@@ -28,7 +28,7 @@ export default function Collapsible({
         <div className="flex items-center gap-2.5">
           {icon}
           <div>
-            <div className="font-heading text-base font-semibold text-accent">{title}</div>
+            <div className="text-base font-semibold text-accent">{title}</div>
             {subtitle && <div className="mt-0.5 text-xs text-foreground-muted">{subtitle}</div>}
           </div>
         </div>

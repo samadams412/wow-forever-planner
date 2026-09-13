@@ -1,14 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08090a;
-  --surface: #15171c;
-  --surface-hover: #1c1f26;
-  --border: #2a2c33;
-  --foreground: #e8e6df;
-  --foreground-muted: #9a978f;
-  --accent: #9b7cff;
-  --accent-hover: #b79cff;
+  /* Warm forged-metal/parchment palette -- gold is the primary structural
+     color (borders, dividers, active states); violet and green are kept
+     narrow, single-purpose accents (see --color-violet/--color-green
+     below), not general-purpose UI colors. */
+  --background: #0d0b07;
+  --surface: #1a150e;
+  --surface-hover: #241d13;
+  --border: #3d3420;
+  --foreground: #e8dcc4;
+  --foreground-muted: #a89878;
+  --gold: #c9a961;
+  --gold-hover: #ddc27f;
+  --violet: #9b7cff;
+  --green: #1a5f3f;
+  --accent: var(--gold);
+  --accent-hover: var(--gold-hover);
 }
 
 @theme inline {
@@ -20,9 +28,12 @@
   --color-foreground-muted: var(--foreground-muted);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+  /* Narrow, single-purpose colors -- do not use these as general accents. */
+  --color-violet: var(--violet);
+  --color-green: var(--green);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-cinzel);
+  --font-heading: var(--font-display);
 }
 
 body {

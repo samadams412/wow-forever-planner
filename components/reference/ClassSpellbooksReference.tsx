@@ -1,6 +1,7 @@
 import { spellbooks, SPELLBOOK_CLASS_ORDER, type SpellbookEntry, type NewAbility } from "@/lib/spellbooks";
 import { mediumIconUrl, CLASS_ICON, CLASS_COLOR, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
+import GoldRule from "@/components/site/GoldRule";
 
 function SpellPill({ spell }: { spell: SpellbookEntry }) {
   return (
@@ -29,7 +30,7 @@ function NewAbilityCard({ ability }: { ability: NewAbility }) {
           <span className="text-sm font-semibold text-foreground">{ability.name}</span>
           <span
             className={`rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
-              confirmed ? "bg-green-400/15 text-green-400" : "bg-foreground-muted/15 text-foreground-muted"
+              confirmed ? "bg-green/15 text-green" : "bg-foreground-muted/15 text-foreground-muted"
             }`}
           >
             {confirmed ? "Confirmed" : "Unconfirmed"}
@@ -65,7 +66,7 @@ function ClassSection({ classId }: { classId: string }) {
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {book.tabs.map((tab) => (
           <div key={tab.name}>
-            <h4 className="mb-1.5 font-heading text-xs font-semibold uppercase tracking-wide" style={{ color }}>
+            <h4 className="mb-1.5 text-xs font-semibold" style={{ color }}>
               {tab.name}
             </h4>
             <div className="flex flex-wrap gap-1.5">
@@ -86,8 +87,9 @@ function ClassSection({ classId }: { classId: string }) {
       <p className="mt-1 text-xs text-foreground-muted/70">Source: {spellbooks.source}</p>
 
       {book.newAbilities.length > 0 && (
-        <div className="mt-4 border-t border-border pt-3">
-          <h4 className="font-heading text-sm font-semibold tracking-wide text-foreground">
+        <div className="mt-4">
+          <GoldRule className="mb-3" />
+          <h4 className="text-sm font-semibold text-foreground">
             New {classLabel(classId)} abilities
           </h4>
           <p className="mt-0.5 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">

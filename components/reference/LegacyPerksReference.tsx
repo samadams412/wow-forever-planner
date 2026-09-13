@@ -1,6 +1,7 @@
 import { Info, ArrowLeftRight } from "lucide-react";
 import { legacyPerks, type LegacyPerkTree } from "@/lib/legacy-perks";
 import { mediumIconUrl } from "@/lib/wow-data";
+import GoldRule from "@/components/site/GoldRule";
 
 function RankPips({ count }: { count: number }) {
   return (
@@ -18,7 +19,7 @@ function TreeColumn({ tree }: { tree: LegacyPerkTree }) {
       <div className="flex items-center gap-2 border-b border-border pb-1.5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={mediumIconUrl(tree.icon)} alt="" className="h-6 w-6 rounded-sm" />
-        <h3 className="font-heading text-sm font-semibold tracking-wide text-foreground">{tree.name}</h3>
+        <h3 className="text-sm font-semibold text-foreground">{tree.name}</h3>
       </div>
       {tree.perks.map((perk) => (
         <div key={perk.name} className="rounded border border-border bg-surface p-2.5">
@@ -100,7 +101,9 @@ export default function LegacyPerksReference() {
         </div>
       </div>
 
-      <section className="mt-8">
+      <GoldRule className="mt-8" />
+
+      <section className="mt-4">
         <h2 className="font-heading text-lg font-semibold tracking-wide text-foreground">
           Legacy Rewards
         </h2>

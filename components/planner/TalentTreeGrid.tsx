@@ -7,6 +7,22 @@ import TalentNode from "./TalentNode";
 const TIERS = 7;
 const COLS = 4;
 
+const CORNER_POSITION_CLASS = {
+  tl: "-top-[3px] -left-[3px] border-t-2 border-l-2",
+  tr: "-top-[3px] -right-[3px] border-t-2 border-r-2",
+  bl: "-bottom-[3px] -left-[3px] border-b-2 border-l-2",
+  br: "-bottom-[3px] -right-[3px] border-b-2 border-r-2",
+} as const;
+
+function CornerBracket({ position }: { position: keyof typeof CORNER_POSITION_CLASS }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`pointer-events-none absolute h-3 w-3 border-accent ${CORNER_POSITION_CLASS[position]}`}
+    />
+  );
+}
+
 export default function TalentTreeGrid({
   classId,
   tree,
@@ -28,8 +44,12 @@ export default function TalentTreeGrid({
   const spent = pointsSpentInTree(tree, ranks);
 
   return (
-    <div className="w-full max-w-77 rounded-lg border border-border bg-surface p-3">
-      <div className="mb-1.5 flex items-center justify-between px-0.5">
+    <div className="relative w-full max-w-77 rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)]">
+      <CornerBracket position="tl" />
+      <CornerBracket position="tr" />
+      <CornerBracket position="bl" />
+      <CornerBracket position="br" />
+      <div className="mb-1.5 flex items-center justify-between border-b border-accent/30 px-0.5 pb-1.5">
         <h3 className="font-heading text-sm font-semibold tracking-wide text-foreground">{tree.name}</h3>
         <span className="text-xs text-foreground-muted">{spent} pts</span>
       </div>

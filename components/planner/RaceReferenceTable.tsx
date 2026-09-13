@@ -1,6 +1,7 @@
 import type { Race } from "@/lib/wow-data";
 import { getRacialsForRace, mediumIconUrl, CLASS_ICON } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
+import GoldRule from "@/components/site/GoldRule";
 
 const FACTION_STYLES = {
   Horde: {
@@ -71,10 +72,11 @@ export default function RaceReferenceTable({ races }: { races: Race[] }) {
 
   return (
     <section>
-      <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
+      <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         Race reference
       </h2>
-      <div className="mt-1.5 grid gap-3 sm:grid-cols-2">
+      <GoldRule className="mt-1.5" />
+      <div className="mt-3 grid gap-3 sm:grid-cols-2">
         <div className="space-y-1.5">
           <FactionHeader faction="Horde" />
           {horde.map((r) => (
