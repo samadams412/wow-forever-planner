@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/planner", label: "Planner" },
@@ -12,6 +14,7 @@ const NAV_LINKS = [
 
 export default function SiteHeader() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="relative overflow-hidden border-b border-border bg-surface">
@@ -32,7 +35,7 @@ export default function SiteHeader() {
           <img src="/forevercraft-mark-carved.svg" alt="" className="h-7 w-7" />
           Forevercraft
         </Link>
-        <nav className="flex items-center gap-5">
+        <nav className="hidden items-center gap-5 sm:flex">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
             return (
@@ -50,7 +53,39 @@ export default function SiteHeader() {
             );
           })}
         </nav>
+
+        <button
+          type="button"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          className="text-foreground-muted hover:text-foreground sm:hidden"
+        >
+          {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
+
+      {menuOpen && (
+        <nav className="relative flex flex-col gap-3 border-t border-border px-4 py-3 sm:hidden">
+          {NAV_LINKS.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={`text-sm transition-colors ${
+                  active
+                    ? "font-medium text-accent"
+                    : "text-foreground-muted hover:text-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+      )}
     </header>
   );
 }

@@ -33,15 +33,16 @@ function RaceRow({
         onFocus={show}
         onBlur={hide}
         onClick={onSelect}
-        className={`flex w-full items-center gap-2 rounded border px-2 py-1.5 text-left transition-colors ${
+        title={race.name}
+        className={`flex items-center justify-center gap-2 rounded border p-1.5 text-left transition-colors sm:w-full sm:justify-start sm:px-2 ${
           selected
             ? "border-accent bg-surface-hover"
             : "border-border bg-surface hover:border-accent/60 hover:bg-surface-hover"
         }`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={mediumIconUrl(race.icon)} alt="" className="h-6 w-6 shrink-0 rounded-sm" />
-        <span className="text-xs leading-tight text-foreground">{race.name}</span>
+        <img src={mediumIconUrl(race.icon)} alt="" className="h-7 w-7 shrink-0 rounded-sm sm:h-6 sm:w-6" />
+        <span className="hidden text-xs leading-tight text-foreground sm:inline">{race.name}</span>
       </button>
 
       {pos &&
@@ -82,7 +83,7 @@ export default function RacePicker({
       <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         Eligible Races
       </h2>
-      <div className="flex flex-col gap-1">
+      <div className="grid grid-cols-6 gap-1 sm:flex sm:flex-col">
         {races.map((race) => (
           <RaceRow
             key={race.id}
