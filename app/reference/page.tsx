@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Card from "@/components/site/Card";
 import { mediumIconUrl } from "@/lib/wow-data";
+
+export const metadata: Metadata = {
+  title: "WoW Forever Race & Class Reference",
+  description:
+    "Browse World of Warcraft: Forever race and class rules, allowed race/class combinations, and racials at a glance, plus deep dives on the Legacy System and class spellbooks.",
+};
 
 export default function ReferencePage() {
   return (

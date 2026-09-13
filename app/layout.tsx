@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cinzel } from "next/font/google";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +21,11 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Forevercraft",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Forevercraft — Free WoW Forever Talent Calculator & Guides",
+    template: "%s | Forevercraft",
+  },
   description:
     "A free, fan-made planner and guide hub for World of Warcraft: Forever.",
 };
