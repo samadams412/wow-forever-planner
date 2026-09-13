@@ -23,7 +23,8 @@ export default function TalentNode({
 }) {
   const invested = rank > 0;
   const locked = !invested && !canAdd;
-  const nextRankText = talent.ranks[Math.min(rank, talent.maxRank - 1)];
+  const currentRankText = rank > 0 ? talent.ranks[rank - 1] : null;
+  const nextRankText = rank < talent.maxRank ? talent.ranks[rank] : null;
 
   return (
     <div
@@ -62,7 +63,14 @@ export default function TalentNode({
           <span className="text-sm font-medium text-foreground">{talent.name}</span>
           <ConfidenceBadge confidence={talent.confidence} />
         </div>
-        <p className="mt-1 text-xs text-foreground-muted">{formatTooltipText(nextRankText)}</p>
+        {currentRankText && (
+          <p className="mt-1 text-xs text-foreground-muted">{formatTooltipText(currentRankText)}</p>
+        )}
+        {nextRankText && (
+          <p className="mt-1 text-xs text-foreground-muted/60">
+            <span className="text-foreground-muted/80">Next rank:</span> {formatTooltipText(nextRankText)}
+          </p>
+        )}
         {talent.prereq && (
           <p className="mt-1 text-[11px] text-foreground-muted/70">
             Requires {talent.prereq.ranks} rank{talent.prereq.ranks > 1 ? "s" : ""} in {prereqName ?? "prerequisite talent"}
