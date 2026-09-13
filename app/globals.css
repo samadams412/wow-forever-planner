@@ -59,4 +59,56 @@ body {
   button:disabled {
     cursor: not-allowed;
   }
+
+  [data-cursor="hearth"] {
+    cursor: url("/cursors/hearth.png") 16 16, pointer;
+  }
+
+  [data-cursor="gear"] {
+    cursor: url("/cursors/gear.png") 16 16, not-allowed;
+  }
+
+  /* Added by CustomCursor once JS confirms a real (fine) pointer -- hides
+     the native cursor everywhere except disabled buttons, which keep their
+     own not-allowed cursor so a hovered-but-blocked control still reads as
+     blocked instead of being hidden under the custom cursor image. */
+  html.js-custom-cursor body,
+  html.js-custom-cursor a,
+  html.js-custom-cursor button:not(:disabled),
+  html.js-custom-cursor [role="button"],
+  html.js-custom-cursor summary {
+    cursor: none;
+  }
+
+  html.js-custom-cursor [data-cursor] {
+    cursor: none;
+  }
+}
+
+/* CustomCursor's dynamic hover states -- written as plain CSS rather than
+   Tailwind classes, since Tailwind's JIT scanner didn't pick up compound
+   arbitrary variants like [&.cursor-active]:-rotate-[16deg] here.
+   data-state cycles through: default | active | hearth | gear | hidden. */
+.wow-cursor.cursor-hidden {
+  display: none;
+}
+
+.wow-cursor-tilt {
+  transition: transform 150ms ease-out;
+}
+
+.wow-cursor-tilt[data-state="active"],
+.wow-cursor-tilt[data-state="hearth"] {
+  transform: rotate(-16deg);
+}
+
+.wow-cursor-tilt img {
+  display: none;
+}
+
+.wow-cursor-tilt[data-state="default"] .cursor-img-default,
+.wow-cursor-tilt[data-state="active"] .cursor-img-active,
+.wow-cursor-tilt[data-state="hearth"] .cursor-img-hearth,
+.wow-cursor-tilt[data-state="gear"] .cursor-img-gear {
+  display: block;
 }

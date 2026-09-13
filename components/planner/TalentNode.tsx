@@ -42,7 +42,7 @@ export default function TalentNode({
   const nextRankText = rank < talent.maxRank ? talent.ranks[rank] : null;
 
   const borderClass = locked
-    ? "cursor-not-allowed border-border/40"
+    ? "border-border/40"
     : maxed
       ? "border-green-500"
       : invested
@@ -62,6 +62,7 @@ export default function TalentNode({
       <button
         ref={buttonRef}
         type="button"
+        data-cursor={locked ? "gear" : undefined}
         onMouseEnter={showTooltip}
         onMouseLeave={hideTooltip}
         onFocus={showTooltip}

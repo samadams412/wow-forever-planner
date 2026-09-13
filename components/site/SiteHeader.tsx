@@ -23,7 +23,11 @@ export default function SiteHeader() {
         }}
       />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 font-heading text-lg font-semibold tracking-wide text-accent">
+        <Link
+          href="/"
+          data-cursor="hearth"
+          className="flex items-center gap-2 font-heading text-lg font-semibold tracking-wide text-accent"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/forevercraft-mark-carved.svg" alt="" className="h-7 w-7" />
           Forevercraft
