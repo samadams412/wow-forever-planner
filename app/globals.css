@@ -40,3 +40,23 @@ body {
   background-color: var(--background);
   color: var(--foreground);
 }
+
+/* In Tailwind v4's cascade layers, unlayered rules beat layered utility
+   classes regardless of specificity -- so these live in @layer base to let
+   utilities like cursor-not-allowed (in the utilities layer) still win. */
+@layer base {
+  body {
+    cursor: url("/cursors/gauntlet.png") 6 4, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  summary {
+    cursor: url("/cursors/gauntlet-active.png") 6 4, pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
