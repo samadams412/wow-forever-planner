@@ -97,6 +97,19 @@ export const CLASS_ICON: Record<string, string> = {
   druid: "class_druid",
 };
 
+// Standard WoW class colors.
+export const CLASS_COLOR: Record<string, string> = {
+  warrior: "#C79C6E",
+  paladin: "#F58CBA",
+  hunter: "#ABD473",
+  rogue: "#FFF569",
+  priest: "#FFFFFF",
+  shaman: "#0070DE",
+  mage: "#69CCF0",
+  warlock: "#9482C9",
+  druid: "#FF7D0A",
+};
+
 export const races: Race[] = racesData as Race[];
 export const racialsByRace: Record<string, Racial[]> = racialsData as Record<string, Racial[]>;
 

@@ -1177,25 +1177,6 @@
   ],
   "inferredBaselineAbilities": [
     {
-      "name": "Holy Strike",
-      "description": "A melee strike ability referenced by multiple talents (Improved Holy Strike, Iron Creed, Sacred Arbiter) but never appearing as a talent itself -- inferred to be a new baseline Paladin ability in Forever. Not independently confirmed.",
-      "confidence": "inferred",
-      "mentionedBy": [
-        "Improved Holy Strike",
-        "Iron Creed",
-        "Sacred Arbiter"
-      ]
-    },
-    {
-      "name": "Seal of Fury",
-      "description": "A tanking seal with an absorb shield, referenced by Improved Seal of Fury and Twist of Light but never appearing as a talent itself -- inferred to be a new baseline Paladin seal in Forever. Not independently confirmed.",
-      "confidence": "inferred",
-      "mentionedBy": [
-        "Improved Seal of Fury",
-        "Twist of Light"
-      ]
-    },
-    {
       "name": "Holy Wrath",
       "description": "Referenced by Purifying Power and Holy Conduit as a spell with its own cooldown/mana cost, but never appearing as a talent itself. Not part of vanilla Classic's Paladin kit -- inferred to be a new baseline ability in Forever. Not independently confirmed.",
       "confidence": "inferred",

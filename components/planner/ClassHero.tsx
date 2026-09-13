@@ -1,24 +1,11 @@
-import { mediumIconUrl } from "@/lib/wow-data";
-
-// Standard WoW class colors.
-const CLASS_COLORS: Record<string, string> = {
-  warrior: "#C79C6E",
-  paladin: "#F58CBA",
-  hunter: "#ABD473",
-  rogue: "#FFF569",
-  priest: "#FFFFFF",
-  shaman: "#0070DE",
-  mage: "#69CCF0",
-  warlock: "#9482C9",
-  druid: "#FF7D0A",
-};
+import { mediumIconUrl, CLASS_COLOR } from "@/lib/wow-data";
 
 function label(classId: string): string {
   return classId.charAt(0).toUpperCase() + classId.slice(1);
 }
 
 export default function ClassHero({ classId }: { classId: string }) {
-  const color = CLASS_COLORS[classId] ?? "var(--accent)";
+  const color = CLASS_COLOR[classId] ?? "var(--accent)";
 
   return (
     <div

@@ -24,6 +24,15 @@ export default function ReferencePage() {
             <img src={mediumIconUrl("inv_misc_book_09")} alt="" className="h-7 w-7 rounded-sm" />
           }
         />
+        <Card
+          href="/reference/class-spellbooks"
+          title="Class Spellbooks"
+          description="Every trainer-taught spell a level 38 character had in the BlizzCon 2026 demo, one collapsible section per class, plus new baseline abilities inferred from talent tooltips."
+          icon={
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={mediumIconUrl("inv_misc_book_11")} alt="" className="h-7 w-7 rounded-sm" />
+          }
+        />
       </div>
     </main>
   );

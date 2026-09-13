@@ -1,0 +1,786 @@
+{
+  "source": "Savix's and Xaryu's Twitch VODs of 12 Sep 2026, read frame by frame. Demo characters were level capped at 38.",
+  "classes": {
+    "warrior": {
+      "demoRace": "Human",
+      "notes": [
+        "Victory Rush and Tactical Mastery are baseline.",
+        "No Bloodrage or Intercept in Arms or Fury at 38. Bloodrage most likely sits in the Protection tab, which was never opened. Intercept is trained at 30 in Classic, so its absence is the odd one; the demo capped characters at 38.",
+        "Retaliation: 15 min cooldown, Battle Stance, counterattacks up to 30 melee hits for 15 sec."
+      ],
+      "notOpened": ["Protection"],
+      "tabs": [
+        {
+          "name": "Arms",
+          "spells": [
+            { "name": "Battle Stance" },
+            { "name": "Charge", "rank": 2 },
+            { "name": "Hamstring", "rank": 2 },
+            { "name": "Heroic Strike", "rank": 5 },
+            { "name": "Mocking Blow", "rank": 3 },
+            { "name": "Overpower", "rank": 1 },
+            { "name": "Rend", "rank": 4 },
+            { "name": "Retaliation" },
+            { "name": "Thunder Clap", "rank": 4 },
+            { "name": "Victory Rush" },
+            { "name": "Tactical Mastery", "passive": true }
+          ]
+        },
+        {
+          "name": "Fury",
+          "spells": [
+            { "name": "Battle Shout", "rank": 4 },
+            { "name": "Berserker Rage" },
+            { "name": "Berserker Stance" },
+            { "name": "Challenging Shout" },
+            { "name": "Cleave", "rank": 2 },
+            { "name": "Demoralizing Shout", "rank": 3 },
+            { "name": "Execute", "rank": 2 },
+            { "name": "Intimidating Shout" },
+            { "name": "Pummel", "rank": 1 },
+            { "name": "Slam", "rank": 3 },
+            { "name": "Whirlwind" }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Throw" },
+            { "name": "Shoot Bow" },
+            { "name": "Shoot Crossbow" },
+            { "name": "Shoot Gun" },
+            { "name": "Dual Wield", "passive": true },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Block", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Parry", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Victory Rush",
+          "status": "confirmed",
+          "note": "Confirmed baseline: sits in the Arms tab of a level 38 Warrior's spellbook in the demo (Xaryu's Twitch VOD of 12 Sep 2026, 5h01m). Tooltip not read yet."
+        },
+        {
+          "name": "Tactical Mastery",
+          "status": "confirmed",
+          "note": "Listed as a passive in the Arms tab of the same spellbook, so it is baseline now rather than a talent."
+        },
+        {
+          "name": "Intercept",
+          "status": "unconfirmed",
+          "note": "Not in the Fury tab of the level 38 demo spellbook, where Classic teaches it at 30. Could be moved or gone; the demo was capped at 38, so nothing above that could show."
+        },
+        {
+          "name": "Slam",
+          "status": "unconfirmed",
+          "note": "Changed: Rank 3 by level 38 in the demo spellbook, where Classic reaches Rank 3 at 46, so the ranks were reshuffled."
+        },
+        {
+          "name": "Bloodrage",
+          "status": "unconfirmed",
+          "note": "Not in the Arms or Fury tabs at level 38. Its talent lives in Protection, so it is most likely in the Protection tab, which was never opened on stream."
+        }
+      ]
+    },
+    "paladin": {
+      "demoRace": "Undead",
+      "notes": [
+        "Undead Paladins exist, with Cannibalize and Will of the Forsaken in the General tab.",
+        "Blessing of Kings and Consecration are baseline: neither is a talent anywhere in the Forever trees, and both are in this book. Seal of Command is still a Retribution talent, so it is here because the demo Paladin had it.",
+        "Holy Strike is a baseline Retribution strike. Seal of Fury is back as a trainable seal.",
+        "Lay on Hands: 20 min cooldown, heals for your maximum health and restores 250 mana, drains your remaining mana."
+      ],
+      "notOpened": [],
+      "tabs": [
+        {
+          "name": "Holy",
+          "spells": [
+            { "name": "Blessing of Wisdom", "rank": 3 },
+            { "name": "Consecration", "rank": 2 },
+            { "name": "Exorcism", "rank": 3 },
+            { "name": "Flash of Light", "rank": 3 },
+            { "name": "Holy Light", "rank": 6 },
+            { "name": "Lay on Hands", "rank": 2 },
+            { "name": "Purify" },
+            { "name": "Redemption", "rank": 3 },
+            { "name": "Seal of Light", "rank": 1 },
+            { "name": "Seal of Righteousness", "rank": 5 },
+            { "name": "Seal of Wisdom", "rank": 1 },
+            { "name": "Sense Undead" },
+            { "name": "Turn Undead", "rank": 2 }
+          ]
+        },
+        {
+          "name": "Protection",
+          "spells": [
+            { "name": "Blessing of Freedom" },
+            { "name": "Blessing of Kings" },
+            { "name": "Blessing of Protection", "rank": 3 },
+            { "name": "Blessing of Salvation" },
+            { "name": "Concentration Aura" },
+            { "name": "Devotion Aura", "rank": 4 },
+            { "name": "Divine Intervention" },
+            { "name": "Divine Protection", "rank": 2 },
+            { "name": "Divine Shield", "rank": 1 },
+            { "name": "Fire Resistance Aura", "rank": 1 },
+            { "name": "Frost Resistance Aura", "rank": 1 },
+            { "name": "Hammer of Justice", "rank": 2 },
+            { "name": "Righteous Fury" },
+            { "name": "Seal of Fury", "rank": 4 },
+            { "name": "Seal of Justice" },
+            { "name": "Shadow Resistance Aura", "rank": 1 }
+          ]
+        },
+        {
+          "name": "Retribution",
+          "spells": [
+            { "name": "Blessing of Might", "rank": 4 },
+            { "name": "Holy Strike", "rank": 5 },
+            { "name": "Judgement" },
+            { "name": "Retribution Aura", "rank": 3 },
+            { "name": "Seal of Command", "rank": 5, "talent": true },
+            { "name": "Seal of the Crusader", "rank": 4 }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Block", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Parry", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Blessing of Kings and Consecration",
+          "status": "confirmed",
+          "note": "Both baseline now: neither is a talent anywhere in the Forever trees, and both sit in a level 38 Undead Paladin's spellbook in the demo."
+        },
+        {
+          "name": "Holy Strike",
+          "status": "confirmed",
+          "note": "A baseline Retribution strike, Rank 5 by level 38 in the demo spellbook."
+        },
+        {
+          "name": "Seal of Fury",
+          "status": "confirmed",
+          "note": "Back as a trainable seal, Rank 4 by 38."
+        }
+      ]
+    },
+    "hunter": {
+      "demoRace": "Human",
+      "notes": [
+        "Aimed Shot is baseline (a Classic Marksmanship talent).",
+        "Call Pet is named after the pet: this Hunter had Call Owl.",
+        "Explosive Trap and Viper Sting are trained by 38 (Classic: 44 and 36).",
+        "The fifth tab is the pet's own spellbook; it was not opened."
+      ],
+      "notOpened": ["Pet"],
+      "tabs": [
+        {
+          "name": "Beast Mastery",
+          "spells": [
+            { "name": "Aspect of the Beast", "rank": 1 },
+            { "name": "Aspect of the Cheetah" },
+            { "name": "Aspect of the Hawk", "rank": 4 },
+            { "name": "Aspect of the Monkey" },
+            { "name": "Beast Lore" },
+            { "name": "Call Pet" },
+            { "name": "Dismiss Pet" },
+            { "name": "Eagle Eye" },
+            { "name": "Eyes of the Beast" },
+            { "name": "Feed Pet" },
+            { "name": "Mend Pet", "rank": 4 },
+            { "name": "Revive Pet" },
+            { "name": "Scare Beast", "rank": 2 },
+            { "name": "Tame Beast" }
+          ]
+        },
+        {
+          "name": "Marksmanship",
+          "spells": [
+            { "name": "Aimed Shot", "rank": 3 },
+            { "name": "Arcane Shot", "rank": 5 },
+            { "name": "Auto Shot" },
+            { "name": "Concussive Shot" },
+            { "name": "Distracting Shot", "rank": 3 },
+            { "name": "Flare" },
+            { "name": "Hunter's Mark", "rank": 2 },
+            { "name": "Multi-Shot", "rank": 1 },
+            { "name": "Rapid Fire" },
+            { "name": "Scorpid Sting", "rank": 1 },
+            { "name": "Serpent Sting", "rank": 5 },
+            { "name": "Viper Sting", "rank": 1 }
+          ]
+        },
+        {
+          "name": "Survival",
+          "spells": [
+            { "name": "Disengage", "rank": 2 },
+            { "name": "Explosive Trap", "rank": 1 },
+            { "name": "Feign Death" },
+            { "name": "Freezing Trap", "rank": 1 },
+            { "name": "Frost Trap" },
+            { "name": "Immolation Trap", "rank": 3 },
+            { "name": "Mongoose Bite", "rank": 2 },
+            { "name": "Raptor Strike", "rank": 5 },
+            { "name": "Track Beasts" },
+            { "name": "Track Demons" },
+            { "name": "Track Elementals" },
+            { "name": "Track Hidden" },
+            { "name": "Track Humanoids" },
+            { "name": "Track Undead" },
+            { "name": "Wing Clip", "rank": 2 }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Throw" },
+            { "name": "Beast Training" },
+            { "name": "Dual Wield", "passive": true },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Parry", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Aimed Shot",
+          "status": "confirmed",
+          "note": "Baseline now (a Classic Marksmanship talent): Rank 3 by level 38 in the demo spellbook. This is a different spell from the current \"Sniper Shot\" talent, which now occupies the Forever Marksmanship tree slot Classic's Aimed Shot used to be renamed toward."
+        },
+        {
+          "name": "Call Owl",
+          "status": "confirmed",
+          "note": "Call Pet is named after your pet in Forever; the demo Hunter's read Call Owl."
+        }
+      ]
+    },
+    "rogue": {
+      "demoRace": "Undead",
+      "notes": [
+        "Blade Flurry and Adrenaline Rush are Combat talents in Forever, so they are in this book because the demo rogue had them talented. Not baseline.",
+        "No Riposte in the book at 38, which just means that rogue had not taken it.",
+        "Blind at 38 with no reagent line visible; Disarm Trap is still trained."
+      ],
+      "notOpened": [],
+      "tabs": [
+        {
+          "name": "Assassination",
+          "spells": [
+            { "name": "Ambush", "rank": 3 },
+            { "name": "Cheap Shot" },
+            { "name": "Eviscerate", "rank": 5 },
+            { "name": "Expose Armor", "rank": 3 },
+            { "name": "Garrote", "rank": 4 },
+            { "name": "Kidney Shot", "rank": 1 },
+            { "name": "Rupture", "rank": 3 },
+            { "name": "Slice and Dice", "rank": 1 }
+          ]
+        },
+        {
+          "name": "Combat",
+          "spells": [
+            { "name": "Adrenaline Rush", "talent": true },
+            { "name": "Backstab", "rank": 5 },
+            { "name": "Blade Flurry", "talent": true },
+            { "name": "Evasion" },
+            { "name": "Feint", "rank": 2 },
+            { "name": "Gouge", "rank": 3 },
+            { "name": "Kick", "rank": 2 },
+            { "name": "Sinister Strike", "rank": 6 },
+            { "name": "Sprint", "rank": 2 }
+          ]
+        },
+        {
+          "name": "Subtlety",
+          "spells": [
+            { "name": "Blind" },
+            { "name": "Detect Traps", "passive": true },
+            { "name": "Disarm Trap" },
+            { "name": "Distract" },
+            { "name": "Pick Pocket" },
+            { "name": "Sap", "rank": 2 },
+            { "name": "Stealth", "rank": 2 },
+            { "name": "Vanish", "rank": 1 }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Pick Lock" },
+            { "name": "Shoot Bow" },
+            { "name": "Shoot Crossbow" },
+            { "name": "Shoot Gun" },
+            { "name": "Throw" },
+            { "name": "Dual Wield", "passive": true },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Parry", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "One-handed axes",
+          "status": "unconfirmed",
+          "note": "Rogues can apparently wield one-handed axes now. Hack and Slash (Combat) lists Axe/Sword, Dagger/Fist and Mace as its weapon groups, and Classic rogues could not equip axes at all."
+        }
+      ]
+    },
+    "priest": {
+      "demoRace": "Night Elf",
+      "notes": [
+        "Fear Ward is baseline for every Priest, in the Holy tab.",
+        "Devouring Plague is a normal Shadow spell now, Rank 3 on a Night Elf.",
+        "Elune's Grace changed: 5 min cooldown, 50% chance to be missed by melee and ranged for 15 sec or until missed 3 times.",
+        "No Shadow Word: Death by 38; the talent tooltips mention it, so it is probably trained later. The demo was capped at 38."
+      ],
+      "notOpened": [],
+      "tabs": [
+        {
+          "name": "Discipline",
+          "spells": [
+            { "name": "Dispel Magic", "rank": 2 },
+            { "name": "Divine Spirit" },
+            { "name": "Elune's Grace", "rank": 1 },
+            { "name": "Inner Fire" },
+            { "name": "Levitate" },
+            { "name": "Mana Burn" },
+            { "name": "Power Word: Fortitude" },
+            { "name": "Power Word: Shield" },
+            { "name": "Shackle Undead" },
+            { "name": "Starshards", "rank": 4 }
+          ]
+        },
+        {
+          "name": "Holy",
+          "spells": [
+            { "name": "Abolish Disease" },
+            { "name": "Cure Disease" },
+            { "name": "Fear Ward" },
+            { "name": "Flash Heal" },
+            { "name": "Heal" },
+            { "name": "Holy Fire" },
+            { "name": "Lesser Heal" },
+            { "name": "Prayer of Healing" },
+            { "name": "Renew" },
+            { "name": "Resurrection" },
+            { "name": "Smite" }
+          ]
+        },
+        {
+          "name": "Shadow Magic",
+          "spells": [
+            { "name": "Devouring Plague", "rank": 3 },
+            { "name": "Fade" },
+            { "name": "Mind Blast" },
+            { "name": "Mind Control" },
+            { "name": "Mind Soothe", "rank": 2 },
+            { "name": "Mind Vision" },
+            { "name": "Psychic Scream" },
+            { "name": "Shadow Protection" },
+            { "name": "Shadow Word: Pain" }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Shoot" },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Shadow Word: Death",
+          "status": "unconfirmed",
+          "note": "Execute-style Shadow spell; mentioned by Early Demise. Not present in the level 38 demo spellbook, so it's probably trained later."
+        },
+        {
+          "name": "Devouring Plague",
+          "status": "confirmed",
+          "note": "Now a normal Shadow spell rather than an Undead racial: a Night Elf Priest has it at Rank 3 at level 38 in the demo spellbook. Also mentioned by Devouring Contagion."
+        },
+        {
+          "name": "Fear Ward",
+          "status": "confirmed",
+          "note": "Baseline for every Priest now: sits in the Holy tab of a Night Elf Priest's spellbook in the demo."
+        }
+      ]
+    },
+    "shaman": {
+      "demoRace": "Orc",
+      "notes": [
+        "Call of the Ancestors and Call of the Elements are new Elemental abilities; Totemic Projection and Totemic Recall are new too.",
+        "Fire Nova is a spell with ranks (Rank 3 by 38), no longer a totem.",
+        "Chain Lightning is trained by 38 (Classic: 32) and Windfury Totem and Weapon are both in by 38."
+      ],
+      "notOpened": [],
+      "tabs": [
+        {
+          "name": "Elemental Combat",
+          "spells": [
+            { "name": "Call of the Ancestors" },
+            { "name": "Call of the Elements" },
+            { "name": "Chain Lightning", "rank": 1 },
+            { "name": "Earth Shock", "rank": 5 },
+            { "name": "Earthbind Totem" },
+            { "name": "Fire Nova", "rank": 3 },
+            { "name": "Flame Shock", "rank": 3 },
+            { "name": "Frost Shock", "rank": 2 },
+            { "name": "Lightning Bolt", "rank": 7 },
+            { "name": "Magma Totem", "rank": 2 },
+            { "name": "Purge", "rank": 2 },
+            { "name": "Searing Totem", "rank": 3 },
+            { "name": "Stoneclaw Totem", "rank": 4 },
+            { "name": "Totemic Recall" }
+          ]
+        },
+        {
+          "name": "Enhancement",
+          "spells": [
+            { "name": "Astral Recall" },
+            { "name": "Far Sight" },
+            { "name": "Fire Resistance Totem", "rank": 1 },
+            { "name": "Flametongue Totem", "rank": 2 },
+            { "name": "Flametongue Weapon", "rank": 4 },
+            { "name": "Frost Resistance Totem", "rank": 2 },
+            { "name": "Frostbrand Weapon" },
+            { "name": "Ghost Wolf" },
+            { "name": "Grounding Totem" },
+            { "name": "Lightning Shield", "rank": 4 },
+            { "name": "Nature Resistance Totem", "rank": 1 },
+            { "name": "Rockbiter Weapon", "rank": 5 },
+            { "name": "Sentry Totem" },
+            { "name": "Stoneskin Totem", "rank": 4 },
+            { "name": "Strength of Earth Totem", "rank": 3 },
+            { "name": "Totemic Projection" },
+            { "name": "Water Breathing" },
+            { "name": "Water Walking" },
+            { "name": "Windfury Totem", "rank": 1 },
+            { "name": "Windfury Weapon", "rank": 1 },
+            { "name": "Windwall Totem", "rank": 1 }
+          ]
+        },
+        {
+          "name": "Restoration",
+          "spells": [
+            { "name": "Ancestral Spirit", "rank": 3 },
+            { "name": "Cure Disease" },
+            { "name": "Cure Poison" },
+            { "name": "Disease Cleansing Totem" },
+            { "name": "Healing Stream Totem", "rank": 2 },
+            { "name": "Healing Wave", "rank": 6 },
+            { "name": "Lesser Healing Wave", "rank": 3 },
+            { "name": "Mana Spring Totem", "rank": 2 },
+            { "name": "Poison Cleansing Totem" },
+            { "name": "Reincarnation", "passive": true },
+            { "name": "Tremor Totem" }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Block", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Totemic Projection",
+          "status": "confirmed",
+          "note": "New Enhancement ability in the demo spellbook; Totemic Recall also exists."
+        },
+        {
+          "name": "Fire Nova",
+          "status": "confirmed",
+          "note": "Talent tooltips call it \"your Fire Nova spell\" and give it a cooldown (Improved Fire Nova: +10% damage, -2 sec cooldown). In Classic it was Fire Nova Totem. Also named in Call of Flame and Elemental Reach."
+        }
+      ]
+    },
+    "mage": {
+      "demoRace": "Undead / Gnome / Windshaper Skyborne",
+      "notes": [
+        "Arcane Blast and Presence of Mind are both Arcane talents in Forever, so they are here because the demo Mage had them talented. Not baseline.",
+        "Comprehend Scroll is a new General ability, seen on Savix's Skyborne Mage.",
+        "The Frost tab was shown with every rank listed; the highest rank of each spell is what is recorded here.",
+        "Fire at 38 is five spells: Fire Blast Rank 5 (110 mana, 8 sec cooldown, 261 to 309), Fireball Rank 7 (220 mana, 3.5 sec cast, 220 to 271 plus 24 over 8 sec), Scorch, Fire Ward and Flamestrike. No Pyroblast or Blast Wave by 38."
+      ],
+      "notOpened": [],
+      "tabs": [
+        {
+          "name": "Arcane",
+          "spells": [
+            { "name": "Amplify Magic", "rank": 2 },
+            { "name": "Arcane Blast", "rank": 5, "talent": true },
+            { "name": "Arcane Explosion", "rank": 4 },
+            { "name": "Arcane Intellect", "rank": 3 },
+            { "name": "Arcane Missiles", "rank": 4 },
+            { "name": "Blink" },
+            { "name": "Conjure Food" },
+            { "name": "Conjure Mana Agate" },
+            { "name": "Conjure Mana Jade" },
+            { "name": "Conjure Water", "rank": 4 },
+            { "name": "Counterspell" },
+            { "name": "Dampen Magic", "rank": 3 },
+            { "name": "Evocation" },
+            { "name": "Mage Armor", "rank": 1 },
+            { "name": "Mana Shield", "rank": 3 },
+            { "name": "Polymorph", "rank": 2 },
+            { "name": "Presence of Mind", "talent": true },
+            { "name": "Remove Lesser Curse" },
+            { "name": "Slow Fall" }
+          ]
+        },
+        {
+          "name": "Fire",
+          "spells": [
+            { "name": "Fire Blast", "rank": 5 },
+            { "name": "Fire Ward", "rank": 2 },
+            { "name": "Fireball", "rank": 7 },
+            { "name": "Flamestrike", "rank": 3 },
+            { "name": "Scorch", "rank": 3 }
+          ]
+        },
+        {
+          "name": "Frost",
+          "spells": [
+            { "name": "Blizzard", "rank": 3 },
+            { "name": "Cone of Cold", "rank": 2 },
+            { "name": "Frost Armor", "rank": 3 },
+            { "name": "Frost Nova", "rank": 2 },
+            { "name": "Frost Ward", "rank": 2 },
+            { "name": "Frostbolt", "rank": 7 },
+            { "name": "Ice Armor", "rank": 1 }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Shoot" },
+            { "name": "Comprehend Scroll" },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Comprehend Scroll",
+          "status": "confirmed",
+          "note": "New General ability seen on a Skyborne Mage in the demo."
+        },
+        {
+          "name": "Frostfire Bolt",
+          "status": "unconfirmed",
+          "note": "Fire and Frost bolt; mentioned by Improved Fireball, Hot Streak, Missile Barrage and Incineration. Not present in the level 38 demo spellbook, so it's probably trained later (or gated behind a talent/quest)."
+        }
+      ]
+    },
+    "warlock": {
+      "demoRace": "Human",
+      "notes": [
+        "Curse of Agony is Bane of Agony. Enslave Demon is Subjugate Demon.",
+        "Incubus and Succubus are separate summons.",
+        "Shadow Ward is baseline. Destruction tab not opened."
+      ],
+      "notOpened": ["Destruction"],
+      "tabs": [
+        {
+          "name": "Affliction",
+          "spells": [
+            { "name": "Bane of Agony", "rank": 4 },
+            { "name": "Corruption", "rank": 4 },
+            { "name": "Curse of Recklessness", "rank": 2 },
+            { "name": "Curse of the Elements", "rank": 2 },
+            { "name": "Curse of Tongues", "rank": 1 },
+            { "name": "Curse of Weakness", "rank": 4 },
+            { "name": "Drain Life", "rank": 4 },
+            { "name": "Drain Mana", "rank": 2 },
+            { "name": "Drain Soul", "rank": 3 },
+            { "name": "Fear", "rank": 2 },
+            { "name": "Life Tap", "rank": 4 }
+          ]
+        },
+        {
+          "name": "Demonology",
+          "spells": [
+            { "name": "Banish", "rank": 1 },
+            { "name": "Create Firestone", "rank": 2 },
+            { "name": "Create Healthstone", "rank": 3 },
+            { "name": "Create Soulstone", "rank": 2 },
+            { "name": "Create Spellstone", "rank": 1 },
+            { "name": "Demon Armor", "rank": 2 },
+            { "name": "Demon Skin" },
+            { "name": "Detect Invisibility", "rank": 2 },
+            { "name": "Eye of Kilrogg", "tag": "Summon" },
+            { "name": "Health Funnel", "rank": 4 },
+            { "name": "Ritual of Summoning" },
+            { "name": "Sense Demons" },
+            { "name": "Shadow Ward", "rank": 1 },
+            { "name": "Subjugate Demon", "rank": 1 },
+            { "name": "Summon Felhunter", "tag": "Summon" },
+            { "name": "Summon Imp", "tag": "Summon" },
+            { "name": "Summon Incubus", "tag": "Summon" },
+            { "name": "Summon Succubus", "tag": "Summon" },
+            { "name": "Summon Voidwalker", "tag": "Summon" },
+            { "name": "Unending Breath" }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Shoot" },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Subjugate Demon",
+          "status": "confirmed",
+          "note": "Enslave Demon renamed; Rank 1 by 38 in the demo spellbook. Incubus and Succubus are separate summons."
+        },
+        {
+          "name": "Bane of Agony",
+          "status": "confirmed",
+          "note": "Curse of Agony renamed; mentioned by Improved Bane of Agony, Amplify Curse and Pandemic."
+        },
+        {
+          "name": "Bane of Doom",
+          "status": "unconfirmed",
+          "note": "Curse of Doom renamed; mentioned by Pandemic. Not present in the level 38 demo spellbook."
+        },
+        {
+          "name": "Incubus",
+          "status": "confirmed",
+          "note": "Male counterpart to the Succubus; mentioned by Fel Vitality, Fel Domination, Demonic Sacrifice and Improved Sayaad, and confirmed as its own Summon spell in the demo spellbook."
+        }
+      ]
+    },
+    "druid": {
+      "demoRace": "Night Elf",
+      "notes": [
+        "Nature's Grasp and Omen of Clarity are baseline (Classic Balance and Restoration talents).",
+        "Revive is new: 10 sec cast, 300 health and 520 mana, out of combat. Rebirth keeps its 30 min cooldown and Stranglethorn Seed.",
+        "Cure Poison is gone; Abolish Poison is the only poison cure."
+      ],
+      "notOpened": [],
+      "tabs": [
+        {
+          "name": "Balance",
+          "spells": [
+            { "name": "Entangling Roots", "rank": 4 },
+            { "name": "Faerie Fire", "rank": 2 },
+            { "name": "Hibernate", "rank": 2 },
+            { "name": "Moonfire", "rank": 6 },
+            { "name": "Nature's Grasp", "rank": 4 },
+            { "name": "Omen of Clarity", "passive": true },
+            { "name": "Soothe Animal", "rank": 2 },
+            { "name": "Starfire", "rank": 3 },
+            { "name": "Thorns", "rank": 4 },
+            { "name": "Wrath", "rank": 6 }
+          ]
+        },
+        {
+          "name": "Feral Combat",
+          "spells": [
+            { "name": "Aquatic Form", "tag": "Shapeshift" },
+            { "name": "Bash", "rank": 2 },
+            { "name": "Bear Form", "tag": "Shapeshift" },
+            { "name": "Cat Form", "tag": "Shapeshift" },
+            { "name": "Challenging Roar" },
+            { "name": "Claw", "rank": 3 },
+            { "name": "Cower" },
+            { "name": "Dash", "rank": 1 },
+            { "name": "Demoralizing Roar", "rank": 3 },
+            { "name": "Enrage" },
+            { "name": "Ferocious Bite", "rank": 1 },
+            { "name": "Frenzied Regeneration", "rank": 1 },
+            { "name": "Growl" },
+            { "name": "Maul", "rank": 4 },
+            { "name": "Pounce", "rank": 1 },
+            { "name": "Prowl", "rank": 1 },
+            { "name": "Rake", "rank": 2 },
+            { "name": "Ravage", "rank": 1 },
+            { "name": "Rip", "rank": 3 },
+            { "name": "Shred", "rank": 3 },
+            { "name": "Swipe", "rank": 3 },
+            { "name": "Tiger's Fury" },
+            { "name": "Track Humanoids" },
+            { "name": "Travel Form", "tag": "Shapeshift" }
+          ]
+        },
+        {
+          "name": "Restoration",
+          "spells": [
+            { "name": "Abolish Poison" },
+            { "name": "Healing Touch", "rank": 7 },
+            { "name": "Mark of the Wild", "rank": 4 },
+            { "name": "Rebirth", "rank": 2 },
+            { "name": "Regrowth", "rank": 5 },
+            { "name": "Rejuvenation", "rank": 6 },
+            { "name": "Remove Curse" },
+            { "name": "Revive", "rank": 3 },
+            { "name": "Tranquility", "rank": 1 }
+          ]
+        },
+        {
+          "name": "General",
+          "spells": [
+            { "name": "Attack" },
+            { "name": "Armor Proficiency", "passive": true },
+            { "name": "Dodge", "passive": true },
+            { "name": "Languages", "passive": true }
+          ]
+        }
+      ],
+      "newAbilities": [
+        {
+          "name": "Omen of Clarity and Nature's Grasp",
+          "status": "confirmed",
+          "note": "Both baseline now (Classic talents): they sit in a level 38 Night Elf Druid's Balance tab in the demo."
+        },
+        {
+          "name": "Revive",
+          "status": "confirmed",
+          "note": "New out-of-combat resurrection: 10 sec cast, brings a player back with 300 health and 520 mana at Rank 3. Rebirth keeps its 30 min cooldown."
+        },
+        {
+          "name": "Cure Poison",
+          "status": "confirmed",
+          "note": "Gone. Abolish Poison is the only poison cure in the demo spellbook."
+        }
+      ]
+    }
+  }
+}
