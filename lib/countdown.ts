@@ -46,7 +46,14 @@ function zonedTimeToUtc(
   return new Date(guess - offsetMs);
 }
 
-export const LAUNCH_DATE = zonedTimeToUtc(2026, 11, 4, 18, 0, 0, LAUNCH_TIME_ZONE);
+const ONE_HOUR_MS = 60 * 60 * 1000;
+
+// Manual correction: the resolved instant below still ran an hour ahead of
+// Blizzard's own countdown when compared directly, so it's shifted back an
+// hour here rather than in the timezone math above.
+export const LAUNCH_DATE = new Date(
+  zonedTimeToUtc(2026, 11, 4, 18, 0, 0, LAUNCH_TIME_ZONE).getTime() - ONE_HOUR_MS
+);
 
 export type Countdown = {
   days: number;
