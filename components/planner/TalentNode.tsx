@@ -3,7 +3,6 @@ import { createPortal } from "react-dom";
 import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
-import ConfidenceBadge from "./ConfidenceBadge";
 
 const TOOLTIP_WIDTH = 224;
 
@@ -26,6 +25,7 @@ export default function TalentNode({
   const [tooltipPos, setTooltipPos] = useState<{ top: number; left: number } | null>(null);
 
   const invested = rank > 0;
+  const maxed = rank === talent.maxRank;
   const locked = !invested && !canAdd;
   const currentRankText = rank > 0 ? talent.ranks[rank - 1] : null;
   const nextRankText = rank < talent.maxRank ? talent.ranks[rank] : null;
@@ -39,6 +39,22 @@ export default function TalentNode({
     );
     setTooltipPos({ top: rect.bottom + 6, left });
   };
+
+  const borderClass = locked
+    ? "cursor-not-allowed border-border/40 opacity-40"
+    : maxed
+      ? "border-green-500"
+      : invested
+        ? "border-amber-400"
+        : "border-border hover:border-accent/60";
+
+  const badgeTextClass = locked
+    ? "text-foreground-muted"
+    : maxed
+      ? "text-green-400"
+      : invested
+        ? "text-amber-300"
+        : "text-foreground";
 
   return (
     <div style={{ gridColumn: talent.col, gridRow: talent.tier }} className="aspect-square">
@@ -57,13 +73,7 @@ export default function TalentNode({
           e.preventDefault();
           onRemove();
         }}
-        className={`relative block h-full w-full overflow-hidden rounded border-2 transition-colors ${
-          invested
-            ? "border-accent"
-            : locked
-              ? "cursor-not-allowed border-border/40 opacity-40"
-              : "border-border hover:border-accent/60"
-        }`}
+        className={`relative block h-full w-full overflow-hidden rounded border-2 transition-colors ${borderClass}`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -71,7 +81,9 @@ export default function TalentNode({
           alt={talent.name}
           className={`h-full w-full object-cover ${locked ? "grayscale" : ""}`}
         />
-        <span className="absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[9px] font-semibold leading-tight text-foreground">
+        <span
+          className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[9px] font-semibold leading-tight ${badgeTextClass}`}
+        >
           {rank}/{talent.maxRank}
         </span>
       </button>
@@ -79,13 +91,10 @@ export default function TalentNode({
       {tooltipPos &&
         createPortal(
           <div
-            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface p-2.5 text-left shadow-lg"
+            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-2.5 text-left shadow-lg backdrop-blur-sm"
             style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}
           >
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm font-medium text-foreground">{talent.name}</span>
-              <ConfidenceBadge confidence={talent.confidence} />
-            </div>
+            <span className="text-sm font-medium text-foreground">{talent.name}</span>
             {currentRankText && (
               <p className="mt-1 text-xs text-foreground-muted">{formatTooltipText(currentRankText)}</p>
             )}

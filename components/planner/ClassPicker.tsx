@@ -1,13 +1,15 @@
+import { mediumIconUrl } from "@/lib/wow-data";
+
 const ALL_CLASSES = [
-  "warrior",
-  "paladin",
-  "hunter",
-  "rogue",
-  "priest",
-  "shaman",
-  "mage",
-  "warlock",
-  "druid",
+  { id: "warrior", icon: "class_warrior" },
+  { id: "paladin", icon: "class_paladin" },
+  { id: "hunter", icon: "class_hunter" },
+  { id: "rogue", icon: "class_rogue" },
+  { id: "priest", icon: "class_priest" },
+  { id: "shaman", icon: "class_shaman" },
+  { id: "mage", icon: "class_mage" },
+  { id: "warlock", icon: "class_warlock" },
+  { id: "druid", icon: "class_druid" },
 ];
 
 const CLASSES_WITH_DATA = new Set(["warrior"]);
@@ -33,7 +35,7 @@ export default function ClassPicker({
         2. Choose your class
       </h2>
       <div className="mt-1.5 flex flex-wrap gap-1.5">
-        {ALL_CLASSES.map((classId) => {
+        {ALL_CLASSES.map(({ id: classId, icon }) => {
           const isAllowedForRace = allowed.has(classId);
           const hasData = CLASSES_WITH_DATA.has(classId);
           const enabled = isAllowedForRace && hasData;
@@ -51,7 +53,7 @@ export default function ClassPicker({
               disabled={!enabled}
               title={reason}
               onClick={() => enabled && onSelect(classId)}
-              className={`rounded border px-2 py-1 text-sm transition-colors ${
+              className={`flex items-center gap-1.5 rounded border px-2 py-1 text-sm transition-colors ${
                 !enabled
                   ? "cursor-not-allowed border-border/50 bg-surface/50 text-foreground-muted/50"
                   : selected
@@ -59,6 +61,12 @@ export default function ClassPicker({
                     : "border-border bg-surface text-foreground hover:border-accent/60 hover:bg-surface-hover"
               }`}
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={mediumIconUrl(icon)}
+                alt=""
+                className={`h-4 w-4 rounded-sm ${!enabled ? "opacity-40 grayscale" : ""}`}
+              />
               {label(classId)}
             </button>
           );

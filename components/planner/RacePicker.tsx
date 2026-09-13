@@ -1,4 +1,5 @@
 import type { Race } from "@/lib/wow-data";
+import { mediumIconUrl } from "@/lib/wow-data";
 
 export default function RacePicker({
   races,
@@ -22,13 +23,15 @@ export default function RacePicker({
               key={race.id}
               type="button"
               onClick={() => onSelect(race.id)}
-              className={`rounded border px-2 py-1 text-sm transition-colors ${
+              className={`flex items-center gap-1.5 rounded border px-2 py-1 text-sm transition-colors ${
                 selected
                   ? "border-accent bg-surface-hover"
                   : "border-border bg-surface hover:border-accent/60 hover:bg-surface-hover"
               }`}
             >
-              <span className="font-medium text-foreground">{race.name}</span>{" "}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={mediumIconUrl(race.icon)} alt="" className="h-4 w-4 rounded-sm" />
+              <span className="font-medium text-foreground">{race.name}</span>
               <span className="text-xs text-foreground-muted">{race.faction}</span>
             </button>
           );

@@ -4,37 +4,43 @@
       "name": "Perception",
       "type": "active",
       "description": "Dramatically increases stealth detection for 20 sec.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "spell_nature_sleep"
     },
     {
       "name": "Diplomacy",
       "type": "passive",
       "description": "Reputation gains are increased by 10%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "achievement_reputation_01"
     },
     {
       "name": "Mace Specialization",
       "type": "passive",
       "description": "Mace and two-handed mace skill is increased by 5.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_hammer_05"
     },
     {
       "name": "Sword Specialization",
       "type": "passive",
       "description": "Sword and two-handed sword skill is increased by 5.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_meleedamage"
     },
     {
       "name": "The Human Spirit",
       "type": "passive",
       "description": "Spirit is increased by 5%.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_enchant_shardbrilliantsmall"
     },
     {
       "name": "Will to Survive",
       "type": "active",
       "description": "Clears all Stun effects.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_shadow_charm"
     }
   ],
   "dwarf": [
@@ -42,37 +48,43 @@
       "name": "Stoneform",
       "type": "active",
       "description": "Clears poison, disease and bleed effects and increases armor by 10% for 8 sec.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_shadow_unholystrength"
     },
     {
       "name": "Find Treasure",
       "type": "active",
       "description": "Shows nearby treasure on the minimap.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "racial_dwarf_findtreasure"
     },
     {
       "name": "Frost Resistance",
       "type": "passive",
       "description": "Frost Resistance is increased by 10.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_frost_frostresistancetotem"
     },
     {
       "name": "Gun Specialization",
       "type": "passive",
       "description": "Gun skill is increased by 5.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_weapon_rifle_01"
     },
     {
       "name": "Mace Specialization",
       "type": "passive",
       "description": "Maces increase spell and ability critical chance by 1%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_hammer_05"
     },
     {
       "name": "Big Game Hunter",
       "type": "passive",
       "description": "Damage to Beasts increased by 5%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_hunter_snipershot"
     }
   ],
   "night-elf": [
@@ -80,31 +92,36 @@
       "name": "Shadowmeld",
       "type": "active",
       "description": "Activate to slip into the shadows while stationary and out of combat.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "ability_ambush"
     },
     {
       "name": "Nature Resistance",
       "type": "passive",
       "description": "Nature Resistance is increased by 10.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_nature_natureresistancetotem"
     },
     {
       "name": "Quickness",
       "type": "passive",
       "description": "Dodge chance is increased by 1%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_racial_shadowmeld"
     },
     {
       "name": "Wisp Spirit",
       "type": "passive",
       "description": "Transform into a wisp upon death and move 50% faster.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_nature_wispsplode"
     },
     {
       "name": "Elune's Light",
       "type": "active",
       "description": "Raises critical chance by 10% for 15 sec.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_arcane_starfire"
     }
   ],
   "gnome": [
@@ -112,31 +129,36 @@
       "name": "Escape Artist",
       "type": "active",
       "description": "Breaks free from immobilization or movement speed reduction effects.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "ability_rogue_trip"
     },
     {
       "name": "Arcane Resistance",
       "type": "passive",
       "description": "Arcane Resistance is increased by 10.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_holy_dispelmagic"
     },
     {
       "name": "Expansive Mind",
       "type": "passive",
       "description": "Intellect is increased by 5%.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_enchant_essenceeternallarge"
     },
     {
       "name": "Engineering Specialization",
       "type": "passive",
       "description": "Engineering skill is increased by 15.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_misc_gear_01"
     },
     {
       "name": "Eureka!",
       "type": "active",
       "description": "Your next 5 spells or heals cost less and deal or heal 10% more.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_misc_enggizmos_30"
     }
   ],
   "orc": [
@@ -144,31 +166,36 @@
       "name": "Blood Fury",
       "type": "active",
       "description": "Raises base melee attack power for 15 sec and reduces healing received.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "racial_orc_berserkerstrength"
     },
     {
       "name": "Axe Specialization",
       "type": "passive",
       "description": "Axe and two-handed axe skill is increased by 5.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_axe_02"
     },
     {
       "name": "Command",
       "type": "passive",
       "description": "Damage dealt by Hunter and Warlock pets is increased by 5%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_hunter_beastcall"
     },
     {
       "name": "Hardiness",
       "type": "passive",
       "description": "Chance to resist stun effects is increased by 25%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_helmet_23"
     },
     {
       "name": "Shatter Curse",
       "type": "active",
       "description": "Immunity to Curses and Banes and reduce Magical damage taken for 8 sec.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_shadow_antishadow"
     }
   ],
   "undead": [
@@ -176,31 +203,36 @@
       "name": "Will of the Forsaken",
       "type": "active",
       "description": "Provides immunity to Charm, Fear and Sleep effects for 5 sec.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_shadow_raisedead"
     },
     {
       "name": "Cannibalize",
       "type": "active",
       "description": "Regenerates health by consuming a nearby humanoid or undead corpse.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_racial_cannibalize"
     },
     {
       "name": "Shadow Resistance",
       "type": "passive",
       "description": "Shadow Resistance is increased by 10.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_shadow_antishadow"
     },
     {
       "name": "Underwater Breathing",
       "type": "passive",
       "description": "Underwater breath lasts 300% longer than normal.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "spell_shadow_demonbreath"
     },
     {
       "name": "Touch of the Grave",
       "type": "passive",
       "description": "Your attacks and harmful spells have a chance to drain life from the target, healing you.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_shadow_lifedrain"
     }
   ],
   "tauren": [
@@ -208,31 +240,36 @@
       "name": "War Stomp",
       "type": "active",
       "description": "Stuns up to 5 enemies within 8 yards for 2 sec.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "ability_warstomp"
     },
     {
       "name": "Cultivation",
       "type": "passive",
       "description": "Herbalism skill is increased by 15.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_misc_herb_07"
     },
     {
       "name": "Endurance",
       "type": "passive",
       "description": "Total health is increased by 5%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_nature_unyeildingstamina"
     },
     {
       "name": "Nature Resistance",
       "type": "passive",
       "description": "Nature Resistance is increased by 10.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_nature_natureresistancetotem"
     },
     {
       "name": "Plainstrunning",
       "type": "passive",
       "description": "Gain increased movement speed the longer you remain moving.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_warstomp"
     }
   ],
   "troll": [
@@ -240,31 +277,36 @@
       "name": "Berserking",
       "type": "active",
       "description": "Raises attack and casting speed; the effect grows as health is lost.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_nature_bloodlust"
     },
     {
       "name": "Beast Slaying",
       "type": "passive",
       "description": "Damage dealt to beasts is increased by 5%.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "ability_hunter_beasttaming"
     },
     {
       "name": "Bow Specialization",
       "type": "passive",
       "description": "Bow skill is increased by 5.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_weapon_bow_07"
     },
     {
       "name": "Regeneration",
       "type": "passive",
       "description": "Health regeneration is increased by 10%, and 10% continues during combat.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "spell_nature_rejuvenation"
     },
     {
       "name": "Throwing Specialization",
       "type": "passive",
       "description": "Throwing weapon skill is increased by 5.",
-      "confidence": "estimated"
+      "confidence": "estimated",
+      "icon": "inv_throwingaxe_01"
     }
   ],
   "skyborne-horde": [
@@ -272,25 +314,29 @@
       "name": "Walk on Air",
       "type": "active",
       "description": "Glide downward through the air for 10 sec.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     },
     {
       "name": "Skysight",
       "type": "active",
       "description": "Receive an Elemental Blessing increasing run speed by 10%.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     },
     {
       "name": "Wind Blessed",
       "type": "passive",
       "description": "1% increased melee, ranged, and spellcasting Haste.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     },
     {
       "name": "Elemental Insight",
       "type": "passive",
       "description": "Damage to Elementals increased by 5%.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     }
   ],
   "skyborne-alliance": [
@@ -298,25 +344,29 @@
       "name": "Walk on Air",
       "type": "active",
       "description": "Glide downward through the air for 10 sec.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     },
     {
       "name": "Read Ley Line",
       "type": "active",
       "description": "Activate a ley line to gain 100% increased Health and Mana regeneration.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     },
     {
       "name": "Wind Blessed",
       "type": "passive",
       "description": "1% increased melee, ranged, and spellcasting Haste.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     },
     {
       "name": "Elemental Insight",
       "type": "passive",
       "description": "Damage to Elementals increased by 5%.",
-      "confidence": "confirmed"
+      "confidence": "confirmed",
+      "icon": "inv_misc_questionmark"
     }
   ]
 }

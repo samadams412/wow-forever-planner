@@ -11,6 +11,7 @@ export type Race = {
   faction: "Alliance" | "Horde";
   allowedClasses: string[];
   notes: string;
+  icon: string;
 };
 
 export type Racial = {
@@ -18,6 +19,7 @@ export type Racial = {
   type: "active" | "passive";
   description: string;
   confidence: Confidence;
+  icon: string;
 };
 
 export type Talent = {
@@ -64,6 +66,10 @@ export function getClassTalentData(classId: string): ClassTalentData | undefined
 
 export function iconUrl(icon: string): string {
   return `https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`;
+}
+
+export function mediumIconUrl(icon: string): string {
+  return `https://wow.zamimg.com/images/wow/icons/medium/${icon}.jpg`;
 }
 
 export function treeBackgroundUrl(classId: string, treeName: string): string {

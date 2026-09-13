@@ -11,7 +11,8 @@
       "shaman",
       "warrior"
     ],
-    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes.",
+    "icon": "race_dwarf_male"
   },
   {
     "id": "gnome",
@@ -24,7 +25,8 @@
       "warlock",
       "warrior"
     ],
-    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes.",
+    "icon": "race_gnome_male"
   },
   {
     "id": "human",
@@ -39,7 +41,8 @@
       "warlock",
       "warrior"
     ],
-    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes.",
+    "icon": "race_human_male"
   },
   {
     "id": "night-elf",
@@ -52,7 +55,8 @@
       "rogue",
       "warrior"
     ],
-    "notes": ""
+    "notes": "",
+    "icon": "race_nightelf_male"
   },
   {
     "id": "orc",
@@ -66,7 +70,8 @@
       "warlock",
       "warrior"
     ],
-    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes.",
+    "icon": "race_orc_male"
   },
   {
     "id": "skyborne-horde",
@@ -79,7 +84,8 @@
       "shaman",
       "warrior"
     ],
-    "notes": "Confirmed via beta VOD footage. Forever adds a new Skyborne race split into Horde (Shaman-aligned) and Alliance (Mage-aligned) variants with faction-specific racials; only forevertalent's reference data had this race, but its four racials' descriptions are now confirmed rather than placeholder."
+    "notes": "Confirmed via beta VOD footage. Forever adds a new Skyborne race split into Horde (Shaman-aligned) and Alliance (Mage-aligned) variants with faction-specific racials; only forevertalent's reference data had this race, but its four racials' descriptions are now confirmed rather than placeholder.",
+    "icon": "inv_misc_head_dragon_01"
   },
   {
     "id": "skyborne-alliance",
@@ -92,7 +98,8 @@
       "rogue",
       "warrior"
     ],
-    "notes": "Confirmed via beta VOD footage. Forever adds a new Skyborne race split into Horde (Shaman-aligned) and Alliance (Mage-aligned) variants with faction-specific racials; only forevertalent's reference data had this race, but its four racials' descriptions are now confirmed rather than placeholder."
+    "notes": "Confirmed via beta VOD footage. Forever adds a new Skyborne race split into Horde (Shaman-aligned) and Alliance (Mage-aligned) variants with faction-specific racials; only forevertalent's reference data had this race, but its four racials' descriptions are now confirmed rather than placeholder.",
+    "icon": "inv_misc_head_dragon_01"
   },
   {
     "id": "tauren",
@@ -104,7 +111,8 @@
       "shaman",
       "warrior"
     ],
-    "notes": ""
+    "notes": "",
+    "icon": "race_tauren_male"
   },
   {
     "id": "troll",
@@ -118,7 +126,8 @@
       "shaman",
       "warrior"
     ],
-    "notes": "forevertalent's racial list for this race is a verbatim duplicate of the Skyborne race's abilities (Walk on Air / Skysight / Wind Blessed / Elemental Insight) -- almost certainly a copy-paste bug in that source, not a real Forever change. Used warcraft-forever-talent-calc's classic-accurate racial kit instead."
+    "notes": "forevertalent's racial list for this race is a verbatim duplicate of the Skyborne race's abilities (Walk on Air / Skysight / Wind Blessed / Elemental Insight) -- almost certainly a copy-paste bug in that source, not a real Forever change. Used warcraft-forever-talent-calc's classic-accurate racial kit instead.",
+    "icon": "race_troll_male"
   },
   {
     "id": "undead",
@@ -132,6 +141,7 @@
       "warlock",
       "warrior"
     ],
-    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes.",
+    "icon": "race_scourge_male"
   }
 ]

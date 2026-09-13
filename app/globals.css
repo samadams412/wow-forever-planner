@@ -25,6 +25,11 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(900px 600px at 15% -10%, rgba(76, 29, 149, 0.35), transparent 60%),
+    radial-gradient(800px 500px at 85% 0%, rgba(13, 92, 133, 0.35), transparent 55%),
+    radial-gradient(1000px 700px at 50% 110%, rgba(8, 47, 73, 0.4), transparent 60%);
+  background-attachment: fixed;
   color: var(--foreground);
 }
