@@ -24,7 +24,7 @@
     {
       "name": "Sword Specialization",
       "type": "passive",
-      "description": "Sword and two-handed sword skill is increased by 5.",
+      "description": "Swords increase spell and ability critical chance by 2%.",
       "confidence": "estimated",
       "icon": "ability_meleedamage"
     },
@@ -105,14 +105,14 @@
     {
       "name": "Quickness",
       "type": "passive",
-      "description": "Dodge chance is increased by 1%.",
+      "description": "Increases Dodge chance by 1% and run speed by 2%.",
       "confidence": "estimated",
       "icon": "ability_racial_shadowmeld"
     },
     {
       "name": "Wisp Spirit",
       "type": "passive",
-      "description": "Transform into a wisp upon death and move 50% faster.",
+      "description": "Transforms you into a wisp upon death, increasing movement speed by 75% while dead.",
       "confidence": "estimated",
       "icon": "spell_nature_wispsplode"
     },
@@ -165,14 +165,14 @@
     {
       "name": "Blood Fury",
       "type": "active",
-      "description": "Raises base melee attack power for 15 sec and reduces healing received.",
+      "description": "Raises Attack Power and Spell Power by 10% for 15 sec.",
       "confidence": "estimated",
       "icon": "racial_orc_berserkerstrength"
     },
     {
       "name": "Axe Specialization",
       "type": "passive",
-      "description": "Axe and two-handed axe skill is increased by 5.",
+      "description": "Axes increase spell and ability critical chance by 1%.",
       "confidence": "estimated",
       "icon": "inv_axe_02"
     },
@@ -186,7 +186,7 @@
     {
       "name": "Hardiness",
       "type": "passive",
-      "description": "Chance to resist stun effects is increased by 25%.",
+      "description": "Reduces the duration of Stun effects by 20%.",
       "confidence": "estimated",
       "icon": "inv_helmet_23"
     },
@@ -202,14 +202,14 @@
     {
       "name": "Will of the Forsaken",
       "type": "active",
-      "description": "Provides immunity to Charm, Fear and Sleep effects for 5 sec.",
+      "description": "Clears Charm, Fear, and Sleep effects.",
       "confidence": "estimated",
       "icon": "spell_shadow_raisedead"
     },
     {
       "name": "Cannibalize",
       "type": "active",
-      "description": "Regenerates health by consuming a nearby humanoid or undead corpse.",
+      "description": "Regenerates 35% of your total Health and Mana over time by consuming a nearby Humanoid or Undead corpse.",
       "confidence": "estimated",
       "icon": "ability_racial_cannibalize"
     },
@@ -246,14 +246,14 @@
     {
       "name": "Cultivation",
       "type": "passive",
-      "description": "Herbalism skill is increased by 15.",
+      "description": "Lets you grow bonus herbs without needing Herbalism to gather them.",
       "confidence": "estimated",
       "icon": "inv_misc_herb_07"
     },
     {
       "name": "Endurance",
       "type": "passive",
-      "description": "Total health is increased by 5%.",
+      "description": "Increases total Health by 5% and Hit chance by 1%.",
       "confidence": "estimated",
       "icon": "spell_nature_unyeildingstamina"
     },
@@ -265,7 +265,7 @@
       "icon": "spell_nature_natureresistancetotem"
     },
     {
-      "name": "Plainstrunning",
+      "name": "Plainsrunning",
       "type": "passive",
       "description": "Gain increased movement speed the longer you remain moving.",
       "confidence": "estimated",

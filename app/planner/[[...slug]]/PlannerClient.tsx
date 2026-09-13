@@ -109,7 +109,7 @@ export default function PlannerClient({
   }, []);
 
   return (
-    <main className="mx-auto max-w-5xl px-3 py-2 sm:px-4">
+    <main className="mx-auto max-w-6xl px-3 py-1 sm:px-4">
       <div className="flex items-baseline gap-2">
         <h1 className="text-lg font-semibold text-accent">Planner</h1>
         <p className="text-xs text-foreground-muted">
@@ -117,7 +117,7 @@ export default function PlannerClient({
         </p>
       </div>
 
-      <div className="mt-2 space-y-2">
+      <div className="mt-1 space-y-1">
         <RacePicker races={races} selectedRaceId={raceId} onSelect={handleSelectRace} />
 
         {race && (

@@ -18,10 +18,10 @@ function RacialTile({ racial }: { racial: Racial }) {
         onMouseLeave={hide}
         onFocus={show}
         onBlur={hide}
-        className="flex h-19 w-full flex-col items-center justify-center gap-1 rounded border border-border bg-surface p-1 hover:border-accent/60"
+        className="flex w-full flex-col items-center gap-0.5 rounded border border-border bg-surface p-1 hover:border-accent/60"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={mediumIconUrl(racial.icon)} alt="" className="h-9 w-9 rounded-sm" />
+        <img src={mediumIconUrl(racial.icon)} alt="" className="h-7 w-7 rounded-sm" />
         <span className="text-center text-[10px] leading-tight text-foreground">{racial.name}</span>
       </button>
 
@@ -48,7 +48,7 @@ export default function RacialsPanel({ race, racials }: { race: Race; racials: R
       <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         {race.name} racials
       </h2>
-      <div className="mt-1.5 grid grid-cols-5 gap-1.5 sm:grid-cols-10">
+      <div className="mt-1 grid grid-cols-5 gap-1.5 sm:grid-cols-10">
         {racials.map((r) => (
           <RacialTile key={r.name} racial={r} />
         ))}
