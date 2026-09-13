@@ -17,7 +17,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_rogue_ambush"
         },
         {
           "id": "arms_deflection",
@@ -34,7 +35,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_parry"
         },
         {
           "id": "arms_improved_rend",
@@ -49,7 +51,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_gouge"
         },
         {
           "id": "arms_improved_charge",
@@ -63,7 +66,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_charge"
         },
         {
           "id": "arms_improved_overpower",
@@ -77,7 +81,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "inv_sword_05"
         },
         {
           "id": "arms_anger_management",
@@ -93,7 +98,8 @@
             "id": "arms_tactical_mastery",
             "ranks": 5
           },
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_holy_blessingofstamina"
         },
         {
           "id": "arms_deep_wounds",
@@ -111,7 +117,8 @@
             "id": "arms_improved_rend",
             "ranks": 3
           },
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_backstab"
         },
         {
           "id": "arms_spearing_strike",
@@ -124,7 +131,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "inv_spear_01"
         },
         {
           "id": "arms_two_handed_weapon_specialization",
@@ -139,7 +147,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "inv_axe_09"
         },
         {
           "id": "arms_impale",
@@ -153,7 +162,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved"
+          "status": "moved",
+          "icon": "ability_searingarrow"
         },
         {
           "id": "arms_weaponmaster",
@@ -170,7 +180,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "ability_warrior_weaponmastery"
         },
         {
           "id": "arms_sweeping_strikes",
@@ -183,7 +194,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_rogue_slicedice"
         },
         {
           "id": "arms_bloodthrill",
@@ -200,7 +212,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "ability_warrior_bloodfrenzy"
         },
         {
           "id": "arms_improved_slam",
@@ -214,7 +227,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "moved"
+          "status": "moved",
+          "icon": "ability_warrior_decisivestrike"
         },
         {
           "id": "arms_improved_hamstring",
@@ -229,7 +243,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_shockwave"
         },
         {
           "id": "arms_mortal_strike",
@@ -245,7 +260,8 @@
             "id": "arms_sweeping_strikes",
             "ranks": 1
           },
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_savageblow"
         },
         {
           "id": "arms_tactical_mastery",
@@ -262,7 +278,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "spell_nature_enchantarmor"
         }
       ]
     },
@@ -284,7 +301,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_nature_purge"
         },
         {
           "id": "fury_cruelty",
@@ -301,7 +319,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_rogue_eviscerate"
         },
         {
           "id": "fury_iron_will",
@@ -318,7 +337,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved"
+          "status": "moved",
+          "icon": "spell_magic_magearmor"
         },
         {
           "id": "fury_unbridled_wrath",
@@ -335,7 +355,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_nature_stoneclawtotem"
         },
         {
           "id": "fury_improved_cleave",
@@ -350,7 +371,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_cleave"
         },
         {
           "id": "fury_piercing_howl",
@@ -363,7 +385,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "spell_shadow_deathscream"
         },
         {
           "id": "fury_blood_craze",
@@ -378,7 +401,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_shadow_summonimp"
         },
         {
           "id": "fury_boundless_rage",
@@ -393,7 +417,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "ability_warrior_intensifyrage"
         },
         {
           "id": "fury_dual_wield_specialization",
@@ -413,7 +438,8 @@
             "id": "fury_improved_cleave",
             "ranks": 3
           },
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_dualwield"
         },
         {
           "id": "fury_raging_blows",
@@ -426,7 +452,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved"
+          "status": "moved",
+          "icon": "ability_whirlwind"
         },
         {
           "id": "fury_enrage",
@@ -443,7 +470,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_shadow_unholyfrenzy"
         },
         {
           "id": "fury_improved_execute",
@@ -457,7 +485,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "inv_sword_48"
         },
         {
           "id": "fury_precision",
@@ -472,7 +501,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "ability_marksmanship"
         },
         {
           "id": "fury_death_wish",
@@ -485,7 +515,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved"
+          "status": "moved",
+          "icon": "spell_shadow_deathpact"
         },
         {
           "id": "fury_improved_intercept",
@@ -499,7 +530,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_rogue_sprint"
         },
         {
           "id": "fury_improved_berserker_rage",
@@ -513,7 +545,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_nature_ancestralguardian"
         },
         {
           "id": "fury_flurry",
@@ -533,7 +566,8 @@
             "id": "fury_enrage",
             "ranks": 5
           },
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_ghoulfrenzy"
         },
         {
           "id": "fury_bloodthirst",
@@ -549,7 +583,8 @@
             "id": "fury_death_wish",
             "ranks": 1
           },
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_nature_bloodlust"
         }
       ]
     },
@@ -571,7 +606,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "inv_shield_06"
         },
         {
           "id": "protection_anticipation",
@@ -588,7 +624,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "spell_nature_mirrorimage"
         },
         {
           "id": "protection_improved_bloodrage",
@@ -602,7 +639,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_racial_bloodrage"
         },
         {
           "id": "protection_toughness",
@@ -619,7 +657,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "spell_holy_devotion"
         },
         {
           "id": "protection_improved_thunder_clap",
@@ -634,7 +673,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "moved"
+          "status": "moved",
+          "icon": "ability_thunderclap"
         },
         {
           "id": "protection_last_stand",
@@ -650,7 +690,8 @@
             "id": "protection_improved_bloodrage",
             "ranks": 2
           },
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "spell_holy_ashestoashes"
         },
         {
           "id": "protection_master_of_defense",
@@ -667,7 +708,8 @@
             "id": "protection_shield_specialization",
             "ranks": 5
           },
-          "status": "new"
+          "status": "new",
+          "icon": "ability_defend"
         },
         {
           "id": "protection_improved_revenge",
@@ -682,7 +724,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_revenge"
         },
         {
           "id": "protection_defiance",
@@ -697,7 +740,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_innerrage"
         },
         {
           "id": "protection_improved_sunder_armor",
@@ -712,7 +756,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_warrior_sunder"
         },
         {
           "id": "protection_improved_disarm",
@@ -730,7 +775,8 @@
             "id": "protection_master_of_defense",
             "ranks": 2
           },
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_disarm"
         },
         {
           "id": "protection_vanguard",
@@ -743,7 +789,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "ability_warrior_victoryrush"
         },
         {
           "id": "protection_improved_shield_wall",
@@ -757,7 +804,8 @@
           ],
           "confidence": "estimated",
           "prereq": null,
-          "status": "changed"
+          "status": "changed",
+          "icon": "ability_warrior_shieldwall"
         },
         {
           "id": "protection_concussion_blow",
@@ -773,7 +821,8 @@
             "id": "protection_improved_disarm",
             "ranks": 3
           },
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_thunderbolt"
         },
         {
           "id": "protection_improved_shield_bash",
@@ -787,7 +836,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged"
+          "status": "unchanged",
+          "icon": "ability_warrior_shieldbash"
         },
         {
           "id": "protection_vitality",
@@ -804,7 +854,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "inv_helmet_21"
         },
         {
           "id": "protection_focused_rage",
@@ -819,7 +870,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "ability_warrior_focusedrage"
         },
         {
           "id": "protection_bastion",
@@ -836,7 +888,8 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new"
+          "status": "new",
+          "icon": "inv_shield_04"
         },
         {
           "id": "protection_shield_slam",
@@ -852,7 +905,8 @@
             "id": "protection_concussion_blow",
             "ranks": 1
           },
-          "status": "changed"
+          "status": "changed",
+          "icon": "inv_shield_05"
         }
       ]
     }

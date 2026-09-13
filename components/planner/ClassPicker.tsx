@@ -29,10 +29,10 @@ export default function ClassPicker({
 
   return (
     <section>
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground-muted">
+      <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         2. Choose your class
       </h2>
-      <div className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-5">
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
         {ALL_CLASSES.map((classId) => {
           const isAllowedForRace = allowed.has(classId);
           const hasData = CLASSES_WITH_DATA.has(classId);
@@ -51,7 +51,7 @@ export default function ClassPicker({
               disabled={!enabled}
               title={reason}
               onClick={() => enabled && onSelect(classId)}
-              className={`rounded-lg border p-3 text-left transition-colors ${
+              className={`rounded border px-2 py-1 text-sm transition-colors ${
                 !enabled
                   ? "cursor-not-allowed border-border/50 bg-surface/50 text-foreground-muted/50"
                   : selected
@@ -59,8 +59,7 @@ export default function ClassPicker({
                     : "border-border bg-surface text-foreground hover:border-accent/60 hover:bg-surface-hover"
               }`}
             >
-              <div className="font-medium">{label(classId)}</div>
-              {reason && <div className="text-[11px] text-foreground-muted/60">{reason}</div>}
+              {label(classId)}
             </button>
           );
         })}

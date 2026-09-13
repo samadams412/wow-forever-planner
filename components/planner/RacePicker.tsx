@@ -11,10 +11,10 @@ export default function RacePicker({
 }) {
   return (
     <section>
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground-muted">
+      <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         1. Choose your race
       </h2>
-      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
         {races.map((race) => {
           const selected = race.id === selectedRaceId;
           return (
@@ -22,14 +22,14 @@ export default function RacePicker({
               key={race.id}
               type="button"
               onClick={() => onSelect(race.id)}
-              className={`rounded-lg border p-3 text-left transition-colors ${
+              className={`rounded border px-2 py-1 text-sm transition-colors ${
                 selected
                   ? "border-accent bg-surface-hover"
                   : "border-border bg-surface hover:border-accent/60 hover:bg-surface-hover"
               }`}
             >
-              <div className="font-medium text-foreground">{race.name}</div>
-              <div className="text-xs text-foreground-muted">{race.faction}</div>
+              <span className="font-medium text-foreground">{race.name}</span>{" "}
+              <span className="text-xs text-foreground-muted">{race.faction}</span>
             </button>
           );
         })}

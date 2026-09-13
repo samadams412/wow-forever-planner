@@ -30,6 +30,7 @@ export type Talent = {
   prereq: { id: string; ranks: number } | null;
   status: TalentStatus;
   confidence: Confidence;
+  icon: string;
 };
 
 export type TalentTree = {
@@ -59,4 +60,12 @@ export function getRacialsForRace(raceId: string): Racial[] {
 
 export function getClassTalentData(classId: string): ClassTalentData | undefined {
   return CLASS_TALENT_DATA[classId];
+}
+
+export function iconUrl(icon: string): string {
+  return `https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`;
+}
+
+export function treeBackgroundUrl(classId: string, treeName: string): string {
+  return `/backgrounds/${classId}/${treeName.toLowerCase()}.jpg`;
 }
