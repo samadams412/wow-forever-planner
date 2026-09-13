@@ -44,14 +44,22 @@ export default function LegacyPerksReference() {
         <ConfidenceBadge confidence={legacyPerks.confidence} />
       </div>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-        Account-wide, non-combat bonuses spent across three trees. One Legacy Point is earned per
-        challenge completed (exploring, leveling, tradeskills, PvP ranks, reputations, dungeons and
-        raids). Source: {legacyPerks.source}.
+        Account-wide, non-combat bonuses spent across three trees. You earn Legacy Points by
+        completing Legacy Challenges -- things like leveling a specific class or hitting a
+        tradeskill milestone -- meant to reward play you&apos;re already doing rather than add busywork.
+        Points are earned account-wide and shared across your characters, but each character spends
+        its own points independently in its own set of Legacy Trees. Source: {legacyPerks.source}.
       </p>
       <div className="mt-3 rounded-lg border border-accent/40 bg-surface p-3">
         <p className="max-w-[70ch] text-sm leading-relaxed text-foreground/90">
           <span className="font-semibold text-accent">Not yet an interactive planner: </span>
           {legacyPerks.pointCapNote}
+        </p>
+      </div>
+      <div className="mt-2 rounded-lg border border-border bg-surface p-3">
+        <p className="max-w-[70ch] text-sm leading-relaxed text-foreground/90">
+          <span className="font-semibold text-foreground">Also changing: </span>
+          {legacyPerks.mountCostNote}
         </p>
       </div>
 
@@ -67,27 +75,40 @@ export default function LegacyPerksReference() {
         </h2>
         <p className="mt-1 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
           A separate, cosmetic-only track unlocked by total Legacy Points ever earned -- independent
-          of how many of those points are later spent on perks above.
+          of how many of those points are later spent on perks above. {legacyPerks.rewards.rewardTrackNote}
         </p>
         <div className="mt-2 rounded-lg border border-accent/40 bg-surface p-3">
           <p className="max-w-[70ch] text-sm leading-relaxed text-foreground/90">
-            <span className="font-semibold text-accent">Thresholds not yet known: </span>
+            <span className="font-semibold text-accent">Reward thresholds not yet known: </span>
             {legacyPerks.rewards.note}
           </p>
         </div>
         <div className="mt-3 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
           {legacyPerks.rewards.items.map((reward) => (
-            <div key={reward.name} className="rounded border border-border bg-surface p-2.5">
-              <span className="text-sm font-medium text-foreground">{reward.name}</span>{" "}
-              <span className="text-xs uppercase tracking-wide text-foreground-muted">
-                {reward.type}
-              </span>
-              <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
-                {reward.description}
-              </p>
+            <div key={reward.name} className="flex gap-2.5 rounded border border-border bg-surface p-2.5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={mediumIconUrl(reward.icon)}
+                alt=""
+                title={reward.iconPlaceholder ? "Placeholder icon, not yet confirmed" : undefined}
+                className="h-8 w-8 shrink-0 rounded-sm"
+              />
+              <div>
+                <span className="text-sm font-medium text-foreground">{reward.name}</span>{" "}
+                <span className="text-xs uppercase tracking-wide text-foreground-muted">
+                  {reward.type}
+                </span>
+                <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
+                  {reward.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+        <p className="mt-3 max-w-[70ch] text-xs text-foreground-muted/70">
+          <span className="font-semibold">Looking ahead: </span>
+          {legacyPerks.expansionNote}
+        </p>
       </section>
     </div>
   );

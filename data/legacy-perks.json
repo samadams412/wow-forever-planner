@@ -1,7 +1,9 @@
 {
-  "source": "BlizzCon 2026 demo tooltips; Wowhead \"Warcraft: Forever Legacy System Explained\" (12 Sep 2026)",
+  "source": "BlizzCon 2026 demo tooltips; Wowhead \"Warcraft: Forever Legacy System Explained\" (12 Sep 2026); Blizzard's official Deep Dive panel recap, Legacy System section (13 Sep 2026)",
   "confidence": "datamined",
-  "pointCapNote": "The overall Legacy Point cap (and thus the interactive spend-and-plan flow) is not yet known or confirmed. This page is a static reference until a real cap is confirmed.",
+  "pointCapNote": "Blizzard has confirmed each character can spend up to 16 Legacy Points, drawn from an account-wide pool capped at 65 points earned total -- so it's normal to bank more points than any one character can spend. This page stays a static reference for now rather than an interactive spend-and-plan tool.",
+  "mountCostNote": "Related change, not a Legacy Point mechanic: mount costs are moving to a Burning Crusade-style model. The gold cost moves off the mount itself and into training the matching riding skill, so once you've trained that skill the mount is free.",
+  "expansionNote": "Blizzard has said this system is meant to grow after launch -- expect new Legacy Challenges, new perks, more ways to spend points, higher caps, and possibly new trees or columns over time.",
   "trees": [
     {
       "name": "Adventure",
@@ -139,27 +141,36 @@
     }
   ],
   "rewards": {
-    "note": "Point thresholds for each reward are not yet known or confirmed. Only a partial list has been revealed so far, from the BlizzCon gameplay demo -- more rewards likely exist at higher thresholds.",
+    "note": "The 65-point earn cap is confirmed, but Blizzard hasn't specified how many points each individual reward below actually costs. Only a partial list has been revealed so far, from the BlizzCon gameplay demo -- more rewards likely exist at higher thresholds, and the order below isn't a confirmed unlock order.",
+    "rewardTrackNote": "Points count toward this track as soon as they're earned, whether or not a character has spent them yet -- so a character sitting well below the 16-point spend cap can still be well ahead on rewards, since the reward track follows the account's total earned, not what's currently spent.",
     "items": [
       {
         "name": "Replica Ironforge Air Rifle",
         "type": "Toy",
-        "description": "Fires shots at other players, stunning them on a hit. Stuns (and kills) with this are tracked."
+        "description": "Fires shots at other players, stunning them on a hit. Stuns (and kills) with this are tracked.",
+        "icon": "inv_weapon_rifle_06",
+        "iconPlaceholder": true
       },
       {
         "name": "Spectral Bear Cub",
         "type": "Pet",
-        "description": "A companion pet."
+        "description": "A companion pet.",
+        "icon": "talentspec_druid_feral_bear",
+        "iconPlaceholder": true
       },
       {
         "name": "Spectral Bear",
         "type": "Tabard",
-        "description": "A cosmetic tabard."
+        "description": "A cosmetic tabard.",
+        "icon": "inv_shirt_guildtabard_01",
+        "iconPlaceholder": true
       },
       {
         "name": "Reins of the Spectral Bear",
         "type": "Mount",
-        "description": "Summons a Spectral Bear mount."
+        "description": "Summons a Spectral Bear mount.",
+        "icon": "inv_bearmountblizzard",
+        "iconPlaceholder": true
       }
     ]
   }
