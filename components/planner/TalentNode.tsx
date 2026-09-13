@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
+import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 
 const TOOLTIP_WIDTH = 224;
 
@@ -21,24 +21,14 @@ export default function TalentNode({
   onRemove: () => void;
   prereqName?: string;
 }) {
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const [tooltipPos, setTooltipPos] = useState<{ top: number; left: number } | null>(null);
+  const { ref: buttonRef, pos: tooltipPos, show: showTooltip, hide: hideTooltip } =
+    useHoverTooltip<HTMLButtonElement>(TOOLTIP_WIDTH);
 
   const invested = rank > 0;
   const maxed = rank === talent.maxRank;
   const locked = !invested && !canAdd;
   const currentRankText = rank > 0 ? talent.ranks[rank - 1] : null;
   const nextRankText = rank < talent.maxRank ? talent.ranks[rank] : null;
-
-  const showTooltip = () => {
-    const rect = buttonRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const left = Math.min(
-      Math.max(rect.left + rect.width / 2 - TOOLTIP_WIDTH / 2, 8),
-      window.innerWidth - TOOLTIP_WIDTH - 8
-    );
-    setTooltipPos({ top: rect.bottom + 6, left });
-  };
 
   const borderClass = locked
     ? "cursor-not-allowed border-border/40 opacity-40"
@@ -62,9 +52,9 @@ export default function TalentNode({
         ref={buttonRef}
         type="button"
         onMouseEnter={showTooltip}
-        onMouseLeave={() => setTooltipPos(null)}
+        onMouseLeave={hideTooltip}
         onFocus={showTooltip}
-        onBlur={() => setTooltipPos(null)}
+        onBlur={hideTooltip}
         onClick={(e) => {
           if (e.shiftKey) onRemove();
           else onAdd();

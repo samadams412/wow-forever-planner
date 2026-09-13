@@ -34,7 +34,7 @@ export default function ClassPicker({
       <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         2. Choose your class
       </h2>
-      <div className="mt-1.5 flex flex-wrap gap-1.5">
+      <div className="mt-1.5 grid grid-cols-5 gap-1.5 sm:grid-cols-9">
         {ALL_CLASSES.map(({ id: classId, icon }) => {
           const isAllowedForRace = allowed.has(classId);
           const hasData = CLASSES_WITH_DATA.has(classId);
@@ -53,7 +53,7 @@ export default function ClassPicker({
               disabled={!enabled}
               title={reason}
               onClick={() => enabled && onSelect(classId)}
-              className={`flex items-center gap-1.5 rounded border px-2 py-1 text-sm transition-colors ${
+              className={`flex h-19 w-full flex-col items-center justify-center gap-1 rounded border p-1 transition-colors ${
                 !enabled
                   ? "cursor-not-allowed border-border/50 bg-surface/50 text-foreground-muted/50"
                   : selected
@@ -65,9 +65,9 @@ export default function ClassPicker({
               <img
                 src={mediumIconUrl(icon)}
                 alt=""
-                className={`h-4 w-4 rounded-sm ${!enabled ? "opacity-40 grayscale" : ""}`}
+                className={`h-9 w-9 rounded-sm ${!enabled ? "opacity-40 grayscale" : ""}`}
               />
-              {label(classId)}
+              <span className="text-center text-[10px] leading-tight">{label(classId)}</span>
             </button>
           );
         })}
