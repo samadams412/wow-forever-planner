@@ -85,6 +85,18 @@ const CLASS_TALENT_DATA: Record<string, ClassTalentData> = {
   druid: druidData as ClassTalentData,
 };
 
+export const CLASS_ICON: Record<string, string> = {
+  warrior: "class_warrior",
+  paladin: "class_paladin",
+  hunter: "class_hunter",
+  rogue: "class_rogue",
+  priest: "class_priest",
+  shaman: "class_shaman",
+  mage: "class_mage",
+  warlock: "class_warlock",
+  druid: "class_druid",
+};
+
 export const races: Race[] = racesData as Race[];
 export const racialsByRace: Record<string, Racial[]> = racialsData as Record<string, Racial[]>;
 
@@ -109,5 +121,6 @@ export function mediumIconUrl(icon: string): string {
 }
 
 export function treeBackgroundUrl(classId: string, treeName: string): string {
-  return `/backgrounds/${classId}/${treeName.toLowerCase()}.jpg`;
+  const slug = treeName.toLowerCase().replace(/\s+/g, "-");
+  return `/backgrounds/${classId}/${slug}.jpg`;
 }

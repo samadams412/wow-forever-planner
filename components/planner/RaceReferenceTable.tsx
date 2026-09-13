@@ -1,5 +1,5 @@
 import type { Race } from "@/lib/wow-data";
-import { getRacialsForRace, mediumIconUrl } from "@/lib/wow-data";
+import { getRacialsForRace, mediumIconUrl, CLASS_ICON } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 
 const FACTION_STYLES = {
@@ -15,10 +15,6 @@ const FACTION_STYLES = {
   },
 } as const;
 
-function classLabel(classId: string): string {
-  return classId.charAt(0).toUpperCase() + classId.slice(1);
-}
-
 function RaceBlock({ race }: { race: Race }) {
   const racials = getRacialsForRace(race.id);
   const style = FACTION_STYLES[race.faction];
@@ -27,18 +23,27 @@ function RaceBlock({ race }: { race: Race }) {
     <div className={`rounded border ${style.border} bg-surface p-2`}>
       <div className="flex items-center gap-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={mediumIconUrl(race.icon)} alt="" className="h-8 w-8 shrink-0 rounded-sm" />
+        <img src={mediumIconUrl(race.icon)} alt="" className="h-8 w-8 shrink-0 rounded-full" />
         <div>
           <div className="font-heading font-medium tracking-wide text-foreground">{race.name}</div>
-          <div className="text-[11px] text-foreground-muted">
-            {race.allowedClasses.map(classLabel).join(", ")}
+          <div className="mt-0.5 flex gap-1">
+            {race.allowedClasses.map((classId) => (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                key={classId}
+                src={mediumIconUrl(CLASS_ICON[classId])}
+                alt={classId}
+                title={classId}
+                className="h-4 w-4 rounded-sm"
+              />
+            ))}
           </div>
         </div>
       </div>
       <ul className={`mt-2 space-y-2.5 border-t ${style.border} pt-2.5`}>
         {racials.map((r) => (
           <li key={r.name} className="max-w-[60ch] text-sm leading-relaxed text-foreground/90">
-            <span className="font-semibold text-foreground">{r.name}:</span>{" "}
+            <span className="font-semibold text-accent">{r.name}:</span>{" "}
             {formatTooltipText(r.description)}
           </li>
         ))}

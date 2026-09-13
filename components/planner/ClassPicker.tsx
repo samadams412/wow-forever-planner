@@ -1,16 +1,6 @@
-import { mediumIconUrl, getClassTalentData } from "@/lib/wow-data";
+import { mediumIconUrl, getClassTalentData, CLASS_ICON } from "@/lib/wow-data";
 
-const ALL_CLASSES = [
-  { id: "warrior", icon: "class_warrior" },
-  { id: "paladin", icon: "class_paladin" },
-  { id: "hunter", icon: "class_hunter" },
-  { id: "rogue", icon: "class_rogue" },
-  { id: "priest", icon: "class_priest" },
-  { id: "shaman", icon: "class_shaman" },
-  { id: "mage", icon: "class_mage" },
-  { id: "warlock", icon: "class_warlock" },
-  { id: "druid", icon: "class_druid" },
-];
+const ALL_CLASS_IDS = Object.keys(CLASS_ICON);
 
 function label(classId: string): string {
   return classId.charAt(0).toUpperCase() + classId.slice(1);
@@ -25,7 +15,8 @@ export default function ClassPicker({
 }) {
   return (
     <div className="grid grid-cols-5 gap-1 sm:grid-cols-9">
-      {ALL_CLASSES.map(({ id: classId, icon }) => {
+      {ALL_CLASS_IDS.map((classId) => {
+        const icon = CLASS_ICON[classId];
         const hasData = !!getClassTalentData(classId);
         const selected = classId === selectedClassId;
 
