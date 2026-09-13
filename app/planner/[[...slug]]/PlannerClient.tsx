@@ -11,6 +11,7 @@ import ClassPicker from "@/components/planner/ClassPicker";
 import RaceReferenceTable from "@/components/planner/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
+import CompareLegend from "@/components/planner/CompareLegend";
 import Dialog from "@/components/site/Dialog";
 
 const DEFAULT_CLASS_ID = "warrior";
@@ -209,6 +210,8 @@ export default function PlannerClient({
             My Builds{savedBuilds.length > 0 ? ` (${savedBuilds.length})` : ""}
           </button>
         </div>
+
+        {compareMode && <CompareLegend />}
 
         {classData && <ClassHero classId={classData.class} />}
 

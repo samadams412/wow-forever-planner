@@ -56,7 +56,7 @@ export default function TalentTreeGrid({
                   gridRow: `${prereq.tier} / ${t.tier + 1}`,
                 }}
               >
-                <div className={`w-1 ${met ? "bg-accent/60" : "bg-border"}`} />
+                <div className={`w-1.5 rounded-full ${met ? "bg-accent" : "bg-foreground-muted/50"}`} />
               </div>
             );
           })}
@@ -73,6 +73,27 @@ export default function TalentTreeGrid({
             compareMode={compareMode}
           />
         ))}
+
+        {tree.talents
+          .filter((t) => t.prereq)
+          .map((t) => {
+            const prereq = byId.get(t.prereq!.id);
+            if (!prereq) return null;
+            const met = (ranks[prereq.id] ?? 0) >= t.prereq!.ranks;
+            return (
+              <div
+                key={`arrow-${t.id}`}
+                className="pointer-events-none relative"
+                style={{ gridColumn: t.col, gridRow: t.tier }}
+              >
+                <div
+                  className={`absolute -top-[5px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[5px] border-x-transparent border-t-[7px] ${
+                    met ? "border-t-accent" : "border-t-foreground-muted/50"
+                  }`}
+                />
+              </div>
+            );
+          })}
       </div>
     </div>
   );

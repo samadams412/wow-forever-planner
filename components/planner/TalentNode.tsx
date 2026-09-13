@@ -42,7 +42,7 @@ export default function TalentNode({
   const nextRankText = rank < talent.maxRank ? talent.ranks[rank] : null;
 
   const borderClass = locked
-    ? "cursor-not-allowed border-border/40 opacity-40"
+    ? "cursor-not-allowed border-border/40"
     : maxed
       ? "border-green-500"
       : invested
