@@ -4,12 +4,12 @@ import { formatTooltipText } from "@/lib/tooltip";
 
 const FACTION_STYLES = {
   Horde: {
-    icon: "achievement_pvp_h_01",
+    icon: "inv_misc_tournaments_tabard_orc",
     text: "text-red-400",
     border: "border-red-900/40",
   },
   Alliance: {
-    icon: "achievement_pvp_a_01",
+    icon: "inv_misc_tournaments_tabard_human",
     text: "text-blue-400",
     border: "border-blue-900/40",
   },
