@@ -2,71 +2,64 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { races, getRaceById, getRacialsForRace, getClassTalentData } from "@/lib/wow-data";
+import { races, getRaceById, getClassTalentData } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
 import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from "@/lib/talent-rules";
 import RacePicker from "@/components/planner/RacePicker";
-import RacialsPanel from "@/components/planner/RacialsPanel";
 import ClassPicker from "@/components/planner/ClassPicker";
 import RaceReferenceTable from "@/components/planner/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
 
-function buildPlannerPath(raceId: string | null, classId: string | null, code: string | null): string {
-  const parts: string[] = [];
+const DEFAULT_CLASS_ID = "warrior";
+
+function buildPlannerPath(classId: string, raceId: string | null, code: string | null): string {
+  const parts = [classId];
   if (raceId) {
     parts.push(raceId);
-    if (classId) {
-      parts.push(classId);
-      if (code) parts.push(code);
-    }
+    if (code) parts.push(code);
   }
-  return parts.length ? `/planner/${parts.join("/")}` : "/planner";
+  return `/planner/${parts.join("/")}`;
 }
 
 export default function PlannerClient({
-  initialRaceId,
   initialClassId,
+  initialRaceId,
   initialBuildCode,
 }: {
-  initialRaceId: string | null;
   initialClassId: string | null;
+  initialRaceId: string | null;
   initialBuildCode: string | null;
 }) {
   const router = useRouter();
+  const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
   const [raceId, setRaceId] = useState<string | null>(initialRaceId);
-  const [classId, setClassId] = useState<string | null>(initialClassId);
   const [ranks, setRanks] = useState<RankState>(() => {
-    const classData = initialClassId ? getClassTalentData(initialClassId) : undefined;
+    const classData = getClassTalentData(initialClassId ?? DEFAULT_CLASS_ID);
     return classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
   });
   const [copied, setCopied] = useState(false);
   const [compareMode, setCompareMode] = useState(false);
 
-  const race = raceId ? getRaceById(raceId) : undefined;
-  const classData = classId ? getClassTalentData(classId) : undefined;
+  const classData = getClassTalentData(classId);
+  const eligibleRaces = races.filter((r) => r.allowedClasses.includes(classId));
 
   useEffect(() => {
     const code = classData && Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : null;
-    router.replace(buildPlannerPath(raceId, classId, code), { scroll: false });
-  }, [raceId, classId, ranks, classData, router]);
-
-  const handleSelectRace = useCallback(
-    (id: string) => {
-      setRaceId(id);
-      const newRace = getRaceById(id);
-      if (classId && newRace && !newRace.allowedClasses.includes(classId)) {
-        setClassId(null);
-        setRanks({});
-      }
-    },
-    [classId]
-  );
+    router.replace(buildPlannerPath(classId, raceId, code), { scroll: false });
+  }, [classId, raceId, ranks, classData, router]);
 
   const handleSelectClass = useCallback((id: string) => {
     setClassId(id);
     setRanks({});
+    setRaceId((prev) => {
+      if (!prev) return prev;
+      const prevRace = getRaceById(prev);
+      return prevRace && prevRace.allowedClasses.includes(id) ? prev : null;
+    });
   }, []);
+
+  const handleSelectRace = useCallback((id: string) => setRaceId(id), []);
 
   const addPoint = useCallback(
     (talentId: string) => {
@@ -115,59 +108,52 @@ export default function PlannerClient({
       <div className="flex items-baseline gap-2">
         <h1 className="font-heading text-lg font-semibold tracking-wide text-accent">Planner</h1>
         <p className="text-xs text-foreground-muted">
-          Pick a race, see its racials, then plan your talent build — all in one flow.
+          Pick a class, plan your talent build, then check a race beside it for racials — all in one flow.
         </p>
       </div>
 
-      <div className="mt-1 space-y-1">
-        <RacePicker races={races} selectedRaceId={raceId} onSelect={handleSelectRace} />
+      <div className="mt-1 space-y-1.5">
+        <ClassPicker selectedClassId={classId} onSelect={handleSelectClass} />
 
-        {race && (
-          <>
-            <RacialsPanel race={race} racials={getRacialsForRace(race.id)} />
-            <ClassPicker
-              allowedClasses={race.allowedClasses}
-              selectedClassId={classId}
-              onSelect={handleSelectClass}
-            />
-          </>
-        )}
+        <div className="flex flex-wrap items-center justify-end gap-2">
+          <span className="text-xs text-foreground-muted">
+            {totalSpent} / {MAX_TALENT_POINTS} pts
+          </span>
+          <button
+            type="button"
+            onClick={() => setCompareMode((v) => !v)}
+            aria-pressed={compareMode}
+            className={`rounded border px-2 py-0.5 text-xs transition-colors ${
+              compareMode
+                ? "border-sky-400/70 text-sky-300 bg-sky-400/10"
+                : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
+            }`}
+          >
+            Compare to Classic
+          </button>
+          <button
+            type="button"
+            onClick={resetBuild}
+            className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
+          >
+            Reset
+          </button>
+          <button
+            type="button"
+            onClick={handleCopyLink}
+            className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover"
+          >
+            {copied ? "Copied!" : "Copy share link"}
+          </button>
+        </div>
 
-        {classData && (
-          <section>
-            <ClassHero classId={classData.class} />
-            <div className="mb-1.5 mt-2 flex flex-wrap items-center justify-end gap-2">
-              <span className="text-xs text-foreground-muted">
-                {totalSpent} / {MAX_TALENT_POINTS} pts
-              </span>
-              <button
-                type="button"
-                onClick={() => setCompareMode((v) => !v)}
-                aria-pressed={compareMode}
-                className={`rounded border px-2 py-0.5 text-xs transition-colors ${
-                  compareMode
-                    ? "border-sky-400/70 text-sky-300 bg-sky-400/10"
-                    : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
-                }`}
-              >
-                Compare to Classic
-              </button>
-              <button
-                type="button"
-                onClick={resetBuild}
-                className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
-              >
-                Reset
-              </button>
-              <button
-                type="button"
-                onClick={handleCopyLink}
-                className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover"
-              >
-                {copied ? "Copied!" : "Copy share link"}
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-2">
+        {classData && <ClassHero classId={classData.class} />}
+
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <RacePicker races={eligibleRaces} selectedRaceId={raceId} onSelect={handleSelectRace} />
+
+          {classData && (
+            <div className="flex min-w-0 flex-1 flex-wrap gap-2">
               {classData.trees.map((tree) => (
                 <TalentTreeGrid
                   key={tree.name}
@@ -181,8 +167,8 @@ export default function PlannerClient({
                 />
               ))}
             </div>
-          </section>
-        )}
+          )}
+        </div>
       </div>
 
       <div className="mt-8">

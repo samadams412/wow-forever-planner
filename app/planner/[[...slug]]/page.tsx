@@ -6,12 +6,12 @@ export default async function PlannerPage({
   params: Promise<{ slug?: string[] }>;
 }) {
   const { slug = [] } = await params;
-  const [raceId, classId, buildCode] = slug;
+  const [classId, raceId, buildCode] = slug;
 
   return (
     <PlannerClient
-      initialRaceId={raceId ?? null}
       initialClassId={classId ?? null}
+      initialRaceId={raceId ?? null}
       initialBuildCode={buildCode ?? null}
     />
   );
