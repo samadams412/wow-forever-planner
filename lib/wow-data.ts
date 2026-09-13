@@ -6,6 +6,7 @@ import hunterData from "@/data/talents/hunter.json";
 import rogueData from "@/data/talents/rogue.json";
 import priestData from "@/data/talents/priest.json";
 import shamanData from "@/data/talents/shaman.json";
+import mageData from "@/data/talents/mage.json";
 
 export type Confidence = "confirmed" | "datamined" | "estimated";
 export type TalentStatus = "new" | "changed" | "moved" | "unchanged";
@@ -77,6 +78,7 @@ const CLASS_TALENT_DATA: Record<string, ClassTalentData> = {
   rogue: rogueData as ClassTalentData,
   priest: priestData as ClassTalentData,
   shaman: shamanData as ClassTalentData,
+  mage: mageData as ClassTalentData,
 };
 
 export const races: Race[] = racesData as Race[];
