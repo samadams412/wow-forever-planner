@@ -1,27 +1,34 @@
 import Link from "next/link";
+import { GitBranch, BookOpen, Compass, PenLine } from "lucide-react";
 import Card from "@/components/site/Card";
 import LaunchCountdown from "@/components/site/LaunchCountdown";
+
+const ICON_CLASS = "h-5 w-5 text-accent";
 
 const links = [
   {
     href: "/planner",
     label: "Planner",
     description: "Pick a race and class, then plan your talent build.",
+    icon: <GitBranch className={ICON_CLASS} />,
   },
   {
     href: "/reference",
     label: "Reference",
     description: "Racials and race/class rules at a glance.",
+    icon: <BookOpen className={ICON_CLASS} />,
   },
   {
     href: "/guides",
     label: "Guides",
     description: "Leveling tips, class impressions, and patch breakdowns.",
+    icon: <Compass className={ICON_CLASS} />,
   },
   {
     href: "/blog",
     label: "Blog",
     description: "Dated posts on beta impressions and updates.",
+    icon: <PenLine className={ICON_CLASS} />,
   },
 ];
 
@@ -53,7 +60,13 @@ export default function Home() {
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
           {links.map((link) => (
-            <Card key={link.href} href={link.href} title={link.label} description={link.description} />
+            <Card
+              key={link.href}
+              href={link.href}
+              title={link.label}
+              description={link.description}
+              icon={link.icon}
+            />
           ))}
         </div>
       </div>
