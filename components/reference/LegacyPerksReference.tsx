@@ -16,7 +16,7 @@ function TreeColumn({ tree }: { tree: LegacyPerkTree }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={mediumIconUrl(perk.icon)} alt="" className="h-7 w-7 shrink-0 rounded-sm" />
             <div>
-              <span className="text-sm font-medium text-foreground">{perk.name}</span>{" "}
+              <span className="text-sm font-medium text-accent">{perk.name}</span>{" "}
               <span className="text-xs text-foreground-muted">
                 ({perk.ranks} rank{perk.ranks > 1 ? "s" : ""})
               </span>
