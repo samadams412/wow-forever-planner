@@ -1,10 +1,7 @@
-import { spellbooks, SPELLBOOK_CLASS_ORDER, type SpellbookEntry } from "@/lib/spellbooks";
-import { mediumIconUrl, CLASS_ICON, CLASS_COLOR } from "@/lib/wow-data";
+import Link from "next/link";
+import { spellbooks, SPELLBOOK_CLASS_ORDER, type SpellbookEntry, type NewAbility } from "@/lib/spellbooks";
+import { mediumIconUrl, CLASS_ICON, CLASS_COLOR, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
-
-function classLabel(classId: string): string {
-  return classId.charAt(0).toUpperCase() + classId.slice(1);
-}
 
 function SpellPill({ spell }: { spell: SpellbookEntry }) {
   return (
@@ -22,21 +19,25 @@ function SpellPill({ spell }: { spell: SpellbookEntry }) {
   );
 }
 
-function NewAbilityCard({ ability }: { ability: { name: string; status: string; note: string } }) {
+function NewAbilityCard({ ability }: { ability: NewAbility }) {
   const confirmed = ability.status === "confirmed";
   return (
-    <div className="rounded border border-border bg-background/40 p-2.5">
-      <div className="flex items-center gap-2">
-        <span className="text-sm font-semibold text-foreground">{ability.name}</span>
-        <span
-          className={`rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
-            confirmed ? "bg-green-400/15 text-green-400" : "bg-foreground-muted/15 text-foreground-muted"
-          }`}
-        >
-          {confirmed ? "Confirmed" : "Unconfirmed"}
-        </span>
+    <div className="flex gap-2.5 rounded border border-border bg-background/40 p-2.5">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={mediumIconUrl(ability.icon)} alt="" className="h-8 w-8 shrink-0 rounded-sm" />
+      <div>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold text-foreground">{ability.name}</span>
+          <span
+            className={`rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
+              confirmed ? "bg-green-400/15 text-green-400" : "bg-foreground-muted/15 text-foreground-muted"
+            }`}
+          >
+            {confirmed ? "Confirmed" : "Unconfirmed"}
+          </span>
+        </div>
+        <p className="mt-1 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{ability.note}</p>
       </div>
-      <p className="mt-1 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{ability.note}</p>
     </div>
   );
 }
@@ -54,6 +55,10 @@ function ClassSection({ classId }: { classId: string }) {
         <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-8 w-8 rounded" />
       }
     >
+      <Link href="/reference" className="mb-3 inline-block text-xs text-accent hover:underline">
+        ← Back to references
+      </Link>
+
       {book.notes.length > 0 && (
         <ul className="mb-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-foreground-muted">
           {book.notes.map((note) => (
@@ -65,10 +70,7 @@ function ClassSection({ classId }: { classId: string }) {
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {book.tabs.map((tab) => (
           <div key={tab.name}>
-            <h4
-              className="mb-1.5 font-heading text-xs font-semibold uppercase tracking-wide"
-              style={{ color }}
-            >
+            <h4 className="mb-1.5 font-heading text-xs font-semibold uppercase tracking-wide" style={{ color }}>
               {tab.name}
             </h4>
             <div className="flex flex-wrap gap-1.5">

@@ -17,6 +17,7 @@ export type NewAbility = {
   name: string;
   status: "confirmed" | "unconfirmed";
   note: string;
+  icon: string;
 };
 
 export type ClassSpellbook = {

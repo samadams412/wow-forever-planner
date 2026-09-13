@@ -110,6 +110,10 @@ export const CLASS_COLOR: Record<string, string> = {
   druid: "#FF7D0A",
 };
 
+export function classLabel(classId: string): string {
+  return classId.charAt(0).toUpperCase() + classId.slice(1);
+}
+
 export const races: Race[] = racesData as Race[];
 export const racialsByRace: Record<string, Racial[]> = racialsData as Record<string, Racial[]>;
 

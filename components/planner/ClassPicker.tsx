@@ -1,10 +1,6 @@
-import { mediumIconUrl, getClassTalentData, CLASS_ICON } from "@/lib/wow-data";
+import { mediumIconUrl, getClassTalentData, CLASS_ICON, classLabel } from "@/lib/wow-data";
 
 const ALL_CLASS_IDS = Object.keys(CLASS_ICON);
-
-function label(classId: string): string {
-  return classId.charAt(0).toUpperCase() + classId.slice(1);
-}
 
 export default function ClassPicker({
   selectedClassId,
@@ -41,7 +37,7 @@ export default function ClassPicker({
               alt=""
               className={`h-7 w-7 rounded-sm ${!hasData ? "opacity-40 grayscale" : ""}`}
             />
-            <span className="text-center text-[10px] leading-tight">{label(classId)}</span>
+            <span className="text-center text-[10px] leading-tight">{classLabel(classId)}</span>
           </button>
         );
       })}

@@ -1,8 +1,4 @@
-import { mediumIconUrl, CLASS_COLOR } from "@/lib/wow-data";
-
-function label(classId: string): string {
-  return classId.charAt(0).toUpperCase() + classId.slice(1);
-}
+import { mediumIconUrl, CLASS_COLOR, classLabel } from "@/lib/wow-data";
 
 export default function ClassHero({ classId }: { classId: string }) {
   const color = CLASS_COLOR[classId] ?? "var(--accent)";
@@ -20,7 +16,7 @@ export default function ClassHero({ classId }: { classId: string }) {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={mediumIconUrl(`class_${classId}`)} alt="" className="h-9 w-9 rounded" />
       <h2 className="font-heading text-lg font-semibold tracking-wide" style={{ color }}>
-        {label(classId)}
+        {classLabel(classId)}
       </h2>
     </div>
   );
