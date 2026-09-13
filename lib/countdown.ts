@@ -1,5 +1,34 @@
 const LAUNCH_TIME_ZONE = "America/Chicago";
 
+// How far `timeZone`'s wall clock reads from UTC at `instant`, in ms
+// (negative west of UTC, e.g. -6h for America/Chicago in CST). Reads the
+// live offset via Intl.DateTimeFormat so it reflects whatever DST rule is
+// in effect at that instant, rather than a hardcoded offset.
+function getTimeZoneOffsetMs(instant: Date, timeZone: string): number {
+  const parts: Record<string, string> = {};
+  for (const part of new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    hourCycle: "h23",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).formatToParts(instant)) {
+    if (part.type !== "literal") parts[part.type] = part.value;
+  }
+  const asUtc = Date.UTC(
+    Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+    Number(parts.hour),
+    Number(parts.minute),
+    Number(parts.second)
+  );
+  return asUtc - instant.getTime();
+}
+
 // Resolves a wall-clock date/time in `timeZone` to the correct UTC instant,
 // so DST transitions (e.g. CDT vs. CST) are handled by the platform's tz
 // database instead of a hardcoded offset.
@@ -13,11 +42,8 @@ function zonedTimeToUtc(
   timeZone: string
 ): Date {
   const guess = Date.UTC(year, month - 1, day, hour, minute, second);
-  const asIfUtc = new Date(guess);
-  const utcString = asIfUtc.toLocaleString("en-US", { timeZone: "UTC" });
-  const zonedString = asIfUtc.toLocaleString("en-US", { timeZone });
-  const offset = new Date(utcString).getTime() - new Date(zonedString).getTime();
-  return new Date(guess + offset);
+  const offsetMs = getTimeZoneOffsetMs(new Date(guess), timeZone);
+  return new Date(guess - offsetMs);
 }
 
 export const LAUNCH_DATE = zonedTimeToUtc(2026, 11, 4, 18, 0, 0, LAUNCH_TIME_ZONE);
