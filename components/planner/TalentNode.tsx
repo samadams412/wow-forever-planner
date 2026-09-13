@@ -3,6 +3,7 @@ import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { TooltipCard, TooltipName, TooltipRank, TooltipDescription, TooltipRequirement } from "./TooltipCard";
 
 const TOOLTIP_WIDTH = 260;
 
@@ -80,28 +81,24 @@ export default function TalentNode({
 
       {tooltipPos &&
         createPortal(
-          <div
-            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-3 text-left shadow-lg backdrop-blur-sm"
-            style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}
-          >
-            <span className="text-sm font-medium text-foreground">{talent.name}</span>
-            {currentRankText && (
-              <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
-                {formatTooltipText(currentRankText)}
-              </p>
-            )}
+          <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
+            <TooltipName>{talent.name}</TooltipName>
+            <TooltipRank>
+              Rank {rank}/{talent.maxRank}
+            </TooltipRank>
+            {currentRankText && <TooltipDescription>{formatTooltipText(currentRankText)}</TooltipDescription>}
             {nextRankText && (
-              <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground-muted/70">
-                <span className="text-foreground-muted">Next rank:</span> {formatTooltipText(nextRankText)}
-              </p>
+              <TooltipDescription muted>
+                Next Rank: {formatTooltipText(nextRankText)}
+              </TooltipDescription>
             )}
             {talent.prereq && (
-              <p className="mt-1.5 text-xs text-foreground-muted/70">
+              <TooltipRequirement>
                 Requires {talent.prereq.ranks} rank{talent.prereq.ranks > 1 ? "s" : ""} in{" "}
                 {prereqName ?? "prerequisite talent"}
-              </p>
+              </TooltipRequirement>
             )}
-          </div>,
+          </TooltipCard>,
           document.body
         )}
     </div>

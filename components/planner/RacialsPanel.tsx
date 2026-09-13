@@ -3,6 +3,7 @@ import type { Race, Racial } from "@/lib/wow-data";
 import { mediumIconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { TooltipCard, TooltipName, TooltipType, TooltipDescription } from "./TooltipCard";
 
 const TOOLTIP_WIDTH = 260;
 
@@ -27,17 +28,11 @@ function RacialTile({ racial }: { racial: Racial }) {
 
       {pos &&
         createPortal(
-          <div
-            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-3 text-left shadow-lg backdrop-blur-sm"
-            style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}
-          >
-            <span className="text-sm font-medium text-foreground">
-              {racial.name} <span className="text-[10px] uppercase text-foreground-muted">{racial.type}</span>
-            </span>
-            <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
-              {formatTooltipText(racial.description)}
-            </p>
-          </div>,
+          <TooltipCard style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}>
+            <TooltipName>{racial.name}</TooltipName>
+            <TooltipType>{racial.type}</TooltipType>
+            <TooltipDescription>{formatTooltipText(racial.description)}</TooltipDescription>
+          </TooltipCard>,
           document.body
         )}
     </>
