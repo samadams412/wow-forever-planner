@@ -25,7 +25,7 @@ const links = [
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col items-center px-6 py-24">
+    <main className="flex-1 flex flex-col items-center px-6 py-16">
       <div className="max-w-2xl w-full">
         <h1 className="font-heading text-3xl font-semibold tracking-wide text-accent">Forevercraft</h1>
         <p className="mt-2 text-foreground-muted">

@@ -9,6 +9,7 @@ import RacePicker from "@/components/planner/RacePicker";
 import RacialsPanel from "@/components/planner/RacialsPanel";
 import ClassPicker from "@/components/planner/ClassPicker";
 import RaceReferenceTable from "@/components/planner/RaceReferenceTable";
+import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
 
 function buildPlannerPath(raceId: string | null, classId: string | null, code: string | null): string {
@@ -133,29 +134,25 @@ export default function PlannerClient({
 
         {classData && (
           <section>
-            <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
-                Spend talent points
-              </h2>
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-foreground-muted">
-                  {totalSpent} / {MAX_TALENT_POINTS} pts
-                </span>
-                <button
-                  type="button"
-                  onClick={resetBuild}
-                  className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
-                >
-                  Reset
-                </button>
-                <button
-                  type="button"
-                  onClick={handleCopyLink}
-                  className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover"
-                >
-                  {copied ? "Copied!" : "Copy share link"}
-                </button>
-              </div>
+            <ClassHero classId={classData.class} />
+            <div className="mb-1.5 mt-2 flex flex-wrap items-center justify-end gap-2">
+              <span className="text-xs text-foreground-muted">
+                {totalSpent} / {MAX_TALENT_POINTS} pts
+              </span>
+              <button
+                type="button"
+                onClick={resetBuild}
+                className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
+              >
+                Reset
+              </button>
+              <button
+                type="button"
+                onClick={handleCopyLink}
+                className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover"
+              >
+                {copied ? "Copied!" : "Copy share link"}
+              </button>
             </div>
             <div className="flex flex-wrap gap-2">
               {classData.trees.map((tree) => (
