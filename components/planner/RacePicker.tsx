@@ -80,7 +80,7 @@ export default function RacePicker({
   return (
     <section className="flex w-full shrink-0 flex-col gap-1 sm:w-40">
       <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
-        Race
+        Eligible Races
       </h2>
       <div className="flex flex-col gap-1">
         {races.map((race) => (
