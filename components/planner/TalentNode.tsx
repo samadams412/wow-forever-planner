@@ -4,7 +4,7 @@ import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 
-const TOOLTIP_WIDTH = 224;
+const TOOLTIP_WIDTH = 260;
 
 export default function TalentNode({
   talent,
@@ -81,20 +81,22 @@ export default function TalentNode({
       {tooltipPos &&
         createPortal(
           <div
-            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-2.5 text-left shadow-lg backdrop-blur-sm"
+            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-3 text-left shadow-lg backdrop-blur-sm"
             style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}
           >
             <span className="text-sm font-medium text-foreground">{talent.name}</span>
             {currentRankText && (
-              <p className="mt-1 text-xs text-foreground-muted">{formatTooltipText(currentRankText)}</p>
+              <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
+                {formatTooltipText(currentRankText)}
+              </p>
             )}
             {nextRankText && (
-              <p className="mt-1 text-xs text-foreground-muted/60">
-                <span className="text-foreground-muted/80">Next rank:</span> {formatTooltipText(nextRankText)}
+              <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground-muted/70">
+                <span className="text-foreground-muted">Next rank:</span> {formatTooltipText(nextRankText)}
               </p>
             )}
             {talent.prereq && (
-              <p className="mt-1 text-[11px] text-foreground-muted/70">
+              <p className="mt-1.5 text-xs text-foreground-muted/70">
                 Requires {talent.prereq.ranks} rank{talent.prereq.ranks > 1 ? "s" : ""} in{" "}
                 {prereqName ?? "prerequisite talent"}
               </p>

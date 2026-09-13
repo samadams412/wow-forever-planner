@@ -4,7 +4,7 @@ import { mediumIconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 
-const TOOLTIP_WIDTH = 224;
+const TOOLTIP_WIDTH = 260;
 
 function RacialTile({ racial }: { racial: Racial }) {
   const { ref, pos, show, hide } = useHoverTooltip<HTMLButtonElement>(TOOLTIP_WIDTH);
@@ -28,13 +28,15 @@ function RacialTile({ racial }: { racial: Racial }) {
       {pos &&
         createPortal(
           <div
-            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-2.5 text-left shadow-lg backdrop-blur-sm"
+            className="pointer-events-none fixed z-50 rounded-lg border border-border bg-surface/80 p-3 text-left shadow-lg backdrop-blur-sm"
             style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}
           >
             <span className="text-sm font-medium text-foreground">
               {racial.name} <span className="text-[10px] uppercase text-foreground-muted">{racial.type}</span>
             </span>
-            <p className="mt-1 text-xs text-foreground-muted">{formatTooltipText(racial.description)}</p>
+            <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
+              {formatTooltipText(racial.description)}
+            </p>
           </div>,
           document.body
         )}

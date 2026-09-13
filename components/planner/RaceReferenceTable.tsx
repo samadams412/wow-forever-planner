@@ -35,9 +35,9 @@ function RaceBlock({ race }: { race: Race }) {
           </div>
         </div>
       </div>
-      <ul className={`mt-2 space-y-1 border-t ${style.border} pt-2`}>
+      <ul className={`mt-2 space-y-2.5 border-t ${style.border} pt-2.5`}>
         {racials.map((r) => (
-          <li key={r.name} className="text-xs text-foreground-muted">
+          <li key={r.name} className="max-w-[60ch] text-sm leading-relaxed text-foreground/90">
             <span className="font-semibold text-foreground">{r.name}:</span>{" "}
             {formatTooltipText(r.description)}
           </li>
