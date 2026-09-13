@@ -121,17 +121,14 @@ export default function PlannerClient({
         <RacePicker races={races} selectedRaceId={raceId} onSelect={handleSelectRace} />
 
         {race && (
-          <>
-            <RacialsPanel race={race} racials={getRacialsForRace(race.id)} />
-            <ClassPicker
-              allowedClasses={race.allowedClasses}
-              selectedClassId={classId}
-              onSelect={handleSelectClass}
-            />
-          </>
+          <ClassPicker
+            allowedClasses={race.allowedClasses}
+            selectedClassId={classId}
+            onSelect={handleSelectClass}
+          />
         )}
 
-        <RaceReferenceTable races={races} selectedClassId={classId} />
+        <RaceReferenceTable races={races} />
 
         {classData && (
           <section>
@@ -174,6 +171,8 @@ export default function PlannerClient({
             </div>
           </section>
         )}
+
+        {race && <RacialsPanel race={race} racials={getRacialsForRace(race.id)} />}
       </div>
     </main>
   );
