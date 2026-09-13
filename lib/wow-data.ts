@@ -1,6 +1,7 @@
 import racesData from "@/data/races.json";
 import racialsData from "@/data/racials.json";
 import warriorData from "@/data/talents/warrior.json";
+import paladinData from "@/data/talents/paladin.json";
 
 export type Confidence = "confirmed" | "datamined" | "estimated";
 export type TalentStatus = "new" | "changed" | "moved" | "unchanged";
@@ -29,6 +30,7 @@ export type ClassicTalentInfo = {
   col?: number;
   maxRank?: number;
   text?: string;
+  renamedFrom?: string;
 };
 
 export type Talent = {
@@ -39,6 +41,7 @@ export type Talent = {
   maxRank: number;
   ranks: string[];
   prereq: { id: string; ranks: number } | null;
+  reqText?: string;
   status: TalentStatus;
   confidence: Confidence;
   icon: string;
@@ -50,13 +53,22 @@ export type TalentTree = {
   talents: Talent[];
 };
 
+export type InferredBaselineAbility = {
+  name: string;
+  description: string;
+  confidence: "inferred";
+  mentionedBy: string[];
+};
+
 export type ClassTalentData = {
   class: string;
   trees: TalentTree[];
+  inferredBaselineAbilities?: InferredBaselineAbility[];
 };
 
 const CLASS_TALENT_DATA: Record<string, ClassTalentData> = {
   warrior: warriorData as ClassTalentData,
+  paladin: paladinData as ClassTalentData,
 };
 
 export const races: Race[] = racesData as Race[];

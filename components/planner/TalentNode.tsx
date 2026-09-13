@@ -113,6 +113,7 @@ export default function TalentNode({
                 {prereqName ?? "prerequisite talent"}
               </TooltipRequirement>
             )}
+            {talent.reqText && <TooltipRequirement>{talent.reqText}</TooltipRequirement>}
             {compareMode && talent.classic && (
               <TooltipClassicNote
                 status={talent.status}
@@ -122,6 +123,12 @@ export default function TalentNode({
                     : undefined
                 }
               >
+                {talent.classic.renamedFrom && (
+                  <>
+                    Was called &quot;{talent.classic.renamedFrom}&quot; in Classic.
+                    <br />
+                  </>
+                )}
                 {talent.classic.text ? formatTooltipText(talent.classic.text) : null}
               </TooltipClassicNote>
             )}
