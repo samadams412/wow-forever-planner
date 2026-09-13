@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { spellbooks, SPELLBOOK_CLASS_ORDER, type SpellbookEntry, type NewAbility } from "@/lib/spellbooks";
 import { mediumIconUrl, CLASS_ICON, CLASS_COLOR, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
@@ -55,10 +54,6 @@ function ClassSection({ classId }: { classId: string }) {
         <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-8 w-8 rounded" />
       }
     >
-      <Link href="/reference" className="mb-3 inline-block text-xs text-accent hover:underline">
-        ← Back to references
-      </Link>
-
       {book.notes.length > 0 && (
         <ul className="mb-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-foreground-muted">
           {book.notes.map((note) => (
