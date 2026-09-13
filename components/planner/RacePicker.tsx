@@ -12,7 +12,7 @@ export default function RacePicker({
 }) {
   return (
     <section>
-      <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
+      <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         1. Choose your race
       </h2>
       <div className="mt-1 grid grid-cols-5 gap-1.5 sm:grid-cols-10">

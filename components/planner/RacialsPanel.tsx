@@ -45,7 +45,7 @@ function RacialTile({ racial }: { racial: Racial }) {
 export default function RacialsPanel({ race, racials }: { race: Race; racials: Racial[] }) {
   return (
     <section>
-      <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
+      <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         {race.name} racials
       </h2>
       <div className="mt-1 grid grid-cols-5 gap-1.5 sm:grid-cols-10">

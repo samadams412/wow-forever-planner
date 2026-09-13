@@ -29,7 +29,7 @@ function RaceBlock({ race }: { race: Race }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={mediumIconUrl(race.icon)} alt="" className="h-8 w-8 shrink-0 rounded-sm" />
         <div>
-          <div className="font-medium text-foreground">{race.name}</div>
+          <div className="font-heading font-medium tracking-wide text-foreground">{race.name}</div>
           <div className="text-[11px] text-foreground-muted">
             {race.allowedClasses.map(classLabel).join(", ")}
           </div>
@@ -53,7 +53,7 @@ function FactionHeader({ faction }: { faction: keyof typeof FACTION_STYLES }) {
     <div className={`flex items-center gap-1.5 border-b ${style.border} pb-1`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={mediumIconUrl(style.icon)} alt="" className="h-4 w-4 rounded-sm" />
-      <h3 className={`text-[11px] font-semibold uppercase tracking-wide ${style.text}`}>
+      <h3 className={`font-heading text-[11px] font-semibold uppercase tracking-wide ${style.text}`}>
         {faction}
       </h3>
     </div>
@@ -66,7 +66,7 @@ export default function RaceReferenceTable({ races }: { races: Race[] }) {
 
   return (
     <section>
-      <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
+      <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
         Race reference
       </h2>
       <div className="mt-1.5 grid gap-3 sm:grid-cols-2">

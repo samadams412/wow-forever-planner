@@ -26,9 +26,9 @@ export default function TalentTreeGrid({
   const spent = pointsSpentInTree(tree, ranks);
 
   return (
-    <div className="w-full max-w-[308px] rounded-lg border border-border bg-surface p-3">
+    <div className="w-full max-w-77 rounded-lg border border-border bg-surface p-3">
       <div className="mb-1.5 flex items-center justify-between px-0.5">
-        <h3 className="text-sm font-semibold text-foreground">{tree.name}</h3>
+        <h3 className="font-heading text-sm font-semibold tracking-wide text-foreground">{tree.name}</h3>
         <span className="text-xs text-foreground-muted">{spent} pts</span>
       </div>
       <div

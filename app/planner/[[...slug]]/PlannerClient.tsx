@@ -111,7 +111,7 @@ export default function PlannerClient({
   return (
     <main className="mx-auto max-w-6xl px-3 py-1 sm:px-4">
       <div className="flex items-baseline gap-2">
-        <h1 className="text-lg font-semibold text-accent">Planner</h1>
+        <h1 className="font-heading text-lg font-semibold tracking-wide text-accent">Planner</h1>
         <p className="text-xs text-foreground-muted">
           Pick a race, see its racials, then plan your talent build — all in one flow.
         </p>
@@ -134,7 +134,7 @@ export default function PlannerClient({
         {classData && (
           <section>
             <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
-              <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">
+              <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
                 Spend talent points
               </h2>
               <div className="flex items-center gap-2">
