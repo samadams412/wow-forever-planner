@@ -172,7 +172,9 @@ export default function PlannerClient({
             </div>
           </section>
         )}
+      </div>
 
+      <div className="mt-8">
         <RaceReferenceTable races={races} />
       </div>
     </main>

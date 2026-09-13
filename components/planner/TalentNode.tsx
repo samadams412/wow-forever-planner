@@ -72,7 +72,7 @@ export default function TalentNode({
           className={`h-full w-full object-cover ${locked ? "grayscale" : ""}`}
         />
         <span
-          className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[9px] font-semibold leading-tight ${badgeTextClass}`}
+          className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[12px] font-semibold leading-tight ${badgeTextClass}`}
         >
           {rank}/{talent.maxRank}
         </span>
