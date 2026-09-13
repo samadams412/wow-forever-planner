@@ -1,0 +1,1184 @@
+{
+  "class": "shaman",
+  "trees": [
+    {
+      "name": "Elemental Combat",
+      "talents": [
+        {
+          "id": "elemental_convection",
+          "name": "Convection",
+          "tier": 1,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 2%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 4%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 6%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 8%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 10%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_wispsplode",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 1,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Reduces the mana cost of your Shock, Lightning Bolt and Chain Lightning spells by 2%."
+          }
+        },
+        {
+          "id": "elemental_concussion",
+          "name": "Concussion",
+          "tier": 1,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 2%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 3%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 4%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_fire_fireball",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 1,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Increases the damage done by your Lightning Bolt, Chain Lightning and Shock spells by 1%."
+          }
+        },
+        {
+          "id": "elemental_elemental_warding",
+          "name": "Elemental Warding",
+          "tier": 2,
+          "col": 1,
+          "maxRank": 3,
+          "ranks": [
+            "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
+            "Reduces damage taken from Fire, Frost, and Nature effects by 6%.",
+            "Reduces damage taken from Fire, Frost, and Nature effects by 9%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_spiritarmor",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 2,
+            "col": 2,
+            "maxRank": 3,
+            "text": "Reduces damage taken from Fire, Frost and Nature effects by 4%."
+          }
+        },
+        {
+          "id": "elemental_reverberation",
+          "name": "Reverberation",
+          "tier": 2,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the cooldown of your Shock spells by 0.2 sec.",
+            "Reduces the cooldown of your Shock spells by 0.4 sec.",
+            "Reduces the cooldown of your Shock spells by 0.6 sec.",
+            "Reduces the cooldown of your Shock spells by 0.8 sec.",
+            "Reduces the cooldown of your Shock spells by 1 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_frost_frostward",
+          "classic": {
+            "status": "moved",
+            "tree": "Elemental Combat",
+            "tier": 3,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Reduces the cooldown of your Shock spells by 0.2 sec."
+          }
+        },
+        {
+          "id": "elemental_call_of_flame",
+          "name": "Call of Flame",
+          "tier": 2,
+          "col": 3,
+          "maxRank": 3,
+          "ranks": [
+            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_fire_immolation",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 2,
+            "col": 3,
+            "maxRank": 3,
+            "text": "Increases the damage done by your Fire Totems by 5%."
+          }
+        },
+        {
+          "id": "elemental_elemental_devastation",
+          "name": "Elemental Devastation",
+          "tier": 2,
+          "col": 4,
+          "maxRank": 3,
+          "ranks": [
+            "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 3% for 10 sec.",
+            "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 6% for 10 sec.",
+            "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 9% for 10 sec."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "classic_spell_fire_elementaldevastation",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 4,
+            "col": 4,
+            "maxRank": 3,
+            "text": "Your offensive spell crits will increase your chance to get a critical strike with melee attacks by 3% for 10 sec."
+          }
+        },
+        {
+          "id": "elemental_elemental_focus",
+          "name": "Elemental Focus",
+          "tier": 3,
+          "col": 2,
+          "maxRank": 1,
+          "ranks": [
+            "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "unchanged",
+          "icon": "spell_shadow_manaburn",
+          "classic": {
+            "status": "unchanged",
+            "tree": "Elemental Combat",
+            "tier": 3,
+            "col": 1,
+            "maxRank": 1,
+            "text": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          }
+        },
+        {
+          "id": "elemental_elemental_fury",
+          "name": "Elemental Fury",
+          "tier": 3,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 20%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 40%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 60%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 80%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_fire_volcano",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 5,
+            "col": 2,
+            "maxRank": 1,
+            "text": "Increases the critical strike damage bonus of your Searing, Magma, and Fire Nova Totems and your Fire, Frost, and Nature spells by 100%."
+          }
+        },
+        {
+          "id": "elemental_improved_fire_nova",
+          "name": "Improved Fire Nova",
+          "tier": 4,
+          "col": 1,
+          "maxRank": 2,
+          "ranks": [
+            "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec.",
+            "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_fire_sealoffire",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 4,
+            "col": 1,
+            "maxRank": 2,
+            "text": "Reduces the delay before your Fire Nova Totem activates by 1 sec. and decreases the threat generated by your Magma Totem by 25%.",
+            "renamedFrom": "Improved Fire Totems"
+          }
+        },
+        {
+          "id": "elemental_eye_of_the_storm",
+          "name": "Eye of the Storm",
+          "tier": 4,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 23%.",
+            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 46%.",
+            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 69%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_eyeofthestorm",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 4,
+            "col": 2,
+            "maxRank": 3,
+            "text": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage."
+          }
+        },
+        {
+          "id": "elemental_call_of_thunder",
+          "name": "Call of Thunder",
+          "tier": 4,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 3%."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "elemental_elemental_fury",
+            "ranks": 5
+          },
+          "status": "moved",
+          "icon": "spell_nature_callstorm",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 3,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by an additional 1%."
+          }
+        },
+        {
+          "id": "elemental_elemental_reach",
+          "name": "Elemental Reach",
+          "tier": 5,
+          "col": 1,
+          "maxRank": 2,
+          "ranks": [
+            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards, and increases the range of your Flame Shock spell by 8 yards.",
+            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, and increases the range of your Flame Shock spell by 16 yards."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_stormreach",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 5,
+            "col": 1,
+            "maxRank": 2,
+            "text": "Increases the range of your Lightning Bolt and Chain Lightning spells by 3 yards.",
+            "renamedFrom": "Storm Reach"
+          }
+        },
+        {
+          "id": "elemental_lightning_overload",
+          "name": "Lightning Overload",
+          "tier": 5,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 6% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 9% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_nature_lightningoverload",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "elemental_earthbound",
+          "name": "Earthbound",
+          "tier": 5,
+          "col": 4,
+          "maxRank": 1,
+          "ranks": [
+            "Your Earthbind Totem immobilizes nearby targets for 5 sec when cast."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_nature_strengthofearthtotem02",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "elemental_elemental_alacrity",
+          "name": "Elemental Alacrity",
+          "tier": 6,
+          "col": 3,
+          "maxRank": 3,
+          "ranks": [
+            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.17 sec.",
+            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.3 sec.",
+            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.5 sec."
+          ],
+          "confidence": "estimated",
+          "prereq": {
+            "id": "elemental_call_of_thunder",
+            "ranks": 1
+          },
+          "status": "changed",
+          "icon": "spell_nature_unrelentingstorm",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental Combat",
+            "tier": 6,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.2 sec.",
+            "renamedFrom": "Lightning Mastery"
+          }
+        },
+        {
+          "id": "elemental_lava_burst",
+          "name": "Lava Burst",
+          "tier": 7,
+          "col": 2,
+          "maxRank": 1,
+          "ranks": [
+            "You hurl molten lava at the target, dealing 158 to 187 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "elemental_lightning_overload",
+            "ranks": 3
+          },
+          "status": "new",
+          "icon": "spell_shaman_lavaburst",
+          "classic": {
+            "status": "new"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enhancement",
+      "talents": [
+        {
+          "id": "enhancement_earths_grasp",
+          "name": "Earth's Grasp",
+          "tier": 1,
+          "col": 1,
+          "maxRank": 2,
+          "ranks": [
+            "Increases the health of your Stoneclaw Totem by 25% and the radius of your Earthbind Totem by 10%.",
+            "Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_nature_stoneclawtotem",
+          "classic": {
+            "status": "moved",
+            "tree": "Elemental Combat",
+            "tier": 2,
+            "col": 1,
+            "maxRank": 2,
+            "text": "Increases the health of your Stoneclaw Totem by 25% and the radius of your Earthbind Totem by 10%."
+          }
+        },
+        {
+          "id": "enhancement_thundering_strikes",
+          "name": "Thundering Strikes",
+          "tier": 1,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Improves your chance to get a critical strike with all spells and attacks by 1%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 2%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 3%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 4%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 5%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "ability_thunderbolt",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 2,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Improves your chance to get a critical strike with your weapon attacks by 1%."
+          }
+        },
+        {
+          "id": "enhancement_ancestral_knowledge",
+          "name": "Ancestral Knowledge",
+          "tier": 1,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Increases your Intellect by 2%.",
+            "Increases your Intellect by 4%.",
+            "Increases your Intellect by 6%.",
+            "Increases your Intellect by 8%.",
+            "Increases your Intellect by 10%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_shadow_grimward",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 1,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Increases your maximum Mana by 1%."
+          }
+        },
+        {
+          "id": "enhancement_guardian_totems",
+          "name": "Guardian Totems",
+          "tier": 2,
+          "col": 1,
+          "maxRank": 2,
+          "ranks": [
+            "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec.",
+            "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "unchanged",
+          "icon": "spell_nature_stoneskintotem",
+          "classic": {
+            "status": "unchanged",
+            "tree": "Enhancement",
+            "tier": 2,
+            "col": 1,
+            "maxRank": 2,
+            "text": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec."
+          }
+        },
+        {
+          "id": "enhancement_mental_dexterity",
+          "name": "Mental Dexterity",
+          "tier": 2,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Increases your Attack Power by an amount equal to 33% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 66% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 99% of your Intellect."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_nature_mentalquickness",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "enhancement_improved_ghost_wolf",
+          "name": "Improved Ghost Wolf",
+          "tier": 2,
+          "col": 3,
+          "maxRank": 2,
+          "ranks": [
+            "Reduces the cast time of your Ghost Wolf spell by 1.0 sec. and Ghost Wolf may be used indoors.",
+            "Reduces the cast time of your Ghost Wolf spell by 2.0 sec. and Ghost Wolf may be used indoors."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_spiritwolf",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 2,
+            "col": 3,
+            "maxRank": 2,
+            "text": "Reduces the cast time of your Ghost Wolf spell by 1 sec."
+          }
+        },
+        {
+          "id": "enhancement_improved_lightning_shield",
+          "name": "Improved Lightning Shield",
+          "tier": 2,
+          "col": 4,
+          "maxRank": 3,
+          "ranks": [
+            "Increases the damage done by your Lightning Shield orbs by 5%.",
+            "Increases the damage done by your Lightning Shield orbs by 10%.",
+            "Increases the damage done by your Lightning Shield orbs by 15%."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "unchanged",
+          "icon": "spell_nature_lightningshield",
+          "classic": {
+            "status": "unchanged",
+            "tree": "Enhancement",
+            "tier": 2,
+            "col": 4,
+            "maxRank": 3,
+            "text": "Increases the damage done by your Lightning Shield orbs by 5%."
+          }
+        },
+        {
+          "id": "enhancement_elemental_weapons",
+          "name": "Elemental Weapons",
+          "tier": 3,
+          "col": 1,
+          "maxRank": 3,
+          "ranks": [
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 14%, your Windfury Weapon effect by 27% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 10%.",
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_fire_flametounge",
+          "classic": {
+            "status": "moved",
+            "tree": "Enhancement",
+            "tier": 5,
+            "col": 2,
+            "maxRank": 3,
+            "text": "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%."
+          }
+        },
+        {
+          "id": "enhancement_shamanistic_focus",
+          "name": "Shamanistic Focus",
+          "tier": 3,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_nature_elementalabsorption",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "enhancement_anticipation",
+          "name": "Anticipation",
+          "tier": 3,
+          "col": 4,
+          "maxRank": 3,
+          "ranks": [
+            "Increases your chance to dodge by an additional 2%.",
+            "Increases your chance to dodge by an additional 4%.",
+            "Increases your chance to dodge by an additional 6%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_mirrorimage",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 3,
+            "col": 4,
+            "maxRank": 5,
+            "text": "Increases your chance to dodge by an additional 1%."
+          }
+        },
+        {
+          "id": "enhancement_toughness",
+          "name": "Toughness",
+          "tier": 4,
+          "col": 1,
+          "maxRank": 5,
+          "ranks": [
+            "Increases your Stamina by 2%.",
+            "Increases your Stamina by 4%.",
+            "Increases your Stamina by 6%.",
+            "Increases your Stamina by 8%.",
+            "Increases your Stamina by 10%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_holy_devotion",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 4,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Increases your armor value from items by 2%."
+          }
+        },
+        {
+          "id": "enhancement_flurry",
+          "name": "Flurry",
+          "tier": 4,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Increases your attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 15% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+          ],
+          "confidence": "estimated",
+          "prereq": {
+            "id": "enhancement_mental_dexterity",
+            "ranks": 3
+          },
+          "status": "changed",
+          "icon": "ability_ghoulfrenzy",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 4,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Increases your attack speed by 10% for your next 3 swings after dealing a critical strike."
+          }
+        },
+        {
+          "id": "enhancement_stormstrike",
+          "name": "Stormstrike",
+          "tier": 4,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "Instantly strike for normal weapon damage and increase Nature damage you deal to the target by 20% for 12 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_holy_sealofmight",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 7,
+            "col": 2,
+            "maxRank": 1,
+            "text": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec."
+          }
+        },
+        {
+          "id": "enhancement_spirit_weapons",
+          "name": "Spirit Weapons",
+          "tier": 5,
+          "col": 1,
+          "maxRank": 1,
+          "ranks": [
+            "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "changed",
+          "icon": "ability_parry",
+          "classic": {
+            "status": "changed",
+            "tree": "Enhancement",
+            "tier": 5,
+            "col": 3,
+            "maxRank": 1,
+            "text": "Gives a chance to parry enemy melee attacks.",
+            "renamedFrom": "Parry"
+          }
+        },
+        {
+          "id": "enhancement_mental_quickness",
+          "name": "Mental Quickness",
+          "tier": 5,
+          "col": 2,
+          "maxRank": 2,
+          "ranks": [
+            "Increases your spell damage and healing by up to 15% of your Intellect.",
+            "Increases your spell damage and healing by up to 30% of your Intellect."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_nature_mentalquickness",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "enhancement_improved_stormstrike",
+          "name": "Improved Stormstrike",
+          "tier": 5,
+          "col": 3,
+          "maxRank": 2,
+          "ranks": [
+            "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry.",
+            "When you Stormstrike, you have a 100% chance to gain 100% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry."
+          ],
+          "confidence": "estimated",
+          "prereq": {
+            "id": "enhancement_stormstrike",
+            "ranks": 1
+          },
+          "status": "new",
+          "icon": "ability_shaman_stormstrike",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "enhancement_maelstrom_weapon",
+          "name": "Maelstrom Weapon",
+          "tier": 6,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 4%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 10 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 15 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 20 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 25 times. Lasts 30 sec."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_shaman_maelstromweapon",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "enhancement_rage_of_the_farseer",
+          "name": "Rage of the Farseer",
+          "tier": 7,
+          "col": 2,
+          "maxRank": 1,
+          "ranks": [
+            "Increases your melee attack speed and spell casting speed by 30% for 25 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "enhancement_mental_quickness",
+            "ranks": 2
+          },
+          "status": "new",
+          "icon": "spell_nature_bloodlust",
+          "classic": {
+            "status": "new"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Restoration",
+      "talents": [
+        {
+          "id": "restoration_improved_healing_wave",
+          "name": "Improved Healing Wave",
+          "tier": 1,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the casting time of your Healing Wave spell by 0.1 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.2 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.3 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.4 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.5 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "unchanged",
+          "icon": "spell_nature_magicimmunity",
+          "classic": {
+            "status": "unchanged",
+            "tree": "Restoration",
+            "tier": 1,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Reduces the casting time of your Healing Wave spell by 0.1 sec."
+          }
+        },
+        {
+          "id": "restoration_tidal_mastery",
+          "name": "Tidal Mastery",
+          "tier": 1,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Increases the critical effect chance of your healing spells by 1%.",
+            "Increases the critical effect chance of your healing spells by 2%.",
+            "Increases the critical effect chance of your healing spells by 3%.",
+            "Increases the critical effect chance of your healing spells by 4%.",
+            "Increases the critical effect chance of your healing spells by 5%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_nature_tranquility",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 4,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Increases the critical effect chance of your healing and lightning spells by 1%."
+          }
+        },
+        {
+          "id": "restoration_mindfulness",
+          "name": "Mindfulness",
+          "tier": 2,
+          "col": 1,
+          "maxRank": 3,
+          "ranks": [
+            "Allows 17% of your Mana regeneration to continue while casting.",
+            "Allows 34% of your Mana regeneration to continue while casting.",
+            "Allows 51% of your Mana regeneration to continue while casting."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_nature_sleep",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "restoration_natural_grace",
+          "name": "Natural Grace",
+          "tier": 2,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Reduces the threat generated by your spells by 5%.",
+            "Reduces the threat generated by your spells by 10%.",
+            "Reduces the threat generated by your spells by 15%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_nature_naturetouchgrow",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 3,
+            "col": 4,
+            "maxRank": 3,
+            "text": "Reduces the threat generated by your healing spells by 5%.",
+            "renamedFrom": "Healing Grace"
+          }
+        },
+        {
+          "id": "restoration_tidal_focus",
+          "name": "Tidal Focus",
+          "tier": 2,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the Mana cost of your healing spells by 1% and increases your chance to hit with all spells and attacks by 1%.",
+            "Reduces the Mana cost of your healing spells by 2% and increases your chance to hit with all spells and attacks by 2%.",
+            "Reduces the Mana cost of your healing spells by 3% and increases your chance to hit with all spells and attacks by 3%.",
+            "Reduces the Mana cost of your healing spells by 4% and increases your chance to hit with all spells and attacks by 4%.",
+            "Reduces the Mana cost of your healing spells by 5% and increases your chance to hit with all spells and attacks by 5%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_frost_manarecharge",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 1,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Reduces the Mana cost of your healing spells by 1%."
+          }
+        },
+        {
+          "id": "restoration_improved_reincarnation",
+          "name": "Improved Reincarnation",
+          "tier": 2,
+          "col": 4,
+          "maxRank": 2,
+          "ranks": [
+            "Reduces the cooldown of your Reincarnation spell by 10 min, increases your maximum health by 2%, and increases the amount of health and Mana you reincarnate with by an additional 10%.",
+            "Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_reincarnation",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 2,
+            "col": 1,
+            "maxRank": 2,
+            "text": "Reduces the cooldown of your Reincarnation spell by 10 min and increases the amount of health and mana you reincarnate with by an additional 10%."
+          }
+        },
+        {
+          "id": "restoration_ancestral_healing",
+          "name": "Ancestral Healing",
+          "tier": 3,
+          "col": 1,
+          "maxRank": 3,
+          "ranks": [
+            "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells.",
+            "Increases your target's armor value by 16% for 15 sec after getting a critical effect from one of your healing spells.",
+            "Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_nature_undyingstrength",
+          "classic": {
+            "status": "moved",
+            "tree": "Restoration",
+            "tier": 2,
+            "col": 2,
+            "maxRank": 3,
+            "text": "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells."
+          }
+        },
+        {
+          "id": "restoration_healing_focus",
+          "name": "Healing Focus",
+          "tier": 3,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Gives you a 23% chance to avoid interruption caused by damage while casting any healing spell.",
+            "Gives you a 46% chance to avoid interruption caused by damage while casting any healing spell.",
+            "Gives you a 69% chance to avoid interruption caused by damage while casting any healing spell."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_healingwavelesser",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 3,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Gives you a 14% chance to avoid interruption caused by damage while casting any healing spell."
+          }
+        },
+        {
+          "id": "restoration_water_shield",
+          "name": "Water Shield",
+          "tier": 3,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's healing spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "new",
+          "icon": "ability_shaman_watershield",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "restoration_totemic_focus",
+          "name": "Totemic Focus",
+          "tier": 4,
+          "col": 1,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 5%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 10%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 15%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 20%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 25%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_nature_moonglow",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 2,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Reduces the Mana cost of your totems by 5%."
+          }
+        },
+        {
+          "id": "restoration_restorative_totems",
+          "name": "Restorative Totems",
+          "tier": 4,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Increases the effect of your Mana Spring Totem by 5% and increases the effect of your Healing Stream Totem by 10%.",
+            "Increases the effect of your Mana Spring Totem by 10% and increases the effect of your Healing Stream Totem by 20%.",
+            "Increases the effect of your Mana Spring Totem by 15% and increases the effect of your Healing Stream Totem by 30%.",
+            "Increases the effect of your Mana Spring Totem by 20% and increases the effect of your Healing Stream Totem by 40%.",
+            "Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_nature_manaregentotem",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 4,
+            "col": 2,
+            "maxRank": 5,
+            "text": "Increases the effect of your Mana Spring and Healing Stream Totems by 5%."
+          }
+        },
+        {
+          "id": "restoration_mana_tide_totem",
+          "name": "Mana Tide Totem",
+          "tier": 4,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_frost_summonwaterelemental",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 7,
+            "col": 2,
+            "maxRank": 1,
+            "text": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 170 mana every 3 seconds to group members within 20 yards."
+          }
+        },
+        {
+          "id": "restoration_healing_way",
+          "name": "Healing Way",
+          "tier": 5,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Increases the amount healed by your Healing Wave spell by 8%.",
+            "Increases the amount healed by your Healing Wave spell by 16%.",
+            "Increases the amount healed by your Healing Wave spell by 24%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "classic_spell_nature_healingway",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 5,
+            "col": 1,
+            "maxRank": 3,
+            "text": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec. This effect will stack up to 3 times."
+          }
+        },
+        {
+          "id": "restoration_natures_swiftness",
+          "name": "Nature's Swiftness",
+          "tier": 5,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "unchanged",
+          "icon": "spell_nature_ravenform",
+          "classic": {
+            "status": "unchanged",
+            "tree": "Restoration",
+            "tier": 5,
+            "col": 3,
+            "maxRank": 1,
+            "text": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell."
+          }
+        },
+        {
+          "id": "restoration_purification",
+          "name": "Purification",
+          "tier": 6,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Increases the effectiveness of your healing spells by 2%.",
+            "Increases the effectiveness of your healing spells by 4%.",
+            "Increases the effectiveness of your healing spells by 6%.",
+            "Increases the effectiveness of your healing spells by 8%.",
+            "Increases the effectiveness of your healing spells by 10%."
+          ],
+          "confidence": "estimated",
+          "prereq": null,
+          "status": "changed",
+          "icon": "spell_frost_wizardmark",
+          "classic": {
+            "status": "changed",
+            "tree": "Restoration",
+            "tier": 6,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Increases the effectiveness of your healing spells by 2%."
+          }
+        },
+        {
+          "id": "restoration_riptide",
+          "name": "Riptide",
+          "tier": 7,
+          "col": 2,
+          "maxRank": 1,
+          "ranks": [
+            "Heals a friendly target for 479 to 528, an additional 499 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "restoration_healing_way",
+            "ranks": 3
+          },
+          "status": "new",
+          "icon": "spell_nature_riptide",
+          "classic": {
+            "status": "new"
+          }
+        }
+      ]
+    }
+  ]
+}
