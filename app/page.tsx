@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Card from "@/components/site/Card";
 
 const links = [
   {
@@ -25,26 +26,31 @@ const links = [
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col items-center px-6 py-16">
-      <div className="max-w-2xl w-full">
-        <h1 className="font-heading text-3xl font-semibold tracking-wide text-accent">Forevercraft</h1>
+    <main className="flex min-h-[calc(100vh-4rem)] flex-1 flex-col items-center justify-center px-6 py-16">
+      <div className="w-full max-w-2xl">
+        <div className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/forevercraft-mark.svg" alt="" className="h-10 w-10" />
+          <h1 className="font-heading text-3xl font-semibold tracking-wide text-accent">Forevercraft</h1>
+        </div>
         <p className="mt-2 text-foreground-muted">
           A free, fan-made planner and guide hub for World of Warcraft:
           Forever.
         </p>
+        <p className="mt-1 text-sm text-foreground-muted/70">
+          Tracking WoW Forever beta data as of Sept 13, 2026 · Warrior fully built, other classes in progress.
+        </p>
 
-        <div className="mt-10 grid gap-3 sm:grid-cols-2">
+        <Link
+          href="/planner"
+          className="mt-6 inline-block rounded-lg bg-accent px-5 py-2.5 font-medium text-background transition-colors hover:bg-accent-hover"
+        >
+          Start planning →
+        </Link>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
           {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-lg border border-border bg-surface p-4 transition-colors hover:bg-surface-hover hover:border-accent"
-            >
-              <div className="font-medium text-foreground">{link.label}</div>
-              <p className="mt-1 text-sm text-foreground-muted">
-                {link.description}
-              </p>
-            </Link>
+            <Card key={link.href} href={link.href} title={link.label} description={link.description} />
           ))}
         </div>
       </div>

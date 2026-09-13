@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Card from "@/components/site/Card";
+import { mediumIconUrl } from "@/lib/wow-data";
 
 export default function ReferencePage() {
   return (
@@ -13,16 +15,15 @@ export default function ReferencePage() {
       </p>
 
       <div className="mt-6 grid gap-3">
-        <Link
+        <Card
           href="/reference/legacy-perks"
-          className="rounded-lg border border-border bg-surface p-4 transition-colors hover:bg-surface-hover hover:border-accent"
-        >
-          <div className="font-medium text-foreground">Legacy Perks</div>
-          <p className="mt-1 text-sm text-foreground-muted">
-            Account-wide perks and rewards from the Legacy System -- static reference until the point
-            cap is confirmed.
-          </p>
-        </Link>
+          title="Legacy Perks"
+          description="Account-wide perks and cosmetic rewards from the Legacy System -- all three perk trees plus known reward items, sourced from the BlizzCon 2026 demo and Wowhead's beta coverage. Static reference until the point cap is confirmed."
+          icon={
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={mediumIconUrl("inv_misc_book_09")} alt="" className="h-7 w-7 rounded-sm" />
+          }
+        />
       </div>
     </main>
   );
