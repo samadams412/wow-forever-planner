@@ -14,6 +14,7 @@ export default function TalentTreeGrid({
   totalSpent,
   onAdd,
   onRemove,
+  compareMode,
 }: {
   classId: string;
   tree: TalentTree;
@@ -21,6 +22,7 @@ export default function TalentTreeGrid({
   totalSpent: number;
   onAdd: (talentId: string) => void;
   onRemove: (talentId: string) => void;
+  compareMode?: boolean;
 }) {
   const byId = new Map(tree.talents.map((t) => [t.id, t]));
   const spent = pointsSpentInTree(tree, ranks);
@@ -68,6 +70,7 @@ export default function TalentTreeGrid({
             onAdd={() => onAdd(t.id)}
             onRemove={() => onRemove(t.id)}
             prereqName={t.prereq ? byId.get(t.prereq.id)?.name : undefined}
+            compareMode={compareMode}
           />
         ))}
       </div>

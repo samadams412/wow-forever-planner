@@ -22,6 +22,15 @@ export type Racial = {
   icon: string;
 };
 
+export type ClassicTalentInfo = {
+  status: TalentStatus;
+  tree?: string;
+  tier?: number;
+  col?: number;
+  maxRank?: number;
+  text?: string;
+};
+
 export type Talent = {
   id: string;
   name: string;
@@ -33,6 +42,7 @@ export type Talent = {
   status: TalentStatus;
   confidence: Confidence;
   icon: string;
+  classic?: ClassicTalentInfo;
 };
 
 export type TalentTree = {

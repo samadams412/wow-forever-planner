@@ -1,4 +1,6 @@
 import type { CSSProperties, ReactNode } from "react";
+import type { TalentStatus } from "@/lib/wow-data";
+import { STATUS_LABEL, STATUS_TEXT_CLASS } from "@/lib/talent-status";
 
 // Classic WoW tooltip color language: dark navy card, thin gold border,
 // bold white name, grey rank line, gold-yellow type label, green effect
@@ -39,4 +41,24 @@ export function TooltipDescription({ children, muted }: { children: ReactNode; m
 
 export function TooltipRequirement({ children }: { children: ReactNode }) {
   return <p className="mt-1.5 text-xs text-[#ff4040]">{children}</p>;
+}
+
+export function TooltipClassicNote({
+  status,
+  position,
+  children,
+}: {
+  status: TalentStatus;
+  position?: string;
+  children?: ReactNode;
+}) {
+  return (
+    <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
+      <div className={`text-xs font-semibold uppercase tracking-wide ${STATUS_TEXT_CLASS[status]}`}>
+        {STATUS_LABEL[status]} since Classic
+        {position ? ` — was ${position}` : ""}
+      </div>
+      {children && <p className="mt-1 max-w-[60ch] text-xs leading-relaxed text-gray-400">{children}</p>}
+    </div>
+  );
 }

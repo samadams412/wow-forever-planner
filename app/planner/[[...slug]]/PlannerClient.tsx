@@ -41,6 +41,7 @@ export default function PlannerClient({
     return classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
   });
   const [copied, setCopied] = useState(false);
+  const [compareMode, setCompareMode] = useState(false);
 
   const race = raceId ? getRaceById(raceId) : undefined;
   const classData = classId ? getClassTalentData(classId) : undefined;
@@ -141,6 +142,18 @@ export default function PlannerClient({
               </span>
               <button
                 type="button"
+                onClick={() => setCompareMode((v) => !v)}
+                aria-pressed={compareMode}
+                className={`rounded border px-2 py-0.5 text-xs transition-colors ${
+                  compareMode
+                    ? "border-sky-400/70 text-sky-300 bg-sky-400/10"
+                    : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
+                }`}
+              >
+                Compare to Classic
+              </button>
+              <button
+                type="button"
                 onClick={resetBuild}
                 className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
               >
@@ -164,6 +177,7 @@ export default function PlannerClient({
                   totalSpent={totalSpent}
                   onAdd={addPoint}
                   onRemove={removePoint}
+                  compareMode={compareMode}
                 />
               ))}
             </div>
