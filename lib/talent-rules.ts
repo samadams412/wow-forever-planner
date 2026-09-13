@@ -2,18 +2,29 @@ import type { Talent, TalentTree } from "@/lib/wow-data";
 import type { RankState } from "@/lib/build-code";
 
 export const POINTS_PER_ROW = 5;
+export const MAX_TALENT_POINTS = 51;
 
 export function pointsSpentInTree(tree: TalentTree, ranks: RankState): number {
   return tree.talents.reduce((sum, t) => sum + (ranks[t.id] ?? 0), 0);
+}
+
+export function totalPointsSpent(trees: TalentTree[], ranks: RankState): number {
+  return trees.reduce((sum, tree) => sum + pointsSpentInTree(tree, ranks), 0);
 }
 
 export function tierUnlocked(tier: number, pointsInTree: number): boolean {
   return pointsInTree >= POINTS_PER_ROW * (tier - 1);
 }
 
-export function canAddPoint(tree: TalentTree, talent: Talent, ranks: RankState): boolean {
+export function canAddPoint(
+  tree: TalentTree,
+  talent: Talent,
+  ranks: RankState,
+  totalSpent: number
+): boolean {
   const current = ranks[talent.id] ?? 0;
   if (current >= talent.maxRank) return false;
+  if (totalSpent >= MAX_TALENT_POINTS) return false;
   if (!tierUnlocked(talent.tier, pointsSpentInTree(tree, ranks))) return false;
   if (talent.prereq) {
     const prereqRank = ranks[talent.prereq.id] ?? 0;

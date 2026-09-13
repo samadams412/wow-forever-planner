@@ -11,12 +11,14 @@ export default function TalentTreeGrid({
   classId,
   tree,
   ranks,
+  totalSpent,
   onAdd,
   onRemove,
 }: {
   classId: string;
   tree: TalentTree;
   ranks: RankState;
+  totalSpent: number;
   onAdd: (talentId: string) => void;
   onRemove: (talentId: string) => void;
 }) {
@@ -62,7 +64,7 @@ export default function TalentTreeGrid({
             key={t.id}
             talent={t}
             rank={ranks[t.id] ?? 0}
-            canAdd={canAddPoint(tree, t, ranks)}
+            canAdd={canAddPoint(tree, t, ranks, totalSpent)}
             onAdd={() => onAdd(t.id)}
             onRemove={() => onRemove(t.id)}
             prereqName={t.prereq ? byId.get(t.prereq.id)?.name : undefined}

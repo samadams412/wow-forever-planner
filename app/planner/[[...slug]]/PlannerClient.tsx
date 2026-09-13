@@ -1,49 +1,53 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { races, getRaceById, getRacialsForRace, getClassTalentData } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
-import { canAddPoint, canRemovePoint, pointsSpentInTree } from "@/lib/talent-rules";
+import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from "@/lib/talent-rules";
 import RacePicker from "@/components/planner/RacePicker";
 import RacialsPanel from "@/components/planner/RacialsPanel";
 import ClassPicker from "@/components/planner/ClassPicker";
+import RaceReferenceTable from "@/components/planner/RaceReferenceTable";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
 
-const MAX_TALENT_POINTS = 51;
-
-function readFromUrl() {
-  if (typeof window === "undefined") return { raceId: null, classId: null, ranks: {} as RankState };
-  const params = new URLSearchParams(window.location.search);
-  const raceId = params.get("r");
-  const classId = params.get("c");
-  const code = params.get("b");
-  const classData = classId ? getClassTalentData(classId) : undefined;
-  const ranks = classData && code ? decodeBuild(classData, code) : {};
-  return { raceId, classId, ranks };
+function buildPlannerPath(raceId: string | null, classId: string | null, code: string | null): string {
+  const parts: string[] = [];
+  if (raceId) {
+    parts.push(raceId);
+    if (classId) {
+      parts.push(classId);
+      if (code) parts.push(code);
+    }
+  }
+  return parts.length ? `/planner/${parts.join("/")}` : "/planner";
 }
 
-export default function PlannerClient() {
-  // This component is only ever rendered client-side (see page.tsx), so it's
-  // safe for the initial state to read from the URL directly.
-  const [raceId, setRaceId] = useState<string | null>(() => readFromUrl().raceId);
-  const [classId, setClassId] = useState<string | null>(() => readFromUrl().classId);
-  const [ranks, setRanks] = useState<RankState>(() => readFromUrl().ranks);
+export default function PlannerClient({
+  initialRaceId,
+  initialClassId,
+  initialBuildCode,
+}: {
+  initialRaceId: string | null;
+  initialClassId: string | null;
+  initialBuildCode: string | null;
+}) {
+  const router = useRouter();
+  const [raceId, setRaceId] = useState<string | null>(initialRaceId);
+  const [classId, setClassId] = useState<string | null>(initialClassId);
+  const [ranks, setRanks] = useState<RankState>(() => {
+    const classData = initialClassId ? getClassTalentData(initialClassId) : undefined;
+    return classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
+  });
   const [copied, setCopied] = useState(false);
 
   const race = raceId ? getRaceById(raceId) : undefined;
   const classData = classId ? getClassTalentData(classId) : undefined;
 
   useEffect(() => {
-    const params = new URLSearchParams();
-    if (raceId) params.set("r", raceId);
-    if (classId) params.set("c", classId);
-    if (classData && Object.keys(ranks).length > 0) {
-      params.set("b", encodeBuild(classData, ranks));
-    }
-    const query = params.toString();
-    const url = query ? `${window.location.pathname}?${query}` : window.location.pathname;
-    window.history.replaceState(null, "", url);
-  }, [raceId, classId, ranks, classData]);
+    const code = classData && Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : null;
+    router.replace(buildPlannerPath(raceId, classId, code), { scroll: false });
+  }, [raceId, classId, ranks, classData, router]);
 
   const handleSelectRace = useCallback(
     (id: string) => {
@@ -68,7 +72,7 @@ export default function PlannerClient() {
       const tree = classData.trees.find((t) => t.talents.some((tal) => tal.id === talentId));
       const talent = tree?.talents.find((tal) => tal.id === talentId);
       if (!tree || !talent) return;
-      if (!canAddPoint(tree, talent, ranks)) return;
+      if (!canAddPoint(tree, talent, ranks, totalPointsSpent(classData.trees, ranks))) return;
       setRanks((prev) => ({ ...prev, [talentId]: (prev[talentId] ?? 0) + 1 }));
     },
     [classData, ranks]
@@ -92,9 +96,7 @@ export default function PlannerClient() {
 
   const resetBuild = useCallback(() => setRanks({}), []);
 
-  const totalSpent = classData
-    ? classData.trees.reduce((sum, tree) => sum + pointsSpentInTree(tree, ranks), 0)
-    : 0;
+  const totalSpent = classData ? totalPointsSpent(classData.trees, ranks) : 0;
 
   const handleCopyLink = useCallback(async () => {
     try {
@@ -129,6 +131,8 @@ export default function PlannerClient() {
           </>
         )}
 
+        <RaceReferenceTable races={races} selectedClassId={classId} />
+
         {classData && (
           <section>
             <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
@@ -162,6 +166,7 @@ export default function PlannerClient() {
                   classId={classData.class}
                   tree={tree}
                   ranks={ranks}
+                  totalSpent={totalSpent}
                   onAdd={addPoint}
                   onRemove={removePoint}
                 />
