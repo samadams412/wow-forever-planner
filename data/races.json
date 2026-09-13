@@ -1,0 +1,137 @@
+[
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "faction": "Alliance",
+    "allowedClasses": [
+      "hunter",
+      "paladin",
+      "priest",
+      "rogue",
+      "shaman",
+      "warrior"
+    ],
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+  },
+  {
+    "id": "gnome",
+    "name": "Gnome",
+    "faction": "Alliance",
+    "allowedClasses": [
+      "mage",
+      "priest",
+      "rogue",
+      "warlock",
+      "warrior"
+    ],
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+  },
+  {
+    "id": "human",
+    "name": "Human",
+    "faction": "Alliance",
+    "allowedClasses": [
+      "hunter",
+      "mage",
+      "paladin",
+      "priest",
+      "rogue",
+      "warlock",
+      "warrior"
+    ],
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+  },
+  {
+    "id": "night-elf",
+    "name": "Night Elf",
+    "faction": "Alliance",
+    "allowedClasses": [
+      "druid",
+      "hunter",
+      "priest",
+      "rogue",
+      "warrior"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "faction": "Horde",
+    "allowedClasses": [
+      "hunter",
+      "mage",
+      "rogue",
+      "shaman",
+      "warlock",
+      "warrior"
+    ],
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+  },
+  {
+    "id": "skyborne-horde",
+    "name": "Skyborne",
+    "faction": "Horde",
+    "allowedClasses": [
+      "druid",
+      "hunter",
+      "rogue",
+      "shaman",
+      "warrior"
+    ],
+    "notes": "Present only in the forevertalent reference data; warcraft-forever-talent-calc has no entry for this race at all. Ability icons in the source are placeholders and descriptions are thin -- treat this race's existence in Forever as unconfirmed."
+  },
+  {
+    "id": "skyborne-alliance",
+    "name": "Skyborne",
+    "faction": "Alliance",
+    "allowedClasses": [
+      "druid",
+      "hunter",
+      "mage",
+      "rogue",
+      "warrior"
+    ],
+    "notes": "Present only in the forevertalent reference data; warcraft-forever-talent-calc has no entry for this race at all. Ability icons in the source are placeholders and descriptions are thin -- treat this race's existence in Forever as unconfirmed."
+  },
+  {
+    "id": "tauren",
+    "name": "Tauren",
+    "faction": "Horde",
+    "allowedClasses": [
+      "druid",
+      "hunter",
+      "shaman",
+      "warrior"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "troll",
+    "name": "Troll",
+    "faction": "Horde",
+    "allowedClasses": [
+      "hunter",
+      "mage",
+      "priest",
+      "rogue",
+      "shaman",
+      "warrior"
+    ],
+    "notes": "forevertalent's racial list for this race is a verbatim duplicate of the Skyborne race's abilities (Walk on Air / Skysight / Wind Blessed / Elemental Insight) -- almost certainly a copy-paste bug in that source, not a real Forever change. Used warcraft-forever-talent-calc's classic-accurate racial kit instead."
+  },
+  {
+    "id": "undead",
+    "name": "Undead",
+    "faction": "Horde",
+    "allowedClasses": [
+      "mage",
+      "paladin",
+      "priest",
+      "rogue",
+      "warlock",
+      "warrior"
+    ],
+    "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes."
+  }
+]
