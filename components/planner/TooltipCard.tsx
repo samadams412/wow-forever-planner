@@ -43,6 +43,27 @@ export function TooltipRequirement({ children }: { children: ReactNode }) {
   return <p className="mt-1.5 text-xs text-[#ff4040]">{children}</p>;
 }
 
+// A cost/range/cast-time/cooldown row, e.g. ["15 Rage", "Melee Range"] --
+// mirrors the two-column stat lines under a spell's name in-game.
+export function TooltipStatLine({ left, right }: { left: string; right: string }) {
+  return (
+    <div className="mt-0.5 flex justify-between gap-3 text-xs text-gray-300">
+      <span>{left}</span>
+      {right && <span>{right}</span>}
+    </div>
+  );
+}
+
+export function TooltipSourceNote({ confirmed, source }: { confirmed: boolean; source?: string }) {
+  return confirmed ? (
+    <p className="mt-1.5 text-[10px] font-semibold text-[#1eff00]">
+      Read from demo footage{source ? ` — ${source}` : ""}
+    </p>
+  ) : (
+    <p className="mt-1.5 text-[10px] text-gray-500">Classic-era text — Forever may differ</p>
+  );
+}
+
 export function TooltipClassicNote({
   status,
   position,

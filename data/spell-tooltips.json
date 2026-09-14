@@ -1,0 +1,4422 @@
+{
+  "Warrior|Throw": {
+    "lines": [],
+    "description": "Hurl a thrown weapon at the target.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Shoot Bow": {
+    "lines": [],
+    "description": "Attack with an equipped wand.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Shoot Crossbow": {
+    "lines": [],
+    "description": "Attack with an equipped wand.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Shoot Gun": {
+    "lines": [],
+    "description": "Attack with an equipped wand.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Dual Wield": {
+    "lines": [],
+    "description": "Allows one-hand and off-hand weapons to be equipped in the off-hand.",
+    "confirmed": false
+  },
+  "Warrior|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Warrior|Block": {
+    "lines": [],
+    "description": "Gives a chance to block enemy melee and ranged attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Warrior|Parry": {
+    "lines": [],
+    "description": "Gives a chance to parry enemy melee attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Battle Stance": {
+    "lines": [
+      [
+        "Instant",
+        "1 sec cooldown"
+      ]
+    ],
+    "description": "A balanced combat stance.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Charge": {
+    "lines": [
+      [
+        "8-25 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "15 sec cooldown"
+      ],
+      [
+        "Requires Battle Stance",
+        ""
+      ]
+    ],
+    "description": "Charge an enemy, generate 12 Rage, and Stun it for 1 sec. Cannot be used in combat.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep"
+  },
+  "Warrior|Hamstring": {
+    "lines": [
+      [
+        "10 Rage",
+        "Melee Range"
+      ]
+    ],
+    "description": "Maims the enemy, causing 18 damage and slowing the enemy's movement by 45% for 15 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warrior|Heroic Strike": {
+    "lines": [
+      [
+        "15 Rage",
+        "Melee Range"
+      ]
+    ],
+    "description": "A strong attack that increases melee damage by 58 and causes a high amount of threat.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warrior|Mocking Blow": {
+    "lines": [
+      [
+        "10 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant cast",
+        "2 min cooldown"
+      ]
+    ],
+    "description": "A mocking attack that causes 46 damage, a moderate amount of threat and forces the target to focus attacks on you for 6 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warrior|Overpower": {
+    "lines": [
+      [
+        "5 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "5 sec cooldown"
+      ],
+      [
+        "Requires Battle Stance",
+        ""
+      ]
+    ],
+    "description": "Instantly overpower the enemy, causing weapon damage plus 15. Only useable after the target dodges. The Overpower cannot be blocked, dodged or parried.",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep"
+  },
+  "Warrior|Rend": {
+    "lines": [
+      [
+        "10 Rage",
+        "Melee Range"
+      ]
+    ],
+    "description": "Wounds the target causing them to bleed for 66 damage over 18 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Warrior|Retaliation": {
+    "lines": [
+      [
+        "Instant",
+        "15 min cooldown"
+      ],
+      [
+        "Requires Battle Stance",
+        ""
+      ]
+    ],
+    "description": "Instantly counterattack any enemy that strikes you in melee for 15 sec. Melee attacks made from behind cannot be counterattacked. A maximum of 30 attacks will cause retaliation.",
+    "confirmed": true,
+    "source": "Savix's Warrior, 12 Sep"
+  },
+  "Warrior|Thunder Clap": {
+    "lines": [
+      [
+        "20 Rage",
+        ""
+      ],
+      [
+        "Instant cast",
+        "4 sec cooldown"
+      ]
+    ],
+    "description": "Blasts nearby enemies with thunder increasing the time between their attacks by 10% for 22 sec and doing 55 damage to them.  Will affect up to 4 targets.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Warrior|Victory Rush": {
+    "lines": [
+      [
+        "Melee Range",
+        ""
+      ],
+      [
+        "Instant",
+        "8 sec cooldown"
+      ]
+    ],
+    "description": "Instantly attack the target causing (1 + Attack Power * 45 / 100) damage and healing you for 30% of your maximum health.  Only useable within 20 sec after you kill an enemy that yields experience or honor.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warrior|Tactical Mastery": {
+    "lines": [],
+    "description": "You retain up to 5 of your rage points when you change stances.",
+    "confirmed": false
+  },
+  "Warrior|Battle Shout": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 94.  Lasts 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warrior|Berserker Rage": {
+    "lines": [
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage.  Lasts 10 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warrior|Berserker Stance": {
+    "lines": [
+      [
+        "Instant",
+        "1 sec cooldown"
+      ]
+    ],
+    "description": "An aggressive stance.  Critical hit chance is increased by 3% and all damage taken is increased by 10%.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Warrior|Challenging Shout": {
+    "lines": [
+      [
+        "5 Rage",
+        ""
+      ],
+      [
+        "Instant cast",
+        "10 min cooldown"
+      ]
+    ],
+    "description": "Forces all nearby enemies to focus attacks on you for 6 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 26"
+  },
+  "Warrior|Cleave": {
+    "lines": [
+      [
+        "20 Rage",
+        "Melee Range"
+      ]
+    ],
+    "description": "A sweeping attack that does your weapon damage plus 10 to the target and his nearest ally.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Warrior|Demoralizing Shout": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "Reduces the melee attack power of all enemies within 10 yards by 80 for 30 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Warrior|Execute": {
+    "lines": [
+      [
+        "15 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Battle Stance, Berserker Stance",
+        ""
+      ]
+    ],
+    "description": "Attempt to finish off a wounded foe, causing 200 damage and converting each extra point of rage into 6 additional damage. Only usable on enemies that have 20% or less health.",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep"
+  },
+  "Warrior|Intimidating Shout": {
+    "lines": [
+      [
+        "25 Rage",
+        "10 yd range"
+      ],
+      [
+        "Instant cast",
+        "3 min cooldown"
+      ]
+    ],
+    "description": "The warrior shouts, causing the targeted enemy to cower in fear.  Up to 5 total nearby enemies will flee in fear.  Lasts 8 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 22"
+  },
+  "Warrior|Pummel": {
+    "lines": [
+      [
+        "10 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant cast",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Pummel the target for 20 damage.  It also interrupts spellcasting and prevents any spell in that school from being cast for 4 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Warrior|Slam": {
+    "lines": [
+      [
+        "15 Rage",
+        "Melee Range"
+      ],
+      [
+        "1.5 sec cast",
+        "15 sec cooldown"
+      ]
+    ],
+    "description": "Slams the opponent, causing weapon damage plus 43.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep"
+  },
+  "Warrior|Whirlwind": {
+    "lines": [
+      [
+        "25 Rage",
+        ""
+      ],
+      [
+        "Instant cast",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "In a whirlwind of steel you attack up to 4 enemies within 8 yards, causing weapon damage to each enemy.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warrior|Bloodrage": {
+    "lines": [
+      [
+        "20% of base health",
+        ""
+      ],
+      [
+        "Instant cast",
+        "1 min cooldown"
+      ]
+    ],
+    "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec.  The warrior is considered in combat for the duration.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Warrior|Defensive Stance": {
+    "lines": [
+      [
+        "Instant",
+        "1 sec cooldown"
+      ]
+    ],
+    "description": "A defensive combat stance.  Decreases damage taken by 10% and damage caused by 10%.  Increases threat generated.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Warrior|Disarm": {
+    "lines": [
+      [
+        "20 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant cast",
+        "1 min cooldown"
+      ]
+    ],
+    "description": "Disarm the enemy's weapon for 10 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 18"
+  },
+  "Warrior|Revenge": {
+    "lines": [
+      [
+        "5 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant cast",
+        "5 sec cooldown"
+      ]
+    ],
+    "description": "Instantly counterattack an enemy for 25 to 31 damage and a high amount of threat.   Revenge must follow a block, dodge or parry.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Warrior|Shield Bash": {
+    "lines": [
+      [
+        "10 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant cast",
+        "12 sec cooldown"
+      ]
+    ],
+    "description": "Bashes the target with your shield for 18 damage.  It also interrupts spellcasting and prevents any spell in that school from being cast for 6 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warrior|Shield Block": {
+    "lines": [
+      [
+        "10 Rage",
+        ""
+      ],
+      [
+        "Instant cast",
+        "5 sec cooldown"
+      ]
+    ],
+    "description": "Increases chance to block by 75% for 5 sec, but will only block 1 attack.",
+    "confirmed": false,
+    "levelReq": "Requires level 16"
+  },
+  "Warrior|Shield Wall": {
+    "lines": [
+      [
+        "Instant",
+        "30 min cooldown"
+      ]
+    ],
+    "description": "Reduces the damage taken from melee attacks, ranged attacks and spells by 75% for 10 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 28"
+  },
+  "Warrior|Sunder Armor": {
+    "lines": [
+      [
+        "15 Rage",
+        "Melee Range"
+      ]
+    ],
+    "description": "Sunders the target's armor, reducing it by 270 per Sunder Armor and causes a high amount of threat.  Can be applied up to 5 times.  Lasts 30 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Warrior|Taunt": {
+    "lines": [
+      [
+        "Melee Range",
+        ""
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Taunts the target to attack you, but has no effect if the target is already attacking you.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Paladin|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Paladin|Block": {
+    "lines": [],
+    "description": "Gives a chance to block enemy melee and ranged attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Paladin|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Paladin|Parry": {
+    "lines": [],
+    "description": "Gives a chance to parry enemy melee attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Paladin|Blessing of Wisdom": {
+    "lines": [
+      [
+        "65 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Places a Blessing on the friendly target, restoring 24 mana every 5 seconds for 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Paladin|Consecration": {
+    "lines": [
+      [
+        "235 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "8 sec cooldown"
+      ]
+    ],
+    "description": "Consecrates the land beneath the Paladin, doing 24 Holy damage over 8 sec to enemies who enter the area. The first 4 enemies who enter the area will take an additional 56 damage over 8 sec.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Exorcism": {
+    "lines": [
+      [
+        "180 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "15 sec cooldown"
+      ]
+    ],
+    "description": "Causes 194 to 218 Holy damage to an Undead or Demon target.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Flash of Light": {
+    "lines": [
+      [
+        "70 Mana",
+        "40 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Heals a friendly target for 101 to 114.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Paladin|Holy Light": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "365 Mana",
+        "40 yd range"
+      ]
+    ],
+    "description": "Heals a friendly target for 717 to 799.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Paladin|Lay on Hands": {
+    "lines": [
+      [
+        "40 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "20 min cooldown"
+      ]
+    ],
+    "description": "Heals a friendly target for an amount equal to the Paladin's maximum health and restores 250 of their mana. Drains all of the Paladin's remaining mana but does not interrupt mana regeneration.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Paladin|Purify": {
+    "lines": [
+      [
+        "75 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Purifies the friendly target, removing 1 disease effect and 1 poison effect.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Redemption": {
+    "lines": [
+      [
+        "80% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Brings a dead player back to life with 250 health and 420 mana.  Cannot be cast when in combat.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Paladin|Seal of Light": {
+    "lines": [
+      [
+        "99 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Fills the Paladin with divine light for 30 sec, giving each melee attack a chance to heal the Paladin for 39. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 40 sec, granting melee attacks made against the judged enemy a chance of healing the attacker for 25. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Paladin|Seal of Righteousness": {
+    "lines": [
+      [
+        "120 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Fills the Paladin with holy spirit for 30 sec, granting each melee attack an additional 10 to 37 Holy damage. Slower weapons cause more Holy damage per swing. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will cause 90 to 99 Holy damage to an enemy.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Seal of Wisdom": {
+    "lines": [
+      [
+        "122 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Fills the Paladin with divine wisdom for 30 sec, giving each melee attack a chance to restore 50 of the Paladin's mana. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 40 sec, granting attacks and spells used against the judged enemy a chance to restore 33 mana to the attacker. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Paladin|Sense Undead": {
+    "lines": [],
+    "description": "Shows the location of all nearby undead on the minimap until cancelled.   Only one type of tracking can be used at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 20"
+  },
+  "Paladin|Turn Undead": {
+    "lines": [
+      [
+        "50 Mana",
+        "20 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "The targeted undead enemy will be compelled to flee for up to 15 sec.  Damage caused may interrupt the effect.  Only one target can be turned at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Paladin|Blessing of Freedom": {
+    "lines": [
+      [
+        "93 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "20 sec cooldown"
+      ]
+    ],
+    "description": "Places a Blessing on the friendly target, granting immunity to movement impairing effects for 10 sec. Players may only have one Blessing on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Xaryu's Paladin, 12 Sep (Savix's talented Paladin showed 75 Mana)"
+  },
+  "Paladin|Blessing of Kings": {
+    "lines": [
+      [
+        "75 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Places a Blessing on the friendly target, increasing total stats by 10% for 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Blessing of Protection": {
+    "lines": [
+      [
+        "65 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "A targeted party member is protected from all physical attacks for 10 sec, but during that time they cannot attack or use physical abilities. Players may only have one Blessing on them per Paladin at any one time. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Blessing of Salvation": {
+    "lines": [
+      [
+        "75 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Places a Blessing on the party member, reducing the amount of all threat generated by 30% for 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Xaryu's Paladin, 12 Sep"
+  },
+  "Paladin|Concentration Aura": {
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Gives a 35% chance of ignoring spell interruption when damaged to all party members within 30 yards. Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Devotion Aura": {
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Gives 390 additional armor to party members within 30 yards. Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Divine Intervention": {
+    "lines": [
+      [
+        "40 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "1 hour cooldown"
+      ]
+    ],
+    "description": "The paladin sacrifices himself to remove the targeted party member from harms way.  Enemies will stop attacking the protected party member, who will be immune to all harmful attacks but cannot take any action for 3 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Paladin|Divine Protection": {
+    "lines": [
+      [
+        "35 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "You are protected from all physical attacks and spells for 8 sec, but during that time you cannot attack or use physical abilities yourself. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Divine Shield": {
+    "lines": [
+      [
+        "68 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "Protects the paladin from all damage and spells for 10 sec, but reduces all damage you deal by 50%. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Paladin|Fire Resistance Aura": {
+    "lines": [],
+    "description": "Gives 30 additional Fire resistance to all party members within 30 yards.  Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Paladin|Frost Resistance Aura": {
+    "lines": [],
+    "description": "Gives 30 additional Frost resistance to all party members within 30 yards.  Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Paladin|Hammer of Justice": {
+    "lines": [
+      [
+        "50 Mana",
+        "10 yd range"
+      ],
+      [
+        "Instant",
+        "1 min cooldown"
+      ]
+    ],
+    "description": "Stuns the target for 4 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 24"
+  },
+  "Paladin|Righteous Fury": {
+    "lines": [
+      [
+        "280 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+    "confirmed": true,
+    "source": "Xaryu's Paladin, 12 Sep"
+  },
+  "Paladin|Seal of Fury": {
+    "lines": [
+      [
+        "120 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 19 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy causes 81 to 90 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Paladin, 12 Sep"
+  },
+  "Paladin|Seal of Justice": {
+    "lines": [],
+    "description": "Fills the Paladin with the spirit of justice for 30 sec, giving each melee attack a chance to stun for 2 sec.  Only one Seal can be active on the Paladin at any one time.Unleashing this Seal's energy will judge an enemy for 10 sec, preventing them from fleeing.  Your melee strikes will refresh the spell's duration.  Only one Judgement per Paladin can be active at any one time.",
+    "confirmed": false,
+    "levelReq": "Requires level 22"
+  },
+  "Paladin|Shadow Resistance Aura": {
+    "lines": [],
+    "description": "Gives 30 additional Shadow resistance to all party members within 30 yards.  Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": false,
+    "levelReq": "Requires level 28"
+  },
+  "Paladin|Blessing of Might": {
+    "lines": [
+      [
+        "60 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Places a Blessing on the friendly target, increasing melee attack power by 61 for 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Xaryu's Paladin, 12 Sep"
+  },
+  "Paladin|Holy Strike": {
+    "lines": [
+      [
+        "14 Mana",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "12 sec cooldown"
+      ]
+    ],
+    "description": "An instant strike that causes 42.0% weapon damage plus an additional 17 to 21 as Holy damage.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep (Soda's Paladin showed 16 Mana, 35% weapon damage plus 10 to 13)"
+  },
+  "Paladin|Judgement": {
+    "lines": [
+      [
+        "91 Mana",
+        "10 yd range"
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Unleashes the energy of a Seal on the target. Judgement no longer consumes the seal. Judging Seal of Fury taunts the target for 4 sec.",
+    "confirmed": true,
+    "source": "BlizzCon Deep Dive panel, 13 Sep"
+  },
+  "Paladin|Retribution Aura": {
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Causes 18 Holy damage to any creature that strikes a party member within 30 yards. Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Soda's Paladin, 13 Sep"
+  },
+  "Paladin|Seal of Command": {
+    "lines": [
+      [
+        "189 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Gives the Paladin a chance to deal additional Holy damage equal to 76% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing 192 to 212 Holy damage, 385 to 424 if the target is stunned or incapacitated.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep (mana costs include his talents)"
+  },
+  "Paladin|Seal of the Crusader": {
+    "lines": [
+      [
+        "81 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Fills the Paladin with the spirit of a crusader for 30 sec, granting 157 melee attack power. The Paladin also attacks 40% faster, but deals less damage with each attack. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 40 sec, increasing Holy damage taken by up to 92. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time.",
+    "confirmed": true,
+    "source": "Savix's Paladin, 12 Sep"
+  },
+  "Hunter|Throw": {
+    "lines": [],
+    "description": "Throws a weapon at an enemy, inflicting 2125 to 2875 damage.",
+    "confirmed": false,
+    "levelReq": "Requires level 62"
+  },
+  "Hunter|Beast Training": {
+    "lines": [],
+    "description": "Lets the Hunter train his pet with various abilities that he has learned.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Hunter|Dual Wield": {
+    "lines": [],
+    "description": "Allows one-hand and off-hand weapons to be equipped in the off-hand.",
+    "confirmed": false
+  },
+  "Hunter|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Hunter|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Hunter|Parry": {
+    "lines": [],
+    "description": "Gives a chance to parry enemy melee attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Hunter|Aspect of the Beast": {
+    "lines": [],
+    "description": "The hunter takes on the aspects of a beast, becoming untrackable.  Only one Aspect can be active at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Hunter|Aspect of the Cheetah": {
+    "lines": [
+      [
+        "40 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "The hunter takes on the aspects of a cheetah, increasing movement speed by 30%. If the hunter takes damage, he will be dazed for 4 sec. Only one Aspect can be active at a time.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Aspect of the Hawk": {
+    "lines": [
+      [
+        "70 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 70. Only one Aspect can be active at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Aspect of the Monkey": {
+    "lines": [
+      [
+        "20 Mana",
+        "100 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "The hunter takes on the aspects of a monkey, increasing chance to dodge by 8%. Only one Aspect can be active at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Beast Lore": {
+    "lines": [
+      [
+        "40 Mana",
+        "40 yd range"
+      ]
+    ],
+    "description": "Gather information about the target beast.  The tooltip will display damage, health, armor, any special resistances, and diet.",
+    "confirmed": false,
+    "levelReq": "Requires level 24"
+  },
+  "Hunter|Call Owl": {
+    "lines": [],
+    "description": "Summons your pet to you.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Hunter|Dismiss Pet": {
+    "lines": [],
+    "description": "Dismiss your pet.  Dismissing your pet will reduce its happiness by 50.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Hunter|Eagle Eye": {
+    "lines": [
+      [
+        "25 Mana",
+        "Unlimited range"
+      ],
+      [
+        "Channeled",
+        ""
+      ]
+    ],
+    "description": "Zooms in the hunter's vision. Only usable outdoors. Lasts 1 min.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Eyes of the Beast": {
+    "lines": [
+      [
+        "20 Mana",
+        "Unlimited range"
+      ],
+      [
+        "2 sec cast",
+        ""
+      ]
+    ],
+    "description": "Take direct control of your pet and see through its eyes for 2 min.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Feed Pet": {
+    "lines": [
+      [
+        "10 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Feed your pet the selected item. Feeding your pet increases happiness. Using food close to the pet's level will have a better result.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Mend Pet": {
+    "lines": [
+      [
+        "225 Mana",
+        "20 yd range"
+      ]
+    ],
+    "description": "Heals your pet 103 health every second while you focus.  Lasts 5 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Hunter|Revive Pet": {
+    "lines": [],
+    "description": "Revive your pet, returning it to life with 15% of its health.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Hunter|Scare Beast": {
+    "lines": [
+      [
+        "50 Mana",
+        "10 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Scares a beast, causing it to run in fear for up to 15 sec.  Damage caused may interrupt the effect.  Only one beast can be feared at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Hunter|Tame Beast": {
+    "lines": [
+      [
+        "60% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Begins taming a beast to be your companion.  Your armor is reduced by 100% while you focus on taming the beast for 20 sec.  If you lose the beast's attention for any reason, the taming process will fail.  Once tamed, the beast will be very unhappy and disloyal.  Try feeding the pet immediately to make it happy.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Hunter|Aimed Shot": {
+    "lines": [
+      [
+        "160 Mana",
+        "8 - 35 yd range"
+      ],
+      [
+        "3 sec cast",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "An aimed shot that increases ranged damage by 200.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Hunter|Arcane Shot": {
+    "lines": [
+      [
+        "105 Mana",
+        "8-35 yd range"
+      ],
+      [
+        "Instant",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "An instant shot that causes 94 Arcane damage.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (rank not shown)"
+  },
+  "Hunter|Auto Shot": {
+    "lines": [],
+    "description": "Automatically shoots the target until cancelled.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Hunter|Concussive Shot": {
+    "lines": [
+      [
+        "84 Mana",
+        "8-35 yd range"
+      ],
+      [
+        "Instant",
+        "12 sec cooldown"
+      ]
+    ],
+    "description": "Dazes the target, slowing movement speed by 50% for 4 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Distracting Shot": {
+    "lines": [
+      [
+        "50 Mana",
+        "8 - 35 yd range"
+      ]
+    ],
+    "description": "Distract the target, causing threat.  More effective than Distracting Shot (Rank 2).",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Hunter|Flare": {
+    "lines": [
+      [
+        "50 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "15 sec cooldown"
+      ]
+    ],
+    "description": "Exposes all hidden and invisible enemies within 10 yards of the targeted area for 30 sec.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Hunter's Mark": {
+    "lines": [
+      [
+        "15 Mana",
+        "100 yd range"
+      ]
+    ],
+    "description": "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 20.  In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible.  The target also appears on the mini-map.  Lasts for 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 6"
+  },
+  "Hunter|Multi-Shot": {
+    "lines": [
+      [
+        "145 Mana",
+        "8-35 yd range"
+      ],
+      [
+        "0.5 sec cast",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "Fires several missiles, hitting 3 targets. Multi-Shot shares its cooldown with Aimed Shot.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Rapid Fire": {
+    "lines": [
+      [
+        "100 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "Increases ranged attack speed by 40%  for 15 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 26"
+  },
+  "Hunter|Scorpid Sting": {
+    "lines": [
+      [
+        "70 Mana",
+        "8 - 35 yd range"
+      ]
+    ],
+    "description": "Stings the target, reducing Strength and Agility by 20 for 20 sec.  Only one Sting per Hunter can be active on any one target.",
+    "confirmed": false,
+    "levelReq": "Requires level 22"
+  },
+  "Hunter|Serpent Sting": {
+    "lines": [
+      [
+        "115 Mana",
+        "8 - 35 yd range"
+      ]
+    ],
+    "description": "Stings the target, causing 210 Nature damage over 15 sec.  Only one Sting per Hunter can be active on any one target.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Hunter|Viper Sting": {
+    "lines": [
+      [
+        "135 Mana",
+        "8 - 35 yd range"
+      ]
+    ],
+    "description": "Stings the target, draining 616 mana over 8 sec.  Only one Sting per Hunter can be active on any one target.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Hunter|Disengage": {
+    "lines": [
+      [
+        "100 Mana",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "5 sec cooldown"
+      ]
+    ],
+    "description": "Attempts to disengage from the target, reducing threat.  More effective than Disengage (Rank 1).  Character exits combat mode.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Hunter|Explosive Trap": {
+    "lines": [
+      [
+        "275 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Place a Fire trap that explodes when an enemy approaches, causing 103 to 134 Fire damage and 150 additional Fire damage over 20 sec to all within 10 yards. Trap will exist for 1 min. Only one Fire trap can be active at a time.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Feign Death": {
+    "lines": [
+      [
+        "80 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Feign death which may trick enemies into ignoring you. Lasts 6 min. If not cancelled, after 6 min you will actually die.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Freezing Trap": {
+    "lines": [
+      [
+        "50 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Place a Frost trap that freezes the first enemy that approaches, preventing all action for up to 10 sec. Any damage caused will break the ice. Trap will exist for 1 min. Only one Frost trap can be active at a time.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Frost Trap": {
+    "lines": [
+      [
+        "60 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Place a Frost trap that creates an ice slick around itself for 30 sec when the first enemy approaches it. All enemies within 10 yards will be slowed by 60% while in the area of effect. Trap will exist for 1 min. Only one Frost trap can be active at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Immolation Trap": {
+    "lines": [
+      [
+        "135 Mana",
+        "35 yd range"
+      ]
+    ],
+    "description": "Place a fire trap at a nearby location that will burn the first enemy to approach for 340 Fire damage over 15 sec.  Trap will exist for 1 min.  Only one trap can be active at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Hunter|Mongoose Bite": {
+    "lines": [
+      [
+        "40 Mana",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "5 sec cooldown"
+      ]
+    ],
+    "description": "Counterattack the enemy for melee weapon damage plus 22. Can only be performed after you dodge.",
+    "confirmed": true,
+    "source": "Soda's Hunter, 13 Sep"
+  },
+  "Hunter|Raptor Strike": {
+    "lines": [
+      [
+        "55 Mana",
+        ""
+      ],
+      [
+        "Next melee",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "A strong attack that deals melee weapon damage plus 35.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep (rank not shown on that tooltip)"
+  },
+  "Hunter|Track Beasts": {
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Shows the location of all nearby beasts on the minimap. Only one form of tracking can be active at a time.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
+  },
+  "Hunter|Track Demons": {
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Shows the location of all nearby demons on the minimap. Only one form of tracking can be active at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep"
+  },
+  "Hunter|Track Elementals": {
+    "lines": [],
+    "description": "Shows the location of all nearby elementals on the minimap.  Only one form of tracking can be active at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 26"
+  },
+  "Hunter|Track Hidden": {
+    "lines": [],
+    "description": "Increases stealth detection and shows hidden units within detection range on the minimap.  Only one form of tracking can be active at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 24"
+  },
+  "Hunter|Track Humanoids": {
+    "lines": [],
+    "description": "Shows the location of all nearby humanoids on the minimap.  Only one form of tracking can be active at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Hunter|Track Undead": {
+    "lines": [],
+    "description": "Shows the location of all nearby undead on the minimap.  Only one form of tracking can be active at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 18"
+  },
+  "Hunter|Wing Clip": {
+    "lines": [
+      [
+        "60 Mana",
+        "Melee Range"
+      ]
+    ],
+    "description": "Inflicts 25 damage and reduces the enemy target's movement speed by 55% for 10 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Hunter|Claw": {
+    "lines": [
+      [
+        "25 Focus",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Claw the enemy, causing 21 to 29 damage.",
+    "confirmed": true,
+    "source": "Soda's owl, 13 Sep"
+  },
+  "Hunter|Dive": {
+    "lines": [
+      [
+        "20 Focus",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Increases movement speed by 40% for 15 sec.",
+    "confirmed": true,
+    "source": "Soda's owl, 13 Sep"
+  },
+  "Hunter|Great Stamina": {
+    "lines": [],
+    "description": "Stamina increased by 3.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Hunter|Growl": {
+    "lines": [
+      [
+        "15 Focus",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "5 sec cooldown"
+      ]
+    ],
+    "description": "Taunt the target, increasing the likelihood the creature will focus attacks on you.",
+    "confirmed": true,
+    "source": "Soda's owl, 13 Sep"
+  },
+  "Hunter|Mine!": {
+    "lines": [
+      [
+        "20 Focus",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "1 min cooldown"
+      ]
+    ],
+    "description": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.",
+    "confirmed": true,
+    "source": "Xaryu's owl, 12 Sep"
+  },
+  "Hunter|Natural Armor": {
+    "lines": [],
+    "description": "Armor increased by 50.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Hunter|Stay": {
+    "lines": [],
+    "description": "Orders your pet to stay at its current location.",
+    "confirmed": true,
+    "source": "Soda's owl, 13 Sep"
+  },
+  "Rogue|Pick Lock": {
+    "lines": [
+      [
+        "5 yd range",
+        ""
+      ],
+      [
+        "5 sec cast",
+        ""
+      ],
+      [
+        "Tools: Thieves' Tools",
+        ""
+      ]
+    ],
+    "description": "Allows opening of locked chests and doors.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Shoot Bow": {
+    "lines": [],
+    "description": "Attack with an equipped wand.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Rogue|Shoot Crossbow": {
+    "lines": [],
+    "description": "Attack with an equipped wand.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Rogue|Shoot Gun": {
+    "lines": [],
+    "description": "Attack with an equipped wand.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Rogue|Throw": {
+    "lines": [],
+    "description": "Hurl a thrown weapon at the target.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Rogue|Dual Wield": {
+    "lines": [],
+    "description": "Allows one-hand and off-hand weapons to be equipped in the off-hand.",
+    "confirmed": false
+  },
+  "Rogue|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Rogue|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Rogue|Parry": {
+    "lines": [],
+    "description": "Gives a chance to parry enemy melee attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Rogue|Ambush": {
+    "lines": [
+      [
+        "60 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Stealth",
+        ""
+      ]
+    ],
+    "description": "Ambush the target, causing 250% weapon damage plus 125 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Cheap Shot": {
+    "lines": [
+      [
+        "60 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Stealth",
+        ""
+      ]
+    ],
+    "description": "Stuns the target for 4 sec. Must be stealthed. Awards 2 combo points.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Eviscerate": {
+    "lines": [
+      [
+        "35 Energy",
+        "Melee Range"
+      ],
+      [
+        "1 to 5 Combo Points",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Finishing move that causes damage per combo point, increased by Attack Power: 1 point: 75-112 damage, 2 points: 131-168 damage, 3 points: 187-225 damage, 4 points: 243-281 damage, 5 points: 300-337 damage.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Expose Armor": {
+    "lines": [
+      [
+        "25 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Finishing move that exposes the target for 30 sec, reducing armor per combo point:   1 point  : 210 armor   2 points: 420 armor   3 points: 630 armor   4 points: 840 armor   5 points: 1050 armor",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Rogue|Garrote": {
+    "lines": [
+      [
+        "50 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Garrote the enemy, causing 354 damage over 18 sec, increased by your Attack Power.  Must be stealthed and behind the target.  Awards 1 combo point.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Rogue|Kidney Shot": {
+    "lines": [
+      [
+        "25 Energy",
+        "Melee Range"
+      ],
+      [
+        "1 to 5 Combo Points",
+        ""
+      ],
+      [
+        "Instant",
+        "20 sec cooldown"
+      ]
+    ],
+    "description": "Finishing move that stuns the target. Lasts longer per combo point: 1 point: 1 second, 2 points: 2 seconds, 3 points: 3 seconds, 4 points: 4 seconds, 5 points: 5 seconds.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Rupture": {
+    "lines": [
+      [
+        "25 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Finishing move that causes damage over time, increased by your Attack Power.  Lasts longer per combo point:   1 point  : 88 damage over 8 secs   2 points: 130 damage over 10 secs   3 points: 180 damage over 12 secs   4 points: 238 damage over 14 secs   5 points: 304 damage over 16 secs",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Rogue|Slice and Dice": {
+    "lines": [
+      [
+        "25 Energy",
+        "100 yd range"
+      ]
+    ],
+    "description": "Finishing move that increases melee attack speed by 20%.  Lasts longer per combo point:   1 point  : 9 seconds   2 points: 12 seconds   3 points: 15 seconds   4 points: 18 seconds   5 points: 21 seconds",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Rogue|Adrenaline Rush": {
+    "lines": [
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "Increases your Energy regeneration rate by 100% for 15 sec.",
+    "confirmed": false
+  },
+  "Rogue|Backstab": {
+    "lines": [
+      [
+        "60 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Backstab the target, causing 150% weapon damage plus 90 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards 1 combo point.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Rogue|Blade Flurry": {
+    "lines": [
+      [
+        "25 Energy",
+        ""
+      ],
+      [
+        "Instant",
+        "2 min cooldown"
+      ]
+    ],
+    "description": "Increases your melee attack speed by 20% and your melee attacks strike an additional nearby opponent. Lasts 15 sec.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Evasion": {
+    "lines": [
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "The rogue's dodge chance will increase by 50% for 15 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 8"
+  },
+  "Rogue|Feint": {
+    "lines": [
+      [
+        "20 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Performs a feint, causing no damage but lowering your threat by a medium amount, making the enemy less likely to attack you.",
+    "confirmed": false,
+    "levelReq": "Requires level 28"
+  },
+  "Rogue|Gouge": {
+    "lines": [
+      [
+        "45 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Causes 32 damage, stops your attack, and incapacitates the target for 4 sec. The target must be facing you. Any damage taken will break the effect. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Kick": {
+    "lines": [
+      [
+        "25 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "A quick kick that injures a single foe for 30 damage.  It also interrupts spellcasting and prevents any spell in that school from being cast for 5 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 26"
+  },
+  "Rogue|Sinister Strike": {
+    "lines": [
+      [
+        "45 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "An instant strike that causes 33 damage in addition to your normal weapon damage.  Awards 1 combo point.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Rogue|Sprint": {
+    "lines": [
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "Increases the rogue's movement speed by 60% for 15 sec.  Does not break stealth.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Rogue|Blind": {
+    "lines": [
+      [
+        "30 Energy",
+        "10 yd range"
+      ],
+      [
+        "Instant",
+        "5 min cooldown"
+      ],
+      [
+        "Reagents: Blinding Powder",
+        ""
+      ]
+    ],
+    "description": "Blinds the target, causing it to wander disoriented for up to 10 sec. Any damage caused will remove the effect.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep (Soda's talented Rogue showed 15 Energy and a 3.5 min cooldown)"
+  },
+  "Rogue|Detect Traps": {
+    "lines": [],
+    "description": "Greatly increased chance to detect traps.",
+    "confirmed": false,
+    "levelReq": "Requires level 24"
+  },
+  "Rogue|Disarm Trap": {
+    "lines": [
+      [
+        "5 yd range",
+        ""
+      ],
+      [
+        "2 sec cast",
+        ""
+      ],
+      [
+        "Tools: Thieves' Tools",
+        ""
+      ]
+    ],
+    "description": "Sneak up on the trap in order to disarm it. Don't get too close or the trap will go off.",
+    "confirmed": true,
+    "source": "Soda's Rogue, 13 Sep"
+  },
+  "Rogue|Distract": {
+    "lines": [
+      [
+        "30 Energy",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Throws a distraction, attracting the attention of all nearby enemies and reducing their Stealth detection as if they were 1 level lower for 10 seconds. Does not break stealth.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Pick Pocket": {
+    "lines": [],
+    "description": "Pick the target's pocket.",
+    "confirmed": false,
+    "levelReq": "Requires level 4"
+  },
+  "Rogue|Sap": {
+    "lines": [
+      [
+        "65 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Stealth",
+        ""
+      ]
+    ],
+    "description": "Incapacitates the target for up to 35 sec. Only works on Humanoids that are not in combat. Any damage taken will break the effect. Only 1 target may be sapped at a time. Does not break Stealth.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Stealth": {
+    "lines": [
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Allows the rogue to sneak around, but reduces your speed by 40%. Lasts until cancelled.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Rogue|Vanish": {
+    "lines": [
+      [
+        "Instant",
+        "5 min cooldown"
+      ],
+      [
+        "Reagents: Flash Powder",
+        ""
+      ]
+    ],
+    "description": "Allows the rogue to vanish from sight, entering an improved stealth mode for 10 sec. Also breaks movement impairing effects.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
+  },
+  "Priest|Shoot": {
+    "lines": [
+      [
+        "30 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "1.3 sec cooldown"
+      ]
+    ],
+    "description": "Attack with an equipped wand.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Priest|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Priest|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Priest|Dispel Magic": {
+    "lines": [
+      [
+        "18% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Dispels magic on the target, removing 2 harmful spells from a friend or 2 beneficial spells from an enemy.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Priest|Divine Spirit": {
+    "lines": [
+      [
+        "285 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Holy power infuses the target, increasing their Spirit by 17 for 1 hour.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Elune's Grace": {
+    "lines": [
+      [
+        "26 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "Reduces the chance you will be hit by melee and ranged attacks by 50% for 15 sec or until you are missed 3 times.",
+    "confirmed": true,
+    "source": "Savix's Priest, 12 Sep"
+  },
+  "Priest|Inner Fire": {
+    "lines": [],
+    "description": "A burst of Holy energy fills the caster, increasing armor by 315.  Each melee or ranged damage hit against the priest will remove one charge.  Lasts 10 min or until 20 charges are used.",
+    "confirmed": false,
+    "levelReq": "Requires level 12"
+  },
+  "Priest|Levitate": {
+    "lines": [],
+    "description": "Allows the caster to levitate, floating a few feet above the ground.  While levitating, you will fall at a reduced speed and travel over water-like surfaces.  Any damage will cancel the effect.  Lasts 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Priest|Mana Burn": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "95 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Drains 198 to 211 mana from a target. For each mana drained in this way, the target takes 0.5 Shadow damage.",
+    "confirmed": false,
+    "levelReq": "Requires level 24"
+  },
+  "Priest|Power Word: Fortitude": {
+    "lines": [
+      [
+        "60 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Power infuses the target, increasing their Stamina by 3 for 30 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Priest|Power Word: Shield": {
+    "lines": [
+      [
+        "250 Mana",
+        "40 yd range"
+      ],
+      [
+        "Instant",
+        "4 sec cooldown"
+      ]
+    ],
+    "description": "Draws on the soul of the party member to shield them, absorbing 387 damage. Lasts 30 sec. While the shield holds, spellcasting will not be interrupted by damage. Once shielded, the target cannot be shielded again for 15 sec.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Shackle Undead": {
+    "lines": [
+      [
+        "90 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Shackles the target undead enemy for up to 30 sec.  The shackled unit is unable to move, attack or cast spells.  Any damage caused will release the target.  Only one target can be shackled at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 20"
+  },
+  "Priest|Starshards": {
+    "lines": [
+      [
+        "190 Mana",
+        "30 yd range"
+      ],
+      [
+        "Channeled",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Rains starshards down on the enemy target's head, causing 816 Arcane damage over 6 sec.",
+    "confirmed": true,
+    "source": "Savix's Priest, 12 Sep"
+  },
+  "Priest|Abolish Disease": {
+    "lines": [
+      [
+        "129 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Attempts to cure 1 disease effect on the target, and 1 more disease effect every 5 seconds for 20 sec.",
+    "confirmed": true,
+    "source": "Soda's Priest, 13 Sep"
+  },
+  "Priest|Cure Disease": {
+    "lines": [
+      [
+        "15% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Removes 1 disease from the friendly target.",
+    "confirmed": false,
+    "levelReq": "Requires level 14"
+  },
+  "Priest|Fear Ward": {
+    "lines": [
+      [
+        "100 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "3 min cooldown"
+      ]
+    ],
+    "description": "Wards the friendly target against Fear. The next Fear effect used against the target will fail, using up the ward. Lasts 3 min.",
+    "confirmed": true,
+    "source": "Soda's Priest, 13 Sep"
+  },
+  "Priest|Flash Heal": {
+    "lines": [
+      [
+        "215 Mana",
+        "40 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Heals a friendly target for 408 to 477.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Heal": {
+    "lines": [
+      [
+        "305 Mana",
+        "40 yd range"
+      ],
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Heal your target for 747 to 828.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Holy Fire": {
+    "lines": [
+      [
+        "145 Mana",
+        "30 yd range"
+      ],
+      [
+        "3.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Consumes the enemy in holy flames that cause 116 to 139 Holy damage and an additional 45 Holy damage over 10 sec.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Lesser Heal": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "30 Mana",
+        "40 yd range"
+      ]
+    ],
+    "description": "Heal your target for 47 to 58.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Priest|Prayer of Healing": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "A powerful prayer heals party members within 30 yards for 312 to 333.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Priest|Renew": {
+    "lines": [
+      [
+        "205 Mana",
+        "40 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Heals the target of 408 damage over 15 sec.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Resurrection": {
+    "lines": [
+      [
+        "75% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Brings a dead player back to life with 70 health and 135 mana.  Cannot be cast when in combat.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Priest|Smite": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "20 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Smite an enemy for 15 to 20 Holy damage.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Priest|Devouring Plague": {
+    "lines": [
+      [
+        "495 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "3 min cooldown"
+      ]
+    ],
+    "description": "Afflicts the target with a disease that causes 400 Shadow damage over 24 sec.  Damage caused by the Devouring Plague heals the caster.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Priest|Fade": {
+    "lines": [
+      [
+        "40 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Fade out, discouraging enemies from attacking you for 10 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 8"
+  },
+  "Priest|Mind Blast": {
+    "lines": [
+      [
+        "92 Mana",
+        "36 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        "5.5 sec cooldown"
+      ]
+    ],
+    "description": "Blasts the target for 296 to 311 Shadow damage, but causes a high amount of threat.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep (numbers include that character's talents and gear)"
+  },
+  "Priest|Mind Control": {
+    "lines": [
+      [
+        "175 Mana",
+        "20 yd range"
+      ],
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Controls a humanoid mind up to level 40, but increases the time between its attacks by 25%. Lasts up to 1 min.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Mind Soothe": {
+    "lines": [
+      [
+        "35 Mana",
+        "40 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Soothes the target, reducing the range at which it will attack you by 10 yards. Only affects Humanoid targets level 55 or lower. Lasts 15 sec.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Mind Vision": {
+    "lines": [
+      [
+        "32 Mana",
+        "100 yd range"
+      ],
+      [
+        "Channeled",
+        ""
+      ]
+    ],
+    "description": "Allows the caster to see through the target's eyes for 1 min.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Psychic Scream": {
+    "lines": [
+      [
+        "70 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "The caster lets out a psychic scream, causing 3 enemies within 8 yards to flee for 8 sec. Damage caused may interrupt the effect.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Shadow Protection": {
+    "lines": [
+      [
+        "125 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Increases the target's resistance to Shadow spells by 30 for 10 min.",
+    "confirmed": true,
+    "source": "Troll Priest on Xaryu's stream, 12 Sep"
+  },
+  "Priest|Shadow Word: Pain": {
+    "lines": [
+      [
+        "25 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "A word of darkness that causes 30 Shadow damage over 18 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 4"
+  },
+  "Shaman|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Shaman|Block": {
+    "lines": [],
+    "description": "Gives a chance to block enemy melee and ranged attacks.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Shaman|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Shaman|Call of the Elements": {
+    "lines": [
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Simultaneously places up to 4 totems specified in the Totem Bar.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Chain Lightning": {
+    "lines": [
+      [
+        "225 Mana",
+        "30 yd range"
+      ],
+      [
+        "2 sec cast",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "Hurls a lightning bolt at the enemy, dealing 64 to 71 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+    "confirmed": true,
+    "source": "Guzu's stream via Schiffers, 13 Sep. Half a second faster than Classic."
+  },
+  "Shaman|Earth Shock": {
+    "lines": [
+      [
+        "240 Mana",
+        "20 yd range"
+      ],
+      [
+        "Instant",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "Instantly shocks the target with concussive force, causing 162 to 171 Nature damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 2 sec. Causes a high amount of threat.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Earthbind Totem": {
+    "lines": [
+      [
+        "6% of base mana",
+        ""
+      ],
+      [
+        "Instant",
+        "15 sec cooldown"
+      ]
+    ],
+    "description": "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 sec that slows the movement speed of enemies within 10 yards.",
+    "confirmed": false,
+    "levelReq": "Requires level 6"
+  },
+  "Shaman|Fire Nova": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Instantly inflicts 195 to 219 fire damage to enemies within 10 yd of your active Fire totem.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Shaman|Flame Shock": {
+    "lines": [
+      [
+        "160 Mana",
+        "20 yd range"
+      ],
+      [
+        "Instant",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "Instantly sears the target with fire, causing 66 Fire damage immediately and 89 Fire damage over 12 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Shaman, 12 Sep"
+  },
+  "Shaman|Frost Shock": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "225 Mana",
+        "20 yd range"
+      ],
+      [
+        "Instant",
+        "6 sec cooldown"
+      ]
+    ],
+    "description": "Instantly shocks the target with frost, causing 215 to 230 Frost damage and slowing movement speed by 50%.  Lasts 8 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Shaman|Lightning Bolt": {
+    "lines": [
+      [
+        "135 Mana",
+        "30 yd range"
+      ],
+      [
+        "2.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Casts a bolt of lightning at the target for 102 to 113 Nature damage.",
+    "confirmed": true,
+    "source": "Guzu's stream via Schiffers, 13 Sep. Half a second faster than Classic."
+  },
+  "Shaman|Magma Totem": {
+    "lines": [
+      [
+        "360 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Tools: Fire Totem",
+        ""
+      ]
+    ],
+    "description": "Summons a Magma Totem with 5 health at the feet of the caster for 20 sec that causes 37 Fire damage to creatures within 8 yards every 2 seconds.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Purge": {
+    "lines": [
+      [
+        "10% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Purges the enemy target, removing 2 beneficial magic effects.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Shaman|Searing Totem": {
+    "lines": [],
+    "description": "Summons a Searing Totem with 5 health at your feet for 40 sec that repeatedly attacks an enemy within 20 yards for 19 to 25 Fire damage.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Shaman|Stoneclaw Totem": {
+    "lines": [
+      [
+        "75 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Summons a Stoneclaw Totem with 280 health at the feet of the caster for 15 sec that taunts creatures within 8 yards to attack it.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Shaman|Astral Recall": {
+    "lines": [
+      [
+        "150 Mana",
+        ""
+      ],
+      [
+        "10 sec cast",
+        "15 min cooldown"
+      ]
+    ],
+    "description": "Yanks the caster through the twisting nether back to Hearthstone Location.  Speak to an Innkeeper in a different place to change your home location.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Shaman|Far Sight": {
+    "lines": [
+      [
+        "80 Mana",
+        "Unlimited range"
+      ],
+      [
+        "2 sec cast",
+        ""
+      ]
+    ],
+    "description": "Changes the caster's viewpoint to the targeted location. Lasts 1 min. Only useable outdoors.",
+    "confirmed": true,
+    "source": "Xaryu's Shaman, 12 Sep"
+  },
+  "Shaman|Fire Resistance Totem": {
+    "lines": [],
+    "description": "Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases the fire resistance of party members within 20 yards by 30.",
+    "confirmed": false,
+    "levelReq": "Requires level 28"
+  },
+  "Shaman|Flametongue Totem": {
+    "lines": [
+      [
+        "140 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Tools: Fire Totem",
+        ""
+      ]
+    ],
+    "description": "Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit causes 9 to 31 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Flametongue Weapon": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "Imbue the Shaman's weapon with fire.  Each hit causes 22 to 69 additional Fire damage, based on the speed of the weapon.  Slower weapons cause more fire damage per swing.  Lasts for 5 minutes.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Shaman|Frost Resistance Totem": {
+    "lines": [
+      [
+        "120 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Summons a Frost Resistance Totem with 5 health at the feet of the caster for 5 min. The totem increases party and raid members' frost resistance by 45, if within 30 yards.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Frostbrand Weapon": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "Imbue the Shaman's weapon with frost.  Each hit has a chance of causing 48 additional Frost damage and slowing the target's movement speed by 25% for 8 sec.  Lasts for 5 minutes.",
+    "confirmed": false,
+    "levelReq": "Requires level 20"
+  },
+  "Shaman|Ghost Wolf": {
+    "lines": [],
+    "description": "Turns the Shaman into a Ghost Wolf, increasing speed by 40%.  Only useable outdoors.",
+    "confirmed": false,
+    "levelReq": "Requires level 20"
+  },
+  "Shaman|Grounding Totem": {
+    "lines": [
+      [
+        "6% of base mana",
+        ""
+      ],
+      [
+        "Instant",
+        "15 sec cooldown"
+      ]
+    ],
+    "description": "Summons a Grounding Totem with 5 health at the feet of the caster that will redirect one harmful spell cast on a nearby party member to itself every 10 seconds.  Will not redirect area of effect spells.  Lasts 45 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Shaman|Lightning Shield": {
+    "lines": [
+      [
+        "180 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 86 Nature damage. Only one lightning ball will fire every few seconds. Lasts 10 min.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Nature Resistance Totem": {
+    "lines": [
+      [
+        "75 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Tools: Air Totem",
+        ""
+      ]
+    ],
+    "description": "Summons a Nature Resistance Totem with 5 health at the feet of the caster for 5 min that increases the nature resistance of party and raid members within 30 yards by 30.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Rockbiter Weapon": {
+    "lines": [
+      [
+        "100 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Imbue the Shaman's weapon, increasing melee attack power by 283 and allowing melee attacks to cause additional threat when using that weapon. Lasts 60 minutes.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Shaman|Sentry Totem": {
+    "lines": [],
+    "description": "Summons an immobile Sentry Totem with 100 health at your feet for 5 min that allows vision of nearby area and warns of enemies that attack it.  Right-Click on buff to switch back and forth between totem sight and shaman sight.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Shaman|Stoneskin Totem": {
+    "lines": [
+      [
+        "115 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Tools: Earth Totem",
+        ""
+      ]
+    ],
+    "description": "Summons a Stoneskin Totem with 5 health at the feet of the caster. The totem protects party members within 30 yards, reducing Physical damage taken by 16. Lasts 5 min.",
+    "confirmed": true,
+    "source": "Xaryu's Shaman, 12 Sep"
+  },
+  "Shaman|Strength of Earth Totem": {
+    "lines": [],
+    "description": "Summons a Strength of Earth Totem with 5 health at the feet of the caster.  The totem increases the strength of party members within 20 yards by 36.  Lasts 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Shaman|Totemic Projection": {
+    "lines": [
+      [
+        "30 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Relocates your active totems to the specified location.",
+    "confirmed": false
+  },
+  "Shaman|Water Breathing": {
+    "lines": [
+      [
+        "50 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Allows the target to breathe underwater for 10 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 22"
+  },
+  "Shaman|Water Walking": {
+    "lines": [
+      [
+        "95 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Reagents: Fish Oil",
+        ""
+      ]
+    ],
+    "description": "Allows the friendly target to walk across water for 10 min. Any damage will cancel the effect.",
+    "confirmed": true,
+    "source": "Xaryu's Shaman, 12 Sep"
+  },
+  "Shaman|Windfury Totem": {
+    "lines": [],
+    "description": "Summons a Windfury Totem with 5 health at the feet of the caster.  The totem enchants all party members main-hand weapons with wind, if they are within 20 yards.  Each hit has a 20% chance of granting the attacker 1 extra attack with (122 * 1) extra melee attack power.  Lasts 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Shaman|Windfury Weapon": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "Imbue the Shaman's weapon with wind.  Each hit has a 20% chance of granting you 2 extra attacks with 104 extra melee attack power.  Lasts for 5 minutes.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Shaman|Windwall Totem": {
+    "lines": [],
+    "description": "Summons a Windwall Totem with 5 health at the feet of the caster.  The totem protects party members within 20 yards, reducing ranged damage taken by 32.  Lasts 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Shaman|Ancestral Spirit": {
+    "lines": [
+      [
+        "90% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Returns the spirit to the body, restoring a dead target to life with 250 health and 420 mana.  Cannot be cast when in combat.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Shaman|Cure Disease": {
+    "lines": [
+      [
+        "83 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Cures 1 disease on the target.",
+    "confirmed": true,
+    "source": "Savix's Shaman, 12 Sep"
+  },
+  "Shaman|Cure Poison": {
+    "lines": [
+      [
+        "9% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Cures 1 poison effect on the target.",
+    "confirmed": false,
+    "levelReq": "Requires level 16"
+  },
+  "Shaman|Disease Cleansing Totem": {
+    "lines": [],
+    "description": "Summons a Disease Cleansing Totem with 5 health at the feet of the caster that attempts to remove 1 disease effect from party members within 20 yards every 5 seconds.  Lasts 2 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Shaman|Mana Spring Totem": {
+    "lines": [
+      [
+        "60 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Tools: Water Totem",
+        ""
+      ]
+    ],
+    "description": "Summons a Mana Spring Totem with 5 health at the feet of the caster for 5 min that restores 6 mana every 2 seconds to group members within 30 yards.",
+    "confirmed": true,
+    "source": "Soda's Shaman, 13 Sep"
+  },
+  "Mage|Shoot": {
+    "lines": [
+      [
+        "30 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "1.3 sec cooldown"
+      ]
+    ],
+    "description": "Attack with an equipped wand.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Mage|Comprehend Scroll": {
+    "lines": [
+      [
+        "5 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Decipher an untranslated scroll.",
+    "confirmed": true,
+    "source": "Soda's stream, 13 Sep"
+  },
+  "Mage|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Mage|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Mage|Arcane Explosion": {
+    "lines": [
+      [
+        "250 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Causes an explosion of arcane magic around the caster, causing 143 to 156 Arcane damage to all targets within 10 yards.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Arcane Missiles": {
+    "lines": [
+      [
+        "320 Mana",
+        "36 yd range"
+      ],
+      [
+        "Channeled",
+        ""
+      ]
+    ],
+    "description": "Launches Arcane Missiles at the enemy, causing 91 Arcane damage each second for 5 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep (range includes his talents)"
+  },
+  "Mage|Blink": {
+    "lines": [
+      [
+        "207 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "15 sec cooldown"
+      ]
+    ],
+    "description": "Teleports the caster 20 yards forward, unless something is in the way. Also frees the caster from Stuns and Immobilizes.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Conjure Food": {
+    "lines": [
+      [
+        "105 Mana",
+        ""
+      ],
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Conjures 20 loaves of bread, providing the mage and his allies with something to eat. Conjured items disappear if logged out for more than 15 minutes.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Conjure Water": {
+    "lines": [
+      [
+        "285 Mana",
+        ""
+      ],
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Conjures 18 bottles of spring water, providing the mage and his allies with something to drink. Conjured items disappear if logged out for more than 15 minutes.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Dampen Magic": {
+    "lines": [
+      [
+        "300 Mana",
+        "36 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Dampens magic used against the targeted party member, decreasing damage taken from spells by up to 60 and healing spells by up to 120. Lasts 10 min.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Evocation": {
+    "lines": [
+      [
+        "Channeled",
+        "8 min cooldown"
+      ]
+    ],
+    "description": "While channeling this spell, your mana regeneration is active and increased by 1,500%. Lasts 8 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Mage Armor": {
+    "lines": [
+      [
+        "270 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Increases your resistance to all magic by 5 and allows 50% of your mana regeneration to continue while casting. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Mana Shield": {
+    "lines": [
+      [
+        "80 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Absorbs 300 physical damage, draining mana instead. Drains 2.0 mana per damage absorbed. Lasts 1 min.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Remove Lesser Curse": {
+    "lines": [
+      [
+        "81 Mana",
+        "36 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Removes 1 Curse or Bane from a friendly target.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Fire Blast": {
+    "lines": [
+      [
+        "115 Mana",
+        "20 yd range"
+      ],
+      [
+        "Instant",
+        "8 sec cooldown"
+      ]
+    ],
+    "description": "Blasts the enemy for 121 to 142 Fire damage.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Fireball": {
+    "lines": [
+      [
+        "185 Mana",
+        "41 yd range"
+      ],
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Hurls a fiery ball that causes 192 to 237 Fire damage and an additional 24 Fire damage over 8 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep (range includes his talents)"
+  },
+  "Mage|Blizzard": {
+    "lines": [
+      [
+        "520 Mana",
+        "36 yd range"
+      ],
+      [
+        "Channeled",
+        ""
+      ]
+    ],
+    "description": "Ice shards pelt the target area doing 374 Frost damage over 8 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep (rank not shown; numbers include his talents and gear)"
+  },
+  "Mage|Cone of Cold": {
+    "lines": [
+      [
+        "210 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Targets in a cone in front of the caster take 107 to 117 Frost damage and are slowed by 50% for 8.0 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep (rank not shown; numbers include his talents and gear)"
+  },
+  "Mage|Frost Armor": {
+    "lines": [
+      [
+        "170 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Increases Armor by 200. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 25% for 5 sec. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Frost Nova": {
+    "lines": [
+      [
+        "85 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "25 sec cooldown"
+      ]
+    ],
+    "description": "Blasts enemies near the caster for 37 to 42 Frost damage and freezes them in place for up to 8 sec. Damage caused may interrupt the effect.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep"
+  },
+  "Mage|Frost Ward": {
+    "lines": [
+      [
+        "135 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Absorbs 284 Frost damage. Lasts 30 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Mage, 12 Sep (the rank 1 tooltip read 85 Mana, absorbs 162)"
+  },
+  "Mage|Frostbolt": {
+    "lines": [
+      [
+        "160 Mana",
+        "30 yd range"
+      ],
+      [
+        "2.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Launches a bolt of frost at the enemy, causing 254 to 270 Frost damage and slowing movement speed by 50% for 10.6 sec.",
+    "confirmed": true,
+    "source": "Soda's Mage, 13 Sep (numbers include the character's talents and gear)"
+  },
+  "Warlock|Shoot": {
+    "lines": [
+      [
+        "30 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        "1.3 sec cooldown"
+      ]
+    ],
+    "description": "Attack with an equipped wand.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Warlock|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Warlock|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Warlock|Bane of Agony": {
+    "lines": [
+      [
+        "130 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Afflicts the target with agony, causing 387 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Bane reaches its full duration. Only one Bane per Warlock can be active on any one target.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Corruption": {
+    "lines": [
+      [
+        "160 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Corrupts the target, causing 324 Shadow damage over 18 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Warlock|Curse of Recklessness": {
+    "lines": [
+      [
+        "60 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Curses the target with recklessness, reducing the target's armor by 285 for 2 min. Cursed enemies will not flee and will ignore Fear and Horror effects. Only one Curse per Warlock can be active on any one target.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Curse of the Elements": {
+    "lines": [
+      [
+        "150 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Curses the target for 5 min, reducing Fire and Frost resistances by 60 and increasing Fire and Frost damage taken by 8%.  Only one Curse per Warlock can be active on any one target.",
+    "confirmed": false,
+    "levelReq": "Requires level 46"
+  },
+  "Warlock|Curse of Tongues": {
+    "lines": [
+      [
+        "80 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Forces the target to speak in Demonic, slowing the casting time of all spells by 50%.  Only one Curse per Warlock can be active on any one target.  Lasts 30 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 26"
+  },
+  "Warlock|Curse of Weakness": {
+    "lines": [
+      [
+        "95 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Physical damage caused by the target is reduced by 18 for 2 min. Only one Curse per Warlock can be active on any one target.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Drain Life": {
+    "lines": [
+      [
+        "185 Mana",
+        "20 yd range"
+      ],
+      [
+        "Channeled",
+        ""
+      ]
+    ],
+    "description": "Transfers 36 health every 1 second from the target to the caster. Lasts 5 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Drain Mana": {
+    "lines": [
+      [
+        "155 Mana",
+        "20 yd range"
+      ],
+      [
+        "Channeled",
+        ""
+      ]
+    ],
+    "description": "Transfers 70 Mana every 1 sec from the target to the caster. Lasts 5 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Drain Soul": {
+    "lines": [
+      [
+        "210 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Drains the soul of the target, causing 295 Shadow damage over 15 sec.  If the target dies while being drained, and yields experience or honor, the caster gains a Soul Shard.  Soul Shards are required for other spells.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Warlock|Fear": {
+    "lines": [
+      [
+        "15% of base mana",
+        "20 yd range"
+      ]
+    ],
+    "description": "Strikes fear in the enemy, causing it to run in fear for up to 15 sec.  Damage caused may interrupt the effect.  Only 1 target can be feared at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warlock|Life Tap": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "Converts 220 health into 220 mana",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warlock|Banish": {
+    "lines": [
+      [
+        "100 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Banishes the enemy target, preventing all action but making it invulnerable for up to 20 sec.  Only one target can be banished at a time.  Only works on Demons and Elementals.",
+    "confirmed": false,
+    "levelReq": "Requires level 28"
+  },
+  "Warlock|Create Firestone": {
+    "lines": [],
+    "description": "Creates a Firestone which can be equipped in the off hand.  When equipped, enchants the main hand weapon with fire, granting each attack a chance to deal 40 to 60 additional Fire damage.  In addition, equipping the Firestone increases the damage done by fire spells by 14.Conjured items disappear if logged out for more than 15 minutes.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warlock|Create Healthstone": {
+    "lines": [
+      [
+        "475 Mana",
+        ""
+      ],
+      [
+        "3 sec cast",
+        ""
+      ],
+      [
+        "Reagents: Soul Shard",
+        ""
+      ]
+    ],
+    "description": "Creates a Healthstone that can be used to instantly restore 600 health. Conjured items disappear if logged out for more than 15 minutes.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Create Soulstone": {
+    "lines": [],
+    "description": "Creates a Soulstone.  The Soulstone can be used to store one target's soul.  If the target dies while their soul is stored, they will be able to resurrect with 1100 health and 1700 mana.Conjured items disappear if logged out for more than 15 minutes.",
+    "confirmed": false,
+    "levelReq": "Requires level 40"
+  },
+  "Warlock|Create Spellstone": {
+    "lines": [
+      [
+        "500 Mana",
+        ""
+      ],
+      [
+        "5 sec cast",
+        ""
+      ],
+      [
+        "Reagents: Soul Shard",
+        ""
+      ]
+    ],
+    "description": "Creates a Spellstone which can be used to enchant your weapon with Shadow, increasing your spell haste by 1% and the damage done by your Shadow spells by up to 14. Conjured items disappear if logged out for more than 15 minutes.",
+    "confirmed": true,
+    "source": "Soda's Warlock, 13 Sep"
+  },
+  "Warlock|Demon Armor": {
+    "lines": [
+      [
+        "520 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Protects the caster, increasing armor by 300, Shadow resistance by 6 and increases health regeneration by 9 health per 5 sec. for 30 min.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Demon Skin": {
+    "lines": [],
+    "description": "Protects the caster, increasing armor by 40 and restores 3 Health per 5 sec. for 30 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warlock|Detect Invisibility": {
+    "lines": [
+      [
+        "90 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Allows the friendly target to detect invisibility for 10 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Warlock|Eye of Kilrogg": {
+    "lines": [
+      [
+        "100 Mana",
+        "Unlimited range"
+      ],
+      [
+        "5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Summons an Eye of Kilrogg and binds your vision to it. The eye moves quickly but is very fragile.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Health Funnel": {
+    "lines": [
+      [
+        "39 Health, plus 24 per sec",
+        "20 yd range"
+      ]
+    ],
+    "description": "Gives 64 health to the caster's pet every second for 10 sec as long as the caster channels.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warlock|Ritual of Summoning": {
+    "lines": [
+      [
+        "300 Mana",
+        "30 yd range"
+      ],
+      [
+        "5 sec cast",
+        ""
+      ],
+      [
+        "Reagents: Soul Shard",
+        ""
+      ]
+    ],
+    "description": "Begins a ritual that summons the targeted group member. Requires the caster and 2 additional party members to complete the ritual. In order to participate, all players must be out of combat and right-click the portal and not move until the ritual is complete.",
+    "confirmed": true,
+    "source": "Soda's Warlock, 13 Sep"
+  },
+  "Warlock|Sense Demons": {
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Shows the location of all nearby demons on the minimap until cancelled. Only one type of tracking can be used at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Warlock, 12 Sep"
+  },
+  "Warlock|Shadow Ward": {
+    "lines": [
+      [
+        "135 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Absorbs 290 shadow damage.  Lasts 30 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Warlock|Subjugate Demon": {
+    "lines": [
+      [
+        "300 Mana",
+        "30 yd range"
+      ],
+      [
+        "3 sec cast",
+        ""
+      ],
+      [
+        "Reagents: Soul Shard",
+        ""
+      ]
+    ],
+    "description": "Subjugates the target demon, up to level 40, forcing it to do your bidding. While subjugated, the time between the demon's attacks is increased by 40% and its casting speed is slowed by 30%. Lasts up to 5 min. If you repeatedly subjugate the same demon, it will become more difficult to control with each attempt.",
+    "confirmed": true,
+    "source": "Soda's Warlock, 13 Sep"
+  },
+  "Warlock|Summon Felhunter": {
+    "lines": [],
+    "description": "Summons a Felhunter under the command of the Warlock.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Warlock|Summon Imp": {
+    "lines": [],
+    "description": "Summons an Imp under the command of the Warlock.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Warlock|Summon Incubus": {
+    "lines": [],
+    "description": "Summons an Incubus under the command of the Warlock.",
+    "confirmed": false,
+    "levelReq": "Requires level 20"
+  },
+  "Warlock|Summon Succubus": {
+    "lines": [],
+    "description": "Summons a Succubus under the command of the Warlock.",
+    "confirmed": false,
+    "levelReq": "Requires level 20"
+  },
+  "Warlock|Summon Voidwalker": {
+    "lines": [],
+    "description": "Summons a Voidwalker under the command of the Warlock.",
+    "confirmed": false,
+    "levelReq": "Requires level 10"
+  },
+  "Warlock|Unending Breath": {
+    "lines": [
+      [
+        "50 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Allows the target to breathe underwater for 10 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 16"
+  },
+  "Warlock|Hellfire": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ]
+    ],
+    "description": "Ignites the area surrounding the caster, causing 87 Fire damage to himself and 87 Fire damage to all nearby enemies every 1 sec.  Lasts 15 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Warlock|Immolate": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "155 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Burns the enemy for [101 * (((1)))] Fire damage and then an additional 165 Fire damage over 15 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Warlock|Rain of Fire": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "605 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "8 sec cooldown"
+      ]
+    ],
+    "description": "Calls down a fiery rain to burn enemies in the area of effect for 384 Fire damage over 8 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Warlock|Searing Pain": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "91 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Inflict searing pain on the enemy target, causing 93 to 112 Fire damage.  Causes a high amount of threat.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Warlock|Shadow Bolt": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "210 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Sends a shadowy bolt at the enemy, causing 213 to 240 Shadow damage.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warlock|Devour Magic": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "130 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "8 sec cooldown"
+      ]
+    ],
+    "description": "Purges 1 harmful magic effect from a friend or 1 beneficial magic effect from an enemy.  If an effect is devoured, the Felhunter will be healed for 348.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Warlock|Spell Lock": {
+    "lines": [
+      [
+        "120 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
+      ]
+    ],
+    "description": "Silences the enemy for 3 sec.  If used on a casting target, it will counter the enemy's spellcast, preventing any spell from that school of magic from being cast for 6 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Warlock|Tainted Blood": {
+    "lines": [],
+    "description": "Taints the Felhunter's blood for 1 min.  When the Felhunter is hit with a melee attack, the attacker will lose 17 melee attack power for 10 sec.  Stacks up to 5 times on a single target.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Druid|Armor Proficiency": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Dodge": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Gives a chance to dodge enemy melee attacks.",
+    "confirmed": true,
+    "source": "Soda's Gnome Warlock, 13 Sep"
+  },
+  "Druid|Entangling Roots": {
+    "lines": [
+      [
+        "50 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Roots the target in place and causes 20 Nature damage over 12 sec.  Damage caused may interrupt the effect.  Only useable outdoors.",
+    "confirmed": false,
+    "levelReq": "Requires level 8"
+  },
+  "Druid|Faerie Fire": {
+    "lines": [
+      [
+        "75 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Decrease the armor of the target by 285 for 40 sec. While affected, the target cannot stealth or turn invisible.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Hibernate": {
+    "lines": [
+      [
+        "120 Mana",
+        "30 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Forces the enemy target to sleep for up to 30 sec. Any damage will awaken the target. Only one target can be forced to hibernate at a time. Only works on Beasts and Dragonkin.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Moonfire": {
+    "lines": [
+      [
+        "190 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Burns the enemy for 61 to 72 Arcane damage and then an additional 96 Arcane damage over 12 sec.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Nature's Grasp": {
+    "lines": [
+      [
+        "95 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        "1 min cooldown"
+      ]
+    ],
+    "description": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 4).  Only useable outdoors.  1 charge.  Lasts 45 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Druid|Omen of Clarity": {
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "Your spells and attacks have a chance to grant you Clearcasting, reducing the Mana, Rage, or Energy cost of your next damage or healing spell or offensive ability by 100%. Clearcasting is not consumed by Wrath or by spells or abilities that cost no resources.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Soothe Animal": {
+    "lines": [
+      [
+        "75 Mana",
+        "40 yd range"
+      ]
+    ],
+    "description": "Soothes the target beast, reducing the range at which it will attack you by 10 yards.  Only affects Beast targets level 55 or lower.  Lasts 15 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 38"
+  },
+  "Druid|Starfire": {
+    "lines": [
+      [
+        "180 Mana",
+        "30 yd range"
+      ],
+      [
+        "3.5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Causes 145 to 172 Arcane damage to the target.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Thorns": {
+    "lines": [
+      [
+        "170 Mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Thorns sprout from the friendly target causing 12 Nature damage to attackers when hit.  Lasts 10 min.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Druid|Aquatic Form": {
+    "lines": [],
+    "description": "Shapeshift into aquatic form, increasing swim speed by 50% and allowing the druid to breathe underwater.  Also protects the caster from Polymorph effects.The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+    "confirmed": false,
+    "levelReq": "Requires level 16"
+  },
+  "Druid|Bash": {
+    "lines": [
+      [
+        "10 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant cast",
+        "1 min cooldown"
+      ]
+    ],
+    "description": "Stuns the target for 3 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Druid|Bear Form": {
+    "lines": [
+      [
+        "445 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Shapeshift into a bear, increasing melee attack power by 114, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+    "confirmed": true,
+    "source": "Savix's Druid, 12 Sep"
+  },
+  "Druid|Cat Form": {
+    "lines": [
+      [
+        "445 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Shapeshift into cat form, increasing melee attack power by 76 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Challenging Roar": {
+    "lines": [
+      [
+        "15 Rage",
+        ""
+      ],
+      [
+        "Instant",
+        "10 min cooldown"
+      ],
+      [
+        "Requires Bear Form, Dire Bear Form",
+        ""
+      ]
+    ],
+    "description": "Forces all nearby enemies to focus attacks on you for 6 sec.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Claw": {
+    "lines": [
+      [
+        "45 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Cat Form",
+        ""
+      ]
+    ],
+    "description": "Claw the enemy for 110% normal damage plus 62. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Cower": {
+    "lines": [
+      [
+        "20 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        "10 sec cooldown"
+      ]
+    ],
+    "description": "Cower, causing no damage but lowering your threat a small amount, making the enemy less likely to attack you.",
+    "confirmed": false,
+    "levelReq": "Requires level 28"
+  },
+  "Druid|Dash": {
+    "lines": [
+      [
+        "Instant",
+        "5 min cooldown"
+      ],
+      [
+        "Requires Cat Form",
+        ""
+      ]
+    ],
+    "description": "Increases movement speed by 50% for 15 sec. Does not break prowling.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Demoralizing Roar": {
+    "lines": [
+      [
+        "10 Rage",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Bear Form, Dire Bear Form",
+        ""
+      ]
+    ],
+    "description": "The druid roars, decreasing nearby enemies' melee attack power by 101. Lasts 30 sec.",
+    "confirmed": true,
+    "source": "Savix's Druid, 12 Sep (rank not shown on that tooltip)"
+  },
+  "Druid|Enrage": {
+    "lines": [
+      [
+        "Instant",
+        "1 min cooldown"
+      ],
+      [
+        "Requires Bear Form, Dire Bear Form",
+        ""
+      ]
+    ],
+    "description": "Instantly generates 10 Rage and another 20 Rage over 10 sec, but reduces base armor by 27% in Bear Form and 16% in Dire Bear Form. The druid is considered in combat for the duration.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Ferocious Bite": {
+    "lines": [
+      [
+        "35 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 1 additional damage.  Damage is increased by your Attack Power.   1 point  : 50-66 damage   2 points: 86-102 damage   3 points: 122-138 damage   4 points: 158-174 damage   5 points: 194-210 damage",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Druid|Frenzied Regeneration": {
+    "lines": [
+      [
+        "Instant",
+        "3 min cooldown"
+      ]
+    ],
+    "description": "Converts up to 10 rage per second into health for 10 sec.  Each point of rage is converted into 10 health.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Druid|Growl": {
+    "lines": [
+      [
+        "Melee Range",
+        ""
+      ],
+      [
+        "Instant",
+        "8 sec cooldown"
+      ],
+      [
+        "Requires Bear Form, Dire Bear Form",
+        ""
+      ]
+    ],
+    "description": "Taunts the target to attack you, but has no effect if the target is already attacking you.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Maul": {
+    "lines": [
+      [
+        "15 Rage",
+        "Melee Range"
+      ]
+    ],
+    "description": "Increases the druid's next attack by 49 damage.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Druid|Pounce": {
+    "lines": [
+      [
+        "50 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Pounce, stunning the target for 2 sec and causing 90 damage over 18 sec.  Must be prowling and behind the target.  Awards 1 combo point.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Druid|Prowl": {
+    "lines": [
+      [
+        "Instant",
+        "10 sec cooldown"
+      ],
+      [
+        "Requires Cat Form",
+        ""
+      ]
+    ],
+    "description": "Allows the Druid to prowl around, but reduces your movement speed by 40%. Lasts until cancelled.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Rake": {
+    "lines": [
+      [
+        "40 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Rake the target for 28 damage and an additional 57 damage over 9 sec.  Awards 1 combo point.",
+    "confirmed": false,
+    "levelReq": "Requires level 34"
+  },
+  "Druid|Ravage": {
+    "lines": [
+      [
+        "60 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Cat Form",
+        ""
+      ]
+    ],
+    "description": "Ravage the target, causing 350% damage plus 147 to the target. Must be prowling and behind the target. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Rip": {
+    "lines": [
+      [
+        "30 Energy",
+        "Melee Range"
+      ]
+    ],
+    "description": "Finishing move that causes damage over time.  Damage increases per combo point and by your Attack Power:   1 point  : [6 * 1 * (15)] damage over 12 sec.   2 points: [6 * 1 * (24)] damage over 12 sec.   3 points: [6 * 1 * (33)] damage over 12 sec.   4 points: [6 * 1 * (42)] damage over 12 sec.   5 points: [6 * 1 * (51)] damage over 12 sec.",
+    "confirmed": false,
+    "levelReq": "Requires level 36"
+  },
+  "Druid|Shred": {
+    "lines": [
+      [
+        "60 Energy",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Cat Form",
+        ""
+      ]
+    ],
+    "description": "Shred the target, causing 155% damage plus 99 to the target. Must be behind the target. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Swipe": {
+    "lines": [
+      [
+        "20 Rage",
+        "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Bear Form, Dire Bear Form",
+        ""
+      ]
+    ],
+    "description": "Swipe 3 nearby enemies, inflicting 36 damage.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Tiger's Fury": {
+    "lines": [
+      [
+        "Instant",
+        "30 sec cooldown"
+      ],
+      [
+        "Requires Cat Form",
+        ""
+      ]
+    ],
+    "description": "Increases Physical damage done by 15% for 6 sec, and instantly grants 60 Energy.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Track Humanoids": {
+    "lines": [],
+    "description": "Shows the location of all nearby humanoids on the minimap.  Only one type of thing can be tracked at a time.",
+    "confirmed": false,
+    "levelReq": "Requires level 32"
+  },
+  "Druid|Travel Form": {
+    "lines": [
+      [
+        "162 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Transforms the druid into a travel form, increasing movement speed by 40%. Also protects the caster from Polymorph effects. Only useable outdoors. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Abolish Poison": {
+    "lines": [
+      [
+        "129 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Attempts to cure 1 poison effect on the target, and 1 more poison effect every 2 seconds for 8 sec.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Healing Touch": {
+    "lines": [
+      [
+        "387 Mana",
+        "40 yd range"
+      ],
+      [
+        "3.3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Heals a friendly target for 858 to 1,023.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep (healing includes the character's gear)"
+  },
+  "Druid|Mark of the Wild": {
+    "lines": [
+      [
+        "160 Mana",
+        "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Increases the friendly target's armor by 203, all attributes by 8 and all resistances by 7 for 1 hour.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep"
+  },
+  "Druid|Rebirth": {
+    "lines": [
+      [
+        "85% of base mana",
+        "30 yd range"
+      ],
+      [
+        "2 sec cast",
+        "30 min cooldown"
+      ]
+    ],
+    "description": "Returns the spirit to the body, restoring a dead target to life with 750 health and 1200 mana.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  },
+  "Druid|Regrowth": {
+    "lines": [
+      [
+        "250 Mana",
+        "40 yd range"
+      ],
+      [
+        "2 sec cast",
+        ""
+      ]
+    ],
+    "description": "Heals a friendly target for 385 to 434 and another 375 over 21 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Druid, 12 Sep (Soda's talented Druid showed 228 Mana, 417 to 467 and 547 over 27 sec)"
+  },
+  "Druid|Rejuvenation": {
+    "lines": [
+      [
+        "146 Mana",
+        "40 yd range"
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Heals the target for 313 over 15 sec.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
+  },
+  "Druid|Remove Curse": {
+    "lines": [
+      [
+        "10% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Dispels 1 Curse from a friendly target.",
+    "confirmed": false,
+    "levelReq": "Requires level 24"
+  },
+  "Druid|Revive": {
+    "lines": [
+      [
+        "72% of base mana",
+        "30 yd range"
+      ]
+    ],
+    "description": "Brings a dead player back to life with 15% of their health and mana.  Cannot be used when in combat.",
+    "confirmed": false,
+    "levelReq": "Requires level 1"
+  },
+  "Druid|Tranquility": {
+    "lines": [
+      [
+        "",
+        "Level 60"
+      ],
+      [
+        "Channeled (10 sec cast)",
+        "5 min cooldown"
+      ]
+    ],
+    "description": "Regenerates all nearby group members for 98 every 2 seconds for 10 sec.  Druid must channel to maintain the spell.",
+    "confirmed": false,
+    "levelReq": "Requires level 30"
+  }
+}

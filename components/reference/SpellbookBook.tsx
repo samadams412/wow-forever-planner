@@ -1,9 +1,22 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import { useRef, useState } from "react";
 import { mediumIconUrl, CLASS_ICON, getClassTalentData } from "@/lib/wow-data";
 import type { ClassSpellbook, SpellbookEntry } from "@/lib/spellbooks";
+import { getSpellTooltip } from "@/lib/spell-tooltips";
+import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import {
+  TooltipCard,
+  TooltipName,
+  TooltipRank,
+  TooltipDescription,
+  TooltipStatLine,
+  TooltipSourceNote,
+} from "@/components/planner/TooltipCard";
 import CornerBracket from "@/components/site/CornerBracket";
+
+const TOOLTIP_WIDTH = 260;
 
 const PAGE_SIZE = 12;
 
@@ -15,6 +28,7 @@ const PAGE_SIZE = 12;
 const TAB_ICON_OVERRIDES: Record<string, string> = {
   "warrior:Fury": "ability_warrior_innerrage",
   "warrior:Protection": "ability_warrior_defensivestance",
+  "warrior:Arms": "ability_warrior_offensivestance",
 };
 
 function resolveTabIcon(classId: string, tabName: string): string {
@@ -29,10 +43,21 @@ function prefersReducedMotion(): boolean {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-function SpellEntry({ spell }: { spell: SpellbookEntry }) {
+function SpellEntry({ classId, spell }: { classId: string; spell: SpellbookEntry }) {
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
+  const tooltip = getSpellTooltip(classId, spell.name);
+  const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH);
+
   return (
-    <li className="flex items-start gap-2.5">
+    <li
+      ref={tooltip ? ref : undefined}
+      onMouseEnter={tooltip ? show : undefined}
+      onMouseLeave={tooltip ? hide : undefined}
+      onFocus={tooltip ? show : undefined}
+      onBlur={tooltip ? hide : undefined}
+      tabIndex={tooltip ? 0 : undefined}
+      className="flex items-start gap-2.5"
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={mediumIconUrl(spell.icon ?? "inv_misc_questionmark")}
@@ -51,6 +76,21 @@ function SpellEntry({ spell }: { spell: SpellbookEntry }) {
         </div>
         {subtitle && <p className="text-xs text-[#6b5a3d]">{subtitle}</p>}
       </div>
+
+      {tooltip &&
+        pos &&
+        createPortal(
+          <TooltipCard style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}>
+            <TooltipName>{spell.name}</TooltipName>
+            {subtitle && <TooltipRank>{subtitle}</TooltipRank>}
+            {tooltip.lines.map(([left, right], i) => (
+              <TooltipStatLine key={i} left={left} right={right} />
+            ))}
+            <TooltipDescription muted={!tooltip.confirmed}>{tooltip.description}</TooltipDescription>
+            <TooltipSourceNote confirmed={tooltip.confirmed} source={tooltip.source} />
+          </TooltipCard>,
+          document.body
+        )}
     </li>
   );
 }
@@ -159,7 +199,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
 
               <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
                 {pageSpells.map((spell) => (
-                  <SpellEntry key={spell.name} spell={spell} />
+                  <SpellEntry key={spell.name} classId={classId} spell={spell} />
                 ))}
               </ul>
 
