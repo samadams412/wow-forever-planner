@@ -227,14 +227,14 @@
         {
           "name": "Victory Rush",
           "status": "confirmed",
-          "note": "Confirmed baseline: sits in the Arms tab of a level 38 Warrior's spellbook in the demo (Xaryu's Twitch VOD of 12 Sep 2026, 5h01m). Tooltip not read yet.",
+          "note": "Confirmed baseline: it sits in the Arms tab of a level 38 Warrior's spellbook in the demo (Xaryu's Twitch VOD of 12 Sep 2026, 5h01m). Tooltip not read yet.",
           "icon": "ability_warrior_devastate"
         },
         {
           "name": "Tactical Mastery",
           "status": "confirmed",
           "note": "Listed as a passive in the Arms tab of the same spellbook, so it is baseline now rather than a talent.",
-          "icon": "spell_nature_enchantarmor"
+          "icon": "ability_warrior_decisivestrike"
         },
         {
           "name": "Intercept",
@@ -250,8 +250,8 @@
         },
         {
           "name": "Bloodrage",
-          "status": "unconfirmed",
-          "note": "Not in the Arms or Fury tabs at level 38. Its talent lives in Protection, so it is most likely in the Protection tab, which was never opened on stream.",
+          "status": "confirmed",
+          "note": "Confirmed in the Protection tab of the level 38 demo spellbook (Esfand's stream, 13 Sep), alongside Shield Wall, Taunt and Sunder Armor.",
           "icon": "ability_racial_bloodrage"
         }
       ]
@@ -486,20 +486,26 @@
         {
           "name": "Blessing of Kings and Consecration",
           "status": "confirmed",
-          "note": "Both baseline now: neither is a talent anywhere in the Forever trees, and both sit in a level 38 Undead Paladin's spellbook in the demo.",
-          "icon": "spell_magic_magearmor"
+          "note": "Both baseline now: neither is a talent anywhere in the Forever trees, and both sit in a level 38 Undead Paladin's spellbook in the demo. Consecration is trained at level 20 per the Deep Dive panel.",
+          "icon": "spell_magic_greaterblessingofkings"
         },
         {
           "name": "Holy Strike",
           "status": "confirmed",
-          "note": "A baseline Retribution strike, Rank 5 by level 38 in the demo spellbook.",
+          "note": "Baseline Retribution strike, Rank 5 by 38 in the demo spellbook. Instant weapon strike that deals Holy damage on a 12 sec cooldown; Improved Holy Strike, Iron Creed and Sacred Arbiter build on it.",
           "icon": "spell_holy_crusaderstrike"
         },
         {
           "name": "Seal of Fury",
           "status": "confirmed",
-          "note": "Back as a trainable seal, Rank 4 by 38.",
+          "note": "The tank seal, trainable, Rank 4 by level 38 in the demo spellbook. Each melee hit deals Holy damage and, with a shield equipped, builds an absorb worth 50% of that damage. Improved Seal of Fury and Twist of Light refer to it.",
           "icon": "spell_holy_sealoffury"
+        },
+        {
+          "name": "Judgement",
+          "status": "confirmed",
+          "note": "Changed: no longer consumes your seal. 10 yd range, 10 sec cooldown. Judging Seal of Fury deals Holy damage and taunts the target for 4 sec at 10 yd, so Paladins do have a taunt. Swift Judgement resets it for a second try. From the BlizzCon Deep Dive panel.",
+          "icon": "spell_holy_righteousfury"
         }
       ]
     },
@@ -760,14 +766,14 @@
         {
           "name": "Aimed Shot",
           "status": "confirmed",
-          "note": "Baseline now (a Classic Marksmanship talent): Rank 3 by level 38 in the demo spellbook. This is a different spell from the current \"Sniper Shot\" talent, which now occupies the Forever Marksmanship tree slot Classic's Aimed Shot used to be renamed toward.",
+          "note": "Baseline now (a Classic Marksmanship talent): Rank 3 by level 38 in the demo spellbook.",
           "icon": "inv_spear_07"
         },
         {
           "name": "Call Owl",
           "status": "confirmed",
           "note": "Call Pet is named after your pet in Forever; the demo Hunter's read Call Owl.",
-          "icon": "inv_misc_questionmark"
+          "icon": "ability_hunter_beastcall"
         }
       ]
     },
@@ -971,10 +977,10 @@
       ],
       "newAbilities": [
         {
-          "name": "One-handed axes",
+          "name": "Axes",
           "status": "unconfirmed",
           "note": "Rogues can apparently wield one-handed axes now. Hack and Slash (Combat) lists Axe/Sword, Dagger/Fist and Mace as its weapon groups, and Classic rogues could not equip axes at all.",
-          "icon": "inv_misc_questionmark"
+          "icon": "inv_axe_09"
         }
       ]
     },
@@ -1161,19 +1167,19 @@
         {
           "name": "Shadow Word: Death",
           "status": "unconfirmed",
-          "note": "Execute-style Shadow spell; mentioned by Early Demise. Not present in the level 38 demo spellbook, so it's probably trained later.",
+          "note": "Execute-style Shadow spell; mentioned by Early Demise.",
           "icon": "spell_shadow_demonicfortitude"
         },
         {
           "name": "Devouring Plague",
           "status": "confirmed",
-          "note": "Now a normal Shadow spell rather than an Undead racial: a Night Elf Priest has it at Rank 3 at level 38 in the demo spellbook. Also mentioned by Devouring Contagion.",
+          "note": "Now a normal Shadow spell rather than an Undead racial: a Night Elf Priest has it at Rank 3 by level 38 in the demo spellbook, on a 1 min cooldown. Also mentioned by Devouring Contagion.",
           "icon": "spell_shadow_blackplague"
         },
         {
           "name": "Fear Ward",
           "status": "confirmed",
-          "note": "Baseline for every Priest now: sits in the Holy tab of a Night Elf Priest's spellbook in the demo.",
+          "note": "Baseline for every Priest now: sits in the Holy tab of a Night Elf Priest's spellbook in the demo, 3 min cooldown.",
           "icon": "spell_holy_excorcism"
         }
       ]
@@ -1449,13 +1455,25 @@
           "name": "Totemic Projection",
           "status": "confirmed",
           "note": "New Enhancement ability in the demo spellbook; Totemic Recall also exists.",
-          "icon": "spell_shaman_totemrecall"
+          "icon": "ability_shaman_totemrelocation"
         },
         {
           "name": "Fire Nova",
           "status": "confirmed",
           "note": "Talent tooltips call it \"your Fire Nova spell\" and give it a cooldown (Improved Fire Nova: +10% damage, -2 sec cooldown). In Classic it was Fire Nova Totem. Also named in Call of Flame and Elemental Reach.",
           "icon": "spell_fire_sealoffire"
+        },
+        {
+          "name": "Lightning Bolt",
+          "status": "confirmed",
+          "note": "Casts 0.5 sec faster than Classic at baseline. Rank 7: 135 mana, 30 yd, 2.5 sec cast, 102 to 113 Nature damage (Classic rank 7 was 3 sec). Read from Guzu's stream on an Enhancement Shaman with no haste buff up, captured by Schiffers.",
+          "icon": "spell_nature_lightning"
+        },
+        {
+          "name": "Chain Lightning",
+          "status": "confirmed",
+          "note": "Also 0.5 sec faster at baseline. Rank 1: 225 mana, 2 sec cast, 6 sec cooldown, 64 to 71 Nature, each jump 30% weaker, 3 targets (Classic rank 1 was 2.5 sec). With 3 of 3 Elemental Alacrity that lands at the same 2 sec Lightning Bolt Classic's 5-point Lightning Mastery gave.",
+          "icon": "spell_nature_chainlightning"
         }
       ]
     },
@@ -1670,12 +1688,12 @@
           "name": "Comprehend Scroll",
           "status": "confirmed",
           "note": "New General ability seen on a Skyborne Mage in the demo.",
-          "icon": "inv_misc_questionmark"
+          "icon": "inv_scroll_03"
         },
         {
           "name": "Frostfire Bolt",
           "status": "unconfirmed",
-          "note": "Fire and Frost bolt; mentioned by Improved Fireball, Hot Streak, Missile Barrage and Incineration. Not present in the level 38 demo spellbook, so it's probably trained later (or gated behind a talent/quest).",
+          "note": "Fire and Frost bolt; mentioned by Improved Fireball, Hot Streak, Missile Barrage and Incineration.",
           "icon": "ability_mage_frostfirebolt"
         }
       ]
@@ -1897,14 +1915,14 @@
         {
           "name": "Bane of Doom",
           "status": "unconfirmed",
-          "note": "Curse of Doom renamed; mentioned by Pandemic. Not present in the level 38 demo spellbook.",
+          "note": "Curse of Doom renamed; mentioned by Pandemic.",
           "icon": "spell_shadow_auraofdarkness"
         },
         {
           "name": "Incubus",
           "status": "confirmed",
-          "note": "Male counterpart to the Succubus; mentioned by Fel Vitality, Fel Domination, Demonic Sacrifice and Improved Sayaad, and confirmed as its own Summon spell in the demo spellbook.",
-          "icon": "ability_warlock_incubus"
+          "note": "Male counterpart to the Succubus; mentioned by Fel Vitality, Fel Domination, Demonic Sacrifice and Improved Sayaad.",
+          "icon": "spell_shadow_summonsuccubus"
         }
       ]
     },
@@ -2175,7 +2193,7 @@
           "name": "Revive",
           "status": "confirmed",
           "note": "New out-of-combat resurrection: 10 sec cast, brings a player back with 300 health and 520 mana at Rank 3. Rebirth keeps its 30 min cooldown.",
-          "icon": "ability_druid_lunarguidance"
+          "icon": "spell_nature_reincarnation"
         },
         {
           "name": "Cure Poison",
