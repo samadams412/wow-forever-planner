@@ -5,12 +5,11 @@
       "demoRace": "Human",
       "notes": [
         "Victory Rush and Tactical Mastery are baseline.",
-        "No Bloodrage or Intercept in Arms or Fury at 38. Bloodrage most likely sits in the Protection tab, which was never opened. Intercept is trained at 30 in Classic, so its absence is the odd one; the demo capped characters at 38.",
-        "Retaliation: 15 min cooldown, Battle Stance, counterattacks up to 30 melee hits for 15 sec."
+        "No Intercept in Arms or Fury at 38; Intercept is trained at 30 in Classic, so its absence is the odd one -- the demo capped characters at 38. Bloodrage is confirmed in Protection.",
+        "Retaliation: 15 min cooldown, Battle Stance, counterattacks up to 30 melee hits for 15 sec.",
+        "Protection tab (Esfand's stream, 13 Sep 2026, clip by Zevzve): Bloodrage, Defensive Stance, Disarm, Revenge, Shield Bash, Shield Block, Shield Wall, Sunder Armor, Taunt. Last Stand is not in it, so it stays a talent."
       ],
-      "notOpened": [
-        "Protection"
-      ],
+      "notOpened": [],
       "tabs": [
         {
           "name": "Arms",
@@ -129,8 +128,7 @@
           "spells": [
             {
               "name": "Attack",
-              "icon": "inv_misc_questionmark",
-              "iconPlaceholder": true
+              "icon": "inv_sword_04"
             },
             {
               "name": "Throw",
@@ -138,15 +136,15 @@
             },
             {
               "name": "Shoot Bow",
-              "icon": "ability_marksmanship"
+              "icon": "inv_weapon_bow_07"
             },
             {
               "name": "Shoot Crossbow",
-              "icon": "ability_marksmanship"
+              "icon": "inv_weapon_crossbow_02"
             },
             {
               "name": "Shoot Gun",
-              "icon": "ability_marksmanship"
+              "icon": "inv_weapon_rifle_01"
             },
             {
               "name": "Dual Wield",
@@ -156,7 +154,7 @@
             {
               "name": "Armor Proficiency",
               "passive": true,
-              "icon": "inv_chest_plate01"
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Block",
@@ -166,7 +164,7 @@
             {
               "name": "Dodge",
               "passive": true,
-              "icon": "spell_nature_invisibilty"
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Parry",
@@ -176,8 +174,51 @@
             {
               "name": "Languages",
               "passive": true,
-              "icon": "inv_misc_questionmark",
-              "iconPlaceholder": true
+              "icon": "inv_misc_book_11"
+            }
+          ]
+        },
+        {
+          "name": "Protection",
+          "spells": [
+            {
+              "name": "Bloodrage",
+              "icon": "ability_racial_bloodrage"
+            },
+            {
+              "name": "Defensive Stance",
+              "icon": "ability_warrior_defensivestance"
+            },
+            {
+              "name": "Disarm",
+              "icon": "ability_warrior_disarm"
+            },
+            {
+              "name": "Revenge",
+              "rank": 3,
+              "icon": "ability_warrior_revenge"
+            },
+            {
+              "name": "Shield Bash",
+              "rank": 2,
+              "icon": "ability_warrior_shieldbash"
+            },
+            {
+              "name": "Shield Block",
+              "icon": "ability_defend"
+            },
+            {
+              "name": "Shield Wall",
+              "icon": "ability_warrior_shieldwall"
+            },
+            {
+              "name": "Sunder Armor",
+              "rank": 3,
+              "icon": "ability_warrior_sunder"
+            },
+            {
+              "name": "Taunt",
+              "icon": "spell_nature_reincarnation"
             }
           ]
         }
@@ -230,53 +271,66 @@
           "spells": [
             {
               "name": "Blessing of Wisdom",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_sealofwisdom"
             },
             {
               "name": "Consecration",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_innerfire"
             },
             {
               "name": "Exorcism",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_excorcism_02"
             },
             {
               "name": "Flash of Light",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_flashheal"
             },
             {
               "name": "Holy Light",
-              "rank": 6
+              "rank": 6,
+              "icon": "spell_holy_holybolt"
             },
             {
               "name": "Lay on Hands",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_layonhands"
             },
             {
-              "name": "Purify"
+              "name": "Purify",
+              "icon": "spell_holy_purify"
             },
             {
               "name": "Redemption",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_resurrection"
             },
             {
               "name": "Seal of Light",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_holy_healingaura"
             },
             {
               "name": "Seal of Righteousness",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_thunderbolt"
             },
             {
               "name": "Seal of Wisdom",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_holy_righteousnessaura"
             },
             {
-              "name": "Sense Undead"
+              "name": "Sense Undead",
+              "icon": "spell_holy_senseundead"
             },
             {
               "name": "Turn Undead",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_turnundead"
             }
           ]
         },
@@ -284,61 +338,77 @@
           "name": "Protection",
           "spells": [
             {
-              "name": "Blessing of Freedom"
+              "name": "Blessing of Freedom",
+              "icon": "spell_holy_sealofvalor"
             },
             {
-              "name": "Blessing of Kings"
+              "name": "Blessing of Kings",
+              "icon": "spell_magic_magearmor"
             },
             {
               "name": "Blessing of Protection",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_sealofprotection"
             },
             {
-              "name": "Blessing of Salvation"
+              "name": "Blessing of Salvation",
+              "icon": "spell_holy_sealofsalvation"
             },
             {
-              "name": "Concentration Aura"
+              "name": "Concentration Aura",
+              "icon": "spell_holy_mindsooth"
             },
             {
               "name": "Devotion Aura",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_holy_devotionaura"
             },
             {
-              "name": "Divine Intervention"
+              "name": "Divine Intervention",
+              "icon": "spell_nature_timestop"
             },
             {
               "name": "Divine Protection",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_restoration"
             },
             {
               "name": "Divine Shield",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_holy_divineintervention"
             },
             {
               "name": "Fire Resistance Aura",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_fire_sealoffire"
             },
             {
               "name": "Frost Resistance Aura",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_frost_wizardmark"
             },
             {
               "name": "Hammer of Justice",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_sealofmight"
             },
             {
-              "name": "Righteous Fury"
+              "name": "Righteous Fury",
+              "icon": "spell_holy_sealoffury"
             },
             {
               "name": "Seal of Fury",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_holy_sealoffury"
             },
             {
-              "name": "Seal of Justice"
+              "name": "Seal of Justice",
+              "icon": "spell_holy_sealofwrath"
             },
             {
               "name": "Shadow Resistance Aura",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_shadow_sealofkings"
             }
           ]
         },
@@ -347,27 +417,33 @@
           "spells": [
             {
               "name": "Blessing of Might",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_holy_fistofjustice"
             },
             {
               "name": "Holy Strike",
-              "rank": 5
+              "rank": 5,
+              "icon": "spell_holy_crusaderstrike"
             },
             {
-              "name": "Judgement"
+              "name": "Judgement",
+              "icon": "spell_holy_righteousfury"
             },
             {
               "name": "Retribution Aura",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_auraoflight"
             },
             {
               "name": "Seal of Command",
               "rank": 5,
-              "talent": true
+              "talent": true,
+              "icon": "ability_warrior_innerrage"
             },
             {
               "name": "Seal of the Crusader",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_holy_holysmite"
             }
           ]
         },
@@ -375,27 +451,33 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Block",
-              "passive": true
+              "passive": true,
+              "icon": "ability_defend"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Parry",
-              "passive": true
+              "passive": true,
+              "icon": "ability_parry"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -438,49 +520,63 @@
           "spells": [
             {
               "name": "Aspect of the Beast",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_mount_pinktiger"
             },
             {
-              "name": "Aspect of the Cheetah"
+              "name": "Aspect of the Cheetah",
+              "icon": "ability_mount_jungletiger"
             },
             {
               "name": "Aspect of the Hawk",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_ravenform"
             },
             {
-              "name": "Aspect of the Monkey"
+              "name": "Aspect of the Monkey",
+              "icon": "ability_hunter_aspectofthemonkey"
             },
             {
-              "name": "Beast Lore"
+              "name": "Beast Lore",
+              "icon": "ability_physical_taunt"
             },
             {
-              "name": "Call Pet"
+              "name": "Call Pet",
+              "icon": "ability_hunter_pet_owl"
             },
             {
-              "name": "Dismiss Pet"
+              "name": "Dismiss Pet",
+              "icon": "spell_nature_spiritwolf"
             },
             {
-              "name": "Eagle Eye"
+              "name": "Eagle Eye",
+              "icon": "ability_hunter_eagleeye"
             },
             {
-              "name": "Eyes of the Beast"
+              "name": "Eyes of the Beast",
+              "icon": "ability_eyeoftheowl"
             },
             {
-              "name": "Feed Pet"
+              "name": "Feed Pet",
+              "icon": "ability_hunter_beasttraining"
             },
             {
               "name": "Mend Pet",
-              "rank": 4
+              "rank": 4,
+              "icon": "ability_hunter_mendpet"
             },
             {
-              "name": "Revive Pet"
+              "name": "Revive Pet",
+              "icon": "ability_hunter_beastsoothe"
             },
             {
               "name": "Scare Beast",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_druid_cower"
             },
             {
-              "name": "Tame Beast"
+              "name": "Tame Beast",
+              "icon": "ability_hunter_beasttaming"
             }
           ]
         },
@@ -489,47 +585,59 @@
           "spells": [
             {
               "name": "Aimed Shot",
-              "rank": 3
+              "rank": 3,
+              "icon": "inv_spear_07"
             },
             {
               "name": "Arcane Shot",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_impalingbolt"
             },
             {
-              "name": "Auto Shot"
+              "name": "Auto Shot",
+              "icon": "ability_whirlwind"
             },
             {
-              "name": "Concussive Shot"
+              "name": "Concussive Shot",
+              "icon": "spell_frost_stun"
             },
             {
               "name": "Distracting Shot",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_arcane_blink"
             },
             {
-              "name": "Flare"
+              "name": "Flare",
+              "icon": "spell_fire_flare"
             },
             {
               "name": "Hunter's Mark",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_hunter_snipershot"
             },
             {
               "name": "Multi-Shot",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_upgrademoonglaive"
             },
             {
-              "name": "Rapid Fire"
+              "name": "Rapid Fire",
+              "icon": "ability_hunter_runningshot"
             },
             {
               "name": "Scorpid Sting",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_hunter_criticalshot"
             },
             {
               "name": "Serpent Sting",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_hunter_quickshot"
             },
             {
               "name": "Viper Sting",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_hunter_aimedshot"
             }
           ]
         },
@@ -538,55 +646,70 @@
           "spells": [
             {
               "name": "Disengage",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_rogue_feint"
             },
             {
               "name": "Explosive Trap",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_fire_selfdestruct"
             },
             {
-              "name": "Feign Death"
+              "name": "Feign Death",
+              "icon": "ability_rogue_feigndeath"
             },
             {
               "name": "Freezing Trap",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_frost_chainsofice"
             },
             {
-              "name": "Frost Trap"
+              "name": "Frost Trap",
+              "icon": "spell_frost_freezingbreath"
             },
             {
               "name": "Immolation Trap",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_fire_flameshock"
             },
             {
               "name": "Mongoose Bite",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_hunter_swiftstrike"
             },
             {
               "name": "Raptor Strike",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_meleedamage"
             },
             {
-              "name": "Track Beasts"
+              "name": "Track Beasts",
+              "icon": "ability_tracking"
             },
             {
-              "name": "Track Demons"
+              "name": "Track Demons",
+              "icon": "spell_shadow_summonfelhunter"
             },
             {
-              "name": "Track Elementals"
+              "name": "Track Elementals",
+              "icon": "spell_frost_summonwaterelemental"
             },
             {
-              "name": "Track Hidden"
+              "name": "Track Hidden",
+              "icon": "ability_stealth"
             },
             {
-              "name": "Track Humanoids"
+              "name": "Track Humanoids",
+              "icon": "ability_tracking"
             },
             {
-              "name": "Track Undead"
+              "name": "Track Undead",
+              "icon": "spell_shadow_darksummoning"
             },
             {
               "name": "Wing Clip",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_rogue_trip"
             }
           ]
         },
@@ -594,33 +717,41 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
-              "name": "Throw"
+              "name": "Throw",
+              "icon": "ability_throw"
             },
             {
-              "name": "Beast Training"
+              "name": "Beast Training",
+              "icon": "ability_hunter_beasttraining"
             },
             {
               "name": "Dual Wield",
-              "passive": true
+              "passive": true,
+              "icon": "ability_dualwield"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Parry",
-              "passive": true
+              "passive": true,
+              "icon": "ability_parry"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -654,34 +785,42 @@
           "spells": [
             {
               "name": "Ambush",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_rogue_ambush"
             },
             {
-              "name": "Cheap Shot"
+              "name": "Cheap Shot",
+              "icon": "ability_cheapshot"
             },
             {
               "name": "Eviscerate",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_rogue_eviscerate"
             },
             {
               "name": "Expose Armor",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_warrior_riposte"
             },
             {
               "name": "Garrote",
-              "rank": 4
+              "rank": 4,
+              "icon": "ability_rogue_garrote"
             },
             {
               "name": "Kidney Shot",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_rogue_kidneyshot"
             },
             {
               "name": "Rupture",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_rogue_rupture"
             },
             {
               "name": "Slice and Dice",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_rogue_slicedice"
             }
           ]
         },
@@ -690,38 +829,47 @@
           "spells": [
             {
               "name": "Adrenaline Rush",
-              "talent": true
+              "talent": true,
+              "icon": "spell_shadow_shadowworddominate"
             },
             {
               "name": "Backstab",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_backstab"
             },
             {
               "name": "Blade Flurry",
-              "talent": true
+              "talent": true,
+              "icon": "ability_warrior_punishingblow"
             },
             {
-              "name": "Evasion"
+              "name": "Evasion",
+              "icon": "spell_shadow_shadowward"
             },
             {
               "name": "Feint",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_rogue_feint"
             },
             {
               "name": "Gouge",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_gouge"
             },
             {
               "name": "Kick",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_kick"
             },
             {
               "name": "Sinister Strike",
-              "rank": 6
+              "rank": 6,
+              "icon": "spell_shadow_ritualofsacrifice"
             },
             {
               "name": "Sprint",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_rogue_sprint"
             }
           ]
         },
@@ -729,32 +877,40 @@
           "name": "Subtlety",
           "spells": [
             {
-              "name": "Blind"
+              "name": "Blind",
+              "icon": "spell_shadow_mindsteal"
             },
             {
               "name": "Detect Traps",
-              "passive": true
+              "passive": true,
+              "icon": "ability_spy"
             },
             {
-              "name": "Disarm Trap"
+              "name": "Disarm Trap",
+              "icon": "spell_shadow_grimward"
             },
             {
-              "name": "Distract"
+              "name": "Distract",
+              "icon": "ability_rogue_distract"
             },
             {
-              "name": "Pick Pocket"
+              "name": "Pick Pocket",
+              "icon": "inv_misc_bag_11"
             },
             {
               "name": "Sap",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_sap"
             },
             {
               "name": "Stealth",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_stealth"
             },
             {
               "name": "Vanish",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_vanish"
             }
           ]
         },
@@ -762,42 +918,53 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
-              "name": "Pick Lock"
+              "name": "Pick Lock",
+              "icon": "spell_nature_moonkey"
             },
             {
-              "name": "Shoot Bow"
+              "name": "Shoot Bow",
+              "icon": "inv_weapon_bow_07"
             },
             {
-              "name": "Shoot Crossbow"
+              "name": "Shoot Crossbow",
+              "icon": "inv_weapon_crossbow_02"
             },
             {
-              "name": "Shoot Gun"
+              "name": "Shoot Gun",
+              "icon": "inv_weapon_rifle_01"
             },
             {
-              "name": "Throw"
+              "name": "Throw",
+              "icon": "ability_throw"
             },
             {
               "name": "Dual Wield",
-              "passive": true
+              "passive": true,
+              "icon": "ability_dualwield"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Parry",
-              "passive": true
+              "passive": true,
+              "icon": "ability_parry"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -826,36 +993,46 @@
           "spells": [
             {
               "name": "Dispel Magic",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_dispelmagic"
             },
             {
-              "name": "Divine Spirit"
+              "name": "Divine Spirit",
+              "icon": "spell_holy_divinespirit"
             },
             {
               "name": "Elune's Grace",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_holy_elunesgrace"
             },
             {
-              "name": "Inner Fire"
+              "name": "Inner Fire",
+              "icon": "spell_holy_innerfire"
             },
             {
-              "name": "Levitate"
+              "name": "Levitate",
+              "icon": "spell_holy_layonhands"
             },
             {
-              "name": "Mana Burn"
+              "name": "Mana Burn",
+              "icon": "spell_shadow_manaburn"
             },
             {
-              "name": "Power Word: Fortitude"
+              "name": "Power Word: Fortitude",
+              "icon": "spell_holy_wordfortitude"
             },
             {
-              "name": "Power Word: Shield"
+              "name": "Power Word: Shield",
+              "icon": "spell_holy_powerwordshield"
             },
             {
-              "name": "Shackle Undead"
+              "name": "Shackle Undead",
+              "icon": "spell_nature_slow"
             },
             {
               "name": "Starshards",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_arcane_starfire"
             }
           ]
         },
@@ -863,37 +1040,48 @@
           "name": "Holy",
           "spells": [
             {
-              "name": "Abolish Disease"
+              "name": "Abolish Disease",
+              "icon": "spell_nature_nullifydisease"
             },
             {
-              "name": "Cure Disease"
+              "name": "Cure Disease",
+              "icon": "spell_holy_nullifydisease"
             },
             {
-              "name": "Fear Ward"
+              "name": "Fear Ward",
+              "icon": "spell_holy_excorcism"
             },
             {
-              "name": "Flash Heal"
+              "name": "Flash Heal",
+              "icon": "spell_holy_flashheal"
             },
             {
-              "name": "Heal"
+              "name": "Heal",
+              "icon": "spell_holy_heal"
             },
             {
-              "name": "Holy Fire"
+              "name": "Holy Fire",
+              "icon": "spell_holy_searinglight"
             },
             {
-              "name": "Lesser Heal"
+              "name": "Lesser Heal",
+              "icon": "spell_holy_lesserheal"
             },
             {
-              "name": "Prayer of Healing"
+              "name": "Prayer of Healing",
+              "icon": "spell_holy_prayerofhealing02"
             },
             {
-              "name": "Renew"
+              "name": "Renew",
+              "icon": "spell_holy_renew"
             },
             {
-              "name": "Resurrection"
+              "name": "Resurrection",
+              "icon": "spell_holy_resurrection"
             },
             {
-              "name": "Smite"
+              "name": "Smite",
+              "icon": "spell_holy_holysmite"
             }
           ]
         },
@@ -902,32 +1090,41 @@
           "spells": [
             {
               "name": "Devouring Plague",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_shadow_blackplague"
             },
             {
-              "name": "Fade"
+              "name": "Fade",
+              "icon": "spell_magic_lesserinvisibilty"
             },
             {
-              "name": "Mind Blast"
+              "name": "Mind Blast",
+              "icon": "spell_shadow_unholyfrenzy"
             },
             {
-              "name": "Mind Control"
+              "name": "Mind Control",
+              "icon": "spell_shadow_shadowworddominate"
             },
             {
               "name": "Mind Soothe",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_mindsooth"
             },
             {
-              "name": "Mind Vision"
+              "name": "Mind Vision",
+              "icon": "spell_holy_mindvision"
             },
             {
-              "name": "Psychic Scream"
+              "name": "Psychic Scream",
+              "icon": "spell_shadow_psychicscream"
             },
             {
-              "name": "Shadow Protection"
+              "name": "Shadow Protection",
+              "icon": "spell_shadow_antishadow"
             },
             {
-              "name": "Shadow Word: Pain"
+              "name": "Shadow Word: Pain",
+              "icon": "spell_shadow_shadowwordpain"
             }
           ]
         },
@@ -935,22 +1132,27 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
-              "name": "Shoot"
+              "name": "Shoot",
+              "icon": "ability_shootwand"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -989,56 +1191,70 @@
           "name": "Elemental Combat",
           "spells": [
             {
-              "name": "Call of the Ancestors"
+              "name": "Call of the Ancestors",
+              "icon": "spell_shaman_dropall_02"
             },
             {
-              "name": "Call of the Elements"
+              "name": "Call of the Elements",
+              "icon": "spell_shaman_dropall_01"
             },
             {
               "name": "Chain Lightning",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_nature_chainlightning"
             },
             {
               "name": "Earth Shock",
-              "rank": 5
+              "rank": 5,
+              "icon": "spell_nature_earthshock"
             },
             {
-              "name": "Earthbind Totem"
+              "name": "Earthbind Totem",
+              "icon": "spell_nature_strengthofearthtotem02"
             },
             {
               "name": "Fire Nova",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_fire_sealoffire"
             },
             {
               "name": "Flame Shock",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_fire_flameshock"
             },
             {
               "name": "Frost Shock",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_frost_frostshock"
             },
             {
               "name": "Lightning Bolt",
-              "rank": 7
+              "rank": 7,
+              "icon": "spell_nature_lightning"
             },
             {
               "name": "Magma Totem",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_fire_selfdestruct"
             },
             {
               "name": "Purge",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_purge"
             },
             {
               "name": "Searing Totem",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_fire_searingtotem"
             },
             {
               "name": "Stoneclaw Totem",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_stoneclawtotem"
             },
             {
-              "name": "Totemic Recall"
+              "name": "Totemic Recall",
+              "icon": "spell_shaman_totemrecall"
             }
           ]
         },
@@ -1046,79 +1262,100 @@
           "name": "Enhancement",
           "spells": [
             {
-              "name": "Astral Recall"
+              "name": "Astral Recall",
+              "icon": "spell_nature_astralrecal"
             },
             {
-              "name": "Far Sight"
+              "name": "Far Sight",
+              "icon": "spell_nature_farsight"
             },
             {
               "name": "Fire Resistance Totem",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_fireresistancetotem_01"
             },
             {
               "name": "Flametongue Totem",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_guardianward"
             },
             {
               "name": "Flametongue Weapon",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_fire_flametounge"
             },
             {
               "name": "Frost Resistance Totem",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_frostresistancetotem_01"
             },
             {
-              "name": "Frostbrand Weapon"
+              "name": "Frostbrand Weapon",
+              "icon": "spell_frost_frostbrand"
             },
             {
-              "name": "Ghost Wolf"
+              "name": "Ghost Wolf",
+              "icon": "spell_nature_spiritwolf"
             },
             {
-              "name": "Grounding Totem"
+              "name": "Grounding Totem",
+              "icon": "spell_nature_groundingtotem"
             },
             {
               "name": "Lightning Shield",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_lightningshield"
             },
             {
               "name": "Nature Resistance Totem",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_nature_natureresistancetotem"
             },
             {
               "name": "Rockbiter Weapon",
-              "rank": 5
+              "rank": 5,
+              "icon": "spell_nature_rockbiter"
             },
             {
-              "name": "Sentry Totem"
+              "name": "Sentry Totem",
+              "icon": "spell_nature_removecurse"
             },
             {
               "name": "Stoneskin Totem",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_stoneskintotem"
             },
             {
               "name": "Strength of Earth Totem",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_nature_earthbindtotem"
             },
             {
-              "name": "Totemic Projection"
+              "name": "Totemic Projection",
+              "icon": "ability_shaman_totemrelocation"
             },
             {
-              "name": "Water Breathing"
+              "name": "Water Breathing",
+              "icon": "spell_shadow_demonbreath"
             },
             {
-              "name": "Water Walking"
+              "name": "Water Walking",
+              "icon": "spell_frost_windwalkon"
             },
             {
               "name": "Windfury Totem",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_nature_windfury"
             },
             {
               "name": "Windfury Weapon",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_nature_cyclone"
             },
             {
               "name": "Windwall Totem",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_nature_earthbind"
             }
           ]
         },
@@ -1127,42 +1364,53 @@
           "spells": [
             {
               "name": "Ancestral Spirit",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_nature_regenerate"
             },
             {
-              "name": "Cure Disease"
+              "name": "Cure Disease",
+              "icon": "spell_holy_nullifydisease"
             },
             {
-              "name": "Cure Poison"
+              "name": "Cure Poison",
+              "icon": "spell_nature_nullifypoison"
             },
             {
-              "name": "Disease Cleansing Totem"
+              "name": "Disease Cleansing Totem",
+              "icon": "spell_nature_diseasecleansingtotem"
             },
             {
               "name": "Healing Stream Totem",
-              "rank": 2
+              "rank": 2,
+              "icon": "inv_spear_04"
             },
             {
               "name": "Healing Wave",
-              "rank": 6
+              "rank": 6,
+              "icon": "spell_nature_magicimmunity"
             },
             {
               "name": "Lesser Healing Wave",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_nature_healingwavelesser"
             },
             {
               "name": "Mana Spring Totem",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_manaregentotem"
             },
             {
-              "name": "Poison Cleansing Totem"
+              "name": "Poison Cleansing Totem",
+              "icon": "spell_nature_poisoncleansingtotem"
             },
             {
               "name": "Reincarnation",
-              "passive": true
+              "passive": true,
+              "icon": "spell_nature_reincarnation"
             },
             {
-              "name": "Tremor Totem"
+              "name": "Tremor Totem",
+              "icon": "spell_nature_tremortotem"
             }
           ]
         },
@@ -1170,23 +1418,28 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Block",
-              "passive": true
+              "passive": true,
+              "icon": "ability_defend"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -1221,72 +1474,91 @@
           "spells": [
             {
               "name": "Amplify Magic",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_holy_flashheal"
             },
             {
               "name": "Arcane Blast",
               "rank": 5,
-              "talent": true
+              "talent": true,
+              "icon": "spell_arcane_blast"
             },
             {
               "name": "Arcane Explosion",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_wispsplode"
             },
             {
               "name": "Arcane Intellect",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_holy_magicalsentry"
             },
             {
               "name": "Arcane Missiles",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_starfall"
             },
             {
-              "name": "Blink"
+              "name": "Blink",
+              "icon": "spell_arcane_blink"
             },
             {
-              "name": "Conjure Food"
+              "name": "Conjure Food",
+              "icon": "inv_misc_food_10"
             },
             {
-              "name": "Conjure Mana Agate"
+              "name": "Conjure Mana Agate",
+              "icon": "inv_misc_gem_emerald_01"
             },
             {
-              "name": "Conjure Mana Jade"
+              "name": "Conjure Mana Jade",
+              "icon": "inv_misc_gem_emerald_02"
             },
             {
               "name": "Conjure Water",
-              "rank": 4
+              "rank": 4,
+              "icon": "inv_drink_06"
             },
             {
-              "name": "Counterspell"
+              "name": "Counterspell",
+              "icon": "spell_frost_iceshock"
             },
             {
               "name": "Dampen Magic",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_nature_abolishmagic"
             },
             {
-              "name": "Evocation"
+              "name": "Evocation",
+              "icon": "spell_nature_purge"
             },
             {
               "name": "Mage Armor",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_magearmor"
             },
             {
               "name": "Mana Shield",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_shadow_detectlesserinvisibility"
             },
             {
               "name": "Polymorph",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_polymorph"
             },
             {
               "name": "Presence of Mind",
-              "talent": true
+              "talent": true,
+              "icon": "spell_nature_enchantarmor"
             },
             {
-              "name": "Remove Lesser Curse"
+              "name": "Remove Lesser Curse",
+              "icon": "spell_nature_removecurse"
             },
             {
-              "name": "Slow Fall"
+              "name": "Slow Fall",
+              "icon": "spell_magic_featherfall"
             }
           ]
         },
@@ -1295,23 +1567,28 @@
           "spells": [
             {
               "name": "Fire Blast",
-              "rank": 5
+              "rank": 5,
+              "icon": "spell_fire_fireball"
             },
             {
               "name": "Fire Ward",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_fire_firearmor"
             },
             {
               "name": "Fireball",
-              "rank": 7
+              "rank": 7,
+              "icon": "spell_fire_flamebolt"
             },
             {
               "name": "Flamestrike",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_fire_selfdestruct"
             },
             {
               "name": "Scorch",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_fire_soulburn"
             }
           ]
         },
@@ -1320,31 +1597,38 @@
           "spells": [
             {
               "name": "Blizzard",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_frost_icestorm"
             },
             {
               "name": "Cone of Cold",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_frost_glacier"
             },
             {
               "name": "Frost Armor",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_frost_frostarmor02"
             },
             {
               "name": "Frost Nova",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_frost_frostnova"
             },
             {
               "name": "Frost Ward",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_frost_frostward"
             },
             {
               "name": "Frostbolt",
-              "rank": 7
+              "rank": 7,
+              "icon": "spell_frost_frostbolt02"
             },
             {
               "name": "Ice Armor",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_frost_frostarmor02"
             }
           ]
         },
@@ -1352,25 +1636,31 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
-              "name": "Shoot"
+              "name": "Shoot",
+              "icon": "ability_shootwand"
             },
             {
-              "name": "Comprehend Scroll"
+              "name": "Comprehend Scroll",
+              "icon": "inv_scroll_03"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -1406,47 +1696,58 @@
           "spells": [
             {
               "name": "Bane of Agony",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_shadow_curseofsargeras"
             },
             {
               "name": "Corruption",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_shadow_abominationexplosion"
             },
             {
               "name": "Curse of Recklessness",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_shadow_unholystrength"
             },
             {
               "name": "Curse of the Elements",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_shadow_chilltouch"
             },
             {
               "name": "Curse of Tongues",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_shadow_curseoftounges"
             },
             {
               "name": "Curse of Weakness",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_shadow_curseofmannoroth"
             },
             {
               "name": "Drain Life",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_shadow_lifedrain02"
             },
             {
               "name": "Drain Mana",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_shadow_siphonmana"
             },
             {
               "name": "Drain Soul",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_shadow_haunting"
             },
             {
               "name": "Fear",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_shadow_possession"
             },
             {
               "name": "Life Tap",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_shadow_burningspirit"
             }
           ]
         },
@@ -1455,79 +1756,99 @@
           "spells": [
             {
               "name": "Banish",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_shadow_cripple"
             },
             {
               "name": "Create Firestone",
-              "rank": 2
+              "rank": 2,
+              "icon": "inv_misc_gem_bloodstone_02"
             },
             {
               "name": "Create Healthstone",
-              "rank": 3
+              "rank": 3,
+              "icon": "inv_stone_04"
             },
             {
               "name": "Create Soulstone",
-              "rank": 2
+              "rank": 2,
+              "icon": "inv_misc_orb_04"
             },
             {
               "name": "Create Spellstone",
-              "rank": 1
+              "rank": 1,
+              "icon": "inv_misc_gem_sapphire_01"
             },
             {
               "name": "Demon Armor",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_shadow_ragingscream"
             },
             {
-              "name": "Demon Skin"
+              "name": "Demon Skin",
+              "icon": "spell_shadow_ragingscream"
             },
             {
               "name": "Detect Invisibility",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_shadow_detectinvisibility"
             },
             {
               "name": "Eye of Kilrogg",
-              "tag": "Summon"
+              "tag": "Summon",
+              "icon": "spell_shadow_evileye"
             },
             {
               "name": "Health Funnel",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_shadow_lifedrain"
             },
             {
-              "name": "Ritual of Summoning"
+              "name": "Ritual of Summoning",
+              "icon": "spell_shadow_twilight"
             },
             {
-              "name": "Sense Demons"
+              "name": "Sense Demons",
+              "icon": "spell_shadow_metamorphosis"
             },
             {
               "name": "Shadow Ward",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_shadow_antishadow"
             },
             {
               "name": "Subjugate Demon",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_shadow_enslavedemon"
             },
             {
               "name": "Summon Felhunter",
-              "tag": "Summon"
+              "tag": "Summon",
+              "icon": "spell_shadow_summonfelhunter"
             },
             {
               "name": "Summon Imp",
-              "tag": "Summon"
+              "tag": "Summon",
+              "icon": "spell_shadow_summonimp"
             },
             {
               "name": "Summon Incubus",
-              "tag": "Summon"
+              "tag": "Summon",
+              "icon": "ability_warlock_incubus"
             },
             {
               "name": "Summon Succubus",
-              "tag": "Summon"
+              "tag": "Summon",
+              "icon": "spell_shadow_summonsuccubus"
             },
             {
               "name": "Summon Voidwalker",
-              "tag": "Summon"
+              "tag": "Summon",
+              "icon": "spell_shadow_summonvoidwalker"
             },
             {
-              "name": "Unending Breath"
+              "name": "Unending Breath",
+              "icon": "spell_shadow_demonbreath"
             }
           ]
         },
@@ -1535,22 +1856,27 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
-              "name": "Shoot"
+              "name": "Shoot",
+              "icon": "ability_shootwand"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }
@@ -1596,43 +1922,53 @@
           "spells": [
             {
               "name": "Entangling Roots",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_stranglevines"
             },
             {
               "name": "Faerie Fire",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_faeriefire"
             },
             {
               "name": "Hibernate",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_sleep"
             },
             {
               "name": "Moonfire",
-              "rank": 6
+              "rank": 6,
+              "icon": "spell_nature_starfall"
             },
             {
               "name": "Nature's Grasp",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_natureswrath"
             },
             {
               "name": "Omen of Clarity",
-              "passive": true
+              "passive": true,
+              "icon": "spell_nature_crystalball"
             },
             {
               "name": "Soothe Animal",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_hunter_beastsoothe"
             },
             {
               "name": "Starfire",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_arcane_starfire"
             },
             {
               "name": "Thorns",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_thorns"
             },
             {
               "name": "Wrath",
-              "rank": 6
+              "rank": 6,
+              "icon": "spell_nature_abolishmagic"
             }
           ]
         },
@@ -1641,93 +1977,117 @@
           "spells": [
             {
               "name": "Aquatic Form",
-              "tag": "Shapeshift"
+              "tag": "Shapeshift",
+              "icon": "ability_druid_aquaticform"
             },
             {
               "name": "Bash",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_druid_bash"
             },
             {
               "name": "Bear Form",
-              "tag": "Shapeshift"
+              "tag": "Shapeshift",
+              "icon": "ability_racial_bearform"
             },
             {
               "name": "Cat Form",
-              "tag": "Shapeshift"
+              "tag": "Shapeshift",
+              "icon": "ability_druid_catform"
             },
             {
-              "name": "Challenging Roar"
+              "name": "Challenging Roar",
+              "icon": "ability_druid_challangingroar"
             },
             {
               "name": "Claw",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_druid_rake"
             },
             {
-              "name": "Cower"
+              "name": "Cower",
+              "icon": "ability_druid_cower"
             },
             {
               "name": "Dash",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_druid_dash"
             },
             {
               "name": "Demoralizing Roar",
-              "rank": 3
+              "rank": 3,
+              "icon": "classic_ability_druid_demoralizingroar"
             },
             {
-              "name": "Enrage"
+              "name": "Enrage",
+              "icon": "ability_druid_enrage"
             },
             {
               "name": "Ferocious Bite",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_druid_ferociousbite"
             },
             {
               "name": "Frenzied Regeneration",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_bullrush"
             },
             {
-              "name": "Growl"
+              "name": "Growl",
+              "icon": "ability_physical_taunt"
             },
             {
               "name": "Maul",
-              "rank": 4
+              "rank": 4,
+              "icon": "ability_druid_maul"
             },
             {
               "name": "Pounce",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_druid_supriseattack"
             },
             {
               "name": "Prowl",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_ambush"
             },
             {
               "name": "Rake",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_druid_disembowel"
             },
             {
               "name": "Ravage",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_druid_ravage"
             },
             {
               "name": "Rip",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_ghoulfrenzy"
             },
             {
               "name": "Shred",
-              "rank": 3
+              "rank": 3,
+              "icon": "spell_shadow_vampiricaura"
             },
             {
               "name": "Swipe",
-              "rank": 3
+              "rank": 3,
+              "icon": "inv_misc_monsterclaw_03"
             },
             {
-              "name": "Tiger's Fury"
+              "name": "Tiger's Fury",
+              "icon": "ability_mount_jungletiger"
             },
             {
-              "name": "Track Humanoids"
+              "name": "Track Humanoids",
+              "icon": "ability_tracking"
             },
             {
               "name": "Travel Form",
-              "tag": "Shapeshift"
+              "tag": "Shapeshift",
+              "icon": "ability_druid_travelform"
             }
           ]
         },
@@ -1735,38 +2095,47 @@
           "name": "Restoration",
           "spells": [
             {
-              "name": "Abolish Poison"
+              "name": "Abolish Poison",
+              "icon": "spell_nature_nullifypoison_02"
             },
             {
               "name": "Healing Touch",
-              "rank": 7
+              "rank": 7,
+              "icon": "spell_nature_healingtouch"
             },
             {
               "name": "Mark of the Wild",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_regeneration"
             },
             {
               "name": "Rebirth",
-              "rank": 2
+              "rank": 2,
+              "icon": "spell_nature_reincarnation"
             },
             {
               "name": "Regrowth",
-              "rank": 5
+              "rank": 5,
+              "icon": "spell_nature_resistnature"
             },
             {
               "name": "Rejuvenation",
-              "rank": 6
+              "rank": 6,
+              "icon": "spell_nature_rejuvenation"
             },
             {
-              "name": "Remove Curse"
+              "name": "Remove Curse",
+              "icon": "spell_holy_removecurse"
             },
             {
               "name": "Revive",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_druid_lunarguidance"
             },
             {
               "name": "Tranquility",
-              "rank": 1
+              "rank": 1,
+              "icon": "spell_nature_tranquility"
             }
           ]
         },
@@ -1774,19 +2143,23 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_sword_04"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_chain_05"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_shadow_rune"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_book_11"
             }
           ]
         }

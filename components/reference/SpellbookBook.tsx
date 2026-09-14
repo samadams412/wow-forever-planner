@@ -7,7 +7,19 @@ import CornerBracket from "@/components/site/CornerBracket";
 
 const PAGE_SIZE = 12;
 
+// The "first talent in the tree" heuristic below picks a poor/misleading
+// representative icon for some trees (e.g. Warrior Fury landed on a
+// situational tier-1 talent instead of anything Fury-flavored) -- these
+// verified overrides (from the reference site's own tab icons) take
+// priority over the heuristic. Keyed by `${classId}:${tabName}`.
+const TAB_ICON_OVERRIDES: Record<string, string> = {
+  "warrior:Fury": "ability_warrior_innerrage",
+  "warrior:Protection": "ability_warrior_defensivestance",
+};
+
 function resolveTabIcon(classId: string, tabName: string): string {
+  const override = TAB_ICON_OVERRIDES[`${classId}:${tabName}`];
+  if (override) return override;
   if (tabName === "General") return CLASS_ICON[classId] ?? "inv_misc_questionmark";
   const tree = getClassTalentData(classId)?.trees.find((t) => t.name === tabName);
   return tree?.talents[0]?.icon ?? "inv_misc_questionmark";
@@ -110,44 +122,71 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
         <div style={{ perspective: 1400 }}>
           <div
             onAnimationEnd={handleAnimationEnd}
-            className={`spellbook-page rounded-sm border border-[#8a6d3b]/50 bg-[#e8dcc4] p-3 sm:p-5 ${
+            className={`spellbook-page relative overflow-hidden rounded-sm border border-[#8a6d3b]/50 bg-[#e8dcc4] p-3 sm:p-5 ${
               phase === "out" ? "flip-out" : phase === "in" ? "flip-in" : ""
             }`}
           >
-            <div className="flex items-baseline justify-between gap-2 border-b border-[#8a6d3b]/40 pb-2">
-              <h3 className="font-heading text-lg font-semibold text-[#2b2013] sm:text-xl">{activeTab.name}</h3>
-              <span className="shrink-0 text-xs text-[#6b5a3d]">{activeTab.spells.length} spells</span>
-            </div>
+            {/* Aging: uneven warm blotches + a darkened vignette toward the edges, layered over the base parchment color. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0"
+              style={{
+                backgroundImage: [
+                  "radial-gradient(circle at 12% 18%, rgba(120,88,42,0.16), transparent 38%)",
+                  "radial-gradient(circle at 88% 12%, rgba(120,88,42,0.12), transparent 32%)",
+                  "radial-gradient(circle at 78% 85%, rgba(101,72,32,0.16), transparent 42%)",
+                  "radial-gradient(circle at 8% 82%, rgba(110,80,35,0.14), transparent 38%)",
+                  "radial-gradient(circle at 50% 95%, rgba(101,72,32,0.10), transparent 45%)",
+                  "radial-gradient(ellipse at center, transparent 55%, rgba(69,50,24,0.18) 100%)",
+                ].join(", "),
+              }}
+            />
+            {/* Spine shadow: where the two halves of an open book would meet. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-1/2 w-16 -translate-x-1/2"
+              style={{
+                backgroundImage:
+                  "linear-gradient(to right, transparent, rgba(45,32,15,0.22) 45%, rgba(45,32,15,0.28) 50%, rgba(45,32,15,0.22) 55%, transparent)",
+              }}
+            />
 
-            <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-              {pageSpells.map((spell) => (
-                <SpellEntry key={spell.name} spell={spell} />
-              ))}
-            </ul>
-
-            {totalPages > 1 && (
-              <div className="mt-4 flex items-center justify-center gap-4 border-t border-[#8a6d3b]/40 pt-2">
-                <button
-                  type="button"
-                  disabled={page === 0}
-                  onClick={() => goTo(tabIndex, page - 1)}
-                  className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
-                >
-                  ← Prev
-                </button>
-                <span className="text-xs text-[#6b5a3d]">
-                  Page {page + 1} / {totalPages}
-                </span>
-                <button
-                  type="button"
-                  disabled={page >= totalPages - 1}
-                  onClick={() => goTo(tabIndex, page + 1)}
-                  className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
-                >
-                  Next →
-                </button>
+            <div className="relative">
+              <div className="flex items-baseline justify-between gap-2 border-b border-[#8a6d3b]/40 pb-2">
+                <h3 className="font-heading text-lg font-semibold text-[#2b2013] sm:text-xl">{activeTab.name}</h3>
+                <span className="shrink-0 text-xs text-[#6b5a3d]">{activeTab.spells.length} spells</span>
               </div>
-            )}
+
+              <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+                {pageSpells.map((spell) => (
+                  <SpellEntry key={spell.name} spell={spell} />
+                ))}
+              </ul>
+
+              {totalPages > 1 && (
+                <div className="mt-4 flex items-center justify-center gap-4 border-t border-[#8a6d3b]/40 pt-2">
+                  <button
+                    type="button"
+                    disabled={page === 0}
+                    onClick={() => goTo(tabIndex, page - 1)}
+                    className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
+                  >
+                    ← Prev
+                  </button>
+                  <span className="text-xs text-[#6b5a3d]">
+                    Page {page + 1} / {totalPages}
+                  </span>
+                  <button
+                    type="button"
+                    disabled={page >= totalPages - 1}
+                    onClick={() => goTo(tabIndex, page + 1)}
+                    className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
+                  >
+                    Next →
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
