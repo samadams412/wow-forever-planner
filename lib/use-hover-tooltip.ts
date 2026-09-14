@@ -23,7 +23,8 @@ export function useHoverTooltip<T extends HTMLElement>(
       Math.max(rect.left + rect.width / 2 - width / 2, 8),
       window.innerWidth - width - 8
     );
-    setPos({ top: rect.bottom + 6, left });
+    const top = Math.min(rect.bottom + 6, Math.max(8, window.innerHeight - estimatedHeight - 8));
+    setPos({ top, left });
   };
 
   const hide = () => setPos(null);

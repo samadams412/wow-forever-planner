@@ -241,6 +241,8 @@ export default function PlannerClient({
         <RaceReferenceTable races={races} />
       </div>
 
+      <p className="mt-4 text-[11px] text-foreground-muted/60">Source: talentsforever.com</p>
+
       <Dialog open={saveDialogOpen} onClose={() => setSaveDialogOpen(false)} title="Save build">
         <p className="text-xs text-foreground-muted">
           Saved to this browser only -- not synced across devices, and cleared if you clear site data.

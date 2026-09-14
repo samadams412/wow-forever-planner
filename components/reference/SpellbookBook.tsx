@@ -23,12 +23,51 @@ const PAGE_SIZE = 12;
 // The "first talent in the tree" heuristic below picks a poor/misleading
 // representative icon for some trees (e.g. Warrior Fury landed on a
 // situational tier-1 talent instead of anything Fury-flavored) -- these
-// verified overrides (from the reference site's own tab icons) take
-// priority over the heuristic. Keyed by `${classId}:${tabName}`.
+// verified overrides (from the reference site's own tab icons, each slug
+// checked against Wowhead's icon CDN) take priority over the heuristic.
+// Keyed by `${classId}:${tabName}`. warlock:Destruction and warlock:Demon
+// are included for a future Warlock Destruction/Pet tab split (see the
+// talentsforever.com changelog) -- inert until our data has those tabs.
 const TAB_ICON_OVERRIDES: Record<string, string> = {
+  "warrior:Arms": "ability_warrior_offensivestance",
   "warrior:Fury": "ability_warrior_innerrage",
   "warrior:Protection": "ability_warrior_defensivestance",
-  "warrior:Arms": "ability_warrior_offensivestance",
+  "paladin:Holy": "spell_holy_holybolt",
+  "paladin:Retribution": "spell_holy_auraoflight",
+  "paladin:Protection": "spell_holy_devotionaura",
+  "hunter:Beast Mastery": "ability_hunter_beasttaming",
+  "hunter:Marksmanship": "ability_marksmanship",
+  "hunter:Survival": "ability_hunter_swiftstrike",
+  "rogue:Assassination": "ability_rogue_eviscerate",
+  "rogue:Combat": "ability_backstab",
+  "rogue:Subtlety": "ability_stealth",
+  "priest:Discipline": "spell_holy_wordfortitude",
+  "priest:Holy": "spell_holy_holybolt",
+  "priest:Shadow Magic": "spell_shadow_shadowwordpain",
+  "shaman:Elemental Combat": "spell_nature_lightning",
+  "shaman:Enhancement": "spell_nature_lightningshield",
+  "shaman:Restoration": "spell_nature_magicimmunity",
+  "mage:Arcane": "spell_holy_magicalsentry",
+  "mage:Fire": "spell_fire_firebolt02",
+  "mage:Frost": "spell_frost_frostbolt02",
+  "warlock:Affliction": "spell_shadow_deathcoil",
+  "warlock:Demonology": "spell_shadow_metamorphosis",
+  "warlock:Destruction": "spell_shadow_rainoffire",
+  "warlock:Demon": "spell_shadow_summonvoidwalker",
+  "druid:Balance": "spell_nature_starfall",
+  "druid:Feral Combat": "ability_racial_bearform",
+  "druid:Restoration": "spell_nature_healingtouch",
+};
+
+// Some spells share one icon across every class's General tab rather than
+// the per-weapon/per-class icon our data stores -- override by spell name.
+// spell_nature_invisibilty is a real Blizzard file (verified against
+// Wowhead's CDN); the missing "i" before "ty" is in-client, not a typo here.
+const SPELL_ICON_OVERRIDES: Record<string, string> = {
+  "Shoot Bow": "ability_marksmanship",
+  "Shoot Gun": "ability_marksmanship",
+  "Shoot Crossbow": "ability_marksmanship",
+  Dodge: "spell_nature_invisibilty",
 };
 
 function resolveTabIcon(classId: string, tabName: string): string {
@@ -39,6 +78,10 @@ function resolveTabIcon(classId: string, tabName: string): string {
   return tree?.talents[0]?.icon ?? "inv_misc_questionmark";
 }
 
+function resolveSpellIcon(spell: SpellbookEntry): string {
+  return SPELL_ICON_OVERRIDES[spell.name] ?? spell.icon ?? "inv_misc_questionmark";
+}
+
 function prefersReducedMotion(): boolean {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
@@ -46,7 +89,7 @@ function prefersReducedMotion(): boolean {
 function SpellEntry({ classId, spell }: { classId: string; spell: SpellbookEntry }) {
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
   const tooltip = getSpellTooltip(classId, spell.name);
-  const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH);
+  const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH, "below", 280);
 
   return (
     <li
@@ -56,15 +99,22 @@ function SpellEntry({ classId, spell }: { classId: string; spell: SpellbookEntry
       onFocus={tooltip ? show : undefined}
       onBlur={tooltip ? hide : undefined}
       tabIndex={tooltip ? 0 : undefined}
-      className="flex items-start gap-2.5"
+      className="group -mx-1 flex items-start gap-2.5 rounded-sm px-1 py-0.5 transition-colors hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={mediumIconUrl(spell.icon ?? "inv_misc_questionmark")}
-        alt=""
-        title={spell.iconPlaceholder ? "Placeholder icon, not yet confirmed" : undefined}
-        className="h-9 w-9 shrink-0 rounded-sm border border-[#8a6d3b]/50"
-      />
+      <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-[#c9a961]/60 transition-colors group-hover:border-[#c9a961]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={mediumIconUrl(resolveSpellIcon(spell))}
+          alt=""
+          title={spell.iconPlaceholder ? "Placeholder icon, not yet confirmed" : undefined}
+          className="h-full w-full object-cover"
+        />
+        {/* Foil-card shine sweep, replayed each time the row is hovered. */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[spellbook-icon-shine_0.8s_ease]"
+        />
+      </div>
       <div className="min-w-0">
         <div className="flex flex-wrap items-baseline gap-x-1.5">
           <span className="text-sm font-semibold text-[#2b2013]">{spell.name}</span>
@@ -96,12 +146,15 @@ function SpellEntry({ classId, spell }: { classId: string; spell: SpellbookEntry
 }
 
 export default function SpellbookBook({ classId, book }: { classId: string; book: ClassSpellbook }) {
-  const tabs = [...book.tabs].sort((a, b) => (a.name === "General" ? -1 : b.name === "General" ? 1 : 0));
+  // General is always reachable but never the default view -- push it to the
+  // end so the default tab (index 0) lands on the class's first spec tree.
+  const tabs = [...book.tabs].sort((a, b) => (a.name === "General" ? 1 : b.name === "General" ? -1 : 0));
 
   const [tabIndex, setTabIndex] = useState(0);
   const [page, setPage] = useState(0);
   const [display, setDisplay] = useState({ tabIndex: 0, page: 0 });
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
+  const [direction, setDirection] = useState<"forward" | "backward">("forward");
   const pending = useRef<{ tabIndex: number; page: number } | null>(null);
 
   const activeTab = tabs[display.tabIndex];
@@ -110,6 +163,8 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
 
   function goTo(nextTabIndex: number, nextPage: number) {
     if (nextTabIndex === tabIndex && nextPage === page) return;
+    const isForward = nextTabIndex > tabIndex || (nextTabIndex === tabIndex && nextPage > page);
+    setDirection(isForward ? "forward" : "backward");
     setTabIndex(nextTabIndex);
     setPage(nextPage);
 
@@ -133,7 +188,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
 
   return (
     <div className="flex flex-col gap-2 sm:flex-row">
-      <div className="flex gap-1.5 overflow-x-auto sm:w-14 sm:shrink-0 sm:flex-col sm:overflow-visible">
+      <div className="order-2 flex gap-1.5 overflow-x-auto sm:order-0 sm:w-14 sm:shrink-0 sm:flex-col sm:overflow-visible">
         {tabs.map((tab, i) => (
           <button
             key={tab.name}
@@ -153,7 +208,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
         ))}
       </div>
 
-      <div className="relative flex-1 rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:p-3">
+      <div className="order-1 relative flex-1 rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:order-0 sm:p-3">
         <CornerBracket position="tl" />
         <CornerBracket position="tr" />
         <CornerBracket position="bl" />
@@ -162,8 +217,8 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
         <div style={{ perspective: 1400 }}>
           <div
             onAnimationEnd={handleAnimationEnd}
-            className={`spellbook-page relative overflow-hidden rounded-sm border border-[#8a6d3b]/50 bg-[#e8dcc4] p-3 sm:p-5 ${
-              phase === "out" ? "flip-out" : phase === "in" ? "flip-in" : ""
+            className={`spellbook-page relative min-h-105 overflow-hidden rounded-sm border border-[#8a6d3b]/50 bg-[#e8dcc4] p-3 sm:min-h-115 sm:p-5 ${
+              phase === "out" ? `flip-out-${direction}` : phase === "in" ? `flip-in-${direction}` : ""
             }`}
           >
             {/* Aging: uneven warm blotches + a darkened vignette toward the edges, layered over the base parchment color. */}

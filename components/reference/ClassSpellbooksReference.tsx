@@ -1,32 +1,9 @@
-import { spellbooks, SPELLBOOK_CLASS_ORDER, type NewAbility } from "@/lib/spellbooks";
+import { spellbooks, SPELLBOOK_CLASS_ORDER } from "@/lib/spellbooks";
 import { getClassRacials, type ClassRacialSpell } from "@/lib/class-racials";
 import { mediumIconUrl, CLASS_ICON, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
 import GoldRule from "@/components/site/GoldRule";
 import SpellbookBook from "./SpellbookBook";
-
-function NewAbilityCard({ ability }: { ability: NewAbility }) {
-  const confirmed = ability.status === "confirmed";
-  return (
-    <div className="flex gap-2.5 rounded border border-border bg-background/40 p-2.5">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={mediumIconUrl(ability.icon)} alt="" className="h-8 w-8 shrink-0 rounded-sm" />
-      <div>
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold text-foreground">{ability.name}</span>
-          <span
-            className={`rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
-              confirmed ? "bg-green/15 text-green" : "bg-foreground-muted/15 text-foreground-muted"
-            }`}
-          >
-            {confirmed ? "Confirmed" : "Unconfirmed"}
-          </span>
-        </div>
-        <p className="mt-1 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{ability.note}</p>
-      </div>
-    </div>
-  );
-}
 
 function ClassRacialSpellCard({ spell }: { spell: ClassRacialSpell }) {
   return (
@@ -98,25 +75,6 @@ function ClassSection({ classId }: { classId: string }) {
       )}
 
       <p className="mt-1 text-xs text-foreground-muted/70">Source: {spellbooks.source}</p>
-
-      {book.newAbilities.length > 0 && (
-        <div className="mt-4">
-          <GoldRule className="mb-3" />
-          <h4 className="text-sm font-semibold text-foreground">
-            New {classLabel(classId)} abilities
-          </h4>
-          <p className="mt-0.5 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">
-            Baseline spells the Forever talent tooltips mention that are not in Classic. Some are
-            directly observed in the level 38 spellbook above (confirmed); others are still only
-            inferred from talent text until a higher-authority source or a beta patch confirms them.
-          </p>
-          <div className="mt-2 space-y-2">
-            {book.newAbilities.map((ability) => (
-              <NewAbilityCard key={ability.name} ability={ability} />
-            ))}
-          </div>
-        </div>
-      )}
 
       <ClassRacialsSection classId={classId} />
     </Collapsible>
