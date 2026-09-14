@@ -5,6 +5,7 @@ import { spellbooks, SPELLBOOK_CLASS_ORDER } from "@/lib/spellbooks";
 import { getClassRacials, type ClassRacialSpell } from "@/lib/class-racials";
 import { mediumIconUrl, getRaceIconByName, CLASS_ICON, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
+import IconFan from "@/components/site/IconFan";
 import SpellbookBook from "./SpellbookBook";
 
 function ClassRacialSpellCard({ spell }: { spell: ClassRacialSpell }) {
@@ -27,9 +28,19 @@ function ClassRacialsSection({ classId }: { classId: string }) {
   const data = getClassRacials(classId);
   if (!data) return null;
 
+  // Representative summary icon: first spell of each of the first 3 races.
+  // Generic on purpose -- works for any class's data without special-casing.
+  const fanIcons = Object.values(data.races)
+    .slice(0, 3)
+    .map((spells) => spells[0].icon);
+
   return (
     <div className="mt-4">
-      <Collapsible title="Race-specific bonus spells" subtitle={data.note}>
+      <Collapsible
+        title="Race-specific bonus spells"
+        subtitle={data.note}
+        icon={<IconFan icons={fanIcons} />}
+      >
         <div className="space-y-3">
           {Object.entries(data.races).map(([race, spells]) => (
             <div key={race}>
