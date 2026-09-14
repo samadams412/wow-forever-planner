@@ -44,17 +44,17 @@ export default function TalentNode({
   const borderClass = locked
     ? "border-border/40"
     : maxed
-      ? "border-green-500"
+      ? "border-amber-400"
       : invested
-        ? "border-amber-400"
+        ? "border-green-500"
         : "border-border hover:border-accent/60";
 
   const badgeTextClass = locked
     ? "text-foreground-muted"
     : maxed
-      ? "text-green-400"
+      ? "text-amber-300"
       : invested
-        ? "text-amber-300"
+        ? "text-green-400"
         : "text-foreground";
 
   return (
