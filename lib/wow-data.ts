@@ -129,6 +129,54 @@ export function getClassTalentData(classId: string): ClassTalentData | undefined
   return CLASS_TALENT_DATA[classId];
 }
 
+// The "first talent in the tree" heuristic below picks a poor/misleading
+// representative icon for some trees (e.g. Warrior Fury landed on a
+// situational tier-1 talent instead of anything Fury-flavored) -- these
+// verified overrides (from the reference site's own tab icons, each slug
+// checked against Wowhead's icon CDN) take priority over the heuristic.
+// Keyed by `${classId}:${treeName}`. warlock:Destruction and warlock:Demon
+// are included for a future Warlock Destruction/Pet tab split (see the
+// talentsforever.com changelog) -- inert until our data has those trees.
+// Shared by the planner's talent tree grid and the Class Spellbooks page,
+// so both stay in sync as overrides are added.
+const TREE_ICON_OVERRIDES: Record<string, string> = {
+  "warrior:Arms": "ability_warrior_offensivestance",
+  "warrior:Fury": "ability_warrior_innerrage",
+  "warrior:Protection": "ability_warrior_defensivestance",
+  "paladin:Holy": "spell_holy_holybolt",
+  "paladin:Retribution": "spell_holy_auraoflight",
+  "paladin:Protection": "spell_holy_devotionaura",
+  "hunter:Beast Mastery": "ability_hunter_beasttaming",
+  "hunter:Marksmanship": "ability_marksmanship",
+  "hunter:Survival": "ability_hunter_swiftstrike",
+  "rogue:Assassination": "ability_rogue_eviscerate",
+  "rogue:Combat": "ability_backstab",
+  "rogue:Subtlety": "ability_stealth",
+  "priest:Discipline": "spell_holy_wordfortitude",
+  "priest:Holy": "spell_holy_holybolt",
+  "priest:Shadow Magic": "spell_shadow_shadowwordpain",
+  "shaman:Elemental Combat": "spell_nature_lightning",
+  "shaman:Enhancement": "spell_nature_lightningshield",
+  "shaman:Restoration": "spell_nature_magicimmunity",
+  "mage:Arcane": "spell_holy_magicalsentry",
+  "mage:Fire": "spell_fire_firebolt02",
+  "mage:Frost": "spell_frost_frostbolt02",
+  "warlock:Affliction": "spell_shadow_deathcoil",
+  "warlock:Demonology": "spell_shadow_metamorphosis",
+  "warlock:Destruction": "spell_shadow_rainoffire",
+  "warlock:Demon": "spell_shadow_summonvoidwalker",
+  "druid:Balance": "spell_nature_starfall",
+  "druid:Feral Combat": "ability_racial_bearform",
+  "druid:Restoration": "spell_nature_healingtouch",
+};
+
+export function getTreeIcon(classId: string, treeName: string): string {
+  const override = TREE_ICON_OVERRIDES[`${classId}:${treeName}`];
+  if (override) return override;
+  const tree = getClassTalentData(classId)?.trees.find((t) => t.name === treeName);
+  return tree?.talents[0]?.icon ?? "inv_misc_questionmark";
+}
+
 export function iconUrl(icon: string): string {
   return `https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`;
 }

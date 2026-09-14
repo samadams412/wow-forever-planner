@@ -1,6 +1,6 @@
 import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
-import { treeBackgroundUrl } from "@/lib/wow-data";
+import { treeBackgroundUrl, mediumIconUrl, getTreeIcon } from "@/lib/wow-data";
 import { canAddPoint, pointsSpentInTree } from "@/lib/talent-rules";
 import CornerBracket from "@/components/site/CornerBracket";
 import TalentNode from "./TalentNode";
@@ -35,7 +35,15 @@ export default function TalentTreeGrid({
       <CornerBracket position="bl" />
       <CornerBracket position="br" />
       <div className="mb-1.5 flex items-center justify-between border-b border-accent/30 px-0.5 pb-1.5">
-        <h3 className="font-heading text-sm font-semibold tracking-wide text-foreground">{tree.name}</h3>
+        <div className="flex items-center gap-1.5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={mediumIconUrl(getTreeIcon(classId, tree.name))}
+            alt=""
+            className="h-5 w-5 shrink-0 rounded-full border border-accent/60"
+          />
+          <h3 className="font-heading text-sm font-semibold tracking-wide text-foreground">{tree.name}</h3>
+        </div>
         <span className="text-xs text-foreground-muted">{spent} pts</span>
       </div>
       <div
