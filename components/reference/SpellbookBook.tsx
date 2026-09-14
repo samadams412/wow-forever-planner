@@ -44,7 +44,15 @@ function prefersReducedMotion(): boolean {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-function SpellEntry({ classId, spell }: { classId: string; spell: SpellbookEntry }) {
+function SpellEntry({
+  classId,
+  spell,
+  revealDelayMs,
+}: {
+  classId: string;
+  spell: SpellbookEntry;
+  revealDelayMs?: number;
+}) {
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
   const tooltip = getSpellTooltip(classId, spell.name);
   const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH, "below", 280);
@@ -57,9 +65,12 @@ function SpellEntry({ classId, spell }: { classId: string; spell: SpellbookEntry
       onFocus={tooltip ? show : undefined}
       onBlur={tooltip ? hide : undefined}
       tabIndex={tooltip ? 0 : undefined}
-      className="group -mx-1 flex items-start gap-2.5 rounded-sm px-1 py-0.5 transition-colors hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40"
+      style={revealDelayMs !== undefined ? { animationDelay: `${revealDelayMs}ms` } : undefined}
+      className={`group -mx-1 flex items-start gap-2.5 rounded-sm px-1 py-0.5 transition-colors hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40 ${
+        revealDelayMs !== undefined ? "spellbook-row-reveal" : ""
+      }`}
     >
-      <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-[#c9a961]/60 transition-colors group-hover:border-[#c9a961]">
+      <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-[#c9a961]/50 transition-colors group-hover:border-[#c9a961]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={mediumIconUrl(resolveSpellIcon(spell))}
@@ -113,7 +124,13 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
   const [display, setDisplay] = useState({ tabIndex: 0, page: 0 });
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
+  // Bumped once a flip-in settles, to key the spell list into a fresh mount
+  // so its per-row reveal animation replays. Left alone under
+  // prefers-reduced-motion (no flip ever runs), so the list just updates
+  // in place with no animation at all.
+  const [revealSeq, setRevealSeq] = useState(0);
   const pending = useRef<{ tabIndex: number; page: number } | null>(null);
+  const reducedMotion = prefersReducedMotion();
 
   const activeTab = tabs[display.tabIndex];
   const totalPages = Math.max(1, Math.ceil(activeTab.spells.length / PAGE_SIZE));
@@ -141,6 +158,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
       setPhase("in");
     } else if (phase === "in") {
       setPhase("idle");
+      setRevealSeq((s) => s + 1);
     }
   }
 
@@ -172,7 +190,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
         <CornerBracket position="bl" />
         <CornerBracket position="br" />
 
-        <div style={{ perspective: 1400 }}>
+        <div style={{ perspective: 1800 }}>
           <div
             onAnimationEnd={handleAnimationEnd}
             className={`spellbook-page relative min-h-105 overflow-hidden rounded-sm border border-[#8a6d3b]/50 bg-[#e8dcc4] p-3 sm:min-h-115 sm:p-5 ${
@@ -210,9 +228,14 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
                 <span className="shrink-0 text-xs text-[#6b5a3d]">{activeTab.spells.length} spells</span>
               </div>
 
-              <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-                {pageSpells.map((spell) => (
-                  <SpellEntry key={spell.name} classId={classId} spell={spell} />
+              <ul key={revealSeq} className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+                {pageSpells.map((spell, i) => (
+                  <SpellEntry
+                    key={spell.name}
+                    classId={classId}
+                    spell={spell}
+                    revealDelayMs={reducedMotion ? undefined : Math.floor(i / 2) * 40}
+                  />
                 ))}
               </ul>
 

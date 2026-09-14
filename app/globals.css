@@ -118,26 +118,34 @@ body {
    page's own center, which lines up with the spine-shadow overlay), with
    rotation direction following navigation direction: moving to a later
    tab/page turns forward (new page swings in from the right), moving to
-   an earlier one turns backward (from the left). JS skips both classes
-   entirely under prefers-reduced-motion rather than just shortening them. */
+   an earlier one turns backward (from the left). A brightness filter rides
+   along with the rotation -- darkening as the page turns away from the
+   viewer, brightening back up as it turns toward them -- to fake the way
+   a real page catches and loses the light as it turns. JS skips both
+   classes entirely under prefers-reduced-motion rather than just
+   shortening them. */
 @keyframes spellbook-flip-out-forward {
   from {
     transform: rotateY(0deg);
+    filter: brightness(1);
     opacity: 1;
   }
   to {
-    transform: rotateY(-80deg);
+    transform: rotateY(-88deg);
+    filter: brightness(0.5);
     opacity: 0;
   }
 }
 
 @keyframes spellbook-flip-in-forward {
   from {
-    transform: rotateY(80deg);
+    transform: rotateY(88deg);
+    filter: brightness(0.5);
     opacity: 0;
   }
   to {
     transform: rotateY(0deg);
+    filter: brightness(1);
     opacity: 1;
   }
 }
@@ -145,21 +153,25 @@ body {
 @keyframes spellbook-flip-out-backward {
   from {
     transform: rotateY(0deg);
+    filter: brightness(1);
     opacity: 1;
   }
   to {
-    transform: rotateY(80deg);
+    transform: rotateY(88deg);
+    filter: brightness(0.5);
     opacity: 0;
   }
 }
 
 @keyframes spellbook-flip-in-backward {
   from {
-    transform: rotateY(-80deg);
+    transform: rotateY(-88deg);
+    filter: brightness(0.5);
     opacity: 0;
   }
   to {
     transform: rotateY(0deg);
+    filter: brightness(1);
     opacity: 1;
   }
 }
@@ -169,20 +181,41 @@ body {
   backface-visibility: hidden;
 }
 
+/* Outgoing half eases in (starts slow, accelerates away); incoming half
+   eases out (starts fast, settles into place) -- reads as a page being let
+   go versus a page coming to rest, rather than one uniform linear spin. */
 .spellbook-page.flip-out-forward {
-  animation: spellbook-flip-out-forward 200ms ease-in forwards;
+  animation: spellbook-flip-out-forward 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 .spellbook-page.flip-in-forward {
-  animation: spellbook-flip-in-forward 240ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: spellbook-flip-in-forward 260ms cubic-bezier(0, 0, 0.2, 1) forwards;
 }
 
 .spellbook-page.flip-out-backward {
-  animation: spellbook-flip-out-backward 200ms ease-in forwards;
+  animation: spellbook-flip-out-backward 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 .spellbook-page.flip-in-backward {
-  animation: spellbook-flip-in-backward 240ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: spellbook-flip-in-backward 260ms cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+/* Staggered top-to-bottom reveal of each spell row once the flip settles.
+   `backwards` fill mode holds the from-state during animation-delay so
+   later rows stay invisible instead of flashing in at full opacity first. */
+@keyframes spellbook-row-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spellbook-row-reveal {
+  animation: spellbook-row-reveal 220ms ease-out backwards;
 }
 
 /* Foil-card shine sweep on spellbook icon hover. */
