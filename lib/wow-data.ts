@@ -132,13 +132,14 @@ export function getClassTalentData(classId: string): ClassTalentData | undefined
 // The "first talent in the tree" heuristic below picks a poor/misleading
 // representative icon for some trees (e.g. Warrior Fury landed on a
 // situational tier-1 talent instead of anything Fury-flavored) -- these
-// verified overrides (from the reference site's own tab icons, each slug
-// checked against Wowhead's icon CDN) take priority over the heuristic.
-// Keyed by `${classId}:${treeName}`. warlock:Destruction and warlock:Demon
-// are included for a future Warlock Destruction/Pet tab split (see the
-// talentsforever.com changelog) -- inert until our data has those trees.
-// Shared by the planner's talent tree grid and the Class Spellbooks page,
-// so both stay in sync as overrides are added.
+// verified overrides take priority over the heuristic. Keyed by
+// `${classId}:${treeName}`. Shared by the planner's talent tree grid and
+// the Class Spellbooks page, so both stay in sync as overrides are added.
+// Talent-tree entries were checked against Wowhead's icon CDN; warlock:Pet
+// has no talent tree (it's a spellbook-only tab) and was instead read
+// directly off talentsforever.com's own Warlock spellbook tab rail via
+// its `li[data-sk]`/`.btab img` markup -- it reuses the class icon there,
+// not a demon-specific one.
 const TREE_ICON_OVERRIDES: Record<string, string> = {
   "warrior:Arms": "ability_warrior_offensivestance",
   "warrior:Fury": "ability_warrior_innerrage",
@@ -164,7 +165,7 @@ const TREE_ICON_OVERRIDES: Record<string, string> = {
   "warlock:Affliction": "spell_shadow_deathcoil",
   "warlock:Demonology": "spell_shadow_metamorphosis",
   "warlock:Destruction": "spell_shadow_rainoffire",
-  "warlock:Demon": "spell_shadow_summonvoidwalker",
+  "warlock:Pet": "class_warlock",
   "druid:Balance": "spell_nature_starfall",
   "druid:Feral Combat": "ability_racial_bearform",
   "druid:Restoration": "spell_nature_healingtouch",

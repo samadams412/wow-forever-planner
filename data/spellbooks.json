@@ -1703,11 +1703,10 @@
       "notes": [
         "Curse of Agony is Bane of Agony. Enslave Demon is Subjugate Demon.",
         "Incubus and Succubus are separate summons.",
-        "Shadow Ward is baseline. Destruction tab not opened."
+        "Shadow Ward is baseline. Destruction tab read from Soda's stream and matches the Goldshire trainer list exactly.",
+        "Pet tab is the Felhunter's: Devour Magic rank 2, Spell Lock, Tainted Blood."
       ],
-      "notOpened": [
-        "Destruction"
-      ],
+      "notOpened": [],
       "tabs": [
         {
           "name": "Affliction",
@@ -1867,6 +1866,91 @@
             {
               "name": "Unending Breath",
               "icon": "spell_shadow_demonbreath"
+            }
+          ]
+        },
+        {
+          "name": "Destruction",
+          "spells": [
+            {
+              "name": "Hellfire",
+              "rank": 1,
+              "icon": "spell_fire_incinerate"
+            },
+            {
+              "name": "Immolate",
+              "rank": 4,
+              "icon": "spell_fire_immolation"
+            },
+            {
+              "name": "Rain of Fire",
+              "rank": 2,
+              "icon": "spell_shadow_rainoffire"
+            },
+            {
+              "name": "Searing Pain",
+              "rank": 3,
+              "icon": "spell_fire_soulburn"
+            },
+            {
+              "name": "Shadow Bolt",
+              "rank": 6,
+              "icon": "spell_shadow_shadowbolt"
+            }
+          ]
+        },
+        {
+          "name": "Pet",
+          "spells": [
+            {
+              "name": "Assist",
+              "tag": "Pet Stance",
+              "icon": "ability_hunter_pet_assist"
+            },
+            {
+              "name": "Attack",
+              "tag": "Pet Command",
+              "icon": "inv_sword_04"
+            },
+            {
+              "name": "Defensive",
+              "tag": "Pet Stance",
+              "icon": "ability_defend"
+            },
+            {
+              "name": "Devour Magic",
+              "rank": 2,
+              "icon": "spell_nature_purge"
+            },
+            {
+              "name": "Follow",
+              "tag": "Pet Command",
+              "icon": "ability_tracking"
+            },
+            {
+              "name": "Move To",
+              "tag": "Pet Command",
+              "icon": "ability_hunter_pet_goto"
+            },
+            {
+              "name": "Passive",
+              "tag": "Pet Stance",
+              "icon": "ability_seal"
+            },
+            {
+              "name": "Spell Lock",
+              "rank": 1,
+              "icon": "spell_shadow_mindrot"
+            },
+            {
+              "name": "Stay",
+              "tag": "Pet Command",
+              "icon": "spell_nature_timestop"
+            },
+            {
+              "name": "Tainted Blood",
+              "rank": 1,
+              "icon": "spell_shadow_lifedrain"
             }
           ]
         },
