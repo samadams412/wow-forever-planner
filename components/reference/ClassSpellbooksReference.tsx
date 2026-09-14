@@ -3,9 +3,8 @@
 import { useState } from "react";
 import { spellbooks, SPELLBOOK_CLASS_ORDER } from "@/lib/spellbooks";
 import { getClassRacials, type ClassRacialSpell } from "@/lib/class-racials";
-import { mediumIconUrl, CLASS_ICON, classLabel } from "@/lib/wow-data";
+import { mediumIconUrl, getRaceIconByName, CLASS_ICON, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
-import GoldRule from "@/components/site/GoldRule";
 import SpellbookBook from "./SpellbookBook";
 
 function ClassRacialSpellCard({ spell }: { spell: ClassRacialSpell }) {
@@ -21,30 +20,34 @@ function ClassRacialSpellCard({ spell }: { spell: ClassRacialSpell }) {
   );
 }
 
+// Generic per-class "race-specific bonus spells" section -- driven entirely
+// by data/class-racials.json, so adding another class there is enough to
+// get this section for free; nothing here is Priest-specific.
 function ClassRacialsSection({ classId }: { classId: string }) {
   const data = getClassRacials(classId);
   if (!data) return null;
 
   return (
     <div className="mt-4">
-      <GoldRule className="mb-3" />
-      <h4 className="text-sm font-semibold text-foreground">
-        Race-specific bonus spells
-      </h4>
-      <p className="mt-0.5 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{data.note}</p>
-      <div className="mt-2 space-y-3">
-        {Object.entries(data.races).map(([race, spells]) => (
-          <div key={race}>
-            <h5 className="text-xs font-semibold uppercase tracking-wide text-accent">{race}</h5>
-            <div className="mt-1.5 space-y-2">
-              {spells.map((spell) => (
-                <ClassRacialSpellCard key={spell.name} spell={spell} />
-              ))}
+      <Collapsible title="Race-specific bonus spells" subtitle={data.note}>
+        <div className="space-y-3">
+          {Object.entries(data.races).map(([race, spells]) => (
+            <div key={race}>
+              <div className="flex items-center gap-1.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={mediumIconUrl(getRaceIconByName(race))} alt="" className="h-5 w-5 shrink-0 rounded-full" />
+                <h5 className="text-xs font-semibold uppercase tracking-wide text-accent">{race}</h5>
+              </div>
+              <div className="mt-1.5 space-y-2">
+                {spells.map((spell) => (
+                  <ClassRacialSpellCard key={spell.name} spell={spell} />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <p className="mt-2 text-xs text-foreground-muted/70">Source: {data.source}</p>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-foreground-muted/70">Source: {data.source}</p>
+      </Collapsible>
     </div>
   );
 }

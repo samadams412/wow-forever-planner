@@ -121,6 +121,14 @@ export function getRaceById(id: string): Race | undefined {
   return races.find((r) => r.id === id);
 }
 
+// Race-specific bonus spell sections (data/class-racials.json) key their
+// races object by display name (e.g. "Night Elf"), matching races.json's
+// own `name` field -- this looks up the circular portrait icon from that
+// name directly rather than needing a name-to-id conversion.
+export function getRaceIconByName(raceName: string): string {
+  return races.find((r) => r.name === raceName)?.icon ?? "inv_misc_questionmark";
+}
+
 export function getRacialsForRace(raceId: string): Racial[] {
   return racialsByRace[raceId] ?? [];
 }
