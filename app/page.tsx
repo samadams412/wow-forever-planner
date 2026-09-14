@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { GitBranch, BookOpen, Compass, PenLine } from "lucide-react";
 import Card from "@/components/site/Card";
 import LaunchCountdown from "@/components/site/LaunchCountdown";
@@ -34,8 +35,45 @@ const links = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-[calc(100vh-4rem)] flex-1 flex-col items-center justify-center px-6 py-16">
-      <div className="w-full max-w-2xl">
+    <main className="relative flex min-h-[calc(100vh-4rem)] flex-1 flex-col items-center justify-center overflow-hidden px-6 py-16">
+      {/* Official BlizzCon 2026 reveal cinematic still, used with credit --
+          see the caption below. object-position is pinned left-of-center so
+          the hunter-and-bear figures and the smoking peak both stay in frame
+          on narrow/tall mobile crops, where cover scales to full height and
+          crops the sides rather than the top/bottom. */}
+      <Image
+        src="/hero/homepage-hero.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: "cover", objectPosition: "20% 45%" }}
+      />
+      {/* Warm gold/black color-grade so the photo reads as part of the site
+          rather than a pasted-on screenshot. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: "linear-gradient(135deg, rgba(201,169,97,0.1), rgba(13,11,7,0.2))",
+        }}
+      />
+      {/* Legibility gradient: transparent over the sky, darkening toward the
+          edges and bottom so the countdown/title/cards stay readable without
+          a hard box around them -- plus a soft vignette at the far corners. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: [
+            "radial-gradient(ellipse 100% 60% at 50% 2%, transparent 0%, transparent 25%, rgba(13,11,7,0.6) 70%, rgba(13,11,7,0.8) 100%)",
+            "linear-gradient(to bottom, rgba(13,11,7,0.35) 0%, transparent 12%, transparent 55%, rgba(13,11,7,0.6) 80%, var(--background) 100%)",
+            "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.4) 100%)",
+          ].join(", "),
+        }}
+      />
+
+      <div className="relative w-full max-w-2xl">
         <LaunchCountdown />
 
         <div className="mt-6 flex items-center gap-3">
@@ -70,6 +108,10 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <p className="absolute inset-x-0 bottom-1.5 text-center text-[10px] text-foreground-muted/60">
+        Image: Official World of Warcraft: Forever reveal cinematic, courtesy of Blizzard Entertainment
+      </p>
     </main>
   );
 }
