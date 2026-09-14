@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ClassSpellbooksPage() {
   return (
-    <main className="mx-auto max-w-6xl px-3 py-6 sm:px-4">
+    <main className="mx-auto w-full max-w-6xl px-3 py-6 sm:px-4">
       <BackToReferences />
       <ClassSpellbooksReference />
     </main>

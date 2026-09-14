@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ReferencePage() {
   return (
-    <main className="mx-auto max-w-2xl px-4 py-16">
+    <main className="mx-auto w-full max-w-2xl px-4 py-16">
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Reference</h1>
       <p className="mt-2 text-foreground-muted">
         Racials and race/class rules are browsable inline as part of the{" "}

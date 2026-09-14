@@ -29,7 +29,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const { frontmatter, content } = guide;
 
   return (
-    <main className="mx-auto max-w-3xl px-3 py-8 sm:px-4">
+    <main className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
       <Link href="/guides" className="mb-3 inline-block text-xs text-accent hover:underline">
         ← Back to guides
       </Link>

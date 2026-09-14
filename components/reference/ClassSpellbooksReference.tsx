@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { spellbooks, SPELLBOOK_CLASS_ORDER } from "@/lib/spellbooks";
 import { getClassRacials, type ClassRacialSpell } from "@/lib/class-racials";
 import { mediumIconUrl, CLASS_ICON, classLabel } from "@/lib/wow-data";
@@ -82,20 +85,36 @@ function ClassSection({ classId }: { classId: string }) {
 }
 
 export default function ClassSpellbooksReference() {
+  // Bumped to force every ClassSection (and the Collapsible inside it) to
+  // remount with its default (closed) state -- simpler and more robust
+  // than lifting open/close state up into each Collapsible individually.
+  const [collapseAllKey, setCollapseAllKey] = useState(0);
+
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Class Spellbooks</h1>
-      <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-        Every trainer-taught spell a level 38 character had in the BlizzCon 2026 demo, read frame by
-        frame from stream footage, one collapsible section per class. Spells tagged{" "}
-        <span className="font-semibold text-amber-300">Talent</span> are in the Forever talent trees --
-        they appear here only because that demo character had the talent, not because they&apos;re
-        baseline.
-      </p>
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Class Spellbooks</h1>
+          <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
+            Every trainer-taught spell a level 38 character had in the BlizzCon 2026 demo, read frame by
+            frame from stream footage, one collapsible section per class. Spells tagged{" "}
+            <span className="font-semibold text-amber-300">Talent</span> are in the Forever talent trees --
+            they appear here only because that demo character had the talent, not because they&apos;re
+            baseline.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setCollapseAllKey((k) => k + 1)}
+          className="shrink-0 rounded border border-border px-3 py-1.5 text-xs font-medium text-foreground-muted transition-colors hover:border-accent/60 hover:text-foreground"
+        >
+          Collapse all
+        </button>
+      </div>
 
       <div className="mt-5 space-y-3">
         {SPELLBOOK_CLASS_ORDER.map((classId) => (
-          <ClassSection key={classId} classId={classId} />
+          <ClassSection key={`${classId}-${collapseAllKey}`} classId={classId} />
         ))}
       </div>
     </div>

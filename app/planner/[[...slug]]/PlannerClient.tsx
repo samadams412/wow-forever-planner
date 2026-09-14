@@ -154,7 +154,7 @@ export default function PlannerClient({
   }, []);
 
   return (
-    <main className="mx-auto max-w-6xl px-3 py-1 sm:px-4">
+    <main className="mx-auto w-full max-w-6xl px-3 py-1 sm:px-4">
       <div className="flex items-baseline gap-2">
         <h1 className="font-heading text-lg font-semibold tracking-wide text-accent">Planner</h1>
         <p className="text-xs text-foreground-muted">
