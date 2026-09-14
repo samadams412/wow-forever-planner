@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllGuides, getGuide } from "@/lib/guides";
 import { guideMdxComponents } from "@/components/guides/mdx-components";
 import GuideImage from "@/components/guides/GuideImage";
+import Breadcrumbs from "@/components/site/Breadcrumbs";
 
 export function generateStaticParams() {
   return getAllGuides().map((guide) => ({ slug: guide.slug }));
@@ -30,9 +30,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   return (
     <main className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
-      <Link href="/guides" className="mb-3 inline-block text-xs text-accent hover:underline">
-        ← Back to guides
-      </Link>
+      <Breadcrumbs
+        items={[{ label: "Guides", href: "/guides" }, { label: frontmatter.title, truncate: true }]}
+      />
 
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">{frontmatter.title}</h1>
       <div className="mt-1.5 flex flex-wrap items-center gap-2 text-xs text-foreground-muted/70">

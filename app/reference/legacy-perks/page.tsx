@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BackToReferences from "@/components/reference/BackToReferences";
+import Breadcrumbs from "@/components/site/Breadcrumbs";
 import LegacyPerksReference from "@/components/reference/LegacyPerksReference";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function LegacyPerksPage() {
   return (
     <main className="mx-auto w-full max-w-6xl px-3 py-6 sm:px-4">
-      <BackToReferences />
+      <Breadcrumbs items={[{ label: "Reference", href: "/reference" }, { label: "Legacy Perks" }]} />
       <LegacyPerksReference />
     </main>
   );
