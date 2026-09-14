@@ -70,7 +70,7 @@ function SpellEntry({
         revealDelayMs !== undefined ? "spellbook-row-reveal" : ""
       }`}
     >
-      <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-[#c9a961]/50 transition-colors group-hover:border-[#c9a961]">
+      <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border-2 border-[#c9a961]/70 transition-colors group-hover:border-[#c9a961]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={mediumIconUrl(resolveSpellIcon(spell))}
