@@ -42,7 +42,7 @@ export default function Home() {
           on narrow/tall mobile crops, where cover scales to full height and
           crops the sides rather than the top/bottom. */}
       <Image
-        src="/hero/homepage-hero.webp"
+        src="/images/hero/homepage-hero.webp"
         alt=""
         fill
         priority
@@ -78,7 +78,7 @@ export default function Home() {
 
         <div className="mt-6 flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/forevercraft-mark-carved.svg" alt="" className="h-10 w-10" />
+          <img src="/images/logo/forevercraft-mark-carved.svg" alt="" className="h-10 w-10" />
           <h1 className="font-heading text-3xl font-semibold tracking-wide text-accent">Forevercraft</h1>
         </div>
         <p className="mt-2 text-foreground-muted">
