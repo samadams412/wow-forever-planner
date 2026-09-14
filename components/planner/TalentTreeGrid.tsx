@@ -2,26 +2,11 @@ import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
 import { treeBackgroundUrl } from "@/lib/wow-data";
 import { canAddPoint, pointsSpentInTree } from "@/lib/talent-rules";
+import CornerBracket from "@/components/site/CornerBracket";
 import TalentNode from "./TalentNode";
 
 const TIERS = 7;
 const COLS = 4;
-
-const CORNER_POSITION_CLASS = {
-  tl: "-top-[3px] -left-[3px] border-t-2 border-l-2",
-  tr: "-top-[3px] -right-[3px] border-t-2 border-r-2",
-  bl: "-bottom-[3px] -left-[3px] border-b-2 border-l-2",
-  br: "-bottom-[3px] -right-[3px] border-b-2 border-r-2",
-} as const;
-
-function CornerBracket({ position }: { position: keyof typeof CORNER_POSITION_CLASS }) {
-  return (
-    <span
-      aria-hidden="true"
-      className={`pointer-events-none absolute h-3 w-3 border-accent ${CORNER_POSITION_CLASS[position]}`}
-    />
-  );
-}
 
 export default function TalentTreeGrid({
   classId,
