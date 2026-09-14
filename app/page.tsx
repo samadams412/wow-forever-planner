@@ -85,7 +85,7 @@ export default function Home() {
           A free, fan-made planner and guide hub for World of Warcraft:
           Forever.
         </p>
-        <p className="mt-1 text-sm text-foreground-muted/70">
+        <p className="mt-2 inline-block rounded bg-background/60 px-2 py-1 text-sm text-foreground-muted/90 backdrop-blur-[2px]">
           Tracking WoW Forever beta data as of Sept 13, 2026 · Warrior fully built, other classes in progress.
         </p>
 
