@@ -27,7 +27,7 @@ export default function LaunchCountdown() {
   const c = countdown ?? { days: 0, hours: 0, minutes: 0, seconds: 0, done: false };
 
   return (
-    <div className="w-full rounded-xl border border-accent/50 bg-background/85 px-4 py-4 shadow-[0_0_30px_-10px_var(--accent)] backdrop-blur-sm sm:px-6">
+    <div className="w-full rounded-xl border border-accent/50 bg-background/50 px-4 py-4 shadow-[0_0_30px_-10px_var(--accent)] backdrop-blur-sm sm:px-6">
       <p className="text-center text-sm font-medium text-foreground sm:text-base">
         {c.done
           ? "World of Warcraft: Forever is here!"

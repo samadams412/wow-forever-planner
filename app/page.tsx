@@ -76,17 +76,21 @@ export default function Home() {
       <div className="relative w-full max-w-2xl">
         <LaunchCountdown />
 
-        <div className="mt-6 flex items-center gap-3">
+        <div className="mt-6 flex items-center gap-3 [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo/forevercraft-mark-carved.svg" alt="" className="h-10 w-10" />
+          <img
+            src="/images/logo/forevercraft-mark-carved.svg"
+            alt=""
+            className="h-12 w-12 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] sm:h-14 sm:w-14"
+          />
           <h1 className="font-heading text-3xl font-semibold tracking-wide text-accent">Forevercraft</h1>
         </div>
         <p className="mt-2 text-foreground-muted">
           A free, fan-made planner and guide hub for World of Warcraft:
           Forever.
         </p>
-        <p className="mt-2 inline-block rounded bg-background/60 px-2 py-1 text-sm text-foreground-muted/90 backdrop-blur-[2px]">
-          Tracking WoW Forever beta data as of Sept 13, 2026 · Warrior fully built, other classes in progress.
+        <p className="mt-2 text-sm text-foreground-muted">
+          Tracking WoW Forever beta data as of Sept 13, 2026 · All classes fully built, other features in progress.
         </p>
 
         <Link

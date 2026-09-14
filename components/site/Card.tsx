@@ -15,7 +15,7 @@ export default function Card({
   return (
     <Link
       href={href}
-      className="rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+      className="rounded-lg border border-border bg-surface/50 p-4 transition-colors hover:border-accent hover:bg-surface-hover"
     >
       {icon && <div className="mb-2">{icon}</div>}
       <div className="font-medium text-foreground">{title}</div>

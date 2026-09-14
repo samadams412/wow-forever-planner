@@ -20,10 +20,10 @@ export default function SiteHeader() {
     <header className="relative overflow-hidden border-b border-border bg-surface">
       <div
         className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(480px 220px at 6% 0%, rgba(150,24,28,0.35), transparent 70%), radial-gradient(480px 220px at 94% 0%, rgba(20,88,158,0.35), transparent 70%)",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "radial-gradient(480px 220px at 6% 0%, rgba(150,24,28,0.35), transparent 70%), radial-gradient(480px 220px at 94% 0%, rgba(20,88,158,0.35), transparent 70%)",
+        // }}
       />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link

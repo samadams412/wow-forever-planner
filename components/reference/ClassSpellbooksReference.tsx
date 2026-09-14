@@ -157,13 +157,7 @@ export default function ClassSpellbooksReference() {
             baseline.
           </p>
         </div>
-        <button
-          type="button"
-          onClick={collapseAll}
-          className="shrink-0 rounded border border-accent/40 px-3 py-1.5 text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-surface-hover"
-        >
-          Collapse all
-        </button>
+
       </div>
 
       {!headerButtonVisible && (
@@ -181,6 +175,8 @@ export default function ClassSpellbooksReference() {
           <ClassSection key={`${classId}-${collapseAllKey}`} classId={classId} />
         ))}
       </div>
+      
     </div>
+    
   );
 }
