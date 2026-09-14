@@ -76,7 +76,7 @@
             "tier": 1,
             "col": 3,
             "maxRank": 5,
-            "text": "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles.",
+            "text": "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles [<span class='q2'>S03 - Tuning and Overrides Passive - Mage</span>: <span class='q9'>Regeneration, or Mass Regeneration, and a 14% chance to avoid interruption caused by damage while casting Arcane Blast or Spellfrost Bolt</span>].",
             "renamedFrom": "Improved Arcane Missiles"
           }
         },
@@ -95,7 +95,7 @@
           "status": "moved",
           "icon": "spell_holy_dispelmagic",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Arcane",
             "tier": 1,
             "col": 1,
@@ -123,7 +123,7 @@
             "tier": 2,
             "col": 2,
             "maxRank": 5,
-            "text": "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana. 1 sec. cooldown."
+            "text": "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana.  1 sec. cooldown."
           }
         },
         {
@@ -133,11 +133,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -149,7 +149,7 @@
             "tier": 2,
             "col": 3,
             "maxRank": 5,
-            "text": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "text": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           }
         },
         {
@@ -167,7 +167,7 @@
           "status": "moved",
           "icon": "spell_arcane_arcaneresilience",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Arcane",
             "tier": 3,
             "col": 3,
@@ -420,7 +420,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect lasts 15 sec."
+            "text": "When activated, your spells deal 30% more damage while costing 30% more mana to cast.  This effect lasts 15 sec."
           }
         }
       ]
@@ -443,7 +443,7 @@
           "status": "moved",
           "icon": "spell_fire_fireball",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Fire",
             "tier": 2,
             "col": 3,
@@ -468,7 +468,7 @@
           "status": "moved",
           "icon": "spell_fire_flameshock",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Fire",
             "tier": 3,
             "col": 1,
@@ -568,7 +568,7 @@
           "status": "moved",
           "icon": "spell_fire_meteorstorm",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Fire",
             "tier": 1,
             "col": 3,
@@ -643,7 +643,7 @@
             "tier": 3,
             "col": 3,
             "maxRank": 1,
-            "text": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec."
+            "text": "Hurls an immense fiery boulder that causes <!--ppl11366:20:24:141:190-->148 to <!--ppl11366:20:24:187:190:1-->195 Fire damage and an additional 56 Fire damage over 12 sec."
           }
         },
         {
@@ -667,7 +667,7 @@
             "tier": 4,
             "col": 1,
             "maxRank": 3,
-            "text": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec. Stacks up to 5 times."
+            "text": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage.  This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec.  Stacks up to 5 times."
           }
         },
         {
@@ -780,7 +780,7 @@
             "tier": 5,
             "col": 3,
             "maxRank": 1,
-            "text": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 160 to 192 Fire damage, and dazing them for 6 sec."
+            "text": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for <!--ppl11113:30:36:154:100-->160 to <!--ppl11113:30:36:186:100:1-->192 Fire damage, and dazing them for 6 sec."
           }
         },
         {
@@ -831,7 +831,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 critical strikes with Fire spells."
+            "text": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 critical strikes with Fire spells."
           }
         }
       ]
@@ -859,7 +859,7 @@
             "tier": 1,
             "col": 1,
             "maxRank": 2,
-            "text": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by 15%. In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active."
+            "text": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by 15%.  In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active."
           }
         },
         {
@@ -961,7 +961,7 @@
             "tier": 2,
             "col": 4,
             "maxRank": 3,
-            "text": "Increases the duration of your Chill effects by 1 sec and reduces the target's speed by an additional 4%."
+            "text": "Increases the duration of your Chill effects by 1 <!--singular:sec:secs-->sec<!--singular--> and reduces the target's speed by an additional 4%."
           }
         },
         {
@@ -1085,7 +1085,7 @@
           "ranks": [
             "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 15% for 1.5 sec.",
             "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 30% for 1.5 sec.",
-            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 45% for 1.5 sec."
+            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 40% for 1.5 sec."
           ],
           "confidence": "estimated",
           "prereq": null,
@@ -1097,7 +1097,7 @@
             "tier": 3,
             "col": 4,
             "maxRank": 3,
-            "text": "Adds a chill effect to your Blizzard spell. This effect lowers the target's movement speed by 30%. Lasts 1.50 sec."
+            "text": "Adds a chill effect to your Blizzard spell.  This effect lowers the target's movement speed by 30%.  Lasts 1.50 sec."
           }
         },
         {
@@ -1207,12 +1207,12 @@
           "status": "moved",
           "icon": "spell_frost_wizardmark",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Frost",
             "tier": 3,
             "col": 2,
             "maxRank": 1,
-            "text": "When activated, this spell finishes the cooldown on all of your Frost spells."
+            "text": "When activated, this spell finishes the cooldown on all of your Frost spells.<!--cooldown:442543:5 min cooldown-->"
           }
         },
         {
@@ -1259,7 +1259,7 @@
             "tier": 6,
             "col": 3,
             "maxRank": 5,
-            "text": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec. Stacks up to 5 times."
+            "text": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up to 5 times."
           }
         },
         {
@@ -1284,7 +1284,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Instantly shields you, absorbing 455 damage. Lasts 1 min. While the shield holds, spells will not be interrupted."
+            "text": "Instantly shields you, absorbing <!--ppl11426:40:46:438:280:1-->455 damage.  Lasts 1 min.  While the shield holds, spells will not be interrupted."
           }
         }
       ]
