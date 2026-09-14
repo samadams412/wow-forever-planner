@@ -90,7 +90,7 @@
           "status": "moved",
           "icon": "spell_holy_holybolt",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Holy",
             "tier": 3,
             "col": 1,
@@ -161,7 +161,7 @@
           "status": "moved",
           "icon": "spell_holy_unyieldingfaith",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Holy",
             "tier": 3,
             "col": 4,
@@ -249,7 +249,7 @@
           "maxRank": 5,
           "ranks": [
             "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 20% chance to gain Mana equal to 50% of the base cost of the spell.",
-            "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 40% chance to gain Mana equal to 100% of the base cost of the spell.",
+            "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 40% chance to gain Mana equal to 50% of the base cost of the spell.",
             "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 60% chance to gain Mana equal to 150% of the base cost of the spell.",
             "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 80% chance to gain Mana equal to 200% of the base cost of the spell.",
             "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 100% chance to gain Mana equal to 250% of the base cost of the spell."
@@ -328,7 +328,7 @@
           "status": "moved",
           "icon": "spell_holy_searinglight",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Holy",
             "tier": 7,
             "col": 2,
@@ -454,7 +454,7 @@
             "tier": 1,
             "col": 3,
             "maxRank": 5,
-            "text": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike. Lasts 10 sec or 5 blocks."
+            "text": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike.  Lasts 10 sec or 5 blocks."
           }
         },
         {
@@ -522,7 +522,7 @@
           "status": "moved",
           "icon": "spell_magic_lesserinvisibilty",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Protection",
             "tier": 3,
             "col": 4,
@@ -652,7 +652,7 @@
           "status": "moved",
           "icon": "inv_sword_20",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Protection",
             "tier": 6,
             "col": 3,
@@ -771,7 +771,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+            "text": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.<!--sp456541:0--> Each block expends a charge. 4 charges.<!--sp456541--> [<span class='q2'>S03 - Tuning and Overrides Passive - All Classes</span>: <span class='q9'>Activating Holy Shield also grants you 2 Spell Power for each point of your defense skill beyond (<!--pl20925:40:60-->60 * 5). Lasts 15 sec</span><!--sp446847:0--><!--sp446847-->]"
           }
         }
       ]
@@ -841,7 +841,7 @@
             "Decreases the cooldown of your Judgement ability by 1 sec.",
             "Decreases the cooldown of your Judgement ability by 2 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_holy_righteousfury",
@@ -890,7 +890,7 @@
           "status": "moved",
           "icon": "spell_holy_retributionaura",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Retribution",
             "tier": 3,
             "col": 2,
@@ -919,7 +919,7 @@
             "tier": 3,
             "col": 1,
             "maxRank": 3,
-            "text": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5%"
+            "text": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>reduce the target's Attack Power by (<!--ppl9452:20:60:-90:300:1-->30 /- 3), and increase the Paladin's Attack Power by 5% for 30 sec</span> / 10 sec.]"
           }
         },
         {
@@ -931,7 +931,7 @@
           "ranks": [
             "Gives your Judgement ability a 33% chance to return 20% of the Mana cost of the judged seal.",
             "Gives your Judgement ability a 66% chance to return 40% of the Mana cost of the judged seal.",
-            "Gives your Judgement ability a 99% chance to return 60% of the Mana cost of the judged seal."
+            "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal."
           ],
           "confidence": "estimated",
           "prereq": null,
@@ -960,7 +960,7 @@
             "tier": 3,
             "col": 3,
             "maxRank": 1,
-            "text": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 146 if the target is stunned or incapacitated."
+            "text": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.<br /><br />Unleashing this Seal's energy will judge an enemy, instantly causing <!--ppl20375:20:28:46:280-->68 to <!--ppl20375:20:28:50:280:1-->73 Holy damage, <!--ppl20375:20:28:93:560-->137 to <!--ppl20375:20:28:101:560:1-->146 if the target is stunned or incapacitated."
           }
         },
         {
@@ -983,7 +983,7 @@
             "tier": 3,
             "col": 4,
             "maxRank": 2,
-            "text": "Increases movement and mounted movement speed by 4%. This does not stack with other movement speed increasing effects."
+            "text": "Increases movement and mounted movement speed by 4%.  This does not stack with other movement speed increasing effects."
           }
         },
         {
@@ -1006,7 +1006,7 @@
             "tier": 4,
             "col": 1,
             "maxRank": 2,
-            "text": "All spell criticals against you cause 15% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
+            "text": "All spell criticals against you cause 15% of the damage taken to the caster as well.  The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
           }
         },
         {
@@ -1087,12 +1087,12 @@
           "status": "moved",
           "icon": "ability_racial_avatar",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Retribution",
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability."
+            "text": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability. [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>Also Reduces all Physical and Holy threat you generate by 6% while Righteous Fury is not active</span>]"
           }
         },
         {
@@ -1102,7 +1102,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
+            "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec.  Any damage caused will awaken the target.  Only works against Humanoids."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1114,7 +1114,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
+            "text": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec.  Any damage caused will awaken the target.  Only works against Humanoids."
           }
         },
         {
@@ -1146,7 +1146,7 @@
             "Reduces the cast time of your Hammer of Wrath by 0.5 sec, and reduces all threat you generate by 10% while Righteous Fury is not active.",
             "Reduces the cast time of your Hammer of Wrath by 1.0 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "ability_paladin_hammeroftherighteous",
