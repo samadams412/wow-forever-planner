@@ -6,6 +6,10 @@ export type SpellbookEntry = {
   passive?: boolean;
   talent?: boolean;
   tag?: string;
+  icon?: string;
+  // Set on entries using the inv_misc_questionmark fallback because a real
+  // icon hasn't been verified yet -- easy to grep for and swap in later.
+  iconPlaceholder?: boolean;
 };
 
 export type SpellbookTab = {

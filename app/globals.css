@@ -112,3 +112,43 @@ body {
 .wow-cursor-tilt[data-state="gear"] .cursor-img-gear {
   display: block;
 }
+
+/* Spellbook page-turn: an original take on the flip idea (own timing/easing,
+   not the reference site's values) -- the outgoing face rotates+fades out
+   around its left edge, content swaps, then the incoming face rotates+fades
+   in. JS skips both classes entirely under prefers-reduced-motion rather
+   than just shortening them. */
+@keyframes spellbook-flip-out {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(-80deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spellbook-flip-in {
+  from {
+    transform: rotateY(80deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.spellbook-page {
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.spellbook-page.flip-out {
+  animation: spellbook-flip-out 200ms ease-in forwards;
+}
+
+.spellbook-page.flip-in {
+  animation: spellbook-flip-in 240ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

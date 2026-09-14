@@ -1,23 +1,8 @@
-import { spellbooks, SPELLBOOK_CLASS_ORDER, type SpellbookEntry, type NewAbility } from "@/lib/spellbooks";
-import { mediumIconUrl, CLASS_ICON, CLASS_COLOR, classLabel } from "@/lib/wow-data";
+import { spellbooks, SPELLBOOK_CLASS_ORDER, type NewAbility } from "@/lib/spellbooks";
+import { mediumIconUrl, CLASS_ICON, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
 import GoldRule from "@/components/site/GoldRule";
-
-function SpellPill({ spell }: { spell: SpellbookEntry }) {
-  return (
-    <span
-      className={`inline-flex items-center gap-1.5 rounded border px-2 py-1 text-xs ${
-        spell.talent ? "border-amber-400/50 bg-amber-400/10" : "border-border bg-background/40"
-      }`}
-    >
-      <span className="text-foreground">{spell.name}</span>
-      {spell.rank !== undefined && <span className="text-foreground-muted">Rank {spell.rank}</span>}
-      {spell.passive && <span className="text-foreground-muted">Passive</span>}
-      {spell.tag && <span className="text-foreground-muted">{spell.tag}</span>}
-      {spell.talent && <span className="font-semibold uppercase tracking-wide text-amber-300">Talent</span>}
-    </span>
-  );
-}
+import SpellbookBook from "./SpellbookBook";
 
 function NewAbilityCard({ ability }: { ability: NewAbility }) {
   const confirmed = ability.status === "confirmed";
@@ -44,7 +29,6 @@ function NewAbilityCard({ ability }: { ability: NewAbility }) {
 
 function ClassSection({ classId }: { classId: string }) {
   const book = spellbooks.classes[classId];
-  const color = CLASS_COLOR[classId] ?? "var(--accent)";
 
   return (
     <Collapsible
@@ -63,20 +47,7 @@ function ClassSection({ classId }: { classId: string }) {
         </ul>
       )}
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {book.tabs.map((tab) => (
-          <div key={tab.name}>
-            <h4 className="mb-1.5 text-xs font-semibold" style={{ color }}>
-              {tab.name}
-            </h4>
-            <div className="flex flex-wrap gap-1.5">
-              {tab.spells.map((spell) => (
-                <SpellPill key={spell.name} spell={spell} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <SpellbookBook classId={classId} book={book} />
 
       {book.notOpened.length > 0 && (
         <p className="mt-3 text-xs text-foreground-muted/70">

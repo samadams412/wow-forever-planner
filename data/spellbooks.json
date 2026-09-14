@@ -16,45 +16,56 @@
           "name": "Arms",
           "spells": [
             {
-              "name": "Battle Stance"
+              "name": "Battle Stance",
+              "icon": "ability_warrior_offensivestance"
             },
             {
               "name": "Charge",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_warrior_charge"
             },
             {
               "name": "Hamstring",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_shockwave"
             },
             {
               "name": "Heroic Strike",
-              "rank": 5
+              "rank": 5,
+              "icon": "ability_rogue_ambush"
             },
             {
               "name": "Mocking Blow",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_warrior_punishingblow"
             },
             {
               "name": "Overpower",
-              "rank": 1
+              "rank": 1,
+              "icon": "ability_meleedamage"
             },
             {
               "name": "Rend",
-              "rank": 4
+              "rank": 4,
+              "icon": "ability_gouge"
             },
             {
-              "name": "Retaliation"
+              "name": "Retaliation",
+              "icon": "ability_warrior_challange"
             },
             {
               "name": "Thunder Clap",
-              "rank": 4
+              "rank": 4,
+              "icon": "spell_nature_thunderclap"
             },
             {
-              "name": "Victory Rush"
+              "name": "Victory Rush",
+              "icon": "ability_warrior_devastate"
             },
             {
               "name": "Tactical Mastery",
-              "passive": true
+              "passive": true,
+              "icon": "spell_nature_enchantarmor"
             }
           ]
         },
@@ -63,42 +74,53 @@
           "spells": [
             {
               "name": "Battle Shout",
-              "rank": 4
+              "rank": 4,
+              "icon": "ability_warrior_battleshout"
             },
             {
-              "name": "Berserker Rage"
+              "name": "Berserker Rage",
+              "icon": "spell_nature_ancestralguardian"
             },
             {
-              "name": "Berserker Stance"
+              "name": "Berserker Stance",
+              "icon": "ability_racial_avatar"
             },
             {
-              "name": "Challenging Shout"
+              "name": "Challenging Shout",
+              "icon": "ability_bullrush"
             },
             {
               "name": "Cleave",
-              "rank": 2
+              "rank": 2,
+              "icon": "ability_warrior_cleave"
             },
             {
               "name": "Demoralizing Shout",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_warrior_warcry"
             },
             {
               "name": "Execute",
-              "rank": 2
+              "rank": 2,
+              "icon": "inv_sword_48"
             },
             {
-              "name": "Intimidating Shout"
+              "name": "Intimidating Shout",
+              "icon": "ability_golemthunderclap"
             },
             {
               "name": "Pummel",
-              "rank": 1
+              "rank": 1,
+              "icon": "inv_gauntlets_04"
             },
             {
               "name": "Slam",
-              "rank": 3
+              "rank": 3,
+              "icon": "ability_warrior_decisivestrike"
             },
             {
-              "name": "Whirlwind"
+              "name": "Whirlwind",
+              "icon": "ability_whirlwind"
             }
           ]
         },
@@ -106,43 +128,56 @@
           "name": "General",
           "spells": [
             {
-              "name": "Attack"
+              "name": "Attack",
+              "icon": "inv_misc_questionmark",
+              "iconPlaceholder": true
             },
             {
-              "name": "Throw"
+              "name": "Throw",
+              "icon": "ability_throw"
             },
             {
-              "name": "Shoot Bow"
+              "name": "Shoot Bow",
+              "icon": "ability_marksmanship"
             },
             {
-              "name": "Shoot Crossbow"
+              "name": "Shoot Crossbow",
+              "icon": "ability_marksmanship"
             },
             {
-              "name": "Shoot Gun"
+              "name": "Shoot Gun",
+              "icon": "ability_marksmanship"
             },
             {
               "name": "Dual Wield",
-              "passive": true
+              "passive": true,
+              "icon": "ability_dualwield"
             },
             {
               "name": "Armor Proficiency",
-              "passive": true
+              "passive": true,
+              "icon": "inv_chest_plate01"
             },
             {
               "name": "Block",
-              "passive": true
+              "passive": true,
+              "icon": "ability_defend"
             },
             {
               "name": "Dodge",
-              "passive": true
+              "passive": true,
+              "icon": "spell_nature_invisibilty"
             },
             {
               "name": "Parry",
-              "passive": true
+              "passive": true,
+              "icon": "ability_parry"
             },
             {
               "name": "Languages",
-              "passive": true
+              "passive": true,
+              "icon": "inv_misc_questionmark",
+              "iconPlaceholder": true
             }
           ]
         }
