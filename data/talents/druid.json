@@ -67,7 +67,7 @@
           "status": "moved",
           "icon": "spell_nature_sentinal",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Balance",
             "tier": 5,
             "col": 3,
@@ -131,7 +131,7 @@
           "status": "moved",
           "icon": "spell_nature_naturetouchgrow",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Balance",
             "tier": 3,
             "col": 4,
@@ -155,7 +155,7 @@
           "status": "moved",
           "icon": "spell_nature_stranglevines",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Balance",
             "tier": 2,
             "col": 1,
@@ -247,7 +247,7 @@
           "status": "moved",
           "icon": "spell_nature_insectswarm",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 3,
             "col": 3,
@@ -363,7 +363,7 @@
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Increases the damage done by your Starfire, Moonfire and Wrath spells by."
+            "text": "Increases the damage done by your Starfire, Moonfire and Wrath spells by [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>2%</span> / 2%]."
           }
         },
         {
@@ -385,7 +385,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Transforms the Druid intoMoonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "text": "Transforms the Druid into Moonkin Form.  While in this form the armor contribution from items is increased by 360% [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Moonfire costs 50% less mana and deals 100% more damage over time, your periodic damage spells can deal critical periodic damage, you gain (<!--pl24858:40:60-->60 * 3) spell damage</span>] and all party members within 30 yards have their spell critical chance increased by 3%.  [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>The Moonkin cannot cast healing spells while shapeshifted</span> / The Moonkin can only cast Balance spells while shapeshifted.] [<span class='q9'>Reduces all threat from Arcane and Nature spells by 0% while in this form</span><!--sp436895:0--><!--sp436895-->]<br /><br />The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           }
         }
       ]
@@ -437,12 +437,12 @@
           "status": "moved",
           "icon": "spell_holy_blessingofagility",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Feral Combat",
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Increases your Intellect by 4%. In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%."
+            "text": "Increases your Intellect by 4%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%."
           }
         },
         {
@@ -460,12 +460,12 @@
           "status": "moved",
           "icon": "ability_druid_dash",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Feral Combat",
             "tier": 3,
             "col": 1,
             "maxRank": 2,
-            "text": "Increases your movement speed by 15% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
+            "text": "Increases your movement speed by 15% <!--sp436895:0-->while outdoors<!--sp436895--> in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
             "renamedFrom": "Feline Swiftness"
           }
         },
@@ -555,7 +555,7 @@
           "status": "moved",
           "icon": "ability_druid_ravage",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Feral Combat",
             "tier": 5,
             "col": 1,
@@ -596,7 +596,7 @@
             "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 3%.",
             "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 6%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "inv_misc_monsterclaw_04",
@@ -738,7 +738,7 @@
           "status": "moved",
           "icon": "spell_nature_unyeildingstamina",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Feral Combat",
             "tier": 7,
             "col": 2,
@@ -855,7 +855,7 @@
           "status": "moved",
           "icon": "spell_nature_healingwavegreater",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 2,
             "col": 2,
@@ -873,8 +873,8 @@
             "Gives you a 20% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 20% of the Energy you had when you were last in Cat Form, plus 2 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 20 Energy.",
             "Gives you a 40% chance to gain 20 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 40% of the Energy you had when you were last in Cat Form, plus 4 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 40 Energy.",
             "Gives you a 60% chance to gain 30 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 60% of the Energy you had when you were last in Cat Form, plus 6 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 60 Energy.",
-            "Gives you a 80% chance to gain 40 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 80% of the Energy you had when you were last in Cat Form, plus 8 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 80 Energy.",
-            "Gives you a 100% chance to gain 50 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 100% of the Energy you had when you were last in Cat Form, plus 10 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 100 Energy."
+            "Gives you a 80% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 80% of the Energy you had when you were last in Cat Form, plus 8 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 80 Energy.",
+            "Gives you a 100% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 100% of the Energy you had when you were last in Cat Form, plus 10 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 100 Energy."
           ],
           "confidence": "estimated",
           "prereq": null,
@@ -932,7 +932,7 @@
           "status": "moved",
           "icon": "ability_eyeoftheowl",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 3,
             "col": 4,
@@ -1006,7 +1006,7 @@
           "status": "moved",
           "icon": "spell_nature_protectionformnature",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 5,
             "col": 3,
@@ -1095,12 +1095,12 @@
           "status": "moved",
           "icon": "inv_relics_idolofrejuvenation",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
+            "text": "[<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Instantly heals a target with an active Rejuvenation or Regrowth effect for</span> / Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them] an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
           }
         },
         {
