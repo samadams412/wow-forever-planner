@@ -1,4 +1,5 @@
 import { spellbooks, SPELLBOOK_CLASS_ORDER, type NewAbility } from "@/lib/spellbooks";
+import { getClassRacials, type ClassRacialSpell } from "@/lib/class-racials";
 import { mediumIconUrl, CLASS_ICON, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
 import GoldRule from "@/components/site/GoldRule";
@@ -23,6 +24,47 @@ function NewAbilityCard({ ability }: { ability: NewAbility }) {
         </div>
         <p className="mt-1 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{ability.note}</p>
       </div>
+    </div>
+  );
+}
+
+function ClassRacialSpellCard({ spell }: { spell: ClassRacialSpell }) {
+  return (
+    <div className="flex gap-2.5 rounded border border-border bg-background/40 p-2.5">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={mediumIconUrl(spell.icon)} alt="" className="h-8 w-8 shrink-0 rounded-sm" />
+      <div>
+        <span className="text-sm font-semibold text-foreground">{spell.name}</span>
+        <p className="mt-1 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{spell.description}</p>
+      </div>
+    </div>
+  );
+}
+
+function ClassRacialsSection({ classId }: { classId: string }) {
+  const data = getClassRacials(classId);
+  if (!data) return null;
+
+  return (
+    <div className="mt-4">
+      <GoldRule className="mb-3" />
+      <h4 className="text-sm font-semibold text-foreground">
+        Race-specific bonus spells
+      </h4>
+      <p className="mt-0.5 max-w-[65ch] text-xs leading-relaxed text-foreground-muted">{data.note}</p>
+      <div className="mt-2 space-y-3">
+        {Object.entries(data.races).map(([race, spells]) => (
+          <div key={race}>
+            <h5 className="text-xs font-semibold uppercase tracking-wide text-accent">{race}</h5>
+            <div className="mt-1.5 space-y-2">
+              {spells.map((spell) => (
+                <ClassRacialSpellCard key={spell.name} spell={spell} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-2 text-xs text-foreground-muted/70">Source: {data.source}</p>
     </div>
   );
 }
@@ -75,6 +117,8 @@ function ClassSection({ classId }: { classId: string }) {
           </div>
         </div>
       )}
+
+      <ClassRacialsSection classId={classId} />
     </Collapsible>
   );
 }

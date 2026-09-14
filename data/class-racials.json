@@ -1,0 +1,70 @@
+{
+  "Priest": {
+    "note": "From the BlizzCon demo. Fear Ward is now baseline for every Priest. Night Elf and Troll spells read from level 38 spellbook tooltips.",
+    "source": "Warcraft Tavern, 12 Sep 2026; Dark Sacrifice tooltip from demo footage; Night Elf spells read from Savix's Twitch VOD of 12 Sep 2026 (5h02m); Troll spells from demo spellbook screenshots shared by Schiffers on Reddit, 13 Sep 2026 (rank 3 tooltips at level 38), matched by admiralbfalcon's captures from Xaryu's stream; Gnome Contingency Plan tooltip from admiralbfalcon, 13 Sep 2026.",
+    "races": {
+      "Undead": [
+        {
+          "name": "Dark Sacrifice",
+          "description": "Instant, 10 min cooldown. Cannibalize 720 of your own Health over 15 sec to gain 720 Mana. (Rank 2, level 38 values.)",
+          "icon": "spell_shadow_soulleech_3"
+        }
+      ],
+      "Troll": [
+        {
+          "name": "Hex of Weakness",
+          "description": "Changed. Rank 3: 45 mana, instant, 30 yd. Reduces the target's melee attack power by 85 and the effectiveness of healing on it by 20% for 2 min. (Classic reduced flat melee damage instead of attack power.)",
+          "icon": "spell_shadow_fumble"
+        },
+        {
+          "name": "Shadowguard",
+          "description": "Rank 3: 30 mana, instant. Shadows strike anyone who hits you with a spell, melee or ranged attack for 76 Shadow damage, once every few seconds, no threat. 3 charges, lasts 10 min.",
+          "icon": "spell_nature_lightningshield"
+        }
+      ],
+      "Dwarf": [
+        {
+          "name": "Chastise",
+          "description": "Holy damage plus a short root, as in TBC.",
+          "icon": "spell_holy_chastise"
+        },
+        {
+          "name": "Desperate Prayer",
+          "description": "Instantly heals you, as in TBC.",
+          "icon": "spell_holy_restoration"
+        }
+      ],
+      "Gnome": [
+        {
+          "name": "Confounding Flash",
+          "description": "Area crowd-control cooldown.",
+          "icon": "spell_holy_mindsooth"
+        },
+        {
+          "name": "Contingency Plan",
+          "description": "Rank 2 at 38: 220 mana, instant, 30 yd, 10 min cooldown. Places a Holy ward on an ally for 15 sec; the next hit that drops them below 35% health gives them a 290 absorb and heals 338 over 15 sec. One Contingency Plan per target. Read from a demo spellbook tooltip.",
+          "icon": "spell_holy_guardianspirit"
+        }
+      ],
+      "Human": [
+        {
+          "name": "Divine Grace",
+          "description": "Cooldown that removes Weakened Soul from the target and heals them.",
+          "icon": "spell_holy_purify"
+        }
+      ],
+      "Night Elf": [
+        {
+          "name": "Elune's Grace",
+          "description": "Changed. Instant, 26 mana, 5 min cooldown: reduces the chance you will be hit by melee and ranged attacks by 50% for 15 sec or until you are missed 3 times. (Classic: ranged only, plus dodge, 3 min cooldown.) Read from the demo spellbook at level 38.",
+          "icon": "spell_holy_elunesgrace"
+        },
+        {
+          "name": "Starshards",
+          "description": "Changed. Rank 4 at 38: 190 mana, 30 yd, channeled, 30 sec cooldown. Rains starshards on the target for 816 Arcane damage over 6 sec. (Classic: no cooldown and far less damage.) Read from a demo spellbook tooltip.",
+          "icon": "spell_arcane_starfire"
+        }
+      ]
+    }
+  }
+}
