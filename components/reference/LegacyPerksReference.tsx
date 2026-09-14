@@ -21,17 +21,35 @@ function TreeColumn({ tree }: { tree: LegacyPerkTree }) {
         <img src={mediumIconUrl(tree.icon)} alt="" className="h-6 w-6 rounded-sm" />
         <h3 className="text-sm font-semibold text-foreground">{tree.name}</h3>
       </div>
-      {tree.perks.map((perk) => (
-        <div key={perk.name} className="rounded border border-border bg-surface p-2.5">
+      {tree.perks.map((perk, i) => (
+        <div
+          key={perk.name + i}
+          className={`rounded border p-2.5 ${
+            perk.placeholder ? "border-dashed border-border/50 bg-surface/40" : "border-border bg-surface"
+          }`}
+        >
           <div className="flex items-start gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={mediumIconUrl(perk.icon)} alt="" className="h-7 w-7 shrink-0 rounded-sm" />
+            <img
+              src={mediumIconUrl(perk.icon)}
+              alt=""
+              className={`h-7 w-7 shrink-0 rounded-sm ${perk.placeholder ? "opacity-40 grayscale" : ""}`}
+            />
             <div>
-              <span className="text-sm font-medium text-accent">{perk.name}</span>{" "}
-              <span className="text-xs text-foreground-muted">
-                ({perk.ranks} rank{perk.ranks > 1 ? "s" : ""})
-              </span>{" "}
-              <RankPips count={perk.ranks} />
+              <span
+                className={`text-sm font-medium ${perk.placeholder ? "text-foreground-muted" : "text-accent"}`}
+              >
+                {perk.name}
+              </span>
+              {!perk.placeholder && (
+                <>
+                  {" "}
+                  <span className="text-xs text-foreground-muted">
+                    ({perk.ranks} rank{perk.ranks > 1 ? "s" : ""})
+                  </span>{" "}
+                  <RankPips count={perk.ranks} />
+                </>
+              )}
             </div>
           </div>
           {(perk.castTime || perk.cooldown) && (
@@ -39,7 +57,11 @@ function TreeColumn({ tree }: { tree: LegacyPerkTree }) {
               {[perk.castTime, perk.cooldown].filter(Boolean).join(", ")}
             </p>
           )}
-          <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-foreground/90">
+          <p
+            className={`mt-1.5 max-w-[60ch] text-sm leading-relaxed ${
+              perk.placeholder ? "italic text-foreground-muted/70" : "text-foreground/90"
+            }`}
+          >
             {perk.description}
           </p>
         </div>

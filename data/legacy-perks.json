@@ -1,13 +1,13 @@
 {
   "source": "BlizzCon 2026 demo tooltips; Wowhead \"Warcraft: Forever Legacy System Explained\" (12 Sep 2026); Blizzard's official Deep Dive panel recap, Legacy System section (13 Sep 2026)",
   "confidence": "datamined",
-  "pointCapNote": "Blizzard has confirmed each character can spend up to 16 Legacy Points, drawn from an account-wide pool capped at 65 points earned total -- so it's normal to bank more points than any one character can spend. This page stays a static reference for now rather than an interactive spend-and-plan tool.",
+  "pointCapNote": "Blizzard has confirmed each character can spend up to 16 Legacy Points, drawn from an account-wide pool capped at 65 points earned total -- so it's normal to bank more points than any one character can spend. The Professions tree also has two placeholder slots (shown below, greyed out) whose tooltip just reads \"To be added in future patch content.\" This page stays a static reference for now rather than an interactive spend-and-plan tool.",
   "mountCostNote": "Related change, not a Legacy Point mechanic: mount costs are moving to a Burning Crusade-style model. The gold cost moves off the mount itself and into training the matching riding skill, so once you've trained that skill the mount is free.",
   "expansionNote": "Blizzard has said this system is meant to grow after launch -- expect new Legacy Challenges, new perks, more ways to spend points, higher caps, and possibly new trees or columns over time.",
   "trees": [
     {
       "name": "Adventure",
-      "icon": "inv_111_hunter_ability_airsuperiority",
+      "icon": "inv_misc_map_01",
       "perks": [
         {
           "name": "Well Rested",
@@ -19,7 +19,7 @@
           "name": "Talented",
           "ranks": 5,
           "icon": "spell_holy_mindvision",
-          "description": "You gain talent points every level starting at level 9 instead of starting at level 10, but you still may not have more than 51 total talent points."
+          "description": "You gain talent points every level starting at level 9 instead of level 10, but you still may not have more than 51 total talent points."
         },
         {
           "name": "High Alert",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Resourcefulness",
-      "icon": "achievement_general_dungeondiplomat",
+      "icon": "inv_misc_coin_01",
       "perks": [
         {
           "name": "The Quick and the Dead",
@@ -67,7 +67,7 @@
           "name": "Reinforce",
           "ranks": 5,
           "icon": "inv_hammer_20",
-          "description": "You take 6% less durability loss when you die."
+          "description": "You take 8% less durability loss when you die."
         },
         {
           "name": "Diplomat",
@@ -112,6 +112,12 @@
           "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4%."
         },
         {
+          "name": "Bountiful Harvest",
+          "ranks": 5,
+          "icon": "inv_misc_herb_02",
+          "description": "You discover 20% more Scarce materials from Mining, Herbalism, and Skinning."
+        },
+        {
           "name": "Performance Bonus",
           "ranks": 5,
           "icon": "inv_crate_01",
@@ -119,7 +125,7 @@
         },
         {
           "name": "Luremaster",
-          "ranks": 5,
+          "ranks": 2,
           "icon": "trade_fishing",
           "description": "While fishing with a lure active, you have a 25% chance to catch an extra fish."
         },
@@ -131,11 +137,25 @@
         },
         {
           "name": "Dedicated Study",
-          "ranks": 5,
+          "ranks": 1,
           "icon": "inv_scroll_03",
           "castTime": "25 sec cast",
           "cooldown": "23 hour cooldown",
           "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+        },
+        {
+          "name": "Future Profession Perk",
+          "ranks": 0,
+          "icon": "inv_misc_questionmark",
+          "description": "To be added in future patch content.",
+          "placeholder": true
+        },
+        {
+          "name": "Future Profession Perk",
+          "ranks": 0,
+          "icon": "inv_misc_questionmark",
+          "description": "To be added in future patch content.",
+          "placeholder": true
         }
       ]
     }

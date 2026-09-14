@@ -7,6 +7,9 @@ export type LegacyPerk = {
   description: string;
   castTime?: string;
   cooldown?: string;
+  // A not-yet-implemented Professions slot -- the source only has two of
+  // these and gives them no distinguishing name, just this placeholder text.
+  placeholder?: boolean;
 };
 
 export type LegacyPerkTree = {
