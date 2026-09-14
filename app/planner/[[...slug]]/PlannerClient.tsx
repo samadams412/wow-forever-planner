@@ -241,7 +241,17 @@ export default function PlannerClient({
         <RaceReferenceTable races={races} />
       </div>
 
-      <p className="mt-4 text-[11px] text-foreground-muted/60">Source: talentsforever.com</p>
+      <p className="mt-4 text-[11px] text-foreground-muted/60">
+        Source:{" "}
+        <a
+          href="https://talentsforever.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-foreground-muted hover:underline"
+        >
+          talentsforever.com
+        </a>
+      </p>
 
       <Dialog open={saveDialogOpen} onClose={() => setSaveDialogOpen(false)} title="Save build">
         <p className="text-xs text-foreground-muted">

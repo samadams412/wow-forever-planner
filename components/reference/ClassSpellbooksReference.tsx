@@ -58,15 +58,15 @@ function ClassSection({ classId }: { classId: string }) {
         <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-8 w-8 rounded" />
       }
     >
+      <SpellbookBook classId={classId} book={book} />
+
       {book.notes.length > 0 && (
-        <ul className="mb-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-foreground-muted">
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/90">
           {book.notes.map((note) => (
             <li key={note}>{note}</li>
           ))}
         </ul>
       )}
-
-      <SpellbookBook classId={classId} book={book} />
 
       {book.notOpened.length > 0 && (
         <p className="mt-3 text-xs text-foreground-muted/70">

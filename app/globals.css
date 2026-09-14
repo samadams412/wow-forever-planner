@@ -113,17 +113,18 @@ body {
   display: block;
 }
 
-/* Spellbook page-turn: an original take on the flip idea (own timing/easing,
-   not the reference site's values) -- hinged at the book's spine (the
-   page's own center, which lines up with the spine-shadow overlay), with
-   rotation direction following navigation direction: moving to a later
-   tab/page turns forward (new page swings in from the right), moving to
-   an earlier one turns backward (from the left). A brightness filter rides
-   along with the rotation -- darkening as the page turns away from the
-   viewer, brightening back up as it turns toward them -- to fake the way
-   a real page catches and loses the light as it turns. JS skips both
-   classes entirely under prefers-reduced-motion rather than just
-   shortening them. */
+/* Spellbook page-turn: hinged at the spine edge (left edge for a forward
+   turn, since the new page settles in like a right-hand page with the
+   spine to its left; right edge for backward, like a left-hand page with
+   the spine to its right) rather than the page's own center -- a center
+   hinge only sweeps a half-page arc, which is what read as flat/squashed
+   before. Own timing/values, adapted from studying (not copying) how a
+   reference implementation structures this: perspective on the ancestor
+   (set inline on the wrapper in SpellbookBook.tsx), separate out/in states
+   each with their own rotateY + opacity keyframe, plus a shading overlay
+   (below) that fakes light catching the page as it turns. JS skips both
+   the flip and the shading entirely under prefers-reduced-motion rather
+   than just shortening them. */
 @keyframes spellbook-flip-out-forward {
   from {
     transform: rotateY(0deg);
@@ -131,7 +132,7 @@ body {
     opacity: 1;
   }
   to {
-    transform: rotateY(-88deg);
+    transform: rotateY(-75deg);
     filter: brightness(0.5);
     opacity: 0;
   }
@@ -139,7 +140,7 @@ body {
 
 @keyframes spellbook-flip-in-forward {
   from {
-    transform: rotateY(88deg);
+    transform: rotateY(65deg);
     filter: brightness(0.5);
     opacity: 0;
   }
@@ -157,7 +158,7 @@ body {
     opacity: 1;
   }
   to {
-    transform: rotateY(88deg);
+    transform: rotateY(75deg);
     filter: brightness(0.5);
     opacity: 0;
   }
@@ -165,7 +166,7 @@ body {
 
 @keyframes spellbook-flip-in-backward {
   from {
-    transform: rotateY(-88deg);
+    transform: rotateY(-65deg);
     filter: brightness(0.5);
     opacity: 0;
   }
@@ -177,8 +178,23 @@ body {
 }
 
 .spellbook-page {
-  transform-origin: center center;
+  /* Book color variables -- page background and ink (text) tone. Scoped
+     here rather than global :root since they're specific to the parchment
+     look; descendants (spell name spans, the tab heading) read them via
+     inheritance instead of repeating the hex values. */
+  --pg: #e4d2a8;
+  --ink2: #3a2812;
   backface-visibility: hidden;
+}
+
+.spellbook-page.flip-out-forward,
+.spellbook-page.flip-in-forward {
+  transform-origin: left center;
+}
+
+.spellbook-page.flip-out-backward,
+.spellbook-page.flip-in-backward {
+  transform-origin: right center;
 }
 
 /* Outgoing half eases in (starts slow, accelerates away); incoming half
@@ -198,6 +214,57 @@ body {
 
 .spellbook-page.flip-in-backward {
   animation: spellbook-flip-in-backward 260ms cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+/* Shading overlay: a diagonal band sweeps across the page during the turn
+   to fake light catching its surface. Same keyframe both ways -- the
+   incoming page plays it with animation-direction: reverse so the sweep
+   crosses in the opposite screen direction from the outgoing page's,
+   mirroring like light hitting the page from a fixed source as it rotates
+   past two different angles. */
+.spellbook-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(0, 0, 0, 0.4) 62%,
+    transparent 80%
+  );
+  background-size: 250% 250%;
+}
+
+@keyframes spellbook-page-shade {
+  0% {
+    opacity: 0;
+    background-position: 120% 0%;
+  }
+  50% {
+    opacity: 0.9;
+    background-position: 50% 0%;
+  }
+  100% {
+    opacity: 0;
+    background-position: -20% 0%;
+  }
+}
+
+.spellbook-page.flip-out-forward::after,
+.spellbook-page.flip-out-backward::after {
+  animation: spellbook-page-shade 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.spellbook-page.flip-in-forward::after,
+.spellbook-page.flip-in-backward::after {
+  animation-name: spellbook-page-shade;
+  animation-duration: 260ms;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
 }
 
 /* Staggered top-to-bottom reveal of each spell row once the flip settles.

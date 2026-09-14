@@ -1,7 +1,7 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { useRef, useState } from "react";
+import { useRef, useState, type AnimationEvent } from "react";
 import { mediumIconUrl, CLASS_ICON, getTreeIcon } from "@/lib/wow-data";
 import type { ClassSpellbook, SpellbookEntry } from "@/lib/spellbooks";
 import { getSpellTooltip } from "@/lib/spell-tooltips";
@@ -86,7 +86,7 @@ function SpellEntry({
       </div>
       <div className="min-w-0">
         <div className="flex flex-wrap items-baseline gap-x-1.5">
-          <span className="text-sm font-semibold text-[#2b2013]">{spell.name}</span>
+          <span className="text-sm font-semibold text-(--ink2)">{spell.name}</span>
           {spell.talent && (
             <span className="rounded-sm bg-[#8a6d3b]/20 px-1 text-[9px] font-semibold uppercase tracking-wide text-[#6b4f22]">
               Talent
@@ -115,13 +115,18 @@ function SpellEntry({
 }
 
 export default function SpellbookBook({ classId, book }: { classId: string; book: ClassSpellbook }) {
-  // General is always reachable but never the default view -- push it to the
-  // end so the default tab (index 0) lands on the class's first spec tree.
-  const tabs = [...book.tabs].sort((a, b) => (a.name === "General" ? 1 : b.name === "General" ? -1 : 0));
+  // Tab order and default selection are independent: General sits first in
+  // the rail (restored to its original position), but the tab shown when
+  // the book first opens is still the class's first spec tree, not General.
+  const tabs = [...book.tabs].sort((a, b) => (a.name === "General" ? -1 : b.name === "General" ? 1 : 0));
+  const defaultTabIndex = Math.max(
+    0,
+    tabs.findIndex((t) => t.name !== "General")
+  );
 
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(defaultTabIndex);
   const [page, setPage] = useState(0);
-  const [display, setDisplay] = useState({ tabIndex: 0, page: 0 });
+  const [display, setDisplay] = useState({ tabIndex: defaultTabIndex, page: 0 });
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
   // Bumped once a flip-in settles, to key the spell list into a fresh mount
@@ -151,7 +156,12 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
     setPhase("out");
   }
 
-  function handleAnimationEnd() {
+  function handleAnimationEnd(e: AnimationEvent<HTMLDivElement>) {
+    // animationend bubbles -- without this guard, a child's short animation
+    // (the icon hover shine, a row's stagger-reveal) reaches this handler
+    // and fires it way before the page's own multi-hundred-ms flip is done,
+    // which was cutting the flip short and made it read as barely-there.
+    if (e.target !== e.currentTarget) return;
     if (phase === "out" && pending.current) {
       setDisplay(pending.current);
       pending.current = null;
@@ -184,7 +194,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
         ))}
       </div>
 
-      <div className="order-1 relative flex-1 rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:order-0 sm:p-3">
+      <div className="order-1 relative w-full rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:order-0 sm:w-175 sm:shrink-0 sm:p-3">
         <CornerBracket position="tl" />
         <CornerBracket position="tr" />
         <CornerBracket position="bl" />
@@ -193,7 +203,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
         <div style={{ perspective: 1800 }}>
           <div
             onAnimationEnd={handleAnimationEnd}
-            className={`spellbook-page relative min-h-105 overflow-hidden rounded-sm border border-[#8a6d3b]/50 bg-[#e8dcc4] p-3 sm:min-h-115 sm:p-5 ${
+            className={`spellbook-page relative min-h-105 overflow-hidden rounded-sm border border-[#8a6d3b]/50 bg-(--pg) p-3 sm:min-h-115 sm:p-5 ${
               phase === "out" ? `flip-out-${direction}` : phase === "in" ? `flip-in-${direction}` : ""
             }`}
           >
@@ -224,7 +234,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
 
             <div className="relative">
               <div className="flex items-baseline justify-between gap-2 border-b border-[#8a6d3b]/40 pb-2">
-                <h3 className="font-heading text-lg font-semibold text-[#2b2013] sm:text-xl">{activeTab.name}</h3>
+                <h3 className="font-heading text-lg font-semibold text-(--ink2) sm:text-xl">{activeTab.name}</h3>
                 <span className="shrink-0 text-xs text-[#6b5a3d]">{activeTab.spells.length} spells</span>
               </div>
 
