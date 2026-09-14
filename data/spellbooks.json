@@ -515,11 +515,9 @@
         "Aimed Shot is baseline (a Classic Marksmanship talent).",
         "Call Pet is named after the pet: this Hunter had Call Owl.",
         "Explosive Trap and Viper Sting are trained by 38 (Classic: 44 and 36).",
-        "The fifth tab is the pet's own spellbook; it was not opened."
+        "Pet tab is the pet's own spellbook, read from Soda's owl: Assist, Attack, Claw, Defensive, Dive, Follow, Great Stamina, Growl, Mine!, Move To, Natural Armor, Passive, Stay."
       ],
-      "notOpened": [
-        "Pet"
-      ],
+      "notOpened": [],
       "tabs": [
         {
           "name": "Beast Mastery",
@@ -716,6 +714,76 @@
               "name": "Wing Clip",
               "rank": 2,
               "icon": "ability_rogue_trip"
+            }
+          ]
+        },
+        {
+          "name": "Pet",
+          "spells": [
+            {
+              "name": "Assist",
+              "tag": "Pet Stance",
+              "icon": "ability_hunter_pet_assist"
+            },
+            {
+              "name": "Attack",
+              "tag": "Pet Command",
+              "icon": "inv_sword_04"
+            },
+            {
+              "name": "Claw",
+              "rank": 5,
+              "icon": "ability_druid_rake"
+            },
+            {
+              "name": "Defensive",
+              "tag": "Pet Stance",
+              "icon": "ability_defend"
+            },
+            {
+              "name": "Dive",
+              "rank": 1,
+              "icon": "spell_shadow_burningspirit"
+            },
+            {
+              "name": "Follow",
+              "tag": "Pet Command",
+              "icon": "ability_tracking"
+            },
+            {
+              "name": "Great Stamina",
+              "rank": 6,
+              "icon": "spell_nature_unyeildingstamina"
+            },
+            {
+              "name": "Growl",
+              "rank": 4,
+              "icon": "ability_physical_taunt"
+            },
+            {
+              "name": "Mine!",
+              "rank": 3,
+              "icon": "ability_hunter_beastcall"
+            },
+            {
+              "name": "Move To",
+              "tag": "Pet Command",
+              "icon": "ability_hunter_pet_goto"
+            },
+            {
+              "name": "Natural Armor",
+              "rank": 6,
+              "icon": "spell_nature_spiritarmor"
+            },
+            {
+              "name": "Passive",
+              "tag": "Pet Stance",
+              "icon": "ability_seal"
+            },
+            {
+              "name": "Stay",
+              "tag": "Pet Command",
+              "icon": "spell_nature_timestop"
             }
           ]
         },

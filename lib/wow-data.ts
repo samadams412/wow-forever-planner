@@ -136,10 +136,10 @@ export function getClassTalentData(classId: string): ClassTalentData | undefined
 // `${classId}:${treeName}`. Shared by the planner's talent tree grid and
 // the Class Spellbooks page, so both stay in sync as overrides are added.
 // Talent-tree entries were checked against Wowhead's icon CDN; warlock:Pet
-// has no talent tree (it's a spellbook-only tab) and was instead read
-// directly off talentsforever.com's own Warlock spellbook tab rail via
-// its `li[data-sk]`/`.btab img` markup -- it reuses the class icon there,
-// not a demon-specific one.
+// and hunter:Pet have no talent tree (they're spellbook-only tabs) and
+// were instead read directly off talentsforever.com's own spellbook tab
+// rail via its `li[data-sk]`/`.btab img` markup -- both reuse their
+// class's own icon there, not a pet-specific one.
 const TREE_ICON_OVERRIDES: Record<string, string> = {
   "warrior:Arms": "ability_warrior_offensivestance",
   "warrior:Fury": "ability_warrior_innerrage",
@@ -150,6 +150,7 @@ const TREE_ICON_OVERRIDES: Record<string, string> = {
   "hunter:Beast Mastery": "ability_hunter_beasttaming",
   "hunter:Marksmanship": "ability_marksmanship",
   "hunter:Survival": "ability_hunter_swiftstrike",
+  "hunter:Pet": "class_hunter",
   "rogue:Assassination": "ability_rogue_eviscerate",
   "rogue:Combat": "ability_backstab",
   "rogue:Subtlety": "ability_stealth",
