@@ -146,7 +146,7 @@
           "status": "moved",
           "icon": "classic_spell_fire_elementaldevastation",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Elemental Combat",
             "tier": 4,
             "col": 4,
@@ -161,7 +161,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -173,7 +173,7 @@
             "tier": 3,
             "col": 1,
             "maxRank": 1,
-            "text": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "text": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           }
         },
         {
@@ -194,7 +194,7 @@
           "status": "moved",
           "icon": "spell_fire_volcano",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Elemental Combat",
             "tier": 5,
             "col": 2,
@@ -247,7 +247,7 @@
             "tier": 4,
             "col": 2,
             "maxRank": 3,
-            "text": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage."
+            "text": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike.  The Focused Casting effect prevents you from losing casting time when taking damage."
           }
         },
         {
@@ -267,7 +267,7 @@
           "status": "moved",
           "icon": "spell_nature_callstorm",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Elemental Combat",
             "tier": 3,
             "col": 3,
@@ -429,7 +429,7 @@
           "status": "moved",
           "icon": "ability_thunderbolt",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Enhancement",
             "tier": 2,
             "col": 2,
@@ -686,12 +686,12 @@
           "status": "moved",
           "icon": "spell_holy_sealofmight",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Enhancement",
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec."
+            "text": "Gives you an extra attack.  <!--sp435884:0-->In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%.  Lasts 12 sec.<!--sp435884--><!--cooldown:435884:6 sec cooldown-->"
           }
         },
         {
@@ -767,7 +767,7 @@
             "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 10 times. Lasts 30 sec.",
             "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 15 times. Lasts 30 sec.",
             "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 20 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 25 times. Lasts 30 sec."
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
           ],
           "confidence": "estimated",
           "prereq": null,
@@ -846,7 +846,7 @@
           "status": "moved",
           "icon": "spell_nature_tranquility",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 4,
             "col": 3,
@@ -889,7 +889,7 @@
           "status": "moved",
           "icon": "spell_nature_naturetouchgrow",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 3,
             "col": 4,
@@ -916,7 +916,7 @@
           "status": "moved",
           "icon": "spell_frost_manarecharge",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 1,
             "col": 3,
@@ -1030,7 +1030,7 @@
           "status": "moved",
           "icon": "spell_nature_moonglow",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 2,
             "col": 3,
@@ -1078,7 +1078,7 @@
           "status": "moved",
           "icon": "spell_frost_summonwaterelemental",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 7,
             "col": 2,
@@ -1107,7 +1107,7 @@
             "tier": 5,
             "col": 1,
             "maxRank": 3,
-            "text": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec. This effect will stack up to 3 times."
+            "text": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec.  This effect will stack up to 3 times."
           }
         },
         {
@@ -1155,7 +1155,7 @@
             "tier": 6,
             "col": 3,
             "maxRank": 5,
-            "text": "Increases the effectiveness of your healing spells by 2%."
+            "text": "Increases the effectiveness of your healing spells by 2%. [<span class='q2'>S03 - Tuning and Overrides Passive - Shaman</span>: <span class='q9'>Increases healing from your Riptide and Earth Shield by an additional 20%</span>]"
           }
         },
         {
