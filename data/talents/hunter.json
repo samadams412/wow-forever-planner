@@ -366,7 +366,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
+            "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -381,7 +381,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
+            "text": "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
           }
         }
       ]
@@ -457,7 +457,7 @@
           "status": "moved",
           "icon": "ability_hunter_criticalshot",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Marksmanship",
             "tier": 2,
             "col": 3,
@@ -482,7 +482,7 @@
           "status": "moved",
           "icon": "ability_hunter_quickshot",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Marksmanship",
             "tier": 4,
             "col": 2,
@@ -509,12 +509,12 @@
           "status": "moved",
           "icon": "spell_frost_wizardmark",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Marksmanship",
             "tier": 1,
             "col": 3,
             "maxRank": 5,
-            "text": "Reduces the Mana cost of your Shots and Stings by 2%."
+            "text": "Reduces the Mana cost of your Shots [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>Strikes</span>] and Stings by 2%."
           }
         },
         {
@@ -613,12 +613,12 @@
           "status": "moved",
           "icon": "ability_trueshot",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Marksmanship",
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Increases the attack power of party members within 45 yards by 50. Lasts 30 min."
+            "text": "Increases the [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>ranged</span>]attack power of party members within 45 yards by 50 [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>and the Hunter's ranged attack power by an additional 100</span>].  Lasts 30 min."
           }
         },
         {
@@ -647,7 +647,7 @@
             "tier": 4,
             "col": 3,
             "maxRank": 5,
-            "text": "Increases your ranged weapon critical strike damage bonus by 6%."
+            "text": "Increases your ranged weapon [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>and melee ability</span>]critical strike damage bonus by 6%."
           }
         },
         {
@@ -658,9 +658,9 @@
           "maxRank": 2,
           "ranks": [
             "Hitting a target with your Serpent Sting ability grants you 25% and consuming Rapid Killing grants you 50% of your Mana regeneration while casting for the next 15 sec.",
-            "Hitting a target with your Serpent Sting ability grants you 50% and consuming Rapid Killing grants you 100% of your Mana regeneration while casting for the next 30 sec."
+            "Hitting a target with your Serpent Sting ability grants you 50% and consuming Rapid Killing grants you 100% of your Mana regeneration while casting for the next 15 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "marksmanship_rapid_killing",
             "ranks": 2
@@ -702,7 +702,7 @@
           "col": 4,
           "maxRank": 1,
           "ranks": [
-            "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
+            "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -714,7 +714,7 @@
             "tier": 5,
             "col": 1,
             "maxRank": 1,
-            "text": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
+            "text": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used."
           }
         },
         {
@@ -760,7 +760,7 @@
           "status": "moved",
           "icon": "ability_hunter_snipershot",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Marksmanship",
             "tier": 3,
             "col": 1,
@@ -888,7 +888,7 @@
           "status": "moved",
           "icon": "spell_shadow_twilight",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Survival",
             "tier": 3,
             "col": 2,
@@ -959,7 +959,7 @@
           "status": "moved",
           "icon": "ability_kick",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Survival",
             "tier": 4,
             "col": 2,
@@ -1045,12 +1045,12 @@
           "status": "moved",
           "icon": "ability_warrior_challange",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Survival",
             "tier": 5,
             "col": 3,
             "maxRank": 1,
-            "text": "A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
+            "text": "A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
           }
         },
         {
