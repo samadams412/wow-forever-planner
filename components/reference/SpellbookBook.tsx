@@ -66,7 +66,7 @@ function SpellEntry({
       onBlur={tooltip ? hide : undefined}
       tabIndex={tooltip ? 0 : undefined}
       style={revealDelayMs !== undefined ? { animationDelay: `${revealDelayMs}ms` } : undefined}
-      className={`group -mx-1 flex items-start gap-2.5 rounded-sm border border-[#8a6d3b]/60 px-1.5 py-1 transition-colors hover:border-[#c9a961] hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40 ${
+      className={`group -mx-1 flex items-start gap-2.5 rounded-sm px-1.5 py-1 transition-colors hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40 ${
         revealDelayMs !== undefined ? "spellbook-row-reveal" : ""
       }`}
     >
