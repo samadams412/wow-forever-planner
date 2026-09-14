@@ -2,7 +2,10 @@ import classRacialsData from "@/data/class-racials.json";
 
 export type ClassRacialSpell = {
   name: string;
+  tag?: "new" | "changed";
+  meta?: string;
   description: string;
+  classicNote?: string;
   icon: string;
 };
 

@@ -22,7 +22,7 @@ export default function Collapsible({
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-3 p-3 text-left"
+        className="group flex w-full items-center justify-between gap-3 p-3 text-left"
         aria-expanded={open}
       >
         <div className="flex items-center gap-2.5">
@@ -32,7 +32,7 @@ export default function Collapsible({
             {subtitle && <div className="mt-0.5 text-xs text-foreground-muted">{subtitle}</div>}
           </div>
         </div>
-        <span className="shrink-0 rounded border border-border px-2 py-0.5 text-xs text-foreground-muted">
+        <span className="shrink-0 rounded border border-accent/40 px-2 py-0.5 text-xs text-accent transition-colors group-hover:border-accent group-hover:bg-surface-hover">
           {open ? "Hide" : "Show"}
         </span>
       </button>

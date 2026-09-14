@@ -6,72 +6,93 @@
       "Human": [
         {
           "name": "Divine Grace",
-          "description": "New. Rank 1: instant, 40 yd, 10 min cooldown. Heals a friendly target below 50% health for 220 to 257 and removes Weakened Soul from them. Cannot be cast on yourself.",
+          "tag": "new",
+          "meta": "Rank 1: instant, 40 yd, 10 min cooldown",
+          "description": "Heals a friendly target below 50% health for 220 to 257 and removes Weakened Soul from them. Cannot be cast on yourself.",
           "icon": "spell_holy_purify"
         },
         {
           "name": "Feedback",
-          "description": "Rank 1: 55 mana, instant, 3 min cooldown. For 15 sec, any spell that hits you burns 18 of the attacker's mana and deals 1 Shadow damage per point burned.",
+          "meta": "Rank 1: 55 mana, instant, 3 min cooldown",
+          "description": "For 15 sec, any spell that hits you burns 18 of the attacker's mana and deals 1 Shadow damage per point burned.",
           "icon": "spell_shadow_ritualofsacrifice"
         }
       ],
       "Dwarf": [
         {
           "name": "Chastise",
-          "description": "Rank 1: 50 mana, instant, 20 yd, 2 min cooldown. 50 to 57 Holy damage and roots the target for up to 2 sec. Humanoids only, very low threat. Same idea as TBC.",
+          "meta": "Rank 1: 50 mana, instant, 20 yd, 2 min cooldown",
+          "description": "50 to 57 Holy damage and roots the target for up to 2 sec. Humanoids only, very low threat. Same idea as TBC.",
           "icon": "spell_holy_chastise"
         },
         {
           "name": "Desperate Prayer",
-          "description": "Rank 1: instant, 10 min cooldown. Heals you for 220 to 257.",
+          "meta": "Rank 1: instant, 10 min cooldown",
+          "description": "Heals you for 220 to 257.",
           "icon": "spell_holy_restoration"
         }
       ],
       "Night Elf": [
         {
           "name": "Elune's Grace",
-          "description": "Changed. Instant, 26 mana, 5 min cooldown: reduces the chance you will be hit by melee and ranged attacks by 50% for 15 sec or until you are missed 3 times. (Classic: ranged only, plus dodge, 3 min cooldown.) Read from the demo spellbook at level 38.",
+          "tag": "changed",
+          "meta": "Instant, 26 mana, 5 min cooldown",
+          "description": "Reduces the chance you will be hit by melee and ranged attacks by 50% for 15 sec or until you are missed 3 times.",
+          "classicNote": "(Classic: ranged only, plus dodge, 3 min cooldown.)",
           "icon": "spell_holy_elunesgrace"
         },
         {
           "name": "Starshards",
-          "description": "Changed. Rank 4 at 38: 190 mana, 30 yd, channeled, 30 sec cooldown. Rains starshards on the target for 816 Arcane damage over 6 sec. Rank 1 is 50 mana for 216. (Classic: no cooldown and far less damage.)",
+          "tag": "changed",
+          "meta": "Rank 4 at 38: 190 mana, 30 yd, channeled, 30 sec cooldown",
+          "description": "Rains starshards on the target for 816 Arcane damage over 6 sec. Rank 1 is 50 mana for 216.",
+          "classicNote": "(Classic: no cooldown and far less damage.)",
           "icon": "spell_arcane_starfire"
         }
       ],
       "Gnome": [
         {
           "name": "Confounding Flash",
-          "description": "New. Rank 1: 26 mana, 0.5 sec cast, 2 min cooldown. Confuses up to 5 enemies within 8 yds for 3 sec. Any damage breaks it.",
+          "tag": "new",
+          "meta": "Rank 1: 26 mana, 0.5 sec cast, 2 min cooldown",
+          "description": "Confuses up to 5 enemies within 8 yds for 3 sec. Any damage breaks it.",
           "icon": "spell_holy_mindsooth"
         },
         {
           "name": "Contingency Plan",
-          "description": "New. Rank 2 at 38: 220 mana, instant, 30 yd, 10 min cooldown. Places a Holy ward on an ally for 15 sec; the next hit that drops them below 35% health gives them a 290 absorb and heals 338 over 15 sec. One per target. Rank 1 is 130 mana, 155 absorb, 300 heal.",
+          "tag": "new",
+          "meta": "Rank 2 at 38: 220 mana, instant, 30 yd, 10 min cooldown",
+          "description": "Places a Holy ward on an ally for 15 sec; the next hit that drops them below 35% health gives them a 290 absorb and heals 338 over 15 sec. One per target. Rank 1 is 130 mana, 155 absorb, 300 heal.",
           "icon": "spell_holy_guardianspirit"
         }
       ],
       "Undead": [
         {
           "name": "Dark Sacrifice",
-          "description": "Instant, 10 min cooldown. Rank 2 at 38: cannibalize 720 of your own health over 15 sec to gain 720 mana. Rank 1: 532 health for 440 mana.",
+          "meta": "Rank 2 at 38: instant, 10 min cooldown",
+          "description": "Cannibalize 720 of your own health over 15 sec to gain 720 mana. Rank 1: 532 health for 440 mana.",
           "icon": "spell_shadow_soulleech_3"
         },
         {
           "name": "Touch of Weakness",
-          "description": "Rank 1: 12 mana, instant. The next melee attack against you deals 20 Shadow damage to the attacker and cuts their melee attack power by 43 for 2 min.",
+          "meta": "Rank 1: 12 mana, instant",
+          "description": "The next melee attack against you deals 20 Shadow damage to the attacker and cuts their melee attack power by 43 for 2 min.",
           "icon": "spell_shadow_deadofnight"
         }
       ],
       "Troll": [
         {
           "name": "Hex of Weakness",
-          "description": "Changed. Rank 3 at 38: 45 mana, instant, 30 yd. Reduces the target's melee attack power by 85 and the effectiveness of healing on it by 20% for 2 min. Rank 1 is 35 mana and 43 attack power. (Classic reduced flat melee damage instead of attack power.)",
+          "tag": "changed",
+          "meta": "Rank 3 at 38: 45 mana, instant, 30 yd",
+          "description": "Reduces the target's melee attack power by 85 and the effectiveness of healing on it by 20% for 2 min. Rank 1 is 35 mana and 43 attack power.",
+          "classicNote": "(Classic reduced flat melee damage instead of attack power.)",
           "icon": "spell_shadow_fumble"
         },
         {
           "name": "Shadowguard",
-          "description": "Rank 3 at 38: 30 mana, instant. Shadows strike anyone who hits you with a spell, melee or ranged attack for 76 Shadow damage, once every few seconds, no threat. 3 charges, lasts 10 min. Rank 1 is 50 mana and 34 damage.",
+          "meta": "Rank 3 at 38: 30 mana, instant",
+          "description": "Shadows strike anyone who hits you with a spell, melee or ranged attack for 76 Shadow damage, once every few seconds, no threat. 3 charges, lasts 10 min. Rank 1 is 50 mana and 34 damage.",
           "icon": "spell_nature_lightningshield"
         }
       ]
