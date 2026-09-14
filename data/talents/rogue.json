@@ -20,7 +20,7 @@
           "status": "moved",
           "icon": "ability_gouge",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Combat",
             "tier": 1,
             "col": 1,
@@ -48,7 +48,7 @@
             "tier": 1,
             "col": 2,
             "maxRank": 2,
-            "text": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike. Lasts 20 sec."
+            "text": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec."
           }
         },
         {
@@ -178,9 +178,9 @@
           "maxRank": 2,
           "ranks": [
             "Reduces the Energy cost of your Expose Armor ability by 5, and refunds 1 Combo Point when cast with 5 Combo Points.",
-            "Reduces the Energy cost of your Expose Armor ability by 10, and refunds 2 Combo Point when cast with 10 Combo Points."
+            "Reduces the Energy cost of your Expose Armor ability by 10, and refunds 2 Combo Points when cast with 5 Combo Points."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_warrior_riposte",
@@ -262,7 +262,7 @@
           "status": "moved",
           "icon": "spell_ice_lament",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Assassination",
             "tier": 5,
             "col": 2,
@@ -311,7 +311,7 @@
           "status": "moved",
           "icon": "spell_nature_earthbindtotem",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Assassination",
             "tier": 7,
             "col": 2,
@@ -366,11 +366,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Your critical strikes from abilities that add combo points have a 20% chance to add an additional combo point.",
-            "Your critical strikes from abilities that add combo points have a 40% chance to add an additional combo point.",
-            "Your critical strikes from abilities that add combo points have a 60% chance to add an additional combo point.",
-            "Your critical strikes from abilities that add combo points have a 80% chance to add an additional combo point.",
-            "Your critical strikes from abilities that add combo points have a 100% chance to add an additional combo point."
+            "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point.",
+            "Your critical strikes from abilities that add combo points  have a 40% chance to add an additional combo point.",
+            "Your critical strikes from abilities that add combo points  have a 60% chance to add an additional combo point.",
+            "Your critical strikes from abilities that add combo points  have a 80% chance to add an additional combo point.",
+            "Your critical strikes from abilities that add combo points  have a 100% chance to add an additional combo point."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -382,7 +382,7 @@
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Your critical strikes from abilities that add combo points have a 20% chance to add an additional combo point."
+            "text": "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point."
           }
         },
         {
@@ -392,7 +392,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Finishing move that increases the damage of your Poisons by 30% and your chance to apply Poisons by 10%. Lasts longer per combo point:\n 1 point: 9 seconds\n 2 points: 12 seconds\n 3 points: 15 seconds\n 4 points: 18 seconds\n 5 points: 21 seconds"
+            "Finishing move that increases the damage of your Poisons by 30% and your chance to apply Poisons by 10%. Lasts longer per combo point:\n   1 point: 9 seconds\n   2 points: 12 seconds\n   3 points: 15 seconds\n   4 points: 18 seconds\n   5 points: 21 seconds"
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -426,7 +426,7 @@
           "status": "moved",
           "icon": "ability_rogue_eviscerate",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Assassination",
             "tier": 1,
             "col": 1,
@@ -586,7 +586,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec."
+            "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -601,7 +601,7 @@
             "tier": 3,
             "col": 2,
             "maxRank": 1,
-            "text": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec."
+            "text": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
           }
         },
         {
@@ -715,7 +715,7 @@
             "tier": 5,
             "col": 2,
             "maxRank": 1,
-            "text": "Increases your attack speed by 20%. In addition, attacks strike an additional nearby opponent. Lasts 15 sec."
+            "text": "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec."
           }
         },
         {
@@ -725,11 +725,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Gives your melee weapon attacks a benefit depending on the weapon:\n\n Axe/Sword: Your successful melee attacks have a 1% chance to trigger an extra attack on the target.\n\n Dagger/Fist: Increases your critical strike chance by 1%.\n\n Mace: Your attacks ignore 3% of your target's armor.",
+            "Gives your melee weapon attacks a benefit depending on the weapon:\n\n   Axe/Sword: Your successful melee attacks have a 1% chance to trigger an extra attack on the target.\n\n   Dagger/Fist: Increases your critical strike chance by 1%.\n\n   Mace: Your attacks ignore 3% of your target's armor.",
             "Gives your melee weapon attacks a benefit depending on the weapon:\n\n Axe/Sword: Your successful melee attacks have a 2% chance to trigger an extra attack on the target.\n\n Dagger/Fist: Increases your critical strike chance by 2%.\n\n Mace: Your attacks ignore 6% of your target's armor.",
             "Gives your melee weapon attacks a benefit depending on the weapon:\n\n Axe/Sword: Your successful melee attacks have a 3% chance to trigger an extra attack on the target.\n\n Dagger/Fist: Increases your critical strike chance by 3%.\n\n Mace: Your attacks ignore 9% of your target's armor.",
             "Gives your melee weapon attacks a benefit depending on the weapon:\n\n Axe/Sword: Your successful melee attacks have a 4% chance to trigger an extra attack on the target.\n\n Dagger/Fist: Increases your critical strike chance by 4%.\n\n Mace: Your attacks ignore 12% of your target's armor.",
-            "Gives your melee weapon attacks a benefit depending on the weapon:\n\n Axe/Sword: Your successful melee attacks have a 5% chance to trigger an extra attack on the target.\n\n Dagger/Fist: Increases your critical strike chance by 5%.\n\n Mace: Your attacks ignore 15% of your target's armor."
+            "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful melee attacks have a 5% chance to trigger an extra attack on the target.\n\nDagger/Fist: Increases your critical strike chance by 5%.\n\nMace: Your attacks ignore 15% of your target's armor."
           ],
           "confidence": "estimated",
           "prereq": null,
@@ -837,7 +837,7 @@
           "status": "moved",
           "icon": "ability_stealth",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Subtlety",
             "tier": 2,
             "col": 3,
@@ -908,7 +908,7 @@
           "status": "moved",
           "icon": "spell_nature_mirrorimage",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Subtlety",
             "tier": 4,
             "col": 1,
@@ -1024,7 +1024,7 @@
             "tier": 3,
             "col": 2,
             "maxRank": 1,
-            "text": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point."
+            "text": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->."
           }
         },
         {
@@ -1053,14 +1053,14 @@
           "maxRank": 2,
           "ranks": [
             "Increases your Stealth detection as if you were 1 level higher and reduces your chance to be hit by spells and ranged attacks by 2%.",
-            "Increases your Stealth detection as if you were 2 level higher and reduces your chance to be hit by spells and ranged attacks by 4%."
+            "Increases your Stealth detection as if you were 3 levels higher and reduces your chance to be hit by spells and ranged attacks by 4%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "ability_ambush",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Subtlety",
             "tier": 5,
             "col": 1,
@@ -1082,12 +1082,12 @@
           "status": "moved",
           "icon": "spell_shadow_possession",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Subtlety",
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "When used, adds 2 combo points to your target. You must add to or use those combo points within 10 sec or the combo points are lost."
+            "text": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost."
           }
         },
         {
@@ -1099,7 +1099,7 @@
           "ranks": [
             "Causes your attacks to ignore 3% of your target's Armor and increases the damage dealt by your Rupture ability by 10%.",
             "Causes your attacks to ignore 3% of your target's Armor and increases the damage dealt by your Rupture ability by 20%.",
-            "Causes your attacks to ignore 3% of your target's Armor and increases the damage dealt by your Rupture ability by 30%."
+            "Causes your attacks to ignore 9% of your target's Armor and increases the damage dealt by your Rupture ability by 30%."
           ],
           "confidence": "estimated",
           "prereq": null,
@@ -1111,7 +1111,7 @@
             "tier": 4,
             "col": 3,
             "maxRank": 3,
-            "text": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%. The amount of Armor reduced increases with your level."
+            "text": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level."
           }
         },
         {
@@ -1181,7 +1181,7 @@
             "tier": 5,
             "col": 4,
             "maxRank": 1,
-            "text": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. Awards 1 combo point."
+            "text": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3.  Lasts 30 charges or 15 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->."
           }
         },
         {
