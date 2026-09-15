@@ -234,8 +234,10 @@ export default function PlannerClient({
             </div>
           )}
         </div>
+      </div>
 
-        {classData && (
+      {classData && (
+        <div className="mt-8">
           <Collapsible
             title={`${classLabel(classData.class)} spellbook at level 38`}
             subtitle={`Demo race: ${spellbooks.classes[classData.class].demoRace}`}
@@ -249,8 +251,8 @@ export default function PlannerClient({
                 not exist on the new class's spec tabs. */}
             <SpellbookBook key={classData.class} classId={classData.class} book={spellbooks.classes[classData.class]} />
           </Collapsible>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="mt-8">
         <RaceReferenceTable races={races} />
