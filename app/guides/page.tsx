@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllGuides } from "@/lib/guides";
+import GuideImage from "@/components/guides/GuideImage";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -18,6 +19,12 @@ export default function GuidesPage() {
         Longer-form, less time-sensitive content -- leveling tips, class impressions, and zone/dungeon
         breakdowns.
       </p>
+
+      <GuideImage
+        src="/images/guides/hero.webp"
+        alt="A stone watchtower overlooking a river, with red rock spires and misty mountains in the background"
+        priority
+      />
 
       {guides.length === 0 ? (
         <p className="mt-6 text-sm text-foreground-muted">No guides published yet -- check back soon.</p>
