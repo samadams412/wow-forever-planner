@@ -191,7 +191,9 @@ export default function PlannerClient({
           <button
             type="button"
             onClick={handleCopyLink}
-            className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover"
+            disabled={totalSpent === 0}
+            title={totalSpent === 0 ? "Spend at least one talent point to get a share link" : undefined}
+            className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
           >
             {copied ? "Copied!" : "Copy share link"}
           </button>
