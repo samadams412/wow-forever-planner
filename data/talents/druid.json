@@ -379,7 +379,7 @@
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Increases the damage done by your Starfire, Moonfire and Wrath spells by [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>2%</span> / 2%]."
+            "text": "Increases the damage done by your Starfire, Moonfire and Wrath spells by 2%."
           },
           "passive": true
         },
@@ -402,7 +402,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Transforms the Druid into Moonkin Form.  While in this form the armor contribution from items is increased by 360% [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Moonfire costs 50% less mana and deals 100% more damage over time, your periodic damage spells can deal critical periodic damage, you gain (<!--pl24858:40:60-->60 * 3) spell damage</span>] and all party members within 30 yards have their spell critical chance increased by 3%.  [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>The Moonkin cannot cast healing spells while shapeshifted</span> / The Moonkin can only cast Balance spells while shapeshifted.] [<span class='q9'>Reduces all threat from Arcane and Nature spells by 0% while in this form</span><!--sp436895:0--><!--sp436895-->]<br /><br />The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "text": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted. Reduces all threat from Arcane and Nature spells by 0% while in this form. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           },
           "passive": false,
           "cost": "283 Mana | Instant"
@@ -1151,7 +1151,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "[<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Instantly heals a target with an active Rejuvenation or Regrowth effect for</span> / Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them] an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
+            "text": "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
           },
           "passive": false,
           "cost": "162 Mana | 40 yd range | Instant | 15 sec cooldown"

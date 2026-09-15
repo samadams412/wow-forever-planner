@@ -810,7 +810,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.<!--sp456541:0--> Each block expends a charge. 4 charges.<!--sp456541--> [<span class='q2'>S03 - Tuning and Overrides Passive - All Classes</span>: <span class='q9'>Activating Holy Shield also grants you 2 Spell Power for each point of your defense skill beyond (<!--pl20925:40:60-->60 * 5). Lasts 15 sec</span><!--sp446847:0--><!--sp446847-->]"
+            "text": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
           },
           "passive": false,
           "cost": "150 Mana | Instant | 10 sec cooldown"
@@ -965,7 +965,7 @@
             "tier": 3,
             "col": 1,
             "maxRank": 3,
-            "text": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>reduce the target's Attack Power by (<!--ppl9452:20:60:-90:300:1-->30 /- 3), and increase the Paladin's Attack Power by 5% for 30 sec</span> / 10 sec.]"
+            "text": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% for 10 sec."
           },
           "passive": true
         },
@@ -1147,7 +1147,7 @@
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability. [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>Also Reduces all Physical and Holy threat you generate by 6% while Righteous Fury is not active</span>]"
+            "text": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability."
           },
           "passive": true
         },
