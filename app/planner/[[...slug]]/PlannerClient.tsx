@@ -215,7 +215,7 @@ export default function PlannerClient({
           <RacePicker races={eligibleRaces} />
 
           {classData && (
-            <div className="flex min-w-0 flex-1 flex-wrap gap-2">
+            <div className="flex min-w-0 flex-1 flex-wrap justify-center gap-2 sm:justify-start">
               {classData.trees.map((tree) => (
                 <TalentTreeGrid
                   key={tree.name}
