@@ -1,7 +1,7 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { useRef, useState, type AnimationEvent } from "react";
+import { useRef, useState, type AnimationEvent, type WheelEvent } from "react";
 import { mediumIconUrl, CLASS_ICON, getTreeIcon } from "@/lib/wow-data";
 import type { ClassSpellbook, SpellbookEntry } from "@/lib/spellbooks";
 import { getSpellTooltip } from "@/lib/spell-tooltips";
@@ -56,14 +56,49 @@ function SpellEntry({
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
   const tooltip = getSpellTooltip(classId, spell.name);
   const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH, "below", 280);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const hideTimer = useRef<number | null>(null);
+
+  // A tooltip taller than the book needs to be hoverable (unlike the
+  // talent tree's pointer-events-none tooltip) so the mouse can move into
+  // it and scroll -- but moving from the icon to the tooltip below it
+  // crosses a gap, so leaving the icon schedules a hide rather than firing
+  // immediately, giving entering the tooltip a chance to cancel it.
+  function clearHideTimer() {
+    if (hideTimer.current !== null) {
+      window.clearTimeout(hideTimer.current);
+      hideTimer.current = null;
+    }
+  }
+  function scheduleHide() {
+    clearHideTimer();
+    hideTimer.current = window.setTimeout(hide, 150);
+  }
+  function handleTriggerEnter() {
+    clearHideTimer();
+    show();
+  }
+  function handleTooltipEnter() {
+    clearHideTimer();
+  }
+  // Scrolling while still over the icon (not yet over the tooltip) still
+  // scrolls the tooltip instead of the page behind it, matching scrolling
+  // once the mouse has moved onto the tooltip itself.
+  function handleTriggerWheel(e: WheelEvent) {
+    if (pos && scrollRef.current) {
+      e.preventDefault();
+      scrollRef.current.scrollTop += e.deltaY;
+    }
+  }
 
   return (
     <li
       ref={tooltip ? ref : undefined}
-      onMouseEnter={tooltip ? show : undefined}
-      onMouseLeave={tooltip ? hide : undefined}
+      onMouseEnter={tooltip ? handleTriggerEnter : undefined}
+      onMouseLeave={tooltip ? scheduleHide : undefined}
       onFocus={tooltip ? show : undefined}
-      onBlur={tooltip ? hide : undefined}
+      onBlur={tooltip ? scheduleHide : undefined}
+      onWheel={tooltip ? handleTriggerWheel : undefined}
       tabIndex={tooltip ? 0 : undefined}
       style={revealDelayMs !== undefined ? { animationDelay: `${revealDelayMs}ms` } : undefined}
       className={`group -mx-1 flex items-start gap-2.5 rounded-sm px-1.5 py-1 transition-colors hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40 ${
@@ -99,14 +134,21 @@ function SpellEntry({
       {tooltip &&
         pos &&
         createPortal(
-          <TooltipCard style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}>
-            <TooltipName>{spell.name}</TooltipName>
-            {subtitle && <TooltipRank>{subtitle}</TooltipRank>}
-            {tooltip.lines.map(([left, right], i) => (
-              <TooltipStatLine key={i} left={left} right={right} />
-            ))}
-            <TooltipDescription muted={!tooltip.confirmed}>{tooltip.description}</TooltipDescription>
-            <TooltipSourceNote confirmed={tooltip.confirmed} source={tooltip.source} />
+          <TooltipCard
+            style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}
+            interactive
+            onMouseEnter={handleTooltipEnter}
+            onMouseLeave={scheduleHide}
+          >
+            <div ref={scrollRef} className="max-h-[70vh] overflow-y-auto">
+              <TooltipName>{spell.name}</TooltipName>
+              {subtitle && <TooltipRank>{subtitle}</TooltipRank>}
+              {tooltip.lines.map(([left, right], i) => (
+                <TooltipStatLine key={i} left={left} right={right} />
+              ))}
+              <TooltipDescription muted={!tooltip.confirmed}>{tooltip.description}</TooltipDescription>
+              <TooltipSourceNote confirmed={tooltip.confirmed} source={tooltip.source} />
+            </div>
           </TooltipCard>,
           document.body
         )}

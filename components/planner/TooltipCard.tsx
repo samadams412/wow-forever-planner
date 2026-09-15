@@ -6,11 +6,31 @@ import { STATUS_LABEL, STATUS_TEXT_CLASS } from "@/lib/talent-status";
 // bold white name, grey rank line, gold-yellow type label, green effect
 // text, red requirement text.
 
-export function TooltipCard({ style, children }: { style: CSSProperties; children: ReactNode }) {
+export function TooltipCard({
+  style,
+  children,
+  // Talent tooltips stay pointer-events-none so a tap on a mobile tooltip
+  // passes straight through to the talent grid underneath it. Spellbook
+  // tooltips opt into `interactive` instead, since a tooltip taller than
+  // the book needs to be hoverable and scrollable to be usable at all.
+  interactive,
+  onMouseEnter,
+  onMouseLeave,
+}: {
+  style: CSSProperties;
+  children: ReactNode;
+  interactive?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+}) {
   return (
     <div
-      className="pointer-events-none fixed z-50 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg"
+      className={`fixed z-50 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg ${
+        interactive ? "pointer-events-auto" : "pointer-events-none"
+      }`}
       style={style}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </div>
