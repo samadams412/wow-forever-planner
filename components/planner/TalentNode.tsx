@@ -217,11 +217,13 @@ export default function TalentNode({
         )}
       </button>
 
-      {isTapped && (
+      {isTapped && rank > 0 && (
         // Sits outside the button (which clips via overflow-hidden for its
         // icon) so the badge can overlap the icon's top-left corner without
         // being cut off by that clip. A real button, not a decorative span
         // -- it needs its own tap/click target to actually remove a point.
+        // Gated on rank > 0 same as the tooltip's "Next Rank" block below --
+        // there's nothing to remove from a talent that's still at 0.
         <button
           type="button"
           aria-label={`Remove a point from ${talent.name}`}
