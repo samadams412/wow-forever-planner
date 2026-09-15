@@ -7,15 +7,7 @@ import { TooltipCard, TooltipType, TooltipDescription } from "./TooltipCard";
 
 const POPOVER_WIDTH = 280;
 
-function RaceRow({
-  race,
-  selected,
-  onSelect,
-}: {
-  race: Race;
-  selected: boolean;
-  onSelect: () => void;
-}) {
+function RaceRow({ race }: { race: Race }) {
   const racials = getRacialsForRace(race.id);
   const { ref, pos, show, hide } = useHoverTooltip<HTMLButtonElement>(
     POPOVER_WIDTH,
@@ -32,13 +24,8 @@ function RaceRow({
         onMouseLeave={hide}
         onFocus={show}
         onBlur={hide}
-        onClick={onSelect}
         title={race.name}
-        className={`flex items-center justify-center gap-2 rounded border p-1.5 text-left transition-colors sm:w-full sm:justify-start sm:px-2 ${
-          selected
-            ? "border-accent bg-surface-hover"
-            : "border-border bg-surface hover:border-accent/60 hover:bg-surface-hover"
-        }`}
+        className="flex cursor-default items-center justify-center gap-2 rounded border border-border bg-surface p-1.5 text-left sm:w-full sm:justify-start sm:px-2"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={mediumIconUrl(race.icon)} alt="" className="h-7 w-7 shrink-0 rounded-sm sm:h-6 sm:w-6" />
@@ -69,15 +56,7 @@ function RaceRow({
   );
 }
 
-export default function RacePicker({
-  races,
-  selectedRaceId,
-  onSelect,
-}: {
-  races: Race[];
-  selectedRaceId: string | null;
-  onSelect: (raceId: string) => void;
-}) {
+export default function RacePicker({ races }: { races: Race[] }) {
   return (
     <section className="flex w-full shrink-0 flex-col gap-1 sm:w-40">
       <h2 className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground-muted">
@@ -85,12 +64,7 @@ export default function RacePicker({
       </h2>
       <div className="grid grid-cols-6 gap-1 sm:flex sm:flex-col">
         {races.map((race) => (
-          <RaceRow
-            key={race.id}
-            race={race}
-            selected={race.id === selectedRaceId}
-            onSelect={() => onSelect(race.id)}
-          />
+          <RaceRow key={race.id} race={race} />
         ))}
       </div>
     </section>

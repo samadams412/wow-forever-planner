@@ -16,27 +16,23 @@ import Dialog from "@/components/site/Dialog";
 
 const DEFAULT_CLASS_ID = "warrior";
 
-function buildPlannerPath(classId: string, raceId: string | null, code: string | null): string {
-  const parts = [classId];
-  if (raceId) {
-    parts.push(raceId);
-    if (code) parts.push(code);
-  }
+// Race is reference-only (see RacePicker) -- it never affects talent
+// calculations, so it isn't app state and isn't part of the URL. The build
+// code sits directly after the class: /planner/<class>/<build>.
+function buildPlannerPath(classId: string, code: string | null): string {
+  const parts = code ? [classId, code] : [classId];
   return `/planner/${parts.join("/")}`;
 }
 
 export default function PlannerClient({
   initialClassId,
-  initialRaceId,
   initialBuildCode,
 }: {
   initialClassId: string | null;
-  initialRaceId: string | null;
   initialBuildCode: string | null;
 }) {
   const router = useRouter();
   const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
-  const [raceId, setRaceId] = useState<string | null>(initialRaceId);
   const [ranks, setRanks] = useState<RankState>(() => {
     const classData = getClassTalentData(initialClassId ?? DEFAULT_CLASS_ID);
     return classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
@@ -61,20 +57,13 @@ export default function PlannerClient({
 
   useEffect(() => {
     const code = classData && Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : null;
-    router.replace(buildPlannerPath(classId, raceId, code), { scroll: false });
-  }, [classId, raceId, ranks, classData, router]);
+    router.replace(buildPlannerPath(classId, code), { scroll: false });
+  }, [classId, ranks, classData, router]);
 
   const handleSelectClass = useCallback((id: string) => {
     setClassId(id);
     setRanks({});
-    setRaceId((prev) => {
-      if (!prev) return prev;
-      const prevRace = getRaceById(prev);
-      return prevRace && prevRace.allowedClasses.includes(id) ? prev : null;
-    });
   }, []);
-
-  const handleSelectRace = useCallback((id: string) => setRaceId(id), []);
 
   const addPoint = useCallback(
     (talentId: string) => {
@@ -128,19 +117,18 @@ export default function PlannerClient({
     const name = buildName.trim();
     if (!name || !classData) return;
     const code = Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : "";
-    const saved = saveBuild({ name, classId, raceId, buildCode: code });
+    const saved = saveBuild({ name, classId, raceId: null, buildCode: code });
     if (!saved) {
       setSaveError(true);
       return;
     }
     setSavedBuilds(getSavedBuilds());
     setSaveDialogOpen(false);
-  }, [buildName, classData, classId, raceId, ranks]);
+  }, [buildName, classData, classId, ranks]);
 
   const handleLoadBuild = useCallback(
     (build: SavedBuild) => {
       setClassId(build.classId);
-      setRaceId(build.raceId);
       const buildClassData = getClassTalentData(build.classId);
       setRanks(buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {});
       setMyBuildsOpen(false);
@@ -218,7 +206,7 @@ export default function PlannerClient({
         {classData && <ClassHero classId={classData.class} />}
 
         <div className="flex flex-col gap-3 sm:flex-row">
-          <RacePicker races={eligibleRaces} selectedRaceId={raceId} onSelect={handleSelectRace} />
+          <RacePicker races={eligibleRaces} />
 
           {classData && (
             <div className="flex min-w-0 flex-1 flex-wrap gap-2">
