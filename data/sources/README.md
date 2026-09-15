@@ -39,6 +39,23 @@ keyed `Class|Spell|Rank`), `racials`, `class_racials`, `class_abilities`,
   Eureka!), and rewritten class-spellbook notes. `class_racials.Priest`
   and `legacy` were already unchanged from the 13th by the time this was
   ingested.
+- `talentsforever-2026-09-15.json` -- Talented (Legacy Perk) points-from-
+  level went per-rank instead of one flat line; nine Warrior talent icons
+  swapped (Spearing Strike, Bloodthrill, Weaponmaster, Boundless Rage,
+  Raging Blows, Master of Defense, Vanguard, Vitality, Bastion); 20
+  occurrences of Season-of-Discovery override markup stripped from
+  `classic.text` across 17 entries (15 of them talents we track -- the
+  "clean" text was itself still broken/truncated for 5 of those and had
+  to be reconstructed, see the ingestion commit); confirmed Ice Lance/
+  Arcane Blast are real talents and not on the Mage abilities card; and
+  Elune's Grace/Starshards (Night Elf racials) removed from the Priest
+  spellbook's Discipline tab. `class_abilities`, `legacy`, and `racials`
+  were unchanged from the 14th.
+  **Not yet applied:** `spell_desc` entries gained new `cs`/`cd`/`cl`
+  fields (Classic-comparison status/text/stat-lines for spellbook
+  tooltips, ~290 entries) that our site doesn't read anywhere -- this
+  is a real new upstream feature, not something any of the day's
+  changelog items called for, so it's untouched pending its own task.
 
 ### Updating this data
 When pulling a new snapshot, save it as a new dated file (never overwrite
