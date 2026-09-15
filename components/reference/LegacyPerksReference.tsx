@@ -57,13 +57,23 @@ function TreeColumn({ tree }: { tree: LegacyPerkTree }) {
               {[perk.castTime, perk.cooldown].filter(Boolean).join(", ")}
             </p>
           )}
-          <p
-            className={`mt-1.5 max-w-[60ch] text-sm leading-relaxed ${
-              perk.placeholder ? "italic text-foreground-muted/70" : "text-foreground/90"
-            }`}
-          >
-            {perk.description}
-          </p>
+          {Array.isArray(perk.description) ? (
+            <ul className="mt-1.5 space-y-1">
+              {perk.description.map((text, rank) => (
+                <li key={rank} className="max-w-[60ch] text-sm leading-relaxed text-foreground/90">
+                  <span className="font-semibold text-accent">Rank {rank + 1}:</span> {text}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p
+              className={`mt-1.5 max-w-[60ch] text-sm leading-relaxed ${
+                perk.placeholder ? "italic text-foreground-muted/70" : "text-foreground/90"
+              }`}
+            >
+              {perk.description}
+            </p>
+          )}
         </div>
       ))}
     </div>

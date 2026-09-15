@@ -19,7 +19,13 @@
           "name": "Talented",
           "ranks": 5,
           "icon": "spell_holy_mindvision",
-          "description": "You gain talent points every level starting at level 9 instead of level 10, but you still may not have more than 51 total talent points."
+          "description": [
+            "You gain talent points every level starting at level 9 instead of level 10, but you still may not have more than 51 total talent points.",
+            "You gain talent points every level starting at level 8 instead of level 10, but you still may not have more than 51 total talent points.",
+            "You gain talent points every level starting at level 7 instead of level 10, but you still may not have more than 51 total talent points.",
+            "You gain talent points every level starting at level 6 instead of level 10, but you still may not have more than 51 total talent points.",
+            "You gain talent points every level starting at level 5 instead of level 10, but you still may not have more than 51 total talent points."
+          ]
         },
         {
           "name": "High Alert",

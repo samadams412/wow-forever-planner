@@ -4,7 +4,10 @@ export type LegacyPerk = {
   name: string;
   ranks: number;
   icon: string;
-  description: string;
+  // A string[] is per-rank text (index 0 = rank 1, etc.) for a perk whose
+  // wording actually changes at each rank -- most perks are a flat bonus
+  // and just use a single string regardless of rank.
+  description: string | string[];
   castTime?: string;
   cooldown?: string;
   // A not-yet-implemented Professions slot -- the source only has two of
