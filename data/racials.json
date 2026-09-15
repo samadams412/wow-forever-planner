@@ -24,8 +24,8 @@
     {
       "name": "Sword Specialization",
       "type": "passive",
-      "description": "While wielding a sword, +2% spell and ability critical strike chance.",
-      "confidence": "estimated",
+      "description": "Passive. +2% critical strike chance with all spells and attacks, auto attacks included, while you have a sword or two-handed sword equipped. Read off Soda's Warrior tooltip.",
+      "confidence": "confirmed",
       "icon": "inv_sword_27"
     },
     {
@@ -156,7 +156,7 @@
     {
       "name": "Eureka!",
       "type": "active",
-      "description": "Instant, 2 min cooldown. Your next 3 damaging abilities cost 50% less Mana and deal 10% more damage.",
+      "description": "Instant, 2 min cooldown. Your next 3 damaging or healing abilities cost 50% less Mana and do 10% more damage or healing.",
       "confidence": "confirmed",
       "icon": "inv_gizmo_02"
     }

@@ -31,3 +31,23 @@ keyed `Class|Spell|Rank`), `racials`, `class_racials`, `class_abilities`,
   Paladin reconciled against our existing data, remaining 7 classes
   populated directly, spellbook tooltips wired up, Legacy Perks
   corrected, racials/class abilities merged in).
+- `talentsforever-2026-09-14.json` -- rank-estimator fixes (several
+  talents' non-confirmed ranks were scaling the wrong numbers, or
+  scaling numbers that should've stayed fixed), ~70 spell tooltips
+  upgraded from Classic fallback to real demo text (`s: "classic"` ->
+  `"demo"`), two racial corrections (Human Sword Specialization, Gnome
+  Eureka!), and rewritten class-spellbook notes. `class_racials.Priest`
+  and `legacy` were already unchanged from the 13th by the time this was
+  ingested.
+
+### Updating this data
+When pulling a new snapshot, save it as a new dated file (never overwrite
+an existing one) and diff it against the previous snapshot before
+touching anything else -- covering at minimum `talents`, `spell_desc`,
+`racials`, `class_racials`, `class_abilities`, and `legacy`. Apply only
+what the diff shows changed; don't re-verify or re-transcribe sections
+the diff says are identical. A throwaway diff script is fine -- it
+doesn't need to be kept or polished, just accurate. Also check
+`spellbooks[cls].notes` in the diff: it's prose describing the same
+per-class findings and has repeatedly carried real corrections (e.g. the
+09-14 Shield Wall fix) that don't otherwise show up in `spell_desc`.

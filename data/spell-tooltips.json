@@ -1,15 +1,37 @@
 {
   "Warrior|Throw": {
-    "lines": [],
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "0.5 sec cast",
+        "1.7 sec cooldown"
+      ],
+      [
+        "Requires Thrown",
+        ""
+      ]
+    ],
     "description": "Hurl a thrown weapon at the target.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
   },
   "Warrior|Shoot Bow": {
-    "lines": [],
-    "description": "Attack with an equipped wand.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "1 sec cast",
+        "1.7 sec cooldown"
+      ]
+    ],
+    "description": "",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep (the tooltip has no description line)"
   },
   "Warrior|Shoot Crossbow": {
     "lines": [],
@@ -18,10 +40,23 @@
     "levelReq": "Requires level 1"
   },
   "Warrior|Shoot Gun": {
-    "lines": [],
-    "description": "Attack with an equipped wand.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "1 sec cast",
+        "1.7 sec cooldown"
+      ],
+      [
+        "Requires Guns",
+        ""
+      ]
+    ],
+    "description": "",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep (no description line on the tooltip)"
   },
   "Warrior|Dual Wield": {
     "lines": [],
@@ -35,9 +70,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: the ones your class can wear.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Wording read on Soda's Druid, Mage and Warlock; this class's own list hasn't been hovered on footage yet"
   },
   "Warrior|Block": {
     "lines": [],
@@ -90,29 +125,41 @@
     ],
     "description": "Charge an enemy, generate 12 Rage, and Stun it for 1 sec. Cannot be used in combat.",
     "confirmed": true,
-    "source": "Xaryu's Warrior, 12 Sep"
+    "source": "Xaryu's Warrior, 12 Sep. On his day 2 stream, with the Protection talent Vanguard, the same tooltip read 'Requires Battle Stance, Defensive Stance' and no longer carried the 'Cannot be used in combat' line."
   },
   "Warrior|Hamstring": {
     "lines": [
       [
         "10 Rage",
         "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Battle Stance, Berserker Stance",
+        ""
       ]
     ],
     "description": "Maims the enemy, causing 18 damage and slowing the enemy's movement by 45% for 15 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "confirmed": true,
+    "source": "Esfand's Warrior, 12 Sep. Xaryu's day 2 tooltip read 16 damage, otherwise identical."
   },
   "Warrior|Heroic Strike": {
     "lines": [
       [
         "15 Rage",
-        "Melee Range"
+        ""
+      ],
+      [
+        "Next melee",
+        ""
       ]
     ],
-    "description": "A strong attack that increases melee damage by 58 and causes a high amount of threat.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "description": "A strong attack that increases melee damage by 54 and causes a high amount of threat.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31)"
   },
   "Warrior|Mocking Blow": {
     "lines": [
@@ -121,13 +168,17 @@
         "Melee Range"
       ],
       [
-        "Instant cast",
+        "Instant",
         "2 min cooldown"
+      ],
+      [
+        "Requires Battle Stance",
+        ""
       ]
     ],
     "description": "A mocking attack that causes 46 damage, a moderate amount of threat and forces the target to focus attacks on you for 6 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "confirmed": true,
+    "source": "Soda's Warrior Class Deep Dive video (18:48, action bar hover). A reader (dasgerm) pointed at it. Same text as Classic, and it still needs Battle Stance."
   },
   "Warrior|Overpower": {
     "lines": [
@@ -153,11 +204,19 @@
       [
         "10 Rage",
         "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Requires Battle Stance, Defensive Stance",
+        ""
       ]
     ],
-    "description": "Wounds the target causing them to bleed for 66 damage over 18 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "Wounds the target causing them to bleed for 61 damage over 18 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31)"
   },
   "Warrior|Retaliation": {
     "lines": [
@@ -181,13 +240,17 @@
         ""
       ],
       [
-        "Instant cast",
+        "Instant",
         "4 sec cooldown"
+      ],
+      [
+        "Requires Battle Stance, Defensive Stance",
+        ""
       ]
     ],
-    "description": "Blasts nearby enemies with thunder increasing the time between their attacks by 10% for 22 sec and doing 55 damage to them.  Will affect up to 4 targets.",
-    "confirmed": false,
-    "levelReq": "Requires level 38"
+    "description": "Blasts nearby enemies with thunder, increasing the time between their attacks by 20% for 22 sec and doing 55 damage to them. Will affect up to 4 targets.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep (YouTube 'BLIZZCON DAY 1' VOD at 5:01:33, action-bar hover). A reader spotted the Defensive Stance line."
   },
   "Warrior|Victory Rush": {
     "lines": [
@@ -197,39 +260,53 @@
       ],
       [
         "Instant",
-        "8 sec cooldown"
+        "30 sec cooldown"
       ]
     ],
-    "description": "Instantly attack the target causing (1 + Attack Power * 45 / 100) damage and healing you for 30% of your maximum health.  Only useable within 20 sec after you kill an enemy that yields experience or honor.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "description": "Instantly attack the target causing 102 damage and healing you for 10% of your maximum health. Only useable within 20 sec after you kill a non-trivial enemy.",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep (stream at 5:59:41, screenshot sent in by a reader). The damage number includes his gear."
   },
   "Warrior|Tactical Mastery": {
-    "lines": [],
-    "description": "You retain up to 5 of your rage points when you change stances.",
-    "confirmed": false
+    "lines": [
+      [
+        "Passive",
+        ""
+      ]
+    ],
+    "description": "You retain up to 10 Rage when you change Stances.",
+    "confirmed": true,
+    "source": "Soda's Warrior Class Deep Dive video (18:29, spellbook). His Warrior had 5/5 Improved Tactical Mastery, which its own tooltip lists as 'an additional 15 Rage' on top of this."
   },
   "Warrior|Battle Shout": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "10 Rage",
+        ""
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 94.  Lasts 2 min.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "description": "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 54. Lasts 3 min.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep (YouTube 'BLIZZCON DAY 1' VOD at 5:01:33, action-bar hover)"
   },
   "Warrior|Berserker Rage": {
     "lines": [
       [
         "Instant",
         "30 sec cooldown"
+      ],
+      [
+        "Requires Berserker Stance",
+        ""
       ]
     ],
-    "description": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage.  Lasts 10 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "description": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage. Lasts 10 sec.",
+    "confirmed": true,
+    "source": "Esfand's Warrior, 12 Sep (day 1 stream, 6:26)"
   },
   "Warrior|Berserker Stance": {
     "lines": [
@@ -238,9 +315,9 @@
         "1 sec cooldown"
       ]
     ],
-    "description": "An aggressive stance.  Critical hit chance is increased by 3% and all damage taken is increased by 10%.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "An aggressive stance. Critical strike chance increased by 3% and all damage taken is increased by 10%.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep (YouTube 'BLIZZCON DAY 1' VOD at 5:01:33, action-bar hover)"
   },
   "Warrior|Challenging Shout": {
     "lines": [
@@ -249,13 +326,13 @@
         ""
       ],
       [
-        "Instant cast",
+        "Instant",
         "10 min cooldown"
       ]
     ],
-    "description": "Forces all nearby enemies to focus attacks on you for 6 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 26"
+    "description": "Forces all nearby enemies within 10 yards to focus attacks on you for 6 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31)"
   },
   "Warrior|Cleave": {
     "lines": [
@@ -271,13 +348,17 @@
   "Warrior|Demoralizing Shout": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "10 Rage",
+        ""
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "Reduces the melee attack power of all enemies within 10 yards by 80 for 30 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 34"
+    "description": "Reduces the melee attack power of all enemies within 10 yards by 103 for 45 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31). Numbers include his talents (Classic rank 3 was 80 for 30 sec)."
   },
   "Warrior|Execute": {
     "lines": [
@@ -305,13 +386,13 @@
         "10 yd range"
       ],
       [
-        "Instant cast",
+        "Instant",
         "3 min cooldown"
       ]
     ],
-    "description": "The warrior shouts, causing the targeted enemy to cower in fear.  Up to 5 total nearby enemies will flee in fear.  Lasts 8 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 22"
+    "description": "The warrior shouts, causing the targeted enemy to cower in fear. Up to 5 total nearby enemies will flee in fear. Lasts 8 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep (YouTube 'BLIZZCON DAY 1' VOD at 5:01:33, action-bar hover)"
   },
   "Warrior|Pummel": {
     "lines": [
@@ -350,28 +431,32 @@
         ""
       ],
       [
-        "Instant cast",
+        "Instant",
         "10 sec cooldown"
+      ],
+      [
+        "Requires Berserker Stance",
+        ""
       ]
     ],
     "description": "In a whirlwind of steel you attack up to 4 enemies within 8 yards, causing weapon damage to each enemy.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep (YouTube 'BLIZZCON DAY 1' VOD at 5:01:33, action-bar hover)"
   },
   "Warrior|Bloodrage": {
     "lines": [
       [
-        "20% of base health",
+        "116 Health",
         ""
       ],
       [
-        "Instant cast",
+        "Instant",
         "1 min cooldown"
       ]
     ],
-    "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec.  The warrior is considered in combat for the duration.",
-    "confirmed": false,
-    "levelReq": "Requires level 10"
+    "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec. The warrior is considered in combat for the duration.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 12 Sep (YouTube 'BLIZZCON DAY 1' VOD at 5:01:33, action-bar hover)"
   },
   "Warrior|Defensive Stance": {
     "lines": [
@@ -380,9 +465,9 @@
         "1 sec cooldown"
       ]
     ],
-    "description": "A defensive combat stance.  Decreases damage taken by 10% and damage caused by 10%.  Increases threat generated.",
-    "confirmed": false,
-    "levelReq": "Requires level 10"
+    "description": "A defensive combat stance. Decreases damage taken by 10% and damage caused by 10%. Increases all threat generated by 30%.",
+    "confirmed": true,
+    "source": "Tyler1's Warrior, 12 Sep (Twitch VOD, 0:24)"
   },
   "Warrior|Disarm": {
     "lines": [
@@ -391,13 +476,17 @@
         "Melee Range"
       ],
       [
-        "Instant cast",
+        "Instant",
         "1 min cooldown"
+      ],
+      [
+        "Requires Defensive Stance",
+        ""
       ]
     ],
     "description": "Disarm the enemy's weapon for 10 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 18"
+    "confirmed": true,
+    "source": "Esfand's Warrior, 12 Sep (day 1 stream, 6:26)"
   },
   "Warrior|Revenge": {
     "lines": [
@@ -406,13 +495,17 @@
         "Melee Range"
       ],
       [
-        "Instant cast",
+        "Instant",
         "5 sec cooldown"
+      ],
+      [
+        "Requires Defensive Stance",
+        ""
       ]
     ],
-    "description": "Instantly counterattack an enemy for 25 to 31 damage and a high amount of threat.   Revenge must follow a block, dodge or parry.",
-    "confirmed": false,
-    "levelReq": "Requires level 34"
+    "description": "Instantly counterattack an enemy for 64 to 80 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31) (Classic rank 3 was 25 to 31)"
   },
   "Warrior|Shield Bash": {
     "lines": [
@@ -421,13 +514,17 @@
         "Melee Range"
       ],
       [
-        "Instant cast",
+        "Instant",
         "12 sec cooldown"
+      ],
+      [
+        "Requires Battle Stance, Defensive Stance",
+        ""
       ]
     ],
-    "description": "Bashes the target with your shield for 18 damage.  It also interrupts spellcasting and prevents any spell in that school from being cast for 6 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "description": "Bashes the target with your shield for 16 damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 6 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31)"
   },
   "Warrior|Shield Block": {
     "lines": [
@@ -436,35 +533,51 @@
         ""
       ],
       [
-        "Instant cast",
+        "Instant",
         "5 sec cooldown"
+      ],
+      [
+        "Requires Defensive Stance",
+        ""
       ]
     ],
-    "description": "Increases chance to block by 75% for 5 sec, but will only block 1 attack.",
-    "confirmed": false,
-    "levelReq": "Requires level 16"
+    "description": "Increases chance to block by 75% for 7 sec, but will only block 2 attacks.",
+    "confirmed": true,
+    "source": "Tyler1's Warrior, 12 Sep (spellbook screenshot sent in by a reader). Classic was 5 sec and 1 attack."
   },
   "Warrior|Shield Wall": {
     "lines": [
       [
         "Instant",
-        "30 min cooldown"
+        "15 min cooldown"
+      ],
+      [
+        "Requires Shields",
+        ""
+      ],
+      [
+        "Requires Defensive Stance",
+        ""
       ]
     ],
-    "description": "Reduces the damage taken from melee attacks, ranged attacks and spells by 75% for 10 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 28"
+    "description": "Reduces the damage taken from all attacks by 60% for 12 sec.",
+    "confirmed": true,
+    "source": "Esfand's Warrior, in his 'Warriors Just Got a MASSIVE Rework' video at 11:49. Two readers pointed to it. Classic was 30 min, 75% for 10 sec."
   },
   "Warrior|Sunder Armor": {
     "lines": [
       [
-        "15 Rage",
+        "12 Rage",
         "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "Sunders the target's armor, reducing it by 270 per Sunder Armor and causes a high amount of threat.  Can be applied up to 5 times.  Lasts 30 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 34"
+    "description": "Sunders the target's armor, reducing it by 270 per Sunder Armor and causes a high amount of threat. Can be applied up to 5 times. Lasts 30 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Warrior, 13 Sep (day 2 stream, 6:31). 12 Rage includes his Improved Sunder Armor talent (base is 15)."
   },
   "Warrior|Taunt": {
     "lines": [
@@ -488,9 +601,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: the ones your class can wear.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Wording read on Soda's Druid, Mage and Warlock; this class's own list hasn't been hovered on footage yet"
   },
   "Paladin|Block": {
     "lines": [],
@@ -623,13 +736,17 @@
   "Paladin|Redemption": {
     "lines": [
       [
-        "80% of base mana",
+        "746 Mana",
         "30 yd range"
+      ],
+      [
+        "10 sec cast",
+        ""
       ]
     ],
-    "description": "Brings a dead player back to life with 250 health and 420 mana.  Cannot be cast when in combat.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Brings a dead player back to life with 250 health and 420 mana. Cannot be cast when in combat.",
+    "confirmed": true,
+    "source": "Esfand's Paladin, 12 Sep (day 1 stream, 5:22)"
   },
   "Paladin|Seal of Light": {
     "lines": [
@@ -825,16 +942,26 @@
     "source": "Savix's Paladin, 12 Sep"
   },
   "Paladin|Fire Resistance Aura": {
-    "lines": [],
-    "description": "Gives 30 additional Fire resistance to all party members within 30 yards.  Players may only have one Aura on them per Paladin at any one time.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Gives 30 additional Fire resistance to all party and raid members within 30 yards. Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Pikabooirl's Paladin, 13 Sep"
   },
   "Paladin|Frost Resistance Aura": {
-    "lines": [],
-    "description": "Gives 30 additional Frost resistance to all party members within 30 yards.  Players may only have one Aura on them per Paladin at any one time.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Gives 30 additional Frost resistance to all party and raid members within 30 yards. Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Esfand's Paladin, 12 Sep (day 1 stream, 5:22)"
   },
   "Paladin|Hammer of Justice": {
     "lines": [
@@ -888,10 +1015,15 @@
     "levelReq": "Requires level 22"
   },
   "Paladin|Shadow Resistance Aura": {
-    "lines": [],
-    "description": "Gives 30 additional Shadow resistance to all party members within 30 yards.  Players may only have one Aura on them per Paladin at any one time.",
-    "confirmed": false,
-    "levelReq": "Requires level 28"
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Gives 30 additional Shadow resistance to all party and raid members within 30 yards. Players may only have one Aura on them per Paladin at any one time.",
+    "confirmed": true,
+    "source": "Pikabooirl's Paladin, 13 Sep"
   },
   "Paladin|Blessing of Might": {
     "lines": [
@@ -980,16 +1112,29 @@
     "source": "Savix's Paladin, 12 Sep"
   },
   "Hunter|Throw": {
-    "lines": [],
-    "description": "Throws a weapon at an enemy, inflicting 2125 to 2875 damage.",
-    "confirmed": false,
-    "levelReq": "Requires level 62"
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "0.5 sec cast",
+        "1.7 sec cooldown"
+      ],
+      [
+        "Requires Thrown",
+        ""
+      ]
+    ],
+    "description": "Hurl a thrown weapon at the target.",
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
   },
   "Hunter|Beast Training": {
     "lines": [],
-    "description": "Lets the Hunter train his pet with various abilities that he has learned.",
-    "confirmed": false,
-    "levelReq": "Requires level 10"
+    "description": "Lets you train your pet with various abilities that you have learned how to teach.",
+    "confirmed": true,
+    "source": "Savix's Hunter, 12 Sep"
   },
   "Hunter|Dual Wield": {
     "lines": [],
@@ -1003,9 +1148,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: the ones your class can wear.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Wording read on Soda's Druid, Mage and Warlock; this class's own list hasn't been hovered on footage yet"
   },
   "Hunter|Dodge": {
     "lines": [
@@ -1025,10 +1170,19 @@
     "levelReq": "Requires level 1"
   },
   "Hunter|Aspect of the Beast": {
-    "lines": [],
-    "description": "The hunter takes on the aspects of a beast, becoming untrackable.  Only one Aspect can be active at a time.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "lines": [
+      [
+        "50 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "The hunter takes on the aspects of a beast, becoming untrackable and increasing Melee Attack Power by 50. Only one Aspect can be active at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:13). A reader spotted the attack power line."
   },
   "Hunter|Aspect of the Cheetah": {
     "lines": [
@@ -1087,16 +1241,30 @@
     "levelReq": "Requires level 24"
   },
   "Hunter|Call Owl": {
-    "lines": [],
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
     "description": "Summons your pet to you.",
-    "confirmed": false,
-    "levelReq": "Requires level 10"
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:13)"
   },
   "Hunter|Dismiss Pet": {
-    "lines": [],
-    "description": "Dismiss your pet.  Dismissing your pet will reduce its happiness by 50.",
-    "confirmed": false,
-    "levelReq": "Requires level 10"
+    "lines": [
+      [
+        "10 yd range",
+        ""
+      ],
+      [
+        "5 sec cast",
+        ""
+      ]
+    ],
+    "description": "Dismiss your pet. Dismissing your pet will reduce its happiness by 50.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:13)"
   },
   "Hunter|Eagle Eye": {
     "lines": [
@@ -1148,11 +1316,15 @@
       [
         "225 Mana",
         "20 yd range"
+      ],
+      [
+        "Channeled",
+        ""
       ]
     ],
-    "description": "Heals your pet 103 health every second while you focus.  Lasts 5 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Heals your pet 103 health every second while you focus. Lasts 5 sec.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:13)"
   },
   "Hunter|Revive Pet": {
     "lines": [],
@@ -1190,16 +1362,16 @@
     "lines": [
       [
         "160 Mana",
-        "8 - 35 yd range"
+        "8-35 yd range"
       ],
       [
-        "3 sec cast",
+        "2 sec cast",
         "6 sec cooldown"
       ]
     ],
-    "description": "An aimed shot that increases ranged damage by 200.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "An aimed shot that increases ranged damage by 55. Aimed Shot shares its cooldown with Multi-Shot.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:24). A reader spotted the 2 sec cast."
   },
   "Hunter|Arcane Shot": {
     "lines": [
@@ -1214,13 +1386,22 @@
     ],
     "description": "An instant shot that causes 94 Arcane damage.",
     "confirmed": true,
-    "source": "Xaryu's Hunter, 12 Sep (rank not shown)"
+    "source": "Xaryu's Hunter, 12 Sep (rank 5 on the spellbook page at 56:24)"
   },
   "Hunter|Auto Shot": {
-    "lines": [],
+    "lines": [
+      [
+        "8-35 yd range",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
     "description": "Automatically shoots the target until cancelled.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:24)"
   },
   "Hunter|Concussive Shot": {
     "lines": [
@@ -1266,13 +1447,17 @@
   "Hunter|Hunter's Mark": {
     "lines": [
       [
-        "15 Mana",
+        "30 Mana",
         "100 yd range"
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 20.  In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible.  The target also appears on the mini-map.  Lasts for 2 min.",
-    "confirmed": false,
-    "levelReq": "Requires level 6"
+    "description": "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 59. In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible. The target also appears on the mini-map. Lasts for 2 min.",
+    "confirmed": true,
+    "source": "Esfand's Hunter, 12 Sep (day 1 stream, 7:33) (Classic rank 2 was 15 mana for 20 attack power)"
   },
   "Hunter|Multi-Shot": {
     "lines": [
@@ -1348,9 +1533,9 @@
         "5 sec cooldown"
       ]
     ],
-    "description": "Attempts to disengage from the target, reducing threat.  More effective than Disengage (Rank 1).  Character exits combat mode.",
-    "confirmed": false,
-    "levelReq": "Requires level 34"
+    "description": "Attempts to disengage from the target by reducing threat. More effective than Disengage (Rank 1). Disables auto-attack.",
+    "confirmed": true,
+    "source": "Esfand's Hunter, 12 Sep (day 1 stream, 7:33). Classic said 'Character exits combat mode' instead."
   },
   "Hunter|Explosive Trap": {
     "lines": [
@@ -1416,12 +1601,16 @@
     "lines": [
       [
         "135 Mana",
-        "35 yd range"
+        ""
+      ],
+      [
+        "Instant",
+        "30 sec cooldown"
       ]
     ],
-    "description": "Place a fire trap at a nearby location that will burn the first enemy to approach for 340 Fire damage over 15 sec.  Trap will exist for 1 min.  Only one trap can be active at a time.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Place a Fire trap that will burn the first enemy to approach for 340 Fire damage over 15 sec. Trap will exist for 1 min. Only one Fire trap can be active at a time.",
+    "confirmed": true,
+    "source": "Soda's Hunter, 13 Sep"
   },
   "Hunter|Mongoose Bite": {
     "lines": [
@@ -1476,10 +1665,15 @@
     "source": "Xaryu's Hunter, 12 Sep"
   },
   "Hunter|Track Elementals": {
-    "lines": [],
-    "description": "Shows the location of all nearby elementals on the minimap.  Only one form of tracking can be active at a time.",
-    "confirmed": false,
-    "levelReq": "Requires level 26"
+    "lines": [
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Shows the location of all nearby elementals on the minimap. Only one form of tracking can be active at a time.",
+    "confirmed": true,
+    "source": "Xaryu's Hunter, 12 Sep (YouTube 'Xaryu Checks Out EVERY WoW Forever Class' at 56:13)"
   },
   "Hunter|Track Hidden": {
     "lines": [],
@@ -1608,10 +1802,19 @@
     "source": "Savix's Rogue, 12 Sep"
   },
   "Rogue|Shoot Bow": {
-    "lines": [],
-    "description": "Attack with an equipped wand.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "1 sec cast",
+        "1.7 sec cooldown"
+      ]
+    ],
+    "description": "",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep (the tooltip has no description line)"
   },
   "Rogue|Shoot Crossbow": {
     "lines": [],
@@ -1620,16 +1823,42 @@
     "levelReq": "Requires level 1"
   },
   "Rogue|Shoot Gun": {
-    "lines": [],
-    "description": "Attack with an equipped wand.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "1 sec cast",
+        "1.7 sec cooldown"
+      ],
+      [
+        "Requires Guns",
+        ""
+      ]
+    ],
+    "description": "",
+    "confirmed": true,
+    "source": "Soda's Warrior, 13 Sep (no description line on the tooltip)"
   },
   "Rogue|Throw": {
-    "lines": [],
+    "lines": [
+      [
+        "8-30 yd range",
+        ""
+      ],
+      [
+        "0.5 sec cast",
+        "1.7 sec cooldown"
+      ],
+      [
+        "Requires Thrown",
+        ""
+      ]
+    ],
     "description": "Hurl a thrown weapon at the target.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "confirmed": true,
+    "source": "Savix's Rogue, 12 Sep"
   },
   "Rogue|Dual Wield": {
     "lines": [],
@@ -1643,9 +1872,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: Cloth, Leather.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Not hovered on a Rogue yet; Rogues wear the same two types as the Druid whose tooltip we read."
   },
   "Rogue|Dodge": {
     "lines": [
@@ -1881,11 +2110,15 @@
       [
         "45 Energy",
         "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "An instant strike that causes 33 damage in addition to your normal weapon damage.  Awards 1 combo point.",
-    "confirmed": false,
-    "levelReq": "Requires level 38"
+    "description": "An instant strike that causes 33 damage in addition to your normal weapon damage. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Xaryu's and Pikabooirl's Rogues, 13 Sep"
   },
   "Rogue|Sprint": {
     "lines": [
@@ -2030,9 +2263,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: Cloth.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Same tooltip read on Soda's Mage and Warlock; Priests are cloth-only too. A reader caught the site listing Leather here."
   },
   "Priest|Dodge": {
     "lines": [
@@ -2101,17 +2334,17 @@
   "Priest|Mana Burn": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "70 Mana",
+        "30 yd range"
       ],
       [
-        "95 Mana",
-        "30 yd range"
+        "3 sec cast",
+        ""
       ]
     ],
-    "description": "Drains 198 to 211 mana from a target. For each mana drained in this way, the target takes 0.5 Shadow damage.",
-    "confirmed": false,
-    "levelReq": "Requires level 24"
+    "description": "Drains 315 to 336 mana from a target. For each mana drained in this way, the target takes 0.5 Shadow damage.",
+    "confirmed": true,
+    "source": "Xaryu's Priest, 13 Sep (day 2 stream, 6:08; rank not shown)"
   },
   "Priest|Power Word: Fortitude": {
     "lines": [
@@ -2321,22 +2554,22 @@
   "Priest|Devouring Plague": {
     "lines": [
       [
-        "495 Mana",
-        "30 yd range"
+        "62 Mana",
+        "36 yd range"
       ],
       [
         "Instant",
-        "3 min cooldown"
+        "1 min cooldown"
       ]
     ],
-    "description": "Afflicts the target with a disease that causes 400 Shadow damage over 24 sec.  Damage caused by the Devouring Plague heals the caster.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Afflicts the target with a disease that causes 525 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+    "confirmed": true,
+    "source": "Xaryu's Priest, 13 Sep (day 2 stream, 6:06; range includes his talents)"
   },
   "Priest|Fade": {
     "lines": [
       [
-        "40 Mana",
+        "62 Mana",
         ""
       ],
       [
@@ -2344,9 +2577,9 @@
         "30 sec cooldown"
       ]
     ],
-    "description": "Fade out, discouraging enemies from attacking you for 10 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 8"
+    "description": "Fade out, discouraging enemies from attacking you for 10 sec. More effective than Fade (rank 2).",
+    "confirmed": true,
+    "source": "Xaryu's Priest, 13 Sep (day 2 stream, 6:08; the tooltip is rank 3 going by its own text)"
   },
   "Priest|Mind Blast": {
     "lines": [
@@ -2456,9 +2689,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: the ones your class can wear.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Wording read on Soda's Druid, Mage and Warlock; this class's own list hasn't been hovered on footage yet"
   },
   "Shaman|Block": {
     "lines": [],
@@ -2536,17 +2769,17 @@
   "Shaman|Fire Nova": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "280 Mana",
+        "30 yd range"
       ],
       [
         "Instant",
         "10 sec cooldown"
       ]
     ],
-    "description": "Instantly inflicts 195 to 219 fire damage to enemies within 10 yd of your active Fire totem.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "description": "Instantly inflicts 206 to 231 fire damage to enemies within 10 yd of your active Fire totem.",
+    "confirmed": true,
+    "source": "Esfand's Shaman, 13 Sep (day 2 stream, 5:56)"
   },
   "Shaman|Flame Shock": {
     "lines": [
@@ -2706,13 +2939,17 @@
   "Shaman|Flametongue Weapon": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "105 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "Imbue the Shaman's weapon with fire.  Each hit causes 22 to 69 additional Fire damage, based on the speed of the weapon.  Slower weapons cause more fire damage per swing.  Lasts for 5 minutes.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Imbue the Shaman's weapon with fire. Each hit causes 18 to 57 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. When applied to main hand, disables any benefit you personally receive from Flametongue Totem. Lasts for 60 minutes.",
+    "confirmed": true,
+    "source": "Guzu's Shaman, 12 Sep (rank not shown; 105 mana is Classic's rank 3)"
   },
   "Shaman|Frost Resistance Totem": {
     "lines": [
@@ -2741,10 +2978,19 @@
     "levelReq": "Requires level 20"
   },
   "Shaman|Ghost Wolf": {
-    "lines": [],
-    "description": "Turns the Shaman into a Ghost Wolf, increasing speed by 40%.  Only useable outdoors.",
-    "confirmed": false,
-    "levelReq": "Requires level 20"
+    "lines": [
+      [
+        "100 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ]
+    ],
+    "description": "Turns the Shaman into a Ghost Wolf, increasing speed by 40%.",
+    "confirmed": true,
+    "source": "Guzu's Shaman, 12 Sep, with Improved Ghost Wolf 2/2: that talent makes it instant and usable indoors, so the base tooltip will show a cast time and an outdoors line."
   },
   "Shaman|Grounding Totem": {
     "lines": [
@@ -2772,7 +3018,7 @@
         ""
       ]
     ],
-    "description": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 86 Nature damage. Only one lightning ball will fire every few seconds. Lasts 10 min.",
+    "description": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 86 Nature damage. This expends one lightning ball. Only one ball will fire every few seconds. Lasts 10 min.",
     "confirmed": true,
     "source": "Soda's Shaman, 13 Sep"
   },
@@ -2806,7 +3052,7 @@
         ""
       ]
     ],
-    "description": "Imbue the Shaman's weapon, increasing melee attack power by 283 and allowing melee attacks to cause additional threat when using that weapon. Lasts 60 minutes.",
+    "description": "Imbue the Shaman's weapon, increasing melee attack power by 283 and allowing melee attacks to cause additional threat when using that weapon. Lasts for 60 minutes.",
     "confirmed": true,
     "source": "Soda's Shaman, 13 Sep"
   },
@@ -2894,13 +3140,17 @@
   "Shaman|Windfury Weapon": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "90 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "Imbue the Shaman's weapon with wind.  Each hit has a 20% chance of granting you 2 extra attacks with 104 extra melee attack power.  Lasts for 5 minutes.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "Imbue the Shaman's weapon with wind. Each hit has a 20% chance of granting you 2 extra attacks with 103 extra melee attack power. When applied to main hand, disables any benefit you personally receive from Windfury Totem. Lasts for 60 minutes.",
+    "confirmed": true,
+    "source": "Demo spellbook screenshot sent by a reader (Schiffers)"
   },
   "Shaman|Windwall Totem": {
     "lines": [],
@@ -3007,9 +3257,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: Cloth.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Soda's Mage, 13 Sep"
   },
   "Mage|Dodge": {
     "lines": [
@@ -3310,9 +3560,9 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: Cloth.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Soda's Warlock, 13 Sep"
   },
   "Warlock|Dodge": {
     "lines": [
@@ -3812,7 +4062,7 @@
         ""
       ]
     ],
-    "description": "You are proficient in the use of the armor types your class can wear (the demo Druid listed Cloth and Leather).",
+    "description": "You are proficient in the use of the following armor types: Cloth, Leather.",
     "confirmed": true,
     "source": "Soda's Druid, 13 Sep"
   },
@@ -4044,11 +4294,15 @@
       [
         "Instant",
         "10 sec cooldown"
+      ],
+      [
+        "Requires Cat Form",
+        ""
       ]
     ],
     "description": "Cower, causing no damage but lowering your threat a small amount, making the enemy less likely to attack you.",
-    "confirmed": false,
-    "levelReq": "Requires level 28"
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep (rank 1)"
   },
   "Druid|Dash": {
     "lines": [
@@ -4267,9 +4521,9 @@
         ""
       ]
     ],
-    "description": "Increases Physical damage done by 15% for 6 sec, and instantly grants 60 Energy.",
+    "description": "Increases Physical damage done by 15% for 6 sec.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Soda's Druid, 13 Sep. With 3 points in the Feral talent that adds 20 Energy per rank, the tooltip also reads 'and instantly grants 60 Energy'."
   },
   "Druid|Track Humanoids": {
     "lines": [],
@@ -4370,7 +4624,7 @@
   "Druid|Rejuvenation": {
     "lines": [
       [
-        "146 Mana",
+        "160 Mana",
         "40 yd range"
       ],
       [
@@ -4378,9 +4632,9 @@
         ""
       ]
     ],
-    "description": "Heals the target for 313 over 15 sec.",
+    "description": "Heals the target for 223 over 12 sec.",
     "confirmed": true,
-    "source": "Soda's Druid, 13 Sep"
+    "source": "Soda's Druid, 13 Sep. A talented Druid on the same stream showed 146 Mana and 313 over 15 sec."
   },
   "Druid|Remove Curse": {
     "lines": [
@@ -4396,27 +4650,31 @@
   "Druid|Revive": {
     "lines": [
       [
-        "72% of base mana",
+        "607 Mana",
         "30 yd range"
+      ],
+      [
+        "9.9 sec cast",
+        ""
       ]
     ],
-    "description": "Brings a dead player back to life with 15% of their health and mana.  Cannot be used when in combat.",
-    "confirmed": false,
-    "levelReq": "Requires level 1"
+    "description": "Brings a dead player back to life with 300 health and 520 mana. Cannot be cast when in combat.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep (the 9.9 sec cast includes a little haste; the base is 10 sec)"
   },
   "Druid|Tranquility": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "375 Mana",
+        ""
       ],
       [
-        "Channeled (10 sec cast)",
+        "Channeled",
         "5 min cooldown"
       ]
     ],
-    "description": "Regenerates all nearby group members for 98 every 2 seconds for 10 sec.  Druid must channel to maintain the spell.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "Regenerates all nearby party members within 20 yards for 92 every 2 sec for 10 sec. Druid must channel to maintain the spell.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep"
   }
 }

@@ -4,10 +4,12 @@
     "warrior": {
       "demoRace": "Human",
       "notes": [
-        "Victory Rush and Tactical Mastery are baseline.",
-        "No Intercept in Arms or Fury at 38; Intercept is trained at 30 in Classic, so its absence is the odd one -- the demo capped characters at 38. Bloodrage is confirmed in Protection.",
-        "Retaliation: 15 min cooldown, Battle Stance, counterattacks up to 30 melee hits for 15 sec.",
-        "Protection tab (Esfand's stream, 13 Sep 2026, clip by Zevzve): Bloodrage, Defensive Stance, Disarm, Revenge, Shield Bash, Shield Block, Shield Wall, Sunder Armor, Taunt. Last Stand is not in it, so it stays a talent."
+        "Baseline now: Victory Rush and Tactical Mastery. Tactical Mastery keeps up to 10 Rage through a stance change by itself; the Arms talent adds up to 15 more.",
+        "Mocking Blow still needs Battle Stance (10 Rage, 2 min cooldown). Thunder Clap works in Battle or Defensive Stance now. Both read off Soda's Warrior video.",
+        "Protection tab (Esfand's stream): Bloodrage, Defensive Stance, Disarm, Revenge, Shield Bash, Shield Block, Shield Wall, Sunder Armor, Taunt. No Last Stand, so that stays a talent.",
+        "Intercept isn't in the book at 38, where Classic teaches it at 30. Improved Intercept is in the Fury tree though, so it's learned later.",
+        "Retaliation: 15 min cooldown, Battle Stance, counters up to 30 melee hits for 15 sec.",
+        "Slam is rank 3 by 38 and has a 15 sec cooldown. Thunder Clap works in Defensive Stance too. Shield Wall is 15 min, 60% for 12 sec, and no longer shares a cooldown with Retaliation."
       ],
       "notOpened": [],
       "tabs": [
@@ -259,10 +261,10 @@
     "paladin": {
       "demoRace": "Undead",
       "notes": [
-        "Undead Paladins exist, with Cannibalize and Will of the Forsaken in the General tab.",
-        "Blessing of Kings and Consecration are baseline: neither is a talent anywhere in the Forever trees, and both are in this book. Seal of Command is still a Retribution talent, so it is here because the demo Paladin had it.",
-        "Holy Strike is a baseline Retribution strike. Seal of Fury is back as a trainable seal.",
-        "Lay on Hands: 20 min cooldown, heals for your maximum health and restores 250 mana, drains your remaining mana."
+        "Undead Paladins are real. Cannibalize and Will of the Forsaken sit in the General tab.",
+        "Baseline now: Blessing of Kings, Consecration, Holy Strike and Seal of Fury. None of them are talents anywhere in the trees.",
+        "Seal of Command is still a Retribution talent. It's here because this Paladin took it.",
+        "Lay on Hands: 20 min cooldown, heals your full health, gives 250 mana, and empties your own mana."
       ],
       "notOpened": [],
       "tabs": [
@@ -512,10 +514,12 @@
     "hunter": {
       "demoRace": "Human",
       "notes": [
-        "Aimed Shot is baseline (a Classic Marksmanship talent).",
-        "Call Pet is named after the pet: this Hunter had Call Owl.",
-        "Explosive Trap and Viper Sting are trained by 38 (Classic: 44 and 36).",
-        "Pet tab is the pet's own spellbook, read from Soda's owl: Assist, Attack, Claw, Defensive, Dive, Follow, Great Stamina, Growl, Mine!, Move To, Natural Armor, Passive, Stay."
+        "Baseline now: Aimed Shot, a Marksmanship talent in Classic. It's a 2 sec cast on a 6 sec cooldown shared with Multi-Shot.",
+        "Call Pet takes your pet's name. This one read Call Owl.",
+        "Earlier than Classic: Explosive Trap and Viper Sting are both trained by 38 (Classic: 44 and 36).",
+        "Traps: every trap tooltip we've read (Savix, Xaryu and Soda's Hunters) drops the Classic line 'Traps can only be placed when out of combat', and 'Only one trap can be active at a time' now reads one Fire trap or one Frost trap, so a Freezing Trap and an Immolation Trap may sit out together. Cooldown is 30 sec (Classic 15). Nobody has placed one mid-fight on stream yet, so treat in-combat trapping as what the tooltip says, not as tested. A reader (ericles26) spotted the missing line.",
+        "Pet tab is your pet's own book, read from Soda's owl. Growl rank 4 is a 15 Focus taunt on 5 sec, Dive is 20 Focus for 40% speed for 15 sec, Claw rank 5 hits 21 to 29, and Mine! is new: a disarm.",
+        "Beast Training still uses training points. Claw 1/8/16/24/32, Growl 1/10/20/30, Cower 5/15/25/35, Great Stamina and Natural Armor 24/30/36, Mine! 10/20/30/40/50, Dive 30, resistances 20 and 30."
       ],
       "notOpened": [],
       "tabs": [
@@ -848,9 +852,9 @@
     "rogue": {
       "demoRace": "Undead",
       "notes": [
-        "Blade Flurry and Adrenaline Rush are Combat talents in Forever, so they are in this book because the demo rogue had them talented. Not baseline.",
-        "No Riposte in the book at 38, which just means that rogue had not taken it.",
-        "Blind at 38 with no reagent line visible; Disarm Trap is still trained."
+        "Blade Flurry and Adrenaline Rush are Combat talents in Forever. They're here because this Rogue took them, not baseline.",
+        "No Riposte at 38 just means this Rogue hadn't taken it.",
+        "Blind: 30 Energy, 5 min cooldown, still needs Blinding Powder. Disarm Trap is still trained."
       ],
       "notOpened": [],
       "tabs": [
@@ -1055,10 +1059,11 @@
     "priest": {
       "demoRace": "Night Elf",
       "notes": [
-        "Fear Ward is baseline for every Priest, in the Holy tab.",
-        "Devouring Plague is a normal Shadow spell now, Rank 3 on a Night Elf.",
+        "Baseline now: Fear Ward, in the Holy tab. Devouring Plague is a normal Shadow spell, rank 3 here on a Night Elf.",
+        "Troll racials: a level 38 Troll Shadow Priest on Xaryu's stream had Hex of Weakness rank 3 and Shadowguard rank 3 in the Shadow tab, plus Shadow Word: Pain rank 5 and Mind Blast rank 5.",
         "Elune's Grace changed: 5 min cooldown, 50% chance to be missed by melee and ranged for 15 sec or until missed 3 times.",
-        "No Shadow Word: Death by 38; the talent tooltips mention it, so it is probably trained later. The demo was capped at 38."
+        "No Shadow Word: Death by 38. Talents mention it, so it comes later.",
+        "Ranks for Flash Heal, Heal, Renew, Power Word: Shield, Mind Blast, Holy Fire, Psychic Scream, Mind Control, Shadow Protection, Mind Vision and Divine Spirit come from that Troll Priest's tooltips."
       ],
       "notOpened": [],
       "tabs": [
@@ -1255,9 +1260,11 @@
     "shaman": {
       "demoRace": "Orc",
       "notes": [
-        "Call of the Ancestors and Call of the Elements are new Elemental abilities; Totemic Projection and Totemic Recall are new too.",
-        "Fire Nova is a spell with ranks (Rank 3 by 38), no longer a totem.",
-        "Chain Lightning is trained by 38 (Classic: 32) and Windfury Totem and Weapon are both in by 38."
+        "New: Call of the Ancestors, Call of the Elements, Totemic Projection and Totemic Recall. Totemic Projection is ground-targeted: your totems move to the spot you pick, up to 30 yd away.",
+        "Fire Nova is a spell with ranks now (rank 3 by 38), not a totem: 30 yd, instant, 10 sec cooldown, hits everything within 10 yd of your active Fire totem.",
+        "Faster bolts: Lightning Bolt rank 7 is a 2.5 sec cast and Chain Lightning 2 sec, half a second quicker than Classic before any talents.",
+        "Earlier than Classic: Chain Lightning by 38 (Classic: 32). Windfury Totem and Windfury Weapon are both in.",
+        "Weapon buffs last 60 min: Rockbiter, Flametongue and Windfury Weapon all read 60 minutes. Windfury and Flametongue Weapon each turn off your own benefit from the matching totem when on your main hand. The wording only names the matching totem, so mixing (say Windfury Weapon plus Flametongue Totem) may stack. Nobody has tested it yet. Frostbrand still shows Classic text."
       ],
       "notOpened": [],
       "tabs": [
@@ -1548,10 +1555,10 @@
     "mage": {
       "demoRace": "Undead / Gnome / Windshaper Skyborne",
       "notes": [
-        "Arcane Blast and Presence of Mind are both Arcane talents in Forever, so they are here because the demo Mage had them talented. Not baseline.",
-        "Comprehend Scroll is a new General ability, seen on Savix's Skyborne Mage.",
-        "The Frost tab was shown with every rank listed; the highest rank of each spell is what is recorded here.",
-        "Fire at 38 is five spells: Fire Blast Rank 5 (110 mana, 8 sec cooldown, 261 to 309), Fireball Rank 7 (220 mana, 3.5 sec cast, 220 to 271 plus 24 over 8 sec), Scorch, Fire Ward and Flamestrike. No Pyroblast or Blast Wave by 38."
+        "Arcane Blast and Presence of Mind are Arcane talents in Forever. They're here because this Mage took them, not baseline.",
+        "New: Comprehend Scroll, a General ability seen on Savix's Skyborne Mage.",
+        "Frost tab showed every rank. The highest is what's listed.",
+        "Fire at 38 is five spells: Fire Blast rank 5 (8 sec cooldown), Fireball rank 7 (3 sec cast plus a burn), Scorch, Fire Ward and Flamestrike. No Pyroblast or Blast Wave yet."
       ],
       "notOpened": [],
       "tabs": [
@@ -1769,9 +1776,10 @@
     "warlock": {
       "demoRace": "Human",
       "notes": [
-        "Curse of Agony is Bane of Agony. Enslave Demon is Subjugate Demon.",
+        "Renamed: Curse of Agony is Bane of Agony, Enslave Demon is Subjugate Demon. Banes and Curses are separate now, so you can run one of each.",
         "Incubus and Succubus are separate summons.",
-        "Shadow Ward is baseline. Destruction tab read from Soda's stream and matches the Goldshire trainer list exactly.",
+        "Baseline now: Shadow Ward. The Destruction tab, read from Soda's stream, matches the Goldshire trainer list exactly.",
+        "Mystery entry: Affliction page 2 lists Metamorphosis: Demonic Howl with a placeholder scroll icon, next to Bane of Agony rank 1. Nobody hovered it, it isn't in any talent tree, and the scroll icon suggests it wasn't finished for the demo. Here's the frame (talentsforever.com/assets/proof/metamorphosis-soda.jpg) from Soda's stream.",
         "Pet tab is the Felhunter's: Devour Magic rank 2, Spell Lock, Tainted Blood."
       ],
       "notOpened": [],
@@ -2081,9 +2089,11 @@
     "druid": {
       "demoRace": "Night Elf",
       "notes": [
-        "Nature's Grasp and Omen of Clarity are baseline (Classic Balance and Restoration talents).",
-        "Revive is new: 10 sec cast, 300 health and 520 mana, out of combat. Rebirth keeps its 30 min cooldown and Stranglethorn Seed.",
-        "Cure Poison is gone; Abolish Poison is the only poison cure."
+        "Baseline now: Nature's Grasp and Omen of Clarity, both Classic talents.",
+        "Revive is new: 10 sec cast, 300 health and 520 mana, out of combat only. Rebirth keeps its 30 min cooldown and Stranglethorn Seed.",
+        "Cure Poison is gone. Abolish Poison is the only poison cure.",
+        "Lacerate exists (Shredding Attacks cuts its cost) but comes after 38.",
+        "Hurricane isn't missing, it's trained at 40 in Classic and this book stops at 38. Nature's Reach still lists it, so it's in. Whether it kept its 1 min cooldown is a beta question."
       ],
       "notOpened": [],
       "tabs": [
