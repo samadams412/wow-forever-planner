@@ -14,6 +14,7 @@ import CompareLegend from "@/components/planner/CompareLegend";
 import Dialog from "@/components/site/Dialog";
 import Collapsible from "@/components/site/Collapsible";
 import SpellbookBook from "@/components/reference/SpellbookBook";
+import ClassAbilitiesSection from "@/components/reference/ClassAbilitiesSection";
 import { spellbooks } from "@/lib/spellbooks";
 
 const DEFAULT_CLASS_ID = "warrior";
@@ -250,6 +251,7 @@ export default function PlannerClient({
                 tab/page state instead of carrying over a tab index that may
                 not exist on the new class's spec tabs. */}
             <SpellbookBook key={classData.class} classId={classData.class} book={spellbooks.classes[classData.class]} />
+            <ClassAbilitiesSection classId={classData.class} />
           </Collapsible>
         </div>
       )}
