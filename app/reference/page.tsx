@@ -14,11 +14,11 @@ export default function ReferencePage() {
     <main className="mx-auto w-full max-w-2xl px-4 py-16">
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Reference</h1>
       <p className="mt-2 text-foreground-muted">
-        Racials and race/class rules are browsable inline as part of the{" "}
+        Racials and race/class rules are also browsable inline as part of the{" "}
         <Link href="/planner" className="text-accent hover:underline">
           planner
-        </Link>{" "}
-        for now -- a standalone version is planned. In the meantime:
+        </Link>
+        .
       </p>
 
       <div className="mt-6 grid gap-3">
@@ -38,6 +38,15 @@ export default function ReferencePage() {
           icon={
             /* eslint-disable-next-line @next/next/no-img-element */
             <img src={mediumIconUrl("inv_misc_book_11")} alt="" className="h-7 w-7 rounded-sm" />
+          }
+        />
+        <Card
+          href="/reference/racials"
+          title="Racials"
+          description="Race and racial ability reference for every class, Horde and Alliance side by side."
+          icon={
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={mediumIconUrl("inv_misc_tournaments_tabard_orc")} alt="" className="h-7 w-7 rounded-sm" />
           }
         />
       </div>

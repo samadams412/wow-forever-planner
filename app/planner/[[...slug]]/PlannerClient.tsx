@@ -7,7 +7,7 @@ import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
 import RacePicker from "@/components/planner/RacePicker";
 import ClassPicker from "@/components/planner/ClassPicker";
-import RaceReferenceTable from "@/components/planner/RaceReferenceTable";
+import RaceReferenceTable from "@/components/reference/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
 import CompareLegend from "@/components/planner/CompareLegend";
