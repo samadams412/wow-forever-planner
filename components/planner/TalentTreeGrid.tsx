@@ -39,7 +39,7 @@ export default function TalentTreeGrid({
   const spent = pointsSpentInTree(tree, ranks);
 
   return (
-    <div className="relative w-full max-w-77 rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)]">
+    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:max-w-77">
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
