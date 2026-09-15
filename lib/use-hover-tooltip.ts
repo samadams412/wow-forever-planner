@@ -1,11 +1,16 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type RefObject } from "react";
 
 export function useHoverTooltip<T extends HTMLElement>(
   width: number,
   placement: "below" | "right" = "below",
-  estimatedHeight = 220
+  estimatedHeight = 220,
+  // Pass an existing ref to position off of it (e.g. sharing one button
+  // between a desktop hover tooltip and a mobile tap tooltip) instead of
+  // creating a new one.
+  sharedRef?: RefObject<T | null>
 ) {
-  const ref = useRef<T>(null);
+  const ownRef = useRef<T>(null);
+  const ref = sharedRef ?? ownRef;
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
 
   const show = () => {

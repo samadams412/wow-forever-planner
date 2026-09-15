@@ -46,6 +46,9 @@ export default function PlannerClient({
   const [myBuildsOpen, setMyBuildsOpen] = useState(false);
   const [savedBuilds, setSavedBuilds] = useState<SavedBuild[]>([]);
   const [saveError, setSaveError] = useState(false);
+  // Which talent (if any) a mobile tap most recently landed on -- shows its
+  // minus badge and turns a second tap into "remove" instead of "add".
+  const [tappedTalentId, setTappedTalentId] = useState<string | null>(null);
 
   useEffect(() => {
     // Reads localStorage, which isn't available during SSR -- state starts
@@ -71,6 +74,7 @@ export default function PlannerClient({
   const handleSelectClass = useCallback((id: string) => {
     setClassId(id);
     setRanks({});
+    setTappedTalentId(null);
   }, []);
 
   const addPoint = useCallback(
@@ -101,7 +105,10 @@ export default function PlannerClient({
     [classData, ranks]
   );
 
-  const resetBuild = useCallback(() => setRanks({}), []);
+  const resetBuild = useCallback(() => {
+    setRanks({});
+    setTappedTalentId(null);
+  }, []);
 
   const totalSpent = classData ? totalPointsSpent(classData.trees, ranks) : 0;
 
@@ -139,6 +146,7 @@ export default function PlannerClient({
       setClassId(build.classId);
       const buildClassData = getClassTalentData(build.classId);
       setRanks(buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {});
+      setTappedTalentId(null);
       setMyBuildsOpen(false);
     },
     []
@@ -230,6 +238,8 @@ export default function PlannerClient({
                   onAdd={addPoint}
                   onRemove={removePoint}
                   compareMode={compareMode}
+                  tappedTalentId={tappedTalentId}
+                  onTap={setTappedTalentId}
                 />
               ))}
             </div>

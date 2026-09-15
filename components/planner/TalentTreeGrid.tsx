@@ -16,6 +16,8 @@ export default function TalentTreeGrid({
   onAdd,
   onRemove,
   compareMode,
+  tappedTalentId,
+  onTap,
 }: {
   classId: string;
   tree: TalentTree;
@@ -24,6 +26,8 @@ export default function TalentTreeGrid({
   onAdd: (talentId: string) => void;
   onRemove: (talentId: string) => void;
   compareMode?: boolean;
+  tappedTalentId: string | null;
+  onTap: (talentId: string | null) => void;
 }) {
   const byId = new Map(tree.talents.map((t) => [t.id, t]));
   const spent = pointsSpentInTree(tree, ranks);
@@ -87,6 +91,8 @@ export default function TalentTreeGrid({
             treeName={tree.name}
             pointsInTree={spent}
             totalSpent={totalSpent}
+            tappedTalentId={tappedTalentId}
+            onTap={onTap}
           />
         ))}
 
