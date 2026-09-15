@@ -101,10 +101,17 @@ export default function PlannerClient({
       const tree = classData.trees.find((t) => t.talents.some((tal) => tal.id === talentId));
       const talent = tree?.talents.find((tal) => tal.id === talentId);
       if (!tree || !talent) return;
-      if (!canAddPoint(tree, talent, ranks, totalPointsSpent(classData.trees, ranks))) return;
-      setRanks((prev) => ({ ...prev, [talentId]: (prev[talentId] ?? 0) + 1 }));
+      // Re-check against prev (not the ranks closure) inside the updater --
+      // rapid repeated taps can queue several addPoint calls before a
+      // single one of them has re-rendered, and checking the stale outer
+      // `ranks` let every queued call see the same pre-tap count and pass
+      // the max-rank/points-left guard, overshooting past the real cap.
+      setRanks((prev) => {
+        if (!canAddPoint(tree, talent, prev, totalPointsSpent(classData.trees, prev))) return prev;
+        return { ...prev, [talentId]: (prev[talentId] ?? 0) + 1 };
+      });
     },
-    [classData, ranks]
+    [classData]
   );
 
   const removePoint = useCallback(
@@ -113,14 +120,14 @@ export default function PlannerClient({
       const tree = classData.trees.find((t) => t.talents.some((tal) => tal.id === talentId));
       const talent = tree?.talents.find((tal) => tal.id === talentId);
       if (!tree || !talent) return;
-      if (!canRemovePoint(tree, talent, ranks)) return;
       setRanks((prev) => {
+        if (!canRemovePoint(tree, talent, prev)) return prev;
         const next = { ...prev, [talentId]: (prev[talentId] ?? 0) - 1 };
         if (next[talentId] <= 0) delete next[talentId];
         return next;
       });
     },
-    [classData, ranks]
+    [classData]
   );
 
   const resetBuild = useCallback(() => {

@@ -1,18 +1,9 @@
 import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
 import { treeBackgroundUrl, mediumIconUrl, getTreeIcon } from "@/lib/wow-data";
-import { canAddPoint, pointsSpentInTree, POINTS_PER_ROW, MAX_TALENT_POINTS, tierUnlocked } from "@/lib/talent-rules";
-import { formatTooltipText } from "@/lib/tooltip";
+import { canAddPoint, pointsSpentInTree } from "@/lib/talent-rules";
 import CornerBracket from "@/components/site/CornerBracket";
 import TalentNode from "./TalentNode";
-import {
-  TooltipCardInline,
-  TooltipName,
-  TooltipRank,
-  TooltipDescription,
-  TooltipRequirement,
-  TooltipClassicNote,
-} from "./TooltipCard";
 
 const TIERS = 7;
 const COLS = 4;
@@ -46,47 +37,6 @@ export default function TalentTreeGrid({
 }) {
   const byId = new Map(tree.talents.map((t) => [t.id, t]));
   const spent = pointsSpentInTree(tree, ranks);
-
-  // The talent whose inline tooltip is currently shown below its row --
-  // long-press-to-read (peek) takes priority over the last tapped-to-spend
-  // talent, and reverts to it on release. undefined (not this tree) when
-  // the active id belongs to a different tree's talent.
-  const activeTalent = byId.get(peekTalentId ?? tappedTalentId ?? "");
-  const activeTier = activeTalent?.tier ?? null;
-
-  // Talents at or before the active tier keep their original grid line;
-  // an inline tooltip row is spliced in right after it, so every tier past
-  // that one shifts down one line to make room instead of anything
-  // floating on top of the grid.
-  function rowLine(tier: number) {
-    return activeTier !== null && tier > activeTier ? tier + 1 : tier;
-  }
-
-  const rowTracks: string[] = [];
-  for (let tier = 1; tier <= TIERS; tier++) {
-    rowTracks.push("1fr");
-    if (tier === activeTier) rowTracks.push("auto");
-  }
-
-  const activeRank = activeTalent ? (ranks[activeTalent.id] ?? 0) : 0;
-  const activeCurrentRankText = activeTalent
-    ? activeRank > 0
-      ? activeTalent.ranks[activeRank - 1]
-      : activeTalent.maxRank === 1
-        ? activeTalent.ranks[0]
-        : null
-    : null;
-  const activeNextRankText =
-    activeTalent && activeTalent.maxRank > 1 && activeRank < activeTalent.maxRank
-      ? activeTalent.ranks[activeRank]
-      : null;
-  const activeTierPointsRequired = activeTalent ? POINTS_PER_ROW * (activeTalent.tier - 1) : 0;
-  const activeTierLocked = activeTalent ? !tierUnlocked(activeTalent.tier, spent) : false;
-  const activeCapReached = activeTalent
-    ? activeRank < activeTalent.maxRank && totalSpent >= MAX_TALENT_POINTS
-    : false;
-  const activePrereqName = activeTalent?.prereq ? byId.get(activeTalent.prereq.id)?.name : undefined;
-  const pointsLeft = MAX_TALENT_POINTS - totalSpent;
 
   return (
     <div className="relative w-full max-w-77 rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)]">
@@ -125,7 +75,7 @@ export default function TalentTreeGrid({
         className="relative grid gap-2.5 rounded bg-cover bg-center p-2"
         style={{
           gridTemplateColumns: `repeat(${COLS}, minmax(52px, 1fr))`,
-          gridTemplateRows: rowTracks.join(" "),
+          gridTemplateRows: `repeat(${TIERS}, 1fr)`,
           backgroundImage: `linear-gradient(rgba(12,13,16,0.55), rgba(12,13,16,0.55)), url(${treeBackgroundUrl(classId, tree.name)})`,
         }}
       >
@@ -141,7 +91,7 @@ export default function TalentTreeGrid({
                 className="pointer-events-none flex items-stretch justify-center"
                 style={{
                   gridColumn: t.col,
-                  gridRow: `${rowLine(prereq.tier)} / ${rowLine(t.tier) + 1}`,
+                  gridRow: `${prereq.tier} / ${t.tier + 1}`,
                 }}
               >
                 <div className={`w-1.5 rounded-full ${met ? "bg-accent" : "bg-foreground-muted/50"}`} />
@@ -153,7 +103,6 @@ export default function TalentTreeGrid({
           <TalentNode
             key={t.id}
             talent={t}
-            row={rowLine(t.tier)}
             rank={ranks[t.id] ?? 0}
             canAdd={canAddPoint(tree, t, ranks, totalSpent)}
             onAdd={() => onAdd(t.id)}
@@ -165,6 +114,7 @@ export default function TalentTreeGrid({
             totalSpent={totalSpent}
             tappedTalentId={tappedTalentId}
             onTap={onTap}
+            peekTalentId={peekTalentId}
             onPeek={onPeek}
           />
         ))}
@@ -179,7 +129,7 @@ export default function TalentTreeGrid({
               <div
                 key={`arrow-${t.id}`}
                 className="pointer-events-none relative"
-                style={{ gridColumn: t.col, gridRow: rowLine(t.tier) }}
+                style={{ gridColumn: t.col, gridRow: t.tier }}
               >
                 <div
                   className={`absolute -top-[5px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[5px] border-x-transparent border-t-[7px] ${
@@ -189,65 +139,6 @@ export default function TalentTreeGrid({
               </div>
             );
           })}
-
-        {activeTalent && (
-          <TooltipCardInline style={{ gridColumn: "1 / -1", gridRow: activeTier! + 1 }}>
-            <div className="flex items-baseline justify-between gap-2">
-              <TooltipName>{activeTalent.name}</TooltipName>
-              <TooltipRank>
-                Rank {activeRank}/{activeTalent.maxRank} · {pointsLeft} left
-              </TooltipRank>
-            </div>
-            {activeCurrentRankText && (
-              <TooltipDescription>{formatTooltipText(activeCurrentRankText)}</TooltipDescription>
-            )}
-            {activeNextRankText && (
-              <>
-                <TooltipRank>Next Rank</TooltipRank>
-                <TooltipDescription>{formatTooltipText(activeNextRankText)}</TooltipDescription>
-              </>
-            )}
-            {activeTalent.prereq && (
-              <TooltipRequirement>
-                Requires {activeTalent.prereq.ranks} rank{activeTalent.prereq.ranks > 1 ? "s" : ""} in{" "}
-                {activePrereqName ?? "prerequisite talent"}
-              </TooltipRequirement>
-            )}
-            {activeTalent.reqText && <TooltipRequirement>{activeTalent.reqText}</TooltipRequirement>}
-            {activeTierLocked && (
-              <TooltipRequirement>
-                Requires {activeTierPointsRequired} points in {tree.name} Talents
-              </TooltipRequirement>
-            )}
-            {activeCapReached && (
-              <TooltipRequirement>
-                All {MAX_TALENT_POINTS} talent points are spent -- unlearn a point elsewhere before you can
-                spend one here.
-              </TooltipRequirement>
-            )}
-            {compareMode && activeTalent.classic && (
-              <TooltipClassicNote
-                status={activeTalent.status}
-                position={
-                  activeTalent.status === "moved" &&
-                  activeTalent.classic.tree &&
-                  activeTalent.classic.tier &&
-                  activeTalent.classic.col
-                    ? `${activeTalent.classic.tree} tier ${activeTalent.classic.tier}, col ${activeTalent.classic.col}`
-                    : undefined
-                }
-              >
-                {activeTalent.classic.renamedFrom && (
-                  <>
-                    Was called &quot;{activeTalent.classic.renamedFrom}&quot; in Classic.
-                    <br />
-                  </>
-                )}
-                {activeTalent.classic.text ? formatTooltipText(activeTalent.classic.text) : null}
-              </TooltipClassicNote>
-            )}
-          </TooltipCardInline>
-        )}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
@@ -19,7 +19,6 @@ const TOOLTIP_WIDTH = 260;
 
 export default function TalentNode({
   talent,
-  row,
   rank,
   canAdd,
   onAdd,
@@ -31,13 +30,10 @@ export default function TalentNode({
   totalSpent,
   tappedTalentId,
   onTap,
+  peekTalentId,
   onPeek,
 }: {
   talent: Talent;
-  // Grid row line for this talent -- not always talent.tier, since a tier
-  // below the tree's active inline tooltip shifts down a line to make room
-  // for it (see TalentTreeGrid).
-  row: number;
   rank: number;
   canAdd: boolean;
   onAdd: () => void;
@@ -48,13 +44,14 @@ export default function TalentNode({
   pointsInTree: number;
   totalSpent: number;
   // Which talent (if any) was most recently tapped on a touch device --
-  // shows a small minus badge on it and turns a second tap into "remove"
-  // instead of "add". Lifted above this component since only one talent
-  // across the whole tree should show it at a time.
+  // shows a small minus badge on it and keeps its tooltip open. Lifted
+  // above this component since only one talent across the whole tree
+  // should show it at a time.
   tappedTalentId: string | null;
   onTap: (talentId: string | null) => void;
-  // Long-press-to-read: temporarily shows this talent's inline tooltip
-  // without spending a point, reverting to tappedTalentId on release.
+  // Long-press-to-read: temporarily shows this talent's tooltip without
+  // spending a point, reverting to tappedTalentId on release.
+  peekTalentId: string | null;
   onPeek: (talentId: string | null) => void;
 }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -64,10 +61,33 @@ export default function TalentNode({
     220,
     buttonRef
   );
+  // Tap-to-select and long-press-to-peek both float this same "below"
+  // tooltip (an overlay, not part of document flow) -- it doesn't push the
+  // grid's rows down, and stays pointer-events-none like the hover one so
+  // taps meant for icons underneath/behind it still land on those icons.
+  const { pos: activePos, show: showActive, hide: hideActive } = useHoverTooltip<HTMLButtonElement>(
+    TOOLTIP_WIDTH,
+    "below",
+    220,
+    buttonRef
+  );
+  const tooltipPos = hoverPos ?? activePos;
 
   const isTapped = tappedTalentId === talent.id;
+  const isActive = talent.id === (peekTalentId ?? tappedTalentId);
   const longPressTimer = useRef<number | null>(null);
   const longPressFired = useRef(false);
+  // Set for the duration of a touch gesture (plus a short tail) so the
+  // focus a tap leaves behind doesn't also fire the desktop hover tooltip,
+  // which previously produced two tooltips on screen at once on real
+  // touch devices.
+  const justTouchedRef = useRef(false);
+
+  useEffect(() => {
+    if (isActive) showActive();
+    else hideActive();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isActive]);
 
   function clearLongPressTimer() {
     if (longPressTimer.current !== null) {
@@ -77,6 +97,7 @@ export default function TalentNode({
   }
 
   function handleTouchStart() {
+    justTouchedRef.current = true;
     longPressFired.current = false;
     clearLongPressTimer();
     longPressTimer.current = window.setTimeout(() => {
@@ -89,19 +110,35 @@ export default function TalentNode({
     clearLongPressTimer();
     // Long-press already showed the tooltip for reading -- releasing just
     // ends the read, no point spent. Also stops the browser's follow-up
-    // synthetic click from re-triggering add/remove below.
+    // synthetic click from re-triggering add below.
     if (longPressFired.current) {
       e.preventDefault();
       onPeek(null);
+      buttonRef.current?.blur();
+      window.setTimeout(() => {
+        justTouchedRef.current = false;
+      }, 300);
       return;
     }
     e.preventDefault();
-    if (isTapped) {
-      onRemove();
-    } else {
-      onAdd();
-      onTap(talent.id);
-    }
+    // Always adds, exactly like a desktop click -- repeated taps on the
+    // same talent spend repeated points up to its max. Removing a point is
+    // a separate, explicit action via the minus button below, never an
+    // implicit second tap on the icon itself.
+    onAdd();
+    onTap(talent.id);
+    buttonRef.current?.blur();
+    window.setTimeout(() => {
+      justTouchedRef.current = false;
+    }, 300);
+  }
+
+  function handleFocus() {
+    // Skip the hover tooltip if this focus was just a side effect of the
+    // tap/touch gesture above -- a real keyboard Tab a moment later still
+    // shows it normally.
+    if (justTouchedRef.current) return;
+    showHover();
   }
 
   const invested = rank > 0;
@@ -140,14 +177,14 @@ export default function TalentNode({
         : "text-foreground";
 
   return (
-    <div style={{ gridColumn: talent.col, gridRow: row }} className="relative aspect-square">
+    <div style={{ gridColumn: talent.col, gridRow: talent.tier }} className="relative aspect-square">
       <button
         ref={buttonRef}
         type="button"
         data-cursor={locked ? "gear" : undefined}
         onMouseEnter={showHover}
         onMouseLeave={hideHover}
-        onFocus={showHover}
+        onFocus={handleFocus}
         onBlur={hideHover}
         onTouchStart={handleTouchStart}
         onTouchMove={clearLongPressTimer}
@@ -183,18 +220,29 @@ export default function TalentNode({
       {isTapped && (
         // Sits outside the button (which clips via overflow-hidden for its
         // icon) so the badge can overlap the icon's top-left corner without
-        // being cut off by that clip.
-        <span
-          aria-hidden="true"
-          className="absolute -left-1 -top-1 z-10 flex h-4 w-4 items-center justify-center rounded-full bg-red-500/90 text-xs font-bold leading-none text-white ring-1 ring-background"
+        // being cut off by that clip. A real button, not a decorative span
+        // -- it needs its own tap/click target to actually remove a point.
+        <button
+          type="button"
+          aria-label={`Remove a point from ${talent.name}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            onRemove();
+          }}
+          onTouchEnd={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onRemove();
+          }}
+          className="absolute -left-1 -top-1 z-10 flex h-4 w-4 items-center justify-center rounded-full bg-red-500/90 text-xs font-bold leading-none text-white ring-1 ring-background hover:bg-red-400"
         >
           −
-        </span>
+        </button>
       )}
 
-      {hoverPos &&
+      {tooltipPos &&
         createPortal(
-          <TooltipCard style={{ top: hoverPos.top, left: hoverPos.left, width: TOOLTIP_WIDTH }}>
+          <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
             <TooltipName>{talent.name}</TooltipName>
             <TooltipRank>
               Rank {rank} of {talent.maxRank} · {typeLabel}
