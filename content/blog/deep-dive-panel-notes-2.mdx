@@ -1,0 +1,84 @@
+---
+title: "Deep Dive Panel Notes #2: Paladins, Rulesets, and What I'm Still Not Sure About"
+date: "2026-09-15"
+summary: "My own notes from watching the 9/13 Deep Dive panel -- transmog, Legacy, the new ruleset structure, and a long look at the Paladin rework, plus the questions it left me with."
+tags: ["deep-dive", "beta", "paladin"]
+status: "published"
+heroImage: "/images/blog/deep-dive-panel-notes-2/hero.webp"
+heroAlt: "An official slide reading Server Updates: Gameplay Style, showing four ruleset cards -- Normal, PvP, Roleplay, and Hardcore, the last marked Arriving Later"
+---
+
+I watched the 9/13 Deep Dive panel live and took my own notes rather than working off anyone else's writeup, so this one's going to read differently from the usual recap. Less "here's what was announced," more "here's what I actually wrote down while it was happening," including the parts where I'm not sure I followed correctly. Where I'm guessing or reacting rather than reporting, I'll say so.
+
+## Transmog, and the parts that matter more than the toggle
+
+The headline is that transmog exists and you can flip it on or off anytime through an NPC -- fine, expected, every modern WoW has this by now. The more interesting stuff is in the fine print. Appearances unlock on loot for bind-on-pickup, uncommon, and rare items, which means you're building your wardrobe passively just by playing, not by farming a specific vendor or achievement. Epic appearances are the exception -- those stay reserved to whoever actually looted them, which reads like a deliberate decision to keep epic drops feeling like a personal event rather than something anyone can just buy or borrow the look of later.
+
+Two other details stood out. First, you can only transmog an item to something of the same armor type -- so no putting a cloth robe's look on plate, which keeps the fantasy of "this is armor a warrior would wear" intact even when you're chasing a specific appearance. Second, and this is the one I actually care about: there's a new per-slot appearance override, meaning a stat upgrade that happens to look worse doesn't force you to break your outfit. That's a real quality-of-life fix -- anyone who's ever refused an upgrade because it clashed with their transmog knows exactly the problem this solves.
+
+Appearances are level-locked and get removed at 60, except for rank-gated PvP gear. I don't have a strong read on why that carve-out exists yet -- possibly to keep PvP rank rewards feeling exclusive at endgame specifically. Worth watching for more context.
+
+<GuideImage src="/images/blog/deep-dive-panel-notes-2/transmog-without.webp" alt="Two World of Warcraft characters wearing visually mismatched gear -- a green robe and a purple-and-pink clashing outfit" />
+<GuideImage src="/images/blog/deep-dive-panel-notes-2/transmog-with.webp" alt="The same two characters after transmog, now wearing a coordinated red-and-gold set and a matched purple-and-gold set" />
+
+## Legacy System: three trees now, more later
+
+Legacy hasn't changed shape since the last time I wrote about it: three trees (Adventure, Professions, Resourcefulness), with more said to be planned down the line. Points are earned account-wide but spent per-character, and every reward in the system is cosmetic-only -- no stat power hiding in there. That's a good design line to hold, and it's the same account-wide-currency-spent-per-character pattern from the last panel I covered, so nothing here surprised me. The three-tree icon selector shown on stream is a clean, simple UI -- picking a tree feels more like picking a specialization than filling out a spreadsheet, which I think is the right instinct for a system meant to reward playing normally rather than optimizing.
+
+<GuideImage src="/images/blog/deep-dive-panel-notes-2/legacy-trees.webp" alt="Three Legacy tree selection icons: Professions, Adventure, and Resourcefulness, each showing 0 points spent" />
+
+## Server infrastructure: no realms, four rulesets, and a system I'm still parsing
+
+This is the section where my notes have the most question marks next to them.
+
+Forever is going realmless -- there's no picking a specific server, characters exist against four rulesets instead: Normal, PvP, Roleplay, and Hardcore. Hardcore arrives later than the other three and is described as its own closed ecosystem. I'll be honest, I don't fully have my head around what "realmless" means in practice yet. Does everyone on a ruleset share one shard, sharded dynamically, or something else entirely? The panel didn't get into the technical shape of it, at least not in the part I caught, so I'm flagging my own uncertainty here rather than guessing at an architecture I don't actually know.
+
+A few mechanics did come through clearly. Hardcore has one-way transfers out on death -- die permanently, and your character can move to one of the other rulesets to keep playing, but there's no route back into Hardcore for that character. Legacy points flow one direction too: Hardcore feeds Legacy progress into your other rulesets' pool, but points earned elsewhere don't flow back into Hardcore. That's a coherent design if the goal is making Hardcore feel like a genuine one-shot challenge mode that still rewards the rest of your account -- you get something permanent out of a permanent-death game type, which takes some sting out of losing a character.
+
+Two more details: character names are apparently two-part now (I didn't catch full specifics on the format), and there's a language-preference matching system, which I'm reading as an attempt to group players by language across a realmless population rather than relying on realm-as-community the way Classic always has. Both plausible, both things I'd like confirmed before I'd write about them as settled.
+
+The one I want to flag clearly: faction balance was mentioned as something the new system accounts for, via unspecified "mechanisms." That's the actual word used, as far as I caught it, and no further detail was given. I don't know if that means queue-based balancing, incentives, hard caps, or something else. Anyone telling you exactly how faction balance works in the realmless system right now is filling in a blank Blizzard left blank on purpose or by omission -- I'd treat any confident claim about this as speculation until there's a follow-up.
+
+Also, a smaller open question that's been bugging me since the panel: a lot of Classic's old world PvP flagging and stealth-detection rules talk about "outdoors" as a state. In a realmless, ruleset-based world, does "outdoors" still mean the same thing across rulesets that can apparently see or interact differently? I don't have an answer. Flagging it because it feels like exactly the kind of rule that quietly breaks or quietly needs restating when the underlying server model changes underneath it.
+
+## Combat and itemization: a lot of small changes that add up
+
+Hit and crit are unified across attack types now instead of having separate mechanics per damage type, and weapon skill got rebalanced alongside it -- this reads like general combat-math cleanup rather than a flashy feature, but it's the kind of thing that quietly fixes a dozen small Classic annoyances (like weapon skill being nearly mandatory itemization for years). Healing items now grant bonus damage too, which is a small thing that actually matters a lot for hybrid classes who've spent two decades staring at healing-only trinkets they can't use in a damage set.
+
+There's a new stat, Expertise, which reduces the chance your target parries or dodges you -- a real answer to Classic's infamous position-behind-boss requirement, if it lands the way it sounds. Spellcaster weapons apparently matter starting at level 10 instead of being a non-factor until much later, which should make early caster gearing feel less like busywork.
+
+The itemization examples I saw back this up. Trinkets are getting more varied and situational (a Worgen-specific stun trinket, for instance, rather than another flat stat stick), and there are biome- and species-based effects baked into item text now -- extra spell piercing specifically in forest zones, triple damage against Undead and Swine, that kind of thing. It's a itemization design philosophy: make gear tell you something about the world it exists in, not just a stat block. Between that and the "broad re-itemization pass" mentioned, plus a stated push toward more valuable world-drop epics and rare drops, the overall signal is that itemization is getting more texture across the board, not just at the top end.
+
+<GuideImage src="/images/blog/deep-dive-panel-notes-2/items-and-gear.webp" alt="Four World of Warcraft item tooltips showing biome-specific and situational effects, including spell piercing bonuses in forest areas and bonus damage against Undead and Swine" />
+
+## Racials: six new combos, and a real floor for every race
+
+Six new race/class combinations were confirmed -- I don't have the full list written down cleanly enough to repeat here, so I'm not going to guess at it. The structural change is the one worth remembering: every race now gets a guaranteed 2 active abilities and 2 passive abilities, which sets a real baseline instead of leaving some races feeling racial-poor the way a few classic combos always have.
+
+## Talent philosophy: baking in the boring stuff
+
+The stated direction is that a lot of the old flat stat-buff talents -- the ones nobody skipped but nobody was excited about either -- are getting baked into class baseline instead of sitting in the tree as a talent tax. The explicit goal, in their words, is making every talent viable. I like this direction on principle: it's the same instinct behind Consecration and Blessing of Kings going baseline for Paladins (more on that below), and it should free up real design space in the trees instead of "spend 5 points here because the alternative is strictly worse."
+
+## The Paladin deep dive
+
+This was the most detailed section of the whole panel, and it's the one I took the most notes on, so I'm giving it the most space here too.
+
+**Holy Strike is back.** This is apparently restored from the original 2004 beta plans -- a baseline Retribution strike that several talents build on. I don't have independent confirmation of the "original 2004 beta" framing beyond what was said on stage, but if true, it's a neat bit of Paladin archaeology: a piece of the class that existed in some form before Classic ever shipped, finally making it in.
+
+**Judgement no longer consumes your seal**, which sounds like a small tooltip change but reshapes the whole seal-management rotation -- you're not burning your buff every time you judge anymore. Combined with **Seal of Fury**, which adds an absorb shield and makes Judgement taunt at 10 yards, this is the panel's actual headline for the class: Paladins can tank for real now, not "off-tank in an emergency," but with a designed taunt tool. That's a genuinely new role capability, not a numbers tweak.
+
+**Consecration** gets bonus damage to the first four targets it hits, which is a nice bit of AoE tuning that rewards positioning without making it a mindless AoE button.
+
+The **Holy tree** picked up several tools worth naming individually: Voice of Truth gives a silence with interrupt immunity attached, which is an unusual combination -- normally you'd expect a silence to be interruptible by the same category of effects it applies. Reverence grants in-combat Spirit regeneration, which matters a lot for a caster hybrid that's historically had to choose between casting and regenerating. Infusion of Light reduces cast time, Holy Shock and Consecrated Ground round out the toolkit, and Light's Vigil is a party-wide heal -- the first real party-wide Holy tool I've heard mentioned for this kit.
+
+The **Protection tree** leans into the new tank identity: Improved Seal of Fury and Shield Specialization apparently have mana synergy with each other (I'd want to see the actual tooltip math before committing to exactly how that interaction works), Swift Judgement resets on a taunt resist -- a sensible failsafe for a class whose entire new tanking identity runs through one taunt spell -- and Templar's Bulwark, Reckoning off blocks, and Iron Creed round out a tree that now reads like an actual tanking specialization instead of "Holy but with more Stamina."
+
+The **Retribution tree** got a comparison I found genuinely useful: Vindication was compared directly to Demoralizing Shout/Roar, which tells you its design intent immediately if you already know those abilities -- it's the Paladin's version of a debuff that trades your damage for the target's. Sacred Arbiter shares judgements in some fashion (I didn't catch the exact mechanic clearly enough to describe it precisely), Champion of the Light and Instrument of Law add more identity to the tree, and Twist of Light brings back seal twisting -- swapping seals mid-fight for value -- as a deliberate playstyle rather than a Classic-era exploit.
+
+**What they were upfront about:** Paladins still don't get an interrupt, still don't get a slow, still have short range compared to other healers, and still have limited party healing -- but they're being pitched as still the best single-target healer in the game. That's a coherent set of tradeoffs if it holds up: a class that's now viable to tank, strong in one specific healing lane, and better at melee DPS utility, while deliberately staying out of the interrupt/slow/party-heal space other classes cover. Whether "still the best single-target healer" survives contact with the beta is exactly the kind of claim I want to see tested rather than taken at face value.
+
+## Confidence check
+
+Everything above is my own notes from watching the panel live, not a transcript and not cross-checked against a recording -- treat anything I've flagged as uncertain (the realmless architecture, the exact faction-balance mechanism, the precise Sacred Arbiter/Improved Seal of Fury mechanics, the six new race/class combos) as genuinely open rather than confirmed. Where I've editorialized -- the transmog override being the sleeper best change, the Paladin tradeoffs being coherent -- that's opinion, not reporting, and I've tried to keep it clearly marked as such throughout.
+
+Source: personal notes taken while watching the WoW: Forever Deep Dive panel, 13 Sep 2026.
