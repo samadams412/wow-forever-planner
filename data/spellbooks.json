@@ -981,7 +981,7 @@
       "notes": [
         "Baseline now: Fear Ward, in the Holy tab. Devouring Plague is a normal Shadow spell, rank 3 here on a Night Elf.",
         "Troll racials: a level 38 Troll Shadow Priest on Xaryu's stream had Hex of Weakness rank 3 and Shadowguard rank 3 in the Shadow tab, plus Shadow Word: Pain rank 5 and Mind Blast rank 5.",
-        "Elune's Grace changed: 5 min cooldown, 50% chance to be missed by melee and ranged for 15 sec or until missed 3 times.",
+        "Night Elf only: this book was read on a Night Elf, so Elune's Grace and Starshards were in it. They're racials, not Priest spells, so they live under the race-specific bonus spells below, with every other race's pair.",
         "No Shadow Word: Death by 38. Talents mention it, so it comes later.",
         "Ranks for Flash Heal, Heal, Renew, Power Word: Shield, Mind Blast, Holy Fire, Psychic Scream, Mind Control, Shadow Protection, Mind Vision and Divine Spirit come from that Troll Priest's tooltips."
       ],
@@ -998,11 +998,6 @@
             {
               "name": "Divine Spirit",
               "icon": "spell_holy_divinespirit"
-            },
-            {
-              "name": "Elune's Grace",
-              "rank": 1,
-              "icon": "spell_holy_elunesgrace"
             },
             {
               "name": "Inner Fire",
@@ -1027,11 +1022,6 @@
             {
               "name": "Shackle Undead",
               "icon": "spell_nature_slow"
-            },
-            {
-              "name": "Starshards",
-              "rank": 4,
-              "icon": "spell_arcane_starfire"
             }
           ]
         },
