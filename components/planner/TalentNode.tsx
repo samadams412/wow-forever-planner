@@ -4,7 +4,7 @@ import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { STATUS_DOT_CLASS } from "@/lib/talent-status";
-import { POINTS_PER_ROW, tierUnlocked } from "@/lib/talent-rules";
+import { POINTS_PER_ROW, MAX_TALENT_POINTS, tierUnlocked } from "@/lib/talent-rules";
 import {
   TooltipCard,
   TooltipName,
@@ -26,6 +26,7 @@ export default function TalentNode({
   compareMode,
   treeName,
   pointsInTree,
+  totalSpent,
 }: {
   talent: Talent;
   rank: number;
@@ -36,6 +37,7 @@ export default function TalentNode({
   compareMode?: boolean;
   treeName: string;
   pointsInTree: number;
+  totalSpent: number;
 }) {
   const { ref: buttonRef, pos: tooltipPos, show: showTooltip, hide: hideTooltip } =
     useHoverTooltip<HTMLButtonElement>(TOOLTIP_WIDTH);
@@ -53,6 +55,11 @@ export default function TalentNode({
   const typeLabel = talent.passive ? "Passive" : (talent.cost ?? "Active");
   const tierPointsRequired = POINTS_PER_ROW * (talent.tier - 1);
   const tierLocked = !tierUnlocked(talent.tier, pointsInTree);
+  // Independent of tier/prereq gating -- the tree may be fully unlocked and
+  // this talent still un-clickable because every point is already spent
+  // somewhere else. Point auto-shifting isn't a feature (matches the
+  // original game), so the fix here is just telling the player what to do.
+  const capReached = rank < talent.maxRank && totalSpent >= MAX_TALENT_POINTS;
 
   const borderClass = locked
     ? "border-border/40"
@@ -132,6 +139,12 @@ export default function TalentNode({
             {tierLocked && (
               <TooltipRequirement>
                 Requires {tierPointsRequired} points in {treeName} Talents
+              </TooltipRequirement>
+            )}
+            {capReached && (
+              <TooltipRequirement>
+                All {MAX_TALENT_POINTS} talent points are spent -- unlearn a point elsewhere before you can
+                spend one here.
               </TooltipRequirement>
             )}
             {compareMode && talent.classic && (

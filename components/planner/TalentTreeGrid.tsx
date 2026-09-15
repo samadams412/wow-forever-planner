@@ -86,6 +86,7 @@ export default function TalentTreeGrid({
             compareMode={compareMode}
             treeName={tree.name}
             pointsInTree={spent}
+            totalSpent={totalSpent}
           />
         ))}
 
