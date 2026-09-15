@@ -47,6 +47,7 @@ export default function NotFound() {
         <Link
           href="/"
           className="mt-7 inline-block rounded-lg bg-accent px-5 py-2.5 font-medium text-background transition-colors hover:bg-accent-hover"
+          data-cursor="hearth"
         >
           Back to camp
         </Link>
