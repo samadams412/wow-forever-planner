@@ -192,7 +192,9 @@ export default function PlannerClient({
           <button
             type="button"
             onClick={handleOpenSaveDialog}
-            className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
+            disabled={totalSpent === 0}
+            title={totalSpent === 0 ? "Spend at least one talent point to save a build" : undefined}
+            className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border"
           >
             Save build
           </button>
