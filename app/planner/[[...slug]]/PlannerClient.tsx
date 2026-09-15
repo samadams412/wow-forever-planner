@@ -12,6 +12,9 @@ import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
 import CompareLegend from "@/components/planner/CompareLegend";
 import Dialog from "@/components/site/Dialog";
+import Collapsible from "@/components/site/Collapsible";
+import SpellbookBook from "@/components/reference/SpellbookBook";
+import { spellbooks } from "@/lib/spellbooks";
 
 const DEFAULT_CLASS_ID = "warrior";
 
@@ -231,6 +234,22 @@ export default function PlannerClient({
             </div>
           )}
         </div>
+
+        {classData && (
+          <Collapsible
+            title={`${classLabel(classData.class)} spellbook at level 38`}
+            subtitle={`Demo race: ${spellbooks.classes[classData.class].demoRace}`}
+            icon={
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={mediumIconUrl(CLASS_ICON[classData.class])} alt="" className="h-8 w-8 rounded" />
+            }
+          >
+            {/* Keyed on class so switching classes resets the book's own
+                tab/page state instead of carrying over a tab index that may
+                not exist on the new class's spec tabs. */}
+            <SpellbookBook key={classData.class} classId={classData.class} book={spellbooks.classes[classData.class]} />
+          </Collapsible>
+        )}
       </div>
 
       <div className="mt-8">
