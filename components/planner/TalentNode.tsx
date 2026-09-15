@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
@@ -83,11 +83,43 @@ export default function TalentNode({
   // touch devices.
   const justTouchedRef = useRef(false);
 
+  // Mobile-only "acknowledged" pulse + haptic tick on an actual rank
+  // change. Set true right before a touch-driven onAdd/onRemove call and
+  // cleared by a desktop click, so the effect below -- which only reacts
+  // once `rank` really changes -- knows whether that change came from a
+  // touch tap rather than a mouse click, without a separate viewport or
+  // pointer-type check.
+  const touchChangeRef = useRef(false);
+  const prevRankRef = useRef(rank);
+  const pulseCounter = useRef(0);
+  const [pulse, setPulse] = useState<{ dir: "add" | "remove"; key: number } | null>(null);
+
   useEffect(() => {
     if (isActive) showActive();
     else hideActive();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive]);
+
+  useEffect(() => {
+    if (rank !== prevRankRef.current) {
+      const dir: "add" | "remove" = rank > prevRankRef.current ? "add" : "remove";
+      if (touchChangeRef.current) {
+        pulseCounter.current += 1;
+        setPulse({ dir, key: pulseCounter.current });
+        if (typeof navigator !== "undefined" && navigator.vibrate) {
+          try {
+            navigator.vibrate(dir === "add" ? 10 : [10, 30, 10]);
+          } catch {
+            // Vibration can throw in some restricted contexts (e.g. an
+            // iframe without the "vibrate" permission) -- the pulse
+            // animation alone is still plenty of feedback either way.
+          }
+        }
+      }
+      touchChangeRef.current = false;
+      prevRankRef.current = rank;
+    }
+  }, [rank]);
 
   function clearLongPressTimer() {
     if (longPressTimer.current !== null) {
@@ -125,6 +157,7 @@ export default function TalentNode({
     // same talent spend repeated points up to its max. Removing a point is
     // a separate, explicit action via the minus button below, never an
     // implicit second tap on the icon itself.
+    touchChangeRef.current = true;
     onAdd();
     onTap(talent.id);
     buttonRef.current?.blur();
@@ -190,21 +223,34 @@ export default function TalentNode({
         onTouchMove={clearLongPressTimer}
         onTouchEnd={handleTouchEnd}
         onClick={(e) => {
+          // A real mouse click, not touch -- don't let a pulse fire for it,
+          // and invalidate any leftover touch flag from an earlier tap that
+          // never actually changed rank (e.g. a locked/capped talent).
+          touchChangeRef.current = false;
           if (e.shiftKey) onRemove();
           else onAdd();
         }}
         onContextMenu={(e) => {
           e.preventDefault();
+          touchChangeRef.current = false;
           onRemove();
         }}
         className={`relative block h-full w-full overflow-hidden rounded border-2 transition-colors ${borderClass}`}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={iconUrl(talent.icon)}
-          alt={talent.name}
-          className={`h-full w-full object-cover ${locked ? "grayscale" : ""}`}
-        />
+        {/* Wrapped separately from the button so the pulse animation (keyed
+            to force a restart on every rapid repeat tap) only remounts this
+            small span, never the interactive button/ref itself. */}
+        <span
+          key={pulse ? `${pulse.dir}-${pulse.key}` : "idle"}
+          className={`block h-full w-full ${pulse ? (pulse.dir === "add" ? "talent-pulse-add" : "talent-pulse-remove") : ""}`}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={iconUrl(talent.icon)}
+            alt={talent.name}
+            className={`h-full w-full object-cover ${locked ? "grayscale" : ""}`}
+          />
+        </span>
         <span
           className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[12px] font-semibold leading-tight ${badgeTextClass}`}
         >
@@ -229,11 +275,13 @@ export default function TalentNode({
           aria-label={`Remove a point from ${talent.name}`}
           onClick={(e) => {
             e.stopPropagation();
+            touchChangeRef.current = false;
             onRemove();
           }}
           onTouchEnd={(e) => {
             e.preventDefault();
             e.stopPropagation();
+            touchChangeRef.current = true;
             onRemove();
           }}
           className="absolute -left-1 -top-1 z-10 flex h-4 w-4 items-center justify-center rounded-full bg-red-500/90 text-xs font-bold leading-none text-white ring-1 ring-background hover:bg-red-400"

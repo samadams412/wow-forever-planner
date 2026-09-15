@@ -294,3 +294,39 @@ body {
     transform: translateX(220%);
   }
 }
+
+/* Mobile talent tap feedback: a quick "acknowledged" bounce on the icon
+   itself when a point is spent or removed by touch -- never on desktop
+   clicks, see TalentNode. Kept well under 200ms so it can't feel like it's
+   in the way of rapid repeated taps. */
+@keyframes talent-pulse-add {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.16);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.talent-pulse-add {
+  animation: talent-pulse-add 160ms ease-out;
+}
+
+@keyframes talent-pulse-remove {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.86);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.talent-pulse-remove {
+  animation: talent-pulse-remove 160ms ease-out;
+}
