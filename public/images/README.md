@@ -5,9 +5,9 @@ public/images/
   hero/    homepage hero background(s)
   og/      opengraph/social preview image(s)
   guides/
-    <zone-or-dungeon-slug>/   one folder per guide, e.g. mount-hyjal/
+    <zone-or-dungeon-slug>/   one folder per guide (none published yet)
   blog/
-    <post-slug>/              one folder per post, e.g. zephras-isle/
+    <post-slug>/              one folder per post, e.g. mount-hyjal/
   logo/    the runestone mark variants (carved/forged/ember)
 ```
 
