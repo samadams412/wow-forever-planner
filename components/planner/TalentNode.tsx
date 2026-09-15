@@ -16,6 +16,9 @@ import {
 } from "./TooltipCard";
 
 const TOOLTIP_WIDTH = 260;
+// Standard tap-vs-scroll distinction: a touch that travels further than this
+// before lifting is a scroll that happened to pass over the icon, not a tap.
+const TAP_MOVE_THRESHOLD_PX = 10;
 
 export default function TalentNode({
   talent,
@@ -77,6 +80,13 @@ export default function TalentNode({
   const isActive = talent.id === (peekTalentId ?? tappedTalentId);
   const longPressTimer = useRef<number | null>(null);
   const longPressFired = useRef(false);
+  // Where the touch started, and whether it's since traveled further than
+  // TAP_MOVE_THRESHOLD_PX -- distinguishes a deliberate tap from a scroll
+  // gesture that happens to pass over this icon (which must not spend a
+  // point or open the tooltip, even though the finger lifts while still
+  // over the icon).
+  const touchStartPos = useRef<{ x: number; y: number } | null>(null);
+  const movedPastThresholdRef = useRef(false);
   // Set for the duration of a touch gesture (plus a short tail) so the
   // focus a tap leaves behind doesn't also fire the desktop hover tooltip,
   // which previously produced two tooltips on screen at once on real
@@ -128,7 +138,10 @@ export default function TalentNode({
     }
   }
 
-  function handleTouchStart() {
+  function handleTouchStart(e: React.TouchEvent) {
+    const touch = e.touches[0];
+    touchStartPos.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
+    movedPastThresholdRef.current = false;
     justTouchedRef.current = true;
     longPressFired.current = false;
     clearLongPressTimer();
@@ -138,8 +151,34 @@ export default function TalentNode({
     }, 450);
   }
 
+  function handleTouchMove(e: React.TouchEvent) {
+    // Any movement cancels a pending long-press, same as before. Distance
+    // is tracked separately so a real scroll -- which naturally involves
+    // more movement than a long-press-in-place would tolerate anyway --
+    // still gets to suppress the tap/peek entirely once it lifts.
+    clearLongPressTimer();
+    const start = touchStartPos.current;
+    const touch = e.touches[0];
+    if (!start || !touch) return;
+    const dx = touch.clientX - start.x;
+    const dy = touch.clientY - start.y;
+    if (Math.hypot(dx, dy) > TAP_MOVE_THRESHOLD_PX) {
+      movedPastThresholdRef.current = true;
+    }
+  }
+
   function handleTouchEnd(e: React.TouchEvent) {
     clearLongPressTimer();
+    touchStartPos.current = null;
+    if (movedPastThresholdRef.current) {
+      // This was a scroll that happened to pass over the icon, not a tap --
+      // don't preventDefault, so the browser's own scroll/momentum handling
+      // finishes undisturbed, and don't spend a point or open anything.
+      window.setTimeout(() => {
+        justTouchedRef.current = false;
+      }, 300);
+      return;
+    }
     // Long-press already showed the tooltip for reading -- releasing just
     // ends the read, no point spent. Also stops the browser's follow-up
     // synthetic click from re-triggering add below.
@@ -220,7 +259,7 @@ export default function TalentNode({
         onFocus={handleFocus}
         onBlur={hideHover}
         onTouchStart={handleTouchStart}
-        onTouchMove={clearLongPressTimer}
+        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onClick={(e) => {
           // A real mouse click, not touch -- don't let a pulse fire for it,
