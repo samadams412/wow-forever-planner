@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { spellbooks, SPELLBOOK_CLASS_ORDER } from "@/lib/spellbooks";
 import { getClassRacials, type ClassRacialSpell } from "@/lib/class-racials";
+import { getClassAbilities } from "@/lib/class-abilities";
 import { mediumIconUrl, getRaceIconByName, CLASS_ICON, classLabel } from "@/lib/wow-data";
 import Collapsible from "@/components/site/Collapsible";
 import IconFan from "@/components/site/IconFan";
@@ -18,7 +19,10 @@ const SPELL_TAG_LABEL: Record<"new" | "changed", string> = {
   changed: "Changed",
 };
 
-function ClassRacialSpellCard({ spell }: { spell: ClassRacialSpell }) {
+// Generic ability card -- tag/meta/classicNote are all optional, so this
+// covers both race-specific bonus spells and the plainer class_abilities
+// entries (name/description/icon only) without a second implementation.
+function AbilityCard({ spell }: { spell: ClassRacialSpell }) {
   return (
     <div className="flex gap-2.5 rounded border border-border bg-background/40 p-2.5">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -76,13 +80,39 @@ function ClassRacialsSection({ classId }: { classId: string }) {
               </div>
               <div className="mt-1.5 space-y-2">
                 {spells.map((spell) => (
-                  <ClassRacialSpellCard key={spell.name} spell={spell} />
+                  <AbilityCard key={spell.name} spell={spell} />
                 ))}
               </div>
             </div>
           ))}
         </div>
         <p className="mt-3 text-xs text-foreground-muted/70">Source: {data.source}</p>
+      </Collapsible>
+    </div>
+  );
+}
+
+// Generic per-class "new & changed abilities" section -- driven entirely
+// by data/class-abilities.json, so nothing here is Warrior/Shaman-specific
+// even though those two currently have the most entries.
+function ClassAbilitiesSection({ classId }: { classId: string }) {
+  const data = getClassAbilities(classId);
+  if (!data || data.abilities.length === 0) return null;
+
+  const fanIcons = data.abilities.slice(0, 3).map((a) => a.icon);
+
+  return (
+    <div className="mt-4">
+      <Collapsible
+        title="New & changed abilities"
+        subtitle={`${data.abilities.length} confirmed from beta footage`}
+        icon={<IconFan icons={fanIcons} />}
+      >
+        <div className="space-y-2">
+          {data.abilities.map((ability) => (
+            <AbilityCard key={ability.name} spell={ability} />
+          ))}
+        </div>
       </Collapsible>
     </div>
   );
@@ -103,12 +133,17 @@ function ClassSection({ classId }: { classId: string }) {
       <SpellbookBook classId={classId} book={book} />
 
       {book.notes.length > 0 && (
-        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/90">
+        <ul className="mt-4 space-y-2 border-t border-border pt-3 text-xs leading-relaxed text-foreground-muted">
           {book.notes.map((note) => (
-            <li key={note}>{note}</li>
+            <li key={note} className="flex gap-2">
+              <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60" />
+              <span>{note}</span>
+            </li>
           ))}
         </ul>
       )}
+
+      <ClassAbilitiesSection classId={classId} />
 
       {book.notOpened.length > 0 && (
         <p className="mt-3 text-xs text-foreground-muted/70">

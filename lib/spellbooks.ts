@@ -17,19 +17,11 @@ export type SpellbookTab = {
   spells: SpellbookEntry[];
 };
 
-export type NewAbility = {
-  name: string;
-  status: "confirmed" | "unconfirmed";
-  note: string;
-  icon: string;
-};
-
 export type ClassSpellbook = {
   demoRace: string;
   notes: string[];
   notOpened: string[];
   tabs: SpellbookTab[];
-  newAbilities: NewAbility[];
 };
 
 export type SpellbooksData = {

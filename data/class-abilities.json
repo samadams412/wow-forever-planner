@@ -1,0 +1,223 @@
+{
+  "Paladin": {
+    "abilities": [
+      {
+        "name": "Judgement",
+        "description": "Changed. It no longer eats your seal. 10 yd range, 10 sec cooldown. Judging Seal of Fury taunts for 4 sec, so Paladins can tank pulls now.",
+        "icon": "spell_holy_righteousfury"
+      },
+      {
+        "name": "Seal of Fury",
+        "description": "The tank seal. Every hit adds Holy damage, and with a shield up you get an absorb worth half of it. Rank 4 by level 38.",
+        "icon": "spell_holy_sealoffury"
+      },
+      {
+        "name": "Holy Strike",
+        "description": "Baseline Ret strike on a 12 sec cooldown: weapon damage plus Holy. Rank 5 by 38. Several talents build on it.",
+        "icon": "spell_holy_crusaderstrike"
+      },
+      {
+        "name": "Blessing of Kings and Consecration",
+        "description": "Both trainable now, not talents. Consecration comes at level 20.",
+        "icon": "spell_magic_greaterblessingofkings"
+      }
+    ]
+  },
+  "Priest": {
+    "abilities": [
+      {
+        "name": "Shadow Word: Death",
+        "description": "Execute-style Shadow spell. Named by the Early Demise talent.",
+        "icon": "spell_shadow_demonicfortitude"
+      },
+      {
+        "name": "Devouring Plague",
+        "description": "A normal Shadow spell now, not an Undead racial. Rank 3 by 38, 1 min cooldown.",
+        "icon": "spell_shadow_blackplague"
+      },
+      {
+        "name": "Fear Ward",
+        "description": "Every Priest gets it. 3 min cooldown.",
+        "icon": "spell_holy_excorcism"
+      }
+    ]
+  },
+  "Hunter": {
+    "abilities": [
+      {
+        "name": "Aimed Shot",
+        "description": "Trainable now instead of a Marksmanship talent, and quicker: 2 sec cast, 6 sec cooldown, shared with Multi-Shot (Classic was a 3 sec cast). Rank 3 by 38. A reader caught the cast time on Xaryu's stream.",
+        "icon": "inv_spear_07"
+      },
+      {
+        "name": "Call Owl",
+        "description": "Call Pet is named after your pet. The demo Hunter's read Call Owl.",
+        "icon": "ability_hunter_beastcall"
+      },
+      {
+        "name": "Aspect of the Beast",
+        "description": "Changed. Rank 1 makes you untrackable and adds 50 melee attack power. Classic was untrackable only. Spotted by a reader on Xaryu's stream.",
+        "icon": "ability_mount_pinktiger"
+      }
+    ]
+  },
+  "Mage": {
+    "abilities": [
+      {
+        "name": "Comprehend Scroll",
+        "description": "New little ability: decipher an untranslated scroll. Seen on a Skyborne Mage.",
+        "icon": "inv_scroll_03"
+      },
+      {
+        "name": "Frostfire Bolt",
+        "description": "A bolt that is both Fire and Frost. Four talents mention it.",
+        "icon": "ability_mage_frostfirebolt"
+      }
+    ]
+  },
+  "Warlock": {
+    "abilities": [
+      {
+        "name": "Subjugate Demon",
+        "description": "Enslave Demon, renamed. Rank 1 by 38.",
+        "icon": "spell_shadow_enslavedemon"
+      },
+      {
+        "name": "Bane of Agony",
+        "description": "Curse of Agony, renamed. Bane of Doom the same. Banes and Curses are now separate, so you can run one of each.",
+        "icon": "spell_shadow_curseofsargeras"
+      },
+      {
+        "name": "Incubus",
+        "description": "Male counterpart to the Succubus, its own summon. Named by four Demonology talents.",
+        "icon": "spell_shadow_summonsuccubus"
+      }
+    ]
+  },
+  "Warrior": {
+    "abilities": [
+      {
+        "name": "Victory Rush",
+        "description": "Baseline, in the Arms tab. Instant, 30 sec cooldown: a melee hit that heals you for 10% of your maximum health, usable within 20 sec of killing something non-trivial. Read off Soda's stream via a reader.",
+        "icon": "ability_warrior_devastate"
+      },
+      {
+        "name": "Tactical Mastery",
+        "description": "A passive in the Arms tab now, not a talent. You keep up to 10 Rage when you change stances on your own, and the Arms talent Improved Tactical Mastery adds up to 15 more. Read off Soda's Warrior video via a reader.",
+        "icon": "ability_warrior_decisivestrike"
+      },
+      {
+        "name": "Intercept",
+        "description": "Still in the game: the Fury tree has Improved Intercept. It just isn't in the level 38 spellbook, so it's probably learned later than 30 now.",
+        "icon": "ability_rogue_sprint"
+      },
+      {
+        "name": "Slam",
+        "description": "Rank 3 by 38 (Classic reached that at 46) and it has a 15 sec cooldown now.",
+        "icon": "ability_warrior_decisivestrike"
+      },
+      {
+        "name": "Thunder Clap",
+        "description": "Changed. Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec and hits up to 4 targets, where Classic was 10% for 30. Read off Xaryu's stream, thanks to a reader.",
+        "icon": "spell_nature_thunderclap"
+      },
+      {
+        "name": "Bloodrage",
+        "description": "Still there, in the Protection tab. 116 health for 10 rage plus 10 more over 10 sec.",
+        "icon": "ability_racial_bloodrage"
+      },
+      {
+        "name": "Shield Wall",
+        "description": "Changed: 15 min cooldown, 60% less damage for 12 sec (Classic was 30 min, 75% for 10 sec). In Esfand's video it was ready while Retaliation was on cooldown, so the shared cooldown with Retaliation and Recklessness looks gone. Two readers flagged this.",
+        "icon": "ability_warrior_shieldwall"
+      },
+      {
+        "name": "Shield Block",
+        "description": "Changed: 2 charges and 7 sec baseline (Classic was 1 block for 5 sec). Still 10 Rage, 5 sec cooldown, Defensive Stance. Read from a Tyler1 spellbook screenshot a reader sent in.",
+        "icon": "ability_defend"
+      }
+    ]
+  },
+  "Rogue": {
+    "abilities": [
+      {
+        "name": "Mutilate",
+        "description": "New talent, Assassination row 5. Hits with both weapons for 75% damage each, 20% more on poisoned targets, and gives 2 combo points. Nine other talents feed it.",
+        "icon": "ability_rogue_shadowstrikes"
+      },
+      {
+        "name": "Venom",
+        "description": "New finisher at the bottom of Assassination. Your poisons do 30% more and apply 10% more often, longer per combo point.",
+        "icon": "ability_rogue_deadlybrew"
+      },
+      {
+        "name": "Thousand Cuts",
+        "description": "New Subtlety capstone. Each Rupture tick takes 3 Energy off your next Hemorrhage or Backstab, stacking to 5.",
+        "icon": "ability_rogue_slaughterfromtheshadows"
+      },
+      {
+        "name": "Axes",
+        "description": "Rogues can use one-handed axes now. The Hack and Slash talent lists Axe/Sword as a weapon group.",
+        "icon": "inv_axe_09"
+      }
+    ]
+  },
+  "Druid": {
+    "abilities": [
+      {
+        "name": "Omen of Clarity and Nature's Grasp",
+        "description": "Both trainable now, not talents. They're in the Balance tab at 38.",
+        "icon": "spell_nature_crystalball"
+      },
+      {
+        "name": "Revive",
+        "description": "New out-of-combat resurrection, 10 sec cast. Rebirth keeps its 30 min cooldown.",
+        "icon": "spell_nature_reincarnation"
+      },
+      {
+        "name": "Lacerate",
+        "description": "Bear bleed from later expansions, in Forever as a baseline ability: the Shredding Attacks talent cuts its Rage cost. Not in the level 38 spellbook, so it comes later. Thanks to a reader.",
+        "icon": "ability_druid_lacerate"
+      },
+      {
+        "name": "Cure Poison",
+        "description": "Gone. Abolish Poison is the only poison cure.",
+        "icon": "spell_nature_nullifypoison"
+      }
+    ]
+  },
+  "Shaman": {
+    "abilities": [
+      {
+        "name": "Lightning Bolt",
+        "description": "Half a second faster than Classic. Rank 7 is a 2.5 sec cast.",
+        "icon": "spell_nature_lightning"
+      },
+      {
+        "name": "Chain Lightning",
+        "description": "Also half a second faster: rank 1 is a 2 sec cast, 6 sec cooldown, 3 targets, each jump 30% weaker. Max Elemental Alacrity brings Lightning Bolt to the same 2 sec.",
+        "icon": "spell_nature_chainlightning"
+      },
+      {
+        "name": "Totemic Projection",
+        "description": "New. Pick a spot up to 30 yd away and your totems move there, not just to your feet. Seen on Guzu's stream: a green circle on the ground, then the totems appear by the mob. Totemic Recall is in too.",
+        "icon": "ability_shaman_totemrelocation"
+      },
+      {
+        "name": "Call of the Elements",
+        "description": "New: drops up to four totems from your Totem Bar in one 3 sec cast.",
+        "icon": "spell_nature_earthbind"
+      },
+      {
+        "name": "Ghost Wolf",
+        "description": "Base cast is 2 sec now, down from 3 in Classic. Improved Ghost Wolf takes 1 sec per rank and lets it work indoors, so at 2/2 it is instant: that is what Guzu's tooltip showed. Readers caught both halves of this.",
+        "icon": "spell_nature_spiritwolf"
+      },
+      {
+        "name": "Fire Nova",
+        "description": "A spell now, not a totem: 30 yd range, instant, 10 sec cooldown, and it blasts everything within 10 yd of your active Fire totem (rank 3 does 206 to 231 at 38). Improved Fire Nova trims 2 sec off the cooldown. Read on Esfand's stream.",
+        "icon": "spell_fire_sealoffire"
+      }
+    ]
+  }
+}
