@@ -2,7 +2,9 @@ export type SavedBuild = {
   id: string;
   name: string;
   classId: string;
-  raceId: string | null;
+  // Race stopped being part of the planner's build state -- kept optional,
+  // read-nowhere, purely so builds saved before that change still parse.
+  raceId?: string | null;
   buildCode: string;
   createdAt: number;
 };
@@ -34,12 +36,7 @@ export function getSavedBuilds(): SavedBuild[] {
   return readAll().sort((a, b) => b.createdAt - a.createdAt);
 }
 
-export function saveBuild(build: {
-  name: string;
-  classId: string;
-  raceId: string | null;
-  buildCode: string;
-}): SavedBuild | null {
+export function saveBuild(build: { name: string; classId: string; buildCode: string }): SavedBuild | null {
   const entry: SavedBuild = {
     id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     createdAt: Date.now(),

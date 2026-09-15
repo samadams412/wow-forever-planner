@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { races, getRaceById, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON } from "@/lib/wow-data";
+import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
 import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
@@ -124,7 +124,7 @@ export default function PlannerClient({
     const name = buildName.trim();
     if (!name || !classData) return;
     const code = Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : "";
-    const saved = saveBuild({ name, classId, raceId: null, buildCode: code });
+    const saved = saveBuild({ name, classId, buildCode: code });
     if (!saved) {
       setSaveError(true);
       return;
@@ -312,7 +312,6 @@ export default function PlannerClient({
         ) : (
           <ul className="mt-3 max-h-80 space-y-2 overflow-y-auto">
             {savedBuilds.map((build) => {
-              const race = build.raceId ? getRaceById(build.raceId) : undefined;
               return (
                 <li
                   key={build.id}
@@ -327,8 +326,7 @@ export default function PlannerClient({
                   <div className="min-w-0 flex-1">
                     <div className="truncate text-sm font-medium text-foreground">{build.name}</div>
                     <div className="truncate text-xs text-foreground-muted">
-                      {classLabel(build.classId)} · {race?.name ?? "No race"} ·{" "}
-                      {new Date(build.createdAt).toLocaleDateString()}
+                      {classLabel(build.classId)} · {new Date(build.createdAt).toLocaleDateString()}
                     </div>
                   </div>
                   <button
