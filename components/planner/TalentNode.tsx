@@ -4,6 +4,7 @@ import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { STATUS_DOT_CLASS } from "@/lib/talent-status";
+import { POINTS_PER_ROW, tierUnlocked } from "@/lib/talent-rules";
 import {
   TooltipCard,
   TooltipName,
@@ -23,6 +24,8 @@ export default function TalentNode({
   onRemove,
   prereqName,
   compareMode,
+  treeName,
+  pointsInTree,
 }: {
   talent: Talent;
   rank: number;
@@ -31,6 +34,8 @@ export default function TalentNode({
   onRemove: () => void;
   prereqName?: string;
   compareMode?: boolean;
+  treeName: string;
+  pointsInTree: number;
 }) {
   const { ref: buttonRef, pos: tooltipPos, show: showTooltip, hide: hideTooltip } =
     useHoverTooltip<HTMLButtonElement>(TOOLTIP_WIDTH);
@@ -38,8 +43,16 @@ export default function TalentNode({
   const invested = rank > 0;
   const maxed = rank === talent.maxRank;
   const locked = !invested && !canAdd;
-  const currentRankText = rank > 0 ? talent.ranks[rank - 1] : null;
-  const nextRankText = rank < talent.maxRank ? talent.ranks[rank] : null;
+  // A single-rank talent at 0 still shows its (only) rank text, matching
+  // the reference tooltip's "Rank 0 of 1" case -- there's no other rank to
+  // preview instead. A multi-rank talent at 0 has nothing "current" yet,
+  // so it shows only the Next Rank preview rather than duplicating that
+  // same text as both "current" and "next".
+  const currentRankText = rank > 0 ? talent.ranks[rank - 1] : talent.maxRank === 1 ? talent.ranks[0] : null;
+  const nextRankText = talent.maxRank > 1 && rank < talent.maxRank ? talent.ranks[rank] : null;
+  const typeLabel = talent.passive ? "Passive" : (talent.cost ?? "Active");
+  const tierPointsRequired = POINTS_PER_ROW * (talent.tier - 1);
+  const tierLocked = !tierUnlocked(talent.tier, pointsInTree);
 
   const borderClass = locked
     ? "border-border/40"
@@ -100,13 +113,14 @@ export default function TalentNode({
           <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
             <TooltipName>{talent.name}</TooltipName>
             <TooltipRank>
-              Rank {rank}/{talent.maxRank}
+              Rank {rank} of {talent.maxRank} · {typeLabel}
             </TooltipRank>
             {currentRankText && <TooltipDescription>{formatTooltipText(currentRankText)}</TooltipDescription>}
             {nextRankText && (
-              <TooltipDescription muted>
-                Next Rank: {formatTooltipText(nextRankText)}
-              </TooltipDescription>
+              <>
+                <TooltipRank>Next Rank</TooltipRank>
+                <TooltipDescription>{formatTooltipText(nextRankText)}</TooltipDescription>
+              </>
             )}
             {talent.prereq && (
               <TooltipRequirement>
@@ -115,6 +129,11 @@ export default function TalentNode({
               </TooltipRequirement>
             )}
             {talent.reqText && <TooltipRequirement>{talent.reqText}</TooltipRequirement>}
+            {tierLocked && (
+              <TooltipRequirement>
+                Requires {tierPointsRequired} points in {treeName} Talents
+              </TooltipRequirement>
+            )}
             {compareMode && talent.classic && (
               <TooltipClassicNote
                 status={talent.status}

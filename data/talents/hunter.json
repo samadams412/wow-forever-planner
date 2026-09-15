@@ -29,7 +29,8 @@
             "maxRank": 5,
             "text": "While Aspect of the Hawk is active, all normal ranged attacks have a 1% chance of increasing ranged attack speed by 30% for 12 sec.",
             "renamedFrom": "Improved Aspect of the Hawk"
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_endurance_training",
@@ -55,7 +56,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the Health of your pets by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_focused_fire",
@@ -73,7 +75,8 @@
           "icon": "ability_hunter_focusfire",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_improved_aspect_of_the_monkey",
@@ -97,7 +100,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases the Dodge bonus of your Aspect of the Monkey by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_pathfinding",
@@ -120,7 +124,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the speed bonus of your Aspect of the Cheetah and Aspect of the Pack by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_improved_revive_pet",
@@ -143,7 +148,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Revive Pet's casting time is reduced by 3 sec, mana cost is reduced by 20%, and increases the health your pet returns with by an additional 15%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_bestial_swiftness",
@@ -165,7 +171,8 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases the outdoor movement speed of your pets by 30%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_unleashed_fury",
@@ -191,7 +198,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage done by your pets by 4%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_improved_mend_pet",
@@ -214,7 +222,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Gives the Mend Pet spell a 15% chance of cleansing 1 Curse, Disease, Magic or Poison effect from the pet each tick."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_ferocity",
@@ -240,7 +249,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the critical strike chance of your pets by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_summon_hawk",
@@ -257,7 +267,9 @@
           "icon": "ability_eyeoftheowl",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "80 Mana | 35 yd range | Instant | 6 sec cooldown"
         },
         {
           "id": "beast_mastery_spirit_bond",
@@ -280,7 +292,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "While your pet is active, you and your pet will regenerate 1% of total health every 10 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_intimidation",
@@ -305,7 +318,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Command your pet to intimidate the target on the next successful melee attack, causing a high amount of threat and stunning the target for 3 sec."
-          }
+          },
+          "passive": false,
+          "cost": "84 Mana | 100 yd range | Instant | 1 min cooldown"
         },
         {
           "id": "beast_mastery_bestial_discipline",
@@ -328,7 +343,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Increases the Focus regeneration of your pets by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_frenzy",
@@ -357,7 +373,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives your pet a 20% chance to gain a 30% attack speed increase for 8 sec after dealing a critical strike."
-          }
+          },
+          "passive": true
         },
         {
           "id": "beast_mastery_bestial_wrath",
@@ -382,7 +399,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
-          }
+          },
+          "passive": false,
+          "cost": "125 Mana | 100 yd range | Instant | 2 min cooldown"
         }
       ]
     },
@@ -411,7 +430,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Increases the range of your ranged weapons by 2 yards."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_improved_concussive_shot",
@@ -437,7 +457,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Gives your Concussive Shot a 4% chance to stun the target for 3 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_lethal_attacks",
@@ -464,7 +485,8 @@
             "maxRank": 5,
             "text": "Increases your critical strike chance with ranged weapons by 1%.",
             "renamedFrom": "Lethal Shots"
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_improved_stings",
@@ -489,7 +511,8 @@
             "maxRank": 5,
             "text": "Increases the damage done by your Serpent Sting by 2%.",
             "renamedFrom": "Improved Serpent Sting"
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_efficiency",
@@ -515,7 +538,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Reduces the Mana cost of your Shots [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>Strikes</span>] and Stings by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_careful_aim",
@@ -536,7 +560,8 @@
           "icon": "ability_hunter_zenarchery",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_rapid_killing",
@@ -554,7 +579,8 @@
           "icon": "ability_hunter_rapidkilling",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_improved_arcane_shot",
@@ -580,7 +606,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the cooldown of your Arcane Shot by 0.2 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_lone_wolf",
@@ -597,7 +624,8 @@
           "icon": "spell_nature_spiritwolf",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_trueshot_aura",
@@ -619,7 +647,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases the [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>ranged</span>]attack power of party members within 45 yards by 50 [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>and the Hunter's ranged attack power by an additional 100</span>].  Lasts 30 min."
-          }
+          },
+          "passive": false,
+          "cost": "180 Mana | Instant"
         },
         {
           "id": "marksmanship_mortal_shots",
@@ -648,7 +678,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your ranged weapon [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>and melee ability</span>]critical strike damage bonus by 6%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_rapid_recuperation",
@@ -669,7 +700,8 @@
           "icon": "ability_hunter_rapidregeneration",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_barrage",
@@ -693,7 +725,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases the damage done by your Multi-Shot and Volley spells by 5%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_scatter_shot",
@@ -715,7 +748,9 @@
             "col": 1,
             "maxRank": 1,
             "text": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used."
-          }
+          },
+          "passive": false,
+          "cost": "84 Mana | 15 yd range | Instant | 30 sec cooldown"
         },
         {
           "id": "marksmanship_ranged_weapon_specialization",
@@ -741,7 +776,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage you deal with ranged weapons by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "marksmanship_sniper_shot",
@@ -767,7 +803,9 @@
             "maxRank": 1,
             "text": "An aimed shot that increases ranged damage by 70.",
             "renamedFrom": "Aimed Shot"
-          }
+          },
+          "passive": false,
+          "cost": "365 Mana | 8-35 yd range | 4 sec cast | 15 sec cooldown"
         }
       ]
     },
@@ -793,7 +831,8 @@
           "icon": "ability_hunter_improvedtracking",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_deflection",
@@ -819,7 +858,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your Parry chance by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_entrapment",
@@ -845,7 +885,8 @@
             "col": 1,
             "maxRank": 5,
             "text": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a 5% chance to entrap the target, preventing them from moving for 5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_savage_strikes",
@@ -868,7 +909,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases the critical strike chance of Raptor Strike and Mongoose Bite by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_survivalist",
@@ -894,7 +936,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases total health by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_improved_wing_clip",
@@ -918,7 +961,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives your Wing Clip ability a 4% chance to immobilize the target for 5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_clever_traps",
@@ -941,7 +985,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the duration of Freezing and Frost trap effects by 15% and the damage of Immolation and Explosive trap effects by 15%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_surefooted",
@@ -965,7 +1010,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases hit chance by 1% and increases the chance movement impairing effects will be resisted by an additional 5%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_deterrence",
@@ -987,7 +1033,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "When activated, increases your Dodge and Parry chance by 25% for 10 sec."
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 5 min cooldown"
         },
         {
           "id": "survival_survival_tactics",
@@ -1005,7 +1053,8 @@
           "icon": "ability_rogue_feint",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_predators_edge",
@@ -1026,7 +1075,8 @@
           "icon": "ability_hunter_huntingparty",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_counterattack",
@@ -1051,7 +1101,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
-          }
+          },
+          "passive": false,
+          "cost": "30 Mana | Melee Range | Instant | 5 sec cooldown"
         },
         {
           "id": "survival_resourcefulness",
@@ -1069,7 +1121,8 @@
           "icon": "ability_hunter_resourcefulness",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_expose_prey",
@@ -1087,7 +1140,8 @@
           "icon": "ability_hunter_markedfordeath",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_survivalists_discipline",
@@ -1105,7 +1159,8 @@
           "icon": "ability_hunter_survivalinstincts",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_strider_kick",
@@ -1122,7 +1177,9 @@
           "icon": "ability_hunter_pet_tallstrider",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "61 Mana | Melee Range | Instant | 8 sec cooldown"
         },
         {
           "id": "survival_lightning_reflexes",
@@ -1148,7 +1205,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your Agility by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "survival_lacerating_strikes",
@@ -1168,7 +1226,8 @@
           "icon": "ability_druid_lacerate",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         }
       ]
     }

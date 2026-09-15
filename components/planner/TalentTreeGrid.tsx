@@ -84,6 +84,8 @@ export default function TalentTreeGrid({
             onRemove={() => onRemove(t.id)}
             prereqName={t.prereq ? byId.get(t.prereq.id)?.name : undefined}
             compareMode={compareMode}
+            treeName={tree.name}
+            pointsInTree={spent}
           />
         ))}
 

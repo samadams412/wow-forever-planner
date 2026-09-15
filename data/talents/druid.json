@@ -28,7 +28,8 @@
             "col": 1,
             "maxRank": 5,
             "text": "Reduces the cast time of your Wrath spell by 0.1 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_genesis",
@@ -49,7 +50,8 @@
           "icon": "spell_arcane_arcane03",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_moonglow",
@@ -73,7 +75,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation spells by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_improved_moonfire",
@@ -96,7 +99,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases the damage and critical strike chance of your Moonfire spell by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_natures_majesty",
@@ -114,7 +118,8 @@
           "icon": "spell_nature_wispsplode",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_natures_reach",
@@ -137,7 +142,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire, Starfire, and Hurricane spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_improved_entangling_roots",
@@ -161,7 +167,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Gives you a 40% chance to avoid interruption caused by damage while casting Entangling Roots."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_natures_splendor",
@@ -181,7 +188,8 @@
           "icon": "spell_nature_naturesblessing",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_balance_of_nature",
@@ -202,7 +210,8 @@
           "icon": "ability_druid_balanceofpower",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_vengeance",
@@ -231,7 +240,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 20%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_insect_swarm",
@@ -253,7 +263,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "The enemy target is swarmed by insects, decreasing their chance to hit by 2% and causing 66 Nature damage over 12 sec."
-          }
+          },
+          "passive": false,
+          "cost": "45 Mana | 30 yd range | Instant"
         },
         {
           "id": "balance_improved_starfire",
@@ -279,7 +291,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Reduces the cast time of Starfire by 0.1 sec and has a 3% chance to stun the target for 3 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_overgrowth",
@@ -297,7 +310,8 @@
           "icon": "ability_druid_flourish",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_natures_grace",
@@ -319,7 +333,8 @@
             "col": 2,
             "maxRank": 1,
             "text": "All spell criticals grace you with a blessing of nature, reducing the casting time of your next spell by 0.5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_eclipse",
@@ -338,7 +353,8 @@
           "icon": "ability_druid_eclipse",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_moonfury",
@@ -364,7 +380,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases the damage done by your Starfire, Moonfire and Wrath spells by [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>2%</span> / 2%]."
-          }
+          },
+          "passive": true
         },
         {
           "id": "balance_moonkin_form",
@@ -386,7 +403,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Transforms the Druid into Moonkin Form.  While in this form the armor contribution from items is increased by 360% [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Moonfire costs 50% less mana and deals 100% more damage over time, your periodic damage spells can deal critical periodic damage, you gain (<!--pl24858:40:60-->60 * 3) spell damage</span>] and all party members within 30 yards have their spell critical chance increased by 3%.  [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>The Moonkin cannot cast healing spells while shapeshifted</span> / The Moonkin can only cast Balance spells while shapeshifted.] [<span class='q9'>Reduces all threat from Arcane and Nature spells by 0% while in this form</span><!--sp436895:0--><!--sp436895-->]<br /><br />The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
-          }
+          },
+          "passive": false,
+          "cost": "283 Mana | Instant"
         }
       ]
     },
@@ -417,7 +436,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 1 Rage or Energy."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_heart_of_the_wild",
@@ -443,7 +463,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases your Intellect by 4%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_feral_swiftness",
@@ -467,7 +488,8 @@
             "maxRank": 2,
             "text": "Increases your movement speed by 15% <!--sp436895:0-->while outdoors<!--sp436895--> in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
             "renamedFrom": "Feline Swiftness"
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_feral_instinct",
@@ -491,7 +513,8 @@
             "col": 1,
             "maxRank": 5,
             "text": "Increases threat caused in Bear and Dire Bear Form by 3% and reduces the chance enemies have to detect you while Prowling."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_brutal_impact",
@@ -514,7 +537,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_thick_hide",
@@ -538,7 +562,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your Armor contribution from items by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_savage_fury",
@@ -561,7 +586,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_feral_charge",
@@ -584,7 +610,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec."
-          }
+          },
+          "passive": false,
+          "cost": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Feral Charge (Cat): 8-25 yd range | Instant | 30 sec cooldown"
         },
         {
           "id": "feral_sharpened_claws",
@@ -607,7 +635,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Increases your critical strike chance while in Bear, Dire Bear or Cat Form by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_shredding_attacks",
@@ -632,7 +661,8 @@
             "maxRank": 2,
             "text": "Reduces the Energy cost of your Shred ability by 6.",
             "renamedFrom": "Improved Shred"
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_mangle",
@@ -653,7 +683,9 @@
           "icon": "ability_druid_mangle2",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "20 Rage | Melee Range | Instant | 6 sec cooldown"
         },
         {
           "id": "feral_predatory_strikes",
@@ -678,7 +710,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases your melee attack power in Cat, Bear and Dire Bear Forms by 50% of your level."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_primal_fury",
@@ -704,7 +737,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Gives you a 50% chance to gain an additional 5 Rage anytime you get a critical strike while in Bear and Dire Bear Form."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_predatory_instincts",
@@ -722,7 +756,8 @@
           "icon": "ability_druid_predatoryinstincts",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_leader_of_the_pack",
@@ -744,7 +779,8 @@
             "col": 2,
             "maxRank": 1,
             "text": "While in Cat, Bear or Dire Bear Form, the Leader of the Pack increases ranged and melee critical chance of all party members within 45 yards by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_king_of_the_jungle",
@@ -763,7 +799,8 @@
           "icon": "ability_druid_kingofthejungle",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_natural_reaction",
@@ -785,7 +822,8 @@
           "icon": "ability_bullrush",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_rend_and_tear",
@@ -809,7 +847,8 @@
           "icon": "ability_druid_swipe",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "feral_berserk",
@@ -830,7 +869,9 @@
           "icon": "ability_druid_berserk",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         }
       ]
     },
@@ -861,7 +902,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Gives you a 14% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_furor",
@@ -887,7 +929,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives you 20% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_naturalist",
@@ -914,7 +957,8 @@
             "maxRank": 5,
             "text": "Reduces the cast time of your Healing Touch spell by 0.1 sec.",
             "renamedFrom": "Improved Healing Touch"
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_subtlety",
@@ -938,7 +982,8 @@
             "col": 4,
             "maxRank": 5,
             "text": "Reduces the threat generated by your Healing spells by 4%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_natural_shapeshifter",
@@ -962,7 +1007,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Reduces the mana cost of all shapeshifting by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_reflection",
@@ -986,7 +1032,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Allows 5% of your Mana regeneration to continue while casting."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_gift_of_nature",
@@ -1012,7 +1059,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the effect of all healing spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_gift_of_the_earthmother",
@@ -1029,7 +1077,8 @@
           "icon": "ability_druid_manatree",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_tranquil_spirit",
@@ -1055,7 +1104,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the mana cost of your Healing Touch and Tranquility spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_improved_rejuvenation",
@@ -1079,7 +1129,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Increases the effect of your Rejuvenation spell by 5%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_swiftmend",
@@ -1101,7 +1152,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "[<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Instantly heals a target with an active Rejuvenation or Regrowth effect for</span> / Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them] an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
-          }
+          },
+          "passive": false,
+          "cost": "162 Mana | 40 yd range | Instant | 15 sec cooldown"
         },
         {
           "id": "restoration_natures_swiftness",
@@ -1126,7 +1179,9 @@
             "col": 1,
             "maxRank": 1,
             "text": "When activated, your next Nature spell becomes an instant cast spell."
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         },
         {
           "id": "restoration_living_spirit",
@@ -1145,7 +1200,8 @@
           "icon": "spell_nature_giftofthewild",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_improved_tranquility",
@@ -1168,7 +1224,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Reduces threat caused by Tranquility by 50%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_improved_regrowth",
@@ -1197,7 +1254,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the critical effect chance of your Regrowth spell by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "restoration_wild_growth",
@@ -1217,7 +1275,9 @@
           "icon": "ability_druid_flourish",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "550 Mana | 40 yd range | Instant | 6 sec cooldown"
         }
       ]
     }

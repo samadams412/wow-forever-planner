@@ -25,7 +25,8 @@
             "col": 3,
             "maxRank": 2,
             "text": "Increases the amount of Mana awarded by your Life Tap spell by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_suppression",
@@ -51,7 +52,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the chance for enemies to resist your Affliction spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_improved_corruption",
@@ -77,7 +79,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Reduces the casting time of your Corruption spell by 0.4 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_malediction",
@@ -98,7 +101,8 @@
           "icon": "spell_shadow_curseofachimonde",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_soul_harvesting",
@@ -116,7 +120,8 @@
           "icon": "spell_shadow_soulgem",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_improved_drains",
@@ -135,7 +140,8 @@
           "icon": "spell_shadow_lifedrain02",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_improved_bane_of_agony",
@@ -159,7 +165,8 @@
             "maxRank": 3,
             "text": "Increases the damage done by your Curse of Agony by 2%.",
             "renamedFrom": "Improved Curse of Agony"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_fel_concentration",
@@ -183,7 +190,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Gives you a 14% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell."
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_amplify_curse",
@@ -205,7 +213,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse of Exhaustion by 20%.  Lasts 30 sec."
-          }
+          },
+          "passive": false,
+          "cost": "Instant; 3 min cooldown"
         },
         {
           "id": "affliction_pandemic",
@@ -224,7 +234,8 @@
           "icon": "spell_shadow_unstableaffliction_2",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_malevolence",
@@ -245,7 +256,8 @@
           "icon": "spell_shadow_deathpact",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_nightfall",
@@ -268,7 +280,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Gives your Corruption and Drain Life spells a 2% chance to cause you to enter a Shadow Trance state after damaging the opponent.  The Shadow Trance state reduces the casting time of your next Shadow Bolt spell by 100%<!--sp403873:0--><!--sp403873-->."
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_curse_of_exhaustion",
@@ -293,7 +306,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "Reduces the target's movement speed by <!--sp18312:0--><!--sp18288:0--><!--sp18311:0--><!--sp18310:0--><!--sp18313:0-->10<!--sp18313--><!--sp18310--><!--sp18311--><!--sp18288--><!--sp18312-->% for 12 sec.  Only one Curse per Warlock can be active on any one target."
-          }
+          },
+          "passive": false,
+          "cost": "69 Mana; 30 yd range; Instant"
         },
         {
           "id": "affliction_siphon_life",
@@ -315,7 +330,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Transfers 15 health from the target to the caster every 3 sec.  Lasts 30 sec."
-          }
+          },
+          "passive": false,
+          "cost": "150 Mana; 30 yd range; Instant"
         },
         {
           "id": "affliction_soul_siphon",
@@ -334,7 +351,8 @@
           "icon": "spell_shadow_soulleech_3",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_shadow_mastery",
@@ -360,7 +378,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases the damage dealt or life drained by your Shadow spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "affliction_drain_hope",
@@ -380,7 +399,9 @@
           "icon": "spell_shadow_haunting",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "200 Mana; 30 yd range; Channeled"
         }
       ]
     },
@@ -408,7 +429,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the amount of Health transferred by your Health Funnel spell by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_improved_imp",
@@ -432,7 +454,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases the effect of your Imp's Firebolt, Fire Shield, and Blood Pact spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_demonic_embrace",
@@ -458,7 +481,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your total Stamina by 3% but reduces your total Spirit by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_unholy_power",
@@ -484,7 +508,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage done by your Voidwalker, Succubus, Incubus, and Felhunter's melee attacks by 4%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_demonic_aegis",
@@ -502,7 +527,8 @@
           "icon": "spell_shadow_ragingscream",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_improved_voidwalker",
@@ -526,7 +552,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice and Suffering spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_fel_vitality",
@@ -551,7 +578,8 @@
             "maxRank": 5,
             "text": "Increases the maximum Health of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 3%.",
             "renamedFrom": "Fel Stamina"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_demonic_energies",
@@ -569,7 +597,8 @@
           "icon": "spell_shadow_demonicempathy",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_improved_sayaad",
@@ -593,7 +622,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases the effect of your Succubus' and Incubus' Lash of Pain and Soothing Kiss spells by 10%, and increases the duration of your Succubus' and Incubus' Seduction and Lesser Invisibility spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_demonic_sacrifice",
@@ -615,7 +645,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min.  The effect is canceled if any Demon is summoned.<br /><br />Imp: Increases your Fire damage by 15%.<br /><br />Voidwalker: Restores 3% of total Health every 4 sec.<br /><br />Succubus/Incubus: Increases your Shadow damage by 15%.<br /><br />Felhunter: Restores 2% of total Mana every 4 sec."
-          }
+          },
+          "passive": false,
+          "cost": "100 yd range; Instant"
         },
         {
           "id": "demonology_master_summoner",
@@ -638,7 +670,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Reduces the casting time of your Imp, Voidwalker, Succubus, Incubus, and Felhunter Summoning spells by 2 sec and the Mana cost by 20%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_decimation",
@@ -656,7 +689,8 @@
           "icon": "spell_fire_fireball02",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_fel_domination",
@@ -681,7 +715,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Your next Imp, Voidwalker, Succubus, Incubus, or Felhunter Summon spell has its casting time reduced by 5.5 sec and its Mana cost reduced by 50%."
-          }
+          },
+          "passive": false,
+          "cost": "Instant; 5 min cooldown"
         },
         {
           "id": "demonology_demonic_brand",
@@ -700,7 +736,8 @@
           "icon": "spell_shadow_demonbreath",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_improved_felhunter",
@@ -719,7 +756,8 @@
           "icon": "spell_shadow_summonfelhunter",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_soul_link",
@@ -744,7 +782,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead.  In addition, both the demon and master will inflict 3% more damage.  Lasts as long as the demon is active."
-          }
+          },
+          "passive": false,
+          "cost": "173 Mana; 100 yd range; Instant"
         },
         {
           "id": "demonology_demonic_knowledge",
@@ -763,7 +803,8 @@
           "icon": "spell_shadow_improvedvampiricembrace",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_master_demonologist",
@@ -789,7 +830,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Grants both the Warlock and the summoned demon an effect as long as that demon is active.<br /><br />Imp - <!--sp403789:0-->Reduces<!--sp403789--> threat caused by 4%.<br /><br />Voidwalker - Reduces physical damage taken by 2%.<br /><br />Succubus/Incubus - Increases all damage caused by 2%.<br /><br />Felhunter - Increases all resistances by .2 per level."
-          }
+          },
+          "passive": true
         },
         {
           "id": "demonology_demonic_pact",
@@ -809,7 +851,8 @@
           "icon": "spell_shadow_demonicpact",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         }
       ]
     },
@@ -837,7 +880,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases the range of your Destruction spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_improved_shadow_bolt",
@@ -863,7 +907,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Your Shadow Bolt critical strikes increase Shadow damage dealt to the target by 4% until 4 non-periodic damage sources are applied.  Effect lasts a maximum of 12 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_bane",
@@ -889,7 +934,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the casting time of your Shadow Bolt and Immolate spells by 0.1 sec and your Soul Fire spell by 0.4 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_molten_skin",
@@ -910,7 +956,8 @@
           "icon": "ability_mage_moltenarmor",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_cataclysm",
@@ -934,7 +981,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Reduces the Mana cost of your Destruction spells by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_aftermath",
@@ -960,7 +1008,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives your Destruction spells a 2% chance to daze the target for 5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_ruin",
@@ -986,7 +1035,8 @@
             "col": 3,
             "maxRank": 1,
             "text": "Increases the critical strike damage bonus of your Destruction spells by 100%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_shadowburn",
@@ -1008,7 +1058,9 @@
             "col": 4,
             "maxRank": 1,
             "text": "Instantly blasts the target for <!--ppl17877:20:24:87:120-->91 to <!--ppl17877:20:24:99:120:1-->104 Shadow damage.  If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard."
-          }
+          },
+          "passive": false,
+          "cost": "105 Mana; 30 yd range; Instant; 15 sec cooldown; Reagents: Soul Shard"
         },
         {
           "id": "destruction_intensity",
@@ -1032,7 +1084,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Gives you a 35% chance to resist interruption caused by damage while channeling the Rain of Fire, Hellfire or Soul Fire spell."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_agonizing_flames",
@@ -1057,7 +1110,8 @@
             "maxRank": 5,
             "text": "Increases the critical strike chance of your Searing Pain spell by 2%.",
             "renamedFrom": "Improved Searing Pain"
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_conflagrate",
@@ -1082,7 +1136,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Ignites a target that is already afflicted by Immolate, dealing <!--ppl17962:40:46:240:160-->249 to <!--ppl17962:40:46:306:160:1-->316 Fire damage and consuming the Immolate spell."
-          }
+          },
+          "passive": false,
+          "cost": "100 Mana; 30 yd range; Instant; 10 sec cooldown"
         },
         {
           "id": "destruction_pyroclasm",
@@ -1108,7 +1164,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Gives your Rain of Fire, Hellfire, and Soul Fire spells a 13% chance to stun the target for 3 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_bane_of_havoc",
@@ -1125,7 +1182,9 @@
           "icon": "ability_warlock_baneofhavoc",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "43 Mana; 30 yd range; Instant"
         },
         {
           "id": "destruction_fire_and_brimstone",
@@ -1147,7 +1206,8 @@
           "icon": "ability_warlock_fireandbrimstone",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_shadow_and_flame",
@@ -1168,7 +1228,8 @@
           "icon": "spell_shadow_shadowandflame",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "destruction_incinerate",
@@ -1188,7 +1249,9 @@
           "icon": "spell_fire_burnout",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "205 Mana; 30 yd range; 2.5 sec cast"
         }
       ]
     }

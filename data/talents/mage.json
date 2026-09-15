@@ -25,7 +25,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases your damage with Wands by 13%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_focus",
@@ -51,7 +52,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the chance that the opponent can resist your Arcane spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_improved_channeling",
@@ -78,7 +80,8 @@
             "maxRank": 5,
             "text": "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles [<span class='q2'>S03 - Tuning and Overrides Passive - Mage</span>: <span class='q9'>Regeneration, or Mass Regeneration, and a 14% chance to avoid interruption caused by damage while casting Arcane Blast or Spellfrost Bolt</span>].",
             "renamedFrom": "Improved Arcane Missiles"
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_subtlety",
@@ -101,7 +104,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Reduces your target's resistance to all your spells by 5 and reduces the threat caused by your Arcane spells by 20%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_magic_absorption",
@@ -124,7 +128,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana.  1 sec. cooldown."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_concentration",
@@ -150,7 +155,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_resilience",
@@ -173,7 +179,8 @@
             "col": 3,
             "maxRank": 1,
             "text": "Increases your armor by an amount equal to 50% of your Intellect."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_geometry",
@@ -191,7 +198,8 @@
           "icon": "spell_arcane_arcane01",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_impact",
@@ -216,7 +224,8 @@
             "maxRank": 3,
             "text": "Increases the critical strike chance of your Arcane Explosion spell by an additional 2%.",
             "renamedFrom": "Improved Arcane Explosion"
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_blast",
@@ -233,7 +242,9 @@
           "icon": "spell_arcane_blast",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "122 Mana | 30 yd range | 2.5 sec cast"
         },
         {
           "id": "arcane_arcane_shielding",
@@ -257,7 +268,8 @@
             "maxRank": 2,
             "text": "Decreases the mana lost per point of damage taken when Mana Shield is active by 10%.",
             "renamedFrom": "Improved Mana Shield"
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_improved_counterspell",
@@ -280,7 +292,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Gives your Counterspell a 50% chance to silence the target for 4 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_meditation",
@@ -307,7 +320,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Allows 5% of your Mana regeneration to continue while casting."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_missile_barrage",
@@ -324,7 +338,8 @@
           "icon": "ability_mage_missilebarrage",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_presence_of_mind",
@@ -346,7 +361,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         },
         {
           "id": "arcane_arcane_mind",
@@ -372,7 +389,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your maximum Mana by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_instability",
@@ -396,7 +414,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases your spell damage and critical strike chance by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "arcane_arcane_power",
@@ -421,7 +440,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, your spells deal 30% more damage while costing 30% more mana to cast.  This effect lasts 15 sec."
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         }
       ]
     },
@@ -450,7 +471,8 @@
             "maxRank": 3,
             "text": "Reduces the cooldown of your Fire Blast spell by 0.5 sec.",
             "renamedFrom": "Improved Fire Blast"
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_incineration",
@@ -475,7 +497,8 @@
             "maxRank": 2,
             "text": "Increases the critical strike chance of your Fire Blast and Scorch spells by 2%.",
             "renamedFrom": "Incinerate"
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_improved_fireball",
@@ -501,7 +524,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the casting time of your Fireball spell by 0.1 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_ignite",
@@ -527,7 +551,8 @@
             "col": 1,
             "maxRank": 5,
             "text": "Your critical strikes from Fire damage spells cause the target to burn for an additional 8% of your spell's damage over 4 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_flame_throwing",
@@ -550,7 +575,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases the range of your Fire spells by 3 yards."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_impact",
@@ -574,7 +600,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives your Fire spells a 2% chance to stun the target for 2 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_burning_soul",
@@ -598,7 +625,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Gives your Fire spells a 35% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 15%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_improved_flamestrike",
@@ -622,7 +650,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases the critical strike chance of your Flamestrike spell by 5%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_pyroblast",
@@ -644,7 +673,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "Hurls an immense fiery boulder that causes <!--ppl11366:20:24:141:190-->148 to <!--ppl11366:20:24:187:190:1-->195 Fire damage and an additional 56 Fire damage over 12 sec."
-          }
+          },
+          "passive": false,
+          "cost": "125 Mana | 35 yd range | 6 sec cast"
         },
         {
           "id": "fire_improved_scorch",
@@ -668,7 +699,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage.  This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec.  Stacks up to 5 times."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_improved_fire_ward",
@@ -691,7 +723,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Causes your Fire Ward to have a 10% chance to reflect Fire spells while active."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_hot_streak",
@@ -711,7 +744,8 @@
           "icon": "ability_mage_hotstreak",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_master_of_elements",
@@ -735,7 +769,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Your Fire and Frost spell criticals will refund 10% of their base mana cost."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_critical_mass",
@@ -759,7 +794,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases the critical strike chance of your Fire spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_blast_wave",
@@ -781,7 +817,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for <!--ppl11113:30:36:154:100-->160 to <!--ppl11113:30:36:186:100:1-->192 Fire damage, and dazing them for 6 sec."
-          }
+          },
+          "passive": false,
+          "cost": "215 Mana | Instant | 45 sec cooldown"
         },
         {
           "id": "fire_fire_power",
@@ -807,7 +845,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage done by your Fire spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "fire_combustion",
@@ -832,7 +871,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 critical strikes with Fire spells."
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         }
       ]
     },
@@ -860,7 +901,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by 15%.  In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_improved_frostbolt",
@@ -886,7 +928,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the casting time of your Frostbolt spell by 0.1 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_elemental_precision",
@@ -912,7 +955,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Reduces the chance that the opponent can resist your Frost and Fire spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_ice_shards",
@@ -938,7 +982,8 @@
             "col": 1,
             "maxRank": 5,
             "text": "Increases the critical strike damage bonus of your Frost spells by 20%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_permafrost",
@@ -962,7 +1007,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Increases the duration of your Chill effects by 1 <!--singular:sec:secs-->sec<!--singular--> and reduces the target's speed by an additional 4%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_improved_frost_nova",
@@ -985,7 +1031,8 @@
             "col": 3,
             "maxRank": 2,
             "text": "Reduces the cooldown of your Frost Nova spell by 2 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_frostbite",
@@ -1009,7 +1056,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Gives your Chill effects a 5% chance to freeze the target for 5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_piercing_ice",
@@ -1033,7 +1081,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases the damage done by your Frost spells by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_frost_channeling",
@@ -1057,7 +1106,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Reduces the mana cost of your Frost spells by 5% and reduces the threat caused by your Frost spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_ice_lance",
@@ -1074,7 +1124,9 @@
           "icon": "spell_frost_frostblast",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "45 Mana | 30 yd range | Instant"
         },
         {
           "id": "frost_improved_blizzard",
@@ -1098,7 +1150,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Adds a chill effect to your Blizzard spell.  This effect lowers the target's movement speed by 30%.  Lasts 1.50 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_arctic_reach",
@@ -1121,7 +1174,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the range of your Frostbolt and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_ice_block",
@@ -1143,7 +1197,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move or cast spells."
-          }
+          },
+          "passive": false,
+          "cost": "15 Mana | Instant | 5 min cooldown"
         },
         {
           "id": "frost_shatter",
@@ -1167,7 +1223,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the critical strike chance of all your spells against frozen targets by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_improved_cone_of_cold",
@@ -1191,7 +1248,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Increases the damage dealt by your Cone of Cold spell by 15%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_cold_snap",
@@ -1213,7 +1271,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, this spell finishes the cooldown on all of your Frost spells.<!--cooldown:442543:5 min cooldown-->"
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 10 min cooldown"
         },
         {
           "id": "frost_fingers_of_frost",
@@ -1234,7 +1294,8 @@
           "icon": "ability_mage_wintersgrasp",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_winters_chill",
@@ -1260,7 +1321,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up to 5 times."
-          }
+          },
+          "passive": true
         },
         {
           "id": "frost_ice_barrier",
@@ -1285,7 +1347,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Instantly shields you, absorbing <!--ppl11426:40:46:438:280:1-->455 damage.  Lasts 1 min.  While the shield holds, spells will not be interrupted."
-          }
+          },
+          "passive": false,
+          "cost": "305 Mana | Instant | 30 sec cooldown"
         }
       ]
     }

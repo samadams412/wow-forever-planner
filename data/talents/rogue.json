@@ -26,7 +26,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases the effect duration of your Gouge ability by 0.5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_remorseless_attacks",
@@ -49,7 +50,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_malice",
@@ -75,7 +77,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your critical strike chance by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_ruthlessness",
@@ -99,7 +102,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Gives your finishing moves a 20% chance to add a combo point to your target."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_murder",
@@ -122,7 +126,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_improved_slice_and_dice",
@@ -146,7 +151,8 @@
             "col": 4,
             "maxRank": 3,
             "text": "Increases the duration of your Slice and Dice ability by 15%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_relentless_strikes",
@@ -168,7 +174,8 @@
             "col": 1,
             "maxRank": 1,
             "text": "Your finishing moves have a 20% chance per combo point to restore 25 energy."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_improved_expose_armor",
@@ -191,7 +198,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases the armor reduced by your Expose Armor ability by 25%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_lethality",
@@ -220,7 +228,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 6%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_vile_poisons",
@@ -246,7 +255,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases the damage dealt by your poisons by 4% and gives your poisons an additional 8% chance to resist dispel effects."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_cold_blood",
@@ -268,7 +278,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100%."
-          }
+          },
+          "passive": false,
+          "cost": "Instant; 3 min cooldown"
         },
         {
           "id": "assassination_improved_poisons",
@@ -294,7 +306,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the chance to apply poisons to your target by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_vigor",
@@ -317,7 +330,8 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases your maximum Energy by 10."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_mutilate",
@@ -334,7 +348,9 @@
           "icon": "ability_rogue_shadowstrikes",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "60 Energy; Melee Range; Instant"
         },
         {
           "id": "assassination_improved_kidney_shot",
@@ -357,7 +373,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "While affected by your Kidney Shot ability, the target receives an additional 3% damage from all sources."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_seal_fate",
@@ -383,7 +400,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point."
-          }
+          },
+          "passive": true
         },
         {
           "id": "assassination_venom",
@@ -403,7 +421,9 @@
           "icon": "ability_rogue_deadlybrew",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "25 Energy; 1 to 5 Combo Points; Instant"
         }
       ]
     },
@@ -432,7 +452,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases the damage done by your Eviscerate ability by 5%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_improved_sinister_strike",
@@ -455,7 +476,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Reduces the Energy cost of your Sinister Strike ability by 3."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_lightning_reflexes",
@@ -481,7 +503,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your Dodge chance by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_puncturing_wounds",
@@ -506,7 +529,8 @@
             "maxRank": 3,
             "text": "Increases the critical strike chance of your Backstab ability by 10%.",
             "renamedFrom": "Improved Backstab"
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_deflection",
@@ -530,7 +554,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases your Parry chance by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_precision",
@@ -554,7 +579,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your chance to hit with melee weapons by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_endurance",
@@ -577,7 +603,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Reduces the cooldown of your Sprint and Evasion abilities by 45 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_riposte",
@@ -602,7 +629,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
-          }
+          },
+          "passive": false,
+          "cost": "10 Energy; Melee Range; Instant; 6 sec cooldown"
         },
         {
           "id": "combat_improved_sprint",
@@ -625,7 +654,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Gives a 50% chance to remove all movement impairing effects when you activate your Sprint ability."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_improved_kick",
@@ -648,7 +678,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Gives your Kick ability a 50% chance to silence the target for 2 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_restless_blades",
@@ -665,7 +696,8 @@
           "icon": "ability_rogue_restlessblades",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_dual_wield_specialization",
@@ -694,7 +726,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage done by your offhand weapon by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_blade_flurry",
@@ -716,7 +749,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec."
-          }
+          },
+          "passive": false,
+          "cost": "25 Energy; Instant; 2 min cooldown"
         },
         {
           "id": "combat_hack_and_slash",
@@ -737,7 +772,8 @@
           "icon": "inv_sword_27",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_weapon_expertise",
@@ -763,7 +799,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Increases your skill with Sword, Fist and Dagger weapons by 3."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_aggression",
@@ -790,7 +827,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Increases the damage of your Sinister Strike and Eviscerate abilities by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "combat_adrenaline_rush",
@@ -812,7 +850,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases your Energy regeneration rate by 100% for 15 sec."
-          }
+          },
+          "passive": false,
+          "cost": "Instant; 5 min cooldown"
         }
       ]
     },
@@ -843,7 +883,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your speed while stealthed by 3% and reduces the cooldown of your Stealth ability by 1 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_master_of_deception",
@@ -867,7 +908,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Reduces the chance enemies have to detect you while in Stealth mode."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_opportunity",
@@ -890,7 +932,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 4%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_setup",
@@ -914,7 +957,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Gives you a 15% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_elusiveness",
@@ -937,7 +981,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Reduces the cooldown of your Vanish and Blind abilities by 45 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_dirty_tricks",
@@ -955,7 +1000,8 @@
           "icon": "ability_rogue_dirtydeeds",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_improved_ambush",
@@ -979,7 +1025,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Increases the critical strike chance of your Ambush ability by 15%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_initiative",
@@ -1003,7 +1050,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Gives you a 25% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_ghostly_strike",
@@ -1025,7 +1073,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->."
-          }
+          },
+          "passive": false,
+          "cost": "40 Energy; Melee Range; Instant; 20 sec cooldown"
         },
         {
           "id": "subtlety_improved_distract",
@@ -1043,7 +1093,8 @@
           "icon": "ability_rogue_distract",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_heightened_senses",
@@ -1066,7 +1117,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_premeditation",
@@ -1088,7 +1140,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost."
-          }
+          },
+          "passive": false,
+          "cost": "20 yd range; Instant; 2 min cooldown"
         },
         {
           "id": "subtlety_serrated_blades",
@@ -1112,7 +1166,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_dirty_deeds",
@@ -1135,7 +1190,8 @@
             "col": 3,
             "maxRank": 2,
             "text": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10."
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_preparation",
@@ -1157,7 +1213,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities."
-          }
+          },
+          "passive": false,
+          "cost": "Instant; 10 min cooldown"
         },
         {
           "id": "subtlety_hemorrhage",
@@ -1182,7 +1240,9 @@
             "col": 4,
             "maxRank": 1,
             "text": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3.  Lasts 30 charges or 15 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->."
-          }
+          },
+          "passive": false,
+          "cost": "35 Energy; Melee Range; Instant"
         },
         {
           "id": "subtlety_quietus",
@@ -1206,7 +1266,8 @@
           "icon": "ability_rogue_quickrecovery",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_cutthroat",
@@ -1227,7 +1288,8 @@
           "icon": "ability_rogue_cuttothechase",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "subtlety_thousand_cuts",
@@ -1247,7 +1309,8 @@
           "icon": "ability_rogue_shadowstrikes",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         }
       ]
     }

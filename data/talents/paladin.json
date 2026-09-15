@@ -20,7 +20,8 @@
           "icon": "spell_holy_crusaderstrike",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_divine_strength",
@@ -46,7 +47,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases your Strength by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_divine_intellect",
@@ -72,7 +74,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your total Intellect by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_healing_light",
@@ -96,7 +99,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases the amount healed by your Holy Light and Flash of Light spells by 12%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_spiritual_focus",
@@ -119,7 +123,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Gives your Flash of Light and Holy Light spells a 28% chance to not lose casting time when you take damage."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_improved_seals",
@@ -144,7 +149,8 @@
             "maxRank": 5,
             "text": "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 3%.",
             "renamedFrom": "Improved Seal of Righteousness"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_unyielding_faith",
@@ -167,7 +173,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Increases your chance to resist Fear and Disorient effects by an additional 5%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_voice_of_truth",
@@ -184,7 +191,9 @@
           "icon": "spell_holy_silence",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         },
         {
           "id": "holy_reverence",
@@ -203,7 +212,8 @@
           "icon": "spell_holy_mindvision",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_purifying_power",
@@ -221,7 +231,8 @@
           "icon": "spell_holy_purifyingpower",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_infusion_of_light",
@@ -239,7 +250,8 @@
           "icon": "ability_paladin_infusionoflight",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_illumination",
@@ -268,7 +280,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 20% chance to gain Mana equal to the base cost of the spell."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_divine_favor",
@@ -290,7 +303,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance."
-          }
+          },
+          "passive": false,
+          "cost": "37 Mana | Instant | 2 min cooldown"
         },
         {
           "id": "holy_divine_precision",
@@ -312,7 +327,8 @@
           "icon": "spell_holy_holybolt",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_holy_shock",
@@ -334,7 +350,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing to an ally."
-          }
+          },
+          "passive": false,
+          "cost": "160 Mana | Instant | Enemy: 20 yd range | Friendly: 40 yd range | 10 sec cooldown"
         },
         {
           "id": "holy_consecrated_ground",
@@ -352,7 +370,8 @@
           "icon": "spell_holy_innerfire",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_holy_power",
@@ -378,7 +397,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the critical effect chance of your Holy spells by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "holy_lights_vigil",
@@ -398,7 +418,9 @@
           "icon": "spell_holy_holyguidance",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "730 Mana | 1.5 sec cast | Enemy: 20 yd range | Friendly: 40 yd range | 6 sec cooldown"
         }
       ]
     },
@@ -429,7 +451,8 @@
             "col": 4,
             "maxRank": 5,
             "text": "Increases your armor value from items by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_redoubt",
@@ -455,7 +478,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike.  Lasts 10 sec or 5 blocks."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_precision",
@@ -479,7 +503,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases your chance to hit with melee weapons by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_guardians_favor",
@@ -502,7 +527,8 @@
             "col": 2,
             "maxRank": 2,
             "text": "Reduces the cooldown of your Blessing of Protection by 60 sec and increases the duration of your Blessing of Freedom by 3 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_anticipation",
@@ -528,7 +554,8 @@
             "col": 4,
             "maxRank": 5,
             "text": "Increases your Defense skill by 2."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_improved_seal_of_fury",
@@ -545,7 +572,8 @@
           "icon": "spell_holy_sealoffury",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_improved_righteous_fury",
@@ -569,7 +597,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Increases the amount of threat generated by your Righteous Fury spell by 16%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_shield_specialization",
@@ -596,7 +625,8 @@
             "col": 3,
             "maxRank": 3,
             "text": "Increases the amount of damage absorbed by your shield by 10%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_sacred_duty",
@@ -614,7 +644,8 @@
           "icon": "spell_holy_divineintervention",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_swift_judgement",
@@ -634,7 +665,9 @@
           "icon": "spell_holy_righteousfury",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "Instant | 1 min cooldown"
         },
         {
           "id": "protection_one_handed_weapon_specialization",
@@ -658,7 +691,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases the damage you deal with one-handed melee weapons by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_improved_hammer_of_justice",
@@ -682,7 +716,8 @@
             "col": 2,
             "maxRank": 3,
             "text": "Decreases the cooldown of your Hammer of Justice spell by 5 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_templars_bulwark",
@@ -699,7 +734,9 @@
           "icon": "ability_paladin_shieldofthetemplar",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": false,
+          "cost": "110 Mana | Instant | 5 min cooldown"
         },
         {
           "id": "protection_reckoning",
@@ -725,7 +762,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Gives you a 20% chance to gain an extra attack after being the victim of a critical strike."
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_iron_creed",
@@ -746,7 +784,8 @@
           "icon": "ability_paladin_shieldofvengeance",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "protection_holy_shield",
@@ -772,7 +811,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.<!--sp456541:0--> Each block expends a charge. 4 charges.<!--sp456541--> [<span class='q2'>S03 - Tuning and Overrides Passive - All Classes</span>: <span class='q9'>Activating Holy Shield also grants you 2 Spell Power for each point of your defense skill beyond (<!--pl20925:40:60-->60 * 5). Lasts 15 sec</span><!--sp446847:0--><!--sp446847-->]"
-          }
+          },
+          "passive": false,
+          "cost": "150 Mana | Instant | 10 sec cooldown"
         }
       ]
     },
@@ -803,7 +844,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Increases your Parry chance by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_benediction",
@@ -829,7 +871,8 @@
             "col": 3,
             "maxRank": 5,
             "text": "Reduces the Mana cost of your Judgement and Seal spells by 3%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_improved_judgement",
@@ -852,7 +895,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "Decreases the cooldown of your Judgement spell by 1 sec."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_holy_conduit",
@@ -870,7 +914,8 @@
           "icon": "spell_holy_divineillumination",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_conviction",
@@ -896,7 +941,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Increases your chance to get a critical strike with melee weapons by 1%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_vindication",
@@ -920,7 +966,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>reduce the target's Attack Power by (<!--ppl9452:20:60:-90:300:1-->30 /- 3), and increase the Paladin's Attack Power by 5% for 30 sec</span> / 10 sec.]"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_sanctified_judgement",
@@ -939,7 +986,8 @@
           "icon": "spell_holy_righteousfury",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_seal_of_command",
@@ -961,7 +1009,9 @@
             "col": 3,
             "maxRank": 1,
             "text": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.<br /><br />Unleashing this Seal's energy will judge an enemy, instantly causing <!--ppl20375:20:28:46:280-->68 to <!--ppl20375:20:28:50:280:1-->73 Holy damage, <!--ppl20375:20:28:93:560-->137 to <!--ppl20375:20:28:101:560:1-->146 if the target is stunned or incapacitated."
-          }
+          },
+          "passive": false,
+          "cost": "65 Mana | Instant"
         },
         {
           "id": "retribution_pursuit_of_justice",
@@ -984,7 +1034,8 @@
             "col": 4,
             "maxRank": 2,
             "text": "Increases movement and mounted movement speed by 4%.  This does not stack with other movement speed increasing effects."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_eye_for_an_eye",
@@ -1007,7 +1058,8 @@
             "col": 1,
             "maxRank": 2,
             "text": "All spell criticals against you cause 15% of the damage taken to the caster as well.  The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_sacred_arbiter",
@@ -1024,7 +1076,8 @@
           "icon": "spell_holy_righteousfury",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_crusade",
@@ -1042,7 +1095,8 @@
           "icon": "spell_holy_crusade",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_two_handed_weapon_specialization",
@@ -1066,7 +1120,8 @@
             "col": 1,
             "maxRank": 3,
             "text": "Increases the damage you deal with two-handed melee weapons by 2%."
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_vengeance",
@@ -1093,7 +1148,8 @@
             "col": 2,
             "maxRank": 5,
             "text": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability. [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>Also Reduces all Physical and Holy threat you generate by 6% while Righteous Fury is not active</span>]"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_repentance",
@@ -1115,7 +1171,9 @@
             "col": 2,
             "maxRank": 1,
             "text": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec.  Any damage caused will awaken the target.  Only works against Humanoids."
-          }
+          },
+          "passive": false,
+          "cost": "60 Mana | Instant | 20 yd range | 1 min cooldown"
         },
         {
           "id": "retribution_champion_of_the_light",
@@ -1134,7 +1192,8 @@
           "icon": "spell_holy_championsbond",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_instrument_of_law",
@@ -1152,7 +1211,8 @@
           "icon": "ability_paladin_hammeroftherighteous",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         },
         {
           "id": "retribution_twist_of_light",
@@ -1170,7 +1230,8 @@
           "icon": "spell_holy_divineintervention",
           "classic": {
             "status": "new"
-          }
+          },
+          "passive": true
         }
       ]
     }

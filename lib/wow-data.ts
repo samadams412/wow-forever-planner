@@ -53,6 +53,8 @@ export type Talent = {
   confidence: Confidence;
   icon: string;
   classic?: ClassicTalentInfo;
+  passive: boolean;
+  cost?: string;
 };
 
 export type TalentTree = {
