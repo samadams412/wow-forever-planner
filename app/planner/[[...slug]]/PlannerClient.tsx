@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { races, getRaceById, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
 import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from "@/lib/talent-rules";
@@ -31,7 +30,6 @@ export default function PlannerClient({
   initialClassId: string | null;
   initialBuildCode: string | null;
 }) {
-  const router = useRouter();
   const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
   const [ranks, setRanks] = useState<RankState>(() => {
     const classData = getClassTalentData(initialClassId ?? DEFAULT_CLASS_ID);
@@ -56,9 +54,15 @@ export default function PlannerClient({
   const eligibleRaces = races.filter((r) => r.allowedClasses.includes(classId));
 
   useEffect(() => {
+    // window.history.replaceState, not next/navigation's router.replace: the
+    // App Router treats every changed catch-all segment as a distinct route
+    // and re-fetches/swaps the whole subtree, unmounting PlannerClient (and
+    // resetting/flashing everything in it, including the toolbar) on every
+    // single point spent. Updating the address bar directly keeps this a
+    // pure URL-bar sync with no React tree impact.
     const code = classData && Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : null;
-    router.replace(buildPlannerPath(classId, code), { scroll: false });
-  }, [classId, ranks, classData, router]);
+    window.history.replaceState(null, "", buildPlannerPath(classId, code));
+  }, [classId, ranks, classData]);
 
   const handleSelectClass = useCallback((id: string) => {
     setClassId(id);
