@@ -59,12 +59,23 @@ keyed `Class|Spell|Rank`), `racials`, `class_racials`, `class_abilities`,
 
 ### Updating this data
 When pulling a new snapshot, save it as a new dated file (never overwrite
-an existing one) and diff it against the previous snapshot before
-touching anything else -- covering at minimum `talents`, `spell_desc`,
-`racials`, `class_racials`, `class_abilities`, and `legacy`. Apply only
-what the diff shows changed; don't re-verify or re-transcribe sections
-the diff says are identical. A throwaway diff script is fine -- it
-doesn't need to be kept or polished, just accurate. Also check
-`spellbooks[cls].notes` in the diff: it's prose describing the same
-per-class findings and has repeatedly carried real corrections (e.g. the
-09-14 Shield Wall fix) that don't otherwise show up in `spell_desc`.
+an existing one), then run
+`node scripts/diff-talentsforever.js` (no args: diffs the two most recent
+snapshots here) before touching anything else. It covers `talents`
+(added/removed/changed, with field-level call-outs and markup/whitespace-
+only changes collapsed separately from substantive ones), `legacy` perks,
+`spellbooks` entries and notes text, `spell_desc`, and a structural check
+on `racials`/`class_racials`/`class_abilities` -- including flagging any
+brand-new field it's never seen before, so a schema addition doesn't go
+unnoticed just because nothing yet reads it. Apply only what the diff
+shows changed; don't re-verify or re-transcribe sections it says are
+identical. It writes both a markdown summary and the raw JSON diff to
+`data/sources/diffs/`, and prints the markdown to stdout.
+
+It's a pure JSON-field diff, so it can't see a changelog item with no
+data-level signal at all -- a UI/UX rebuild, a CSS-only fix, copy changed
+only on our own site, or (as happened for the 09-15 Talented Legacy Perk
+fix) something the vendor's site changed without it ever showing up in
+this raw export. Read the vendor's own `changelog` array in the new
+snapshot by hand for those; the script only tells you what the data
+itself changed.

@@ -1,0 +1,1530 @@
+{
+  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-14.json",
+  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-15.json",
+  "oldLabel": "2026-09-14",
+  "newLabel": "2026-09-15",
+  "talents": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Spearing Strike",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_savageblow",
+            "new": "inv_spear_01",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Bloodthrill",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_bloodfrenzy",
+            "new": "ability_warrior_weaponmastery",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Weaponmaster",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_weaponmastery",
+            "new": "garrison_weaponupgrade",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Booming Voice",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "[<span class='q2'>S03 - Tuning and Overrides Passive - Warrior</span>: <span class='q9'>Increases the area of effect of Battle Shout and Demoralizing Shout by 10%, increases the duration of Battle Shout by 10% and Demoralizing Shout by 10%, and reduces the Rage cost of Battle Shout by 20%</span> / Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 10%.]",
+            "new": "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by 10%.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Boundless Rage",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_endlessrage",
+            "new": "ability_warrior_intensifyrage",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Raging Blows",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_rampage",
+            "new": "ability_whirlwind",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Death Wish",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.  Lasts 30 sec.",
+            "new": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%. Lasts 30 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Bloodthirst",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Instantly attack the target causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec.",
+            "new": "Instantly attack the target causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Last Stand",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds.  After the effect expires, the hit points are lost.<!--cooldown:446658:3 min cooldown-->",
+            "new": "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds. After the effect expires, the hit points are lost.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Master of Defense",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_defend",
+            "new": "ability_warrior_shieldguard",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Vanguard",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_shieldguard",
+            "new": "ability_warrior_victoryrush",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Vitality",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_strengthofarms",
+            "new": "inv_helmet_21",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Bastion",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_warrior_shieldmastery",
+            "new": "inv_shield_04",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Shield Slam",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Slam the target with your shield, causing 225 to 235 damage, modified by [<span class='q2'>S03 - Tuning and Overrides Passive - Warrior</span>: <span class='q9'>twice</span>]your shield block value, and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat. [<span class='q2'>S03 - Tuning and Overrides Passive - Warrior</span>: <span class='q9'>Hitting a target with Shield Slam also grants you 4 Attack Power for each point of your defense skill beyond (<!--pl23922:40:60-->60 * 5). Lasts 15 sec</span>]",
+            "new": "Slam the target with your shield, causing 225 to 235 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target. Also causes a high amount of threat.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Redoubt",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike.  Lasts 10 sec or 5 blocks.",
+            "new": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Holy Shield",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active.  Damage caused by Holy Shield causes 20% additional threat.<!--sp456541:0--> Each block expends a charge. 4 charges.<!--sp456541--> [<span class='q2'>S03 - Tuning and Overrides Passive - All Classes</span>: <span class='q9'>Activating Holy Shield also grants you 2 Spell Power for each point of your defense skill beyond (<!--pl20925:40:60-->60 * 5). Lasts 15 sec</span><!--sp446847:0--><!--sp446847-->]",
+            "new": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Vindication",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>reduce the target's Attack Power by (<!--ppl9452:20:60:-90:300:1-->30 /- 3), and increase the Paladin's Attack Power by 5% for 30 sec</span> / 10 sec.]",
+            "new": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5%",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Seal of Command",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.<br /><br />Unleashing this Seal's energy will judge an enemy, instantly causing <!--ppl20375:20:28:46:280-->68 to <!--ppl20375:20:28:50:280:1-->73 Holy damage, <!--ppl20375:20:28:93:560-->137 to <!--ppl20375:20:28:101:560:1-->146 if the target is stunned or incapacitated.",
+            "new": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.Unleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 146 if the target is stunned or incapacitated.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Pursuit of Justice",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases movement and mounted movement speed by 4%.  This does not stack with other movement speed increasing effects.",
+            "new": "Increases movement and mounted movement speed by 4%. This does not stack with other movement speed increasing effects.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Eye for an Eye",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "All spell criticals against you cause 15% of the damage taken to the caster as well.  The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
+            "new": "All spell criticals against you cause 15% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Vengeance",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability. [<span class='q2'>S03 - Tuning and Overrides Passive - Paladin</span>: <span class='q9'>Also Reduces all Physical and Holy threat you generate by 6% while Righteous Fury is not active</span>]",
+            "new": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Repentance",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec.  Any damage caused will awaken the target.  Only works against Humanoids.",
+            "new": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Beast Mastery",
+        "name": "Bestial Wrath",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.",
+            "new": "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Efficiency",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Reduces the Mana cost of your Shots [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>Strikes</span>] and Stings by 2%.",
+            "new": "Reduces the Mana cost of your Shots and Stings by 2%.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Trueshot Aura",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>ranged</span>]attack power of party members within 45 yards by 50 [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>and the Hunter's ranged attack power by an additional 100</span>].  Lasts 30 min.",
+            "new": "Increases the attack power of party members within 45 yards by 50. Lasts 30 min.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Mortal Shots",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your ranged weapon [<span class='q2'>S03 - Tuning and Overrides Passive - Hunter</span>: <span class='q9'>and melee ability</span>]critical strike damage bonus by 6%.",
+            "new": "Increases your ranged weapon critical strike damage bonus by 6%.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Scatter Shot",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used.",
+            "new": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Counterattack",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried.",
+            "new": "A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Assassination",
+        "name": "Remorseless Attacks",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec.",
+            "new": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike. Lasts 20 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Assassination",
+        "name": "Seal Fate",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point.",
+            "new": "Your critical strikes from abilities that add combo points have a 20% chance to add an additional combo point.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Combat",
+        "name": "Riposte",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec.",
+            "new": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Combat",
+        "name": "Blade Flurry",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec.",
+            "new": "Increases your attack speed by 20%. In addition, attacks strike an additional nearby opponent. Lasts 15 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Subtlety",
+        "name": "Ghostly Strike",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->.",
+            "new": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Subtlety",
+        "name": "Premeditation",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost.",
+            "new": "When used, adds 2 combo points to your target. You must add to or use those combo points within 10 sec or the combo points are lost.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Subtlety",
+        "name": "Serrated Blades",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level.",
+            "new": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%. The amount of Armor reduced increases with your level.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Subtlety",
+        "name": "Hemorrhage",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3.  Lasts 30 charges or 15 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->.",
+            "new": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. Awards 1 combo point.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Discipline",
+        "name": "Martyrdom",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 50% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike.  The Focused Casting effect prevents you from losing casting time when taking damage and increases resistance to Interrupt effects by 10%.",
+            "new": "Gives you a 50% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage and increases resistance to Interrupt effects by 10%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Discipline",
+        "name": "Power Infusion",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Infuses the target with power, increasing their spell damage and healing by 20%.  Lasts 15 sec.",
+            "new": "Infuses the target with power, increasing their spell damage and healing by 20%. Lasts 15 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "name": "Holy Nova",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Causes an explosion of holy light around the caster, causing <!--ppl15237:20:26:28:20-->29 to <!--ppl15237:20:26:32:20:1-->34 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for <!--ppl15237:20:26:52:40-->54 to <!--ppl15237:20:26:60:40:1-->63.  These effects cause no threat.",
+            "new": "Causes an explosion of holy light around the caster, causing 29 to 34 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 54 to 63. These effects cause no threat.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "name": "Inspiration",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your target's armor by 8% for 15 sec after getting a critical effect from [<span class='q2'>S03 - Tuning and Overrides Passive - Priest</span>: <span class='q9'>any of your heals</span> / your Flash Heal, Heal, Greater Heal, or Prayer of Healing spell.]",
+            "new": "Increases your target's armor by 8% for 15 sec after getting a critical effect from",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "name": "Spirit of Redemption",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Upon death, the priest becomes the Spirit of Redemption for 10 sec.  The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects.  While in this form the priest can cast any healing spell free of cost.  When the effect ends, the priest dies.",
+            "new": "Upon death, the priest becomes the Spirit of Redemption for 10 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects. While in this form the priest can cast any healing spell free of cost. When the effect ends, the priest dies.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow Magic",
+        "name": "Spirit Tap",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 20% chance to gain a 100% bonus to your Spirit after killing a target that yields experience.  For the duration, your Mana will regenerate at a 50% rate while casting.  Lasts 15 sec.",
+            "new": "Gives you a 20% chance to gain a 100% bonus to your Spirit after killing a target that yields experience. For the duration, your Mana will regenerate at a 50% rate while casting. Lasts 15 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow Magic",
+        "name": "Vampiric Embrace",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 1 min<!--sp440247:0--><!--sp440247-->.",
+            "new": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 1 min.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow Magic",
+        "name": "Shadow Weaving",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Your Shadow damage spells have a 20% chance to cause your target to be vulnerable to Shadow damage.  This vulnerability increases the Shadow damage dealt to your target by 3% and lasts 15 sec.  Stacks up to 5 times.",
+            "new": "Your Shadow damage spells have a 20% chance to cause your target to be vulnerable to Shadow damage. This vulnerability increases the Shadow damage dealt to your target by 3% and lasts 15 sec. Stacks up to 5 times.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow Magic",
+        "name": "Shadowform",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Assume a Shadowform, increasing your Shadow damage by 15% [<span class='q2'>S03 - Tuning and Overrides Passive - Priest</span>: <span class='q9'>reducing the mana cost of all Shadow spells by 0%</span>] and reducing Physical damage done to you by 15%.  However, you may not cast Holy spells while in this form.",
+            "new": "Assume a Shadowform, increasing your Shadow damage by 15% and reducing Physical damage done to you by 15%. However, you may not cast Holy spells while in this form.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Elemental Combat",
+        "name": "Elemental Focus",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "new": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Elemental Combat",
+        "name": "Eye of the Storm",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike.  The Focused Casting effect prevents you from losing casting time when taking damage.",
+            "new": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Enhancement",
+        "name": "Stormstrike",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you an extra attack.  <!--sp435884:0-->In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%.  Lasts 12 sec.<!--sp435884--><!--cooldown:435884:6 sec cooldown-->",
+            "new": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Restoration",
+        "name": "Healing Way",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec.  This effect will stack up to 3 times.",
+            "new": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec. This effect will stack up to 3 times.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Restoration",
+        "name": "Purification",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the effectiveness of your healing spells by 2%. [<span class='q2'>S03 - Tuning and Overrides Passive - Shaman</span>: <span class='q9'>Increases healing from your Riptide and Earth Shield by an additional 20%</span>]",
+            "new": "Increases the effectiveness of your healing spells by 2%.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Improved Channeling",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles [<span class='q2'>S03 - Tuning and Overrides Passive - Mage</span>: <span class='q9'>Regeneration, or Mass Regeneration, and a 14% chance to avoid interruption caused by damage while casting Arcane Blast or Spellfrost Bolt</span>].",
+            "new": "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Magic Absorption",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana.  1 sec. cooldown.",
+            "new": "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana. 1 sec. cooldown.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Arcane Concentration",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "new": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Arcane Power",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, your spells deal 30% more damage while costing 30% more mana to cast.  This effect lasts 15 sec.",
+            "new": "When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect lasts 15 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Pyroblast",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Hurls an immense fiery boulder that causes <!--ppl11366:20:24:141:190-->148 to <!--ppl11366:20:24:187:190:1-->195 Fire damage and an additional 56 Fire damage over 12 sec.",
+            "new": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Improved Scorch",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage.  This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec.  Stacks up to 5 times.",
+            "new": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec. Stacks up to 5 times.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Blast Wave",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for <!--ppl11113:30:36:154:100-->160 to <!--ppl11113:30:36:186:100:1-->192 Fire damage, and dazing them for 6 sec.",
+            "new": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 160 to 192 Fire damage, and dazing them for 6 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Combustion",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 critical strikes with Fire spells.",
+            "new": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 critical strikes with Fire spells.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Frost Warding",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by 15%.  In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active.",
+            "new": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by 15%. In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Permafrost",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the duration of your Chill effects by 1 <!--singular:sec:secs-->sec<!--singular--> and reduces the target's speed by an additional 4%.",
+            "new": "Increases the duration of your Chill effects by 1 sec and reduces the target's speed by an additional 4%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Improved Blizzard",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Adds a chill effect to your Blizzard spell.  This effect lowers the target's movement speed by 30%.  Lasts 1.50 sec.",
+            "new": "Adds a chill effect to your Blizzard spell. This effect lowers the target's movement speed by 30%. Lasts 1.50 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Cold Snap",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, this spell finishes the cooldown on all of your Frost spells.<!--cooldown:442543:5 min cooldown-->",
+            "new": "When activated, this spell finishes the cooldown on all of your Frost spells.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Winter's Chill",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up to 5 times.",
+            "new": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec. Stacks up to 5 times.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Ice Barrier",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Instantly shields you, absorbing <!--ppl11426:40:46:438:280:1-->455 damage.  Lasts 1 min.  While the shield holds, spells will not be interrupted.",
+            "new": "Instantly shields you, absorbing 455 damage. Lasts 1 min. While the shield holds, spells will not be interrupted.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Affliction",
+        "name": "Amplify Curse",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse of Exhaustion by 20%.  Lasts 30 sec.",
+            "new": "Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Affliction",
+        "name": "Nightfall",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives your Corruption and Drain Life spells a 2% chance to cause you to enter a Shadow Trance state after damaging the opponent.  The Shadow Trance state reduces the casting time of your next Shadow Bolt spell by 100%<!--sp403873:0--><!--sp403873-->.",
+            "new": "Gives your Corruption and Drain Life spells a 2% chance to cause you to enter a Shadow Trance state after damaging the opponent. The Shadow Trance state reduces the casting time of your next Shadow Bolt spell by 100%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Affliction",
+        "name": "Curse of Exhaustion",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Reduces the target's movement speed by <!--sp18312:0--><!--sp18288:0--><!--sp18311:0--><!--sp18310:0--><!--sp18313:0-->10<!--sp18313--><!--sp18310--><!--sp18311--><!--sp18288--><!--sp18312-->% for 12 sec.  Only one Curse per Warlock can be active on any one target.",
+            "new": "Reduces the target's movement speed by 10% for 12 sec. Only one Curse per Warlock can be active on any one target.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Affliction",
+        "name": "Siphon Life",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Transfers 15 health from the target to the caster every 3 sec.  Lasts 30 sec.",
+            "new": "Transfers 15 health from the target to the caster every 3 sec. Lasts 30 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Demonic Sacrifice",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min.  The effect is canceled if any Demon is summoned.<br /><br />Imp: Increases your Fire damage by 15%.<br /><br />Voidwalker: Restores 3% of total Health every 4 sec.<br /><br />Succubus/Incubus: Increases your Shadow damage by 15%.<br /><br />Felhunter: Restores 2% of total Mana every 4 sec.",
+            "new": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min. The effect is canceled if any Demon is summoned.Imp: Increases your Fire damage by 15%.Voidwalker: Restores 3% of total Health every 4 sec.Succubus/Incubus: Increases your Shadow damage by 15%.Felhunter: Restores 2% of total Mana every 4 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Soul Link",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead.  In addition, both the demon and master will inflict 3% more damage.  Lasts as long as the demon is active.",
+            "new": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead. In addition, both the demon and master will inflict 3% more damage. Lasts as long as the demon is active.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Master Demonologist",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Grants both the Warlock and the summoned demon an effect as long as that demon is active.<br /><br />Imp - <!--sp403789:0-->Reduces<!--sp403789--> threat caused by 4%.<br /><br />Voidwalker - Reduces physical damage taken by 2%.<br /><br />Succubus/Incubus - Increases all damage caused by 2%.<br /><br />Felhunter - Increases all resistances by .2 per level.",
+            "new": "Grants both the Warlock and the summoned demon an effect as long as that demon is active.Imp - Reduces threat caused by 4%.Voidwalker - Reduces physical damage taken by 2%.Succubus/Incubus - Increases all damage caused by 2%.Felhunter - Increases all resistances by.2 per level.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Destruction",
+        "name": "Improved Shadow Bolt",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Your Shadow Bolt critical strikes increase Shadow damage dealt to the target by 4% until 4 non-periodic damage sources are applied.  Effect lasts a maximum of 12 sec.",
+            "new": "Your Shadow Bolt critical strikes increase Shadow damage dealt to the target by 4% until 4 non-periodic damage sources are applied. Effect lasts a maximum of 12 sec.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Destruction",
+        "name": "Shadowburn",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Instantly blasts the target for <!--ppl17877:20:24:87:120-->91 to <!--ppl17877:20:24:99:120:1-->104 Shadow damage.  If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+            "new": "Instantly blasts the target for 91 to 104 Shadow damage. If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Destruction",
+        "name": "Conflagrate",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Ignites a target that is already afflicted by Immolate, dealing <!--ppl17962:40:46:240:160-->249 to <!--ppl17962:40:46:306:160:1-->316 Fire damage and consuming the Immolate spell.",
+            "new": "Ignites a target that is already afflicted by Immolate, dealing 249 to 316 Fire damage and consuming the Immolate spell.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Druid",
+        "treeName": "Balance",
+        "name": "Moonfury",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the damage done by your Starfire, Moonfire and Wrath spells by [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>2%</span> / 2%].",
+            "new": "Increases the damage done by your Starfire, Moonfire and Wrath spells by.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Balance",
+        "name": "Moonkin Form",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Transforms the Druid into Moonkin Form.  While in this form the armor contribution from items is increased by 360% [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Moonfire costs 50% less mana and deals 100% more damage over time, your periodic damage spells can deal critical periodic damage, you gain (<!--pl24858:40:60-->60 * 3) spell damage</span>] and all party members within 30 yards have their spell critical chance increased by 3%.  [<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>The Moonkin cannot cast healing spells while shapeshifted</span> / The Moonkin can only cast Balance spells while shapeshifted.] [<span class='q9'>Reduces all threat from Arcane and Nature spells by 0% while in this form</span><!--sp436895:0--><!--sp436895-->]<br /><br />The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+            "new": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. [Reduces all threat from Arcane and Nature spells by 0% while in this form]The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Heart of the Wild",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your Intellect by 4%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%.",
+            "new": "Increases your Intellect by 4%. In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Feral Swiftness",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your movement speed by 15% <!--sp436895:0-->while outdoors<!--sp436895--> in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
+            "new": "Increases your movement speed by 15% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
+            "trivial": true
+          }
+        ],
+        "allTrivial": true
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Thick Hide",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": {
+              "1": "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 1 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
+            },
+            "new": {
+              "1": "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 1 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+              "2": "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 2 additional base Armor per level and another 1.33 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
+            },
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "new": [
+              2
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Swiftmend",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "[<span class='q2'>S03 - Tuning and Overrides Passive - Druid</span>: <span class='q9'>Instantly heals a target with an active Rejuvenation or Regrowth effect for</span> / Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them] an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.",
+            "new": "an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [],
+    "removedArrayAdded": [],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "spellbooks": {
+    "added": [],
+    "removed": [
+      {
+        "className": "Priest",
+        "tabName": "Discipline",
+        "key": "Priest|Discipline|Elune's Grace",
+        "name": "Elune's Grace"
+      },
+      {
+        "className": "Priest",
+        "tabName": "Discipline",
+        "key": "Priest|Discipline|Starshards",
+        "name": "Starshards"
+      }
+    ],
+    "notesChanges": [
+      {
+        "className": "Priest",
+        "old": [
+          "<b>Baseline now:</b> Fear Ward, in the Holy tab. Devouring Plague is a normal Shadow spell, rank 3 here on a Night Elf.",
+          "<b>Troll racials:</b> a level 38 Troll Shadow Priest on Xaryu's stream had Hex of Weakness rank 3 and Shadowguard rank 3 in the Shadow tab, plus Shadow Word: Pain rank 5 and Mind Blast rank 5.",
+          "<b>Elune's Grace changed:</b> 5 min cooldown, 50% chance to be missed by melee and ranged for 15 sec or until missed 3 times.",
+          "<b>No Shadow Word: Death</b> by 38. Talents mention it, so it comes later.",
+          "<b>Ranks</b> for Flash Heal, Heal, Renew, Power Word: Shield, Mind Blast, Holy Fire, Psychic Scream, Mind Control, Shadow Protection, Mind Vision and Divine Spirit come from that Troll Priest's tooltips."
+        ],
+        "new": [
+          "<b>Baseline now:</b> Fear Ward, in the Holy tab. Devouring Plague is a normal Shadow spell, rank 3 here on a Night Elf.",
+          "<b>Troll racials:</b> a level 38 Troll Shadow Priest on Xaryu's stream had Hex of Weakness rank 3 and Shadowguard rank 3 in the Shadow tab, plus Shadow Word: Pain rank 5 and Mind Blast rank 5.",
+          "<b>Night Elf only:</b> this book was read on a Night Elf, so Elune's Grace and Starshards were in it. They're racials, not Priest spells, so they live under Priest racials above, with the other races' pairs. A reader (Santum) caught it.",
+          "<b>No Shadow Word: Death</b> by 38. Talents mention it, so it comes later.",
+          "<b>Ranks</b> for Flash Heal, Heal, Renew, Power Word: Shield, Mind Blast, Holy Fire, Psychic Scream, Mind Control, Shadow Protection, Mind Vision and Divine Spirit come from that Troll Priest's tooltips."
+        ]
+      }
+    ]
+  },
+  "spellDesc": {
+    "added": [
+      "Shaman|Healing Stream Totem|Rank 2",
+      "Shaman|Healing Wave|Rank 6",
+      "Shaman|Lesser Healing Wave|Rank 3",
+      "Shaman|Poison Cleansing Totem|",
+      "Shaman|Reincarnation|Passive",
+      "Shaman|Tremor Totem|",
+      "Mage|Amplify Magic|Rank 2",
+      "Mage|Arcane Intellect|Rank 3",
+      "Mage|Conjure Mana Agate|",
+      "Mage|Conjure Mana Jade|",
+      "Mage|Counterspell|",
+      "Mage|Polymorph|Rank 2",
+      "Mage|Slow Fall|",
+      "Mage|Fire Ward|Rank 2",
+      "Mage|Flamestrike|Rank 3",
+      "Mage|Scorch|Rank 3",
+      "Mage|Ice Armor|Rank 1",
+      "Warlock|Metamorphosis: Demonic Howl|",
+      "Druid|Wrath|Rank 6"
+    ],
+    "removed": [
+      "Priest|Elune's Grace|Rank 1",
+      "Priest|Starshards|Rank 4"
+    ],
+    "changed": [
+      "Warrior|Charge|Rank 2",
+      "Warrior|Hamstring|Rank 2",
+      "Warrior|Heroic Strike|Rank 5",
+      "Warrior|Mocking Blow|Rank 3",
+      "Warrior|Overpower|Rank 2",
+      "Warrior|Rend|Rank 4",
+      "Warrior|Retaliation|",
+      "Warrior|Thunder Clap|Rank 4",
+      "Warrior|Victory Rush|",
+      "Warrior|Tactical Mastery|Passive",
+      "Warrior|Battle Shout|Rank 4",
+      "Warrior|Berserker Rage|",
+      "Warrior|Berserker Stance|",
+      "Warrior|Challenging Shout|",
+      "Warrior|Cleave|Rank 2",
+      "Warrior|Demoralizing Shout|Rank 3",
+      "Warrior|Execute|Rank 2",
+      "Warrior|Intimidating Shout|",
+      "Warrior|Pummel|Rank 1",
+      "Warrior|Slam|Rank 3",
+      "Warrior|Whirlwind|",
+      "Warrior|Bloodrage|",
+      "Warrior|Defensive Stance|",
+      "Warrior|Disarm|",
+      "Warrior|Revenge|Rank 3",
+      "Warrior|Shield Bash|Rank 2",
+      "Warrior|Shield Block|",
+      "Warrior|Shield Wall|",
+      "Warrior|Sunder Armor|Rank 3",
+      "Warrior|Taunt|",
+      "Paladin|Blessing of Wisdom|Rank 3",
+      "Paladin|Consecration|Rank 2",
+      "Paladin|Exorcism|Rank 3",
+      "Paladin|Flash of Light|Rank 3",
+      "Paladin|Holy Light|Rank 6",
+      "Paladin|Lay on Hands|Rank 2",
+      "Paladin|Purify|",
+      "Paladin|Redemption|Rank 3",
+      "Paladin|Seal of Light|Rank 1",
+      "Paladin|Seal of Righteousness|Rank 5",
+      "Paladin|Seal of Wisdom|Rank 1",
+      "Paladin|Sense Undead|",
+      "Paladin|Turn Undead|Rank 2",
+      "Paladin|Blessing of Freedom|",
+      "Paladin|Blessing of Kings|",
+      "Paladin|Blessing of Protection|Rank 3",
+      "Paladin|Blessing of Salvation|",
+      "Paladin|Concentration Aura|",
+      "Paladin|Devotion Aura|Rank 4",
+      "Paladin|Divine Intervention|",
+      "Paladin|Divine Protection|Rank 2",
+      "Paladin|Divine Shield|Rank 1",
+      "Paladin|Fire Resistance Aura|Rank 1",
+      "Paladin|Frost Resistance Aura|Rank 1",
+      "Paladin|Righteous Fury|",
+      "Paladin|Seal of Fury|Rank 4",
+      "Paladin|Seal of Justice|",
+      "Paladin|Shadow Resistance Aura|Rank 1",
+      "Paladin|Blessing of Might|Rank 4",
+      "Paladin|Holy Strike|Rank 5",
+      "Paladin|Judgement|",
+      "Paladin|Retribution Aura|Rank 3",
+      "Paladin|Seal of Command|Rank 5",
+      "Paladin|Seal of the Crusader|Rank 4",
+      "Hunter|Beast Training|",
+      "Hunter|Aspect of the Beast|Rank 1",
+      "Hunter|Aspect of the Cheetah|",
+      "Hunter|Aspect of the Hawk|Rank 4",
+      "Hunter|Aspect of the Monkey|",
+      "Hunter|Beast Lore|",
+      "Hunter|Call Owl|",
+      "Hunter|Dismiss Pet|",
+      "Hunter|Eagle Eye|",
+      "Hunter|Eyes of the Beast|",
+      "Hunter|Feed Pet|",
+      "Hunter|Mend Pet|Rank 4",
+      "Hunter|Revive Pet|",
+      "Hunter|Scare Beast|Rank 2",
+      "Hunter|Tame Beast|",
+      "Hunter|Aimed Shot|Rank 3",
+      "Hunter|Arcane Shot|Rank 5",
+      "Hunter|Auto Shot|",
+      "Hunter|Concussive Shot|",
+      "Hunter|Distracting Shot|Rank 3",
+      "Hunter|Flare|",
+      "Hunter|Hunter's Mark|Rank 2",
+      "Hunter|Multi-Shot|Rank 1",
+      "Hunter|Rapid Fire|",
+      "Hunter|Scorpid Sting|Rank 1",
+      "Hunter|Serpent Sting|Rank 5",
+      "Hunter|Viper Sting|Rank 1",
+      "Hunter|Disengage|Rank 2",
+      "Hunter|Explosive Trap|Rank 1",
+      "Hunter|Feign Death|",
+      "Hunter|Freezing Trap|Rank 1",
+      "Hunter|Frost Trap|",
+      "Hunter|Immolation Trap|Rank 3",
+      "Hunter|Mongoose Bite|Rank 2",
+      "Hunter|Raptor Strike|Rank 5",
+      "Hunter|Track Beasts|",
+      "Hunter|Track Demons|",
+      "Hunter|Track Elementals|",
+      "Hunter|Track Hidden|",
+      "Hunter|Track Humanoids|",
+      "Hunter|Track Undead|",
+      "Hunter|Wing Clip|Rank 2",
+      "Hunter|Claw|Rank 5",
+      "Hunter|Dive|Rank 1",
+      "Hunter|Growl|Rank 4",
+      "Hunter|Mine!|Rank 3",
+      "Hunter|Stay|Pet Command",
+      "Rogue|Pick Lock|",
+      "Rogue|Ambush|Rank 3",
+      "Rogue|Cheap Shot|",
+      "Rogue|Eviscerate|Rank 5",
+      "Rogue|Expose Armor|Rank 3",
+      "Rogue|Garrote|Rank 4",
+      "Rogue|Kidney Shot|Rank 1",
+      "Rogue|Rupture|Rank 3",
+      "Rogue|Slice and Dice|Rank 1",
+      "Rogue|Backstab|Rank 5",
+      "Rogue|Blade Flurry|",
+      "Rogue|Gouge|Rank 3",
+      "Rogue|Kick|Rank 2",
+      "Rogue|Sinister Strike|Rank 6",
+      "Rogue|Sprint|Rank 2",
+      "Rogue|Blind|",
+      "Rogue|Disarm Trap|",
+      "Rogue|Distract|",
+      "Rogue|Pick Pocket|",
+      "Rogue|Sap|Rank 2",
+      "Rogue|Stealth|Rank 2",
+      "Rogue|Vanish|Rank 1",
+      "Priest|Dispel Magic|Rank 2",
+      "Priest|Divine Spirit|Rank 1",
+      "Priest|Inner Fire|",
+      "Priest|Levitate|",
+      "Priest|Mana Burn|",
+      "Priest|Power Word: Fortitude|",
+      "Priest|Power Word: Shield|Rank 6",
+      "Priest|Shackle Undead|",
+      "Priest|Abolish Disease|",
+      "Priest|Cure Disease|",
+      "Priest|Fear Ward|",
+      "Priest|Flash Heal|Rank 4",
+      "Priest|Heal|Rank 4",
+      "Priest|Holy Fire|Rank 4",
+      "Priest|Lesser Heal|",
+      "Priest|Prayer of Healing|",
+      "Priest|Renew|Rank 6",
+      "Priest|Resurrection|",
+      "Priest|Smite|",
+      "Priest|Devouring Plague|Rank 3",
+      "Priest|Fade|",
+      "Priest|Mind Blast|Rank 5",
+      "Priest|Mind Control|Rank 1",
+      "Priest|Mind Soothe|Rank 2",
+      "Priest|Mind Vision|Rank 1",
+      "Priest|Psychic Scream|Rank 2",
+      "Priest|Shadow Protection|Rank 1",
+      "Priest|Shadow Word: Pain|",
+      "Shaman|Call of the Elements|",
+      "Shaman|Chain Lightning|Rank 1",
+      "Shaman|Earth Shock|Rank 5",
+      "Shaman|Fire Nova|Rank 3",
+      "Shaman|Flame Shock|Rank 3",
+      "Shaman|Frost Shock|Rank 2",
+      "Shaman|Lightning Bolt|Rank 7",
+      "Shaman|Magma Totem|Rank 2",
+      "Shaman|Purge|Rank 2",
+      "Shaman|Searing Totem|Rank 3",
+      "Shaman|Astral Recall|",
+      "Shaman|Far Sight|",
+      "Shaman|Fire Resistance Totem|Rank 1",
+      "Shaman|Flametongue Totem|Rank 2",
+      "Shaman|Flametongue Weapon|Rank 4",
+      "Shaman|Frost Resistance Totem|Rank 2",
+      "Shaman|Frostbrand Weapon|",
+      "Shaman|Ghost Wolf|",
+      "Shaman|Grounding Totem|",
+      "Shaman|Lightning Shield|Rank 4",
+      "Shaman|Nature Resistance Totem|Rank 1",
+      "Shaman|Rockbiter Weapon|Rank 5",
+      "Shaman|Sentry Totem|",
+      "Shaman|Stoneskin Totem|Rank 4",
+      "Shaman|Strength of Earth Totem|Rank 3",
+      "Shaman|Water Breathing|",
+      "Shaman|Water Walking|",
+      "Shaman|Windfury Totem|Rank 1",
+      "Shaman|Windfury Weapon|Rank 1",
+      "Shaman|Windwall Totem|Rank 1",
+      "Shaman|Ancestral Spirit|Rank 3",
+      "Shaman|Cure Disease|",
+      "Shaman|Cure Poison|",
+      "Shaman|Disease Cleansing Totem|",
+      "Shaman|Mana Spring Totem|Rank 2",
+      "Mage|Arcane Explosion|Rank 4",
+      "Mage|Arcane Missiles|Rank 4",
+      "Mage|Blink|",
+      "Mage|Conjure Food|",
+      "Mage|Conjure Water|Rank 4",
+      "Mage|Dampen Magic|Rank 3",
+      "Mage|Evocation|",
+      "Mage|Mage Armor|Rank 1",
+      "Mage|Mana Shield|Rank 3",
+      "Mage|Remove Lesser Curse|",
+      "Mage|Fire Blast|Rank 5",
+      "Mage|Fireball|Rank 7",
+      "Mage|Blizzard|Rank 3",
+      "Mage|Cone of Cold|Rank 2",
+      "Mage|Frost Armor|Rank 3",
+      "Mage|Frost Nova|Rank 2",
+      "Mage|Frost Ward|Rank 2",
+      "Mage|Frostbolt|Rank 7",
+      "Warlock|Bane of Agony|Rank 4",
+      "Warlock|Corruption|Rank 4",
+      "Warlock|Curse of Recklessness|Rank 2",
+      "Warlock|Curse of the Elements|Rank 2",
+      "Warlock|Curse of Tongues|Rank 1",
+      "Warlock|Curse of Weakness|Rank 4",
+      "Warlock|Drain Life|Rank 4",
+      "Warlock|Drain Mana|Rank 2",
+      "Warlock|Drain Soul|Rank 3",
+      "Warlock|Fear|Rank 2",
+      "Warlock|Life Tap|Rank 4",
+      "Warlock|Banish|Rank 1",
+      "Warlock|Create Firestone|Rank 2",
+      "Warlock|Create Healthstone|Rank 3",
+      "Warlock|Create Soulstone|Rank 2",
+      "Warlock|Create Spellstone|Rank 1",
+      "Warlock|Demon Armor|Rank 2",
+      "Warlock|Demon Skin|",
+      "Warlock|Eye of Kilrogg|Summon",
+      "Warlock|Health Funnel|Rank 4",
+      "Warlock|Ritual of Summoning|",
+      "Warlock|Sense Demons|",
+      "Warlock|Shadow Ward|Rank 1",
+      "Warlock|Subjugate Demon|Rank 1",
+      "Warlock|Summon Felhunter|Summon",
+      "Warlock|Summon Imp|Summon",
+      "Warlock|Summon Incubus|Summon",
+      "Warlock|Summon Succubus|Summon",
+      "Warlock|Summon Voidwalker|Summon",
+      "Warlock|Unending Breath|",
+      "Warlock|Hellfire|Rank 1",
+      "Warlock|Immolate|Rank 4",
+      "Warlock|Rain of Fire|Rank 2",
+      "Warlock|Searing Pain|Rank 3",
+      "Warlock|Shadow Bolt|Rank 6",
+      "Warlock|Devour Magic|Rank 2",
+      "Warlock|Spell Lock|Rank 1",
+      "Warlock|Tainted Blood|Rank 1",
+      "Druid|Entangling Roots|Rank 4",
+      "Druid|Faerie Fire|Rank 2",
+      "Druid|Hibernate|Rank 2",
+      "Druid|Moonfire|Rank 6",
+      "Druid|Nature's Grasp|Rank 4",
+      "Druid|Omen of Clarity|Passive",
+      "Druid|Soothe Animal|Rank 2",
+      "Druid|Starfire|Rank 3",
+      "Druid|Thorns|Rank 4",
+      "Druid|Aquatic Form|Shapeshift",
+      "Druid|Bash|Rank 2",
+      "Druid|Bear Form|Shapeshift",
+      "Druid|Cat Form|Shapeshift",
+      "Druid|Challenging Roar|",
+      "Druid|Claw|Rank 3",
+      "Druid|Cower|",
+      "Druid|Dash|Rank 1",
+      "Druid|Demoralizing Roar|Rank 3",
+      "Druid|Enrage|",
+      "Druid|Ferocious Bite|Rank 1",
+      "Druid|Frenzied Regeneration|Rank 1",
+      "Druid|Growl|",
+      "Druid|Maul|Rank 4",
+      "Druid|Pounce|Rank 1",
+      "Druid|Prowl|Rank 1",
+      "Druid|Rake|Rank 2",
+      "Druid|Ravage|Rank 1",
+      "Druid|Rip|Rank 3",
+      "Druid|Shred|Rank 3",
+      "Druid|Swipe|Rank 3",
+      "Druid|Tiger's Fury|",
+      "Druid|Track Humanoids|",
+      "Druid|Travel Form|Shapeshift",
+      "Druid|Abolish Poison|",
+      "Druid|Healing Touch|Rank 7",
+      "Druid|Mark of the Wild|Rank 4",
+      "Druid|Regrowth|Rank 5",
+      "Druid|Rejuvenation|Rank 6",
+      "Druid|Remove Curse|",
+      "Druid|Revive|Rank 3",
+      "Druid|Tranquility|Rank 1"
+    ],
+    "newFields": [
+      "cs",
+      "cd",
+      "cl",
+      "cn"
+    ]
+  },
+  "opaque": {
+    "racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": false,
+      "newFields": []
+    }
+  }
+}
