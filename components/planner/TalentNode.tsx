@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
@@ -19,6 +19,7 @@ const TOOLTIP_WIDTH = 260;
 
 export default function TalentNode({
   talent,
+  row,
   rank,
   canAdd,
   onAdd,
@@ -30,8 +31,13 @@ export default function TalentNode({
   totalSpent,
   tappedTalentId,
   onTap,
+  onPeek,
 }: {
   talent: Talent;
+  // Grid row line for this talent -- not always talent.tier, since a tier
+  // below the tree's active inline tooltip shifts down a line to make room
+  // for it (see TalentTreeGrid).
+  row: number;
   rank: number;
   canAdd: boolean;
   onAdd: () => void;
@@ -47,6 +53,9 @@ export default function TalentNode({
   // across the whole tree should show it at a time.
   tappedTalentId: string | null;
   onTap: (talentId: string | null) => void;
+  // Long-press-to-read: temporarily shows this talent's inline tooltip
+  // without spending a point, reverting to tappedTalentId on release.
+  onPeek: (talentId: string | null) => void;
 }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { pos: hoverPos, show: showHover, hide: hideHover } = useHoverTooltip<HTMLButtonElement>(
@@ -55,27 +64,10 @@ export default function TalentNode({
     220,
     buttonRef
   );
-  // Separate from the desktop hover tooltip so tapping doesn't disturb
-  // "below" placement there -- floats beside the icon instead, per the
-  // reference mobile rebuild.
-  const { pos: tapPos, show: showTap, hide: hideTap } = useHoverTooltip<HTMLButtonElement>(
-    TOOLTIP_WIDTH,
-    "right",
-    260,
-    buttonRef
-  );
-  const tooltipPos = hoverPos ?? tapPos;
 
   const isTapped = tappedTalentId === talent.id;
   const longPressTimer = useRef<number | null>(null);
   const longPressFired = useRef(false);
-
-  // Another talent was tapped (or the tree/class reset) -- this one is no
-  // longer the active one, so its tap tooltip shouldn't linger.
-  useEffect(() => {
-    if (!isTapped) hideTap();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isTapped]);
 
   function clearLongPressTimer() {
     if (longPressTimer.current !== null) {
@@ -89,7 +81,7 @@ export default function TalentNode({
     clearLongPressTimer();
     longPressTimer.current = window.setTimeout(() => {
       longPressFired.current = true;
-      showTap();
+      onPeek(talent.id);
     }, 450);
   }
 
@@ -100,7 +92,7 @@ export default function TalentNode({
     // synthetic click from re-triggering add/remove below.
     if (longPressFired.current) {
       e.preventDefault();
-      hideTap();
+      onPeek(null);
       return;
     }
     e.preventDefault();
@@ -110,7 +102,6 @@ export default function TalentNode({
       onAdd();
       onTap(talent.id);
     }
-    showTap();
   }
 
   const invested = rank > 0;
@@ -149,7 +140,7 @@ export default function TalentNode({
         : "text-foreground";
 
   return (
-    <div style={{ gridColumn: talent.col, gridRow: talent.tier }} className="aspect-square">
+    <div style={{ gridColumn: talent.col, gridRow: row }} className="relative aspect-square">
       <button
         ref={buttonRef}
         type="button"
@@ -187,19 +178,23 @@ export default function TalentNode({
             className={`absolute left-0.5 top-0.5 h-2 w-2 rounded-full ring-1 ring-background/80 ${STATUS_DOT_CLASS[talent.status]}`}
           />
         )}
-        {isTapped && (
-          <span
-            aria-hidden="true"
-            className="absolute bottom-0 left-0 flex h-4 w-4 items-center justify-center rounded-tr bg-red-500/90 text-xs font-bold leading-none text-white"
-          >
-            −
-          </span>
-        )}
       </button>
 
-      {tooltipPos &&
+      {isTapped && (
+        // Sits outside the button (which clips via overflow-hidden for its
+        // icon) so the badge can overlap the icon's top-left corner without
+        // being cut off by that clip.
+        <span
+          aria-hidden="true"
+          className="absolute -left-1 -top-1 z-10 flex h-4 w-4 items-center justify-center rounded-full bg-red-500/90 text-xs font-bold leading-none text-white ring-1 ring-background"
+        >
+          −
+        </span>
+      )}
+
+      {hoverPos &&
         createPortal(
-          <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
+          <TooltipCard style={{ top: hoverPos.top, left: hoverPos.left, width: TOOLTIP_WIDTH }}>
             <TooltipName>{talent.name}</TooltipName>
             <TooltipRank>
               Rank {rank} of {talent.maxRank} · {typeLabel}

@@ -37,6 +37,18 @@ export function TooltipCard({
   );
 }
 
+// Same tooltip color language as TooltipCard, but a normal block element
+// instead of a fixed-position overlay -- for the mobile inline tooltip,
+// which sits in document flow below a talent's row rather than floating
+// on top of the grid.
+export function TooltipCardInline({ style, children }: { style?: CSSProperties; children: ReactNode }) {
+  return (
+    <div className="rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg" style={style}>
+      {children}
+    </div>
+  );
+}
+
 export function TooltipName({ children }: { children: ReactNode }) {
   return <div className="text-base font-bold text-white">{children}</div>;
 }

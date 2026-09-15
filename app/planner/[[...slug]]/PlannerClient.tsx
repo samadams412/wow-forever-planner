@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON } from "@/lib/wow-data";
+import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
 import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
@@ -47,8 +47,25 @@ export default function PlannerClient({
   const [savedBuilds, setSavedBuilds] = useState<SavedBuild[]>([]);
   const [saveError, setSaveError] = useState(false);
   // Which talent (if any) a mobile tap most recently landed on -- shows its
-  // minus badge and turns a second tap into "remove" instead of "add".
+  // minus badge and turns a second tap into "remove" instead of "add", and
+  // drives the inline tooltip's position/content.
   const [tappedTalentId, setTappedTalentId] = useState<string | null>(null);
+  // Long-press-to-read: temporarily overrides tappedTalentId for the inline
+  // tooltip while held, without touching the actual tap/spend state.
+  const [peekTalentId, setPeekTalentId] = useState<string | null>(null);
+
+  useEffect(() => {
+    // The inline talent tooltip stays open through taps/point-spending and
+    // is only dismissed by scrolling -- the page itself scrolls here (the
+    // tree grids don't have their own overflow container), so this listens
+    // on the window rather than a specific ref.
+    function handleScroll() {
+      setTappedTalentId(null);
+      setPeekTalentId(null);
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     // Reads localStorage, which isn't available during SSR -- state starts
@@ -75,6 +92,7 @@ export default function PlannerClient({
     setClassId(id);
     setRanks({});
     setTappedTalentId(null);
+    setPeekTalentId(null);
   }, []);
 
   const addPoint = useCallback(
@@ -108,6 +126,20 @@ export default function PlannerClient({
   const resetBuild = useCallback(() => {
     setRanks({});
     setTappedTalentId(null);
+    setPeekTalentId(null);
+  }, []);
+
+  // Distinct from resetBuild: clears only the points spent within one tree,
+  // leaving the other trees (and their tapped/peeked state) untouched.
+  const resetTree = useCallback((tree: TalentTree) => {
+    const treeTalentIds = new Set(tree.talents.map((t) => t.id));
+    setRanks((prev) => {
+      const next = { ...prev };
+      for (const id of treeTalentIds) delete next[id];
+      return next;
+    });
+    setTappedTalentId((prev) => (prev && treeTalentIds.has(prev) ? null : prev));
+    setPeekTalentId((prev) => (prev && treeTalentIds.has(prev) ? null : prev));
   }, []);
 
   const totalSpent = classData ? totalPointsSpent(classData.trees, ranks) : 0;
@@ -147,6 +179,7 @@ export default function PlannerClient({
       const buildClassData = getClassTalentData(build.classId);
       setRanks(buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {});
       setTappedTalentId(null);
+      setPeekTalentId(null);
       setMyBuildsOpen(false);
     },
     []
@@ -240,6 +273,9 @@ export default function PlannerClient({
                   compareMode={compareMode}
                   tappedTalentId={tappedTalentId}
                   onTap={setTappedTalentId}
+                  peekTalentId={peekTalentId}
+                  onPeek={setPeekTalentId}
+                  onResetTree={() => resetTree(tree)}
                 />
               ))}
             </div>
