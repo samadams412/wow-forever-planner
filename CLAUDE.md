@@ -12,19 +12,31 @@ serving as a fixed project brief.
 ## Session handoff — 2026-09-16
 
 **Stable and shipped this session:**
-- Mobile talent tree rebuilt end to end: tap-always-adds (never toggles to
-  remove), long-press-to-peek, scroll-vs-tap touch-threshold, single
-  overlay tooltip that closes on scroll, per-tree reset, add/remove
-  pulse+haptic feedback, and a widened mobile layout matching the site's
-  `px-3`/`sm:px-4` gutter. See "Mobile talent tree interaction model" below.
-- 10 Hunter talent icons corrected against Wowhead-verified slugs.
-- 2026-09-16 talentsforever pull ingested: per-rank `confirmedRanks` marker
-  added (generic, opt-in — see below) and applied to Improved Holy
-  Strike/Reverence, the Talented legacy perk's wording reconciled, Call of
-  the Ancestors spellbook tooltip added, Ghost Wolf's base cast time
-  corrected to 2 sec with an inferred-not-observed citation.
-- `docs/adding-content.md` written and verified by scaffolding (then
-  deleting) throwaway guide/blog posts in dev.
+- 2026-09-16 talentsforever pull ingested (second pass): all 43 talent
+  field changes + all 16 spell_desc changes applied in bulk from the diff.
+  Includes Improved Ghost Wolf/Ghost Wolf's base cast reverting to Classic's
+  3 sec (a non-linear per-rank cut disproved the earlier flat -1/-2 sec
+  assumption — see the talent commit), Windwall Totem/Totemic Projection,
+  and twelve Pikaboo-duel-video spellbook tooltips.
+- Planner header redesign: class tiles are icon+name rectangles (was
+  square icon-over-name); a Level 10-60 dropdown (default 60) now gates
+  the talent point cap via `pointsAtLevel()` in `lib/talent-rules.ts` —
+  the curve (1 pt/level from 10) was confirmed directly against
+  talentsforever.com's own level dropdown, not invented.
+- Eligible-races column (`RacePicker`) removed from the planner — see the
+  "reversal" note under Architecture below before reintroducing it.
+- Talent tree visual polish: wider spacing, thicker/clearer connector
+  arrows, and a new `TalentLegend` showing the four talent states (Open/
+  Learning both green — deliberately, matches talentsforever.com's own
+  tree; Maxed gold; Locked grayed).
+- Spellbook tooltip positioning fixed (opens to whichever side of the row
+  is away from the list's continuation, instead of stacking below and
+  covering the next spell) plus a mobile bottom-sheet placement — see
+  "Shared class spellbook component" below for the one unverified part.
+- Spellbook tooltips gained a real header/rank line, a word-level
+  "Changed from Classic" diff (`lib/text-diff.ts` + `TooltipClassicDiff`),
+  and a citation footer, gated behind a `compareMode` prop shared with the
+  talent tree's existing toggle.
 
 **Open / mid-flight — do not guess at these, ask or investigate fresh:**
 - `data/sources/talentsforever-2026-09-15.json` and `-16.json` are
@@ -35,23 +47,35 @@ serving as a fixed project brief.
   which snapshot is which.
 - No visual distinction exists yet between a directly-observed demo
   tooltip source and one that's inferred from indirect evidence (both
-  currently render as the same green "confirmed" note) — flagged during
-  the Ghost Wolf fix as a possible follow-up, not decided or scheduled.
+  currently render as the same green "confirmed" note) — flagged again
+  during this session's Ghost Wolf revert (same inferred-citation pattern
+  reused, not reinvented), still not decided or scheduled.
+- The spellbook tooltip's mobile bottom-sheet placement (`useHoverTooltip`'s
+  `mobileBottomSheet` option) is implemented and code-reviewed but **not
+  visually verified** — `resize_window` didn't actually shrink the
+  viewport in this session's browser automation environment (window
+  stayed 1920px regardless of the requested size), so the `<640px` code
+  path was never seen rendering for real. Check on an actual narrow
+  viewport/device before trusting it fully.
+- `classicDescription`/`classicStatus` (the new Classic-vs-Forever diff
+  data for spellbook tooltips) is populated for only 7 spells so far
+  (Entangling Roots, Windwall Totem, Ghost Wolf, Corruption, Hellfire,
+  Shadow Bolt, Devour Magic) — enough to prove the feature, not a backfill.
+  Bulk-populating the rest from talentsforever's own `cd`/`cs` spell_desc
+  fields (already ingested into `data/sources/`, never fully read) is real
+  follow-up work, same shape as the confirmedRanks bulk-apply was.
 - Per-post Open Graph images for guides/blog posts aren't built — every
   post falls back to the sitewide default image regardless of its own
   `heroImage`. Noted in `docs/adding-content.md`, not scheduled.
 - `app/sitemap.ts` has a literal TODO and currently omits all four
   published blog posts (and any future guides) — adding a new post/guide
   does not add it to the sitemap.
-- I was asked to note a previously-flagged "Druid Thick Hide missing
-  rank-2 text" bug in this handoff, but checked `data/talents/druid.json`
-  directly and it currently has distinct, fully-populated text for all
-  three ranks. Either it was already fixed in a session not reflected in
-  my visible history, or this refers to something other than the talent
-  data itself (e.g. a rendering issue) — re-verify against the live page
-  before assuming it's still broken.
 
 **Suggested next:**
+- Verify the spellbook tooltip mobile bottom-sheet on a real narrow
+  viewport (see above).
+- Backfill `classicDescription`/`classicStatus` across the rest of the
+  confirmed spellbook tooltips from talentsforever's `cd`/`cs` fields.
 - Once the user has resolved the `data/sources/` snapshot naming, resume
   the normal daily-pull workflow (below).
 - Wire `getAllPosts()`/`getAllGuides()` into `app/sitemap.ts` instead of
@@ -132,6 +156,20 @@ default. `ClassAbilitiesSection` also wraps itself in its own nested
 (`TooltipSourceNote`) currently use a strict binary `confirmed` boolean —
 see the open item above about inferred-vs-observed sourcing having no
 distinct visual treatment yet.
+
+`SpellbookBook` takes a `compareMode` prop (default `false`) that gates a
+per-spell "Changed from Classic" word-diff (`TooltipClassicDiff`, built on
+`lib/text-diff.ts`'s small LCS diff) shown only when that spell's
+`classicStatus === "changed"` and it has a `classicDescription`. The
+planner passes its existing `compareMode` state through; the standalone
+`/reference/class-spellbooks` page has its own local `compareMode` state
+and its own "Compare to Classic" button (mirroring the planner's), since it
+has no other shared toggle to reuse. Each `SpellEntry`'s tooltip opens on
+whichever side of its row is away from the list's continuation (alternates
+by column) via `useHoverTooltip`'s `"left"`/`"right"` placement, and
+switches to a bottom-anchored sheet below the `sm` breakpoint via that
+hook's `mobileBottomSheet` option — see the open item above, that mobile
+path hasn't been seen rendering on an actual narrow viewport yet.
 
 ### `confirmed` field — per-rank talent confirmation (resolved)
 talentsforever's source data can carry a per-rank `confirmed: number[]`
