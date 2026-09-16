@@ -14,7 +14,7 @@
             "Reduces the cooldown of your Holy Strike ability by 1 sec.",
             "Reduces the cooldown of your Holy Strike ability by 2 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_holy_crusaderstrike",
@@ -207,6 +207,7 @@
             "Allows 30% of your Mana regeneration to continue while casting."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [3],
           "prereq": null,
           "status": "new",
           "icon": "spell_holy_mindvision",

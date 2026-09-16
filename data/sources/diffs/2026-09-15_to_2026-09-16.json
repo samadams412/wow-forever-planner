@@ -1,0 +1,248 @@
+{
+  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-15.json",
+  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-16.json",
+  "oldLabel": "2026-09-15",
+  "newLabel": "2026-09-16",
+  "talents": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Improved Holy Strike",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": {
+              "1": "Reduces the cooldown of your Holy Strike ability by 1 sec."
+            },
+            "new": [
+              "Reduces the cooldown of your Holy Strike ability by 1 sec.",
+              "Reduces the cooldown of your Holy Strike ability by 2 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "complete",
+            "old": false,
+            "new": true,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "new": [
+              2
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Reverence",
+        "fieldChanges": [
+          {
+            "field": "confirmed",
+            "new": [
+              3
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Lethal Attacks",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_criticalshot",
+            "new": "ability_searingarrow",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Improved Stings",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_quickshot",
+            "new": "hunter_pvp_spidersting",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Lone Wolf",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "spell_nature_spiritwolf",
+            "new": "ability_mount_whitedirewolf",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Sniper Shot",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_snipershot",
+            "new": "hunter_pvp_snipershot",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Improved Tracking",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_improvedtracking",
+            "new": "inv_misc_head_dragon_black",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Survival Tactics",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_rogue_feint",
+            "new": "inv_misc_net_01",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Predator's Edge",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_huntingparty",
+            "new": "ability_hunter_hatchettoss",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Expose Prey",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_markedfordeath",
+            "new": "ability_hunter_swiftstrike",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Survivalist's Discipline",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_hunter_survivalinstincts",
+            "new": "ability_hunter_mastertactitian",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Lacerating Strikes",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "ability_druid_lacerate",
+            "new": "ability_gouge",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [],
+    "removedArrayAdded": [],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "treeName": "Adventure",
+        "name": "Talented",
+        "fieldChanges": [
+          {
+            "field": "description",
+            "old": "You gain talent points every level starting at level 9 instead of level 10, but you still may not have more than 51 total talent points.",
+            "new": "Each rank starts your talent points one level earlier. At 5/5: You gain talent points every level starting at level 5 instead of starting at level 10, but you still may not have more than 51 total talent points. (Rank 1 starts them at level 9. Read at 5/5 on Soda's BlizzCon stream.)"
+          }
+        ]
+      }
+    ]
+  },
+  "spellbooks": {
+    "added": [],
+    "removed": [],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [
+      "Shaman|Call of the Ancestors|"
+    ],
+    "removed": [],
+    "changed": [
+      "Shaman|Ghost Wolf|"
+    ],
+    "newFields": []
+  },
+  "opaque": {
+    "racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": false,
+      "newFields": []
+    }
+  }
+}

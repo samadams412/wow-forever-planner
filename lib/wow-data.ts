@@ -51,6 +51,11 @@ export type Talent = {
   reqText?: string;
   status: TalentStatus;
   confidence: Confidence;
+  // 1-indexed ranks whose text in `ranks` is vendor-confirmed rather than
+  // our own extrapolation. Only meaningful when confidence !== "confirmed";
+  // omit entirely for talents with no per-rank confirmation data (the
+  // common case) rather than listing every rank.
+  confirmedRanks?: number[];
   icon: string;
   classic?: ClassicTalentInfo;
   passive: boolean;

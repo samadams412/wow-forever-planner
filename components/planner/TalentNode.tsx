@@ -223,6 +223,19 @@ export default function TalentNode({
   // same text as both "current" and "next".
   const currentRankText = rank > 0 ? talent.ranks[rank - 1] : talent.maxRank === 1 ? talent.ranks[0] : null;
   const nextRankText = talent.maxRank > 1 && rank < talent.maxRank ? talent.ranks[rank] : null;
+  // Which rank number each of those texts actually is, so it can be checked
+  // against confirmedRanks below -- not always `rank`/`rank + 1` because of
+  // the maxRank === 1 special case above.
+  const currentRankNumber = rank > 0 ? rank : talent.maxRank === 1 ? 1 : null;
+  const nextRankNumber = nextRankText ? rank + 1 : null;
+  // Only ever true when the data explicitly says so -- a talent with no
+  // confirmedRanks at all (the vast majority) never shows this marker,
+  // regardless of its overall confidence.
+  function isRankEstimated(rankNumber: number | null): boolean {
+    if (rankNumber === null) return false;
+    if (talent.confidence === "confirmed" || !talent.confirmedRanks) return false;
+    return !talent.confirmedRanks.includes(rankNumber);
+  }
   const typeLabel = talent.passive ? "Passive" : (talent.cost ?? "Active");
   const tierPointsRequired = POINTS_PER_ROW * (talent.tier - 1);
   const tierLocked = !tierUnlocked(talent.tier, pointsInTree);
@@ -336,11 +349,23 @@ export default function TalentNode({
             <TooltipRank>
               Rank {rank} of {talent.maxRank} · {typeLabel}
             </TooltipRank>
-            {currentRankText && <TooltipDescription>{formatTooltipText(currentRankText)}</TooltipDescription>}
+            {currentRankText && (
+              <TooltipDescription>
+                {formatTooltipText(currentRankText)}
+                {isRankEstimated(currentRankNumber) && (
+                  <span className="ml-1 text-[10px] italic text-gray-500">(estimated)</span>
+                )}
+              </TooltipDescription>
+            )}
             {nextRankText && (
               <>
                 <TooltipRank>Next Rank</TooltipRank>
-                <TooltipDescription>{formatTooltipText(nextRankText)}</TooltipDescription>
+                <TooltipDescription>
+                  {formatTooltipText(nextRankText)}
+                  {isRankEstimated(nextRankNumber) && (
+                    <span className="ml-1 text-[10px] italic text-gray-500">(estimated)</span>
+                  )}
+                </TooltipDescription>
               </>
             )}
             {talent.prereq && (
