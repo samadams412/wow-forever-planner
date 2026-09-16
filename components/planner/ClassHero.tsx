@@ -37,7 +37,7 @@ export default function ClassHero({
           </h2>
           <p className="text-xs text-foreground-muted">
             {specLabel && (
-              <span className="mr-1.5 font-semibold" style={{ color: TREE_ACCENT_COLORS[leadIdx!] }}>
+              <span className="mr-1.5 font-semibold" style={{ color }}>
                 {specLabel}
               </span>
             )}
