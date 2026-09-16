@@ -2028,11 +2028,15 @@
       [
         "60 Energy",
         "Melee Range"
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
-    "description": "Backstab the target, causing 150% weapon damage plus 90 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards 1 combo point.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Backstab the target, causing 150% weapon damage plus 90 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+    "confirmed": true,
+    "source": "Pikaboo's Rogue, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458. His tooltip read 165% plus 99, which is this base with his 5/5 Aggression (+10%) applied; the base is shown here."
   },
   "Rogue|Blade Flurry": {
     "lines": [
@@ -2057,8 +2061,8 @@
       ]
     ],
     "description": "The rogue's dodge chance will increase by 50% for 15 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 8"
+    "confirmed": true,
+    "source": "Pikaboo's Rogue, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Rogue|Feint": {
     "lines": [
@@ -2127,9 +2131,9 @@
         "5 min cooldown"
       ]
     ],
-    "description": "Increases the rogue's movement speed by 60% for 15 sec.  Does not break stealth.",
-    "confirmed": false,
-    "levelReq": "Requires level 34"
+    "description": "Increases the rogue's movement speed by 60% for 15 sec. Does not break stealth.",
+    "confirmed": true,
+    "source": "Pikaboo's Rogue, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Rogue|Blind": {
     "lines": [
@@ -2281,13 +2285,17 @@
   "Priest|Dispel Magic": {
     "lines": [
       [
-        "18% of base mana",
+        "150 Mana",
         "30 yd range"
+      ],
+      [
+        "Instant",
+        ""
       ]
     ],
     "description": "Dispels magic on the target, removing 2 harmful spells from a friend or 2 beneficial spells from an enemy.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "confirmed": true,
+    "source": "Pikaboo's Priest, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Priest|Divine Spirit": {
     "lines": [
@@ -2377,11 +2385,15 @@
       [
         "90 Mana",
         "30 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        ""
       ]
     ],
-    "description": "Shackles the target undead enemy for up to 30 sec.  The shackled unit is unable to move, attack or cast spells.  Any damage caused will release the target.  Only one target can be shackled at a time.",
-    "confirmed": false,
-    "levelReq": "Requires level 20"
+    "description": "Shackles the target undead enemy for up to 30 sec. The shackled unit is unable to move, attack or cast spells. Any damage caused will release the target. Only one target can be shackled at a time.",
+    "confirmed": true,
+    "source": "Pikaboo's Priest, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Priest|Starshards": {
     "lines": [
@@ -2995,13 +3007,13 @@
         ""
       ],
       [
-        "2 sec cast",
+        "3 sec cast",
         ""
       ]
     ],
     "description": "Turns the Shaman into a Ghost Wolf, increasing speed by 40%.",
     "confirmed": true,
-    "source": "Inferred, not directly observed: Guzu's Shaman, 12 Sep, had Improved Ghost Wolf 2/2 (shows Instant), and that talent cuts 1 sec per rank, so the untalented cast is 2 sec, down from 3 in Classic. No untalented Shaman has hovered it on footage yet."
+    "source": "Inferred, not directly observed: Guzu's Shaman, 12 Sep, had Improved Ghost Wolf 2/2 (shows Instant). u/Buttschnapz sent the talent tooltip showing rank 2 cuts 3.0 sec, so the untalented base is the Classic 3 sec cast. No untalented Shaman has hovered it on footage yet."
   },
   "Shaman|Grounding Totem": {
     "lines": [
@@ -3101,16 +3113,17 @@
   "Shaman|Totemic Projection": {
     "lines": [
       [
-        "30 yd range",
-        ""
+        "230 Mana",
+        "30 yd range"
       ],
       [
         "Instant",
-        "10 sec cooldown"
+        "1 min cooldown"
       ]
     ],
     "description": "Relocates your active totems to the specified location.",
-    "confirmed": false
+    "confirmed": true,
+    "source": "Soda's Shaman Class Deep Dive video (YouTube, 13 Sep), spellbook hover. Spotted by u/Whisp157."
   },
   "Shaman|Water Breathing": {
     "lines": [
@@ -3164,10 +3177,23 @@
     "source": "Demo spellbook screenshot sent by a reader (Schiffers)"
   },
   "Shaman|Windwall Totem": {
-    "lines": [],
-    "description": "Summons a Windwall Totem with 5 health at the feet of the caster.  The totem protects party members within 20 yards, reducing ranged damage taken by 32.  Lasts 2 min.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "lines": [
+      [
+        "115 Mana",
+        ""
+      ],
+      [
+        "Instant",
+        ""
+      ],
+      [
+        "Tools: Air Totem",
+        ""
+      ]
+    ],
+    "description": "Summons a Windwall Totem with 5 health at the feet of the caster. The totem protects party members within 30 yards, reducing ranged damage taken by 32. Lasts 5 min.",
+    "confirmed": true,
+    "source": "Soda's Shaman Class Deep Dive video (YouTube, 13 Sep), spellbook hover. Spotted by u/Whisp157."
   },
   "Shaman|Ancestral Spirit": {
     "lines": [
@@ -3606,11 +3632,15 @@
       [
         "160 Mana",
         "30 yd range"
+      ],
+      [
+        "2 sec cast",
+        ""
       ]
     ],
-    "description": "Corrupts the target, causing 324 Shadow damage over 18 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 34"
+    "description": "Corrupts the target, causing 327 Shadow damage over 18 sec.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458. His tooltip read Instant because he had 5/5 Improved Corruption; the base 2 sec cast is shown here. Damage includes his gear."
   },
   "Warlock|Curse of Recklessness": {
     "lines": [
@@ -3708,13 +3738,17 @@
   "Warlock|Fear": {
     "lines": [
       [
-        "15% of base mana",
+        "130 Mana",
         "20 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        ""
       ]
     ],
-    "description": "Strikes fear in the enemy, causing it to run in fear for up to 15 sec.  Damage caused may interrupt the effect.  Only 1 target can be feared at a time.",
-    "confirmed": false,
-    "levelReq": "Requires level 32"
+    "description": "Strikes fear in the enemy, causing it to run in fear for up to 15 sec. Damage caused may interrupt the effect. Only 1 target can be feared at a time.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Warlock|Life Tap": {
     "lines": [
@@ -3954,28 +3988,32 @@
   "Warlock|Hellfire": {
     "lines": [
       [
-        "",
-        "Level 60"
+        "645 Mana",
+        ""
+      ],
+      [
+        "Channeled",
+        ""
       ]
     ],
-    "description": "Ignites the area surrounding the caster, causing 87 Fire damage to himself and 87 Fire damage to all nearby enemies every 1 sec.  Lasts 15 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "Ignites the area surrounding the caster, causing 90 Fire damage to herself and 86 Fire damage to all nearby enemies every 1 sec. Lasts 15 sec.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458. His character is female, hence 'herself'."
   },
   "Warlock|Immolate": {
     "lines": [
       [
-        "",
-        "Level 60"
-      ],
-      [
         "155 Mana",
         "30 yd range"
+      ],
+      [
+        "2 sec cast",
+        ""
       ]
     ],
-    "description": "Burns the enemy for [101 * (((1)))] Fire damage and then an additional 165 Fire damage over 15 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "Burns the enemy for 74 Fire damage and then an additional 133 Fire damage over 15 sec.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458. Damage includes his gear."
   },
   "Warlock|Rain of Fire": {
     "lines": [
@@ -4014,24 +4052,20 @@
   "Warlock|Shadow Bolt": {
     "lines": [
       [
-        "",
-        "Level 60"
-      ],
-      [
         "210 Mana",
         "30 yd range"
+      ],
+      [
+        "3 sec cast",
+        ""
       ]
     ],
-    "description": "Sends a shadowy bolt at the enemy, causing 213 to 240 Shadow damage.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Sends a shadowy bolt at the enemy, causing 178 to 192 Shadow damage.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458. Damage includes his gear."
   },
   "Warlock|Devour Magic": {
     "lines": [
-      [
-        "",
-        "Level 60"
-      ],
       [
         "130 Mana",
         "30 yd range"
@@ -4041,9 +4075,9 @@
         "8 sec cooldown"
       ]
     ],
-    "description": "Purges 1 harmful magic effect from a friend or 1 beneficial magic effect from an enemy.  If an effect is devoured, the Felhunter will be healed for 348.",
-    "confirmed": false,
-    "levelReq": "Requires level 38"
+    "description": "Purges 1 harmful magic effect from a friend or 1 beneficial magic effect from an enemy. If an effect is devoured, the Felhunter will be healed for 319.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Warlock|Spell Lock": {
     "lines": [
@@ -4056,9 +4090,9 @@
         "30 sec cooldown"
       ]
     ],
-    "description": "Silences the enemy for 3 sec.  If used on a casting target, it will counter the enemy's spellcast, preventing any spell from that school of magic from being cast for 6 sec.",
-    "confirmed": false,
-    "levelReq": "Requires level 36"
+    "description": "Silences the enemy for 3 sec. If used on a casting target, it will counter the enemy's spellcast, preventing any spell from that school of magic from being cast for 6 sec.",
+    "confirmed": true,
+    "source": "Pikaboo's Warlock, BlizzCon day 2 (his YouTube duel video, 13 Sep). Spotted by u/DepthFun4458."
   },
   "Warlock|Tainted Blood": {
     "lines": [],
@@ -4091,13 +4125,17 @@
   "Druid|Entangling Roots": {
     "lines": [
       [
-        "50 Mana",
+        "95 Mana",
         "30 yd range"
+      ],
+      [
+        "1.5 sec cast",
+        ""
       ]
     ],
-    "description": "Roots the target in place and causes 20 Nature damage over 12 sec.  Damage caused may interrupt the effect.  Only useable outdoors.",
-    "confirmed": false,
-    "levelReq": "Requires level 8"
+    "description": "Roots the target in place and causes 140 Nature damage over 21 sec. Damage caused may interrupt the effect. You may only have 1 target Rooted at a time.",
+    "confirmed": true,
+    "source": "Soda's Druid, 13 Sep, VOD timestamp 8:24:15 (spotted by u/Crawlthewall): rank 4 shows no outdoors line and the one-target line; the beta client's spell text is the same for every rank."
   },
   "Druid|Faerie Fire": {
     "lines": [
