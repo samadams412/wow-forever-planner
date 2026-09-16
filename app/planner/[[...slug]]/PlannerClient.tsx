@@ -3,7 +3,14 @@
 import { useCallback, useEffect, useState } from "react";
 import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
-import { canAddPoint, canRemovePoint, totalPointsSpent, MAX_TALENT_POINTS } from "@/lib/talent-rules";
+import {
+  canAddPoint,
+  canRemovePoint,
+  totalPointsSpent,
+  pointsAtLevel,
+  MIN_TALENT_LEVEL,
+  MAX_LEVEL,
+} from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
 import RacePicker from "@/components/planner/RacePicker";
 import ClassPicker from "@/components/planner/ClassPicker";
@@ -39,6 +46,11 @@ export default function PlannerClient({
     const classData = getClassTalentData(initialClassId ?? DEFAULT_CLASS_ID);
     return classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
   });
+  // Not part of the URL/build code (talentsforever.com's own level control
+  // works the same way -- it's a local planning aid, not part of the shared
+  // build). Defaults to the level cap so a fresh/shared build always starts
+  // with every point available.
+  const [level, setLevel] = useState<number>(MAX_LEVEL);
   const [copied, setCopied] = useState(false);
   const [compareMode, setCompareMode] = useState(false);
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
@@ -76,6 +88,7 @@ export default function PlannerClient({
 
   const classData = getClassTalentData(classId);
   const eligibleRaces = races.filter((r) => r.allowedClasses.includes(classId));
+  const maxPoints = pointsAtLevel(level);
 
   useEffect(() => {
     // window.history.replaceState, not next/navigation's router.replace: the
@@ -107,11 +120,11 @@ export default function PlannerClient({
       // `ranks` let every queued call see the same pre-tap count and pass
       // the max-rank/points-left guard, overshooting past the real cap.
       setRanks((prev) => {
-        if (!canAddPoint(tree, talent, prev, totalPointsSpent(classData.trees, prev))) return prev;
+        if (!canAddPoint(tree, talent, prev, totalPointsSpent(classData.trees, prev), maxPoints)) return prev;
         return { ...prev, [talentId]: (prev[talentId] ?? 0) + 1 };
       });
     },
-    [classData]
+    [classData, maxPoints]
   );
 
   const removePoint = useCallback(
@@ -210,8 +223,22 @@ export default function PlannerClient({
         <ClassPicker selectedClassId={classId} onSelect={handleSelectClass} />
 
         <div className="flex flex-wrap items-center justify-end gap-2">
+          <label className="flex items-center gap-1.5 text-xs text-foreground-muted">
+            Level
+            <select
+              value={level}
+              onChange={(e) => setLevel(Number(e.target.value))}
+              className="rounded border border-border bg-surface px-1.5 py-0.5 text-xs text-foreground focus:border-accent focus:outline-none"
+            >
+              {Array.from({ length: MAX_LEVEL - MIN_TALENT_LEVEL + 1 }, (_, i) => MAX_LEVEL - i).map((lvl) => (
+                <option key={lvl} value={lvl}>
+                  Level {lvl}
+                </option>
+              ))}
+            </select>
+          </label>
           <span className="text-xs text-foreground-muted">
-            {totalSpent} / {MAX_TALENT_POINTS} pts
+            {totalSpent} / {maxPoints} pts
           </span>
           <button
             type="button"
@@ -275,6 +302,7 @@ export default function PlannerClient({
                   tree={tree}
                   ranks={ranks}
                   totalSpent={totalSpent}
+                  maxPoints={maxPoints}
                   onAdd={addPoint}
                   onRemove={removePoint}
                   compareMode={compareMode}

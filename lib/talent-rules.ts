@@ -4,6 +4,18 @@ import type { RankState } from "@/lib/build-code";
 export const POINTS_PER_ROW = 5;
 export const MAX_TALENT_POINTS = 51;
 
+// Core WoW rule (confirmed against talentsforever.com's own level dropdown,
+// and matches the "Talented" Legacy Perk's baseline text: "you gain talent
+// points every level starting at level 10"): 1 point per level, levels
+// 10-60, capping at MAX_TALENT_POINTS (51) at the level cap. No points at
+// all below level 10.
+export const MIN_TALENT_LEVEL = 10;
+export const MAX_LEVEL = 60;
+
+export function pointsAtLevel(level: number): number {
+  return Math.max(0, Math.min(level, MAX_LEVEL) - (MIN_TALENT_LEVEL - 1));
+}
+
 export function pointsSpentInTree(tree: TalentTree, ranks: RankState): number {
   return tree.talents.reduce((sum, t) => sum + (ranks[t.id] ?? 0), 0);
 }
@@ -20,11 +32,12 @@ export function canAddPoint(
   tree: TalentTree,
   talent: Talent,
   ranks: RankState,
-  totalSpent: number
+  totalSpent: number,
+  maxPoints: number = MAX_TALENT_POINTS
 ): boolean {
   const current = ranks[talent.id] ?? 0;
   if (current >= talent.maxRank) return false;
-  if (totalSpent >= MAX_TALENT_POINTS) return false;
+  if (totalSpent >= maxPoints) return false;
   if (!tierUnlocked(talent.tier, pointsSpentInTree(tree, ranks))) return false;
   if (talent.prereq) {
     const prereqRank = ranks[talent.prereq.id] ?? 0;

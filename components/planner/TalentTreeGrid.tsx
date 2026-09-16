@@ -13,6 +13,7 @@ export default function TalentTreeGrid({
   tree,
   ranks,
   totalSpent,
+  maxPoints,
   onAdd,
   onRemove,
   compareMode,
@@ -26,6 +27,7 @@ export default function TalentTreeGrid({
   tree: TalentTree;
   ranks: RankState;
   totalSpent: number;
+  maxPoints: number;
   onAdd: (talentId: string) => void;
   onRemove: (talentId: string) => void;
   compareMode?: boolean;
@@ -104,7 +106,7 @@ export default function TalentTreeGrid({
             key={t.id}
             talent={t}
             rank={ranks[t.id] ?? 0}
-            canAdd={canAddPoint(tree, t, ranks, totalSpent)}
+            canAdd={canAddPoint(tree, t, ranks, totalSpent, maxPoints)}
             onAdd={() => onAdd(t.id)}
             onRemove={() => onRemove(t.id)}
             prereqName={t.prereq ? byId.get(t.prereq.id)?.name : undefined}

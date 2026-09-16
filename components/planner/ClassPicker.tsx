@@ -10,7 +10,7 @@ export default function ClassPicker({
   onSelect: (classId: string) => void;
 }) {
   return (
-    <div className="grid grid-cols-5 gap-1 sm:grid-cols-9">
+    <div className="grid grid-cols-3 gap-1.5 sm:grid-cols-9">
       {ALL_CLASS_IDS.map((classId) => {
         const icon = CLASS_ICON[classId];
         const hasData = !!getClassTalentData(classId);
@@ -23,7 +23,7 @@ export default function ClassPicker({
             disabled={!hasData}
             title={hasData ? undefined : "Data coming soon"}
             onClick={() => hasData && onSelect(classId)}
-            className={`flex w-full flex-col items-center gap-0.5 rounded border p-1.5 transition-colors ${
+            className={`flex w-full items-center gap-1.5 rounded border px-2 py-1.5 transition-colors ${
               !hasData
                 ? "cursor-not-allowed border-border/50 bg-surface/50 text-foreground-muted/50"
                 : selected
@@ -35,9 +35,9 @@ export default function ClassPicker({
             <img
               src={mediumIconUrl(icon)}
               alt=""
-              className={`h-7 w-7 rounded-sm ${!hasData ? "opacity-40 grayscale" : ""}`}
+              className={`h-6 w-6 shrink-0 rounded-sm ${!hasData ? "opacity-40 grayscale" : ""}`}
             />
-            <span className="text-center text-[10px] leading-tight">{classLabel(classId)}</span>
+            <span className="truncate text-left text-xs font-medium leading-tight">{classLabel(classId)}</span>
           </button>
         );
       })}
