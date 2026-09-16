@@ -245,13 +245,15 @@ export default function TalentNode({
   // original game), so the fix here is just telling the player what to do.
   const capReached = rank < talent.maxRank && totalSpent >= MAX_TALENT_POINTS;
 
-  const borderClass = locked
-    ? "border-border/40"
-    : maxed
-      ? "border-amber-400"
-      : invested
-        ? "border-green-500"
-        : "border-border hover:border-accent/60";
+  // Four states, matching the planner's talent legend: locked (grayed),
+  // maxed (gold), and "open" (available, unlearned) + "learning" (has
+  // points, not maxed) both green -- available-but-empty and in-progress
+  // read the same at the border, differentiated only by the rank badge
+  // (0/N vs N/M). That's a deliberate match to talentsforever.com's own
+  // talent tree, not an oversight: zoomed screenshots of their live site
+  // confirm an unlearned-but-available talent (0/5) gets the identical
+  // green border their in-progress talents do.
+  const borderClass = locked ? "border-border/40" : maxed ? "border-amber-400" : "border-green-500";
 
   const badgeTextClass = locked
     ? "text-foreground-muted"

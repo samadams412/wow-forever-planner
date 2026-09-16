@@ -17,6 +17,7 @@ import RaceReferenceTable from "@/components/reference/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
 import CompareLegend from "@/components/planner/CompareLegend";
+import TalentLegend from "@/components/planner/TalentLegend";
 import Dialog from "@/components/site/Dialog";
 import Collapsible from "@/components/site/Collapsible";
 import SpellbookBook from "@/components/reference/SpellbookBook";
@@ -285,6 +286,7 @@ export default function PlannerClient({
           </button>
         </div>
 
+        <TalentLegend />
         {compareMode && <CompareLegend />}
 
         {classData && <ClassHero classId={classData.class} />}

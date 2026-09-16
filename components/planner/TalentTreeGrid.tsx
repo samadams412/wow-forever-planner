@@ -74,7 +74,7 @@ export default function TalentTreeGrid({
         </div>
       </div>
       <div
-        className="relative grid gap-2.5 rounded bg-cover bg-center p-2"
+        className="relative grid gap-3.5 rounded bg-cover bg-center p-2.5"
         style={{
           gridTemplateColumns: `repeat(${COLS}, minmax(60px, 1fr))`,
           gridTemplateRows: `repeat(${TIERS}, 1fr)`,
@@ -96,7 +96,7 @@ export default function TalentTreeGrid({
                   gridRow: `${prereq.tier} / ${t.tier + 1}`,
                 }}
               >
-                <div className={`w-1.5 rounded-full ${met ? "bg-accent" : "bg-foreground-muted/50"}`} />
+                <div className={`w-2.5 rounded-full ${met ? "bg-accent" : "bg-foreground-muted/40"}`} />
               </div>
             );
           })}
@@ -134,8 +134,8 @@ export default function TalentTreeGrid({
                 style={{ gridColumn: t.col, gridRow: t.tier }}
               >
                 <div
-                  className={`absolute -top-[5px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[5px] border-x-transparent border-t-[7px] ${
-                    met ? "border-t-accent" : "border-t-foreground-muted/50"
+                  className={`absolute -top-[7px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[7px] border-x-transparent border-t-[10px] ${
+                    met ? "border-t-accent" : "border-t-foreground-muted/40"
                   }`}
                 />
               </div>
