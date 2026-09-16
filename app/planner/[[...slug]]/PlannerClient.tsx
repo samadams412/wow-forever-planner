@@ -12,7 +12,6 @@ import {
   MAX_LEVEL,
 } from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
-import RacePicker from "@/components/planner/RacePicker";
 import ClassPicker from "@/components/planner/ClassPicker";
 import RaceReferenceTable from "@/components/reference/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
@@ -26,9 +25,10 @@ import { spellbooks } from "@/lib/spellbooks";
 
 const DEFAULT_CLASS_ID = "warrior";
 
-// Race is reference-only (see RacePicker) -- it never affects talent
-// calculations, so it isn't app state and isn't part of the URL. The build
-// code sits directly after the class: /planner/<class>/<build>.
+// Race never affects talent calculations, so it isn't app state and isn't
+// part of the URL (see RaceReferenceTable below for the reference-only
+// race info that still lives on this page). The build code sits directly
+// after the class: /planner/<class>/<build>.
 function buildPlannerPath(classId: string, code: string | null): string {
   const parts = code ? [classId, code] : [classId];
   return `/planner/${parts.join("/")}`;
@@ -87,7 +87,6 @@ export default function PlannerClient({
   }, []);
 
   const classData = getClassTalentData(classId);
-  const eligibleRaces = races.filter((r) => r.allowedClasses.includes(classId));
   const maxPoints = pointsAtLevel(level);
 
   useEffect(() => {
@@ -290,32 +289,28 @@ export default function PlannerClient({
 
         {classData && <ClassHero classId={classData.class} />}
 
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <RacePicker races={eligibleRaces} />
-
-          {classData && (
-            <div className="flex min-w-0 flex-1 flex-wrap justify-center gap-2 sm:justify-start">
-              {classData.trees.map((tree) => (
-                <TalentTreeGrid
-                  key={tree.name}
-                  classId={classData.class}
-                  tree={tree}
-                  ranks={ranks}
-                  totalSpent={totalSpent}
-                  maxPoints={maxPoints}
-                  onAdd={addPoint}
-                  onRemove={removePoint}
-                  compareMode={compareMode}
-                  tappedTalentId={tappedTalentId}
-                  onTap={setTappedTalentId}
-                  peekTalentId={peekTalentId}
-                  onPeek={setPeekTalentId}
-                  onResetTree={() => resetTree(tree)}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        {classData && (
+          <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
+            {classData.trees.map((tree) => (
+              <TalentTreeGrid
+                key={tree.name}
+                classId={classData.class}
+                tree={tree}
+                ranks={ranks}
+                totalSpent={totalSpent}
+                maxPoints={maxPoints}
+                onAdd={addPoint}
+                onRemove={removePoint}
+                compareMode={compareMode}
+                tappedTalentId={tappedTalentId}
+                onTap={setTappedTalentId}
+                peekTalentId={peekTalentId}
+                onPeek={setPeekTalentId}
+                onResetTree={() => resetTree(tree)}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {classData && (

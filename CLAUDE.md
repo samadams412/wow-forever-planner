@@ -66,11 +66,22 @@ serving as a fixed project brief.
 
 ### Planner: race is reference-only; URL is `/planner/<class>/<build>`
 Race is no longer app state or a URL segment — it never affects talent
-calculations. `RacePicker` (`components/planner/RacePicker.tsx`) shows a
-compact, class-filtered race column beside the tree with racials via
-popover; `RaceReferenceTable` (`components/reference/RaceReferenceTable.tsx`)
+calculations. `RaceReferenceTable` (`components/reference/RaceReferenceTable.tsx`)
 is the full table, shared as-is between the planner (rendered inline below
 the trees) and the standalone `/reference/racials` page.
+
+**Reversal (2026-09-16):** `RacePicker` (`components/planner/RacePicker.tsx`)
+— the compact, class-filtered race column that used to sit beside the tree
+with racials via popover — has been removed from the planner page (its only
+call site) to give the talent trees the full width instead (trees widened
+from `max-w-77` to `max-w-89`, icon columns from `minmax(52px,...)` to
+`minmax(60px,...)`). The component file itself is left in place, deliberately
+unused, per instruction not to touch it — only its embedding in the planner
+is gone; `RaceReferenceTable` (a different, larger component) is unaffected
+and still renders both standalone at `/reference/racials` and inline below
+the planner's trees, same as before. Do not reintroduce `RacePicker` into
+the planner without a fresh explicit decision to do so; this was a
+deliberate width trade-off, not an oversight.
 
 URL scheme is `/planner/<classId>/<buildCode>` (2 segments), handled by the
 catch-all route `app/planner/[[...slug]]/page.tsx`. Old-style 3-segment
