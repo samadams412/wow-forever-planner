@@ -87,6 +87,30 @@ export default function TalentTreeGrid({
             const prereq = byId.get(t.prereq!.id);
             if (!prereq) return null;
             const met = (ranks[prereq.id] ?? 0) >= t.prereq!.ranks;
+            const barClass = met ? "bg-accent" : "bg-foreground-muted/40";
+
+            // Same-tier prereq (e.g. Paladin Holy Shock -> Divine Precision,
+            // Priest Mind Flay -> Improved Mind Flay): the two talents sit
+            // side by side in the same row, so the connector runs
+            // horizontally across the column gap between them instead of
+            // vertically down a shared column.
+            if (prereq.tier === t.tier) {
+              const minCol = Math.min(prereq.col, t.col);
+              const maxCol = Math.max(prereq.col, t.col);
+              return (
+                <div
+                  key={`connector-${t.id}`}
+                  className="pointer-events-none flex items-center justify-stretch"
+                  style={{
+                    gridColumn: `${minCol} / ${maxCol + 1}`,
+                    gridRow: t.tier,
+                  }}
+                >
+                  <div className={`h-2.5 w-full rounded-full ${barClass}`} />
+                </div>
+              );
+            }
+
             return (
               <div
                 key={`connector-${t.id}`}
@@ -96,7 +120,7 @@ export default function TalentTreeGrid({
                   gridRow: `${prereq.tier} / ${t.tier + 1}`,
                 }}
               >
-                <div className={`w-2.5 rounded-full ${met ? "bg-accent" : "bg-foreground-muted/40"}`} />
+                <div className={`w-2.5 rounded-full ${barClass}`} />
               </div>
             );
           })}
@@ -127,6 +151,32 @@ export default function TalentTreeGrid({
             const prereq = byId.get(t.prereq!.id);
             if (!prereq) return null;
             const met = (ranks[prereq.id] ?? 0) >= t.prereq!.ranks;
+
+            // Same-tier prereq: arrow pokes out of the side of the
+            // dependent talent's cell that faces the prereq (left edge,
+            // pointing right, if the prereq sits to the left; right edge,
+            // pointing left, if it sits to the right -- e.g. Holy Shock at
+            // col 2 pointing left into Divine Precision at col 1) instead
+            // of the default top edge pointing down.
+            if (prereq.tier === t.tier) {
+              const prereqIsRight = prereq.col > t.col;
+              return (
+                <div
+                  key={`arrow-${t.id}`}
+                  className="pointer-events-none relative"
+                  style={{ gridColumn: t.col, gridRow: t.tier }}
+                >
+                  <div
+                    className={`absolute top-1/2 h-0 w-0 -translate-y-1/2 border-y-[7px] border-y-transparent ${
+                      prereqIsRight
+                        ? `-right-[7px] border-r-[10px] ${met ? "border-r-accent" : "border-r-foreground-muted/40"}`
+                        : `-left-[7px] border-l-[10px] ${met ? "border-l-accent" : "border-l-foreground-muted/40"}`
+                    }`}
+                  />
+                </div>
+              );
+            }
+
             return (
               <div
                 key={`arrow-${t.id}`}
