@@ -54,7 +54,7 @@ export default function ClassHero({
       <div className="flex flex-col gap-1 sm:w-44 sm:shrink-0">
         {trees.map((tree, i) => {
           const pct = maxPoints > 0 ? Math.min(100, (spentPerTree[i] / maxPoints) * 100) : 0;
-          const barColor = TREE_ACCENT_COLORS[i % TREE_ACCENT_COLORS.length];
+          const barColor = i === leadIdx ? color : "#ffd700";
           return (
             <div key={tree.name} className="flex items-center gap-1.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}

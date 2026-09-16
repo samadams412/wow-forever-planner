@@ -1260,10 +1260,14 @@
        "col": 1,
        "passive": true,
        "icon": "spell_holy_crusaderstrike",
-       "desc": {
-        "1": "Reduces the cooldown of your Holy Strike ability by 1 sec."
-       },
-       "complete": false,
+       "desc": [
+        "Reduces the cooldown of your Holy Strike ability by 1 sec.",
+        "Reduces the cooldown of your Holy Strike ability by 2 sec."
+       ],
+       "complete": true,
+       "confirmed": [
+        2
+       ],
        "classic": {
         "status": "new"
        }
@@ -1439,6 +1443,9 @@
         "3": "Allows 30% of your Mana regeneration to continue while casting."
        },
        "complete": false,
+       "confirmed": [
+        3
+       ],
        "classic": {
         "status": "new"
        }
@@ -2830,7 +2837,7 @@
        "row": 1,
        "col": 3,
        "passive": true,
-       "icon": "ability_hunter_criticalshot",
+       "icon": "ability_searingarrow",
        "desc": {
         "1": "Increases your critical strike chance with all attacks by 1%."
        },
@@ -2855,7 +2862,7 @@
        "row": 2,
        "col": 1,
        "passive": true,
-       "icon": "ability_hunter_quickshot",
+       "icon": "hunter_pvp_spidersting",
        "desc": {
         "1": "Increases the damage of your Serpent Sting ability by 6%, reduces the cooldown of your Viper Sting ability by 2 sec, and increases the duration of your Scorpid Sting ability by 15 sec."
        },
@@ -2951,7 +2958,7 @@
        "row": 3,
        "col": 4,
        "passive": true,
-       "icon": "spell_nature_spiritwolf",
+       "icon": "ability_mount_whitedirewolf",
        "desc": [
         "You deal 20% increased damage with all attacks while you do not have an active pet."
        ],
@@ -3097,7 +3104,7 @@
        "row": 7,
        "col": 2,
        "passive": false,
-       "icon": "ability_hunter_snipershot",
+       "icon": "hunter_pvp_snipershot",
        "desc": [
         "A steady snipe that increases ranged damage by 160."
        ],
@@ -3142,7 +3149,7 @@
        "row": 1,
        "col": 2,
        "passive": true,
-       "icon": "ability_hunter_improvedtracking",
+       "icon": "inv_misc_head_dragon_black",
        "desc": {
         "1": "While tracking Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids, or Undead, all damage you deal to the tracked creature type is increased by 1%."
        },
@@ -3344,7 +3351,7 @@
        "row": 4,
        "col": 1,
        "passive": true,
-       "icon": "ability_rogue_feint",
+       "icon": "inv_misc_net_01",
        "desc": {
         "1": "Increases your chance to hit with your Trap and Feign Death abilities by 5%."
        },
@@ -3359,7 +3366,7 @@
        "row": 4,
        "col": 2,
        "passive": true,
-       "icon": "ability_hunter_huntingparty",
+       "icon": "ability_hunter_hatchettoss",
        "desc": {
         "1": "Increases your melee critical strike damage by 6% and your offhand weapon damage by 10%."
        },
@@ -3416,7 +3423,7 @@
        "row": 5,
        "col": 2,
        "passive": true,
-       "icon": "ability_hunter_markedfordeath",
+       "icon": "ability_hunter_swiftstrike",
        "desc": {
         "1": "Your attacks against targets with Hunter's Mark have a 5% chance to activate your Mongoose Bite for 5 sec."
        },
@@ -3431,7 +3438,7 @@
        "row": 5,
        "col": 3,
        "passive": true,
-       "icon": "ability_hunter_survivalinstincts",
+       "icon": "ability_hunter_mastertactitian",
        "desc": {
         "1": "Reduces the cooldown of your Trap and Deterrence abilities by 20%."
        },
@@ -3485,7 +3492,7 @@
        "row": 7,
        "col": 2,
        "passive": true,
-       "icon": "ability_druid_lacerate",
+       "icon": "ability_gouge",
        "desc": [
         "Your Mongoose Bite also causes the target to Bleed for damage over 21 sec equal to 40% of the damage done by Mongoose Bite."
        ],
@@ -16961,6 +16968,22 @@
    "lv": "",
    "id": null
   },
+  "Shaman|Call of the Ancestors|": {
+   "l": [
+    [
+     "3 sec cast",
+     ""
+    ]
+   ],
+   "d": "Simultaneously places up to 4 totems specified in the Totem Bar. Can call different totems than Call of the Elements.",
+   "s": "demo",
+   "src": "Guzu's Shaman, YouTube POV 49:29 (k0DVYMoO1x8), spotted by u/davidisonredditnow",
+   "r": "",
+   "lv": "",
+   "id": null,
+   "cs": "note",
+   "cn": "New in Forever. Drops a saved set of totems in one cast."
+  },
   "Shaman|Call of the Elements|": {
    "l": [
     [
@@ -17384,13 +17407,13 @@
      ""
     ],
     [
-     "Instant",
+     "2 sec cast",
      ""
     ]
    ],
    "d": "Turns the Shaman into a Ghost Wolf, increasing speed by 40%.",
    "s": "demo",
-   "src": "Guzu's Shaman, 12 Sep, with Improved Ghost Wolf 2/2: that talent makes it instant and usable indoors, so the base tooltip will show a cast time and an outdoors line.",
+   "src": "Guzu's Shaman, 12 Sep, had Improved Ghost Wolf 2/2, which showed Instant. The talent cuts 1 sec per rank, so the untalented base is a 2 sec cast (Classic was 3); no untalented Shaman has hovered it on footage yet. Reader Web on Discord caught the Instant.",
    "r": "",
    "lv": "",
    "id": null,
@@ -21092,7 +21115,7 @@
      [
       "Talented",
       5,
-      "You gain talent points every level starting at level 9 instead of level 10, but you still may not have more than 51 total talent points.",
+      "Each rank starts your talent points one level earlier. At 5/5: You gain talent points every level starting at level 5 instead of starting at level 10, but you still may not have more than 51 total talent points. (Rank 1 starts them at level 9. Read at 5/5 on Soda's BlizzCon stream.)",
       "spell_holy_mindvision"
      ],
      [
@@ -21222,13 +21245,53 @@
  "changelog": [
   {
    "date": "2026-09-15",
+   "title": "Stream layout: move and resize the page so your cam never covers a talent",
+   "text": "KingGizNtheLizardWiz pointed out that a streamer's camera sits right where the bottom-left talents are, and every cam is in a different corner. So on desktop there is now a Stream layout button next to Compare to Classic. Turn it on and a bar appears above the page: grab anywhere on it to slide the page sideways or down, pull the handle on the right to make it narrower or wider (never below 640px, so viewers can still read it), and reset puts it back. Your position is remembered on this browser; every visit still starts in the normal layout. The class banner also says talentsforever.com in the middle now, so viewers know where to find the build."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "New share cards, and the book is on the page",
+   "text": "Paste a build link in Discord, Reddit or X and the card now shows the class big in its colour, the build's main tree lit up, the tree art behind it, and the class emblem. Every class and every tree has its own card. The painted book that has always been the site's icon now sits in the masthead and the footer too, with a slow mist behind it. Hover it, or the class emblem, and they breathe."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "Improved Holy Strike rank 2 read off Xaryu's Paladin",
+   "text": "The second VOD sweep found one tooltip we had estimated: Improved Holy Strike 2/2 reduces the Holy Strike cooldown by 2 sec, read straight off Xaryu's day-2 stream. Reverence 3/3 and Voice of Truth on the same frame matched what the site already said. Everything else the sweep flagged turned out to be the reader misreading footage, not the site."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "Call of the Ancestors has its tooltip",
+   "text": "<a href=\"https://www.reddit.com/user/davidisonredditnow\" target=\"_blank\" rel=\"noopener\">u/davidisonredditnow</a> found the one spellbook line we had with no text: Call of the Ancestors, sitting next to Call of the Elements in the Shaman book. Guzu hovers it on his YouTube POV at 49:29. Three second cast, drops up to four totems from the Totem Bar, and it can hold a different set than Call of the Elements."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "Ghost Wolf in the Shaman spellbook shows its base 2 sec cast",
+   "text": "Web on Discord noticed the spellbook said Instant while the Enhancement tree still had two points to put into Improved Ghost Wolf. The Instant came from Guzu's Shaman, which had that talent at 2/2. It cuts 1 sec per rank, so the untalented spell is a 2 sec cast, down from 3 in Classic, and the book now says so. No untalented Shaman has hovered it on footage yet, so the note on the tooltip says where the number comes from."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "Ten Hunter talent icons replaced with the real ones",
+   "text": "<a href=\"https://www.reddit.com/user/Chouss\" target=\"_blank\" rel=\"noopener\">u/Chouss</a> did Hunter next: Lethal Attacks, Improved Stings, Lone Wolf, Sniper Shot, Improved Tracking, Survival Tactics, Predator's Edge, Expose Prey, Survivalist's Discipline and Lacerating Strikes. Checked against the talent window on Savix's day-2 stream, where Lethal Attacks, Improved Stings and Sniper Shot had points in them, and the greyed cells for the rest. All ten swapped."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "Talented Legacy perk: talent points from level 5 at max rank",
+   "text": "<a href=\"https://www.reddit.com/user/NeverScream\" target=\"_blank\" rel=\"noopener\">u/NeverScream</a> pointed out that Talented reads level 5 on Soda's stream, not the level 9 we had. Both are right: our text was the rank 1 tooltip. I found the moment on Soda's BlizzCon VOD where he puts five points in it with Swifty next to him, and at 5/5 the client says talent points start at level 5 instead of 10, still capped at 51. The perk now reads per rank."
+  },
+  {
+   "date": "2026-09-15",
+   "title": "Nine Warrior talent icons were guesses. Now they're the real ones",
+   "text": "<a href=\"https://www.reddit.com/user/Chouss\" target=\"_blank\" rel=\"noopener\">u/Chouss</a> sent a list of the correct icons for Spearing Strike, Bloodthrill, Weaponmaster, Boundless Rage, Raging Blows, Master of Defense, Vanguard, Vitality and Bastion. I checked every one against the talent window on Savix's, Xaryu's and Esfand's streams and he was right on all nine. Swapped. Thanks Chouss."
+  },
+  {
+   "date": "2026-09-15",
    "title": "Compare to Classic showed Season of Discovery markup on 20 talents",
-   "text": "A reader hovered Trueshot Aura with Compare on and got raw override tags in the Classic text. The Classic reference came from Wowhead pages that carry Season of Discovery tweaks inline, and 20 talents had them: Trueshot Aura, Mortal Shots, Booming Voice, Natural Weapons and others. Every Classic text is vanilla now. Reader Darkthor69 caught it."
+   "text": "A reader hovered Trueshot Aura with Compare on and got raw override tags in the Classic text. The Classic reference came from Wowhead pages that carry Season of Discovery tweaks inline, and 20 talents had them: Trueshot Aura, Mortal Shots, Booming Voice, Natural Weapons and others. Every Classic text is vanilla now. <a href=\"https://www.reddit.com/user/Darkthor69\" target=\"_blank\" rel=\"noopener\">u/Darkthor69</a> caught it."
   },
   {
    "date": "2026-09-15",
    "title": "Ice Lance and Arcane Blast are talents, and a clearer full-build message",
-   "text": "Two readers asked why Ice Lance and Arcane Blast are not on the new Mage abilities card. Both are talents in Forever, Ice Lance in row 3 of Frost and Arcane Blast in row 3 of Arcane, so they live in the tree with their real tooltips. I briefly put Ice Lance on the card by mistake this morning and a third reader caught it within the hour. Also, when all 51 points are spent the site now says so and tells you to take one back, instead of a vague no-points line. Another reader asked for points to move automatically; that is on purpose, the game makes you unlearn first."
+   "text": "<a href=\"https://www.reddit.com/user/Feisty_Analyst_8497\" target=\"_blank\" rel=\"noopener\">u/Feisty_Analyst_8497</a> and another reader asked why Ice Lance and Arcane Blast are not on the new Mage abilities card. Both are talents in Forever, Ice Lance in row 3 of Frost and Arcane Blast in row 3 of Arcane, so they live in the tree with their real tooltips. I briefly put Ice Lance on the card by mistake this morning and <a href=\"https://www.reddit.com/user/YuusukeKlein\" target=\"_blank\" rel=\"noopener\">u/YuusukeKlein</a> caught it within the hour. Also, when all 51 points are spent the site now says so and tells you to take one back, instead of a vague no-points line. <a href=\"https://www.reddit.com/user/Yugudubenbi\" target=\"_blank\" rel=\"noopener\">u/Yugudubenbi</a> asked for points to move automatically; that is on purpose, the game makes you unlearn first."
   },
   {
    "date": "2026-09-15",
@@ -21238,12 +21301,12 @@
   {
    "date": "2026-09-15",
    "title": "Long spellbook tooltips can be scrolled now",
-   "text": "A Reddit reader hovering Paladin seals hit a tooltip taller than the book, and moving the mouse into it made it vanish. On a desktop the tooltip now stays put while your mouse is in it, and the wheel scrolls it whether you are over the spell or the tooltip. Phones were already fine."
+   "text": "<a href=\"https://www.reddit.com/user/Direct-Bike4253\" target=\"_blank\" rel=\"noopener\">u/Direct-Bike4253</a> was hovering Paladin seals and hit a tooltip taller than the book, and moving the mouse into it made it vanish. On a desktop the tooltip now stays put while your mouse is in it, and the wheel scrolls it whether you are over the spell or the tooltip. Phones were already fine."
   },
   {
    "date": "2026-09-14",
    "title": "Starshards and Elune's Grace out of the Priest spellbook",
-   "text": "Both are Night Elf racials and were only in the book because the Priest we read was a Night Elf. They stay under Priest racials with every race's pair. A Discord reader caught it."
+   "text": "Both are Night Elf racials and were only in the book because the Priest we read was a Night Elf. They stay under Priest racials with every race's pair. Santum on Discord caught it."
   },
   {
    "date": "2026-09-14",
@@ -21253,27 +21316,27 @@
   {
    "date": "2026-09-14",
    "title": "Thick Hide rank 2 read off footage",
-   "text": "A reader sent a Feral Druid video with a point in Thick Hide: rank 2 is 2 Armor per level and 1.33 per defense point, so the site now shows the real text there and 3 and 2 at rank 3. If your copy still says 1 Armor at every rank, that's an older cached build; reload the page."
+   "text": "<a href=\"https://www.reddit.com/user/MisguidedWandering\" target=\"_blank\" rel=\"noopener\">u/MisguidedWandering</a> sent a Feral Druid video with a point in Thick Hide: rank 2 is 2 Armor per level and 1.33 per defense point, so the site now shows the real text there and 3 and 2 at rank 3. If your copy still says 1 Armor at every rank, that's an older cached build; reload the page."
   },
   {
    "date": "2026-09-14",
    "title": "Hunter traps: the out-of-combat line is gone",
-   "text": "A reader noticed our trap tooltips never say traps must be placed out of combat. That's not us trimming: all three Hunter spellbooks we read (Savix, Xaryu, Soda) drop that Classic line, and the one-trap rule now reads one Fire trap or one Frost trap. Cooldown is 30 sec instead of 15. Added a note on the Hunter spellbook page; whether it actually works mid-fight is untested until beta."
+   "text": "<a href=\"https://www.reddit.com/user/ericles26\" target=\"_blank\" rel=\"noopener\">u/ericles26</a> noticed our trap tooltips never say traps must be placed out of combat. That's not us trimming: all three Hunter spellbooks we read (Savix, Xaryu, Soda) drop that Classic line, and the one-trap rule now reads one Fire trap or one Frost trap. Cooldown is 30 sec instead of 15. Added a note on the Hunter spellbook page; whether it actually works mid-fight is untested until beta."
   },
   {
    "date": "2026-09-14",
    "title": "Tactical Mastery keeps 10 Rage; Mocking Blow still needs Battle Stance",
-   "text": "A reader watched Soda's Warrior deep dive: the baseline Tactical Mastery passive reads 10 Rage kept through a stance change, not the 5 we had from Classic, and the Arms talent adds up to 15 more at 5/5 (that rank 5 text is now read verbatim instead of estimated). Mocking Blow's tooltip shows Requires Battle Stance, which the Classic import had dropped. Both tooltips are on the Warrior spellbook page now."
+   "text": "<a href=\"https://www.reddit.com/user/dasgerm\" target=\"_blank\" rel=\"noopener\">u/dasgerm</a> watched Soda's Warrior deep dive: the baseline Tactical Mastery passive reads 10 Rage kept through a stance change, not the 5 we had from Classic, and the Arms talent adds up to 15 more at 5/5 (that rank 5 text is now read verbatim instead of estimated). Mocking Blow's tooltip shows Requires Battle Stance, which the Classic import had dropped. Both tooltips are on the Warrior spellbook page now."
   },
   {
    "date": "2026-09-14",
    "title": "Human Sword Specialization counts auto attacks",
-   "text": "A reader checked Soda's Warrior video: the racial reads 'all spells and attacks', not spells and abilities, so white hits get the 2% crit too. Fixed the wording. Also the line under the logo now follows the class you pick instead of the one the page opened on, and the Druid spellbook notes explain why Hurricane isn't in a level 38 book."
+   "text": "<a href=\"https://www.reddit.com/user/Utensile_\" target=\"_blank\" rel=\"noopener\">u/Utensile_</a> checked Soda's Warrior video: the racial reads 'all spells and attacks', not spells and abilities, so white hits get the 2% crit too. Fixed the wording. Also the line under the logo now follows the class you pick instead of the one the page opened on, and the Druid spellbook notes explain why Hurricane isn't in a level 38 book."
   },
   {
    "date": "2026-09-14",
    "title": "Priest racials filled in",
-   "text": "A reader pointed at Warcraft Tavern's demo-floor screenshots of all twelve Priest racials. Human Feedback and Undead Touch of Weakness were missing, and the Dwarf and Gnome entries had no numbers. All in now with rank 1 mana, cooldowns and values, alongside the level 38 ranks we already had."
+   "text": "<a href=\"https://www.reddit.com/user/Typical_Effect_9054\" target=\"_blank\" rel=\"noopener\">u/Typical_Effect_9054</a> pointed at Warcraft Tavern's demo-floor screenshots of all twelve Priest racials. Human Feedback and Undead Touch of Weakness were missing, and the Dwarf and Gnome entries had no numbers. All in now with rank 1 mana, cooldowns and values, alongside the level 38 ranks we already had."
   },
   {
    "date": "2026-09-14",
@@ -21283,12 +21346,12 @@
   {
    "date": "2026-09-14",
    "title": "Windfury Weapon, read off a reader's screenshot",
-   "text": "Rank 1: 20% chance of 2 extra attacks with 103 attack power, 60 minutes, and it turns off your own Windfury Totem benefit when it's on your main hand. Flametongue Weapon has the same line about Flametongue Totem. Whether a weapon imbue stacks with a different totem is an open question."
+   "text": "From a demo spellbook screenshot <a href=\"https://www.reddit.com/user/Schiffers\" target=\"_blank\" rel=\"noopener\">u/Schiffers</a> sent in. Rank 1: 20% chance of 2 extra attacks with 103 attack power, 60 minutes, and it turns off your own Windfury Totem benefit when it's on your main hand. Flametongue Weapon has the same line about Flametongue Totem. Whether a weapon imbue stacks with a different totem is an open question."
   },
   {
    "date": "2026-09-14",
    "title": "Totemic Projection is ground-targeted",
-   "text": "A reader pointed at Guzu's stream: Totemic Projection puts a green circle on the ground and your totems move there, up to 30 yd away, not to your feet. The Shaman abilities card said the opposite. Fixed. The same footage shows Ghost Wolf instant on Guzu, who had Improved Ghost Wolf 2/2, which is what the spellbook already says."
+   "text": "<a href=\"https://www.reddit.com/user/Schiffers\" target=\"_blank\" rel=\"noopener\">u/Schiffers</a> pointed at Guzu's stream: Totemic Projection puts a green circle on the ground and your totems move there, up to 30 yd away, not to your feet. The Shaman abilities card said the opposite. Fixed. The same footage shows Ghost Wolf instant on Guzu, who had Improved Ghost Wolf 2/2, which is what the spellbook already says."
   },
   {
    "date": "2026-09-14",
@@ -21323,12 +21386,12 @@
   {
    "date": "2026-09-13",
    "title": "Sanctified Judgement, Dwarf and Undead racials",
-   "text": "Sanctified Judgement now scales both numbers: rank 3 is a 100% chance to return 60% of the mana, read straight off a rank 3 of 3 tooltip on Savix's stream after a reader flagged it. Dwarf and Undead racials rewritten from Blizzard's own Deep Dive slides: Stoneform is a 3 min cooldown with 10% less physical damage, Cannibalize ticks 7% health and mana every 2 sec, Touch of the Grave is a 5% chance capped at 5% of your health."
+   "text": "Sanctified Judgement now scales both numbers: rank 3 is a 100% chance to return 60% of the mana, read straight off a rank 3 of 3 tooltip on Savix's stream after <a href=\"https://www.reddit.com/user/ALC0LITE\" target=\"_blank\" rel=\"noopener\">u/ALC0LITE</a> flagged it. Dwarf and Undead racials rewritten from Blizzard's own Deep Dive slides: Stoneform is a 3 min cooldown with 10% less physical damage, Cannibalize ticks 7% health and mana every 2 sec, Touch of the Grave is a 5% chance capped at 5% of your health."
   },
   {
    "date": "2026-09-13",
    "title": "Shaman bolts are faster",
-   "text": "Lightning Bolt and Chain Lightning cast half a second faster than Classic before you spend a talent point, read from tooltips on Guzu's stream that a reader sent in. That is why Elemental Alacrity only trims 0.5 sec at 3 of 3: deep Elemental ends up right where Classic did. On the Shaman page under Abilities."
+   "text": "Lightning Bolt and Chain Lightning cast half a second faster than Classic before you spend a talent point, read from tooltips on Guzu's stream that <a href=\"https://www.reddit.com/user/Schiffers\" target=\"_blank\" rel=\"noopener\">u/Schiffers</a> sent in. That is why Elemental Alacrity only trims 0.5 sec at 3 of 3: deep Elemental ends up right where Classic did. On the Shaman page under Abilities."
   },
   {
    "date": "2026-09-13",
@@ -21343,17 +21406,17 @@
   {
    "date": "2026-09-13",
    "title": "Weaponmaster ranks",
-   "text": "All three weapon lines now scale with rank, not just the sword one. A reader caught it. Still an estimate from the rank 1 tooltip until the beta."
+   "text": "All three weapon lines now scale with rank, not just the sword one. <a href=\"https://www.reddit.com/user/AARespect\" target=\"_blank\" rel=\"noopener\">u/AARespect</a> caught it. Still an estimate from the rank 1 tooltip until the beta."
   },
   {
    "date": "2026-09-13",
    "title": "Warrior Protection tab",
-   "text": "The one spellbook tab we were missing. Read from a clip of Esfand's stream a reader sent in: Bloodrage, Shield Wall, Taunt, Sunder Armor and the rest. Overpower corrected to rank 2 while we were in there."
+   "text": "The one spellbook tab we were missing. Read from a clip of Esfand's stream a reader sent in (clipped by Zevzve): Bloodrage, Shield Wall, Taunt, Sunder Armor and the rest. Overpower corrected to rank 2 while we were in there."
   },
   {
    "date": "2026-09-13",
    "title": "Troll Priest spells",
-   "text": "Hex of Weakness and Shadowguard are confirmed for Troll Priests, read from demo spellbook tooltips a Reddit reader shared. Hex now cuts attack power instead of flat damage. Under Racials on the Priest page."
+   "text": "Hex of Weakness and Shadowguard are confirmed for Troll Priests, read from demo spellbook tooltips <a href=\"https://www.reddit.com/user/Schiffers\" target=\"_blank\" rel=\"noopener\">u/Schiffers</a> shared after <a href=\"https://www.reddit.com/user/Demonboy_jr\" target=\"_blank\" rel=\"noopener\">u/Demonboy_jr</a> tipped us off, and matched against <a href=\"https://www.reddit.com/user/admiralbfalcon\" target=\"_blank\" rel=\"noopener\">u/admiralbfalcon</a>'s captures of Xaryu's stream. Hex now cuts attack power instead of flat damage. Under Racials on the Priest page."
   },
   {
    "date": "2026-09-13",
