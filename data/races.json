@@ -74,20 +74,6 @@
     "icon": "race_orc_male"
   },
   {
-    "id": "skyborne-horde",
-    "name": "Windshaper Skyborne",
-    "faction": "Horde",
-    "allowedClasses": [
-      "druid",
-      "hunter",
-      "rogue",
-      "shaman",
-      "warrior"
-    ],
-    "notes": "Confirmed via beta VOD footage. Forever adds a new Skyborne race split into Horde (Shaman-aligned) and Alliance (Mage-aligned) variants with faction-specific racials; only forevertalent's reference data had this race, but its four racials' descriptions are now confirmed rather than placeholder.",
-    "icon": "inv_misc_questionmark"
-  },
-  {
     "id": "skyborne-alliance",
     "name": "High Order Skyborne",
     "faction": "Alliance",
@@ -144,5 +130,19 @@
     ],
     "notes": "Allowed-class list is a union of two disagreeing sources -- see data-sourcing discrepancy notes.",
     "icon": "race_scourge_male"
+  },
+  {
+    "id": "skyborne-horde",
+    "name": "Windshaper Skyborne",
+    "faction": "Horde",
+    "allowedClasses": [
+      "druid",
+      "hunter",
+      "rogue",
+      "shaman",
+      "warrior"
+    ],
+    "notes": "Confirmed via beta VOD footage. Forever adds a new Skyborne race split into Horde (Shaman-aligned) and Alliance (Mage-aligned) variants with faction-specific racials; only forevertalent's reference data had this race, but its four racials' descriptions are now confirmed rather than placeholder.",
+    "icon": "inv_misc_questionmark"
   }
 ]

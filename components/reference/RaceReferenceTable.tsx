@@ -20,7 +20,7 @@ function RaceBlock({ race }: { race: Race }) {
   const racials = getRacialsForRace(race.id);
   // First 3 racials' icons, so the collapsed header hints at what's inside
   // without needing every card expanded -- generic across every race.
-  const fanIcons = racials.slice(0, 3).map((r) => r.icon);
+  const fanIcons = racials.slice(0, 4).map((r) => r.icon);
 
   return (
     <Collapsible
