@@ -289,7 +289,9 @@ export default function PlannerClient({
         <TalentLegend />
         {compareMode && <CompareLegend />}
 
-        {classData && <ClassHero classId={classData.class} />}
+        {classData && (
+          <ClassHero classId={classData.class} trees={classData.trees} ranks={ranks} maxPoints={maxPoints} />
+        )}
 
         {classData && (
           <div className="flex flex-wrap justify-center gap-3 sm:justify-start">

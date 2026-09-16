@@ -121,6 +121,16 @@ export function classLabel(classId: string): string {
   return classId.charAt(0).toUpperCase() + classId.slice(1);
 }
 
+// No per-tree accent color exists anywhere else in the codebase (checked:
+// only CLASS_COLOR, one color per class, exists) -- these are positional
+// (1st/2nd/3rd tree in a class's `trees` array), not tied to any specific
+// spec's identity, chosen to stay visually distinct from colors that
+// already mean something elsewhere in the planner (green/gold/red = talent
+// state, sky blue = Compare to Classic). Used by ClassHero's per-tree point
+// bars; reuse this rather than picking new colors if that need comes up
+// again.
+export const TREE_ACCENT_COLORS: [string, string, string] = ["#e879a8", "#5eead4", "#a78bfa"];
+
 export const races: Race[] = racesData as Race[];
 export const racialsByRace: Record<string, Racial[]> = racialsData as Record<string, Racial[]>;
 

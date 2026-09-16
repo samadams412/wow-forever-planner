@@ -24,6 +24,22 @@ export function totalPointsSpent(trees: TalentTree[], ranks: RankState): number 
   return trees.reduce((sum, tree) => sum + pointsSpentInTree(tree, ranks), 0);
 }
 
+// Which tree currently has the clear point lead, for deriving a spec label
+// like "Holy Paladin" (ClassHero). Returns null -- no spec label -- both at
+// 0/0/0 and whenever two or more trees are tied for the max, rather than
+// picking an arbitrary "first tree wins" winner: a tie is genuinely
+// ambiguous (an even hybrid build isn't "Holy" just because Holy happens to
+// be listed first), so showing nothing there reads as more honest than a
+// label implying a lead that doesn't exist.
+export function leadingTreeIndex(trees: TalentTree[], ranks: RankState): number | null {
+  const spent = trees.map((tree) => pointsSpentInTree(tree, ranks));
+  const max = Math.max(...spent);
+  if (max === 0) return null;
+  const leaders = spent.filter((n) => n === max).length;
+  if (leaders > 1) return null;
+  return spent.indexOf(max);
+}
+
 export function tierUnlocked(tier: number, pointsInTree: number): boolean {
   return pointsInTree >= POINTS_PER_ROW * (tier - 1);
 }
