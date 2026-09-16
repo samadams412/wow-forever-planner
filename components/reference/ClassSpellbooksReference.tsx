@@ -51,7 +51,7 @@ function ClassRacialsSection({ classId }: { classId: string }) {
   );
 }
 
-function ClassSection({ classId }: { classId: string }) {
+function ClassSection({ classId, compareMode }: { classId: string; compareMode: boolean }) {
   const book = spellbooks.classes[classId];
 
   return (
@@ -63,7 +63,7 @@ function ClassSection({ classId }: { classId: string }) {
         <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-8 w-8 rounded" />
       }
     >
-      <SpellbookBook classId={classId} book={book} />
+      <SpellbookBook classId={classId} book={book} compareMode={compareMode} />
 
       {book.notes.length > 0 && (
         <ul className="mt-4 space-y-2 border-t border-border pt-3 text-xs leading-relaxed text-foreground-muted">
@@ -97,6 +97,7 @@ export default function ClassSpellbooksReference() {
   // than lifting open/close state up into each Collapsible individually.
   const [collapseAllKey, setCollapseAllKey] = useState(0);
   const collapseAll = () => setCollapseAllKey((k) => k + 1);
+  const [compareMode, setCompareMode] = useState(false);
 
   // The header's own "Collapse all" button scrolls out of view on a long
   // page of expanded spellbooks -- once that happens, a floating copy
@@ -126,6 +127,18 @@ export default function ClassSpellbooksReference() {
           </p>
         </div>
 
+        <button
+          type="button"
+          onClick={() => setCompareMode((v) => !v)}
+          aria-pressed={compareMode}
+          className={`shrink-0 rounded border px-2 py-0.5 text-xs transition-colors ${
+            compareMode
+              ? "border-sky-400/70 bg-sky-400/10 text-sky-300"
+              : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
+          }`}
+        >
+          Compare to Classic
+        </button>
       </div>
 
       {!headerButtonVisible && (
@@ -140,7 +153,7 @@ export default function ClassSpellbooksReference() {
 
       <div className="mt-5 space-y-3">
         {SPELLBOOK_CLASS_ORDER.map((classId) => (
-          <ClassSection key={`${classId}-${collapseAllKey}`} classId={classId} />
+          <ClassSection key={`${classId}-${collapseAllKey}`} classId={classId} compareMode={compareMode} />
         ))}
       </div>
       

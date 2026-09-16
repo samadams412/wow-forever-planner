@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import type { TalentStatus } from "@/lib/wow-data";
 import { STATUS_LABEL, STATUS_TEXT_CLASS } from "@/lib/talent-status";
+import { diffWords } from "@/lib/text-diff";
 
 // Classic WoW tooltip color language: dark navy card, thin gold border,
 // bold white name, grey rank line, gold-yellow type label, green effect
@@ -81,6 +82,54 @@ export function TooltipSourceNote({ confirmed, source }: { confirmed: boolean; s
     </p>
   ) : (
     <p className="mt-1.5 text-[10px] text-gray-500">Classic-era text — Forever may differ</p>
+  );
+}
+
+// Full Classic-vs-Forever text diff for a spellbook tooltip -- distinct
+// from TooltipClassicNote (the talent tree's flatter "status + note" line)
+// because the reference design for this one calls for an actual word-level
+// diff: the Classic line strikes through words only Classic has, the
+// Forever line highlights words only Forever has, shared wording stays
+// plain in both. Only rendered when classicStatus is "changed" (nothing to
+// diff for "same"/"new").
+export function TooltipClassicDiff({ classicText, foreverText }: { classicText: string; foreverText: string }) {
+  const tokens = diffWords(classicText, foreverText);
+  return (
+    <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
+      <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">Changed from Classic</div>
+      <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
+        <span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>
+        {tokens
+          .filter((t) => t.op !== "add")
+          .map((t, i) =>
+            t.op === "remove" ? (
+              <del key={i} className="text-[#ff6b6b]/80 decoration-[#ff6b6b]/80">
+                {t.text}
+              </del>
+            ) : (
+              <span key={i} className="text-gray-400">
+                {t.text}
+              </span>
+            )
+          )}
+      </p>
+      <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
+        <span className="mr-1 font-semibold text-[#ffd100]">Forever:</span>
+        {tokens
+          .filter((t) => t.op !== "remove")
+          .map((t, i) =>
+            t.op === "add" ? (
+              <mark key={i} className="rounded-sm bg-[#ffd100]/25 text-[#ffd100]">
+                {t.text}
+              </mark>
+            ) : (
+              <span key={i} className="text-gray-400">
+                {t.text}
+              </span>
+            )
+          )}
+      </p>
+    </div>
   );
 }
 

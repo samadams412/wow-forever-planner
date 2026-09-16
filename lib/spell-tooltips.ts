@@ -7,6 +7,11 @@ export type SpellTooltip = {
   confirmed: boolean;
   source?: string;
   levelReq?: string;
+  // Only present for spells whose Forever text actually differs from
+  // Classic's (talentsforever's own "cs" status flag -- "changed" vs
+  // "same"/"new"). Powers the tooltip's "Changed from Classic" diff.
+  classicDescription?: string;
+  classicStatus?: "changed" | "same" | "new";
 };
 
 type RawSpellTooltip = {
@@ -15,6 +20,8 @@ type RawSpellTooltip = {
   confirmed: boolean;
   source?: string;
   levelReq?: string;
+  classicDescription?: string;
+  classicStatus?: "changed" | "same" | "new";
 };
 
 const SPELL_TOOLTIPS = spellTooltipsData as unknown as Record<string, RawSpellTooltip>;

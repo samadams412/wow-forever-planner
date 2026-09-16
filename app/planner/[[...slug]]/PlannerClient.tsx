@@ -328,7 +328,12 @@ export default function PlannerClient({
             {/* Keyed on class so switching classes resets the book's own
                 tab/page state instead of carrying over a tab index that may
                 not exist on the new class's spec tabs. */}
-            <SpellbookBook key={classData.class} classId={classData.class} book={spellbooks.classes[classData.class]} />
+            <SpellbookBook
+              key={classData.class}
+              classId={classData.class}
+              book={spellbooks.classes[classData.class]}
+              compareMode={compareMode}
+            />
             <ClassAbilitiesSection classId={classData.class} />
           </Collapsible>
         </div>

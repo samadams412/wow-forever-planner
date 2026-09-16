@@ -13,6 +13,7 @@ import {
   TooltipDescription,
   TooltipStatLine,
   TooltipSourceNote,
+  TooltipClassicDiff,
 } from "@/components/planner/TooltipCard";
 import CornerBracket from "@/components/site/CornerBracket";
 
@@ -49,6 +50,7 @@ function SpellEntry({
   spell,
   revealDelayMs,
   side,
+  compareMode,
 }: {
   classId: string;
   spell: SpellbookEntry;
@@ -59,6 +61,9 @@ function SpellEntry({
   // right-column rows open left). Ignored below the mobile breakpoint,
   // where the tooltip anchors to the bottom of the viewport instead.
   side: "left" | "right";
+  // Same "Compare to Classic" toggle as the talent tree -- gates the
+  // tooltip's Classic-vs-Forever diff section so it isn't shown by default.
+  compareMode: boolean;
 }) {
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
   const tooltip = getSpellTooltip(classId, spell.name);
@@ -156,6 +161,9 @@ function SpellEntry({
                 <TooltipStatLine key={i} left={left} right={right} />
               ))}
               <TooltipDescription muted={!tooltip.confirmed}>{tooltip.description}</TooltipDescription>
+              {compareMode && tooltip.classicStatus === "changed" && tooltip.classicDescription && (
+                <TooltipClassicDiff classicText={tooltip.classicDescription} foreverText={tooltip.description} />
+              )}
               <TooltipSourceNote confirmed={tooltip.confirmed} source={tooltip.source} />
             </div>
           </TooltipCard>,
@@ -165,7 +173,15 @@ function SpellEntry({
   );
 }
 
-export default function SpellbookBook({ classId, book }: { classId: string; book: ClassSpellbook }) {
+export default function SpellbookBook({
+  classId,
+  book,
+  compareMode = false,
+}: {
+  classId: string;
+  book: ClassSpellbook;
+  compareMode?: boolean;
+}) {
   // Tab order and default selection are independent: General sits first in
   // the rail (restored to its original position), but the tab shown when
   // the book first opens is still the class's first spec tree, not General.
@@ -297,6 +313,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
                     spell={spell}
                     revealDelayMs={reducedMotion ? undefined : Math.floor(i / 2) * 40}
                     side={i % 2 === 0 ? "right" : "left"}
+                    compareMode={compareMode}
                   />
                 ))}
               </ul>
