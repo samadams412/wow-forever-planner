@@ -48,14 +48,23 @@ function SpellEntry({
   classId,
   spell,
   revealDelayMs,
+  side,
 }: {
   classId: string;
   spell: SpellbookEntry;
   revealDelayMs?: number;
+  // Which side of the row the tooltip should open on -- the opposite side
+  // of the page from the spell list, so it never stacks over the next row
+  // down. Alternates with the 2-column grid (left-column rows open right,
+  // right-column rows open left). Ignored below the mobile breakpoint,
+  // where the tooltip anchors to the bottom of the viewport instead.
+  side: "left" | "right";
 }) {
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
   const tooltip = getSpellTooltip(classId, spell.name);
-  const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH, "below", 280);
+  const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH, side, 280, undefined, {
+    mobileBottomSheet: true,
+  });
   const scrollRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<number | null>(null);
 
@@ -135,7 +144,7 @@ function SpellEntry({
         pos &&
         createPortal(
           <TooltipCard
-            style={{ top: pos.top, left: pos.left, width: TOOLTIP_WIDTH }}
+            style={{ top: pos.top, left: pos.left, width: pos.width ?? TOOLTIP_WIDTH }}
             interactive
             onMouseEnter={handleTooltipEnter}
             onMouseLeave={scheduleHide}
@@ -287,6 +296,7 @@ export default function SpellbookBook({ classId, book }: { classId: string; book
                     classId={classId}
                     spell={spell}
                     revealDelayMs={reducedMotion ? undefined : Math.floor(i / 2) * 40}
+                    side={i % 2 === 0 ? "right" : "left"}
                   />
                 ))}
               </ul>
