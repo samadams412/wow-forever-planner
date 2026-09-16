@@ -438,10 +438,10 @@
           "maxRank": 3,
           "ranks": [
             "Increases the damage done by your Eviscerate ability by 7%.",
-            "Increases the damage done by your Eviscerate ability by 14%.",
-            "Increases the damage done by your Eviscerate ability by 21%."
+            "Increases the damage done by your Eviscerate ability by 13%.",
+            "Increases the damage done by your Eviscerate ability by 20%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "ability_rogue_eviscerate",
@@ -517,7 +517,7 @@
             "Increases the critical strike chance of your Backstab by 20% and your Mutilate by 10%, and gives Backstab a 30% chance to add an additional Combo Point.",
             "Increases the critical strike chance of your Backstab by 30% and your Mutilate by 15%, and gives Backstab a 45% chance to add an additional Combo Point."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_backstab",
@@ -867,12 +867,12 @@
           "maxRank": 5,
           "ranks": [
             "Reduces your speed penalty from your Stealth ability by 3% and reduces its cooldown by 2 sec.",
-            "Reduces your speed penalty from your Stealth ability by 6% and reduces its cooldown by 4 sec.",
-            "Reduces your speed penalty from your Stealth ability by 9% and reduces its cooldown by 6 sec.",
-            "Reduces your speed penalty from your Stealth ability by 12% and reduces its cooldown by 8 sec.",
-            "Reduces your speed penalty from your Stealth ability by 15% and reduces its cooldown by 10 sec."
+            "Reduces your speed penalty from your Stealth ability by 6% and reduces its cooldown by 3 sec.",
+            "Reduces your speed penalty from your Stealth ability by 9% and reduces its cooldown by 4 sec.",
+            "Reduces your speed penalty from your Stealth ability by 12% and reduces its cooldown by 5 sec.",
+            "Reduces your speed penalty from your Stealth ability by 15% and reduces its cooldown by 6 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "ability_stealth",
@@ -897,7 +897,7 @@
             "Reduces the chance enemies have to detect you while in Stealth mode as if you were 2 level higher.",
             "Reduces the chance enemies have to detect you while in Stealth mode as if you were 3 level higher."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_charm",
@@ -921,7 +921,7 @@
             "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 5%.",
             "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_warrior_warcry",
@@ -1036,10 +1036,10 @@
           "maxRank": 3,
           "ranks": [
             "Gives you a 33% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
-            "Gives you a 66% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
-            "Gives you a 99% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
+            "Gives you a 67% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+            "Gives you a 100% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_fumble",
@@ -1283,6 +1283,9 @@
             "Your Backstab has a 15% chance to cause your next Ambush within 10 sec to not require Stealth."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            5
+          ],
           "prereq": null,
           "status": "new",
           "icon": "ability_rogue_cuttothechase",

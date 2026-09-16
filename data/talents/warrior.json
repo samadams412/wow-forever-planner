@@ -410,6 +410,10 @@
             "Tactical Mastery lets you retain up to an additional 15 Rage when you change stances."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            2,
+            5
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_enchantarmor",
@@ -623,6 +627,9 @@
             "Increases your maximum Rage by 30."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "new",
           "icon": "ability_warrior_intensifyrage",
@@ -994,10 +1001,13 @@
           "maxRank": 3,
           "ranks": [
             "Reduces the Rage cost of your Thunder Clap ability by 2.",
-            "Cuts the cost of your Thunder Clap ability by 2 rage points.",
+            "Reduces the Rage cost of your Thunder Clap ability by 4.",
             "Cuts the cost of your Thunder Clap ability by 4 rage points."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            2
+          ],
           "prereq": null,
           "status": "moved",
           "icon": "ability_thunderclap",
@@ -1048,7 +1058,7 @@
             "Grants you a 50% chance to generate 5 Rage when you Dodge or Parry while a shield is equipped.",
             "Grants you a 100% chance to generate 5 Rage when you Dodge or Parry while a shield is equipped."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "protection_shield_specialization",
             "ranks": 5
@@ -1187,9 +1197,9 @@
           "maxRank": 2,
           "ranks": [
             "Reduces the cooldown of your Shield Wall ability by 5.5 min.",
-            "Raises the effect duration of your Shield Wall ability by 5 secs."
+            "Reduces the cooldown of your Shield Wall ability by 11.0 min."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_warrior_shieldwall",

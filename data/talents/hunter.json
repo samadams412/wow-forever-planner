@@ -596,6 +596,9 @@
             "Reduces the cooldown of your Arcane Shot by 1.5 sec. Does not affect the cooldown of abilities which share a cooldown with Arcane Shot."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "ability_impalingbolt",
@@ -875,6 +878,9 @@
             "When your traps are triggered, all affected targets are Entrapped, preventing them from moving for 5 sec."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            5
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_stranglevines",

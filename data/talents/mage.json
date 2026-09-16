@@ -459,7 +459,7 @@
             "Reduces the cooldown of your Fire Blast spell by 1 sec. Killing a non-trivial target increases the critical strike chance of your next Fire Blast cast within 20 sec by 25%.",
             "Reduces the cooldown of your Fire Blast spell by 2 sec. Killing a non-trivial target increases the critical strike chance of your next Fire Blast cast within 20 sec by 50%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_fire_fireball",
@@ -485,7 +485,7 @@
             "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
             "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_fire_flameshock",
@@ -514,6 +514,10 @@
             "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            4,
+            5
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_flamebolt",
@@ -612,9 +616,12 @@
           "ranks": [
             "Gives your Fire spells a 23% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 10%.",
             "Gives your Fire spells a 46% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 20%.",
-            "Gives your Fire spells a 69% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 30%."
+            "Gives your Fire spells a 70% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 30%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_fire",
@@ -758,7 +765,7 @@
             "Your Fire and Frost critical strikes will refund 20% of their base mana cost.",
             "Your Fire and Frost critical strikes will refund 30% of their base mana cost."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_masterofelements",
@@ -945,6 +952,11 @@
             "Increases your chance to hit with Frost and Fire spells by 5%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            2,
+            3,
+            5
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "spell_ice_magicdamage",
@@ -994,9 +1006,12 @@
           "ranks": [
             "Increases the duration of your Chill effects by 11% and reduces the target's speed by an additional 3%.",
             "Increases the duration of your Chill effects by 22% and reduces the target's speed by an additional 6%.",
-            "Increases the duration of your Chill effects by 33% and reduces the target's speed by an additional 9%."
+            "Increases the duration of your Chill effects by 33% and reduces the target's speed by an additional 10%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_wisp",
@@ -1283,9 +1298,9 @@
           "maxRank": 2,
           "ranks": [
             "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 1 spell cast as if the target were Frozen. Lasts 15 sec.",
-            "Gives your Chill effects a 30% chance to grant you the Fingers of Frost effect, which treats your next 2 spell cast as if the target were Frozen. Lasts 15 sec."
+            "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 2 spells cast as if the target were Frozen. Lasts 15 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "frost_ice_lance",
             "ranks": 1

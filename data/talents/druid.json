@@ -503,6 +503,9 @@
             "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 level higher."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "changed",
           "icon": "ability_ambush",
@@ -548,10 +551,10 @@
           "maxRank": 3,
           "ranks": [
             "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 1 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
-            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 2 additional base Armor per level and another 1.3 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
-            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 3 additional base Armor per level and another 2.0 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
+            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 2 additional base Armor per level and another 1.33 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 3 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "inv_misc_pelt_bear_03",
@@ -575,7 +578,7 @@
             "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 5%.",
             "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "ability_druid_ravage",
@@ -750,7 +753,7 @@
             "Increases the critical strike damage bonus of your melee abilities by 10%.",
             "Increases the critical strike damage bonus of your melee abilities by 20%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "ability_druid_predatoryinstincts",

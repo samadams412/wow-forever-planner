@@ -343,9 +343,12 @@
           "ranks": [
             "Increases the rate at which your Drain Life and Drain Soul deal damage by 17%, but reduces your healing from Drain Life by 10%.",
             "Increases the rate at which your Drain Life and Drain Soul deal damage by 34%, but reduces your healing from Drain Life by 20%.",
-            "Increases the rate at which your Drain Life and Drain Soul deal damage by 51%, but reduces your healing from Drain Life by 30%."
+            "Increases the rate at which your Drain Life and Drain Soul deal damage by 50%, but reduces your healing from Drain Life by 20%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "new",
           "icon": "spell_shadow_soulleech_3",
@@ -951,6 +954,10 @@
             "Reduces all damage taken by 10%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            4,
+            5
+          ],
           "prereq": null,
           "status": "new",
           "icon": "ability_mage_moltenarmor",
@@ -1195,9 +1202,12 @@
           "ranks": [
             "Increases the critical strike chance of your Conflagrate spell by 8%.",
             "Increases the critical strike chance of your Conflagrate spell by 16%.",
-            "Increases the critical strike chance of your Conflagrate spell by 24%."
+            "Increases the critical strike chance of your Conflagrate spell by 25%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": {
             "id": "destruction_conflagrate",
             "ranks": 1

@@ -443,6 +443,9 @@
             "Improves your chance to get a critical strike with all spells and attacks by 5%."
           ],
           "confidence": "estimated",
+          "confirmedRanks": [
+            3
+          ],
           "prereq": null,
           "status": "moved",
           "icon": "ability_thunderbolt",
@@ -534,10 +537,10 @@
           "col": 3,
           "maxRank": 2,
           "ranks": [
-            "Reduces the cast time of your Ghost Wolf spell by 1.0 sec. and Ghost Wolf may be used indoors.",
-            "Reduces the cast time of your Ghost Wolf spell by 2.0 sec. and Ghost Wolf may be used indoors."
+            "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
+            "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_spiritwolf",
@@ -759,7 +762,7 @@
             "Increases your spell damage and healing by up to 15% of your Intellect.",
             "Increases your spell damage and healing by up to 30% of your Intellect."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_nature_mentalquickness",
