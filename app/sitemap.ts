@@ -11,6 +11,7 @@ const ROUTES = [
   "/reference/legacy-perks",
   "/reference/class-spellbooks",
   "/reference/dungeons",
+  "/reference/professions",
   "/guides",
   "/blog",
 ];

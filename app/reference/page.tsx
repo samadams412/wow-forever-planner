@@ -98,6 +98,15 @@ export default function ReferencePage() {
               <img src={mediumIconUrl("inv_misc_key_03")} alt="" className="h-7 w-7 rounded-sm" />
             }
           />
+          <Card
+            href="/reference/professions"
+            title="Professions"
+            description="New recipes, gear, and titles coming to every crafting and gathering profession in Forever."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("trade_engineering")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
         </div>
       </div>
     </main>
