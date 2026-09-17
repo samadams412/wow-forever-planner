@@ -6,25 +6,18 @@ import { dungeons, MIN_DUNGEON_LEVEL, MAX_DUNGEON_LEVEL, type Dungeon } from "@/
 import { packDungeonRows } from "@/lib/dungeon-layout";
 
 const LEVEL_SPAN = MAX_DUNGEON_LEVEL - MIN_DUNGEON_LEVEL + 1; // inclusive
-const ROW_HEIGHT = 34;
-const ROW_GAP = 4;
+const ROW_HEIGHT = 38;
+const ROW_GAP = 5;
 const TICK_LEVELS = [15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
 
 function levelToCol(level: number) {
   return level - MIN_DUNGEON_LEVEL + 1;
 }
 
-// Same continuous 0-100% position the tick marks below the grid use, so
-// the alternating bands line up exactly with the 15/20/25/... labels
-// rather than with the (coarser, per-level) bar-column grid.
 function levelToPercent(level: number) {
   return ((level - MIN_DUNGEON_LEVEL) / (LEVEL_SPAN - 1)) * 100;
 }
 
-// Alternating-shade bands every 5 levels, aligned to the tick marks (so a
-// boundary always falls on a multiple of 5) rather than to
-// MIN_DUNGEON_LEVEL itself -- the first/last band is a shorter partial
-// band when MIN/MAX_DUNGEON_LEVEL aren't themselves multiples of 5.
 const LEVEL_BANDS: { start: number; end: number }[] = (() => {
   const bands: { start: number; end: number }[] = [];
   let start = MIN_DUNGEON_LEVEL;
@@ -39,20 +32,10 @@ const LEVEL_BANDS: { start: number; end: number }[] = (() => {
   return bands;
 })();
 
-const MIN_COL_PX = 24;
-
 function prefersReducedMotion() {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-// A char-count heuristic here misjudged real cases (e.g. "Hall of Thanes
-// (13-18)" measured as fitting but actually clipped at the bar's right
-// edge) -- text width depends on which characters are in it, not just how
-// many. This measures the *actual* rendered text with a scratch canvas
-// (same technique browsers use internally for text layout) against the
-// bar's *actual* clientWidth, and re-measures on resize, so the decision
-// is correct at whatever width the bar really renders at rather than an
-// assumed worst case.
 let measureCanvasCtx: CanvasRenderingContext2D | null = null;
 function measureTextWidth(text: string, font: string): number {
   if (!measureCanvasCtx) {
@@ -75,7 +58,6 @@ function useInlineRangeText(fullText: string, fallbackText: string) {
       if (!el) return;
       const cs = getComputedStyle(el);
       const font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
-      // px-1 padding on both sides, plus a couple px of slack.
       const available = el.clientWidth - 10;
       const fits = measureTextWidth(fullText, font) <= available;
       setText(fits ? fullText : fallbackText);
@@ -106,9 +88,6 @@ function DungeonBar({
   const isNew = dungeon.type === "new";
   const label = isNew ? dungeon.name : (dungeon.abbr ?? dungeon.name);
   const withRange = `${label} (${dungeon.levelMin}-${dungeon.levelMax})`;
-  // Inline the range when it actually measures as fitting; otherwise fall
-  // back to the bare label and rely on the title tooltip for the exact
-  // range, rather than letting the fuller text render clipped/truncated.
   const { ref: textRef, text: displayText } = useInlineRangeText(withRange, label);
 
   const style = {
@@ -118,7 +97,7 @@ function DungeonBar({
     transformOrigin: "left center",
   };
 
-  const sharedClasses = `flex items-center justify-center overflow-hidden rounded-sm px-1 text-center text-[10px] font-medium leading-tight transition-all duration-500 ease-out sm:text-[11px] ${
+  const sharedClasses = `flex items-center justify-center overflow-hidden rounded-sm px-1 text-center text-[11px] font-medium leading-tight transition-all duration-500 ease-out sm:text-xs ${
     revealed ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
   }`;
 
@@ -130,7 +109,7 @@ function DungeonBar({
         data-cursor="gauntlet-active"
         onClick={() => onSelect(dungeon)}
         style={style}
-        className={`${sharedClasses} cursor-pointer border-2 border-accent bg-accent/20 text-accent shadow-[0_0_6px_rgba(201,169,97,0.35)] hover:z-10 hover:scale-105 hover:bg-accent/35 hover:shadow-[0_0_10px_rgba(201,169,97,0.6)] focus-visible:z-10 focus-visible:scale-105 focus-visible:bg-accent/35 focus-visible:shadow-[0_0_10px_rgba(201,169,97,0.6)]`}
+        className={`${sharedClasses} cursor-pointer border-2 border-accent bg-accent/25 text-accent shadow-[0_0_8px_rgba(201,169,97,0.4)] hover:z-10 hover:scale-105 hover:bg-accent/40 hover:shadow-[0_0_16px_rgba(201,169,97,0.75)] focus-visible:z-10 focus-visible:scale-105 focus-visible:bg-accent/40 focus-visible:shadow-[0_0_16px_rgba(201,169,97,0.75)]`}
         title={`${dungeon.name} (Level ${dungeon.levelMin}-${dungeon.levelMax}) -- click for details`}
       >
         {displayText}
@@ -142,7 +121,8 @@ function DungeonBar({
     <div
       ref={textRef as React.RefObject<HTMLDivElement>}
       style={style}
-      className={`${sharedClasses} border border-border bg-surface text-foreground-muted`}
+      /* [AESTHETIC TWEAK]: Rich dark-leather card styling with a subtle amber border to match the parchment theme */
+      className={`${sharedClasses} border border-accent/20 bg-[#1c1712]/90 text-foreground-muted shadow-sm hover:border-accent/40 hover:text-foreground`}
       title={`${dungeon.name} (Level ${dungeon.levelMin}-${dungeon.levelMax})`}
     >
       {displayText}
@@ -231,10 +211,6 @@ export default function DungeonsTimeline() {
 
   useEffect(() => {
     if (prefersReducedMotion()) {
-      // matchMedia is browser-only and can't run during SSR; setting after
-      // mount (rather than an SSR-mismatched lazy initializer) matches the
-      // pattern already used for localStorage reads elsewhere in this
-      // codebase (e.g. PlannerClient's saved-builds effect).
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setRevealed(true);
       return;
@@ -254,8 +230,6 @@ export default function DungeonsTimeline() {
     return () => observer.disconnect();
   }, []);
 
-  const trackMinWidth = LEVEL_SPAN * MIN_COL_PX;
-
   return (
     <div>
       <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-foreground-muted">
@@ -263,43 +237,33 @@ export default function DungeonsTimeline() {
           <span className="h-2.5 w-4 rounded-sm border-2 border-accent bg-accent/20" /> New Dungeons (Launch)
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="h-2.5 w-4 rounded-sm border border-border bg-surface" /> Original Classic Dungeons
+          <span className="h-2.5 w-4 rounded-sm border border-accent/20 bg-[#1c1712]" /> Original Classic Dungeons
         </span>
       </div>
 
       <div
-        className="scrollbar-gold overflow-x-auto rounded-lg border border-accent/30 bg-background/40 p-3"
+        className="scrollbar-gold overflow-x-auto rounded-lg border border-accent/40 p-3 shadow-inner"
+        style={{
+          backgroundColor: "#14110e",
+          backgroundImage: [
+            "radial-gradient(circle at 15% 20%, rgba(201,169,97,0.18), transparent 45%)",
+            "radial-gradient(circle at 85% 80%, rgba(180,140,70,0.14), transparent 50%)",
+            "linear-gradient(135deg, rgba(40,32,22,0.9) 0%, rgba(15,12,9,0.95) 100%)",
+          ].join(", "),
+        }}
         ref={containerRef}
       >
-        <div className="relative" style={{ minWidth: trackMinWidth }}>
-          {/* Faint fantasy-map-style texture behind the chart -- warm blotches
-              plus a soft vignette, echoing the parchment/forged-metal
-              language used elsewhere on the site. Kept low-opacity and
-              behind everything else in DOM order so it never competes with
-              bars, gridlines, or labels. */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0"
-            style={{
-              backgroundImage: [
-                "radial-gradient(circle at 10% 15%, rgba(201,169,97,0.05), transparent 40%)",
-                "radial-gradient(circle at 90% 10%, rgba(201,169,97,0.04), transparent 35%)",
-                "radial-gradient(circle at 80% 90%, rgba(201,169,97,0.05), transparent 45%)",
-                "radial-gradient(circle at 15% 85%, rgba(201,169,97,0.04), transparent 40%)",
-                "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.25) 100%)",
-              ].join(", "),
-            }}
-          />
-          {/* Alternating 5-level bands for at-a-glance scanning of which
-              level bracket a bar falls into -- shading only, well under
-              the opacity used for real UI state (bar borders/fills). */}
+        {/* w-max + min-w forces scroll on mobile; md:w-full md:min-w-0 makes it fit the screen fluidly on desktop */}
+        <div className="relative w-max min-w-[950px] md:w-full md:min-w-0">
+          
+          {/* Alternating 5-level bands */}
           <div aria-hidden="true" className="pointer-events-none absolute inset-0">
             {LEVEL_BANDS.map(
               (band, i) =>
                 i % 2 === 1 && (
                   <div
                     key={band.start}
-                    className="absolute inset-y-0 bg-accent/[0.04]"
+                    className="absolute inset-y-0 bg-accent/[0.07]"
                     style={{
                       left: `${levelToPercent(band.start)}%`,
                       width: `${levelToPercent(band.end) - levelToPercent(band.start)}%`,
@@ -308,12 +272,24 @@ export default function DungeonsTimeline() {
                 )
             )}
           </div>
+
+          {/* [AESTHETIC TWEAK]: Subtle vertical grid lines matching tick levels */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+            {TICK_LEVELS.map((lvl) => (
+              <div
+                key={lvl}
+                className="absolute inset-y-0 border-l border-accent/[0.08]"
+                style={{ left: `${((lvl - MIN_DUNGEON_LEVEL) / (LEVEL_SPAN - 1)) * 100}%` }}
+              />
+            ))}
+          </div>
+
           <div
             className="relative grid"
             style={{
               gridTemplateColumns: `repeat(${LEVEL_SPAN}, minmax(0, 1fr))`,
               gridTemplateRows: `repeat(${rowCount}, ${ROW_HEIGHT}px)`,
-              gap: `${ROW_GAP}px 2px`,
+              gap: `${ROW_GAP}px 3px`,
             }}
           >
             {placed.map(({ dungeon, row }, i) => (
@@ -343,7 +319,9 @@ export default function DungeonsTimeline() {
         </div>
       </div>
 
-      <p className="mt-2 text-[11px] text-foreground-muted/70 sm:hidden">Scroll sideways to see the full level range.</p>
+      <p className="mt-2 text-[11px] text-foreground-muted">
+        Tip: Scroll horizontally across the chart on mobile devices to view full level brackets clearly.
+      </p>
 
       {selected && <DungeonDetailModal dungeon={selected} onClose={() => setSelected(null)} />}
     </div>
