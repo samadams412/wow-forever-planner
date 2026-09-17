@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPost } from "@/lib/blog";
@@ -28,6 +29,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const { frontmatter, content } = post;
 
+  // Get all posts and filter out the current one
+  const otherPosts = getAllPosts().filter((p) => p.slug !== slug);
+
   return (
     <main className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
       <Breadcrumbs
@@ -56,6 +60,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <article>
         <MDXRemote source={content} components={blogMdxComponents} />
       </article>
+
+      {/* Other Posts Section */}
+      {otherPosts.length > 0 && (
+        <section className="mt-12 border-t border-foreground/10 pt-8">
+          <h2 className="font-heading text-lg font-medium text-foreground">Other Posts</h2>
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {otherPosts.slice(0, 2).map((other) => (
+              <Link
+                key={other.slug}
+                href={`/blog/${other.slug}`}
+                className="group flex items-center justify-between rounded-lg border border-foreground/10 p-4 transition-colors hover:border-accent/50 hover:bg-accent/5"
+              >
+                <span className="font-medium text-foreground group-hover:text-accent truncate">
+                  {other.title}
+                </span>
+                <span className="text-sm text-foreground-muted/70 transition-transform group-hover:translate-x-0.5 shrink-0 ml-2">
+                  &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }

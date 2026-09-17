@@ -145,7 +145,7 @@ export default function ClassSpellbooksReference() {
         <button
           type="button"
           onClick={collapseAll}
-          className="fixed bottom-5 right-5 z-20 rounded-full border border-accent/60 bg-surface px-4 py-2 text-xs font-medium text-accent shadow-lg shadow-black/40 transition-colors hover:border-accent hover:bg-surface-hover"
+          className="fixed bottom-5 left-5 z-20 rounded-full border border-accent/60 bg-surface px-4 py-2 text-xs font-medium text-accent shadow-lg shadow-black/40 transition-colors hover:border-accent hover:bg-surface-hover"
         >
           Collapse all
         </button>

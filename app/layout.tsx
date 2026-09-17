@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Cinzel_Decorative } from "next/font/google";
 import SiteHeader from "@/components/site/SiteHeader";
 import SiteFooter from "@/components/site/SiteFooter";
 import CustomCursor from "@/components/site/CustomCursor";
+import BackToTop from "@/components/site/BackToTop"; // <-- Import the BackToTop component
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -30,9 +31,6 @@ export const metadata: Metadata = {
   },
   description:
     "A free, fan-made planner and guide hub for World of Warcraft: Forever.",
-  // Next's opengraph-image.png file convention only auto-detects the file
-  // inside app/ -- since it now lives in public/images/og with the rest of
-  // the site's images, it has to be declared explicitly here instead.
   openGraph: {
     images: [{ url: "/images/og/opengraph.png", width: 1200, height: 630 }],
   },
@@ -49,6 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         {children}
         <SiteFooter />
+        <BackToTop /> {/* <-- Mount the BackToTop component globally here */}
       </body>
     </html>
   );
