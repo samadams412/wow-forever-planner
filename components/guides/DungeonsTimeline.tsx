@@ -14,8 +14,55 @@ function levelToCol(level: number) {
   return level - MIN_DUNGEON_LEVEL + 1;
 }
 
+const MIN_COL_PX = 24;
+
 function prefersReducedMotion() {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+// A char-count heuristic here misjudged real cases (e.g. "Hall of Thanes
+// (13-18)" measured as fitting but actually clipped at the bar's right
+// edge) -- text width depends on which characters are in it, not just how
+// many. This measures the *actual* rendered text with a scratch canvas
+// (same technique browsers use internally for text layout) against the
+// bar's *actual* clientWidth, and re-measures on resize, so the decision
+// is correct at whatever width the bar really renders at rather than an
+// assumed worst case.
+let measureCanvasCtx: CanvasRenderingContext2D | null = null;
+function measureTextWidth(text: string, font: string): number {
+  if (!measureCanvasCtx) {
+    measureCanvasCtx = document.createElement("canvas").getContext("2d");
+  }
+  if (!measureCanvasCtx) return Infinity;
+  measureCanvasCtx.font = font;
+  return measureCanvasCtx.measureText(text).width;
+}
+
+function useInlineRangeText(fullText: string, fallbackText: string) {
+  const ref = useRef<HTMLElement>(null);
+  const [text, setText] = useState(fallbackText);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    function measure() {
+      if (!el) return;
+      const cs = getComputedStyle(el);
+      const font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+      // px-1 padding on both sides, plus a couple px of slack.
+      const available = el.clientWidth - 10;
+      const fits = measureTextWidth(fullText, font) <= available;
+      setText(fits ? fullText : fallbackText);
+    }
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [fullText, fallbackText]);
+
+  return { ref, text };
 }
 
 function DungeonBar({
@@ -33,6 +80,11 @@ function DungeonBar({
 }) {
   const isNew = dungeon.type === "new";
   const label = isNew ? dungeon.name : (dungeon.abbr ?? dungeon.name);
+  const withRange = `${label} (${dungeon.levelMin}-${dungeon.levelMax})`;
+  // Inline the range when it actually measures as fitting; otherwise fall
+  // back to the bare label and rely on the title tooltip for the exact
+  // range, rather than letting the fuller text render clipped/truncated.
+  const { ref: textRef, text: displayText } = useInlineRangeText(withRange, label);
 
   const style = {
     gridColumn: `${levelToCol(dungeon.levelMin)} / ${levelToCol(dungeon.levelMax) + 1}`,
@@ -48,24 +100,26 @@ function DungeonBar({
   if (isNew) {
     return (
       <button
+        ref={textRef as React.RefObject<HTMLButtonElement>}
         type="button"
         onClick={() => onSelect(dungeon)}
         style={style}
         className={`${sharedClasses} border-2 border-accent bg-accent/20 text-accent shadow-[0_0_6px_rgba(201,169,97,0.35)] hover:bg-accent/35 focus-visible:bg-accent/35`}
         title={`${dungeon.name} (Level ${dungeon.levelMin}-${dungeon.levelMax}) -- click for details`}
       >
-        {label}
+        {displayText}
       </button>
     );
   }
 
   return (
     <div
+      ref={textRef as React.RefObject<HTMLDivElement>}
       style={style}
       className={`${sharedClasses} border border-border bg-surface text-foreground-muted`}
       title={`${dungeon.name} (Level ${dungeon.levelMin}-${dungeon.levelMax})`}
     >
-      {label}
+      {displayText}
     </div>
   );
 }
@@ -174,7 +228,7 @@ export default function DungeonsTimeline() {
     return () => observer.disconnect();
   }, []);
 
-  const trackMinWidth = LEVEL_SPAN * 24;
+  const trackMinWidth = LEVEL_SPAN * MIN_COL_PX;
 
   return (
     <div>
