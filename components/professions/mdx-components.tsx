@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import ProfessionImage from "./ProfessionImage";
+import GuideImageGrid from "./GuideImageGrid";
 
 // Same typographic treatment as guides/blog -- mirrored, not shared, per the
 // existing convention (see components/blog/mdx-components.tsx) so each
@@ -9,7 +10,9 @@ import ProfessionImage from "./ProfessionImage";
 // apply to profession concept art -- see ProfessionImage for why. Profession
 // .mdx bodies still write `<GuideImage .../>` (unchanged from before the
 // migration), so that's the key this map needs, even though it now resolves
-// to a different component.
+// to a different component. `<GuideImageGrid>` wraps a set of `<GuideImage>`
+// children in a responsive 2/3-column grid for item sets or recipe batches
+// that belong together -- see GuideImageGrid.tsx.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const professionMdxComponents: Record<string, ComponentType<any>> = {
   h2: (props) => (
@@ -35,4 +38,5 @@ export const professionMdxComponents: Record<string, ComponentType<any>> = {
     />
   ),
   GuideImage: ProfessionImage,
+  GuideImageGrid,
 };
