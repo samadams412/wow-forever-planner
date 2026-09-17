@@ -241,7 +241,10 @@ export default function DungeonsTimeline() {
         </span>
       </div>
 
-      <div className="overflow-x-auto rounded-lg border border-accent/30 bg-background/40 p-3" ref={containerRef}>
+      <div
+        className="scrollbar-gold overflow-x-auto rounded-lg border border-accent/30 bg-background/40 p-3"
+        ref={containerRef}
+      >
         <div style={{ minWidth: trackMinWidth }}>
           <div
             className="relative grid"
