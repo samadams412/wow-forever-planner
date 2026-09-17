@@ -1,6 +1,12 @@
-import { mediumIconUrl, getTreeIcon, CLASS_COLOR, TREE_ACCENT_COLORS, classLabel, type TalentTree } from "@/lib/wow-data";
+import { mediumIconUrl, getTreeIcon, CLASS_COLOR, classLabel, type TalentTree } from "@/lib/wow-data";
 import { pointsSpentInTree, leadingTreeIndex } from "@/lib/talent-rules";
 import type { RankState } from "@/lib/build-code";
+
+// Every tree's bar is gold; the tree with the current point lead (if any)
+// is white instead, so the lead reads at a glance without needing a
+// distinct color per tree.
+const BAR_COLOR = "var(--accent)";
+const LEAD_BAR_COLOR = "#ffffff";
 
 export default function ClassHero({
   classId,
@@ -54,7 +60,7 @@ export default function ClassHero({
       <div className="flex flex-col gap-1 sm:w-44 sm:shrink-0">
         {trees.map((tree, i) => {
           const pct = maxPoints > 0 ? Math.min(100, (spentPerTree[i] / maxPoints) * 100) : 0;
-          const barColor = i === leadIdx ? color : "#ffd700";
+          const barColor = i === leadIdx ? LEAD_BAR_COLOR : BAR_COLOR;
           return (
             <div key={tree.name} className="flex items-center gap-1.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
