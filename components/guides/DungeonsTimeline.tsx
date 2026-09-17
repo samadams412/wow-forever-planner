@@ -245,7 +245,25 @@ export default function DungeonsTimeline() {
         className="scrollbar-gold overflow-x-auto rounded-lg border border-accent/30 bg-background/40 p-3"
         ref={containerRef}
       >
-        <div style={{ minWidth: trackMinWidth }}>
+        <div className="relative" style={{ minWidth: trackMinWidth }}>
+          {/* Faint fantasy-map-style texture behind the chart -- warm blotches
+              plus a soft vignette, echoing the parchment/forged-metal
+              language used elsewhere on the site. Kept low-opacity and
+              behind everything else in DOM order so it never competes with
+              bars, gridlines, or labels. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage: [
+                "radial-gradient(circle at 10% 15%, rgba(201,169,97,0.05), transparent 40%)",
+                "radial-gradient(circle at 90% 10%, rgba(201,169,97,0.04), transparent 35%)",
+                "radial-gradient(circle at 80% 90%, rgba(201,169,97,0.05), transparent 45%)",
+                "radial-gradient(circle at 15% 85%, rgba(201,169,97,0.04), transparent 40%)",
+                "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.25) 100%)",
+              ].join(", "),
+            }}
+          />
           <div
             className="relative grid"
             style={{
