@@ -2,20 +2,33 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
-const NAV_LINKS: { href: string; label: string; children?: { href: string; label: string }[] }[] = [
+type SubNavLink = {
+  href: string;
+  label: string;
+  icon?: string;
+};
+
+type NavLink = {
+  href: string;
+  label: string;
+  children?: SubNavLink[];
+};
+
+const NAV_LINKS: NavLink[] = [
   { href: "/planner", label: "Planner" },
   {
     href: "/reference",
     label: "Reference",
     children: [
-      { href: "/reference/racials", label: "Racials" },
-      { href: "/reference/legacy-perks", label: "Legacy Perks" },
-      { href: "/reference/class-spellbooks", label: "Class Spellbooks" },
-      { href: "/reference/dungeons", label: "Dungeon Level Ranges" },
-      { href: "/reference/professions", label: "Professions" },
+      { href: "/reference/racials", label: "Racials", icon: "https://wow.zamimg.com/images/wow/icons/large/spell_nature_bloodlust.jpg" },
+      { href: "/reference/legacy-perks", label: "Legacy Perks", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_book_09.jpg" },
+      { href: "/reference/class-spellbooks", label: "Class Spellbooks", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_book_11.jpg" },
+      { href: "/reference/dungeons", label: "Dungeon Level Ranges", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_key_03.jpg" },
+      { href: "/reference/professions", label: "Professions", icon: "https://wow.zamimg.com/images/wow/icons/medium/trade_engineering.jpg" },
     ],
   },
   { href: "/guides", label: "Guides" },
@@ -28,13 +41,6 @@ export default function SiteHeader() {
 
   return (
     <header className="relative border-b border-border bg-surface">
-      <div
-        className="pointer-events-none absolute inset-0"
-        // style={{
-        //   backgroundImage:
-        //     "radial-gradient(480px 220px at 6% 0%, rgba(150,24,28,0.35), transparent 70%), radial-gradient(480px 220px at 94% 0%, rgba(20,88,158,0.35), transparent 70%)",
-        // }}
-      />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link
           href="/"
@@ -65,17 +71,33 @@ export default function SiteHeader() {
                 <Link href={link.href} className={linkClass}>
                   {link.label}
                 </Link>
-                <div className="invisible absolute left-0 top-full z-20 w-52 pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="invisible absolute left-0 top-full z-20 w-56 pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-lg border border-border bg-surface py-1 shadow-lg shadow-black/40">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className="block px-3 py-2 text-sm text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                    {link.children.map((child) => {
+                      const childActive = pathname === child.href;
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors hover:bg-surface-hover hover:text-foreground ${
+                            childActive ? "font-medium text-accent" : "text-foreground-muted"
+                          }`}
+                        >
+                          {child.icon && (
+                            <div className="relative h-5 w-5 shrink-0 overflow-hidden rounded border border-border/50 bg-surface-muted">
+                              <Image
+                                src={child.icon}
+                                alt=""
+                                width={20}
+                                height={20}
+                                className="h-full w-full object-cover"
+                              />
+                            </div>
+                          )}
+                          <span className="truncate">{child.label}</span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -110,21 +132,33 @@ export default function SiteHeader() {
                   {link.label}
                 </Link>
                 {link.children && (
-                  <div className="flex flex-col gap-2 border-l border-border pl-3">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMenuOpen(false)}
-                        className={`text-sm transition-colors ${
-                          pathname === child.href
-                            ? "font-medium text-accent"
-                            : "text-foreground-muted hover:text-foreground"
-                        }`}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="flex flex-col gap-2.5 border-l border-border pl-3">
+                    {link.children.map((child) => {
+                      const childActive = pathname === child.href;
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setMenuOpen(false)}
+                          className={`flex items-center gap-2.5 text-sm transition-colors ${
+                            childActive ? "font-medium text-accent" : "text-foreground-muted hover:text-foreground"
+                          }`}
+                        >
+                          {child.icon && (
+                            <div className="relative h-5 w-5 shrink-0 overflow-hidden rounded border border-border/50 bg-surface-muted">
+                              <Image
+                                src={child.icon}
+                                alt=""
+                                width={20}
+                                height={20}
+                                className="h-full w-full object-cover"
+                              />
+                            </div>
+                          )}
+                          <span className="truncate">{child.label}</span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>

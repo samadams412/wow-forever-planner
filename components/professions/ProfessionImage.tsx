@@ -1,16 +1,5 @@
 import Image from "next/image";
 
-// Same figure/caption shape as guides' GuideImage, but without its hardcoded
-// "official Blizzard reveal screenshot" credit line -- profession images are
-// concept art for hypothetical recipes/items, not press stills, so that
-// credit would be a false attribution here. No credit line at all rather
-// than guessing at a real one.
-//
-// `variant` distinguishes a full-bleed standalone image (the default; same
-// sizing as before this prop existed) from a small tile inside
-// <GuideImageGrid>: "grid" drops the standalone vertical margin (the grid
-// container owns spacing via its own gap) and tightens the `sizes` hint so
-// next/image doesn't fetch a 700px-wide image for a ~220px tile.
 export default function ProfessionImage({
   src,
   alt,
@@ -22,16 +11,39 @@ export default function ProfessionImage({
   priority?: boolean;
   variant?: "full" | "grid";
 }) {
+  const isGrid = variant === "grid";
+
+  if (isGrid) {
+    return (
+      <figure className="m-0 flex items-center justify-center overflow-hidden rounded-lg border border-border bg-background/50 p-2">
+        <div className="relative w-full">
+          {/* Using a regular img or Next.js Image with intrinsic scaling via unoptimized or layout auto */}
+          <Image
+            src={src}
+            alt={alt}
+            width={600}
+            height={800}
+            priority={priority}
+            sizes="(min-width: 640px) 350px, 100vw"
+            className="h-auto w-full rounded object-contain transition-transform duration-200 hover:scale-[1.02]"
+          />
+        </div>
+      </figure>
+    );
+  }
+
+  // Default Full-Bleed view
   return (
-    <figure className={variant === "grid" ? "" : "my-6"}>
-      <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border">
+    <figure className="my-6">
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border bg-background/50">
         <Image
           src={src}
           alt={alt}
           fill
           priority={priority}
-          sizes={variant === "grid" ? "(min-width: 640px) 220px, 45vw" : "(min-width: 768px) 700px, 100vw"}
-          className="object-cover"
+          sizes="(min-width: 768px) 700px, 100vw"
+          className="object-contain"
+          
         />
       </div>
     </figure>

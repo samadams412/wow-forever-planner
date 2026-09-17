@@ -13,7 +13,7 @@ import { Children, cloneElement, isValidElement, type ReactNode } from "react";
 // set that prop by hand.
 export default function GuideImageGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="my-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+    <div className="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
       {Children.map(children, (child) =>
         isValidElement(child) ? cloneElement(child, { variant: "grid" } as Partial<unknown>) : child
       )}

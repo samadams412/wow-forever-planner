@@ -9,16 +9,26 @@ export const metadata: Metadata = {
     "Dated posts on World of Warcraft: Forever beta impressions, patch breakdowns, and updates.",
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+const POSTS_PER_PAGE = 5;
+
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const resolvedSearchParams = await searchParams;
+  const currentPage = Math.max(1, Number(resolvedSearchParams.page) || 1);
+
+  const allPosts = getAllPosts();
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+  
+  // Slice posts for the current page
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const posts = allPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
 
   return (
     <main className="w-full">
       <div className="relative flex min-h-64 items-end overflow-hidden px-6 py-10 sm:min-h-80 sm:py-14">
-        {/* Official World of Warcraft: Forever zone press still, used with
-            credit -- see the caption below. Same treatment as the guides
-            hero: full-bleed image, warm color-grade, then a darkening
-            gradient so the title/intro stay readable over it. */}
         <Image
           src="/images/blog/hero.webp"
           alt=""
@@ -60,39 +70,72 @@ export default function BlogPage() {
         {posts.length === 0 ? (
           <p className="text-sm text-foreground-muted">No posts published yet -- check back soon.</p>
         ) : (
-          <div className="space-y-3">
-            {posts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
-              >
-                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                  <h2 className="font-medium text-foreground">{post.title}</h2>
-                  <span className="text-xs text-foreground-muted/70">
-                    {new Date(post.date).toLocaleDateString(undefined, {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                      timeZone: "UTC",
-                    })}
-                  </span>
-                </div>
-                <p className="mt-1.5 text-sm text-foreground-muted">{post.summary}</p>
-                {post.tags.length > 0 && (
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-accent"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+          <div className="space-y-6">
+            <div className="space-y-3">
+              {posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <h2 className="font-medium text-foreground">{post.title}</h2>
+                    <span className="text-xs text-foreground-muted/70">
+                      {new Date(post.date).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                        timeZone: "UTC",
+                      })}
+                    </span>
                   </div>
+                  <p className="mt-1.5 text-sm text-foreground-muted">{post.summary}</p>
+                  {post.tags.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-accent"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </Link>
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <nav className="flex items-center justify-between border-t border-border pt-6">
+                {currentPage > 1 ? (
+                  <Link
+                    href={`/blog?page=${currentPage - 1}`}
+                    className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                  >
+                    &larr; Previous Page
+                  </Link>
+                ) : (
+                  <div /> // Spacer to keep layout flex aligned
                 )}
-              </Link>
-            ))}
+
+                <span className="text-xs text-foreground-muted">
+                  Page <strong className="text-foreground">{currentPage}</strong> of {totalPages}
+                </span>
+
+                {currentPage < totalPages ? (
+                  <Link
+                    href={`/blog?page=${currentPage + 1}`}
+                    className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                  >
+                    Next Page &rarr;
+                  </Link>
+                ) : (
+                  <div />
+                )}
+              </nav>
+            )}
           </div>
         )}
       </div>

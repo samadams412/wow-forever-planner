@@ -13,6 +13,7 @@ export type ProfessionFrontmatter = {
   status: "draft" | "published";
   heroImage: string;
   heroAlt: string;
+  iconUrl?: string;
 };
 
 export type ProfessionMeta = ProfessionFrontmatter & { slug: string };
