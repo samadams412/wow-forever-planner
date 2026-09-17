@@ -44,7 +44,7 @@ export default function DungeonsPage() {
         >
           Dungeons Overview for Forever
         </a>{" "}
-        guide, paraphrased. Classic dungeon level ranges cross-referenced against the community&apos;s own
+        guide. Classic dungeon level ranges cross-referenced against the community&apos;s own
         level-range chart.
       </p>
     </main>
