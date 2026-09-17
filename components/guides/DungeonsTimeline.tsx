@@ -129,7 +129,7 @@ function DungeonBar({
         type="button"
         onClick={() => onSelect(dungeon)}
         style={style}
-        className={`${sharedClasses} border-2 border-accent bg-accent/20 text-accent shadow-[0_0_6px_rgba(201,169,97,0.35)] hover:bg-accent/35 focus-visible:bg-accent/35`}
+        className={`${sharedClasses} cursor-pointer border-2 border-accent bg-accent/20 text-accent shadow-[0_0_6px_rgba(201,169,97,0.35)] hover:z-10 hover:scale-105 hover:bg-accent/35 hover:shadow-[0_0_10px_rgba(201,169,97,0.6)] focus-visible:z-10 focus-visible:scale-105 focus-visible:bg-accent/35 focus-visible:shadow-[0_0_10px_rgba(201,169,97,0.6)]`}
         title={`${dungeon.name} (Level ${dungeon.levelMin}-${dungeon.levelMax}) -- click for details`}
       >
         {displayText}
