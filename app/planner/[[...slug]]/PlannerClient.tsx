@@ -3,16 +3,10 @@
 import { useCallback, useEffect, useState } from "react";
 import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
-import {
-  canAddPoint,
-  canRemovePoint,
-  totalPointsSpent,
-  pointsAtLevel,
-  MIN_TALENT_LEVEL,
-  MAX_LEVEL,
-} from "@/lib/talent-rules";
+import { canAddPoint, canRemovePoint, totalPointsSpent, pointsAtLevel, MAX_LEVEL } from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
 import ClassPicker from "@/components/planner/ClassPicker";
+import PlannerControls from "@/components/planner/PlannerControls";
 import RaceReferenceTable from "@/components/reference/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
@@ -222,71 +216,21 @@ export default function PlannerClient({
       <div className="mt-1 space-y-1.5">
         <ClassPicker selectedClassId={classId} onSelect={handleSelectClass} />
 
-        <div className="flex flex-wrap items-center justify-end gap-2">
-          <label className="flex items-center gap-1.5 text-xs text-foreground-muted">
-            Level
-            <select
-              value={level}
-              onChange={(e) => setLevel(Number(e.target.value))}
-              className="rounded border border-border bg-surface px-1.5 py-0.5 text-xs text-foreground focus:border-accent focus:outline-none"
-            >
-              {Array.from({ length: MAX_LEVEL - MIN_TALENT_LEVEL + 1 }, (_, i) => MAX_LEVEL - i).map((lvl) => (
-                <option key={lvl} value={lvl}>
-                  Level {lvl}
-                </option>
-              ))}
-            </select>
-          </label>
-          <span className="text-xs text-foreground-muted">
-            {totalSpent} / {maxPoints} pts
-          </span>
-          <button
-            type="button"
-            onClick={() => setCompareMode((v) => !v)}
-            aria-pressed={compareMode}
-            className={`rounded border px-2 py-0.5 text-xs transition-colors ${
-              compareMode
-                ? "border-sky-400/70 text-sky-300 bg-sky-400/10"
-                : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
-            }`}
-          >
-            Compare to Classic
-          </button>
-          <button
-            type="button"
-            onClick={resetBuild}
-            className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
-          >
-            Reset
-          </button>
-          <button
-            type="button"
-            onClick={handleCopyLink}
-            disabled={totalSpent === 0}
-            title={totalSpent === 0 ? "Spend at least one talent point to get a share link" : undefined}
-            className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
-          >
-            {copied ? "Copied!" : "Copy share link"}
-          </button>
-          <button
-            type="button"
-            onClick={handleOpenSaveDialog}
-            disabled={totalSpent === 0}
-            title={totalSpent === 0 ? "Spend at least one talent point to save a build" : undefined}
-            className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border"
-          >
-            Save build
-          </button>
-          <button
-            type="button"
-            onClick={() => setMyBuildsOpen(true)}
-            className="rounded border border-border px-2 py-0.5 text-xs text-foreground-muted hover:border-accent/60 hover:text-foreground"
-          >
-            My Builds{savedBuilds.length > 0 ? ` (${savedBuilds.length})` : ""}
-          </button>
-        </div>
+        <PlannerControls
+          level={level}
+          onLevelChange={setLevel}
+          totalSpent={totalSpent}
+          maxPoints={maxPoints}
+          compareMode={compareMode}
+          onToggleCompare={() => setCompareMode((v) => !v)}
+          onReset={resetBuild}
+          onCopyLink={handleCopyLink}
+          copied={copied}
+          onOpenSaveDialog={handleOpenSaveDialog}
+          onOpenMyBuilds={() => setMyBuildsOpen(true)}
+          savedBuildsCount={savedBuilds.length}
+        />
 
-        <TalentLegend />
         {compareMode && <CompareLegend />}
 
         {classData && (
@@ -343,6 +287,10 @@ export default function PlannerClient({
 
       <div className="mt-8">
         <RaceReferenceTable races={races} />
+      </div>
+
+      <div className="mt-6">
+        <TalentLegend />
       </div>
 
       <p className="mt-4 text-[11px] text-foreground-muted/60">
