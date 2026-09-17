@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import DungeonsTimeline from "@/components/guides/DungeonsTimeline";
+import DungeonsTimeline from "@/components/reference/DungeonsTimeline";
 import { dungeons } from "@/lib/dungeons";
 
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ export default function DungeonsPage() {
   return (
     <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
       <p className="text-xs text-foreground-muted">
-        <Link href="/guides" className="hover:text-foreground hover:underline">
-          Guides
+        <Link href="/reference" className="hover:text-foreground hover:underline">
+          Reference
         </Link>{" "}
         / Dungeon Level Ranges
       </p>
