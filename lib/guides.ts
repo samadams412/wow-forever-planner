@@ -11,6 +11,7 @@ export type GuideFrontmatter = {
   status: "draft" | "published";
   heroImage: string;
   heroAlt: string;
+  heroCredit? : string;
 };
 
 export type GuideMeta = GuideFrontmatter & { slug: string };

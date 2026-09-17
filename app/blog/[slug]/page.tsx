@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         ))}
       </div>
 
-      <GuideImage src={frontmatter.heroImage} alt={frontmatter.heroAlt} priority />
+      <GuideImage src={frontmatter.heroImage} alt={frontmatter.heroAlt} credit={frontmatter.heroCredit} priority />
 
       <article>
         <MDXRemote source={content} components={blogMdxComponents} />

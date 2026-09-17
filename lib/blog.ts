@@ -12,6 +12,7 @@ export type PostFrontmatter = {
   status: "draft" | "published";
   heroImage: string;
   heroAlt: string;
+  heroCredit? : string;
 };
 
 export type PostMeta = PostFrontmatter & { slug: string };

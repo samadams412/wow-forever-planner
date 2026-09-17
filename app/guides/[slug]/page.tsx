@@ -51,7 +51,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         ))}
       </div>
 
-      <GuideImage src={frontmatter.heroImage} alt={frontmatter.heroAlt} priority />
+      <GuideImage src={frontmatter.heroImage} alt={frontmatter.heroAlt} credit={frontmatter.heroCredit} priority />
 
       <article>
         <MDXRemote source={content} components={guideMdxComponents} />
