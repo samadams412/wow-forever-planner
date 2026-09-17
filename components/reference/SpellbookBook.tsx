@@ -1,7 +1,7 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { useRef, useState, type AnimationEvent, type WheelEvent } from "react";
+import { useEffect, useRef, useState, type AnimationEvent, type WheelEvent } from "react";
 import { mediumIconUrl, CLASS_ICON, getTreeIcon } from "@/lib/wow-data";
 import type { ClassSpellbook, SpellbookEntry } from "@/lib/spellbooks";
 import { getSpellTooltip } from "@/lib/spell-tooltips";
@@ -72,6 +72,24 @@ function SpellEntry({
   });
   const scrollRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<number | null>(null);
+
+  // Same scroll-dismiss approach as the mobile talent tree tooltip (a real
+  // scroll listener, not a timeout) -- without this, tapping a spell open on
+  // mobile and then scrolling the page left the tooltip floating in place
+  // over whatever scrolled underneath it. Attached once per mount (hide is
+  // recreated every render, so it's read through a ref instead of being a
+  // dependency) and safe to call even while already closed.
+  const hideRef = useRef(hide);
+  useEffect(() => {
+    hideRef.current = hide;
+  });
+  useEffect(() => {
+    function handleScroll() {
+      hideRef.current();
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // A tooltip taller than the book needs to be hoverable (unlike the
   // talent tree's pointer-events-none tooltip) so the mouse can move into
@@ -154,13 +172,18 @@ function SpellEntry({
             onMouseEnter={handleTooltipEnter}
             onMouseLeave={scheduleHide}
           >
-            <div ref={scrollRef} className="max-h-[70vh] overflow-y-auto">
+            {/* max-height is computed from this tooltip's actual on-screen
+                top (not a flat 70vh, which assumes it always opens near the
+                top of the viewport) so long content scrolls inside the card
+                instead of spilling past the bottom of the screen when the
+                tooltip opens further down. */}
+            <div ref={scrollRef} className="overflow-y-auto" style={{ maxHeight: `calc(100vh - ${pos.top}px - 16px)` }}>
               <TooltipName>{spell.name}</TooltipName>
               {subtitle && <TooltipRank>{subtitle}</TooltipRank>}
               {tooltip.lines.map(([left, right], i) => (
                 <TooltipStatLine key={i} left={left} right={right} />
               ))}
-              <TooltipDescription muted={!tooltip.confirmed}>{tooltip.description}</TooltipDescription>
+              <TooltipDescription>{tooltip.description}</TooltipDescription>
               {compareMode && tooltip.classicStatus === "changed" && tooltip.classicDescription && (
                 <TooltipClassicDiff classicText={tooltip.classicDescription} foreverText={tooltip.description} />
               )}

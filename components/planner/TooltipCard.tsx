@@ -52,12 +52,8 @@ export function TooltipType({ children }: { children: ReactNode }) {
   );
 }
 
-export function TooltipDescription({ children, muted }: { children: ReactNode; muted?: boolean }) {
-  return (
-    <p className={`mt-1.5 max-w-[60ch] text-sm leading-relaxed ${muted ? "text-[#1eff00]/55" : "text-[#1eff00]"}`}>
-      {children}
-    </p>
-  );
+export function TooltipDescription({ children }: { children: ReactNode }) {
+  return <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-[#1eff00]">{children}</p>;
 }
 
 export function TooltipRequirement({ children }: { children: ReactNode }) {
