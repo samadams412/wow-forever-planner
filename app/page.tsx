@@ -79,7 +79,7 @@ export default function Home() {
         <div className="mt-6 flex items-center gap-3 [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo/forevercraft-mark-carved.svg"
+            src="/images/logo/gold-talent-tree-transparent.svg"
             alt=""
             className="h-12 w-12 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] sm:h-14 sm:w-14"
           />

@@ -48,7 +48,7 @@ export default function SiteHeader() {
           className="flex items-center gap-2 font-heading text-lg font-semibold tracking-wide text-accent"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo/forevercraft-mark-carved.svg" alt="" className="h-7 w-7" />
+          <img src="/images/logo/gold-talent-tree-transparent.svg" alt="" className="h-7 w-7" />
           Forevercraft
         </Link>
         <nav className="hidden items-center gap-5 sm:flex">
