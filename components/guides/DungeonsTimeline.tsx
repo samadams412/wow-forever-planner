@@ -14,6 +14,31 @@ function levelToCol(level: number) {
   return level - MIN_DUNGEON_LEVEL + 1;
 }
 
+// Same continuous 0-100% position the tick marks below the grid use, so
+// the alternating bands line up exactly with the 15/20/25/... labels
+// rather than with the (coarser, per-level) bar-column grid.
+function levelToPercent(level: number) {
+  return ((level - MIN_DUNGEON_LEVEL) / (LEVEL_SPAN - 1)) * 100;
+}
+
+// Alternating-shade bands every 5 levels, aligned to the tick marks (so a
+// boundary always falls on a multiple of 5) rather than to
+// MIN_DUNGEON_LEVEL itself -- the first/last band is a shorter partial
+// band when MIN/MAX_DUNGEON_LEVEL aren't themselves multiples of 5.
+const LEVEL_BANDS: { start: number; end: number }[] = (() => {
+  const bands: { start: number; end: number }[] = [];
+  let start = MIN_DUNGEON_LEVEL;
+  let boundary = Math.ceil(MIN_DUNGEON_LEVEL / 5) * 5;
+  if (boundary === start) boundary += 5;
+  while (start < MAX_DUNGEON_LEVEL) {
+    const end = Math.min(boundary, MAX_DUNGEON_LEVEL);
+    bands.push({ start, end });
+    start = end;
+    boundary += 5;
+  }
+  return bands;
+})();
+
 const MIN_COL_PX = 24;
 
 function prefersReducedMotion() {
@@ -264,6 +289,24 @@ export default function DungeonsTimeline() {
               ].join(", "),
             }}
           />
+          {/* Alternating 5-level bands for at-a-glance scanning of which
+              level bracket a bar falls into -- shading only, well under
+              the opacity used for real UI state (bar borders/fills). */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+            {LEVEL_BANDS.map(
+              (band, i) =>
+                i % 2 === 1 && (
+                  <div
+                    key={band.start}
+                    className="absolute inset-y-0 bg-accent/[0.04]"
+                    style={{
+                      left: `${levelToPercent(band.start)}%`,
+                      width: `${levelToPercent(band.end) - levelToPercent(band.start)}%`,
+                    }}
+                  />
+                )
+            )}
+          </div>
           <div
             className="relative grid"
             style={{
