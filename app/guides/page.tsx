@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Card from "@/components/site/Card";
 import { getAllGuides } from "@/lib/guides";
+import { dungeons } from "@/lib/dungeons";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -62,44 +64,52 @@ export default function GuidesPage() {
       </div>
 
       <div className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
-        {guides.length === 0 ? (
-          <p className="text-sm text-foreground-muted">No guides published yet -- check back soon.</p>
-        ) : (
-          <div className="space-y-3">
-            {guides.map((guide) => (
-              <Link
-                key={guide.slug}
-                href={`/guides/${guide.slug}`}
-                className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
-              >
-                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                  <h2 className="font-medium text-foreground">{guide.title}</h2>
-                  <span className="text-xs text-foreground-muted/70">
-                    {new Date(guide.date).toLocaleDateString(undefined, {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                      timeZone: "UTC",
-                    })}
-                  </span>
-                </div>
-                <p className="mt-1.5 text-sm text-foreground-muted">{guide.summary}</p>
-                {guide.tags.length > 0 && (
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {guide.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-accent"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+        <Card
+          href="/guides/dungeons"
+          title="Dungeon Level Ranges"
+          description={`Every dungeon on one level-range timeline -- the ${dungeons.filter((d) => d.type === "new").length} new launch dungeons alongside all of Classic's, with details on the new ones.`}
+        />
+
+        <div className="mt-6">
+          {guides.length === 0 ? (
+            <p className="text-sm text-foreground-muted">No guides published yet -- check back soon.</p>
+          ) : (
+            <div className="space-y-3">
+              {guides.map((guide) => (
+                <Link
+                  key={guide.slug}
+                  href={`/guides/${guide.slug}`}
+                  className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <h2 className="font-medium text-foreground">{guide.title}</h2>
+                    <span className="text-xs text-foreground-muted/70">
+                      {new Date(guide.date).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                        timeZone: "UTC",
+                      })}
+                    </span>
                   </div>
-                )}
-              </Link>
-            ))}
-          </div>
-        )}
+                  <p className="mt-1.5 text-sm text-foreground-muted">{guide.summary}</p>
+                  {guide.tags.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {guide.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded bg-accent/10 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-accent"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );
