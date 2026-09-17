@@ -28,6 +28,9 @@ serving as a fixed project brief.
   both.
 - New Professions content type (`content/professions/`,
   `/reference/professions`) — see Architecture below.
+- Reusable Open Graph image template (`lib/og-template.tsx`) wired into
+  every static route and the guides/professions/blog per-post dynamic
+  routes — see Architecture below.
 
 **Open / mid-flight — do not guess at these, ask or investigate fresh:**
 - `data/sources/talentsforever-2026-09-15.json` and `-16.json` were last
@@ -52,11 +55,14 @@ serving as a fixed project brief.
   for real. Not touched this session.
 - `classicDescription`/`classicStatus` backfill (7 of many spells done) —
   not touched this session, still real follow-up work.
-- Every profession's `heroImage` frontmatter (all 7 pages) points at a
-  `hero.webp` that doesn't exist anywhere on disk — pre-existing, not
-  introduced by this session's migration, and deliberately not fabricated.
-  Each profession page's top image is currently broken until real hero
-  images are supplied.
+- **Correction to an earlier handoff note above:** by the time this
+  session's OG-image work touched every profession's frontmatter, 6 of the
+  7 `heroImage` files already existed on disk (alchemy, blacksmithing,
+  cooking, enchanting, engineering, first-aid) — only
+  `public/images/professions/tailoring/hero.webp` is still missing. Not
+  this session's doing either way; just re-verified directly rather than
+  trusting the stale claim that all 7 were broken. Still flag tailoring's
+  broken top image if asked, but the other 6 are fine now.
 - `app/sitemap.ts` still has its literal TODO — now also missing every
   individual `/reference/professions/<slug>` page (only the index route is
   listed), on top of the pre-existing gap for blog posts and guides.
@@ -67,14 +73,16 @@ serving as a fixed project brief.
   delete unasked.
 
 **Suggested next:**
-- Supply real `hero.webp` images for the 7 profession pages (see above).
+- Supply a real `hero.webp` for tailoring, the one remaining profession
+  page with a broken top image (see above).
 - Wire `getAllPosts()`/`getAllGuides()`/`getAllProfessions()` into
   `app/sitemap.ts` instead of leaving it a manual TODO — now three content
   types share that same gap, worth doing once rather than per-type.
 - Everything carried over, unresolved, from the 2026-09-16 handoff above
   (data/sources snapshot naming, inferred-vs-observed citation styling,
-  mobile bottom-sheet verification, classicDescription backfill, per-post
-  OG image decision).
+  mobile bottom-sheet verification, classicDescription backfill) — the
+  per-post OG image item from that list is now resolved, see Architecture
+  below.
 
 ## Architecture notes
 
@@ -271,6 +279,58 @@ migration) — `components/professions/mdx-components.tsx` just maps that
 tag to `ProfessionImage` instead, mirroring the existing "own file per
 content type, not shared" convention already used by
 `components/blog/mdx-components.tsx`.
+
+### Open Graph images: shared template + file-convention routes
+`lib/og-template.tsx` exports `renderOgImage({ title, subtitle?,
+backgroundImage? })`, used by an `opengraph-image.tsx` file (the Next.js
+file convention, not a Route Handler) colocated in every route segment that
+needs one — both static (`/reference`, `/reference/racials`,
+`/reference/legacy-perks`, `/reference/class-spellbooks`,
+`/reference/dungeons`, `/reference/professions`, `/guides`, `/blog`) and
+dynamic-slug (`/guides/[slug]`, `/reference/professions/[slug]`,
+`/blog/[slug]`, each pulling `title`/`summary`/`heroImage` straight from
+that post's frontmatter). Unlike the planner's build-code image (see
+above), none of these routes sit under a catch-all segment, so the plain
+file convention works directly and Next.js wires up the `<meta
+property="og:image">` tags automatically — no manual `generateMetadata`
+wiring needed. The homepage's own `openGraph.images` still points at the
+static `public/images/og/opengraph.png` (unchanged) rather than the new
+template, since that PNG *is* the visual reference the template was built
+to match — regenerating a pixel-equivalent image via code would be pure
+churn.
+
+The template renders the gold hexagon talent-tree mark (same artwork as
+`public/images/logo/gold-talent-tree-transparent.svg`, but with path data
+embedded directly in `lib/og-template.tsx` rather than read from disk) plus
+Cinzel Bold title / EB Garamond italic subtitle / a gold rule /
+"FOREVERCRAFT.APP" footer, over a darkened background photo — `backgroundImage`
+when given, else the homepage hero, with the same fallback triggering
+automatically if a given path doesn't exist on disk (e.g. a profession's
+`heroImage` that hasn't been supplied yet, see below). Both font files live
+in a new top-level `assets/fonts/` (`Cinzel-Bold.ttf`,
+`EBGaramond-Regular.ttf`, `EBGaramond-Italic.ttf` — only the italic is
+currently loaded into `ImageResponse`, the other two are there for any
+future non-italic EB Garamond use), pulled from Google Fonts' own hosting
+via the legacy-user-agent trick that returns real `.ttf` files instead of
+`.woff2` (`next/og`'s renderer only accepts ttf/otf/woff).
+
+**Every background image is re-encoded through `sharp` before being
+embedded as a data URI, unconditionally** — this isn't optional polish, two
+real failures were hit and confirmed by testing directly against this
+renderer before adding it: (1) `next/og`'s renderer (satori) cannot decode
+WebP passed via a data-URI `<img>` — it crashes the whole response with an
+opaque `"u2 is not iterable"` error with no useful stack, while the
+identical layout with a JPEG/PNG source works fine, and most of this site's
+hero images are `.webp`; (2) a full-resolution source
+(`content/blog`'s hero, 5+MB) blows past satori's internal XML buffer limit
+once base64-inflated, failing differently (`Resource limit exceeded: Buffer
+size limit exceeded`). `readPublicImageAsDataUri` in `lib/og-template.tsx`
+resizes every source to 1600px wide (`withoutEnlargement`) and re-encodes
+as JPEG q82 regardless of its original format, which fixes both at once.
+`sharp` was already present in `node_modules` only as an *optional*
+dependency of `next` itself (used internally for `next/image`), which isn't
+reliable to import from application code — it's now also a direct
+`package.json` dependency for this reason.
 
 ### Adding guides/blog/profession content
 See `docs/adding-content.md` for the full step-by-step: frontmatter schema,
