@@ -9,82 +9,72 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-16
+## Session handoff — 2026-09-17
 
 **Stable and shipped this session:**
-- 2026-09-16 talentsforever pull ingested (second pass): all 43 talent
-  field changes + all 16 spell_desc changes applied in bulk from the diff.
-  Includes Improved Ghost Wolf/Ghost Wolf's base cast reverting to Classic's
-  3 sec (a non-linear per-rank cut disproved the earlier flat -1/-2 sec
-  assumption — see the talent commit), Windwall Totem/Totemic Projection,
-  and twelve Pikaboo-duel-video spellbook tooltips.
-- Planner header redesign: class tiles are icon+name rectangles (was
-  square icon-over-name); a Level 10-60 dropdown (default 60) now gates
-  the talent point cap via `pointsAtLevel()` in `lib/talent-rules.ts` —
-  the curve (1 pt/level from 10) was confirmed directly against
-  talentsforever.com's own level dropdown, not invented.
-- Eligible-races column (`RacePicker`) removed from the planner — see the
-  "reversal" note under Architecture below before reintroducing it.
-- Talent tree visual polish: wider spacing, thicker/clearer connector
-  arrows, and a new `TalentLegend` showing the four talent states (Open/
-  Learning both green — deliberately, matches talentsforever.com's own
-  tree; Maxed gold; Locked grayed).
-- Spellbook tooltip positioning fixed (opens to whichever side of the row
-  is away from the list's continuation, instead of stacking below and
-  covering the next spell) plus a mobile bottom-sheet placement — see
-  "Shared class spellbook component" below for the one unverified part.
-- Spellbook tooltips gained a real header/rank line, a word-level
-  "Changed from Classic" diff (`lib/text-diff.ts` + `TooltipClassicDiff`),
-  and a citation footer, gated behind a `compareMode` prop shared with the
-  talent tree's existing toggle.
+- Dungeons timeline polish (`components/reference/DungeonsTimeline.tsx`,
+  see below for its move): inline level ranges on bars where they measure
+  as actually fitting (canvas text measurement against real `clientWidth`,
+  falls back to the bare label otherwise); a real bug this surfaced —
+  `packDungeonRows` let two dungeons sharing an exact boundary level (one's
+  `levelMax` == the next's `levelMin`) land in the same row, but each level
+  is its own CSS grid column, so they rendered on top of each other — fixed
+  by treating a shared boundary as a real overlap (`<` not `<=`). Also: a
+  gold/bronze custom scrollbar, a faint parchment/map texture behind the
+  grid, alternating 5-level background bands aligned to the tick marks, and
+  hover/focus scale+glow on the clickable "new dungeon" bars only.
+- Reference nav dropdown, and Dungeon Level Ranges moved from
+  `/guides/dungeons` to `/reference/dungeons` — see Architecture below for
+  both.
+- New Professions content type (`content/professions/`,
+  `/reference/professions`) — see Architecture below.
 
 **Open / mid-flight — do not guess at these, ask or investigate fresh:**
-- `data/sources/talentsforever-2026-09-15.json` and `-16.json` are
-  currently in an inconsistent state (content appears shifted between
-  them, plus a stray `-15-old.json`) — the user is handling this
-  personally as of this handoff. Don't touch those three files until
-  confirmed resolved; re-check `git status`/file contents before trusting
-  which snapshot is which.
+- `data/sources/talentsforever-2026-09-15.json` and `-16.json` were last
+  known to be in an inconsistent state (content appears shifted between
+  them, plus a stray `-15-old.json`) that the user was resolving
+  personally — not touched or re-checked this session, which was all
+  guides/reference/professions work, not talent data. Re-verify
+  `git status`/file contents before trusting which snapshot is which,
+  rather than assuming it's still exactly as last described.
 - No visual distinction exists yet between a directly-observed demo
   tooltip source and one that's inferred from indirect evidence (both
-  currently render as the same green "confirmed" note) — flagged again
-  during this session's Ghost Wolf revert (same inferred-citation pattern
-  reused, not reinvented), still not decided or scheduled.
+  currently render as the same green "confirmed" note) — still not decided
+  or scheduled, not touched this session.
 - The spellbook tooltip's mobile bottom-sheet placement (`useHoverTooltip`'s
-  `mobileBottomSheet` option) is implemented and code-reviewed but **not
-  visually verified** — `resize_window` didn't actually shrink the
-  viewport in this session's browser automation environment (window
-  stayed 1920px regardless of the requested size), so the `<640px` code
-  path was never seen rendering for real. Check on an actual narrow
-  viewport/device before trusting it fully.
-- `classicDescription`/`classicStatus` (the new Classic-vs-Forever diff
-  data for spellbook tooltips) is populated for only 7 spells so far
-  (Entangling Roots, Windwall Totem, Ghost Wolf, Corruption, Hellfire,
-  Shadow Bolt, Devour Magic) — enough to prove the feature, not a backfill.
-  Bulk-populating the rest from talentsforever's own `cd`/`cs` spell_desc
-  fields (already ingested into `data/sources/`, never fully read) is real
-  follow-up work, same shape as the confirmedRanks bulk-apply was.
-- Per-post Open Graph images for guides/blog posts aren't built — every
-  post falls back to the sitewide default image regardless of its own
-  `heroImage`. Noted in `docs/adding-content.md`, not scheduled.
-- `app/sitemap.ts` has a literal TODO and currently omits all four
-  published blog posts (and any future guides) — adding a new post/guide
-  does not add it to the sitemap.
+  `mobileBottomSheet` option) was implemented in an earlier session but has
+  never been visually verified on a real narrow viewport — `resize_window`
+  doesn't actually shrink the viewport in this environment (window stays
+  ~1920px regardless of the requested size; the coordinate mismatch this
+  causes between screenshots and real CSS pixels was rediscovered and
+  worked around this session on the dungeons page, see the timeline-polish
+  commits), so the `<640px` code path has still never been seen rendering
+  for real. Not touched this session.
+- `classicDescription`/`classicStatus` backfill (7 of many spells done) —
+  not touched this session, still real follow-up work.
+- Every profession's `heroImage` frontmatter (all 7 pages) points at a
+  `hero.webp` that doesn't exist anywhere on disk — pre-existing, not
+  introduced by this session's migration, and deliberately not fabricated.
+  Each profession page's top image is currently broken until real hero
+  images are supplied.
+- `app/sitemap.ts` still has its literal TODO — now also missing every
+  individual `/reference/professions/<slug>` page (only the index route is
+  listed), on top of the pre-existing gap for blog posts and guides.
+- Cosmetic, not urgent: each `public/images/professions/<profession>/`
+  folder carries an empty, unreferenced `<profession>.txt` (e.g.
+  `alchemy.txt`) — moved as-is from its old location along with the real
+  images, not cleaned up since it's harmless and wasn't clearly mine to
+  delete unasked.
 
 **Suggested next:**
-- Verify the spellbook tooltip mobile bottom-sheet on a real narrow
-  viewport (see above).
-- Backfill `classicDescription`/`classicStatus` across the rest of the
-  confirmed spellbook tooltips from talentsforever's `cd`/`cs` fields.
-- Once the user has resolved the `data/sources/` snapshot naming, resume
-  the normal daily-pull workflow (below).
-- Wire `getAllPosts()`/`getAllGuides()` into `app/sitemap.ts` instead of
-  leaving it a manual TODO.
-- Zero guides are published yet (`content/guides/` is empty) — the
-  authoring path is now verified end-to-end via `docs/adding-content.md`,
-  so this is now a content task, not a dev task.
-- Decide (don't assume) whether per-post OG images are worth building for
-  guides/blog, using the planner's Route Handler OG image as a precedent.
+- Supply real `hero.webp` images for the 7 profession pages (see above).
+- Wire `getAllPosts()`/`getAllGuides()`/`getAllProfessions()` into
+  `app/sitemap.ts` instead of leaving it a manual TODO — now three content
+  types share that same gap, worth doing once rather than per-type.
+- Everything carried over, unresolved, from the 2026-09-16 handoff above
+  (data/sources snapshot naming, inferred-vs-observed citation styling,
+  mobile bottom-sheet verification, classicDescription backfill, per-post
+  OG image decision).
 
 ## Architecture notes
 
@@ -197,10 +187,97 @@ export by hand. The script is a pure JSON-field diff — it can't see
 UI/UX-only changes with no data-level signal, so also read the vendor's own
 `changelog` array by hand for those.
 
-### Adding guides/blog content
+### Content-type architecture: shared `lib/content.ts` loader
+`lib/content.ts` factors the filesystem/frontmatter plumbing —
+`listContentSlugs(dir)` and `readContentFile<Frontmatter>(dir, slug)` (a
+thin wrapper around `fs.readdirSync`/`fs.readFileSync` + `gray-matter`,
+generic over the frontmatter shape) — out of what used to be duplicated
+directly in `lib/guides.ts`. `lib/guides.ts` now calls into it with no
+behavior change; `lib/professions.ts` (new) is a second, thin wrapper over
+the same loader. **`lib/blog.ts` was not migrated onto this shared loader**
+this session — it still has its own independent `fs`/`gray-matter` reads.
+That's a real candidate for the same factor-out later, not an oversight to
+silently "fix"; it just wasn't part of what this session's task asked for.
+
+Each wrapper module keeps its own frontmatter type and its own behavior on
+top of the shared loader: `lib/professions.ts`'s `ProfessionFrontmatter`
+has no `tags` field (a profession page's slug already says which
+profession it's about), and `getAllProfessions()` sorts alphabetically by
+`title` rather than newest-first by `date` (profession pages are evergreen
+reference material, not dated posts) — both deliberate, not the guide/blog
+shape trimmed down by mistake.
+
+### Reference nav dropdown
+`components/site/SiteHeader.tsx`'s `NAV_LINKS` entries can carry an
+optional `children: {href, label}[]`; only Reference does (five entries:
+Racials, Legacy Perks, Class Spellbooks, Dungeon Level Ranges,
+Professions). Desktop is pure CSS (`group`/`group-hover`/
+`group-focus-within`, no JS state) — the panel is a sibling `absolute`
+div inside a `relative` wrapper around the trigger link, so hovering or
+tabbing into the trigger opens it and it stays open as long as focus is
+anywhere inside the group. This is also why `<header>` no longer has
+`overflow-hidden`: it was clipping the dropdown panel (which needs to
+extend below the header's own box), and wasn't actually protecting
+anything — it existed to contain a decorative background gradient div
+that's currently disabled and, even active, wouldn't have needed the
+clip anyway (a `background-image` never paints outside its own element's
+box). Mobile renders the same five links indented under "Reference" in
+the existing flat mobile menu overlay, not a separate nested toggle.
+
+### Dungeon Level Ranges lives under Reference, not Guides
+Moved from `/guides/dungeons` to `/reference/dungeons` this session — it's
+reference material (a static data chart), not a written guide. The
+component moved with it: `components/reference/DungeonsTimeline.tsx` (was
+`components/guides/DungeonsTimeline.tsx`); page/chart logic itself is
+unchanged. `next.config.ts` has a permanent redirect from the old path.
+Don't be surprised to find `/guides/dungeons` referenced in old
+conversation history or external links — the redirect handles it, no
+further action needed there.
+
+### Professions content type
+New `/reference/professions` (index, card-list like the Guides index) and
+`/reference/professions/[slug]` (individual page, same shell as an
+individual guide page — Breadcrumbs, h1, hero image, MDX body — but
+matching the no-big-banner pattern every other Reference subpage uses).
+See `lib/content.ts` above for the data layer.
+
+All 7 profession write-ups (alchemy, blacksmithing, cooking, enchanting,
+engineering, first-aid, tailoring) were migrated this session from
+`content/guides/` (where they'd been sitting with `status: "draft"`,
+invisible on the live Guides listing) to `content/professions/`, and their
+images from `public/images/guides/professions/<profession>/` to
+`public/images/professions/<profession>/`. Status was flipped to
+`"published"` as part of the migration — they read as finished write-ups,
+not stubs, and Professions now has a real home for them. While fixing each
+file's image paths for the move, several **pre-existing** broken
+references were found and fixed (not introduced by the migration): most
+body `<GuideImage>` tags were missing the `professions/` path segment
+entirely, cooking had a filename typo and a stale filename, and
+first-aid's four images are actually `.jpg` despite every reference saying
+`.webp`. **Still broken, deliberately not fabricated:** every profession's
+`heroImage` points at a `hero.webp` that doesn't exist anywhere on disk —
+flag this if asked why a profession page's top image is missing rather
+than inventing a substitute.
+
+Images render via a new `components/professions/ProfessionImage.tsx`, not
+the shared `GuideImage` — `GuideImage` hardcodes an "official Blizzard
+reveal screenshot" credit line that's accurate for guides/blog (real press
+stills) but would misattribute profession images, which are clearly
+concept art per their alt text (a gnomish poultryizer, glowing potion
+flasks, etc.). `ProfessionImage` renders no credit line at all rather than
+guessing at a real one. Profession `.mdx` bodies still use the
+`<GuideImage>` tag name unchanged (prose wasn't rewritten during the
+migration) — `components/professions/mdx-components.tsx` just maps that
+tag to `ProfessionImage` instead, mirroring the existing "own file per
+content type, not shared" convention already used by
+`components/blog/mdx-components.tsx`.
+
+### Adding guides/blog/profession content
 See `docs/adding-content.md` for the full step-by-step: frontmatter schema,
-image conventions and credit-line rules, SEO metadata (what's automatic vs.
-not), gotchas, and copy-pasteable templates for both content types. It's
+image conventions and credit-line rules (including the guides/blog vs.
+professions difference above), SEO metadata (what's automatic vs. not),
+gotchas, and copy-pasteable templates, for all three content types. It's
 written from the actual implementation (`next-mdx-remote` + filesystem
-reads in `lib/blog.ts`/`lib/guides.ts`), not the `@next/mdx` file-convention
-routing an earlier description of this project assumed.
+reads in `lib/blog.ts`/`lib/guides.ts`/`lib/professions.ts`, the latter two
+via the shared `lib/content.ts` loader — see above), not the `@next/mdx`
+file-convention routing an earlier description of this project assumed.
