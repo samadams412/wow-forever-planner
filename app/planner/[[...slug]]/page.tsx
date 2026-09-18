@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { SITE_URL } from "@/lib/site";
 import { getClassTalentData, races } from "@/lib/wow-data";
 import { decodeBuild } from "@/lib/build-code";
+import { getLatestDiffSummary } from "@/lib/whats-new";
 import PlannerClient from "./PlannerClient";
 
 const RACE_IDS = new Set(races.map((r) => r.id));
@@ -96,13 +97,19 @@ export default async function PlannerPage({
   const { classId, buildCode, redirectTo } = parseSlug(slug);
   if (redirectTo) redirect(redirectTo);
 
+  const latestChangeCount = getLatestDiffSummary()?.totals.total ?? 0;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEB_APPLICATION_JSON_LD) }}
       />
-      <PlannerClient initialClassId={classId ?? null} initialBuildCode={buildCode ?? null} />
+      <PlannerClient
+        initialClassId={classId ?? null}
+        initialBuildCode={buildCode ?? null}
+        latestChangeCount={latestChangeCount}
+      />
     </>
   );
 }
