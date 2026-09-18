@@ -9,80 +9,79 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-17
+## Session handoff — 2026-09-18
 
-**Stable and shipped this session:**
-- Dungeons timeline polish (`components/reference/DungeonsTimeline.tsx`,
-  see below for its move): inline level ranges on bars where they measure
-  as actually fitting (canvas text measurement against real `clientWidth`,
-  falls back to the bare label otherwise); a real bug this surfaced —
-  `packDungeonRows` let two dungeons sharing an exact boundary level (one's
-  `levelMax` == the next's `levelMin`) land in the same row, but each level
-  is its own CSS grid column, so they rendered on top of each other — fixed
-  by treating a shared boundary as a real overlap (`<` not `<=`). Also: a
-  gold/bronze custom scrollbar, a faint parchment/map texture behind the
-  grid, alternating 5-level background bands aligned to the tick marks, and
-  hover/focus scale+glow on the clickable "new dungeon" bars only.
-- Reference nav dropdown, and Dungeon Level Ranges moved from
-  `/guides/dungeons` to `/reference/dungeons` — see Architecture below for
-  both.
-- New Professions content type (`content/professions/`,
-  `/reference/professions`) — see Architecture below.
-- Reusable Open Graph image template (`lib/og-template.tsx`) wired into
-  every static route and the guides/professions/blog per-post dynamic
-  routes — see Architecture below.
+**Stable and shipped this session (spanning two conversations, same day):**
+- A talentsforever.com pull (`talentsforever-2026-09-18.json`) that changed
+  the vendor's *source*, not just its values: every talent now carries
+  `src: "beta"` (100% of 468), meaning direct WoW Forever beta-client
+  extraction (build `1.60.1.69876`) rather than stream/demo footage.
+  Practical effect: "estimated" is functionally retired for talents (see
+  below), and 466 talent field-level changes plus a full racials rewrite
+  landed from this one pull.
+- `scripts/diff-talentsforever.js` fixed for the new Legacy Perks shape and
+  upgraded schema-drift reporting — see Architecture below.
+- Talent tree structural changes applied and browser-verified: Warrior
+  Protection lost Vitality (Bastion and Focused Rage each moved into a
+  vacated slot); Rogue Combat's Restless Blades and Warlock Affliction's
+  Drain Hope were each replaced in-slot by a new talent (Flawless
+  Execution, Wrack); Druid Balance lost Balance of Nature outright; Rogue
+  Aggression no longer requires Hack and Slash; Warlock Conflagrate no
+  longer requires Shadowburn; Priest's tab is now "Shadow" (was "Shadow
+  Magic") and Shaman's is "Elemental" (was "Elemental Combat") — **that
+  direction was verified against both raw vendor snapshots directly and
+  corrects an earlier wrong assumption**, so trust the live tree names in
+  `data/talents/*.json` over any older note describing it the other way.
+  This rename also broke two things it wasn't obviously connected to
+  (found and fixed later the same day, once flagged): the Priest/Shaman
+  talent tree background images, and the Class Spellbooks page's tab
+  icons for those two specs — see the "tab renames touch more than tree
+  data" architecture note below for what actually broke and why.
+- `lib/build-code.ts` versioned to protect existing shared links from the
+  reshuffle above — see Architecture below.
+- `/reference/legacy-perks` rebuilt as an interactive 3-column tree — see
+  Architecture below.
+- Racials rewrite applied by name-matching (36 general + 12 Priest
+  class-specific) — see Architecture below.
+- The `confirmedRanks`/per-rank "(estimated)" mechanism was retired
+  (removed from `Talent`, `TalentNode.tsx`, and confirmed absent from every
+  `data/talents/*.json` file) now that it has nothing left to distinguish —
+  see Architecture below for why, and don't reintroduce it without first
+  checking whether the vendor data has gone back to partial/estimated.
 
-**Open / mid-flight — do not guess at these, ask or investigate fresh:**
-- `data/sources/talentsforever-2026-09-15.json` and `-16.json` were last
-  known to be in an inconsistent state (content appears shifted between
-  them, plus a stray `-15-old.json`) that the user was resolving
-  personally — not touched or re-checked this session, which was all
-  guides/reference/professions work, not talent data. Re-verify
-  `git status`/file contents before trusting which snapshot is which,
-  rather than assuming it's still exactly as last described.
-- No visual distinction exists yet between a directly-observed demo
-  tooltip source and one that's inferred from indirect evidence (both
-  currently render as the same green "confirmed" note) — still not decided
-  or scheduled, not touched this session.
-- The spellbook tooltip's mobile bottom-sheet placement (`useHoverTooltip`'s
-  `mobileBottomSheet` option) was implemented in an earlier session but has
-  never been visually verified on a real narrow viewport — `resize_window`
-  doesn't actually shrink the viewport in this environment (window stays
-  ~1920px regardless of the requested size; the coordinate mismatch this
-  causes between screenshots and real CSS pixels was rediscovered and
-  worked around this session on the dungeons page, see the timeline-polish
-  commits), so the `<640px` code path has still never been seen rendering
-  for real. Not touched this session.
-- `classicDescription`/`classicStatus` backfill (7 of many spells done) —
-  not touched this session, still real follow-up work.
-- **Correction to an earlier handoff note above:** by the time this
-  session's OG-image work touched every profession's frontmatter, 6 of the
-  7 `heroImage` files already existed on disk (alchemy, blacksmithing,
-  cooking, enchanting, engineering, first-aid) — only
-  `public/images/professions/tailoring/hero.webp` is still missing. Not
-  this session's doing either way; just re-verified directly rather than
-  trusting the stale claim that all 7 were broken. Still flag tailoring's
-  broken top image if asked, but the other 6 are fine now.
-- `app/sitemap.ts` still has its literal TODO — now also missing every
-  individual `/reference/professions/<slug>` page (only the index route is
-  listed), on top of the pre-existing gap for blog posts and guides.
-- Cosmetic, not urgent: each `public/images/professions/<profession>/`
-  folder carries an empty, unreferenced `<profession>.txt` (e.g.
-  `alchemy.txt`) — moved as-is from its old location along with the real
-  images, not cleaned up since it's harmless and wasn't clearly mine to
-  delete unasked.
+**Open / mid-flight:**
+- One instruction this session ("drop false 'Requires Shadowform'/'Requires
+  Spirit of Redemption' lines from Priest racials and Human Perception")
+  could not be resolved — grepped current `data/racials.json` and
+  `data/class-racials.json` (neither schema has a requirement-line field at
+  all) and the full text of both the 09-16 and 09-18 vendor snapshots (zero
+  occurrences of either phrase in either file). Not fixed, not fabricated.
+  If this comes up again, ask for a screenshot or a different source before
+  acting — it isn't in anything this codebase currently tracks.
+- `data/sources/talentsforever-2026-09-15.json`/`-16.json`'s previously-flagged
+  inconsistency (see the 2026-09-17 handoff, now superseded in git history)
+  was never revisited directly, but is moot in practice — `-16.json` was
+  already the correct "old" snapshot for this session's 09-16→09-18 diff
+  and produced a clean, fully-matched result.
+- Legacy Perks page (`/reference/legacy-perks`) is desktop-only by explicit
+  scope cut — see Architecture below. No mobile tap/long-press model yet.
+- Carried over from 2026-09-17, still untouched: no visual distinction
+  between directly-observed vs. inferred spell tooltip sourcing;
+  spellbook tooltip's mobile bottom-sheet placement still never visually
+  verified on a real narrow viewport; `classicDescription`/`classicStatus`
+  backfill (7+ of many spells done); tailoring's missing `hero.webp`;
+  `app/sitemap.ts`'s manual TODO (still missing per-slug profession pages,
+  blog posts, and guides).
 
 **Suggested next:**
-- Supply a real `hero.webp` for tailoring, the one remaining profession
-  page with a broken top image (see above).
-- Wire `getAllPosts()`/`getAllGuides()`/`getAllProfessions()` into
-  `app/sitemap.ts` instead of leaving it a manual TODO — now three content
-  types share that same gap, worth doing once rather than per-type.
-- Everything carried over, unresolved, from the 2026-09-16 handoff above
-  (data/sources snapshot naming, inferred-vs-observed citation styling,
-  mobile bottom-sheet verification, classicDescription backfill) — the
-  per-post OG image item from that list is now resolved, see Architecture
-  below.
+- Nothing urgent surfaced by this session's own work. If picking this
+  project back up cold, the open items above (racials "Requires" mystery,
+  sitemap TODO, tailoring hero image, mobile bottom-sheet verification) are
+  the standing backlog, not new discoveries.
+- Optional, low-priority: Legacy Perks could get the planner's mobile touch
+  model (tap-to-add, long-press-peek, haptic pulse) ported over from
+  `TalentNode.tsx` if this page turns out to get real mobile traffic — see
+  Architecture below for why it was scoped out initially.
 
 ## Architecture notes
 
@@ -110,6 +109,118 @@ catch-all route `app/planner/[[...slug]]/page.tsx`. Old-style 3-segment
 `/planner/<classId>/<raceId>/<buildCode>` links (from when race was a URL
 segment) are detected in that route's `parseSlug()` — a second segment
 matching a known race id — and redirected to the canonical 2-segment form.
+
+### Build codes are versioned (`lib/build-code.ts`)
+Encoding is positional — one base36 rank digit per talent, talents ordered
+by tier then col within each tree, trees joined with `-` — with **no
+name/id tie-back to the encoded digits**. That means any change to a
+tree's talent membership or order (add/remove/reshuffle) shifts every
+digit after the change point onto a *different* talent for anyone
+decoding an old link against the current data: not a decode failure, a
+silent wrong-talent assignment, and for a removed talent, a decode that
+runs past the new (shorter) array just drops that digit's data with no
+error at all. This is exactly what the 2026-09-18 tree restructuring above
+would have done to old links with points in Warrior Protection's tier
+5-7, Rogue Combat, Warlock Affliction, or Druid Balance.
+
+Fixed with a version segment: `encodeBuild` prepends a version number
+(currently `2`) as an extra `-`-separated segment, so a versioned code has
+`classData.trees.length + 1` segments vs. exactly `classData.trees.length`
+for a pre-versioning code — detected by segment count, not a special
+character, so codes stay plain base36+`-` and drop safely into any URL
+segment (including the OG image route's path) with no escaping questions.
+`decodeBuild` branches on that: versioned codes decode directly against
+the current tree order; unversioned (legacy) codes decode against a
+frozen `LEGACY_TREE_ORDER` snapshot of the 4 talent trees that changed
+shape on 2026-09-18, then translate old talent ids to current ones
+(`LEGACY_ID_TRANSLATION` — identity for anything unchanged, an explicit
+mapping for the 2 same-slot renames, `null`/dropped for the 2 outright
+removals) before clamping to the current talent's `maxRank`. Every other
+tree, on every other class, is untouched by any of this and always
+decodes the same way it always did.
+
+**The next time a tree's talent membership or order changes**, bump
+`CURRENT_VERSION` again and add a new frozen `LEGACY_TREE_ORDER`-style
+snapshot (and translation table) for whatever changed, following this
+same pattern — don't simplify the versioning away just because it looks
+like unused-most-of-the-time machinery; it exists specifically because
+array-position encoding plus a tree reshuffle is a silent-corruption
+scenario, verified directly against constructed legacy codes for all 4
+trees affected on 2026-09-18 (see that commit for the exact repro).
+
+### Legacy Perks: interactive 3-column tree (`/reference/legacy-perks`)
+Rebuilt 2026-09-18 to match the vendor's real Legacy Tree UI (three
+columns — Adventure, Resourcefulness, Professions — each row/col/gate/
+ranks/req-shaped like a talent tree; see `.reference/deep-dive-images/`
+for the actual in-game reference screenshots) instead of the old flat
+description-list page. `components/reference/LegacyPerkTreeGrid.tsx` +
+`LegacyPerkNode.tsx` reuse `TalentTreeGrid.tsx`'s grid/connector-arrow
+layout and `TooltipCard`'s tooltip primitives rather than a parallel UI.
+One real geometry difference from class talent trees: every Legacy Perk
+prereq (`req` in the vendor data, resolved to `prereq: {id, ranks: 1}` at
+data-authoring time in `data/legacy-perks.json`) runs within the same row,
+never between rows — so only `TalentTreeGrid`'s existing same-tier
+horizontal-connector path (originally built for the rare same-tier class-
+talent case, e.g. Paladin Holy Shock → Divine Precision) is ever exercised
+here.
+
+`lib/legacy-perks.ts`'s gating (`canAddLegacyPoint`/`canRemoveLegacyPoint`)
+is deliberately its own thing, not a reuse of `lib/talent-rules.ts`: a
+class talent tier unlocks at a fixed 5-points-per-row formula, but each
+Legacy Perk specifies its own explicit `gate` that doesn't follow row math
+at all (confirmed in the data: Resourcefulness's row-1 "For Great Honor"
+has `gate: 5` while its row-2 neighbor "Gourmand" has `gate: 0`).
+
+**Explicit scope cut, not an oversight:** `LegacyPerkNode` is click-to-add
+/ shift-click-or-right-click-to-remove only — no touch-specific tap/
+long-press-peek/haptic model ported from `TalentNode.tsx`. This is a
+lower-traffic reference page, not the main planner, and the source data
+has no confidence/classic-compare fields to show either, so the component
+is meaningfully smaller than a straight fork would suggest. Plain clicks
+still register via tap-triggers-click on a touch browser; only the extra
+mobile affordances (long-press peek, haptic pulse) are missing. Port them
+from `TalentNode.tsx` if this page turns out to get real mobile traffic.
+Also **not persisted anywhere** — no build-code, URL, or localStorage; the
+page is a spend-order scratch pad, not a saved/shareable build like the
+main planner.
+
+### A tab rename touches more than tree/tooltip logic
+The 2026-09-18 Priest "Shadow Magic" → "Shadow" and Shaman "Elemental
+Combat" → "Elemental" talent-tree tab renames (see the session handoff
+above) broke two things that weren't visually checked in that same
+session's own "verified live" pass, both surfacing only after the fact:
+
+- **`treeBackgroundUrl()`** (`lib/wow-data.ts`) derives its image path by
+  slugifying `tree.name` directly — `public/backgrounds/<classId>/<slug>
+  .jpg`. Renaming the tree left it requesting `shadow.jpg`/`elemental.jpg`
+  paths that didn't exist on disk yet (`shadow-magic.jpg`/`elemental-
+  combat.jpg` were the tracked files). Fixed by renaming the actual image
+  files to match — the derivation is single-domain (only ever called with
+  the talent tree's own name from `TalentTreeGrid.tsx`), so renaming the
+  assets is the complete, permanent fix, not a stopgap.
+- **`getTreeIcon()`**'s `TREE_ICON_OVERRIDES` map (`lib/wow-data.ts`) is
+  shared by two *different* naming domains that happened to be identical
+  strings before this rename and no longer are after it: `TalentTreeGrid
+  .tsx` calls it with the talent tree's name (now "Shadow"/"Elemental"),
+  but `SpellbookBook.tsx` calls it with the trainer-spellbook tab name from
+  `data/spellbooks.json`, which the vendor left unchanged ("Shadow Magic"/
+  "Elemental Combat" — confirmed by direct inspection, not a mistake to
+  "fix" there). Renaming only the override keys orphaned the spellbook's
+  lookup, which fell through to the icon fallback and rendered a
+  placeholder "?" for both tabs. Fixed by keeping **both** keys
+  (`"priest:Shadow"` and `"priest:Shadow Magic"`, same for Shaman) mapped
+  to the same icon — this is correct steady-state, not a duplicate to
+  clean up later, as long as the two domains stay split.
+
+**The lesson, not just the fix:** a rename like this can propagate through
+any code that derives a path/lookup key from the renamed string, not just
+the obvious tree-rendering and tooltip call sites a "did the tree still
+work in the browser" check would catch. Before considering a tab/tree
+rename done, grep the *entire* codebase (components, `lib/`, data files)
+for the literal old string, not just the files you already expect to
+touch — and don't take an earlier session's "verified live" note as proof
+nothing else broke; it verified what it looked at, not everything the
+string touched.
 
 ### Per-build Open Graph image: a Route Handler, not the file convention
 Lives at `app/planner/og/[classId]/[buildCode]/route.tsx` as a plain Route
@@ -169,18 +280,31 @@ switches to a bottom-anchored sheet below the `sm` breakpoint via that
 hook's `mobileBottomSheet` option — see the open item above, that mobile
 path hasn't been seen rendering on an actual narrow viewport yet.
 
-### `confirmed` field — per-rank talent confirmation (resolved)
-talentsforever's source data can carry a per-rank `confirmed: number[]`
-array — which specific ranks' text is vendor-verified, distinct from the
-existing whole-talent `confidence` field. This is implemented generically:
-`Talent` (`lib/wow-data.ts`) has an optional `confirmedRanks?: number[]`,
-and the tooltip (`TalentNode.tsx`) marks any rendered rank *not* in that
-list with a small "(estimated)" note. Talents without the field (the large
-majority) are completely unaffected — it's opt-in per-talent, not a
-blanket behavior change. Separately and independently, a talent whose
-source `complete` flag flips to `true` gets its whole `confidence` bumped
-`estimated → confirmed` (a pre-existing rule, unrelated to
-`confirmedRanks`).
+### Per-rank `confirmedRanks` mechanism — retired 2026-09-18
+talentsforever's source data used to sometimes carry a per-rank
+`confirmed: number[]` array (which specific ranks' text is vendor-verified,
+distinct from the whole-talent `confidence` field), and `Talent`
+(`lib/wow-data.ts`) had a matching optional `confirmedRanks?: number[]`
+that `TalentNode.tsx` used to mark any rendered rank *not* in that list
+with a small "(estimated)" note.
+
+Removed this session: the 2026-09-18 pull confirmed 100% of 468 talents at
+`complete: true` (extracted directly from the beta client, `src: "beta"`,
+not partial stream/demo reads), and `data/talents/*.json` already carried
+zero `confirmedRanks` arrays by that point — the mechanism had nothing
+left to ever display. `confirmedRanks` is gone from the `Talent` type and
+`TalentNode.tsx`'s tooltip no longer has any per-rank estimated marker.
+
+**The whole-talent `confidence` field itself is untouched** and still
+flips `estimated → confirmed` when a talent's `complete` flag does
+(`ConfidenceBadge.tsx` still renders it) — this removal was specifically
+about the now-always-vacuous per-rank marker, not the talent-level
+concept. Don't reintroduce `confirmedRanks` without first checking a fresh
+`talentsforever-*.json` pull for a nonzero `complete: false` count — if
+the vendor ever goes back to partial/estimated extraction, per-rank
+confirmation becomes meaningful again and this mechanism (or something
+like it) would be worth rebuilding, but re-add it from that evidence, not
+speculatively.
 
 ### Daily data-diff workflow
 `data/sources/` holds dated, **immutable** snapshots of talentsforever.com's
@@ -194,6 +318,38 @@ diff's actual field-level output rather than re-transcribing the whole
 export by hand. The script is a pure JSON-field diff — it can't see
 UI/UX-only changes with no data-level signal, so also read the vendor's own
 `changelog` array by hand for those.
+
+**Legacy Perks are diffed by tree+row+col, not name** (fixed 2026-09-18,
+when the vendor moved this section from `[name, maxRank, description,
+icon]` tuples to full talent-shaped objects —
+`name/max/row/col/icon/ranks/gate/req?/placeholder?`, see the Legacy Perks
+architecture note below): several placeholder perks share the literal name
+"Unknown", and the main transition this data goes through is a placeholder
+getting revealed in place, which position-keying reports as one "changed"
+entry (with a "(revealed)" marker) instead of a spurious remove+add pair.
+The one-time tuple→object transition itself has no sound cross-shape
+identity to diff and is called out explicitly in the markdown rather than
+guessed at — every pull since is object-vs-object and diffs normally.
+
+**Schema-drift fields are reported as a value-count summary, not spammed
+per-talent** (also fixed 2026-09-18): a field that appears on every talent
+at once (e.g. `src` going from absent to `"beta"` on all 468 when the
+vendor switched to direct beta-client extraction) shows up as one summary
+line — count and value distribution — under "New fields seen on talents",
+not one "changed" line per talent. Only fields never seen in the old
+snapshot get this treatment; a real per-talent value change still shows
+individually.
+
+**Match by name (or position, for Legacy Perks — see above), never array
+index, when applying a rewrite the vendor reordered.** The racials/
+class_racials sections in particular have been reordered by the vendor
+before (2026-09-18's pull shuffled both the per-race `classes` list and
+the `abilities` array order) — diffing or applying by index there silently
+attributes the wrong text to the wrong ability. Match by the vendor's own
+`race`/ability `name` fields instead, the same approach used for the
+2026-09-18 racials resync (36 general + 12 Priest class-specific abilities,
+0 unmatched in either direction) and worth repeating for any future
+resync of that section.
 
 ### Content-type architecture: shared `lib/content.ts` loader
 `lib/content.ts` factors the filesystem/frontmatter plumbing —
