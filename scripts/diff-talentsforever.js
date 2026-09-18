@@ -109,6 +109,7 @@ const TALENT_DIFF_FIELDS = [
   "max",
   "row",
   "col",
+  "req",
   "complete",
   "confirmed",
   ["classic", "text"],

@@ -1,6 +1,6 @@
 {
-  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-16.json",
-  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-18.json",
+  "oldPath": "data/sources/talentsforever-2026-09-16.json",
+  "newPath": "data/sources/talentsforever-2026-09-18.json",
   "oldLabel": "2026-09-16",
   "newLabel": "2026-09-18",
   "talents": {
@@ -5828,6 +5828,11 @@
               "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 4%.",
               "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 6%."
             ],
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Hack and Slash",
             "trivial": false
           },
           {
@@ -12751,6 +12756,11 @@
             "field": "cost",
             "old": "100 Mana; 30 yd range; Instant; 10 sec cooldown",
             "new": "100 Mana | 30 yd range | Instant | 10 sec cooldown",
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Shadowburn",
             "trivial": false
           },
           {
