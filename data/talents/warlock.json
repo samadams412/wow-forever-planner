@@ -382,13 +382,13 @@
           "passive": true
         },
         {
-          "id": "affliction_drain_hope",
-          "name": "Drain Hope",
+          "id": "affliction_wrack",
+          "name": "Wrack",
           "tier": 7,
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Drains all hope from the target, dealing 52 Shadow damage every 1 sec and increasing all other Shadow damage over time you deal to that target by 10%. Lasts 6 sec."
+            "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -396,12 +396,12 @@
             "ranks": 1
           },
           "status": "new",
-          "icon": "spell_shadow_haunting",
+          "icon": "ability_deathknight_hemorrhagicfever",
           "classic": {
             "status": "new"
           },
           "passive": false,
-          "cost": "200 Mana; 30 yd range; Channeled"
+          "cost": "200 Mana | 30 yd range | Channeled"
         }
       ]
     },
@@ -1123,10 +1123,7 @@
             "Ignites a target that is already afflicted by your Immolate spell, dealing 88 to 110 Fire damage and consuming your Immolate effect."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "destruction_shadowburn",
-            "ranks": 1
-          },
+          "prereq": null,
           "status": "moved",
           "icon": "spell_fire_fireball",
           "classic": {

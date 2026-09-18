@@ -682,18 +682,18 @@
           "passive": true
         },
         {
-          "id": "combat_restless_blades",
-          "name": "Restless Blades",
+          "id": "combat_flawless_execution",
+          "name": "Flawless Execution",
           "tier": 4,
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Your damaging finishing moves reduce the remaining cooldown of your Adrenaline Rush, Blade Flurry, Evasion, Sprint, and Vanish abilities by 2 sec per combo point."
+            "Reduces the Energy cost of your Eviscerate ability by 10."
           ],
           "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "ability_rogue_restlessblades",
+          "icon": "inv_sword_35",
           "classic": {
             "status": "new"
           },
@@ -814,10 +814,7 @@
             "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 6%."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "combat_hack_and_slash",
-            "ranks": 5
-          },
+          "prereq": null,
           "status": "changed",
           "icon": "ability_racial_avatar",
           "classic": {

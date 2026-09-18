@@ -1252,52 +1252,10 @@
           "passive": true
         },
         {
-          "id": "protection_vitality",
-          "name": "Vitality",
-          "tier": 5,
-          "col": 4,
-          "maxRank": 5,
-          "ranks": [
-            "Increases your Stamina and Strength by 2%.",
-            "Increases your Stamina and Strength by 4%.",
-            "Increases your Stamina and Strength by 6%.",
-            "Increases your Stamina and Strength by 8%.",
-            "Increases your Stamina and Strength by 10%."
-          ],
-          "confidence": "estimated",
-          "prereq": null,
-          "status": "new",
-          "icon": "inv_helmet_21",
-          "classic": {
-            "status": "new"
-          },
-          "passive": true
-        },
-        {
-          "id": "protection_focused_rage",
-          "name": "Focused Rage",
-          "tier": 6,
-          "col": 1,
-          "maxRank": 3,
-          "ranks": [
-            "Reduces the Rage cost of your offensive abilities by 1.",
-            "Reduces the Rage cost of your offensive abilities by 2.",
-            "Reduces the Rage cost of your offensive abilities by 3."
-          ],
-          "confidence": "confirmed",
-          "prereq": null,
-          "status": "new",
-          "icon": "ability_warrior_focusedrage",
-          "classic": {
-            "status": "new"
-          },
-          "passive": true
-        },
-        {
           "id": "protection_bastion",
           "name": "Bastion",
-          "tier": 6,
-          "col": 3,
+          "tier": 5,
+          "col": 4,
           "maxRank": 5,
           "ranks": [
             "Increases all damage you deal by 2% while a shield is equipped.",
@@ -1310,6 +1268,26 @@
           "prereq": null,
           "status": "new",
           "icon": "inv_shield_04",
+          "classic": {
+            "status": "new"
+          },
+          "passive": true
+        },
+        {
+          "id": "protection_focused_rage",
+          "name": "Focused Rage",
+          "tier": 6,
+          "col": 3,
+          "maxRank": 3,
+          "ranks": [
+            "Reduces the Rage cost of your offensive abilities by 1.",
+            "Reduces the Rage cost of your offensive abilities by 2.",
+            "Reduces the Rage cost of your offensive abilities by 3."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "new",
+          "icon": "ability_warrior_focusedrage",
           "classic": {
             "status": "new"
           },

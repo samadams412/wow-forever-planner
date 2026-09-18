@@ -192,28 +192,6 @@
           "passive": true
         },
         {
-          "id": "balance_balance_of_nature",
-          "name": "Balance of Nature",
-          "tier": 3,
-          "col": 4,
-          "maxRank": 5,
-          "ranks": [
-            "Each time you cast a Nature spell, your next Arcane damage spell within 10 sec deals 1% increased damage. Each time you cast an Arcane spell, your next Nature damage spell within 10 sec deals 1% increased damage.",
-            "Each time you cast a Nature spell, your next Arcane damage spell within 10 sec deals 2% increased damage. Each time you cast an Arcane spell, your next Nature damage spell within 10 sec deals 2% increased damage.",
-            "Each time you cast a Nature spell, your next Arcane damage spell within 10 sec deals 3% increased damage. Each time you cast an Arcane spell, your next Nature damage spell within 10 sec deals 3% increased damage.",
-            "Each time you cast a Nature spell, your next Arcane damage spell within 10 sec deals 4% increased damage. Each time you cast an Arcane spell, your next Nature damage spell within 10 sec deals 4% increased damage.",
-            "Each time you cast a Nature spell, your next Arcane damage spell within 10 sec deals 5% increased damage. Each time you cast an Arcane spell, your next Nature damage spell within 10 sec deals 5% increased damage."
-          ],
-          "confidence": "estimated",
-          "prereq": null,
-          "status": "new",
-          "icon": "ability_druid_balanceofpower",
-          "classic": {
-            "status": "new"
-          },
-          "passive": true
-        },
-        {
           "id": "balance_vengeance",
           "name": "Vengeance",
           "tier": 4,
