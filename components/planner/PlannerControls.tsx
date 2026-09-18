@@ -14,6 +14,8 @@ export default function PlannerControls({
   onReset,
   onCopyLink,
   copied,
+  onCopyAiText,
+  copiedAiText,
   onOpenSaveDialog,
   onOpenMyBuilds,
   savedBuildsCount,
@@ -27,6 +29,8 @@ export default function PlannerControls({
   onReset: () => void;
   onCopyLink: () => void;
   copied: boolean;
+  onCopyAiText: () => void;
+  copiedAiText: boolean;
   onOpenSaveDialog: () => void;
   onOpenMyBuilds: () => void;
   savedBuildsCount: number;
@@ -79,6 +83,15 @@ export default function PlannerControls({
         className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
       >
         {copied ? "Copied!" : "Copy share link"}
+      </button>
+      <button
+        type="button"
+        onClick={onCopyAiText}
+        disabled={!hasPoints}
+        title={!hasPoints ? "Spend at least one talent point to copy a build summary" : undefined}
+        className="rounded border border-accent/60 px-2 py-0.5 text-xs text-accent hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
+      >
+        {copiedAiText ? "Copied!" : "Copy build for AI"}
       </button>
       <button
         type="button"

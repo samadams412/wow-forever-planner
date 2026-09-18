@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
+import { buildAiTextSummary } from "@/lib/build-text-export";
 import { canAddPoint, canRemovePoint, totalPointsSpent, pointsAtLevel, MAX_LEVEL } from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
 import ClassPicker from "@/components/planner/ClassPicker";
@@ -32,9 +34,11 @@ function buildPlannerPath(classId: string, code: string | null): string {
 export default function PlannerClient({
   initialClassId,
   initialBuildCode,
+  latestChangeCount = 0,
 }: {
   initialClassId: string | null;
   initialBuildCode: string | null;
+  latestChangeCount?: number;
 }) {
   const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
   const [ranks, setRanks] = useState<RankState>(() => {
@@ -47,6 +51,7 @@ export default function PlannerClient({
   // with every point available.
   const [level, setLevel] = useState<number>(MAX_LEVEL);
   const [copied, setCopied] = useState(false);
+  const [copiedAiText, setCopiedAiText] = useState(false);
   const [compareMode, setCompareMode] = useState(false);
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [buildName, setBuildName] = useState("");
@@ -168,6 +173,18 @@ export default function PlannerClient({
     }
   }, []);
 
+  const handleCopyAiText = useCallback(async () => {
+    if (!classData) return;
+    try {
+      const text = buildAiTextSummary(classData, ranks, level, window.location.href);
+      await navigator.clipboard.writeText(text);
+      setCopiedAiText(true);
+      setTimeout(() => setCopiedAiText(false), 1500);
+    } catch {
+      // clipboard API unavailable; nothing to fall back to without a visible text field
+    }
+  }, [classData, ranks, level]);
+
   const handleOpenSaveDialog = useCallback(() => {
     setBuildName("");
     setSaveError(false);
@@ -206,11 +223,24 @@ export default function PlannerClient({
 
   return (
     <main className="mx-auto w-full max-w-7xl px-3 py-1 sm:px-4">
-      <div className="flex items-baseline gap-2">
-        <h1 className="font-heading text-lg font-semibold tracking-wide text-accent">Planner</h1>
-        <p className="text-xs text-foreground-muted">
-          Pick a class, plan your talent build, then check a race beside it for racials — all in one flow.
-        </p>
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <div className="flex items-baseline gap-2">
+          <h1 className="font-heading text-lg font-semibold tracking-wide text-accent">Planner</h1>
+          <p className="text-xs text-foreground-muted">
+            Pick a class, plan your talent build, then check a race beside it for racials — all in one flow.
+          </p>
+        </div>
+        <Link
+          href="/whats-new"
+          className="flex shrink-0 items-center gap-1.5 rounded border border-border px-2 py-0.5 text-xs text-foreground-muted transition-colors hover:border-accent/60 hover:text-foreground"
+        >
+          What&apos;s new
+          {latestChangeCount > 0 && (
+            <span className="rounded-full bg-accent/20 px-1.5 py-0.5 font-semibold text-accent">
+              {latestChangeCount}
+            </span>
+          )}
+        </Link>
       </div>
 
       <div className="mt-1 space-y-1.5">
@@ -226,6 +256,8 @@ export default function PlannerClient({
           onReset={resetBuild}
           onCopyLink={handleCopyLink}
           copied={copied}
+          onCopyAiText={handleCopyAiText}
+          copiedAiText={copiedAiText}
           onOpenSaveDialog={handleOpenSaveDialog}
           onOpenMyBuilds={() => setMyBuildsOpen(true)}
           savedBuildsCount={savedBuilds.length}
