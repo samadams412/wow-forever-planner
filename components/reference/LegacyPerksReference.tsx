@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { Info, ArrowLeftRight } from "lucide-react";
+import { Info } from "lucide-react";
 import { legacyPerks } from "@/lib/legacy-perks";
 import { canAddLegacyPoint, canRemoveLegacyPoint, pointsSpentInLegacyTree } from "@/lib/legacy-perks";
 import type { RankState } from "@/lib/build-code";
@@ -93,13 +93,7 @@ export default function LegacyPerksReference() {
           {legacyPerks.earnCapNote}
         </p>
       </div>
-      <div className="mt-2 flex items-start gap-2 rounded-lg border border-sky-400/30 bg-sky-400/5 p-3">
-        <ArrowLeftRight className="mt-0.5 h-4 w-4 shrink-0 text-sky-400" />
-        <p className="max-w-[70ch] text-sm leading-relaxed text-foreground/90">
-          <span className="font-semibold text-sky-400">Also changing: </span>
-          {legacyPerks.mountCostNote}
-        </p>
-      </div>
+      
 
       <div className="mt-6 grid gap-4 lg:grid-cols-3">
         {legacyPerks.trees.map((tree) => (
