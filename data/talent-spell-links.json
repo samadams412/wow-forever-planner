@@ -1,0 +1,3314 @@
+{
+  "arms_improved_heroic_strike": [
+    {
+      "name": "Heroic Strike",
+      "kind": "spell",
+      "source": "Warrior spell, rank 9",
+      "description": "A strong attack that increases melee damage by 157 and causes a high amount of threat.",
+      "icon": "ability_rogue_ambush"
+    }
+  ],
+  "arms_deflection": [
+    {
+      "name": "Parry",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Gives a chance to parry enemy melee attacks.",
+      "icon": "ability_parry"
+    }
+  ],
+  "arms_improved_rend": [
+    {
+      "name": "Rend",
+      "kind": "spell",
+      "source": "Warrior spell, rank 7",
+      "description": "Wounds the target causing them to bleed for 147 damage over 21 sec.",
+      "icon": "ability_gouge"
+    }
+  ],
+  "arms_improved_charge": [
+    {
+      "name": "Charge",
+      "kind": "spell",
+      "source": "Warrior spell, rank 3",
+      "description": "Charge an enemy, generate 15 Rage, and Stun it for 1 sec. Cannot be used in combat.",
+      "icon": "ability_warrior_charge"
+    }
+  ],
+  "arms_improved_overpower": [
+    {
+      "name": "Overpower",
+      "kind": "spell",
+      "source": "Warrior spell, rank 4",
+      "description": "Instantly overpower the enemy, causing weapon damage plus 35. Only useable after the target dodges. The Overpower cannot be blocked, dodged or parried.",
+      "icon": "ability_meleedamage"
+    }
+  ],
+  "arms_bloodthrill": [
+    {
+      "name": "Rend",
+      "kind": "spell",
+      "source": "Warrior spell, rank 7",
+      "description": "Wounds the target causing them to bleed for 147 damage over 21 sec.",
+      "icon": "ability_gouge"
+    },
+    {
+      "name": "Overpower",
+      "kind": "spell",
+      "source": "Warrior spell, rank 4",
+      "description": "Instantly overpower the enemy, causing weapon damage plus 35. Only useable after the target dodges. The Overpower cannot be blocked, dodged or parried.",
+      "icon": "ability_meleedamage"
+    }
+  ],
+  "arms_improved_slam": [
+    {
+      "name": "Slam",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "Slams the opponent, causing weapon damage plus 87.",
+      "icon": "ability_warrior_decisivestrike"
+    }
+  ],
+  "arms_improved_hamstring": [
+    {
+      "name": "Hamstring",
+      "kind": "spell",
+      "source": "Warrior spell, rank 3",
+      "description": "Maims the enemy, causing 45 damage and slowing the enemy's movement by 50% for 15 sec.",
+      "icon": "ability_shockwave"
+    }
+  ],
+  "arms_tactical_mastery": [
+    {
+      "name": "Tactical Mastery",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "You retain up to 10 Rage when you change Stances.",
+      "icon": "spell_nature_enchantarmor"
+    }
+  ],
+  "fury_booming_voice": [
+    {
+      "name": "Battle Shout",
+      "kind": "spell",
+      "source": "Warrior spell, rank 7",
+      "description": "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 139. Lasts 3 min.",
+      "icon": "ability_warrior_battleshout"
+    },
+    {
+      "name": "Demoralizing Shout",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "Reduces the melee attack power of all enemies within 10 yards by 204 for 45 sec.",
+      "icon": "ability_warrior_warcry"
+    }
+  ],
+  "fury_improved_cleave": [
+    {
+      "name": "Cleave",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "A sweeping attack that does your weapon damage plus 50 to the target and a second nearby enemy.",
+      "icon": "ability_warrior_cleave"
+    }
+  ],
+  "fury_blood_craze": [
+    {
+      "name": "Bloodthirst",
+      "kind": "talent",
+      "source": "Talent · Fury, row 7",
+      "description": "Instantly attack the target causing damage equal to 35% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec.",
+      "icon": "spell_nature_bloodlust"
+    }
+  ],
+  "fury_raging_blows": [
+    {
+      "name": "Whirlwind",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "In a whirlwind of steel you attack up to 4 enemies within 8 yards, causing weapon damage to each enemy.",
+      "icon": "ability_whirlwind"
+    },
+    {
+      "name": "Cleave",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "A sweeping attack that does your weapon damage plus 50 to the target and a second nearby enemy.",
+      "icon": "ability_warrior_cleave"
+    }
+  ],
+  "fury_improved_execute": [
+    {
+      "name": "Execute",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "Attempt to finish off a wounded foe, causing 600 damage and converting each extra point of rage into 15 additional damage. Only usable on enemies that have 20% or less health.",
+      "icon": "inv_sword_48"
+    }
+  ],
+  "fury_improved_berserker_rage": [
+    {
+      "name": "Berserker Rage",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage. Lasts 10 sec.",
+      "icon": "spell_nature_ancestralguardian"
+    }
+  ],
+  "protection_shield_specialization": [
+    {
+      "name": "Block",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Gives a chance to block enemy melee and ranged attacks.",
+      "icon": "ability_defend"
+    }
+  ],
+  "protection_improved_bloodrage": [
+    {
+      "name": "Bloodrage",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec. The warrior is considered in combat for the duration.",
+      "icon": "ability_racial_bloodrage"
+    }
+  ],
+  "protection_improved_thunder_clap": [
+    {
+      "name": "Thunder Clap",
+      "kind": "spell",
+      "source": "Warrior spell, rank 6",
+      "description": "Blasts nearby enemies with thunder, increasing the time between their attacks by 20% for 30 sec and doing 103 damage to them. Will affect up to 4 targets.",
+      "icon": "spell_nature_thunderclap"
+    }
+  ],
+  "protection_master_of_defense": [
+    {
+      "name": "Dodge",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Gives a chance to dodge enemy melee attacks.",
+      "icon": "spell_shadow_rune"
+    },
+    {
+      "name": "Parry",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Gives a chance to parry enemy melee attacks.",
+      "icon": "ability_parry"
+    }
+  ],
+  "protection_improved_revenge": [
+    {
+      "name": "Revenge",
+      "kind": "spell",
+      "source": "Warrior spell, rank 6",
+      "description": "Instantly counterattack an enemy for 138 to 168 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+      "icon": "ability_warrior_revenge"
+    }
+  ],
+  "protection_improved_sunder_armor": [
+    {
+      "name": "Sunder Armor",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "Sunders the target's armor, reducing it by 450 per Sunder Armor and causes a high amount of threat. Can be applied up to 5 times. Lasts 30 sec.",
+      "icon": "ability_warrior_sunder"
+    }
+  ],
+  "protection_improved_disarm": [
+    {
+      "name": "Disarm",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Disarm the enemy's weapon for 10 sec.",
+      "icon": "ability_warrior_disarm"
+    }
+  ],
+  "protection_vanguard": [
+    {
+      "name": "Charge",
+      "kind": "spell",
+      "source": "Warrior spell, rank 3",
+      "description": "Charge an enemy, generate 15 Rage, and Stun it for 1 sec. Cannot be used in combat.",
+      "icon": "ability_warrior_charge"
+    },
+    {
+      "name": "Defensive Stance",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "A defensive combat stance. Decreases damage taken by 10% and damage caused by 10%. Increases all threat generated by 30%.",
+      "icon": "ability_warrior_defensivestance"
+    }
+  ],
+  "protection_improved_shield_wall": [
+    {
+      "name": "Shield Wall",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Reduces the damage taken from all attacks by 60% for 12 sec.",
+      "icon": "ability_warrior_shieldwall"
+    }
+  ],
+  "protection_improved_shield_bash": [
+    {
+      "name": "Shield Bash",
+      "kind": "spell",
+      "source": "Warrior spell, rank 3",
+      "description": "Bashes the target with your shield for 45 damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 6 sec.",
+      "icon": "ability_warrior_shieldbash"
+    }
+  ],
+  "protection_shield_slam": [
+    {
+      "name": "Slam",
+      "kind": "spell",
+      "source": "Warrior spell, rank 5",
+      "description": "Slams the opponent, causing weapon damage plus 87.",
+      "icon": "ability_warrior_decisivestrike"
+    },
+    {
+      "name": "Block",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Gives a chance to block enemy melee and ranged attacks.",
+      "icon": "ability_defend"
+    }
+  ],
+  "holy_improved_holy_strike": [
+    {
+      "name": "Holy Strike",
+      "kind": "spell",
+      "source": "Paladin spell, rank 8",
+      "description": "An instant strike that causes 40% weapon damage plus an additional 32 to 42 as Holy damage.",
+      "icon": "spell_holy_crusaderstrike"
+    }
+  ],
+  "holy_healing_light": [
+    {
+      "name": "Holy Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 9",
+      "description": "Heals a friendly target for 1,495 to 1,665.",
+      "icon": "spell_holy_holybolt"
+    },
+    {
+      "name": "Flash of Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Heals a friendly target for 291 to 325.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "holy_spiritual_focus": [
+    {
+      "name": "Flash of Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Heals a friendly target for 291 to 325.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Holy Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 9",
+      "description": "Heals a friendly target for 1,495 to 1,665.",
+      "icon": "spell_holy_holybolt"
+    },
+    {
+      "name": "Light's Vigil",
+      "kind": "talent",
+      "source": "Talent · Holy, row 7",
+      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes friendly targets to heal their party for 325 to 343, or enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost. You may only have 1 Light's Vigil active per Paladin, per party.",
+      "icon": "ability_paladin_judgementofthepure"
+    }
+  ],
+  "holy_purifying_power": [
+    {
+      "name": "Purify",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Purifies the friendly target, removing 1 disease effect and 1 poison effect.",
+      "icon": "spell_holy_purify"
+    },
+    {
+      "name": "Exorcism",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Causes 475 to 529 Holy damage to an Undead or Demon target.",
+      "icon": "spell_holy_excorcism_02"
+    }
+  ],
+  "holy_infusion_of_light": [
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    },
+    {
+      "name": "Flash of Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Heals a friendly target for 291 to 325.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Holy Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 9",
+      "description": "Heals a friendly target for 1,495 to 1,665.",
+      "icon": "spell_holy_holybolt"
+    }
+  ],
+  "holy_illumination": [
+    {
+      "name": "Flash of Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Heals a friendly target for 291 to 325.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Holy Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 9",
+      "description": "Heals a friendly target for 1,495 to 1,665.",
+      "icon": "spell_holy_holybolt"
+    },
+    {
+      "name": "Light's Vigil",
+      "kind": "talent",
+      "source": "Talent · Holy, row 7",
+      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes friendly targets to heal their party for 325 to 343, or enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost. You may only have 1 Light's Vigil active per Paladin, per party.",
+      "icon": "ability_paladin_judgementofthepure"
+    },
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "holy_divine_favor": [
+    {
+      "name": "Flash of Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Heals a friendly target for 291 to 325.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Holy Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 9",
+      "description": "Heals a friendly target for 1,495 to 1,665.",
+      "icon": "spell_holy_holybolt"
+    },
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "holy_consecrated_ground": [
+    {
+      "name": "Consecration",
+      "kind": "spell",
+      "source": "Paladin spell, rank 5",
+      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
+      "icon": "spell_holy_innerfire"
+    }
+  ],
+  "holy_holy_power": [
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "holy_lights_vigil": [
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "protection_guardians_favor": [
+    {
+      "name": "Blessing of Protection",
+      "kind": "spell",
+      "source": "Paladin spell, rank 3",
+      "description": "A targeted party member is protected from all physical attacks for 10 sec, but during that time they cannot attack or use physical abilities. Players may only have one Blessing on them per Paladin at any one time. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+      "icon": "spell_holy_sealofprotection"
+    },
+    {
+      "name": "Blessing of Freedom",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Places a Blessing on the friendly target, granting immunity to movement impairing effects for 10 sec. Players may only have one Blessing on them per Paladin at any one time.",
+      "icon": "spell_holy_sealofvalor"
+    }
+  ],
+  "protection_improved_seal_of_fury": [
+    {
+      "name": "Seal of Fury",
+      "kind": "spell",
+      "source": "Paladin spell, rank 7",
+      "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy causes 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+      "icon": "spell_holy_sealoffury"
+    }
+  ],
+  "protection_improved_righteous_fury": [
+    {
+      "name": "Righteous Fury",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+      "icon": "spell_holy_sealoffury"
+    }
+  ],
+  "protection_sacred_duty": [
+    {
+      "name": "Divine Shield",
+      "kind": "spell",
+      "source": "Paladin spell, rank 2",
+      "description": "Protects the paladin from all damage and spells for 12 sec, but reduces all damage you deal by 50%. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+      "icon": "spell_holy_divineintervention"
+    },
+    {
+      "name": "Divine Protection",
+      "kind": "spell",
+      "source": "Paladin spell, rank 2",
+      "description": "You are protected from all physical attacks and spells for 8 sec, but during that time you cannot attack or use physical abilities yourself. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+      "icon": "spell_holy_restoration"
+    },
+    {
+      "name": "Templar's Bulwark",
+      "kind": "talent",
+      "source": "Talent · Protection, row 5",
+      "description": "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
+      "icon": "ability_paladin_shieldofthetemplar"
+    }
+  ],
+  "protection_swift_judgement": [
+    {
+      "name": "Judgement",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect.",
+      "icon": "spell_holy_righteousfury"
+    }
+  ],
+  "protection_improved_hammer_of_justice": [
+    {
+      "name": "Hammer of Justice",
+      "kind": "spell",
+      "source": "Paladin spell, rank 4",
+      "description": "Stuns the target for 6 sec.",
+      "icon": "spell_holy_sealofmight"
+    }
+  ],
+  "protection_iron_creed": [
+    {
+      "name": "Holy Strike",
+      "kind": "spell",
+      "source": "Paladin spell, rank 8",
+      "description": "An instant strike that causes 40% weapon damage plus an additional 32 to 42 as Holy damage.",
+      "icon": "spell_holy_crusaderstrike"
+    },
+    {
+      "name": "Righteous Fury",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+      "icon": "spell_holy_sealoffury"
+    }
+  ],
+  "retribution_deflection": [
+    {
+      "name": "Parry",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Gives a chance to parry enemy melee attacks.",
+      "icon": "ability_parry"
+    }
+  ],
+  "retribution_improved_judgement": [
+    {
+      "name": "Judgement",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect.",
+      "icon": "spell_holy_righteousfury"
+    }
+  ],
+  "retribution_holy_conduit": [
+    {
+      "name": "Consecration",
+      "kind": "spell",
+      "source": "Paladin spell, rank 5",
+      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
+      "icon": "spell_holy_innerfire"
+    },
+    {
+      "name": "Exorcism",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Causes 475 to 529 Holy damage to an Undead or Demon target.",
+      "icon": "spell_holy_excorcism_02"
+    }
+  ],
+  "retribution_sanctified_judgement": [
+    {
+      "name": "Judgement",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect.",
+      "icon": "spell_holy_righteousfury"
+    }
+  ],
+  "retribution_sacred_arbiter": [
+    {
+      "name": "Holy Strike",
+      "kind": "spell",
+      "source": "Paladin spell, rank 8",
+      "description": "An instant strike that causes 40% weapon damage plus an additional 32 to 42 as Holy damage.",
+      "icon": "spell_holy_crusaderstrike"
+    },
+    {
+      "name": "Judgement",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect.",
+      "icon": "spell_holy_righteousfury"
+    }
+  ],
+  "retribution_instrument_of_law": [
+    {
+      "name": "Righteous Fury",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+      "icon": "spell_holy_sealoffury"
+    }
+  ],
+  "retribution_twist_of_light": [
+    {
+      "name": "Seal of Command",
+      "kind": "talent",
+      "source": "Talent · Retribution, row 3",
+      "description": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.\n\nUnleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 145 if the target is stunned or incapacitated.",
+      "icon": "ability_warrior_innerrage"
+    },
+    {
+      "name": "Seal of Righteousness",
+      "kind": "spell",
+      "source": "Paladin spell, rank 8",
+      "description": "Fills the Paladin with holy spirit for 30 sec, granting each melee attack an additional 21 to 75 Holy damage. Slower weapons cause more Holy damage per swing. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy will cause 170 to 186 Holy damage to an enemy.",
+      "icon": "ability_thunderbolt"
+    },
+    {
+      "name": "Seal of Fury",
+      "kind": "spell",
+      "source": "Paladin spell, rank 7",
+      "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy causes 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+      "icon": "spell_holy_sealoffury"
+    },
+    {
+      "name": "Seal of Justice",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Fills the Paladin with the spirit of justice for 30 sec, giving each melee attack a chance to stun for 2 sec. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy will judge an enemy for 10 sec, preventing them from fleeing. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time.",
+      "icon": "spell_holy_sealofwrath"
+    }
+  ],
+  "beast_mastery_deadly_aspects": [
+    {
+      "name": "Aspect of the Hawk",
+      "kind": "spell",
+      "source": "Hunter spell, rank 7",
+      "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 120. Only one Aspect can be active at a time.",
+      "icon": "spell_nature_ravenform"
+    },
+    {
+      "name": "Auto Shot",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Automatically shoots the target until cancelled.",
+      "icon": "ability_whirlwind"
+    },
+    {
+      "name": "Aspect of the Beast",
+      "kind": "spell",
+      "source": "Hunter spell, rank 4",
+      "description": "The hunter takes on the aspects of a beast, becoming untrackable and increasing Melee Attack Power by 110. Only one Aspect can be active at a time.",
+      "icon": "ability_mount_pinktiger"
+    }
+  ],
+  "beast_mastery_improved_aspect_of_the_monkey": [
+    {
+      "name": "Dodge",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Gives a chance to dodge enemy melee attacks.",
+      "icon": "spell_shadow_rune"
+    },
+    {
+      "name": "Aspect of the Monkey",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "The hunter takes on the aspects of a monkey, increasing chance to dodge by 8%. Only one Aspect can be active at a time.",
+      "icon": "ability_hunter_aspectofthemonkey"
+    }
+  ],
+  "beast_mastery_pathfinding": [
+    {
+      "name": "Aspect of the Cheetah",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "The hunter takes on the aspects of a cheetah, increasing movement speed by 30%. If the hunter takes damage, he will be dazed for 4 sec. Only one Aspect can be active at a time.",
+      "icon": "ability_mount_jungletiger"
+    }
+  ],
+  "beast_mastery_improved_revive_pet": [
+    {
+      "name": "Revive Pet",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Revive your pet, returning it to life with 15% of its health.",
+      "icon": "ability_hunter_beastsoothe"
+    }
+  ],
+  "beast_mastery_improved_mend_pet": [
+    {
+      "name": "Mend Pet",
+      "kind": "spell",
+      "source": "Hunter spell, rank 7",
+      "description": "Heals your pet 245 health every second while you focus. Lasts 5 sec.",
+      "icon": "ability_hunter_mendpet"
+    }
+  ],
+  "beast_mastery_summon_hawk": [
+    {
+      "name": "Arcane Shot",
+      "kind": "spell",
+      "source": "Hunter spell, rank 8",
+      "description": "An instant shot that causes 217 Arcane damage.",
+      "icon": "ability_impalingbolt"
+    }
+  ],
+  "marksmanship_improved_concussive_shot": [
+    {
+      "name": "Concussive Shot",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Dazes the target, slowing movement speed by 50% for 4 sec.",
+      "icon": "spell_frost_stun"
+    }
+  ],
+  "marksmanship_improved_stings": [
+    {
+      "name": "Serpent Sting",
+      "kind": "spell",
+      "source": "Hunter spell, rank 9",
+      "description": "Stings the target, causing 555 Nature damage over 15 sec. Only one Sting per Hunter can be active on any one target.",
+      "icon": "ability_hunter_quickshot"
+    },
+    {
+      "name": "Viper Sting",
+      "kind": "spell",
+      "source": "Hunter spell, rank 3",
+      "description": "Stings the target, draining 1,108 mana over 8 sec. Only one Sting per Hunter can be active on any one target.",
+      "icon": "ability_hunter_aimedshot"
+    },
+    {
+      "name": "Scorpid Sting",
+      "kind": "spell",
+      "source": "Hunter spell, rank 1",
+      "description": "Stings the target, reducing the target's chance to hit with attacks by 2% for 20 sec. Only one Sting per Hunter can be active on any one target.",
+      "icon": "ability_hunter_criticalshot"
+    }
+  ],
+  "marksmanship_rapid_killing": [
+    {
+      "name": "Rapid Fire",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Increases ranged and melee attack speed by 40% for 15 sec.",
+      "icon": "ability_hunter_runningshot"
+    },
+    {
+      "name": "Serpent Sting",
+      "kind": "spell",
+      "source": "Hunter spell, rank 9",
+      "description": "Stings the target, causing 555 Nature damage over 15 sec. Only one Sting per Hunter can be active on any one target.",
+      "icon": "ability_hunter_quickshot"
+    }
+  ],
+  "marksmanship_improved_arcane_shot": [
+    {
+      "name": "Arcane Shot",
+      "kind": "spell",
+      "source": "Hunter spell, rank 8",
+      "description": "An instant shot that causes 217 Arcane damage.",
+      "icon": "ability_impalingbolt"
+    }
+  ],
+  "marksmanship_rapid_recuperation": [
+    {
+      "name": "Serpent Sting",
+      "kind": "spell",
+      "source": "Hunter spell, rank 9",
+      "description": "Stings the target, causing 555 Nature damage over 15 sec. Only one Sting per Hunter can be active on any one target.",
+      "icon": "ability_hunter_quickshot"
+    },
+    {
+      "name": "Rapid Killing",
+      "kind": "talent",
+      "source": "Talent · Marksmanship, row 3",
+      "description": "Reduces the cooldown on your Rapid Fire ability by 2 min. In addition, when you kill a non-trivial enemy or it dies while afflicted by your Serpent Sting, you gain Rapid Killing, increasing the damage of your next Shot ability within 20 sec by 20%.",
+      "icon": "ability_hunter_rapidkilling"
+    }
+  ],
+  "marksmanship_barrage": [
+    {
+      "name": "Multi-Shot",
+      "kind": "spell",
+      "source": "Hunter spell, rank 1",
+      "description": "Fires several missiles, hitting 3 targets. Multi-Shot shares its cooldown with Aimed Shot.",
+      "icon": "ability_upgrademoonglaive"
+    },
+    {
+      "name": "Aimed Shot",
+      "kind": "spell",
+      "source": "Hunter spell, rank 6",
+      "description": "An aimed shot that increases ranged damage by 166. Aimed Shot shares its cooldown with Multi-Shot.",
+      "icon": "inv_spear_07"
+    }
+  ],
+  "survival_deflection": [
+    {
+      "name": "Parry",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Gives a chance to parry enemy melee attacks.",
+      "icon": "ability_parry"
+    }
+  ],
+  "survival_improved_wing_clip": [
+    {
+      "name": "Wing Clip",
+      "kind": "spell",
+      "source": "Hunter spell, rank 3",
+      "description": "Inflicts 50 damage and reduces the enemy target's movement speed by 60% for 10 sec.",
+      "icon": "ability_rogue_trip"
+    }
+  ],
+  "survival_deterrence": [
+    {
+      "name": "Dodge",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Gives a chance to dodge enemy melee attacks.",
+      "icon": "spell_shadow_rune"
+    },
+    {
+      "name": "Parry",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Gives a chance to parry enemy melee attacks.",
+      "icon": "ability_parry"
+    }
+  ],
+  "survival_survival_tactics": [
+    {
+      "name": "Feign Death",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "Feign death which may trick enemies into ignoring you. Lasts 6 min. If not cancelled, after 6 min you will actually die.",
+      "icon": "ability_rogue_feigndeath"
+    }
+  ],
+  "survival_expose_prey": [
+    {
+      "name": "Hunter's Mark",
+      "kind": "spell",
+      "source": "Hunter spell, rank 4",
+      "description": "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 71. In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible. The target also appears on the mini-map. Lasts for 2 min.",
+      "icon": "ability_hunter_snipershot"
+    },
+    {
+      "name": "Mongoose Bite",
+      "kind": "spell",
+      "source": "Hunter spell, rank 4",
+      "description": "Counterattack the enemy for melee weapon damage plus 57. Can only be performed after you dodge.",
+      "icon": "ability_hunter_swiftstrike"
+    }
+  ],
+  "survival_survivalists_discipline": [
+    {
+      "name": "Deterrence",
+      "kind": "talent",
+      "source": "Talent · Survival, row 3",
+      "description": "When activated, increases your Dodge and Parry chance by 25% for 10 sec.",
+      "icon": "ability_whirlwind"
+    }
+  ],
+  "survival_lacerating_strikes": [
+    {
+      "name": "Mongoose Bite",
+      "kind": "spell",
+      "source": "Hunter spell, rank 4",
+      "description": "Counterattack the enemy for melee weapon damage plus 57. Can only be performed after you dodge.",
+      "icon": "ability_hunter_swiftstrike"
+    }
+  ],
+  "assassination_improved_gouge": [
+    {
+      "name": "Gouge",
+      "kind": "spell",
+      "source": "Rogue spell, rank 5",
+      "description": "Causes 75 damage, stops your attack, and incapacitates the target for 4 sec. The target must be facing you. Any damage taken will break the effect. Awards 1 combo point.",
+      "icon": "ability_gouge"
+    }
+  ],
+  "assassination_remorseless_attacks": [
+    {
+      "name": "Sinister Strike",
+      "kind": "spell",
+      "source": "Rogue spell, rank 8",
+      "description": "An instant strike that causes 68 damage in addition to your normal weapon damage. Awards 1 combo point.",
+      "icon": "spell_shadow_ritualofsacrifice"
+    },
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Ambush",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Ambush the target, causing 250% weapon damage plus 290 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_rogue_ambush"
+    },
+    {
+      "name": "Mutilate",
+      "kind": "talent",
+      "source": "Talent · Assassination, row 5",
+      "description": "Instantly attacks with both weapons for 75% weapon damage plus an additional 13 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points.",
+      "icon": "ability_rogue_deadlybrew"
+    },
+    {
+      "name": "Ghostly Strike",
+      "kind": "talent",
+      "source": "Talent · Subtlety, row 3",
+      "description": "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
+      "icon": "spell_shadow_curse"
+    }
+  ],
+  "assassination_improved_slice_and_dice": [
+    {
+      "name": "Slice and Dice",
+      "kind": "spell",
+      "source": "Rogue spell, rank 2",
+      "description": "Finishing move that increases melee attack speed by 30%. Lasts longer per combo point:\n 1 point : 9 seconds\n 2 points: 12 seconds\n 3 points: 15 seconds\n 4 points: 18 seconds\n 5 points: 21 seconds",
+      "icon": "ability_rogue_slicedice"
+    }
+  ],
+  "assassination_improved_expose_armor": [
+    {
+      "name": "Expose Armor",
+      "kind": "spell",
+      "source": "Rogue spell, rank 5",
+      "description": "Finishing move that exposes the target for 30 sec, reducing armor per combo point:\n 1 point : 450 armor\n 2 points: 900 armor\n 3 points: 1,350 armor\n 4 points: 1,800 armor\n 5 points: 2,250 armor",
+      "icon": "ability_warrior_riposte"
+    }
+  ],
+  "assassination_lethality": [
+    {
+      "name": "Sinister Strike",
+      "kind": "spell",
+      "source": "Rogue spell, rank 8",
+      "description": "An instant strike that causes 68 damage in addition to your normal weapon damage. Awards 1 combo point.",
+      "icon": "spell_shadow_ritualofsacrifice"
+    },
+    {
+      "name": "Gouge",
+      "kind": "spell",
+      "source": "Rogue spell, rank 5",
+      "description": "Causes 75 damage, stops your attack, and incapacitates the target for 4 sec. The target must be facing you. Any damage taken will break the effect. Awards 1 combo point.",
+      "icon": "ability_gouge"
+    },
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Mutilate",
+      "kind": "talent",
+      "source": "Talent · Assassination, row 5",
+      "description": "Instantly attacks with both weapons for 75% weapon damage plus an additional 13 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points.",
+      "icon": "ability_rogue_deadlybrew"
+    },
+    {
+      "name": "Ghostly Strike",
+      "kind": "talent",
+      "source": "Talent · Subtlety, row 3",
+      "description": "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
+      "icon": "spell_shadow_curse"
+    },
+    {
+      "name": "Hemorrhage",
+      "kind": "talent",
+      "source": "Talent · Subtlety, row 5",
+      "description": "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point.",
+      "icon": "spell_shadow_lifedrain"
+    }
+  ],
+  "assassination_cold_blood": [
+    {
+      "name": "Sinister Strike",
+      "kind": "spell",
+      "source": "Rogue spell, rank 8",
+      "description": "An instant strike that causes 68 damage in addition to your normal weapon damage. Awards 1 combo point.",
+      "icon": "spell_shadow_ritualofsacrifice"
+    },
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Ambush",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Ambush the target, causing 250% weapon damage plus 290 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_rogue_ambush"
+    },
+    {
+      "name": "Eviscerate",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Finishing move that causes damage per combo point, increased by Attack Power:\n 1 point : 224-332 damage\n 2 points: 394-502 damage\n 3 points: 564-672 damage\n 4 points: 734-842 damage\n 5 points: 904-1,012 damage",
+      "icon": "ability_rogue_eviscerate"
+    },
+    {
+      "name": "Mutilate",
+      "kind": "talent",
+      "source": "Talent · Assassination, row 5",
+      "description": "Instantly attacks with both weapons for 75% weapon damage plus an additional 13 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points.",
+      "icon": "ability_rogue_deadlybrew"
+    }
+  ],
+  "assassination_improved_kidney_shot": [
+    {
+      "name": "Kidney Shot",
+      "kind": "spell",
+      "source": "Rogue spell, rank 2",
+      "description": "Finishing move that stuns the target. Lasts longer per combo point:\n 1 point : 2 seconds\n 2 points: 3 seconds\n 3 points: 4 seconds\n 4 points: 5 seconds\n 5 points: 6 seconds",
+      "icon": "ability_rogue_kidneyshot"
+    }
+  ],
+  "combat_improved_eviscerate": [
+    {
+      "name": "Eviscerate",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Finishing move that causes damage per combo point, increased by Attack Power:\n 1 point : 224-332 damage\n 2 points: 394-502 damage\n 3 points: 564-672 damage\n 4 points: 734-842 damage\n 5 points: 904-1,012 damage",
+      "icon": "ability_rogue_eviscerate"
+    }
+  ],
+  "combat_improved_sinister_strike": [
+    {
+      "name": "Sinister Strike",
+      "kind": "spell",
+      "source": "Rogue spell, rank 8",
+      "description": "An instant strike that causes 68 damage in addition to your normal weapon damage. Awards 1 combo point.",
+      "icon": "spell_shadow_ritualofsacrifice"
+    }
+  ],
+  "combat_lightning_reflexes": [
+    {
+      "name": "Dodge",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Gives a chance to dodge enemy melee attacks.",
+      "icon": "spell_shadow_rune"
+    }
+  ],
+  "combat_puncturing_wounds": [
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Mutilate",
+      "kind": "talent",
+      "source": "Talent · Assassination, row 5",
+      "description": "Instantly attacks with both weapons for 75% weapon damage plus an additional 13 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points.",
+      "icon": "ability_rogue_deadlybrew"
+    }
+  ],
+  "combat_deflection": [
+    {
+      "name": "Parry",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Gives a chance to parry enemy melee attacks.",
+      "icon": "ability_parry"
+    }
+  ],
+  "combat_endurance": [
+    {
+      "name": "Sprint",
+      "kind": "spell",
+      "source": "Rogue spell, rank 3",
+      "description": "Increases the rogue's movement speed by 70% for 15 sec. Does not break stealth.",
+      "icon": "ability_rogue_sprint"
+    },
+    {
+      "name": "Evasion",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "The rogue's dodge chance will increase by 50% for 15 sec.",
+      "icon": "spell_shadow_shadowward"
+    }
+  ],
+  "combat_improved_sprint": [
+    {
+      "name": "Sprint",
+      "kind": "spell",
+      "source": "Rogue spell, rank 3",
+      "description": "Increases the rogue's movement speed by 70% for 15 sec. Does not break stealth.",
+      "icon": "ability_rogue_sprint"
+    }
+  ],
+  "combat_improved_kick": [
+    {
+      "name": "Kick",
+      "kind": "spell",
+      "source": "Rogue spell, rank 4",
+      "description": "A quick kick that injures a single foe for 80 damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 5 sec.",
+      "icon": "ability_kick"
+    }
+  ],
+  "combat_flawless_execution": [
+    {
+      "name": "Eviscerate",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Finishing move that causes damage per combo point, increased by Attack Power:\n 1 point : 224-332 damage\n 2 points: 394-502 damage\n 3 points: 564-672 damage\n 4 points: 734-842 damage\n 5 points: 904-1,012 damage",
+      "icon": "ability_rogue_eviscerate"
+    }
+  ],
+  "combat_aggression": [
+    {
+      "name": "Sinister Strike",
+      "kind": "spell",
+      "source": "Rogue spell, rank 8",
+      "description": "An instant strike that causes 68 damage in addition to your normal weapon damage. Awards 1 combo point.",
+      "icon": "spell_shadow_ritualofsacrifice"
+    },
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Eviscerate",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Finishing move that causes damage per combo point, increased by Attack Power:\n 1 point : 224-332 damage\n 2 points: 394-502 damage\n 3 points: 564-672 damage\n 4 points: 734-842 damage\n 5 points: 904-1,012 damage",
+      "icon": "ability_rogue_eviscerate"
+    }
+  ],
+  "subtlety_camouflage": [
+    {
+      "name": "Stealth",
+      "kind": "spell",
+      "source": "Rogue spell, rank 4",
+      "description": "Allows the rogue to sneak around, but reduces your speed by 30%. Lasts until cancelled.",
+      "icon": "ability_stealth"
+    }
+  ],
+  "subtlety_master_of_deception": [
+    {
+      "name": "Stealth",
+      "kind": "spell",
+      "source": "Rogue spell, rank 4",
+      "description": "Allows the rogue to sneak around, but reduces your speed by 30%. Lasts until cancelled.",
+      "icon": "ability_stealth"
+    }
+  ],
+  "subtlety_opportunity": [
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Garrote",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Garrote the enemy, causing 552 damage over 18 sec, increased by your Attack Power. Must be stealthed and behind the target. Awards 1 combo point.",
+      "icon": "ability_rogue_garrote"
+    },
+    {
+      "name": "Ambush",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Ambush the target, causing 250% weapon damage plus 290 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_rogue_ambush"
+    },
+    {
+      "name": "Mutilate",
+      "kind": "talent",
+      "source": "Talent · Assassination, row 5",
+      "description": "Instantly attacks with both weapons for 75% weapon damage plus an additional 13 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points.",
+      "icon": "ability_rogue_deadlybrew"
+    }
+  ],
+  "subtlety_elusiveness": [
+    {
+      "name": "Vanish",
+      "kind": "spell",
+      "source": "Rogue spell, rank 2",
+      "description": "Allows the rogue to vanish from sight, entering an improved stealth mode for 10 sec. Also breaks movement impairing effects. More effective than Vanish (Rank 1).",
+      "icon": "ability_vanish"
+    },
+    {
+      "name": "Blind",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Blinds the target, causing it to wander disoriented for up to 10 sec. Any damage caused will remove the effect.",
+      "icon": "spell_shadow_mindsteal"
+    }
+  ],
+  "subtlety_dirty_tricks": [
+    {
+      "name": "Sap",
+      "kind": "spell",
+      "source": "Rogue spell, rank 3",
+      "description": "Incapacitates the target for up to 45 sec. Only works on Humanoids that are not in combat. Any damage taken will break the effect. Only 1 target may be sapped at a time. Does not break Stealth.",
+      "icon": "ability_sap"
+    },
+    {
+      "name": "Blind",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Blinds the target, causing it to wander disoriented for up to 10 sec. Any damage caused will remove the effect.",
+      "icon": "spell_shadow_mindsteal"
+    }
+  ],
+  "subtlety_improved_ambush": [
+    {
+      "name": "Ambush",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Ambush the target, causing 250% weapon damage plus 290 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_rogue_ambush"
+    }
+  ],
+  "subtlety_initiative": [
+    {
+      "name": "Ambush",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Ambush the target, causing 250% weapon damage plus 290 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_rogue_ambush"
+    },
+    {
+      "name": "Garrote",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Garrote the enemy, causing 552 damage over 18 sec, increased by your Attack Power. Must be stealthed and behind the target. Awards 1 combo point.",
+      "icon": "ability_rogue_garrote"
+    },
+    {
+      "name": "Cheap Shot",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Stuns the target for 4 sec. Must be stealthed. Awards 2 combo points.",
+      "icon": "ability_cheapshot"
+    }
+  ],
+  "subtlety_improved_distract": [
+    {
+      "name": "Distract",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Throws a distraction, attracting the attention of all nearby enemies and reducing their Stealth detection as if they were 1 level lower for 10 seconds. Does not break stealth.",
+      "icon": "ability_rogue_distract"
+    },
+    {
+      "name": "Stealth",
+      "kind": "spell",
+      "source": "Rogue spell, rank 4",
+      "description": "Allows the rogue to sneak around, but reduces your speed by 30%. Lasts until cancelled.",
+      "icon": "ability_stealth"
+    }
+  ],
+  "subtlety_heightened_senses": [
+    {
+      "name": "Stealth",
+      "kind": "spell",
+      "source": "Rogue spell, rank 4",
+      "description": "Allows the rogue to sneak around, but reduces your speed by 30%. Lasts until cancelled.",
+      "icon": "ability_stealth"
+    }
+  ],
+  "subtlety_serrated_blades": [
+    {
+      "name": "Rupture",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Finishing move that causes damage over time, increased by your Attack Power. Lasts longer per combo point:\n 1 point : 159 damage over 8 secs\n 2 points: 222 damage over 10 secs\n 3 points: 295 damage over 12 secs\n 4 points: 377 damage over 14 secs\n 5 points: 469 damage over 16 secs",
+      "icon": "ability_rogue_rupture"
+    }
+  ],
+  "subtlety_dirty_deeds": [
+    {
+      "name": "Cheap Shot",
+      "kind": "spell",
+      "source": "Rogue spell",
+      "description": "Stuns the target for 4 sec. Must be stealthed. Awards 2 combo points.",
+      "icon": "ability_cheapshot"
+    },
+    {
+      "name": "Garrote",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Garrote the enemy, causing 552 damage over 18 sec, increased by your Attack Power. Must be stealthed and behind the target. Awards 1 combo point.",
+      "icon": "ability_rogue_garrote"
+    }
+  ],
+  "subtlety_hemorrhage": [
+    {
+      "name": "Rupture",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Finishing move that causes damage over time, increased by your Attack Power. Lasts longer per combo point:\n 1 point : 159 damage over 8 secs\n 2 points: 222 damage over 10 secs\n 3 points: 295 damage over 12 secs\n 4 points: 377 damage over 14 secs\n 5 points: 469 damage over 16 secs",
+      "icon": "ability_rogue_rupture"
+    }
+  ],
+  "subtlety_quietus": [
+    {
+      "name": "Sinister Strike",
+      "kind": "spell",
+      "source": "Rogue spell, rank 8",
+      "description": "An instant strike that causes 68 damage in addition to your normal weapon damage. Awards 1 combo point.",
+      "icon": "spell_shadow_ritualofsacrifice"
+    },
+    {
+      "name": "Ghostly Strike",
+      "kind": "talent",
+      "source": "Talent · Subtlety, row 3",
+      "description": "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
+      "icon": "spell_shadow_curse"
+    },
+    {
+      "name": "Hemorrhage",
+      "kind": "talent",
+      "source": "Talent · Subtlety, row 5",
+      "description": "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point.",
+      "icon": "spell_shadow_lifedrain"
+    }
+  ],
+  "subtlety_cutthroat": [
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    },
+    {
+      "name": "Ambush",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Ambush the target, causing 250% weapon damage plus 290 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_rogue_ambush"
+    },
+    {
+      "name": "Stealth",
+      "kind": "spell",
+      "source": "Rogue spell, rank 4",
+      "description": "Allows the rogue to sneak around, but reduces your speed by 30%. Lasts until cancelled.",
+      "icon": "ability_stealth"
+    }
+  ],
+  "subtlety_thousand_cuts": [
+    {
+      "name": "Rupture",
+      "kind": "spell",
+      "source": "Rogue spell, rank 6",
+      "description": "Finishing move that causes damage over time, increased by your Attack Power. Lasts longer per combo point:\n 1 point : 159 damage over 8 secs\n 2 points: 222 damage over 10 secs\n 3 points: 295 damage over 12 secs\n 4 points: 377 damage over 14 secs\n 5 points: 469 damage over 16 secs",
+      "icon": "ability_rogue_rupture"
+    },
+    {
+      "name": "Hemorrhage",
+      "kind": "talent",
+      "source": "Talent · Subtlety, row 5",
+      "description": "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point.",
+      "icon": "spell_shadow_lifedrain"
+    },
+    {
+      "name": "Backstab",
+      "kind": "spell",
+      "source": "Rogue spell, rank 9",
+      "description": "Backstab the target, causing 150% weapon damage plus 225 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo point.",
+      "icon": "ability_backstab"
+    }
+  ],
+  "discipline_power_in_light": [
+    {
+      "name": "Smite",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Smite an enemy for 166 to 186 Holy damage.",
+      "icon": "spell_holy_holysmite"
+    },
+    {
+      "name": "Penance",
+      "kind": "talent",
+      "source": "Talent · Discipline, row 5",
+      "description": "Launches a volley of holy light at the target, causing 81 Holy damage to an enemy, or 184 healing to an ally, instantly and every 1 sec for 2 sec.",
+      "icon": "spell_holy_penance"
+    },
+    {
+      "name": "Holy Fire",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Consumes the enemy in holy flames that cause 184 to 232 Holy damage and an additional 75 Holy damage over 10 sec.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "discipline_silent_resolve": [
+    {
+      "name": "Silence",
+      "kind": "talent",
+      "source": "Talent · Shadow, row 5",
+      "description": "Silences the target, preventing them from casting spells for 5 sec and interrupting their spellcasts for 3 sec.",
+      "icon": "spell_shadow_impphaseshift"
+    }
+  ],
+  "discipline_improved_power_word_shield": [
+    {
+      "name": "Power Word: Shield",
+      "kind": "spell",
+      "source": "Priest spell, rank 10",
+      "description": "Draws on the soul of the party member to shield them, absorbing 928 damage. Lasts 30 sec. While the shield holds, spellcasting will not be interrupted by damage. Once shielded, the target cannot be shielded again for 15 sec.",
+      "icon": "spell_holy_powerwordshield"
+    }
+  ],
+  "discipline_mental_agility": [
+    {
+      "name": "Smite",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Smite an enemy for 166 to 186 Holy damage.",
+      "icon": "spell_holy_holysmite"
+    },
+    {
+      "name": "Holy Fire",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Consumes the enemy in holy flames that cause 184 to 232 Holy damage and an additional 75 Holy damage over 10 sec.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "discipline_improved_inner_fire": [
+    {
+      "name": "Inner Fire",
+      "kind": "spell",
+      "source": "Priest spell, rank 6",
+      "description": "A burst of Holy energy fills the caster, increasing armor by 1,395. Each melee or ranged damage hit against the priest will remove one charge. Lasts 10 min or until 20 charges are used.",
+      "icon": "spell_holy_innerfire"
+    }
+  ],
+  "discipline_soul_warding": [
+    {
+      "name": "Power Word: Shield",
+      "kind": "spell",
+      "source": "Priest spell, rank 10",
+      "description": "Draws on the soul of the party member to shield them, absorbing 928 damage. Lasts 30 sec. While the shield holds, spellcasting will not be interrupted by damage. Once shielded, the target cannot be shielded again for 15 sec.",
+      "icon": "spell_holy_powerwordshield"
+    }
+  ],
+  "discipline_improved_mana_burn": [
+    {
+      "name": "Mana Burn",
+      "kind": "spell",
+      "source": "Priest spell, rank 5",
+      "description": "Drains 746 to 788 mana from a target. For each mana drained in this way, the target takes 0.5 Shadow damage.",
+      "icon": "spell_shadow_manaburn"
+    }
+  ],
+  "discipline_renewed_hope": [
+    {
+      "name": "Flash Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 7",
+      "description": "Heals a friendly target for 773 to 909.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 4",
+      "description": "Heal your target for 633 to 713.",
+      "icon": "spell_holy_heal"
+    },
+    {
+      "name": "Binding Heal",
+      "kind": "talent",
+      "source": "Talent · Holy, row 4",
+      "description": "Heals a friendly target and the caster for 236 to 284. Low threat.",
+      "icon": "spell_holy_blindingheal"
+    },
+    {
+      "name": "Lesser Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 3",
+      "description": "Heal your target for 138 to 160.",
+      "icon": "spell_holy_lesserheal"
+    },
+    {
+      "name": "Penance",
+      "kind": "talent",
+      "source": "Talent · Discipline, row 5",
+      "description": "Launches a volley of holy light at the target, causing 81 Holy damage to an enemy, or 184 healing to an ally, instantly and every 1 sec for 2 sec.",
+      "icon": "spell_holy_penance"
+    }
+  ],
+  "holy_improved_renew": [
+    {
+      "name": "Renew",
+      "kind": "spell",
+      "source": "Priest spell, rank 10",
+      "description": "Heals the target of 830 damage over 15 sec.",
+      "icon": "spell_holy_renew"
+    }
+  ],
+  "holy_divine_fury": [
+    {
+      "name": "Smite",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Smite an enemy for 166 to 186 Holy damage.",
+      "icon": "spell_holy_holysmite"
+    },
+    {
+      "name": "Holy Fire",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Consumes the enemy in holy flames that cause 184 to 232 Holy damage and an additional 75 Holy damage over 10 sec.",
+      "icon": "spell_holy_searinglight"
+    },
+    {
+      "name": "Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 4",
+      "description": "Heal your target for 633 to 713.",
+      "icon": "spell_holy_heal"
+    }
+  ],
+  "holy_holy_reach": [
+    {
+      "name": "Smite",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Smite an enemy for 166 to 186 Holy damage.",
+      "icon": "spell_holy_holysmite"
+    },
+    {
+      "name": "Holy Fire",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Consumes the enemy in holy flames that cause 184 to 232 Holy damage and an additional 75 Holy damage over 10 sec.",
+      "icon": "spell_holy_searinglight"
+    },
+    {
+      "name": "Prayer of Healing",
+      "kind": "spell",
+      "source": "Priest spell, rank 5",
+      "description": "A powerful prayer that heals the target and their party for 631 to 667. Party members must be within 40 yards of target.",
+      "icon": "spell_holy_prayerofhealing02"
+    },
+    {
+      "name": "Holy Nova",
+      "kind": "talent",
+      "source": "Talent · Holy, row 3",
+      "description": "Causes an explosion of holy light around the caster, causing 26 to 30 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 49 to 57. These effects cause no threat.",
+      "icon": "spell_holy_holynova"
+    }
+  ],
+  "holy_improved_healing": [
+    {
+      "name": "Lesser Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 3",
+      "description": "Heal your target for 138 to 160.",
+      "icon": "spell_holy_lesserheal"
+    },
+    {
+      "name": "Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 4",
+      "description": "Heal your target for 633 to 713.",
+      "icon": "spell_holy_heal"
+    },
+    {
+      "name": "Penance",
+      "kind": "talent",
+      "source": "Talent · Discipline, row 5",
+      "description": "Launches a volley of holy light at the target, causing 81 Holy damage to an enemy, or 184 healing to an ally, instantly and every 1 sec for 2 sec.",
+      "icon": "spell_holy_penance"
+    },
+    {
+      "name": "Prayer of Mending",
+      "kind": "talent",
+      "source": "Talent · Holy, row 7",
+      "description": "Places a spell on the target that heals them for 172 the next time they take damage or receive non-periodic healing. When the heal occurs, Prayer of Mending jumps to a party or raid member within 20 yards. Jumps up to 5 times and lasts 30 sec after each jump. This spell can only be placed on one target at a time per caster.",
+      "icon": "spell_holy_prayerofmendingtga"
+    }
+  ],
+  "holy_searing_light": [
+    {
+      "name": "Holy Fire",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "Consumes the enemy in holy flames that cause 184 to 232 Holy damage and an additional 75 Holy damage over 10 sec.",
+      "icon": "spell_holy_searinglight"
+    },
+    {
+      "name": "Holy Nova",
+      "kind": "talent",
+      "source": "Talent · Holy, row 3",
+      "description": "Causes an explosion of holy light around the caster, causing 26 to 30 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 49 to 57. These effects cause no threat.",
+      "icon": "spell_holy_holynova"
+    }
+  ],
+  "shadow_improved_shadow_word_pain": [
+    {
+      "name": "Shadow Word: Pain",
+      "kind": "spell",
+      "source": "Priest spell, rank 8",
+      "description": "A word of darkness that causes 762 Shadow damage over 18 sec.",
+      "icon": "spell_shadow_shadowwordpain"
+    }
+  ],
+  "shadow_improved_mind_blast": [
+    {
+      "name": "Mind Blast",
+      "kind": "spell",
+      "source": "Priest spell, rank 9",
+      "description": "Blasts the target for 477 to 503 Shadow damage, but causes a high amount of threat.",
+      "icon": "spell_shadow_unholyfrenzy"
+    }
+  ],
+  "shadow_improved_psychic_scream": [
+    {
+      "name": "Psychic Scream",
+      "kind": "spell",
+      "source": "Priest spell, rank 4",
+      "description": "The caster lets out a psychic scream, causing 5 enemies within 8 yards to flee for 8 sec. Damage caused may interrupt the effect.",
+      "icon": "spell_shadow_psychicscream"
+    }
+  ],
+  "shadow_improved_mind_flay": [
+    {
+      "name": "Mind Flay",
+      "kind": "talent",
+      "source": "Talent · Shadow, row 3",
+      "description": "Assault the target's mind with Shadow energy, causing 63 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+      "icon": "spell_shadow_siphonmana"
+    }
+  ],
+  "shadow_improved_fade": [
+    {
+      "name": "Fade",
+      "kind": "spell",
+      "source": "Priest spell, rank 6",
+      "description": "Fade out, discouraging enemies from attacking you for 10 sec. More effective than Fade (rank 5).",
+      "icon": "spell_magic_lesserinvisibilty"
+    }
+  ],
+  "shadow_vampiric_embrace": [
+    {
+      "name": "Spirit Tap",
+      "kind": "talent",
+      "source": "Talent · Shadow, row 1",
+      "description": "Gives you a 100% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+      "icon": "spell_shadow_requiem"
+    }
+  ],
+  "shadow_devouring_contagion": [
+    {
+      "name": "Devouring Plague",
+      "kind": "spell",
+      "source": "Priest spell, rank 6",
+      "description": "Afflicts the target with a disease that causes 848 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+      "icon": "spell_shadow_blackplague"
+    }
+  ],
+  "elemental_convection": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Lava Burst",
+      "kind": "talent",
+      "source": "Talent · Elemental, row 7",
+      "description": "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+      "icon": "spell_shaman_lavaburst"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    }
+  ],
+  "elemental_concussion": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    },
+    {
+      "name": "Earth Shock",
+      "kind": "spell",
+      "source": "Shaman spell, rank 7",
+      "description": "Instantly shocks the target with concussive force, causing 293 to 309 Nature damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 2 sec. Causes a high amount of threat.",
+      "icon": "spell_nature_earthshock"
+    }
+  ],
+  "elemental_call_of_flame": [
+    {
+      "name": "Flame Shock",
+      "kind": "spell",
+      "source": "Shaman spell, rank 6",
+      "description": "Instantly sears the target with fire, causing 166 Fire damage immediately and 176 Fire damage over 12 sec.",
+      "icon": "spell_fire_flameshock"
+    },
+    {
+      "name": "Fire Nova",
+      "kind": "spell",
+      "source": "Shaman spell, rank 5",
+      "description": "Instantly inflicts 413 to 459 fire damage to enemies within 10 yd of your active Fire totem.",
+      "icon": "spell_fire_sealoffire"
+    },
+    {
+      "name": "Lava Burst",
+      "kind": "talent",
+      "source": "Talent · Elemental, row 7",
+      "description": "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+      "icon": "spell_shaman_lavaburst"
+    }
+  ],
+  "elemental_improved_fire_nova": [
+    {
+      "name": "Fire Nova",
+      "kind": "spell",
+      "source": "Shaman spell, rank 5",
+      "description": "Instantly inflicts 413 to 459 fire damage to enemies within 10 yd of your active Fire totem.",
+      "icon": "spell_fire_sealoffire"
+    }
+  ],
+  "elemental_eye_of_the_storm": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    },
+    {
+      "name": "Lava Burst",
+      "kind": "talent",
+      "source": "Talent · Elemental, row 7",
+      "description": "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+      "icon": "spell_shaman_lavaburst"
+    }
+  ],
+  "elemental_call_of_thunder": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    }
+  ],
+  "elemental_elemental_reach": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    },
+    {
+      "name": "Fire Nova",
+      "kind": "spell",
+      "source": "Shaman spell, rank 5",
+      "description": "Instantly inflicts 413 to 459 fire damage to enemies within 10 yd of your active Fire totem.",
+      "icon": "spell_fire_sealoffire"
+    },
+    {
+      "name": "Lava Burst",
+      "kind": "talent",
+      "source": "Talent · Elemental, row 7",
+      "description": "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+      "icon": "spell_shaman_lavaburst"
+    },
+    {
+      "name": "Flame Shock",
+      "kind": "spell",
+      "source": "Shaman spell, rank 6",
+      "description": "Instantly sears the target with fire, causing 166 Fire damage immediately and 176 Fire damage over 12 sec.",
+      "icon": "spell_fire_flameshock"
+    }
+  ],
+  "elemental_lightning_overload": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    }
+  ],
+  "elemental_earthbound": [
+    {
+      "name": "Earthbind Totem",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 sec that slows the movement speed of enemies within 10 yards.",
+      "icon": "spell_nature_strengthofearthtotem02"
+    }
+  ],
+  "elemental_elemental_alacrity": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    },
+    {
+      "name": "Lava Burst",
+      "kind": "talent",
+      "source": "Talent · Elemental, row 7",
+      "description": "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+      "icon": "spell_shaman_lavaburst"
+    }
+  ],
+  "elemental_lava_burst": [
+    {
+      "name": "Flame Shock",
+      "kind": "spell",
+      "source": "Shaman spell, rank 6",
+      "description": "Instantly sears the target with fire, causing 166 Fire damage immediately and 176 Fire damage over 12 sec.",
+      "icon": "spell_fire_flameshock"
+    }
+  ],
+  "enhancement_earths_grasp": [
+    {
+      "name": "Stoneclaw Totem",
+      "kind": "spell",
+      "source": "Shaman spell, rank 6",
+      "description": "Summons a Stoneclaw Totem with 486 health at the feet of the caster for 15 sec that taunts creatures within 8 yards to attack it.",
+      "icon": "spell_nature_stoneclawtotem"
+    },
+    {
+      "name": "Earthbind Totem",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 sec that slows the movement speed of enemies within 10 yards.",
+      "icon": "spell_nature_strengthofearthtotem02"
+    }
+  ],
+  "enhancement_guardian_totems": [
+    {
+      "name": "Stoneskin Totem",
+      "kind": "spell",
+      "source": "Shaman spell, rank 6",
+      "description": "Summons a Stoneskin Totem with 5 health at the feet of the caster. The totem protects party members within 30 yards, reducing Physical damage taken by 30. Lasts 5 min.",
+      "icon": "spell_nature_stoneskintotem"
+    },
+    {
+      "name": "Windwall Totem",
+      "kind": "spell",
+      "source": "Shaman spell, rank 3",
+      "description": "Summons a Windwall Totem with 5 health at the feet of the caster. The totem protects party members within 30 yards, reducing ranged damage taken by 64. Lasts 5 min.",
+      "icon": "spell_nature_earthbind"
+    },
+    {
+      "name": "Grounding Totem",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "Summons a Grounding Totem with 5 health at the feet of the caster that will redirect one harmful spell cast on a nearby party member to itself every 10 seconds. Will not redirect area of effect spells. Lasts 45 sec.",
+      "icon": "spell_nature_groundingtotem"
+    }
+  ],
+  "enhancement_improved_ghost_wolf": [
+    {
+      "name": "Ghost Wolf",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "Turns the Shaman into a Ghost Wolf, increasing speed by 40%. Only useable outdoors.",
+      "icon": "spell_nature_spiritwolf"
+    }
+  ],
+  "enhancement_improved_lightning_shield": [
+    {
+      "name": "Lightning Shield",
+      "kind": "spell",
+      "source": "Shaman spell, rank 7",
+      "description": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 178 Nature damage. This expends one lightning ball. Only one ball will fire every few seconds. Lasts 10 min.",
+      "icon": "spell_nature_lightningshield"
+    }
+  ],
+  "enhancement_elemental_weapons": [
+    {
+      "name": "Rockbiter Weapon",
+      "kind": "spell",
+      "source": "Shaman spell, rank 7",
+      "description": "Imbue the Shaman's weapon, increasing melee attack power by 653 and allowing melee attacks to cause additional threat when using that weapon. Lasts for 60 minutes.",
+      "icon": "spell_nature_rockbiter"
+    },
+    {
+      "name": "Windfury Weapon",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Imbue the Shaman's weapon with wind. Each hit has a 20% chance of granting you 2 extra attacks with 333 extra melee attack power. When applied to main hand, disables any benefit you personally receive from Windfury Totem. Lasts for 60 minutes.",
+      "icon": "spell_nature_cyclone"
+    },
+    {
+      "name": "Flametongue Weapon",
+      "kind": "spell",
+      "source": "Shaman spell, rank 6",
+      "description": "Imbue the Shaman's weapon with fire. Each hit causes 35 to 112 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. When applied to main hand, disables any benefit you personally receive from Flametongue Totem. Lasts for 60 minutes.",
+      "icon": "spell_fire_flametounge"
+    },
+    {
+      "name": "Frostbrand Weapon",
+      "kind": "spell",
+      "source": "Shaman spell, rank 5",
+      "description": "Imbue the Shaman's weapon with frost. Each hit has a chance of causing 169 additional Frost damage and slowing the target's movement speed by 25% for 8 sec. Lasts for 60 minutes.",
+      "icon": "spell_frost_frostbrand"
+    }
+  ],
+  "enhancement_shamanistic_focus": [
+    {
+      "name": "Lightning Shield",
+      "kind": "spell",
+      "source": "Shaman spell, rank 7",
+      "description": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 178 Nature damage. This expends one lightning ball. Only one ball will fire every few seconds. Lasts 10 min.",
+      "icon": "spell_nature_lightningshield"
+    }
+  ],
+  "enhancement_stormstrike": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    },
+    {
+      "name": "Chain Lightning",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+      "icon": "spell_nature_chainlightning"
+    },
+    {
+      "name": "Earth Shock",
+      "kind": "spell",
+      "source": "Shaman spell, rank 7",
+      "description": "Instantly shocks the target with concussive force, causing 293 to 309 Nature damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 2 sec. Causes a high amount of threat.",
+      "icon": "spell_nature_earthshock"
+    }
+  ],
+  "enhancement_spirit_weapons": [
+    {
+      "name": "Rockbiter Weapon",
+      "kind": "spell",
+      "source": "Shaman spell, rank 7",
+      "description": "Imbue the Shaman's weapon, increasing melee attack power by 653 and allowing melee attacks to cause additional threat when using that weapon. Lasts for 60 minutes.",
+      "icon": "spell_nature_rockbiter"
+    }
+  ],
+  "enhancement_improved_stormstrike": [
+    {
+      "name": "Stormstrike",
+      "kind": "talent",
+      "source": "Talent · Enhancement, row 4",
+      "description": "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
+      "icon": "ability_shaman_stormstrike"
+    },
+    {
+      "name": "Dodge",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "Gives a chance to dodge enemy melee attacks.",
+      "icon": "spell_shadow_rune"
+    }
+  ],
+  "enhancement_maelstrom_weapon": [
+    {
+      "name": "Lightning Bolt",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Casts a bolt of lightning at the target for 189 to 211 Nature damage.",
+      "icon": "spell_nature_lightning"
+    }
+  ],
+  "restoration_improved_healing_wave": [
+    {
+      "name": "Healing Wave",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Heals a friendly target for 1,508 to 1,722.",
+      "icon": "spell_nature_magicimmunity"
+    }
+  ],
+  "restoration_improved_reincarnation": [
+    {
+      "name": "Reincarnation",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "Allows you to resurrect yourself upon death with 20% health and mana.",
+      "icon": "spell_nature_reincarnation"
+    }
+  ],
+  "restoration_restorative_totems": [
+    {
+      "name": "Mana Spring Totem",
+      "kind": "spell",
+      "source": "Shaman spell, rank 4",
+      "description": "Summons a Mana Spring Totem with 5 health at the feet of the caster for 5 min that restores 10 mana every 2 seconds to group members within 30 yards.",
+      "icon": "spell_nature_manaregentotem"
+    },
+    {
+      "name": "Healing Stream Totem",
+      "kind": "spell",
+      "source": "Shaman spell, rank 5",
+      "description": "Summons a Healing Stream Totem with 5 health at the feet of the caster for 5 min that heals group members within 30 yards for 11 every 2 seconds.",
+      "icon": "inv_spear_04"
+    }
+  ],
+  "restoration_healing_way": [
+    {
+      "name": "Healing Wave",
+      "kind": "spell",
+      "source": "Shaman spell, rank 10",
+      "description": "Heals a friendly target for 1,508 to 1,722.",
+      "icon": "spell_nature_magicimmunity"
+    }
+  ],
+  "arcane_improved_channeling": [
+    {
+      "name": "Arcane Missiles",
+      "kind": "spell",
+      "source": "Mage spell, rank 8",
+      "description": "Launches Arcane Missiles at the enemy, causing 209 Arcane damage each second for 5 sec.",
+      "icon": "spell_nature_starfall"
+    },
+    {
+      "name": "Arcane Blast",
+      "kind": "talent",
+      "source": "Talent · Arcane, row 3",
+      "description": "Blasts the target with energy, dealing 57 to 65 Arcane damage. Each time you cast Arcane Blast, the damage of all your other spells is increased by 10% and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 8 sec or until any other damage spell is cast.",
+      "icon": "spell_arcane_blast"
+    }
+  ],
+  "arcane_arcane_shielding": [
+    {
+      "name": "Mana Shield",
+      "kind": "spell",
+      "source": "Mage spell, rank 6",
+      "description": "Absorbs 570 physical damage, draining mana instead. Drains 2 mana per damage absorbed. Lasts 1 min.",
+      "icon": "spell_shadow_detectlesserinvisibility"
+    },
+    {
+      "name": "Mage Armor",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Increases your resistance to all magic by 15 and allows 50% of your mana regeneration to continue while casting. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min.",
+      "icon": "spell_magearmor"
+    }
+  ],
+  "arcane_improved_counterspell": [
+    {
+      "name": "Counterspell",
+      "kind": "spell",
+      "source": "Mage spell",
+      "description": "Counters the enemy's spellcast, preventing any spell from that school of magic from being cast for 10 sec. Generates a high amount of threat.",
+      "icon": "spell_frost_iceshock"
+    }
+  ],
+  "arcane_missile_barrage": [
+    {
+      "name": "Arcane Blast",
+      "kind": "talent",
+      "source": "Talent · Arcane, row 3",
+      "description": "Blasts the target with energy, dealing 57 to 65 Arcane damage. Each time you cast Arcane Blast, the damage of all your other spells is increased by 10% and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 8 sec or until any other damage spell is cast.",
+      "icon": "spell_arcane_blast"
+    },
+    {
+      "name": "Fireball",
+      "kind": "spell",
+      "source": "Mage spell, rank 12",
+      "description": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.",
+      "icon": "spell_fire_flamebolt"
+    },
+    {
+      "name": "Frostbolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 11",
+      "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_frost_frostbolt02"
+    },
+    {
+      "name": "Frostfire Bolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Launches a bolt of frostfire at the enemy, causing 270 to 314 Frostfire damage, slowing movement speed by 40% and causing an additional 57 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.",
+      "icon": "ability_mage_frostfirebolt"
+    },
+    {
+      "name": "Arcane Missiles",
+      "kind": "spell",
+      "source": "Mage spell, rank 8",
+      "description": "Launches Arcane Missiles at the enemy, causing 209 Arcane damage each second for 5 sec.",
+      "icon": "spell_nature_starfall"
+    }
+  ],
+  "fire_wake_of_fire": [
+    {
+      "name": "Fire Blast",
+      "kind": "spell",
+      "source": "Mage spell, rank 7",
+      "description": "Blasts the enemy for 417 to 489 Fire damage.",
+      "icon": "spell_fire_fireball"
+    }
+  ],
+  "fire_incineration": [
+    {
+      "name": "Fire Blast",
+      "kind": "spell",
+      "source": "Mage spell, rank 7",
+      "description": "Blasts the enemy for 417 to 489 Fire damage.",
+      "icon": "spell_fire_fireball"
+    },
+    {
+      "name": "Ice Lance",
+      "kind": "talent",
+      "source": "Talent · Frost, row 3",
+      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
+      "icon": "spell_frost_frostblast"
+    },
+    {
+      "name": "Arcane Blast",
+      "kind": "talent",
+      "source": "Talent · Arcane, row 3",
+      "description": "Blasts the target with energy, dealing 57 to 65 Arcane damage. Each time you cast Arcane Blast, the damage of all your other spells is increased by 10% and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 8 sec or until any other damage spell is cast.",
+      "icon": "spell_arcane_blast"
+    },
+    {
+      "name": "Scorch",
+      "kind": "spell",
+      "source": "Mage spell, rank 7",
+      "description": "Scorch the enemy for 166 to 196 Fire damage.",
+      "icon": "spell_fire_soulburn"
+    }
+  ],
+  "fire_improved_fireball": [
+    {
+      "name": "Fireball",
+      "kind": "spell",
+      "source": "Mage spell, rank 12",
+      "description": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.",
+      "icon": "spell_fire_flamebolt"
+    },
+    {
+      "name": "Frostfire Bolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Launches a bolt of frostfire at the enemy, causing 270 to 314 Frostfire damage, slowing movement speed by 40% and causing an additional 57 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.",
+      "icon": "ability_mage_frostfirebolt"
+    }
+  ],
+  "fire_improved_flamestrike": [
+    {
+      "name": "Flamestrike",
+      "kind": "spell",
+      "source": "Mage spell, rank 6",
+      "description": "Calls down a pillar of fire, burning all enemies within the area for 381 to 465 Fire damage and an additional 332 Fire damage over 8 sec. Only one Flamestrike can be active per Mage at a time.",
+      "icon": "spell_fire_selfdestruct"
+    }
+  ],
+  "fire_improved_scorch": [
+    {
+      "name": "Scorch",
+      "kind": "spell",
+      "source": "Mage spell, rank 7",
+      "description": "Scorch the enemy for 166 to 196 Fire damage.",
+      "icon": "spell_fire_soulburn"
+    }
+  ],
+  "fire_improved_fire_ward": [
+    {
+      "name": "Fire Ward",
+      "kind": "spell",
+      "source": "Mage spell, rank 5",
+      "description": "Absorbs 913 Fire damage. Lasts 30 sec.",
+      "icon": "spell_fire_firearmor"
+    }
+  ],
+  "fire_hot_streak": [
+    {
+      "name": "Fireball",
+      "kind": "spell",
+      "source": "Mage spell, rank 12",
+      "description": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.",
+      "icon": "spell_fire_flamebolt"
+    },
+    {
+      "name": "Frostfire Bolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Launches a bolt of frostfire at the enemy, causing 270 to 314 Frostfire damage, slowing movement speed by 40% and causing an additional 57 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.",
+      "icon": "ability_mage_frostfirebolt"
+    },
+    {
+      "name": "Fire Blast",
+      "kind": "spell",
+      "source": "Mage spell, rank 7",
+      "description": "Blasts the enemy for 417 to 489 Fire damage.",
+      "icon": "spell_fire_fireball"
+    },
+    {
+      "name": "Scorch",
+      "kind": "spell",
+      "source": "Mage spell, rank 7",
+      "description": "Scorch the enemy for 166 to 196 Fire damage.",
+      "icon": "spell_fire_soulburn"
+    },
+    {
+      "name": "Pyroblast",
+      "kind": "talent",
+      "source": "Talent · Fire, row 3",
+      "description": "Hurls an immense fiery boulder that causes 101 to 131 Fire damage and an additional 44 Fire damage over 12 sec.",
+      "icon": "spell_fire_fireball02"
+    }
+  ],
+  "frost_frost_warding": [
+    {
+      "name": "Frost Armor",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Increases Armor by 200. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 25% for 5 sec. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min.",
+      "icon": "spell_frost_frostarmor02"
+    },
+    {
+      "name": "Ice Armor",
+      "kind": "spell",
+      "source": "Mage spell, rank 4",
+      "description": "Increases Armor by 560 and frost resistance by 15. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 25% for 5 sec. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min.",
+      "icon": "spell_frost_frostarmor02"
+    },
+    {
+      "name": "Frost Ward",
+      "kind": "spell",
+      "source": "Mage spell, rank 5",
+      "description": "Absorbs 913 Frost damage. Lasts 30 sec.",
+      "icon": "spell_frost_frostward"
+    }
+  ],
+  "frost_improved_frostbolt": [
+    {
+      "name": "Frostbolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 11",
+      "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_frost_frostbolt02"
+    }
+  ],
+  "frost_improved_frost_nova": [
+    {
+      "name": "Frost Nova",
+      "kind": "spell",
+      "source": "Mage spell, rank 4",
+      "description": "Blasts enemies near the caster for 71 to 79 Frost damage and freezes them in place for up to 8 sec. Damage caused may interrupt the effect.",
+      "icon": "spell_frost_frostnova"
+    }
+  ],
+  "frost_improved_blizzard": [
+    {
+      "name": "Blizzard",
+      "kind": "spell",
+      "source": "Mage spell, rank 6",
+      "description": "Ice shards pelt the target area doing 1,168 Frost damage over 8 sec.",
+      "icon": "spell_frost_icestorm"
+    }
+  ],
+  "frost_arctic_reach": [
+    {
+      "name": "Frostbolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 11",
+      "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_frost_frostbolt02"
+    },
+    {
+      "name": "Blizzard",
+      "kind": "spell",
+      "source": "Mage spell, rank 6",
+      "description": "Ice shards pelt the target area doing 1,168 Frost damage over 8 sec.",
+      "icon": "spell_frost_icestorm"
+    },
+    {
+      "name": "Frost Nova",
+      "kind": "spell",
+      "source": "Mage spell, rank 4",
+      "description": "Blasts enemies near the caster for 71 to 79 Frost damage and freezes them in place for up to 8 sec. Damage caused may interrupt the effect.",
+      "icon": "spell_frost_frostnova"
+    },
+    {
+      "name": "Cone of Cold",
+      "kind": "spell",
+      "source": "Mage spell, rank 5",
+      "description": "Targets in a cone in front of the caster take 328 to 358 Frost damage and are slowed by 40% for 6 sec.",
+      "icon": "spell_frost_glacier"
+    }
+  ],
+  "frost_improved_cone_of_cold": [
+    {
+      "name": "Cone of Cold",
+      "kind": "spell",
+      "source": "Mage spell, rank 5",
+      "description": "Targets in a cone in front of the caster take 328 to 358 Frost damage and are slowed by 40% for 6 sec.",
+      "icon": "spell_frost_glacier"
+    }
+  ],
+  "frost_winters_chill": [
+    {
+      "name": "Ice Lance",
+      "kind": "talent",
+      "source": "Talent · Frost, row 3",
+      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
+      "icon": "spell_frost_frostblast"
+    },
+    {
+      "name": "Frostbolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 11",
+      "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_frost_frostbolt02"
+    }
+  ],
+  "affliction_improved_life_tap": [
+    {
+      "name": "Life Tap",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Converts 424 health into 424 Mana for you. Spirit increases the amount of Mana converted. Mana gained is increased by your Spirit.",
+      "icon": "spell_shadow_burningspirit"
+    }
+  ],
+  "affliction_improved_corruption": [
+    {
+      "name": "Corruption",
+      "kind": "spell",
+      "source": "Warlock spell, rank 7",
+      "description": "Corrupts the target, causing 438 Shadow damage over 18 sec.",
+      "icon": "spell_shadow_abominationexplosion"
+    }
+  ],
+  "affliction_soul_harvesting": [
+    {
+      "name": "Drain Soul",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Drains the soul of the target, causing 420 Shadow damage over 15 sec. Non-trivial targets damaged by Drain Soul have a chance to grant you a Soul Shard. Non-trivial targets killed by Drain Soul will always grant you a Soul shard. Soul Shards are required for other spells.",
+      "icon": "spell_shadow_haunting"
+    }
+  ],
+  "affliction_improved_drains": [
+    {
+      "name": "Drain Life",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Transfers 51 health every 1 second from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_lifedrain02"
+    },
+    {
+      "name": "Drain Soul",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Drains the soul of the target, causing 420 Shadow damage over 15 sec. Non-trivial targets damaged by Drain Soul have a chance to grant you a Soul Shard. Non-trivial targets killed by Drain Soul will always grant you a Soul shard. Soul Shards are required for other spells.",
+      "icon": "spell_shadow_haunting"
+    },
+    {
+      "name": "Wrack",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 7",
+      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "icon": "ability_deathknight_hemorrhagicfever"
+    }
+  ],
+  "affliction_improved_bane_of_agony": [
+    {
+      "name": "Bane of Agony",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Afflicts the target with agony, causing 552 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Bane reaches its full duration. Only one Bane per Warlock can be active on any one target.",
+      "icon": "spell_shadow_curseofsargeras"
+    },
+    {
+      "name": "Bane",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 1",
+      "description": "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.5 sec and your Soul Fire spell by 2 sec.",
+      "icon": "spell_shadow_deathpact"
+    }
+  ],
+  "affliction_fel_concentration": [
+    {
+      "name": "Drain Life",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Transfers 51 health every 1 second from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_lifedrain02"
+    },
+    {
+      "name": "Drain Mana",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Transfers 139 Mana every 1 sec from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_siphonmana"
+    },
+    {
+      "name": "Drain Soul",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Drains the soul of the target, causing 420 Shadow damage over 15 sec. Non-trivial targets damaged by Drain Soul have a chance to grant you a Soul Shard. Non-trivial targets killed by Drain Soul will always grant you a Soul shard. Soul Shards are required for other spells.",
+      "icon": "spell_shadow_haunting"
+    },
+    {
+      "name": "Wrack",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 7",
+      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "icon": "ability_deathknight_hemorrhagicfever"
+    }
+  ],
+  "affliction_amplify_curse": [
+    {
+      "name": "Curse of Weakness",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Physical damage caused by the target is reduced by 37 for 2 min. Only one Curse per Warlock can be active on any one target.",
+      "icon": "spell_shadow_curseofmannoroth"
+    },
+    {
+      "name": "Bane of Agony",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Afflicts the target with agony, causing 552 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Bane reaches its full duration. Only one Bane per Warlock can be active on any one target.",
+      "icon": "spell_shadow_curseofsargeras"
+    },
+    {
+      "name": "Bane",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 1",
+      "description": "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.5 sec and your Soul Fire spell by 2 sec.",
+      "icon": "spell_shadow_deathpact"
+    },
+    {
+      "name": "Curse of Exhaustion",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 4",
+      "description": "Reduces the target's movement speed by 30% for 12 sec. Only one Curse per Warlock can be active on any one target.",
+      "icon": "spell_shadow_grimward"
+    }
+  ],
+  "affliction_pandemic": [
+    {
+      "name": "Corruption",
+      "kind": "spell",
+      "source": "Warlock spell, rank 7",
+      "description": "Corrupts the target, causing 438 Shadow damage over 18 sec.",
+      "icon": "spell_shadow_abominationexplosion"
+    },
+    {
+      "name": "Bane of Agony",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Afflicts the target with agony, causing 552 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Bane reaches its full duration. Only one Bane per Warlock can be active on any one target.",
+      "icon": "spell_shadow_curseofsargeras"
+    },
+    {
+      "name": "Bane",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 1",
+      "description": "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.5 sec and your Soul Fire spell by 2 sec.",
+      "icon": "spell_shadow_deathpact"
+    },
+    {
+      "name": "Drain Soul",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Drains the soul of the target, causing 420 Shadow damage over 15 sec. Non-trivial targets damaged by Drain Soul have a chance to grant you a Soul Shard. Non-trivial targets killed by Drain Soul will always grant you a Soul shard. Soul Shards are required for other spells.",
+      "icon": "spell_shadow_haunting"
+    },
+    {
+      "name": "Drain Life",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Transfers 51 health every 1 second from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_lifedrain02"
+    },
+    {
+      "name": "Siphon Life",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 5",
+      "description": "Transfers 11 health from the target to the caster every 3 sec. Lasts 30 sec.",
+      "icon": "spell_shadow_requiem"
+    },
+    {
+      "name": "Wrack",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 7",
+      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "icon": "ability_deathknight_hemorrhagicfever"
+    }
+  ],
+  "affliction_nightfall": [
+    {
+      "name": "Corruption",
+      "kind": "spell",
+      "source": "Warlock spell, rank 7",
+      "description": "Corrupts the target, causing 438 Shadow damage over 18 sec.",
+      "icon": "spell_shadow_abominationexplosion"
+    },
+    {
+      "name": "Drain Soul",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Drains the soul of the target, causing 420 Shadow damage over 15 sec. Non-trivial targets damaged by Drain Soul have a chance to grant you a Soul Shard. Non-trivial targets killed by Drain Soul will always grant you a Soul shard. Soul Shards are required for other spells.",
+      "icon": "spell_shadow_haunting"
+    },
+    {
+      "name": "Drain Life",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Transfers 51 health every 1 second from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_lifedrain02"
+    },
+    {
+      "name": "Wrack",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 7",
+      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "icon": "ability_deathknight_hemorrhagicfever"
+    },
+    {
+      "name": "Shadow Bolt",
+      "kind": "spell",
+      "source": "Warlock spell, rank 10",
+      "description": "Sends a shadowy bolt at the enemy, causing 253 to 283 Shadow damage.",
+      "icon": "spell_shadow_shadowbolt"
+    }
+  ],
+  "affliction_soul_siphon": [
+    {
+      "name": "Drain Life",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Transfers 51 health every 1 second from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_lifedrain02"
+    },
+    {
+      "name": "Drain Soul",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Drains the soul of the target, causing 420 Shadow damage over 15 sec. Non-trivial targets damaged by Drain Soul have a chance to grant you a Soul Shard. Non-trivial targets killed by Drain Soul will always grant you a Soul shard. Soul Shards are required for other spells.",
+      "icon": "spell_shadow_haunting"
+    },
+    {
+      "name": "Wrack",
+      "kind": "talent",
+      "source": "Talent · Affliction, row 7",
+      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "icon": "ability_deathknight_hemorrhagicfever"
+    }
+  ],
+  "demonology_improved_health_funnel": [
+    {
+      "name": "Health Funnel",
+      "kind": "spell",
+      "source": "Warlock spell, rank 7",
+      "description": "Gives 153 health to the caster's pet every second for 10 sec as long as the caster channels. Generates reduced threat.",
+      "icon": "spell_shadow_lifedrain"
+    }
+  ],
+  "demonology_demonic_aegis": [
+    {
+      "name": "Demon Skin",
+      "kind": "spell",
+      "source": "Warlock spell, rank 2",
+      "description": "Protects the caster, increasing armor by 120 and increases health regeneration by 5 health per 5 sec. for 30 min.",
+      "icon": "spell_shadow_ragingscream"
+    },
+    {
+      "name": "Demon Armor",
+      "kind": "spell",
+      "source": "Warlock spell, rank 5",
+      "description": "Protects the caster, increasing armor by 570, Shadow resistance by 15 and increases health regeneration by 15 health per 5 sec. for 30 min.",
+      "icon": "spell_shadow_ragingscream"
+    }
+  ],
+  "demonology_demonic_energies": [
+    {
+      "name": "Life Tap",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Converts 424 health into 424 Mana for you. Spirit increases the amount of Mana converted. Mana gained is increased by your Spirit.",
+      "icon": "spell_shadow_burningspirit"
+    }
+  ],
+  "demonology_decimation": [
+    {
+      "name": "Shadow Bolt",
+      "kind": "spell",
+      "source": "Warlock spell, rank 10",
+      "description": "Sends a shadowy bolt at the enemy, causing 253 to 283 Shadow damage.",
+      "icon": "spell_shadow_shadowbolt"
+    },
+    {
+      "name": "Searing Pain",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Inflict searing pain on the enemy target, causing 107 to 125 Fire damage. Causes a high amount of threat.",
+      "icon": "spell_fire_soulburn"
+    }
+  ],
+  "demonology_demonic_brand": [
+    {
+      "name": "Searing Pain",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Inflict searing pain on the enemy target, causing 107 to 125 Fire damage. Causes a high amount of threat.",
+      "icon": "spell_fire_soulburn"
+    }
+  ],
+  "demonology_improved_felhunter": [
+    {
+      "name": "Tainted Blood",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Taints the Felhunter's blood for 1 min. When the Felhunter is hit with a melee attack, the attacker will lose 40 melee attack power for 10 sec. Stacks up to 5 times on a single target.",
+      "icon": "spell_shadow_lifedrain"
+    },
+    {
+      "name": "Devour Magic",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Purges 1 harmful magic effect from a friend or 1 beneficial magic effect from an enemy. If an effect is devoured, the Felhunter will be healed for 618.",
+      "icon": "spell_nature_purge"
+    },
+    {
+      "name": "Spell Lock",
+      "kind": "spell",
+      "source": "Warlock spell, rank 2",
+      "description": "Silences the enemy for 3 sec. If used on a casting target, it will counter the enemy's spellcast, preventing any spell from that school of magic from being cast for 8 sec.",
+      "icon": "spell_shadow_mindrot"
+    }
+  ],
+  "demonology_demonic_pact": [
+    {
+      "name": "Demonic Sacrifice",
+      "kind": "talent",
+      "source": "Talent · Demonology, row 3",
+      "description": "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hrs. The effect is canceled if any Demon is summoned.\n\nImp: Increases your Shadow damage by 15%.\n\nVoidwalker: Restores 2% of your total Mana every 4 sec.\n\nSuccubus/Incubus: Increases your Fire damage by 15%.\n\nFelhunter: Restores 3% of your total Health every 4 sec.",
+      "icon": "spell_shadow_psychicscream"
+    }
+  ],
+  "destruction_improved_shadow_bolt": [
+    {
+      "name": "Shadow Bolt",
+      "kind": "spell",
+      "source": "Warlock spell, rank 10",
+      "description": "Sends a shadowy bolt at the enemy, causing 253 to 283 Shadow damage.",
+      "icon": "spell_shadow_shadowbolt"
+    }
+  ],
+  "destruction_bane": [
+    {
+      "name": "Shadow Bolt",
+      "kind": "spell",
+      "source": "Warlock spell, rank 10",
+      "description": "Sends a shadowy bolt at the enemy, causing 253 to 283 Shadow damage.",
+      "icon": "spell_shadow_shadowbolt"
+    },
+    {
+      "name": "Immolate",
+      "kind": "spell",
+      "source": "Warlock spell, rank 8",
+      "description": "Burns the enemy for 158 Fire damage and then an additional 275 Fire damage over 15 sec.",
+      "icon": "spell_fire_immolation"
+    },
+    {
+      "name": "Incinerate",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 7",
+      "description": "Deals 99 to 113 Fire damage to your target and an additional 25% damage if the target is afflicted by Immolate.",
+      "icon": "spell_fire_burnout"
+    }
+  ],
+  "destruction_aftermath": [
+    {
+      "name": "Immolate",
+      "kind": "spell",
+      "source": "Warlock spell, rank 8",
+      "description": "Burns the enemy for 158 Fire damage and then an additional 275 Fire damage over 15 sec.",
+      "icon": "spell_fire_immolation"
+    },
+    {
+      "name": "Conflagrate",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 4",
+      "description": "Ignites a target that is already afflicted by your Immolate spell, dealing 88 to 110 Fire damage and consuming your Immolate effect.",
+      "icon": "spell_fire_fireball"
+    }
+  ],
+  "destruction_agonizing_flames": [
+    {
+      "name": "Searing Pain",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Inflict searing pain on the enemy target, causing 107 to 125 Fire damage. Causes a high amount of threat.",
+      "icon": "spell_fire_soulburn"
+    }
+  ],
+  "destruction_conflagrate": [
+    {
+      "name": "Immolate",
+      "kind": "spell",
+      "source": "Warlock spell, rank 8",
+      "description": "Burns the enemy for 158 Fire damage and then an additional 275 Fire damage over 15 sec.",
+      "icon": "spell_fire_immolation"
+    }
+  ],
+  "destruction_pyroclasm": [
+    {
+      "name": "Rain of Fire",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Calls down a fiery rain to burn enemies in the area of effect for 884 Fire damage over 8 sec.",
+      "icon": "spell_shadow_rainoffire"
+    },
+    {
+      "name": "Hellfire",
+      "kind": "spell",
+      "source": "Warlock spell, rank 3",
+      "description": "Ignites the area surrounding the caster, causing 210 Fire damage to himself and 210 Fire damage to all nearby enemies every 1 sec. Lasts 15 sec.",
+      "icon": "spell_fire_incinerate"
+    }
+  ],
+  "destruction_bane_of_havoc": [
+    {
+      "name": "Bane",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 1",
+      "description": "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.5 sec and your Soul Fire spell by 2 sec.",
+      "icon": "spell_shadow_deathpact"
+    }
+  ],
+  "destruction_fire_and_brimstone": [
+    {
+      "name": "Conflagrate",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 4",
+      "description": "Ignites a target that is already afflicted by your Immolate spell, dealing 88 to 110 Fire damage and consuming your Immolate effect.",
+      "icon": "spell_fire_fireball"
+    }
+  ],
+  "destruction_shadow_and_flame": [
+    {
+      "name": "Conflagrate",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 4",
+      "description": "Ignites a target that is already afflicted by your Immolate spell, dealing 88 to 110 Fire damage and consuming your Immolate effect.",
+      "icon": "spell_fire_fireball"
+    },
+    {
+      "name": "Shadowburn",
+      "kind": "talent",
+      "source": "Talent · Destruction, row 3",
+      "description": "Instantly blasts the target for 65 to 73 Shadow damage. If a non-trivial target dies within 8 sec of being hit with Shadowburn, the caster gains a Soul Shard.",
+      "icon": "spell_shadow_scourgebuild"
+    },
+    {
+      "name": "Immolate",
+      "kind": "spell",
+      "source": "Warlock spell, rank 8",
+      "description": "Burns the enemy for 158 Fire damage and then an additional 275 Fire damage over 15 sec.",
+      "icon": "spell_fire_immolation"
+    }
+  ],
+  "destruction_incinerate": [
+    {
+      "name": "Immolate",
+      "kind": "spell",
+      "source": "Warlock spell, rank 8",
+      "description": "Burns the enemy for 158 Fire damage and then an additional 275 Fire damage over 15 sec.",
+      "icon": "spell_fire_immolation"
+    }
+  ],
+  "balance_improved_wrath": [
+    {
+      "name": "Wrath",
+      "kind": "spell",
+      "source": "Druid spell, rank 8",
+      "description": "Causes 62 to 68 Nature damage to the target.",
+      "icon": "spell_nature_abolishmagic"
+    }
+  ],
+  "balance_improved_moonfire": [
+    {
+      "name": "Moonfire",
+      "kind": "spell",
+      "source": "Druid spell, rank 10",
+      "description": "Burns the enemy for 128 to 150 Arcane damage and then an additional 240 Arcane damage over 12 sec.",
+      "icon": "spell_nature_starfall"
+    }
+  ],
+  "balance_improved_entangling_roots": [
+    {
+      "name": "Entangling Roots",
+      "kind": "spell",
+      "source": "Druid spell, rank 6",
+      "description": "Roots the target in place and causes 234 Nature damage over 27 sec. Damage caused may interrupt the effect. You may only have 1 target Rooted at a time.",
+      "icon": "spell_nature_stranglevines"
+    }
+  ],
+  "balance_natures_splendor": [
+    {
+      "name": "Moonfire",
+      "kind": "spell",
+      "source": "Druid spell, rank 10",
+      "description": "Burns the enemy for 128 to 150 Arcane damage and then an additional 240 Arcane damage over 12 sec.",
+      "icon": "spell_nature_starfall"
+    },
+    {
+      "name": "Rejuvenation",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals the target for 776 over 12 sec.",
+      "icon": "spell_nature_rejuvenation"
+    },
+    {
+      "name": "Regrowth",
+      "kind": "spell",
+      "source": "Druid spell, rank 9",
+      "description": "Heals a friendly target for 965 to 1,077 and another 994 over 21 sec.",
+      "icon": "spell_nature_resistnature"
+    },
+    {
+      "name": "Insect Swarm",
+      "kind": "talent",
+      "source": "Talent · Balance, row 4",
+      "description": "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec.",
+      "icon": "spell_nature_insectswarm"
+    }
+  ],
+  "balance_improved_starfire": [
+    {
+      "name": "Starfire",
+      "kind": "spell",
+      "source": "Druid spell, rank 7",
+      "description": "Causes 350 to 412 Arcane damage to the target.",
+      "icon": "spell_arcane_starfire"
+    }
+  ],
+  "balance_overgrowth": [
+    {
+      "name": "Entangling Roots",
+      "kind": "spell",
+      "source": "Druid spell, rank 6",
+      "description": "Roots the target in place and causes 234 Nature damage over 27 sec. Damage caused may interrupt the effect. You may only have 1 target Rooted at a time.",
+      "icon": "spell_nature_stranglevines"
+    }
+  ],
+  "balance_eclipse": [
+    {
+      "name": "Wrath",
+      "kind": "spell",
+      "source": "Druid spell, rank 8",
+      "description": "Causes 62 to 68 Nature damage to the target.",
+      "icon": "spell_nature_abolishmagic"
+    },
+    {
+      "name": "Starfire",
+      "kind": "spell",
+      "source": "Druid spell, rank 7",
+      "description": "Causes 350 to 412 Arcane damage to the target.",
+      "icon": "spell_arcane_starfire"
+    }
+  ],
+  "balance_moonkin_form": [
+    {
+      "name": "Omen of Clarity",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Your spells and attacks have a chance to grant you Clearcasting, reducing the Mana, Rage, or Energy cost of your next damage or healing spell or offensive ability by 100%. Clearcasting is not consumed by Wrath or by spells or abilities that cost no resources.",
+      "icon": "spell_nature_crystalball"
+    },
+    {
+      "name": "Leader of the Pack",
+      "kind": "talent",
+      "source": "Talent · Feral Combat, row 5",
+      "description": "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the critical strike chance of all party members within 45 yards by 3%, exclusive with Moonkin Aura.",
+      "icon": "spell_nature_unyeildingstamina"
+    }
+  ],
+  "feral_ferocity": [
+    {
+      "name": "Maul",
+      "kind": "spell",
+      "source": "Druid spell, rank 7",
+      "description": "Increases the druid's next attack by 128 damage.",
+      "icon": "ability_druid_maul"
+    },
+    {
+      "name": "Mangle",
+      "kind": "talent",
+      "source": "Talent · Feral Combat, row 4",
+      "description": "Mangle the target for 100% normal damage plus 26.",
+      "icon": "ability_druid_mangle2"
+    },
+    {
+      "name": "Swipe",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Swipe 3 nearby enemies, inflicting 83 damage.",
+      "icon": "inv_misc_monsterclaw_03"
+    },
+    {
+      "name": "Claw",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Claw the enemy for 110% normal damage plus 126. Awards 1 combo point.",
+      "icon": "ability_druid_rake"
+    },
+    {
+      "name": "Rake",
+      "kind": "spell",
+      "source": "Druid spell, rank 4",
+      "description": "Rake the target for 61 damage and an additional 102 damage over 9 sec. Awards 1 combo point.",
+      "icon": "ability_druid_disembowel"
+    }
+  ],
+  "feral_heart_of_the_wild": [
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    }
+  ],
+  "feral_feral_swiftness": [
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    },
+    {
+      "name": "Dodge",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Gives a chance to dodge enemy melee attacks.",
+      "icon": "spell_shadow_rune"
+    }
+  ],
+  "feral_feral_instinct": [
+    {
+      "name": "Swipe",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Swipe 3 nearby enemies, inflicting 83 damage.",
+      "icon": "inv_misc_monsterclaw_03"
+    }
+  ],
+  "feral_brutal_impact": [
+    {
+      "name": "Bash",
+      "kind": "spell",
+      "source": "Druid spell, rank 3",
+      "description": "Stuns the target for 4 sec.",
+      "icon": "ability_druid_bash"
+    },
+    {
+      "name": "Pounce",
+      "kind": "spell",
+      "source": "Druid spell, rank 3",
+      "description": "Pounce, stunning the target for 2 sec and causing 150 damage over 18 sec. Must be prowling and behind the target. Awards 1 combo point.",
+      "icon": "ability_druid_supriseattack"
+    }
+  ],
+  "feral_thick_hide": [
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    },
+    {
+      "name": "Moonkin Form",
+      "kind": "talent",
+      "source": "Talent · Balance, row 7",
+      "description": "Transforms the Druid into Moonkin Form. While in this form, the armor contribution from items is increased by 360%, Omen of Clarity gains 100% increased chance to trigger, and all party members within 45 yards have their critical strike chance increased by 3%, exclusive with Leader of the Pack. The Moonkin cannot cast healing spells while shapeshifted.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "spell_nature_forceofnature"
+    }
+  ],
+  "feral_savage_fury": [
+    {
+      "name": "Claw",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Claw the enemy for 110% normal damage plus 126. Awards 1 combo point.",
+      "icon": "ability_druid_rake"
+    },
+    {
+      "name": "Rake",
+      "kind": "spell",
+      "source": "Druid spell, rank 4",
+      "description": "Rake the target for 61 damage and an additional 102 damage over 9 sec. Awards 1 combo point.",
+      "icon": "ability_druid_disembowel"
+    },
+    {
+      "name": "Shred",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Shred the target, causing 155% damage plus 180 to the target. Must be behind the target. Awards 1 combo point.",
+      "icon": "spell_shadow_vampiricaura"
+    },
+    {
+      "name": "Maul",
+      "kind": "spell",
+      "source": "Druid spell, rank 7",
+      "description": "Increases the druid's next attack by 128 damage.",
+      "icon": "ability_druid_maul"
+    },
+    {
+      "name": "Swipe",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Swipe 3 nearby enemies, inflicting 83 damage.",
+      "icon": "inv_misc_monsterclaw_03"
+    }
+  ],
+  "feral_sharpened_claws": [
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    }
+  ],
+  "feral_shredding_attacks": [
+    {
+      "name": "Shred",
+      "kind": "spell",
+      "source": "Druid spell, rank 5",
+      "description": "Shred the target, causing 155% damage plus 180 to the target. Must be behind the target. Awards 1 combo point.",
+      "icon": "spell_shadow_vampiricaura"
+    }
+  ],
+  "feral_predatory_strikes": [
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    },
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    }
+  ],
+  "feral_primal_fury": [
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    }
+  ],
+  "feral_leader_of_the_pack": [
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    },
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    }
+  ],
+  "feral_king_of_the_jungle": [
+    {
+      "name": "Tiger's Fury",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Increases Physical damage done by 15% for 6 sec.",
+      "icon": "ability_mount_jungletiger"
+    }
+  ],
+  "feral_berserk": [
+    {
+      "name": "Mangle",
+      "kind": "talent",
+      "source": "Talent · Feral Combat, row 4",
+      "description": "Mangle the target for 100% normal damage plus 26.",
+      "icon": "ability_druid_mangle2"
+    }
+  ],
+  "restoration_furor": [
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    }
+  ],
+  "restoration_naturalist": [
+    {
+      "name": "Healing Touch",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals a friendly target for 2,139 to 2,525.",
+      "icon": "spell_nature_healingtouch"
+    }
+  ],
+  "restoration_gift_of_the_earthmother": [
+    {
+      "name": "Rejuvenation",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals the target for 776 over 12 sec.",
+      "icon": "spell_nature_rejuvenation"
+    },
+    {
+      "name": "Swiftmend",
+      "kind": "talent",
+      "source": "Talent · Restoration, row 4",
+      "description": "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells.",
+      "icon": "inv_relics_idolofrejuvenation"
+    },
+    {
+      "name": "Wild Growth",
+      "kind": "talent",
+      "source": "Talent · Restoration, row 7",
+      "description": "Heals the target and their party for 336 over 7 sec. Party members must be within 43 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
+      "icon": "ability_druid_flourish"
+    }
+  ],
+  "restoration_tranquil_spirit": [
+    {
+      "name": "Healing Touch",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals a friendly target for 2,139 to 2,525.",
+      "icon": "spell_nature_healingtouch"
+    },
+    {
+      "name": "Tranquility",
+      "kind": "spell",
+      "source": "Druid spell, rank 4",
+      "description": "Regenerates all nearby party members within 20 yards for 285 every 2 sec for 10 sec. Druid must channel to maintain the spell.",
+      "icon": "spell_nature_tranquility"
+    }
+  ],
+  "restoration_improved_rejuvenation": [
+    {
+      "name": "Rejuvenation",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals the target for 776 over 12 sec.",
+      "icon": "spell_nature_rejuvenation"
+    }
+  ],
+  "restoration_swiftmend": [
+    {
+      "name": "Rejuvenation",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals the target for 776 over 12 sec.",
+      "icon": "spell_nature_rejuvenation"
+    },
+    {
+      "name": "Regrowth",
+      "kind": "spell",
+      "source": "Druid spell, rank 9",
+      "description": "Heals a friendly target for 965 to 1,077 and another 994 over 21 sec.",
+      "icon": "spell_nature_resistnature"
+    }
+  ],
+  "restoration_improved_tranquility": [
+    {
+      "name": "Tranquility",
+      "kind": "spell",
+      "source": "Druid spell, rank 4",
+      "description": "Regenerates all nearby party members within 20 yards for 285 every 2 sec for 10 sec. Druid must channel to maintain the spell.",
+      "icon": "spell_nature_tranquility"
+    }
+  ],
+  "restoration_improved_regrowth": [
+    {
+      "name": "Regrowth",
+      "kind": "spell",
+      "source": "Druid spell, rank 9",
+      "description": "Heals a friendly target for 965 to 1,077 and another 994 over 21 sec.",
+      "icon": "spell_nature_resistnature"
+    }
+  ]
+}

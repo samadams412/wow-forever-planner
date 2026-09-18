@@ -4,6 +4,9 @@ import type { Talent } from "@/lib/wow-data";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { useCtrlHeld } from "@/lib/use-ctrl-held";
+import { usePointerFine } from "@/lib/use-pointer-fine";
+import { getLinkedSpells, splitTextWithLinks } from "@/lib/talent-spell-links";
 import { STATUS_DOT_CLASS } from "@/lib/talent-status";
 import { POINTS_PER_ROW, MAX_TALENT_POINTS, tierUnlocked } from "@/lib/talent-rules";
 import {
@@ -11,6 +14,9 @@ import {
   TooltipName,
   TooltipRank,
   TooltipDescription,
+  TooltipDescriptionWithLinks,
+  TooltipCtrlPrompt,
+  TooltipLinkedSpell,
   TooltipRequirement,
   TooltipClassicNote,
 } from "./TooltipCard";
@@ -75,6 +81,9 @@ export default function TalentNode({
     buttonRef
   );
   const tooltipPos = hoverPos ?? activePos;
+  const linkedSpells = getLinkedSpells(talent.id);
+  const ctrlHeld = useCtrlHeld(tooltipPos !== null);
+  const pointerFine = usePointerFine();
 
   const isTapped = tappedTalentId === talent.id;
   const isActive = talent.id === (peekTalentId ?? tappedTalentId);
@@ -338,13 +347,24 @@ export default function TalentNode({
             <TooltipRank>
               Rank {rank} of {talent.maxRank} · {typeLabel}
             </TooltipRank>
-            {currentRankText && <TooltipDescription>{formatTooltipText(currentRankText)}</TooltipDescription>}
+            {currentRankText &&
+              (linkedSpells.length > 0 ? (
+                <TooltipDescriptionWithLinks
+                  segments={splitTextWithLinks(formatTooltipText(currentRankText), linkedSpells)}
+                />
+              ) : (
+                <TooltipDescription>{formatTooltipText(currentRankText)}</TooltipDescription>
+              ))}
             {nextRankText && (
               <>
                 <TooltipRank>Next Rank</TooltipRank>
                 <TooltipDescription>{formatTooltipText(nextRankText)}</TooltipDescription>
               </>
             )}
+            {linkedSpells.length > 0 && pointerFine && !ctrlHeld && <TooltipCtrlPrompt count={linkedSpells.length} />}
+            {linkedSpells.length > 0 &&
+              ctrlHeld &&
+              linkedSpells.map((entry) => <TooltipLinkedSpell key={entry.name} entry={entry} />)}
             {talent.prereq && (
               <TooltipRequirement>
                 Requires {talent.prereq.ranks} rank{talent.prereq.ranks > 1 ? "s" : ""} in{" "}

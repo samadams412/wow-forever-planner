@@ -105,6 +105,27 @@ directly for that one pull.
   trainer spell (Mage Frostfire Bolt), and assorted half-second-rounding
   and `?`-placeholder value fixes. See the 2026-09-18 session's summary
   for the full list of what got applied vs. flagged for a decision.
+- `talentsforever-2026-09-18-v2-data.json` -- a same-day re-pull that
+  turned out to be byte-identical to `talentsforever-2026-09-18.json`
+  (confirmed by md5). Nothing to sync from it; kept only because it was
+  already saved, not because it carries any new data. Doesn't match this
+  file's `talentsforever-YYYY-MM-DD.json` naming convention, which is also
+  why `scripts/diff-talentsforever.js`'s default two-most-recent-snapshots
+  picker skips it.
+- `talentsforever-2026-09-18-v3-spelldesc.json` -- a later same-day pull
+  that, unlike the v2 one above, is genuinely different: `talents`,
+  `racials`, `legacy` and `class_abilities` are all unchanged from
+  `talentsforever-2026-09-18.json`, but `spell_desc` jumped from 368 to
+  1,771 entries (97.6% now `s: "beta"`) as the vendor extended the same
+  beta-client extraction from talents to full per-rank spellbook tooltips
+  -- e.g. `Warrior|Overpower|Rank 4` and `Warrior|Rend|Rank 7` now exist
+  with real text, where before only one demo-observed rank per spell was
+  ever captured. This is the source `scripts/build-talent-spell-links.js`
+  reads rank-accurate spell text from for the planner talent tooltip's
+  Ctrl-hold "explain N names" feature (see `data/talent-spell-links.json`
+  and `lib/talent-spell-links.ts`). Also picked up 3 new spell_desc fields
+  (`sc` spell school, `co` spell-power coefficient, `nt` unclear so far) --
+  flagged, not yet surfaced anywhere on the site.
 
 ### Updating this data
 When pulling a new snapshot, save it as a new dated file (never overwrite

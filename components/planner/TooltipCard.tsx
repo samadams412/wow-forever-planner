@@ -2,6 +2,8 @@ import type { CSSProperties, ReactNode } from "react";
 import type { TalentStatus } from "@/lib/wow-data";
 import { STATUS_LABEL, STATUS_TEXT_CLASS } from "@/lib/talent-status";
 import { diffWords } from "@/lib/text-diff";
+import { iconUrl } from "@/lib/wow-data";
+import type { DescriptionSegment, LinkedSpell } from "@/lib/talent-spell-links";
 
 // Classic WoW tooltip color language: dark navy card, thin gold border,
 // bold white name, grey rank line, gold-yellow type label, green effect
@@ -54,6 +56,64 @@ export function TooltipType({ children }: { children: ReactNode }) {
 
 export function TooltipDescription({ children }: { children: ReactNode }) {
   return <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-[#1eff00]">{children}</p>;
+}
+
+// Same description styling as TooltipDescription, but for text already
+// split into segments (splitTextWithLinks) -- a segment naming another
+// spell/talent this one modifies renders as a white, underlined inline
+// highlight within the green effect text, matching talentsforever.com's
+// treatment of the same information (see the Ctrl-hold study in this
+// project's session notes) without copying their cream/white base text
+// color, which would clash with this site's classic-tooltip green.
+export function TooltipDescriptionWithLinks({ segments }: { segments: DescriptionSegment[] }) {
+  return (
+    <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-[#1eff00]">
+      {segments.map((seg, i) =>
+        seg.linked ? (
+          <span key={i} className="text-white underline decoration-white/50 underline-offset-2">
+            {seg.text}
+          </span>
+        ) : (
+          <span key={i}>{seg.text}</span>
+        )
+      )}
+    </p>
+  );
+}
+
+// The "Hold Ctrl to explain N names" prompt line -- shown under a
+// description that has 1+ linked spells, only on desktop (no Ctrl key on
+// touch). Not rendered at all while Ctrl is already held, since the cards
+// it's promising are showing right below it at that point.
+export function TooltipCtrlPrompt({ count }: { count: number }) {
+  return (
+    <p className="mt-1 text-[11px] text-gray-500">
+      Hold Ctrl to explain {count} name{count === 1 ? "" : "s"}
+    </p>
+  );
+}
+
+// One expanded linked-spell/talent card, shown while Ctrl is held. Icon +
+// name + source line reuse the tooltip's existing name/rank color language;
+// the description is a muted gray rather than this tooltip's own bright
+// green effect text, so the hierarchy stays clear: green is always "what
+// this talent itself does," gray is "background on a spell it mentions."
+export function TooltipLinkedSpell({ entry }: { entry: LinkedSpell }) {
+  return (
+    <div className="mt-1.5 flex gap-2 border-t border-[#c8aa6e]/20 pt-1.5">
+      {entry.icon && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={iconUrl(entry.icon)} alt="" className="h-7 w-7 shrink-0 rounded-sm" />
+      )}
+      <div className="min-w-0">
+        <div className="text-xs leading-tight">
+          <span className="font-semibold text-white">{entry.name}</span>{" "}
+          <span className="text-[#c8aa6e]">{entry.source}</span>
+        </div>
+        <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{entry.description}</p>
+      </div>
+    </div>
+  );
 }
 
 export function TooltipRequirement({ children }: { children: ReactNode }) {
