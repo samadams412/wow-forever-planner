@@ -8,23 +8,52 @@ in place -- a new pull gets a new dated file alongside the old one.
 ## talentsforever-YYYY-MM-DD.json
 
 Full `data.json` export from talentsforever.com (a fan-made WoW: Forever
-talent calculator). Per its own `_readme` field: values were read off
-BlizzCon 2026 demo footage frame-by-frame and, in places, checked directly
-against Blizzard's official Deep Dive slides.
+talent calculator). Through 2026-09-16, its own `_readme` field described
+values as read off BlizzCon 2026 demo footage frame-by-frame and, in
+places, checked directly against Blizzard's official Deep Dive slides.
+
+**As of `talentsforever-2026-09-18.json`, the source fundamentally
+changed**: every talent now carries `src: "beta"` (100% of 468 talents),
+meaning the export is now extracted directly from the WoW Forever beta
+client (per the vendor's own site changelog: build `1.60.1.69876`), not
+stream/demo footage. "Estimated" as a concept is largely retired going
+forward -- see the 2026-09-18 session's summary for how this changed our
+own `confidence`/`confirmedRanks` handling.
 
 Confidence signals baked into this file (used to derive our own
 `confidence`/`iconPlaceholder`-style fields when ingesting it):
 - Talents: `complete: true` -> confirmed. `complete: false` -> only the
   ranks listed in `confirmed: [...]` are confirmed; the rest on that
-  talent are estimated (scaled/synthesized).
+  talent are estimated (scaled/synthesized). Since 2026-09-18 essentially
+  every talent is `complete: true` (beta-client extraction, not partial
+  footage reads), so this distinction is close to moot going forward.
 - Spell tooltips (`spell_desc`): `s: "demo"` -> confirmed (read from
   actual footage). `s: "classic"` -> estimated (Classic-era fallback, not
-  yet verified for Forever).
+  yet verified for Forever). Unaffected by the `src`/beta-client change
+  above, which is a talents-only field so far.
 
 Top-level shape: `talents` (per class, trees of talents), `spellbooks`
 (level-38 demo spellbook pages per class), `spell_desc` (tooltip text
 keyed `Class|Spell|Rank`), `racials`, `class_racials`, `class_abilities`,
-`legacy` (Legacy perk trees), `changelog`.
+`legacy` (Legacy perk trees). `_readme` mentions a `changelog` array but no
+snapshot so far has actually included one -- changelog information has
+only ever come from the vendor's own site, read by hand.
+
+**`legacy` perk shape changed as of `talentsforever-2026-09-18.json`**:
+each perk was a `[name, maxRank, description, icon]` tuple through
+2026-09-16; from 09-18 on it's a talent-shaped object --
+`{ name, max, row, col, icon, ranks: [...], gate, req?, placeholder? }` --
+matching a real 3-column (Adventure/Resourcefulness/Professions) tree
+layout with prerequisites (`req`, by perk name) and point gates (`gate`,
+points required in that tree). `placeholder: true` marks an
+unrevealed `"Unknown"` slot. `scripts/diff-talentsforever.js` diffs perks
+by tree+row+col (not name -- several placeholders share the name
+"Unknown", and the main transition this data goes through is a
+placeholder getting revealed in place). The one-time tuple-to-object
+transition itself (09-16 -> 09-18) isn't diffed item-by-item -- tuples
+carry no row/col/gate concept to match against -- the script calls this
+out explicitly instead of guessing; read `legacy` in the 09-18 snapshot
+directly for that one pull.
 
 ### Snapshots
 - `talentsforever-2026-09-13.json` -- first full ingestion pass (Warrior/
@@ -56,6 +85,26 @@ keyed `Class|Spell|Rank`), `racials`, `class_racials`, `class_abilities`,
   tooltips, ~290 entries) that our site doesn't read anywhere -- this
   is a real new upstream feature, not something any of the day's
   changelog items called for, so it's untouched pending its own task.
+- `talentsforever-2026-09-18.json` -- the beta-client switch described
+  above: every talent gains `src: "beta"`, `desc` moves from sparse
+  per-rank objects to full per-rank arrays for nearly every talent (466
+  field-level changes across all 9 classes), and Legacy Perks moves from
+  flat tuples to a real 3-column tree (see above). Also: 2 talents added
+  (Rogue Flawless Execution, Warlock Wrack), 2 same-slot renames (Rogue
+  Restless Blades, Warlock Drain Hope -- the talents each new one
+  replaced), 2 outright removals (Warrior Vitality, Druid Balance of
+  Nature), a 3-talent Warrior Protection layout reshuffle (Vitality's
+  removal let Bastion and Focused Rage move slots), a 2-talent Shaman
+  Restoration position swap (Tidal Mastery/Totemic Focus), a Priest
+  "Shadow" -> "Shadow Magic" and Shaman "Elemental" -> "Elemental Combat"
+  tab rename, dropped prereqs (Aggression no longer needs Hack and Slash,
+  Conflagrate no longer needs Shadowburn), several false Priest/Human
+  "Requires <form>" racial lines that were actually a usable-in-form flag
+  misread as a hard requirement, a near-total racials/class_racials
+  rewrite (demo guesses -> real beta values, section reordered), one new
+  trainer spell (Mage Frostfire Bolt), and assorted half-second-rounding
+  and `?`-placeholder value fixes. See the 2026-09-18 session's summary
+  for the full list of what got applied vs. flagged for a decision.
 
 ### Updating this data
 When pulling a new snapshot, save it as a new dated file (never overwrite

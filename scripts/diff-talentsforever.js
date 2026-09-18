@@ -192,10 +192,28 @@ function diffTalents(oldSnapshot, newSnapshot) {
   }
 
   // Schema drift: any key present on a new-snapshot talent that never
-  // appeared on ANY old-snapshot talent.
+  // appeared on ANY old-snapshot talent. Deliberately NOT added to
+  // TALENT_DIFF_FIELDS -- a field that just got added to every talent at
+  // once (e.g. `src` on 2026-09-18) would otherwise spam one "changed"
+  // line per talent for a single, dataset-wide event. Instead summarize
+  // it once here: how many new-snapshot talents carry it, and the
+  // distribution of values seen, so a reader gets the signal without
+  // the noise.
   const oldKeys = collectKeys([...oldTalents.values()].map((t) => t.talent));
-  const newKeys = collectKeys([...newTalents.values()].map((t) => t.talent));
-  const newFields = [...newKeys].filter((k) => !oldKeys.has(k));
+  const newTalentObjs = [...newTalents.values()].map((t) => t.talent);
+  const newKeys = collectKeys(newTalentObjs);
+  const newFieldNames = [...newKeys].filter((k) => !oldKeys.has(k));
+  const newFields = newFieldNames.map((field) => {
+    const valueCounts = new Map();
+    let withField = 0;
+    for (const t of newTalentObjs) {
+      if (!(field in t)) continue;
+      withField++;
+      const v = JSON.stringify(t[field]);
+      valueCounts.set(v, (valueCounts.get(v) || 0) + 1);
+    }
+    return { field, withField, total: newTalentObjs.length, valueCounts: [...valueCounts.entries()] };
+  });
 
   const removedList = new Map(flattenRemovedTalents(oldSnapshot).map((t) => [t.key, t]));
   const removedListNew = new Map(flattenRemovedTalents(newSnapshot).map((t) => [t.key, t]));
@@ -207,20 +225,54 @@ function diffTalents(oldSnapshot, newSnapshot) {
 
 // --- legacy perks --------------------------------------------------
 
-// Raw shape is [name, maxRank, description, icon] per perk (see
-// data/sources/README.md) -- normalize to an object for diffing.
+// Current shape (since 2026-09-18) is a talent-shaped object per perk:
+// { name, max, row, col, icon, ranks: [...], gate, req?, placeholder? }
+// (see data/sources/README.md). Perks are keyed by grid position
+// (tree|row|col), not name -- several "Unknown"/placeholder perks share
+// the literal name "Unknown" within a tree, and the main transition this
+// data goes through is a placeholder getting revealed into a real perk
+// AT THE SAME SLOT (name/icon/ranks changing in place), which position
+// keying reports as a single "changed" entry instead of a spurious
+// remove+add pair that name-keying would produce.
 function flattenLegacyPerks(snapshot) {
   const out = [];
   for (const tree of (snapshot.legacy || {}).trees || []) {
     for (const perk of tree.perks || []) {
-      const [name, maxRank, description, icon] = perk;
-      out.push({ treeName: tree.name, key: `${tree.name}|${name}`, perk: { name, maxRank, description, icon } });
+      out.push({ treeName: tree.name, key: `${tree.name}|${perk.row}|${perk.col}`, perk });
     }
   }
   return out;
 }
 
+const LEGACY_PERK_DIFF_FIELDS = ["name", "max", "icon", "ranks", "gate", "req", "placeholder"];
+
+// True if any perk in this snapshot is still the pre-2026-09-18 tuple
+// shape ([name, maxRank, description, icon]) rather than the current
+// object shape.
+function hasTupleShapePerks(snapshot) {
+  for (const tree of (snapshot.legacy || {}).trees || []) {
+    for (const perk of tree.perks || []) {
+      if (Array.isArray(perk)) return true;
+    }
+  }
+  return false;
+}
+
 function diffLegacyPerks(oldSnapshot, newSnapshot) {
+  // The tuple -> object shape change (2026-09-18) is a one-time, already-
+  // historical transition: old tuples carry no row/col/gate/placeholder
+  // concept at all, so there's no sound way to key-match them against the
+  // new position-keyed objects (name isn't safe either -- multiple new
+  // "Unknown" placeholders share that literal name). Rather than force a
+  // dual-shape matcher permanently into the position-based design below
+  // (which is the correct, simple shape for every future object-vs-object
+  // pull), just call this pair out explicitly and point at the raw data.
+  if (hasTupleShapePerks(oldSnapshot) && !hasTupleShapePerks(newSnapshot)) {
+    const oldCount = flattenLegacyPerks(oldSnapshot).length;
+    const newCount = flattenLegacyPerks(newSnapshot).length;
+    return { transitioned: true, oldCount, newCount, added: [], removed: [], changed: [], newFields: [] };
+  }
+
   const oldPerks = new Map(flattenLegacyPerks(oldSnapshot).map((p) => [p.key, p]));
   const newPerks = new Map(flattenLegacyPerks(newSnapshot).map((p) => [p.key, p]));
 
@@ -231,16 +283,33 @@ function diffLegacyPerks(oldSnapshot, newSnapshot) {
     const newEntry = newPerks.get(key);
     if (!newEntry) continue;
     const fieldChanges = [];
-    for (const field of ["maxRank", "description", "icon"]) {
-      if (!deepEqual(oldEntry.perk[field], newEntry.perk[field])) {
-        fieldChanges.push({ field, old: oldEntry.perk[field], new: newEntry.perk[field] });
+    for (const field of LEGACY_PERK_DIFF_FIELDS) {
+      const oldVal = oldEntry.perk[field];
+      const newVal = newEntry.perk[field];
+      if (!deepEqual(oldVal, newVal)) {
+        fieldChanges.push({ field, old: oldVal, new: newVal });
       }
     }
     if (fieldChanges.length > 0) {
-      changed.push({ treeName: oldEntry.treeName, name: oldEntry.perk.name, fieldChanges });
+      const revealed = oldEntry.perk.placeholder === true && newEntry.perk.placeholder !== true;
+      changed.push({
+        treeName: oldEntry.treeName,
+        row: oldEntry.perk.row,
+        col: oldEntry.perk.col,
+        name: oldEntry.perk.name,
+        newName: newEntry.perk.name,
+        revealed,
+        fieldChanges,
+      });
     }
   }
-  return { added, removed, changed };
+
+  // Schema drift on legacy perks, same idea as collectKeys for talents.
+  const oldKeys = collectKeys([...oldPerks.values()].map((p) => p.perk));
+  const newKeys = collectKeys([...newPerks.values()].map((p) => p.perk));
+  const newFields = [...newKeys].filter((k) => !oldKeys.has(k));
+
+  return { added, removed, changed, newFields };
 }
 
 // --- spellbooks (per-class trainer spell listings) --------------------
@@ -374,7 +443,10 @@ function renderMarkdown({ oldLabel, newLabel, talents, legacy, spellbooks, spell
   if (talents.newFields.length > 0) {
     lines.push(`### New fields seen on talents (${talents.newFields.length})`, "");
     lines.push("Fields that never appeared on any talent in the old snapshot -- may need a new display/ingestion rule:");
-    for (const f of talents.newFields) lines.push(`- \`${f}\``);
+    for (const nf of talents.newFields) {
+      const valuesText = nf.valueCounts.map(([v, n]) => `${v} x${n}`).join(", ");
+      lines.push(`- \`${nf.field}\`: on ${nf.withField}/${nf.total} new-snapshot talents. Values: ${valuesText}`);
+    }
     lines.push("");
   }
   if (talents.removedArrayAdded.length > 0 || talents.removedArrayRemoved.length > 0) {
@@ -389,27 +461,49 @@ function renderMarkdown({ oldLabel, newLabel, talents, legacy, spellbooks, spell
   }
 
   lines.push("## Legacy perks", "");
-  if (legacy.added.length === 0 && legacy.removed.length === 0 && legacy.changed.length === 0) {
+  if (legacy.transitioned) {
+    lines.push(
+      "**Shape change, not diffed item-by-item.** The old snapshot's Legacy",
+      "Perks are still `[name, maxRank, description, icon]` tuples; the new",
+      "snapshot uses the current object shape",
+      "(`name/max/row/col/icon/ranks/gate/req?/placeholder?`). Tuples carry no",
+      "row/col/gate/placeholder concept, so there's no sound identity to",
+      "match old entries against the new position-keyed ones -- read",
+      `\`legacy\` in the new snapshot directly instead. Old snapshot: ${legacy.oldCount} perks. New snapshot: ${legacy.newCount} perks.`,
+      "Future pulls (object vs. object) will diff normally.",
+      ""
+    );
+  } else if (legacy.added.length === 0 && legacy.removed.length === 0 && legacy.changed.length === 0) {
     lines.push("No legacy perk changes.", "");
   } else {
     if (legacy.added.length > 0) {
       lines.push(`### Added (${legacy.added.length})`);
-      for (const p of legacy.added) lines.push(`- ${p.treeName} / **${p.perk.name}**`);
+      for (const p of legacy.added) {
+        const gate = p.perk.gate !== undefined ? `, gate ${p.perk.gate}` : "";
+        const req = p.perk.req ? `, requires ${p.perk.req}` : "";
+        lines.push(`- ${p.treeName} row ${p.perk.row} col ${p.perk.col} / **${p.perk.name}** (max ${p.perk.max}${gate}${req})`);
+      }
       lines.push("");
     }
     if (legacy.removed.length > 0) {
       lines.push(`### Removed (${legacy.removed.length})`);
-      for (const p of legacy.removed) lines.push(`- ${p.treeName} / **${p.perk.name}**`);
+      for (const p of legacy.removed) lines.push(`- ${p.treeName} row ${p.perk.row} col ${p.perk.col} / **${p.perk.name}**`);
       lines.push("");
     }
     if (legacy.changed.length > 0) {
       lines.push(`### Changed (${legacy.changed.length})`);
       for (const p of legacy.changed) {
-        lines.push(`- ${p.treeName} / **${p.name}**`);
+        const label = p.revealed ? `**${p.name}** -> **${p.newName}** (revealed)` : `**${p.name}**`;
+        lines.push(`- ${p.treeName} row ${p.row} col ${p.col} / ${label}`);
         for (const fc of p.fieldChanges) lines.push(renderTalentField(fc.field, fc.old, fc.new));
       }
       lines.push("");
     }
+  }
+  if (legacy.newFields && legacy.newFields.length > 0) {
+    lines.push(`### New fields seen on legacy perks (${legacy.newFields.length})`, "");
+    for (const f of legacy.newFields) lines.push(`- \`${f}\``);
+    lines.push("");
   }
 
   lines.push("## Spellbooks (trainer spell listings)", "");
