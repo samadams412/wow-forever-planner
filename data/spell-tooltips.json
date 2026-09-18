@@ -105,7 +105,8 @@
       ]
     ],
     "description": "A balanced combat stance.",
-    "confirmed": false,
+    "confirmed": true,
+    "source": "Sodapoppin's Warrior, 13 Sep (Twitch VOD 2872274770 at 5:58:13), found by u/xxatti",
     "levelReq": "Requires level 1"
   },
   "Warrior|Charge": {
@@ -338,12 +339,19 @@
     "lines": [
       [
         "20 Rage",
-        "Melee Range"
+        ""
+      ],
+      [
+        "Next melee",
+        ""
       ]
     ],
-    "description": "A sweeping attack that does your weapon damage plus 10 to the target and his nearest ally.",
-    "confirmed": false,
-    "levelReq": "Requires level 30"
+    "description": "A sweeping attack that does your weapon damage plus 10 to the target and a second nearby enemy.",
+    "confirmed": true,
+    "source": "Pikabooirl's Warrior, 12 Sep (Twitch VOD 2872621915 at 1:56:54), found by u/xxatti",
+    "levelReq": "Requires level 30",
+    "classicDescription": "A sweeping attack that does your weapon damage plus 10 to the target and his nearest ally.",
+    "classicStatus": "changed"
   },
   "Warrior|Demoralizing Shout": {
     "lines": [
@@ -3488,6 +3496,22 @@
     "description": "Hurls a fiery ball that causes 192 to 237 Fire damage and an additional 24 Fire damage over 8 sec.",
     "confirmed": true,
     "source": "Xaryu's Mage, 12 Sep (range includes his talents)"
+  },
+  "Mage|Frostfire Bolt": {
+    "lines": [
+      [
+        "205 Mana",
+        "35 yd range"
+      ],
+      [
+        "3 sec cast",
+        ""
+      ]
+    ],
+    "description": "Launches a bolt of frostfire at the enemy, causing 173 to 190 Frostfire damage, slowing movement speed by 40% and causing an additional 27 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.",
+    "confirmed": true,
+    "source": "Xaryu's Mage at level 40, 16 Sep (YouTube DxtVEhjyROU at 8:02:59; the damage includes his gear), found by u/overon",
+    "levelReq": "Requires level 40"
   },
   "Mage|Blizzard": {
     "lines": [
