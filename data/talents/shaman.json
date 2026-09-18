@@ -17,13 +17,13 @@
             "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 8%.",
             "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_wispsplode",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 1,
             "col": 2,
             "maxRank": 5,
@@ -44,13 +44,13 @@
             "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 4%.",
             "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
-          "icon": "spell_fire_fireball",
+          "icon": "spell_nature_earthshock",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 1,
             "col": 3,
             "maxRank": 5,
@@ -66,16 +66,16 @@
           "maxRank": 3,
           "ranks": [
             "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
-            "Reduces damage taken from Fire, Frost, and Nature effects by 6%.",
-            "Reduces damage taken from Fire, Frost, and Nature effects by 9%."
+            "Reduces damage taken from Fire, Frost, and Nature effects by 7%.",
+            "Reduces damage taken from Fire, Frost, and Nature effects by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_spiritarmor",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 2,
             "col": 2,
             "maxRank": 3,
@@ -102,7 +102,7 @@
           "icon": "spell_frost_frostward",
           "classic": {
             "status": "moved",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 3,
             "col": 2,
             "maxRank": 5,
@@ -121,13 +121,13 @@
             "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%.",
             "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_immolation",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 2,
             "col": 3,
             "maxRank": 3,
@@ -146,13 +146,13 @@
             "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 6% for 10 sec.",
             "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 9% for 10 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
-          "icon": "classic_spell_fire_elementaldevastation",
+          "icon": "spell_fire_elementaldevastation",
           "classic": {
             "status": "moved",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 4,
             "col": 4,
             "maxRank": 3,
@@ -167,7 +167,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -175,7 +175,7 @@
           "icon": "spell_shadow_manaburn",
           "classic": {
             "status": "unchanged",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 3,
             "col": 1,
             "maxRank": 1,
@@ -196,13 +196,13 @@
             "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 80%.",
             "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_fire_volcano",
           "classic": {
             "status": "moved",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 5,
             "col": 2,
             "maxRank": 1,
@@ -220,13 +220,13 @@
             "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec.",
             "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_sealoffire",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 4,
             "col": 1,
             "maxRank": 2,
@@ -243,16 +243,16 @@
           "maxRank": 3,
           "ranks": [
             "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 23%.",
-            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 46%.",
-            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 69%."
+            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 47%.",
+            "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 70%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_eyeofthestorm",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 4,
             "col": 2,
             "maxRank": 3,
@@ -278,7 +278,7 @@
           "icon": "spell_nature_callstorm",
           "classic": {
             "status": "moved",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 3,
             "col": 3,
             "maxRank": 5,
@@ -294,15 +294,15 @@
           "maxRank": 2,
           "ranks": [
             "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards, and increases the range of your Flame Shock spell by 8 yards.",
-            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, and increases the range of your Flame Shock spell by 16 yards."
+            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, and increases the range of your Flame Shock spell by 15 yards."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_stormreach",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 5,
             "col": 1,
             "maxRank": 2,
@@ -319,10 +319,10 @@
           "maxRank": 3,
           "ranks": [
             "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
-            "Gives your Lightning Bolt and Chain Lightning spells a 6% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
-            "Gives your Lightning Bolt and Chain Lightning spells a 9% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+            "Gives your Lightning Bolt and Chain Lightning spells a 7% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_nature_lightningoverload",
@@ -338,12 +338,12 @@
           "col": 4,
           "maxRank": 1,
           "ranks": [
-            "Your Earthbind Totem immobilizes nearby targets for 5 sec when cast."
+            "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast."
           ],
           "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "spell_nature_strengthofearthtotem02",
+          "icon": "spell_nature_stranglevines",
           "classic": {
             "status": "new"
           },
@@ -357,19 +357,19 @@
           "maxRank": 3,
           "ranks": [
             "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.17 sec.",
-            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.3 sec.",
-            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.5 sec."
+            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.33 sec.",
+            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.50 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "elemental_call_of_thunder",
             "ranks": 1
           },
           "status": "changed",
-          "icon": "spell_nature_unrelentingstorm",
+          "icon": "spell_lightning_lightningbolt01",
           "classic": {
             "status": "changed",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 6,
             "col": 3,
             "maxRank": 5,
@@ -385,7 +385,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "You hurl molten lava at the target, dealing 158 to 187 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+            "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -421,7 +421,7 @@
           "icon": "spell_nature_stoneclawtotem",
           "classic": {
             "status": "moved",
-            "tree": "Elemental Combat",
+            "tree": "Elemental",
             "tier": 2,
             "col": 1,
             "maxRank": 2,
@@ -442,10 +442,7 @@
             "Improves your chance to get a critical strike with all spells and attacks by 4%.",
             "Improves your chance to get a critical strike with all spells and attacks by 5%."
           ],
-          "confidence": "estimated",
-          "confirmedRanks": [
-            3
-          ],
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "ability_thunderbolt",
@@ -472,7 +469,7 @@
             "Increases your Intellect by 8%.",
             "Increases your Intellect by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_grimward",
@@ -518,10 +515,10 @@
           "maxRank": 3,
           "ranks": [
             "Increases your Attack Power by an amount equal to 33% of your Intellect.",
-            "Increases your Attack Power by an amount equal to 66% of your Intellect.",
-            "Increases your Attack Power by an amount equal to 99% of your Intellect."
+            "Increases your Attack Power by an amount equal to 67% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 100% of your Intellect."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_nature_mentalquickness",
@@ -537,8 +534,8 @@
           "col": 3,
           "maxRank": 2,
           "ranks": [
-            "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
-            "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
+            "Reduces the cast time of your Ghost Wolf spell by 1 sec, and Ghost Wolf may be used indoors.",
+            "Reduces the cast time of your Ghost Wolf spell by 3 sec, and Ghost Wolf may be used indoors."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -587,7 +584,7 @@
           "maxRank": 3,
           "ranks": [
             "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
-            "Increases the melee attack power bonus of your Rockbiter Weapon by 14%, your Windfury Weapon effect by 27% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 10%.",
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 13%, your Windfury Weapon effect by 27% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 10%.",
             "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%."
           ],
           "confidence": "confirmed",
@@ -633,7 +630,7 @@
             "Increases your chance to dodge by an additional 4%.",
             "Increases your chance to dodge by an additional 6%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_mirrorimage",
@@ -660,7 +657,7 @@
             "Increases your Stamina by 8%.",
             "Increases your Stamina by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_holy_devotion",
@@ -687,7 +684,7 @@
             "Increases your attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
             "Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "enhancement_mental_dexterity",
             "ranks": 3
@@ -711,12 +708,12 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Instantly strike for normal weapon damage and increase Nature damage you deal to the target by 20% for 12 sec."
+            "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
-          "icon": "spell_holy_sealofmight",
+          "icon": "ability_shaman_stormstrike",
           "classic": {
             "status": "moved",
             "tree": "Enhancement",
@@ -765,7 +762,7 @@
           "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "spell_nature_mentalquickness",
+          "icon": "spell_nature_sleep",
           "classic": {
             "status": "new"
           },
@@ -779,15 +776,15 @@
           "maxRank": 2,
           "ranks": [
             "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry.",
-            "When you Stormstrike, you have a 100% chance to gain 100% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry."
+            "When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "enhancement_stormstrike",
             "ranks": 1
           },
           "status": "new",
-          "icon": "ability_shaman_stormstrike",
+          "icon": "spell_shaman_improvedstormstrike",
           "classic": {
             "status": "new"
           },
@@ -801,12 +798,12 @@
           "maxRank": 5,
           "ranks": [
             "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 4%. Stacks up to 5 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 10 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 15 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 20 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 5 times. Lasts 30 sec.",
             "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_shaman_maelstromweapon",
@@ -882,7 +879,7 @@
             "Increases the critical effect chance of your healing spells by 4%.",
             "Increases the critical effect chance of your healing spells by 5%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_tranquility",
@@ -904,10 +901,10 @@
           "maxRank": 3,
           "ranks": [
             "Allows 17% of your Mana regeneration to continue while casting.",
-            "Allows 34% of your Mana regeneration to continue while casting.",
-            "Allows 51% of your Mana regeneration to continue while casting."
+            "Allows 33% of your Mana regeneration to continue while casting.",
+            "Allows 50% of your Mana regeneration to continue while casting."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_nature_sleep",
@@ -927,10 +924,10 @@
             "Reduces the threat generated by your spells by 10%.",
             "Reduces the threat generated by your spells by 15%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
-          "icon": "spell_nature_naturetouchgrow",
+          "icon": "spell_nature_healingtouch",
           "classic": {
             "status": "moved",
             "tree": "Restoration",
@@ -949,13 +946,13 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Reduces the Mana cost of your healing spells by 1% and increases your chance to hit with all spells and attacks by 1%.",
-            "Reduces the Mana cost of your healing spells by 2% and increases your chance to hit with all spells and attacks by 2%.",
-            "Reduces the Mana cost of your healing spells by 3% and increases your chance to hit with all spells and attacks by 3%.",
-            "Reduces the Mana cost of your healing spells by 4% and increases your chance to hit with all spells and attacks by 4%.",
-            "Reduces the Mana cost of your healing spells by 5% and increases your chance to hit with all spells and attacks by 5%."
+            "Reduces the Mana cost of your healing spells by 1% and improves your chance to hit by 1%.",
+            "Reduces the Mana cost of your healing spells by 2% and improves your chance to hit by 2%.",
+            "Reduces the Mana cost of your healing spells by 3% and improves your chance to hit by 3%.",
+            "Reduces the Mana cost of your healing spells by 4% and improves your chance to hit by 4%.",
+            "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_frost_manarecharge",
@@ -979,7 +976,7 @@
             "Reduces the cooldown of your Reincarnation spell by 10 min, increases your maximum health by 2%, and increases the amount of health and Mana you reincarnate with by an additional 10%.",
             "Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_reincarnation",
@@ -1001,7 +998,7 @@
           "maxRank": 3,
           "ranks": [
             "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells.",
-            "Increases your target's armor value by 16% for 15 sec after getting a critical effect from one of your healing spells.",
+            "Increases your target's armor value by 17% for 15 sec after getting a critical effect from one of your healing spells.",
             "Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells."
           ],
           "confidence": "confirmed",
@@ -1026,10 +1023,10 @@
           "maxRank": 3,
           "ranks": [
             "Gives you a 23% chance to avoid interruption caused by damage while casting any healing spell.",
-            "Gives you a 46% chance to avoid interruption caused by damage while casting any healing spell.",
-            "Gives you a 69% chance to avoid interruption caused by damage while casting any healing spell."
+            "Gives you a 47% chance to avoid interruption caused by damage while casting any healing spell.",
+            "Gives you a 70% chance to avoid interruption caused by damage while casting any healing spell."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_healingwavelesser",
@@ -1075,7 +1072,7 @@
             "Reduces the Mana cost of your totems and any spells that summon or move them by 20%.",
             "Reduces the Mana cost of your totems and any spells that summon or move them by 25%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_moonglow",
@@ -1102,7 +1099,7 @@
             "Increases the effect of your Mana Spring Totem by 20% and increases the effect of your Healing Stream Totem by 40%.",
             "Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_manaregentotem",
@@ -1138,7 +1135,7 @@
             "text": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 170 mana every 3 seconds to group members within 20 yards."
           },
           "passive": false,
-          "cost": "10 Mana | Instant | 5 min cooldown | Tools: Water Totem"
+          "cost": "10 Mana | Instant | 5 min cooldown"
         },
         {
           "id": "restoration_healing_way",
@@ -1148,13 +1145,13 @@
           "maxRank": 3,
           "ranks": [
             "Increases the amount healed by your Healing Wave spell by 8%.",
-            "Increases the amount healed by your Healing Wave spell by 16%.",
-            "Increases the amount healed by your Healing Wave spell by 24%."
+            "Increases the amount healed by your Healing Wave spell by 17%.",
+            "Increases the amount healed by your Healing Wave spell by 25%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
-          "icon": "classic_spell_nature_healingway",
+          "icon": "spell_nature_healingway",
           "classic": {
             "status": "changed",
             "tree": "Restoration",
@@ -1202,7 +1199,7 @@
             "Increases the effectiveness of your healing spells by 8%.",
             "Increases the effectiveness of your healing spells by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_wizardmark",
@@ -1223,7 +1220,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Heals a friendly target for 479 to 528, an additional 499 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+            "Heals a friendly target for 485 to 533, an additional 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
           ],
           "confidence": "confirmed",
           "prereq": {

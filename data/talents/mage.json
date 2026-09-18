@@ -35,13 +35,13 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Increases your chance to hit with your Arcane spells by 1%.",
-            "Increases your chance to hit with your Arcane spells by 2%.",
-            "Increases your chance to hit with your Arcane spells by 3%.",
-            "Increases your chance to hit with your Arcane spells by 4%.",
-            "Increases your chance to hit with your Arcane spells by 5%."
+            "Improves your chance to hit with Arcane spells by 1%.",
+            "Improves your chance to hit with Arcane spells by 2%.",
+            "Improves your chance to hit with Arcane spells by 3%.",
+            "Improves your chance to hit with Arcane spells by 4%.",
+            "Improves your chance to hit with Arcane spells by 5%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_holy_devotion",
@@ -68,10 +68,10 @@
             "Gives you a 80% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 56% chance while casting Arcane Blast.",
             "Gives you a 100% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 70% chance while casting Arcane Blast."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
-          "icon": "spell_holy_mindvision",
+          "icon": "spell_nature_starfall",
           "classic": {
             "status": "changed",
             "tree": "Arcane",
@@ -91,9 +91,9 @@
           "maxRank": 2,
           "ranks": [
             "Reduces your target's resistance to all your spells by 8 and reduces the threat caused by your Arcane spells by 15%.",
-            "Reduces your target's resistance to all your spells by 16 and reduces the threat caused by your Arcane spells by 30%."
+            "Reduces your target's resistance to all your spells by 15 and reduces the threat caused by your Arcane spells by 30%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_holy_dispelmagic",
@@ -117,7 +117,7 @@
             "Increases all your resistances by 5 and causes all spells you fully resist to restore 1% of your total mana. Cannot trigger more often than 1 time per sec.",
             "Increases all your resistances by 10 and causes all spells you fully resist to restore 2% of your total mana. Cannot trigger more often than 1 time per sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_astralrecalgroup",
@@ -138,11 +138,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
-            "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -168,7 +168,7 @@
             "Increases your Armor by an amount equal to 25% of your Intellect.",
             "Increases your Armor by an amount equal to 50% of your Intellect."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_arcane_arcaneresilience",
@@ -192,10 +192,10 @@
             "Increases the range of your Arcane spells by 3 yards.",
             "Increases the range of your Arcane spells by 6 yards."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "spell_arcane_arcane01",
+          "icon": "inv_ability_mage_radiantspark",
           "classic": {
             "status": "new"
           },
@@ -212,10 +212,10 @@
             "Increases the critical strike chance of your Arcane spells by 4%.",
             "Increases the critical strike chance of your Arcane spells by 6%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
-          "icon": "spell_nature_starfall",
+          "icon": "spell_nature_wispsplode",
           "classic": {
             "status": "changed",
             "tree": "Arcane",
@@ -234,7 +234,7 @@
           "col": 4,
           "maxRank": 1,
           "ranks": [
-            "Blasts the target with energy, dealing 95 to 104 Arcane damage. Each time you cast Arcane Blast, the damage of all your other spells is increased by 10% and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 8 sec or until any other damage spell is cast."
+            "Blasts the target with energy, dealing 57 to 65 Arcane damage. Each time you cast Arcane Blast, the damage of all your other spells is increased by 10% and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 8 sec or until any other damage spell is cast."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -244,7 +244,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "122 Mana | 30 yd range | 2.5 sec cast"
+          "cost": "15% of base mana | 30 yd range | 2.5 sec cast"
         },
         {
           "id": "arcane_arcane_shielding",
@@ -254,9 +254,9 @@
           "maxRank": 2,
           "ranks": [
             "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 17% and increases the resistances granted by your Mage Armor spell by 25%.",
-            "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 34% and increases the resistances granted by your Mage Armor spell by 50%."
+            "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 33% and increases the resistances granted by your Mage Armor spell by 50%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_detectlesserinvisibility",
@@ -281,7 +281,7 @@
             "Your Counterspell also Silences the target for 2 sec.",
             "Your Counterspell also Silences the target for 4 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_iceshock",
@@ -303,10 +303,10 @@
           "maxRank": 3,
           "ranks": [
             "Allows 17% of your Mana regeneration to continue while casting.",
-            "Allows 34% of your Mana regeneration to continue while casting.",
-            "Allows 51% of your Mana regeneration to continue while casting."
+            "Allows 33% of your Mana regeneration to continue while casting.",
+            "Allows 50% of your Mana regeneration to continue while casting."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "arcane_arcane_concentration",
             "ranks": 5
@@ -330,7 +330,7 @@
           "col": 4,
           "maxRank": 1,
           "ranks": [
-            "Gives your Arcane Blast spell a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles will fire every 0.5 sec."
+            "Gives your Arcane Blast spell a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -378,7 +378,7 @@
             "Increases your Intellect by 8% and increases the critical strike damage bonus of your Arcane spells by 80%.",
             "Increases your Intellect by 10% and increases the critical strike damage bonus of your Arcane spells by 100%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_charm",
@@ -399,11 +399,11 @@
           "col": 3,
           "maxRank": 3,
           "ranks": [
-            "Increases the damage done by all your spells by 1% and your critical strike chance with all attacks by 1%.",
-            "Increases the damage done by all your spells by 2% and your critical strike chance with all attacks by 2%.",
-            "Increases the damage done by all your spells by 3% and your critical strike chance with all attacks by 3%."
+            "Increases the damage done by your spells by 1% and your critical strike chance by 1%.",
+            "Increases the damage done by your spells by 2% and your critical strike chance by 2%.",
+            "Increases the damage done by your spells by 3% and your critical strike chance by 3%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_teleport",
@@ -462,7 +462,7 @@
           "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
-          "icon": "spell_fire_fireball",
+          "icon": "spell_fire_lavaspawn",
           "classic": {
             "status": "moved",
             "tree": "Fire",
@@ -513,11 +513,7 @@
             "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.4 sec.",
             "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
           ],
-          "confidence": "estimated",
-          "confirmedRanks": [
-            4,
-            5
-          ],
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_flamebolt",
@@ -590,10 +586,10 @@
           "maxRank": 3,
           "ranks": [
             "Gives your Fire spells a 3% chance to stun the target for 2 sec.",
-            "Gives your Fire spells a 6% chance to stun the target for 2 sec.",
-            "Gives your Fire spells a 9% chance to stun the target for 2 sec."
+            "Gives your Fire spells a 7% chance to stun the target for 2 sec.",
+            "Gives your Fire spells a 10% chance to stun the target for 2 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_fire_meteorstorm",
@@ -615,13 +611,10 @@
           "maxRank": 3,
           "ranks": [
             "Gives your Fire spells a 23% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 10%.",
-            "Gives your Fire spells a 46% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 20%.",
+            "Gives your Fire spells a 47% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 20%.",
             "Gives your Fire spells a 70% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 30%."
           ],
-          "confidence": "estimated",
-          "confirmedRanks": [
-            3
-          ],
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_fire_fire",
@@ -667,7 +660,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Hurls an immense fiery boulder that causes 155 to 185 Fire damage and an additional 76 Fire damage over 12 sec."
+            "Hurls an immense fiery boulder that causes 101 to 131 Fire damage and an additional 44 Fire damage over 12 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -692,13 +685,13 @@
           "maxRank": 3,
           "ranks": [
             "Your Scorch spell has a 33% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
-            "Your Scorch spell has a 66% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
-            "Your Scorch spell has a 99% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times."
+            "Your Scorch spell has a 67% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
+            "Your Scorch spell has a 100% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
-          "icon": "spell_fire_soulburn",
+          "icon": "spell_fire_windsofwoe",
           "classic": {
             "status": "changed",
             "tree": "Fire",
@@ -811,7 +804,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 160 to 191 Fire damage, and Dazing them for 50% reduced movement speed for 6 sec."
+            "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 154 to 184 Fire damage, and Dazing them for 50% reduced movement speed for 6 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -897,7 +890,7 @@
             "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 15%. In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active.",
             "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 30%. In addition, gives your Frost Ward a 20% chance to reflect Frost spells and effects while active."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_frostward",
@@ -945,18 +938,13 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Increases your chance to hit with Frost and Fire spells by 1%.",
-            "Increases your chance to hit with Frost and Fire spells by 2%.",
-            "Increases your chance to hit with Frost and Fire spells by 3%.",
-            "Increases your chance to hit with Frost and Fire spells by 4%.",
-            "Increases your chance to hit with Frost and Fire spells by 5%."
+            "Improves your chance to hit with Frost and Fire spells by 1%.",
+            "Improves your chance to hit with Frost and Fire spells by 2%.",
+            "Improves your chance to hit with Frost and Fire spells by 3%.",
+            "Improves your chance to hit with Frost and Fire spells by 4%.",
+            "Improves your chance to hit with Frost and Fire spells by 5%."
           ],
-          "confidence": "estimated",
-          "confirmedRanks": [
-            2,
-            3,
-            5
-          ],
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_ice_magicdamage",
@@ -1005,13 +993,10 @@
           "maxRank": 3,
           "ranks": [
             "Increases the duration of your Chill effects by 11% and reduces the target's speed by an additional 3%.",
-            "Increases the duration of your Chill effects by 22% and reduces the target's speed by an additional 6%.",
+            "Increases the duration of your Chill effects by 22% and reduces the target's speed by an additional 7%.",
             "Increases the duration of your Chill effects by 33% and reduces the target's speed by an additional 10%."
           ],
-          "confidence": "estimated",
-          "confirmedRanks": [
-            3
-          ],
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_wisp",
@@ -1056,9 +1041,9 @@
           "col": 4,
           "maxRank": 3,
           "ranks": [
-            "Gives your Chill effects a 5% chance to freeze the target for 5 sec.",
-            "Gives your Chill effects a 10% chance to freeze the target for 5 sec.",
-            "Gives your Chill effects a 15% chance to freeze the target for 5 sec."
+            "Gives your Chill effects a 5% chance to Freeze the target for 5 sec.",
+            "Gives your Chill effects a 10% chance to Freeze the target for 5 sec.",
+            "Gives your Chill effects a 15% chance to Freeze the target for 5 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1131,7 +1116,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Deals 28 to 33 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
+            "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1151,10 +1136,10 @@
           "maxRank": 3,
           "ranks": [
             "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 15% for 1.5 sec.",
-            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 30% for 1.5 sec.",
+            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 25% for 1.5 sec.",
             "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 40% for 1.5 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_icestorm",
@@ -1199,7 +1184,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move or cast spells."
+            "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move, or cast spells."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1224,10 +1209,10 @@
           "maxRank": 3,
           "ranks": [
             "Increases the critical strike chance of all your spells against Frozen targets by 17%.",
-            "Increases the critical strike chance of all your spells against Frozen targets by 34%.",
-            "Increases the critical strike chance of all your spells against Frozen targets by 51%."
+            "Increases the critical strike chance of all your spells against Frozen targets by 33%.",
+            "Increases the critical strike chance of all your spells against Frozen targets by 50%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_frostshock",
@@ -1249,10 +1234,10 @@
           "maxRank": 3,
           "ranks": [
             "Increases the damage dealt by your Cone of Cold spell by 12%.",
-            "Increases the damage dealt by your Cone of Cold spell by 24%.",
-            "Increases the damage dealt by your Cone of Cold spell by 36%."
+            "Increases the damage dealt by your Cone of Cold spell by 23%.",
+            "Increases the damage dealt by your Cone of Cold spell by 35%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_glacier",
@@ -1325,7 +1310,7 @@
             "Gives your Frost damage spells a 80% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 4 times.",
             "Gives your Frost damage spells a 100% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 5 times."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_chillingblast",
@@ -1346,7 +1331,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Instantly shields you, absorbing 431 damage. Lasts 1 min. While the shield holds, your spellcasts will not be interrupted or delayed from taking damage."
+            "Instantly shields you, absorbing 447 damage. Lasts 1 min. While the shield holds, your spellcasts will not be interrupted or delayed from taking damage."
           ],
           "confidence": "confirmed",
           "prereq": {

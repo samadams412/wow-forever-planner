@@ -17,7 +17,7 @@
             "Reduces the cast time of your Wrath spell by 0.4 sec and its Mana cost by 40%.",
             "Reduces the cast time of your Wrath spell by 0.5 sec and its Mana cost by 50%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_abolishmagic",
@@ -44,7 +44,7 @@
             "Increases the periodic damage and healing done by your spells and abilities by 4%.",
             "Increases the periodic damage and healing done by your spells and abilities by 5%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "spell_arcane_arcane03",
@@ -60,11 +60,11 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Reduces the Mana cost of your spells by 3%.",
-            "Reduces the Mana cost of your spells by 6%.",
-            "Reduces the Mana cost of your spells by 9%."
+            "Reduces the Mana cost of your damaging spells by 8%.",
+            "Reduces the Mana cost of your damaging spells by 17%.",
+            "Reduces the Mana cost of your damaging spells by 25%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_sentinal",
@@ -88,7 +88,7 @@
             "Increases the damage and critical strike chance of your Moonfire spell by 5%.",
             "Increases the damage and critical strike chance of your Moonfire spell by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_starfall",
@@ -112,10 +112,10 @@
             "Increases your critical strike chance with spells and melee attacks by 2%.",
             "Increases your critical strike chance with spells and melee attacks by 4%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "spell_nature_wispsplode",
+          "icon": "inv_staff_01",
           "classic": {
             "status": "new"
           },
@@ -128,10 +128,10 @@
           "col": 4,
           "maxRank": 2,
           "ranks": [
-            "Increases the range of your offensive Balance spells by 10% and increases the chance for all your spells and attacks to hit by 2%.",
-            "Increases the range of your offensive Balance spells by 20% and increases the chance for all your spells and attacks to hit by 4%."
+            "Increases the range of your offensive Balance spells by 10% and improves your chance to hit by 2%.",
+            "Increases the range of your offensive Balance spells by 20% and improves your chance to hit by 4%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_naturetouchgrow",
@@ -156,7 +156,7 @@
             "Increases the damage done by your Entangling Roots spell by 50%, and its victims can take up to 50% more damage without interrupting the effect.",
             "Increases the damage done by your Entangling Roots spell by 75%, and its victims can take up to 75% more damage without interrupting the effect."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_stranglevines",
@@ -185,7 +185,7 @@
             "ranks": 2
           },
           "status": "new",
-          "icon": "spell_nature_naturesblessing",
+          "icon": "spell_nature_natureresistancetotem",
           "classic": {
             "status": "new"
           },
@@ -226,7 +226,7 @@
             "Increases the critical strike damage bonus of your Arcane and Nature spells by 80%.",
             "Increases the critical strike damage bonus of your Arcane and Nature spells by 100%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "balance_improved_moonfire",
             "ranks": 2
@@ -250,7 +250,7 @@
           "col": 1,
           "maxRank": 1,
           "ranks": [
-            "The enemy target is swarmed by insects, decreasing their chance to hit by 2% and causing 55 Nature damage over 12 sec."
+            "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -280,7 +280,7 @@
             "Reduces the cast time of Starfire by 0.4 sec and Starfire has a 12% chance to stun its target for 3 sec.",
             "Reduces the cast time of Starfire by 0.5 sec and Starfire has a 15% chance to stun its target for 3 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_arcane_starfire",
@@ -304,10 +304,10 @@
             "Increases the maximum number of targets you may have affected by Entangling Roots by 1.",
             "Increases the maximum number of targets you may have affected by Entangling Roots by 2."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "ability_druid_flourish",
+          "icon": "inv_misc_herb_15",
           "classic": {
             "status": "new"
           },
@@ -344,10 +344,10 @@
           "maxRank": 3,
           "ranks": [
             "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.17 sec. Stores up to 4 charges. Lasts 15 sec.",
-            "Your Wrath spell reduces the cast time of your next 4 Starfire spells by 0.3 sec. Stores up to 8 charges. Lasts 15 sec.",
-            "Your Wrath spell reduces the cast time of your next 6 Starfire spells by 0.5 sec. Stores up to 12 charges. Lasts 15 sec."
+            "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.33 sec. Stores up to 4 charges. Lasts 15 sec.",
+            "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.50 sec. Stores up to 4 charges. Lasts 15 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "ability_druid_eclipse",
@@ -363,13 +363,13 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Increases the damage done by your Arcane and Nature spells by 1%.",
             "Increases the damage done by your Arcane and Nature spells by 2%.",
-            "Increases the damage done by your Arcane and Nature spells by 3%.",
             "Increases the damage done by your Arcane and Nature spells by 4%.",
-            "Increases the damage done by your Arcane and Nature spells by 5%."
+            "Increases the damage done by your Arcane and Nature spells by 6%.",
+            "Increases the damage done by your Arcane and Nature spells by 8%.",
+            "Increases the damage done by your Arcane and Nature spells by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_moonglow",
@@ -390,7 +390,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Transforms the Druid into Moonkin Form. While in this form, the armor contribution from items is increased by 360% and all party members within 45 yards have their critical chance increased by 3%, exclusive with Leader of the Pack. The Moonkin cannot cast healing spells while shapeshifted.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "Transforms the Druid into Moonkin Form. While in this form, the armor contribution from items is increased by 360%, Omen of Clarity gains 100% increased chance to trigger, and all party members within 45 yards have their critical strike chance increased by 3%, exclusive with Leader of the Pack. The Moonkin cannot cast healing spells while shapeshifted.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -405,7 +405,7 @@
             "text": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted. Reduces all threat from Arcane and Nature spells by 0% while in this form. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           },
           "passive": false,
-          "cost": "283 Mana | Instant"
+          "cost": "35% of base mana | Instant"
         }
       ]
     },
@@ -425,7 +425,7 @@
             "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 4 Rage or Energy.",
             "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_hunter_pet_hyena",
@@ -452,7 +452,7 @@
             "Increases your Intellect by 8%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 16% and while in Cat Form your Strength is increased by 8%.",
             "Increases your Intellect by 10%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 20% and while in Cat Form your Strength is increased by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_holy_blessingofagility",
@@ -476,10 +476,10 @@
             "Increases your movement speed while in Cat Form by 15%, and increases your chance to Dodge by 2%.",
             "Increases your movement speed while in Cat Form by 30%, and increases your chance to Dodge by 4%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
-          "icon": "ability_druid_dash",
+          "icon": "spell_nature_spiritwolf",
           "classic": {
             "status": "moved",
             "tree": "Feral Combat",
@@ -499,13 +499,10 @@
           "maxRank": 3,
           "ranks": [
             "Increases damage done by your Swipe ability by 10% and reduces the chance enemies have to detect you while Prowling as if you were 1 level higher.",
-            "Increases damage done by your Swipe ability by 20% and reduces the chance enemies have to detect you while Prowling as if you were 2 level higher.",
-            "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 level higher."
+            "Increases damage done by your Swipe ability by 20% and reduces the chance enemies have to detect you while Prowling as if you were 2 levels higher.",
+            "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 levels higher."
           ],
-          "confidence": "estimated",
-          "confirmedRanks": [
-            3
-          ],
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_ambush",
@@ -527,9 +524,9 @@
           "maxRank": 2,
           "ranks": [
             "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec and reduces the cooldown of Bash by 15 sec.",
-            "Increases the stun duration of your Bash and Pounce abilities by 1.0 sec and reduces the cooldown of Bash by 30 sec."
+            "Increases the stun duration of your Bash and Pounce abilities by 1 sec and reduces the cooldown of Bash by 30 sec."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "ability_druid_bash",
@@ -599,7 +596,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nFeral Charge (Cat)\nLeap behind an enemy, Dazing them for 3 sec."
+            "Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nLeap behind an enemy."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -615,7 +612,7 @@
             "text": "Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec."
           },
           "passive": false,
-          "cost": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Feral Charge (Cat): 8-25 yd range | Instant | 30 sec cooldown"
+          "cost": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Cat Form, Bear Form, Dire Bear Form"
         },
         {
           "id": "feral_sharpened_claws",
@@ -652,7 +649,7 @@
             "Reduces the Energy cost of your Shred ability by 12 and reduces the Rage cost of your Lacerate ability by 2.",
             "Reduces the Energy cost of your Shred ability by 18 and reduces the Rage cost of your Lacerate ability by 3."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_vampiricaura",
@@ -688,7 +685,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "20 Rage | Melee Range | Instant | 6 sec cooldown"
+          "cost": "20 Rage | Melee Range | Instant | 6 sec cooldown | Requires Bear Form, Dire Bear Form"
         },
         {
           "id": "feral_predatory_strikes",
@@ -697,11 +694,11 @@
           "col": 3,
           "maxRank": 3,
           "ranks": [
-            "Increases your melee Attack Power by 50% of your level.",
-            "Increases your melee Attack Power by 100% of your level.",
-            "Increases your melee Attack Power by 150% of your level."
+            "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 50% of your level.",
+            "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 100% of your level.",
+            "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 150% of your level."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "reqText": "Requires Cat Form, Bear Form, Dire Bear Form",
           "status": "changed",
@@ -724,9 +721,9 @@
           "maxRank": 2,
           "ranks": [
             "Gives you a 50% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 50% chance to add an additional Combo Point.",
-            "Gives you a 100% chance to gain an additional 10 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 100% chance to add an additional Combo Point."
+            "Gives you a 100% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 100% chance to add an additional Combo Point."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "feral_sharpened_claws",
             "ranks": 2
@@ -796,7 +793,7 @@
             "Tiger's Fury now instantly grants you 40 Energy.",
             "Tiger's Fury now instantly grants you 60 Energy."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
           "icon": "ability_druid_kingofthejungle",
@@ -818,7 +815,7 @@
             "Increases your dodge chance by 4%, and gives you a 80% chance to gain 5 Rage each time you dodge.",
             "Increases your dodge chance by 5%, and gives you a 100% chance to gain 5 Rage each time you dodge."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "reqText": "Requires Bear Form, Dire Bear Form",
           "status": "new",
@@ -841,13 +838,13 @@
             "Increases damage done by your melee abilities on Bleeding targets by 8%.",
             "Increases damage done by your melee abilities on Bleeding targets by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": {
             "id": "feral_predatory_strikes",
             "ranks": 3
           },
           "status": "new",
-          "icon": "ability_druid_swipe",
+          "icon": "ability_druid_primalagression",
           "classic": {
             "status": "new"
           },
@@ -894,7 +891,7 @@
             "Gives you a 56% chance to avoid interruption caused by damage while casting Arcane and Nature spells.",
             "Gives you a 70% chance to avoid interruption caused by damage while casting Arcane and Nature spells."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_healingwavegreater",
@@ -916,12 +913,12 @@
           "maxRank": 5,
           "ranks": [
             "Gives you a 20% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 20% of the Energy you had when you were last in Cat Form, plus 2 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 20 Energy.",
-            "Gives you a 40% chance to gain 20 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 40% of the Energy you had when you were last in Cat Form, plus 4 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 40 Energy.",
-            "Gives you a 60% chance to gain 30 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 60% of the Energy you had when you were last in Cat Form, plus 6 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 60 Energy.",
+            "Gives you a 40% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 40% of the Energy you had when you were last in Cat Form, plus 4 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 40 Energy.",
+            "Gives you a 60% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 60% of the Energy you had when you were last in Cat Form, plus 6 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 60 Energy.",
             "Gives you a 80% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 80% of the Energy you had when you were last in Cat Form, plus 8 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 80 Energy.",
             "Gives you a 100% chance to gain 10 Rage when you shapeshift into Bear Form or Dire Bear Form. When you shift into Cat Form, you will regain 100% of the Energy you had when you were last in Cat Form, plus 10 Energy for each second you spent not in Bear Form, Cat Form, or Dire Bear Form, up to a maximum of 100 Energy."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_holy_blessingofstamina",
@@ -948,7 +945,7 @@
             "Reduces the cast time of your Healing Touch spell by 0.4 sec and increases all damage you deal by 4%.",
             "Reduces the cast time of your Healing Touch spell by 0.5 sec and increases all damage you deal by 5%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_healingtouch",
@@ -974,7 +971,7 @@
             "Reduces the threat generated by your Nature and Arcane spells by 20%.",
             "Reduces the threat generated by your Nature and Arcane spells by 30%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "ability_eyeoftheowl",
@@ -1021,10 +1018,10 @@
           "maxRank": 3,
           "ranks": [
             "Allows 17% of your Mana regeneration to continue while casting.",
-            "Allows 34% of your Mana regeneration to continue while casting.",
-            "Allows 51% of your Mana regeneration to continue while casting."
+            "Allows 33% of your Mana regeneration to continue while casting.",
+            "Allows 50% of your Mana regeneration to continue while casting."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_frost_windwalkon",
@@ -1051,7 +1048,7 @@
             "Increases the effect of all your healing spells by 8%.",
             "Increases the effect of all your healing spells by 10%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
           "icon": "spell_nature_protectionformnature",
@@ -1077,7 +1074,7 @@
           "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "ability_druid_manatree",
+          "icon": "spell_nature_spiritarmor",
           "classic": {
             "status": "new"
           },
@@ -1157,7 +1154,7 @@
             "text": "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
           },
           "passive": false,
-          "cost": "162 Mana | 40 yd range | Instant | 15 sec cooldown"
+          "cost": "20% of base mana | 40 yd range | Instant | 15 sec cooldown"
         },
         {
           "id": "restoration_natures_swiftness",
@@ -1197,10 +1194,10 @@
             "Increases your Spirit by 10%.",
             "Increases your Spirit by 15%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "spell_nature_giftofthewild",
+          "icon": "spell_nature_giftofthewaterspirit",
           "classic": {
             "status": "new"
           },
@@ -1216,7 +1213,7 @@
             "Reduces threat caused by Tranquility by 50% and its cooldown by 30%.",
             "Reduces threat caused by Tranquility by 100% and its cooldown by 60%."
           ],
-          "confidence": "estimated",
+          "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_tranquility",
@@ -1267,7 +1264,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Heals the target and their party for 285 over 7 sec. Party members must be within 43 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+            "Heals the target and their party for 336 over 7 sec. Party members must be within 43 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
           ],
           "confidence": "confirmed",
           "prereq": {
