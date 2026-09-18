@@ -166,8 +166,20 @@ const TREE_ICON_OVERRIDES: Record<string, string> = {
   "rogue:Subtlety": "ability_stealth",
   "priest:Discipline": "spell_holy_wordfortitude",
   "priest:Holy": "spell_holy_holybolt",
+  // Priest's talent tree tab was renamed "Shadow Magic" -> "Shadow" in the
+  // 2026-09-18 sync (see CLAUDE.md), but the vendor's own trainer-spellbook
+  // tab name for the same spec is unchanged -- still "Shadow Magic" in
+  // data/spellbooks.json. getTreeIcon() is called with each of those two
+  // different strings from two different places (TalentTreeGrid.tsx passes
+  // the talent tree name; SpellbookBook.tsx passes the spellbook tab name),
+  // so both keys are needed here now that they've diverged -- this isn't
+  // a duplicate to clean up.
   "priest:Shadow": "spell_shadow_shadowwordpain",
+  "priest:Shadow Magic": "spell_shadow_shadowwordpain",
+  // Same divergence, Shaman "Elemental Combat" -> "Elemental" (talent tree)
+  // vs. unchanged "Elemental Combat" (spellbook tab) -- see note above.
   "shaman:Elemental": "spell_nature_lightning",
+  "shaman:Elemental Combat": "spell_nature_lightning",
   "shaman:Enhancement": "spell_nature_lightningshield",
   "shaman:Restoration": "spell_nature_magicimmunity",
   "mage:Arcane": "spell_holy_magicalsentry",
