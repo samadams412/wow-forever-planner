@@ -41,11 +41,19 @@ export function TooltipCard({
 }
 
 export function TooltipName({ children }: { children: ReactNode }) {
-  return <div className="text-base font-bold text-white">{children}</div>;
+  return <div className="text-base font-bold tracking-wide text-white">{children}</div>;
 }
 
 export function TooltipRank({ children }: { children: ReactNode }) {
   return <div className="text-xs text-gray-400">{children}</div>;
+}
+
+// A spell's "Learned at level N" line -- sits right after the cost/range
+// stat lines, same position talentsforever.com's own spell tooltip uses.
+// Spellbook-only: talents don't carry a level requirement in our data model
+// the way trainer spells do (SpellTooltip.levelReq, ~30% of spells).
+export function TooltipLevelReq({ children }: { children: ReactNode }) {
+  return <div className="mt-0.5 text-[11px] text-gray-500">{children}</div>;
 }
 
 export function TooltipType({ children }: { children: ReactNode }) {

@@ -10,6 +10,7 @@ import {
   TooltipCard,
   TooltipName,
   TooltipRank,
+  TooltipLevelReq,
   TooltipDescription,
   TooltipStatLine,
   TooltipSourceNote,
@@ -183,6 +184,7 @@ function SpellEntry({
               {tooltip.lines.map(([left, right], i) => (
                 <TooltipStatLine key={i} left={left} right={right} />
               ))}
+              {tooltip.levelReq && <TooltipLevelReq>{tooltip.levelReq}</TooltipLevelReq>}
               <TooltipDescription>{tooltip.description}</TooltipDescription>
               {compareMode && tooltip.classicStatus === "changed" && tooltip.classicDescription && (
                 <TooltipClassicDiff classicText={tooltip.classicDescription} foreverText={tooltip.description} />
