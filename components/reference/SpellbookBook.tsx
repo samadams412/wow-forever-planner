@@ -840,7 +840,17 @@ export default function SpellbookBook({
 
               <div className="mt-4 flex items-center justify-between gap-4 border-t border-[#8a6d3b]/40 pt-2">
                 {hasMultiRankSpells ? (
-                  <label className="flex items-center gap-1.5 text-xs text-[#5a4a30]">
+                  // Custom checkbox, not the bare browser default -- built from
+                  // this component's own already-established parchment/gold
+                  // palette (the CornerBracket trim's border tone and the same
+                  // filled gold LevelsRow uses for a rank's active badge)
+                  // rather than the site's separate dark-theme pill-button
+                  // toggle (PlannerControls' "Compare to Classic"), which is
+                  // built for the dark site chrome outside this parchment page
+                  // and would clash sitting inside it. The real input stays
+                  // present and keyboard-focusable (sr-only, not display:none),
+                  // with a styled sibling box standing in visually.
+                  <label className="group flex cursor-pointer items-center gap-1.5 text-xs text-[#5a4a30]">
                     <input
                       type="checkbox"
                       checked={showAllRanks}
@@ -853,7 +863,27 @@ export default function SpellbookBook({
                         setPage(0);
                         setDisplay((d) => ({ ...d, page: 0 }));
                       }}
+                      className="peer sr-only"
                     />
+                    <span
+                      className={`flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-sm border transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-accent/50 ${
+                        showAllRanks
+                          ? "border-[#8a6d3b] bg-[#c9a961]"
+                          : "border-[#8a6d3b]/60 bg-[#e4d2a8] group-hover:border-[#8a6d3b]"
+                      }`}
+                    >
+                      {showAllRanks && (
+                        <svg viewBox="0 0 16 16" className="h-2.5 w-2.5 text-[#2a2010]" fill="none" aria-hidden="true">
+                          <path
+                            d="M3 8.5l3 3 7-7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                    </span>
                     Show all ranks
                   </label>
                 ) : (
