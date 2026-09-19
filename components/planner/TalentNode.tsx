@@ -7,6 +7,7 @@ import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { useCtrlHeld } from "@/lib/use-ctrl-held";
 import { usePointerFine } from "@/lib/use-pointer-fine";
 import { getLinkedSpells, splitTextWithLinks } from "@/lib/talent-spell-links";
+import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import { STATUS_DOT_CLASS } from "@/lib/talent-status";
 import { POINTS_PER_ROW, MAX_TALENT_POINTS, tierUnlocked } from "@/lib/talent-rules";
 import {
@@ -88,7 +89,19 @@ export default function TalentNode({
     buttonRef,
     { sharedTooltipRef: tooltipElRef }
   );
-  const tooltipPos = hoverPos ?? activePos;
+  // Hard single-tooltip invariant: a node only actually renders its
+  // tooltip while it holds the shared claim (see lib/active-tooltip.ts),
+  // regardless of what its own local hoverPos/activePos state says. This
+  // is the backstop for a real bug -- alt-tabbing away mid-hover without
+  // moving the mouse, then returning and hovering a different talent,
+  // can desync this node's mouseenter/mouseleave pair and leave hoverPos
+  // stuck non-null with no further events ever telling it to clear. The
+  // claim is global and single-owner, so a different node claiming it
+  // (or a window blur) hides this one immediately even if its own local
+  // state never gets cleaned up.
+  const tooltipId = `${classId}:${talent.id}`;
+  const isTooltipClaimed = useIsActiveTooltip(tooltipId);
+  const tooltipPos = isTooltipClaimed ? (hoverPos ?? activePos) : null;
   const linkedSpells = getLinkedSpells(classId, talent.id);
   const ctrlHeld = useCtrlHeld(tooltipPos !== null);
   const pointerFine = usePointerFine();
@@ -122,8 +135,13 @@ export default function TalentNode({
   const [pulse, setPulse] = useState<{ dir: "add" | "remove"; key: number } | null>(null);
 
   useEffect(() => {
-    if (isActive) showActive();
-    else hideActive();
+    if (isActive) {
+      claimActiveTooltip(tooltipId);
+      showActive();
+    } else {
+      releaseActiveTooltip(tooltipId);
+      hideActive();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive]);
 
@@ -227,7 +245,18 @@ export default function TalentNode({
     // tap/touch gesture above -- a real keyboard Tab a moment later still
     // shows it normally.
     if (justTouchedRef.current) return;
+    claimActiveTooltip(tooltipId);
     showHover();
+  }
+
+  function handleHoverEnter() {
+    claimActiveTooltip(tooltipId);
+    showHover();
+  }
+
+  function handleHoverLeave() {
+    releaseActiveTooltip(tooltipId);
+    hideHover();
   }
 
   const invested = rank > 0;
@@ -273,10 +302,10 @@ export default function TalentNode({
         ref={buttonRef}
         type="button"
         data-cursor={locked ? "gear" : undefined}
-        onMouseEnter={showHover}
-        onMouseLeave={hideHover}
+        onMouseEnter={handleHoverEnter}
+        onMouseLeave={handleHoverLeave}
         onFocus={handleFocus}
-        onBlur={hideHover}
+        onBlur={handleHoverLeave}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}

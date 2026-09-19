@@ -6,6 +6,7 @@ import { mediumIconUrl, CLASS_ICON, getTreeIcon } from "@/lib/wow-data";
 import type { ClassSpellbook, SpellbookEntry } from "@/lib/spellbooks";
 import { getSpellTooltip } from "@/lib/spell-tooltips";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import {
   TooltipCard,
   TooltipName,
@@ -77,6 +78,17 @@ function SpellEntry({
   );
   const scrollRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<number | null>(null);
+  // Hard single-tooltip invariant, same as the talent tree tooltip (see
+  // lib/active-tooltip.ts) -- a shared claim this entry's render gates on,
+  // so a stuck local `pos` (e.g. from a mouseleave desynced by a window
+  // blur/focus cycle mid-hover) can't stay visible once anything else
+  // claims the tooltip, or the window loses focus outright.
+  const tooltipId = `${classId}:${spell.name}`;
+  const isTooltipClaimed = useIsActiveTooltip(tooltipId);
+  function releaseAndHide() {
+    releaseActiveTooltip(tooltipId);
+    hide();
+  }
 
   // Same scroll-dismiss approach as the mobile talent tree tooltip (a real
   // scroll listener, not a timeout) -- without this, tapping a spell open on
@@ -84,9 +96,9 @@ function SpellEntry({
   // over whatever scrolled underneath it. Attached once per mount (hide is
   // recreated every render, so it's read through a ref instead of being a
   // dependency) and safe to call even while already closed.
-  const hideRef = useRef(hide);
+  const hideRef = useRef(releaseAndHide);
   useEffect(() => {
-    hideRef.current = hide;
+    hideRef.current = releaseAndHide;
   });
   useEffect(() => {
     function handleScroll() {
@@ -100,7 +112,10 @@ function SpellEntry({
   // talent tree's pointer-events-none tooltip) so the mouse can move into
   // it and scroll -- but moving from the icon to the tooltip below it
   // crosses a gap, so leaving the icon schedules a hide rather than firing
-  // immediately, giving entering the tooltip a chance to cancel it.
+  // immediately, giving entering the tooltip a chance to cancel it. The
+  // claim is released on that same delay, not immediately on mouseleave --
+  // releasing right away would hide the tooltip before the grace period
+  // even started, since the render gate checks the claim on every render.
   function clearHideTimer() {
     if (hideTimer.current !== null) {
       window.clearTimeout(hideTimer.current);
@@ -109,10 +124,11 @@ function SpellEntry({
   }
   function scheduleHide() {
     clearHideTimer();
-    hideTimer.current = window.setTimeout(hide, 150);
+    hideTimer.current = window.setTimeout(releaseAndHide, 150);
   }
   function handleTriggerEnter() {
     clearHideTimer();
+    claimActiveTooltip(tooltipId);
     show();
   }
   function handleTooltipEnter() {
@@ -133,7 +149,7 @@ function SpellEntry({
       ref={tooltip ? ref : undefined}
       onMouseEnter={tooltip ? handleTriggerEnter : undefined}
       onMouseLeave={tooltip ? scheduleHide : undefined}
-      onFocus={tooltip ? show : undefined}
+      onFocus={tooltip ? handleTriggerEnter : undefined}
       onBlur={tooltip ? scheduleHide : undefined}
       onWheel={tooltip ? handleTriggerWheel : undefined}
       tabIndex={tooltip ? 0 : undefined}
@@ -170,6 +186,7 @@ function SpellEntry({
 
       {tooltip &&
         pos &&
+        isTooltipClaimed &&
         createPortal(
           <TooltipCard
             divRef={tooltipElRef}
