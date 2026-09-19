@@ -791,19 +791,42 @@ export default function SpellbookBook({
                 </span>
               </div>
 
-              <ul key={revealSeq} className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-                {pageRows.map((row, i) => (
-                  <SpellEntry
-                    key={`${row.spell.name}-${row.rankEntry?.rank ?? row.rankEntry?.variant ?? "base"}`}
-                    classId={classId}
-                    spell={row.spell}
-                    rankEntry={row.rankEntry}
-                    revealDelayMs={reducedMotion ? undefined : Math.floor(i / 2) * 40}
-                    side={i % 2 === 0 ? "right" : "left"}
-                    compareMode={compareMode}
-                  />
-                ))}
-              </ul>
+              {/* Column-major, matching talentsforever.com's actual book layout
+                  (verified against .reference/spellbook_ordering_correct.png):
+                  the left page reads straight top-to-bottom through the first
+                  half of this page's rows, then the right page continues the
+                  same sequence from where the left page left off -- not a
+                  2-column grid's row-major/checkerboard fill (item 1 top-left,
+                  item 2 top-right, item 3 second-left, ...), which is what an
+                  earlier version of this rendered and .reference/
+                  spellbook_ordering_incorrect.png shows. Two independent
+                  single-column lists side by side achieve this directly; on
+                  mobile they stack (flex-col), and stacking the left list
+                  fully above the right list reconstructs the exact same
+                  original order, so no separate mobile-only logic is needed. */}
+              {(() => {
+                const half = Math.ceil(pageRows.length / 2);
+                const leftRows = pageRows.slice(0, half);
+                const rightRows = pageRows.slice(half);
+                const renderColumn = (rows: DisplayRow[], side: "left" | "right") =>
+                  rows.map((row, i) => (
+                    <SpellEntry
+                      key={`${row.spell.name}-${row.rankEntry?.rank ?? row.rankEntry?.variant ?? "base"}`}
+                      classId={classId}
+                      spell={row.spell}
+                      rankEntry={row.rankEntry}
+                      revealDelayMs={reducedMotion ? undefined : i * 40}
+                      side={side}
+                      compareMode={compareMode}
+                    />
+                  ));
+                return (
+                  <div key={revealSeq} className="mt-3 flex flex-col gap-3 sm:flex-row sm:gap-x-6">
+                    <ul className="flex flex-col gap-3 sm:w-1/2">{renderColumn(leftRows, "right")}</ul>
+                    <ul className="flex flex-col gap-3 sm:w-1/2">{renderColumn(rightRows, "left")}</ul>
+                  </div>
+                );
+              })()}
 
               <div className="mt-4 flex items-center justify-between gap-4 border-t border-[#8a6d3b]/40 pt-2">
                 {hasMultiRankSpells ? (
