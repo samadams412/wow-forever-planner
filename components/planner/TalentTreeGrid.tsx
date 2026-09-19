@@ -41,7 +41,7 @@ export default function TalentTreeGrid({
   const spent = pointsSpentInTree(tree, ranks);
 
   return (
-    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:max-w-96">
+    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:max-w-72">
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
@@ -74,9 +74,9 @@ export default function TalentTreeGrid({
         </div>
       </div>
       <div
-        className="relative grid gap-3.5 rounded bg-cover bg-center p-2.5 sm:gap-5"
+        className="relative grid gap-3.5 rounded bg-cover bg-center p-2.5 sm:gap-3"
         style={{
-          gridTemplateColumns: `repeat(${COLS}, minmax(60px, 1fr))`,
+          gridTemplateColumns: `repeat(${COLS}, minmax(48px, 1fr))`,
           gridTemplateRows: `repeat(${TIERS}, 1fr)`,
           backgroundImage: `linear-gradient(rgba(12,13,16,0.55), rgba(12,13,16,0.55)), url(${treeBackgroundUrl(classId, tree.name)})`,
         }}
@@ -106,7 +106,7 @@ export default function TalentTreeGrid({
                     gridRow: t.tier,
                   }}
                 >
-                  <div className={`h-2.5 w-full rounded-full ${barClass}`} />
+                  <div className={`h-2.5 w-full rounded-full sm:h-2 ${barClass}`} />
                 </div>
               );
             }
@@ -120,7 +120,7 @@ export default function TalentTreeGrid({
                   gridRow: `${prereq.tier} / ${t.tier + 1}`,
                 }}
               >
-                <div className={`w-2.5 rounded-full ${barClass}`} />
+                <div className={`w-2.5 rounded-full sm:w-2 ${barClass}`} />
               </div>
             );
           })}
@@ -168,10 +168,10 @@ export default function TalentTreeGrid({
                   style={{ gridColumn: t.col, gridRow: t.tier }}
                 >
                   <div
-                    className={`absolute top-1/2 h-0 w-0 -translate-y-1/2 border-y-[7px] border-y-transparent ${
+                    className={`absolute top-1/2 h-0 w-0 -translate-y-1/2 border-y-[7px] border-y-transparent sm:border-y-[6px] ${
                       prereqIsRight
-                        ? `-right-[7px] border-r-[10px] ${met ? "border-r-accent" : "border-r-foreground-muted/40"}`
-                        : `-left-[7px] border-l-[10px] ${met ? "border-l-accent" : "border-l-foreground-muted/40"}`
+                        ? `-right-[7px] border-r-[10px] sm:-right-[6px] sm:border-r-[8px] ${met ? "border-r-accent" : "border-r-foreground-muted/40"}`
+                        : `-left-[7px] border-l-[10px] sm:-left-[6px] sm:border-l-[8px] ${met ? "border-l-accent" : "border-l-foreground-muted/40"}`
                     }`}
                   />
                 </div>
@@ -185,7 +185,7 @@ export default function TalentTreeGrid({
                 style={{ gridColumn: t.col, gridRow: t.tier }}
               >
                 <div
-                  className={`absolute -top-[7px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[7px] border-x-transparent border-t-[10px] ${
+                  className={`absolute -top-[7px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[7px] border-x-transparent border-t-[10px] sm:-top-[6px] sm:border-x-[6px] sm:border-t-[8px] ${
                     met ? "border-t-accent" : "border-t-foreground-muted/40"
                   }`}
                 />

@@ -310,7 +310,7 @@ export default function TalentNode({
           />
         </span>
         <span
-          className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[12px] font-semibold leading-tight ${badgeTextClass}`}
+          className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[12px] font-semibold leading-tight sm:text-[10px] ${badgeTextClass}`}
         >
           {rank}/{talent.maxRank}
         </span>
