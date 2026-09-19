@@ -3,7 +3,13 @@
 import { createPortal } from "react-dom";
 import { useEffect, useRef, useState, type AnimationEvent, type WheelEvent } from "react";
 import { mediumIconUrl, CLASS_ICON, getTreeIcon } from "@/lib/wow-data";
-import type { ClassSpellbook, SpellbookEntry, SpellRank } from "@/lib/spellbooks";
+import {
+  spellbooks,
+  type ClassSpellbook,
+  type SpellbookEntry,
+  type SpellRank,
+  type SpellbookVerification,
+} from "@/lib/spellbooks";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import {
@@ -533,6 +539,56 @@ function ByLevelView({
   );
 }
 
+// Own-voice equivalent of talentsforever.com's two-checkmark verification
+// banner (see CLAUDE.md) -- same substance, not their exact wording: every
+// rank in the book is read straight from the beta client's own files rather
+// than stream/demo footage (true for every class, so always shown), and a
+// class gets a second line only once someone has actually walked its
+// trainer in-game and cross-checked what it sells against these files --
+// currently just Mage (`book.checked`). No promise about when the rest get
+// done; that would go stale the moment it's read after this session.
+function VerificationBanner({ checked }: { checked?: SpellbookVerification }) {
+  // toLocaleDateString on a bare "YYYY-MM-DD" would parse it as UTC midnight
+  // and then render in the browser's local zone, which can roll it back a
+  // day west of UTC -- format from the UTC parts instead so the date always
+  // reads as the calendar day this actually happened on.
+  const checkedDate = checked
+    ? new Date(checked.date).toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        timeZone: "UTC",
+      })
+    : null;
+  return (
+    <div className="mb-2 flex flex-col gap-1 rounded border border-border bg-surface/50 px-3 py-2 text-xs text-foreground-muted">
+      <div className="flex items-start gap-1.5">
+        <span className="text-[#1eff00]">✓</span>
+        <span>
+          Every spell, rank and level here is read straight from the {spellbooks.source.replace(" (via talentsforever.com)", "")}
+          , not stream footage.
+        </span>
+      </div>
+      {checked ? (
+        <div className="flex items-start gap-1.5">
+          <span className="text-[#1eff00]">✓</span>
+          <span>
+            Cross-checked against the real trainer -- {checked.npc} in {checked.zone}, {checkedDate}: {checked.rows}{" "}
+            spells confirmed
+            {checked.lacked > 0 ? `, ${checked.lacked} the trainer didn't actually sell` : ""}
+            {checked.levelDiffs > 0
+              ? `, ${checked.levelDiffs} learned at a different level than the files said`
+              : ", every level matched"}
+            .
+          </span>
+        </div>
+      ) : (
+        <div className="text-foreground-muted/70">Not yet cross-checked against an in-game trainer for this class.</div>
+      )}
+    </div>
+  );
+}
+
 export default function SpellbookBook({
   classId,
   book,
@@ -630,6 +686,7 @@ export default function SpellbookBook({
 
   return (
     <div className="flex flex-col gap-2">
+      <VerificationBanner checked={book.checked} />
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="inline-flex rounded border border-border bg-surface p-0.5 text-xs">
           {VIEWS.map(({ value, label }) => (
