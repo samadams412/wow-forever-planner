@@ -85,16 +85,33 @@ function StatusPill({ status }: { status: "renamed" | "reworked" | "new" }) {
 // files either) gets exactly one row with no rank info.
 type DisplayRow = { spell: SpellbookEntry; rankEntry?: SpellRank };
 
-function buildDisplayRows(spells: SpellbookEntry[], showAllRanks: boolean): DisplayRow[] {
+// "All" / "New and reworked" / "New only", matching the live site's own
+// three tabs. "New and reworked" reads as one combined bucket there (their
+// footer counts new + renamed together, e.g. "3 new in Forever, 6
+// renamed") -- since a renamed spell is also `classicStatus: "changed"`,
+// treating "reworked" as everything Classic-different (renamed or not) and
+// only excluding untouched ("same") spells matches that framing without
+// needing a separate renamed-specific bucket.
+export type SpellbookFilter = "all" | "newAndReworked" | "newOnly";
+
+function rankMatchesFilter(rankEntry: SpellRank | undefined, filter: SpellbookFilter): boolean {
+  if (filter === "all") return true;
+  if (!rankEntry) return false;
+  if (filter === "newOnly") return rankEntry.classicStatus === "new";
+  return rankEntry.classicStatus === "new" || rankEntry.classicStatus === "changed";
+}
+
+function buildDisplayRows(spells: SpellbookEntry[], showAllRanks: boolean, filter: SpellbookFilter): DisplayRow[] {
   const rows: DisplayRow[] = [];
   for (const spell of spells) {
     const ranks = spell.ranks ?? [];
     if (ranks.length === 0) {
-      rows.push({ spell });
+      if (filter === "all") rows.push({ spell });
     } else if (showAllRanks) {
-      for (const rankEntry of ranks) rows.push({ spell, rankEntry });
+      for (const rankEntry of ranks) if (rankMatchesFilter(rankEntry, filter)) rows.push({ spell, rankEntry });
     } else {
-      rows.push({ spell, rankEntry: ranks[ranks.length - 1] });
+      const maxRank = ranks[ranks.length - 1];
+      if (rankMatchesFilter(maxRank, filter)) rows.push({ spell, rankEntry: maxRank });
     }
   }
   return rows;
@@ -332,6 +349,7 @@ export default function SpellbookBook({
   // Defaults to checked, matching talentsforever.com's own default (verified
   // live -- the book opens with every rank shown as its own row).
   const [showAllRanks, setShowAllRanks] = useState(true);
+  const [filter, setFilter] = useState<SpellbookFilter>("all");
   const [display, setDisplay] = useState({ tabIndex: defaultTabIndex, page: 0 });
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
@@ -344,7 +362,7 @@ export default function SpellbookBook({
   const reducedMotion = prefersReducedMotion();
 
   const activeTab = tabs[display.tabIndex];
-  const displayRows = buildDisplayRows(activeTab.spells, showAllRanks);
+  const displayRows = buildDisplayRows(activeTab.spells, showAllRanks, filter);
   const totalPages = Math.max(1, Math.ceil(displayRows.length / PAGE_SIZE));
   const pageRows = displayRows.slice(display.page * PAGE_SIZE, display.page * PAGE_SIZE + PAGE_SIZE);
   const totalRankCount = activeTab.spells.reduce((sum, s) => sum + Math.max(1, s.ranks?.length ?? 0), 0);
@@ -384,8 +402,41 @@ export default function SpellbookBook({
     }
   }
 
+  const FILTERS: { value: SpellbookFilter; label: string }[] = [
+    { value: "all", label: "All" },
+    { value: "newAndReworked", label: "New and reworked" },
+    { value: "newOnly", label: "New only" },
+  ];
+
+  function handleFilterChange(next: SpellbookFilter) {
+    if (next === filter) return;
+    setFilter(next);
+    setPage(0);
+    setDisplay((d) => ({ ...d, page: 0 }));
+  }
+
   return (
-    <div className="flex flex-col gap-2 sm:flex-row">
+    <div className="flex flex-col gap-2">
+      <div className="flex justify-end">
+        <div className="inline-flex rounded border border-border bg-surface p-0.5 text-xs">
+          {FILTERS.map(({ value, label }) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => handleFilterChange(value)}
+              className={`rounded-sm px-2 py-1 transition-colors ${
+                filter === value
+                  ? "bg-accent/20 text-accent"
+                  : "text-foreground-muted hover:text-foreground"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2 sm:flex-row">
       <div className="order-2 flex gap-1.5 overflow-x-auto sm:order-0 sm:w-14 sm:shrink-0 sm:flex-col sm:overflow-visible">
         {tabs.map((tab, i) => (
           <button
@@ -515,6 +566,7 @@ export default function SpellbookBook({
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
