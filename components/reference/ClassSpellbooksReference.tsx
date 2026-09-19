@@ -56,7 +56,7 @@ function ClassSection({ classId, compareMode }: { classId: string; compareMode: 
 
   return (
     <Collapsible
-      title={`${classLabel(classId)} spellbook at level 38`}
+      title={`${classLabel(classId)} Spellbook`}
       subtitle={`Demo race: ${book.demoRace}`}
       icon={
         // eslint-disable-next-line @next/next/no-img-element
@@ -119,11 +119,11 @@ export default function ClassSpellbooksReference() {
         <div>
           <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Class Spellbooks</h1>
           <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-            Every trainer-taught spell a level 38 character had in the BlizzCon 2026 demo, read frame by
-            frame from stream footage, one collapsible section per class. Spells tagged{" "}
-            <span className="font-semibold text-amber-300">Talent</span> are in the Forever talent trees --
-            they appear here only because that demo character had the talent, not because they&apos;re
-            baseline.
+            Every trainer-taught spell for each class, every rank and level, read straight from the WoW
+            Forever beta client&apos;s own files -- one collapsible section per class. Spells tagged{" "}
+            <span className="font-semibold text-amber-300">Talent</span> are granted by a talent in the
+            Forever talent trees, not trained normally, so they only show up in your own book once you take
+            that talent.
           </p>
         </div>
 

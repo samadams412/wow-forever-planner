@@ -1,7 +1,7 @@
 import { renderOgImage, OG_SIZE } from "@/lib/og-template";
 
 export const runtime = "nodejs";
-export const alt = "Forevercraft Class Spellbooks at Level 38 Reference";
+export const alt = "Forevercraft Class Spellbooks Reference";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 
