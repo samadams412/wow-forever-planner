@@ -291,6 +291,8 @@ export default function PlannerClient({
             ))}
           </div>
         )}
+
+        {classData && <TalentLegend />}
       </div>
 
       {classData && (
@@ -319,10 +321,6 @@ export default function PlannerClient({
 
       <div className="mt-8">
         <RaceReferenceTable races={races} />
-      </div>
-
-      <div className="mt-6">
-        <TalentLegend />
       </div>
 
       <p className="mt-4 text-[11px] text-foreground-muted/60">
