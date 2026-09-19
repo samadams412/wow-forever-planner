@@ -146,9 +146,15 @@ export function TooltipStatLine({ left, right }: { left: string; right: string }
 }
 
 export function TooltipSourceNote({ confirmed, source }: { confirmed: boolean; source?: string }) {
+  // `source` used to always mean a specific stream/demo citation ("Xaryu's
+  // Warrior, 13 Sep") back when that's all this data ever was. The
+  // spellbook's per-rank data is now read straight from the beta client's
+  // own files (source: "beta client 1.60.1.69876"), so a hardcoded "Read
+  // from demo footage" prefix would misdescribe it -- just state the
+  // source directly instead of assuming what kind of source it is.
   return confirmed ? (
     <p className="mt-1.5 text-[10px] font-semibold text-[#1eff00]">
-      Read from demo footage{source ? ` — ${source}` : ""}
+      {source ? `Confirmed — ${source}` : "Confirmed"}
     </p>
   ) : (
     <p className="mt-1.5 text-[10px] text-gray-500">Classic-era text — Forever may differ</p>

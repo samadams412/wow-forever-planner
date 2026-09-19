@@ -3,8 +3,7 @@
 import { createPortal } from "react-dom";
 import { useEffect, useRef, useState, type AnimationEvent, type WheelEvent } from "react";
 import { mediumIconUrl, CLASS_ICON, getTreeIcon } from "@/lib/wow-data";
-import type { ClassSpellbook, SpellbookEntry } from "@/lib/spellbooks";
-import { getSpellTooltip } from "@/lib/spell-tooltips";
+import type { ClassSpellbook, SpellbookEntry, SpellRank } from "@/lib/spellbooks";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import {
@@ -47,15 +46,96 @@ function prefersReducedMotion(): boolean {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+// A spell's own "REWORKED"/"RENAMED"/"NEW" classification, derived the same
+// way the live site's tags are (see CLAUDE.md's spellbook architecture
+// note): a renamed-from name always means RENAMED, regardless of the
+// vendor's own `ck` field, which doesn't cleanly map to the tag shown.
+function spellStatus(rankEntry: SpellRank | undefined): "renamed" | "reworked" | "new" | null {
+  if (!rankEntry) return null;
+  if (rankEntry.renamedFrom) return "renamed";
+  if (rankEntry.classicStatus === "new") return "new";
+  if (rankEntry.classicStatus === "changed") return "reworked";
+  return null;
+}
+
+const STATUS_PILL_CLASS: Record<"renamed" | "reworked" | "new", string> = {
+  renamed: "bg-purple-600/20 text-purple-800",
+  reworked: "bg-amber-500/25 text-amber-900",
+  new: "bg-green-600/20 text-green-800",
+};
+
+const STATUS_PILL_LABEL: Record<"renamed" | "reworked" | "new", string> = {
+  renamed: "Renamed",
+  reworked: "Reworked",
+  new: "New",
+};
+
+function StatusPill({ status }: { status: "renamed" | "reworked" | "new" }) {
+  return (
+    <span className={`rounded-sm px-1 text-[9px] font-semibold uppercase tracking-wide ${STATUS_PILL_CLASS[status]}`}>
+      {STATUS_PILL_LABEL[status]}
+    </span>
+  );
+}
+
+// One row per rank when showAllRanks is on (matching talentsforever.com's
+// own "Show all ranks" checkbox -- see CLAUDE.md), else one row per spell
+// using its highest rank. A spell with no rank data at all (the General
+// tab's baseline commands, which have no real tooltip in the game's own
+// files either) gets exactly one row with no rank info.
+type DisplayRow = { spell: SpellbookEntry; rankEntry?: SpellRank };
+
+function buildDisplayRows(spells: SpellbookEntry[], showAllRanks: boolean): DisplayRow[] {
+  const rows: DisplayRow[] = [];
+  for (const spell of spells) {
+    const ranks = spell.ranks ?? [];
+    if (ranks.length === 0) {
+      rows.push({ spell });
+    } else if (showAllRanks) {
+      for (const rankEntry of ranks) rows.push({ spell, rankEntry });
+    } else {
+      rows.push({ spell, rankEntry: ranks[ranks.length - 1] });
+    }
+  }
+  return rows;
+}
+
+// The small "8 18 28 38 48 58" row under a multi-rank spell -- every rank's
+// learned-at level, with the level belonging to the rank this row is
+// currently showing picked out in a filled badge (matches the reference
+// image and the live site exactly).
+function LevelsRow({ allRanks, currentRank }: { allRanks: SpellRank[]; currentRank?: SpellRank }) {
+  const levels = allRanks.map((r) => r.level).filter((l): l is number => l !== null);
+  if (levels.length === 0) return null;
+  return (
+    <div className="mt-0.5 flex flex-wrap gap-1">
+      {levels.map((level, i) => (
+        <span
+          key={i}
+          className={`rounded-sm px-1 text-[10px] font-semibold leading-tight ${
+            currentRank?.level === level
+              ? "bg-[#c9a961] text-[#2a2010]"
+              : "bg-[#8a6d3b]/15 text-[#6b5a3d]"
+          }`}
+        >
+          {level}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function SpellEntry({
   classId,
   spell,
+  rankEntry,
   revealDelayMs,
   side,
   compareMode,
 }: {
   classId: string;
   spell: SpellbookEntry;
+  rankEntry?: SpellRank;
   revealDelayMs?: number;
   // Which side of the row the tooltip should open on -- the opposite side
   // of the page from the spell list, so it never stacks over the next row
@@ -67,8 +147,16 @@ function SpellEntry({
   // tooltip's Classic-vs-Forever diff section so it isn't shown by default.
   compareMode: boolean;
 }) {
-  const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
-  const tooltip = getSpellTooltip(classId, spell.name);
+  const subtitle = rankEntry?.rank
+    ? `Rank ${rankEntry.rank}${rankEntry.variant ? ` (${rankEntry.variant})` : ""}`
+    : spell.passive
+      ? "Passive"
+      : rankEntry?.variant || spell.tag;
+  const status = spellStatus(rankEntry);
+  // A rank-keyed id (not just the spell name) so "Show all ranks" mode --
+  // where the same spell renders as several rows at once -- gives each
+  // rank its own independent tooltip claim instead of them fighting over one.
+  const tooltipId = `${classId}:${spell.name}:${rankEntry?.rank ?? rankEntry?.variant ?? "base"}`;
   const { ref, tooltipRef: tooltipElRef, pos, show, hide } = useHoverTooltip<HTMLLIElement>(
     TOOLTIP_WIDTH,
     side,
@@ -83,7 +171,6 @@ function SpellEntry({
   // so a stuck local `pos` (e.g. from a mouseleave desynced by a window
   // blur/focus cycle mid-hover) can't stay visible once anything else
   // claims the tooltip, or the window loses focus outright.
-  const tooltipId = `${classId}:${spell.name}`;
   const isTooltipClaimed = useIsActiveTooltip(tooltipId);
   function releaseAndHide() {
     releaseActiveTooltip(tooltipId);
@@ -146,13 +233,13 @@ function SpellEntry({
 
   return (
     <li
-      ref={tooltip ? ref : undefined}
-      onMouseEnter={tooltip ? handleTriggerEnter : undefined}
-      onMouseLeave={tooltip ? scheduleHide : undefined}
-      onFocus={tooltip ? handleTriggerEnter : undefined}
-      onBlur={tooltip ? scheduleHide : undefined}
-      onWheel={tooltip ? handleTriggerWheel : undefined}
-      tabIndex={tooltip ? 0 : undefined}
+      ref={rankEntry ? ref : undefined}
+      onMouseEnter={rankEntry ? handleTriggerEnter : undefined}
+      onMouseLeave={rankEntry ? scheduleHide : undefined}
+      onFocus={rankEntry ? handleTriggerEnter : undefined}
+      onBlur={rankEntry ? scheduleHide : undefined}
+      onWheel={rankEntry ? handleTriggerWheel : undefined}
+      tabIndex={rankEntry ? 0 : undefined}
       style={revealDelayMs !== undefined ? { animationDelay: `${revealDelayMs}ms` } : undefined}
       className={`group -mx-1 flex items-start gap-2.5 rounded-sm px-1.5 py-1 transition-colors hover:bg-[#c9a961]/10 hover:ring-1 hover:ring-inset hover:ring-[#c9a961]/40 ${
         revealDelayMs !== undefined ? "spellbook-row-reveal" : ""
@@ -180,11 +267,13 @@ function SpellEntry({
               Talent
             </span>
           )}
+          {status && <StatusPill status={status} />}
         </div>
         {subtitle && <p className="text-xs text-[#6b5a3d]">{subtitle}</p>}
+        {spell.ranks && spell.ranks.length > 1 && <LevelsRow allRanks={spell.ranks} currentRank={rankEntry} />}
       </div>
 
-      {tooltip &&
+      {rankEntry &&
         pos &&
         isTooltipClaimed &&
         createPortal(
@@ -203,15 +292,15 @@ function SpellEntry({
             <div ref={scrollRef} className="overflow-y-auto" style={{ maxHeight: `calc(100vh - ${pos.top}px - 16px)` }}>
               <TooltipName>{spell.name}</TooltipName>
               {subtitle && <TooltipRank>{subtitle}</TooltipRank>}
-              {tooltip.lines.map(([left, right], i) => (
+              {rankEntry.lines.map(([left, right], i) => (
                 <TooltipStatLine key={i} left={left} right={right} />
               ))}
-              {tooltip.levelReq && <TooltipLevelReq>{tooltip.levelReq}</TooltipLevelReq>}
-              <TooltipDescription>{tooltip.description}</TooltipDescription>
-              {compareMode && tooltip.classicStatus === "changed" && tooltip.classicDescription && (
-                <TooltipClassicDiff classicText={tooltip.classicDescription} foreverText={tooltip.description} />
+              {rankEntry.level !== null && <TooltipLevelReq>Learned at level {rankEntry.level}</TooltipLevelReq>}
+              <TooltipDescription>{rankEntry.description}</TooltipDescription>
+              {compareMode && rankEntry.classicStatus === "changed" && rankEntry.classicDescription && (
+                <TooltipClassicDiff classicText={rankEntry.classicDescription} foreverText={rankEntry.description} />
               )}
-              <TooltipSourceNote confirmed={tooltip.confirmed} source={tooltip.source} />
+              <TooltipSourceNote confirmed={rankEntry.confirmed} source={rankEntry.source} />
             </div>
           </TooltipCard>,
           document.body
@@ -240,6 +329,9 @@ export default function SpellbookBook({
 
   const [tabIndex, setTabIndex] = useState(defaultTabIndex);
   const [page, setPage] = useState(0);
+  // Defaults to checked, matching talentsforever.com's own default (verified
+  // live -- the book opens with every rank shown as its own row).
+  const [showAllRanks, setShowAllRanks] = useState(true);
   const [display, setDisplay] = useState({ tabIndex: defaultTabIndex, page: 0 });
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
@@ -252,8 +344,14 @@ export default function SpellbookBook({
   const reducedMotion = prefersReducedMotion();
 
   const activeTab = tabs[display.tabIndex];
-  const totalPages = Math.max(1, Math.ceil(activeTab.spells.length / PAGE_SIZE));
-  const pageSpells = activeTab.spells.slice(display.page * PAGE_SIZE, display.page * PAGE_SIZE + PAGE_SIZE);
+  const displayRows = buildDisplayRows(activeTab.spells, showAllRanks);
+  const totalPages = Math.max(1, Math.ceil(displayRows.length / PAGE_SIZE));
+  const pageRows = displayRows.slice(display.page * PAGE_SIZE, display.page * PAGE_SIZE + PAGE_SIZE);
+  const totalRankCount = activeTab.spells.reduce((sum, s) => sum + Math.max(1, s.ranks?.length ?? 0), 0);
+  // Any spell in this tab has ranks worth toggling between -- if every
+  // spell is single-rank (or rank-less, like General), the checkbox would
+  // have nothing to do, so it's hidden rather than shown inert.
+  const hasMultiRankSpells = activeTab.spells.some((s) => (s.ranks?.length ?? 0) > 1);
 
   function goTo(nextTabIndex: number, nextPage: number) {
     if (nextTabIndex === tabIndex && nextPage === page) return;
@@ -349,15 +447,19 @@ export default function SpellbookBook({
             <div className="relative">
               <div className="flex items-baseline justify-between gap-2 border-b border-[#8a6d3b]/40 pb-2">
                 <h3 className="font-heading text-lg font-semibold text-(--ink2) sm:text-xl">{activeTab.name}</h3>
-                <span className="shrink-0 text-xs text-[#6b5a3d]">{activeTab.spells.length} spells</span>
+                <span className="shrink-0 text-xs text-[#6b5a3d]">
+                  {activeTab.spells.length} spells
+                  {totalRankCount > activeTab.spells.length ? `, ${totalRankCount} ranks` : ""}
+                </span>
               </div>
 
               <ul key={revealSeq} className="mt-3 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-                {pageSpells.map((spell, i) => (
+                {pageRows.map((row, i) => (
                   <SpellEntry
-                    key={spell.name}
+                    key={`${row.spell.name}-${row.rankEntry?.rank ?? row.rankEntry?.variant ?? "base"}`}
                     classId={classId}
-                    spell={spell}
+                    spell={row.spell}
+                    rankEntry={row.rankEntry}
                     revealDelayMs={reducedMotion ? undefined : Math.floor(i / 2) * 40}
                     side={i % 2 === 0 ? "right" : "left"}
                     compareMode={compareMode}
@@ -365,29 +467,51 @@ export default function SpellbookBook({
                 ))}
               </ul>
 
-              {totalPages > 1 && (
-                <div className="mt-4 flex items-center justify-center gap-4 border-t border-[#8a6d3b]/40 pt-2">
-                  <button
-                    type="button"
-                    disabled={page === 0}
-                    onClick={() => goTo(tabIndex, page - 1)}
-                    className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
-                  >
-                    ← Prev
-                  </button>
-                  <span className="text-xs text-[#6b5a3d]">
-                    Page {page + 1} / {totalPages}
-                  </span>
-                  <button
-                    type="button"
-                    disabled={page >= totalPages - 1}
-                    onClick={() => goTo(tabIndex, page + 1)}
-                    className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
-                  >
-                    Next →
-                  </button>
-                </div>
-              )}
+              <div className="mt-4 flex items-center justify-between gap-4 border-t border-[#8a6d3b]/40 pt-2">
+                {hasMultiRankSpells ? (
+                  <label className="flex items-center gap-1.5 text-xs text-[#5a4a30]">
+                    <input
+                      type="checkbox"
+                      checked={showAllRanks}
+                      onChange={(e) => {
+                        // Resets the page directly rather than through goTo()
+                        // -- this isn't a page turn (no flip animation should
+                        // play), and goTo() would also no-op silently if we
+                        // happened to already be on page 0.
+                        setShowAllRanks(e.target.checked);
+                        setPage(0);
+                        setDisplay((d) => ({ ...d, page: 0 }));
+                      }}
+                    />
+                    Show all ranks
+                  </label>
+                ) : (
+                  <span />
+                )}
+                {totalPages > 1 && (
+                  <div className="flex items-center gap-4">
+                    <button
+                      type="button"
+                      disabled={page === 0}
+                      onClick={() => goTo(tabIndex, page - 1)}
+                      className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
+                    >
+                      ← Prev
+                    </button>
+                    <span className="text-xs text-[#6b5a3d]">
+                      Page {page + 1} / {totalPages}
+                    </span>
+                    <button
+                      type="button"
+                      disabled={page >= totalPages - 1}
+                      onClick={() => goTo(tabIndex, page + 1)}
+                      className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
+                    >
+                      Next →
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
