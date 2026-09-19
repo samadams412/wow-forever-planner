@@ -19,8 +19,11 @@ export type LinkedSpell = {
 
 const TALENT_SPELL_LINKS = talentSpellLinksData as Record<string, LinkedSpell[]>;
 
-export function getLinkedSpells(talentId: string): LinkedSpell[] {
-  return TALENT_SPELL_LINKS[talentId] ?? [];
+// Keyed "classId:talentId", not just talentId -- a handful of talent ids
+// collide across classes (see scripts/build-talent-spell-links.js), so
+// classId disambiguates which class's talent is actually being looked up.
+export function getLinkedSpells(classId: string, talentId: string): LinkedSpell[] {
+  return TALENT_SPELL_LINKS[`${classId}:${talentId}`] ?? [];
 }
 
 export type DescriptionSegment = { text: string; linked: boolean };

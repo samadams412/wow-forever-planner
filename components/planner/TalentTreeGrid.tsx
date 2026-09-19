@@ -128,6 +128,7 @@ export default function TalentTreeGrid({
         {tree.talents.map((t) => (
           <TalentNode
             key={t.id}
+            classId={classId}
             talent={t}
             rank={ranks[t.id] ?? 0}
             canAdd={canAddPoint(tree, t, ranks, totalSpent, maxPoints)}

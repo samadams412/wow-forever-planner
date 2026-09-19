@@ -72,20 +72,29 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+// One combined alternation, longest name first, matched with matchAll --
+// deliberately the exact same approach lib/talent-spell-links.ts's runtime
+// splitTextWithLinks() uses. Matching each candidate name independently
+// against the full text (the previous approach) double-counted a shorter
+// name that's a word-boundary-valid prefix of a longer one also present at
+// the same spot -- e.g. "Bane" is its own \b...\b match inside "Bane of
+// Agony", so both got recorded as separate links even though there's only
+// one real mention in the text. A single ordered alternation only ever
+// consumes each span once, so a name fully absorbed into a longer match
+// never shows up a second time -- and this guarantees build-time linkage
+// and runtime highlighting always agree on what actually got matched.
 function findMentions(text, candidateNames) {
+  if (candidateNames.size === 0) return [];
   const sorted = [...candidateNames].sort((a, b) => b.length - a.length);
+  const pattern = new RegExp(`\\b(${sorted.map(escapeRegExp).join("|")})\\b`, "g");
   const found = [];
-  const consumed = new Set();
-  for (const name of sorted) {
-    if (consumed.has(name)) continue;
-    const re = new RegExp(`\\b${escapeRegExp(name)}\\b`);
-    if (re.test(text)) {
-      found.push(name);
-      consumed.add(name);
+  const seen = new Set();
+  for (const match of text.matchAll(pattern)) {
+    if (!seen.has(match[0])) {
+      seen.add(match[0]);
+      found.push(match[0]);
     }
   }
-  // Preserve the order names first appear in the text, not match length order.
-  found.sort((a, b) => text.indexOf(a) - text.indexOf(b));
   return found;
 }
 
@@ -138,7 +147,13 @@ function build() {
             });
           }
         }
-        if (entries.length > 0) links[talent.id] = entries;
+        // Namespaced by class, not just talent.id -- a handful of talent
+        // ids collide across classes (e.g. "protection_shield_specialization"
+        // exists for both Warrior and Paladin, since ids are generated from
+        // tree+name without a class prefix). A flat talent.id key silently
+        // let one class's entry leak into another's lookup whenever the
+        // second class produced zero links of its own for the same id.
+        if (entries.length > 0) links[`${classId}:${talent.id}`] = entries;
       }
     }
   }

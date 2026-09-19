@@ -27,6 +27,7 @@ const TOOLTIP_WIDTH = 260;
 const TAP_MOVE_THRESHOLD_PX = 10;
 
 export default function TalentNode({
+  classId,
   talent,
   rank,
   canAdd,
@@ -42,6 +43,7 @@ export default function TalentNode({
   peekTalentId,
   onPeek,
 }: {
+  classId: string;
   talent: Talent;
   rank: number;
   canAdd: boolean;
@@ -81,7 +83,7 @@ export default function TalentNode({
     buttonRef
   );
   const tooltipPos = hoverPos ?? activePos;
-  const linkedSpells = getLinkedSpells(talent.id);
+  const linkedSpells = getLinkedSpells(classId, talent.id);
   const ctrlHeld = useCtrlHeld(tooltipPos !== null);
   const pointerFine = usePointerFine();
 
@@ -358,7 +360,13 @@ export default function TalentNode({
             {nextRankText && (
               <>
                 <TooltipRank>Next Rank</TooltipRank>
-                <TooltipDescription>{formatTooltipText(nextRankText)}</TooltipDescription>
+                {linkedSpells.length > 0 ? (
+                  <TooltipDescriptionWithLinks
+                    segments={splitTextWithLinks(formatTooltipText(nextRankText), linkedSpells)}
+                  />
+                ) : (
+                  <TooltipDescription>{formatTooltipText(nextRankText)}</TooltipDescription>
+                )}
               </>
             )}
             {linkedSpells.length > 0 && pointerFine && !ctrlHeld && <TooltipCtrlPrompt count={linkedSpells.length} />}
