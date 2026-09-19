@@ -5,6 +5,7 @@ import SiteFooter from "@/components/site/SiteFooter";
 import CustomCursor from "@/components/site/CustomCursor";
 import BackToTop from "@/components/site/BackToTop"; // <-- Import the BackToTop component
 import { SITE_URL } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <SiteFooter />
         <BackToTop /> {/* <-- Mount the BackToTop component globally here */}
+        <Analytics />
       </body>
     </html>
   );
