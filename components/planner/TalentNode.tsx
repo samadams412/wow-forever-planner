@@ -66,11 +66,16 @@ export default function TalentNode({
   onPeek: (talentId: string | null) => void;
 }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  // Shared across both hook calls below -- only one <TooltipCard> is ever
+  // rendered at a time (tooltipPos = hoverPos ?? activePos), so both need to
+  // observe the same real DOM node for viewport-edge measurement/flipping.
+  const tooltipElRef = useRef<HTMLDivElement>(null);
   const { pos: hoverPos, show: showHover, hide: hideHover } = useHoverTooltip<HTMLButtonElement>(
     TOOLTIP_WIDTH,
     "below",
     220,
-    buttonRef
+    buttonRef,
+    { sharedTooltipRef: tooltipElRef }
   );
   // Tap-to-select and long-press-to-peek both float this same "below"
   // tooltip (an overlay, not part of document flow) -- it doesn't push the
@@ -80,7 +85,8 @@ export default function TalentNode({
     TOOLTIP_WIDTH,
     "below",
     220,
-    buttonRef
+    buttonRef,
+    { sharedTooltipRef: tooltipElRef }
   );
   const tooltipPos = hoverPos ?? activePos;
   const linkedSpells = getLinkedSpells(classId, talent.id);
@@ -344,7 +350,10 @@ export default function TalentNode({
 
       {tooltipPos &&
         createPortal(
-          <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
+          <TooltipCard
+            divRef={tooltipElRef}
+            style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}
+          >
             <TooltipName>{talent.name}</TooltipName>
             <TooltipRank>
               Rank {rank} of {talent.maxRank} · {typeLabel}

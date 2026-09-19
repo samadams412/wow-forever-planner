@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties, ReactNode, RefObject } from "react";
 import type { TalentStatus } from "@/lib/wow-data";
 import { STATUS_LABEL, STATUS_TEXT_CLASS } from "@/lib/talent-status";
 import { diffWords } from "@/lib/text-diff";
@@ -19,15 +19,21 @@ export function TooltipCard({
   interactive,
   onMouseEnter,
   onMouseLeave,
+  // useHoverTooltip's tooltipRef -- lets it measure this card's actual
+  // rendered size to keep it fully on-screen (see recompute() there)
+  // instead of only ever positioning off an estimated height.
+  divRef,
 }: {
   style: CSSProperties;
   children: ReactNode;
   interactive?: boolean;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  divRef?: RefObject<HTMLDivElement | null>;
 }) {
   return (
     <div
+      ref={divRef}
       className={`fixed z-50 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg ${
         interactive ? "pointer-events-auto" : "pointer-events-none"
       }`}

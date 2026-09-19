@@ -68,9 +68,13 @@ function SpellEntry({
 }) {
   const subtitle = spell.passive ? "Passive" : spell.rank ? `Rank ${spell.rank}` : spell.tag;
   const tooltip = getSpellTooltip(classId, spell.name);
-  const { ref, pos, show, hide } = useHoverTooltip<HTMLLIElement>(TOOLTIP_WIDTH, side, 280, undefined, {
-    mobileBottomSheet: true,
-  });
+  const { ref, tooltipRef: tooltipElRef, pos, show, hide } = useHoverTooltip<HTMLLIElement>(
+    TOOLTIP_WIDTH,
+    side,
+    280,
+    undefined,
+    { mobileBottomSheet: true }
+  );
   const scrollRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<number | null>(null);
 
@@ -168,6 +172,7 @@ function SpellEntry({
         pos &&
         createPortal(
           <TooltipCard
+            divRef={tooltipElRef}
             style={{ top: pos.top, left: pos.left, width: pos.width ?? TOOLTIP_WIDTH }}
             interactive
             onMouseEnter={handleTooltipEnter}
