@@ -304,7 +304,11 @@ function SpellEntry({
           {status && <StatusPill status={status} />}
         </div>
         {subtitle && <p className="text-xs text-[#6b5a3d]">{subtitle}</p>}
-        {tabLabel && <p className="text-[10px] uppercase tracking-wide text-[#8a7550]">{tabLabel}</p>}
+        {/* Same muted tone as the subtitle line above it (#6b5a3d, the
+            established parchment-page muted-text color -- see the page's
+            "N spells, M ranks" line and Prev/Next) rather than a lighter
+            one-off gray that read as too low-contrast against the parchment. */}
+        {tabLabel && <p className="text-[10px] uppercase tracking-wide text-[#6b5a3d]">{tabLabel}</p>}
         {!hideLevelsRow && spell.ranks && spell.ranks.length > 1 && (
           <LevelsRow allRanks={spell.ranks} currentRank={rankEntry} />
         )}
@@ -442,7 +446,13 @@ function ByLevelView({
       <CornerBracket position="bl" />
       <CornerBracket position="br" />
 
-      <div className="relative min-h-105 rounded-sm border border-[#8a6d3b]/50 bg-(--pg) p-3 sm:min-h-115 sm:p-5">
+      {/* spellbook-page (not just the bg-(--pg) utility) is required here --
+          it's the class that actually defines the --pg/--ink2 variables (see
+          globals.css), which the book view's page div also carries. Without
+          it this page rendered on the site's dark background instead of
+          parchment, which is what made pill tags and the tab-label caption
+          (both styled for a light page) unreadable here specifically. */}
+      <div className="spellbook-page relative min-h-105 rounded-sm border border-[#8a6d3b]/50 bg-(--pg) p-3 sm:min-h-115 sm:p-5">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -510,7 +520,7 @@ function ByLevelView({
               <div>
                 <div className="flex items-baseline gap-2">
                   <h4 className="font-heading text-sm font-semibold text-(--ink2)">From your talents</h4>
-                  <span className="text-[10px] uppercase tracking-wide text-[#8a7550]">When you spend the point</span>
+                  <span className="text-[10px] uppercase tracking-wide text-[#6b5a3d]">When you spend the point</span>
                 </div>
                 <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
                   {talentGranted.map((row, i) => (
