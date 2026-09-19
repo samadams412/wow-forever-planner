@@ -58,7 +58,7 @@ export default function ClassAbilitiesSection({ classId }: { classId: string }) 
     <div className="mt-4">
       <Collapsible
         title="New & changed abilities"
-        subtitle={`${data.abilities.length} confirmed from beta footage`}
+        subtitle={`${data.abilities.length} inferred from talent tooltips`}
         icon={<IconFan icons={fanIcons} />}
       >
         <div className="space-y-2">

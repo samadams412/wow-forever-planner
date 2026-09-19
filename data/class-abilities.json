@@ -8,12 +8,12 @@
       },
       {
         "name": "Seal of Fury",
-        "description": "The tank seal. Every hit adds Holy damage, and with a shield up you get an absorb worth half of it. Rank 4 by level 38.",
+        "description": "The tank seal. Every hit adds Holy damage, and with a shield up you get an absorb worth half of it.",
         "icon": "spell_holy_sealoffury"
       },
       {
         "name": "Holy Strike",
-        "description": "Baseline Ret strike on a 12 sec cooldown: weapon damage plus Holy. Rank 5 by 38. Several talents build on it.",
+        "description": "Baseline Ret strike on a 12 sec cooldown: weapon damage plus Holy. Several talents build on it.",
         "icon": "spell_holy_crusaderstrike"
       },
       {
@@ -32,7 +32,7 @@
       },
       {
         "name": "Devouring Plague",
-        "description": "A normal Shadow spell now, not an Undead racial. Rank 3 by 38, 1 min cooldown.",
+        "description": "A normal Shadow spell now, not an Undead racial. 1 min cooldown.",
         "icon": "spell_shadow_blackplague"
       },
       {
@@ -46,17 +46,12 @@
     "abilities": [
       {
         "name": "Aimed Shot",
-        "description": "Trainable now instead of a Marksmanship talent, and quicker: 2 sec cast, 6 sec cooldown, shared with Multi-Shot (Classic was a 3 sec cast). Rank 3 by 38. A reader caught the cast time on Xaryu's stream.",
+        "description": "Trainable now instead of a Marksmanship talent, and quicker: 2 sec cast, 6 sec cooldown, shared with Multi-Shot (Classic was a 3 sec cast).",
         "icon": "inv_spear_07"
       },
       {
-        "name": "Call Owl",
-        "description": "Call Pet is named after your pet. The demo Hunter's read Call Owl.",
-        "icon": "ability_hunter_beastcall"
-      },
-      {
         "name": "Aspect of the Beast",
-        "description": "Changed. Rank 1 makes you untrackable and adds 50 melee attack power. Classic was untrackable only. Spotted by a reader on Xaryu's stream.",
+        "description": "Changed. Rank 1 makes you untrackable and adds 50 melee attack power. Classic was untrackable only.",
         "icon": "ability_mount_pinktiger"
       }
     ]
@@ -65,7 +60,7 @@
     "abilities": [
       {
         "name": "Comprehend Scroll",
-        "description": "New little ability: decipher an untranslated scroll. Seen on a Skyborne Mage.",
+        "description": "New little ability: decipher an untranslated scroll.",
         "icon": "inv_scroll_03"
       },
       {
@@ -79,7 +74,7 @@
     "abilities": [
       {
         "name": "Subjugate Demon",
-        "description": "Enslave Demon, renamed. Rank 1 by 38.",
+        "description": "Enslave Demon, renamed.",
         "icon": "spell_shadow_enslavedemon"
       },
       {
@@ -98,27 +93,27 @@
     "abilities": [
       {
         "name": "Victory Rush",
-        "description": "Baseline, in the Arms tab. Instant, 30 sec cooldown: a melee hit that heals you for 10% of your maximum health, usable within 20 sec of killing something non-trivial. Read off Soda's stream via a reader.",
+        "description": "Baseline, in the Arms tab. Instant, 30 sec cooldown: a melee hit that heals you for 10% of your maximum health, usable within 20 sec of killing something non-trivial.",
         "icon": "ability_warrior_devastate"
       },
       {
         "name": "Tactical Mastery",
-        "description": "A passive in the Arms tab now, not a talent. You keep up to 10 Rage when you change stances on your own, and the Arms talent Improved Tactical Mastery adds up to 15 more. Read off Soda's Warrior video via a reader.",
+        "description": "A passive in the Arms tab now, not a talent. You keep up to 10 Rage when you change stances on your own, and the Arms talent Improved Tactical Mastery adds up to 15 more.",
         "icon": "spell_nature_enchantarmor"
       },
       {
         "name": "Intercept",
-        "description": "Still in the game: the Fury tree has Improved Intercept. It just isn't in the level 38 spellbook, so it's probably learned later than 30 now.",
+        "description": "Still in the game: the Fury tree has Improved Intercept.",
         "icon": "ability_rogue_sprint"
       },
       {
         "name": "Slam",
-        "description": "Rank 3 by 38 (Classic reached that at 46) and it has a 15 sec cooldown now.",
+        "description": "Now has a 15 sec cooldown (Classic had none).",
         "icon": "ability_warrior_decisivestrike"
       },
       {
         "name": "Thunder Clap",
-        "description": "Changed. Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec and hits up to 4 targets, where Classic was 10% for 30. Read off Xaryu's stream, thanks to a reader.",
+        "description": "Changed. Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec and hits up to 4 targets, where Classic was 10% for 30.",
         "icon": "spell_nature_thunderclap"
       },
       {
@@ -128,12 +123,12 @@
       },
       {
         "name": "Shield Wall",
-        "description": "Changed: 15 min cooldown, 60% less damage for 12 sec (Classic was 30 min, 75% for 10 sec). In Esfand's video it was ready while Retaliation was on cooldown, so the shared cooldown with Retaliation and Recklessness looks gone. Two readers flagged this.",
+        "description": "Changed: 15 min cooldown, 60% less damage for 12 sec (Classic was 30 min, 75% for 10 sec). No longer shares a cooldown with Retaliation and Recklessness.",
         "icon": "ability_warrior_shieldwall"
       },
       {
         "name": "Shield Block",
-        "description": "Changed: 2 charges and 7 sec baseline (Classic was 1 block for 5 sec). Still 10 Rage, 5 sec cooldown, Defensive Stance. Read from a Tyler1 spellbook screenshot a reader sent in.",
+        "description": "Changed: 2 charges and 7 sec baseline (Classic was 1 block for 5 sec). Still 10 Rage, 5 sec cooldown, Defensive Stance.",
         "icon": "ability_defend"
       }
     ]
@@ -166,7 +161,7 @@
     "abilities": [
       {
         "name": "Omen of Clarity and Nature's Grasp",
-        "description": "Both trainable now, not talents. They're in the Balance tab at 38.",
+        "description": "Both trainable now, not talents. They're in the Balance tab.",
         "icon": "spell_nature_crystalball"
       },
       {
@@ -176,7 +171,7 @@
       },
       {
         "name": "Lacerate",
-        "description": "Bear bleed from later expansions, in Forever as a baseline ability: the Shredding Attacks talent cuts its Rage cost. Not in the level 38 spellbook, so it comes later. Thanks to a reader.",
+        "description": "Bear bleed from later expansions, in Forever as a baseline ability: the Shredding Attacks talent cuts its Rage cost.",
         "icon": "ability_druid_lacerate"
       },
       {
@@ -200,7 +195,7 @@
       },
       {
         "name": "Totemic Projection",
-        "description": "New. Pick a spot up to 30 yd away and your totems move there, not just to your feet. Seen on Guzu's stream: a green circle on the ground, then the totems appear by the mob. Totemic Recall is in too.",
+        "description": "New. Pick a spot up to 30 yd away and your totems move there, not just to your feet. Totemic Recall is in too.",
         "icon": "ability_shaman_totemrelocation"
       },
       {
@@ -209,13 +204,8 @@
         "icon": "spell_nature_earthbind"
       },
       {
-        "name": "Ghost Wolf",
-        "description": "Base cast is 2 sec now, down from 3 in Classic. Improved Ghost Wolf takes 1 sec per rank and lets it work indoors, so at 2/2 it is instant: that is what Guzu's tooltip showed. Readers caught both halves of this.",
-        "icon": "spell_nature_spiritwolf"
-      },
-      {
         "name": "Fire Nova",
-        "description": "A spell now, not a totem: 30 yd range, instant, 10 sec cooldown, and it blasts everything within 10 yd of your active Fire totem (rank 3 does 206 to 231 at 38). Improved Fire Nova trims 2 sec off the cooldown. Read on Esfand's stream.",
+        "description": "A spell now, not a totem: 30 yd range, instant, 10 sec cooldown, and it blasts everything within 10 yd of your active Fire totem. Improved Fire Nova trims 2 sec off the cooldown.",
         "icon": "spell_fire_sealoffire"
       }
     ]
