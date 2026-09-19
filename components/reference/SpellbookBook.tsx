@@ -149,6 +149,15 @@ function SpellEntry({
   revealDelayMs,
   side,
   compareMode,
+  // By-level view: which tree/tab this spell belongs to, shown as a small
+  // caption under the rank line (talentsforever.com shows this per-row since
+  // that view mixes spells from every tree together) -- undefined in the
+  // book view, where the active tab already says which tree you're looking at.
+  tabLabel,
+  // By-level view groups rows by their own learned-at level, so repeating
+  // the full "8 18 28 38 48 58" other-ranks row under every entry would be
+  // redundant noise -- only the book view (one tree, one page) shows it.
+  hideLevelsRow,
 }: {
   classId: string;
   spell: SpellbookEntry;
@@ -163,6 +172,8 @@ function SpellEntry({
   // Same "Compare to Classic" toggle as the talent tree -- gates the
   // tooltip's Classic-vs-Forever diff section so it isn't shown by default.
   compareMode: boolean;
+  tabLabel?: string;
+  hideLevelsRow?: boolean;
 }) {
   const subtitle = rankEntry?.rank
     ? `Rank ${rankEntry.rank}${rankEntry.variant ? ` (${rankEntry.variant})` : ""}`
@@ -287,7 +298,10 @@ function SpellEntry({
           {status && <StatusPill status={status} />}
         </div>
         {subtitle && <p className="text-xs text-[#6b5a3d]">{subtitle}</p>}
-        {spell.ranks && spell.ranks.length > 1 && <LevelsRow allRanks={spell.ranks} currentRank={rankEntry} />}
+        {tabLabel && <p className="text-[10px] uppercase tracking-wide text-[#8a7550]">{tabLabel}</p>}
+        {!hideLevelsRow && spell.ranks && spell.ranks.length > 1 && (
+          <LevelsRow allRanks={spell.ranks} currentRank={rankEntry} />
+        )}
       </div>
 
       {rankEntry &&
@@ -326,6 +340,199 @@ function SpellEntry({
   );
 }
 
+// "The book" (tab by tab) vs "By level" (every tree mixed together, grouped
+// by the level each rank is actually learned at) -- matches talentsforever.com's
+// own two view buttons, verified live on their Warlock page.
+type SpellbookView = "book" | "byLevel";
+
+type LevelRow = { spell: SpellbookEntry; rankEntry: SpellRank; tabName: string };
+
+// Splits every non-General spell's ranks into two buckets: ones learned at a
+// specific character level (grouped into "Level N" sections below), and
+// talent-granted ranks with no level at all (rankEntry.level === null) --
+// those only ever appear once their talent is spent, so the live site pulls
+// them into their own "From your talents" section instead of a fake level.
+// General is skipped entirely -- it's demo-sourced data with no per-rank
+// level info to group by (same reason it's excluded from "Show all ranks").
+function splitLevelRows(tabs: { name: string; spells: SpellbookEntry[] }[], filter: SpellbookFilter) {
+  const leveled: (LevelRow & { level: number })[] = [];
+  const talentGranted: LevelRow[] = [];
+  for (const tab of tabs) {
+    if (tab.name === "General") continue;
+    for (const spell of tab.spells) {
+      for (const rankEntry of spell.ranks ?? []) {
+        if (!rankMatchesFilter(rankEntry, filter)) continue;
+        // A talent-granted spell's first rank (no numbered rank at all, or
+        // explicitly "Rank 1") always goes to "From your talents", even when
+        // that rank's own data carries a real-looking level value -- verified
+        // directly against talentsforever.com's live data.json: Conflagrate,
+        // Incinerate, Siphon Life and Shadowburn all have a genuine level on
+        // their Rank 1 (25/8/30/34 respectively, not a placeholder), yet the
+        // live site still buckets that first rank as talent-granted, while
+        // their higher ranks (still trained normally at the trainer as you
+        // level) appear in their real level groups as usual. The point you
+        // spend on the talent grants rank 1 outright regardless of what a
+        // naive level reading would suggest; only ranks 2+ are ever a real
+        // level gate for a talent-granted spell.
+        const isTalentGrantedRank = spell.talent && (rankEntry.rank === null || rankEntry.rank === 1);
+        if (rankEntry.level !== null && !isTalentGrantedRank) {
+          leveled.push({ spell, rankEntry, tabName: tab.name, level: rankEntry.level });
+        } else {
+          talentGranted.push({ spell, rankEntry, tabName: tab.name });
+        }
+      }
+    }
+  }
+  const byName = (a: LevelRow, b: LevelRow) => a.spell.name.localeCompare(b.spell.name);
+  talentGranted.sort(byName);
+  return { leveled, talentGranted };
+}
+
+function groupByLevel(rows: (LevelRow & { level: number })[]): [number, LevelRow[]][] {
+  const groups = new Map<number, LevelRow[]>();
+  for (const row of rows) {
+    const list = groups.get(row.level) ?? [];
+    list.push(row);
+    groups.set(row.level, list);
+  }
+  for (const list of groups.values()) list.sort((a, b) => a.spell.name.localeCompare(b.spell.name));
+  return [...groups.entries()].sort((a, b) => a[0] - b[0]);
+}
+
+// The "I'm level [slider]" view -- verified live against talentsforever.com's
+// Warlock page rather than guessed from the schema alone (see CLAUDE.md).
+// Two behaviors confirmed there and reproduced here:
+// - The level gate only ever hides leveled rows; the talent-granted bucket
+//   at the bottom always shows in full, regardless of the slider.
+// - If the current filter + slider combination would leave zero leveled rows
+//   visible (e.g. "New only" at a low level, before any new spell is learned),
+//   the gate is dropped entirely and every remaining filtered row shows
+//   instead, with the lowest level among them marked "Next up" -- an empty
+//   page is worse than showing what's coming.
+function ByLevelView({
+  classId,
+  tabs,
+  filter,
+  compareMode,
+}: {
+  classId: string;
+  tabs: { name: string; spells: SpellbookEntry[] }[];
+  filter: SpellbookFilter;
+  compareMode: boolean;
+}) {
+  const [characterLevel, setCharacterLevel] = useState(60);
+  const { leveled, talentGranted } = splitLevelRows(tabs, filter);
+  const atOrBelow = leveled.filter((r) => r.level <= characterLevel);
+  const above = leveled.filter((r) => r.level > characterLevel);
+  const usingFallback = atOrBelow.length === 0 && above.length > 0;
+  const groups = groupByLevel(usingFallback ? leveled : atOrBelow);
+  const nextUpLevel = usingFallback ? Math.min(...above.map((r) => r.level)) : null;
+  const nextLevelAfter = above.length > 0 ? Math.min(...above.map((r) => r.level)) : null;
+
+  return (
+    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:p-3">
+      <CornerBracket position="tl" />
+      <CornerBracket position="tr" />
+      <CornerBracket position="bl" />
+      <CornerBracket position="br" />
+
+      <div className="relative min-h-105 rounded-sm border border-[#8a6d3b]/50 bg-(--pg) p-3 sm:min-h-115 sm:p-5">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: [
+              "radial-gradient(circle at 12% 18%, rgba(120,88,42,0.16), transparent 38%)",
+              "radial-gradient(circle at 88% 12%, rgba(120,88,42,0.12), transparent 32%)",
+              "radial-gradient(circle at 78% 85%, rgba(101,72,32,0.16), transparent 42%)",
+              "radial-gradient(circle at 8% 82%, rgba(110,80,35,0.14), transparent 38%)",
+              "radial-gradient(circle at 50% 95%, rgba(101,72,32,0.10), transparent 45%)",
+              "radial-gradient(ellipse at center, transparent 55%, rgba(69,50,24,0.18) 100%)",
+            ].join(", "),
+          }}
+        />
+
+        <div className="relative">
+          <label className="flex flex-wrap items-baseline gap-x-2 gap-y-1 border-b border-[#8a6d3b]/40 pb-2">
+            <span className="font-heading text-lg font-semibold text-(--ink2) sm:text-xl">
+              I&apos;m level <span className="text-accent">{characterLevel}</span>
+            </span>
+            <input
+              type="range"
+              min={1}
+              max={60}
+              value={characterLevel}
+              onChange={(e) => setCharacterLevel(Number(e.target.value))}
+              aria-label="Your level"
+              className="ml-1 w-full max-w-64 accent-accent sm:w-48"
+            />
+            <span className="w-full text-xs text-[#6b5a3d] sm:w-auto">
+              {atOrBelow.length} of {leveled.length} learned by level {characterLevel} ·{" "}
+              {nextLevelAfter !== null ? `next at level ${nextLevelAfter}` : "that is all of them"}
+            </span>
+          </label>
+
+          <div className="mt-3 flex flex-col gap-4">
+            {groups.map(([level, rows]) => (
+              <div key={level}>
+                <div className="flex items-baseline gap-2">
+                  <h4 className="font-heading text-sm font-semibold text-(--ink2)">Level {level}</h4>
+                  {usingFallback && level === nextUpLevel && (
+                    <span className="rounded-sm bg-accent/20 px-1 text-[9px] font-semibold uppercase tracking-wide text-accent">
+                      Next up
+                    </span>
+                  )}
+                </div>
+                <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+                  {rows.map((row, i) => (
+                    <SpellEntry
+                      key={`${row.tabName}-${row.spell.name}-${row.rankEntry.rank ?? row.rankEntry.variant ?? "base"}`}
+                      classId={classId}
+                      spell={row.spell}
+                      rankEntry={row.rankEntry}
+                      side={i % 2 === 0 ? "right" : "left"}
+                      compareMode={compareMode}
+                      tabLabel={row.tabName}
+                      hideLevelsRow
+                    />
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            {talentGranted.length > 0 && (
+              <div>
+                <div className="flex items-baseline gap-2">
+                  <h4 className="font-heading text-sm font-semibold text-(--ink2)">From your talents</h4>
+                  <span className="text-[10px] uppercase tracking-wide text-[#8a7550]">When you spend the point</span>
+                </div>
+                <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+                  {talentGranted.map((row, i) => (
+                    <SpellEntry
+                      key={`${row.tabName}-${row.spell.name}-${row.rankEntry.rank ?? row.rankEntry.variant ?? "base"}`}
+                      classId={classId}
+                      spell={row.spell}
+                      rankEntry={row.rankEntry}
+                      side={i % 2 === 0 ? "right" : "left"}
+                      compareMode={compareMode}
+                      tabLabel={row.tabName}
+                      hideLevelsRow
+                    />
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {groups.length === 0 && talentGranted.length === 0 && (
+              <p className="text-sm text-[#6b5a3d]">No spells match this filter.</p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function SpellbookBook({
   classId,
   book,
@@ -344,6 +551,7 @@ export default function SpellbookBook({
     tabs.findIndex((t) => t.name !== "General")
   );
 
+  const [view, setView] = useState<SpellbookView>("book");
   const [tabIndex, setTabIndex] = useState(defaultTabIndex);
   const [page, setPage] = useState(0);
   // Defaults to checked, matching talentsforever.com's own default (verified
@@ -415,9 +623,28 @@ export default function SpellbookBook({
     setDisplay((d) => ({ ...d, page: 0 }));
   }
 
+  const VIEWS: { value: SpellbookView; label: string }[] = [
+    { value: "book", label: "The book" },
+    { value: "byLevel", label: "By level" },
+  ];
+
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex justify-end">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="inline-flex rounded border border-border bg-surface p-0.5 text-xs">
+          {VIEWS.map(({ value, label }) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => setView(value)}
+              className={`rounded-sm px-2 py-1 transition-colors ${
+                view === value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
         <div className="inline-flex rounded border border-border bg-surface p-0.5 text-xs">
           {FILTERS.map(({ value, label }) => (
             <button
@@ -436,6 +663,9 @@ export default function SpellbookBook({
         </div>
       </div>
 
+      {view === "byLevel" ? (
+        <ByLevelView classId={classId} tabs={tabs} filter={filter} compareMode={compareMode} />
+      ) : (
       <div className="flex flex-col gap-2 sm:flex-row">
       <div className="order-2 flex gap-1.5 overflow-x-auto sm:order-0 sm:w-14 sm:shrink-0 sm:flex-col sm:overflow-visible">
         {tabs.map((tab, i) => (
@@ -568,6 +798,7 @@ export default function SpellbookBook({
         </div>
       </div>
       </div>
+      )}
     </div>
   );
 }
