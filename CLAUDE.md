@@ -553,6 +553,31 @@ clip anyway (a `background-image` never paints outside its own element's
 box). Mobile renders the same five links indented under "Reference" in
 the existing flat mobile menu overlay, not a separate nested toggle.
 
+### "What's New" is built but intentionally unlinked from navigation
+Shelved, not broken or abandoned: the planner header's "What's new" badge
+(a `Link` to `/whats-new` with an unread-change-count pill) was removed
+along with the now-unused `latestChangeCount` prop threaded from
+`app/planner/[[...slug]]/page.tsx` through to `PlannerClient.tsx` (that
+page's own `getLatestDiffSummary()` call went with it). Nothing else was
+touched — `/whats-new`'s own page, `components/whats-new/*`,
+`lib/whats-new.ts`/`lib/whats-new-style.ts`, and
+`scripts/diff-talentsforever.js`'s diff-generation pipeline it reads from
+are all fully intact and functional.
+
+The route itself is a deliberate middle ground, not a hard removal: it's
+left fully reachable for anyone with the direct URL (no redirect, no 404)
+since the feature isn't broken, just not something the site is currently
+pointing people toward -- but its metadata now sets `robots: { index:
+false, follow: false }` so it doesn't surface in search results while
+unlinked. If this comes back to nav, drop that `robots` block along with
+re-adding the link.
+
+**Don't "clean up" any of this as dead code** without checking here first
+— it's mid-shelf, not mid-removal. Re-link it (and re-thread
+`latestChangeCount` back through, or redesign that badge) once the page
+itself is fleshed out further; until then this note is the reason it
+looks unreachable-but-present.
+
 ### Dungeon Level Ranges lives under Reference, not Guides
 Moved from `/guides/dungeons` to `/reference/dungeons` this session — it's
 reference material (a static data chart), not a written guide. The

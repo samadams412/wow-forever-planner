@@ -3,7 +3,11 @@ import { redirect } from "next/navigation";
 import { SITE_URL } from "@/lib/site";
 import { getClassTalentData, races } from "@/lib/wow-data";
 import { decodeBuild } from "@/lib/build-code";
-import { getLatestDiffSummary } from "@/lib/whats-new";
+// "What's new" (lib/whats-new.ts, /whats-new, components/whats-new/*) is
+// intentionally unlinked from navigation right now, not abandoned -- see
+// CLAUDE.md. This page used to surface a change-count badge here via
+// getLatestDiffSummary(); that wiring was removed along with the nav link,
+// but the underlying feature and its route are untouched and still work.
 import PlannerClient from "./PlannerClient";
 
 const RACE_IDS = new Set(races.map((r) => r.id));
@@ -97,19 +101,13 @@ export default async function PlannerPage({
   const { classId, buildCode, redirectTo } = parseSlug(slug);
   if (redirectTo) redirect(redirectTo);
 
-  const latestChangeCount = getLatestDiffSummary()?.totals.total ?? 0;
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEB_APPLICATION_JSON_LD) }}
       />
-      <PlannerClient
-        initialClassId={classId ?? null}
-        initialBuildCode={buildCode ?? null}
-        latestChangeCount={latestChangeCount}
-      />
+      <PlannerClient initialClassId={classId ?? null} initialBuildCode={buildCode ?? null} />
     </>
   );
 }

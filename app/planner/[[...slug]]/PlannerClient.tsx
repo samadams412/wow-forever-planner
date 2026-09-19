@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
@@ -34,11 +33,9 @@ function buildPlannerPath(classId: string, code: string | null): string {
 export default function PlannerClient({
   initialClassId,
   initialBuildCode,
-  latestChangeCount = 0,
 }: {
   initialClassId: string | null;
   initialBuildCode: string | null;
-  latestChangeCount?: number;
 }) {
   const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
   const [ranks, setRanks] = useState<RankState>(() => {
@@ -230,17 +227,6 @@ export default function PlannerClient({
             Pick a class, plan your talent build, then check a race beside it for racials — all in one flow.
           </p>
         </div>
-        <Link
-          href="/whats-new"
-          className="flex shrink-0 items-center gap-1.5 rounded border border-border px-2 py-0.5 text-xs text-foreground-muted transition-colors hover:border-accent/60 hover:text-foreground"
-        >
-          What&apos;s new
-          {latestChangeCount > 0 && (
-            <span className="rounded-full bg-accent/20 px-1.5 py-0.5 font-semibold text-accent">
-              {latestChangeCount}
-            </span>
-          )}
-        </Link>
       </div>
 
       <div className="mt-1 space-y-1.5">

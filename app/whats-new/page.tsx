@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import WhatsNewView from "@/components/whats-new/WhatsNewView";
 import { getAllDiffSummaries } from "@/lib/whats-new";
 
+// Intentionally unlinked from site navigation right now (see CLAUDE.md) --
+// the page itself is left fully working for anyone with the direct URL, but
+// noindex keeps it out of search results while it's not something the site
+// is pointing people toward yet.
 export const metadata: Metadata = {
   title: "What's New",
   description: "Talent changes from the latest WoW Forever beta data sync, class by class.",
+  robots: { index: false, follow: false },
 };
 
 export default function WhatsNewPage() {
