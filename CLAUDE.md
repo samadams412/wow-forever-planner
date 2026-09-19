@@ -11,7 +11,58 @@ serving as a fixed project brief.
 
 ## Session handoff — 2026-09-18
 
-**Stable and shipped this session (spanning two conversations, same day):**
+**Stable and shipped this session (spanning several conversations, same day):**
+- Planner "Copy build for AI" export: a plain-text summary of the current
+  build (spec numbers, per-tree points, each spent talent's actual tooltip
+  at its chosen rank, the share URL) copied to the clipboard from a new
+  button in the planner controls row, for pasting into an AI chat. Disabled
+  at 0 points like the other build-action buttons.
+- `/whats-new` page: a talent-change breakdown (added/removed/moved/
+  prerequisite-changed) generated from `scripts/diff-talentsforever.js`'s
+  existing diff JSON, with a per-class picker and plain-language detail,
+  linked from a small badge next to the planner header (not primary nav).
+  Building it surfaced a real gap in the diff script itself: it never
+  tracked a talent's `req` (prerequisite) field, so a dropped/added
+  prereq was invisible to the tool and only ever caught by hand-reading
+  the vendor changelog — fixed, and all historical diffs regenerated.
+- Talent tooltip "Ctrl-hold to explain linked spells" feature: hovering a
+  talent whose description names another spell/talent (e.g. Bloodthrill
+  mentioning Rend and Overpower) highlights that name inline, and holding
+  Ctrl expands a card per linked spell with its own tooltip text at the
+  correct rank. New data layer (`data/talent-spell-links.json`,
+  `scripts/build-talent-spell-links.js`, `lib/talent-spell-links.ts`) plus
+  `lib/use-ctrl-held.ts`/`lib/use-pointer-fine.ts`. See the dedicated
+  architecture note below for the data pipeline and two real bugs found
+  and fixed while auditing it (a cross-class talent-id collision, a
+  substring-overlap match bug) — the initial ship had a rendering gap
+  that silently broke highlighting for every multi-rank talent at 0
+  points (i.e. most talents, most of the time); fixed same session.
+- Spellbook tooltip polish: a `TooltipLevelReq` line (surfaces
+  `SpellTooltip.levelReq`, which existed in the data but was never
+  rendered) and a typography tweak, matching a talentsforever.com study
+  pass without copying their cream/yellow palette.
+- Tooltip positioning rewritten to be viewport-aware for real (`lib/
+  use-hover-tooltip.ts`): measures the tooltip's actual rendered size and
+  flips/clamps against every edge, instead of clamping against a static
+  height estimate that could still run off-screen — see architecture note
+  below.
+- Desktop talent tree resized and centered to match talentsforever.com's
+  density (43px icons / 24px gap / 67px pitch, within 1px of their own
+  44px/24px/68px) and the tree group centered as a unit instead of left-
+  aligned with empty space beside it — see the dedicated architecture note
+  below, including the deliberate square-cells-not-their-rhythm trade-off.
+- Fixed a real bug where two tooltips could be open at once after a
+  window blur/focus cycle mid-hover (e.g. alt-tabbing away without moving
+  the mouse, then returning and hovering elsewhere) — see the new
+  `lib/active-tooltip.ts` architecture note below. Covers both the talent
+  tree tooltip and the spellbook tooltip, and both the desktop hover and
+  mobile tap-to-open interaction models.
+- Mobile re-verified against a real device-emulated browser window (not
+  just reasoned about from unchanged CSS classes, which is as far as an
+  earlier pass in this same session could get — see Tooling notes below
+  for why): confirmed the desktop resize above didn't touch mobile's own
+  icon sizing, and confirmed the single-tooltip fix also holds for the
+  mobile tap-to-open flow.
 - A talentsforever.com pull (`talentsforever-2026-09-18.json`) that changed
   the vendor's *source*, not just its values: every talent now carries
   `src: "beta"` (100% of 468), meaning direct WoW Forever beta-client
@@ -58,30 +109,72 @@ serving as a fixed project brief.
   occurrences of either phrase in either file). Not fixed, not fabricated.
   If this comes up again, ask for a screenshot or a different source before
   acting — it isn't in anything this codebase currently tracks.
-- `data/sources/talentsforever-2026-09-15.json`/`-16.json`'s previously-flagged
-  inconsistency (see the 2026-09-17 handoff, now superseded in git history)
-  was never revisited directly, but is moot in practice — `-16.json` was
-  already the correct "old" snapshot for this session's 09-16→09-18 diff
-  and produced a clean, fully-matched result.
 - Legacy Perks page (`/reference/legacy-perks`) is desktop-only by explicit
-  scope cut — see Architecture below. No mobile tap/long-press model yet.
+  scope cut — see Architecture below. No mobile tap/long-press model yet,
+  and `LegacyPerkNode`'s tooltip does not yet use the new single-tooltip-
+  owner mechanism (`lib/active-tooltip.ts`) either — both ports are
+  optional/low-priority unless this page turns out to get real traffic.
+- Priest's Renewed Hope highlights "Heal" inside its own description text
+  even where that word is really the tail of "Greater Heal" (a spell that
+  isn't tracked anywhere in `data/spellbooks.json`) — a data-coverage gap
+  found while auditing the linked-spell feature, not a matching-logic bug.
+  Left as-is rather than fabricating "Greater Heal" data; would need a real
+  source for that spell to fix properly.
+- The talent tree's square talent cells vs. talentsforever.com's own wider-
+  column, non-square rhythm (91px column pitch vs. their 68px row pitch)
+  is a disclosed, deliberate trade-off, not an oversight — see the sizing
+  architecture note below before "fixing" this into non-square cells.
 - Carried over from 2026-09-17, still untouched: no visual distinction
   between directly-observed vs. inferred spell tooltip sourcing;
   spellbook tooltip's mobile bottom-sheet placement still never visually
-  verified on a real narrow viewport; `classicDescription`/`classicStatus`
-  backfill (7+ of many spells done); tailoring's missing `hero.webp`;
-  `app/sitemap.ts`'s manual TODO (still missing per-slug profession pages,
-  blog posts, and guides).
+  verified on a real narrow viewport (note: this session verified the
+  *talent tree's* mobile sizing and tap-tooltip behavior on a real
+  device-emulated window — that's a different check from the spellbook's
+  bottom-sheet placement specifically, which remains unverified);
+  `classicDescription`/`classicStatus` backfill (7+ of many spells done);
+  tailoring's missing `hero.webp`; `app/sitemap.ts`'s manual TODO (still
+  missing per-slug profession pages, blog posts, and guides).
 
 **Suggested next:**
 - Nothing urgent surfaced by this session's own work. If picking this
   project back up cold, the open items above (racials "Requires" mystery,
-  sitemap TODO, tailoring hero image, mobile bottom-sheet verification) are
-  the standing backlog, not new discoveries.
+  sitemap TODO, tailoring hero image, spellbook mobile bottom-sheet
+  verification) are the standing backlog, not new discoveries.
 - Optional, low-priority: Legacy Perks could get the planner's mobile touch
   model (tap-to-add, long-press-peek, haptic pulse) ported over from
   `TalentNode.tsx` if this page turns out to get real mobile traffic — see
   Architecture below for why it was scoped out initially.
+- Optional: decouple the talent tree's row/column spacing to match
+  talentsforever.com's non-square cell rhythm exactly, if that proportion
+  difference turns out to matter — see the sizing architecture note for
+  why it wasn't done this session (risk to the connector-arrow geometry
+  for a proportions-only gain).
+
+## Tooling notes
+
+### claude-in-chrome can drive more than one open Chrome window
+Learned 2026-09-18, after wrongly assuming otherwise for a while first:
+the extension is not bound to a single fixed window for the life of a
+session. `tabs_create_mcp` creates its new tab in whichever Chrome window
+currently has OS focus — not necessarily the window holding this
+session's other tabs — and the resulting tab keeps its own addressable
+`tabId` afterward regardless of which window it landed in or which window
+has focus later. Both tabs stay independently usable by `tabId` at the
+same time.
+
+Practical effect: testing across two open windows (e.g. one at normal
+desktop size, one set to a mobile responsive-mode viewport) just needs
+the user to focus the target window, then a fresh `tabs_create_mcp` call
+— no need to close/reopen either window, and no need to treat the tool as
+limited to whatever viewport it happened to attach to first. This
+directly unblocked a real mobile-verification need this session:
+`resize_window` on an existing tab was confirmed unreliable in this
+environment across many separate attempts (it reports success but
+`window.innerWidth` never actually changes), which had previously been
+written off as "mobile can't be visually verified here, only reasoned
+about from unchanged CSS classes" — that conclusion was wrong. If a
+resize-based approach isn't working, ask the user whether a second real
+window is available before falling back to code-only reasoning.
 
 ## Architecture notes
 
@@ -254,6 +347,78 @@ touch model that's deliberately separate from desktop's plain `onClick`:
   ref set immediately before a touch-driven add/remove, consumed by an
   effect that only reacts to an actual rank change) — a desktop mouse
   click never triggers either.
+
+### Desktop talent tree sizing matches talentsforever.com within 1px (square cells, not their rhythm)
+`TalentTreeGrid.tsx`'s desktop sizing is a set of `sm:`-prefixed Tailwind
+classes layered on top of the mobile values above — mobile is completely
+untouched by any of this (verified live against a real device-emulated
+window, not just reasoned about from the class names — see Tooling notes).
+Tuned 2026-09-18 by direct pixel measurement (`getBoundingClientRect`, not
+their CSS/JS) against talentsforever.com's live tree: their icons render
+at 44px on a 24px gap (68px row pitch); ours now measures 43px icons, 24px
+gap, 67px pitch — within 1px of every one of their numbers. Concretely:
+panel width `sm:max-w-[296px]`, grid gap `sm:gap-5`, column floor
+`minmax(44px, 1fr)`, with the connector bar thickness, arrow triangle
+size, and rank-badge text size all given matching `sm:`-only reductions so
+nothing scaled independently of the icons. The tree group itself is
+centered as a unit (`justify-center`, no `sm:justify-start` override) —
+a stray override from an earlier width change had been left-aligning it
+with a large empty gap on one side once the panels got narrower than the
+container.
+
+**Deliberately not matched: their non-square cell rhythm.** talentsforever
+'s own column pitch (91px) is noticeably wider than their row pitch
+(68px) — a rectangular, not square, cell. Ours stays square (`TalentNode`
+'s `aspect-square` wrapper ties row height to column width via the grid
+track), matching their row pitch but not reproducing the wider columns.
+**This is a disclosed trade-off, not an oversight** — don't "fix" it into
+non-square cells without a fresh explicit decision to do so. Decoupling
+row/column spacing to match their rhythm exactly would mean removing
+`aspect-square` and giving the grid explicit, separate row and column
+tracks, which touches the same cell geometry the connector-arrow
+legibility work depended on; matching a proportions difference that's
+already within 1px on the dimension that actually matters (row pitch,
+since that's what determines whether the tree fits without scrolling)
+wasn't judged worth that risk. Also don't assume these exact pixel values
+stay right forever — talentsforever.com is a live site that gets its own
+updates, so re-measure before trusting the numbers above as still
+accurate.
+
+### Single-tooltip-owner mechanism (`lib/active-tooltip.ts`)
+Both the talent tree tooltip (`TalentNode.tsx`) and the spellbook tooltip
+(`SpellbookBook.tsx`'s `SpellEntry`) share one module-level "which tooltip
+is currently allowed to be open" claim, added 2026-09-18 to fix a real
+bug: each tooltip used to manage its own visibility purely from its own
+mouseenter/mouseleave (and focus/blur) pair via `useHoverTooltip`'s local
+state, and a window blur/focus cycle mid-hover isn't guaranteed to
+deliver a mouseleave to the element the mouse never actually left — so
+alt-tabbing away while hovering one talent, then returning and hovering a
+different one, could leave the first tooltip stuck open alongside the
+second. Verified fixed by reproducing the actual desync (dispatching
+`mouseenter` on one talent, a window `blur` with no matching `mouseleave`
+ever fired, then `mouseenter` on a different talent with the first still
+never released) rather than just the surface symptom.
+
+`claimActiveTooltip(id)` / `releaseActiveTooltip(id)` / `useIsActiveTooltip
+(id)` enforce a hard single-owner invariant: every tooltip's render gates
+on holding the claim, not just on its own local show/hide state, so a
+different tooltip claiming it (or a window `blur`, handled directly inside
+the module) hides a stuck one immediately regardless of whether its own
+lifecycle ever fires correctly. It's a plain module-level store, not React
+state lifted through a shared ancestor — talent nodes and spellbook
+entries are siblings many levels deep with no natural place to hold
+shared state, and threading it through every intermediate component would
+be its own source of bugs. The spellbook entry releases its claim on the
+same delayed timer as its existing hide-on-leave grace period (not
+immediately on mouseleave), since releasing early would hide the tooltip
+before the player has a chance to move the mouse into it.
+
+**Any future tooltip-like component should use this mechanism from the
+start**, not reinvent its own show/hide lifecycle — the failure mode here
+(a stuck-open tooltip after a window focus change) is generic to anything
+built on hover/focus events, not specific to talents or spellbooks.
+`LegacyPerkNode`'s tooltip does not currently use this and would be worth
+migrating if that page gets a mobile/touch pass (see the open items above).
 
 ### Shared class spellbook component
 `SpellbookBook` and `ClassAbilitiesSection` (its "New & changed abilities"
