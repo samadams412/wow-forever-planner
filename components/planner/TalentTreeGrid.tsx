@@ -41,7 +41,7 @@ export default function TalentTreeGrid({
   const spent = pointsSpentInTree(tree, ranks);
 
   return (
-    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:max-w-72">
+    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:max-w-[296px]">
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
@@ -74,9 +74,9 @@ export default function TalentTreeGrid({
         </div>
       </div>
       <div
-        className="relative grid gap-3.5 rounded bg-cover bg-center p-2.5 sm:gap-3"
+        className="relative grid gap-3.5 rounded bg-cover bg-center p-2.5 sm:gap-5"
         style={{
-          gridTemplateColumns: `repeat(${COLS}, minmax(48px, 1fr))`,
+          gridTemplateColumns: `repeat(${COLS}, minmax(44px, 1fr))`,
           gridTemplateRows: `repeat(${TIERS}, 1fr)`,
           backgroundImage: `linear-gradient(rgba(12,13,16,0.55), rgba(12,13,16,0.55)), url(${treeBackgroundUrl(classId, tree.name)})`,
         }}

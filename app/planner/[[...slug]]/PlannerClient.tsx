@@ -270,7 +270,7 @@ export default function PlannerClient({
         )}
 
         {classData && (
-          <div className="flex flex-wrap justify-center gap-3 sm:justify-start sm:gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {classData.trees.map((tree) => (
               <TalentTreeGrid
                 key={tree.name}
