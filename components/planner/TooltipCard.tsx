@@ -78,7 +78,7 @@ export function TooltipDescriptionWithLinks({ segments }: { segments: Descriptio
     <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-[#1eff00]">
       {segments.map((seg, i) =>
         seg.linked ? (
-          <span key={i} className="font-semibold text-white underline decoration-2 underline-offset-2">
+          <span key={i} className="font-semibold text-white underline decoration-dotted underline-offset-2">
             {seg.text}
           </span>
         ) : (
