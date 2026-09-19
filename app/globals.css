@@ -124,14 +124,33 @@ body {
    each with their own rotateY + opacity keyframe, plus a shading overlay
    (below) that fakes light catching the page as it turns. JS skips both
    the flip and the shading entirely under prefers-reduced-motion rather
-   than just shortening them. */
+   than just shortening them.
+
+   Opacity and brightness are deliberately held at their starting value for
+   the first ~60-65% of each keyframe and only move in the remaining
+   stretch, instead of interpolating across the full 0-100% range like
+   rotateY does. Originally all three animated together end-to-end under
+   the same ease-in curve (slow start, fast finish), which front-loads
+   almost the whole visual change into the last moment -- by the time the
+   rotation was large enough to read as a page turning, opacity had also
+   already dropped enough that it was fading out, not turning. A page
+   turning in real life doesn't become transparent either way; it narrows
+   from perspective foreshortening and darkens as it turns away from the
+   light. Splitting the timing lets the rotation stay visible as an actual
+   rotation for most of the duration, with the opacity/brightness change
+   arriving only right at the edge-on moment where a real page would
+   visually thin out to nothing. */
 @keyframes spellbook-flip-out-forward {
-  from {
+  0% {
     transform: rotateY(0deg);
     filter: brightness(1);
     opacity: 1;
   }
-  to {
+  60% {
+    filter: brightness(0.85);
+    opacity: 1;
+  }
+  100% {
     transform: rotateY(-75deg);
     filter: brightness(0.5);
     opacity: 0;
@@ -139,12 +158,16 @@ body {
 }
 
 @keyframes spellbook-flip-in-forward {
-  from {
+  0% {
     transform: rotateY(65deg);
     filter: brightness(0.5);
     opacity: 0;
   }
-  to {
+  35% {
+    filter: brightness(0.85);
+    opacity: 1;
+  }
+  100% {
     transform: rotateY(0deg);
     filter: brightness(1);
     opacity: 1;
@@ -152,12 +175,16 @@ body {
 }
 
 @keyframes spellbook-flip-out-backward {
-  from {
+  0% {
     transform: rotateY(0deg);
     filter: brightness(1);
     opacity: 1;
   }
-  to {
+  60% {
+    filter: brightness(0.85);
+    opacity: 1;
+  }
+  100% {
     transform: rotateY(75deg);
     filter: brightness(0.5);
     opacity: 0;
@@ -165,12 +192,16 @@ body {
 }
 
 @keyframes spellbook-flip-in-backward {
-  from {
+  0% {
     transform: rotateY(-65deg);
     filter: brightness(0.5);
     opacity: 0;
   }
-  to {
+  35% {
+    filter: brightness(0.85);
+    opacity: 1;
+  }
+  100% {
     transform: rotateY(0deg);
     filter: brightness(1);
     opacity: 1;
@@ -199,21 +230,24 @@ body {
 
 /* Outgoing half eases in (starts slow, accelerates away); incoming half
    eases out (starts fast, settles into place) -- reads as a page being let
-   go versus a page coming to rest, rather than one uniform linear spin. */
+   go versus a page coming to rest, rather than one uniform linear spin.
+   Durations bumped from an earlier 220ms/260ms -- the rotation is now
+   visible through most of the run (see the keyframes above), so it can
+   afford a bit more time on screen without dragging. */
 .spellbook-page.flip-out-forward {
-  animation: spellbook-flip-out-forward 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation: spellbook-flip-out-forward 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 .spellbook-page.flip-in-forward {
-  animation: spellbook-flip-in-forward 260ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  animation: spellbook-flip-in-forward 340ms cubic-bezier(0, 0, 0.2, 1) forwards;
 }
 
 .spellbook-page.flip-out-backward {
-  animation: spellbook-flip-out-backward 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation: spellbook-flip-out-backward 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 .spellbook-page.flip-in-backward {
-  animation: spellbook-flip-in-backward 260ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  animation: spellbook-flip-in-backward 340ms cubic-bezier(0, 0, 0.2, 1) forwards;
 }
 
 /* Shading overlay: a diagonal band sweeps across the page during the turn
@@ -255,13 +289,13 @@ body {
 
 .spellbook-page.flip-out-forward::after,
 .spellbook-page.flip-out-backward::after {
-  animation: spellbook-page-shade 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation: spellbook-page-shade 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 .spellbook-page.flip-in-forward::after,
 .spellbook-page.flip-in-backward::after {
   animation-name: spellbook-page-shade;
-  animation-duration: 260ms;
+  animation-duration: 340ms;
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   animation-fill-mode: forwards;
   animation-direction: reverse;
