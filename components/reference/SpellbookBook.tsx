@@ -749,7 +749,6 @@ export default function SpellbookBook({
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={mediumIconUrl(resolveTabIcon(classId, tab.name))} alt="" className="h-6 w-6 shrink-0 rounded-sm" />
-            <span className="text-xs text-foreground sm:hidden">{tab.name}</span>
           </button>
         ))}
       </div>
@@ -782,10 +781,13 @@ export default function SpellbookBook({
                 ].join(", "),
               }}
             />
-            {/* Spine shadow: where the two halves of an open book would meet. */}
+            {/* Spine shadow: where the two halves of an open book would meet.
+                Hidden below sm -- mobile stacks the two columns into one
+                continuous page (see the column-major layout note below), so
+                there's no seam between page halves to shade there. */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-y-0 left-1/2 w-16 -translate-x-1/2"
+              className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-16 -translate-x-1/2 sm:block"
               style={{
                 backgroundImage:
                   "linear-gradient(to right, transparent, rgba(45,32,15,0.22) 45%, rgba(45,32,15,0.28) 50%, rgba(45,32,15,0.22) 55%, transparent)",
