@@ -5,7 +5,9 @@
 // character happened to have by BlizzCon 2026) with the real thing.
 //
 // Usage: node scripts/build-spellbooks.js [snapshotPath]
-//   Defaults to data/sources/talentsforever-2026-09-19.json.
+//   Defaults to the most recent data/sources/talentsforever-*.json snapshot
+//   (a plain-dated file, matching diff-talentsforever.js's own picker) --
+//   not a hardcoded date, since that goes stale the moment a new pull lands.
 //
 // What's preserved from the old data/spellbooks.json rather than rebuilt:
 // - Each class's "General" tab (Attack, Shoot, Armor Proficiency, ...) --
@@ -122,10 +124,20 @@ function buildClassSpellbook(classId, snapshot, oldSpellbook) {
   return classSpellbook;
 }
 
+function findLatestSnapshot() {
+  const sourcesDir = path.join(ROOT, "data", "sources");
+  const files = fs
+    .readdirSync(sourcesDir)
+    .filter((f) => /^talentsforever-\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .sort();
+  if (files.length === 0) {
+    throw new Error(`No talentsforever-*.json snapshots found in ${sourcesDir}`);
+  }
+  return path.join(sourcesDir, files[files.length - 1]);
+}
+
 function build() {
-  const snapshotPath = process.argv[2]
-    ? path.resolve(process.argv[2])
-    : path.join(ROOT, "data", "sources", "talentsforever-2026-09-19.json");
+  const snapshotPath = process.argv[2] ? path.resolve(process.argv[2]) : findLatestSnapshot();
   const snapshot = JSON.parse(fs.readFileSync(snapshotPath, "utf8"));
   const oldData = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "spellbooks.json"), "utf8"));
 
