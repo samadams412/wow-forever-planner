@@ -43,9 +43,8 @@ route reads the matching file and renders its body through `<MDXRemote>`.
 3. Write the body in Markdown/MDX below the frontmatter.
 4. Run `npx next dev` (or use the one already running) and open
    `/guides/<slug>` to check it.
-5. Done — no other file needs to change for it to exist. See
-   [Gotchas](#gotchas--manual-steps) for the one thing that *does* need a
-   manual update (the sitemap).
+5. Done — no other file needs to change for it to exist, sitemap included
+   (see [Gotchas](#gotchas--manual-steps)).
 
 ## Adding a new blog post
 
@@ -55,7 +54,7 @@ Identical steps, swapping `guides` for `blog`:
 2. Add images under `public/images/blog/<slug>/`.
 3. Write the body.
 4. Check it at `/blog/<slug>`.
-5. Same sitemap caveat applies — see below.
+5. Done — same as guides, nothing else needs to change.
 
 ## Adding a new profession page
 
@@ -77,15 +76,17 @@ dated posts.
    [Body content](#body-content-mdx)) even though it resolves to a
    different component here.
 4. Check it at `/reference/professions/<slug>`.
-5. Same sitemap caveat applies — see below.
+5. Done — same as guides/blog, nothing else needs to change.
 
 ## Frontmatter schema
 
 Pulled directly from `lib/blog.ts` / `lib/guides.ts` / `lib/professions.ts`
-and cross-checked against `content/blog/mount-hyjal.mdx` and the other three
-published posts — all four use every field below, so there are currently no
-fields that are sometimes omitted in practice, even though only `status` is
-structurally load-bearing.
+and cross-checked against every currently published post. **Note:**
+`content/guides/` currently has zero files in it — the guide-authoring
+steps and template below are real and wired up, but there is no live guide
+to cross-check them against right now. Everything here was verified
+against `lib/guides.ts`'s types and the working `/guides` route directly
+instead.
 
 | Field       | Required | Type              | Notes |
 |-------------|----------|-------------------|-------|
@@ -94,8 +95,9 @@ structurally load-bearing.
 | `summary`   | Yes      | string            | Shown on the listing card and used as the meta description. |
 | `tags`      | Guides/blog only | string[]  | Shown as small pill badges. Can be `[]`. **Not a field on professions** — a profession page's slug already says which profession it's about, so there's nothing for cross-cutting tags to group. |
 | `status`    | Yes      | `"draft"` \| `"published"` | Only `"published"` is ever rendered anywhere (see above). |
-| `heroImage` | Yes      | string (root-relative path) | e.g. `"/images/blog/mount-hyjal/hero.webp"`. Rendered via `<GuideImage>` for guides/blog, `<ProfessionImage>` for professions (same shape, different credit-line behavior — see [Images](#images)), `fill` + `object-cover`, forced 16:9. |
+| `heroImage` | Yes      | string (root-relative path) | e.g. `"/images/blog/mount-hyjal/hero.webp"`. Rendered via `<GuideImage>` for guides/blog, `<ProfessionImage>` for professions (same shape, different credit-line behavior — see [Images](#images)), `fill` + `object-cover`, forced 16:9. Also read by that post's `opengraph-image.tsx` as its OG image background — see [SEO metadata](#seo-metadata). |
 | `heroAlt`   | Yes      | string            | Alt text for the hero image. Write a real description — it's the only alt text either image component renders, there's no fallback. |
+| `heroCredit`| Guides/blog only, optional | string | Overrides `<GuideImage>`'s default Blizzard-press-still credit line under the **hero** image specifically (see [Images](#images) — this is the per-image override that section used to say didn't exist). Omit it to get the default credit; not a field on professions, which never show a credit line at all. |
 
 Real example (from `content/blog/mount-hyjal.mdx`):
 
@@ -124,12 +126,21 @@ heroAlt: "A collection of bubbling glass potion flasks glowing with green, red, 
 ---
 ```
 
-Nothing is optional in the TypeScript type (`PostFrontmatter`/
-`GuideFrontmatter`/`ProfessionFrontmatter` in `lib/blog.ts`/`lib/guides.ts`/
-`lib/professions.ts`) — omitting a field won't error at build time
-(frontmatter is cast with `as`, not validated), but it will render as
-`undefined` (e.g. a blank date or a broken image), so treat every field
-listed as required for that content type in practice.
+Real example of `heroCredit` in use (from `content/blog/launch-day-beta.mdx`,
+a non-Blizzard screenshot that needs its own attribution instead of the
+default press-still credit):
+
+```yaml
+heroCredit: "Screenshot captured by author during Closed Beta queue"
+```
+
+Every field except `heroCredit` is required in the TypeScript type
+(`PostFrontmatter`/`GuideFrontmatter`/`ProfessionFrontmatter` in
+`lib/blog.ts`/`lib/guides.ts`/`lib/professions.ts`) — omitting a required
+field won't error at build time (frontmatter is cast with `as`, not
+validated), but it will render as `undefined` (e.g. a blank date or a
+broken image), so treat every field listed as required (other than
+`heroCredit`) as required in practice.
 
 ## Body content (MDX)
 
@@ -165,17 +176,21 @@ you're adding:
   `first-aid` profession images, which are `.jpg` (a pre-existing
   inconsistency from before the professions migration, not a new
   convention — match `.webp` for anything new).
-- **Credit line — guides/blog only:** `<GuideImage>` hardcodes a single
+- **Credit line — guides/blog only:** `<GuideImage>` defaults to a single
   credit string — *"Image: Official World of Warcraft: Forever reveal
-  screenshot, courtesy of Blizzard Entertainment"* — under every image, for
-  both the hero and body images, with no per-image override. This means
-  **`<GuideImage>` is only correct for official Blizzard press
-  stills/reveal screenshots.** If you ever need a custom-made image (a
-  diagram, a screenshot you took, a graphic you drew) that needs different
-  credit or no credit line in a guide or blog post, don't reuse
-  `<GuideImage>` as-is there — it would mislabel the source. That's a real
-  gap for those two content types, not a solved case; flag it before
-  forcing a non-Blizzard image through that component.
+  screenshot, courtesy of Blizzard Entertainment"* — under every image, but
+  **does take a per-image override**: pass a `credit` prop (a plain string,
+  or `credit=""` to suppress the line entirely) to change or remove it for
+  that one image. For the **hero** image specifically, this is wired
+  through frontmatter's `heroCredit` field (see
+  [Frontmatter schema](#frontmatter-schema)) rather than a prop, since the
+  hero is rendered by the page shell, not by hand in the MDX body — for a
+  **body** image, pass `credit` directly on the `<GuideImage>` tag:
+  `<GuideImage src="..." alt="..." credit="Your credit text" />`. Use this
+  for a custom-made image (a diagram, a screenshot you took, a graphic you
+  drew) that needs different credit, or no credit line, in a guide or blog
+  post — `<GuideImage>`'s default is only correct for official Blizzard
+  press stills/reveal screenshots.
 - **Credit line — professions:** `<ProfessionImage>` (what the `<GuideImage>`
   tag actually renders in this content type — see [Body
   content](#body-content-mdx)) renders **no credit line at all**, by design:
@@ -197,25 +212,26 @@ you're adding:
   frontmatter.summary }`), and the title gets the sitewide `%s |
   Forevercraft` template applied automatically. Nothing to fill in by hand
   for basic SEO.
-- **Not automatic — same generic image for every post:** there's no
-  per-post Open Graph image. `generateMetadata` doesn't set `openGraph`,
-  so every guide/post falls back to the sitewide default
-  (`/images/og/opengraph.png`) when shared on social platforms, regardless
-  of that post's own `heroImage`. If per-post social preview images matter,
-  that's unbuilt — flag it rather than assuming it already varies by post.
+- **Automatic — per-post Open Graph image, no extra step needed:** each of
+  the three content types has its own `opengraph-image.tsx` (the Next.js
+  file-convention route, e.g. `app/blog/[slug]/opengraph-image.tsx`), which
+  renders that post's own `title`/`summary`/`heroImage` through the shared
+  `lib/og-template.tsx` template. This is generated automatically from the
+  same frontmatter you already wrote — there's nothing to fill in by hand,
+  and no separate image to design or upload. A post with no `heroImage` (or
+  one Next can't resolve) falls back to the template's own default
+  background, not the sitewide static PNG — that static image
+  (`/images/og/opengraph.png`) is only ever used by the homepage.
 
 ## Gotchas / manual steps
 
-- **Sitemap is not automatic.** `app/sitemap.ts` has a literal `// TODO:
-  once real guide/blog posts exist... add their URLs here` comment, and
-  currently lists only static top-level routes — **all four existing
-  published blog posts, and every individual `/reference/professions/<slug>`
-  page, are already missing from the sitemap today** (only the
-  `/reference/professions` index route itself is listed). Adding a new
-  post/profession page does not add it to the sitemap; someone has to
-  update `app/sitemap.ts` by hand (or someone eventually wires
-  `getAllPosts()`/`getAllGuides()`/`getAllProfessions()` into it, which
-  hasn't happened yet).
+- **Sitemap is automatic — no manual step needed.** `app/sitemap.ts` calls
+  `getAllPosts()`, `getAllGuides()`, and `getAllProfessions()` directly, so
+  every published post/guide/profession page is included the moment it's
+  published — nothing to update by hand. (This wasn't always true: an
+  earlier version of this doc described a manual-update gotcha here from
+  before `app/sitemap.ts` was wired up to these functions — that's since
+  been fixed, so a new post genuinely needs no sitemap step today.)
 - **Draft posts 404, they don't preview.** Covered above — worth repeating
   since it's the one gotcha most likely to surprise someone expecting a
   standard draft-preview flow.
@@ -313,4 +329,4 @@ Body text.
 More body text.
 ```
 
-Set `status: "published"` (and don't forget the sitemap) when it's ready to go live.
+Set `status: "published"` when it's ready to go live — the sitemap picks it up automatically, nothing else to do.
