@@ -10,6 +10,8 @@ export function generateStaticParams() {
   return getAllGuides().map((guide) => ({ slug: guide.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {

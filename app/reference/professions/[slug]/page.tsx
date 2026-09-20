@@ -12,6 +12,8 @@ export function generateStaticParams() {
   return getAllProfessions().map((profession) => ({ slug: profession.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
