@@ -9,9 +9,43 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-18
+## Session handoff — 2026-09-19
 
-**Stable and shipped this session (spanning several conversations, same day):**
+**Stable and shipped this session:**
+- Vercel Web Analytics actually wired up (`app/layout.tsx`): the prior
+  session had installed `@vercel/analytics` and imported `Analytics` from
+  `@vercel/analytics/next`, but never rendered the component — so despite
+  looking complete (import present, package installed), zero events were
+  ever firing. Added `<Analytics />` inside `<body>`. Checked against
+  Vercel's live docs (fetched directly, not from training knowledge) to
+  confirm `@vercel/analytics/next` is the correct App Router variant (not
+  `/react`, not the Pages Router `_app.tsx` pattern) and that placement
+  matches their example. Confirmed no other analytics/tracking setup
+  exists anywhere in the codebase to conflict with it. Verified live via
+  a real browser: in dev, the component loads `va.vercel-scripts.com/v1/
+  script.debug.js` and the console logs `[Vercel Web Analytics] Running
+  queued event pageview` → `[view] .../_vercel/insights/view` — dev mode
+  intentionally queues without sending to the server, which is expected
+  debug behavior per Vercel's own docs, not a bug. **Still needs a
+  dashboard action from the user, not code**: Vercel project → Analytics
+  in the sidebar → **Enable** — required before any real data flows,
+  regardless of how correct the code is. Commit `588715a`.
+- Spellbook mobile tab rail + spine (`components/reference/
+  SpellbookBook.tsx`): the task as described assumed desktop already
+  showed icon+name tabs and mobile's icon+name was the one causing
+  horizontal scroll. Reading the actual code (and confirming live)
+  showed the reverse — desktop was **already** icon-only (`sm:hidden` on
+  the tab's name `<span>`), and mobile was the one rendering full names,
+  which is what forced the scroll. Flagged this mismatch to the user
+  before touching anything; they chose the simpler fix (make mobile
+  match desktop) over the literal ask (add names to desktop's 56px
+  rail). Removed the name `<span>` entirely — `title={tab.name}` on the
+  button still gives it an accessible/hover name at every breakpoint —
+  and added `hidden sm:block` to the book's center spine-shadow div so
+  it doesn't render on mobile's single-column stacked layout. Desktop
+  verified live via screenshot, both before and after. Commit `a808ceb`.
+
+**Session from 2026-09-18 (spanning several conversations, same day) — folded forward, unchanged this session:**
 - Planner "Copy build for AI" export: a plain-text summary of the current
   build (spec numbers, per-tree points, each spent talent's actual tooltip
   at its chosen rank, the share URL) copied to the clipboard from a new
@@ -101,6 +135,27 @@ serving as a fixed project brief.
   checking whether the vendor data has gone back to partial/estimated.
 
 **Open / mid-flight:**
+- Mobile verification for the spellbook change above isn't fully closed:
+  got a real mobile-width window rendering correctly (330×717, confirmed
+  via screenshot — not `resize_window`, still non-functional, same
+  finding as 2026-09-18 below), but every click attempt inside that tab
+  timed out (`Input.dispatchMouseEvent`) even though screenshots on the
+  same tab worked fine — see the new Tooling note below. So the collapsed
+  list was confirmed icon-only-ready, but an actual *expanded* book on a
+  real phone-width viewport (tab rail + spine together, in context) was
+  never seen — only reasoned about from the same Tailwind breakpoint
+  logic that was directly confirmed on desktop. User opted to skip
+  further live click-through rather than keep troubleshooting the click
+  timeout. Worth a real manual phone check next time this page is
+  touched.
+- Not investigated this session, flagging rather than guessing: the
+  working tree at session end carries changes this session didn't make
+  and has no context on — `data/racials.json`, `data/spellbooks.json`,
+  `data/talents/{hunter,paladin,warrior}.json`, plus an untracked
+  `data/sources/talentsforever-2026-09-20.json`. Looks like a fresh
+  vendor pull/diff-apply happened outside this conversation. Don't
+  assume it's finished, reviewed, or safe to build on without checking
+  with whoever ran it.
 - One instruction this session ("drop false 'Requires Shadowform'/'Requires
   Spirit of Redemption' lines from Priest racials and Human Perception")
   could not be resolved — grepped current `data/racials.json` and
@@ -136,10 +191,18 @@ serving as a fixed project brief.
   missing per-slug profession pages, blog posts, and guides).
 
 **Suggested next:**
-- Nothing urgent surfaced by this session's own work. If picking this
-  project back up cold, the open items above (racials "Requires" mystery,
-  sitemap TODO, tailoring hero image, spellbook mobile bottom-sheet
-  verification) are the standing backlog, not new discoveries.
+- If picking this project back up cold: the standing backlog above
+  (racials "Requires" mystery, sitemap TODO, tailoring hero image,
+  spellbook mobile bottom-sheet verification — a different, still-open
+  check from this session's tab-rail/spine change, see above) plus this
+  session's two new open items (real mobile click-through on the
+  spellbook, and the unreviewed uncommitted data-pull files) are the
+  standing backlog, not new discoveries.
+- The claude-in-chrome click-timeout-on-an-unfocused-window issue (see
+  Tooling notes below) is worth watching for. It only happened once, so
+  it was worked around with a user hand-off rather than investigated —
+  if it recurs, it's probably worth digging into properly instead of
+  routing around it every time.
 - Optional, low-priority: Legacy Perks could get the planner's mobile touch
   model (tap-to-add, long-press-peek, haptic pulse) ported over from
   `TalentNode.tsx` if this page turns out to get real mobile traffic — see
@@ -175,6 +238,29 @@ written off as "mobile can't be visually verified here, only reasoned
 about from unchanged CSS classes" — that conclusion was wrong. If a
 resize-based approach isn't working, ask the user whether a second real
 window is available before falling back to code-only reasoning.
+
+### A second real window can screenshot fine but time out on clicks
+Observed 2026-09-19, not yet root-caused: after the user set up a second,
+mobile-sized Chrome window per the note above, `tabs_create_mcp` landed a
+new tab there and `computer` `screenshot` worked on it repeatedly and
+correctly (confirmed a genuine 330×717 viewport) — but every `computer`
+`left_click` on that same tab timed out on `Input.dispatchMouseEvent`
+after 30s, even immediately after a successful screenshot. The likely
+cause is that CDP input-event dispatch needs the target window to have
+real OS focus, which a second window sitting behind/beside the active
+one may not have, while screenshot capture apparently doesn't need it.
+Not confirmed against Chrome/CDP internals this session — treat as a
+working theory, not a proven mechanism.
+
+**Practical effect:** if clicks on a real secondary window mysteriously
+time out while screenshots on the same tab keep working, don't loop
+retrying the click — ask the user to click into (focus) that window
+first, or fall back to asking them to perform the click themselves and
+just screenshot the result. This session's spellbook mobile-tab
+verification (see the 2026-09-19 handoff above) hit exactly this and the
+user opted to skip further live interaction rather than troubleshoot it
+further, so the underlying cause is still unconfirmed — worth revisiting
+if it blocks something more important later.
 
 ## Architecture notes
 
