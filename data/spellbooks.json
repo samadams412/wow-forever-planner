@@ -881,6 +881,10 @@
                     [
                       "Instant",
                       "20 sec cooldown"
+                    ],
+                    [
+                      "Requires Two-Handed Axes, Two-Handed Maces, Polearms, Two-Handed Swords, Staves",
+                      ""
                     ]
                   ],
                   "school": "Physical",
@@ -5536,6 +5540,10 @@
                     [
                       "Instant",
                       "10 sec cooldown"
+                    ],
+                    [
+                      "Requires Shields",
+                      ""
                     ]
                   ],
                   "school": "Holy",
@@ -5556,6 +5564,10 @@
                     [
                       "Instant",
                       "10 sec cooldown"
+                    ],
+                    [
+                      "Requires Shields",
+                      ""
                     ]
                   ],
                   "school": "Holy",
@@ -5576,6 +5588,10 @@
                     [
                       "Instant",
                       "10 sec cooldown"
+                    ],
+                    [
+                      "Requires Shields",
+                      ""
                     ]
                   ],
                   "school": "Holy",
@@ -14249,6 +14265,10 @@
                     [
                       "Instant",
                       ""
+                    ],
+                    [
+                      "Requires Daggers",
+                      ""
                     ]
                   ],
                   "school": "Physical",
@@ -14267,6 +14287,10 @@
                     ],
                     [
                       "Instant",
+                      ""
+                    ],
+                    [
+                      "Requires Daggers",
                       ""
                     ]
                   ],
@@ -14287,6 +14311,10 @@
                     [
                       "Instant",
                       ""
+                    ],
+                    [
+                      "Requires Daggers",
+                      ""
                     ]
                   ],
                   "school": "Physical",
@@ -14305,6 +14333,10 @@
                     ],
                     [
                       "Instant",
+                      ""
+                    ],
+                    [
+                      "Requires Daggers",
                       ""
                     ]
                   ],
@@ -25374,6 +25406,28 @@
                   "source": "beta client 1.60.1.69876",
                   "classicStatus": "changed",
                   "classicDescription": "Summons a Tremor Totem with 5 health at the feet of the caster that shakes the ground around it, removing Fear, Charm and Sleep effects from party members within 30 yards. Lasts 2 min."
+                }
+              ]
+            },
+            {
+              "name": "Water Shield",
+              "icon": "ability_shaman_watershield",
+              "talent": true,
+              "ranks": [
+                {
+                  "rank": null,
+                  "level": 20,
+                  "description": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's healing spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time.",
+                  "lines": [
+                    [
+                      "Instant",
+                      "15 sec cooldown"
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "new"
                 }
               ]
             }
@@ -37097,6 +37151,32 @@
               ]
             },
             {
+              "name": "Berserk",
+              "icon": "ability_druid_berserk",
+              "talent": true,
+              "ranks": [
+                {
+                  "rank": null,
+                  "level": 40,
+                  "description": "Causes your Mangle ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec.",
+                  "lines": [
+                    [
+                      "Instant",
+                      "3 min cooldown"
+                    ],
+                    [
+                      "Requires Cat Form, Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "new"
+                }
+              ]
+            },
+            {
               "name": "Cat Form",
               "icon": "ability_druid_catform",
               "ranks": [
@@ -37881,6 +37961,120 @@
                     [
                       "Instant",
                       ""
+                    ],
+                    [
+                      "Requires Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "new"
+                }
+              ]
+            },
+            {
+              "name": "Mangle",
+              "icon": "ability_druid_mangle2",
+              "talent": true,
+              "ranks": [
+                {
+                  "rank": 1,
+                  "level": 25,
+                  "description": "Mangle the target for 100% normal damage plus 26.",
+                  "lines": [
+                    [
+                      "20 Rage",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      "6 sec cooldown"
+                    ],
+                    [
+                      "Requires Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Finishing move that causes damage, disorients the opponent, and turns off your attack. Any damage caused will revive the target. Causes more damage and lasts longer per combo point: 1 point : 7-11 damage and 2 seconds 2 points: 13-19 damage and 3 seconds 3 points: 19-24 damage and 4 seconds 4 points: 25-30 damage and 5 seconds 5 points: 31-37 damage and 6 seconds",
+                  "classicLines": [
+                    [
+                      "45 Energy",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      "10 sec cooldown"
+                    ],
+                    [
+                      "Requires Cat Form",
+                      ""
+                    ]
+                  ]
+                },
+                {
+                  "rank": 2,
+                  "level": 36,
+                  "description": "Mangle the target for 100% normal damage plus 38.",
+                  "lines": [
+                    [
+                      "20 Rage",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      "6 sec cooldown"
+                    ],
+                    [
+                      "Requires Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "new"
+                },
+                {
+                  "rank": 3,
+                  "level": 48,
+                  "description": "Mangle the target for 100% normal damage plus 59.",
+                  "lines": [
+                    [
+                      "20 Rage",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      "6 sec cooldown"
+                    ],
+                    [
+                      "Requires Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "new"
+                },
+                {
+                  "rank": 4,
+                  "level": 60,
+                  "description": "Mangle the target for 100% normal damage plus 77.",
+                  "lines": [
+                    [
+                      "20 Rage",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      "6 sec cooldown"
                     ],
                     [
                       "Requires Bear Form, Dire Bear Form",

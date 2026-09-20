@@ -9,7 +9,52 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-19
+## Session handoff — 2026-09-20
+
+**Stable and shipped this session:**
+- New talentsforever.com pull (`talentsforever-2026-09-20.json`) diffed
+  against 2026-09-19 (`data/sources/diffs/2026-09-19_to_2026-09-20.{md,json}`)
+  and applied. This session also finished a partial, unreviewed application
+  of this same diff that a prior session had left uncommitted (see that
+  session's "Open / mid-flight" note, now resolved) — three of five talent
+  cost-line changes and the racials change had already been hand-applied
+  before this session started, one with a real bug (see below).
+- Small field-level talent/spellbook changes: Warrior Spearing Strike,
+  Paladin Holy Shield and Rogue Mutilate each gained a "Requires \<weapon
+  type\>" clause on their `cost` line (both in `data/talents/*.json` and the
+  matching `data/spellbooks.json` entries); Hunter Resourcefulness's desc
+  numbers changed; Hunter Lightning Reflexes' desc numbers changed and its
+  `classic.status` flipped `changed` → `same`. Tauren's Cultivation racial
+  gained a cooldown clause. The already-applied racials edit had a real bug
+  (concatenated without the source's comma/space: "Instant. 1 hour
+  cooldown.Cultivate..." instead of "Instant, 1 hour cooldown. Cultivate...")
+  — found by diffing raw source JSON directly rather than trusting the
+  working-tree edit, and fixed to match the source exactly.
+- **Talent-granted spells now show in the spellbook** (Shaman's Water
+  Shield, Druid's Mangle and Berserk — all three confirmed via this pull).
+  This needed no new UI: `components/reference/SpellbookBook.tsx` already
+  has a complete mechanism for this from an earlier session — a `talent?:
+  boolean` field on `SpellbookEntry` (`lib/spellbooks.ts`) drives both a
+  "Talent" pill next to the spell's name in the normal tab view and a
+  separate "From your talents" bucket in the "By level" view (spells whose
+  first rank has no real trainer level, or whose `talent` flag forces rank 1
+  into that bucket even when it does have one — see `splitLevelRows`'s own
+  comment). Regenerating `data/spellbooks.json` via `node scripts/
+  build-spellbooks.js data/sources/talentsforever-2026-09-20.json` (which
+  reads the flag from the vendor's own per-class `spellbooks.<Class>.talents`
+  name list, not something we name-match ourselves) picked up all three
+  automatically — confirmed live for Water Shield (Shaman) and both Berserk
+  and Mangle (Druid), pill + tooltip + "From your talents" grouping all
+  correct, and confirmed no passive talent is incorrectly flagged (`spell
+  .talent && spell.passive` is 0 across every class). No second, differently-
+  worded tag was added alongside the existing "Talent" pill — one label for
+  one concept, per the existing convention.
+- Regenerating spellbooks.json this way was verified purely additive first
+  (`git diff --stat` showed 194 insertions, 0 deletions) before trusting it
+  over the prior partial hand-edit — every hand-applied cost-line change
+  already matched the script's own output exactly.
+
+
 
 **Stable and shipped this session:**
 - Vercel Web Analytics actually wired up (`app/layout.tsx`): the prior

@@ -1112,8 +1112,8 @@
           "col": 1,
           "maxRank": 2,
           "ranks": [
-            "Reduces the mana cost of your Trap abilities and melee abilities by 30%. In addition, your critical strikes have a 50% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec.",
-            "Reduces the mana cost of your Trap abilities and melee abilities by 60%. In addition, your critical strikes have a 100% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec."
+            "Reduces the mana cost of your Trap abilities and melee abilities by 30%. In addition, your critical strikes have a 30% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec.",
+            "Reduces the mana cost of your Trap abilities and melee abilities by 60%. In addition, your critical strikes have a 60% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1188,18 +1188,18 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Increases your Agility by 2%.",
-            "Increases your Agility by 4%.",
+            "Increases your Agility by 3%.",
             "Increases your Agility by 6%.",
-            "Increases your Agility by 8%.",
-            "Increases your Agility by 10%."
+            "Increases your Agility by 9%.",
+            "Increases your Agility by 12%.",
+            "Increases your Agility by 15%."
           ],
           "confidence": "confirmed",
           "prereq": null,
           "status": "changed",
           "icon": "spell_nature_invisibilty",
           "classic": {
-            "status": "changed",
+            "status": "same",
             "tree": "Survival",
             "tier": 6,
             "col": 3,

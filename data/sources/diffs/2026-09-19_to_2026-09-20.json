@@ -1,0 +1,175 @@
+{
+  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-19.json",
+  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-20.json",
+  "oldLabel": "2026-09-19",
+  "newLabel": "2026-09-20",
+  "talents": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Spearing Strike",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "15 Rage | Melee Range | Instant | 20 sec cooldown",
+            "new": "15 Rage | Melee Range | Instant | 20 sec cooldown | Requires Two-Handed Axes, Two-Handed Maces, Polearms, Two-Handed Swords, Staves",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Holy Shield",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "150 Mana | Instant | 10 sec cooldown",
+            "new": "150 Mana | Instant | 10 sec cooldown | Requires Shields",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Resourcefulness",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the mana cost of your Trap abilities and melee abilities by 30%. In addition, your critical strikes have a 50% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec.",
+              "Reduces the mana cost of your Trap abilities and melee abilities by 60%. In addition, your critical strikes have a 100% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec."
+            ],
+            "new": [
+              "Reduces the mana cost of your Trap abilities and melee abilities by 30%. In addition, your critical strikes have a 30% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec.",
+              "Reduces the mana cost of your Trap abilities and melee abilities by 60%. In addition, your critical strikes have a 60% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Survival",
+        "name": "Lightning Reflexes",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases your Agility by 2%.",
+              "Increases your Agility by 4%.",
+              "Increases your Agility by 6%.",
+              "Increases your Agility by 8%.",
+              "Increases your Agility by 10%."
+            ],
+            "new": [
+              "Increases your Agility by 3%.",
+              "Increases your Agility by 6%.",
+              "Increases your Agility by 9%.",
+              "Increases your Agility by 12%.",
+              "Increases your Agility by 15%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "changed",
+            "new": "same",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Assassination",
+        "name": "Mutilate",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "60 Energy | Melee Range | Instant",
+            "new": "60 Energy | Melee Range | Instant | Requires Daggers",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [],
+    "removedArrayAdded": [],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": []
+  },
+  "spellbooks": {
+    "added": [
+      {
+        "className": "Shaman",
+        "tabName": "Restoration",
+        "key": "Shaman|Restoration|Water Shield",
+        "name": "Water Shield"
+      },
+      {
+        "className": "Druid",
+        "tabName": "Feral Combat",
+        "key": "Druid|Feral Combat|Berserk",
+        "name": "Berserk"
+      },
+      {
+        "className": "Druid",
+        "tabName": "Feral Combat",
+        "key": "Druid|Feral Combat|Mangle",
+        "name": "Mangle"
+      }
+    ],
+    "removed": [],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [
+      "Shaman|Water Shield|",
+      "Druid|Berserk|",
+      "Druid|Mangle|Rank 1",
+      "Druid|Mangle|Rank 2",
+      "Druid|Mangle|Rank 3",
+      "Druid|Mangle|Rank 4"
+    ],
+    "removed": [],
+    "changed": [
+      "Warrior|Spearing Strike|",
+      "Paladin|Holy Shield|Rank 1",
+      "Paladin|Holy Shield|Rank 2",
+      "Paladin|Holy Shield|Rank 3",
+      "Rogue|Mutilate|Rank 1",
+      "Rogue|Mutilate|Rank 2",
+      "Rogue|Mutilate|Rank 3",
+      "Rogue|Mutilate|Rank 4"
+    ],
+    "newFields": []
+  },
+  "opaque": {
+    "racials": {
+      "changed": true,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": false,
+      "newFields": []
+    }
+  }
+}
