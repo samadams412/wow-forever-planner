@@ -391,3 +391,20 @@ body {
 .scrollbar-gold::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-hover);
 }
+
+@keyframes border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-spin {
+  animation: border-spin 4s linear infinite;
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 0 30px -10px rgba(201, 169, 97, 0.4);
+}
