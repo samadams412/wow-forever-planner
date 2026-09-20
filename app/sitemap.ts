@@ -2,11 +2,13 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
+import { getAllProfessions } from "@/lib/professions";
 
 const STATIC_ROUTES = [
   "",
   "/planner",
   "/reference",
+  "/reference/racials",
   "/reference/legacy-perks",
   "/reference/class-spellbooks",
   "/reference/dungeons",
@@ -42,9 +44,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // 4. Dynamic profession pages
+  const professions = getAllProfessions();
+  const professionEntries = professions.map((profession) => ({
+    url: `${SITE_URL}/reference/professions/${profession.slug}`,
+    lastModified: profession.date ? new Date(profession.date) : new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     ...staticEntries,
     ...guideEntries,
     ...blogEntries,
+    ...professionEntries,
   ];
 }
