@@ -392,6 +392,11 @@ body {
   background-color: var(--accent-hover);
 }
 
+/* Both retired below once their last consumer is migrated onto the shared
+   .fx-featured primitive that replaces them (Start planning button and
+   LaunchCountdown respectively) -- kept here meanwhile so this step stays
+   additive and doesn't leave either current consumer referencing a
+   deleted class. */
 @keyframes border-spin {
   0% {
     transform: rotate(0deg);
@@ -407,4 +412,113 @@ body {
 
 .shadow-gold-glow {
   box-shadow: 0 0 30px -10px rgba(201, 169, 97, 0.4);
+}
+
+/* ==========================================================================
+   Shared interactive effect tiers
+   ==========================================================================
+   Two tiers, reused sitewide instead of each component redefining its own
+   hover chain -- a future hover/glow effect should be an application of
+   one of these classes, not more one-off Tailwind hover: chains.
+
+   - "featured" (.fx-featured, + .fx-featured-hover on a clickable one):
+     reserved for the single primary element per page. Currently the
+     homepage's "Start planning" button and LaunchCountdown -- both wear
+     the same rotating shimmer ring and ambient glow so they read as one
+     visual language, even though only the button also gets the
+     hover-only lift/glow-boost half (the countdown isn't clickable, so it
+     only ever shows the ambient state).
+   - "standard" (.fx-standard-hover, + .fx-standard-hover-icon on an icon
+     child): every ordinary clickable card/row -- Card.tsx, the shared
+     reference Collapsible, blog list items. One tier quieter than
+     featured on purpose: same lift direction, smaller glow, no shimmer --
+     this is Card.tsx's original hover treatment, extracted as-is rather
+     than re-tuned, so it stays the ceiling for every tier-2 location.
+
+   Both disable their transform/animation under prefers-reduced-motion but
+   keep the border/background color change, so hover still reads as
+   "interactive" without any motion.
+   ========================================================================== */
+
+@keyframes fx-shimmer-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Wrap a single child in this for a rotating conic-gradient ring, shown as
+   a hairline border through this element's own 1px padding, plus a static
+   ambient glow. isolation: isolate scopes the ring's negative z-index to
+   this element's own stacking context instead of sinking below the page.
+   The child supplies its own background/blur -- every current consumer
+   keeps that translucent on purpose (see page.tsx) so the homepage hero
+   photo stays visible through it, but that's the consumer's choice, not
+   something this class enforces. */
+.fx-featured {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: inherit;
+  padding: 1px;
+  box-shadow: 0 0 30px -8px rgba(201, 169, 97, 0.45);
+}
+
+.fx-featured::before {
+  content: "";
+  position: absolute;
+  inset: -1000%;
+  z-index: -1;
+  background: conic-gradient(from 90deg at 50% 50%, #3d3420 0%, #c9a961 25%, #ffeaac 50%, #c9a961 75%, #3d3420 100%);
+  animation: fx-shimmer-spin 4s linear infinite;
+}
+
+/* Hover-only boost for a .fx-featured element that's also clickable --
+   put on the same element as .fx-featured itself (LaunchCountdown skips
+   this; it only ever shows .fx-featured's ambient state). */
+.fx-featured-hover {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.fx-featured-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px -6px rgba(201, 169, 97, 0.55);
+}
+
+/* Standard tier -- matches Card.tsx's original hover values exactly. */
+.fx-standard-hover {
+  transition: transform 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.fx-standard-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background-color: var(--surface-hover);
+  box-shadow: 0 4px 20px rgba(201, 169, 97, 0.12);
+}
+
+/* Companion for an icon/child inside a .fx-standard-hover element (Card's
+   icon slot) -- a plain descendant selector instead of Tailwind's
+   group/group-hover so the reduced-motion override below can catch it in
+   the same place as everything else. */
+.fx-standard-hover-icon {
+  transition: transform 300ms ease;
+}
+
+.fx-standard-hover:hover .fx-standard-hover-icon {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-featured::before {
+    animation: none;
+  }
+
+  .fx-featured-hover:hover,
+  .fx-standard-hover:hover {
+    transform: none;
+  }
+
+  .fx-standard-hover:hover .fx-standard-hover-icon {
+    transform: none;
+  }
 }
