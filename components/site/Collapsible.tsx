@@ -18,7 +18,7 @@ export default function Collapsible({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-lg border border-border bg-surface">
+    <div className="fx-standard-hover rounded-lg border border-border bg-surface">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}

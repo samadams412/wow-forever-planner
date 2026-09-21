@@ -76,7 +76,7 @@ export default async function BlogPage({
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+                  className="fx-standard-hover block rounded-lg border border-border bg-surface p-4"
                 >
                   <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                     <h2 className="font-medium text-foreground">{post.title}</h2>
