@@ -93,14 +93,14 @@ export default function Home() {
           Tracking WoW Forever beta data as of Sept 13, 2026 · All classes fully built, other features in progress.
         </p>
 
-        <div className="group relative mt-6 inline-block overflow-hidden rounded-lg p-[1px] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(201,169,97,0.2)]">
-          {/* Rotating Shimmer Border Layer */}
-          <span className="absolute inset-[-1000%] animate-border-spin bg-[conic-gradient(from_90deg_at_50%_50%,#3d3420_0%,#c9a961_25%,#ffeaac_50%,#c9a961_75%,#3d3420_100%)]" />
-
-          {/* See-through Button Content matching Card style */}
+        <div className="fx-featured fx-featured-hover mt-6 inline-block rounded-lg">
+          {/* bg-surface-hover/85 on hover, not the opaque bg-surface-hover
+              Card.tsx uses -- this button sits over the hero photo, so its
+              hover state has to stay translucent same as its resting state
+              instead of going solid. */}
           <Link
             href="/planner"
-            className="relative flex items-center justify-center rounded-lg bg-surface/80 px-5 py-2.5 font-medium text-accent backdrop-blur-sm transition-colors group-hover:bg-surface-hover"
+            className="relative flex items-center justify-center rounded-lg bg-surface/80 px-5 py-2.5 font-medium text-accent backdrop-blur-sm transition-colors hover:bg-surface-hover/85"
           >
             Start planning →
           </Link>
