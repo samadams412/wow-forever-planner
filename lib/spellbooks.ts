@@ -19,11 +19,22 @@ export type SpellRank = {
   classicStatus?: "changed" | "same" | "new" | "note";
   classicDescription?: string;
   classicLines?: [string, string][];
+  // The vendor's own explanation for a `classicStatus: "note"` rank -- a
+  // free-text caveat (e.g. Presence of Mind: "Still an Arcane talent in
+  // Forever. It comes with the talent point.") rather than a diffable
+  // before/after pair like classicDescription.
+  classicNote?: string;
   // Present when this rank's Classic-era name differed from Forever's --
   // e.g. "Curse of Agony" for what Forever calls Bane of Agony. Drives the
   // RENAMED tag; a spell can be `classicStatus: "changed"` without this
   // (a REWORKED-tagged spell -- same name, different numbers/text).
   renamedFrom?: string;
+  // A vendor footnote on this specific rank's own data, distinct from any
+  // Classic comparison -- e.g. Instant Poison IV: the beta client's own
+  // tooltip literally shows "1,800 charges" (its 30 min duration in
+  // seconds, mis-slotted into the charges field); `description` already
+  // carries the corrected 130, this is the explanation for the mismatch.
+  note?: string;
 };
 
 export type SpellbookEntry = {
@@ -45,6 +56,15 @@ export type SpellbookEntry = {
 
 export type SpellbookTab = {
   name: string;
+  // Present on a tab that isn't derived from a talent tree (so getTreeIcon
+  // has no talent-tree data to fall back to) -- currently just Rogue's
+  // "Poisons" recipe tab. Falls back to getTreeIcon's own heuristic/
+  // overrides when absent, same as before this field existed.
+  icon?: string;
+  // A short caption shown under the tab's header, e.g. Poisons' "recipes:
+  // each one makes the poison you put on a weapon" -- absent on every
+  // other tab today.
+  note?: string;
   spells: SpellbookEntry[];
 };
 

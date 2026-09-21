@@ -7,6 +7,7 @@ import {
   spellbooks,
   type ClassSpellbook,
   type SpellbookEntry,
+  type SpellbookTab,
   type SpellRank,
   type SpellbookVerification,
 } from "@/lib/spellbooks";
@@ -20,6 +21,7 @@ import {
   TooltipDescription,
   TooltipStatLine,
   TooltipSourceNote,
+  TooltipDataNote,
   TooltipClassicDiff,
 } from "@/components/planner/TooltipCard";
 import CornerBracket from "@/components/site/CornerBracket";
@@ -39,9 +41,13 @@ const SPELL_ICON_OVERRIDES: Record<string, string> = {
   Dodge: "spell_nature_invisibilty",
 };
 
-function resolveTabIcon(classId: string, tabName: string): string {
-  if (tabName === "General") return CLASS_ICON[classId] ?? "inv_misc_questionmark";
-  return getTreeIcon(classId, tabName);
+// A tab not derived from a talent tree (e.g. Rogue's "Poisons" recipe tab)
+// carries its own icon straight from the vendor rather than needing an
+// entry in getTreeIcon's TREE_ICON_OVERRIDES -- prefer that when present.
+function resolveTabIcon(classId: string, tab: SpellbookTab): string {
+  if (tab.icon) return tab.icon;
+  if (tab.name === "General") return CLASS_ICON[classId] ?? "inv_misc_questionmark";
+  return getTreeIcon(classId, tab.name);
 }
 
 function resolveSpellIcon(spell: SpellbookEntry): string {
@@ -338,6 +344,7 @@ function SpellEntry({
               ))}
               {rankEntry.level !== null && <TooltipLevelReq>Learned at level {rankEntry.level}</TooltipLevelReq>}
               <TooltipDescription>{rankEntry.description}</TooltipDescription>
+              {rankEntry.note && <TooltipDataNote>{rankEntry.note}</TooltipDataNote>}
               {compareMode && rankEntry.classicStatus === "changed" && rankEntry.classicDescription && (
                 <TooltipClassicDiff classicText={rankEntry.classicDescription} foreverText={rankEntry.description} />
               )}
@@ -748,7 +755,7 @@ export default function SpellbookBook({
             }`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={mediumIconUrl(resolveTabIcon(classId, tab.name))} alt="" className="h-6 w-6 shrink-0 rounded-sm" />
+            <img src={mediumIconUrl(resolveTabIcon(classId, tab))} alt="" className="h-6 w-6 shrink-0 rounded-sm" />
           </button>
         ))}
       </div>
@@ -802,6 +809,7 @@ export default function SpellbookBook({
                   {totalRankCount > activeTab.spells.length ? `, ${totalRankCount} ranks` : ""}
                 </span>
               </div>
+              {activeTab.note && <p className="mt-1 text-[11px] italic text-[#6b5a3d]">{activeTab.note}</p>}
 
               {/* Column-major, matching talentsforever.com's actual book layout
                   (verified against .reference/spellbook_ordering_correct.png):

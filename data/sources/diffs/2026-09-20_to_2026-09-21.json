@@ -1,0 +1,113 @@
+{
+  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-20.json",
+  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever-2026-09-21.json",
+  "oldLabel": "2026-09-20",
+  "newLabel": "2026-09-21",
+  "talents": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": [],
+    "removedArrayAdded": [],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": []
+  },
+  "spellbooks": {
+    "added": [
+      {
+        "className": "Rogue",
+        "tabName": "Poisons",
+        "key": "Rogue|Poisons|Crippling Poison",
+        "name": "Crippling Poison"
+      },
+      {
+        "className": "Rogue",
+        "tabName": "Poisons",
+        "key": "Rogue|Poisons|Instant Poison",
+        "name": "Instant Poison"
+      },
+      {
+        "className": "Rogue",
+        "tabName": "Poisons",
+        "key": "Rogue|Poisons|Mind-numbing Poison",
+        "name": "Mind-numbing Poison"
+      },
+      {
+        "className": "Rogue",
+        "tabName": "Poisons",
+        "key": "Rogue|Poisons|Deadly Poison",
+        "name": "Deadly Poison"
+      },
+      {
+        "className": "Rogue",
+        "tabName": "Poisons",
+        "key": "Rogue|Poisons|Wound Poison",
+        "name": "Wound Poison"
+      },
+      {
+        "className": "Rogue",
+        "tabName": "Poisons",
+        "key": "Rogue|Poisons|Blinding Powder",
+        "name": "Blinding Powder"
+      }
+    ],
+    "removed": [],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [
+      "Rogue|Crippling Poison|Rank 1",
+      "Rogue|Crippling Poison|Rank 2",
+      "Rogue|Instant Poison|Rank 1",
+      "Rogue|Instant Poison|Rank 2",
+      "Rogue|Instant Poison|Rank 3",
+      "Rogue|Instant Poison|Rank 4",
+      "Rogue|Instant Poison|Rank 5",
+      "Rogue|Instant Poison|Rank 6",
+      "Rogue|Mind-numbing Poison|Rank 1",
+      "Rogue|Mind-numbing Poison|Rank 2",
+      "Rogue|Mind-numbing Poison|Rank 3",
+      "Rogue|Deadly Poison|Rank 1",
+      "Rogue|Deadly Poison|Rank 2",
+      "Rogue|Deadly Poison|Rank 3",
+      "Rogue|Deadly Poison|Rank 4",
+      "Rogue|Deadly Poison|Rank 5",
+      "Rogue|Wound Poison|Rank 1",
+      "Rogue|Wound Poison|Rank 2",
+      "Rogue|Wound Poison|Rank 3",
+      "Rogue|Wound Poison|Rank 4",
+      "Rogue|Blinding Powder|"
+    ],
+    "removed": [],
+    "changed": [
+      "Hunter|Enchanted Flare|",
+      "Shaman|Rage of the Farseer|",
+      "Shaman|Totemic Projection|",
+      "Mage|Presence of Mind|",
+      "Druid|Mangle|Rank 1",
+      "Druid|Revive|Rank 1"
+    ],
+    "newFields": [
+      "fx"
+    ]
+  },
+  "opaque": {
+    "racials": {
+      "changed": true,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": true,
+      "newFields": []
+    }
+  }
+}

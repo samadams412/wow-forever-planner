@@ -65,7 +65,14 @@ function collectRanks(spellDesc, classId, spellName) {
     classicStatus: entry.cs,
     classicDescription: entry.cd,
     classicLines: entry.cl,
+    classicNote: entry.cn,
     renamedFrom: entry.was,
+    // A vendor-authored footnote on this specific rank's data (e.g. Instant
+    // Poison IV: the beta client's own tooltip literally prints "1,800
+    // charges" -- its 30 min duration in seconds, mistakenly in the charges
+    // field -- while `d` above already carries the corrected 130). Rare and
+    // not talent/poison-specific; render wherever it's present.
+    note: entry.fx,
   }));
 }
 
@@ -95,7 +102,10 @@ function buildClassSpellbook(classId, snapshot, oldSpellbook) {
     // Our own tab label stays "Pet" regardless of the vendor's per-class
     // name -- see the file-level comment for why.
     const tabName = tab.name === petTabSourceName ? "Pet" : tab.name;
-    return { name: tabName, spells };
+    // icon/note are new as of the 2026-09-21 pull's Rogue "Poisons" tab
+    // (the recipe list, not a talent tree) -- generic here, not Poisons-
+    // specific, so any future vendor tab carrying them picks them up too.
+    return { name: tabName, icon: tab.icon, note: tab.note, spells };
   });
 
   // The General tab is untouched, demo-sourced data -- carried over as-is.

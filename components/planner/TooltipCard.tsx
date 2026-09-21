@@ -145,6 +145,15 @@ export function TooltipStatLine({ left, right }: { left: string; right: string }
   );
 }
 
+// A vendor-authored footnote on the rank's own data, distinct from a
+// Classic comparison -- e.g. Instant Poison IV's beta-tooltip-vs-recipe
+// charges mismatch. Same muted caveat tone as TooltipSourceNote's
+// unconfirmed branch below and TooltipLevelReq, just italicized to read as
+// an aside rather than a source citation.
+export function TooltipDataNote({ children }: { children: ReactNode }) {
+  return <p className="mt-1.5 text-[10px] italic text-gray-500">{children}</p>;
+}
+
 export function TooltipSourceNote({ confirmed, source }: { confirmed: boolean; source?: string }) {
   // `source` used to always mean a specific stream/demo citation ("Xaryu's
   // Warrior, 13 Sep") back when that's all this data ever was. The

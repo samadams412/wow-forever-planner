@@ -936,7 +936,8 @@
                   "school": "Physical",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "In Classic this was an Arms talent. Forever teaches it at the trainer."
                 }
               ]
             },
@@ -8151,7 +8152,7 @@
                   "school": "Arcane",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "same"
+                  "classicStatus": "new"
                 }
               ]
             },
@@ -15777,6 +15778,541 @@
           ]
         },
         {
+          "name": "Poisons",
+          "icon": "trade_brewpoison",
+          "note": "recipes: each one makes the poison you put on a weapon",
+          "spells": [
+            {
+              "name": "Crippling Poison",
+              "icon": "ability_poisonsting",
+              "ranks": [
+                {
+                  "rank": 1,
+                  "level": 20,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, slowing their movement speed by 50% for 12 sec.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Essence of Pain, Empty Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Crippling Poison",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "same"
+                },
+                {
+                  "rank": 2,
+                  "level": 50,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, slowing their movement speed by 70% for 12 sec.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Essence of Agony x3, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Crippling Poison II",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "same"
+                }
+              ]
+            },
+            {
+              "name": "Instant Poison",
+              "icon": "ability_poisons",
+              "ranks": [
+                {
+                  "rank": 1,
+                  "level": 20,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 13 to 17 Nature damage. 60 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Decay, Empty Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Instant Poison",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 19 to 25 Nature damage. 40 charges."
+                },
+                {
+                  "rank": 2,
+                  "level": 28,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 20 to 26 Nature damage. 85 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Decay x3, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Instant Poison II",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 30 to 38 Nature damage. 55 charges."
+                },
+                {
+                  "rank": 3,
+                  "level": 36,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 29 to 37 Nature damage. 105 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Deterioration, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Instant Poison III",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 44 to 56 Nature damage. 70 charges."
+                },
+                {
+                  "rank": 4,
+                  "level": 44,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 45 to 57 Nature damage. 130 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Deterioration x2, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Instant Poison IV",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 67 to 85 Nature damage. 85 charges.",
+                  "note": "The beta's own tooltip reads 1,800 charges here. That is the 30 minute duration in seconds, a slip in the game's text; the recipe's data says 130."
+                },
+                {
+                  "rank": 5,
+                  "level": 52,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 62 to 80 Nature damage. 150 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Deterioration x3, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Instant Poison V",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 92 to 118 Nature damage. 100 charges."
+                },
+                {
+                  "rank": 6,
+                  "level": 60,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 76 to 100 Nature damage. 175 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Deterioration x4, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Instant Poison VI",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 112 to 148 Nature damage. 115 charges."
+                }
+              ]
+            },
+            {
+              "name": "Mind-numbing Poison",
+              "icon": "spell_nature_nullifydisease",
+              "ranks": [
+                {
+                  "rank": 1,
+                  "level": 24,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 40% for 10 sec. 75 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Decay, Essence of Pain, Empty Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Mind-numbing Poison",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 40% for 10 sec. 50 charges."
+                },
+                {
+                  "rank": 2,
+                  "level": 38,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 50% for 12 sec. 115 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Decay x4, Essence of Pain x4, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Mind-numbing Poison II",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 50% for 12 sec. 75 charges."
+                },
+                {
+                  "rank": 3,
+                  "level": 52,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 60% for 14 sec. 150 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Dust of Deterioration x2, Essence of Agony x2, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Mind-numbing Poison III",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 60% for 14 sec. 100 charges."
+                }
+              ]
+            },
+            {
+              "name": "Deadly Poison",
+              "icon": "ability_rogue_dualweild",
+              "ranks": [
+                {
+                  "rank": 1,
+                  "level": 30,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 24 Nature damage over 12 sec. Stacks up to 5 times on a single target. 90 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Deathweed, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Deadly Poison",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 36 Nature damage over 12 sec. Stacks up to 5 times on a single target. 60 charges."
+                },
+                {
+                  "rank": 2,
+                  "level": 38,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 36 Nature damage over 12 sec. Stacks up to 5 times on a single target. 115 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Deathweed x2, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Deadly Poison II",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 52 Nature damage over 12 sec. Stacks up to 5 times on a single target. 75 charges."
+                },
+                {
+                  "rank": 3,
+                  "level": 46,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 56 Nature damage over 12 sec. Stacks up to 5 times on a single target. 135 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Deathweed x3, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Deadly Poison III",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 80 Nature damage over 12 sec. Stacks up to 5 times on a single target. 90 charges."
+                },
+                {
+                  "rank": 4,
+                  "level": 54,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 72 Nature damage over 12 sec. Stacks up to 5 times on a single target. 160 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Deathweed x5, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Deadly Poison IV",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 108 Nature damage over 12 sec. Stacks up to 5 times on a single target. 105 charges."
+                },
+                {
+                  "rank": 5,
+                  "level": 60,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 92 Nature damage over 12 sec. Stacks up to 5 times on a single target. 180 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Deathweed x7, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Deadly Poison V",
+                      ""
+                    ]
+                  ],
+                  "school": "Nature",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 136 Nature damage over 12 sec. Stacks up to 5 times on a single target. 105 charges."
+                }
+              ]
+            },
+            {
+              "name": "Wound Poison",
+              "icon": "inv_misc_herb_16",
+              "ranks": [
+                {
+                  "rank": 1,
+                  "level": 32,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 67 for 15 sec. Stacks up to 5 times on a single target. 90 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Essence of Pain, Deathweed, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Wound Poison",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 55 for 15 sec."
+                },
+                {
+                  "rank": 2,
+                  "level": 40,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 92 for 15 sec. Stacks up to 5 times on a single target. 115 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Essence of Pain, Deathweed x2, Leaded Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Wound Poison II",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 75 for 15 sec."
+                },
+                {
+                  "rank": 3,
+                  "level": 48,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 128 for 15 sec. Stacks up to 5 times on a single target. 135 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Essence of Agony, Deathweed x2, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Wound Poison III",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 105 for 15 sec."
+                },
+                {
+                  "rank": 4,
+                  "level": 56,
+                  "description": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 165 for 15 sec. Stacks up to 5 times on a single target. 160 charges.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Essence of Agony x2, Deathweed x2, Crystal Vial",
+                      ""
+                    ],
+                    [
+                      "Makes: Wound Poison IV",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "changed",
+                  "classicDescription": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 135 for 15 sec."
+                }
+              ]
+            },
+            {
+              "name": "Blinding Powder",
+              "icon": "inv_misc_ammo_gunpowder_02",
+              "ranks": [
+                {
+                  "rank": null,
+                  "level": 34,
+                  "description": "Create the reagent for the Blind ability.",
+                  "lines": [
+                    [
+                      "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "Reagents: Fadeleaf",
+                      ""
+                    ],
+                    [
+                      "Makes: 3 Blinding Powder",
+                      ""
+                    ]
+                  ],
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.69876",
+                  "classicStatus": "same"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "General",
           "spells": [
             {
@@ -16033,7 +16569,8 @@
                   "school": "Holy",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "Baseline now. In Classic this was a Discipline talent."
                 },
                 {
                   "rank": 2,
@@ -21330,7 +21867,8 @@
                   "school": "Fire, Nature, Frost",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "New in Forever. Drops a saved set of totems in one cast."
                 }
               ]
             },
@@ -21351,7 +21889,8 @@
                   "school": "Fire, Nature, Frost",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "New in Forever. Drops a saved set of totems in one cast."
                 }
               ]
             },
@@ -22744,7 +23283,8 @@
                   "school": "Nature",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "New in Forever. Classic had no way to pull totems back."
                 }
               ]
             }
@@ -23602,15 +24142,7 @@
                   "school": "Physical",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "changed",
-                  "classicDescription": "Reduces all damage you take by 20% and you regenerate mana equal to 5% of your maximum mana every second for 15 sec. Your party and raid members within 40 yards will also receive 18% of the mana you receive this way.",
-                  "classicLines": [
-                    [
-                      "Instant",
-                      "1 min cooldown"
-                    ]
-                  ],
-                  "renamedFrom": "Shamanistic Rage"
+                  "classicStatus": "new"
                 }
               ]
             },
@@ -24075,17 +24607,7 @@
                   "school": "Nature",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "changed",
-                  "classicLines": [
-                    [
-                      "",
-                      "30 yd range"
-                    ],
-                    [
-                      "Instant",
-                      "10 sec cooldown"
-                    ]
-                  ]
+                  "classicStatus": "new"
                 }
               ]
             },
@@ -25664,7 +26186,8 @@
                   "coefficient": "71.4% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "Not in Classic Era. Season of Discovery had a rune with this name."
                 }
               ]
             },
@@ -27181,7 +27704,8 @@
                   "school": "Physical",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "note"
+                  "classicStatus": "note",
+                  "classicNote": "Still an Arcane talent in Forever. It comes with the talent point."
                 }
               ]
             },
@@ -38000,22 +38524,7 @@
                   "school": "Physical",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "changed",
-                  "classicDescription": "Finishing move that causes damage, disorients the opponent, and turns off your attack. Any damage caused will revive the target. Causes more damage and lasts longer per combo point: 1 point : 7-11 damage and 2 seconds 2 points: 13-19 damage and 3 seconds 3 points: 19-24 damage and 4 seconds 4 points: 25-30 damage and 5 seconds 5 points: 31-37 damage and 6 seconds",
-                  "classicLines": [
-                    [
-                      "45 Energy",
-                      "Melee Range"
-                    ],
-                    [
-                      "Instant",
-                      "10 sec cooldown"
-                    ],
-                    [
-                      "Requires Cat Form",
-                      ""
-                    ]
-                  ]
+                  "classicStatus": "new"
                 },
                 {
                   "rank": 2,
@@ -40387,18 +40896,7 @@
                   "school": "Physical",
                   "confirmed": true,
                   "source": "beta client 1.60.1.69876",
-                  "classicStatus": "changed",
-                  "classicDescription": "Brings a dead player back to life with 15% of their health and mana. Cannot be used when in combat.",
-                  "classicLines": [
-                    [
-                      "72% of base mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "10 sec cast",
-                      ""
-                    ]
-                  ]
+                  "classicStatus": "new"
                 },
                 {
                   "rank": 2,
