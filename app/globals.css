@@ -392,6 +392,10 @@ body {
   background-color: var(--accent-hover);
 }
 
+.shadow-gold-glow {
+  box-shadow: 0 0 30px -10px rgba(201, 169, 97, 0.4);
+}
+
 /* ==========================================================================
    Shared interactive effect tiers
    ==========================================================================
@@ -400,12 +404,10 @@ body {
    one of these classes, not more one-off Tailwind hover: chains.
 
    - "featured" (.fx-featured, + .fx-featured-hover on a clickable one):
-     reserved for the single primary element per page. Currently the
-     homepage's "Start planning" button and LaunchCountdown -- both wear
-     the same rotating shimmer ring and ambient glow so they read as one
-     visual language, even though only the button also gets the
-     hover-only lift/glow-boost half (the countdown isn't clickable, so it
-     only ever shows the ambient state).
+     reserved for the single primary element per page -- currently just
+     the homepage's "Start planning" button. (LaunchCountdown wore this
+     too for a stretch, but was reverted back to its own plain
+     border-accent/50 + shadow-gold-glow by request.)
    - "standard" (.fx-standard-hover, + .fx-standard-hover-icon on an icon
      child): every ordinary clickable card/row -- Card.tsx, the shared
      reference Collapsible, blog list items. One tier quieter than
