@@ -392,13 +392,6 @@ body {
   background-color: var(--accent-hover);
 }
 
-/* Retired once its last consumer is migrated onto the shared .fx-featured
-   primitive that replaces it (LaunchCountdown) -- kept here meanwhile so
-   that step stays additive. */
-.shadow-gold-glow {
-  box-shadow: 0 0 30px -10px rgba(201, 169, 97, 0.4);
-}
-
 /* ==========================================================================
    Shared interactive effect tiers
    ==========================================================================
