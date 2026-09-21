@@ -83,13 +83,17 @@ export default function Home() {
             alt=""
             className="h-12 w-12 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] sm:h-14 sm:w-14"
           />
-          <h1 className="font-heading text-3xl font-semibold tracking-wide text-accent">Forevercraft</h1>
+          <h1 className="hero-text-accent font-heading text-3xl font-semibold tracking-wide">Forevercraft</h1>
         </div>
-        <p className="mt-2 text-foreground-muted">
+        {/* hero-text-muted, not text-foreground-muted -- this sits directly
+            over the hero photo with only a text-shadow (on the wrapping div
+            above and this section's own overlays) for legibility, so it
+            can't repaint dark in readable mode the way plain body copy does. */}
+        <p className="hero-text-muted mt-2">
           A free, fan-made planner and guide hub for World of Warcraft:
           Forever.
         </p>
-        <p className="mt-2 text-sm text-foreground-muted">
+        <p className="hero-text-muted mt-2 text-sm">
           Tracking WoW Forever beta data as of Sept 13, 2026 · All classes fully built, other features in progress.
         </p>
 

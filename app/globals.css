@@ -61,8 +61,10 @@ body {
    talent tree, the spellbook's page-flip/parchment (--pg/--ink2 are scoped
    to .spellbook-page itself, untouched by this), the Dungeon Level Ranges
    chart, today's .fx-featured/.fx-standard-hover shimmer/glow (their colors
-   are hardcoded rgba() values, not theme variables), or CornerBracket --
-   those stay exactly as themed in both modes for this pass. */
+   are hardcoded rgba() values, not theme variables), CornerBracket, or the
+   homepage/Blog/Guides hero headline+tagline (.hero-text-accent/
+   .hero-text-muted below) -- those stay exactly as themed in both modes
+   for this pass. */
 html.readable-mode {
   color-scheme: light;
   --background: #ffffff;
@@ -78,6 +80,24 @@ html.readable-mode {
   --gold: #8a6a14;
   --gold-hover: #6e5410;
   --font-heading: var(--font-sans);
+}
+
+/* Hero headline/tagline text over a photo (homepage, Blog index, Guides
+   index) -- each page's own dark gradient/vignette overlay behind this
+   text is hardcoded and art-directed for light text, not tied to
+   --background, so it was never going to look right once readable-mode
+   turned this text dark. Same fix as the talent tree/spellbook/Dungeon
+   chart being scoped out of readable-mode entirely: these are fixed
+   colors (matching exactly what the default theme already renders here),
+   not aliases to --accent/--foreground-muted, so they never repaint with
+   the toggle. Everything else on these pages (guide/blog list items, the
+   rest of the page body) is unaffected and still repaints normally. */
+.hero-text-accent {
+  color: #c9a961;
+}
+
+.hero-text-muted {
+  color: #a89878;
 }
 
 /* In Tailwind v4's cascade layers, unlayered rules beat layered utility

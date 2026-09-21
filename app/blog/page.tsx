@@ -53,10 +53,14 @@ export default async function BlogPage({
         />
 
         <div className="relative mx-auto w-full max-w-3xl">
-          <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
+          {/* hero-text-accent/hero-text-muted, not text-accent/
+              text-foreground-muted -- this sits directly over the hero photo
+              with only a text-shadow for legibility, so it can't repaint
+              dark in readable mode the way plain body copy does. */}
+          <h1 className="hero-text-accent font-heading text-2xl font-semibold tracking-wide [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
             Blog
           </h1>
-          <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
+          <p className="hero-text-muted mt-2 max-w-[70ch] text-sm leading-relaxed [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
             Dated posts -- beta impressions, patch breakdowns, and updates as Forever evolves.
           </p>
         </div>
