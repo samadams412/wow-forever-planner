@@ -5,6 +5,7 @@ import SiteFooter from "@/components/site/SiteFooter";
 import CustomCursor from "@/components/site/CustomCursor";
 import BackToTop from "@/components/site/BackToTop"; // <-- Import the BackToTop component
 import { SITE_URL } from "@/lib/site";
+import { READABLE_MODE_INIT_SCRIPT } from "@/lib/readable-mode";
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
@@ -42,8 +43,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${cinzelDecorative.variable} h-full antialiased`}
+      // The blocking readable-mode script below adds a class to this element
+      // before React hydrates. Without suppressHydrationWarning, React
+      // treats that as a mismatch against its own server-rendered className
+      // and "fixes" it by reconciling the attribute back -- silently
+      // stripping the class back off right after hydration completes on
+      // every full page load (client-side Link navigations aren't affected,
+      // since those don't re-hydrate this element).
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {/* Applies the readable-mode class (if the visitor previously
+            turned it on) before hydration -- running this from a useEffect
+            instead would flash the default theme first on every load. */}
+        <script dangerouslySetInnerHTML={{ __html: READABLE_MODE_INIT_SCRIPT }} />
         <CustomCursor />
         <SiteHeader />
         {children}

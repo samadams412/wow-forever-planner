@@ -1,3 +1,5 @@
+import ReadableModeToggle from "@/components/site/ReadableModeToggle";
+
 export default function SiteFooter() {
   return (
     <footer className="mt-auto border-t border-border">
@@ -10,6 +12,7 @@ export default function SiteFooter() {
         <p className="text-foreground-muted">
           Forevercraft is a free, fan-made project and is not affiliated with Blizzard Entertainment.
         </p>
+        <ReadableModeToggle />
       </div>
     </footer>
   );

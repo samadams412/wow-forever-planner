@@ -41,6 +41,45 @@ body {
   color: var(--foreground);
 }
 
+/* ==========================================================================
+   Readable mode
+   ==========================================================================
+   A second palette, toggled by adding "readable-mode" to <html> (see
+   components/site/ReadableModeToggle.tsx + lib/readable-mode.ts) --
+   redefines the same custom properties the default theme sets above,
+   following that theme's own alias pattern (--accent/--accent-hover stay
+   declared as var(--gold)/var(--gold-hover) up in :root and are never
+   redeclared here -- overriding just --gold/--gold-hover is enough, since
+   var() resolves each reference against the current element's own cascade)
+   rather than inventing a parallel set of --readable-* names every consumer
+   would have to opt into.
+
+   Scope is deliberately narrow -- swaps the heading font (Cinzel Decorative
+   -> the same Geist Sans already used for body copy) and the base
+   background/surface/border/text/accent colors for a plain, higher-
+   contrast look. It does NOT reskin decorative/textured components: the
+   talent tree, the spellbook's page-flip/parchment (--pg/--ink2 are scoped
+   to .spellbook-page itself, untouched by this), the Dungeon Level Ranges
+   chart, today's .fx-featured/.fx-standard-hover shimmer/glow (their colors
+   are hardcoded rgba() values, not theme variables), or CornerBracket --
+   those stay exactly as themed in both modes for this pass. */
+html.readable-mode {
+  color-scheme: light;
+  --background: #ffffff;
+  --surface: #f4f4f5;
+  --surface-hover: #e9e9ec;
+  --border: #d4d4d8;
+  --foreground: #18181b;
+  --foreground-muted: #52525b;
+  /* Plain WCAG-friendly dark gold -- the default theme's bright #c9a961
+     reads at roughly 2:1 against white, well under the 4.5:1 body-text
+     minimum. Same hue family, not swapped for an unrelated color, so this
+     still reads as the same site. */
+  --gold: #8a6a14;
+  --gold-hover: #6e5410;
+  --font-heading: var(--font-sans);
+}
+
 /* In Tailwind v4's cascade layers, unlayered rules beat layered utility
    classes regardless of specificity -- so these live in @layer base to let
    utilities like cursor-not-allowed (in the utilities layer) still win. */
