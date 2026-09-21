@@ -218,6 +218,21 @@ export function TooltipClassicDiff({ classicText, foreverText }: { classicText: 
   );
 }
 
+// The vendor's own free-text aside for a `classicStatus: "note"` rank --
+// e.g. Presence of Mind: "Still an Arcane talent in Forever. It comes with
+// the talent point." Same "Compare to Classic" gating and header treatment
+// as TooltipClassicDiff, since it's answering the same question ("how does
+// this compare to Classic?") for a rank that isn't a clean before/after
+// diff.
+export function TooltipClassicStatusNote({ children }: { children: ReactNode }) {
+  return (
+    <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
+      <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">Compared to Classic</div>
+      <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed text-gray-400">{children}</p>
+    </div>
+  );
+}
+
 export function TooltipClassicNote({
   status,
   position,

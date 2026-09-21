@@ -23,6 +23,7 @@ import {
   TooltipSourceNote,
   TooltipDataNote,
   TooltipClassicDiff,
+  TooltipClassicStatusNote,
 } from "@/components/planner/TooltipCard";
 import CornerBracket from "@/components/site/CornerBracket";
 
@@ -347,6 +348,9 @@ function SpellEntry({
               {rankEntry.note && <TooltipDataNote>{rankEntry.note}</TooltipDataNote>}
               {compareMode && rankEntry.classicStatus === "changed" && rankEntry.classicDescription && (
                 <TooltipClassicDiff classicText={rankEntry.classicDescription} foreverText={rankEntry.description} />
+              )}
+              {compareMode && rankEntry.classicStatus === "note" && rankEntry.classicNote && (
+                <TooltipClassicStatusNote>{rankEntry.classicNote}</TooltipClassicStatusNote>
               )}
               <TooltipSourceNote confirmed={rankEntry.confirmed} source={rankEntry.source} />
             </div>
