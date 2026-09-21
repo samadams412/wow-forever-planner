@@ -8,6 +8,31 @@ import type { RankState } from "@/lib/build-code";
 const BAR_COLOR = "var(--accent)";
 const LEAD_BAR_COLOR = "#ffffff";
 
+// CLASS_COLOR (lib/wow-data.ts) is the standard WoW class-color palette --
+// several of those (Priest's #FFFFFF most severely, Rogue's pale yellow and
+// Mage's light blue to a lesser degree) have no guaranteed contrast against
+// whatever this card's own background happens to be: Light mode's near-
+// white surface, Themed mode's dark one, or the color-tinted gradient
+// background below that's itself derived from the same class color. Rather
+// than special-case Priest, every class-colored text here gets the same
+// dark outline -- a general fallback so a future class-color addition
+// can't silently break in either mode either.
+//
+// A single soft blurred shadow (the [text-shadow:...] convention used for
+// hero text elsewhere on the site) isn't enough here: that convention
+// assumes a photo behind the text, which has natural tonal variation for a
+// soft halo to show up against. Priest's white-on-Light-mode's near-white
+// surface is the opposite case -- a solid color within a few shades of the
+// text itself -- so this is a real 4-direction hard outline plus a wider
+// soft glow, not just a drop shadow.
+const CLASS_TEXT_SHADOW = [
+  "-1px -1px 2px rgba(0,0,0,0.9)",
+  "1px -1px 2px rgba(0,0,0,0.9)",
+  "-1px 1px 2px rgba(0,0,0,0.9)",
+  "1px 1px 2px rgba(0,0,0,0.9)",
+  "0 0 5px rgba(0,0,0,0.6)",
+].join(", ");
+
 export default function ClassHero({
   classId,
   trees,
@@ -38,12 +63,12 @@ export default function ClassHero({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={mediumIconUrl(`class_${classId}`)} alt="" className="h-9 w-9 shrink-0 rounded" />
         <div className="min-w-0">
-          <h2 className="font-heading text-lg font-semibold tracking-wide" style={{ color }}>
+          <h2 className="font-heading text-lg font-semibold tracking-wide" style={{ color, textShadow: CLASS_TEXT_SHADOW }}>
             {classLabel(classId)}
           </h2>
           <p className="text-xs text-foreground-muted">
             {specLabel && (
-              <span className="mr-1.5 font-semibold" style={{ color }}>
+              <span className="mr-1.5 font-semibold" style={{ color, textShadow: CLASS_TEXT_SHADOW }}>
                 {specLabel}
               </span>
             )}
