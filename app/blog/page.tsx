@@ -56,7 +56,7 @@ export default async function BlogPage({
           {/* hero-text-accent/hero-text-muted, not text-accent/
               text-foreground-muted -- this sits directly over the hero photo
               with only a text-shadow for legibility, so it can't repaint
-              dark in readable mode the way plain body copy does. */}
+              dark in Light mode the way plain body copy does. */}
           <h1 className="hero-text-accent font-heading text-2xl font-semibold tracking-wide [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
             Blog
           </h1>

@@ -1,4 +1,4 @@
-import ReadableModeToggle from "@/components/site/ReadableModeToggle";
+import ModeToggle from "@/components/site/ModeToggle";
 
 export default function SiteFooter() {
   return (
@@ -12,7 +12,7 @@ export default function SiteFooter() {
         <p className="text-foreground-muted">
           Forevercraft is a free, fan-made project and is not affiliated with Blizzard Entertainment.
         </p>
-        <ReadableModeToggle />
+        <ModeToggle />
       </div>
     </footer>
   );

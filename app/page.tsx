@@ -88,7 +88,7 @@ export default function Home() {
         {/* hero-text-muted, not text-foreground-muted -- this sits directly
             over the hero photo with only a text-shadow (on the wrapping div
             above and this section's own overlays) for legibility, so it
-            can't repaint dark in readable mode the way plain body copy does. */}
+            can't repaint dark in Light mode the way plain body copy does. */}
         <p className="hero-text-muted mt-2">
           A free, fan-made planner and guide hub for World of Warcraft:
           Forever.
