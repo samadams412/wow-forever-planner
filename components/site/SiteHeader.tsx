@@ -28,6 +28,7 @@ const NAV_LINKS: NavLink[] = [
       { href: "/reference/legacy-perks", label: "Legacy Perks", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_book_09.jpg" },
       { href: "/reference/class-spellbooks", label: "Class Spellbooks", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_book_11.jpg" },
       { href: "/reference/dungeons", label: "Dungeon Level Ranges", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_key_03.jpg" },
+      { href: "/reference/dungeons/loot", label: "Dungeon Loot", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_bag_10.jpg" },
       { href: "/reference/professions", label: "Professions", icon: "https://wow.zamimg.com/images/wow/icons/medium/trade_engineering.jpg" },
     ],
   },

@@ -99,6 +99,15 @@ export default function ReferencePage() {
             }
           />
           <Card
+            href="/reference/dungeons/loot"
+            title="Dungeon Loot"
+            description="Boss-by-boss loot for every dungeon, community-sourced from wowtbc.gg -- not confirmed against the beta client like the rest of this site's data."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("inv_misc_bag_10")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
+          <Card
             href="/reference/professions"
             title="Professions"
             description="New recipes, gear, and titles coming to every crafting and gathering profession in Forever."

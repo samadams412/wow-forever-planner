@@ -47,6 +47,14 @@ export default function DungeonsPage() {
         guide. Classic dungeon level ranges cross-referenced against the community&apos;s own
         level-range chart.
       </p>
+
+      <p className="mt-4 text-sm text-foreground-muted">
+        Looking for what actually drops?{" "}
+        <Link href="/reference/dungeons/loot" className="text-accent hover:underline">
+          Boss-by-boss dungeon loot tables
+        </Link>
+        .
+      </p>
     </main>
   );
 }
