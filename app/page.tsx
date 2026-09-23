@@ -16,7 +16,7 @@ const links = [
   {
     href: "/reference",
     label: "Reference",
-    description: "Racials and race/class rules at a glance.",
+    description: "Racials, spellbooks, dungeon loot, professions, and the full item catalog.",
     icon: <BookOpen className={ICON_CLASS} />,
   },
   {
