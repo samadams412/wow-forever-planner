@@ -110,7 +110,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/professions"
             title="Professions"
-            description="New recipes, gear, and titles coming to every crafting and gathering profession in Forever."
+            description="Every recipe for all 8 crafting professions -- reagents, source, and skill-up thresholds, plus a full leveling guide for Alchemy and Blacksmithing."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("trade_engineering")} alt="" className="h-7 w-7 rounded-sm" />

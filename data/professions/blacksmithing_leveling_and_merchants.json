@@ -1,0 +1,211 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirements": "from any Blacksmithing trainer, up to 75",
+      "steps": [
+        {
+          "range": { "min": 1, "max": 11 },
+          "item": { "name": "Copper Rod", "url": "https://foreverchanges.pro/item/6217" },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [{ "name": "Copper Bar", "quantity": 1, "url": "https://foreverchanges.pro/item/2840" }]
+        },
+        {
+          "range": { "min": 11, "max": 36 },
+          "item": { "name": "Rough Sharpening Stone", "url": "https://foreverchanges.pro/item/2862" },
+          "source": "Learned from the trainer",
+          "count": "~34crafts",
+          "mats": [{ "name": "Rough Stone", "quantity": 1, "url": "https://foreverchanges.pro/item/2835" }]
+        },
+        {
+          "range": { "min": 36, "max": 75 },
+          "item": { "name": "Rough Grinding Stone", "url": "https://foreverchanges.pro/item/3470" },
+          "source": "Learned from the trainer",
+          "count": "~63crafts",
+          "mats": [{ "name": "Rough Stone", "quantity": 2, "url": "https://foreverchanges.pro/item/2835" }]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirements": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": { "min": 75, "max": 85 },
+          "item": { "name": "Acolyte's Chain Shirt", "url": "https://foreverchanges.pro/item/250491" },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 4, "url": "https://foreverchanges.pro/item/2841" }]
+        },
+        {
+          "range": { "min": 85, "max": 95 },
+          "item": { "name": "Acolyte's Chain Leggings", "url": "https://foreverchanges.pro/item/250496" },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 6, "url": "https://foreverchanges.pro/item/2841" }]
+        },
+        {
+          "range": { "min": 95, "max": 105 },
+          "item": { "name": "Rough Bronze Boots", "url": "https://foreverchanges.pro/item/6350" },
+          "source": "Learned from the trainer",
+          "count": "~11crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 6, "url": "https://foreverchanges.pro/item/2841" }]
+        },
+        {
+          "range": { "min": 105, "max": 120 },
+          "item": { "name": "Rough Bronze Leggings", "url": "https://foreverchanges.pro/item/2865" },
+          "source": "Learned from the trainer",
+          "count": "~15crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 6, "url": "https://foreverchanges.pro/item/2841" }]
+        },
+        {
+          "range": { "min": 120, "max": 140 },
+          "item": { "name": "Patterned Bronze Bracers", "url": "https://foreverchanges.pro/item/2868" },
+          "source": "Learned from the trainer",
+          "count": "~26crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 5, "url": "https://foreverchanges.pro/item/2841" }]
+        },
+        {
+          "range": { "min": 140, "max": 150 },
+          "item": { "name": "Bronze Warhammer", "url": "https://foreverchanges.pro/item/7956" },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 8, "url": "https://foreverchanges.pro/item/2841" }]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirements": "from the trainer, from skill 125 and level 20, up to 225",
+      "steps": [
+        {
+          "range": { "min": 150, "max": 165 },
+          "item": { "name": "Bronze Warhammer", "url": "https://foreverchanges.pro/item/7956" },
+          "source": "Learned from the trainer",
+          "count": "~17crafts",
+          "mats": [{ "name": "Bronze Bar", "quantity": 8, "url": "https://foreverchanges.pro/item/2841" }]
+        },
+        {
+          "range": { "min": 165, "max": 181 },
+          "item": { "name": "Green Iron Bracers", "url": "https://foreverchanges.pro/item/3835" },
+          "source": "Learned from the trainer",
+          "count": "~25crafts",
+          "mats": [{ "name": "Iron Bar", "quantity": 6, "url": "https://foreverchanges.pro/item/3575" }]
+        },
+        {
+          "range": { "min": 181, "max": 185 },
+          "item": { "name": "Golden Scale Coif", "url": "https://foreverchanges.pro/item/3837" },
+          "source": "Plans sold by Krinkle Goodsteel (Tanaris)",
+          "count": "~4crafts",
+          "mats": [{ "name": "Steel Bar", "quantity": 8, "url": "https://foreverchanges.pro/item/3859" }]
+        },
+        {
+          "range": { "min": 185, "max": 200 },
+          "item": { "name": "Golden Scale Bracers", "url": "https://foreverchanges.pro/item/6040" },
+          "source": "Learned from the trainer",
+          "count": "~23crafts",
+          "mats": [{ "name": "Steel Bar", "quantity": 5, "url": "https://foreverchanges.pro/item/3859" }]
+        },
+        {
+          "range": { "min": 200, "max": 205 },
+          "item": { "name": "Mithril Plate Bracers", "url": "https://foreverchanges.pro/item/7924" },
+          "source": "Plans sold by Gharash (Horde) or Harggan (Alliance)",
+          "count": "~5crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 8, "url": "https://foreverchanges.pro/item/3860" }]
+        },
+        {
+          "range": { "min": 205, "max": 210 },
+          "item": { "name": "Mithril Plate Pants", "url": "https://foreverchanges.pro/item/7920" },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 12, "url": "https://foreverchanges.pro/item/3860" }]
+        },
+        {
+          "range": { "min": 210, "max": 225 },
+          "item": { "name": "Mithril Plate Bracers", "url": "https://foreverchanges.pro/item/7924" },
+          "source": "Plans sold by Gharash (Horde) or Harggan (Alliance)",
+          "count": "~27crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 8, "url": "https://foreverchanges.pro/item/3860" }]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirements": "from the trainer, from skill 200 and level 35, up to 300",
+      "steps": [
+        {
+          "range": { "min": 225, "max": 230 },
+          "item": { "name": "Shining Mithril Helm", "url": "https://foreverchanges.pro/item/250543" },
+          "source": "Learned from the trainer",
+          "count": "~5crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 8, "url": "https://foreverchanges.pro/item/3860" }]
+        },
+        {
+          "range": { "min": 230, "max": 235 },
+          "item": { "name": "Heavy Mithril Breastplate", "url": "https://foreverchanges.pro/item/7930" },
+          "source": "Learned from the trainer",
+          "count": "~8crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 16, "url": "https://foreverchanges.pro/item/3860" }]
+        },
+        {
+          "range": { "min": 235, "max": 243 },
+          "item": { "name": "Heavy Mithril Boots", "url": "https://foreverchanges.pro/item/7933" },
+          "source": "Learned from the trainer",
+          "count": "~15crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 14, "url": "https://foreverchanges.pro/item/3860" }]
+        },
+        {
+          "range": { "min": 243, "max": 250 },
+          "item": { "name": "Ebon Shiv", "url": "https://foreverchanges.pro/item/7947" },
+          "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
+          "count": "~7crafts",
+          "mats": [{ "name": "Mithril Bar", "quantity": 12, "url": "https://foreverchanges.pro/item/3860" }]
+        },
+        {
+          "range": { "min": 250, "max": 291 },
+          "item": { "name": "Ornate Thorium Handaxe", "url": "https://foreverchanges.pro/item/12773" },
+          "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
+          "count": "~50crafts",
+          "mats": [{ "name": "Thorium Bar", "quantity": 20, "url": "https://foreverchanges.pro/item/12359" }]
+        },
+        {
+          "range": { "min": 291, "max": 300 },
+          "item": { "name": "Bold Dirk", "url": "https://foreverchanges.pro/item/250616" },
+          "source": "Plans sold by Pexmit (Mount Hyjal)",
+          "count": "~13crafts",
+          "mats": [{ "name": "Thorium Bar", "quantity": 30, "url": "https://foreverchanges.pro/item/12359" }]
+        }
+      ]
+    }
+  ],
+  "favor_section": [
+    {
+      "tier": "30 Merchant's Favor",
+      "skill_range": { "min": 45, "max": 125 },
+      "items": [
+        { "name": "Guard's Chain Belt", "url": "https://foreverchanges.pro/item/250514", "skill_threshold": 45 },
+        { "name": "Crusader's Chain Belt", "url": "https://foreverchanges.pro/item/250517", "skill_threshold": 45 },
+        { "name": "Acolyte's Chain Belt", "url": "https://foreverchanges.pro/item/250516", "skill_threshold": 45 },
+        { "name": "Protector's Chain Belt", "url": "https://foreverchanges.pro/item/250515", "skill_threshold": 45 },
+        { "name": "Veteran's Chain Belt", "url": "https://foreverchanges.pro/item/250513", "skill_threshold": 45 },
+        { "name": "Protector's Boots", "url": "https://foreverchanges.pro/item/250505", "skill_threshold": 85 },
+        { "name": "Guard's Boots", "url": "https://foreverchanges.pro/item/250504", "skill_threshold": 85 },
+        { "name": "Crusader's Boots", "url": "https://foreverchanges.pro/item/250507", "skill_threshold": 85 },
+        { "name": "Acolyte's Boots", "url": "https://foreverchanges.pro/item/250506", "skill_threshold": 85 },
+        { "name": "Veteran's Boots", "url": "https://foreverchanges.pro/item/250503", "skill_threshold": 85 },
+        { "name": "Guard's Gloves", "url": "https://foreverchanges.pro/item/250509", "skill_threshold": 80 },
+        { "name": "Crusader's Gloves", "url": "https://foreverchanges.pro/item/250512", "skill_threshold": 80 },
+        { "name": "Acolyte's Gloves", "url": "https://foreverchanges.pro/item/250511", "skill_threshold": 80 },
+        { "name": "Protector's Gloves", "url": "https://foreverchanges.pro/item/250501", "skill_threshold": 80 },
+        { "name": "Veteran's Silvered Chain Leggings", "url": "https://foreverchanges.pro/item/250523", "skill_threshold": 125 },
+        { "name": "Protector's Silvered Chain Leggings", "url": "https://foreverchanges.pro/item/250525", "skill_threshold": 125 },
+        { "name": "Guard's Silvered Chain Leggings", "url": "https://foreverchanges.pro/item/250524", "skill_threshold": 125 },
+        { "name": "Crusader's Silvered Chain Leggings", "url": "https://foreverchanges.pro/item/250527", "skill_threshold": 125 },
+        { "name": "Acolyte's Silvered Chain Leggings", "url": "https://foreverchanges.pro/item/250526", "skill_threshold": 125 },
+        { "name": "Veteran's Silvered Chain Shirt", "url": "https://foreverchanges.pro/item/250518", "skill_threshold": 110 },
+        { "name": "Protector's Silvered Chain Shirt", "url": "https://foreverchanges.pro/item/250520", "skill_threshold": 110 }
+      ]
+    }
+  ]
+}

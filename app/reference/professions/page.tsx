@@ -1,61 +1,62 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
-import { getAllProfessions } from "@/lib/professions";
+import { getAllProfessionSummaries } from "@/lib/profession-recipes";
+import { mediumIconUrl } from "@/lib/wow-data";
+
+const PROFESSION_ICON: Record<string, string> = {
+  alchemy: "trade_alchemy",
+  blacksmithing: "trade_blacksmithing",
+  cooking: "inv_misc_food_15",
+  enchanting: "trade_engraving",
+  engineering: "trade_engineering",
+  "first-aid": "spell_holy_sealofsacrifice",
+  leatherworking: "trade_leatherworking",
+  tailoring: "trade_tailoring",
+};
 
 export const metadata: Metadata = {
   title: "Professions",
   description:
-    "New recipes, gear, and titles coming to every crafting and gathering profession in World of Warcraft: Forever.",
+    "Every crafting profession recipe in World of Warcraft: Forever -- reagents, source, and skill-up thresholds, sourced from the WoW Forever beta client.",
 };
 
 export default function ProfessionsPage() {
-  const professions = getAllProfessions();
+  const professions = getAllProfessionSummaries();
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-3 py-6 sm:px-4">
+    <main className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
       <Breadcrumbs items={[{ label: "Reference", href: "/reference" }, { label: "Professions" }]} />
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Professions</h1>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-        What&apos;s new for each crafting and gathering profession in Forever -- recipes, gear, and titles, one
-        page per profession.
+        Every recipe for every crafting profession in Forever -- reagents, trainer or recipe source, and
+        skill-up thresholds. Alchemy and Blacksmithing also have a full leveling-1-to-300 guide and
+        Merchant&apos;s Favor breakdown; the rest are coming soon.
       </p>
 
-      <div className="mt-6 space-y-3">
-        {professions.length === 0 ? (
-          <p className="text-sm text-foreground-muted">No profession write-ups published yet -- check back soon.</p>
-        ) : (
-          professions.map((profession) => {
-            // Because getAllProfessions returns ProfessionMeta (which spreads frontmatter), 
-            // title, summary, and iconUrl are right on the object.
-            const { slug, title, summary, iconUrl } = profession;
-
-            return (
-              <Link
-                key={slug}
-                href={`/reference/professions/${slug}`}
-                className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
-              >
-                {iconUrl && (
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-md border border-border/50 bg-surface-muted">
-                    <Image
-                      src={iconUrl}
-                      alt={`${title} icon`}
-                      width={48}
-                      height={48}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                )}
-                <div className="min-w-0 flex-1">
-                  <h2 className="font-medium text-foreground group-hover:text-accent">{title}</h2>
-                  <p className="mt-1 text-sm text-foreground-muted line-clamp-2">{summary}</p>
-                </div>
-              </Link>
-            );
-          })
-        )}
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        {professions.map((profession) => (
+          <Link
+            key={profession.id}
+            href={`/reference/professions/${profession.id}`}
+            className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+          >
+            {PROFESSION_ICON[profession.id] && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={mediumIconUrl(PROFESSION_ICON[profession.id])}
+                alt=""
+                className="h-10 w-10 shrink-0 rounded border border-border/50"
+              />
+            )}
+            <div className="min-w-0 flex-1">
+              <h2 className="font-medium text-foreground group-hover:text-accent">{profession.name}</h2>
+              <p className="mt-0.5 text-xs text-foreground-muted">
+                {profession.recipeCount} recipes{profession.hasLeveling ? " -- leveling guide available" : ""}
+              </p>
+            </div>
+          </Link>
+        ))}
       </div>
     </main>
   );

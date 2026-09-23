@@ -8,6 +8,6 @@ export const contentType = "image/png";
 export default async function Image() {
   return renderOgImage({
     title: "Professions",
-    subtitle: "New recipes, gear, and titles coming to every profession in World of Warcraft: Forever.",
+    subtitle: "Every recipe for every crafting profession in World of Warcraft: Forever.",
   });
 }

@@ -1,0 +1,442 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirement": "from any Alchemy trainer, up to 75",
+      "steps": [
+        {
+          "range": [1, 11],
+          "item": {
+            "name": "Elixir of Minor Force",
+            "url": "https://foreverchanges.pro/item/247755"
+          },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "Silverleaf",
+              "url": "https://foreverchanges.pro/item/765"
+            }
+          ]
+        },
+        {
+          "range": [11, 23],
+          "item": {
+            "name": "Mana Well",
+            "url": "https://foreverchanges.pro/item/279956"
+          },
+          "source": "Learned from the trainer",
+          "count": "~13crafts",
+          "mats": [
+            {
+              "name": "Peacebloom",
+              "url": "https://foreverchanges.pro/item/2447"
+            }
+          ]
+        },
+        {
+          "range": [23, 25],
+          "item": {
+            "name": "Minor Troll's Blood Elixir",
+            "url": "https://foreverchanges.pro/item/3382"
+          },
+          "source": "Learned from the trainer",
+          "count": "~2crafts",
+          "mats": [
+            {
+              "name": "Peacebloom",
+              "url": "https://foreverchanges.pro/item/2447"
+            }
+          ]
+        },
+        {
+          "range": [25, 40],
+          "item": {
+            "name": "Minor Mana Potion",
+            "url": "https://foreverchanges.pro/item/2455"
+          },
+          "source": "Learned from the trainer",
+          "count": "~15crafts",
+          "mats": [
+            {
+              "name": "Mageroyal",
+              "url": "https://foreverchanges.pro/item/785"
+            }
+          ]
+        },
+        {
+          "range": [40, 56],
+          "item": {
+            "name": "Elixir of Minor Defense",
+            "url": "https://foreverchanges.pro/item/5997"
+          },
+          "source": "Learned from the trainer",
+          "count": "~16crafts",
+          "mats": [
+            {
+              "name": "Silverleaf",
+              "url": "https://foreverchanges.pro/item/765"
+            }
+          ]
+        },
+        {
+          "range": [56, 60],
+          "item": {
+            "name": "Minor Mana Potion",
+            "url": "https://foreverchanges.pro/item/2455"
+          },
+          "source": "Learned from the trainer",
+          "count": "~4crafts",
+          "mats": [
+            {
+              "name": "Mageroyal",
+              "url": "https://foreverchanges.pro/item/785"
+            }
+          ]
+        },
+        {
+          "range": [60, 75],
+          "item": {
+            "name": "Rage Potion",
+            "url": "https://foreverchanges.pro/item/5631"
+          },
+          "source": "Recipe sold by Xandar Goodbeard (Alliance) or Hagrus (Horde) and 1 more",
+          "count": "~15crafts",
+          "mats": [
+            {
+              "name": "Sharp Claw",
+              "url": "https://foreverchanges.pro/item/5635"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": [75, 90],
+          "item": {
+            "name": "Rage Potion",
+            "url": "https://foreverchanges.pro/item/5631"
+          },
+          "source": "Recipe sold by Xandar Goodbeard (Alliance) or Hagrus (Horde) and 1 more",
+          "count": "~15crafts",
+          "mats": [
+            {
+              "name": "Sharp Claw",
+              "url": "https://foreverchanges.pro/item/5635"
+            }
+          ]
+        },
+        {
+          "range": [90, 100],
+          "item": {
+            "name": "Draught of Water Breathing",
+            "url": "https://foreverchanges.pro/item/5996"
+          },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "Stranglekelp",
+              "url": "https://foreverchanges.pro/item/3820"
+            }
+          ]
+        },
+        {
+          "range": [100, 140],
+          "item": {
+            "name": "Swim Speed Potion",
+            "url": "https://foreverchanges.pro/item/6372"
+          },
+          "source": "Learned from the trainer",
+          "count": "~42crafts",
+          "mats": [
+            {
+              "name": "Swiftthistle",
+              "url": "https://foreverchanges.pro/item/2452"
+            }
+          ]
+        },
+        {
+          "range": [140, 150],
+          "item": {
+            "name": "Elixir of Fire Power",
+            "url": "https://foreverchanges.pro/item/6373"
+          },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "quantity": 2,
+              "name": "Fire Oil",
+              "url": "https://foreverchanges.pro/item/6371"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+      "steps": [
+        {
+          "range": [150, 165],
+          "item": {
+            "name": "Free Action Potion",
+            "url": "https://foreverchanges.pro/item/5634"
+          },
+          "source": "Recipe sold by Ulthir (Alliance) or Soolie Berryfizz (Alliance) and 1 more",
+          "count": "~15crafts",
+          "mats": [
+            {
+              "quantity": 2,
+              "name": "Blackmouth Oil",
+              "url": "https://foreverchanges.pro/item/6370"
+            }
+          ]
+        },
+        {
+          "range": [165, 225],
+          "item": {
+            "name": "Fire Protection Potion",
+            "url": "https://foreverchanges.pro/item/6049"
+          },
+          "source": "Recipe sold by Nandar Branson (Alliance) or Jeeda (Horde)",
+          "count": "~64crafts",
+          "mats": [
+            {
+              "name": "Small Flame Sac",
+              "url": "https://foreverchanges.pro/item/4402"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+      "steps": [
+        {
+          "range": [225, 268],
+          "item": {
+            "name": "Gold Bar",
+            "url": "https://foreverchanges.pro/item/3577"
+          },
+          "source": "Recipe sold by Alchemist Pestlezugg (Tanaris)",
+          "count": "~63crafts",
+          "mats": [
+            {
+              "name": "Iron Bar",
+              "url": "https://foreverchanges.pro/item/3575"
+            }
+          ]
+        },
+        {
+          "range": [268, 279],
+          "item": {
+            "name": "Potion of Demonslaying",
+            "url": "https://foreverchanges.pro/item/9224"
+          },
+          "source": "Recipe sold by Nina Lightbrew (Alliance) or Rartar (Horde)",
+          "count": "~14crafts",
+          "mats": [
+            {
+              "name": "Gromsblood",
+              "url": "https://foreverchanges.pro/item/8846"
+            }
+          ]
+        },
+        {
+          "range": [279, 295],
+          "item": {
+            "name": "Elixir of Greater Defense",
+            "url": "https://foreverchanges.pro/item/13445"
+          },
+          "source": "Recipe sold by Soolie Berryfizz (Alliance) or Kor'geld (Horde)",
+          "count": "~20crafts",
+          "mats": [
+            {
+              "quantity": 2,
+              "name": "Stonescale Oil",
+              "url": "https://foreverchanges.pro/item/13423"
+            }
+          ]
+        },
+        {
+          "range": [295, 300],
+          "item": {
+            "name": "Major Mana Potion",
+            "url": "https://foreverchanges.pro/item/13444"
+          },
+          "source": "Recipe sold by Magnus Frostwake (Western Plaguelands)",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "quantity": 3,
+              "name": "Dreamfoil",
+              "url": "https://foreverchanges.pro/item/13463"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "favor_section": [
+    {
+      "tier": "45 Merchant's Favor (skill 65 to 140)",
+      "items": [
+        {
+          "name": "Elixir of Lesser Spirit",
+          "url": "https://foreverchanges.pro/item/250345",
+          "skill_threshold": 65
+        },
+        {
+          "name": "Lesser Mageblood Elixir",
+          "url": "https://foreverchanges.pro/item/250340",
+          "skill_threshold": 75
+        },
+        {
+          "name": "Elixir of Lesser Intellect",
+          "url": "https://foreverchanges.pro/item/250353",
+          "skill_threshold": 95
+        },
+        {
+          "name": "Lesser Cleric's Elixir",
+          "url": "https://foreverchanges.pro/item/250331",
+          "skill_threshold": 95
+        },
+        {
+          "name": "Lesser Arcane Elixir",
+          "url": "https://foreverchanges.pro/item/250342",
+          "skill_threshold": 120
+        },
+        {
+          "name": "Mender's Potion",
+          "url": "https://foreverchanges.pro/item/250946",
+          "skill_threshold": 130
+        },
+        {
+          "name": "Spellblasting Potion",
+          "url": "https://foreverchanges.pro/item/250934",
+          "skill_threshold": 135
+        },
+        {
+          "name": "Frenzy Potion",
+          "url": "https://foreverchanges.pro/item/250940",
+          "skill_threshold": 140
+        }
+      ]
+    },
+    {
+      "tier": "120 Merchant's Favor (skill 165 to 245)",
+      "items": [
+        {
+          "name": "Elixir of Greater Spirit",
+          "url": "https://foreverchanges.pro/item/250347",
+          "skill_threshold": 165
+        },
+        {
+          "name": "Greater Mageblood Elixir",
+          "url": "https://foreverchanges.pro/item/250341",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Disorienting Smog Potion",
+          "url": "https://foreverchanges.pro/item/250952",
+          "skill_threshold": 180
+        },
+        {
+          "name": "Greater Cleric's Elixir",
+          "url": "https://foreverchanges.pro/item/250333",
+          "skill_threshold": 195
+        },
+        {
+          "name": "Elixir of Greater Fortitude",
+          "url": "https://foreverchanges.pro/item/250335",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Dragonfire Potion",
+          "url": "https://foreverchanges.pro/item/250953",
+          "skill_threshold": 245
+        }
+      ]
+    },
+    {
+      "tier": "180 Merchant's Favor (skill 250 to 285)",
+      "items": [
+        {
+          "name": "Elixir of the Phalanx",
+          "url": "https://foreverchanges.pro/item/250329",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Caustic Smog Potion",
+          "url": "https://foreverchanges.pro/item/250951",
+          "skill_threshold": 265
+        },
+        {
+          "name": "Elixir of Cunning",
+          "url": "https://foreverchanges.pro/item/250328",
+          "skill_threshold": 275
+        },
+        {
+          "name": "Elixir of Ferocity",
+          "url": "https://foreverchanges.pro/item/250350",
+          "skill_threshold": 275
+        },
+        {
+          "name": "Elixir of Sages",
+          "url": "https://foreverchanges.pro/item/250338",
+          "skill_threshold": 275
+        },
+        {
+          "name": "Elixir of the Whale",
+          "url": "https://foreverchanges.pro/item/250348",
+          "skill_threshold": 275
+        },
+        {
+          "name": "Potion of Venomous Blood",
+          "url": "https://foreverchanges.pro/item/250950",
+          "skill_threshold": 275
+        },
+        {
+          "name": "Elixir of the Owl",
+          "url": "https://foreverchanges.pro/item/250337",
+          "skill_threshold": 280
+        },
+        {
+          "name": "Major Mender's Potion",
+          "url": "https://foreverchanges.pro/item/250949",
+          "skill_threshold": 280
+        },
+        {
+          "name": "Potion of Elemental Siphoning",
+          "url": "https://foreverchanges.pro/item/250954",
+          "skill_threshold": 280
+        },
+        {
+          "name": "Elixir of Nature Power",
+          "url": "https://foreverchanges.pro/item/250343",
+          "skill_threshold": 285
+        },
+        {
+          "name": "Elixir of Wicked Regeneration",
+          "url": "https://foreverchanges.pro/item/250336",
+          "skill_threshold": 285
+        },
+        {
+          "name": "Major Spellblasting Potion",
+          "url": "https://foreverchanges.pro/item/250937",
+          "skill_threshold": 285
+        }
+      ]
+    },
+    {
+      "tier": "240 Merchant's Favor (skill 290 to 300)"
+    }
+  ]
+}
