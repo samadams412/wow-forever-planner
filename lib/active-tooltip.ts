@@ -44,17 +44,26 @@ function subscribe(listener: () => void) {
   return () => listeners.delete(listener);
 }
 
-function getSnapshot() {
-  return activeId;
-}
-
-function getServerSnapshot() {
-  return null;
-}
-
+// Deliberately NOT a shared getSnapshot returning the raw activeId: every
+// TalentNode/SpellEntry/LootItemPill on the page subscribes to this same
+// store, and useSyncExternalStore only skips re-rendering a subscriber when
+// ITS OWN getSnapshot return value is unchanged (Object.is) from the last
+// render. A shared getSnapshot returning the bare activeId changes for
+// EVERY subscriber on every claim/release (even ones whose own claimed-ness
+// never changes), so every consumer's component function re-runs on every
+// single hover transition -- confirmed directly: on a profession page with
+// ~170 item pills, two hover transitions produced ~680 LootItemPill
+// re-renders (every pill re-rendering ~4 times) before this fix. Each
+// consumer instead gets its own selector closure that returns a boolean
+// scoped to its own id, so React's Object.is check only lets a re-render
+// through for the (at most) two subscribers whose claimed state actually
+// flipped -- everyone else bails out before rendering.
 export function useIsActiveTooltip(id: string): boolean {
-  const current = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-  return current === id;
+  return useSyncExternalStore(
+    subscribe,
+    () => activeId === id,
+    () => false
+  );
 }
 
 // Defensive measure against exactly the defocus scenario above: if the
