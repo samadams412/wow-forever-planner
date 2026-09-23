@@ -72,7 +72,7 @@ export default function LootItemPill({
         nameEl
       )}
       {item.status === "new" && (
-        <span className="rounded-sm bg-green-600/20 px-1 text-[9px] font-semibold uppercase tracking-wide text-green-800">
+        <span className="rounded-sm border border-green-300/70 bg-green-600 px-1 text-[9px] font-semibold uppercase tracking-wide text-white">
           New
         </span>
       )}
