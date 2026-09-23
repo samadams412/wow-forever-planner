@@ -1,0 +1,2599 @@
+{
+ "id": "first-aid",
+ "name": "First Aid",
+ "categories": [
+  "Bandages",
+  "Anti-Venoms and Potions",
+  "Camp Objects"
+ ],
+ "recipes": [
+  {
+   "name": "Linen Bandage",
+   "rank": "1",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "1",
+    "yellow": "30",
+    "green": "45",
+    "grey": "60"
+   },
+   "item": {
+    "name": "Linen Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 1251,
+    "icon": "inv_misc_bandage_15",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Linen Cloth",
+     "item": {
+      "name": "Linen Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 2589,
+      "icon": "inv_fabric_linen_01",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Minor Healing Potion",
+   "rank": "1",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "1",
+    "yellow": "55",
+    "green": "75",
+    "grey": "95"
+   },
+   "item": {
+    "name": "Minor Healing Potion",
+    "slot": null,
+    "type": null,
+    "itemId": 118,
+    "icon": "inv_potion_49",
+    "quality": 1,
+    "itemLevel": 5,
+    "requiredLevel": 1,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Empty Vial",
+     "item": {
+      "name": "Empty Vial",
+      "slot": null,
+      "type": null,
+      "itemId": 3371,
+      "icon": "inv_potion_84",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Mild Spices",
+     "item": {
+      "name": "Mild Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2678,
+      "icon": "inv_misc_food_wheat_02",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to somewhat enhance the flavor in cooking recipes.\""
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "\"Used to enhance the flavor in cooking recipes.\""
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Peacebloom",
+     "item": {
+      "name": "Peacebloom",
+      "slot": null,
+      "type": null,
+      "itemId": 2447,
+      "icon": "inv_misc_flower_02",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "First Aid Kit",
+   "rank": "20",
+   "category": "Camp Objects",
+   "categoryConfident": false,
+   "source": "Trainer",
+   "skills": {
+    "orange": "20",
+    "yellow": "20",
+    "green": "22",
+    "grey": "25"
+   },
+   "item": {
+    "name": "First Aid Kit",
+    "slot": null,
+    "type": "Other",
+    "itemId": 279968,
+    "icon": "inv_misc_bandage_11",
+    "quality": 1,
+    "itemLevel": 4,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tOther",
+     "Requires First Aid (20)",
+     "Use: Unpacks a first aid kit that allows you and others sitting nearby to gain 56 increased Stamina, exclusive with Power Word: Fortitude. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 3,
+     "name": "Linen Bandage",
+     "item": {
+      "name": "Linen Bandage",
+      "slot": null,
+      "type": null,
+      "itemId": 1251,
+      "icon": "inv_misc_bandage_15",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Refreshing Spring Water",
+     "item": {
+      "name": "Refreshing Spring Water",
+      "slot": null,
+      "type": null,
+      "itemId": 159,
+      "icon": "inv_drink_07",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 1,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Heavy Linen Bandage",
+   "rank": "40",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "40",
+    "yellow": "50",
+    "green": "75",
+    "grey": "100"
+   },
+   "item": {
+    "name": "Heavy Linen Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 2581,
+    "icon": "inv_misc_bandage_18",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Linen Cloth",
+     "item": {
+      "name": "Linen Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 2589,
+      "icon": "inv_fabric_linen_01",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Lesser Healing Potion",
+   "rank": "55",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "55",
+    "yellow": "85",
+    "green": "105",
+    "grey": "125"
+   },
+   "item": {
+    "name": "Lesser Healing Potion",
+    "slot": null,
+    "type": null,
+    "itemId": 858,
+    "icon": "inv_potion_50",
+    "quality": 1,
+    "itemLevel": 13,
+    "requiredLevel": 3,
+    "tooltip": [
+     "Requires Level 3"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Empty Vial",
+     "item": {
+      "name": "Empty Vial",
+      "slot": null,
+      "type": null,
+      "itemId": 3371,
+      "icon": "inv_potion_84",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Mild Spices",
+     "item": {
+      "name": "Mild Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2678,
+      "icon": "inv_misc_food_wheat_02",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to somewhat enhance the flavor in cooking recipes.\""
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "\"Used to enhance the flavor in cooking recipes.\""
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Briarthorn",
+     "item": {
+      "name": "Briarthorn",
+      "slot": null,
+      "type": null,
+      "itemId": 2450,
+      "icon": "inv_misc_root_01",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Anti-Venom",
+   "rank": "80",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "80",
+    "yellow": "80",
+    "green": "115",
+    "grey": "150"
+   },
+   "item": {
+    "name": "Anti-Venom",
+    "slot": null,
+    "type": null,
+    "itemId": 6452,
+    "icon": "inv_misc_slime_01",
+    "quality": 1,
+    "itemLevel": 16,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Small Venom Sac",
+     "item": {
+      "name": "Small Venom Sac",
+      "slot": null,
+      "type": null,
+      "itemId": 1475,
+      "icon": "inv_misc_organ_02",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Wool Bandage",
+   "rank": "80",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "80",
+    "yellow": "80",
+    "green": "115",
+    "grey": "150"
+   },
+   "item": {
+    "name": "Wool Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 3530,
+    "icon": "inv_misc_bandage_14",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Wool Cloth",
+     "item": {
+      "name": "Wool Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 2592,
+      "icon": "inv_fabric_wool_01",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Simple Poultice",
+   "rank": "90",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "90",
+    "yellow": "90",
+    "green": "125",
+    "grey": "160"
+   },
+   "item": {
+    "name": "Simple Poultice",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255716,
+    "icon": "inv_10_alchemy2_quenchingfluid_color2",
+    "quality": 1,
+    "itemLevel": 16,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of diseases up to level 25. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 28c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Spider Ichor",
+     "item": {
+      "name": "Spider Ichor",
+      "slot": null,
+      "type": null,
+      "itemId": 3174,
+      "icon": "inv_misc_slime_01",
+      "quality": 1,
+      "itemLevel": 10,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Mild Spices",
+     "item": {
+      "name": "Mild Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2678,
+      "icon": "inv_misc_food_wheat_02",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to somewhat enhance the flavor in cooking recipes.\""
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "\"Used to enhance the flavor in cooking recipes.\""
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Bottle of Dalaran Noir",
+     "item": {
+      "name": "Bottle of Dalaran Noir",
+      "slot": null,
+      "type": null,
+      "itemId": 2723,
+      "icon": "inv_drink_10",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Healing Potion",
+   "rank": "110",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "110",
+    "yellow": "135",
+    "green": "155",
+    "grey": "175"
+   },
+   "item": {
+    "name": "Healing Potion",
+    "slot": null,
+    "type": null,
+    "itemId": 929,
+    "icon": "inv_potion_51",
+    "quality": 1,
+    "itemLevel": 22,
+    "requiredLevel": 12,
+    "tooltip": [
+     "Requires Level 12"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Leaded Vial",
+     "item": {
+      "name": "Leaded Vial",
+      "slot": null,
+      "type": null,
+      "itemId": 3372,
+      "icon": "inv_potion_85",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Hot Spices",
+     "item": {
+      "name": "Hot Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2692,
+      "icon": "inv_misc_food_legion_dalapenopepper",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
+       "Sell Price: 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 10c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Bruiseweed",
+     "item": {
+      "name": "Bruiseweed",
+      "slot": null,
+      "type": null,
+      "itemId": 2453,
+      "icon": "inv_misc_herb_01",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Heavy Wool Bandage",
+   "rank": "115",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "115",
+    "yellow": "115",
+    "green": "150",
+    "grey": "185"
+   },
+   "item": {
+    "name": "Heavy Wool Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 3531,
+    "icon": "inv_misc_bandage_17",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Wool Cloth",
+     "item": {
+      "name": "Wool Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 2592,
+      "icon": "inv_fabric_wool_01",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Woolen Tourniquet",
+   "rank": "120",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "120",
+    "yellow": "120",
+    "green": "155",
+    "grey": "190"
+   },
+   "item": {
+    "name": "Woolen Tourniquet",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255720,
+    "icon": "inv_misc_bandage_05",
+    "quality": 1,
+    "itemLevel": 21,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of bleeds up to level 30. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 50c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Wool Cloth",
+     "item": {
+      "name": "Wool Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 2592,
+      "icon": "inv_fabric_wool_01",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Fine Thread",
+     "item": {
+      "name": "Fine Thread",
+      "slot": null,
+      "type": null,
+      "itemId": 2321,
+      "icon": "inv_fabric_wool_02",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Strong Anti-Venom",
+   "rank": "130",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "130",
+    "yellow": "130",
+    "green": "165",
+    "grey": "200"
+   },
+   "item": {
+    "name": "Strong Anti-Venom",
+    "slot": null,
+    "type": null,
+    "itemId": 6453,
+    "icon": "inv_misc_slime_01",
+    "quality": 1,
+    "itemLevel": 26,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Large Venom Sac",
+     "item": {
+      "name": "Large Venom Sac",
+      "slot": null,
+      "type": null,
+      "itemId": 1288,
+      "icon": "inv_misc_organ_01",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Toxin Study",
+   "rank": "140",
+   "category": "Camp Objects",
+   "categoryConfident": false,
+   "source": "Recipe",
+   "skills": {
+    "orange": "140",
+    "yellow": "140",
+    "green": "142",
+    "grey": "145"
+   },
+   "item": {
+    "name": "Toxin Study",
+    "slot": null,
+    "type": "Other",
+    "itemId": 279940,
+    "icon": "inv_misc_potiona3",
+    "quality": 1,
+    "itemLevel": 28,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tOther",
+     "Requires First Aid (140)",
+     "Use: Places a Toxin Study that contains healing potions, anti-venom, and provides all of the benefits of a First Aid Kit. Requires a Campfire nearby. May be placed over a First Aid Kit to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Anti-Venom",
+     "item": {
+      "name": "Anti-Venom",
+      "slot": null,
+      "type": null,
+      "itemId": 6452,
+      "icon": "inv_misc_slime_01",
+      "quality": 1,
+      "itemLevel": 16,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Mageweave Bandage",
+     "item": {
+      "name": "Mageweave Bandage",
+      "slot": null,
+      "type": null,
+      "itemId": 8544,
+      "icon": "inv_misc_bandage_19",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Simple Wood",
+     "item": {
+      "name": "Simple Wood",
+      "slot": null,
+      "type": null,
+      "itemId": 4470,
+      "icon": "inv_tradeskillitem_01",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Clever Poultice",
+   "rank": "140",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "140",
+    "yellow": "160",
+    "green": "190",
+    "grey": "220"
+   },
+   "item": {
+    "name": "Clever Poultice",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255717,
+    "icon": "inv_10_alchemy2_quenchingfluid_color4",
+    "quality": 1,
+    "itemLevel": 26,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of diseases up to level 35. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 62c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Murloc Fin",
+     "item": {
+      "name": "Murloc Fin",
+      "slot": null,
+      "type": null,
+      "itemId": 1468,
+      "icon": "inv_misc_monsterscales_02",
+      "quality": 1,
+      "itemLevel": 16,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Soothing Spices",
+     "item": {
+      "name": "Soothing Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 3713,
+      "icon": "inv_misc_food_vendor_rice",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to effortlessly enhance the flavor in cooking recipes.\"",
+       "Sell Price: 40c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 40c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Thunder Ale",
+     "item": {
+      "name": "Thunder Ale",
+      "slot": null,
+      "type": null,
+      "itemId": 2686,
+      "icon": "inv_drink_13",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Silk Bandage",
+   "rank": "150",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "150",
+    "yellow": "150",
+    "green": "180",
+    "grey": "210"
+   },
+   "item": {
+    "name": "Silk Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 6450,
+    "icon": "inv_misc_bandage_01",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Silk Cloth",
+     "item": {
+      "name": "Silk Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 4306,
+      "icon": "inv_fabric_silk_01",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Greater Healing Potion",
+   "rank": "155",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "155",
+    "yellow": "175",
+    "green": "195",
+    "grey": "215"
+   },
+   "item": {
+    "name": "Greater Healing Potion",
+    "slot": null,
+    "type": null,
+    "itemId": 1710,
+    "icon": "inv_potion_52",
+    "quality": 1,
+    "itemLevel": 31,
+    "requiredLevel": 21,
+    "tooltip": [
+     "Requires Level 21"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Leaded Vial",
+     "item": {
+      "name": "Leaded Vial",
+      "slot": null,
+      "type": null,
+      "itemId": 3372,
+      "icon": "inv_potion_85",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 3,
+     "name": "Hot Spices",
+     "item": {
+      "name": "Hot Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2692,
+      "icon": "inv_misc_food_legion_dalapenopepper",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
+       "Sell Price: 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 10c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Liferoot",
+     "item": {
+      "name": "Liferoot",
+      "slot": null,
+      "type": null,
+      "itemId": 3357,
+      "icon": "inv_misc_root_02",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Heavy Silk Bandage",
+   "rank": "180",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "180",
+    "yellow": "180",
+    "green": "210",
+    "grey": "240"
+   },
+   "item": {
+    "name": "Heavy Silk Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 6451,
+    "icon": "inv_misc_bandage_02",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Silk Cloth",
+     "item": {
+      "name": "Silk Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 4306,
+      "icon": "inv_fabric_silk_01",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Leather Tourniquet",
+   "rank": "200",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "200",
+    "yellow": "220",
+    "green": "250",
+    "grey": "280"
+   },
+   "item": {
+    "name": "Leather Tourniquet",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255721,
+    "icon": "inv_misc_bandage_06",
+    "quality": 1,
+    "itemLevel": 36,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of bleeds up to level 45. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 1s 25c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Thick Leather",
+     "item": {
+      "name": "Thick Leather",
+      "slot": null,
+      "type": null,
+      "itemId": 4304,
+      "icon": "inv_misc_leatherscrap_08",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Silken Thread",
+     "item": {
+      "name": "Silken Thread",
+      "slot": null,
+      "type": null,
+      "itemId": 4291,
+      "icon": "inv_fabric_silk_02",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Mageweave Bandage",
+   "rank": "210",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "210",
+    "yellow": "210",
+    "green": "240",
+    "grey": "270"
+   },
+   "item": {
+    "name": "Mageweave Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 8544,
+    "icon": "inv_misc_bandage_19",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Mageweave Cloth",
+     "item": {
+      "name": "Mageweave Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 4338,
+      "icon": "inv_fabric_mageweave_01",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Superior Poultice",
+   "rank": "210",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "210",
+    "yellow": "225",
+    "green": "255",
+    "grey": "285"
+   },
+   "item": {
+    "name": "Superior Poultice",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255718,
+    "icon": "inv_10_alchemy2_quenchingfluid_color3",
+    "quality": 1,
+    "itemLevel": 36,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of diseases up to level 45. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 1s 25c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Elemental Water",
+     "item": {
+      "name": "Elemental Water",
+      "slot": null,
+      "type": null,
+      "itemId": 7070,
+      "icon": "inv_potion_03",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Hot Spices",
+     "item": {
+      "name": "Hot Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2692,
+      "icon": "inv_misc_food_legion_dalapenopepper",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
+       "Sell Price: 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 10c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Skin of Dwarven Stout",
+     "item": {
+      "name": "Skin of Dwarven Stout",
+      "slot": null,
+      "type": null,
+      "itemId": 2596,
+      "icon": "inv_drink_milk_02",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Potent Anti-Venom",
+   "rank": "215",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "215",
+    "yellow": "230",
+    "green": "260",
+    "grey": "290"
+   },
+   "item": {
+    "name": "Potent Anti-Venom",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255715,
+    "icon": "ability_creature_poison_02",
+    "quality": 1,
+    "itemLevel": 36,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of poisons up to level 45. (1 Min Cooldown)",
+     "Sell Price: 1s 25c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Swolen Venom Sac",
+     "item": {
+      "name": "Swolen Venom Sac",
+      "slot": null,
+      "type": "Other",
+      "itemId": 255645,
+      "icon": "inv_misc_organ_06",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "Sell Price: 3s 70c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Superior Healing Potion",
+   "rank": "215",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "215",
+    "yellow": "230",
+    "green": "250",
+    "grey": "270"
+   },
+   "item": {
+    "name": "Superior Healing Potion",
+    "slot": null,
+    "type": null,
+    "itemId": 3928,
+    "icon": "inv_potion_53",
+    "quality": 1,
+    "itemLevel": 45,
+    "requiredLevel": 35,
+    "tooltip": [
+     "Requires Level 35"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Crystal Vial",
+     "item": {
+      "name": "Crystal Vial",
+      "slot": null,
+      "type": null,
+      "itemId": 8925,
+      "icon": "inv_potion_86",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Soothing Spices",
+     "item": {
+      "name": "Soothing Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 3713,
+      "icon": "inv_misc_food_vendor_rice",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to effortlessly enhance the flavor in cooking recipes.\"",
+       "Sell Price: 40c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 40c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Sungrass",
+     "item": {
+      "name": "Sungrass",
+      "slot": null,
+      "type": null,
+      "itemId": 8838,
+      "icon": "inv_misc_herb_18",
+      "quality": 1,
+      "itemLevel": 46,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Heavy Mageweave Bandage",
+   "rank": "–",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "–",
+    "yellow": "240",
+    "green": "270",
+    "grey": "300"
+   },
+   "item": {
+    "name": "Heavy Mageweave Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 8545,
+    "icon": "inv_misc_bandage_20",
+    "quality": 1,
+    "itemLevel": 1,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Mageweave Cloth",
+     "item": {
+      "name": "Mageweave Cloth",
+      "slot": null,
+      "type": null,
+      "itemId": 4338,
+      "icon": "inv_fabric_mageweave_01",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Runecloth Bandage",
+   "rank": "–",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "–",
+    "yellow": "260",
+    "green": "290",
+    "grey": "320"
+   },
+   "item": {
+    "name": "Runecloth Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 14529,
+    "icon": "inv_misc_bandage_11",
+    "quality": 1,
+    "itemLevel": 52,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Runecloth",
+     "item": {
+      "name": "Runecloth",
+      "slot": null,
+      "type": null,
+      "itemId": 14047,
+      "icon": "inv_fabric_purplefire_01",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Surgical Tourniquet",
+   "rank": "265",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "265",
+    "yellow": "280",
+    "green": "310",
+    "grey": "340"
+   },
+   "item": {
+    "name": "Surgical Tourniquet",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255722,
+    "icon": "inv_misc_bandage_09",
+    "quality": 1,
+    "itemLevel": 58,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of bleeds up to level 65. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 5s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Rugged Leather",
+     "item": {
+      "name": "Rugged Leather",
+      "slot": null,
+      "type": null,
+      "itemId": 8170,
+      "icon": "inv_misc_leatherscrap_02",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Runecloth",
+     "item": {
+      "name": "Runecloth",
+      "slot": null,
+      "type": null,
+      "itemId": 14047,
+      "icon": "inv_fabric_purplefire_01",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Heavy Silken Thread",
+     "item": {
+      "name": "Heavy Silken Thread",
+      "slot": null,
+      "type": null,
+      "itemId": 8343,
+      "icon": "inv_fabric_silk_02",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Major Healing Potion",
+   "rank": "275",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "275",
+    "yellow": "290",
+    "green": "310",
+    "grey": "330"
+   },
+   "item": {
+    "name": "Major Healing Potion",
+    "slot": null,
+    "type": null,
+    "itemId": 13446,
+    "icon": "inv_potion_54",
+    "quality": 1,
+    "itemLevel": 55,
+    "requiredLevel": 45,
+    "tooltip": [
+     "Requires Level 45"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Crystal Vial",
+     "item": {
+      "name": "Crystal Vial",
+      "slot": null,
+      "type": null,
+      "itemId": 8925,
+      "icon": "inv_potion_86",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 3,
+     "name": "Soothing Spices",
+     "item": {
+      "name": "Soothing Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 3713,
+      "icon": "inv_misc_food_vendor_rice",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to effortlessly enhance the flavor in cooking recipes.\"",
+       "Sell Price: 40c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 40c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Golden Sansam",
+     "item": {
+      "name": "Golden Sansam",
+      "slot": null,
+      "type": null,
+      "itemId": 13464,
+      "icon": "inv_misc_herb_sansamroot",
+      "quality": 1,
+      "itemLevel": 52,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Powerful Poultice",
+   "rank": "280",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "280",
+    "yellow": "295",
+    "green": "325",
+    "grey": "355"
+   },
+   "item": {
+    "name": "Powerful Poultice",
+    "slot": null,
+    "type": "Reagent",
+    "itemId": 255719,
+    "icon": "inv_10_alchemy2_quenchingfluid_color1",
+    "quality": 1,
+    "itemLevel": 58,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tReagent",
+     "Use: Target is cured of diseases up to level 65. Not useable in combat. (1 Min Cooldown)",
+     "Sell Price: 5s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Essence of Water",
+     "item": {
+      "name": "Essence of Water",
+      "slot": null,
+      "type": null,
+      "itemId": 7080,
+      "icon": "spell_nature_acid_01",
+      "quality": 2,
+      "itemLevel": 55,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Hot Spices",
+     "item": {
+      "name": "Hot Spices",
+      "slot": null,
+      "type": "Other",
+      "itemId": 2692,
+      "icon": "inv_misc_food_legion_dalapenopepper",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
+       "Sell Price: 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tTrade Goods",
+       "Sell Price: 10c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 1,
+     "name": "Flagon of Dwarven Honeymead",
+     "item": {
+      "name": "Flagon of Dwarven Honeymead",
+      "slot": null,
+      "type": null,
+      "itemId": 2594,
+      "icon": "inv_drink_05",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Heavy Runecloth Bandage",
+   "rank": "–",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Trainer",
+   "skills": {
+    "orange": "–",
+    "yellow": "290",
+    "green": "320",
+    "grey": "350"
+   },
+   "item": {
+    "name": "Heavy Runecloth Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 14530,
+    "icon": "inv_misc_bandage_12",
+    "quality": 1,
+    "itemLevel": 58,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Runecloth",
+     "item": {
+      "name": "Runecloth",
+      "slot": null,
+      "type": null,
+      "itemId": 14047,
+      "icon": "inv_fabric_purplefire_01",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Crystal Infused Bandage",
+   "rank": "–",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "–",
+    "yellow": "300",
+    "green": "330",
+    "grey": "360"
+   },
+   "item": {
+    "name": "Crystal Infused Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": 23684,
+    "icon": "inv_misc_bandage_16",
+    "quality": 1,
+    "itemLevel": 60,
+    "requiredLevel": 0,
+    "tooltip": null,
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 4,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "[PH] Silithus PvP Dust [DEP]",
+     "item": {
+      "name": "[PH] Silithus PvP Dust [DEP]",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 10,
+     "name": "Runecloth",
+     "item": {
+      "name": "Runecloth",
+      "slot": null,
+      "type": null,
+      "itemId": 14047,
+      "icon": "inv_fabric_purplefire_01",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Plague Doctor's Laboratory",
+   "rank": "300",
+   "category": "Camp Objects",
+   "categoryConfident": false,
+   "source": "Recipe",
+   "skills": {
+    "orange": "300",
+    "yellow": "300",
+    "green": "300",
+    "grey": "300"
+   },
+   "item": {
+    "name": "Plague Doctor's Laboratory",
+    "slot": null,
+    "type": "Other",
+    "itemId": 279951,
+    "icon": "inv_10_alchemy_incenseholder_color1",
+    "quality": 1,
+    "itemLevel": 60,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tOther",
+     "Requires First Aid (300)",
+     "Use: Places a Plague Doctor's Laboratory that contains healing potions, poultices, and provides all of the benefits of a First Aid Kit. Requires a Campfire nearby. May be placed over a First Aid Kit to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Simple Wood",
+     "item": {
+      "name": "Simple Wood",
+      "slot": null,
+      "type": null,
+      "itemId": 4470,
+      "icon": "inv_tradeskillitem_01",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 2,
+     "name": "Strong Anti-Venom",
+     "item": {
+      "name": "Strong Anti-Venom",
+      "slot": null,
+      "type": null,
+      "itemId": 6453,
+      "icon": "inv_misc_slime_01",
+      "quality": 1,
+      "itemLevel": 26,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    },
+    {
+     "qty": 5,
+     "name": "Heavy Runecloth Bandage",
+     "item": {
+      "name": "Heavy Runecloth Bandage",
+      "slot": null,
+      "type": null,
+      "itemId": 14530,
+      "icon": "inv_misc_bandage_12",
+      "quality": 1,
+      "itemLevel": 58,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Powerful Anti-Venom",
+   "rank": "300",
+   "category": "Anti-Venoms and Potions",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "300",
+    "yellow": "300",
+    "green": "330",
+    "grey": "360"
+   },
+   "item": {
+    "name": "Powerful Anti-Venom",
+    "slot": null,
+    "type": "Other",
+    "itemId": 19440,
+    "icon": "inv_drink_14",
+    "quality": 1,
+    "itemLevel": 58,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tOther",
+     "Requires First Aid (300)",
+     "Use: Target is cured of poisons up to level 65. (1 Min Cooldown)",
+     "Sell Price: 5s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": [
+     "\tReagent",
+     "Requires First Aid (300)",
+     "Use: Target is cured of poisons up to level 60. (1 Min Cooldown)",
+     "Sell Price: 5s"
+    ],
+    "status": "changed",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "makesQty": 3,
+   "reagents": [
+    {
+     "qty": 1,
+     "name": "Huge Venom Sac",
+     "item": {
+      "name": "Huge Venom Sac",
+      "slot": null,
+      "type": null,
+      "itemId": 19441,
+      "icon": "inv_misc_organ_04",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Dense Runecloth Bandage",
+   "rank": "300",
+   "category": "Bandages",
+   "categoryConfident": true,
+   "source": "Recipe",
+   "skills": {
+    "orange": "300",
+    "yellow": "315",
+    "green": "327",
+    "grey": "340"
+   },
+   "item": {
+    "name": "Dense Runecloth Bandage",
+    "slot": null,
+    "type": null,
+    "itemId": null,
+    "icon": null,
+    "quality": null,
+    "itemLevel": null,
+    "requiredLevel": null,
+    "tooltip": null,
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": null,
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": true,
+    "source": "foreverchanges"
+   },
+   "makesQty": null,
+   "reagents": [
+    {
+     "qty": 2,
+     "name": "Heavy Runecloth Bandage",
+     "item": {
+      "name": "Heavy Runecloth Bandage",
+      "slot": null,
+      "type": null,
+      "itemId": 14530,
+      "icon": "inv_misc_bandage_12",
+      "quality": 1,
+      "itemLevel": 58,
+      "requiredLevel": 0,
+      "tooltip": null,
+      "tooltipSynthesized": true,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     }
+    }
+   ]
+  }
+ ],
+ "leveling": null,
+ "favor": null
+}
