@@ -11,7 +11,108 @@ serving as a fixed project brief.
 
 ## Session handoff — 2026-09-23
 
-**Stable and shipped this session:** five follow-ups on the dungeon loot
+**Stable and shipped this session:** individual item pages plus a batch of
+small data/copy fixes, each verified live and committed separately (this
+session picks up right after the dungeon-loot follow-ups below, same day).
+- **`/items/[itemId]`** — individual item pages, studied against
+  foreverchanges.pro/items live (clicking an item goes to `/item/<id>`,
+  showing a title/meta line, a status callout, and a tooltip panel with
+  current + Classic tooltip text) and rebuilt at the same information depth
+  in this site's own theme, not a copy of their layout. Not statically
+  generated -- `lib/items.ts`'s new `getItemById` is a Map lookup against
+  the same cached `data/items.json` read `queryItems` already uses, so
+  21,458 pages don't get built up front for a page most visitors reach one
+  at a time.
+- **Every item-rendering surface site-wide now links to its item page.**
+  `LootItemPill`'s inner tooltip content (name, tooltip lines, drop chance,
+  Classic-comparison block) was extracted into a new shared
+  `ItemTooltipBody` component (needed by both the hover popover and the
+  static item page, which has no use for `TooltipCard`'s fixed-position
+  wrapper); `LootItemPill` now wraps an item's name in a `Link` whenever it
+  has a real `itemId`. Because boss loot, quest rewards, the items catalog
+  table, and the dungeon timeline's inline panel all already go through
+  this one shared component, this single change wired up linking
+  everywhere at once -- verified live on all four surfaces. Legacy Perk
+  reward items were audited and deliberately left unlinked: that data has
+  no real item id, and this project's convention is not to name-match when
+  an id would be needed but isn't there.
+- **Unchanged ("same"-status) items get a real tooltip instead of a bare
+  "Slot, Type" line**, on both the `/reference/items` hover tooltip and the
+  new item page. foreverchanges' "same" items never carry full tooltip
+  text at the source -- only new/changed/missing do -- but they DO still
+  carry real structured fields (slot, class restriction, weapon speed/dps,
+  required level). `fcItemToUnified` (`scripts/lib/fc-item.js`) now
+  reconstructs a tooltip from those fields when full text is absent, in
+  the exact line format/order real tooltip-text items use (cross-checked
+  against real weapon entries to confirm `p`/`d` are speed/dps, not some
+  other stat). A new `tooltipSynthesized` flag drives an honest
+  `TooltipDataNote` disclosing this is reconstructed, not the beta
+  client's own text, and that armor/stat bonuses aren't derivable this
+  way -- this project doesn't present reconstructed data as equivalent to
+  a real pull.
+- **Two real pre-existing bugs found and fixed while touching this area,**
+  both the same root cause (loot-table-specific wording/styling applied
+  unconditionally to the plain item catalog, where `status: "missing"`
+  means something different -- "beta hasn't touched this Classic item
+  yet," not "no longer drops"): the shared status note text, and the
+  muted/grayscale-icon-plus-"Gone"-badge treatment. `ItemTooltipBody` and
+  `LootItemPill` both now take a `context: "loot" | "catalog"` prop and
+  render the wording/styling that's actually true for where they're used.
+- **Data cleanup, each independently verified and committed:**
+  - Stray leading commas in tooltip lines (e.g. ", Elixirs") -- came from
+    joining an empty slot with a non-empty type on the tab-separated
+    "Slot\tType" line without filtering the empty part first. Fixed in
+    both `LootItemPill`'s tab-line renderer and its Classic-comparison
+    block; confirmed live on Simple Flour ("\tCooking" -> now "COOKING").
+  - Missing space in quest XP reward text (e.g. "...Forever beta2,750 in
+    Classic") -- the source HTML has the Classic value as a sibling
+    `<small class="dgx-was">` right after the Forever value with no
+    separating text (CSS spacing does the work on the live site);
+    `extract-foreverchanges-quests.js`'s `stripTags`-based extraction
+    concatenated them directly. Fixed by inserting ", " before stripping;
+    re-ran the scrape for all 35 dungeons and rebuilt
+    `data/dungeons/*.json` (37 quests across 8 dungeons affected).
+  - Homepage Reference card copy ("Racials and race/class rules at a
+    glance") and the Reference page's own Dungeon Loot card copy (still
+    said "community-sourced from wowtbc.gg" from before the 2026-09-22
+    foreverchanges rebuild, flagged in that session's own handoff) both
+    updated to reflect what's actually there now.
+- **Investigated, no code change (reported rather than guessed):**
+  - The stray "OLD" prefix on some item names (e.g. "OLDThug Belt",
+    "OLDRecruit's Belt") is NOT a data artifact -- confirmed against
+    foreverchanges.pro's own live item pages (both its catalog listing and
+    its individual `/item/<id>` page) that they render the exact same
+    "OLD..." name with no special-casing, for the same 31 item ids. These
+    are real leftover/debug entries in the game's own item database (low-
+    level vendor gear, NPC-only "Monster - X" template items, all quality
+    0-1) that genuinely carry "OLD" as part of the stored name, not
+    something either site's pipeline introduced. Left as-is, matching the
+    primary source's own treatment -- don't strip it without a reason to
+    believe it's wrong.
+  - `LootDisclaimer`'s "cite foreverchanges.pro exactly once" requirement
+    was checked against every one of the 35 dungeon loot pages (same-
+    source and mixed-source cases) and the guard already in
+    `app/reference/dungeons/loot/[slug]/page.tsx`
+    (`questSource !== bossLootSource`) already prevents duplication in
+    every case tried -- no reproducible bug found. Noted here in case this
+    was observed somewhere this session didn't check (a specific dungeon,
+    a specific viewport) rather than assumed fixed.
+
+**Suggested next:**
+- If `/items/[itemId]` ever needs prebuilt/cached pages for SEO reasons,
+  reconsider `generateStaticParams` for at least the "new"/"changed"
+  subset (the items people actually search for) rather than all 21,458.
+- `app/sitemap.ts` still doesn't list `/reference/items`,
+  `/reference/dungeons/loot`, per-dungeon loot pages, or the new
+  `/items/[itemId]` pages -- pre-existing gap (the file's own guides/
+  blog/profession coverage predates this session), not something this
+  session's task asked for. Adding 21,458 item URLs to the sitemap would
+  need its own explicit decision, not a default "add everything."
+- The `LootDisclaimer` duplication question above is worth a fresh look
+  if it recurs with a specific reproduction (URL, viewport) to check
+  against, rather than re-auditing all 35 dungeons blind again.
+
+**Session from earlier 2026-09-23:** five follow-ups on the dungeon loot
 feature from 2026-09-22, each verified live and committed separately.
 - **Quest field label hierarchy fix**
   (`components/reference/LootQuestRewardsCard.tsx` and
@@ -697,6 +798,62 @@ rather than exposing a fourth bucket, so this matches the source's own
 grouping rather than inventing a status. Don't be surprised to find
 `"rebuilt"` in a raw `new.json` entry; it's normalized away by the time
 `data/items.json` is built.
+
+### `/items/[itemId]`: individual item pages, and the shared tooltip-body extraction
+Added 2026-09-23, same session as `/reference/items` above. Studied
+foreverchanges.pro/items live: clicking an item goes to `/item/<id>`,
+which shows a title/meta line (quality, slot, type, item level, id), a
+colored status callout, and a tooltip panel with the item's full current
+(and, when changed, Classic) tooltip text. Rebuilt at that same
+information depth, not copied layout -- `app/items/[itemId]/page.tsx` is
+a plain async Server Component; `lib/items.ts`'s `getItemById` is a Map
+lookup (built once, lazily) against the same cached `data/items.json`
+read `queryItems` already uses. **Deliberately not statically
+generated** -- no `generateStaticParams`, so Next.js renders each item
+page on demand rather than building all 21,458 up front for a page most
+visitors reach one at a time (from a drop, a reward, or the catalog
+table), matching this project's "load fast, minimal bloat" priority the
+same way `/reference/items` itself already does for the catalog table.
+
+**`ItemTooltipBody` (`components/reference/ItemTooltipBody.tsx`)** is
+the tooltip's inner content -- name, tooltip lines (or a bare slot/type
+fallback), the synthesized-tooltip disclosure (see the "same"-status
+note in the `/reference/items` section above), drop chance, and the
+Classic-comparison block -- extracted out of `LootItemPill` so the item
+page could reuse it without `TooltipCard`'s `position: fixed` hover
+wrapper: the item page wraps it in a plain bordered box instead.
+`LootItemPill` now imports it too, so there is exactly one place this
+content is rendered from, not two copies that could drift.
+
+**Every item-rendering surface site-wide links to its item page** as a
+consequence of one change: `LootItemPill` wraps an item's name in a
+`Link` to `/items/<id>` whenever `item.itemId` isn't null. Since boss
+loot (`LootBossCard`), quest rewards (`LootQuestRewardsCard`), the
+items catalog (`ItemsTable`), and the dungeon timeline's inline panel
+(`DungeonInlinePanel`) all already render items exclusively through
+`LootItemPill`, this wired up linking everywhere at once -- verified
+live on all four. Legacy Perk reward items (`LegacyPerksReference`) are
+a different, hand-authored data shape with no real item id, so they
+were deliberately left unlinked rather than name-matched against the
+catalog -- this project's own convention (see the quest-reward-
+enrichment note above) is to trust an id join over a name guess, and to
+skip the link entirely when there's no id to join on.
+
+**`context: "loot" | "catalog"`** on both `LootItemPill` and
+`ItemTooltipBody` exists because `item.status === "missing"` means two
+different things depending on where an item renders: on a dungeon loot
+page it's a boss/quest drop no longer confirmed in Forever's loot
+table; in the full item catalog it just means the beta client hasn't
+touched that Classic item's data yet (`lib/items.ts`'s own "No Forever
+Data" tab label is the accurate claim there). Before this was split out,
+the catalog showed a "Gone"-badged, grayscale, "no longer drops"-
+captioned row for a plain not-yet-touched Classic item -- actively
+contradicting the catalog page's own copy ("not that it's been
+removed") and its correct "NO FOREVER DATA" status-column badge right
+next to it. Found and fixed in the same session that built the item
+page, not a pre-existing note carried forward. `context` defaults to
+`"loot"` (most `LootItemPill` call sites are loot-related); only
+`ItemsTable` and the item page itself pass `"catalog"`.
 
 ### Planner: race is reference-only; URL is `/planner/<class>/<build>`
 Race is no longer app state or a URL segment — it never affects talent
