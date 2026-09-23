@@ -184,6 +184,13 @@ function buildBosses(ourId, fcSlug) {
           name: b.name,
           kind: b.kind,
           level: b.level ?? null,
+          // foreverchanges' own NPC portrait render, keyed by the beta
+          // client's creature display id -- verified to resolve for all
+          // 223 distinct display ids across every dungeon before relying
+          // on it (see build-dungeons.js history/commit for the check).
+          // Absent for "Trash mobs" groupings and lootable objects, which
+          // have no single NPC to portray.
+          portraitUrl: b.display ? `https://foreverchanges.pro/wow-ui/bosses/${b.display}.webp` : null,
           items: (b.items || []).map(fcItemToUnified),
         })),
       };
@@ -197,6 +204,7 @@ function buildBosses(ourId, fcSlug) {
         name: b.name,
         kind: "boss",
         level: null,
+        portraitUrl: null,
         items: (b.items || []).map(wowtbcItemToUnified),
       })),
     };

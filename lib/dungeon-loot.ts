@@ -41,6 +41,10 @@ export type LootBoss = {
   name: string;
   kind: "boss" | "trash" | "rare" | "object" | "quest";
   level: number | null;
+  // foreverchanges.pro's own NPC portrait render, hotlinked -- null for
+  // "Trash mobs" groupings, lootable objects, and any boss sourced from
+  // wowtbc.gg (which has no equivalent asset).
+  portraitUrl: string | null;
   items: LootItem[];
 };
 

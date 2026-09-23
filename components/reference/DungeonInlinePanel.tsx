@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import BossPortrait from "@/components/reference/BossPortrait";
 import LootItemPill from "@/components/reference/LootItemPill";
 import type { DungeonData, LootBoss, Quest } from "@/lib/dungeon-loot";
 
@@ -163,7 +164,10 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                 <div className="min-w-0 flex-1 overflow-y-auto p-3">
                   {boss && (
                     <>
-                      <h4 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-accent">{boss.name}</h4>
+                      <div className="mb-1.5 flex items-center gap-2">
+                        <BossPortrait src={boss.portraitUrl} alt="" size={28} />
+                        <h4 className="text-xs font-semibold uppercase tracking-wide text-accent">{boss.name}</h4>
+                      </div>
                       <BossDetail boss={boss} dungeonId={data.id} />
                     </>
                   )}
