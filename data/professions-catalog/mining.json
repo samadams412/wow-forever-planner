@@ -1,0 +1,1711 @@
+{
+ "id": "mining",
+ "name": "Mining",
+ "kind": "gathering",
+ "nodes": [
+  {
+   "name": "Copper Vein",
+   "icon": "inv_ore_copper_01",
+   "zones": "Most in Durotar, Westfall and Duskwood",
+   "items": [
+    {
+     "name": "Copper Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2770,
+     "icon": "inv_ore_copper_01",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rough Stone",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2835,
+     "icon": "inv_stone_06",
+     "quality": 1,
+     "itemLevel": 5,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rethban Ore",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 2798,
+     "icon": "inv_ore_iron_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest",
+      "Sell Price: 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "\tJunk",
+      "Sell Price: 25c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "1",
+    "yellow": "26",
+    "green": "51",
+    "grey": "101"
+   }
+  },
+  {
+   "name": "Tin Vein",
+   "icon": "inv_ore_tin_01",
+   "zones": "Most in Wetlands, Duskwood and Silverpine Forest",
+   "items": [
+    {
+     "name": "Tin Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2771,
+     "icon": "inv_ore_tin_01",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Coarse Stone",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2836,
+     "icon": "inv_stone_09",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rethban Ore",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 2798,
+     "icon": "inv_ore_iron_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest",
+      "Sell Price: 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "\tJunk",
+      "Sell Price: 25c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "65",
+    "yellow": "90",
+    "green": "115",
+    "grey": "165"
+   }
+  },
+  {
+   "name": "Silver Vein",
+   "icon": "inv_stone_16",
+   "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
+   "items": [
+    {
+     "name": "Silver Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2775,
+     "icon": "inv_stone_16",
+     "quality": 2,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "75",
+    "yellow": "100",
+    "green": "125",
+    "grey": "175"
+   }
+  },
+  {
+   "name": "Iron Deposit",
+   "icon": "inv_ore_iron_01",
+   "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
+   "items": [
+    {
+     "name": "Iron Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2772,
+     "icon": "inv_ore_iron_01",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heavy Stone",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2838,
+     "icon": "inv_stone_12",
+     "quality": 1,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 60c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "125",
+    "yellow": "150",
+    "green": "175",
+    "grey": "225"
+   }
+  },
+  {
+   "name": "Gold Vein",
+   "icon": "inv_ore_copper_01",
+   "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
+   "items": [
+    {
+     "name": "Gold Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2776,
+     "icon": "inv_ore_copper_01",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "155",
+    "yellow": "180",
+    "green": "205",
+    "grey": "255"
+   }
+  },
+  {
+   "name": "Mithril Deposit",
+   "icon": "inv_ore_mithril_02",
+   "zones": "Most in Badlands, The Hinterlands and Alterac Mountains",
+   "items": [
+    {
+     "name": "Mithril Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 3858,
+     "icon": "inv_ore_mithril_02",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Solid Stone",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 7912,
+     "icon": "inv_stone_10",
+     "quality": 1,
+     "itemLevel": 35,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "175",
+    "yellow": "200",
+    "green": "225",
+    "grey": "275"
+   }
+  },
+  {
+   "name": "Dark Iron Deposit",
+   "icon": "inv_ore_mithril_01",
+   "zones": "Most in Searing Gorge",
+   "items": [
+    {
+     "name": "Dark Iron Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 11370,
+     "icon": "inv_ore_mithril_01",
+     "quality": 1,
+     "itemLevel": 50,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "230",
+    "yellow": "255",
+    "green": "280",
+    "grey": "330"
+   }
+  },
+  {
+   "name": "Truesilver Deposit",
+   "icon": "inv_ore_truesilver_01",
+   "zones": "Most in Badlands, The Hinterlands and Alterac Mountains",
+   "items": [
+    {
+     "name": "Truesilver Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 7911,
+     "icon": "inv_ore_truesilver_01",
+     "quality": 2,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "230",
+    "yellow": "255",
+    "green": "280",
+    "grey": "330"
+   }
+  },
+  {
+   "name": "Small Thorium Vein",
+   "icon": "inv_ore_thorium_02",
+   "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands",
+   "items": [
+    {
+     "name": "Thorium Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 10620,
+     "icon": "inv_ore_thorium_02",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dense Stone",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 12365,
+     "icon": "inv_misc_stonetablet_07",
+     "quality": 1,
+     "itemLevel": 45,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arcane Crystal",
+     "slot": null,
+     "type": "Other",
+     "itemId": 12363,
+     "icon": "inv_misc_gem_topaz_01",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Other",
+      "Sell Price: 20s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "245",
+    "yellow": "270",
+    "green": "295",
+    "grey": "345"
+   }
+  },
+  {
+   "name": "Rich Thorium Vein",
+   "icon": "inv_ore_thorium_02",
+   "zones": "Most in Winterspring and Azshara",
+   "items": [
+    {
+     "name": "Thorium Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 10620,
+     "icon": "inv_ore_thorium_02",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dense Stone",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 12365,
+     "icon": "inv_misc_stonetablet_07",
+     "quality": 1,
+     "itemLevel": 45,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arcane Crystal",
+     "slot": null,
+     "type": "Other",
+     "itemId": 12363,
+     "icon": "inv_misc_gem_topaz_01",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Other",
+      "Sell Price: 20s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "275",
+    "yellow": "300",
+    "green": "325",
+    "grey": "375"
+   }
+  }
+ ],
+ "leveling": [
+  {
+   "range": [
+    1,
+    65
+   ],
+   "name": "Copper Vein",
+   "zones": "Most of them in Durotar, Westfall, Duskwood and Silverpine Forest",
+   "icons": [
+    {
+     "icon": "inv_ore_copper_01",
+     "name": "Copper Vein"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    65,
+    125
+   ],
+   "name": "Tin Vein and Silver Vein",
+   "zones": "Most of them in Arathi Highlands, Wetlands, Duskwood and Silverpine Forest",
+   "icons": [
+    {
+     "icon": "inv_ore_tin_01",
+     "name": "Tin Vein"
+    },
+    {
+     "icon": "inv_stone_16",
+     "name": "Silver Vein"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    125,
+    175
+   ],
+   "name": "Iron Deposit and Gold Vein",
+   "zones": "Most of them in Arathi Highlands, Alterac Mountains, Stranglethorn Vale and Duskwood",
+   "icons": [
+    {
+     "icon": "inv_ore_iron_01",
+     "name": "Iron Deposit"
+    },
+    {
+     "icon": "inv_ore_copper_01",
+     "name": "Gold Vein"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    175,
+    245
+   ],
+   "name": "Mithril Deposit and Truesilver Deposit",
+   "zones": "Most of them in Badlands, The Hinterlands, Alterac Mountains and Searing Gorge",
+   "icons": [
+    {
+     "icon": "inv_ore_mithril_02",
+     "name": "Mithril Deposit"
+    },
+    {
+     "icon": "inv_ore_truesilver_01",
+     "name": "Truesilver Deposit"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    245,
+    300
+   ],
+   "name": "Small Thorium Vein and Rich Thorium Vein",
+   "zones": "Most of them in Winterspring, Azshara, Swamp of Sorrows and Blasted Lands",
+   "icons": [
+    {
+     "icon": "inv_ore_thorium_02",
+     "name": "Small Thorium Vein"
+    },
+    {
+     "icon": "inv_ore_thorium_02",
+     "name": "Rich Thorium Vein"
+    }
+   ],
+   "items": []
+  }
+ ],
+ "skin": null,
+ "smelting": [
+  {
+   "name": "Copper Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Copper Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 2840,
+    "icon": "inv_ingot_02",
+    "quality": 1,
+    "itemLevel": 10,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 10c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Copper Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2770,
+     "icon": "inv_ore_copper_01",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "10",
+    "yellow": "25",
+    "green": "47",
+    "grey": "70"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Bronze Bar",
+   "makesQty": 2,
+   "item": {
+    "name": "Bronze Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 2841,
+    "icon": "inv_ingot_bronze",
+    "quality": 1,
+    "itemLevel": 20,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 50c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Copper Bar",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2840,
+     "icon": "inv_ingot_02",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 10c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tin Bar",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 3576,
+     "icon": "inv_ingot_05",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "65",
+    "yellow": "65",
+    "green": "90",
+    "grey": "115"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Tin Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Tin Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 3576,
+    "icon": "inv_ingot_05",
+    "quality": 1,
+    "itemLevel": 20,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Tin Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2771,
+     "icon": "inv_ore_tin_01",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "65",
+    "yellow": "50",
+    "green": "62",
+    "grey": "75"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Silver Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Silver Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 2842,
+    "icon": "inv_ingot_01",
+    "quality": 2,
+    "itemLevel": 10,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 1s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Silver Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2775,
+     "icon": "inv_stone_16",
+     "quality": 2,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "75",
+    "yellow": "100",
+    "green": "112",
+    "grey": "125"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Iron Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Iron Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 3575,
+    "icon": "inv_ingot_iron",
+    "quality": 1,
+    "itemLevel": 30,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 2s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Iron Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2772,
+     "icon": "inv_ore_iron_01",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "125",
+    "yellow": "130",
+    "green": "135",
+    "grey": "140"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Gold Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Gold Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 3577,
+    "icon": "inv_ingot_03",
+    "quality": 2,
+    "itemLevel": 30,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 6s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Gold Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 2776,
+     "icon": "inv_ore_copper_01",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "155",
+    "yellow": "170",
+    "green": "177",
+    "grey": "185"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Steel Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Steel Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 3859,
+    "icon": "inv_ingot_steel",
+    "quality": 1,
+    "itemLevel": 35,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 60c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Iron Bar",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 3575,
+     "icon": "inv_ingot_iron",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Coal",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 3857,
+     "icon": "inv_ore_tin_01",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "165",
+    "yellow": "165",
+    "green": "165",
+    "grey": "165"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Mithril Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Mithril Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 3860,
+    "icon": "inv_ingot_06",
+    "quality": 1,
+    "itemLevel": 40,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 4s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Mithril Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 3858,
+     "icon": "inv_ore_mithril_02",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "175",
+    "yellow": "175",
+    "green": "175",
+    "grey": "175"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Dark Iron Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Dark Iron Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 11371,
+    "icon": "inv_ingot_mithril",
+    "quality": 1,
+    "itemLevel": 50,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 6s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Dark Iron Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 11370,
+     "icon": "inv_ore_mithril_01",
+     "quality": 1,
+     "itemLevel": 50,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "215",
+    "yellow": "230",
+    "green": "230",
+    "grey": "230"
+   },
+   "source": "Not from a trainer: a quest or a teacher of its own in Classic"
+  },
+  {
+   "name": "Truesilver Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Truesilver Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 6037,
+    "icon": "inv_ingot_08",
+    "quality": 2,
+    "itemLevel": 50,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 12s 50c"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Truesilver Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 7911,
+     "icon": "inv_ore_truesilver_01",
+     "quality": 2,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "230",
+    "yellow": "230",
+    "green": "230",
+    "grey": "230"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Thorium Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Thorium Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 12359,
+    "icon": "inv_ingot_07",
+    "quality": 1,
+    "itemLevel": 50,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone",
+     "Sell Price: 6s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Thorium Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 10620,
+     "icon": "inv_ore_thorium_02",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "250",
+    "yellow": "250",
+    "green": "250",
+    "grey": "250"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Azerothium BarNew",
+   "makesQty": null,
+   "item": {
+    "name": "Azerothium Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 249726,
+    "icon": "inv_ingot_livingsteel",
+    "quality": 2,
+    "itemLevel": 55,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tMetal & Stone",
+     "Sell Price: 50s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Pitchblende",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 249426,
+     "icon": "inv_ore_elethium_nugget",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tMetal & Stone",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Coal",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 3857,
+     "icon": "inv_ore_tin_01",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "260",
+    "yellow": "275",
+    "green": "275",
+    "grey": "275"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Heavy Thorium BarNew",
+   "makesQty": null,
+   "item": {
+    "name": "Heavy Thorium Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 251291,
+    "icon": "item_elementiumbar",
+    "quality": 2,
+    "itemLevel": 60,
+    "requiredLevel": 0,
+    "tooltip": [
+     "\tMetal & Stone",
+     "Sell Price: 25s"
+    ],
+    "tooltipSynthesized": false,
+    "classicTooltip": null,
+    "status": "new",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Heavy Thorium Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 248815,
+     "icon": "inv_ore_oxxein",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tMetal & Stone",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "285",
+    "yellow": "300",
+    "green": "307",
+    "grey": "315"
+   },
+   "source": "Trainer"
+  },
+  {
+   "name": "Elementium Bar",
+   "makesQty": null,
+   "item": {
+    "name": "Elementium Bar",
+    "slot": null,
+    "type": "Metal & Stone",
+    "itemId": 17771,
+    "icon": "inv_ingot_thorium",
+    "quality": 5,
+    "itemLevel": 60,
+    "requiredLevel": 0,
+    "tooltip": [
+     "Metal & Stone"
+    ],
+    "tooltipSynthesized": true,
+    "classicTooltip": null,
+    "status": "same",
+    "dropChance": null,
+    "dropChanceUnder": false,
+    "unknown": false,
+    "source": "foreverchanges"
+   },
+   "mats": [
+    {
+     "name": "Elementium Ore",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 18562,
+     "icon": "inv_stone_sharpeningstone_01",
+     "quality": 4,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arcanite Bar",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 12360,
+     "icon": "inv_misc_stonetablet_05",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 50s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fiery Core",
+     "slot": null,
+     "type": "Other",
+     "itemId": 17010,
+     "icon": "spell_fire_flamebolt",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Other",
+      "Sell Price: 20s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Elemental Flux",
+     "slot": null,
+     "type": "Metal & Stone",
+     "itemId": 18567,
+     "icon": "spell_frost_fireresistancetotem",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Metal & Stone",
+      "Sell Price: 3g 75s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "295",
+    "yellow": "310",
+    "green": "315",
+    "grey": "320"
+   },
+   "source": "Not from a trainer: a quest or a teacher of its own in Classic"
+  }
+ ],
+ "camp": {
+  "milestones": [],
+  "campObjects": [
+   {
+    "name": "Lodestone",
+    "icon": null,
+    "description": "90 melee Attack Power to everyone sitting nearby, like Blessing of Might (at level 60, scaling with level)",
+    "legacyPoints": null,
+    "skill": 20,
+    "item": {
+     "name": "Lodestone",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279960,
+     "icon": "inv_misc_rune_06",
+     "quality": 1,
+     "itemLevel": 4,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Mining (20)",
+      "Use: Erects a lodestone that allows you and others sitting nearby to gain 90 increased melee Attack Power, exclusive with Blessing of Might. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   },
+   {
+    "name": "Rock Garden",
+    "icon": null,
+    "description": "Spawns a common mining node over time, and gives the Lodestone buff",
+    "legacyPoints": null,
+    "skill": 140,
+    "item": {
+     "name": "Rock Garden",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279948,
+     "icon": "inv_misc_powder_iron",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Mining (140)",
+      "Use: Places a Rock Garden that spawns a common mining node over time, and provides all the benefits of a Lodestone. Requires a Campfire nearby. May be placed over a Lodestone to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Rock Garden",
+     "slot": null,
+     "type": "Book",
+     "itemId": 273097,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Mining (140)",
+      "Use: Craft a Rock Garden.",
+      "\"Teaches you how to place a Rock Garden at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   },
+   {
+    "name": "Molten Foundry",
+    "icon": null,
+    "description": "Needed for recipes that require it, and gives the Lodestone buff",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Molten Foundry",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279952,
+     "icon": "inv_blacksmithingalloys_red",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Mining (300)",
+      "Use: Places a Molten Foundry usable for recipes that require it, and provides all the benefits of a Lodestone. Requires a Campfire nearby. May be placed over a Lodestone to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Molten Foundry",
+     "slot": null,
+     "type": "Book",
+     "itemId": 273122,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Mining (300)",
+      "Use: Craft a Molten Foundry.",
+      "\"Teaches you how to place a Molten Foundry at a campsite.\"",
+      "Sell Price: 12g"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   }
+  ],
+  "legacyPerks": [
+   {
+    "id": "professions_bountiful_harvest",
+    "name": "Bountiful Harvest",
+    "icon": "inv_misc_bag_18",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "You discover 100% more Scarce materials from Mining, Herbalism, and Skinning."
+   },
+   {
+    "id": "professions_working_overtime",
+    "name": "Working Overtime",
+    "icon": "inv_misc_pocketwatch_03",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 20%."
+   },
+   {
+    "id": "professions_dedicated_study",
+    "name": "Dedicated Study",
+    "icon": "inv_misc_book_08",
+    "maxRank": 1,
+    "gate": 10,
+    "prereqName": "Bartering",
+    "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+   }
+  ]
+ }
+}

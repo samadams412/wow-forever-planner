@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
 import { PROFESSION_IDS } from "@/lib/profession-recipes";
+import { GATHERING_PROFESSION_IDS } from "@/lib/gathering-professions";
 
 const STATIC_ROUTES = [
   "",
@@ -46,7 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 4. Profession catalog pages -- recipe data, not dated content, so no
   // per-page lastModified from frontmatter the way guides/blog have.
-  const professionEntries = PROFESSION_IDS.map((id) => ({
+  // Gathering (Mining/Herbalism/Skinning) share the same URL shape as the
+  // 8 crafting professions despite their different page content.
+  const professionEntries = [...PROFESSION_IDS, ...GATHERING_PROFESSION_IDS].map((id) => ({
     url: `${SITE_URL}/reference/professions/${id}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

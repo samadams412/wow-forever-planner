@@ -1,0 +1,728 @@
+{
+ "id": "skinning",
+ "name": "Skinning",
+ "kind": "gathering",
+ "nodes": null,
+ "leveling": null,
+ "skin": [
+  {
+   "range": [
+    1,
+    null
+   ],
+   "name": "Beasts of level 1 to 10",
+   "zones": "Most in Mulgore, Durotar, Dun Morogh and Elwynn Forest",
+   "icons": [],
+   "items": [
+    {
+     "name": "Ruined Leather Scraps",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2934,
+     "icon": "inv_misc_pelt_bear_ruin_05",
+     "quality": 1,
+     "itemLevel": 5,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 7c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Light Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2318,
+     "icon": "inv_misc_leatherscrap_03",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Light Hide",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 783,
+     "icon": "inv_misc_pelt_wolf_ruin_02",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "range": [
+    10,
+    100
+   ],
+   "name": "Beasts of level 11 to 20",
+   "zones": "Most in The Barrens, Darkshore, Silverpine Forest and Loch Modan",
+   "icons": [],
+   "items": [
+    {
+     "name": "Light Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2318,
+     "icon": "inv_misc_leatherscrap_03",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ruined Leather Scraps",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2934,
+     "icon": "inv_misc_pelt_bear_ruin_05",
+     "quality": 1,
+     "itemLevel": 5,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 7c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Medium Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2319,
+     "icon": "inv_misc_leatherscrap_05",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shiny Fish Scales",
+     "slot": null,
+     "type": "Reagent",
+     "itemId": 17057,
+     "icon": "inv_misc_monsterscales_08",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Reagent"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "range": [
+    105,
+    150
+   ],
+   "name": "Beasts of level 21 to 30",
+   "zones": "Most in Wetlands, Ashenvale, Hillsbrad Foothills and Thousand Needles",
+   "icons": [],
+   "items": [
+    {
+     "name": "Medium Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2319,
+     "icon": "inv_misc_leatherscrap_05",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Light Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2318,
+     "icon": "inv_misc_leatherscrap_03",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heavy Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4234,
+     "icon": "inv_misc_leatherscrap_07",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heavy Hide",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4235,
+     "icon": "inv_misc_pelt_wolf_ruin_03",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 2s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "range": [
+    155,
+    200
+   ],
+   "name": "Beasts of level 31 to 40",
+   "zones": "Most in Dustwallow Marsh, Desolace, Stranglethorn Vale and Badlands",
+   "icons": [],
+   "items": [
+    {
+     "name": "Heavy Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4234,
+     "icon": "inv_misc_leatherscrap_07",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thick Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4304,
+     "icon": "inv_misc_leatherscrap_08",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 3s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Medium Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 2319,
+     "icon": "inv_misc_leatherscrap_05",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Turtle Scale",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 8167,
+     "icon": "inv_misc_monsterscales_11",
+     "quality": 1,
+     "itemLevel": 35,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "range": [
+    205,
+    250
+   ],
+   "name": "Beasts of level 41 to 50",
+   "zones": "Most in Tanaris, Feralas, The Hinterlands and Felwood",
+   "icons": [],
+   "items": [
+    {
+     "name": "Thick Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4304,
+     "icon": "inv_misc_leatherscrap_08",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 3s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heavy Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4234,
+     "icon": "inv_misc_leatherscrap_07",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rugged Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 8170,
+     "icon": "inv_misc_leatherscrap_02",
+     "quality": 1,
+     "itemLevel": 50,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 5s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Turtle Scale",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 8167,
+     "icon": "inv_misc_monsterscales_11",
+     "quality": 1,
+     "itemLevel": 35,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "range": [
+    255,
+    300
+   ],
+   "name": "Beasts of level 51 to 60",
+   "zones": "Most in Winterspring, Azshara, Silithus and Eastern Plaguelands",
+   "icons": [],
+   "items": [
+    {
+     "name": "Rugged Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 8170,
+     "icon": "inv_misc_leatherscrap_02",
+     "quality": 1,
+     "itemLevel": 50,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 5s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thick Leather",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 4304,
+     "icon": "inv_misc_leatherscrap_08",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 3s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heavy Scorpid Scale",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 15408,
+     "icon": "inv_misc_monsterscales_03",
+     "quality": 1,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 5s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rugged Hide",
+     "slot": null,
+     "type": "Leather",
+     "itemId": 8171,
+     "icon": "inv_misc_pelt_bear_ruin_02",
+     "quality": 1,
+     "itemLevel": 50,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Leather",
+      "Sell Price: 5s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "smelting": null,
+ "camp": {
+  "milestones": [],
+  "campObjects": [
+   {
+    "name": "Camp Chair",
+    "icon": null,
+    "description": "2% critical strike chance with spells and attacks to everyone sitting nearby, like Moonkin Aura",
+    "legacyPoints": null,
+    "skill": 20,
+    "item": {
+     "name": "Camp Chair",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279979,
+     "icon": "inv_crate_01",
+     "quality": 1,
+     "itemLevel": 4,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Skinning (20)",
+      "Use: Assembles a camp chair that allows you and others sitting nearby to gain 2% increased critical strike chance with all spells and attacks, exclusive with Moonkin Aura. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   },
+   {
+    "name": "Field Guide",
+    "icon": null,
+    "description": "Grants Track Beasts to whoever reads it, and gives the Camp Chair buff",
+    "legacyPoints": null,
+    "skill": 140,
+    "item": {
+     "name": "Field Guide",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279969,
+     "icon": "inv_misc_book_03",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Skinning (140)",
+      "Use: Places a Field Guide that allows players to read it and gain Track Beasts, and provides all the benefits of a Camp Chair. Requires a Campfire nearby. May be placed over a Camp Chair to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Field Guide",
+     "slot": null,
+     "type": "Book",
+     "itemId": 273098,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Skinning (140)",
+      "Use: Craft a Field Guide.",
+      "\"Teaches you how to place a Field Guide at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   },
+   {
+    "name": "Trapper's Workbench",
+    "icon": null,
+    "description": "Holds one trap, and gives the Camp Chair buff",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Trapper's Workbench",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279938,
+     "icon": "inv_misc_kobysstools_knifetrap_color3",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Skinning (300)",
+      "Use: Places a Trapper's Workbench containing 1 trap, and provides all the benefits of a Camp Chair. Requires a Campfire nearby. May be placed over a Camp Chair to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Trapper's Workbench",
+     "slot": null,
+     "type": "Book",
+     "itemId": 273109,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Skinning (300)",
+      "Use: Craft a Trapper's Workbench.",
+      "\"Teaches you how to place a Trapper's Workbench at a campsite.\"",
+      "Sell Price: 1g 20s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   }
+  ],
+  "legacyPerks": [
+   {
+    "id": "professions_bountiful_harvest",
+    "name": "Bountiful Harvest",
+    "icon": "inv_misc_bag_18",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "You discover 100% more Scarce materials from Mining, Herbalism, and Skinning."
+   },
+   {
+    "id": "professions_working_overtime",
+    "name": "Working Overtime",
+    "icon": "inv_misc_pocketwatch_03",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 20%."
+   },
+   {
+    "id": "professions_dedicated_study",
+    "name": "Dedicated Study",
+    "icon": "inv_misc_book_08",
+    "maxRank": 1,
+    "gate": 10,
+    "prereqName": "Bartering",
+    "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+   }
+  ]
+ }
+}

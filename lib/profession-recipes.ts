@@ -114,6 +114,14 @@ export type ProfessionCatalog = {
 
 const CATALOG_DIR = path.join(process.cwd(), "data", "professions-catalog");
 
+// Mining/Herbalism/Skinning live in this same directory (data/professions-
+// catalog/) but are a different shape entirely -- see lib/gathering-
+// professions.ts's header comment -- so every crafting-only reader below
+// (which assumes catalog.recipes, catalog.categories, etc.) must not pick
+// them up. Excluded by id here rather than by probing each file's shape,
+// since the 3 ids are fixed and known.
+const GATHERING_IDS = new Set(["mining", "herbalism", "skinning"]);
+
 let idCache: string[] | null = null;
 
 export function getProfessionIds(): string[] {
@@ -123,6 +131,7 @@ export function getProfessionIds(): string[] {
     .readdirSync(CATALOG_DIR)
     .filter((f) => f.endsWith(".json") && f !== "uncertain.json")
     .map((f) => f.replace(/\.json$/, ""))
+    .filter((id) => !GATHERING_IDS.has(id))
     .sort();
   return idCache;
 }

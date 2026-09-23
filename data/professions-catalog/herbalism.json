@@ -1,0 +1,1461 @@
+{
+ "id": "herbalism",
+ "name": "Herbalism",
+ "kind": "gathering",
+ "nodes": [
+  {
+   "name": "Peacebloom",
+   "icon": "inv_misc_flower_02",
+   "zones": "Most in The Barrens, Durotar and Mulgore",
+   "items": [
+    {
+     "name": "Peacebloom",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 2447,
+     "icon": "inv_misc_flower_02",
+     "quality": 1,
+     "itemLevel": 5,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 10c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "1",
+    "yellow": "26",
+    "green": "51",
+    "grey": "101"
+   }
+  },
+  {
+   "name": "Silverleaf",
+   "icon": "inv_misc_herb_10",
+   "zones": "Most in Durotar, The Barrens and Mulgore",
+   "items": [
+    {
+     "name": "Silverleaf",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 765,
+     "icon": "inv_misc_herb_10",
+     "quality": 1,
+     "itemLevel": 5,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 10c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Root Sample",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 5056,
+     "icon": "inv_misc_herb_07",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "1",
+    "yellow": "26",
+    "green": "51",
+    "grey": "101"
+   }
+  },
+  {
+   "name": "Earthroot",
+   "icon": "inv_misc_herb_07",
+   "zones": "Most in The Barrens, Durotar and Tirisfal Glades",
+   "items": [
+    {
+     "name": "Earthroot",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 2449,
+     "icon": "inv_misc_herb_07",
+     "quality": 1,
+     "itemLevel": 5,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 20c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Root Sample",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 5056,
+     "icon": "inv_misc_herb_07",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "15",
+    "yellow": "40",
+    "green": "65",
+    "grey": "115"
+   }
+  },
+  {
+   "name": "Mageroyal",
+   "icon": "inv_jewelry_talisman_03",
+   "zones": "Most in The Barrens, Ashenvale and Darkshore",
+   "items": [
+    {
+     "name": "Mageroyal",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 785,
+     "icon": "inv_jewelry_talisman_03",
+     "quality": 1,
+     "itemLevel": 10,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 20c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Root Sample",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 5056,
+     "icon": "inv_misc_herb_07",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Swiftthistle",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 2452,
+     "icon": "inv_misc_herb_04",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "50",
+    "yellow": "75",
+    "green": "100",
+    "grey": "150"
+   }
+  },
+  {
+   "name": "Briarthorn",
+   "icon": "inv_misc_root_01",
+   "zones": "Most in The Barrens, Duskwood and Ashenvale",
+   "items": [
+    {
+     "name": "Briarthorn",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 2450,
+     "icon": "inv_misc_root_01",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Swiftthistle",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 2452,
+     "icon": "inv_misc_herb_04",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Root Sample",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 5056,
+     "icon": "inv_misc_herb_07",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest"
+     ],
+     "tooltipSynthesized": true,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "70",
+    "yellow": "95",
+    "green": "120",
+    "grey": "170"
+   }
+  },
+  {
+   "name": "Stranglekelp",
+   "icon": "inv_misc_herb_11",
+   "zones": "Most in Stranglethorn Vale, Wetlands and Ashenvale",
+   "items": [
+    {
+     "name": "Stranglekelp",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3820,
+     "icon": "inv_misc_herb_11",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "85",
+    "yellow": "110",
+    "green": "135",
+    "grey": "185"
+   }
+  },
+  {
+   "name": "Bruiseweed",
+   "icon": "inv_misc_herb_01",
+   "zones": "Most in Stonetalon Mountains, The Barrens and Hillsbrad Foothills",
+   "items": [
+    {
+     "name": "Bruiseweed",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 2453,
+     "icon": "inv_misc_herb_01",
+     "quality": 1,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "100",
+    "yellow": "125",
+    "green": "150",
+    "grey": "200"
+   }
+  },
+  {
+   "name": "Wild Steelbloom",
+   "icon": "inv_misc_flower_01",
+   "zones": "Most in Arathi Highlands, Stonetalon Mountains and Stranglethorn Vale",
+   "items": [
+    {
+     "name": "Wild Steelbloom",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3355,
+     "icon": "inv_misc_flower_01",
+     "quality": 1,
+     "itemLevel": 22,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "115",
+    "yellow": "140",
+    "green": "165",
+    "grey": "215"
+   }
+  },
+  {
+   "name": "Grave Moss",
+   "icon": "inv_misc_dust_02",
+   "zones": "Most in Duskwood, Desolace and Wetlands",
+   "items": [
+    {
+     "name": "Grave Moss",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3369,
+     "icon": "inv_misc_dust_02",
+     "quality": 1,
+     "itemLevel": 24,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "120",
+    "yellow": "145",
+    "green": "170",
+    "grey": "220"
+   }
+  },
+  {
+   "name": "Kingsblood",
+   "icon": "inv_misc_herb_03",
+   "zones": "Most in Stranglethorn Vale, Wetlands and Ashenvale",
+   "items": [
+    {
+     "name": "Kingsblood",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3356,
+     "icon": "inv_misc_herb_03",
+     "quality": 1,
+     "itemLevel": 24,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 30c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "125",
+    "yellow": "150",
+    "green": "175",
+    "grey": "225"
+   }
+  },
+  {
+   "name": "Liferoot",
+   "icon": "inv_misc_root_02",
+   "zones": "Most in Stranglethorn Vale, Wetlands and Arathi Highlands",
+   "items": [
+    {
+     "name": "Liferoot",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3357,
+     "icon": "inv_misc_root_02",
+     "quality": 1,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "150",
+    "yellow": "175",
+    "green": "200",
+    "grey": "250"
+   }
+  },
+  {
+   "name": "Fadeleaf",
+   "icon": "inv_misc_herb_12",
+   "zones": "Most in Arathi Highlands, Swamp of Sorrows and Alterac Mountains",
+   "items": [
+    {
+     "name": "Fadeleaf",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3818,
+     "icon": "inv_misc_herb_12",
+     "quality": 1,
+     "itemLevel": 32,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "160",
+    "yellow": "185",
+    "green": "210",
+    "grey": "260"
+   }
+  },
+  {
+   "name": "Goldthorn",
+   "icon": "inv_misc_herb_15",
+   "zones": "Most in Stranglethorn Vale, Arathi Highlands and Swamp of Sorrows",
+   "items": [
+    {
+     "name": "Goldthorn",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3821,
+     "icon": "inv_misc_herb_15",
+     "quality": 1,
+     "itemLevel": 34,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "170",
+    "yellow": "195",
+    "green": "220",
+    "grey": "270"
+   }
+  },
+  {
+   "name": "Khadgar's Whisker",
+   "icon": "inv_misc_herb_08",
+   "zones": "Most in Stranglethorn Vale, Arathi Highlands and Swamp of Sorrows",
+   "items": [
+    {
+     "name": "Khadgar's Whisker",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3358,
+     "icon": "inv_misc_herb_08",
+     "quality": 1,
+     "itemLevel": 37,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "185",
+    "yellow": "210",
+    "green": "235",
+    "grey": "285"
+   }
+  },
+  {
+   "name": "Wintersbite",
+   "icon": "inv_misc_flower_03",
+   "zones": "Most in Alterac Mountains",
+   "items": [
+    {
+     "name": "Wintersbite",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 3819,
+     "icon": "inv_misc_flower_03",
+     "quality": 1,
+     "itemLevel": 39,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "195",
+    "yellow": "220",
+    "green": "245",
+    "grey": "295"
+   }
+  },
+  {
+   "name": "Firebloom",
+   "icon": "inv_misc_herb_19",
+   "zones": "Most in Tanaris, Searing Gorge and Badlands",
+   "items": [
+    {
+     "name": "Firebloom",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 4625,
+     "icon": "inv_misc_herb_19",
+     "quality": 1,
+     "itemLevel": 41,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "205",
+    "yellow": "230",
+    "green": "255",
+    "grey": "305"
+   }
+  },
+  {
+   "name": "Purple Lotus",
+   "icon": "inv_misc_herb_17",
+   "zones": "Most in Azshara, The Hinterlands and Tanaris",
+   "items": [
+    {
+     "name": "Purple Lotus",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8831,
+     "icon": "inv_misc_herb_17",
+     "quality": 1,
+     "itemLevel": 42,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 3s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wildvine",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8153,
+     "icon": "inv_misc_herb_03",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 5c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "210",
+    "yellow": "235",
+    "green": "260",
+    "grey": "310"
+   }
+  },
+  {
+   "name": "Arthas' Tears",
+   "icon": "inv_misc_herb_13",
+   "zones": "Most in Western Plaguelands, Eastern Plaguelands and Felwood",
+   "items": [
+    {
+     "name": "Arthas' Tears",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8836,
+     "icon": "inv_misc_herb_13",
+     "quality": 1,
+     "itemLevel": 44,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 95c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "220",
+    "yellow": "245",
+    "green": "270",
+    "grey": "320"
+   }
+  },
+  {
+   "name": "Sungrass",
+   "icon": "inv_misc_herb_18",
+   "zones": "Most in Azshara, The Hinterlands and Feralas",
+   "items": [
+    {
+     "name": "Sungrass",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8838,
+     "icon": "inv_misc_herb_18",
+     "quality": 1,
+     "itemLevel": 46,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 60c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "230",
+    "yellow": "255",
+    "green": "280",
+    "grey": "330"
+   }
+  },
+  {
+   "name": "Blindweed",
+   "icon": "inv_misc_herb_14",
+   "zones": "Most in Swamp of Sorrows and Un'Goro Crater",
+   "items": [
+    {
+     "name": "Blindweed",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8839,
+     "icon": "inv_misc_herb_14",
+     "quality": 1,
+     "itemLevel": 47,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "235",
+    "yellow": "260",
+    "green": "285",
+    "grey": "335"
+   }
+  },
+  {
+   "name": "Ghost Mushroom",
+   "icon": "inv_mushroom_08",
+   "zones": "Most in The Hinterlands and Desolace",
+   "items": [
+    {
+     "name": "Ghost Mushroom",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8845,
+     "icon": "inv_mushroom_08",
+     "quality": 1,
+     "itemLevel": 47,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "245",
+    "yellow": "270",
+    "green": "295",
+    "grey": "345"
+   }
+  },
+  {
+   "name": "Gromsblood",
+   "icon": "inv_misc_herb_16",
+   "zones": "Most in Felwood and Desolace",
+   "items": [
+    {
+     "name": "Gromsblood",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 8846,
+     "icon": "inv_misc_herb_16",
+     "quality": 1,
+     "itemLevel": 50,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "250",
+    "yellow": "275",
+    "green": "300",
+    "grey": "350"
+   }
+  },
+  {
+   "name": "Golden Sansam",
+   "icon": "inv_misc_herb_sansamroot",
+   "zones": "Most in Un'Goro Crater, Azshara and Eastern Plaguelands",
+   "items": [
+    {
+     "name": "Golden Sansam",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 13464,
+     "icon": "inv_misc_herb_sansamroot",
+     "quality": 1,
+     "itemLevel": 52,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "260",
+    "yellow": "285",
+    "green": "310",
+    "grey": "360"
+   }
+  },
+  {
+   "name": "Dreamfoil",
+   "icon": "inv_misc_herb_dreamfoil",
+   "zones": "Most in Azshara, Eastern Plaguelands and Un'Goro Crater",
+   "items": [
+    {
+     "name": "Dreamfoil",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 13463,
+     "icon": "inv_misc_herb_dreamfoil",
+     "quality": 1,
+     "itemLevel": 54,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "270",
+    "yellow": "295",
+    "green": "320",
+    "grey": "370"
+   }
+  },
+  {
+   "name": "Mountain Silversage",
+   "icon": "inv_misc_herb_mountainsilversage",
+   "zones": "Most in Winterspring, Un'Goro Crater and Azshara",
+   "items": [
+    {
+     "name": "Mountain Silversage",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 13465,
+     "icon": "inv_misc_herb_mountainsilversage",
+     "quality": 1,
+     "itemLevel": 56,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 1s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "280",
+    "yellow": "305",
+    "green": "330",
+    "grey": "380"
+   }
+  },
+  {
+   "name": "Plaguebloom",
+   "icon": "inv_misc_herb_plaguebloom",
+   "zones": "Most in Eastern Plaguelands and Western Plaguelands",
+   "items": [
+    {
+     "name": "Plaguebloom",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 13466,
+     "icon": "inv_misc_herb_plaguebloom",
+     "quality": 1,
+     "itemLevel": 57,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "285",
+    "yellow": "310",
+    "green": "335",
+    "grey": "385"
+   }
+  },
+  {
+   "name": "Icecap",
+   "icon": "inv_misc_herb_icecap",
+   "zones": "Most in Winterspring",
+   "items": [
+    {
+     "name": "Icecap",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 13467,
+     "icon": "inv_misc_herb_icecap",
+     "quality": 1,
+     "itemLevel": 58,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 2s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "290",
+    "yellow": "315",
+    "green": "340",
+    "grey": "390"
+   }
+  },
+  {
+   "name": "Black Lotus",
+   "icon": "inv_misc_herb_blacklotus",
+   "zones": "Most in Burning Steppes, Winterspring and Eastern Plaguelands",
+   "items": [
+    {
+     "name": "Black Lotus",
+     "slot": null,
+     "type": "Herb",
+     "itemId": 13468,
+     "icon": "inv_misc_herb_blacklotus",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Herb",
+      "Sell Price: 10s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "skills": {
+    "orange": "300",
+    "yellow": "325",
+    "green": "350",
+    "grey": "400"
+   }
+  }
+ ],
+ "leveling": [
+  {
+   "range": [
+    1,
+    50
+   ],
+   "name": "Peacebloom, Silverleaf and Earthroot",
+   "zones": "Most of them in The Barrens, Durotar, Tirisfal Glades and Elwynn Forest",
+   "icons": [
+    {
+     "icon": "inv_misc_flower_02",
+     "name": "Peacebloom"
+    },
+    {
+     "icon": "inv_misc_herb_10",
+     "name": "Silverleaf"
+    },
+    {
+     "icon": "inv_misc_herb_07",
+     "name": "Earthroot"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    50,
+    100
+   ],
+   "name": "Mageroyal, Briarthorn and Earthroot",
+   "zones": "Most of them in The Barrens, Ashenvale, Darkshore and Westfall",
+   "icons": [
+    {
+     "icon": "inv_jewelry_talisman_03",
+     "name": "Mageroyal"
+    },
+    {
+     "icon": "inv_misc_root_01",
+     "name": "Briarthorn"
+    },
+    {
+     "icon": "inv_misc_herb_07",
+     "name": "Earthroot"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    100,
+    150
+   ],
+   "name": "Bruiseweed, Wild Steelbloom, Kingsblood, Grave Moss and Stranglekelp",
+   "zones": "Most of them in Wetlands, The Barrens, Stonetalon Mountains and Ashenvale",
+   "icons": [
+    {
+     "icon": "inv_misc_herb_01",
+     "name": "Bruiseweed"
+    },
+    {
+     "icon": "inv_misc_flower_01",
+     "name": "Wild Steelbloom"
+    },
+    {
+     "icon": "inv_misc_herb_03",
+     "name": "Kingsblood"
+    },
+    {
+     "icon": "inv_misc_dust_02",
+     "name": "Grave Moss"
+    },
+    {
+     "icon": "inv_misc_herb_11",
+     "name": "Stranglekelp"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    150,
+    205
+   ],
+   "name": "Liferoot, Fadeleaf, Goldthorn and Khadgar's Whisker",
+   "zones": "Most of them in Stranglethorn Vale, Arathi Highlands, Alterac Mountains and Swamp of Sorrows",
+   "icons": [
+    {
+     "icon": "inv_misc_root_02",
+     "name": "Liferoot"
+    },
+    {
+     "icon": "inv_misc_herb_12",
+     "name": "Fadeleaf"
+    },
+    {
+     "icon": "inv_misc_herb_15",
+     "name": "Goldthorn"
+    },
+    {
+     "icon": "inv_misc_herb_08",
+     "name": "Khadgar's Whisker"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    205,
+    230
+   ],
+   "name": "Firebloom, Purple Lotus and Arthas' Tears",
+   "zones": "Most of them in Azshara, Tanaris, Western Plaguelands and Searing Gorge",
+   "icons": [
+    {
+     "icon": "inv_misc_herb_19",
+     "name": "Firebloom"
+    },
+    {
+     "icon": "inv_misc_herb_17",
+     "name": "Purple Lotus"
+    },
+    {
+     "icon": "inv_misc_herb_13",
+     "name": "Arthas' Tears"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    230,
+    270
+   ],
+   "name": "Sungrass, Blindweed, Ghost Mushroom, Gromsblood and Golden Sansam",
+   "zones": "Most of them in Azshara, Swamp of Sorrows, The Hinterlands and Un'Goro Crater",
+   "icons": [
+    {
+     "icon": "inv_misc_herb_18",
+     "name": "Sungrass"
+    },
+    {
+     "icon": "inv_misc_herb_14",
+     "name": "Blindweed"
+    },
+    {
+     "icon": "inv_mushroom_08",
+     "name": "Ghost Mushroom"
+    },
+    {
+     "icon": "inv_misc_herb_16",
+     "name": "Gromsblood"
+    },
+    {
+     "icon": "inv_misc_herb_sansamroot",
+     "name": "Golden Sansam"
+    }
+   ],
+   "items": []
+  },
+  {
+   "range": [
+    270,
+    300
+   ],
+   "name": "Dreamfoil, Mountain Silversage, Plaguebloom and Icecap",
+   "zones": "Most of them in Eastern Plaguelands, Winterspring, Azshara and Un'Goro Crater",
+   "icons": [
+    {
+     "icon": "inv_misc_herb_dreamfoil",
+     "name": "Dreamfoil"
+    },
+    {
+     "icon": "inv_misc_herb_mountainsilversage",
+     "name": "Mountain Silversage"
+    },
+    {
+     "icon": "inv_misc_herb_plaguebloom",
+     "name": "Plaguebloom"
+    },
+    {
+     "icon": "inv_misc_herb_icecap",
+     "name": "Icecap"
+    }
+   ],
+   "items": []
+  }
+ ],
+ "skin": null,
+ "smelting": null,
+ "camp": {
+  "milestones": [],
+  "campObjects": [
+   {
+    "name": "Incense Candle",
+    "icon": null,
+    "description": "25 Intellect to everyone sitting nearby, like Arcane Intellect (at level 60, scaling with level)",
+    "legacyPoints": null,
+    "skill": 20,
+    "item": {
+     "name": "Incense Candle",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279962,
+     "icon": "inv_misc_candle_02",
+     "quality": 1,
+     "itemLevel": 4,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Herbalism (20)",
+      "Use: Ignites an incense candle that allows you and others sitting nearby to gain 25 increased Intellect, exclusive with Arcane Intellect. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   },
+   {
+    "name": "Greenhouse",
+    "icon": null,
+    "description": "Grows herbs over time from planted seeds, and gives the Incense Candle buff",
+    "legacyPoints": null,
+    "skill": 140,
+    "item": {
+     "name": "Greenhouse",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279964,
+     "icon": "inv_misc_herb_08",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Herbalism (140)",
+      "Use: Places a Greenhouse that will grow herbs over time from seeds planted, and provides all of the benefits of an Incense Candle. Requires a Campfire nearby. May be placed over an Incense Candle to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Greenhouse",
+     "slot": null,
+     "type": "Book",
+     "itemId": 273106,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Herbalism (140)",
+      "Use: Craft a Greenhouse.",
+      "\"Teaches you how to place a Greenhouse at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   },
+   {
+    "name": "Seed Hybridizer",
+    "icon": null,
+    "description": "Multiplies seeds or combines them into rarer tiers, and gives the Incense Candle buff",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Seed Hybridizer",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279947,
+     "icon": "inv_farm_herbseed",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Herbalism (300)",
+      "Use: Places a Seed Hybridizer that allows seeds to be multiplied or combined into rarer tiers, and provides all of the benefits of an Incense Candle. Requires a Campfire nearby. May be placed over an Incense Candle to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Seed Hybridizer",
+     "slot": null,
+     "type": "Book",
+     "itemId": 273120,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Herbalism (300)",
+      "Use: Craft a Seed Hybridizer.",
+      "\"Teaches you how to place a Seed Hybridizer at a campsite.\"",
+      "Sell Price: 12g"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   }
+  ],
+  "legacyPerks": [
+   {
+    "id": "professions_bountiful_harvest",
+    "name": "Bountiful Harvest",
+    "icon": "inv_misc_bag_18",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "You discover 100% more Scarce materials from Mining, Herbalism, and Skinning."
+   },
+   {
+    "id": "professions_working_overtime",
+    "name": "Working Overtime",
+    "icon": "inv_misc_pocketwatch_03",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 20%."
+   },
+   {
+    "id": "professions_dedicated_study",
+    "name": "Dedicated Study",
+    "icon": "inv_misc_book_08",
+    "maxRank": 1,
+    "gate": 10,
+    "prereqName": "Bartering",
+    "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+   }
+  ]
+ }
+}

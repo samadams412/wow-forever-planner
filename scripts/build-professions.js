@@ -25,6 +25,8 @@ const fs = require("fs");
 const path = require("path");
 const { PROFESSIONS } = require("./lib/professions-config");
 const { buildNameIndex, resolveItemByName, parseReagentText } = require("./lib/profession-item-resolver");
+const { itemRef, unresolvedItemRef } = require("./lib/item-ref");
+const { buildCampMilestones, loadLegacyPerks, CRAFTING_LEGACY_PERK_IDS } = require("./lib/camp-section");
 
 const ROOT = path.join(__dirname, "..");
 const PROF_DIR = path.join(ROOT, "data", "professions");
@@ -41,63 +43,9 @@ const CATEGORIZERS = {
   tailoring: require("./lib/profession-categories/tailoring"),
 };
 
-// Full LootItem shape (see lib/dungeon-loot.ts), not a slim {itemId, icon,
-// quality, name} ref -- every item on this site (dungeon loot, quest
-// rewards, the items catalog, now professions) renders through the one
-// shared LootItemPill component (see Part A's item-linking work), so a
-// profession recipe's crafted item and its reagents need the same shape
-// everything else gives that component: full tooltip text (or the
-// synthesized one for "same"-status items), status, dropChance/unknown
-// (always null/false here -- profession data has no drop-table concept),
-// so hovering a reagent gets the exact same rich tooltip as everywhere
-// else on the site, not a second, thinner rendering.
-function itemRef(item) {
-  if (!item) return null;
-  return {
-    name: item.name,
-    slot: item.slot,
-    type: item.type,
-    itemId: item.itemId,
-    icon: item.icon,
-    quality: item.quality,
-    itemLevel: item.itemLevel,
-    requiredLevel: item.requiredLevel,
-    tooltip: item.tooltip,
-    tooltipSynthesized: item.tooltipSynthesized,
-    classicTooltip: item.classicTooltip,
-    status: item.status,
-    dropChance: null,
-    dropChanceUnder: false,
-    unknown: false,
-    source: "foreverchanges",
-  };
-}
-
-// Same shape itemRef() produces, for a name that didn't resolve against the
-// item catalog at all -- `unknown: true` is the existing site-wide
-// convention LootItemPill already renders for this (muted italic text, no
-// icon, no link), same treatment wowtbc-sourced "not yet discovered" items
-// get elsewhere.
-function unresolvedItemRef(name) {
-  return {
-    name,
-    slot: null,
-    type: null,
-    itemId: null,
-    icon: null,
-    quality: null,
-    itemLevel: null,
-    requiredLevel: null,
-    tooltip: null,
-    tooltipSynthesized: false,
-    classicTooltip: null,
-    status: null,
-    dropChance: null,
-    dropChanceUnder: false,
-    unknown: true,
-    source: "foreverchanges",
-  };
-}
+// itemRef/unresolvedItemRef (the LootItem-shaped wrapper every item
+// reference in this file uses) now live in scripts/lib/item-ref.js,
+// shared with build-gathering-professions.js.
 
 function buildRecipe(raw, byName, categorizer) {
   const { item, makesQty, cleanName } = resolveItemByName(byName, raw.name);
@@ -133,80 +81,11 @@ function normalizeRange(range) {
   return [null, null];
 }
 
-// Camp milestones/objects come with a real foreverchanges.pro item URL
-// already (e.g. ".../item/271627"), unlike recipe/reagent names elsewhere
-// in this pipeline -- resolve by id, not name, per this project's own
-// "prefer an id join over a name guess when an id is available" convention
-// (see the quest-reward-enrichment precedent in build-dungeons.js).
-function itemIdFromUrl(url) {
-  if (!url) return null;
-  const match = url.match(/\/item\/(\d+)/);
-  return match ? parseInt(match[1], 10) : null;
-}
-
-function buildCampMilestones(rawItems, byId) {
-  return (rawItems || []).map((raw) => {
-    const id = itemIdFromUrl(raw.item_url);
-    const item = id !== null ? byId.get(id) : null;
-    return {
-      name: raw.name,
-      // The row's own trade/profession icon (e.g. "trade_tailoring") for a
-      // plain skill-rank milestone with no real item -- null once a real
-      // item resolved, since that item's own icon is what LootItemPill
-      // renders instead.
-      icon: item ? null : raw.icon,
-      description: raw.description,
-      legacyPoints: raw.legacy_points,
-      skill: raw.skill,
-      // Genuinely null (not unresolvedItemRef) when the source page never
-      // linked an item at all -- a skill-rank milestone with no item is a
-      // different, correct state from a real item we failed to resolve.
-      item: id !== null ? itemRef(item) || unresolvedItemRef(raw.name) : null,
-      blueprint: (() => {
-        const bpId = itemIdFromUrl(raw.blueprint_url);
-        const bpItem = bpId !== null ? byId.get(bpId) : null;
-        return bpId !== null ? itemRef(bpItem) || unresolvedItemRef("Blueprint") : null;
-      })(),
-    };
-  });
-}
-
-// The "Legacy perks" list on every profession's own "Camp, skill rewards
-// and perks" chapter is NOT profession-specific -- verified live against
-// multiple professions (Leatherworking, Tailoring): identical names,
-// descriptions, and /legacy-perks#perk= anchors on every one, since it's
-// just the same generic "Professions" Legacy tree shown everywhere. That
-// tree already exists in data/legacy-perks.json from an earlier session,
-// so these 3 are looked up by id there instead of re-scraping the same
-// content 8 times. If foreverchanges ever shows a 4th, adjust this list
-// from a fresh look at the live page rather than assuming it's still 3.
-const CAMP_LEGACY_PERK_IDS = ["professions_performance_bonus", "professions_working_overtime", "professions_dedicated_study"];
-
-function loadCampLegacyPerks() {
-  const legacyPerksPath = path.join(ROOT, "data", "legacy-perks.json");
-  const data = JSON.parse(fs.readFileSync(legacyPerksPath, "utf8"));
-  const professionsTree = data.trees.find((t) => t.name === "Professions");
-  return CAMP_LEGACY_PERK_IDS.map((id) => {
-    const perk = professionsTree.perks.find((p) => p.id === id);
-    if (!perk) throw new Error(`Legacy perk "${id}" not found in data/legacy-perks.json's Professions tree`);
-    // The tree only stores a prereq's id -- resolve its display name here so
-    // the profession page's simple perk list doesn't need its own copy of
-    // the whole Professions tree just to answer "which perk is that".
-    const prereqName = perk.prereq ? professionsTree.perks.find((p) => p.id === perk.prereq.id)?.name ?? null : null;
-    return {
-      id: perk.id,
-      name: perk.name,
-      icon: perk.icon,
-      maxRank: perk.maxRank,
-      gate: perk.gate,
-      prereqName,
-      // The max-rank description is the "fully invested" effect -- the
-      // clearest single line to show in a static list (this tab isn't the
-      // interactive per-rank tree /reference/legacy-perks already is).
-      description: perk.ranks[perk.ranks.length - 1],
-    };
-  });
-}
+// itemIdFromUrl/buildCampMilestones/loadLegacyPerks now live in
+// scripts/lib/camp-section.js and scripts/lib/item-ref.js, shared with
+// build-gathering-professions.js -- the #camp chapter's markup (and this
+// project's "id join over name guess" resolution) is identical between
+// crafting and gathering pages, only the 3 Legacy Perk ids differ.
 
 function buildLevelingSection(sections, byName) {
   if (!sections) return null;
@@ -265,7 +144,7 @@ function main() {
   const items = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "items.json"), "utf8")).items;
   const byName = buildNameIndex(items);
   const byId = new Map(items.map((i) => [i.itemId, i]));
-  const campLegacyPerks = loadCampLegacyPerks();
+  const campLegacyPerks = loadLegacyPerks(CRAFTING_LEGACY_PERK_IDS);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
