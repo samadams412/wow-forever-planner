@@ -38,14 +38,13 @@ export default function ProfessionRecipeTable({ recipes, professionId }: { recip
               <td className="px-3 py-1.5">
                 <div className="flex flex-wrap gap-1">
                   {recipe.reagents.map((reagent, j) => (
-                    <span key={j} className="inline-flex items-center">
-                      <LootItemPill
-                        item={reagent.item}
-                        tooltipId={`prof:${professionId}:${i}:reagent:${j}`}
-                        context="catalog"
-                      />
-                      <span className="ml-0.5 text-[10px] text-foreground-muted">&times;{reagent.qty}</span>
-                    </span>
+                    <LootItemPill
+                      key={j}
+                      item={reagent.item}
+                      tooltipId={`prof:${professionId}:${i}:reagent:${j}`}
+                      context="catalog"
+                      qty={reagent.qty}
+                    />
                   ))}
                 </div>
               </td>

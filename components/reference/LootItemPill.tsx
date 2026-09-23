@@ -15,10 +15,23 @@ export default function LootItemPill({
   item,
   tooltipId,
   context = "loot",
+  qty,
 }: {
   item: LootItem;
   tooltipId: string;
   context?: "loot" | "catalog";
+  // A reagent's consumption count (profession recipes/leveling-guide mats
+  // only -- boss loot, quest rewards, and the items catalog never pass
+  // this). Rendered as a small badge overlaid on the icon's corner, not a
+  // separate "xN" text label -- matches foreverchanges.pro's own real
+  // in-game-tooltip-style convention for a reagent (studied live:
+  // <a class="cr-mat"><img/><b>5</b></a>, with NO <b> at all for qty 1,
+  // same as WoW's own UI never badging a single-count reagent). This is
+  // deliberately a different convention from a recipe's own crafted-output
+  // count ("Roasted Kodo Meat ×2"), which foreverchanges renders as plain
+  // text next to the name, not an icon badge -- that one stays a text
+  // label (ProfessionRecipeTable's makesQty), not migrated here.
+  qty?: number;
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
   const isClaimed = useIsActiveTooltip(tooltipId);
@@ -57,12 +70,19 @@ export default function LootItemPill({
       }`}
     >
       {item.icon && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={mediumIconUrl(item.icon)}
-          alt=""
-          className={`h-5 w-5 shrink-0 rounded-sm ${missing ? "grayscale" : ""}`}
-        />
+        <span className="relative inline-block h-5 w-5 shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={mediumIconUrl(item.icon)}
+            alt=""
+            className={`h-5 w-5 rounded-sm ${missing ? "grayscale" : ""}`}
+          />
+          {qty !== undefined && qty > 1 && (
+            <span className="absolute -bottom-1 -right-1 rounded-sm bg-black/80 px-0.5 text-[9px] font-bold leading-tight text-white">
+              {qty}
+            </span>
+          )}
+        </span>
       )}
       {item.itemId !== null ? (
         <Link href={`/items/${item.itemId}`} className="hover:underline">

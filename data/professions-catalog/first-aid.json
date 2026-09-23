@@ -2877,23 +2877,28 @@
      "count": "~14crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 3,
        "item": {
-        "name": "3 Linen Bandage",
+        "name": "Linen Bandage",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Bandages",
+        "itemId": 1251,
+        "icon": "inv_misc_bandage_15",
+        "quality": 1,
+        "itemLevel": 1,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Bandages",
+         "Requires First Aid (1)",
+         "Use: Heals 66 damage over 6 sec.",
+         "Sell Price: 10c"
+        ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
-        "status": null,
+        "status": "same",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       },
@@ -3013,23 +3018,26 @@
      "count": "~39crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Linen Cloth",
+        "name": "Linen Cloth",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Cloth",
+        "itemId": 2589,
+        "icon": "inv_fabric_linen_01",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 13c"
+        ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
-        "status": null,
+        "status": "same",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }
@@ -3237,23 +3245,26 @@
      "count": "~48crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Wool Cloth",
+        "name": "Wool Cloth",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Cloth",
+        "itemId": 2592,
+        "icon": "inv_fabric_wool_01",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 33c"
+        ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
-        "status": null,
+        "status": "same",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }
@@ -3354,23 +3365,26 @@
      "count": "~41crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Silk Cloth",
+        "name": "Silk Cloth",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Cloth",
+        "itemId": 4306,
+        "icon": "inv_fabric_silk_01",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s 50c"
+        ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
-        "status": null,
+        "status": "same",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }
@@ -3528,23 +3542,26 @@
      "count": "~24crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Mageweave Cloth",
+        "name": "Mageweave Cloth",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Cloth",
+        "itemId": 4338,
+        "icon": "inv_fabric_mageweave_01",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2s 50c"
+        ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
-        "status": null,
+        "status": "same",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }
@@ -3639,23 +3656,26 @@
      "count": "~10crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Runecloth",
+        "name": "Runecloth",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Cloth",
+        "itemId": 14047,
+        "icon": "inv_fabric_purplefire_01",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 4s"
+        ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
-        "status": null,
+        "status": "same",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }

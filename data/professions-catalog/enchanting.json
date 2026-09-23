@@ -24776,23 +24776,28 @@
      "count": "~39crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Strange Dust",
+        "name": "Strange Dust",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
         "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": null,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }
@@ -24935,44 +24940,56 @@
        }
       },
       {
-       "qty": 1,
+       "qty": 3,
        "item": {
-        "name": "3 Strange Dust",
+        "name": "Strange Dust",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
         "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": null,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       },
       {
-       "qty": 1,
+       "qty": 4,
        "item": {
-        "name": "4 Lesser Magic Essence",
+        "name": "Lesser Magic Essence",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Enchanting",
+        "itemId": 10938,
+        "icon": "inv_enchant_essencemagicsmall",
+        "quality": 2,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Use: Turn three lesser magic essences into a greater one.",
+         "Sell Price: 1c"
+        ],
         "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": null,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "Use: Turn three lesser magic essences into a greater one."
+        ],
+        "status": "changed",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       },
@@ -25733,23 +25750,30 @@
        }
       },
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
-        "name": "2 Lesser Nether Essence",
+        "name": "Lesser Nether Essence",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Enchanting",
+        "itemId": 11174,
+        "icon": "inv_enchant_essencenethersmall",
+        "quality": 2,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Use: Turn three lesser nether essences into a greater one.",
+         "Sell Price: 1c"
+        ],
         "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": null,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "Use: Turn three lesser nether essences into a greater one."
+        ],
+        "status": "changed",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }
@@ -25785,23 +25809,28 @@
      "count": "~27crafts",
      "mats": [
       {
-       "qty": 1,
+       "qty": 6,
        "item": {
-        "name": "6 Dream Dust",
+        "name": "Dream Dust",
         "slot": null,
-        "type": null,
-        "itemId": null,
-        "icon": null,
-        "quality": null,
-        "itemLevel": null,
-        "requiredLevel": null,
-        "tooltip": null,
+        "type": "Enchanting",
+        "itemId": 11176,
+        "icon": "inv_enchant_dustdream",
+        "quality": 1,
+        "itemLevel": 45,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
         "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": null,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
         "dropChance": null,
         "dropChanceUnder": false,
-        "unknown": true,
+        "unknown": false,
         "source": "foreverchanges"
        }
       }

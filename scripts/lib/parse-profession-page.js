@@ -69,10 +69,37 @@ function parseLevelingSection(html) {
       const mats = [];
       const matsBlock = inner.match(/<span class="cr-mats">([\s\S]*?)<\/span>\s*<\/li>|<span class="cr-mats">([\s\S]*)$/);
       const matsHtml = (matsBlock?.[1] ?? matsBlock?.[2]) ?? inner;
-      const matRe = /<a href="([^"]+)" class="cr-mat" aria-label="([^"]*)"/g;
+      // A reagent needing more than 1 renders a small overlay badge on its
+      // icon (real WoW UI convention -- a qty-1 reagent gets no badge at
+      // all): <a class="cr-mat" aria-label="5 Light Leather"><img .../>
+      // <b>5</b></a>. The aria-label's own leading number always matches
+      // the <b> value (checked directly), but <b> is the cleaner field to
+      // read -- no risk of a false match against a reagent whose real NAME
+      // starts with a digit. Capture the whole anchor, not just its
+      // opening tag, so the optional <b> is visible to parse.
+      const matRe = /<a href="([^"]+)" class="cr-mat" aria-label="([^"]*)">([\s\S]*?)<\/a>/g;
       let matMatch;
       while ((matMatch = matRe.exec(matsHtml))) {
-        mats.push({ name: cleanText(matMatch[2]), url: absUrl(matMatch[1]) });
+        const [, href, ariaLabel, anchorInner] = matMatch;
+        const badgeMatch = anchorInner.match(/<b>(\d+)<\/b>/);
+        let quantity = 1;
+        let name = cleanText(ariaLabel);
+        if (badgeMatch) {
+          quantity = parseInt(badgeMatch[1], 10);
+          // Strip the same leading number off the aria-label to get the
+          // clean item name -- e.g. "5 Light Leather" -> "Light Leather".
+          name = name.replace(new RegExp(`^${quantity}\\s+`), "");
+        } else {
+          // Defensive fallback in case a future pull has a reagent with no
+          // <b> badge but the aria-label still carries a leading count
+          // (not observed so far -- every qty-1 reagent has neither).
+          const leadingNum = name.match(/^(\d+)\s+(.+)/);
+          if (leadingNum) {
+            quantity = parseInt(leadingNum[1], 10);
+            name = leadingNum[2];
+          }
+        }
+        mats.push({ name, quantity, url: absUrl(href) });
       }
 
       current.steps.push({

@@ -36,15 +36,24 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
                 </span>
                 <LootItemPill item={step.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}`} context="catalog" />
                 <span className="text-xs text-foreground-muted">{step.source}</span>
-                <span className="text-xs text-foreground-muted">
+                {/* Distinct from the muted source/mats text so the craft
+                    estimate is easy to pick out at a glance -- same
+                    "give the number its own color" hierarchy this page's
+                    rank header (text-accent) already uses, not the orange/
+                    yellow/green/grey skill-threshold colors, which mean a
+                    specific different thing (ProfessionSkillColors). */}
+                <span className="text-xs font-medium text-accent">
                   {step.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
                 </span>
                 <div className="flex flex-wrap gap-1">
                   {step.mats.map((mat, mi) => (
-                    <span key={mi} className="inline-flex items-center">
-                      <LootItemPill item={mat.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`} context="catalog" />
-                      <span className="ml-0.5 text-[10px] text-foreground-muted">&times;{mat.qty}</span>
-                    </span>
+                    <LootItemPill
+                      key={mi}
+                      item={mat.item}
+                      tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`}
+                      context="catalog"
+                      qty={mat.qty}
+                    />
                   ))}
                 </div>
               </div>
