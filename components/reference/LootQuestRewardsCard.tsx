@@ -35,29 +35,29 @@ function QuestCard({ quest, dungeonId }: { quest: Quest; dungeonId: string }) {
       {quest.text && <p className="mt-1 text-xs leading-relaxed text-foreground-muted">{quest.text}</p>}
 
       {(quest.giver || quest.prereq || quest.objectives.length > 0 || quest.experience) && (
-        <dl className="mt-1.5 flex flex-col gap-0.5 text-[11px] text-foreground-muted">
+        <dl className="mt-1.5 flex flex-col gap-0.5 text-[11px]">
           {quest.prereq && (
-            <div className="flex gap-1">
-              <dt className="font-medium text-foreground-muted/80">Comes after</dt>
-              <dd>{quest.prereq}</dd>
+            <div className="flex gap-1.5">
+              <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Comes after</dt>
+              <dd className="text-foreground">{quest.prereq}</dd>
             </div>
           )}
           {quest.giver && (
-            <div className="flex gap-1">
-              <dt className="font-medium text-foreground-muted/80">Starts</dt>
-              <dd>{quest.giver.location}</dd>
+            <div className="flex gap-1.5">
+              <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Starts</dt>
+              <dd className="text-foreground">{quest.giver.location}</dd>
             </div>
           )}
           {quest.objectives.map((obj, i) => (
-            <div key={i} className="flex gap-1">
-              <dt className="font-medium text-foreground-muted/80">{obj.label}</dt>
-              <dd>{obj.needItems ? obj.needItems.map((it) => `${it.name}${it.qty ? ` ${it.qty}` : ""}`).join(", ") : obj.value}</dd>
+            <div key={i} className="flex gap-1.5">
+              <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">{obj.label}</dt>
+              <dd className="text-foreground">{obj.needItems ? obj.needItems.map((it) => `${it.name}${it.qty ? ` ${it.qty}` : ""}`).join(", ") : obj.value}</dd>
             </div>
           ))}
           {(quest.experience || quest.money) && (
-            <div className="flex gap-1">
-              <dt className="font-medium text-foreground-muted/80">Reward</dt>
-              <dd>{[quest.experience, quest.money].filter(Boolean).join(" + ")}</dd>
+            <div className="flex gap-1.5">
+              <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Reward</dt>
+              <dd className="text-foreground">{[quest.experience, quest.money].filter(Boolean).join(" + ")}</dd>
             </div>
           )}
         </dl>
