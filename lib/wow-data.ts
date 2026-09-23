@@ -217,9 +217,16 @@ export function treeBackgroundUrl(classId: string, treeName: string): string {
 // Standard Blizzard item-quality colors (0 Poor - 5 Legendary), same values
 // the in-game tooltip and every armory-style site use -- not something this
 // site invented, so hardcoding the 6 values here rather than deriving them.
+// Common (1) is the one exception: it's plain white, which only works
+// in-game because the trade window is always dark. Routed through the
+// --quality-common CSS custom property (app/globals.css) instead of a
+// literal "#ffffff" so it can flip to a dark color under Light mode --
+// every other quality's color is intentionally NOT theme-aware, since
+// those are readable on both this site's dark and light surfaces and are
+// meant to match the game's fixed palette exactly.
 export const ITEM_QUALITY_COLOR: Record<number, string> = {
   0: "#9d9d9d",
-  1: "#ffffff",
+  1: "var(--quality-common)",
   2: "#1eff00",
   3: "#0070dd",
   4: "#a335ee",

@@ -7,7 +7,15 @@ import type { DescriptionSegment, LinkedSpell } from "@/lib/talent-spell-links";
 
 // Classic WoW tooltip color language: dark navy card, thin gold border,
 // bold white name, grey rank line, gold-yellow type label, green effect
-// text, red requirement text.
+// text, red requirement text. This card is NEVER part of the Light/Themed
+// toggle -- always the same dark navy, in both modes -- so anything inside
+// it that reads a theme-aware color custom property needs pinning back to
+// its dark-mode value here. Concretely: item quality 1 (Common) renders via
+// --quality-common (lib/wow-data.ts's ITEM_QUALITY_COLOR), which flips to a
+// near-black color under Light mode so Common-quality names stay legible on
+// the page's own light background -- but that would make them unreadable
+// again against this card's own always-dark background, so it's pinned
+// back to white here regardless of site theme.
 
 export function TooltipCard({
   style,
@@ -34,7 +42,7 @@ export function TooltipCard({
   return (
     <div
       ref={divRef}
-      className={`fixed z-50 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg ${
+      className={`fixed z-50 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg [--quality-common:#ffffff] ${
         interactive ? "pointer-events-auto" : "pointer-events-none"
       }`}
       style={style}

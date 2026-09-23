@@ -101,7 +101,7 @@ export default async function ItemPage({ params }: { params: Promise<{ itemId: s
         </div>
       )}
 
-      <div className="mt-4 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-4 text-left shadow-lg">
+      <div className="mt-4 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-4 text-left shadow-lg [--quality-common:#ffffff]">
         <ItemTooltipBody item={item} context="catalog" />
       </div>
     </main>

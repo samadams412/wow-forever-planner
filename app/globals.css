@@ -17,6 +17,18 @@
   --green: #1a5f3f;
   --accent: var(--gold);
   --accent-hover: var(--gold-hover);
+  /* WoW's canonical item-quality colors (lib/wow-data.ts's
+     ITEM_QUALITY_COLOR) are applied via inline style, so most of them
+     can't respond to the Light mode toggle below -- deliberately so, per
+     that file's own comment, since they're supposed to match the game's
+     fixed palette. Common quality is the one exception: it's plain white,
+     which the game can get away with because its UI is always dark, but
+     this site can't since Light mode's background is white too. Routed
+     through this custom property (referenced as "var(--quality-common)"
+     in ITEM_QUALITY_COLOR[1], not a literal hex) so it can flip without
+     turning it into a second special-cased color path in every component
+     that reads item quality. */
+  --quality-common: #ffffff;
 }
 
 @theme inline {
@@ -82,6 +94,11 @@ html.light-mode {
      still reads as the same site. */
   --gold: #8a6a14;
   --gold-hover: #6e5410;
+  /* Common-quality item/recipe names render plain white in-game because
+     the trade window is always dark -- on this site's white Light-mode
+     background that's invisible, so it tracks --foreground here instead
+     of staying pinned to white the way every other quality color does. */
+  --quality-common: var(--foreground);
 }
 
 /* Text over a photo with a hardcoded dark scrim behind it, not tied to
