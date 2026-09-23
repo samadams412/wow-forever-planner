@@ -40,7 +40,7 @@ export default function ItemsTable({ items }: { items: LootItem[] }) {
           {items.map((item, i) => (
             <tr key={`${item.itemId}-${i}`} className="border-b border-border/60 last:border-b-0 even:bg-surface/40">
               <td className="px-3 py-1.5">
-                <LootItemPill item={item} tooltipId={`items-catalog:${item.itemId}:${i}`} />
+                <LootItemPill item={item} tooltipId={`items-catalog:${item.itemId}:${i}`} context="catalog" />
               </td>
               <td className="px-3 py-1.5 text-foreground-muted">{item.requiredLevel ?? "--"}</td>
               <td className="px-3 py-1.5 text-foreground-muted">{item.slot ?? "--"}</td>

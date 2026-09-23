@@ -12,12 +12,23 @@ export type ItemStatus = "new" | "changed" | "same" | "missing";
 
 const DATA_FILE = path.join(process.cwd(), "data", "items.json");
 let cache: LootItem[] | null = null;
+let byId: Map<number, LootItem> | null = null;
 
 function loadAll(): LootItem[] {
   if (cache) return cache;
   const parsed = JSON.parse(fs.readFileSync(DATA_FILE, "utf8")) as { items: LootItem[] };
   cache = parsed.items;
   return cache;
+}
+
+export function getItemById(itemId: number): LootItem | undefined {
+  if (!byId) {
+    byId = new Map();
+    for (const item of loadAll()) {
+      if (item.itemId !== null) byId.set(item.itemId, item);
+    }
+  }
+  return byId.get(itemId);
 }
 
 // Labels match foreverchanges.pro's own tab wording for these statuses
