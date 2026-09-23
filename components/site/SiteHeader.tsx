@@ -30,6 +30,7 @@ const NAV_LINKS: NavLink[] = [
       { href: "/reference/dungeons", label: "Dungeon Level Ranges", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_key_03.jpg" },
       { href: "/reference/dungeons/loot", label: "Dungeon Loot", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_bag_10.jpg" },
       { href: "/reference/professions", label: "Professions", icon: "https://wow.zamimg.com/images/wow/icons/medium/trade_engineering.jpg" },
+      { href: "/reference/items", label: "Items", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_gem_01.jpg" },
     ],
   },
   { href: "/guides", label: "Guides" },

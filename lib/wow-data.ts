@@ -230,3 +230,17 @@ export function itemQualityColor(quality: number | null | undefined): string {
   if (quality === null || quality === undefined) return ITEM_QUALITY_COLOR[1];
   return ITEM_QUALITY_COLOR[quality] ?? ITEM_QUALITY_COLOR[1];
 }
+
+export const ITEM_QUALITY_NAME: Record<number, string> = {
+  0: "Poor",
+  1: "Common",
+  2: "Uncommon",
+  3: "Rare",
+  4: "Epic",
+  5: "Legendary",
+};
+
+export function itemQualityName(quality: number | null | undefined): string {
+  if (quality === null || quality === undefined) return "Unknown";
+  return ITEM_QUALITY_NAME[quality] ?? "Unknown";
+}

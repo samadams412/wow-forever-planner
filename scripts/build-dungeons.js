@@ -35,6 +35,7 @@
 const fs = require("fs");
 const path = require("path");
 const SLUG_MAP = require("./dungeon-source-map");
+const { fcItemToUnified } = require("./lib/fc-item");
 
 const ROOT = path.join(__dirname, "..");
 const FC_DIR = path.join(ROOT, "data", "sources", "foreverchanges_dungeon_data");
@@ -76,42 +77,6 @@ function parseItemId(href) {
   if (!href) return null;
   const m = href.match(/\/item\/(\d+)/);
   return m ? Number(m[1]) : null;
-}
-
-// foreverchanges' item tooltip lines (x/y) hold slot+type combined as one
-// tab-separated line (e.g. "Wrist\tCloth", "Main Hand\tDagger") -- pull the
-// "type" half out of it (armor material / weapon subclass) to match
-// wowtbc.gg's separate slot+type fields, so both sources feed the exact
-// same UI shape.
-function deriveTypeFromTooltip(lines) {
-  if (!Array.isArray(lines)) return null;
-  for (const line of lines) {
-    if (typeof line === "string" && line.includes("\t")) {
-      const parts = line.split("\t");
-      return parts[1]?.trim() || null;
-    }
-  }
-  return null;
-}
-
-function fcItemToUnified(raw) {
-  return {
-    name: raw.n,
-    slot: raw.s ?? null,
-    type: deriveTypeFromTooltip(raw.x),
-    itemId: raw.i ?? null,
-    icon: raw.k ?? null,
-    quality: raw.q ?? null,
-    itemLevel: raw.l ?? null,
-    requiredLevel: raw.r ?? null,
-    tooltip: raw.x ?? null,
-    classicTooltip: raw.y ?? null,
-    status: raw.t ?? null,
-    dropChance: null,
-    dropChanceUnder: false,
-    unknown: false,
-    source: "foreverchanges",
-  };
 }
 
 function wowtbcItemToUnified(raw) {

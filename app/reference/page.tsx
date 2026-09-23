@@ -116,6 +116,15 @@ export default function ReferencePage() {
               <img src={mediumIconUrl("trade_engineering")} alt="" className="h-7 w-7 rounded-sm" />
             }
           />
+          <Card
+            href="/reference/items"
+            title="Items"
+            description="Every item in the beta client, filterable by new/changed/unchanged-since-Classic, sourced from foreverchanges.pro."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("inv_misc_gem_01")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
         </div>
       </div>
     </main>
