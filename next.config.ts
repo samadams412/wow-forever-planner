@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
         hostname: 'wow.zamimg.com',
         pathname: '/images/wow/icons/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'foreverchanges.pro',
+        pathname: '/wow-ui/dungeons/**',
+      },
     ],
   },
 };

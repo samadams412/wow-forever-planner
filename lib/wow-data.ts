@@ -213,3 +213,20 @@ export function treeBackgroundUrl(classId: string, treeName: string): string {
   const slug = treeName.toLowerCase().replace(/\s+/g, "-");
   return `/backgrounds/${classId}/${slug}.jpg`;
 }
+
+// Standard Blizzard item-quality colors (0 Poor - 5 Legendary), same values
+// the in-game tooltip and every armory-style site use -- not something this
+// site invented, so hardcoding the 6 values here rather than deriving them.
+export const ITEM_QUALITY_COLOR: Record<number, string> = {
+  0: "#9d9d9d",
+  1: "#ffffff",
+  2: "#1eff00",
+  3: "#0070dd",
+  4: "#a335ee",
+  5: "#ff8000",
+};
+
+export function itemQualityColor(quality: number | null | undefined): string {
+  if (quality === null || quality === undefined) return ITEM_QUALITY_COLOR[1];
+  return ITEM_QUALITY_COLOR[quality] ?? ITEM_QUALITY_COLOR[1];
+}

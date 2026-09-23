@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import DungeonsTimeline from "@/components/reference/DungeonsTimeline";
 import { dungeons } from "@/lib/dungeons";
+import { getDungeonData, type DungeonData } from "@/lib/dungeon-loot";
 
 export const metadata: Metadata = {
   title: "Dungeon Level Ranges",
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
 
 export default function DungeonsPage() {
   const newDungeons = dungeons.filter((d) => d.type === "new");
+  const dungeonData: Record<string, DungeonData> = {};
+  for (const d of dungeons) {
+    const data = getDungeonData(d.id);
+    if (data) dungeonData[d.id] = data;
+  }
 
   return (
     <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
@@ -26,12 +32,12 @@ export default function DungeonsPage() {
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
         Forever launches with {newDungeons.length} new dungeons alongside every dungeon Classic already had --{" "}
         {dungeons.length} in total. The timeline below places all of them on one level-range scale, in the same
-        stacked-row layout the community&apos;s own reference charts use. Click any gold &quot;New&quot; dungeon
-        for what&apos;s known about it so far; hover any dungeon for its full name and level range.
+        stacked-row layout the community&apos;s own reference charts use. Click any dungeon to see its bosses,
+        loot and quests right here; hover any dungeon for its full name and level range.
       </p>
 
       <div className="mt-6">
-        <DungeonsTimeline />
+        <DungeonsTimeline dungeonData={dungeonData} />
       </div>
 
       <p className="mt-4 text-[11px] text-foreground-muted/70">
