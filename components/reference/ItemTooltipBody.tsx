@@ -1,5 +1,5 @@
 import { TooltipName, TooltipType, TooltipDataNote } from "@/components/planner/TooltipCard";
-import { itemQualityColor } from "@/lib/wow-data";
+import { itemQualityColor, iconUrl } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 
 // "missing" means two different things depending on where an item is shown:
@@ -86,9 +86,15 @@ export default function ItemTooltipBody({
 
   return (
     <>
-      <TooltipName>
-        <span style={item.quality !== null ? { color: qualityColor } : undefined}>{item.name}</span>
-      </TooltipName>
+      <div className="flex items-center gap-2">
+        {item.icon && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={iconUrl(item.icon)} alt="" className="h-9 w-9 shrink-0 rounded-sm border border-[#c8aa6e]/40" />
+        )}
+        <TooltipName>
+          <span style={item.quality !== null ? { color: qualityColor } : undefined}>{item.name}</span>
+        </TooltipName>
+      </div>
       {item.tooltip ? (
         item.tooltip.map((line, i) => <TooltipLine key={i} line={line} index={i} />)
       ) : (
