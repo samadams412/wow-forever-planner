@@ -1,0 +1,1238 @@
+{
+ "id": "razorfen-downs",
+ "name": "Razorfen Downs",
+ "type": "classic",
+ "levelMin": 38,
+ "levelMax": 44,
+ "abbr": "RFD",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-razorfendowns.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Tuten'kash",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Silky Spider Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 10776,
+     "icon": "inv_misc_cape_17",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "30 Armor",
+      "+11 Stamina",
+      "+5 Spirit",
+      "Requires Level 35",
+      "Sell Price: 47s 99c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Carapace of Tuten'kash",
+     "slot": "Chest",
+     "type": "Plate",
+     "itemId": 10775,
+     "icon": "inv_chest_plate08",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tPlate",
+      "373 Armor",
+      "+15 Stamina",
+      "+10 Strength",
+      "+8 Agility",
+      "Requires Level 40",
+      "Sell Price: 63s 77c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arachnid Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 10777,
+     "icon": "inv_gauntlets_32",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "79 Armor",
+      "+10 Nature Resistance",
+      "Requires Level 37",
+      "Sell Price: 40s 14c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Mordresh Fire Eye",
+   "kind": "boss",
+   "level": 39,
+   "items": [
+    {
+     "name": "Glowing Eye of Mordresh",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 10769,
+     "icon": "inv_misc_orb_03",
+     "quality": 3,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+11 Spirit",
+      "+5 Intellect",
+      "Requires Level 36",
+      "Sell Price: 52s 77c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Deathmage Sash",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 10771,
+     "icon": "inv_belt_24",
+     "quality": 3,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "33 Armor",
+      "+15 Intellect",
+      "+6 Stamina",
+      "Requires Level 36",
+      "Sell Price: 29s 10c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mordresh's Lifeless Skull",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 10770,
+     "icon": "inv_misc_bone_elfskull_01",
+     "quality": 3,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+11 Spirit",
+      "+5 Stamina",
+      "Requires Level 36",
+      "Sell Price: 78s 35c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Glutton",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Fleshhide Shoulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 10774,
+     "icon": "inv_shoulder_28",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "95 Armor",
+      "+5 Strength",
+      "+15 Stamina",
+      "+6 Agility",
+      "Requires Level 37",
+      "Sell Price: 59s 57c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Glutton's Cleaver",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemId": 10772,
+     "icon": "inv_axe_23",
+     "quality": 2,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tAxe",
+      "32 - 60 Damage\tSpeed 2.00",
+      "(23.0 damage per second)",
+      "Requires Level 36",
+      "Chance on hit: Wounds the target causing them to bleed for 50 damage over 30 sec.",
+      "Sell Price: 1g 21s 70c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ragglesnout",
+   "kind": "rare",
+   "level": 40,
+   "items": [
+    {
+     "name": "Boar Champion's Belt",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 10768,
+     "icon": "inv_belt_11",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "147 Armor",
+      "+15 Strength",
+      "+6 Stamina",
+      "Requires Level 37",
+      "Sell Price: 45s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savage Boar's Guard",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 10767,
+     "icon": "inv_shield_17",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1287 Armor",
+      "+11 Strength",
+      "+6 Stamina",
+      "Requires Level 37",
+      "Sell Price: 96s 52c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "X'caliboar",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 10758,
+     "icon": "inv_sword_45",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "98 - 148 Damage\tSpeed 3.30",
+      "(37.3 damage per second)",
+      "+20 Strength",
+      "+8 Stamina",
+      "Requires Level 35",
+      "Sell Price: 2g 1s 44c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Amnennar the Coldbringer",
+   "kind": "boss",
+   "level": 41,
+   "items": [
+    {
+     "name": "Icemetal Barbute",
+     "slot": "Head",
+     "type": "Plate",
+     "itemId": 10763,
+     "icon": "inv_helmet_13",
+     "quality": 3,
+     "itemLevel": 44,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "383 Armor",
+      "+15 Strength",
+      "+7 Spirit",
+      "+10 Stamina",
+      "+10 Frost Resistance",
+      "Requires Level 40",
+      "Sell Price: 51s 97c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Robes of the Lich",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 10762,
+     "icon": "inv_chest_cloth_17",
+     "quality": 3,
+     "itemLevel": 44,
+     "requiredLevel": 39,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "64 Armor",
+      "+10 Intellect",
+      "+20 Stamina",
+      "Requires Level 39",
+      "Sell Price: 69s 3c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Deathchill Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 10764,
+     "icon": "inv_chest_plate12",
+     "quality": 3,
+     "itemLevel": 44,
+     "requiredLevel": 39,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "270 Armor",
+      "+20 Spirit",
+      "+9 Intellect",
+      "+3 Stamina",
+      "Requires Level 39",
+      "Sell Price: 1g 4s 34c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Coldrage Dagger",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 10761,
+     "icon": "inv_sword_34",
+     "quality": 3,
+     "itemLevel": 44,
+     "requiredLevel": 39,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "31 - 58 Damage\tSpeed 1.50",
+      "(29.7 damage per second)",
+      "Requires Level 39",
+      "Chance on hit: Launches a bolt of frost at the enemy causing 20 to 30 Frost damage and slowing movement speed by 50% for 5 sec.",
+      "Sell Price: 1g 71s 93c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bonefingers",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 10765,
+     "icon": "inv_gauntlets_09",
+     "quality": 2,
+     "itemLevel": 43,
+     "requiredLevel": 38,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "73 Armor",
+      "+9 Stamina",
+      "+9 Intellect",
+      "Requires Level 38",
+      "Sell Price: 33s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Plaguemaw the Rotting",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Plaguerot Sprig",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 10766,
+     "icon": "inv_wand_03",
+     "quality": 3,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "41 - 78 Nature Damage\tSpeed 1.60",
+      "(37.2 damage per second)",
+      "+7 Shadow Resistance",
+      "Classes: Mage",
+      "Requires Level 35",
+      "Sell Price: 96s 60c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Swine Fists",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 10760,
+     "icon": "inv_gauntlets_23",
+     "quality": 2,
+     "itemLevel": 39,
+     "requiredLevel": 34,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "68 Armor",
+      "+8 Strength",
+      "+8 Agility",
+      "Requires Level 34",
+      "Sell Price: 24s 28c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Corpseshroud",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 10574,
+     "icon": "inv_misc_cape_04",
+     "quality": 3,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when equipped",
+      "Head\tCloth",
+      "47 Armor",
+      "+6 Spirit",
+      "+19 Intellect",
+      "+5 Agility",
+      "Requires Level 35",
+      "Sell Price: 37s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Death's Head Vestment",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 10581,
+     "icon": "inv_chest_leather_08",
+     "quality": 3,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "58 Armor",
+      "+8 Intellect",
+      "+13 Spirit",
+      "+12 Stamina",
+      "Requires Level 35",
+      "Sell Price: 53s 10c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Quillward Harness",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 10583,
+     "icon": "inv_chest_leather_08",
+     "quality": 3,
+     "itemLevel": 39,
+     "requiredLevel": 34,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tLeather",
+      "120 Armor",
+      "+19 Agility",
+      "+8 Strength",
+      "Requires Level 34",
+      "Sell Price: 61s 91c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stormgale Fists",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 10584,
+     "icon": "inv_gauntlets_11",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when equipped",
+      "Hands\tMail",
+      "149 Armor",
+      "+10 Strength",
+      "+7 Spirit",
+      "+3 Stamina",
+      "Requires Level 31",
+      "Sell Price: 29s 5c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thoughtcast Boots",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 10578,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 38,
+     "requiredLevel": 33,
+     "tooltip": [
+      "Binds when equipped",
+      "Feet\tCloth",
+      "38 Armor",
+      "+6 Intellect",
+      "+3 Stamina",
+      "+13 Spirit",
+      "Requires Level 33",
+      "Sell Price: 33s 77c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Briar Tredders",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 10582,
+     "icon": "inv_boots_08",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when equipped",
+      "Feet\tLeather",
+      "78 Armor",
+      "+8 Spirit",
+      "+5 Agility",
+      "+9 Intellect",
+      "Requires Level 31",
+      "Sell Price: 36s 6c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Freezing Shard",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 10572,
+     "icon": "inv_wand_01",
+     "quality": 3,
+     "itemLevel": 39,
+     "requiredLevel": 34,
+     "tooltip": [
+      "Binds when equipped",
+      "Ranged\tWand",
+      "32 - 61 Frost Damage\tSpeed 1.30",
+      "(35.8 damage per second)",
+      "Classes: Mage",
+      "Requires Level 34",
+      "Equip: Increases damage done by Frost spells and effects by up to 10.",
+      "Sell Price: 95s 92c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Quillshooter",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 10567,
+     "icon": "inv_weapon_bow_01",
+     "quality": 3,
+     "itemLevel": 38,
+     "requiredLevel": 33,
+     "tooltip": [
+      "Binds when equipped",
+      "Ranged\tBow",
+      "31 - 58 Damage\tSpeed 2.80",
+      "(15.9 damage per second)",
+      "Requires Level 33",
+      "Equip: Chance to strike your ranged target with a Quill Shot for 66 to 98 Nature damage.",
+      "Sell Price: 87s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ebony Boneclub",
+     "slot": "One-Hand",
+     "type": "Mace",
+     "itemId": 10571,
+     "icon": "inv_misc_bone_10",
+     "quality": 3,
+     "itemLevel": 37,
+     "requiredLevel": 32,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tMace",
+      "31 - 59 Damage\tSpeed 1.80",
+      "(25.0 damage per second)",
+      "+5 Strength",
+      "+5 Shadow Resistance",
+      "Requires Level 32",
+      "Sell Price: 1g 9s 27c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Manslayer",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 10570,
+     "icon": "inv_axe_04",
+     "quality": 3,
+     "itemLevel": 39,
+     "requiredLevel": 34,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "88 - 133 Damage\tSpeed 3.20",
+      "(34.5 damage per second)",
+      "+8 Stamina",
+      "Requires Level 34",
+      "Equip: +38 Attack Power.",
+      "Sell Price: 1g 58s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Boneslasher",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 10573,
+     "icon": "inv_sword_41",
+     "quality": 3,
+     "itemLevel": 37,
+     "requiredLevel": 32,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "70 - 106 Damage\tSpeed 2.70",
+      "(32.6 damage per second)",
+      "+7 Stamina",
+      "+16 Strength",
+      "+5 Agility",
+      "Requires Level 32",
+      "Sell Price: 1g 37s 54c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Henry Stern",
+   "kind": "object",
+   "level": 36,
+   "items": [
+    {
+     "name": "Troll's Blood Elixir",
+     "slot": null,
+     "type": "Potions",
+     "itemId": 3826,
+     "icon": "inv_potion_80",
+     "quality": 1,
+     "itemLevel": 36,
+     "requiredLevel": 26,
+     "tooltip": [
+      "\tPotions",
+      "Requires Level 26",
+      "Use: Regenerate 12 health every 5 sec for 1 hr. (3 Sec Cooldown)",
+      "Sell Price: 1s 5c"
+     ],
+     "classicTooltip": [
+      "\tConsumable",
+      "Requires Level 26",
+      "Use: Regenerate 12 health every 5 sec for 1 hr. (3 Sec Cooldown)",
+      "Sell Price: 1s 5c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Goldthorn Tea",
+     "slot": null,
+     "type": "Food & Drink",
+     "itemId": 10841,
+     "icon": "inv_drink_15",
+     "quality": 1,
+     "itemLevel": 35,
+     "requiredLevel": 25,
+     "tooltip": [
+      "\tFood & Drink",
+      "Requires Level 25",
+      "Use: Restores 249 mana over 27 sec. Must remain seated while drinking. If you spend at least 10 seconds drinking you will become well fed and gain ? Herbalism skill for 15 min.",
+      "Sell Price: 85c"
+     ],
+     "classicTooltip": [
+      "\tConsumable",
+      "Requires Level 25",
+      "Use: Restores 249 mana over 27 sec. Must remain seated while drinking.",
+      "Sell Price: 85c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-6626",
+   "faction": "Both",
+   "name": "A Host of Evil",
+   "level": 35,
+   "minLevel": 28,
+   "text": "Kill 8 Razorfen Battleguard, 8 Razorfen Thornweavers, and 8 Death's Head Cultists and return to Myriam Moonsinger near the entrance to Razorfen Downs.",
+   "giver": {
+    "name": "Myriam Moonsinger",
+    "location": "Myriam Moonsinger, The Barrens",
+    "mapRef": {
+     "name": "Myriam Moonsinger",
+     "href": "/map/kalimdor#pin=Myriam%20Moonsinger"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Razorfen Battleguard ×8, Razorfen Thornweaver ×8, Death's Head Cultist ×8",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "3,450 XP in Classic",
+   "money": "75s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3525",
+   "faction": "Both",
+   "name": "Extinguishing the Idol",
+   "level": 37,
+   "minLevel": 32,
+   "text": "Escort Belnistrasz to the Quilboar's idol in Razorfen Downs.  Protect Belnistrasz while he performs the ritual to shut down the idol.",
+   "giver": {
+    "name": "Belnistrasz",
+    "location": "Belnistrasz, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "4,250 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Dragonclaw Ring",
+     "slot": null,
+     "type": null,
+     "itemId": 10710,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3523",
+   "faction": "Both",
+   "name": "Scourge of the Downs",
+   "level": 37,
+   "minLevel": 32,
+   "text": "If you agree to aid Belnistrasz, speak with him again and hand the Oathstone he gave you back to him.",
+   "giver": {
+    "name": "Belnistrasz",
+    "location": "Belnistrasz, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Belnistrasz's Oathstone",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/10682",
+       "name": "Belnistrasz's Oathstone",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "290 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3636",
+   "faction": "Alliance",
+   "name": "Bring the Light",
+   "level": 42,
+   "minLevel": 39,
+   "text": "Archbishop Bendictus wants you to slay Amnennar the Coldbringer in Razorfen Downs.",
+   "giver": {
+    "name": "Archbishop Benedictus",
+    "location": "Archbishop Benedictus, Stormwind City",
+    "mapRef": {
+     "name": "Archbishop Benedictus",
+     "href": "/map/eastern-kingdoms#pin=Archbishop%20Benedictus"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Amnennar the Coldbringer",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "4,300 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Vanquisher's Sword",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 10823,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Amberglow Talisman",
+     "slot": null,
+     "type": null,
+     "itemId": 10824,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6521",
+   "faction": "Horde",
+   "name": "An Unholy Alliance",
+   "level": 36,
+   "minLevel": 28,
+   "text": "Bring Ambassador Malcin's Head to Varimathras in the Undercity.",
+   "giver": {
+    "name": "Varimathras",
+    "location": "Varimathras, Undercity",
+    "mapRef": {
+     "name": "Varimathras",
+     "href": "/map/eastern-kingdoms#pin=Varimathras"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Ambassador Malcin's HeadAmbassador Malcin",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17009",
+       "name": "Ambassador Malcin's Head",
+       "qty": null,
+       "source": "Ambassador Malcin"
+      }
+     ]
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": "20s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Skullbreaker",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 17039,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Nail Spitter",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemId": 17042,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Zealot's Robe",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 17043,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6522",
+   "faction": "Horde",
+   "name": "An Unholy Alliance",
+   "level": 36,
+   "minLevel": 28,
+   "text": "Take the Small Scroll to Varimathras in the Undercity.",
+   "giver": {
+    "name": "From the item Small Scroll",
+    "location": "From the item Small Scroll",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Small ScrollCharlga Razorflank",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17008",
+       "name": "Small Scroll",
+       "qty": null,
+       "source": "Charlga Razorflank"
+      }
+     ]
+    }
+   ],
+   "experience": "3,500 XP in Classic",
+   "money": "40s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3341",
+   "faction": "Horde",
+   "name": "Bring the End",
+   "level": 42,
+   "minLevel": 37,
+   "text": "Andrew Brownell wants you to kill Amnennar the Coldbringer and return his skull.",
+   "giver": {
+    "name": "Andrew Brownell",
+    "location": "Andrew Brownell, Undercity",
+    "mapRef": {
+     "name": "Andrew Brownell",
+     "href": "/map/eastern-kingdoms#pin=Andrew%20Brownell"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Skull of the ColdbringerAmnennar the Coldbringer",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/10420",
+       "name": "Skull of the Coldbringer",
+       "qty": null,
+       "source": "Amnennar the Coldbringer"
+      }
+     ]
+    }
+   ],
+   "experience": "4,300 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Vanquisher's Sword",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 10823,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Amberglow Talisman",
+     "slot": null,
+     "type": null,
+     "itemId": 10824,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

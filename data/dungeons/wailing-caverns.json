@@ -1,0 +1,1507 @@
+{
+ "id": "wailing-caverns",
+ "name": "Wailing Caverns",
+ "type": "classic",
+ "levelMin": 19,
+ "levelMax": 25,
+ "abbr": "WC",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-wailingcaverns.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Lord Cobrahn",
+   "kind": "boss",
+   "level": 20,
+   "items": [
+    {
+     "name": "Cobrahn's Grasp",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 6460,
+     "icon": "inv_belt_03",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "107 Armor",
+      "+7 Strength",
+      "+3 Agility",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "111 Armor",
+      "+8 Strength",
+      "+3 Agility",
+      "Requires Level 19",
+      "Sell Price: 8s 44c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Leggings of the Fang",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 10410,
+     "icon": "inv_pants_11",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "78 Armor",
+      "+5 Strength",
+      "+9 Agility",
+      "+4 Stamina",
+      "Requires Level 17",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: +10 Intellect.",
+      "(3) Set: +10 Attack Power.",
+      "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "79 Armor",
+      "+5 Strength",
+      "+4 Stamina",
+      "+9 Agility",
+      "Requires Level 18",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: Increases damage done by Nature spells and effects by up to 7.",
+      "(3) Set: Increased Staves +2.",
+      "(4) Set: Increases healing done by spells and effects by up to 11.",
+      "(5) Set: +10 Intellect.",
+      "Sell Price: 12s 56c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Robe of the Moccasin",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 6465,
+     "icon": "inv_chest_cloth_36",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "+3 Strength",
+      "+10 Spirit",
+      "+3 Spell Damage",
+      "+9 Healing",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "36 Armor",
+      "+2 Strength",
+      "+2 Stamina",
+      "+6 Spirit",
+      "Requires Level 17",
+      "Sell Price: 7s 68c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lady Anacondra",
+   "kind": "boss",
+   "level": 20,
+   "items": [
+    {
+     "name": "Belt of the Fang",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 10412,
+     "icon": "inv_belt_30",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "49 Armor",
+      "+3 Agility",
+      "+5 Stamina",
+      "Requires Level 16",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: +10 Intellect.",
+      "(3) Set: +10 Attack Power.",
+      "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "45 Armor",
+      "+3 Stamina",
+      "+2 Agility",
+      "Requires Level 16",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: Increases damage done by Nature spells and effects by up to 7.",
+      "(3) Set: Increased Staves +2.",
+      "(4) Set: Increases healing done by spells and effects by up to 11.",
+      "(5) Set: +10 Intellect.",
+      "Sell Price: 4s 5c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Serpent's Shoulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 5404,
+     "icon": "inv_shoulder_08",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "68 Armor",
+      "+5 Agility",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Shoulder\tLeather",
+      "59 Armor",
+      "Requires Level 18",
+      "Sell Price: 4s 69c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Snakeskin Bag",
+     "slot": "Bag",
+     "type": null,
+     "itemId": 6446,
+     "icon": "inv_misc_bag_12",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Bag",
+      "10 Slot Bag",
+      "Sell Price: 5s 32c"
+     ],
+     "classicTooltip": [
+      "Unique",
+      "Bag",
+      "10 Slot Bag",
+      "Sell Price: 5s 32c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Snake Eye Kaleidoscope",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 273088,
+     "icon": "inv_misc_eye_01",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+1 Strength",
+      "+1 Agility",
+      "+1 Stamina",
+      "+1 Intellect",
+      "+1 Spirit",
+      "+1 Fire Resistance",
+      "+1 Frost Resistance",
+      "+1 Nature Resistance",
+      "+1 Arcane Resistance",
+      "+1 Shadow Resistance",
+      "Requires Level 17",
+      "Sell Price: 9s 12c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Kresh",
+   "kind": "boss",
+   "level": 20,
+   "items": [
+    {
+     "name": "Kresh's Back",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 13245,
+     "icon": "inv_shield_18",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "528 Armor",
+      "+5 Defense Rating",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "471 Armor",
+      "Requires Level 15",
+      "Equip: Increased Defense +4.",
+      "Sell Price: 10s 64c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Worn Turtle Shell Shield",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 6447,
+     "icon": "inv_shield_21",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "530 Armor",
+      "+2 Mana Regeneration",
+      "Requires Level 16"
+     ],
+     "classicTooltip": [
+      "Off Hand\tShield",
+      "382 Armor",
+      "Requires Level 15",
+      "Sell Price: 5s 62c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lord Pythas",
+   "kind": "boss",
+   "level": 21,
+   "items": [
+    {
+     "name": "Stinging Viper",
+     "slot": "One-Hand",
+     "type": "Mace",
+     "itemId": 6472,
+     "icon": "inv_wand_10",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tMace",
+      "30 - 57 Damage\tSpeed 2.80",
+      "(15.5 damage per second)",
+      "Chance on hit: Poisons target for 7 Nature damage every 3 sec for 12 sec.",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tMace",
+      "30 - 57 Damage\tSpeed 2.80",
+      "(15.5 damage per second)",
+      "Requires Level 19",
+      "Chance on hit: Poisons target for 7 Nature damage every 3 sec for 15 sec.",
+      "Sell Price: 30s 18c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Armor of the Fang",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 6473,
+     "icon": "inv_shirt_16",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "91 Armor",
+      "+6 Strength",
+      "+4 Stamina",
+      "+7 Spirit",
+      "Requires Level 18",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: +10 Intellect.",
+      "(3) Set: +10 Attack Power.",
+      "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "82 Armor",
+      "+2 Strength",
+      "+7 Spirit",
+      "Requires Level 18",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: Increases damage done by Nature spells and effects by up to 7.",
+      "(3) Set: Increased Staves +2.",
+      "(4) Set: Increases healing done by spells and effects by up to 11.",
+      "(5) Set: +10 Intellect.",
+      "Sell Price: 10s 10c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Slither Cord",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 273089,
+     "icon": "inv_belt_21",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "22 Armor",
+      "+3 Mana Regeneration",
+      "Use: Escape all immobilizing effects.",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Skum",
+   "kind": "boss",
+   "level": 21,
+   "items": [
+    {
+     "name": "Glowing Lizardscale Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6449,
+     "icon": "inv_chest_cloth_15",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "20 Armor",
+      "+6 Agility",
+      "+2 Spirit",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "20 Armor",
+      "+6 Agility",
+      "+2 Spirit",
+      "Requires Level 17",
+      "Sell Price: 7s 1c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tail Spike",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 6448,
+     "icon": "inv_weapon_shortblade_10",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "17 - 33 Damage\tSpeed 1.80",
+      "(13.9 damage per second)",
+      "+3 Strength",
+      "+3 Agility",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "14 - 26 Damage\tSpeed 1.80",
+      "(11.1 damage per second)",
+      "+2 Agility",
+      "+2 Strength",
+      "Requires Level 17",
+      "Sell Price: 19s 42c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Skum's Bucket",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 273137,
+     "icon": "inv_misc_1h_bucket_c_01",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+3 Stamina",
+      "Requires Level 17",
+      "Equip: +3 Spell Damage",
+      "Equip: +10 Healing",
+      "Use: Restores 174 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
+      "Sell Price: 21s 88c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lord Serpentis",
+   "kind": "boss",
+   "level": 21,
+   "items": [
+    {
+     "name": "Venomstrike",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 6469,
+     "icon": "inv_weapon_bow_10",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "20 - 38 Damage\tSpeed 2.40",
+      "(12.1 damage per second)",
+      "Chance on hit: Venom Shot the target for 28 Nature damage.",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "16 - 30 Damage\tSpeed 2.40",
+      "(9.6 damage per second)",
+      "Requires Level 19",
+      "Equip: Chance to strike your ranged target with a Venom Shot for 31 to 45 Nature damage.",
+      "Sell Price: 22s 40c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Serpent Gloves",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 5970,
+     "icon": "inv_gauntlets_19",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "25 Armor",
+      "+6 Agility",
+      "+7 Spell Power",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "23 Armor",
+      "+4 Agility",
+      "+4 Intellect",
+      "Requires Level 18",
+      "Sell Price: 4s 18c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Footpads of the Fang",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 10411,
+     "icon": "inv_boots_04",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "61 Armor",
+      "+6 Agility",
+      "+6 Stamina",
+      "Requires Level 17",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: +10 Intellect.",
+      "(3) Set: +10 Attack Power.",
+      "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "57 Armor",
+      "+4 Stamina",
+      "+4 Agility",
+      "Requires Level 18",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: Increases damage done by Nature spells and effects by up to 7.",
+      "(3) Set: Increased Staves +2.",
+      "(4) Set: Increases healing done by spells and effects by up to 11.",
+      "(5) Set: +10 Intellect.",
+      "Sell Price: 7s 87c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savage Trodders",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 6459,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "134 Armor",
+      "+7 Stamina",
+      "+6 Health Regeneration",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "122 Armor",
+      "+6 Stamina",
+      "Requires Level 18",
+      "Sell Price: 9s 34c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Verdan the Everliving",
+   "kind": "boss",
+   "level": 21,
+   "items": [
+    {
+     "name": "Seedcloud Buckler",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 6630,
+     "icon": "inv_shield_10",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "547 Armor",
+      "+5 Nature Resistance",
+      "+5 Spell Power",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "566 Armor",
+      "+3 Spirit",
+      "+6 Intellect",
+      "Requires Level 20",
+      "Sell Price: 20s 67c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Living Root",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 6631,
+     "icon": "inv_staff_25",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "34 - 52 Damage\tSpeed 2.90",
+      "(14.8 damage per second)",
+      "+2 Stamina",
+      "+5 Spirit",
+      "+9 Nature Resistance",
+      "+15 Spell Damage",
+      "+44 Healing",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "49 - 74 Damage\tSpeed 2.90",
+      "(21.2 damage per second)",
+      "+12 Spirit",
+      "+2 Stamina",
+      "+5 Nature Resistance",
+      "Requires Level 20",
+      "Sell Price: 40s 53c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sporid Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6629,
+     "icon": "inv_misc_cape_17",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "20 Armor",
+      "+6 Stamina",
+      "Equip: When struck in combat inflicts 1 Nature damage to the attacker.",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "18 Armor",
+      "+3 Stamina",
+      "+2 Spirit",
+      "Requires Level 18",
+      "Sell Price: 6s 30c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Mutanus the Devourer",
+   "kind": "boss",
+   "level": 22,
+   "items": [
+    {
+     "name": "Slime-encrusted Pads",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 6461,
+     "icon": "inv_shoulder_05",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "32 Armor",
+      "+3 Mana Regeneration",
+      "+10 Health Regeneration",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "34 Armor",
+      "Requires Level 22",
+      "Equip: Restores 3 health every 4 sec.",
+      "Sell Price: 11s 90c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mutant Scale Breastplate",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 6627,
+     "icon": "inv_chest_plate08",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "194 Armor",
+      "+10 Strength",
+      "+4 Stamina",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "211 Armor",
+      "+13 Strength",
+      "+5 Stamina",
+      "Requires Level 23",
+      "Sell Price: 26s 20c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Deep Fathom Ring",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 6463,
+     "icon": "inv_jewelry_ring_15",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Finger",
+      "+3 Stamina",
+      "+5 Spirit",
+      "+1 Spell Penetration",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+6 Spirit",
+      "+3 Stamina",
+      "+3 Intellect",
+      "Requires Level 21",
+      "Sell Price: 15s 27c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Glowing Shard",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 10441,
+     "icon": "inv_stone_03",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tQuest",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Deviate Faerie Dragon",
+   "kind": "rare",
+   "level": 20,
+   "items": [
+    {
+     "name": "Firebelcher",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 5243,
+     "icon": "inv_wand_11",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "27 - 52 Fire Damage\tSpeed 1.70",
+      "(23.2 damage per second)",
+      "Equip: Chance on hit to blast the target for 28 Fire damage.",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "24 - 45 Fire Damage\tSpeed 1.70",
+      "(20.3 damage per second)",
+      "Requires Level 15",
+      "Sell Price: 13s 12c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Feyscale Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6632,
+     "icon": "inv_misc_cape_02",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "19 Armor",
+      "+5 Stamina",
+      "+3 Spell Power",
+      "Requires Level 16"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "17 Armor",
+      "+3 Stamina",
+      "+2 Spirit",
+      "Requires Level 15",
+      "Sell Price: 6s 42c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Gloves of the Fang",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 10413,
+     "icon": "inv_gauntlets_18",
+     "quality": 3,
+     "itemLevel": 19,
+     "requiredLevel": 14,
+     "tooltip": [
+      "Binds when equipped",
+      "Hands\tLeather",
+      "52 Armor",
+      "+4 Strength",
+      "+6 Agility",
+      "Requires Level 14",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: +10 Intellect.",
+      "(3) Set: +10 Attack Power.",
+      "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Hands\tLeather",
+      "47 Armor",
+      "+3 Agility",
+      "+2 Strength",
+      "Requires Level 14",
+      "Embrace of the Viper (0/5)",
+      "(2) Set: Increases damage done by Nature spells and effects by up to 7.",
+      "(3) Set: Increased Staves +2.",
+      "(4) Set: Increases healing done by spells and effects by up to 11.",
+      "(5) Set: +10 Intellect.",
+      "Sell Price: 3s 7c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-1486",
+   "faction": "Both",
+   "name": "Deviate Hides",
+   "level": 17,
+   "minLevel": 13,
+   "text": "Nalpak in the Wailing Caverns wants 20 Deviate Hides.",
+   "giver": {
+    "name": "Nalpak",
+    "location": "Nalpak, The Barrens",
+    "mapRef": {
+     "name": "Nalpak",
+     "href": "/map/kalimdor#pin=Nalpak"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Deviate Hide ×20Deviate Adder, Deviate Coiler and Deviate Creeper and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/6443",
+       "name": "Deviate Hide",
+       "qty": "×20",
+       "source": "Deviate Adder, Deviate Coiler and Deviate Creeper and others"
+      }
+     ]
+    }
+   ],
+   "experience": "4,640 XP in the Forever beta1,600 in Classic",
+   "money": "18s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Deviate Hide Pack",
+     "slot": null,
+     "type": null,
+     "itemId": 918,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Slick Deviate Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 6480,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1491",
+   "faction": "Both",
+   "name": "Smart Drinks",
+   "level": 18,
+   "minLevel": 13,
+   "text": "Bring 6 portions of Wailing Essence to Mebok Mizzyrix in Ratchet.",
+   "giver": {
+    "name": "Mebok Mizzyrix",
+    "location": "Mebok Mizzyrix, The Barrens",
+    "mapRef": {
+     "name": "Mebok Mizzyrix",
+     "href": "/map/kalimdor#pin=Mebok%20Mizzyrix"
+    }
+   },
+   "prereq": "Raptor Horns, from Mebok Mizzyrix, The Barrens",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Wailing Essence ×6Devouring Ectoplasm, Evolving Ectoplasm and Nightmare Ectoplasm",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/6464",
+       "name": "Wailing Essence",
+       "qty": "×6",
+       "source": "Devouring Ectoplasm, Evolving Ectoplasm and Nightmare Ectoplasm"
+      }
+     ]
+    }
+   ],
+   "experience": "3,915 XP in the Forever beta1,350 in Classic",
+   "money": "10s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-959",
+   "faction": "Both",
+   "name": "Trouble at the Docks",
+   "level": 18,
+   "minLevel": 14,
+   "text": "Crane Operator Bigglefuzz in Ratchet wants you to retrieve the bottle of 99-Year-Old Port from Mad Magglish who is hiding in the Wailing Caverns.",
+   "giver": {
+    "name": "Crane Operator Bigglefuzz",
+    "location": "Crane Operator Bigglefuzz, The Barrens",
+    "mapRef": {
+     "name": "Crane Operator Bigglefuzz",
+     "href": "/map/kalimdor#pin=Crane%20Operator%20Bigglefuzz"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "99-Year-Old PortMad Magglish",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5334",
+       "name": "99-Year-Old Port",
+       "qty": null,
+       "source": "Mad Magglish"
+      }
+     ]
+    }
+   ],
+   "experience": "3,915 XP in the Forever beta1,350 in Classic",
+   "money": "10s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1487",
+   "faction": "Both",
+   "name": "Deviate Eradication",
+   "level": 21,
+   "minLevel": 15,
+   "text": "Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs.",
+   "giver": {
+    "name": "Ebru",
+    "location": "Ebru, The Barrens",
+    "mapRef": {
+     "name": "Ebru",
+     "href": "/map/kalimdor#pin=Ebru"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Deviate Ravager ×7, Deviate Viper ×7, Deviate Shambler ×7, Deviate Dreadfang ×7",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "5,945 XP in the Forever beta2,050 in Classic",
+   "money": "25s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Pattern: Deviate Scale Belt",
+     "slot": "Leatherworking",
+     "type": null,
+     "itemId": 6476,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sizzle Stick",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 8071,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dagmire Gauntlets",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 6481,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6981",
+   "faction": "Both",
+   "name": "The Glowing Shard",
+   "level": 26,
+   "minLevel": 15,
+   "text": "Travel to Ratchet to find someone that can tell you more about the glowing shard.  Then, deliver the shard as you are directed.",
+   "giver": {
+    "name": "From the item Glowing Shard",
+    "location": "From the item Glowing Shard",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Glowing ShardMutanus the Devourer",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/10441",
+       "name": "Glowing Shard",
+       "qty": null,
+       "source": "Mutanus the Devourer"
+      }
+     ]
+    }
+   ],
+   "experience": "7,685 XP in the Forever beta2,650 in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-914",
+   "faction": "Horde",
+   "name": "Leaders of the Fang",
+   "level": 22,
+   "minLevel": 11,
+   "text": "Bring the Gems of Cobrahn, Anacondra, Pythas and Serpentis to Nara Wildmane in Thunder Bluff.",
+   "giver": {
+    "name": "Nara Wildmane",
+    "location": "Nara Wildmane, Thunder Bluff",
+    "mapRef": {
+     "name": "Nara Wildmane",
+     "href": "/map/kalimdor#pin=Nara%20Wildmane"
+    }
+   },
+   "prereq": "Nara Wildmane, from Arch Druid Hamuul Runetotem, Thunder Bluff",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Gem of CobrahnLord CobrahnGem of AnacondraLady AnacondraGem of PythasLord PythasGem of SerpentisLord Serpentis",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9738",
+       "name": "Gem of Cobrahn",
+       "qty": null,
+       "source": "Lord Cobrahn"
+      },
+      {
+       "itemHref": "/item/9739",
+       "name": "Gem of Anacondra",
+       "qty": null,
+       "source": "Lady Anacondra"
+      },
+      {
+       "itemHref": "/item/9740",
+       "name": "Gem of Pythas",
+       "qty": null,
+       "source": "Lord Pythas"
+      },
+      {
+       "itemHref": "/item/9741",
+       "name": "Gem of Serpentis",
+       "qty": null,
+       "source": "Lord Serpentis"
+      }
+     ]
+    }
+   ],
+   "experience": "6,380 XP in the Forever beta2,200 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Crescent Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 6505,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wingblade",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 6504,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hammerbone",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 270018,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-962",
+   "faction": "Horde",
+   "name": "Serpentbloom",
+   "level": 18,
+   "minLevel": 14,
+   "text": "Apothecary Zamah in Thunder Bluff wants you to collect 10 Serpentbloom.",
+   "giver": {
+    "name": "Apothecary Zamah",
+    "location": "Apothecary Zamah, Thunder Bluff",
+    "mapRef": {
+     "name": "Apothecary Zamah",
+     "href": "/map/kalimdor#pin=Apothecary%20Zamah"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Serpentbloom ×10Serpentbloom",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5339",
+       "name": "Serpentbloom",
+       "qty": "×10",
+       "source": "Serpentbloom"
+      }
+     ]
+    }
+   ],
+   "experience": "4,930 XP in the Forever beta1,350 in Classic",
+   "money": "10s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Apothecary Gloves",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 10919,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heat Resistant Mitts",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 270008,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Safety Boots",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 270009,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

@@ -1,0 +1,535 @@
+{
+ "id": "the-stockade",
+ "name": "The Stockade",
+ "type": "classic",
+ "levelMin": 26,
+ "levelMax": 32,
+ "abbr": "Stocks",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-stockade.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Kam Deepfury",
+   "kind": "boss",
+   "level": 27,
+   "items": [
+    {
+     "name": "Kam's Walking Stick",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 2280,
+     "icon": "inv_staff_06",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "40 - 60 Damage\tSpeed 2.80",
+      "(17.9 damage per second)",
+      "+10 Agility",
+      "+3 Intellect",
+      "+32 Spell Damage",
+      "+32 Healing",
+      "Equip: Reduces the duration of all movement impairing effects on you by -10%.",
+      "Requires Level 24"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "41 - 62 Damage\tSpeed 2.80",
+      "(18.4 damage per second)",
+      "+3 Agility",
+      "+8 Intellect",
+      "Requires Level 22",
+      "Sell Price: 40s 23c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Bruegal Ironknuckle",
+   "kind": "rare",
+   "level": 26,
+   "items": [
+    {
+     "name": "Jimmied Handcuffs",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 3228,
+     "icon": "inv_bracer_02",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "92 Armor",
+      "+3 Strength",
+      "+8 Stamina",
+      "Requires Level 23",
+      "Sell Price: 13s 36c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "89 Armor",
+      "+3 Strength",
+      "+7 Stamina",
+      "Requires Level 21",
+      "Sell Price: 10s 98c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Prison Shank",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 2941,
+     "icon": "inv_weapon_shortblade_18",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "22 - 42 Damage\tSpeed 1.80",
+      "(17.8 damage per second)",
+      "+6 Agility",
+      "+2 Stamina",
+      "Requires Level 23",
+      "Sell Price: 44s 55c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "21 - 39 Damage\tSpeed 1.80",
+      "(16.7 damage per second)",
+      "+5 Agility",
+      "+2 Stamina",
+      "Requires Level 21",
+      "Sell Price: 35s 52c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Iron Knuckles",
+     "slot": "One-Hand",
+     "type": "Fist Weapon",
+     "itemId": 2942,
+     "icon": "inv_gauntlets_04",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tFist Weapon",
+      "21 - 39 Damage\tSpeed 1.70",
+      "(17.6 damage per second)",
+      "Requires Level 23",
+      "Chance on hit: Pummel the target for 25 damage and interrupt the spell being cast for 5 sec.",
+      "Sell Price: 44s 55c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tFist Weapon",
+      "19 - 37 Damage\tSpeed 1.70",
+      "(16.5 damage per second)",
+      "Requires Level 21",
+      "Chance on hit: Pummel the target for 4 damage and interrupt the spell being cast for 5 sec.",
+      "Sell Price: 36s 63c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Defias Renegade Ring",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 1076,
+     "icon": "inv_jewelry_ring_02",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Finger",
+      "+5 Agility",
+      "+5 Stamina",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Finger",
+      "+3 Stamina",
+      "+3 Agility",
+      "Requires Level 20",
+      "Sell Price: 6s 50c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-391",
+   "faction": "Alliance",
+   "name": "The Stockade Riots",
+   "level": 29,
+   "minLevel": 16,
+   "text": "Kill Bazil Thredd and bring his head back to Warden Thelwater at the Stockade.",
+   "giver": {
+    "name": "Warden Thelwater",
+    "location": "Warden Thelwater, Stormwind City",
+    "mapRef": {
+     "name": "Warden Thelwater",
+     "href": "/map/eastern-kingdoms#pin=Warden%20Thelwater"
+    }
+   },
+   "prereq": "Bazil Thredd, from Baros Alexston, Stormwind City",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of Bazil ThreddBazil Thredd",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/2926",
+       "name": "Head of Bazil Thredd",
+       "qty": null,
+       "source": "Bazil Thredd"
+      }
+     ]
+    }
+   ],
+   "experience": "7,520 XP in the Forever beta2,650 in Classic",
+   "money": "25s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-386",
+   "faction": "Alliance",
+   "name": "What Comes Around...",
+   "level": 25,
+   "minLevel": 22,
+   "text": "Bring the head of Targorr the Dread to Guard Berton in Lakeshire.",
+   "giver": {
+    "name": "Guard Berton",
+    "location": "Guard Berton, Redridge Mountains",
+    "mapRef": {
+     "name": "Guard Berton",
+     "href": "/map/eastern-kingdoms#pin=Guard%20Berton"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of TargorrTargorr the Dread",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/3630",
+       "name": "Head of Targorr",
+       "qty": null,
+       "source": "Targorr the Dread"
+      }
+     ]
+    }
+   ],
+   "experience": "6,400 XP in the Forever beta2,000 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Lucine Longsword",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 3400,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hardened Root Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 1317,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-377",
+   "faction": "Alliance",
+   "name": "Crime and Punishment",
+   "level": 26,
+   "minLevel": 22,
+   "text": "Councilman Millstipe of Darkshire wants you to bring him the hand of Dextren Ward.",
+   "giver": {
+    "name": "Councilman Millstipe",
+    "location": "Councilman Millstipe, Duskwood",
+    "mapRef": {
+     "name": "Councilman Millstipe",
+     "href": "/map/eastern-kingdoms#pin=Councilman%20Millstipe"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Hand of Dextren WardDextren Ward",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/3628",
+       "name": "Hand of Dextren Ward",
+       "qty": null,
+       "source": "Dextren Ward"
+      }
+     ]
+    }
+   ],
+   "experience": "6,720 XP in the Forever beta2,100 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Ambassador's Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 2033,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Darkshire Mail Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 2906,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-387",
+   "faction": "Alliance",
+   "name": "Quell The Uprising",
+   "level": 26,
+   "minLevel": 22,
+   "text": "Warden Thelwater of Stormwind wants you to kill 10 Defias Prisoners, 8 Defias Convicts, and 8 Defias Insurgents in The Stockade.",
+   "giver": {
+    "name": "Warden Thelwater",
+    "location": "Warden Thelwater, Stormwind City",
+    "mapRef": {
+     "name": "Warden Thelwater",
+     "href": "/map/eastern-kingdoms#pin=Warden%20Thelwater"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Defias Prisoner ×10, Defias Convict ×8, Defias Insurgent ×8",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "8,480 XP in the Forever beta2,650 in Classic",
+   "money": "60s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-388",
+   "faction": "Alliance",
+   "name": "The Color of Blood",
+   "level": 26,
+   "minLevel": 22,
+   "text": "Nikova Raskol of Stormwind wants you to collect 10 Red Wool Bandanas.",
+   "giver": {
+    "name": "Nikova Raskol",
+    "location": "Nikova Raskol, Stormwind City",
+    "mapRef": {
+     "name": "Nikova Raskol",
+     "href": "/map/eastern-kingdoms#pin=Nikova%20Raskol"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Red Wool Bandana ×10Bazil Thredd, Bruegal Ironknuckle and Defias Captive and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/2909",
+       "name": "Red Wool Bandana",
+       "qty": "×10",
+       "source": "Bazil Thredd, Bruegal Ironknuckle and Defias Captive and others"
+      }
+     ]
+    }
+   ],
+   "experience": "8,480 XP in the Forever beta2,650 in Classic",
+   "money": "60s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-378",
+   "faction": "Alliance",
+   "name": "The Fury Runs Deep",
+   "level": 27,
+   "minLevel": 22,
+   "text": "Motley Garmason wants Kam Deepfury's head brought to him at Dun Modr.",
+   "giver": {
+    "name": "Motley Garmason",
+    "location": "Motley Garmason, Wetlands",
+    "mapRef": {
+     "name": "Motley Garmason",
+     "href": "/map/eastern-kingdoms#pin=Motley%20Garmason"
+    }
+   },
+   "prereq": "The Dark Iron War, from Motley Garmason, Wetlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of DeepfuryKam Deepfury",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/3640",
+       "name": "Head of Deepfury",
+       "qty": null,
+       "source": "Kam Deepfury"
+      }
+     ]
+    }
+   ],
+   "experience": "2,750 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Belt of Vindication",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 3562,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Headbasher",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 1264,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

@@ -1,0 +1,1317 @@
+{
+ "id": "razorfen-kraul",
+ "name": "Razorfen Kraul",
+ "type": "classic",
+ "levelMin": 30,
+ "levelMax": 36,
+ "abbr": "RFK",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-razorfenkraul.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Aggem Thorncurse",
+   "kind": "boss",
+   "level": 30,
+   "items": [
+    {
+     "name": "Thornspike",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 6681,
+     "icon": "inv_weapon_shortblade_10",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "24 - 46 Damage\tSpeed 1.70",
+      "(20.6 damage per second)",
+      "Requires Level 27",
+      "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+      "Sell Price: 65s 22c"
+     ],
+     "classicTooltip": [
+      "One-Hand\tDagger",
+      "18 - 35 Damage\tSpeed 1.70",
+      "(15.6 damage per second)",
+      "Requires Level 27",
+      "Sell Price: 31s 24c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Death Speaker Jargba",
+   "kind": "boss",
+   "level": 30,
+   "items": [
+    {
+     "name": "Death Speaker Scepter",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 2816,
+     "icon": "inv_mace_07",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "33 - 63 Damage\tSpeed 2.80",
+      "(17.1 damage per second)",
+      "+1 Spirit",
+      "Requires Level 28",
+      "Equip: Increases healing done by spells and effects by up to 11.",
+      "Equip: Increases damage done by Shadow spells and effects by up to 7.",
+      "Sell Price: 73s 24c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Death Speaker Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 6685,
+     "icon": "inv_shoulder_09",
+     "quality": 2,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "32 Armor",
+      "+7 Intellect",
+      "+3 Spirit",
+      "Requires Level 25",
+      "Sell Price: 13s 10c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Death Speaker Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 6682,
+     "icon": "inv_chest_cloth_20",
+     "quality": 2,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "44 Armor",
+      "+3 Stamina",
+      "+8 Intellect",
+      "+6 Spirit",
+      "Requires Level 26",
+      "Sell Price: 19s"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Overlord Ramtusk",
+   "kind": "boss",
+   "level": 32,
+   "items": [
+    {
+     "name": "Corpsemaker",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 6687,
+     "icon": "inv_weapon_halbard_01",
+     "quality": 3,
+     "itemLevel": 34,
+     "requiredLevel": 29,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "88 - 132 Damage\tSpeed 3.80",
+      "(28.9 damage per second)",
+      "+15 Strength",
+      "+8 Stamina",
+      "Requires Level 29",
+      "Sell Price: 99s 30c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tusken Helm",
+     "slot": "Head",
+     "type": "Mail",
+     "itemId": 6686,
+     "icon": "inv_helmet_09",
+     "quality": 3,
+     "itemLevel": 34,
+     "requiredLevel": 29,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tMail",
+      "308 Armor",
+      "+13 Strength",
+      "Requires Level 29",
+      "Sell Price: 35s 67c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Head\tMail",
+      "168 Armor",
+      "+9 Strength",
+      "+8 Agility",
+      "Requires Level 28",
+      "Sell Price: 26s 27c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Razorfen Spearhide",
+   "kind": "boss",
+   "level": [
+    29,
+    30
+   ],
+   "items": [
+    {
+     "name": "Armor Piercer",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemId": 6679,
+     "icon": "inv_spear_05",
+     "quality": 2,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "41 - 62 Damage\tSpeed 2.60",
+      "(19.8 damage per second)",
+      "+11 Agility",
+      "Requires Level 24",
+      "Sell Price: 48s 52c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Agathelos the Raging",
+   "kind": "boss",
+   "level": 33,
+   "items": [
+    {
+     "name": "Swinetusk Shank",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 6691,
+     "icon": "inv_misc_bone_06",
+     "quality": 3,
+     "itemLevel": 35,
+     "requiredLevel": 30,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tDagger",
+      "24 - 45 Damage\tSpeed 1.50",
+      "(23.0 damage per second)",
+      "+6 Stamina",
+      "+4 Spirit",
+      "Requires Level 30",
+      "Sell Price: 88s 66c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ferine Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 6690,
+     "icon": "inv_pants_14",
+     "quality": 2,
+     "itemLevel": 34,
+     "requiredLevel": 29,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "87 Armor",
+      "+9 Strength",
+      "+8 Agility",
+      "Requires Level 29",
+      "Sell Price: 33s 46c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Blind Hunter",
+   "kind": "rare",
+   "level": 32,
+   "items": [
+    {
+     "name": "Stygian Bone Amulet",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 6695,
+     "icon": "inv_jewelry_necklace_04",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+8 Spirit",
+      "+4 Stamina",
+      "Requires Level 27",
+      "Sell Price: 30s 2c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Batwing Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 6697,
+     "icon": "inv_shoulder_05",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "37 Armor",
+      "+5 Spirit",
+      "+10 Intellect",
+      "+3 Agility",
+      "Requires Level 27",
+      "Sell Price: 20s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Nightstalker Bow",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 6696,
+     "icon": "inv_weapon_bow_12",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "19 - 36 Damage\tSpeed 1.70",
+      "(16.2 damage per second)",
+      "+3 Agility",
+      "Requires Level 27",
+      "Sell Price: 50s 86c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Charlga Razorflank",
+   "kind": "boss",
+   "level": 33,
+   "items": [
+    {
+     "name": "Agamaggan's Clutch",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 6693,
+     "icon": "inv_misc_bone_05",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+9 Spirit",
+      "+5 Stamina",
+      "Requires Level 31",
+      "Sell Price: 18s 16c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heart of Agamaggan",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 6694,
+     "icon": "inv_shield_02",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "776 Armor",
+      "+8 Spirit",
+      "+7 Stamina",
+      "Requires Level 31",
+      "Sell Price: 63s 9c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pronged Reaver",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemId": 6692,
+     "icon": "inv_axe_18",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tAxe",
+      "40 - 75 Damage\tSpeed 2.40",
+      "(24.0 damage per second)",
+      "+5 Spirit",
+      "+6 Strength",
+      "Requires Level 31",
+      "Sell Price: 97s 88c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Small Scroll",
+     "slot": null,
+     "type": "Junk",
+     "itemId": 17008,
+     "icon": "inv_scroll_03",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tJunk",
+      "Requires Level 28",
+      "\"The scroll bears an insignia foreign to you.\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Earthcaller Halmgar",
+   "kind": "rare",
+   "level": 32,
+   "items": [
+    {
+     "name": "Wind Spirit Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 6689,
+     "icon": "inv_staff_01",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "70 - 106 Damage\tSpeed 3.30",
+      "(26.7 damage per second)",
+      "+5 Intellect",
+      "+15 Spirit",
+      "+3 Stamina",
+      "Requires Level 27",
+      "Sell Price: 82s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Whisperwind Headdress",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 6688,
+     "icon": "inv_helmet_17",
+     "quality": 2,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "79 Armor",
+      "+3 Stamina",
+      "+7 Intellect",
+      "+7 Spirit",
+      "Requires Level 27",
+      "Sell Price: 20s 59c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Mantle of Thieves",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 2264,
+     "icon": "inv_shoulder_08",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when equipped",
+      "Shoulder\tLeather",
+      "77 Armor",
+      "+10 Agility",
+      "+3 Spirit",
+      "+4 Stamina",
+      "Requires Level 25",
+      "Sell Price: 19s 57c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Avenger's Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 1488,
+     "icon": "inv_chest_chain",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tMail",
+      "221 Armor",
+      "+15 Strength",
+      "+6 Stamina",
+      "Requires Level 26",
+      "Sell Price: 33s 79c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pugilist Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 4438,
+     "icon": "inv_bracer_03",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when equipped",
+      "Wrist\tMail",
+      "95 Armor",
+      "+8 Strength",
+      "+3 Stamina",
+      "Requires Level 25",
+      "Sell Price: 16s 92c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wolfclaw Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 1978,
+     "icon": "inv_gauntlets_04",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when equipped",
+      "Hands\tLeather",
+      "61 Armor",
+      "+6 Agility",
+      "+5 Strength",
+      "+6 Stamina",
+      "Requires Level 22",
+      "Sell Price: 9s 80c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plains Ring",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 2039,
+     "icon": "inv_jewelry_ring_02",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "Finger",
+      "+8 Stamina",
+      "+3 Intellect",
+      "Requires Level 24",
+      "Sell Price: 7s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sword of Decay",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 1727,
+     "icon": "inv_sword_26",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when equipped",
+      "Main Hand\tSword",
+      "33 - 62 Damage\tSpeed 2.70",
+      "(17.6 damage per second)",
+      "Requires Level 23",
+      "Chance on hit: Reduces target's Strength by 10 for 30 sec.",
+      "Sell Price: 45s 62c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Vendetta",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 776,
+     "icon": "inv_weapon_shortblade_02",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tDagger",
+      "17 - 33 Damage\tSpeed 1.30",
+      "(19.2 damage per second)",
+      "+6 Agility",
+      "Requires Level 26",
+      "Sell Price: 57s 65c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Slaghammer",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 1976,
+     "icon": "inv_hammer_16",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "53 - 80 Damage\tSpeed 2.80",
+      "(23.8 damage per second)",
+      "+10 Stamina",
+      "+11 Strength",
+      "Requires Level 24",
+      "Sell Price: 61s 25c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "53 - 80 Damage\tSpeed 2.80",
+      "(23.8 damage per second)",
+      "+10 Stamina",
+      "+11 Strength",
+      "Requires Level 24",
+      "Sell Price: 63s 40c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pysan's Old Greatsword",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 1975,
+     "icon": "inv_sword_25",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "60 - 91 Damage\tSpeed 3.30",
+      "(22.9 damage per second)",
+      "+13 Spirit",
+      "+5 Strength",
+      "Requires Level 23",
+      "Sell Price: 57s 44c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Staff of the Shade",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 2549,
+     "icon": "inv_staff_25",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "34 - 52 Damage\tSpeed 2.60",
+      "(16.5 damage per second)",
+      "+15 Stamina",
+      "Requires Level 22",
+      "Equip: +37 Shadow Spell Damage",
+      "Sell Price: 50s 62c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "46 - 70 Damage\tSpeed 2.60",
+      "(22.3 damage per second)",
+      "Requires Level 22",
+      "Equip: Increases damage done by Shadow spells and effects by up to 21.",
+      "Sell Price: 50s 16c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Vicar's Robe",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 3569,
+     "icon": "inv_chest_cloth_42",
+     "quality": 2,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "40 Armor",
+      "+4 Stamina",
+      "+7 Spirit",
+      "Requires Level 21",
+      "Sell Price: 12s 62c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Armor Piercer",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemId": 6679,
+     "icon": "inv_spear_05",
+     "quality": 2,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "41 - 62 Damage\tSpeed 2.60",
+      "(19.8 damage per second)",
+      "+11 Agility",
+      "Requires Level 24",
+      "Sell Price: 48s 52c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-1221",
+   "faction": "Both",
+   "name": "Blueleaf Tubers",
+   "level": 26,
+   "minLevel": 20,
+   "text": "Grab a Crate with Holes. Grab a Snufflenose Command Stick. Grab and read the Snufflenose Owner's Manual.  In Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers.  Bring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate with Holes to Mebok Mizzyrix in Ratchet.",
+   "giver": {
+    "name": "Mebok Mizzyrix",
+    "location": "Mebok Mizzyrix, The Barrens",
+    "mapRef": {
+     "name": "Mebok Mizzyrix",
+     "href": "/map/kalimdor#pin=Mebok%20Mizzyrix"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Blueleaf Tuber ×6Blueleaf TuberCrate With HolesCrate with HolesSnufflenose Owner's ManualSnufflenose Owner's ManualSnufflenose Command StickSnufflenose Command Sticks",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5876",
+       "name": "Blueleaf Tuber",
+       "qty": "×6",
+       "source": "Blueleaf Tuber"
+      },
+      {
+       "itemHref": "/item/5880",
+       "name": "Crate With Holes",
+       "qty": null,
+       "source": "Crate with Holes"
+      },
+      {
+       "itemHref": "/item/5897",
+       "name": "Snufflenose Owner's Manual",
+       "qty": null,
+       "source": "Snufflenose Owner's Manual"
+      },
+      {
+       "itemHref": "/item/6684",
+       "name": "Snufflenose Command Stick",
+       "qty": null,
+       "source": "Snufflenose Command Sticks"
+      }
+     ]
+    }
+   ],
+   "experience": "7,875 XP in the Forever beta2,100 in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "A Small Container of Gems",
+     "slot": "Junk",
+     "type": null,
+     "itemId": 6755,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1144",
+   "faction": "Both",
+   "name": "Willix the Importer",
+   "level": 30,
+   "minLevel": 23,
+   "text": "Escort Willix the Importer out of Razorfen Kraul.",
+   "giver": {
+    "name": "Willix the Importer",
+    "location": "Willix the Importer, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "11,438 XP in the Forever beta3,050 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Monkey Ring",
+     "slot": null,
+     "type": null,
+     "itemId": 6748,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Snake Hoop",
+     "slot": null,
+     "type": null,
+     "itemId": 6750,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tiger Band",
+     "slot": null,
+     "type": null,
+     "itemId": 6749,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1142",
+   "faction": "Alliance",
+   "name": "Mortality Wanes",
+   "level": 30,
+   "minLevel": 25,
+   "text": "Find and return Treshala's Pendant to Treshala Fallowbrook in Darnassus.",
+   "giver": {
+    "name": "Heralath Fallowbrook",
+    "location": "Heralath Fallowbrook, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Treshala's PendantAggem Thorncurse, Charlga Razorflank and Death Speaker Jargba and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5825",
+       "name": "Treshala's Pendant",
+       "qty": null,
+       "source": "Aggem Thorncurse, Charlga Razorflank and Death Speaker Jargba and others"
+      }
+     ]
+    }
+   ],
+   "experience": "3,050 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Mourning Shawl",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6751,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lancer Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 6752,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1101",
+   "faction": "Alliance",
+   "name": "The Crone of the Kraul",
+   "level": 34,
+   "minLevel": 29,
+   "text": "Bring Razorflank's Medallion to Falfindel Waywarder in Thalanaar.",
+   "giver": {
+    "name": "Falfindel Waywarder",
+    "location": "Falfindel Waywarder, Feralas",
+    "mapRef": {
+     "name": "Falfindel Waywarder",
+     "href": "/map/kalimdor#pin=Falfindel%20Waywarder"
+    }
+   },
+   "prereq": "Lonebrow's Journal, from the item Henrig Lonebrow's Journal",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Razorflank's MedallionCharlga Razorflank",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5792",
+       "name": "Razorflank's Medallion",
+       "qty": null,
+       "source": "Charlga Razorflank"
+      }
+     ]
+    }
+   ],
+   "experience": "3,350 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Berylline Pads",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 4197,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stonefist Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 6742,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Marbled Buckler",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 6725,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1102",
+   "faction": "Horde",
+   "name": "A Vengeful Fate",
+   "level": 34,
+   "minLevel": 29,
+   "text": "Bring Razorflank's Heart to Auld Stonespire in Thunder Bluff.",
+   "giver": {
+    "name": "Auld Stonespire",
+    "location": "Auld Stonespire, Thunder Bluff",
+    "mapRef": {
+     "name": "Auld Stonespire",
+     "href": "/map/kalimdor#pin=Auld%20Stonespire"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Razorflank's HeartCharlga Razorflank",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5793",
+       "name": "Razorflank's Heart",
+       "qty": null,
+       "source": "Charlga Razorflank"
+      }
+     ]
+    }
+   ],
+   "experience": "4,050 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Berylline Pads",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 4197,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stonefist Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 6742,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Marbled Buckler",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 6725,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1109",
+   "faction": "Horde",
+   "name": "Going, Going, Guano!",
+   "level": 33,
+   "minLevel": 30,
+   "text": "Bring 1 pile of Kraul Guano to Master Apothecary Faranell in the Undercity.",
+   "giver": {
+    "name": "Master Apothecary Faranell",
+    "location": "Master Apothecary Faranell, Undercity",
+    "mapRef": {
+     "name": "Master Apothecary Faranell",
+     "href": "/map/eastern-kingdoms#pin=Master%20Apothecary%20Faranell"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Kraul GuanoGreater Kraul Bat and Kraul Bat",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5801",
+       "name": "Kraul Guano",
+       "qty": null,
+       "source": "Greater Kraul Bat and Kraul Bat"
+      }
+     ]
+    }
+   ],
+   "experience": "3,300 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  }
+ ]
+}

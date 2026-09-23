@@ -1,0 +1,1305 @@
+{
+ "id": "gnomeregan",
+ "name": "Gnomeregan",
+ "type": "classic",
+ "levelMin": 31,
+ "levelMax": 37,
+ "abbr": "Gnomer",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-gnomeregan.webp",
+ "bossLootSource": "wowtbc",
+ "bosses": [
+  {
+   "name": "Grubbis",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Grubbis Paws",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": 8,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "wowtbc"
+    }
+   ]
+  },
+  {
+   "name": "Viscous Fallout",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Toxic Revenger",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": 17,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Hydrocane",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Acidic Walkers",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    }
+   ]
+  },
+  {
+   "name": "Electrocutioner 6000",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Electrocutioner Leg",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Electrocutioner Lagnut",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Spidertank Oilrag",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    }
+   ]
+  },
+  {
+   "name": "Crowd Pummeler 9-60",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Manual Crowd Pummeler",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": 33,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Gnomebot Operating Boots",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    }
+   ]
+  },
+  {
+   "name": "Dark Iron Ambassador",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Emissary Cuffs",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Glass Shooter",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Royal Diplomatic Scepter",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    }
+   ]
+  },
+  {
+   "name": "Mekgineer Thermaplugg",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Thermaplugg's Central Core",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Thermaplugg's Left Arm",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Charged Gear",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Electromagnetic Gigaflux Reactivator",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    }
+   ]
+  },
+  {
+   "name": "Trash",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Vibroblade",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Supercharger Battle Axe",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Hi-tech Supergun",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Oscillating Power Hammer",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Gyromatic Icemaker",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Gizmotron Megachopper",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Hotshot Pilot's Gloves",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Mechbuilder's Overalls",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Petrolspill Leggings",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    },
+    {
+     "name": "Caverndeep Trudgers",
+     "slot": null,
+     "type": null,
+     "itemId": null,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": true,
+     "source": "wowtbc"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-2904",
+   "faction": "Both",
+   "name": "A Fine Mess",
+   "level": 30,
+   "minLevel": 24,
+   "text": "Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay.",
+   "giver": {
+    "name": "Kernobee",
+    "location": "Kernobee, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "9,188 XP in the Forever beta2,450 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Fire-welded Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 9535,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fairywing Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 9536,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Technician's Bracers",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 270042,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2951",
+   "faction": "Both",
+   "name": "The Sparklematic 5200!",
+   "level": 30,
+   "minLevel": 25,
+   "text": "Insert a Grime-Encrusted Item into the Sparklematic 5200, and be sure to have three silver coins to start the machine.",
+   "giver": {
+    "name": "The Sparklematic 5200",
+    "location": "The Sparklematic 5200, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Grime-Encrusted ObjectCaverndeep Ambusher, Caverndeep Burrower and Caverndeep Invader and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9308",
+       "name": "Grime-Encrusted Object",
+       "qty": null,
+       "source": "Caverndeep Ambusher, Caverndeep Burrower and Caverndeep Invader and others"
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2952",
+   "faction": "Both",
+   "name": "The Sparklematic 5200!",
+   "level": 30,
+   "minLevel": 25,
+   "text": null,
+   "giver": {
+    "name": "The Sparklematic 5200",
+    "location": "The Sparklematic 5200, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "2,450 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Sparklematic-Wrapped Box",
+     "slot": "Junk",
+     "type": null,
+     "itemId": 9363,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2945",
+   "faction": "Both",
+   "name": "Grime-Encrusted Ring",
+   "level": 34,
+   "minLevel": 28,
+   "text": "Figure out a way to remove the grime from the Grime-Encrusted Ring.",
+   "giver": {
+    "name": "From the item Grime-Encrusted Ring",
+    "location": "From the item Grime-Encrusted Ring",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Grime-Encrusted RingDark Iron Agent",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9326",
+       "name": "Grime-Encrusted Ring",
+       "qty": null,
+       "source": "Dark Iron Agent"
+      }
+     ]
+    }
+   ],
+   "experience": "2,700 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2922",
+   "faction": "Alliance",
+   "name": "Save Techbot's Brain!",
+   "level": 26,
+   "minLevel": 20,
+   "text": "Bring Techbot's Memory Core to Tinkmaster Overspark in Ironforge.",
+   "giver": {
+    "name": "Tinkmaster Overspark",
+    "location": "Tinkmaster Overspark, Dun Morogh",
+    "mapRef": {
+     "name": "Tinkmaster Overspark",
+     "href": "/map/eastern-kingdoms#pin=Tinkmaster%20Overspark"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Techbot's Memory CoreTechbot",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9277",
+       "name": "Techbot's Memory Core",
+       "qty": null,
+       "source": "Techbot"
+      }
+     ]
+    }
+   ],
+   "experience": "6,890 XP in the Forever beta2,650 in Classic",
+   "money": "20s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2926",
+   "faction": "Alliance",
+   "name": "Gnogaine",
+   "level": 27,
+   "minLevel": 20,
+   "text": "Use the Empty Leaden Collection Phial on Irradiated Invaders or Irradiated Pillagers to collect radioactive fallout. Once it is full, take it back to Ozzie Togglevolt in Kharanos.",
+   "giver": {
+    "name": "Ozzie Togglevolt",
+    "location": "Ozzie Togglevolt, Dun Morogh",
+    "mapRef": {
+     "name": "Ozzie Togglevolt",
+     "href": "/map/eastern-kingdoms#pin=Ozzie%20Togglevolt"
+    }
+   },
+   "prereq": "The Day After, from Gnoarn, Dun Morogh",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Full Leaden Collection Phial",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9284",
+       "name": "Full Leaden Collection Phial",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "5,720 XP in the Forever beta2,200 in Classic",
+   "money": "22s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2928",
+   "faction": "Alliance",
+   "name": "Gyrodrillmatic Excavationators",
+   "level": 30,
+   "minLevel": 20,
+   "text": "Bring twenty-four Robo-mechanical Guts to Shoni in Stormwind.",
+   "giver": {
+    "name": "Shoni the Shilent",
+    "location": "Shoni the Shilent, Stormwind City",
+    "mapRef": {
+     "name": "Shoni the Shilent",
+     "href": "/map/eastern-kingdoms#pin=Shoni%20the%20Shilent"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Robo-mechanical Guts ×24Arcane Nullifier X-21, Caverndeep Ambusher and Caverndeep Burrower and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9309",
+       "name": "Robo-mechanical Guts",
+       "qty": "×24",
+       "source": "Arcane Nullifier X-21, Caverndeep Ambusher and Caverndeep Burrower and others"
+      }
+     ]
+    }
+   ],
+   "experience": "6,370 XP in the Forever beta2,450 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Shoni's Disarming Tool",
+     "slot": "Off Hand",
+     "type": "Axe",
+     "itemId": 9608,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shilly Mitts",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 9609,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Operator's Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 270045,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2962",
+   "faction": "Alliance",
+   "name": "The Only Cure is More Green Glow",
+   "level": 30,
+   "minLevel": 20,
+   "text": "Travel to Gnomeregan and bring back High Potency Radioactive Fallout. Be warned, the fallout is unstable and will collapse rather quickly.  Ozzie will also require your Heavy Leaden Collection Phial when the task is complete.",
+   "giver": {
+    "name": "Ozzie Togglevolt",
+    "location": "Ozzie Togglevolt, Dun Morogh",
+    "mapRef": {
+     "name": "Ozzie Togglevolt",
+     "href": "/map/eastern-kingdoms#pin=Ozzie%20Togglevolt"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "High Potency Radioactive FalloutHeavy Leaden Collection Phial",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9365",
+       "name": "High Potency Radioactive Fallout",
+       "qty": null,
+       "source": null
+      },
+      {
+       "itemHref": "/item/9364",
+       "name": "Heavy Leaden Collection Phial",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "6,370 XP in the Forever beta2,450 in Classic",
+   "money": "25s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2924",
+   "faction": "Alliance",
+   "name": "Essential Artificials",
+   "level": 30,
+   "minLevel": 24,
+   "text": "Bring 12 Essential Artificials to Klockmort Spannerspan in Ironforge.",
+   "giver": {
+    "name": "Klockmort Spannerspan",
+    "location": "Klockmort Spannerspan, Dun Morogh",
+    "mapRef": {
+     "name": "Klockmort Spannerspan",
+     "href": "/map/eastern-kingdoms#pin=Klockmort%20Spannerspan"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Essential Artificial ×12Artificial Extrapolator",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9278",
+       "name": "Essential Artificial",
+       "qty": "×12",
+       "source": "Artificial Extrapolator"
+      }
+     ]
+    }
+   ],
+   "experience": "3,050 XP in Classic",
+   "money": "55s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2930",
+   "faction": "Alliance",
+   "name": "Data Rescue",
+   "level": 30,
+   "minLevel": 25,
+   "text": "Bring a Prismatic Punch Card to Master Mechanic Castpipe in Ironforge.",
+   "giver": {
+    "name": "Master Mechanic Castpipe",
+    "location": "Master Mechanic Castpipe, Dun Morogh",
+    "mapRef": {
+     "name": "Master Mechanic Castpipe",
+     "href": "/map/eastern-kingdoms#pin=Master%20Mechanic%20Castpipe"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Prismatic Punch Card",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9316",
+       "name": "Prismatic Punch Card",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "3,650 XP in Classic",
+   "money": "25s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Repairman's Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 9605,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mechanic's Pipehammer",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 9604,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2929",
+   "faction": "Alliance",
+   "name": "The Grand Betrayal",
+   "level": 35,
+   "minLevel": 25,
+   "text": "Venture to Gnomeregan and kill Mekgineer Thermaplugg. Return to High Tinker Mekkatorque when the task is complete.",
+   "giver": {
+    "name": "High Tinker Mekkatorque",
+    "location": "High Tinker Mekkatorque, Dun Morogh",
+    "mapRef": {
+     "name": "High Tinker Mekkatorque",
+     "href": "/map/eastern-kingdoms#pin=High%20Tinker%20Mekkatorque"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Mekgineer Thermaplugg",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "2,750 XP in Classic",
+   "money": "35s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Civinad Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 9623,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Triprunner Dungarees",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 9624,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dual Reinforced Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 9625,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2947",
+   "faction": "Alliance",
+   "name": "Return of the Ring",
+   "level": 34,
+   "minLevel": 28,
+   "text": "You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band.",
+   "giver": {
+    "name": "The Sparklematic 5200",
+    "location": "The Sparklematic 5200, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Brilliant Gold Ring",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9362",
+       "name": "Brilliant Gold Ring",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "2,700 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2843",
+   "faction": "Horde",
+   "name": "Gnomer-gooooone!",
+   "level": 35,
+   "minLevel": 20,
+   "text": "Wait for Scooty to calibrate the Goblin Transponder.",
+   "giver": {
+    "name": "Scooty",
+    "location": "Scooty, Stranglethorn Vale",
+    "mapRef": {
+     "name": "Scooty",
+     "href": "/map/eastern-kingdoms#pin=Scooty"
+    }
+   },
+   "prereq": "Chief Engineer Scooty, from Sovik, Orgrimmar",
+   "objectives": [],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Goblin Transponder",
+     "slot": "Quest",
+     "type": null,
+     "itemId": 9173,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2841",
+   "faction": "Horde",
+   "name": "Rig Wars",
+   "level": 35,
+   "minLevel": 25,
+   "text": "Retrieve the Rig Blueprints and Thermaplugg's Safe Combination from Gnomeregan and bring them to Nogg in Orgrimmar.",
+   "giver": {
+    "name": "Nogg",
+    "location": "Nogg, Orgrimmar",
+    "mapRef": {
+     "name": "Nogg",
+     "href": "/map/kalimdor#pin=Nogg"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Rig BlueprintsThermaplugg's SafeThermaplugg's Safe CombinationMekgineer Thermaplugg",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9153",
+       "name": "Rig Blueprints",
+       "qty": null,
+       "source": "Thermaplugg's Safe"
+      },
+      {
+       "itemHref": "/item/9299",
+       "name": "Thermaplugg's Safe Combination",
+       "qty": null,
+       "source": "Mekgineer Thermaplugg"
+      }
+     ]
+    }
+   ],
+   "experience": "2,750 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Civinad Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 9623,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Triprunner Dungarees",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 9624,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dual Reinforced Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 9625,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2949",
+   "faction": "Horde",
+   "name": "Return of the Ring",
+   "level": 34,
+   "minLevel": 28,
+   "text": "You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band.",
+   "giver": {
+    "name": "The Sparklematic 5200",
+    "location": "The Sparklematic 5200, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Brilliant Gold Ring",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9362",
+       "name": "Brilliant Gold Ring",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "2,700 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  }
+ ]
+}

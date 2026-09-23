@@ -1,0 +1,676 @@
+{
+ "id": "ragefire-chasm",
+ "name": "Ragefire Chasm",
+ "type": "classic",
+ "levelMin": 13,
+ "levelMax": 19,
+ "abbr": "RFC",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-ragefirechasm.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Oggleflint",
+   "kind": "boss",
+   "level": 16,
+   "items": [
+    {
+     "name": "Barbaric Crossbow",
+     "slot": "Ranged",
+     "type": "Crossbow",
+     "itemId": 272999,
+     "icon": "inv_weapon_crossbow_02",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tCrossbow",
+      "15 - 23 Damage\tSpeed 2.00",
+      "(9.5 damage per second)",
+      "Requires Level 13",
+      "Chance on hit: Wounds the target for 14 Physical damage.",
+      "Sell Price: 7s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Trogg Scepter",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 272996,
+     "icon": "inv_misc_bone_10",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "13 - 26 Damage\tSpeed 2.40",
+      "(8.1 damage per second)",
+      "+4 Spirit",
+      "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bone Knuckles",
+     "slot": "Main Hand",
+     "type": "Fist Weapon",
+     "itemId": 272998,
+     "icon": "ability_whirlwind",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tFist Weapon",
+      "17 - 32 Damage\tSpeed 2.00",
+      "(12.3 damage per second)",
+      "Requires Level 13",
+      "Equip: +6 Attack Power Vs Beasts",
+      "Equip: +6 Attack Power",
+      "Sell Price: 11s 26c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Taragaman the Hungerer",
+   "kind": "boss",
+   "level": 16,
+   "items": [
+    {
+     "name": "Subterranean Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 14149,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "17 Armor",
+      "+3 Strength",
+      "+5 Health Regeneration",
+      "Requires Level 13"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "16 Armor",
+      "+2 Agility",
+      "+2 Strength",
+      "Requires Level 13",
+      "Sell Price: 3s 7c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Crystalline Cuffs",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 14148,
+     "icon": "inv_bracer_13",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "15 Armor",
+      "+2 Intellect",
+      "+3 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "14 Armor",
+      "+2 Spirit",
+      "+1 Intellect",
+      "Requires Level 13",
+      "Sell Price: 2s 8c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cursed Felblade",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 14145,
+     "icon": "inv_weapon_shortblade_12",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "19 - 37 Damage\tSpeed 2.30",
+      "(12.2 damage per second)",
+      "Chance on hit: Reduces target enemy's attack power by 24.",
+      "Requires Level 13"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "16 - 31 Damage\tSpeed 2.60",
+      "(9.0 damage per second)",
+      "Requires Level 13",
+      "Chance on hit: Reduces target enemy's attack power by 15 for 30 sec.",
+      "Sell Price: 10s 32c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Jergosh the Invoker",
+   "kind": "boss",
+   "level": 16,
+   "items": [
+    {
+     "name": "Robe of Evocation",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 14150,
+     "icon": "inv_chest_cloth_24",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "+4 Stamina",
+      "+4 Intellect",
+      "+5 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "32 Armor",
+      "+4 Intellect",
+      "+3 Stamina",
+      "Requires Level 13",
+      "Sell Price: 4s 20c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cavedweller Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 14147,
+     "icon": "inv_bracer_07",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "78 Armor",
+      "+2 Strength",
+      "+3 Stamina",
+      "Requires Level 13"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "71 Armor",
+      "+1 Strength",
+      "+2 Stamina",
+      "Requires Level 13",
+      "Sell Price: 3s 11c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Chanting Blade",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 14151,
+     "icon": "inv_weapon_shortblade_25",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "12 - 24 Damage\tSpeed 1.50",
+      "(12.0 damage per second)",
+      "+2 Agility",
+      "+2 Stamina",
+      "Requires Level 13"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "9 - 18 Damage\tSpeed 1.50",
+      "(9.0 damage per second)",
+      "+1 Agility",
+      "+1 Stamina",
+      "Requires Level 13",
+      "Sell Price: 10s 55c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Bazzalan",
+   "kind": "boss",
+   "level": 16,
+   "items": [
+    {
+     "name": "Searing Dagger",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemId": 273003,
+     "icon": "inv_weapon_shortblade_03",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "9 - 17 Damage\tSpeed 1.60",
+      "(8.1 damage per second)",
+      "+18 Spell Damage",
+      "+18 Healing",
+      "Equip: Harmful spell casts sear the target for 3 Fire damage.",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Chasm Walkers",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 273007,
+     "icon": "inv_boots_06",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "56 Armor",
+      "+5 Spirit",
+      "+7 Attack Power",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Satyrskin Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 273005,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "17 Armor",
+      "+3 Stamina",
+      "+3 Fire Resistance",
+      "Requires Level 13",
+      "Sell Price: 3s 13c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-5723",
+   "faction": "Horde",
+   "name": "Testing an Enemy's Strength",
+   "level": 15,
+   "minLevel": 9,
+   "text": "Search Orgrimmar for Ragefire Chasm, then kill 8 Ragefire Troggs and 8 Ragefire Shaman before returning to Rahauro in Thunder Bluff.",
+   "giver": {
+    "name": "Rahauro",
+    "location": "Rahauro, Thunder Bluff",
+    "mapRef": {
+     "name": "Rahauro",
+     "href": "/map/kalimdor#pin=Rahauro"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Ragefire Trogg ×8, Ragefire Shaman ×8",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "3,202 XP in the Forever beta850 in Classic",
+   "money": "7s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-5728",
+   "faction": "Horde",
+   "name": "Hidden Enemies",
+   "level": 16,
+   "minLevel": 9,
+   "text": "Kill Bazzalan and Jergosh the Invoker before returning to Thrall in Orgrimmar.",
+   "giver": {
+    "name": "Thrall",
+    "location": "Thrall, Orgrimmar",
+    "mapRef": {
+     "name": "Thrall",
+     "href": "/map/kalimdor#pin=Thrall"
+    }
+   },
+   "prereq": "Hidden Enemies, from Thrall, Orgrimmar",
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Bazzalan, Jergosh the Invoker",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "3,507 XP in the Forever beta1,150 in Classic",
+   "money": "8s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-5724",
+   "faction": "Horde",
+   "name": "Returning the Lost Satchel",
+   "level": 16,
+   "minLevel": 9,
+   "text": "Take the Grimtotem Satchel to Rahauro in Thunder Bluff.",
+   "giver": {
+    "name": "Maur Grimtotem",
+    "location": "Maur Grimtotem, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "Searching for the Lost Satchel, from Rahauro, Thunder Bluff",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Grimtotem Satchel",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/14381",
+       "name": "Grimtotem Satchel",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "4,422 XP in the Forever beta1,450 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Featherbead Bracers",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 15452,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savannah Bracers",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 15453,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Garrison Cuffs",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 270003,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-5761",
+   "faction": "Horde",
+   "name": "Slaying the Beast",
+   "level": 16,
+   "minLevel": 9,
+   "text": "Enter Ragefire Chasm and slay Taragaman the Hungerer, then bring his heart back to Neeru Fireblade in Orgrimmar.",
+   "giver": {
+    "name": "Neeru Fireblade",
+    "location": "Neeru Fireblade, Orgrimmar",
+    "mapRef": {
+     "name": "Neeru Fireblade",
+     "href": "/map/kalimdor#pin=Neeru%20Fireblade"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Taragaman the Hungerer's HeartTaragaman the Hungerer",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/14540",
+       "name": "Taragaman the Hungerer's Heart",
+       "qty": null,
+       "source": "Taragaman the Hungerer"
+      }
+     ]
+    }
+   ],
+   "experience": "3,507 XP in the Forever beta1,150 in Classic",
+   "money": "8s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-5725",
+   "faction": "Horde",
+   "name": "The Power to Destroy...",
+   "level": 16,
+   "minLevel": 9,
+   "text": "Bring the books Spells of Shadow and Incantations from the Nether to Varimathras in Undercity.",
+   "giver": {
+    "name": "Varimathras",
+    "location": "Varimathras, Undercity",
+    "mapRef": {
+     "name": "Varimathras",
+     "href": "/map/eastern-kingdoms#pin=Varimathras"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Spells of ShadowSearing Blade Cultist and Searing Blade WarlockIncantations from the NetherSearing Blade Cultist and Searing Blade Warlock",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/14395",
+       "name": "Spells of Shadow",
+       "qty": null,
+       "source": "Searing Blade Cultist and Searing Blade Warlock"
+      },
+      {
+       "itemHref": "/item/14396",
+       "name": "Incantations from the Nether",
+       "qty": null,
+       "source": "Searing Blade Cultist and Searing Blade Warlock"
+      }
+     ]
+    }
+   ],
+   "experience": "4,422 XP in the Forever beta1,450 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Ghastly Trousers",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 15449,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dredgemire Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 15450,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gargoyle Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 15451,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

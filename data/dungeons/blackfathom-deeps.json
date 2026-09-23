@@ -1,0 +1,1766 @@
+{
+ "id": "blackfathom-deeps",
+ "name": "Blackfathom Deeps",
+ "type": "classic",
+ "levelMin": 25,
+ "levelMax": 31,
+ "abbr": "BFD",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-blackfathomdeeps.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Ghamoo-ra",
+   "kind": "boss",
+   "level": 25,
+   "items": [
+    {
+     "name": "Tortoise Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 6907,
+     "icon": "inv_shirt_06",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "248 Armor",
+      "Equip: Spell Damage received is reduced by -5.",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "201 Armor",
+      "Requires Level 20",
+      "Sell Price: 18s 72c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ghamoo-ra's Bind",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 6908,
+     "icon": "inv_belt_24",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "25 Armor",
+      "+7 Stamina",
+      "+8 Spell Power",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "22 Armor",
+      "+4 Stamina",
+      "+4 Intellect",
+      "Requires Level 20",
+      "Sell Price: 5s 22c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spiked Shell Band",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 273839,
+     "icon": "inv_jewelry_ring_02",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+5 Stamina",
+      "Requires Level 22",
+      "Equip: When struck in combat inflicts 2 Nature damage to the attacker.",
+      "Sell Price: 16s 36c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lady Sarevess",
+   "kind": "boss",
+   "level": 25,
+   "items": [
+    {
+     "name": "Naga Battle Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 888,
+     "icon": "inv_gauntlets_13",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "61 Armor",
+      "+4 Strength",
+      "+4 Stamina",
+      "+5 Spell Damage",
+      "+15 Healing",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "61 Armor",
+      "+7 Spirit",
+      "+4 Stamina",
+      "+4 Strength",
+      "Requires Level 22",
+      "Sell Price: 9s 80c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Naga Heartpiercer",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 3078,
+     "icon": "inv_weapon_bow_04",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "22 - 42 Damage\tSpeed 2.40",
+      "(13.3 damage per second)",
+      "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "13 - 25 Damage\tSpeed 1.80",
+      "(10.6 damage per second)",
+      "Requires Level 21",
+      "Sell Price: 23s 14c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Darkwater Talwar",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 11121,
+     "icon": "inv_sword_36",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "26 - 49 Damage\tSpeed 2.20",
+      "(17.1 damage per second)",
+      "+6 Attack Power",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 28 Shadow damage.",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "20 - 39 Damage\tSpeed 2.20",
+      "(13.4 damage per second)",
+      "Requires Level 21",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 25 Shadow damage.",
+      "Sell Price: 29s 41c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Brawler's Leather Hood",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemId": 252798,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (100)",
+      "\"Teaches you how to craft Brawler's Leather Hood.\"",
+      "Sell Price: 5s"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Gelihast",
+   "kind": "boss",
+   "level": 26,
+   "items": [
+    {
+     "name": "Algae Fists",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 6906,
+     "icon": "inv_gauntlets_10",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "132 Armor",
+      "+8 Strength",
+      "+4 Stamina",
+      "+4 Nature Resistance",
+      "Requires Level 23"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "132 Armor",
+      "+10 Strength",
+      "+4 Stamina",
+      "Requires Level 23",
+      "Sell Price: 12s 75c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Reef Axe",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 6905,
+     "icon": "inv_weapon_halberd_06",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "59 - 89 Damage\tSpeed 3.30",
+      "(22.4 damage per second)",
+      "+8 Strength",
+      "+8 Spell Damage",
+      "+24 Healing",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "48 - 73 Damage\tSpeed 3.30",
+      "(18.3 damage per second)",
+      "+5 Stamina",
+      "+7 Spirit",
+      "Requires Level 22",
+      "Sell Price: 40s 10c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Murloc Skin Bag",
+     "slot": "Bag",
+     "type": null,
+     "itemId": 1470,
+     "icon": "inv_misc_bag_05",
+     "quality": 1,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Unique",
+      "Bag",
+      "10 Slot Bag",
+      "Sell Price: 8s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lorgus Jett",
+   "kind": "boss",
+   "level": 26,
+   "items": [
+    {
+     "name": "Fallenroot Longbow",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 273843,
+     "icon": "inv_weapon_bow_03",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "21 - 40 Damage\tSpeed 2.20",
+      "(13.9 damage per second)",
+      "+2 Agility",
+      "+4 Stamina",
+      "Requires Level 23",
+      "Sell Price: 34s 24c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Baron Aquanis",
+   "kind": "boss",
+   "level": 28,
+   "items": [
+    {
+     "name": "Strange Water Globe",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 16782,
+     "icon": "spell_shadow_teleport",
+     "quality": 2,
+     "itemLevel": 21,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tQuest",
+      "Requires Level 21"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Twilight Lord Kelris",
+   "kind": "boss",
+   "level": 27,
+   "items": [
+    {
+     "name": "Rod of the Sleepwalker",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 1155,
+     "icon": "inv_staff_06",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "40 - 60 Damage\tSpeed 2.80",
+      "(17.9 damage per second)",
+      "+11 Spirit",
+      "+32 Spell Damage",
+      "+32 Healing",
+      "Equip: Reduces the hit chance of Sleep effects against you by 5%.",
+      "Requires Level 24"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "53 - 80 Damage\tSpeed 2.80",
+      "(23.8 damage per second)",
+      "+11 Intellect",
+      "+10 Spirit",
+      "Requires Level 24",
+      "Sell Price: 59s 54c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gaze Dreamer Pants",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 6903,
+     "icon": "inv_pants_02",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "40 Armor",
+      "+9 Spirit",
+      "+12 Spell Power",
+      "Requires Level 23"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "36 Armor",
+      "+7 Intellect",
+      "+6 Spirit",
+      "Requires Level 23",
+      "Sell Price: 15s 49c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Twilight Lord Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 273846,
+     "icon": "inv_belt_27",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "123 Armor",
+      "+8 Strength",
+      "+5 Shadow Resistance",
+      "Requires Level 25",
+      "Equip: +6 Block Value",
+      "Sell Price: 16s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Old Serra'kis",
+   "kind": "boss",
+   "level": 26,
+   "items": [
+    {
+     "name": "Glowing Thresher Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6901,
+     "icon": "inv_misc_monsterscales_03",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "23 Armor",
+      "+8 Spirit",
+      "+3 Spell Damage",
+      "+7 Healing",
+      "Requires Level 24"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "23 Armor",
+      "+8 Spirit",
+      "+3 Strength",
+      "Requires Level 24",
+      "Sell Price: 15s 23c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bite of Serra'kis",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 6904,
+     "icon": "inv_misc_monsterfang_01",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "16 - 30 Damage\tSpeed 1.30",
+      "(17.7 damage per second)",
+      "+2 Nature Resistance",
+      "Requires Level 23",
+      "Chance on hit: Poisons target for 14 Nature damage every 3 sec for 9 sec.",
+      "Sell Price: 44s 55c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "16 - 30 Damage\tSpeed 1.30",
+      "(17.7 damage per second)",
+      "Requires Level 23",
+      "Chance on hit: Poisons target for 4 Nature damage every 2 sec for 20 sec.",
+      "Sell Price: 46s 65c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bands of Serra'kis",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 6902,
+     "icon": "inv_bracer_08",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "43 Armor",
+      "+6 Strength",
+      "+3 Stamina",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "39 Armor",
+      "+4 Strength",
+      "+2 Stamina",
+      "Requires Level 22",
+      "Sell Price: 8s 77c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Aku'mai",
+   "kind": "boss",
+   "level": 28,
+   "items": [
+    {
+     "name": "Moss Cinch",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 6911,
+     "icon": "inv_belt_25",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "58 Armor",
+      "+5 Stamina",
+      "Requires Level 25",
+      "Equip: +12 Spell Damage",
+      "Sell Price: 13s 58c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "59 Armor",
+      "+11 Intellect",
+      "+5 Stamina",
+      "Requires Level 26",
+      "Sell Price: 14s 42c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Leech Pants",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 6910,
+     "icon": "inv_pants_14",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "41 Armor",
+      "+5 Stamina",
+      "Requires Level 24",
+      "Equip: +5 Spell Power",
+      "Equip: +5 Mana Regeneration",
+      "Equip: +5 Health Regeneration",
+      "Sell Price: 19s 60c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "42 Armor",
+      "+5 Intellect",
+      "+15 Spirit",
+      "+1 Stamina",
+      "Requires Level 26",
+      "Sell Price: 22s 98c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Strike of the Hydra",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 6909,
+     "icon": "inv_sword_42",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "67 - 102 Damage\tSpeed 3.30",
+      "(25.6 damage per second)",
+      "Requires Level 26",
+      "Chance on hit: Deal 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and deal 7 Nature damage every 3 sec for 12 sec.",
+      "Sell Price: 74s 12c"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "67 - 102 Damage\tSpeed 3.30",
+      "(25.6 damage per second)",
+      "Requires Level 26",
+      "Chance on hit: Corrosive acid that deals 7 Nature damage every 3 sec and lowers target's armor by 50 for 30 sec.",
+      "Sell Price: 71s 55c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Tree Bark Jacket",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 1486,
+     "icon": "inv_shirt_02",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "104 Armor",
+      "Requires Level 21",
+      "Equip: +13 Spell Power",
+      "Sell Price: 14s 72c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "42 Armor",
+      "+6 Stamina",
+      "+10 Intellect",
+      "Requires Level 19",
+      "Sell Price: 12s 2c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Martyr's Chain",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 3416,
+     "icon": "inv_chest_chain",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tMail",
+      "211 Armor",
+      "+9 Stamina",
+      "+9 Strength",
+      "Requires Level 23",
+      "Equip: Dying inflicts 420 Holy damage to all enemies within 15 yards.",
+      "Sell Price: 26s 73c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tMail",
+      "204 Armor",
+      "+5 Spirit",
+      "+8 Stamina",
+      "+8 Strength",
+      "Requires Level 21",
+      "Sell Price: 22s 13c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ring of Precision",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 1491,
+     "icon": "inv_jewelry_ring_14",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique-Equipped",
+      "Finger",
+      "+6 Agility",
+      "+3 Spirit",
+      "Requires Level 22",
+      "Sell Price: 16s 20c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Unique",
+      "Finger",
+      "+6 Agility",
+      "+3 Spirit",
+      "Requires Level 20",
+      "Sell Price: 22s 7c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Crested Scepter",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 3414,
+     "icon": "inv_mace_08",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when equipped",
+      "Main Hand\tMace",
+      "22 - 41 Damage\tSpeed 2.60",
+      "(12.1 damage per second)",
+      "+6 Stamina",
+      "+2 Intellect",
+      "Requires Level 24",
+      "Equip: +32 Spell Power",
+      "Sell Price: 49s"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Main Hand\tMace",
+      "31 - 58 Damage\tSpeed 2.60",
+      "(17.1 damage per second)",
+      "+5 Stamina",
+      "+2 Intellect",
+      "Requires Level 22",
+      "Sell Price: 40s 28c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Axe of the Enforcer",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemId": 1454,
+     "icon": "inv_axe_21",
+     "quality": 3,
+     "itemLevel": 29,
+     "requiredLevel": 24,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tAxe",
+      "33 - 62 Damage\tSpeed 2.60",
+      "(18.3 damage per second)",
+      "+5 Strength",
+      "+4 Stamina",
+      "Requires Level 24",
+      "Sell Price: 49s"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "One-Hand\tAxe",
+      "31 - 58 Damage\tSpeed 2.60",
+      "(17.1 damage per second)",
+      "+4 Strength",
+      "+3 Stamina",
+      "Requires Level 22",
+      "Sell Price: 39s 37c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grimclaw",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemId": 1481,
+     "icon": "inv_axe_13",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tAxe",
+      "24 - 45 Damage\tSpeed 2.00",
+      "(17.3 damage per second)",
+      "Requires Level 22",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 42 Shadow damage.",
+      "Sell Price: 40s 50c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "One-Hand\tAxe",
+      "22 - 42 Damage\tSpeed 2.00",
+      "(16.0 damage per second)",
+      "Requires Level 20",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 30 Shadow damage.",
+      "Sell Price: 33s 37c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Evocator's Blade",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemId": 2567,
+     "icon": "inv_weapon_shortblade_15",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when equipped",
+      "Main Hand\tDagger",
+      "12 - 23 Damage\tSpeed 1.60",
+      "(10.9 damage per second)",
+      "+2 Intellect",
+      "+5 Spirit",
+      "+28 Spell Damage",
+      "+28 Healing",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tDagger",
+      "17 - 32 Damage\tSpeed 1.60",
+      "(15.3 damage per second)",
+      "+4 Intellect",
+      "+2 Spirit",
+      "Requires Level 18",
+      "Sell Price: 25s 9c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Doomspike",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 3413,
+     "icon": "inv_sword_29",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tDagger",
+      "18 - 34 Damage\tSpeed 1.50",
+      "(17.3 damage per second)",
+      "+3 Strength",
+      "+3 Stamina",
+      "Requires Level 22",
+      "Sell Price: 40s 50c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "One-Hand\tDagger",
+      "17 - 32 Damage\tSpeed 1.50",
+      "(16.3 damage per second)",
+      "+3 Strength",
+      "+3 Stamina",
+      "Requires Level 20",
+      "Sell Price: 32s 29c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Onyx Claymore",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 3417,
+     "icon": "inv_sword_13",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "51 - 78 Damage\tSpeed 2.80",
+      "(23.0 damage per second)",
+      "+6 Spirit",
+      "+5 Stamina",
+      "+10 Strength",
+      "Requires Level 23",
+      "Sell Price: 55s 68c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "48 - 73 Damage\tSpeed 2.80",
+      "(21.6 damage per second)",
+      "+6 Spirit",
+      "+5 Stamina",
+      "+9 Strength",
+      "Requires Level 21",
+      "Sell Price: 46s 29c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Staff of the Friar",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 3415,
+     "icon": "inv_staff_32",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "33 - 50 Damage\tSpeed 2.60",
+      "(16.0 damage per second)",
+      "+12 Spirit",
+      "+4 Stamina",
+      "+3 Intellect",
+      "Requires Level 21",
+      "Equip: +52 Healing",
+      "Equip: +17 Spell Damage",
+      "Sell Price: 46s 2c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "42 - 64 Damage\tSpeed 2.60",
+      "(20.4 damage per second)",
+      "+11 Spirit",
+      "+4 Stamina",
+      "+3 Intellect",
+      "Requires Level 19",
+      "Sell Price: 35s 98c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Staff of the Blessed Seer",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 2271,
+     "icon": "inv_staff_31",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "37 - 56 Damage\tSpeed 3.00",
+      "(15.5 damage per second)",
+      "+10 Spirit",
+      "+9 Stamina",
+      "Requires Level 20",
+      "Equip: +27 Spell Power",
+      "Sell Price: 40s 72c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "47 - 71 Damage\tSpeed 3.00",
+      "(19.7 damage per second)",
+      "+3 Spirit",
+      "+2 Stamina",
+      "Requires Level 18",
+      "Equip: Increases healing done by spells and effects by up to 24.",
+      "Sell Price: 32s 55c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Scholarly Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 2034,
+     "icon": "inv_chest_cloth_04",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "+8 Spirit",
+      "+2 Spell Power",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "39 Armor",
+      "+2 Intellect",
+      "+8 Spirit",
+      "Requires Level 20",
+      "Sell Price: 10s 35c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-971",
+   "faction": "Alliance",
+   "name": "Knowledge in the Deeps",
+   "level": 23,
+   "minLevel": 10,
+   "text": "Bring the Lorgalis Manuscript to Gerrig Bonegrip in the Forlorn Cavern in Ironforge.",
+   "giver": {
+    "name": "Gerrig Bonegrip",
+    "location": "Gerrig Bonegrip, Dun Morogh",
+    "mapRef": {
+     "name": "Gerrig Bonegrip",
+     "href": "/map/eastern-kingdoms#pin=Gerrig%20Bonegrip"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Lorgalis ManuscriptDocument Chest and Pitted Iron Chest",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5359",
+       "name": "Lorgalis Manuscript",
+       "qty": null,
+       "source": "Document Chest and Pitted Iron Chest"
+      }
+     ]
+    }
+   ],
+   "experience": "10,313 XP in the Forever beta2,750 in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Sustaining Ring",
+     "slot": null,
+     "type": null,
+     "itemId": 6743,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1275",
+   "faction": "Alliance",
+   "name": "Researching the Corruption",
+   "level": 24,
+   "minLevel": 18,
+   "text": "Gershala Nightwhisper in Auberdine wants 8 Corrupt Brain stems.",
+   "giver": {
+    "name": "Gershala Nightwhisper",
+    "location": "Gershala Nightwhisper, Darkshore",
+    "mapRef": {
+     "name": "Gershala Nightwhisper",
+     "href": "/map/kalimdor#pin=Gershala%20Nightwhisper"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Corrupted Brain Stem ×8Blackfathom Myrmidon, Blackfathom Oracle and Blackfathom Sea Witch and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5952",
+       "name": "Corrupted Brain Stem",
+       "qty": "×8",
+       "source": "Blackfathom Myrmidon, Blackfathom Oracle and Blackfathom Sea Witch and others"
+      }
+     ]
+    }
+   ],
+   "experience": "2,400 XP",
+   "money": "35s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Beetle Clasps",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 7003,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Prelacy Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 7004,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Staghide Armguards",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 270021,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1200",
+   "faction": "Alliance",
+   "name": "Blackfathom Villainy",
+   "level": 27,
+   "minLevel": 18,
+   "text": "Bring the head of Twilight Lord Kelris to Dawnwatcher Selgorm in Darnassus.",
+   "giver": {
+    "name": "Argent Guard Thaelrid",
+    "location": "Argent Guard Thaelrid, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "In Search of Thaelrid, from Dawnwatcher Shaedlass, Darnassus",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of KelrisTwilight Lord Kelris",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5881",
+       "name": "Head of Kelris",
+       "qty": null,
+       "source": "Twilight Lord Kelris"
+      }
+     ]
+    }
+   ],
+   "experience": "12,375 XP in the Forever beta1,700 in Classic",
+   "money": "65s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Gravestone Scepter",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 7001,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arctic Buckler",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 7002,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dark Ritual Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 270031,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cultist's Armguards",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 270032,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1199",
+   "faction": "Alliance",
+   "name": "Twilight Falls",
+   "level": 25,
+   "minLevel": 20,
+   "text": "Bring 10 Twilight Pendants to Argent Guard Manados in Darnassus.",
+   "giver": {
+    "name": "Argent Guard Manados",
+    "location": "Argent Guard Manados, Darnassus",
+    "mapRef": {
+     "name": "Argent Guard Manados",
+     "href": "/map/kalimdor#pin=Argent%20Guard%20Manados"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Twilight Pendant ×10Twilight Acolyte, Twilight Aquamancer and Twilight Elementalist and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5879",
+       "name": "Twilight Pendant",
+       "qty": "×10",
+       "source": "Twilight Acolyte, Twilight Aquamancer and Twilight Elementalist and others"
+      }
+     ]
+    }
+   ],
+   "experience": "9,563 XP in the Forever beta2,550 in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Nimbus Boots",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 6998,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heartwood Girdle",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 7000,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Silvered Gauntlets",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 270025,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6564",
+   "faction": "Horde",
+   "name": "Allegiance to the Old Gods",
+   "level": 22,
+   "minLevel": 17,
+   "text": "Bring the Damp Note to Je'neu Sancrea in Ashenvale.",
+   "giver": {
+    "name": "From the item Damp Note",
+    "location": "From the item Damp Note",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Damp NoteBlackfathom Tide Priestess",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/16790",
+       "name": "Damp Note",
+       "qty": null,
+       "source": "Blackfathom Tide Priestess"
+      }
+     ]
+    }
+   ],
+   "experience": "1,300 XP in the Forever beta1,750 in Classic",
+   "money": "11s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6563",
+   "faction": "Horde",
+   "name": "The Essence of Aku'Mai",
+   "level": 22,
+   "minLevel": 17,
+   "text": "Bring 20 Sapphires of Aku'Mai to Je'neu Sancrea in Ashenvale.",
+   "giver": {
+    "name": "Je'neu Sancrea",
+    "location": "Je'neu Sancrea, Ashenvale",
+    "mapRef": {
+     "name": "Je'neu Sancrea",
+     "href": "/map/kalimdor#pin=Je&#x27;neu%20Sancrea"
+    }
+   },
+   "prereq": "Trouble in the Deeps, from Tsunaman, Stonetalon Mountains",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Sapphire of Aku'Mai ×20Sapphire of Aku'Mai",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/16784",
+       "name": "Sapphire of Aku'Mai",
+       "qty": "×20",
+       "source": "Sapphire of Aku'Mai"
+      }
+     ]
+    }
+   ],
+   "experience": "1,750 XP",
+   "money": "14s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6565",
+   "faction": "Horde",
+   "name": "Allegiance to the Old Gods",
+   "level": 26,
+   "minLevel": 17,
+   "text": "Kill Lorgus Jett in Blackfathom Deeps and then return to Je'neu Sancrea in Ashenvale.",
+   "giver": {
+    "name": "Je'neu Sancrea",
+    "location": "Je'neu Sancrea, Ashenvale",
+    "mapRef": {
+     "name": "Je'neu Sancrea",
+     "href": "/map/kalimdor#pin=Je&#x27;neu%20Sancrea"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Lorgus Jett",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "9,938 XP in the Forever beta2,650 in Classic",
+   "money": "40s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Band of the Fist",
+     "slot": null,
+     "type": null,
+     "itemId": 17694,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Chestnut Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 17695,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6561",
+   "faction": "Horde",
+   "name": "Blackfathom Villainy",
+   "level": 27,
+   "minLevel": 18,
+   "text": "Bring the head of Twilight Lord Kelris to Bashana Runetotem in Thunder Bluff.",
+   "giver": {
+    "name": "Argent Guard Thaelrid",
+    "location": "Argent Guard Thaelrid, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of KelrisTwilight Lord Kelris",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5881",
+       "name": "Head of Kelris",
+       "qty": null,
+       "source": "Twilight Lord Kelris"
+      }
+     ]
+    }
+   ],
+   "experience": "12,375 XP in the Forever beta1,700 in Classic",
+   "money": "65s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Gravestone Scepter",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 7001,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arctic Buckler",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 7002,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dark Ritual Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 270031,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cultist's Armguards",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 270032,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-6921",
+   "faction": "Horde",
+   "name": "Amongst the Ruins",
+   "level": 27,
+   "minLevel": 21,
+   "text": "Bring the Fathom Core to Je'neu Sancrea at Zoram'gar Outpost, Ashenvale.",
+   "giver": {
+    "name": "Je'neu Sancrea",
+    "location": "Je'neu Sancrea, Ashenvale",
+    "mapRef": {
+     "name": "Je'neu Sancrea",
+     "href": "/map/kalimdor#pin=Je&#x27;neu%20Sancrea"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Fathom CoreFathom Stone",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/16762",
+       "name": "Fathom Core",
+       "qty": null,
+       "source": "Fathom Stone"
+      }
+     ]
+    }
+   ],
+   "experience": "10,313 XP in the Forever beta2,750 in Classic",
+   "money": "45s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  }
+ ]
+}

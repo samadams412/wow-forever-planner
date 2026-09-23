@@ -1,0 +1,2593 @@
+{
+ "id": "uldaman",
+ "name": "Uldaman",
+ "type": "classic",
+ "levelMin": 44,
+ "levelMax": 50,
+ "abbr": "Uldaman",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-uldaman.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Eric \"The Swift\"",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Horned Viking Helmet",
+     "slot": "Head",
+     "type": "Plate",
+     "itemId": 9394,
+     "icon": "inv_helmet_25",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "303 Armor",
+      "+10 Agility",
+      "+15 Stamina",
+      "Requires Level 40",
+      "Use: Charge an enemy, knocking it silly for 30 seconds. Also knocks you down, stunning you for a short period of time. Any damage caused will revive the target. (30 Min Cooldown)",
+      "Sell Price: 13s 72c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Worn Running Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 9398,
+     "icon": "inv_boots_02",
+     "quality": 2,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "76 Armor",
+      "+11 Agility",
+      "+3 Stamina",
+      "Requires Level 35",
+      "Sell Price: 12s 44c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Swiftness Potion",
+     "slot": null,
+     "type": "Potions",
+     "itemId": 2459,
+     "icon": "inv_potion_95",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 5,
+     "tooltip": [
+      "\tPotions",
+      "Requires Level 5",
+      "Use: Increases run speed by 50% for 15 sec. (2 Min Cooldown)",
+      "Sell Price: 25c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Baelog",
+   "kind": "boss",
+   "level": 41,
+   "items": [
+    {
+     "name": "Nordic Longshank",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 9401,
+     "icon": "inv_sword_24",
+     "quality": 3,
+     "itemLevel": 43,
+     "requiredLevel": 38,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tSword",
+      "45 - 84 Damage\tSpeed 2.20",
+      "(29.3 damage per second)",
+      "+8 Agility",
+      "+5 Stamina",
+      "Requires Level 38",
+      "Sell Price: 50s 70c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Precision Arrow",
+     "slot": "Ammo",
+     "type": "Arrow",
+     "itemId": 9399,
+     "icon": "inv_ammo_arrow_01",
+     "quality": 2,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Ammo\tArrow",
+      "11 - 12 Damage\tSpeed 3.00",
+      "(3.8 damage per second)",
+      "Requires Level 35",
+      "Sell Price: 3c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Baelog's Shortbow",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 9400,
+     "icon": "inv_weapon_bow_11",
+     "quality": 1,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Ranged\tBow",
+      "26 - 50 Damage\tSpeed 2.30",
+      "(16.5 damage per second)",
+      "Requires Level 36",
+      "Sell Price: 16s 24c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Olaf",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Olaf's All Purpose Shield",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 9404,
+     "icon": "inv_shield_02",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1287 Armor",
+      "+11 Stamina",
+      "Requires Level 37",
+      "Use: Reduces your fall speed for 10 sec. (60 Min Cooldown)",
+      "Sell Price: 28s 19c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Battered Viking Shield",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 9403,
+     "icon": "inv_shield_07",
+     "quality": 1,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Off Hand\tShield",
+      "907 Armor",
+      "+8 Stamina",
+      "+4 Spirit",
+      "Requires Level 35",
+      "Sell Price: 13s 31c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Oil of Olaf",
+     "slot": null,
+     "type": "Other",
+     "itemId": 1177,
+     "icon": "inv_potion_12",
+     "quality": 1,
+     "itemLevel": 8,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Use: Increases armor by 50 for 1 hr.",
+      "Sell Price: 3c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Revelosh",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Revelosh's Spaulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 9389,
+     "icon": "inv_shoulder_25",
+     "quality": 2,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "84 Armor",
+      "Requires Level 36",
+      "Sell Price: 43s 31c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Revelosh's Armguards",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 9388,
+     "icon": "inv_bracer_16",
+     "quality": 2,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "101 Armor",
+      "Requires Level 35",
+      "Sell Price: 31s 96c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Revelosh's Gloves",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 9390,
+     "icon": "inv_gauntlets_17",
+     "quality": 2,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "33 Armor",
+      "Requires Level 35",
+      "Sell Price: 21s 46c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Revelosh's Boots",
+     "slot": "Feet",
+     "type": "Plate",
+     "itemId": 9387,
+     "icon": "inv_boots_plate_06",
+     "quality": 2,
+     "itemLevel": 41,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tPlate",
+      "206 Armor",
+      "Requires Level 40",
+      "Sell Price: 34s 38c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Shaft of Tsol",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 7741,
+     "icon": "inv_staff_goldfeathered_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tQuest",
+      "Use: Attach to the Gni'kiv Medallion."
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ironaya",
+   "kind": "boss",
+   "level": 40,
+   "items": [
+    {
+     "name": "Ironaya's Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 9409,
+     "icon": "inv_bracer_19",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "115 Armor",
+      "Requires Level 37",
+      "Sell Price: 44s 90c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stoneweaver Leggings",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 9407,
+     "icon": "inv_pants_01",
+     "quality": 3,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "51 Armor",
+      "+15 Spirit",
+      "+9 Stamina",
+      "+8 Intellect",
+      "Requires Level 35",
+      "Sell Price: 50s 94c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ironshod Bludgeon",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 9408,
+     "icon": "inv_staff_28",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "74 - 112 Damage\tSpeed 2.50",
+      "(37.2 damage per second)",
+      "+20 Stamina",
+      "+8 Strength",
+      "Requires Level 37",
+      "Sell Price: 1g 86s 39c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Obsidian Sentinel",
+   "kind": "boss",
+   "level": 42,
+   "items": [
+    {
+     "name": "Obsidian Power Source",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 8053,
+     "icon": "inv_misc_orb_03",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ancient Stone Keeper",
+   "kind": "boss",
+   "level": 44,
+   "items": [
+    {
+     "name": "Cragfists",
+     "slot": "Hands",
+     "type": "Plate",
+     "itemId": 9410,
+     "icon": "inv_gauntlets_12",
+     "quality": 3,
+     "itemLevel": 45,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tPlate",
+      "300 Armor",
+      "Requires Level 40",
+      "Equip: Increased Defense +5.",
+      "Sell Price: 37s 85c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rockshard Pauldrons",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemId": 9411,
+     "icon": "inv_shoulder_02",
+     "quality": 2,
+     "itemLevel": 45,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "186 Armor",
+      "+2 Strength",
+      "+9 Intellect",
+      "+9 Spirit",
+      "Requires Level 40",
+      "Sell Price: 71s 56c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Galgann Firehammer",
+   "kind": "boss",
+   "level": 45,
+   "items": [
+    {
+     "name": "Flameseer Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 11310,
+     "icon": "inv_shoulder_05",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "51 Armor",
+      "+10 Spirit",
+      "Requires Level 42",
+      "Equip: Increases damage done by Fire spells and effects by up to 14.",
+      "Sell Price: 65s 98c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Galgann's Fireblaster",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemId": 9412,
+     "icon": "inv_weapon_rifle_07",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "44 - 84 Damage\tSpeed 2.60",
+      "(24.6 damage per second)",
+      "Requires Level 42",
+      "Equip: Chance to strike your ranged target with a Fire Blast for 12 to 18 Fire damage.",
+      "Sell Price: 1g 66s 81c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Emberscale Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 11311,
+     "icon": "inv_misc_cape_08",
+     "quality": 2,
+     "itemLevel": 46,
+     "requiredLevel": 41,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "30 Armor",
+      "+3 Spirit",
+      "+10 Stamina",
+      "Requires Level 41",
+      "Sell Price: 51s 10c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Galgann's Firehammer",
+     "slot": "One-Hand",
+     "type": "Mace",
+     "itemId": 9419,
+     "icon": "inv_hammer_17",
+     "quality": 2,
+     "itemLevel": 46,
+     "requiredLevel": 41,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tMace",
+      "42 - 79 Damage\tSpeed 2.20",
+      "(27.5 damage per second)",
+      "Requires Level 41",
+      "Chance on hit: Blasts a target for 80 to 112 Fire damage.",
+      "Sell Price: 1g 80s 76c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Grimlok",
+   "kind": "boss",
+   "level": 45,
+   "items": [
+    {
+     "name": "Grimlok's Tribal Vestments",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 9415,
+     "icon": "inv_shirt_05",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "68 Armor",
+      "+10 Stamina",
+      "+20 Spirit",
+      "+5 Intellect",
+      "Requires Level 42",
+      "Sell Price: 89s 97c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grimlok's Charge",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemId": 9416,
+     "icon": "inv_spear_08",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "88 - 133 Damage\tSpeed 2.70",
+      "(40.9 damage per second)",
+      "+15 Agility",
+      "+10 Strength",
+      "+15 Stamina",
+      "Requires Level 42",
+      "Sell Price: 2g 82s 18c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Oilskin Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 9414,
+     "icon": "inv_pants_06",
+     "quality": 2,
+     "itemLevel": 46,
+     "requiredLevel": 41,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "108 Armor",
+      "+13 Agility",
+      "+12 Spirit",
+      "Requires Level 41",
+      "Sell Price: 86s 45c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shattered Necklace Sapphire",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 7670,
+     "icon": "inv_misc_gem_sapphire_02",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Archaedas",
+   "kind": "boss",
+   "level": 47,
+   "items": [
+    {
+     "name": "Archaedic Stone",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 11118,
+     "icon": "inv_stone_15",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "50 Armor",
+      "Requires Level 42",
+      "Sell Price: 1g 7s 95c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Rockpounder",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 9413,
+     "icon": "inv_hammer_12",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "126 - 190 Damage\tSpeed 3.70",
+      "(42.7 damage per second)",
+      "+5 Strength",
+      "Requires Level 44",
+      "Equip: Improves your chance to get a critical strike by 2%.",
+      "Sell Price: 3g 22s 48c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stoneslayer",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 9418,
+     "icon": "inv_sword_47",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "133 - 200 Damage\tSpeed 3.90",
+      "(42.7 damage per second)",
+      "Requires Level 44",
+      "Chance on hit: Increases damage by 10 for 8 sec.",
+      "Sell Price: 3g 28s 51c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Papal Fez",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 9431,
+     "icon": "inv_helmet_28",
+     "quality": 3,
+     "itemLevel": 43,
+     "requiredLevel": 38,
+     "tooltip": [
+      "Binds when equipped",
+      "Head\tCloth",
+      "51 Armor",
+      "+17 Intellect",
+      "+9 Spirit",
+      "Requires Level 38",
+      "Equip: Increases healing done by spells and effects by up to 22.",
+      "Sell Price: 48s 85c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Miner's Hat of the Deep",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 9429,
+     "icon": "inv_helmet_15",
+     "quality": 3,
+     "itemLevel": 44,
+     "requiredLevel": 39,
+     "tooltip": [
+      "Binds when equipped",
+      "Head\tCloth",
+      "52 Armor",
+      "+10 Spirit",
+      "+17 Intellect",
+      "+7 Stamina",
+      "+4 Agility",
+      "Requires Level 39",
+      "Sell Price: 52s 36c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Adventurer's Pith Helmet",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 9420,
+     "icon": "inv_helmet_15",
+     "quality": 3,
+     "itemLevel": 37,
+     "requiredLevel": 32,
+     "tooltip": [
+      "Binds when equipped",
+      "Head\tLeather",
+      "94 Armor",
+      "+7 Spirit",
+      "+9 Agility",
+      "+14 Stamina",
+      "Requires Level 32",
+      "Sell Price: 40s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spaulders of a Lost Age",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemId": 9430,
+     "icon": "inv_shoulder_18",
+     "quality": 3,
+     "itemLevel": 45,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when equipped",
+      "Shoulder\tMail",
+      "205 Armor",
+      "+16 Stamina",
+      "+7 Spirit",
+      "Requires Level 40",
+      "Sell Price: 85s 53c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Energy Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 9397,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 39,
+     "requiredLevel": 34,
+     "tooltip": [
+      "Binds when equipped",
+      "Back\tCloth",
+      "28 Armor",
+      "+10 Spirit",
+      "Requires Level 34",
+      "Use: Restores 375 to 425 mana. (60 Min Cooldown)",
+      "Sell Price: 36s 72c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spirewind Fetter",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 9406,
+     "icon": "inv_chest_leather_08",
+     "quality": 3,
+     "itemLevel": 35,
+     "requiredLevel": 30,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tLeather",
+      "112 Armor",
+      "+12 Intellect",
+      "+7 Strength",
+      "+11 Stamina",
+      "Requires Level 30",
+      "Sell Price: 41s 61c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Unearthed Bands",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 9428,
+     "icon": "inv_bracer_06",
+     "quality": 3,
+     "itemLevel": 35,
+     "requiredLevel": 30,
+     "tooltip": [
+      "Binds when equipped",
+      "Wrist\tLeather",
+      "49 Armor",
+      "Requires Level 30",
+      "Equip: +8 Attack Power.",
+      "Sell Price: 20s 96c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Skullplate Bracers",
+     "slot": "Wrist",
+     "type": "Plate",
+     "itemId": 9432,
+     "icon": "inv_bracer_14",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when equipped",
+      "Wrist\tPlate",
+      "163 Armor",
+      "+9 Stamina",
+      "+5 Strength",
+      "+5 Spirit",
+      "Requires Level 40",
+      "Sell Price: 30s 27c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Legguards of the Vault",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 9396,
+     "icon": "inv_pants_10",
+     "quality": 3,
+     "itemLevel": 39,
+     "requiredLevel": 34,
+     "tooltip": [
+      "Binds when equipped",
+      "Legs\tMail",
+      "218 Armor",
+      "+5 Agility",
+      "+13 Strength",
+      "+13 Stamina",
+      "+5 Spirit",
+      "Requires Level 34",
+      "Sell Price: 73s 19c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Beacon of Hope",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 9393,
+     "icon": "inv_misc_lantern_01",
+     "quality": 3,
+     "itemLevel": 38,
+     "requiredLevel": 33,
+     "tooltip": [
+      "Binds when equipped",
+      "Held In Off-hand",
+      "+4 Spirit",
+      "Requires Level 33",
+      "Equip: Increases healing done by spells and effects by up to 22.",
+      "Sell Price: 78s 82c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shattered Necklace",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 7666,
+     "icon": "inv_jewelry_necklace_02",
+     "quality": 2,
+     "itemLevel": 37,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tQuest",
+      "Requires Level 37"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Earthen Rod",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 9381,
+     "icon": "inv_staff_17",
+     "quality": 3,
+     "itemLevel": 38,
+     "requiredLevel": 33,
+     "tooltip": [
+      "Binds when equipped",
+      "Ranged\tWand",
+      "42 - 79 Nature Damage\tSpeed 1.70",
+      "(35.6 damage per second)",
+      "Requires Level 33",
+      "Sell Price: 86s 28c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Monolithic Bow",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 9426,
+     "icon": "inv_weapon_bow_01",
+     "quality": 3,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when equipped",
+      "Ranged\tBow",
+      "41 - 77 Damage\tSpeed 2.70",
+      "(21.9 damage per second)",
+      "+6 Strength",
+      "+3 Agility",
+      "Requires Level 36",
+      "Sell Price: 1g 2s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shadowforge Bushmaster",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemId": 9422,
+     "icon": "inv_musket_02",
+     "quality": 3,
+     "itemLevel": 43,
+     "requiredLevel": 38,
+     "tooltip": [
+      "Binds when equipped",
+      "Ranged\tGun",
+      "46 - 86 Damage\tSpeed 2.90",
+      "(22.8 damage per second)",
+      "+7 Shadow Resistance",
+      "Requires Level 38",
+      "Sell Price: 1g 30s 52c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Digmaster 5000",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemId": 9465,
+     "icon": "inv_pick_01",
+     "quality": 3,
+     "itemLevel": 45,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tAxe",
+      "38 - 71 Damage\tSpeed 1.80",
+      "(30.3 damage per second)",
+      "+4 Agility",
+      "Requires Level 40",
+      "Requires Mining (175)",
+      "Chance on hit: Punctures target's armor lowering it by 100.",
+      "Sell Price: 1g 85s 60c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stonevault Shiv",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 9384,
+     "icon": "inv_weapon_shortblade_18",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tDagger",
+      "25 - 47 Damage\tSpeed 1.50",
+      "(24.0 damage per second)",
+      "+7 Agility",
+      "+3 Stamina",
+      "Requires Level 31",
+      "Sell Price: 97s 89c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Excavator's Brand",
+     "slot": "One-Hand",
+     "type": "Mace",
+     "itemId": 9386,
+     "icon": "inv_torch_lit",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 31,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tMace",
+      "43 - 82 Damage\tSpeed 2.60",
+      "(24.0 damage per second)",
+      "Requires Level 31",
+      "Chance on hit: Hurls a fiery ball that causes 40 Fire damage and an additional 9 damage over 6 sec.",
+      "Sell Price: 98s 59c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stonevault Bonebreaker",
+     "slot": "One-Hand",
+     "type": "Mace",
+     "itemId": 9427,
+     "icon": "inv_misc_bone_01",
+     "quality": 3,
+     "itemLevel": 42,
+     "requiredLevel": 37,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tMace",
+      "54 - 101 Damage\tSpeed 2.70",
+      "(28.7 damage per second)",
+      "+8 Strength",
+      "+4 Agility",
+      "Requires Level 37",
+      "Sell Price: 1g 48s 53c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Annealed Blade",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 9392,
+     "icon": "inv_sword_26",
+     "quality": 3,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tSword",
+      "34 - 64 Damage\tSpeed 1.80",
+      "(27.2 damage per second)",
+      "+6 Strength",
+      "+6 Stamina",
+      "Requires Level 35",
+      "Sell Price: 1g 29s 80c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ginn-su Sword",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 9424,
+     "icon": "inv_sword_42",
+     "quality": 3,
+     "itemLevel": 41,
+     "requiredLevel": 36,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tSword",
+      "33 - 62 Damage\tSpeed 1.70",
+      "(27.9 damage per second)",
+      "+8 Agility",
+      "+4 Strength",
+      "Requires Level 36",
+      "Sell Price: 1g 35s 94c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Obsidian Cleaver",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 9383,
+     "icon": "inv_axe_14",
+     "quality": 3,
+     "itemLevel": 40,
+     "requiredLevel": 35,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "94 - 141 Damage\tSpeed 3.30",
+      "(35.6 damage per second)",
+      "+19 Stamina",
+      "+6 Strength",
+      "+5 Agility",
+      "Requires Level 35",
+      "Sell Price: 1g 68s 95c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pendulum of Doom",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 9425,
+     "icon": "inv_weapon_halberd_08",
+     "quality": 3,
+     "itemLevel": 44,
+     "requiredLevel": 39,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "124 - 187 Damage\tSpeed 4.00",
+      "(38.9 damage per second)",
+      "Requires Level 39",
+      "Chance on hit: Delivers a fatal wound for 250 to 350 damage.",
+      "Sell Price: 2g 14s 89c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Jackhammer",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 9423,
+     "icon": "inv_hammer_07",
+     "quality": 3,
+     "itemLevel": 45,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "79 - 119 Damage\tSpeed 2.50",
+      "(39.6 damage per second)",
+      "Requires Level 40",
+      "Chance on hit: Increases your attack speed by 30% for 10 sec.",
+      "Sell Price: 2g 54s 63c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Shoveler",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 9391,
+     "icon": "inv_misc_shovel_02",
+     "quality": 3,
+     "itemLevel": 37,
+     "requiredLevel": 32,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "88 - 133 Damage\tSpeed 3.40",
+      "(32.5 damage per second)",
+      "+15 Stamina",
+      "Classes: Warrior",
+      "Requires Level 32",
+      "Equip: +20 Attack Power.",
+      "Sell Price: 1g 28s 31c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Baelog's Chest",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "Gni'kiv Medallion",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 7740,
+     "icon": "inv_jewelry_amulet_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Unique",
+      "\tQuest",
+      "Use: Attach to the Shaft of Tsol."
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Conspicuous Urn",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "Shattered Necklace Topaz",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 7671,
+     "icon": "inv_misc_gem_topaz_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Shadowforge Cache",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "Shattered Necklace Ruby",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 7669,
+     "icon": "inv_misc_gem_ruby_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Tablet of Will",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "Tablet of Will",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 5824,
+     "icon": "inv_misc_rune_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-2418",
+   "faction": "Both",
+   "name": "Power Stones",
+   "level": 36,
+   "minLevel": 30,
+   "text": "Bring 8 Dentrium Power Stones and 8 An'Alleum Power Stones to Rigglefuzz in the Badlands.",
+   "giver": {
+    "name": "Rigglefuzz",
+    "location": "Rigglefuzz, Badlands",
+    "mapRef": {
+     "name": "Rigglefuzz",
+     "href": "/map/eastern-kingdoms#pin=Rigglefuzz"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Dentrium Power Stone ×8Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and othersAn'Alleum Power Stone ×8Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8009",
+       "name": "Dentrium Power Stone",
+       "qty": "×8",
+       "source": "Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and others"
+      },
+      {
+       "itemHref": "/item/8052",
+       "name": "An'Alleum Power Stone",
+       "qty": "×8",
+       "source": "Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and others"
+      }
+     ]
+    }
+   ],
+   "experience": "3,500 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Energized Stone Circle",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 9522,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Duracin Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 10358,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Everlast Boots",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 10359,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-709",
+   "faction": "Both",
+   "name": "Solution to Doom",
+   "level": 40,
+   "minLevel": 30,
+   "text": "Bring the Tablet of Ryun'eh to Theldurin the Lost.",
+   "giver": {
+    "name": "Theldurin the Lost",
+    "location": "Theldurin the Lost, Badlands",
+    "mapRef": {
+     "name": "Theldurin the Lost",
+     "href": "/map/eastern-kingdoms#pin=Theldurin%20the%20Lost"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Tablet of Ryun'ehAncient Chest",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/4631",
+       "name": "Tablet of Ryun'eh",
+       "qty": null,
+       "source": "Ancient Chest"
+      }
+     ]
+    }
+   ],
+   "experience": "3,150 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Doomsayer's Robe",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 4746,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-704",
+   "faction": "Alliance",
+   "name": "Agmond's Fate",
+   "level": 38,
+   "minLevel": 30,
+   "text": "Bring 4 Carved Stone Urns to Prospector Ironband in Loch Modan.",
+   "giver": {
+    "name": "Prospector Ironband",
+    "location": "Prospector Ironband, Loch Modan",
+    "mapRef": {
+     "name": "Prospector Ironband",
+     "href": "/map/eastern-kingdoms#pin=Prospector%20Ironband"
+    }
+   },
+   "prereq": "Murdaloc, from Battered Dwarven Skeleton, Badlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Carved Stone Urn ×4Carved Stone Urn",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/4610",
+       "name": "Carved Stone Urn",
+       "qty": "×4",
+       "source": "Carved Stone Urn"
+      }
+     ]
+    }
+   ],
+   "experience": "2,850 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Prospector Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 4980,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1360",
+   "faction": "Alliance",
+   "name": "Reclaimed Treasures",
+   "level": 43,
+   "minLevel": 33,
+   "text": "Get Krom Stoutarm's treasured possession from his chest in the North Common Hall of Uldaman, and bring it to him in Ironforge.",
+   "giver": {
+    "name": "Krom Stoutarm",
+    "location": "Krom Stoutarm, Dun Morogh",
+    "mapRef": {
+     "name": "Krom Stoutarm",
+     "href": "/map/eastern-kingdoms#pin=Krom%20Stoutarm"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Krom Stoutarm's TreasureKrom Stoutarm's Chest",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8027",
+       "name": "Krom Stoutarm's Treasure",
+       "qty": null,
+       "source": "Krom Stoutarm's Chest"
+      }
+     ]
+    }
+   ],
+   "experience": "3,600 XP in Classic",
+   "money": "60s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-722",
+   "faction": "Alliance",
+   "name": "Amulet of Secrets",
+   "level": 40,
+   "minLevel": 35,
+   "text": "Find Hammertoe's Amulet and return it to him in Uldaman.",
+   "giver": {
+    "name": "Hammertoe Grez",
+    "location": "Hammertoe Grez, Loch Modan",
+    "mapRef": {
+     "name": "Hammertoe Grez",
+     "href": "/map/eastern-kingdoms#pin=Hammertoe%20Grez"
+    }
+   },
+   "prereq": "A Sign of Hope, from Prospector Ryedol, Badlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Hammertoe's AmuletMagregan Deepshadow",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/4635",
+       "name": "Hammertoe's Amulet",
+       "qty": null,
+       "source": "Magregan Deepshadow"
+      }
+     ]
+    }
+   ],
+   "experience": "3,150 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2240",
+   "faction": "Alliance",
+   "name": "The Hidden Chamber",
+   "level": 40,
+   "minLevel": 35,
+   "text": "Read Baelog's Journal, explore the hidden chamber, then report to Prospector Stormpike.",
+   "giver": {
+    "name": "Baelog",
+    "location": "Baelog, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "The Lost Dwarves, from Prospector Stormpike, Dun Morogh",
+   "objectives": [],
+   "experience": "3,900 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Dwarven Charge",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 9626,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Explorer's League Lodestar",
+     "slot": null,
+     "type": null,
+     "itemId": 9627,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1139",
+   "faction": "Alliance",
+   "name": "The Lost Tablets of Will",
+   "level": 45,
+   "minLevel": 35,
+   "text": "Find the Tablet of Will, and return them to Advisor Belgrum in Ironforge.",
+   "giver": {
+    "name": "Advisor Belgrum",
+    "location": "Advisor Belgrum, Dun Morogh",
+    "mapRef": {
+     "name": "Advisor Belgrum",
+     "href": "/map/eastern-kingdoms#pin=Advisor%20Belgrum"
+    }
+   },
+   "prereq": "An Ambassador of Evil, from Historian Karnik, Dun Morogh",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Tablet of WillTablet of Will",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5824",
+       "name": "Tablet of Will",
+       "qty": null,
+       "source": "Tablet of Will"
+      }
+     ]
+    }
+   ],
+   "experience": "5,850 XP in Classic",
+   "money": "1g 30s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Medal of Courage",
+     "slot": null,
+     "type": null,
+     "itemId": 6723,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-17",
+   "faction": "Alliance",
+   "name": "Uldaman Reagent Run",
+   "level": 42,
+   "minLevel": 36,
+   "text": "Bring 12 Magenta Fungus Caps to Ghak Healtouch in Thelsamar.",
+   "giver": {
+    "name": "Ghak Healtouch",
+    "location": "Ghak Healtouch, Loch Modan",
+    "mapRef": {
+     "name": "Ghak Healtouch",
+     "href": "/map/eastern-kingdoms#pin=Ghak%20Healtouch"
+    }
+   },
+   "prereq": "Badlands Reagent Run, from Ghak Healtouch, Loch Modan",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Magenta Fungus Cap ×12Magenta Cap Clusters",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8047",
+       "name": "Magenta Fungus Cap",
+       "qty": "×12",
+       "source": "Magenta Cap Clusters"
+      }
+     ]
+    }
+   ],
+   "experience": "3,450 XP in Classic",
+   "money": "55s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Restorative Potion",
+     "slot": "Potions",
+     "type": null,
+     "itemId": 9030,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2199",
+   "faction": "Alliance",
+   "name": "Lore for a Price",
+   "level": 41,
+   "minLevel": 37,
+   "text": "Bring five silver bars to Talvash del Kissel in Ironforge.",
+   "giver": {
+    "name": "Talvash del Kissel",
+    "location": "Talvash del Kissel, Dun Morogh",
+    "mapRef": {
+     "name": "Talvash del Kissel",
+     "href": "/map/eastern-kingdoms#pin=Talvash%20del%20Kissel"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Silver Bar ×5Alliance Chest, Alliance Strongbox and Battered Chest and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/2842",
+       "name": "Silver Bar",
+       "qty": "×5",
+       "source": "Alliance Chest, Alliance Strongbox and Battered Chest and others"
+      }
+     ]
+    }
+   ],
+   "experience": "2,450 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2198",
+   "faction": "Alliance",
+   "name": "The Shattered Necklace",
+   "level": 41,
+   "minLevel": 37,
+   "text": "Search for the original creator of the shattered necklace to learn of its potential value.",
+   "giver": {
+    "name": "From the item Shattered Necklace",
+    "location": "From the item Shattered Necklace",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shattered NecklaceShadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7666",
+       "name": "Shattered Necklace",
+       "qty": null,
+       "source": "Shadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others"
+      }
+     ]
+    }
+   ],
+   "experience": "3,300 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2204",
+   "faction": "Alliance",
+   "name": "Restoring the Necklace",
+   "level": 44,
+   "minLevel": 37,
+   "text": "Obtain a power source from the most powerful construct you can find in Uldaman, and deliver it to Talvash del Kissel in Ironforge.",
+   "giver": {
+    "name": "Talvash's Scrying Bowl",
+    "location": "Talvash's Scrying Bowl, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shattered Necklace Power SourceArchaedas",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7672",
+       "name": "Shattered Necklace Power Source",
+       "qty": null,
+       "source": "Archaedas"
+      }
+     ]
+    }
+   ],
+   "experience": "925 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2361",
+   "faction": "Alliance",
+   "name": "Restoring the Necklace",
+   "level": 44,
+   "minLevel": 37,
+   "text": null,
+   "giver": {
+    "name": "Talvash del Kissel",
+    "location": "Talvash del Kissel, Dun Morogh",
+    "mapRef": {
+     "name": "Talvash del Kissel",
+     "href": "/map/eastern-kingdoms#pin=Talvash%20del%20Kissel"
+    }
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "5,600 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Talvash's Enhancing Necklace",
+     "slot": null,
+     "type": null,
+     "itemId": 7673,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2201",
+   "faction": "Alliance",
+   "name": "Find the Gems",
+   "level": 43,
+   "minLevel": 40,
+   "text": "Find the ruby, sapphire, and topaz that are scattered throughout Uldaman.  Once acquired, contact Talvash del Kissel remotely by using the Phial of Scrying he previously gave you.  From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz has been hidden in an urn in one of the Trogg areas, near some Alliance dwarves.  * The sapphire has been claimed by Grimlok, the trogg leader.",
+   "giver": {
+    "name": "Remains of a Paladin",
+    "location": "Remains of a Paladin, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "Back to Uldaman, from Talvash del Kissel, Dun Morogh",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shattered Necklace RubyShadowforge CacheShattered Necklace SapphireGrimlokShattered Necklace TopazConspicuous Urn",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7669",
+       "name": "Shattered Necklace Ruby",
+       "qty": null,
+       "source": "Shadowforge Cache"
+      },
+      {
+       "itemHref": "/item/7670",
+       "name": "Shattered Necklace Sapphire",
+       "qty": null,
+       "source": "Grimlok"
+      },
+      {
+       "itemHref": "/item/7671",
+       "name": "Shattered Necklace Topaz",
+       "qty": null,
+       "source": "Conspicuous Urn"
+      }
+     ]
+    }
+   ],
+   "experience": "3,600 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2279",
+   "faction": "Alliance",
+   "name": "The Platinum Discs",
+   "level": 47,
+   "minLevel": 40,
+   "text": "Take the miniature version of the Discs of Norgannon to the Explorers' League in Ironforge.",
+   "giver": {
+    "name": "The Discs of Norgannon",
+    "location": "The Discs of Norgannon, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "The Platinum Discs, from The Discs of Norgannon",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Miniature Platinum Discs",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/6064",
+       "name": "Miniature Platinum Discs",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2342",
+   "faction": "Horde",
+   "name": "Reclaimed Treasures",
+   "level": 43,
+   "minLevel": 33,
+   "text": "Get Patrick Garrett's family treasure from their family chest in the South Common Hall of Uldaman, and bring it to him in the Undercity.",
+   "giver": {
+    "name": "Patrick Garrett",
+    "location": "Patrick Garrett, Undercity",
+    "mapRef": {
+     "name": "Patrick Garrett",
+     "href": "/map/eastern-kingdoms#pin=Patrick%20Garrett"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Garrett Family TreasureGarrett Family Chest",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8026",
+       "name": "Garrett Family Treasure",
+       "qty": null,
+       "source": "Garrett Family Chest"
+      }
+     ]
+    }
+   ],
+   "experience": "3,600 XP in Classic",
+   "money": "60s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2202",
+   "faction": "Horde",
+   "name": "Uldaman Reagent Run",
+   "level": 42,
+   "minLevel": 36,
+   "text": "Bring 12 Magenta Fungus Caps to Jarkal Mossmeld in Kargath.",
+   "giver": {
+    "name": "Jarkal Mossmeld",
+    "location": "Jarkal Mossmeld, Badlands",
+    "mapRef": {
+     "name": "Jarkal Mossmeld",
+     "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+    }
+   },
+   "prereq": "Badlands Reagent Run, from Jarkal Mossmeld, Badlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Magenta Fungus Cap ×12Magenta Cap Clusters",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8047",
+       "name": "Magenta Fungus Cap",
+       "qty": "×12",
+       "source": "Magenta Cap Clusters"
+      }
+     ]
+    }
+   ],
+   "experience": "3,450 XP in Classic",
+   "money": "55s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Restorative Potion",
+     "slot": "Potions",
+     "type": null,
+     "itemId": 9030,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2283",
+   "faction": "Horde",
+   "name": "Necklace Recovery",
+   "level": 41,
+   "minLevel": 37,
+   "text": "Look for a valuable necklace within the Uldaman dig site and bring it back to Dran Droffers in Orgrimmar.  The necklace may be damaged.",
+   "giver": {
+    "name": "Dran Droffers",
+    "location": "Dran Droffers, Orgrimmar",
+    "mapRef": {
+     "name": "Dran Droffers",
+     "href": "/map/kalimdor#pin=Dran%20Droffers"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shattered NecklaceShadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7666",
+       "name": "Shattered Necklace",
+       "qty": null,
+       "source": "Shadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others"
+      }
+     ]
+    }
+   ],
+   "experience": "2,450 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2338",
+   "faction": "Horde",
+   "name": "Translating the Journal",
+   "level": 42,
+   "minLevel": 37,
+   "text": "Let Jarkal borrow the necklace.  In exchange, he will translate the journal for you.",
+   "giver": {
+    "name": "Jarkal Mossmeld",
+    "location": "Jarkal Mossmeld, Badlands",
+    "mapRef": {
+     "name": "Jarkal Mossmeld",
+     "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+    }
+   },
+   "prereq": "Translating the Journal, from Remains of a Paladin",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Untranslated Journal",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7886",
+       "name": "Untranslated Journal",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "350 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2340",
+   "faction": "Horde",
+   "name": "Deliver the Gems",
+   "level": 44,
+   "minLevel": 37,
+   "text": "Deliver the Necklace and Gem Salvage to Dran Droffers in Orgrimmar.",
+   "giver": {
+    "name": "Jarkal Mossmeld",
+    "location": "Jarkal Mossmeld, Badlands",
+    "mapRef": {
+     "name": "Jarkal Mossmeld",
+     "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Necklace and Gem Salvage",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7887",
+       "name": "Necklace and Gem Salvage",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "1,850 XP in Classic",
+   "money": "1g 25s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2339",
+   "faction": "Horde",
+   "name": "Find the Gems and Power Source",
+   "level": 44,
+   "minLevel": 37,
+   "text": "Recover all three gems and a power source for the necklace from Uldaman, and then bring them to Jarkal Mossmeld in Kargath.  Jarkal believes a power source might be found on the strongest construct present in Uldaman.  From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz has been hidden in an urn in one of the Trogg areas, near some Alliance dwarves. * The sapphire has been claimed by Grimlok, the trogg leader.",
+   "giver": {
+    "name": "Jarkal Mossmeld",
+    "location": "Jarkal Mossmeld, Badlands",
+    "mapRef": {
+     "name": "Jarkal Mossmeld",
+     "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shattered Necklace RubyShadowforge CacheShattered Necklace SapphireGrimlokShattered Necklace TopazConspicuous UrnShattered Necklace Power SourceArchaedas",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7669",
+       "name": "Shattered Necklace Ruby",
+       "qty": null,
+       "source": "Shadowforge Cache"
+      },
+      {
+       "itemHref": "/item/7670",
+       "name": "Shattered Necklace Sapphire",
+       "qty": null,
+       "source": "Grimlok"
+      },
+      {
+       "itemHref": "/item/7671",
+       "name": "Shattered Necklace Topaz",
+       "qty": null,
+       "source": "Conspicuous Urn"
+      },
+      {
+       "itemHref": "/item/7672",
+       "name": "Shattered Necklace Power Source",
+       "qty": null,
+       "source": "Archaedas"
+      }
+     ]
+    }
+   ],
+   "experience": "3,750 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2341",
+   "faction": "Horde",
+   "name": "Necklace Recovery, Take 3",
+   "level": 44,
+   "minLevel": 40,
+   "text": "Visit Jarkal Mossmeld in Kargath to see if he was successful.",
+   "giver": {
+    "name": "Dran Droffers",
+    "location": "Dran Droffers, Orgrimmar",
+    "mapRef": {
+     "name": "Dran Droffers",
+     "href": "/map/kalimdor#pin=Dran%20Droffers"
+    }
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "5,600 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Jarkal's Enhancing Necklace",
+     "slot": null,
+     "type": null,
+     "itemId": 7888,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2280",
+   "faction": "Horde",
+   "name": "The Platinum Discs",
+   "level": 47,
+   "minLevel": 40,
+   "text": "Take the miniature version of the Discs of Norgannon to the one of the sages in Thunder Bluff.",
+   "giver": {
+    "name": "The Discs of Norgannon",
+    "location": "The Discs of Norgannon, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "The Platinum Discs, from The Discs of Norgannon",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Miniature Platinum Discs",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/6064",
+       "name": "Miniature Platinum Discs",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  }
+ ]
+}

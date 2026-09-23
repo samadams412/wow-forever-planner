@@ -1,0 +1,1134 @@
+{
+ "id": "ruins-of-lordaeron",
+ "name": "Ruins of Lordaeron",
+ "type": "new",
+ "levelMin": 15,
+ "levelMax": 20,
+ "abbr": null,
+ "faction": "Horde",
+ "zone": "Tirisfal Glades",
+ "description": "The fallen human capital is still standing -- in ruins -- and still occupied. A Level 15-20 Horde dungeon built around picking through what's left of Lordaeron and whatever still lurks in it.",
+ "image": "/images/guides/dungeons/ruins-of-lordaeron.webp",
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-ruins-of-lordaeron.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "The Baron",
+   "kind": "boss",
+   "level": 17,
+   "items": [
+    {
+     "name": "Meathook Slicer",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 271204,
+     "icon": "inv_misc_monsterfang_01",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "17 - 32 Damage\tSpeed 1.80",
+      "(13.6 damage per second)",
+      "+4 Agility",
+      "+3 Stamina",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Abomination Bones",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 271205,
+     "icon": "inv_chest_chain_15",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "184 Armor",
+      "+9 Strength",
+      "+4 Agility",
+      "+2 Stamina",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Leftover Abomination Skin",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 271206,
+     "icon": "inv_chest_cloth_46",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "37 Armor",
+      "+7 Spirit",
+      "+8 Spell Power",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Witherfang",
+   "kind": "boss",
+   "level": 17,
+   "items": [
+    {
+     "name": "Atrophic Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 271201,
+     "icon": "inv_belt_21",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "104 Armor",
+      "+5 Strength",
+      "+5 Stamina",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Witherbite Bracers",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 271202,
+     "icon": "inv_bracer_07",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "37 Armor",
+      "+4 Agility",
+      "+3 Intellect",
+      "+3 Spirit",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Segmented Spider Leg",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 271203,
+     "icon": "inv_staff_09",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 15,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "50 - 76 Damage\tSpeed 3.60",
+      "(17.5 damage per second)",
+      "+5 Strength",
+      "+9 Agility",
+      "Requires Level 15"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "The Abandoned",
+   "kind": "boss",
+   "level": 18,
+   "items": [
+    {
+     "name": "Wispcloth Leggings",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 271207,
+     "icon": "inv_pants_cloth_05",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "35 Armor",
+      "+5 Stamina",
+      "+8 Intellect",
+      "+5 Spirit",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grip of Fear",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 271208,
+     "icon": "inv_gauntlets_04",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "119 Armor",
+      "+5 Strength",
+      "+4 Agility",
+      "+5 Stamina",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Scepter of the Abandoned",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 271216,
+     "icon": "inv_misc_bone_dwarfskull_01",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "17 - 33 Damage\tSpeed 2.60",
+      "(9.6 damage per second)",
+      "+5 Strength",
+      "+24 Spell Damage",
+      "+24 Healing",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Bjork",
+   "kind": "boss",
+   "level": 19,
+   "items": [
+    {
+     "name": "Bonerust Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 271209,
+     "icon": "inv_pants_mail_01",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tMail",
+      "164 Armor",
+      "+7 Strength",
+      "+6 Agility",
+      "+3 Spirit",
+      "Requires Level 16"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tuskwrap Belt",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 271210,
+     "icon": "inv_belt_26",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "22 Armor",
+      "+5 Stamina",
+      "+5 Intellect",
+      "Requires Level 16"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Corpse Chopper",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 271217,
+     "icon": "inv_axe_09",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "52 - 79 Damage\tSpeed 3.60",
+      "(18.2 damage per second)",
+      "+11 Strength",
+      "Requires Level 16"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Rath'mael",
+   "kind": "boss",
+   "level": 20,
+   "items": [
+    {
+     "name": "Mirror of Rath'mael",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 271213,
+     "icon": "inv_shield_02",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "547 Armor",
+      "+4 Strength",
+      "+4 Stamina",
+      "+3 Intellect",
+      "Requires Level 19"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Frostbane Treads",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 271214,
+     "icon": "inv_boots_05",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "29 Armor",
+      "+7 Stamina",
+      "+4 Intellect",
+      "+4 Spirit",
+      "Requires Level 19"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Coldspire Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 271215,
+     "icon": "inv_staff_07",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "44 - 66 Damage\tSpeed 3.60",
+      "(15.3 damage per second)",
+      "+13 Spirit",
+      "+26 Spell Damage",
+      "+26 Healing",
+      "Requires Level 19"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Viktor the Vile",
+   "kind": "boss",
+   "level": 19,
+   "items": [
+    {
+     "name": "Vilewalkers",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 271211,
+     "icon": "inv_boots_chain_08",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "131 Armor",
+      "+7 Strength",
+      "+5 Stamina",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bloodied Chestwraps",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 271212,
+     "icon": "inv_misc_bandage_14",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "89 Armor",
+      "+9 Agility",
+      "+4 Stamina",
+      "+4 Intellect",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Vileblood Scimitar",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 271218,
+     "icon": "inv_sword_16",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tSword",
+      "26 - 50 Damage\tSpeed 2.60",
+      "(14.6 damage per second)",
+      "+4 Strength",
+      "+2 Agility",
+      "Requires Level 17",
+      "Sell Price: 16s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lordaeron Captain",
+   "kind": "rare",
+   "level": 19,
+   "items": [
+    {
+     "name": "Haunting Blade",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 6641,
+     "icon": "inv_sword_17",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "68 - 102 Damage\tSpeed 3.80",
+      "(22.4 damage per second)",
+      "+11 Spell Damage",
+      "+33 Healing",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "53 - 80 Damage\tSpeed 3.80",
+      "(17.5 damage per second)",
+      "+9 Spirit",
+      "Requires Level 21",
+      "Sell Price: 36s 75c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Phantom Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 6642,
+     "icon": "inv_chest_chain_05",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "208 Armor",
+      "+3 Strength",
+      "+12 Stamina",
+      "+5 Spirit",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "201 Armor",
+      "+5 Spirit",
+      "+11 Stamina",
+      "+3 Strength",
+      "Requires Level 20",
+      "Sell Price: 18s 80c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-95250",
+   "faction": "Alliance",
+   "name": "Abominable Creatures",
+   "level": 21,
+   "minLevel": 16,
+   "text": "Collect the Head of the Baron in the Ruins of Lordaeron and bring it back to Captain Truman.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of the BaronThe Baron",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/268518",
+       "name": "Head of the Baron",
+       "qty": null,
+       "source": "The Baron"
+      }
+     ]
+    }
+   ],
+   "experience": "6,188 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Monstrous Cleaver",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 279864,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grave Shroud",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 279865,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Slain Baron's Signet",
+     "slot": null,
+     "type": null,
+     "itemId": 279867,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95195",
+   "faction": "Alliance",
+   "name": "Bloodied Insignia",
+   "level": 22,
+   "minLevel": 16,
+   "text": "Collect 10 Bloodied Insignias and take them to General Marcus Jonathan in Stormwind City.",
+   "giver": {
+    "name": "From the item Bloodied Insignia",
+    "location": "From the item Bloodied Insignia",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Bloodied Insignia ×10",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/268540",
+       "name": "Bloodied Insignia",
+       "qty": "×10",
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "9,750 XP in the Forever beta",
+   "money": "45s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Duty Bound Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 279868,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Remembrance Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 279869,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92415",
+   "faction": "Alliance",
+   "name": "Remember That I Love You",
+   "level": 22,
+   "minLevel": 15,
+   "text": "Bring the Blood-Stained Letter to Orphan Matron Nightingale in Stormwind City.",
+   "giver": {
+    "name": "From the item Blood-Stained Letter",
+    "location": "From the item Blood-Stained Letter",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "9,750 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Tarnished Locket",
+     "slot": null,
+     "type": null,
+     "itemId": 279870,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95189",
+   "faction": "Alliance",
+   "name": "Crest of Lordaeron",
+   "level": 22,
+   "minLevel": 16,
+   "text": "Return the Crest of Lordaeron to Lady Dena Kennedy in Stormwind City.",
+   "giver": {
+    "name": "From the item Crest of Lordaeron",
+    "location": "From the item Crest of Lordaeron",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "9,750 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Small Sack of Gems",
+     "slot": "Other",
+     "type": null,
+     "itemId": 280567,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92422",
+   "faction": "Horde",
+   "name": "The Wrath of Rath'mael",
+   "level": 22,
+   "minLevel": 15,
+   "text": "Kill Rath'mael in the Ruins of Lordaeron for Deathguard Kristof in Brill.",
+   "giver": {
+    "name": "Deathguard Kristof",
+    "location": "Deathguard Kristof, Tirisfal Glades",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Rath'mael",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Forsaken Greataxe",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 251533,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gnarled Necromancer's Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 251534,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92421",
+   "faction": "Horde",
+   "name": "Light's Justice",
+   "level": 22,
+   "minLevel": 15,
+   "text": "Collect 25 Intact Limbs within The Ruins of Lordaeron for Morbin Lightbane in the Undercity.",
+   "giver": {
+    "name": "Morbin Lightbane",
+    "location": "Morbin Lightbane, Undercity",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Intact Limbs ×25",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/268580",
+       "name": "Intact Limbs",
+       "qty": "×25",
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "7,040 XP in the Forever beta",
+   "money": "45s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "The Stitcher",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 279874,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spare Part Bindings",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 279875,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92401",
+   "faction": "Horde",
+   "name": "A Frightened Request",
+   "level": 22,
+   "minLevel": 15,
+   "text": "Investigate the disappearance of Edward Heartweaver in the Ruins of Lordaeron.",
+   "giver": {
+    "name": "Tabitha Heartweaver",
+    "location": "Tabitha Heartweaver, Silverpine Forest",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "7,040 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Edwards' Knife",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 251485,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tabitha's Cuffs",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 251486,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95216",
+   "faction": "Horde",
+   "name": "The New Plague",
+   "level": 22,
+   "minLevel": 16,
+   "text": "Collect the Highly Toxic Strain from Witherfang in Ruins of Lordaeron for Theodore Griffs in Undercity.",
+   "giver": {
+    "name": "Theodore Griffs",
+    "location": "Theodore Griffs, Undercity",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Highly Toxic StrainWitherfang",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/275443",
+       "name": "Highly Toxic Strain",
+       "qty": null,
+       "source": "Witherfang"
+      }
+     ]
+    }
+   ],
+   "experience": "8,320 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Plaguefang",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 279876,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blight Gloves",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 279877,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-97288",
+   "faction": "Horde",
+   "name": "Unending Torment",
+   "level": 21,
+   "minLevel": 16,
+   "text": "Deliver the Abominable Head to someone within the Undercity.",
+   "giver": {
+    "name": "From the item Abominable Head",
+    "location": "From the item Abominable Head",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "5,280 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95204",
+   "faction": "Horde",
+   "name": "Crest of Lordaeron",
+   "level": 22,
+   "minLevel": 16,
+   "text": "Bring the Crest of Lordaeron to Oran Snakewrithe in Undercity.",
+   "giver": {
+    "name": "From the item Crest of Lordaeron",
+    "location": "From the item Crest of Lordaeron",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "8,320 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Small Sack of Gems",
+     "slot": "Other",
+     "type": null,
+     "itemId": 280567,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

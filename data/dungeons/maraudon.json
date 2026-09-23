@@ -1,0 +1,1914 @@
+{
+ "id": "maraudon",
+ "name": "Maraudon",
+ "type": "classic",
+ "levelMin": 48,
+ "levelMax": 54,
+ "abbr": "Maraudon",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-maraudon.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Veng",
+   "kind": "quest",
+   "level": 47,
+   "items": [
+    {
+     "name": "Gem of the Fifth Khan",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 17765,
+     "icon": "inv_misc_gem_opal_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "Use: Places all five of the Khans' gems in the Amulet of Spirits.",
+      "\"Found on the body of Veng...\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Noxxion",
+   "kind": "boss",
+   "level": 48,
+   "items": [
+    {
+     "name": "Noxxion's Shackles",
+     "slot": "Wrist",
+     "type": "Plate",
+     "itemId": 17746,
+     "icon": "inv_bracer_06",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tPlate",
+      "235 Armor",
+      "+5 Stamina",
+      "+15 Nature Resistance",
+      "Requires Level 46",
+      "Sell Price: 57s 23c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Heart of Noxxion",
+     "slot": "Trinket",
+     "type": null,
+     "itemId": 17744,
+     "icon": "inv_misc_gem_pearl_06",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Trinket",
+      "+10 Nature Resistance",
+      "Requires Level 46",
+      "Use: Removes 1 poison effects. (5 Min Cooldown)",
+      "Sell Price: 90s 31c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Noxious Shooter",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 17745,
+     "icon": "inv_wand_04",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "56 - 104 Nature Damage\tSpeed 1.60",
+      "(50.0 damage per second)",
+      "+7 Stamina",
+      "+5 Nature Resistance",
+      "Requires Level 46",
+      "Sell Price: 2g 25s 19c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Razorlash",
+   "kind": "boss",
+   "level": 48,
+   "items": [
+    {
+     "name": "Phytoskin Spaulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 17749,
+     "icon": "inv_shoulder_06",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "111 Armor",
+      "+16 Agility",
+      "+10 Stamina",
+      "+10 Nature Resistance",
+      "Requires Level 46",
+      "Sell Price: 1g 14s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Vinerot Sandals",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 17748,
+     "icon": "inv_boots_05",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "50 Armor",
+      "+12 Intellect",
+      "+12 Spirit",
+      "+12 Nature Resistance",
+      "Requires Level 46",
+      "Sell Price: 91s 7c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Chloromesh Girdle",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 17750,
+     "icon": "inv_belt_25",
+     "quality": 2,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "37 Armor",
+      "+20 Nature Resistance",
+      "Requires Level 46",
+      "Sell Price: 47s 69c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Brusslehide Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 17751,
+     "icon": "inv_pants_05",
+     "quality": 2,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "118 Armor",
+      "+15 Intellect",
+      "+11 Stamina",
+      "+10 Nature Resistance",
+      "Requires Level 46",
+      "Sell Price: 1g 27s 87c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Maraudos",
+   "kind": "quest",
+   "level": 46,
+   "items": [
+    {
+     "name": "Gem of the Fourth Khan",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 17764,
+     "icon": "inv_misc_gem_sapphire_02",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "Use: Places all five of the Khans' gems in the Amulet of Spirits.",
+      "\"Found on the body of Maraudos...\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lord Vyletongue",
+   "kind": "boss",
+   "level": 47,
+   "items": [
+    {
+     "name": "Satyrmane Sash",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 17755,
+     "icon": "inv_belt_24",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "40 Armor",
+      "+15 Intellect",
+      "+10 Stamina",
+      "+10 Shadow Resistance",
+      "Requires Level 45",
+      "Sell Price: 58s 18c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Infernal Trickster Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 17754,
+     "icon": "inv_pants_wolf",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tMail",
+      "263 Armor",
+      "+20 Agility",
+      "+9 Intellect",
+      "Requires Level 45",
+      "Equip: Increased Bows +4.",
+      "Sell Price: 1g 73s 94c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Satyr's Lash",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 17752,
+     "icon": "inv_weapon_shortblade_09",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tDagger",
+      "39 - 74 Damage\tSpeed 1.70",
+      "(33.2 damage per second)",
+      "Requires Level 45",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 55 to 85 Shadow damage.",
+      "Sell Price: 2g 87s 85c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Meshlok the Harvester",
+   "kind": "rare",
+   "level": 48,
+   "items": [
+    {
+     "name": "Bloomsprout Headpiece",
+     "slot": "Head",
+     "type": "Mail",
+     "itemId": 17767,
+     "icon": "inv_helmet_17",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tMail",
+      "249 Armor",
+      "+18 Stamina",
+      "+10 Nature Resistance",
+      "Requires Level 46",
+      "Equip: +36 Attack Power.",
+      "Sell Price: 1g 36s 10c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Nature's Embrace",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 17741,
+     "icon": "inv_chest_cloth_15",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "73 Armor",
+      "Requires Level 46",
+      "Equip: Increases damage done by Holy spells and effects by up to 29.",
+      "Equip: Restores 8 mana per 5 sec.",
+      "Sell Price: 1g 14s 47c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fungus Shroud Armor",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 17742,
+     "icon": "inv_chest_leather_08",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "148 Armor",
+      "+25 Agility",
+      "+10 Stamina",
+      "Requires Level 46",
+      "Sell Price: 1g 44s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Celebras the Cursed",
+   "kind": "boss",
+   "level": 49,
+   "items": [
+    {
+     "name": "Soothsayer's Headdress",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 17740,
+     "icon": "inv_helmet_12",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "122 Armor",
+      "+25 Intellect",
+      "+8 Spirit",
+      "+7 Stamina",
+      "Requires Level 47",
+      "Sell Price: 1g 14s 1c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grovekeeper's Drape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 17739,
+     "icon": "inv_misc_cape_17",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "37 Armor",
+      "+12 Stamina",
+      "+10 Nature Resistance",
+      "Requires Level 47",
+      "Sell Price: 91s"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Claw of Celebras",
+     "slot": "Off Hand",
+     "type": "Fist Weapon",
+     "itemId": 17738,
+     "icon": "ability_whirlwind",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tFist Weapon",
+      "43 - 81 Damage\tSpeed 1.80",
+      "(34.4 damage per second)",
+      "Requires Level 47",
+      "Chance on hit: Poisons target for 9 Nature damage every 2 sec for 20 sec.",
+      "Sell Price: 3g 33s 51c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Landslide",
+   "kind": "boss",
+   "level": 50,
+   "items": [
+    {
+     "name": "Helm of the Mountain",
+     "slot": "Head",
+     "type": "Plate",
+     "itemId": 17734,
+     "icon": "inv_helmet_20",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "453 Armor",
+      "+10 Nature Resistance",
+      "Requires Level 48",
+      "Equip: Increased Defense +7.",
+      "Sell Price: 1g 4s 57c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rockgrip Gauntlets",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 17736,
+     "icon": "inv_gauntlets_28",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "198 Armor",
+      "+10 Intellect",
+      "+10 Stamina",
+      "Requires Level 48",
+      "Equip: +28 Attack Power.",
+      "Sell Price: 96s 46c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cloud Stone",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 17737,
+     "icon": "inv_misc_orb_01",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+10 Intellect",
+      "+10 Spirit",
+      "+10 Arcane Resistance",
+      "Requires Level 48",
+      "Sell Price: 1g 1s 63c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fist of Stone",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 17943,
+     "icon": "inv_hammer_17",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "44 - 83 Damage\tSpeed 1.80",
+      "(35.3 damage per second)",
+      "Requires Level 48",
+      "Chance on hit: Restores 50 mana.",
+      "Sell Price: 3g 21s 56c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Tinkerer Gizlock",
+   "kind": "boss",
+   "level": 50,
+   "items": [
+    {
+     "name": "Gizlock's Hypertech Buckler",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 17718,
+     "icon": "inv_shield_10",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1835 Armor",
+      "+10 Intellect",
+      "+5 Stamina",
+      "Requires Level 48",
+      "Equip: Restores 4 mana per 5 sec.",
+      "Sell Price: 2g 26s 30c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Megashot Rifle",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemId": 17717,
+     "icon": "inv_weapon_rifle_05",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "32 - 61 Damage\tSpeed 1.70",
+      "(27.4 damage per second)",
+      "+5 Arcane Resistance",
+      "Requires Level 48",
+      "Equip: +19 ranged Attack Power.",
+      "Sell Price: 2g 64s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Inventor's Focal Sword",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 17719,
+     "icon": "inv_sword_14",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tSword",
+      "54 - 101 Damage\tSpeed 2.20",
+      "(35.2 damage per second)",
+      "Requires Level 48",
+      "Equip: Improves your chance to get a critical strike with spells by 1%.",
+      "Sell Price: 3g 21s 6c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Rotgrip",
+   "kind": "boss",
+   "level": 50,
+   "items": [
+    {
+     "name": "Rotgrip Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 17732,
+     "icon": "inv_shoulder_05",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "57 Armor",
+      "+17 Intellect",
+      "+11 Spirit",
+      "Requires Level 48",
+      "Sell Price: 1g 3s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Albino Crocscale Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 17728,
+     "icon": "inv_boots_05",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "105 Armor",
+      "+20 Agility",
+      "+5 Stamina",
+      "+5 Nature Resistance",
+      "Requires Level 48",
+      "Sell Price: 1g 24s 58c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gatorbite Axe",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 17730,
+     "icon": "inv_axe_04",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "117 - 176 Damage\tSpeed 3.20",
+      "(45.8 damage per second)",
+      "Requires Level 48",
+      "Chance on hit: Wounds the target causing them to bleed for 230 damage over 30 sec.",
+      "Sell Price: 4g 29s 51c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Princess Theradras",
+   "kind": "boss",
+   "level": 51,
+   "items": [
+    {
+     "name": "Blade of Eternal Darkness",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemId": 17780,
+     "icon": "inv_sword_09",
+     "quality": 4,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Main Hand\tDagger",
+      "41 - 77 Damage\tSpeed 1.50",
+      "(39.3 damage per second)",
+      "Requires Level 49",
+      "Equip: Chance on landing a damaging spell to deal 100 Shadow damage and restore 100 mana to you. (30 Sec Cooldown)",
+      "Sell Price: 4g 67s 96c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Eye of Theradras",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 17715,
+     "icon": "inv_crown_01",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tCloth",
+      "63 Armor",
+      "+20 Intellect",
+      "+13 Stamina",
+      "+11 Spirit",
+      "Requires Level 49",
+      "Sell Price: 1g 2s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gemshard Heart",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 17707,
+     "icon": "inv_stone_01",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+10 Intellect",
+      "+10 Stamina",
+      "+6 Spirit",
+      "Requires Level 49",
+      "Sell Price: 1g 16s 31c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bracers of the Stone Princess",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 17714,
+     "icon": "inv_bracer_14",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "141 Armor",
+      "+6 Stamina",
+      "+5 Intellect",
+      "Requires Level 49",
+      "Equip: +30 Attack Power.",
+      "Sell Price: 1g 2s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Elemental Rockridge Leggings",
+     "slot": "Legs",
+     "type": "Plate",
+     "itemId": 17711,
+     "icon": "inv_pants_04",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tPlate",
+      "496 Armor",
+      "+18 Stamina",
+      "+20 Strength",
+      "+10 Nature Resistance",
+      "Requires Level 49",
+      "Sell Price: 1g 42s 44c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blackstone Ring",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 17713,
+     "icon": "inv_jewelry_ring_17",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+6 Stamina",
+      "Requires Level 49",
+      "Equip: +20 Attack Power.",
+      "Equip: Improves your chance to hit by 1%.",
+      "Sell Price: 1g 46s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Charstone Dirk",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemId": 17710,
+     "icon": "inv_weapon_shortblade_14",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "40 - 75 Damage\tSpeed 1.60",
+      "(35.9 damage per second)",
+      "+11 Intellect",
+      "Requires Level 49",
+      "Equip: Restores 2 mana per 5 sec.",
+      "Sell Price: 3g 54s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Princess Theradras' Scepter",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 17766,
+     "icon": "inv_hammer_10",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "126 - 190 Damage\tSpeed 3.40",
+      "(46.5 damage per second)",
+      "Requires Level 49",
+      "Chance on hit: Wounds the target for 160 damage and lowers their armor by 100.",
+      "Sell Price: 4g 48s 63c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "The Nameless Prophet",
+   "kind": "object",
+   "level": 41,
+   "items": [
+    {
+     "name": "Amulet of Spirits",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 17757,
+     "icon": "inv_jewelry_amulet_02",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tQuest",
+      "Use: Forces the spirits of the first centaur Kahns to manifest in the physical world."
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Kolk",
+   "kind": "object",
+   "level": 43,
+   "items": [
+    {
+     "name": "Gem of the First Khan",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 17761,
+     "icon": "inv_misc_gem_ruby_02",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "Use: Places all five of the Khans' gems in the Amulet of Spirits.",
+      "\"Found on the body of Kolk...\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Gelk",
+   "kind": "object",
+   "level": 42,
+   "items": [
+    {
+     "name": "Gem of the Second Khan",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 17762,
+     "icon": "inv_misc_gem_emerald_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "Use: Places all five of the Khans' gems in the Amulet of Spirits.",
+      "\"Found on the body of Gelk...\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Magra",
+   "kind": "object",
+   "level": 43,
+   "items": [
+    {
+     "name": "Gem of the Third Khan",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 17763,
+     "icon": "inv_misc_gem_topaz_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "Use: Places all five of the Khans' gems in the Amulet of Spirits.",
+      "\"Found on the body of Magra...\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-7067",
+   "faction": "Both",
+   "name": "The Pariah's Instructions",
+   "level": 48,
+   "minLevel": 39,
+   "text": "Read the Pariah's Instructions. Afterwards, obtain the Amulet of Union from Maraudon and return it to the Centaur Pariah in southern Desolace.",
+   "giver": {
+    "name": "Centaur Pariah",
+    "location": "Centaur Pariah, Desolace",
+    "mapRef": {
+     "name": "Centaur Pariah",
+     "href": "/map/kalimdor#pin=Centaur%20Pariah"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Amulet of Union",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17758",
+       "name": "Amulet of Union",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "5,450 XP in Classic",
+   "money": "1g 40s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Mark of the Chosen",
+     "slot": null,
+     "type": null,
+     "itemId": 17774,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7028",
+   "faction": "Both",
+   "name": "Twisted Evils",
+   "level": 47,
+   "minLevel": 41,
+   "text": "Collect 15 Theradric Crystal Carvings for Willow in Desolace.",
+   "giver": {
+    "name": "Willow",
+    "location": "Willow, Desolace",
+    "mapRef": {
+     "name": "Willow",
+     "href": "/map/kalimdor#pin=Willow"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Theradric Crystal Carving ×15Barbed Lasher, Cavern Lurker and Cavern Shambler and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17684",
+       "name": "Theradric Crystal Carving",
+       "qty": "×15",
+       "source": "Barbed Lasher, Cavern Lurker and Cavern Shambler and others"
+      }
+     ]
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Acumen Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 17775,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sprightring Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 17776,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Relentless Chain",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 17777,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hulkstone Pauldrons",
+     "slot": "Shoulder",
+     "type": "Plate",
+     "itemId": 17779,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7044",
+   "faction": "Both",
+   "name": "Legends of Maraudon",
+   "level": 49,
+   "minLevel": 41,
+   "text": "Recover the two parts of the Scepter of Celebras: the Celebrian Rod and the Celebrian Diamond.  Find a way to speak with Celebras.",
+   "giver": {
+    "name": "Cavindra",
+    "location": "Cavindra, Desolace",
+    "mapRef": {
+     "name": "Cavindra",
+     "href": "/map/kalimdor#pin=Cavindra"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Celebrian DiamondLord VyletongueCelebrian RodNoxxion",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17703",
+       "name": "Celebrian Diamond",
+       "qty": null,
+       "source": "Lord Vyletongue"
+      },
+      {
+       "itemHref": "/item/17702",
+       "name": "Celebrian Rod",
+       "qty": null,
+       "source": "Noxxion"
+      }
+     ]
+    }
+   ],
+   "experience": "3,400 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7046",
+   "faction": "Both",
+   "name": "The Scepter of Celebras",
+   "level": 49,
+   "minLevel": 41,
+   "text": "Assist Celebras the Redeemed while he creates the Scepter of Celebras.  Speak with him when the ritual is complete.",
+   "giver": {
+    "name": "Celebras the Redeemed",
+    "location": "Celebras the Redeemed, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "5,700 XP in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Scepter of Celebras",
+     "slot": "Quest",
+     "type": null,
+     "itemId": 17191,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7066",
+   "faction": "Both",
+   "name": "Seed of Life",
+   "level": 51,
+   "minLevel": 45,
+   "text": "Seek out Remulos in Moonglade and give him the Seed of Life.",
+   "giver": {
+    "name": "Zaetar's Spirit",
+    "location": "Zaetar's Spirit, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Seed of Life",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17760",
+       "name": "Seed of Life",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "6,100 XP in Classic",
+   "money": "1g 50s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7070",
+   "faction": "Alliance",
+   "name": "Shadowshard Fragments",
+   "level": 42,
+   "minLevel": 38,
+   "text": "Collect 10 Shadowshard Fragments from Maraudon and return them to Archmage Tervosh in Theramore on the coast of Dustwallow Marsh.",
+   "giver": {
+    "name": "Archmage Tervosh",
+    "location": "Archmage Tervosh, Dustwallow Marsh",
+    "mapRef": {
+     "name": "Archmage Tervosh",
+     "href": "/map/kalimdor#pin=Archmage%20Tervosh"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shadowshard Fragment ×10Shadowshard Rumbler and Shadowshard Smasher",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17756",
+       "name": "Shadowshard Fragment",
+       "qty": "×10",
+       "source": "Shadowshard Rumbler and Shadowshard Smasher"
+      }
+     ]
+    }
+   ],
+   "experience": "3,450 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Zealous Shadowshard Pendant",
+     "slot": null,
+     "type": null,
+     "itemId": 17772,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Prodigious Shadowshard Pendant",
+     "slot": null,
+     "type": null,
+     "itemId": 17773,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7041",
+   "faction": "Alliance",
+   "name": "Vyletongue Corruption",
+   "level": 47,
+   "minLevel": 41,
+   "text": "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.  Use the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.  Heal 8 plants by killing these Noxxious Scion, then return to Talendria in Nijel's Point.",
+   "giver": {
+    "name": "Talendria",
+    "location": "Talendria, Desolace",
+    "mapRef": {
+     "name": "Talendria",
+     "href": "/map/kalimdor#pin=Talendria"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Filled Cerulean Vial",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17696",
+       "name": "Filled Cerulean Vial",
+       "qty": null,
+       "source": null
+      }
+     ]
+    },
+    {
+     "label": "Slay",
+     "value": "Noxxious Scion ×8",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Woodseed Hoop",
+     "slot": null,
+     "type": null,
+     "itemId": 17768,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sagebrush Girdle",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 17778,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Branchclaw Gauntlets",
+     "slot": "Hands",
+     "type": "Plate",
+     "itemId": 17770,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7065",
+   "faction": "Alliance",
+   "name": "Corruption of Earth and Seed",
+   "level": 51,
+   "minLevel": 45,
+   "text": "Slay Princess Theradras and return to Keeper Marandis at Nijel's Point in Desolace.",
+   "giver": {
+    "name": "Keeper Marandis",
+    "location": "Keeper Marandis, Desolace",
+    "mapRef": {
+     "name": "Keeper Marandis",
+     "href": "/map/kalimdor#pin=Keeper%20Marandis"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Princess Theradras",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "6,100 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Thrash Blade",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 17705,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Resurgence Rod",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 17743,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Verdant Keeper's Aim",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 17753,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7068",
+   "faction": "Horde",
+   "name": "Shadowshard Fragments",
+   "level": 42,
+   "minLevel": 38,
+   "text": "Collect 10 Shadowshard Fragments from Maraudon and return them to Uthel'nay in Orgrimmar.",
+   "giver": {
+    "name": "Uthel'nay",
+    "location": "Uthel'nay, Orgrimmar",
+    "mapRef": {
+     "name": "Uthel'nay",
+     "href": "/map/kalimdor#pin=Uthel&#x27;nay"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Shadowshard Fragment ×10Shadowshard Rumbler and Shadowshard Smasher",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17756",
+       "name": "Shadowshard Fragment",
+       "qty": "×10",
+       "source": "Shadowshard Rumbler and Shadowshard Smasher"
+      }
+     ]
+    }
+   ],
+   "experience": "3,450 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Zealous Shadowshard Pendant",
+     "slot": null,
+     "type": null,
+     "itemId": 17772,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Prodigious Shadowshard Pendant",
+     "slot": null,
+     "type": null,
+     "itemId": 17773,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7029",
+   "faction": "Horde",
+   "name": "Vyletongue Corruption",
+   "level": 47,
+   "minLevel": 41,
+   "text": "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.  Use the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.  Heal 8 plants by killing these Noxxious Scion, then return to Vark Battlescar in Shadowprey Village.",
+   "giver": {
+    "name": "Vark Battlescar",
+    "location": "Vark Battlescar, Desolace",
+    "mapRef": {
+     "name": "Vark Battlescar",
+     "href": "/map/kalimdor#pin=Vark%20Battlescar"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Filled Cerulean Vial",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/17696",
+       "name": "Filled Cerulean Vial",
+       "qty": null,
+       "source": null
+      }
+     ]
+    },
+    {
+     "label": "Slay",
+     "value": "Noxxious Scion ×8",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Woodseed Hoop",
+     "slot": null,
+     "type": null,
+     "itemId": 17768,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sagebrush Girdle",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 17778,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Branchclaw Gauntlets",
+     "slot": "Hands",
+     "type": "Plate",
+     "itemId": 17770,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7064",
+   "faction": "Horde",
+   "name": "Corruption of Earth and Seed",
+   "level": 51,
+   "minLevel": 45,
+   "text": "Slay Princess Theradras and return to Selendra near Shadowprey Village in Desolace.",
+   "giver": {
+    "name": "Selendra",
+    "location": "Selendra, Desolace",
+    "mapRef": {
+     "name": "Selendra",
+     "href": "/map/kalimdor#pin=Selendra"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Princess Theradras",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "6,100 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Thrash Blade",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 17705,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Resurgence Rod",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 17743,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Verdant Keeper's Aim",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 17753,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

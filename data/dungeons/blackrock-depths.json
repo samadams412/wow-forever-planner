@@ -1,0 +1,6577 @@
+{
+ "id": "blackrock-depths",
+ "name": "Blackrock Depths",
+ "type": "classic",
+ "levelMin": 52,
+ "levelMax": 60,
+ "abbr": "BRD",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-blackrockdepths.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Lord Roccor",
+   "kind": "boss",
+   "level": 51,
+   "items": [
+    {
+     "name": "Mantle of Lost Hope",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 22234,
+     "icon": "inv_shoulder_09",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "57 Armor",
+      "+11 Intellect",
+      "+5 Stamina",
+      "Requires Level 48",
+      "Equip: Increases healing done by spells and effects by up to 26.",
+      "Equip: Restores 3 mana per 5 sec.",
+      "Sell Price: 97s 13c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Earthslag Shoulders",
+     "slot": "Shoulder",
+     "type": "Plate",
+     "itemId": 11632,
+     "icon": "inv_shoulder_26",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tPlate",
+      "410 Armor",
+      "+13 Strength",
+      "+8 Intellect",
+      "+8 Stamina",
+      "Requires Level 47",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 9.",
+      "Sell Price: 93s 60c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stoneshell Guard",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 11631,
+     "icon": "inv_shield_02",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1803 Armor",
+      "+6 Strength",
+      "+9 Stamina",
+      "Requires Level 47",
+      "Sell Price: 1g 98s 93c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Idol of Ferocity",
+     "slot": "Relic",
+     "type": "Idol",
+     "itemId": 22397,
+     "icon": "inv_relics_idolofferocity",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Relic\tIdol",
+      "Requires Level 52",
+      "Equip: Reduces the energy cost of Claw and Rake by 3.",
+      "Sell Price: 1g 30s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rockshard Pellets",
+     "slot": "Ammo",
+     "type": "Bullet",
+     "itemId": 11630,
+     "icon": "inv_ammo_bullet_02",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Ammo\tBullet",
+      "18 - 18 Damage\tSpeed 3.00",
+      "(6.0 damage per second)",
+      "Requires Level 47",
+      "Sell Price: 5c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Formula: Smoking Heart of the Mountain",
+     "slot": null,
+     "type": "Enchanting",
+     "itemId": 11813,
+     "icon": "inv_misc_note_01",
+     "quality": 2,
+     "itemLevel": 53,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (265)",
+      "\"Teaches you how to make a smoking heart of the mountain.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (265)",
+      "Use: Teaches you how to make a smoking heart of the mountain.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "High Interrogator Gerstahn",
+   "kind": "boss",
+   "level": 52,
+   "items": [
+    {
+     "name": "Blackveil Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 11626,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "38 Armor",
+      "+6 Strength",
+      "+14 Agility",
+      "Requires Level 48",
+      "Sell Price: 96s 98c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Kentic Amice",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 11624,
+     "icon": "inv_shoulder_25",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "56 Armor",
+      "+13 Intellect",
+      "+6 Spirit",
+      "+5 Stamina",
+      "Requires Level 47",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+      "Sell Price: 90s 79c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Greaves of Withering Despair",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 22240,
+     "icon": "inv_boots_chain_04",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "218 Armor",
+      "+10 Intellect",
+      "+10 Stamina",
+      "Requires Level 48",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 11.",
+      "Equip: Improves your chance to hit with spells by 1%.",
+      "Sell Price: 1g 49s 72c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Enthralled Sphere",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 11625,
+     "icon": "inv_misc_orb_03",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+14 Intellect",
+      "+5 Spirit",
+      "+3 Stamina",
+      "Requires Level 48",
+      "Sell Price: 1g 4s 52c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Prison Cell Key",
+     "slot": null,
+     "type": "Key",
+     "itemId": 11140,
+     "icon": "inv_misc_key_10",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tKey",
+      "\"Various runes and etchings cover the surface of the key.\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Houndmaster Grebmar",
+   "kind": "boss",
+   "level": 52,
+   "items": [
+    {
+     "name": "Spritecaster Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 11623,
+     "icon": "inv_misc_cape_20",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "37 Armor",
+      "+4 Stamina",
+      "+4 Intellect",
+      "+5 Spirit",
+      "Requires Level 47",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+      "Sell Price: 99s 99c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fleetfoot Greaves",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 11627,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "218 Armor",
+      "+19 Agility",
+      "+5 Intellect",
+      "+6 Stamina",
+      "Requires Level 48",
+      "Sell Price: 1g 46s 68c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Houndmaster's Bow",
+     "slot": "Ranged",
+     "type": "Bow",
+     "itemId": 11628,
+     "icon": "inv_weapon_bow_04",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "34 - 64 Damage\tSpeed 1.80",
+      "(27.2 damage per second)",
+      "+3 Agility",
+      "Requires Level 48",
+      "Equip: Attack Power increased by 24 when fighting Beasts.",
+      "Sell Price: 2g 44s 33c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Houndmaster's Rifle",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemId": 11629,
+     "icon": "inv_weapon_rifle_07",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "44 - 82 Damage\tSpeed 2.30",
+      "(27.4 damage per second)",
+      "+3 Agility",
+      "Requires Level 48",
+      "Equip: Attack Power increased by 24 when fighting Beasts.",
+      "Sell Price: 2g 45s 27c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ring of Law: Gorosh the Dervish",
+   "kind": "boss",
+   "level": 56,
+   "items": [
+    {
+     "name": "Savage Gladiator Chain",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 11726,
+     "icon": "inv_chest_chain_15",
+     "quality": 4,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "369 Armor",
+      "+13 Stamina",
+      "+14 Agility",
+      "+13 Strength",
+      "Requires Level 52",
+      "Equip: Improves your chance to get a critical strike by 2%.",
+      "The Gladiator (0/5)",
+      "(2) Set: +20 Armor.",
+      "(3) Set: Increased Defense +2.",
+      "(4) Set: +10 Attack Power.",
+      "(5) Set: Improves your chance to get a critical strike by 1%.",
+      "Sell Price: 3g 35s 33c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Leggings of Frenzied Magic",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 22271,
+     "icon": "inv_pants_leather_21",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "142 Armor",
+      "+15 Intellect",
+      "+15 Stamina",
+      "Requires Level 52",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 16.",
+      "Equip: Restores 5 mana per 5 sec.",
+      "Sell Price: 2g 23s 28c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bloodclot Band",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 22257,
+     "icon": "inv_jewelry_ring_36",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+8 Intellect",
+      "+8 Stamina",
+      "+7 Spirit",
+      "Requires Level 52",
+      "Equip: Increases healing done by spells and effects by up to 15.",
+      "Sell Price: 3g 61s 27c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Flarethorn",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 22266,
+     "icon": "inv_spear_01",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "47 - 88 Damage\tSpeed 1.80",
+      "(37.5 damage per second)",
+      "+5 Intellect",
+      "Requires Level 52",
+      "Equip: Increases damage done by Fire spells and effects by up to 17.",
+      "Sell Price: 4g 38s 78c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ring of Law: Grizzle",
+   "kind": "boss",
+   "level": 54,
+   "items": [
+    {
+     "name": "Dregmetal Spaulders",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemId": 11722,
+     "icon": "inv_shoulder_30",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "246 Armor",
+      "+10 Spirit",
+      "+6 Strength",
+      "+5 Stamina",
+      "+15 Intellect",
+      "Requires Level 50",
+      "Sell Price: 1g 66s 10c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stonewall Girdle",
+     "slot": "Waist",
+     "type": "Plate",
+     "itemId": 11703,
+     "icon": "inv_belt_16",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tPlate",
+      "324 Armor",
+      "+12 Stamina",
+      "Requires Level 50",
+      "Sell Price: 73s 78c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Entrenching Boots",
+     "slot": "Feet",
+     "type": "Plate",
+     "itemId": 22270,
+     "icon": "inv_boots_plate_02",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tPlate",
+      "397 Armor",
+      "+11 Strength",
+      "+5 Agility",
+      "+10 Intellect",
+      "+10 Stamina",
+      "Requires Level 50",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
+      "Sell Price: 1g 18s 82c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grizzle's Skinner",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 11702,
+     "icon": "inv_axe_12",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tAxe",
+      "61 - 114 Damage\tSpeed 2.40",
+      "(36.5 damage per second)",
+      "+8 Strength",
+      "+5 Stamina",
+      "+6 Agility",
+      "Requires Level 50",
+      "Sell Price: 3g 67s 52c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Dark Iron Pulverizer",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11610,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (240)",
+      "\"Teaches you how to make a Dark Iron Pulverizer.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (265)",
+      "Use: Teaches you how to make a Dark Iron Pulverizer.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ring of Law: Eviscerator",
+   "kind": "boss",
+   "level": 54,
+   "items": [
+    {
+     "name": "Splinthide Shoulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 11685,
+     "icon": "inv_shoulder_13",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "118 Armor",
+      "+11 Strength",
+      "+10 Stamina",
+      "+10 Intellect",
+      "Requires Level 50",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 9.",
+      "Sell Price: 1g 39s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rubicund Armguards",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 11679,
+     "icon": "inv_bracer_13",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "143 Armor",
+      "+14 Stamina",
+      "+8 Agility",
+      "Requires Level 50",
+      "Sell Price: 1g 17s 38c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Girdle of Beastial Fury",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 11686,
+     "icon": "inv_belt_12",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "89 Armor",
+      "+8 Strength",
+      "+10 Stamina",
+      "Requires Level 50",
+      "Equip: +30 Attack Power.",
+      "Sell Price: 93s 29c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savage Gladiator Grips",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 11730,
+     "icon": "inv_gauntlets_04",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "211 Armor",
+      "+9 Agility",
+      "+12 Intellect",
+      "+14 Stamina",
+      "+5 Strength",
+      "Requires Level 52",
+      "The Gladiator (0/5)",
+      "(2) Set: +20 Armor.",
+      "(3) Set: Increased Defense +2.",
+      "(4) Set: +10 Attack Power.",
+      "(5) Set: Improves your chance to get a critical strike by 1%.",
+      "Sell Price: 1g 27s 62c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ring of Law: Ok'thor the Breaker",
+   "kind": "boss",
+   "level": 53,
+   "items": [
+    {
+     "name": "Ogreseer Fists",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 11665,
+     "icon": "inv_gauntlets_15",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "97 Armor",
+      "+10 Stamina",
+      "+10 Intellect",
+      "+8 Spirit",
+      "Requires Level 49",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 13.",
+      "Sell Price: 85s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ban'thok Sash",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 11662,
+     "icon": "inv_belt_29",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "43 Armor",
+      "+10 Stamina",
+      "+11 Intellect",
+      "Requires Level 49",
+      "Equip: Improves your chance to hit with spells by 1%.",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 12.",
+      "Sell Price: 74s 62c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savage Gladiator Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 11728,
+     "icon": "inv_pants_03",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tMail",
+      "296 Armor",
+      "+19 Stamina",
+      "+18 Agility",
+      "+12 Strength",
+      "Requires Level 52",
+      "The Gladiator (0/5)",
+      "(2) Set: +20 Armor.",
+      "(3) Set: Increased Defense +2.",
+      "(4) Set: +10 Attack Power.",
+      "(5) Set: Improves your chance to get a critical strike by 1%.",
+      "Sell Price: 2g 53s 36c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cyclopean Band",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 11824,
+     "icon": "inv_jewelry_ring_08",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+4 Spirit",
+      "+4 Strength",
+      "+7 Intellect",
+      "+8 Stamina",
+      "Requires Level 49",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 9.",
+      "Sell Price: 1g 36s 57c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ring of Law: Anub'shiah",
+   "kind": "boss",
+   "level": 54,
+   "items": [
+    {
+     "name": "Carapace of Anub'shiah",
+     "slot": "Chest",
+     "type": "Plate",
+     "itemId": 11678,
+     "icon": "inv_chest_plate08",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tPlate",
+      "577 Armor",
+      "+22 Stamina",
+      "+11 Strength",
+      "+11 Agility",
+      "Requires Level 50",
+      "Sell Price: 1g 55s 96c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Graverot Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 11677,
+     "icon": "inv_misc_cape_19",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "39 Armor",
+      "+15 Stamina",
+      "+6 Spirit",
+      "Requires Level 50",
+      "Sell Price: 1g 16s 55c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shadefiend Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 11675,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "109 Armor",
+      "+10 Strength",
+      "+13 Stamina",
+      "+11 Agility",
+      "Requires Level 50",
+      "Sell Price: 1g 44s 64c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savage Gladiator Greaves",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 11731,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "233 Armor",
+      "+15 Agility",
+      "+10 Strength",
+      "+13 Stamina",
+      "Requires Level 52",
+      "The Gladiator (0/5)",
+      "(2) Set: +20 Armor.",
+      "(3) Set: Increased Defense +2.",
+      "(4) Set: +10 Attack Power.",
+      "(5) Set: Improves your chance to get a critical strike by 1%.",
+      "Sell Price: 1g 93s"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ring of Law: Hedrum the Creeper",
+   "kind": "boss",
+   "level": 53,
+   "items": [
+    {
+     "name": "Spiderfang Carapace",
+     "slot": "Chest",
+     "type": "Plate",
+     "itemId": 11633,
+     "icon": "inv_chest_plate02",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tPlate",
+      "567 Armor",
+      "+14 Strength",
+      "+14 Stamina",
+      "+13 Intellect",
+      "Requires Level 49",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 13.",
+      "Sell Price: 1g 40s 76c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Silkweb Gloves",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 11634,
+     "icon": "inv_gauntlets_12",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "48 Armor",
+      "+14 Stamina",
+      "+13 Intellect",
+      "Requires Level 49",
+      "Equip: Restores 3 mana per 5 sec.",
+      "Sell Price: 70s 63c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hookfang Shanker",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 11635,
+     "icon": "inv_weapon_shortblade_10",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tDagger",
+      "35 - 65 Damage\tSpeed 1.40",
+      "(35.7 damage per second)",
+      "Requires Level 49",
+      "Chance on hit: Corrosive acid that deals 7 Nature damage every 3 sec and lowers target's armor by 50 for 30 sec.",
+      "Sell Price: 3g 54s 51c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Savage Gladiator Helm",
+     "slot": "Head",
+     "type": "Mail",
+     "itemId": 11729,
+     "icon": "inv_helmet_01",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tMail",
+      "275 Armor",
+      "+28 Stamina",
+      "+12 Agility",
+      "Requires Level 52",
+      "The Gladiator (0/5)",
+      "(2) Set: +20 Armor.",
+      "(3) Set: Increased Defense +2.",
+      "(4) Set: +10 Attack Power.",
+      "(5) Set: Improves your chance to get a critical strike by 1%.",
+      "Sell Price: 1g 90s 73c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Pyromancer Loregrain",
+   "kind": "rare",
+   "level": 52,
+   "items": [
+    {
+     "name": "Flamestrider Robes",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 11747,
+     "icon": "inv_chest_cloth_07",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "153 Armor",
+      "+16 Spirit",
+      "+5 Stamina",
+      "+6 Intellect",
+      "+10 Fire Resistance",
+      "Requires Level 48",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 20.",
+      "Sell Price: 1g 66s 59c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Searingscale Leggings",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemId": 11749,
+     "icon": "inv_pants_03",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tMail",
+      "277 Armor",
+      "+10 Spirit",
+      "+13 Intellect",
+      "+13 Stamina",
+      "+13 Agility",
+      "+10 Fire Resistance",
+      "Requires Level 48",
+      "Sell Price: 2g 1s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pyric Caduceus",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 11748,
+     "icon": "inv_staff_13",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "66 - 123 Fire Damage\tSpeed 1.80",
+      "(52.5 damage per second)",
+      "Requires Level 48",
+      "Equip: Increases damage done by Fire spells and effects by up to 13.",
+      "Sell Price: 2g 50s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Kindling Stave",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 11750,
+     "icon": "inv_staff_18",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "106 - 160 Damage\tSpeed 2.90",
+      "(45.9 damage per second)",
+      "+13 Spirit",
+      "+10 Stamina",
+      "+12 Intellect",
+      "+10 Fire Resistance",
+      "Requires Level 48",
+      "Equip: Improves your chance to get a critical strike with spells by 1%.",
+      "Sell Price: 4g 32s 34c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Formula: Enchant Weapon - Fiery Weapon",
+     "slot": null,
+     "type": "Enchanting",
+     "itemId": 11207,
+     "icon": "inv_misc_note_01",
+     "quality": 2,
+     "itemLevel": 53,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (265)",
+      "Use: Permanently enchant a melee weapon to often strike for 40 additional fire damage.",
+      "\"Teaches you how to permanently enchant a weapon to regularly blast its target with fire.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (265)",
+      "Use: Teaches you how to permanently enchant a weapon to regularly blast its target with fire.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Dark Coffer",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Dark Keeper Key",
+     "slot": null,
+     "type": "Key",
+     "itemId": 11197,
+     "icon": "inv_misc_key_11",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Unique",
+      "\tKey",
+      "Use: Use on the Dark Coffer in the Black Vault."
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mana Shaping Handwraps",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 22256,
+     "icon": "inv_gauntlets_17",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "51 Armor",
+      "+11 Intellect",
+      "+9 Stamina",
+      "+7 Spirit",
+      "Requires Level 52",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 16.",
+      "Sell Price: 82s 36c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Black Steel Bindings",
+     "slot": "Wrist",
+     "type": "Plate",
+     "itemId": 22205,
+     "icon": "inv_bracer_14",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tPlate",
+      "261 Armor",
+      "+10 Strength",
+      "+10 Stamina",
+      "+7 Agility",
+      "Requires Level 52",
+      "Sell Price: 85s 22c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Magma Forged Band",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 22255,
+     "icon": "inv_jewelry_ring_04",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+12 Agility",
+      "+7 Strength",
+      "+7 Stamina",
+      "Requires Level 52",
+      "Sell Price: 3g 28s 2c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wand of Eternal Light",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 22254,
+     "icon": "inv_wand_02",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "58 - 109 Holy Damage\tSpeed 1.50",
+      "(55.7 damage per second)",
+      "+6 Intellect",
+      "Requires Level 52",
+      "Equip: Restores 2 mana per 5 sec.",
+      "Equip: Increases healing done by spells and effects by up to 9.",
+      "Sell Price: 3g 6s 55c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Hammer of Grace",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 11923,
+     "icon": "inv_hammer_07",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "71 - 132 Damage\tSpeed 2.70",
+      "(37.6 damage per second)",
+      "Requires Level 52",
+      "Equip: Increases healing done by spells and effects by up to 31.",
+      "Sell Price: 4g 36s 48c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dark Iron Ring",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 11945,
+     "icon": "inv_jewelry_ring_15",
+     "quality": 2,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Finger",
+      "Requires Level 48",
+      "Sell Price: 65s 92c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fire Opal Necklace",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 11946,
+     "icon": "inv_jewelry_necklace_02",
+     "quality": 2,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "Requires Level 47",
+      "Sell Price: 79s 12c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Black Blood of the Tormented",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 11752,
+     "icon": "inv_potion_69",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tQuest",
+      "\"The putrid scent of burned blood assaults your senses.\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Burning Essence",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 11751,
+     "icon": "spell_fire_lavaspawn",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tQuest",
+      "\"The smoldering remains of something...\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Eye of Kajal",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 11753,
+     "icon": "spell_shadow_evileye",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "\"The pupil tracks your every move.\""
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Warder Stilgiss",
+   "kind": "boss",
+   "level": 56,
+   "items": [
+    {
+     "name": "Boreal Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 11782,
+     "icon": "inv_shoulder_02",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "61 Armor",
+      "+8 Intellect",
+      "+5 Stamina",
+      "Requires Level 52",
+      "Equip: Increases damage done by Frost spells and effects by up to 29.",
+      "Sell Price: 1g 27s 20c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dark Warder's Pauldrons",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 22241,
+     "icon": "inv_shoulder_07",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "122 Armor",
+      "+17 Agility",
+      "+11 Strength",
+      "+7 Stamina",
+      "Requires Level 52",
+      "Sell Price: 1g 57s 39c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Chillsteel Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 11783,
+     "icon": "inv_belt_33",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "190 Armor",
+      "+20 Intellect",
+      "+7 Spirit",
+      "+10 Frost Resistance",
+      "Requires Level 52",
+      "Sell Price: 1g 27s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arbiter's Blade",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 11784,
+     "icon": "inv_sword_23",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "59 - 110 Damage\tSpeed 2.40",
+      "(35.2 damage per second)",
+      "+5 Intellect",
+      "+8 Stamina",
+      "Requires Level 48",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 8.",
+      "Sell Price: 3g 38s 35c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Verek",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Verek's Collar",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 11755,
+     "icon": "inv_misc_bandage_14",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+6 Strength",
+      "+7 Stamina",
+      "Requires Level 51",
+      "Equip: Increases your chance to dodge an attack by 1%.",
+      "Sell Price: 1g 46s 27c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Verek's Leash",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 22242,
+     "icon": "inv_belt_18",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "187 Armor",
+      "+8 Strength",
+      "+8 Intellect",
+      "+8 Stamina",
+      "+8 Agility",
+      "+7 Spirit",
+      "Requires Level 51",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 11.",
+      "Sell Price: 1g 14s 89c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Watchman Doomgrip",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Black Steel Bindings",
+     "slot": "Wrist",
+     "type": "Plate",
+     "itemId": 22205,
+     "icon": "inv_bracer_14",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tPlate",
+      "261 Armor",
+      "+10 Strength",
+      "+10 Stamina",
+      "+7 Agility",
+      "Requires Level 52",
+      "Sell Price: 85s 22c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Magma Forged Band",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 22255,
+     "icon": "inv_jewelry_ring_04",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+12 Agility",
+      "+7 Strength",
+      "+7 Stamina",
+      "Requires Level 52",
+      "Sell Price: 3g 28s 2c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mana Shaping Handwraps",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 22256,
+     "icon": "inv_gauntlets_17",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "51 Armor",
+      "+11 Intellect",
+      "+9 Stamina",
+      "+7 Spirit",
+      "Requires Level 52",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 16.",
+      "Sell Price: 82s 36c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wand of Eternal Light",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 22254,
+     "icon": "inv_wand_02",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "58 - 109 Holy Damage\tSpeed 1.50",
+      "(55.7 damage per second)",
+      "+6 Intellect",
+      "Requires Level 52",
+      "Equip: Restores 2 mana per 5 sec.",
+      "Equip: Increases healing done by spells and effects by up to 9.",
+      "Sell Price: 3g 6s 55c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Fineous Darkvire",
+   "kind": "boss",
+   "level": 54,
+   "items": [
+    {
+     "name": "Chief Architect's Monocle",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 11839,
+     "icon": "inv_helmet_44",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tCloth",
+      "64 Armor",
+      "+27 Intellect",
+      "+3 Spirit",
+      "+10 Stamina",
+      "Requires Level 50",
+      "Sell Price: 1g 11s 91c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Foreman's Head Protector",
+     "slot": "Head",
+     "type": "Plate",
+     "itemId": 22223,
+     "icon": "inv_helmet_20",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "469 Armor",
+      "+15 Strength",
+      "+14 Stamina",
+      "+11 Intellect",
+      "Requires Level 50",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 13.",
+      "Sell Price: 1g 12s 91c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lead Surveyor's Mantle",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemId": 11842,
+     "icon": "inv_shoulder_15",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "246 Armor",
+      "+14 Intellect",
+      "+8 Spirit",
+      "Requires Level 50",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 15.",
+      "Sell Price: 1g 70s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Senior Designer's Pantaloons",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 11841,
+     "icon": "inv_pants_09",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "69 Armor",
+      "+18 Spirit",
+      "+8 Stamina",
+      "+7 Intellect",
+      "Requires Level 50",
+      "Equip: Increases healing done by spells and effects by up to 40.",
+      "Sell Price: 1g 50s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Master Builder's Shirt",
+     "slot": "Shirt",
+     "type": null,
+     "itemId": 11840,
+     "icon": "inv_shirt_black_01",
+     "quality": 1,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Shirt",
+      "Sell Price: 71s 37c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Lord Incendius",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Flameweave Cuffs",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 11766,
+     "icon": "inv_bracer_05",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "35 Armor",
+      "+10 Fire Resistance",
+      "Requires Level 52",
+      "Sell Price: 86s 6c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cinderhide Armsplints",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 11764,
+     "icon": "inv_bracer_02",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "71 Armor",
+      "+10 Fire Resistance",
+      "Requires Level 52",
+      "Sell Price: 1g 3s 98c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pyremail Wristguards",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 11765,
+     "icon": "inv_bracer_18",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "148 Armor",
+      "+10 Fire Resistance",
+      "Requires Level 52",
+      "Sell Price: 1g 25s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Emberplate Armguards",
+     "slot": "Wrist",
+     "type": "Plate",
+     "itemId": 11767,
+     "icon": "inv_bracer_18",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tPlate",
+      "261 Armor",
+      "+10 Fire Resistance",
+      "Requires Level 52",
+      "Sell Price: 86s 37c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ace of Elementals",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 19268,
+     "icon": "inv_misc_ticket_tarot_elemental_01",
+     "quality": 3,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tQuest",
+      "Use: Combine the Ace through Eight of Elementals to complete the set.",
+      "Sell Price: 1g 25s"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Incendic Bracers",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 11768,
+     "icon": "inv_bracer_10",
+     "quality": 2,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "32 Armor",
+      "+14 Fire Resistance",
+      "Requires Level 52",
+      "Sell Price: 72s 24c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Bael'Gar",
+   "kind": "boss",
+   "level": 54,
+   "items": [
+    {
+     "name": "Sash of the Burning Heart",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 11807,
+     "icon": "inv_belt_11",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "46 Armor",
+      "+10 Spirit",
+      "+10 Stamina",
+      "+10 Intellect",
+      "Requires Level 53",
+      "Equip: Increases damage done by Fire spells and effects by up to 14.",
+      "Sell Price: 91s 53c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lavacrest Leggings",
+     "slot": "Legs",
+     "type": "Plate",
+     "itemId": 11802,
+     "icon": "inv_pants_04",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tPlate",
+      "531 Armor",
+      "+28 Strength",
+      "+12 Stamina",
+      "Requires Level 53",
+      "Sell Price: 1g 79s 76c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rubidium Hammer",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 11805,
+     "icon": "inv_hammer_09",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "51 - 96 Damage\tSpeed 2.00",
+      "(36.8 damage per second)",
+      "120 Armor",
+      "+5 Strength",
+      "Requires Level 51",
+      "Sell Price: 4g 4s 39c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Force of Magma",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 11803,
+     "icon": "inv_hammer_09",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "123 - 185 Damage\tSpeed 3.20",
+      "(48.1 damage per second)",
+      "+14 Strength",
+      "Requires Level 51",
+      "Chance on hit: Blasts a target for 150 Fire damage.",
+      "Sell Price: 5g 1s 77c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "General Angerforge",
+   "kind": "boss",
+   "level": 57,
+   "items": [
+    {
+     "name": "Royal Decorated Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 11820,
+     "icon": "inv_chest_plate04",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "344 Armor",
+      "+8 Strength",
+      "+26 Stamina",
+      "+12 Agility",
+      "Requires Level 53",
+      "Sell Price: 2g 67s 61c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Warstrife Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 11821,
+     "icon": "inv_pants_09",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "144 Armor",
+      "+6 Strength",
+      "+12 Stamina",
+      "+6 Agility",
+      "Requires Level 53",
+      "Equip: Increases your chance to dodge an attack by 2%.",
+      "Sell Price: 2g 23s 84c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Force of Will",
+     "slot": "Trinket",
+     "type": null,
+     "itemId": 11810,
+     "icon": "inv_jewelry_amulet_01",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Trinket",
+      "Requires Level 55",
+      "Equip: When struck in combat has a 1% chance of reducing all melee damage taken by 25 for 10 sec.",
+      "Equip: Increased Defense +7.",
+      "Sell Price: 1g"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lord General's Sword",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 11817,
+     "icon": "inv_sword_25",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "67 - 125 Damage\tSpeed 2.60",
+      "(36.9 damage per second)",
+      "Requires Level 51",
+      "Chance on hit: Increases attack power by 50 for 30 sec.",
+      "Sell Price: 3g 92s 54c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Angerforge's Battle Axe",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 11816,
+     "icon": "inv_weapon_halberd_06",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "100 - 150 Damage\tSpeed 2.60",
+      "(48.1 damage per second)",
+      "+27 Strength",
+      "+11 Stamina",
+      "Requires Level 51",
+      "Sell Price: 4g 88s 82c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Senior Designer's Pantaloons",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 11841,
+     "icon": "inv_pants_09",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "69 Armor",
+      "+18 Spirit",
+      "+8 Stamina",
+      "+7 Intellect",
+      "Requires Level 50",
+      "Equip: Increases healing done by spells and effects by up to 40.",
+      "Sell Price: 1g 50s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Golem Lord Argelmach",
+   "kind": "boss",
+   "level": 57,
+   "items": [
+    {
+     "name": "Luminary Kilt",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 11823,
+     "icon": "inv_pants_13",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "147 Armor",
+      "+20 Intellect",
+      "+8 Spirit",
+      "+8 Stamina",
+      "Requires Level 54",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 22.",
+      "Sell Price: 2g 36s 77c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Omnicast Boots",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 11822,
+     "icon": "inv_boots_05",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "58 Armor",
+      "+9 Intellect",
+      "+6 Stamina",
+      "Requires Level 54",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 22.",
+      "Sell Price: 1g 41s 53c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Naglering",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 11669,
+     "icon": "inv_jewelry_ring_05",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+10 Stamina",
+      "Requires Level 54",
+      "Equip: When struck in combat inflicts 3 Arcane damage to the attacker.",
+      "Equip: Increased Defense +5.",
+      "Sell Price: 1g 71s 57c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Second Wind",
+     "slot": "Trinket",
+     "type": null,
+     "itemId": 11819,
+     "icon": "inv_jewelry_talisman_06",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Trinket",
+      "Requires Level 54",
+      "Use: Restores 30 mana every 1 sec for 10 sec. (15 Min Cooldown)",
+      "Equip: Increases healing done by spells and effects by up to 22.",
+      "Sell Price: 1g"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Guzzler",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Ragefury Eyepatch",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 11735,
+     "icon": "inv_helmet_46",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "132 Armor",
+      "+9 Stamina",
+      "+6 Strength",
+      "Requires Level 52",
+      "Equip: Improves your chance to get a critical strike by 2%.",
+      "Sell Price: 1g 66s 69c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Coal Miner Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 18043,
+     "icon": "inv_boots_08",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "112 Armor",
+      "+17 Stamina",
+      "+9 Strength",
+      "+10 Fire Resistance",
+      "Requires Level 52",
+      "Sell Price: 1g 54s 95c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Firemoss Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 22275,
+     "icon": "inv_boots_08",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "112 Armor",
+      "+18 Intellect",
+      "+8 Stamina",
+      "Requires Level 52",
+      "Equip: Increases healing done by spells and effects by up to 20.",
+      "Sell Price: 1g 53s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hurley's Tankard",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 18044,
+     "icon": "inv_drink_04",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "71 - 132 Damage\tSpeed 2.70",
+      "(37.6 damage per second)",
+      "+12 Stamina",
+      "+5 Agility",
+      "Requires Level 52",
+      "Sell Price: 4g 14s 78c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Sulfuron Hammer",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 18592,
+     "icon": "inv_scroll_03",
+     "quality": 4,
+     "itemLevel": 63,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Unique",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (300)",
+      "\"Teaches you how to make a Sulfuron Hammer.\"",
+      "Sell Price: 2g"
+     ],
+     "classicTooltip": [
+      "Unique",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (300)",
+      "Use: Teaches you how to make a Sulfuron Hammer.",
+      "Sell Price: 2g"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Dark Iron Plate",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11612,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (260)",
+      "\"Teaches you how to make Dark Iron Plate.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (285)",
+      "Use: Teaches you how to make Dark Iron Plate.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ribbly's Quiver",
+     "slot": "Bag",
+     "type": "Quiver",
+     "itemId": 2662,
+     "icon": "inv_misc_quiver_06",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Bag\tQuiver",
+      "16 Slot Quiver",
+      "Requires Level 50",
+      "Equip: Increases ranged attack speed by 14%.",
+      "Sell Price: 87s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ribbly's Bandolier",
+     "slot": "Bag",
+     "type": "Ammo Pouch",
+     "itemId": 2663,
+     "icon": "inv_misc_ammo_bullet_01",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Bag\tAmmo Pouch",
+      "16 Slot Ammo Pouch",
+      "Requires Level 50",
+      "Equip: Increases ranged attack speed by 14%.",
+      "Sell Price: 87s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wayfarer's Knapsack",
+     "slot": "Bag",
+     "type": null,
+     "itemId": 11742,
+     "icon": "inv_misc_bag_20",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Bag",
+      "16 Slot Bag",
+      "Sell Price: 87s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mixologist's Tunic",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 12793,
+     "icon": "inv_chest_leather_01",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "158 Armor",
+      "+18 Strength",
+      "+18 Stamina",
+      "+11 Agility",
+      "Requires Level 50",
+      "Sell Price: 1g 98s 46c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Barman Shanker",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemId": 12791,
+     "icon": "inv_drink_10",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "51 - 95 Damage\tSpeed 2.00",
+      "(36.5 damage per second)",
+      "Requires Level 50",
+      "Chance on hit: Wounds the target causing them to bleed for 100 damage over 30 sec.",
+      "Sell Price: 3g 94s 11c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Schematic: Goblin Jumper Cables XL",
+     "slot": null,
+     "type": "Engineering",
+     "itemId": 18653,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 53,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEngineering",
+      "Requires Engineering (265)",
+      "\"Teaches you how to make a Goblin Jumper Cable XL.\"",
+      "Sell Price: 40s"
+     ],
+     "classicTooltip": [
+      "\tEngineering",
+      "Requires Engineering (265)",
+      "Use: Teaches you how to make a Goblin Jumper Cable XL.",
+      "Sell Price: 40s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Recipe: Transmute Fire to Earth",
+     "slot": null,
+     "type": "Alchemy",
+     "itemId": 13483,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tAlchemy",
+      "Requires Alchemy (275)",
+      "Use: Transmutes Essence of Fire into Essence of Earth.",
+      "\"Teaches you how to transmute Essence of Fire into Essence of Earth.\""
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "\tAlchemy",
+      "Requires Alchemy (275)",
+      "Use: Teaches you how to transmute Essence of Fire into Essence of Earth."
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Black Dragonscale Breastplate",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemId": 15759,
+     "icon": "inv_scroll_03",
+     "quality": 1,
+     "itemLevel": 58,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (265)",
+      "\"Teaches you how to craft a Black Dragonscale Breastplate.\"",
+      "Sell Price: 55s"
+     ],
+     "classicTooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (290)",
+      "Use: Teaches you how to craft a Black Dragonscale Breastplate.",
+      "Sell Price: 55s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dark Iron Ale Mug",
+     "slot": null,
+     "type": "Other",
+     "itemId": 11325,
+     "icon": "inv_drink_04",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Use: Throw near a patron of the Grim Guzzler",
+      "Sell Price: 1s 50c"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Grim Guzzler Key",
+     "slot": null,
+     "type": "Key",
+     "itemId": 11602,
+     "icon": "inv_misc_key_03",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Unique",
+      "\tKey",
+      "Use: Open locked bar door."
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Phalanx",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Golem Fitted Pauldrons",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemId": 22212,
+     "icon": "inv_shoulder_16",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "250 Armor",
+      "+13 Agility",
+      "+17 Stamina",
+      "Requires Level 51",
+      "Sell Price: 1g 73s 11c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fists of Phalanx",
+     "slot": "Hands",
+     "type": "Plate",
+     "itemId": 11745,
+     "icon": "inv_gauntlets_22",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tPlate",
+      "367 Armor",
+      "+20 Strength",
+      "+9 Stamina",
+      "Requires Level 51",
+      "Sell Price: 78s 78c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bloodfist",
+     "slot": "One-Hand",
+     "type": "Fist Weapon",
+     "itemId": 11744,
+     "icon": "inv_gauntlets_11",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tFist Weapon",
+      "38 - 72 Damage\tSpeed 1.50",
+      "(36.7 damage per second)",
+      "Requires Level 51",
+      "Chance on hit: Wounds the target for 20 damage.",
+      "Sell Price: 3g 92s 42c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rockfist",
+     "slot": "One-Hand",
+     "type": "Fist Weapon",
+     "itemId": 11743,
+     "icon": "inv_gauntlets_11",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tFist Weapon",
+      "32 - 60 Damage\tSpeed 1.40",
+      "(32.9 damage per second)",
+      "+10 Strength",
+      "Requires Level 50",
+      "Sell Price: 3g 7s 34c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Ambassador Flamelash",
+   "kind": "boss",
+   "level": 57,
+   "items": [
+    {
+     "name": "Circle of Flame",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 11808,
+     "icon": "spell_fire_fire",
+     "quality": 4,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tCloth",
+      "74 Armor",
+      "+20 Stamina",
+      "+15 Fire Resistance",
+      "Requires Level 54",
+      "Use: Channels 75 health into mana every 1 sec for 10 sec. (5 Min Cooldown)",
+      "Sell Price: 1g 92s 92c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cape of the Fire Salamander",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 11812,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "41 Armor",
+      "+6 Spirit",
+      "+9 Stamina",
+      "+12 Fire Resistance",
+      "Requires Level 53",
+      "Sell Price: 1g 39s 79c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Molten Fists",
+     "slot": "Hands",
+     "type": "Mail",
+     "itemId": 11814,
+     "icon": "inv_gauntlets_04",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "215 Armor",
+      "+11 Intellect",
+      "+11 Stamina",
+      "+10 Agility",
+      "+10 Fire Resistance",
+      "Requires Level 53",
+      "Sell Price: 1g 30s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Burst of Knowledge",
+     "slot": "Trinket",
+     "type": null,
+     "itemId": 11832,
+     "icon": "inv_jewelry_amulet_07",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Trinket",
+      "Requires Level 53",
+      "Use: Reduces mana cost of all spells by 100 for 10 sec. (15 Min Cooldown)",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 12.",
+      "Sell Price: 1g"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Flame Wrath",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemId": 11809,
+     "icon": "inv_spear_01",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "127 - 191 Damage\tSpeed 3.30",
+      "(48.2 damage per second)",
+      "Requires Level 51",
+      "Chance on hit: Envelops the caster with a Fire shield for 15 sec and shoots a ring of fire dealing 130 to 170 damage to all nearby enemies.",
+      "Sell Price: 5g 12s 87c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tablet of Flame Shock VI",
+     "slot": null,
+     "type": "Book",
+     "itemId": 23320,
+     "icon": "inv_misc_stonetablet_11",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 60,
+     "tooltip": [
+      "\tBook",
+      "Classes: Shaman",
+      "Requires Level 60",
+      "Use: Instantly sears the target with fire, causing 166 Fire damage immediately and 176 Fire damage over 12 sec.",
+      "\"Teaches Flame Shock (Rank 6).\"",
+      "Sell Price: 10g"
+     ],
+     "classicTooltip": [
+      "\tBook",
+      "Classes: Shaman",
+      "Requires Level 60",
+      "Use: Teaches Flame Shock (Rank 6).",
+      "Sell Price: 10g"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Panzor the Invincible",
+   "kind": "rare",
+   "level": 57,
+   "items": [
+    {
+     "name": "Soot Encrusted Footwear",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 22245,
+     "icon": "inv_boots_cloth_05",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "55 Armor",
+      "+9 Intellect",
+      "+8 Stamina",
+      "+14 Spirit",
+      "Requires Level 51",
+      "Equip: Increases healing done by spells and effects by up to 20.",
+      "Sell Price: 1g 23s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shalehusk Boots",
+     "slot": "Feet",
+     "type": "Plate",
+     "itemId": 11787,
+     "icon": "inv_boots_plate_01",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tPlate",
+      "417 Armor",
+      "+5 Stamina",
+      "Requires Level 53",
+      "Equip: Increases your chance to dodge an attack by 2%.",
+      "Sell Price: 1g 37s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rock Golem Bulwark",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 11785,
+     "icon": "inv_shield_06",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1994 Armor",
+      "+10 Stamina",
+      "+10 Nature Resistance",
+      "+10 Arcane Resistance",
+      "Requires Level 53",
+      "Sell Price: 2g 90s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stone of the Earth",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 11786,
+     "icon": "inv_sword_47",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "123 - 185 Damage\tSpeed 3.20",
+      "(48.1 damage per second)",
+      "280 Armor",
+      "+12 Stamina",
+      "Requires Level 51",
+      "Sell Price: 5g 7s 39c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Chest of The Seven",
+   "kind": "boss",
+   "level": 55,
+   "items": [
+    {
+     "name": "Ghostshroud",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 11925,
+     "icon": "inv_helmet_41",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "132 Armor",
+      "+19 Agility",
+      "+18 Stamina",
+      "+12 Strength",
+      "+5 Shadow Resistance",
+      "Requires Level 52",
+      "Sell Price: 1g 64s 84c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Deathdealer Breastplate",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 11926,
+     "icon": "inv_chest_chain_07",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "338 Armor",
+      "+8 Stamina",
+      "+8 Strength",
+      "Requires Level 52",
+      "Equip: Improves your chance to get a critical strike by 2%.",
+      "Sell Price: 2g 45s 90c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Haunting Specter Leggings",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 11929,
+     "icon": "inv_pants_11",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tCloth",
+      "71 Armor",
+      "+28 Spirit",
+      "+12 Intellect",
+      "Requires Level 52",
+      "Sell Price: 1g 65s 81c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Legplates of the Eternal Guardian",
+     "slot": "Legs",
+     "type": "Plate",
+     "itemId": 11927,
+     "icon": "inv_pants_04",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tPlate",
+      "522 Armor",
+      "Requires Level 52",
+      "Equip: Increased Defense +15.",
+      "Sell Price: 1g 64s 56c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wraith Scythe",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 11920,
+     "icon": "inv_axe_13",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tAxe",
+      "57 - 106 Damage\tSpeed 2.20",
+      "(37.0 damage per second)",
+      "Requires Level 51",
+      "Chance on hit: Steals 45 life from target enemy.",
+      "Sell Price: 4g 7s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Hammer of Grace",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 11923,
+     "icon": "inv_hammer_07",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "71 - 132 Damage\tSpeed 2.70",
+      "(37.6 damage per second)",
+      "Requires Level 52",
+      "Equip: Increases healing done by spells and effects by up to 31.",
+      "Sell Price: 4g 36s 48c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blood-etched Blade",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 11922,
+     "icon": "inv_weapon_shortblade_15",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "39 - 74 Damage\tSpeed 1.50",
+      "(37.7 damage per second)",
+      "+12 Stamina",
+      "Requires Level 52",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 6.",
+      "Sell Price: 4g 34s 91c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Impervious Giant",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 11921,
+     "icon": "inv_hammer_08",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "105 - 159 Damage\tSpeed 2.70",
+      "(48.9 damage per second)",
+      "30 Armor",
+      "Requires Level 52",
+      "Equip: Improves your chance to hit by 1%.",
+      "Equip: Improves your chance to get a critical strike by 2%.",
+      "Sell Price: 5g 41s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Magmus",
+   "kind": "boss",
+   "level": 57,
+   "items": [
+    {
+     "name": "Golem Skull Helm",
+     "slot": "Head",
+     "type": "Plate",
+     "itemId": 11746,
+     "icon": "inv_helmet_23",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "477 Armor",
+      "+18 Stamina",
+      "+18 Strength",
+      "Requires Level 51",
+      "Equip: Increased Defense +7.",
+      "Sell Price: 1g 18s 61c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Magmus Stone",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 11935,
+     "icon": "inv_misc_orb_05",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+4 Spirit",
+      "+7 Stamina",
+      "+15 Fire Resistance",
+      "Requires Level 53",
+      "Sell Price: 1g 31s 62c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Totem of Rage",
+     "slot": "Relic",
+     "type": "Totem",
+     "itemId": 22395,
+     "icon": "inv_relics_totemofrage",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Relic\tTotem",
+      "Requires Level 52",
+      "Equip: Increases damage done by Earth Shock, Flame Shock, and Frost Shock by up to 30.",
+      "Sell Price: 1g 29s 73c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Libram of Truth",
+     "slot": "Relic",
+     "type": "Libram",
+     "itemId": 22400,
+     "icon": "inv_relics_libramoftruth",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Relic\tLibram",
+      "Requires Level 52",
+      "Equip: Increases the armor from your Devotion Aura by 55.",
+      "Sell Price: 1g 32s 8c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lavastone Hammer",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 22208,
+     "icon": "inv_hammer_10",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "135 - 203 Damage\tSpeed 3.40",
+      "(49.7 damage per second)",
+      "+14 Stamina",
+      "+12 Intellect",
+      "+10 Strength",
+      "Requires Level 53",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 20.",
+      "Sell Price: 5g 70s 79c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Princess Moira Bronzebeard",
+   "kind": "boss",
+   "level": 58,
+   "items": [
+    {
+     "name": "Ebonsteel Spaulders",
+     "slot": "Shoulder",
+     "type": "Plate",
+     "itemId": 12557,
+     "icon": "inv_shoulder_25",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tPlate",
+      "463 Armor",
+      "+16 Stamina",
+      "+7 Agility",
+      "+6 Strength",
+      "Requires Level 54",
+      "Sell Price: 1g 43s 68c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hands of the Exalted Herald",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 12554,
+     "icon": "inv_gauntlets_32",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "52 Armor",
+      "+13 Intellect",
+      "+12 Spirit",
+      "Requires Level 54",
+      "Equip: Increases healing done by spells and effects by up to 33.",
+      "Sell Price: 94s 74c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "High Priestess Boots",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 12556,
+     "icon": "inv_boots_wolf",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "58 Armor",
+      "+20 Stamina",
+      "+7 Spirit",
+      "+10 Shadow Resistance",
+      "Requires Level 54",
+      "Sell Price: 1g 43s 17c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Swiftwalker Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 12553,
+     "icon": "inv_boots_02",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "115 Armor",
+      "+21 Agility",
+      "+7 Stamina",
+      "+4 Strength",
+      "Requires Level 54",
+      "Sell Price: 1g 76s 99c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Emperor Dagran Thaurissan",
+   "kind": "boss",
+   "level": 59,
+   "items": [
+    {
+     "name": "Ironfoe",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 11684,
+     "icon": "spell_frost_frostbrand",
+     "quality": 4,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Main Hand\tMace",
+      "73 - 136 Damage\tSpeed 2.40",
+      "(43.5 damage per second)",
+      "Requires Level 55",
+      "Chance on hit: Grants 2 extra attacks on your next swing.",
+      "Sell Price: 6g 30s 86c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Imperial Jewel",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 11933,
+     "icon": "inv_misc_gem_sapphire_01",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+7 Stamina",
+      "Requires Level 55",
+      "Equip: +32 Attack Power.",
+      "Sell Price: 1g 96s 46c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Emperor's New Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 11930,
+     "icon": "inv_misc_cape_20",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "43 Armor",
+      "+16 Stamina",
+      "+7 Agility",
+      "Requires Level 55",
+      "Sell Price: 1g 45s 88c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Robes of the Royal Crown",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 11924,
+     "icon": "inv_chest_cloth_16",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "85 Armor",
+      "+10 Spirit",
+      "+12 Intellect",
+      "+19 Stamina",
+      "Requires Level 55",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 18.",
+      "Sell Price: 2g 4s 75c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wristguards of Renown",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 22204,
+     "icon": "inv_bracer_10",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "74 Armor",
+      "+9 Strength",
+      "+10 Stamina",
+      "+10 Agility",
+      "Requires Level 55",
+      "Sell Price: 1g 24s 3c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sash of the Grand Hunt",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 22207,
+     "icon": "inv_belt_28",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "199 Armor",
+      "+15 Agility",
+      "+14 Stamina",
+      "+6 Intellect",
+      "Requires Level 55",
+      "Equip: Increased Bows +2.",
+      "Equip: Increased Guns +2.",
+      "Equip: Increased Crossbows +2.",
+      "Sell Price: 1g 42s 33c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Emperor's Seal",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 11934,
+     "icon": "inv_jewelry_ring_24",
+     "quality": 3,
+     "itemLevel": 61,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Finger",
+      "+6 Frost Resistance",
+      "+6 Arcane Resistance",
+      "Requires Level 55",
+      "Sell Price: 1g 99s 21c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hand of Justice",
+     "slot": "Trinket",
+     "type": null,
+     "itemId": 11815,
+     "icon": "inv_jewelry_talisman_01",
+     "quality": 3,
+     "itemLevel": 58,
+     "requiredLevel": 53,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Trinket",
+      "Requires Level 53",
+      "Equip: 2% chance on melee hit to gain 1 extra attack.",
+      "Equip: +20 Attack Power.",
+      "Sell Price: 1g"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thaurissan's Royal Scepter",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 11928,
+     "icon": "inv_mace_13",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 55,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+10 Spirit",
+      "+5 Intellect",
+      "+5 Stamina",
+      "Requires Level 55",
+      "Equip: Increases healing done by spells and effects by up to 22.",
+      "Sell Price: 2g 20s 45c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dreadforge Retaliator",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 11931,
+     "icon": "inv_axe_22",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "149 - 225 Damage\tSpeed 3.70",
+      "(50.5 damage per second)",
+      "Requires Level 54",
+      "Equip: Increases your chance to parry an attack by 1%.",
+      "Equip: Improves your chance to get a critical strike by 1%.",
+      "Equip: +30 Attack Power.",
+      "Sell Price: 5g 81s 3c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Guiding Stave of Wisdom",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 11932,
+     "icon": "inv_staff_30",
+     "quality": 3,
+     "itemLevel": 59,
+     "requiredLevel": 54,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "133 - 200 Damage\tSpeed 3.30",
+      "(50.5 damage per second)",
+      "+10 Spirit",
+      "+11 Stamina",
+      "+10 Frost Resistance",
+      "Requires Level 54",
+      "Equip: Increases healing done by spells and effects by up to 53.",
+      "Sell Price: 5g 83s 22c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thaurissan Family Jewels",
+     "slot": null,
+     "type": "Junk",
+     "itemId": 12033,
+     "icon": "inv_misc_bag_17",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tJunk"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Braincage",
+     "slot": "Head",
+     "type": "Mail",
+     "itemId": 12549,
+     "icon": "inv_helmet_10",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when equipped",
+      "Head\tMail",
+      "253 Armor",
+      "+25 Intellect",
+      "+9 Spirit",
+      "+5 Stamina",
+      "Requires Level 47",
+      "Sell Price: 1g 36s 69c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blisterbane Wrap",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 12552,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when equipped",
+      "Back\tCloth",
+      "39 Armor",
+      "+15 Agility",
+      "+3 Stamina",
+      "+6 Shadow Resistance",
+      "Requires Level 50",
+      "Sell Price: 1g 9s 80c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stoneshield Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 12551,
+     "icon": "inv_misc_cape_21",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when equipped",
+      "Back\tCloth",
+      "40 Armor",
+      "+6 Stamina",
+      "Requires Level 51",
+      "Sell Price: 1g 15s 94c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Funeral Pyre Vestment",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 12542,
+     "icon": "inv_chest_cloth_40",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "73 Armor",
+      "+13 Intellect",
+      "+13 Spirit",
+      "+13 Stamina",
+      "+10 Fire Resistance",
+      "Requires Level 46",
+      "Sell Price: 1g 23s 56c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Aristocratic Cuffs",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 12546,
+     "icon": "inv_bracer_05",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when equipped",
+      "Wrist\tCloth",
+      "34 Armor",
+      "+15 Intellect",
+      "+6 Spirit",
+      "Requires Level 49",
+      "Sell Price: 74s 63c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Runed Golem Shackles",
+     "slot": "Wrist",
+     "type": "Plate",
+     "itemId": 12550,
+     "icon": "inv_bracer_17",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when equipped",
+      "Wrist\tPlate",
+      "244 Armor",
+      "+14 Strength",
+      "Requires Level 48",
+      "Equip: Increased Defense +4.",
+      "Sell Price: 64s 64c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mar Alom's Grip",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 12547,
+     "icon": "inv_gauntlets_23",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when equipped",
+      "Hands\tLeather",
+      "100 Armor",
+      "+8 Spirit",
+      "+10 Intellect",
+      "+5 Stamina",
+      "Requires Level 51",
+      "Equip: Increases healing done by spells and effects by up to 22.",
+      "Sell Price: 1g 5s 19c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Battlechaser's Greaves",
+     "slot": "Feet",
+     "type": "Plate",
+     "itemId": 12555,
+     "icon": "inv_boots_plate_06",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 50,
+     "tooltip": [
+      "Binds when equipped",
+      "Feet\tPlate",
+      "397 Armor",
+      "+13 Agility",
+      "+14 Strength",
+      "+8 Stamina",
+      "Requires Level 50",
+      "Sell Price: 1g 14s 6c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ribsplitter",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 12527,
+     "icon": "inv_axe_13",
+     "quality": 3,
+     "itemLevel": 53,
+     "requiredLevel": 48,
+     "tooltip": [
+      "Binds when equipped",
+      "Main Hand\tAxe",
+      "66 - 124 Damage\tSpeed 2.70",
+      "(35.2 damage per second)",
+      "Requires Level 48",
+      "Equip: +10 Attack Power.",
+      "Sell Price: 3g 53s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Searing Needle",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 12531,
+     "icon": "inv_weapon_shortblade_03",
+     "quality": 3,
+     "itemLevel": 51,
+     "requiredLevel": 46,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tDagger",
+      "42 - 80 Damage\tSpeed 1.80",
+      "(33.9 damage per second)",
+      "Requires Level 46",
+      "Chance on hit: Blasts a target for 60 Fire damage and increases damage done to target by Fire damage by 10 for 30 sec.",
+      "Sell Price: 2g 88s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Doomforged Straightedge",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 12535,
+     "icon": "inv_sword_41",
+     "quality": 3,
+     "itemLevel": 54,
+     "requiredLevel": 49,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tSword",
+      "47 - 89 Damage\tSpeed 1.90",
+      "(35.8 damage per second)",
+      "+10 Strength",
+      "Requires Level 49",
+      "Equip: +12 Attack Power.",
+      "Sell Price: 3g 49s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Judge's Gavel",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 12528,
+     "icon": "inv_hammer_07",
+     "quality": 3,
+     "itemLevel": 52,
+     "requiredLevel": 47,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "122 - 184 Damage\tSpeed 3.40",
+      "(45.0 damage per second)",
+      "Requires Level 47",
+      "Chance on hit: Stuns target for 3 sec.",
+      "Sell Price: 3g 78s 33c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spire of the Stoneshaper",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 12532,
+     "icon": "inv_wand_07",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "131 - 197 Damage\tSpeed 3.40",
+      "(48.2 damage per second)",
+      "+20 Stamina",
+      "+17 Intellect",
+      "Requires Level 51",
+      "Use: Increases armor by 1000 for 10 sec but cannot cast spells or attack for the duration of the spell. (15 Min Cooldown)",
+      "Sell Price: 4g 85s 1c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Black Dragonscale Leggings",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemId": 15781,
+     "icon": "inv_scroll_05",
+     "quality": 3,
+     "itemLevel": 62,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (290)",
+      "\"Teaches you how to craft Black Dragonscale Leggings.\"",
+      "Sell Price: 1g 50s"
+     ],
+     "classicTooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (300)",
+      "Use: Teaches you how to craft Black Dragonscale Leggings.",
+      "Sell Price: 1g 50s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Black Dragonscale Shoulders",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemId": 15770,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (270)",
+      "\"Teaches you how to craft Black Dragonscale Shoulders.\"",
+      "Sell Price: 75s"
+     ],
+     "classicTooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (300)",
+      "Use: Teaches you how to craft Black Dragonscale Shoulders.",
+      "Sell Price: 75s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Dark Iron Sunderer",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11611,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (250)",
+      "\"Teaches you how to make a Dark Iron Sunderer.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (275)",
+      "Use: Teaches you how to make a Dark Iron Sunderer.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Dark Iron Mail",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11614,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 54,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (245)",
+      "\"Teaches you how to make Dark Iron Mail.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (270)",
+      "Use: Teaches you how to make Dark Iron Mail.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Dark Iron Shoulders",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11615,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 56,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (255)",
+      "\"Teaches you how to make Dark Iron Shoulders.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (280)",
+      "Use: Teaches you how to make Dark Iron Shoulders.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Schematic: Dark Iron Rifle",
+     "slot": null,
+     "type": "Engineering",
+     "itemId": 16048,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 55,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEngineering",
+      "Requires Engineering (275)",
+      "\"Teaches you how to make a Dark Iron Rifle.\"",
+      "Sell Price: 40s"
+     ],
+     "classicTooltip": [
+      "\tEngineering",
+      "Requires Engineering (275)",
+      "Use: Teaches you how to make a Dark Iron Rifle.",
+      "Sell Price: 40s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Schematic: Master Engineer's Goggles",
+     "slot": null,
+     "type": "Engineering",
+     "itemId": 16053,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 58,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEngineering",
+      "Requires Engineering (290)",
+      "\"Teaches you how to make Master Engineer's Goggles.\"",
+      "Sell Price: 50s"
+     ],
+     "classicTooltip": [
+      "\tEngineering",
+      "Requires Engineering (290)",
+      "Use: Teaches you how to make Master Engineer's Goggles.",
+      "Sell Price: 50s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Schematic: Dark Iron Bomb",
+     "slot": null,
+     "type": "Engineering",
+     "itemId": 16049,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 57,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEngineering",
+      "Requires Engineering (285)",
+      "\"Teaches you how to make a Dark Iron Bomb.\"",
+      "Sell Price: 50s"
+     ],
+     "classicTooltip": [
+      "\tEngineering",
+      "Requires Engineering (285)",
+      "Use: Teaches you how to make a Dark Iron Bomb.",
+      "Sell Price: 50s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Schematic: Gnomish Alarm-O-Bot",
+     "slot": null,
+     "type": "Engineering",
+     "itemId": 18654,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 53,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEngineering",
+      "Requires Engineering (265)",
+      "\"Teaches you how to make an Alarm-O-Bot.\"",
+      "Sell Price: 40s"
+     ],
+     "classicTooltip": [
+      "\tEngineering",
+      "Requires Engineering (265)",
+      "Use: Teaches you how to make an Alarm-O-Bot.",
+      "Sell Price: 40s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Schematic: World Enlarger",
+     "slot": null,
+     "type": "Engineering",
+     "itemId": 18661,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 52,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEngineering",
+      "Requires Engineering (260)",
+      "\"Teaches you how to make a World Enlarger.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "\tEngineering",
+      "Requires Engineering (260)",
+      "Use: Teaches you how to make a World Enlarger.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Golem Skull Helm",
+     "slot": "Head",
+     "type": "Plate",
+     "itemId": 11746,
+     "icon": "inv_helmet_23",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "477 Armor",
+      "+18 Stamina",
+      "+18 Strength",
+      "Requires Level 51",
+      "Equip: Increased Defense +7.",
+      "Sell Price: 1g 18s 61c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wraith Scythe",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 11920,
+     "icon": "inv_axe_13",
+     "quality": 3,
+     "itemLevel": 56,
+     "requiredLevel": 51,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tAxe",
+      "57 - 106 Damage\tSpeed 2.20",
+      "(37.0 damage per second)",
+      "Requires Level 51",
+      "Chance on hit: Steals 45 life from target enemy.",
+      "Sell Price: 4g 7s 32c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Impervious Giant",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 11921,
+     "icon": "inv_hammer_08",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "105 - 159 Damage\tSpeed 2.70",
+      "(48.9 damage per second)",
+      "30 Armor",
+      "Requires Level 52",
+      "Equip: Improves your chance to hit by 1%.",
+      "Equip: Improves your chance to get a critical strike by 2%.",
+      "Sell Price: 5g 41s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blood-etched Blade",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 11922,
+     "icon": "inv_weapon_shortblade_15",
+     "quality": 3,
+     "itemLevel": 57,
+     "requiredLevel": 52,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "39 - 74 Damage\tSpeed 1.50",
+      "(37.7 damage per second)",
+      "+12 Stamina",
+      "Requires Level 52",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 6.",
+      "Sell Price: 4g 34s 91c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ironweave Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 22305,
+     "icon": "inv_shoulder_05",
+     "quality": 3,
+     "itemLevel": 61,
+     "requiredLevel": 56,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "65 Armor",
+      "+17 Stamina",
+      "+11 Intellect",
+      "Classes: Priest, Mage, Warlock",
+      "Requires Level 56",
+      "Ironweave Battlesuit (0/8)",
+      "(4) Set: Increases your chance to resist Silence and Interrupt effects by 10%.",
+      "(8) Set: +200 Armor.",
+      "Sell Price: 1g 60s 90c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Plans",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "Plans: Dark Iron Mail",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11614,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 54,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (245)",
+      "\"Teaches you how to make Dark Iron Mail.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (270)",
+      "Use: Teaches you how to make Dark Iron Mail.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Dark Iron Shoulders",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemId": 11615,
+     "icon": "inv_scroll_06",
+     "quality": 2,
+     "itemLevel": 56,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (255)",
+      "\"Teaches you how to make Dark Iron Shoulders.\"",
+      "Sell Price: 30s"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (280)",
+      "Use: Teaches you how to make Dark Iron Shoulders.",
+      "Sell Price: 30s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-4083",
+   "faction": "Both",
+   "name": "The Spectral Chalice",
+   "level": 55,
+   "minLevel": 40,
+   "text": null,
+   "giver": {
+    "name": "Spectral Chalice",
+    "location": "Spectral Chalice, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Star Ruby ×2Abomination, Adamantite Bound Chest and Akubar the Seer and othersGold Bar ×20Alliance Chest, Alliance Strongbox and Battered Chest and othersTruesilver Bar ×10Adamantite Bound Chest, Alliance Chest and Alliance Strongbox and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/7910",
+       "name": "Star Ruby",
+       "qty": "×2",
+       "source": "Abomination, Adamantite Bound Chest and Akubar the Seer and others"
+      },
+      {
+       "itemHref": "/item/3577",
+       "name": "Gold Bar",
+       "qty": "×20",
+       "source": "Alliance Chest, Alliance Strongbox and Battered Chest and others"
+      },
+      {
+       "itemHref": "/item/6037",
+       "name": "Truesilver Bar",
+       "qty": "×10",
+       "source": "Adamantite Bound Chest, Alliance Chest and Alliance Strongbox and others"
+      }
+     ]
+    }
+   ],
+   "experience": "575 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3802",
+   "faction": "Both",
+   "name": "Dark Iron Legacy",
+   "level": 52,
+   "minLevel": 48,
+   "text": "Slay Fineous Darkvire and recover the great hammer, Ironfel. Take Ironfel to the Shrine of Thaurissan and place it on the statue of Franclorn Forgewright.",
+   "giver": {
+    "name": "Franclorn Forgewright",
+    "location": "Franclorn Forgewright, Burning Steppes",
+    "mapRef": {
+     "name": "Franclorn Forgewright",
+     "href": "/map/eastern-kingdoms#pin=Franclorn%20Forgewright"
+    }
+   },
+   "prereq": "Dark Iron Legacy, from Franclorn Forgewright, Burning Steppes",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "IronfelFineous Darkvire",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/10999",
+       "name": "Ironfel",
+       "qty": null,
+       "source": "Fineous Darkvire"
+      }
+     ]
+    }
+   ],
+   "experience": "5,100 XP in Classic",
+   "money": "2g 30s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Shadowforge Key",
+     "slot": "Key",
+     "type": null,
+     "itemId": 11000,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4136",
+   "faction": "Both",
+   "name": "Ribbly Screwspigot",
+   "level": 53,
+   "minLevel": 48,
+   "text": "Bring Ribbly's Head to Yuka Screwspigot in the Burning Steppes.",
+   "giver": {
+    "name": "Yuka Screwspigot",
+    "location": "Yuka Screwspigot, Burning Steppes",
+    "mapRef": {
+     "name": "Yuka Screwspigot",
+     "href": "/map/eastern-kingdoms#pin=Yuka%20Screwspigot"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Ribbly's HeadRibbly Screwspigot",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11313",
+       "name": "Ribbly's Head",
+       "qty": null,
+       "source": "Ribbly Screwspigot"
+      }
+     ]
+    }
+   ],
+   "experience": "2,650 XP in Classic",
+   "money": "60s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Rancor Boots",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemId": 11865,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Penance Spaulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 11963,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Splintsteel Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 12049,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4201",
+   "faction": "Both",
+   "name": "The Love Potion",
+   "level": 54,
+   "minLevel": 50,
+   "text": "Bring 4 Gromsblood, 10 Giant Silver Veins and Nagmara's Filled Vial to Mistress Nagmara in Blackrock Depths.",
+   "giver": {
+    "name": "Mistress Nagmara",
+    "location": "Mistress Nagmara, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Gromsblood ×4Alshirr Banebreath, Angerclaw Bear and Angerclaw Grizzly and othersGiant Silver Vein ×10Cliff Breaker, Cliff Thunderer and Cliff WalkerNagmara's Filled Vial",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8846",
+       "name": "Gromsblood",
+       "qty": "×4",
+       "source": "Alshirr Banebreath, Angerclaw Bear and Angerclaw Grizzly and others"
+      },
+      {
+       "itemHref": "/item/11405",
+       "name": "Giant Silver Vein",
+       "qty": "×10",
+       "source": "Cliff Breaker, Cliff Thunderer and Cliff Walker"
+      },
+      {
+       "itemHref": "/item/11413",
+       "name": "Nagmara's Filled Vial",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "5,450 XP in Classic",
+   "money": "80s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Manacle Cuffs",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 11962,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Nagmara's Whipping Belt",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 11866,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4123",
+   "faction": "Both",
+   "name": "The Heart of the Mountain",
+   "level": 55,
+   "minLevel": 50,
+   "text": "Bring the Heart of the Mountain to Maxwort Uberglint in the Burning Steppes.",
+   "giver": {
+    "name": "Maxwort Uberglint",
+    "location": "Maxwort Uberglint, Burning Steppes",
+    "mapRef": {
+     "name": "Maxwort Uberglint",
+     "href": "/map/eastern-kingdoms#pin=Maxwort%20Uberglint"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "The Heart of the MountainHeart of the Mountain",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11309",
+       "name": "The Heart of the Mountain",
+       "qty": null,
+       "source": "Heart of the Mountain"
+      }
+     ]
+    }
+   ],
+   "experience": "5,650 XP in Classic",
+   "money": "85s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4024",
+   "faction": "Both",
+   "name": "A Taste of Flame",
+   "level": 58,
+   "minLevel": 52,
+   "text": "Travel to Blackrock Depths and slay Bael'Gar.  You only know that the giant resides inside Blackrock Depths. Remember to use the Altered Black Dragonflight Molt on Bael'Gar's remains to capture the Fiery Essence.  Return the Encased Fiery Essence to Cyrus Therepentous.",
+   "giver": {
+    "name": "Cyrus Therepentous",
+    "location": "Cyrus Therepentous, Burning Steppes",
+    "mapRef": {
+     "name": "Cyrus Therepentous",
+     "href": "/map/eastern-kingdoms#pin=Cyrus%20Therepentous"
+    }
+   },
+   "prereq": "A Taste of Flame, from Cyrus Therepentous, Burning Steppes",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Encased Fiery Essence",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11230",
+       "name": "Encased Fiery Essence",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "6,200 XP in Classic",
+   "money": "2g 65s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Shaleskin Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 12066,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wyrmhide Spaulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 12082,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Valconian Sash",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 12083,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-9015",
+   "faction": "Both",
+   "name": "The Challenge",
+   "level": 60,
+   "minLevel": 58,
+   "text": "Travel to the Ring of the Law in Blackrock Depths and place the Banner of Provocation in its center as you are sentenced by High Justice Grimstone.  Slay Theldren and his gladiators and return to Anthion Harmon in the Eastern Plaguelands with the first piece of Lord Valthalak's amulet.",
+   "giver": {
+    "name": "Falrin Treeshaper",
+    "location": "Falrin Treeshaper, Dire Maul",
+    "mapRef": null
+   },
+   "prereq": "The Instigator's Enchantment, from Falrin Treeshaper",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Top Piece of Lord Valthalak's AmuletTheldren",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/22047",
+       "name": "Top Piece of Lord Valthalak's Amulet",
+       "qty": null,
+       "source": "Theldren"
+      }
+     ]
+    }
+   ],
+   "experience": "6,600 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7604",
+   "faction": "Both",
+   "name": "A Binding Contract",
+   "level": 60,
+   "minLevel": 60,
+   "text": "Turn the Thorium Brotherhood Contract in to Lokhtos Darkbargainer if you would like to receive the plans for Sulfuron.",
+   "giver": {
+    "name": "From the item Thorium Brotherhood Contract",
+    "location": "From the item Thorium Brotherhood Contract",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Thorium Brotherhood ContractSulfuron IngotGolemagg the Incinerator",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/18628",
+       "name": "Thorium Brotherhood Contract",
+       "qty": null,
+       "source": null
+      },
+      {
+       "itemHref": "/item/17203",
+       "name": "Sulfuron Ingot",
+       "qty": null,
+       "source": "Golemagg the Incinerator"
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Plans: Sulfuron Hammer",
+     "slot": "Blacksmithing",
+     "type": null,
+     "itemId": 18592,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4242",
+   "faction": "Alliance",
+   "name": "Abandoned Hope",
+   "level": 54,
+   "minLevel": 48,
+   "text": "Give Marshal Maxwell the bad news.",
+   "giver": {
+    "name": "Marshal Windsor",
+    "location": "Marshal Windsor, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": "Marshal Windsor, from Marshal Maxwell, Burning Steppes",
+   "objectives": [],
+   "experience": "5,450 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Conservator Helm",
+     "slot": "Head",
+     "type": "Mail",
+     "itemId": 12018,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shieldplate Sabatons",
+     "slot": "Feet",
+     "type": "Plate",
+     "itemId": 12021,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Windshear Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 12041,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4263",
+   "faction": "Alliance",
+   "name": "Incendius!",
+   "level": 56,
+   "minLevel": 48,
+   "text": "Find Lord Incendius in Blackrock Depths and destroy him!",
+   "giver": {
+    "name": "Jalinda Sprig",
+    "location": "Jalinda Sprig, Burning Steppes",
+    "mapRef": {
+     "name": "Jalinda Sprig",
+     "href": "/map/eastern-kingdoms#pin=Jalinda%20Sprig"
+    }
+   },
+   "prereq": "Overmaster Pyron, from Jalinda Sprig, Burning Steppes",
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Lord Incendius",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "5,800 XP in Classic",
+   "money": "85s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Sunborne Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 12113,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Nightfall Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 12114,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Crypt Demon Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 12112,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stalwart Clutch",
+     "slot": "Waist",
+     "type": "Plate",
+     "itemId": 12115,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4126",
+   "faction": "Alliance",
+   "name": "Hurley Blackbreath",
+   "level": 55,
+   "minLevel": 50,
+   "text": "Bring the Lost Thunderbrew Recipe to Ragnar Thunderbrew in Kharanos.",
+   "giver": {
+    "name": "Ragnar Thunderbrew",
+    "location": "Ragnar Thunderbrew, Dun Morogh",
+    "mapRef": {
+     "name": "Ragnar Thunderbrew",
+     "href": "/map/eastern-kingdoms#pin=Ragnar%20Thunderbrew"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Lost Thunderbrew RecipeBlackbreath Crony and Hurley Blackbreath",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11312",
+       "name": "Lost Thunderbrew Recipe",
+       "qty": null,
+       "source": "Blackbreath Crony and Hurley Blackbreath"
+      }
+     ]
+    }
+   ],
+   "experience": "5,650 XP in Classic",
+   "money": "1g 65s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Swiftstrike Cudgel",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 11964,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Limb Cleaver",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 12000,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dark Dwarven Lager",
+     "slot": "Food & Drink",
+     "type": null,
+     "itemId": 12003,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4286",
+   "faction": "Alliance",
+   "name": "The Good Stuff",
+   "level": 56,
+   "minLevel": 50,
+   "text": "Travel to Blackrock Depths and recover 20 Dark Iron Fanny Packs. Return to Oralius when you have completed this task. You assume that the Dark Iron dwarves inside Blackrock Depths carry these 'fanny pack' contraptions.",
+   "giver": {
+    "name": "Oralius",
+    "location": "Oralius, Burning Steppes",
+    "mapRef": {
+     "name": "Oralius",
+     "href": "/map/eastern-kingdoms#pin=Oralius"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Dark Iron Fanny Pack ×20Anvilrage Captain, Anvilrage Footman and Anvilrage Guardsman and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11468",
+       "name": "Dark Iron Fanny Pack",
+       "qty": "×20",
+       "source": "Anvilrage Captain, Anvilrage Footman and Anvilrage Guardsman and others"
+      }
+     ]
+    }
+   ],
+   "experience": "5,800 XP in Classic",
+   "money": "85s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "A Dingy Fanny Pack",
+     "slot": "Junk",
+     "type": null,
+     "itemId": 11883,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4264",
+   "faction": "Alliance",
+   "name": "A Crumpled Up Note",
+   "level": 58,
+   "minLevel": 50,
+   "text": "You may have just stumbled on to something that Marshal Windsor would be interested in seeing. There may be hope, after all.",
+   "giver": {
+    "name": "From the item A Crumpled Up Note",
+    "location": "From the item A Crumpled Up Note",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "A Crumpled Up NoteAmbassador Flamelash, Anub'shiah and Anvilrage Captain and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11446",
+       "name": "A Crumpled Up Note",
+       "qty": null,
+       "source": "Ambassador Flamelash, Anub'shiah and Anvilrage Captain and others"
+      }
+     ]
+    }
+   ],
+   "experience": "6,200 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4282",
+   "faction": "Alliance",
+   "name": "A Shred of Hope",
+   "level": 58,
+   "minLevel": 50,
+   "text": "Return Marshal Windsor's Lost Information.  Marshal Windsor believes that the information is being held by Golem Lord Argelmach and General Angerforge.",
+   "giver": {
+    "name": "Marshal Windsor",
+    "location": "Marshal Windsor, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Marshal Windsor's Lost InformationGeneral AngerforgeMarshal Windsor's Lost InformationGolem Lord Argelmach",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11464",
+       "name": "Marshal Windsor's Lost Information",
+       "qty": null,
+       "source": "General Angerforge"
+      },
+      {
+       "itemHref": "/item/11465",
+       "name": "Marshal Windsor's Lost Information",
+       "qty": null,
+       "source": "Golem Lord Argelmach"
+      }
+     ]
+    }
+   ],
+   "experience": "6,200 XP in Classic",
+   "money": "90s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4322",
+   "faction": "Alliance",
+   "name": "Jail Break!",
+   "level": 58,
+   "minLevel": 50,
+   "text": "Help Marshal Windsor get his gear back and free his friends. Return to Marshal Maxwell if you succeed.",
+   "giver": {
+    "name": "Marshal Windsor",
+    "location": "Marshal Windsor, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "7,750 XP in Classic",
+   "money": "1g 75s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Blade of Reckoning",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 12061,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Skilled Fighting Blade",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 12062,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ward of the Elements",
+     "slot": null,
+     "type": null,
+     "itemId": 12065,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4362",
+   "faction": "Alliance",
+   "name": "The Fate of the Kingdom",
+   "level": 59,
+   "minLevel": 50,
+   "text": "Return to Blackrock Depths and rescue Princess Moira Bronzebeard from the evil clutches of Emperor Dagran Thaurissan.",
+   "giver": {
+    "name": "King Magni Bronzebeard",
+    "location": "King Magni Bronzebeard, Dun Morogh",
+    "mapRef": {
+     "name": "King Magni Bronzebeard",
+     "href": "/map/eastern-kingdoms#pin=King%20Magni%20Bronzebeard"
+    }
+   },
+   "prereq": "The Bearer of Bad News, from Kharan Mighthammer",
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Emperor Dagran Thaurissan",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "8,050 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4363",
+   "faction": "Alliance",
+   "name": "The Princess's Surprise",
+   "level": 59,
+   "minLevel": 50,
+   "text": "Return to Ironforge and speak with King Magni Bronzebeard.",
+   "giver": {
+    "name": "Princess Moira Bronzebeard",
+    "location": "Princess Moira Bronzebeard, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "9,650 XP in Classic",
+   "money": "2g 65s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Magni's Will",
+     "slot": null,
+     "type": null,
+     "itemId": 12548,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Songstone of Ironforge",
+     "slot": null,
+     "type": null,
+     "itemId": 12543,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4081",
+   "faction": "Horde",
+   "name": "KILL ON SIGHT: Dark Iron Dwarves",
+   "level": 52,
+   "minLevel": 48,
+   "text": "Venture to Blackrock Depths and destroy the vile aggressors!  Warlord Goretooth wants you to kill 15 Anvilrage Guardsmen, 10 Anvilrage Wardens and 5 Anvilrage Footmen. Return to him once your task is complete.",
+   "giver": {
+    "name": "WANTED",
+    "location": "WANTED, Badlands",
+    "mapRef": {
+     "name": "WANTED",
+     "href": "/map/eastern-kingdoms#pin=WANTED"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Anvilrage Guardsman ×15, Anvilrage Warden ×10, Anvilrage Footman ×5",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "5,100 XP in Classic",
+   "money": "1g 55s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-7201",
+   "faction": "Horde",
+   "name": "The Last Element",
+   "level": 54,
+   "minLevel": 48,
+   "text": "Travel to Blackrock Depths and recover 10 Essence of the Elements. Your first inclination is to search the golems and golem makers. You remember Vivian Lagrave also muttering something about elementals.",
+   "giver": {
+    "name": "Shadowmage Vivian Lagrave",
+    "location": "Shadowmage Vivian Lagrave, Badlands",
+    "mapRef": {
+     "name": "Shadowmage Vivian Lagrave",
+     "href": "/map/eastern-kingdoms#pin=Shadowmage%20Vivian%20Lagrave"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Essence of the Elements ×10Ambassador Flamelash, Blazing Fireguard and Fireguard and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11129",
+       "name": "Essence of the Elements",
+       "qty": "×10",
+       "source": "Ambassador Flamelash, Blazing Fireguard and Fireguard and others"
+      }
+     ]
+    }
+   ],
+   "experience": "5,450 XP in Classic",
+   "money": "2g 45s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Lagrave's Seal",
+     "slot": null,
+     "type": null,
+     "itemId": 12038,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3907",
+   "faction": "Horde",
+   "name": "Disharmony of Fire",
+   "level": 56,
+   "minLevel": 48,
+   "text": "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.",
+   "giver": {
+    "name": "Thunderheart",
+    "location": "Thunderheart, Badlands",
+    "mapRef": {
+     "name": "Thunderheart",
+     "href": "/map/eastern-kingdoms#pin=Thunderheart"
+    }
+   },
+   "prereq": "Disharmony of Flame, from Thunderheart, Badlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Tablet of KurniyaLord Incendius",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11126",
+       "name": "Tablet of Kurniya",
+       "qty": null,
+       "source": "Lord Incendius"
+      }
+     ]
+    },
+    {
+     "label": "Slay",
+     "value": "Lord Incendius",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "7,300 XP in Classic",
+   "money": "2g 55s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Sunborne Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 12113,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Nightfall Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 12114,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Crypt Demon Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 12112,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Stalwart Clutch",
+     "slot": "Waist",
+     "type": "Plate",
+     "itemId": 12115,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4003",
+   "faction": "Horde",
+   "name": "The Royal Rescue",
+   "level": 59,
+   "minLevel": 48,
+   "text": "Slay Emperor Dagran Thaurissan and free Princess Moira Bronzebeard from his evil spell.",
+   "giver": {
+    "name": "Thrall",
+    "location": "Thrall, Orgrimmar",
+    "mapRef": {
+     "name": "Thrall",
+     "href": "/map/kalimdor#pin=Thrall"
+    }
+   },
+   "prereq": "The Eastern Kingdom, from Thrall, Orgrimmar",
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Emperor Dagran Thaurissan",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "8,050 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4004",
+   "faction": "Horde",
+   "name": "The Princess Saved?",
+   "level": 60,
+   "minLevel": 48,
+   "text": "Return to Thrall!",
+   "giver": {
+    "name": "Princess Moira Bronzebeard",
+    "location": "Princess Moira Bronzebeard, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "9,950 XP in Classic",
+   "money": "2g 70s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Thrall's Resolve",
+     "slot": null,
+     "type": null,
+     "itemId": 12544,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Eye of Orgrimmar",
+     "slot": null,
+     "type": null,
+     "itemId": 12545,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4082",
+   "faction": "Horde",
+   "name": "KILL ON SIGHT: High Ranking Dark Iron Officials",
+   "level": 54,
+   "minLevel": 50,
+   "text": "Venture to Blackrock Depths and destroy the vile aggressors!  Warlord Goretooth wants you to kill 10 Anvilrage Medics, 10 Anvilrage Soldiers and 10 Anvilrage Officers. Return to him once your task is complete.",
+   "giver": {
+    "name": "KILL ON SIGHT",
+    "location": "KILL ON SIGHT, Badlands",
+    "mapRef": {
+     "name": "KILL ON SIGHT",
+     "href": "/map/eastern-kingdoms#pin=KILL%20ON%20SIGHT"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Anvilrage Medic ×10, Anvilrage Soldier ×10, Anvilrage Officer ×10",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "5,450 XP in Classic",
+   "money": "1g 65s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4134",
+   "faction": "Horde",
+   "name": "Lost Thunderbrew Recipe",
+   "level": 55,
+   "minLevel": 50,
+   "text": "Bring the Lost Thunderbrew Recipe to Vivian Lagrave in Kargath.",
+   "giver": {
+    "name": "Shadowmage Vivian Lagrave",
+    "location": "Shadowmage Vivian Lagrave, Badlands",
+    "mapRef": {
+     "name": "Shadowmage Vivian Lagrave",
+     "href": "/map/eastern-kingdoms#pin=Shadowmage%20Vivian%20Lagrave"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Lost Thunderbrew RecipeBlackbreath Crony and Hurley Blackbreath",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11312",
+       "name": "Lost Thunderbrew Recipe",
+       "qty": null,
+       "source": "Blackbreath Crony and Hurley Blackbreath"
+      }
+     ]
+    }
+   ],
+   "experience": "5,650 XP in Classic",
+   "money": "85s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Swiftstrike Cudgel",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 11964,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Limb Cleaver",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 12000,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Superior Healing Potion",
+     "slot": "Potions",
+     "type": null,
+     "itemId": 3928,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Greater Mana Potion",
+     "slot": "Potions",
+     "type": null,
+     "itemId": 6149,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4132",
+   "faction": "Horde",
+   "name": "Operation: Death to Angerforge",
+   "level": 58,
+   "minLevel": 52,
+   "text": "Travel to Blackrock Depths and slay General Angerforge! Return to Warlord Goretooth when the task is complete.",
+   "giver": {
+    "name": "Warlord Goretooth",
+    "location": "Warlord Goretooth, Badlands",
+    "mapRef": {
+     "name": "Warlord Goretooth",
+     "href": "/map/eastern-kingdoms#pin=Warlord%20Goretooth"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "General Angerforge",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "7,750 XP in Classic",
+   "money": "2g 65s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Conqueror's Medallion",
+     "slot": null,
+     "type": null,
+     "itemId": 12059,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4121",
+   "faction": "Horde",
+   "name": "Precarious Predicament",
+   "level": 58,
+   "minLevel": 52,
+   "text": "Escort your prisoner, Grark Lorkrub, through Burning Steppes and through Blackrock Mountain to the Searing Gorge.  You recall Lexlort mentioning that he would have his men waiting on the other side to take Grark into custody.  You will also be required to hand over your Thorium Shackles to Lexlort.",
+   "giver": {
+    "name": "Grark Lorkrub",
+    "location": "Grark Lorkrub, Burning Steppes",
+    "mapRef": {
+     "name": "Grark Lorkrub",
+     "href": "/map/eastern-kingdoms#pin=Grark%20Lorkrub"
+    }
+   },
+   "prereq": "Grark Lorkrub, from Lexlort, Badlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Thorium Shackles",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11286",
+       "name": "Thorium Shackles",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "7,750 XP in Classic",
+   "money": "2g 65s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-4063",
+   "faction": "Horde",
+   "name": "The Rise of the Machines",
+   "level": 58,
+   "minLevel": 52,
+   "text": "Find and slay Golem Lord Argelmach. Return his head to Lotwil. You will also need to collect 10 Intact Elemental Cores from the Ragereaver Golems and Warbringer Constructs protecting Argelmach. You know this because you are psychic.",
+   "giver": {
+    "name": "Lotwil Veriatus",
+    "location": "Lotwil Veriatus, Badlands",
+    "mapRef": {
+     "name": "Lotwil Veriatus",
+     "href": "/map/eastern-kingdoms#pin=Lotwil%20Veriatus"
+    }
+   },
+   "prereq": "The Rise of the Machines, from Hierophant Theodora Mulvadania, Badlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of ArgelmachGolem Lord ArgelmachIntact Elemental Core ×10Molten War Golem, Ragereaver Golem, Warbringer Construct and Wrath Hammer Construct",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/11268",
+       "name": "Head of Argelmach",
+       "qty": null,
+       "source": "Golem Lord Argelmach"
+      },
+      {
+       "itemHref": "/item/11269",
+       "name": "Intact Elemental Core",
+       "qty": "×10",
+       "source": "Molten War Golem, Ragereaver Golem, Warbringer Construct and Wrath Hammer Construct"
+      }
+     ]
+    }
+   ],
+   "experience": "6,200 XP in Classic",
+   "money": "2g 65s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Azure Moon Amice",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 12109,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Raincaster Drape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 12110,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Basaltscale Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 12108,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lavaplate Gauntlets",
+     "slot": "Hands",
+     "type": "Plate",
+     "itemId": 12111,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

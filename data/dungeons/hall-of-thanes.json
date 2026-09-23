@@ -1,0 +1,649 @@
+{
+ "id": "hall-of-thanes",
+ "name": "Hall of Thanes",
+ "type": "new",
+ "levelMin": 13,
+ "levelMax": 18,
+ "abbr": null,
+ "faction": "Alliance",
+ "zone": "Beneath Ironforge",
+ "description": "Tucked under the city of Ironforge itself, this dungeon puts a Level 13-18 Alliance party against whatever has moved into the tunnels below the dwarven capital.",
+ "image": "/images/guides/dungeons/hall-of-thanes.webp",
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-hall-of-thanes.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Faldrim Anvilmar",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Ephemeral Choker",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 270227,
+     "icon": "inv_misc_necklacea8",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+4 Stamina",
+      "+2 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Aetherwisp Bracers",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 271096,
+     "icon": "inv_bracer_11",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "15 Armor",
+      "+3 Stamina",
+      "+3 Spell Power",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spiritwraith Drape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 271097,
+     "icon": "inv_misc_cape_12",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "17 Armor",
+      "+4 Agility",
+      "+3 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Magmatus",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Kindlegem Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemId": 270230,
+     "icon": "inv_belt_20",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "100 Armor",
+      "+4 Strength",
+      "+4 Stamina",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Flamefist Grips",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemId": 270231,
+     "icon": "inv_gauntlets_25",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "51 Armor",
+      "+2 Strength",
+      "+4 Agility",
+      "+4 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fang of Magmatus",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemId": 271095,
+     "icon": "inv_misc_bone_06",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "9 - 18 Damage\tSpeed 1.70",
+      "(7.9 damage per second)",
+      "+4 Intellect",
+      "+18 Spell Damage",
+      "+18 Healing",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Plunder",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Golemheart Stave",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 270228,
+     "icon": "inv_wand_11",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "30 - 46 Damage\tSpeed 3.20",
+      "(11.9 damage per second)",
+      "+3 Stamina",
+      "+6 Intellect",
+      "+5 Spirit",
+      "+18 Spell Damage",
+      "+18 Healing",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Golemguard Chest",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 271098,
+     "icon": "inv_chest_chain",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "178 Armor",
+      "+4 Strength",
+      "+6 Stamina",
+      "+4 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Treads of the Protector Golem",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 270229,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "122 Armor",
+      "+5 Strength",
+      "+4 Spirit",
+      "Requires Level 13",
+      "Sell Price: 4s 69c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Durgen Dirgehammer",
+   "kind": "boss",
+   "level": null,
+   "items": [
+    {
+     "name": "Durgen's Crescent Axe",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 270256,
+     "icon": "inv_axe_18",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tAxe",
+      "20 - 39 Damage\tSpeed 2.40",
+      "(12.3 damage per second)",
+      "+2 Strength",
+      "+1 Agility",
+      "+1 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Direhammer Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 270260,
+     "icon": "inv_pants_06",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "72 Armor",
+      "+4 Agility",
+      "+7 Stamina",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Robes of the Disgraced Thane",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 270261,
+     "icon": "inv_chest_cloth_09",
+     "quality": 3,
+     "itemLevel": 18,
+     "requiredLevel": 13,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "+5 Intellect",
+      "+7 Spirit",
+      "Requires Level 13"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Durgen Dirgehammer's Head",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 274286,
+     "icon": "inv_misc_head_dwarf_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-96395",
+   "faction": "Both",
+   "name": "An Ancient Grudge",
+   "level": 15,
+   "minLevel": 10,
+   "text": "Put the spirit of Faldrim Anvilmar to rest in the Hall of Thanes.",
+   "giver": {
+    "name": "Ghostly Attendant",
+    "location": "Ghostly Attendant, inside the dungeon",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Faldrim Anvilmar",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "3,570 XP in the Forever beta",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Catacomb Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 279899,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Deepgrave Trousers",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 279900,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-96403",
+   "faction": "Both",
+   "name": "Important Heirlooms",
+   "level": 15,
+   "minLevel": 10,
+   "text": "Collect 8 Dwarven Heirlooms from the Hall of Thanes.",
+   "giver": {
+    "name": "Thom Filch",
+    "location": "Thom Filch, Ironforge",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Dwarven Heirloom ×8",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/274289",
+       "name": "Dwarven Heirloom",
+       "qty": "×8",
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": "4,590 XP in the Forever beta",
+   "money": "7s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Dwarven Tome",
+     "slot": null,
+     "type": null,
+     "itemId": 279898,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tomb Robber's Gloves",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 280096,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-96393",
+   "faction": "Alliance",
+   "name": "Old Ironforge Incursion",
+   "level": 16,
+   "minLevel": 9,
+   "text": "Enter the Hall of Thanes beneath Old Ironforge and claim the Head of Durgen Dirgehammer.",
+   "giver": {
+    "name": "Earthseer Farsen",
+    "location": "Earthseer Farsen, Dun Morogh",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Durgen Dirgehammer's HeadDurgen Dirgehammer",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/274286",
+       "name": "Durgen Dirgehammer's Head",
+       "qty": null,
+       "source": "Durgen Dirgehammer"
+      }
+     ]
+    }
+   ],
+   "experience": "4,930 XP in the Forever beta",
+   "money": "8s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Calibrated Blunderbuss",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemId": 279894,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ironforge Greathammer",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 279895,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Deepblaze",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 279896,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-96394",
+   "faction": "Alliance",
+   "name": "The Restless Dead",
+   "level": 15,
+   "minLevel": 10,
+   "text": "Kill 15 Enraged Apparitions, 10 Tormented Souls and put the spirit of Anvilmar to rest.",
+   "giver": {
+    "name": "Afadra Dunwall",
+    "location": "Afadra Dunwall, Ironforge",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Enraged Apparition ×15, Tormented Soul ×10",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": "3,570 XP in the Forever beta",
+   "money": "7s",
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Dusty Belt",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 279897,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cryptwalker Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 280095,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

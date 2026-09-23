@@ -1,0 +1,1690 @@
+{
+ "id": "shadowfang-keep",
+ "name": "Shadowfang Keep",
+ "type": "classic",
+ "levelMin": 23,
+ "levelMax": 29,
+ "abbr": "SFK",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-shadowfangkeep.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Rethilgore",
+   "kind": "boss",
+   "level": 20,
+   "items": [
+    {
+     "name": "Rugged Spaulders",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 5254,
+     "icon": "inv_shoulder_08",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "87 Armor",
+      "+2 Fire Resistance",
+      "+2 Nature Resistance",
+      "+2 Frost Resistance",
+      "+2 Shadow Resistance",
+      "+2 Arcane Resistance",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Shoulder\tLeather",
+      "55 Armor",
+      "Requires Level 15",
+      "Sell Price: 3s 8c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sorcerer Collar",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 273457,
+     "icon": "inv_jewelry_necklace_07",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+2 Intellect",
+      "+2 Spirit",
+      "Equip: Reduces the hit chance of Silence effects against you by 4%.",
+      "Requires Level 17"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Cell Keeper's Claws",
+     "slot": "Main Hand",
+     "type": "Fist Weapon",
+     "itemId": 273456,
+     "icon": "inv_misc_monsterclaw_04",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tFist Weapon",
+      "25 - 48 Damage\tSpeed 2.50",
+      "(14.6 damage per second)",
+      "+2 Agility",
+      "Requires Level 17",
+      "Equip: +6 Attack Power Vs Humanoids",
+      "Equip: +6 Attack Power",
+      "Sell Price: 21s 88c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Fel Steed / Shadow Charger",
+   "kind": "boss",
+   "level": [
+    20,
+    21
+   ],
+   "items": [
+    {
+     "name": "Eerie Stable Lantern",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 6341,
+     "icon": "inv_misc_lantern_01",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+4 Stamina",
+      "+4 Shadow Resistance",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+3 Stamina",
+      "Requires Level 14",
+      "Sell Price: 6s 66c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Fel Steed Saddlebags",
+     "slot": "Bag",
+     "type": null,
+     "itemId": 932,
+     "icon": "inv_misc_bag_08",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Bag",
+      "10 Slot Bag",
+      "Sell Price: 6s 37c"
+     ],
+     "classicTooltip": [
+      "Unique",
+      "Bag",
+      "10 Slot Bag",
+      "Sell Price: 6s 37c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Razorclaw the Butcher",
+   "kind": "boss",
+   "level": 22,
+   "items": [
+    {
+     "name": "Butcher's Cleaver",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemId": 1292,
+     "icon": "inv_axe_23",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tAxe",
+      "19 - 36 Damage\tSpeed 1.70",
+      "(16.2 damage per second)",
+      "+5 Strength",
+      "+2 Agility",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tAxe",
+      "23 - 32 Damage\tSpeed 1.70",
+      "(16.2 damage per second)",
+      "+5 Strength",
+      "+2 Agility",
+      "Requires Level 20",
+      "Sell Price: 33s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bloody Apron",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 6226,
+     "icon": "inv_chest_cloth_24",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "+9 Stamina",
+      "+4 Spell Damage",
+      "+13 Healing",
+      "+7 Health Regeneration",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "37 Armor",
+      "+8 Stamina",
+      "Requires Level 18",
+      "Sell Price: 8s 90c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Butcher's Slicer",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 6633,
+     "icon": "inv_sword_16",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tSword",
+      "30 - 57 Damage\tSpeed 2.90",
+      "(15.0 damage per second)",
+      "+3 Stamina",
+      "+6 Attack Power",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "One-Hand\tSword",
+      "23 - 44 Damage\tSpeed 2.90",
+      "(11.6 damage per second)",
+      "+2 Strength",
+      "+2 Stamina",
+      "Requires Level 18",
+      "Sell Price: 21s 31c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Baron Silverlaine",
+   "kind": "boss",
+   "level": 24,
+   "items": [
+    {
+     "name": "Silverlaine's Family Seal",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 6321,
+     "icon": "inv_belt_29",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Finger",
+      "+5 Strength",
+      "+2 Stamina",
+      "Equip: Movement speed Increased by 2% in Tirisfal Glades, Silverpine Forest, and Shadowfang Keep.",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+7 Strength",
+      "+3 Stamina",
+      "Requires Level 21",
+      "Sell Price: 16s 50c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Baron's Scepter",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 6323,
+     "icon": "inv_mace_02",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "28 - 52 Damage\tSpeed 2.40",
+      "(16.7 damage per second)",
+      "+2 Strength",
+      "+3 Stamina",
+      "+4 Health Regeneration",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "21 - 40 Damage\tSpeed 2.40",
+      "(12.7 damage per second)",
+      "+4 Strength",
+      "Requires Level 20",
+      "Sell Price: 26s 11c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blade of Silverlaine",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 273637,
+     "icon": "inv_sword_05",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "17 - 33 Damage\tSpeed 2.30",
+      "(10.9 damage per second)",
+      "+6 Shadow Resistance",
+      "+28 Spell Damage",
+      "+28 Healing",
+      "Requires Level 21"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Commander Springvale",
+   "kind": "boss",
+   "level": 24,
+   "items": [
+    {
+     "name": "Commander's Crest",
+     "slot": "Off Hand",
+     "type": "Shield",
+     "itemId": 6320,
+     "icon": "inv_shield_03",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "585 Armor",
+      "+5 Strength",
+      "+3 Stamina",
+      "+4 Health Regeneration",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "623 Armor",
+      "+3 Spirit",
+      "+3 Stamina",
+      "+6 Strength",
+      "Requires Level 23",
+      "Sell Price: 27s 11c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arced War Axe",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 3191,
+     "icon": "inv_axe_06",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "57 - 86 Damage\tSpeed 3.30",
+      "(21.7 damage per second)",
+      "+9 Strength",
+      "+9 Stamina",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "46 - 70 Damage\tSpeed 3.30",
+      "(17.6 damage per second)",
+      "+6 Strength",
+      "+6 Stamina",
+      "Requires Level 21",
+      "Sell Price: 38s 57c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Worgenbane Talisman",
+     "slot": "Trinket",
+     "type": null,
+     "itemId": 273643,
+     "icon": "inv_jewelry_talisman_06",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Trinket",
+      "Requires Level 21",
+      "Equip: +2 Mana Regeneration",
+      "Use: Stuns target Worgen for 4 sec. (5 Min Cooldown)",
+      "Sell Price: 14s 33c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Odo the Blindwatcher",
+   "kind": "boss",
+   "level": 24,
+   "items": [
+    {
+     "name": "Odo's Ley Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 6318,
+     "icon": "inv_staff_27",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "37 - 57 Damage\tSpeed 2.90",
+      "(16.2 damage per second)",
+      "+5 Stamina",
+      "+12 Spirit",
+      "+17 Spell Damage",
+      "+52 Healing",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "50 - 76 Damage\tSpeed 2.90",
+      "(21.7 damage per second)",
+      "+12 Spirit",
+      "+5 Stamina",
+      "Requires Level 21",
+      "Sell Price: 48s 2c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Girdle of the Blindwatcher",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemId": 6319,
+     "icon": "inv_belt_03",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "54 Armor",
+      "+5 Stamina",
+      "+3 Intellect",
+      "+7 Spell Power",
+      "Equip: Increases your effective stealth detection level by 1.",
+      "Requires Level 21"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "49 Armor",
+      "+3 Stamina",
+      "+5 Intellect",
+      "Requires Level 21",
+      "Sell Price: 8s 3c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blindwatcher's Sight",
+     "slot": "Head",
+     "type": null,
+     "itemId": 273645,
+     "icon": "inv_misc_bandana_01",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Head",
+      "Requires Level 21",
+      "Equip: Reduces the hit chance of Disorient effects against you by 7%.",
+      "Sell Price: 10s 82c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Deathsworn Captain",
+   "kind": "rare",
+   "level": 25,
+   "items": [
+    {
+     "name": "Phantom Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 6642,
+     "icon": "inv_chest_chain_05",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "208 Armor",
+      "+3 Strength",
+      "+12 Stamina",
+      "+5 Spirit",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "201 Armor",
+      "+5 Spirit",
+      "+11 Stamina",
+      "+3 Strength",
+      "Requires Level 20",
+      "Sell Price: 18s 80c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Haunting Blade",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 6641,
+     "icon": "inv_sword_17",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "68 - 102 Damage\tSpeed 3.80",
+      "(22.4 damage per second)",
+      "+11 Spell Damage",
+      "+33 Healing",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tSword",
+      "53 - 80 Damage\tSpeed 3.80",
+      "(17.5 damage per second)",
+      "+9 Spirit",
+      "Requires Level 21",
+      "Sell Price: 36s 75c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Arugal's Voidwalker",
+   "kind": "boss",
+   "level": [
+    24,
+    25
+   ],
+   "items": [
+    {
+     "name": "Rift Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 5943,
+     "icon": "inv_bracer_03",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "80 Armor",
+      "+4 Stamina",
+      "+2 Spell Power",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "80 Armor",
+      "+5 Stamina",
+      "Requires Level 20",
+      "Sell Price: 8s 40c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Fenrus the Devourer",
+   "kind": "boss",
+   "level": 25,
+   "items": [
+    {
+     "name": "Fenrus' Hide",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6340,
+     "icon": "inv_misc_pelt_wolf_02",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "22 Armor",
+      "+6 Agility",
+      "+3 Stamina",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "20 Armor",
+      "+4 Agility",
+      "+2 Stamina",
+      "Requires Level 21",
+      "Sell Price: 8s 75c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Black Wolf Bracers",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemId": 3230,
+     "icon": "inv_bracer_07",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "63 Armor",
+      "+7 Stamina",
+      "+4 Attack Power",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "38 Armor",
+      "+5 Stamina",
+      "Requires Level 21",
+      "Sell Price: 7s 68c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Half-Eaten Boots",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemId": 273646,
+     "icon": "inv_boots_01",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "43 Armor",
+      "+8 Strength",
+      "+10 Nature Resistance",
+      "Requires Level 22",
+      "Sell Price: 18s 1c"
+     ],
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Wolf Master Nandos",
+   "kind": "boss",
+   "level": 25,
+   "items": [
+    {
+     "name": "Feline Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 3748,
+     "icon": "inv_shoulder_05",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "34 Armor",
+      "+2 Agility",
+      "+8 Intellect",
+      "+4 Spell Power",
+      "Equip: Reduces damage from falling.",
+      "Requires Level 23"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "34 Armor",
+      "+10 Intellect",
+      "+3 Spirit",
+      "+2 Agility",
+      "Requires Level 23",
+      "Sell Price: 13s 4c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wolfmaster Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 6314,
+     "icon": "inv_misc_cape_10",
+     "quality": 3,
+     "itemLevel": 27,
+     "requiredLevel": 22,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "22 Armor",
+      "+3 Stamina",
+      "+10 Attack Power",
+      "+9 Attack Power when fighting Beasts",
+      "Requires Level 22"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "20 Armor",
+      "+2 Stamina",
+      "+4 Agility",
+      "Requires Level 22",
+      "Sell Price: 12s 68c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Archmage Arugal",
+   "kind": "boss",
+   "level": 26,
+   "items": [
+    {
+     "name": "Robes of Arugal",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 6324,
+     "icon": "inv_chest_cloth_31",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "+5 Stamina",
+      "+6 Spirit",
+      "+8 Shadow Resistance",
+      "+6 Spell Damage",
+      "+18 Healing",
+      "Requires Level 23"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "46 Armor",
+      "+10 Spirit",
+      "+9 Intellect",
+      "+5 Stamina",
+      "+3 Agility",
+      "Requires Level 24",
+      "Sell Price: 18s 92c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Belt of Arugal",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemId": 6392,
+     "icon": "inv_belt_10",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "26 Armor",
+      "+2 Agility",
+      "+3 Intellect",
+      "+5 Spirit",
+      "+9 Spell Power",
+      "Requires Level 23"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "26 Armor",
+      "+10 Intellect",
+      "+3 Spirit",
+      "+2 Agility",
+      "Requires Level 24",
+      "Sell Price: 10s"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Meteor Shard",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 6220,
+     "icon": "inv_weapon_shortblade_25",
+     "quality": 3,
+     "itemLevel": 28,
+     "requiredLevel": 23,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "22 - 42 Damage\tSpeed 1.80",
+      "(17.8 damage per second)",
+      "+3 Fire Resistance",
+      "Chance on hit: Blasts a target for 42 Fire damage.",
+      "Requires Level 23"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tDagger",
+      "23 - 43 Damage\tSpeed 1.80",
+      "(18.3 damage per second)",
+      "Requires Level 24",
+      "Chance on hit: Blasts a target for 35 Fire damage.",
+      "Sell Price: 48s 93c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Necrology Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemId": 2292,
+     "icon": "inv_chest_cloth_36",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "+3 Stamina",
+      "+5 Intellect",
+      "+5 Shadow Resistance",
+      "+14 Shadow Damage",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "43 Armor",
+      "+12 Intellect",
+      "+3 Stamina",
+      "+5 Shadow Resistance",
+      "Requires Level 20",
+      "Sell Price: 13s 34c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gloomshroud Armor",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 1489,
+     "icon": "inv_chest_leather_08",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tLeather",
+      "94 Armor",
+      "+8 Spirit",
+      "+5 Strength",
+      "+8 Stamina",
+      "Requires Level 20",
+      "Equip: When struck in combat inflicts 2 Shadow damage to the attacker.",
+      "Sell Price: 16s 29c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tLeather",
+      "94 Armor",
+      "+12 Spirit",
+      "+5 Strength",
+      "Requires Level 20",
+      "Sell Price: 15s 53c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mindthrust Bracers",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemId": 1974,
+     "icon": "inv_bracer_07",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when equipped",
+      "Wrist\tCloth",
+      "17 Armor",
+      "+1 Stamina",
+      "+5 Intellect",
+      "+3 Mana Regeneration",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Wrist\tCloth",
+      "17 Armor",
+      "+9 Intellect",
+      "-5 Stamina",
+      "Requires Level 17",
+      "Sell Price: 4s 64c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Guillotine Axe",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 2807,
+     "icon": "inv_axe_24",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when equipped",
+      "Main Hand\tAxe",
+      "28 - 53 Damage\tSpeed 2.70",
+      "(15.0 damage per second)",
+      "+3 Strength",
+      "+3 Agility",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Main Hand\tAxe",
+      "28 - 53 Damage\tSpeed 2.70",
+      "(15.0 damage per second)",
+      "+3 Agility",
+      "+3 Strength",
+      "Requires Level 18",
+      "Sell Price: 24s 52c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shadowfang",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 1482,
+     "icon": "inv_sword_13",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when equipped",
+      "Main Hand\tSword",
+      "29 - 55 Damage\tSpeed 2.70",
+      "(15.6 damage per second)",
+      "Requires Level 19",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 42 Shadow damage.",
+      "Sell Price: 28s 83c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Main Hand\tSword",
+      "29 - 55 Damage\tSpeed 2.70",
+      "+4 - 8 Shadow Damage",
+      "(17.8 damage per second)",
+      "Requires Level 19",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 30 Shadow damage.",
+      "Sell Price: 29s 64c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Assassin's Blade",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 1935,
+     "icon": "inv_weapon_shortblade_24",
+     "quality": 3,
+     "itemLevel": 24,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tDagger",
+      "20 - 39 Damage\tSpeed 1.90",
+      "(15.5 damage per second)",
+      "+3 Strength",
+      "+4 Agility",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "One-Hand\tDagger",
+      "20 - 39 Damage\tSpeed 1.90",
+      "(15.5 damage per second)",
+      "+4 Agility",
+      "+3 Strength",
+      "Requires Level 19",
+      "Sell Price: 29s 74c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Face Smasher",
+     "slot": "One-Hand",
+     "type": "Mace",
+     "itemId": 1483,
+     "icon": "inv_hammer_08",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tMace",
+      "25 - 48 Damage\tSpeed 2.60",
+      "(14.0 damage per second)",
+      "+3 Strength",
+      "+3 Stamina",
+      "Requires Level 16"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Night Reaver",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 1318,
+     "icon": "inv_throwingaxe_06",
+     "quality": 3,
+     "itemLevel": 23,
+     "requiredLevel": 18,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "52 - 78 Damage\tSpeed 3.30",
+      "(19.7 damage per second)",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 84 Shadow damage.",
+      "Requires Level 18"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "52 - 78 Damage\tSpeed 3.30",
+      "+1 - 5 Shadow Damage",
+      "(20.6 damage per second)",
+      "Requires Level 18",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 60 to 90 Shadow damage.",
+      "Sell Price: 30s 66c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Black Malice",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemId": 3194,
+     "icon": "inv_mace_01",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 16,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "48 - 73 Damage\tSpeed 3.30",
+      "(18.3 damage per second)",
+      "+2 Shadow Resistance",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 70 Shadow damage.",
+      "Requires Level 16"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tMace",
+      "48 - 73 Damage\tSpeed 3.30",
+      "+1 - 6 Shadow Damage",
+      "(19.4 damage per second)",
+      "Requires Level 16",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 55 to 85 Shadow damage.",
+      "Sell Price: 24s 95c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Duskbringer",
+     "slot": "Two-Hand",
+     "type": "Sword",
+     "itemId": 2205,
+     "icon": "inv_sword_41",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "57 - 86 Damage\tSpeed 3.40",
+      "(21.0 damage per second)",
+      "Requires Level 20",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 74 to 123 Shadow damage.",
+      "Sell Price: 40s 72c"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "57 - 86 Damage\tSpeed 3.40",
+      "(21.0 damage per second)",
+      "Requires Level 20",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 60 to 100 Shadow damage.",
+      "Sell Price: 39s 61c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Witching Stave",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 1484,
+     "icon": "inv_wand_04",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "41 - 62 Damage\tSpeed 3.60",
+      "(14.3 damage per second)",
+      "+6 Stamina",
+      "+5 Intellect",
+      "+8 Shadow Resistance",
+      "+27 Shadow Damage",
+      "Requires Level 17"
+     ],
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "55 - 83 Damage\tSpeed 3.60",
+      "(19.2 damage per second)",
+      "+8 Intellect",
+      "Requires Level 17",
+      "Equip: Increases damage done by Shadow spells and effects by up to 11.",
+      "Sell Price: 29s 22c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Rift Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 5943,
+     "icon": "inv_bracer_03",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 20,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "80 Armor",
+      "+4 Stamina",
+      "+2 Spell Power",
+      "Requires Level 20"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "80 Armor",
+      "+5 Stamina",
+      "Requires Level 20",
+      "Sell Price: 8s 40c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Eerie Stable Lantern",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 6341,
+     "icon": "inv_misc_lantern_01",
+     "quality": 3,
+     "itemLevel": 21,
+     "requiredLevel": 19,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+4 Stamina",
+      "+4 Shadow Resistance",
+      "Requires Level 19"
+     ],
+     "classicTooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+3 Stamina",
+      "Requires Level 14",
+      "Sell Price: 6s 66c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Jordan's Smithing Hammer",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "Jordan's Smithing Hammer",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 6895,
+     "icon": "inv_hammer_09",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "The Book of Ur",
+   "kind": "object",
+   "level": null,
+   "items": [
+    {
+     "name": "The Book of Ur",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 6283,
+     "icon": "inv_misc_book_08",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-1013",
+   "faction": "Horde",
+   "name": "The Book of Ur",
+   "level": 26,
+   "minLevel": 16,
+   "text": "Bring the Book of Ur to Keeper Bel'dugur at the Apothecarium in the Undercity.",
+   "giver": {
+    "name": "Keeper Bel'dugur",
+    "location": "Keeper Bel'dugur, Undercity",
+    "mapRef": {
+     "name": "Keeper Bel'dugur",
+     "href": "/map/eastern-kingdoms#pin=Keeper%20Bel&#x27;dugur"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "The Book of UrThe Book of Ur",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/6283",
+       "name": "The Book of Ur",
+       "qty": null,
+       "source": "The Book of Ur"
+      }
+     ]
+    }
+   ],
+   "experience": "9,135 XP in the Forever beta2,100 in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Grizzled Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 6335,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Steel-clasped Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemId": 4534,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tattered Mittens",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 270030,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1098",
+   "faction": "Horde",
+   "name": "Deathstalkers in Shadowfang",
+   "level": 25,
+   "minLevel": 18,
+   "text": "Find the Deathstalker Adamant and Deathstalker Vincent.",
+   "giver": {
+    "name": "High Executor Hadrec",
+    "location": "High Executor Hadrec, Silverpine Forest",
+    "mapRef": {
+     "name": "High Executor Hadrec",
+     "href": "/map/eastern-kingdoms#pin=High%20Executor%20Hadrec"
+    }
+   },
+   "prereq": null,
+   "objectives": [],
+   "experience": "8,700 XP in the Forever beta2,000 in Classic",
+   "money": "18s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Ghostly Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemId": 3324,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tanned Shoulderpads",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemId": 270023,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bronzed Shoulderguards",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemId": 270024,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-1014",
+   "faction": "Horde",
+   "name": "Arugal Must Die",
+   "level": 27,
+   "minLevel": 18,
+   "text": "Kill Arugal and bring his head to Dalar Dawnweaver at the Sepulcher.",
+   "giver": {
+    "name": "Dalar Dawnweaver",
+    "location": "Dalar Dawnweaver, Silverpine Forest",
+    "mapRef": {
+     "name": "Dalar Dawnweaver",
+     "href": "/map/eastern-kingdoms#pin=Dalar%20Dawnweaver"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Head of ArugalArchmage Arugal",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/5442",
+       "name": "Head of Arugal",
+       "qty": null,
+       "source": "Archmage Arugal"
+      }
+     ]
+    }
+   ],
+   "experience": "14,355 XP in the Forever beta3,300 in Classic",
+   "money": null,
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Seal of Sylvanas",
+     "slot": null,
+     "type": null,
+     "itemId": 6414,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ]
+}

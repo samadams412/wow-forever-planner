@@ -1,0 +1,1444 @@
+{
+ "id": "zulfarrak",
+ "name": "Zul'Farrak",
+ "type": "classic",
+ "levelMin": 45,
+ "levelMax": 51,
+ "abbr": "ZF",
+ "faction": null,
+ "zone": null,
+ "description": null,
+ "image": null,
+ "confidence": null,
+ "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-zulfarrak.webp",
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Antu'sul",
+   "kind": "boss",
+   "level": 48,
+   "items": [
+    {
+     "name": "Vice Grips",
+     "slot": "Hands",
+     "type": "Plate",
+     "itemId": 9640,
+     "icon": "inv_gauntlets_26",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tPlate",
+      "318 Armor",
+      "Requires Level 43",
+      "Equip: +14 Attack Power.",
+      "Sell Price: 48s 40c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Lifeblood Amulet",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 9641,
+     "icon": "inv_jewelry_necklace_02",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+5 Spirit",
+      "+13 Stamina",
+      "Requires Level 43",
+      "Sell Price: 1g 30s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Hand of Antu'sul",
+     "slot": "Main Hand",
+     "type": "Mace",
+     "itemId": 9639,
+     "icon": "inv_mace_11",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "61 - 113 Damage\tSpeed 2.70",
+      "(32.2 damage per second)",
+      "Requires Level 43",
+      "Chance on hit: Blasts nearby enemies with thunder increasing the time between their attacks by 11% for 10 sec and doing 7 Nature damage to them. Will affect up to 4 targets.",
+      "Sell Price: 2g 41s 11c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sang'thraze the Deflector",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 9379,
+     "icon": "inv_sword_45",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tSword",
+      "34 - 65 Damage\tSpeed 1.70",
+      "(29.1 damage per second)",
+      "Requires Level 44",
+      "Equip: Increases your chance to parry an attack by 1%.",
+      "Sell Price: 2g 63s 83c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Theka the Martyr",
+   "kind": "quest",
+   "level": [
+    45,
+    46
+   ],
+   "items": [
+    {
+     "name": "First Mosh'aru Tablet",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 10660,
+     "icon": "inv_misc_rune_04",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Sandarr Dunereaver",
+   "kind": "rare",
+   "level": 45,
+   "items": [
+    {
+     "name": "Troll Temper",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 9523,
+     "icon": "inv_potion_25",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Witch Doctor Zum'rah",
+   "kind": "boss",
+   "level": 46,
+   "items": [
+    {
+     "name": "Jumanza Grips",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemId": 18083,
+     "icon": "inv_gauntlets_09",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Hands\tCloth",
+      "42 Armor",
+      "+11 Intellect",
+      "+10 Spirit",
+      "+10 Stamina",
+      "Requires Level 42",
+      "Sell Price: 45s 22c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Zum'rah's Vexing Cane",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 18082,
+     "icon": "inv_staff_10",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Two-Hand\tStaff",
+      "88 - 133 Damage\tSpeed 2.70",
+      "(40.9 damage per second)",
+      "+10 Intellect",
+      "+10 Stamina",
+      "Requires Level 42",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 21.",
+      "Sell Price: 2g 81s 61c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Nekrum Gutchewer",
+   "kind": "quest",
+   "level": [
+    45,
+    46
+   ],
+   "items": [
+    {
+     "name": "Nekrum's Medallion",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 9471,
+     "icon": "inv_jewelry_amulet_01",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Shadowpriest Sezz'ziz",
+   "kind": "boss",
+   "level": 47,
+   "items": [
+    {
+     "name": "Bad Mojo Mask",
+     "slot": "Head",
+     "type": "Cloth",
+     "itemId": 9470,
+     "icon": "inv_banner_01",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tCloth",
+      "57 Armor",
+      "+24 Intellect",
+      "Requires Level 44",
+      "Equip: Increases damage done by Shadow spells and effects by up to 14. (15 Min Cooldown)",
+      "Sell Price: 78s 58c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Jinxed Hoodoo Skin",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemId": 9473,
+     "icon": "inv_chest_leather_05",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "144 Armor",
+      "+20 Spirit",
+      "+8 Strength",
+      "+10 Stamina",
+      "Requires Level 44",
+      "Sell Price: 1g 32s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Jinxed Hoodoo Kilt",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemId": 9474,
+     "icon": "inv_pants_05",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "126 Armor",
+      "+24 Spirit",
+      "+10 Intellect",
+      "Requires Level 44",
+      "Sell Price: 1g 32s 90c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Diabolic Skiver",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemId": 9475,
+     "icon": "inv_spear_01",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "99 - 149 Damage\tSpeed 2.90",
+      "(42.8 damage per second)",
+      "Requires Level 44",
+      "Chance on hit: Delivers a fatal wound for 160 to 180 damage.",
+      "Sell Price: 3g 33s 46c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Dustwraith",
+   "kind": "rare",
+   "level": 45,
+   "items": [
+    {
+     "name": "Desertwalker Cane",
+     "slot": "Held In Off-hand",
+     "type": null,
+     "itemId": 12471,
+     "icon": "inv_staff_21",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+13 Spirit",
+      "+4 Intellect",
+      "+5 Stamina",
+      "Requires Level 42",
+      "Sell Price: 84s 9c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Sandfury Executioner",
+   "kind": "boss",
+   "level": 46,
+   "items": [
+    {
+     "name": "Executioner's Key",
+     "slot": null,
+     "type": "Other",
+     "itemId": 8444,
+     "icon": "inv_misc_key_02",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Sergeant Bly",
+   "kind": "quest",
+   "level": 45,
+   "items": [
+    {
+     "name": "Divino-matic Rod",
+     "slot": null,
+     "type": "Other",
+     "itemId": 8548,
+     "icon": "inv_wand_08",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tOther"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gutwrencher",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 5616,
+     "icon": "inv_sword_31",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tDagger",
+      "35 - 66 Damage\tSpeed 1.60",
+      "(31.6 damage per second)",
+      "Requires Level 42",
+      "Chance on hit: Wounds the target causing them to bleed for 80 damage over 30 sec.",
+      "Sell Price: 2g 27s 38c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Hydromancer Velratha",
+   "kind": "quest",
+   "level": 46,
+   "items": [
+    {
+     "name": "Tiara of the Deep",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 9234,
+     "icon": "inv_jewelry_amulet_05",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Second Mosh'aru Tablet",
+     "slot": null,
+     "type": "Quest",
+     "itemId": 10661,
+     "icon": "inv_misc_rune_08",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "\tQuest"
+     ],
+     "classicTooltip": null,
+     "status": "same",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Gahz'rilla",
+   "kind": "boss",
+   "level": 46,
+   "items": [
+    {
+     "name": "Gahz'rilla Scale Armor",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemId": 9469,
+     "icon": "inv_chest_chain_06",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "290 Armor",
+      "+10 Stamina",
+      "+23 Spirit",
+      "Requires Level 43",
+      "Sell Price: 1g 46s 34c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gahz'rilla Fang",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 9467,
+     "icon": "inv_misc_monsterfang_01",
+     "quality": 2,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tDagger",
+      "35 - 66 Damage\tSpeed 1.80",
+      "(28.1 damage per second)",
+      "Requires Level 42",
+      "Chance on hit: Surrounds you with electricity, dealing 10 Nature damage to any who strike you for 15 sec.",
+      "Sell Price: 1g 86s 81c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Chief Ukorz Sandscalp",
+   "kind": "boss",
+   "level": 48,
+   "items": [
+    {
+     "name": "Embrace of the Lycan",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 9479,
+     "icon": "ability_mount_whitedirewolf",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "118 Armor",
+      "+16 Stamina",
+      "+5 Spirit",
+      "+8 Strength",
+      "Requires Level 45",
+      "Equip: +32 Attack Power.",
+      "Sell Price: 1g 8s 58c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Big Bad Pauldrons",
+     "slot": "Shoulder",
+     "type": "Plate",
+     "itemId": 9476,
+     "icon": "inv_shoulder_01",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tPlate",
+      "396 Armor",
+      "+12 Strength",
+      "+12 Stamina",
+      "+8 Spirit",
+      "Requires Level 45",
+      "Sell Price: 85s 93c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ripsaw",
+     "slot": "Main Hand",
+     "type": "Axe",
+     "itemId": 9478,
+     "icon": "inv_axe_07",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tAxe",
+      "63 - 117 Damage\tSpeed 2.70",
+      "(33.3 damage per second)",
+      "Requires Level 45",
+      "Chance on hit: Wounds the target for 75 damage.",
+      "Sell Price: 2g 88s 53c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Chief's Enforcer",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 9477,
+     "icon": "inv_staff_goldfeathered_01",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "118 - 178 Damage\tSpeed 3.40",
+      "(43.5 damage per second)",
+      "Requires Level 45",
+      "Chance on hit: Stuns target for 3 sec.",
+      "Sell Price: 3g 59s 36c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Jang'thraze the Protector",
+     "slot": "Main Hand",
+     "type": "Sword",
+     "itemId": 11086,
+     "icon": "inv_sword_43",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Main Hand\tSword",
+      "44 - 83 Damage\tSpeed 1.90",
+      "(33.4 damage per second)",
+      "Requires Level 45",
+      "Use: Combines Jang'thraze and Sang'thraze to form the mighty sword, Sul'thraze.",
+      "Chance on hit: Shields the wielder from physical damage, absorbing 55 to 85 damage. Lasts 20 sec.",
+      "Sell Price: 2g 74s 3c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Zerillis",
+   "kind": "rare",
+   "level": 45,
+   "items": [
+    {
+     "name": "Sandstalker Ankleguards",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemId": 12470,
+     "icon": "inv_bracer_04",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "95 Armor",
+      "+17 Agility",
+      "+3 Spirit",
+      "+6 Strength",
+      "Requires Level 42",
+      "Sell Price: 87s 84c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "items": [
+    {
+     "name": "Blackmetal Cape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemId": 9512,
+     "icon": "inv_misc_cape_05",
+     "quality": 3,
+     "itemLevel": 46,
+     "requiredLevel": 41,
+     "tooltip": [
+      "Binds when equipped",
+      "Back\tCloth",
+      "33 Armor",
+      "+12 Agility",
+      "+5 Stamina",
+      "Requires Level 41",
+      "Sell Price: 63s 41c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Spellshock Leggings",
+     "slot": "Legs",
+     "type": "Cloth",
+     "itemId": 9484,
+     "icon": "inv_pants_08",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when equipped",
+      "Legs\tCloth",
+      "63 Armor",
+      "+10 Intellect",
+      "+9 Stamina",
+      "Requires Level 45",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 23.",
+      "Sell Price: 1g 9s 62c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Runed Ring",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 862,
+     "icon": "inv_belt_34",
+     "quality": 3,
+     "itemLevel": 50,
+     "requiredLevel": 45,
+     "tooltip": [
+      "Binds when equipped",
+      "Finger",
+      "Requires Level 45",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
+      "Sell Price: 3g 82s 22c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Brainlash",
+     "slot": "Finger",
+     "type": null,
+     "itemId": 6440,
+     "icon": "inv_belt_30",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "Finger",
+      "+15 Intellect",
+      "+5 Spirit",
+      "-10 Stamina",
+      "Requires Level 43",
+      "Sell Price: 1g 58s 12c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Flaming Incinerator",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemId": 9483,
+     "icon": "inv_torch_lit",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when equipped",
+      "Ranged\tWand",
+      "59 - 111 Fire Damage\tSpeed 1.80",
+      "(47.2 damage per second)",
+      "+8 Fire Resistance",
+      "Requires Level 44",
+      "Sell Price: 1g 91s 39c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Troll Protector",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemId": 2040,
+     "icon": "inv_shield_16",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when equipped",
+      "Off Hand\tShield",
+      "1676 Armor",
+      "+10 Stamina",
+      "Requires Level 43",
+      "Equip: Increases your chance to block attacks with a shield by 2%.",
+      "Sell Price: 1g 52s 96c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gutwrencher",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemId": 5616,
+     "icon": "inv_sword_31",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when equipped",
+      "Unique",
+      "One-Hand\tDagger",
+      "35 - 66 Damage\tSpeed 1.60",
+      "(31.6 damage per second)",
+      "Requires Level 42",
+      "Chance on hit: Wounds the target causing them to bleed for 80 damage over 30 sec.",
+      "Sell Price: 2g 27s 38c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bloodletter Scalpel",
+     "slot": "One-Hand",
+     "type": "Sword",
+     "itemId": 9511,
+     "icon": "inv_sword_40",
+     "quality": 3,
+     "itemLevel": 46,
+     "requiredLevel": 41,
+     "tooltip": [
+      "Binds when equipped",
+      "One-Hand\tSword",
+      "39 - 73 Damage\tSpeed 1.80",
+      "(31.1 damage per second)",
+      "Requires Level 41",
+      "Chance on hit: Wounds the target for 60 to 70 damage.",
+      "Sell Price: 2g 10s 60c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "The Minotaur",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemId": 9481,
+     "icon": "inv_axe_03",
+     "quality": 3,
+     "itemLevel": 49,
+     "requiredLevel": 44,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "109 - 164 Damage\tSpeed 3.20",
+      "(42.7 damage per second)",
+      "+24 Stamina",
+      "+5 Spirit",
+      "+8 Strength",
+      "Requires Level 44",
+      "Sell Price: 3g 40s 67c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Eyegouger",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemId": 9480,
+     "icon": "inv_spear_05",
+     "quality": 3,
+     "itemLevel": 48,
+     "requiredLevel": 43,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tPolearm",
+      "100 - 151 Damage\tSpeed 3.00",
+      "(41.8 damage per second)",
+      "+23 Agility",
+      "+10 Strength",
+      "Requires Level 43",
+      "Sell Price: 3g 17s 25c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Witch Doctor's Cane",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 9482,
+     "icon": "inv_staff_31",
+     "quality": 3,
+     "itemLevel": 47,
+     "requiredLevel": 42,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tStaff",
+      "75 - 114 Damage\tSpeed 2.30",
+      "(41.1 damage per second)",
+      "+9 Spirit",
+      "Requires Level 42",
+      "Equip: Increases damage done by Nature spells and effects by up to 33.",
+      "Sell Price: 2g 95s 85c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Shriveled Heart",
+     "slot": "Neck",
+     "type": null,
+     "itemId": 9243,
+     "icon": "inv_misc_organ_01",
+     "quality": 2,
+     "itemLevel": 45,
+     "requiredLevel": 40,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "Neck",
+      "-5 Spirit",
+      "-5 Strength",
+      "+13 Stamina",
+      "Requires Level 40",
+      "Sell Price: 81s 55c"
+     ],
+     "classicTooltip": null,
+     "status": "missing",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-2865",
+   "faction": "Both",
+   "name": "Scarab Shells",
+   "level": 45,
+   "minLevel": 40,
+   "text": "Bring 5 Uncracked Scarab Shells to Tran'rek in Gadgetzan.",
+   "giver": {
+    "name": "Tran'rek",
+    "location": "Tran'rek, Tanaris",
+    "mapRef": {
+     "name": "Tran'rek",
+     "href": "/map/kalimdor#pin=Tran&#x27;rek"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Uncracked Scarab Shell ×5Scarab",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9238",
+       "name": "Uncracked Scarab Shell",
+       "qty": "×5",
+       "source": "Scarab"
+      }
+     ]
+    }
+   ],
+   "experience": "3,900 XP in Classic",
+   "money": "65s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3042",
+   "faction": "Both",
+   "name": "Troll Temper",
+   "level": 45,
+   "minLevel": 40,
+   "text": "Bring 20 Vials of Troll Temper to Trenton Lighthammer in Gadgetzan.",
+   "giver": {
+    "name": "Trenton Lighthammer",
+    "location": "Trenton Lighthammer, Tanaris",
+    "mapRef": {
+     "name": "Trenton Lighthammer",
+     "href": "/map/kalimdor#pin=Trenton%20Lighthammer"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Troll Temper ×20Antu'sul, Chief Ukorz Sandscalp and Dustwraith and others",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9523",
+       "name": "Troll Temper",
+       "qty": "×20",
+       "source": "Antu'sul, Chief Ukorz Sandscalp and Dustwraith and others"
+      }
+     ]
+    }
+   ],
+   "experience": "3,900 XP in Classic",
+   "money": "1g 95s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2846",
+   "faction": "Both",
+   "name": "Tiara of the Deep",
+   "level": 46,
+   "minLevel": 40,
+   "text": "Bring the Tiara of the Deep to Tabetha in Dustwallow Marsh.",
+   "giver": {
+    "name": "Tabetha",
+    "location": "Tabetha, Dustwallow Marsh",
+    "mapRef": {
+     "name": "Tabetha",
+     "href": "/map/kalimdor#pin=Tabetha"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Tiara of the DeepHydromancer Velratha",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9234",
+       "name": "Tiara of the Deep",
+       "qty": null,
+       "source": "Hydromancer Velratha"
+      }
+     ]
+    }
+   ],
+   "experience": "6,050 XP in Classic",
+   "money": "65s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Spellshifter Rod",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemId": 9527,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gemshale Pauldrons",
+     "slot": "Shoulder",
+     "type": "Plate",
+     "itemId": 9531,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2768",
+   "faction": "Both",
+   "name": "Divino-matic Rod",
+   "level": 47,
+   "minLevel": 40,
+   "text": "Bring the Divino-matic Rod to Chief Engineer Bilgewhizzle in Gadgetzan.",
+   "giver": {
+    "name": "Chief Engineer Bilgewhizzle",
+    "location": "Chief Engineer Bilgewhizzle, Tanaris",
+    "mapRef": {
+     "name": "Chief Engineer Bilgewhizzle",
+     "href": "/map/kalimdor#pin=Chief%20Engineer%20Bilgewhizzle"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Divino-matic RodSergeant Bly",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8548",
+       "name": "Divino-matic Rod",
+       "qty": null,
+       "source": "Sergeant Bly"
+      }
+     ]
+    }
+   ],
+   "experience": "6,300 XP in Classic",
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Masons Fraternity Ring",
+     "slot": null,
+     "type": null,
+     "itemId": 9533,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Engineer's Guild Headpiece",
+     "slot": "Head",
+     "type": "Leather",
+     "itemId": 9534,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-3527",
+   "faction": "Both",
+   "name": "The Prophecy of Mosh'aru",
+   "level": 47,
+   "minLevel": 40,
+   "text": "Bring the First and Second Mosh'aru Tablets to Yeh'kinya in Tanaris.",
+   "giver": {
+    "name": "Yeh'kinya",
+    "location": "Yeh'kinya, Tanaris",
+    "mapRef": {
+     "name": "Yeh'kinya",
+     "href": "/map/kalimdor#pin=Yeh&#x27;kinya"
+    }
+   },
+   "prereq": "Screecher Spirits, from Yeh'kinya, Tanaris",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "First Mosh'aru TabletTheka the Martyr and Theka the Martyr ShapeshiftSecond Mosh'aru TabletHydromancer Velratha",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/10660",
+       "name": "First Mosh'aru Tablet",
+       "qty": null,
+       "source": "Theka the Martyr and Theka the Martyr Shapeshift"
+      },
+      {
+       "itemHref": "/item/10661",
+       "name": "Second Mosh'aru Tablet",
+       "qty": null,
+       "source": "Hydromancer Velratha"
+      }
+     ]
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2770",
+   "faction": "Both",
+   "name": "Gahz'rilla",
+   "level": 50,
+   "minLevel": 40,
+   "text": "Bring Gahz'rilla's Electrified Scale to Wizzle Brassbolts in the Shimmering Flats.",
+   "giver": {
+    "name": "Wizzle Brassbolts",
+    "location": "Wizzle Brassbolts, Thousand Needles",
+    "mapRef": {
+     "name": "Wizzle Brassbolts",
+     "href": "/map/kalimdor#pin=Wizzle%20Brassbolts"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Gahz'rilla's Electrified ScaleGahz'rilla",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/8707",
+       "name": "Gahz'rilla's Electrified Scale",
+       "qty": null,
+       "source": "Gahz'rilla"
+      }
+     ]
+    }
+   ],
+   "experience": "7,100 XP in Classic",
+   "money": "75s",
+   "rewardHeading": "Reward",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Carrot on a Stick",
+     "slot": null,
+     "type": null,
+     "itemId": 11122,
+     "icon": null,
+     "quality": null,
+     "itemLevel": null,
+     "requiredLevel": null,
+     "tooltip": null,
+     "classicTooltip": null,
+     "status": null,
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-2991",
+   "faction": "Alliance",
+   "name": "Nekrum's Medallion",
+   "level": 47,
+   "minLevel": 40,
+   "text": "Bring Nekrum's Medallion to Thadius Grimshade in the Blasted Lands.",
+   "giver": {
+    "name": "Thadius Grimshade",
+    "location": "Thadius Grimshade, Blasted Lands",
+    "mapRef": {
+     "name": "Thadius Grimshade",
+     "href": "/map/eastern-kingdoms#pin=Thadius%20Grimshade"
+    }
+   },
+   "prereq": "Thadius Grimshade, from Gryphon Master Talonaxe, The Hinterlands",
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Nekrum's MedallionNekrum Gutchewer",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/9471",
+       "name": "Nekrum's Medallion",
+       "qty": null,
+       "source": "Nekrum Gutchewer"
+      }
+     ]
+    }
+   ],
+   "experience": "5,250 XP in Classic",
+   "money": "70s",
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  }
+ ]
+}
