@@ -99,7 +99,14 @@ function parseFields(dlHtml) {
   const ddBlocks = [...dlHtml.matchAll(/<dd>(.*?)<\/dd>/gs)].map((m) => m[1]);
   const fields = [];
   for (let i = 0; i < dts.length; i++) {
-    const ddHtml = ddBlocks[i] || "";
+    // The "Experience" field carries its Classic comparison as a sibling
+    // <small class="dgx-was"> right after the Forever value with no
+    // separating text between them (CSS spacing/color does the work on the
+    // live site) -- e.g. "...Forever beta<small class="dgx-was">2,750 in
+    // Classic</small>". stripTags alone would concatenate the two runs with
+    // no separator ("...Forever beta2,750 in Classic"), so insert one before
+    // stripping.
+    const ddHtml = (ddBlocks[i] || "").replace(/<small class="dgx-was">/g, ", <small class=\"dgx-was\">");
     const mapMatch = ddHtml.match(/<a href="(\/map[^"]*)">(.*?)<\/a>/s);
     const mapRef = mapMatch ? { name: stripTags(mapMatch[2]), href: mapMatch[1] } : null;
     const needItems = parseNeedItems(ddHtml);
