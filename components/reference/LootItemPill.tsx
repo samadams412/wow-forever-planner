@@ -128,6 +128,13 @@ export default function LootItemPill({ item, tooltipId }: { item: LootItem; tool
             ) : (
               <TooltipType>{slotLine || "Slot/type unknown"}</TooltipType>
             )}
+            {item.tooltip && item.tooltipSynthesized && (
+              <TooltipDataNote>
+                Reconstructed from item data, not the beta client&apos;s own tooltip text -- foreverchanges.pro
+                doesn&apos;t store full tooltip text for unchanged items. Armor and stat bonuses aren&apos;t
+                available here.
+              </TooltipDataNote>
+            )}
             {item.dropChance !== null && (
               <TooltipDataNote>
                 Drop chance: {item.dropChanceUnder ? "<" : ""}

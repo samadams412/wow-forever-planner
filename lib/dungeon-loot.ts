@@ -24,6 +24,13 @@ export type LootItem = {
   itemLevel: number | null;
   requiredLevel: number | null;
   tooltip: string[] | null;
+  // true when `tooltip` was reconstructed from structured fields (slot,
+  // class restriction, weapon speed/dps, required level) rather than being
+  // the beta client's own rendered tooltip text -- foreverchanges has no
+  // full tooltip text for "same"-status items (see fc-item.js). Armor
+  // value and stat bonuses are never derivable this way, so a synthesized
+  // tooltip's absence of those lines means "not available", not "none".
+  tooltipSynthesized: boolean;
   classicTooltip: string[] | null;
   status: "new" | "changed" | "same" | "missing" | null;
   // wowtbc-only fields (null/false when source === "foreverchanges")
