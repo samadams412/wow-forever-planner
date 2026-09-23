@@ -87,25 +87,43 @@ function normalizeRange(range) {
 // project's "id join over name guess" resolution) is identical between
 // crafting and gathering pages, only the 3 Legacy Perk ids differ.
 
-function buildLevelingSection(sections, byName) {
+// Alchemy's and Blacksmithing's own *_leveling_and_merchants.json only ever
+// gives ONE reagent per step (confirmed directly: 16/17 and 16/22 of their
+// steps are short at least one reagent vs. that same recipe's entry in
+// data/professions/<dataFile>.json, e.g. Bold Dirk's leveling mats list just
+// "30x Thorium Bar" when the recipe itself needs Essence of Air/Azerothium
+// Bar/Rugged Leather too) -- a real gap in that hand-provided leveling
+// source, not a parser bug (the other 6 professions' scraped leveling data
+// has zero such mismatches, checked the same way). recipesByName (already
+// built with each recipe's full, correctly-resolved reagent list) is the
+// known-good source of truth here, so prefer it by item name whenever a
+// step's crafted item matches a real recipe; fall back to the leveling
+// source's own (possibly incomplete) mats only when it doesn't -- e.g. an
+// Enchanting step that makes an enchant effect with no physical item at all.
+function buildLevelingSection(sections, byName, recipesByName) {
   if (!sections) return null;
   return sections.map((rank) => ({
     rank: rank.rank,
     requirement: rank.requirement || rank.requirements || "",
     steps: (rank.steps || []).map((step) => {
       const { item } = resolveItemByName(byName, step.item.name);
+      const recipe = recipesByName.get(step.item.name.trim().toLowerCase());
+      const mats =
+        recipe && recipe.reagents.length
+          ? recipe.reagents.map((r) => ({ qty: r.qty, item: r.item }))
+          : (step.mats || []).map((mat) => {
+              const { item: matItem } = resolveItemByName(byName, mat.name);
+              return {
+                qty: mat.quantity || 1,
+                item: itemRef(matItem) || unresolvedItemRef(mat.name),
+              };
+            });
       return {
         range: normalizeRange(step.range),
         item: itemRef(item) || unresolvedItemRef(step.item.name),
         source: step.source,
         count: step.count,
-        mats: (step.mats || []).map((mat) => {
-          const { item: matItem } = resolveItemByName(byName, mat.name);
-          return {
-            qty: mat.quantity || 1,
-            item: itemRef(matItem) || unresolvedItemRef(mat.name),
-          };
-        }),
+        mats,
       };
     }),
   }));
@@ -170,7 +188,7 @@ function main() {
       const levelingPath = path.join(PROF_DIR, `${prof.dataFile}_leveling_and_merchants.json`);
       if (fs.existsSync(levelingPath)) {
         const raw = JSON.parse(fs.readFileSync(levelingPath, "utf8"));
-        leveling = buildLevelingSection(raw.leveling_section, byName);
+        leveling = buildLevelingSection(raw.leveling_section, byName, recipesByName);
         favor = buildFavorSection(raw.favor_section, byName, recipesByName);
         if (raw.camp_section) {
           camp = {

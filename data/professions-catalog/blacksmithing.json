@@ -59213,6 +59213,56 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Rough Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3470,
+        "icon": "inv_stone_grindingstone_01",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 5c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Strange Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -59275,6 +59325,56 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Coarse Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3478,
+        "icon": "inv_stone_grindingstone_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 4,
+       "item": {
+        "name": "Strange Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -59331,6 +59431,30 @@
         "tooltip": [
          "Metal & Stone",
          "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 6,
+       "item": {
+        "name": "Rough Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3470,
+        "icon": "inv_stone_grindingstone_01",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 5c"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -59459,6 +59583,30 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Coarse Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3478,
+        "icon": "inv_stone_grindingstone_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -59515,6 +59663,55 @@
         "requiredLevel": 0,
         "tooltip": [
          "Metal & Stone",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Strong Flux",
+        "slot": null,
+        "type": "Other",
+        "itemId": 3466,
+        "icon": "inv_misc_ammo_gunpowder_01",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "\"Used by blacksmiths to remove impurities.\"",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Medium Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 2319,
+        "icon": "inv_misc_leatherscrap_05",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
          "Sell Price: 50c"
         ],
         "tooltipSynthesized": false,
@@ -59597,6 +59794,55 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Strong Flux",
+        "slot": null,
+        "type": "Other",
+        "itemId": 3466,
+        "icon": "inv_misc_ammo_gunpowder_01",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "\"Used by blacksmiths to remove impurities.\"",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Medium Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 2319,
+        "icon": "inv_misc_leatherscrap_05",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -59653,6 +59899,30 @@
         "tooltip": [
          "Metal & Stone",
          "Sell Price: 2s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Green Dye",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2605,
+        "icon": "inv_potion_12",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 25c"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -59730,6 +60000,54 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Gold Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3577,
+        "icon": "inv_ingot_03",
+        "quality": 2,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 6s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Heavy Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3486,
+        "icon": "inv_stone_grindingstone_03",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 1s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -59785,6 +60103,30 @@
         "tooltip": [
          "Metal & Stone",
          "Sell Price: 60c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Heavy Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3486,
+        "icon": "inv_stone_grindingstone_03",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 1s"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -59853,6 +60195,30 @@
         "tooltip": [
          "Metal & Stone",
          "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Citrine",
+        "slot": null,
+        "type": "Other",
+        "itemId": 3864,
+        "icon": "inv_misc_gem_opal_02",
+        "quality": 2,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 8s"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -59998,6 +60364,30 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Citrine",
+        "slot": null,
+        "type": "Other",
+        "itemId": 3864,
+        "icon": "inv_misc_gem_opal_02",
+        "quality": 2,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 8s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     }
@@ -60054,6 +60444,78 @@
         "requiredLevel": 0,
         "tooltip": [
          "Metal & Stone",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 9,
+       "item": {
+        "name": "Truesilver Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 6037,
+        "icon": "inv_ingot_08",
+        "quality": 2,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 12s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Heavy Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3486,
+        "icon": "inv_stone_grindingstone_03",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 1s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Core of Earth",
+        "slot": null,
+        "type": "Elemental",
+        "itemId": 7075,
+        "icon": "inv_stone_05",
+        "quality": 1,
+        "itemLevel": 45,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Elemental",
          "Sell Price: 4s"
         ],
         "tooltipSynthesized": false,
@@ -60196,6 +60658,30 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 4,
+       "item": {
+        "name": "Thick Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 4304,
+        "icon": "inv_misc_leatherscrap_08",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 3s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -60255,6 +60741,102 @@
         "tooltip": [
          "Metal & Stone",
          "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 6,
+       "item": {
+        "name": "Truesilver Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 6037,
+        "icon": "inv_ingot_08",
+        "quality": 2,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 12s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Star Ruby",
+        "slot": null,
+        "type": "Other",
+        "itemId": 7910,
+        "icon": "inv_misc_gem_ruby_02",
+        "quality": 2,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 50s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Solid Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 7966,
+        "icon": "inv_stone_grindingstone_04",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 2s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Thick Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 4304,
+        "icon": "inv_misc_leatherscrap_08",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 3s"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -60332,6 +60914,78 @@
         "unknown": false,
         "source": "foreverchanges"
        }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Large Opal",
+        "slot": null,
+        "type": "Other",
+        "itemId": 12799,
+        "icon": "inv_misc_gem_opal_01",
+        "quality": 2,
+        "itemLevel": 55,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 70s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 2,
+       "item": {
+        "name": "Dense Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 12644,
+        "icon": "inv_stone_grindingstone_05",
+        "quality": 1,
+        "itemLevel": 45,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 2s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 4,
+       "item": {
+        "name": "Rugged Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 8170,
+        "icon": "inv_misc_leatherscrap_02",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
       }
      ]
     },
@@ -60384,6 +61038,78 @@
         "tooltip": [
          "Metal & Stone",
          "Sell Price: 6s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 4,
+       "item": {
+        "name": "Essence of Air",
+        "slot": null,
+        "type": "Elemental",
+        "itemId": 7082,
+        "icon": "spell_nature_earthbind",
+        "quality": 2,
+        "itemLevel": 55,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Elemental",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 10,
+       "item": {
+        "name": "Azerothium Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 249726,
+        "icon": "inv_ingot_livingsteel",
+        "quality": 2,
+        "itemLevel": 55,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tMetal & Stone",
+         "Sell Price: 50s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "new",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 4,
+       "item": {
+        "name": "Rugged Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 8170,
+        "icon": "inv_misc_leatherscrap_02",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 5s"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
