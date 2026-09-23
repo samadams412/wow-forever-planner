@@ -9,9 +9,121 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-20
+## Session handoff — 2026-09-22
 
 **Stable and shipped this session:**
+- **Dungeon loot feature rebuilt on foreverchanges.pro data, replacing the
+  wowtbc.gg-only version from 2026-09-19/09-20.** Full pipeline:
+  `data/sources/foreverchanges_dungeon_data/*.json` (boss loot, pulled a
+  prior session) + `*.quests.json` (quest chains, pulled this session via
+  `scripts/extract-foreverchanges-quests.js`) → `scripts/build-dungeons.js`
+  → `data/dungeons/<id>.json` (35 files, one per dungeon) → `lib/dungeon-
+  loot.ts` (fs-based reader) → UI. See the new architecture note below
+  ("Dungeon loot: two-source reconciliation") for the full shape and the
+  reconciliation policy (one source wins per dungeon per data-type, never
+  blended boss-by-boss). wowtbc.gg data is now only the fallback for 2
+  dungeons (gnomeregan, sm-library) that foreverchanges has no boss-loot
+  pull for yet.
+- **The prior session's wowtbc.gg icon-scrolling extraction (item 1 of an
+  earlier 3-item loot-table task) is abandoned, not incomplete.** It had
+  gotten partway through hand-scrolling ~20 of 34 dungeon pages to read
+  icon slugs off `<img>` `src` attributes before this session found that
+  `data/sources/foreverchanges_dungeon_data/*.json` already carries a real
+  icon slug per item (the `k` field) alongside item id, quality, item
+  level, and full current/Classic tooltip text -- strictly richer than
+  what the manual scroll-and-read approach could ever produce. Don't
+  resume that scroll-based extraction; the scratch files it produced
+  (`wowtbc-icons/*.json` in the temp scratchpad) were never committed and
+  can be discarded.
+- Quest data (giver, giver location, objectives, "bring back" items,
+  rewards) pulled for all 35 dungeons by fetching each foreverchanges.pro
+  `/dungeons/<slug>` page directly with `curl` and parsing just the
+  `#quests` chapter's HTML with a small regex-based parser (`scripts/
+  extract-foreverchanges-quests.js`) -- deliberately not a browser-
+  automation scroll/screenshot loop like the abandoned icon work, since
+  this data is plain server-rendered HTML, not lazy-loaded images; the
+  whole 35-dungeon pull ran in one `node` invocation. `/map`-linking quest
+  givers/objectives are preserved as `{name, href}` mapRefs without being
+  resolved -- there's no map feature yet, this just keeps the reference
+  for whenever one gets built. 332 quests total, 7 dungeons come back
+  empty (see below).
+- New-in-Forever dungeon list/detail pages now hotlink foreverchanges.pro's
+  own per-dungeon background art
+  (`https://foreverchanges.pro/wow-ui/dungeons/art-<slug>.webp`, mapped in
+  `scripts/dungeon-source-map.js`, confirmed per-dungeon against the
+  `--art:url(...)` CSS variable each dungeon actually renders on
+  foreverchanges' own timeline rather than guessed from name similarity) --
+  same hotlink-not-mirror discipline this site already uses for
+  wow.zamimg.com icons. Every dungeon in the `/reference/dungeons` timeline
+  is now clickable (previously only the 9 "new" ones were) and opens an
+  inline Bosses/Quests panel matching foreverchanges' own list-then-detail
+  interaction pattern, rebuilt in this site's own components.
+- `LootItemPill` rebuilt with a real icon, quality-colored name, full
+  tooltip-line rendering, and a Classic-comparison block for changed/
+  missing items -- and, in the same pass, finally wired into `lib/active-
+  tooltip.ts`'s single-tooltip-owner mechanism, which it never had before
+  despite the mechanism existing specifically to fix this exact "two
+  tooltips open at once" bug elsewhere on the site. This closes out items
+  2 and 3 of the original 2026-09-19 loot-table follow-up task as a side
+  effect of the bigger rebuild (item 2's "do we have stats data" question
+  is answered: yes, foreverchanges' `x`/`y` tooltip-line arrays are real
+  beta-client stat text, not just slot/type).
+- 7 dungeons come back with zero bosses and zero quests on both this
+  session's foreverchanges pull and the earlier wowtbc.gg pull: excavation-
+  site, city-of-dalaran, drowned-city, kroldok-stronghold, alcaz-prison,
+  blackmaw-hold, shapers-terrace. Confirmed as a real "not yet in the beta"
+  set (foreverchanges' own site shows the same 7 empty), not a scraping
+  gap -- don't re-pull these expecting different results without checking
+  foreverchanges.pro directly first.
+
+**Open / mid-flight:**
+- Mobile rendering of `DungeonInlinePanel` (the new list-then-detail
+  Bosses/Quests panel) was never checked on a real narrow viewport --
+  verified only at desktop width. The panel does stack `flex-col` below
+  `sm:`, but the boss/quest list-plus-detail two-column sub-layout inside
+  it was designed against the desktop reference screenshot only.
+- `LootItemPill`'s tooltip could not be triggered with the `computer` tool's
+  simulated mouse hover in this session (clicks and hovers via that tool
+  timed out repeatedly, a recurrence of the previously-documented "second
+  window can screenshot but time out on clicks" issue, this time on what
+  should be the primary tab) -- verified instead by dispatching real
+  `mouseover` DOM events via `javascript_exec` (focus() alone does *not*
+  trigger React's onMouseEnter/onFocus the way a real pointer hover does;
+  a dispatched `mouseover` bubbling event does). If this recurs, that's the
+  workaround.
+- foreverchanges' `sources` field (per-dungeon citation links -- Blizzard
+  forum posts, BlizzCon panel timestamps, datamine credits) and `entrance`/
+  `summary` prose were captured in this session's exploration but
+  deliberately NOT carried into `data/dungeons/*.json` or shown anywhere --
+  copying their own written summary/entrance text verbatim felt too close
+  to reproducing another site's prose (see this project's own "paraphrased
+  from that guide's prose, not copied verbatim" precedent for Wowhead
+  content in `data/dungeons.json`'s `_readme`). This session's own
+  `description` field (already on every dungeon, sourced from Wowhead
+  originally) is what's shown instead. If dungeon `sources` citations are
+  wanted later, they're pure URLs (safe to link) -- only the prose summary/
+  entrance text is what was skipped.
+- The plain `/reference/dungeons/loot` table-index page (distinct from the
+  new interactive `/reference/dungeons` timeline) got only the minimum
+  updates needed to compile against the new data shape (column rename,
+  description text) -- not restyled or otherwise touched.
+
+**Suggested next:**
+- Give `DungeonInlinePanel` a real mobile pass (open it on an emulated
+  narrow window, check the boss/quest list-plus-detail sub-layout doesn't
+  overflow or become unusably cramped).
+- Once foreverchanges pulls a boss-loot table for gnomeregan and sm-
+  library, re-run `node scripts/build-dungeons.js` -- their `bossLootSource`
+  will flip from `"wowtbc"` to `"foreverchanges"` automatically, no other
+  changes needed.
+- If a world-map feature ever gets built, the quest mapRefs
+  (`data/sources/foreverchanges_dungeon_data/*.quests.json`'s `fields[].
+  mapRef`, carried through into `data/dungeons/*.json`'s `quests[].giver.
+  mapRef` and `.objectives[].mapRef`) are already there waiting -- `{name,
+  href}` where `href` is foreverchanges' own `/map/<continent>#pin=<name>`
+  path, not yet resolved to anything on this site.
+
+**Session from 2026-09-20:**
 - New talentsforever.com pull (`talentsforever-2026-09-20.json`) diffed
   against 2026-09-19 (`data/sources/diffs/2026-09-19_to_2026-09-20.{md,json}`)
   and applied. This session also finished a partial, unreviewed application
@@ -308,6 +420,86 @@ further, so the underlying cause is still unconfirmed — worth revisiting
 if it blocks something more important later.
 
 ## Architecture notes
+
+### Dungeon loot: two independent sources, reconciled per-dungeon-per-data-type, never blended
+`data/dungeons/<id>.json` (one file per dungeon, 35 total, same ids as
+`data/dungeons.json`) is what every dungeon page actually reads --
+`lib/dungeon-loot.ts` loads all of them via `fs.readdirSync` at request
+time (same pattern as `lib/content.ts`'s guides/professions loader), not a
+single big JSON import. Built by `node scripts/build-dungeons.js` from:
+
+- `data/sources/foreverchanges_dungeon_data/<fc-slug>.json` -- boss/trash/
+  rare/object/quest-NPC loot, pulled from foreverchanges.pro. Real item id,
+  icon slug, quality, item level, required level, full current tooltip
+  text, and (when the item changed since Classic) the old tooltip text
+  too, plus a `new`/`changed`/`same`/`missing` status per item. This is the
+  primary source for loot -- richer than wowtbc.gg on every axis except
+  drop-chance %, which foreverchanges doesn't have at all.
+- `data/sources/foreverchanges_dungeon_data/<fc-slug>.quests.json` -- full
+  quest chains (giver, giver location, objectives incl. structured "bring
+  back N of item X, found on mob Y" lists, prerequisite quest, XP/money,
+  reward choices), pulled by `scripts/extract-foreverchanges-quests.js`
+  fetching each `/dungeons/<slug>` page with plain `curl` and regex-parsing
+  just the `#quests` chapter's server-rendered HTML -- no browser
+  automation needed, this isn't lazy-loaded the way item icons on
+  wowtbc.gg were (see the abandoned-icon-extraction note in this session's
+  handoff above for that contrast). `/map`-linking anchors inside that
+  chapter are kept as `{name, href}` mapRefs, unresolved -- there's no map
+  feature yet.
+- `data/dungeon-loot.json` (the older wowtbc.gg-sourced pull, still built
+  by `scripts/build-dungeon-loot.js` from `data/sources/wowtbc-loot-*.json`
+  snapshots) -- now used only as a fallback, and only per data-type, per
+  dungeon, where foreverchanges has nothing at all.
+
+**Reconciliation policy, deliberately not a merge:** for each dungeon, for
+each data type (loot, quests) independently, exactly one source wins
+outright. foreverchanges wins wherever it has any data; wowtbc.gg is the
+fallback only where foreverchanges came back completely empty for that
+data type on that dungeon -- currently just boss loot for gnomeregan and
+sm-library (that pull hasn't been done on foreverchanges yet; quests for
+both of those ARE foreverchanges-sourced, since foreverchanges has them).
+Blending the two sources item-by-item or quest-by-quest inside one dungeon
+was considered and rejected: they're independent collection efforts (beta-
+client/log reads vs. player-submitted drop reports) that can disagree on
+attribution, and asserting a merged claim neither source actually made
+would be worse than picking one and saying so. `bossLootSource`/
+`questSource` on every `data/dungeons/<id>.json` record which source won,
+and `LootDisclaimer` (`components/reference/LootDisclaimer.tsx`) renders
+different messaging for each -- genuinely different confidence claims, not
+interchangeable copy.
+
+Both sources' items funnel into one unified `LootItem` shape (`lib/
+dungeon-loot.ts`) regardless of origin -- fields only one source ever
+populates (icon, quality, tooltip, classicTooltip, status vs. dropChance,
+dropChanceUnder, unknown) are simply null from the other -- so every UI
+component (`LootItemPill`, boss cards, quest reward lists) handles exactly
+one item shape no matter which source it came from. Quest reward items
+specifically reuse this same `LootItem` shape (built by
+`questRewardItemToUnified` in the build script) rather than being a
+separate lighter type, which is why a quest reward pill and a boss-loot
+pill are the literal same component.
+
+**Slug mapping is non-trivial and lives in one place**
+(`scripts/dungeon-source-map.js`): our own dungeon ids, foreverchanges'
+slugs, and foreverchanges' *background-art* slugs are three different
+naming schemes, and several classic dungeon wings share ONE art file on
+foreverchanges (all 3 Dire Maul wings, both Blackrock Spire wings, both
+Stratholme sides, Scarlet Monastery splitting 2-and-2 between
+"scarletmonastery" and "scarlethalls") -- confirmed per-dungeon against the
+actual `--art:url(...)` CSS custom property foreverchanges renders on its
+own timeline bar for that dungeon, not guessed from name similarity.
+Stratholme's `stratholme-main-gate`/`stratholme-service-gate` foreverchanges
+slugs were mapped to our own `stratholme-live`/`stratholme-undead` ids by
+reading each one's actual boss roster (Main Gate has Hearthsinger
+Forresten/Timmy the Cruel/Balnazzar = the Live/Crusade side; Service Gate
+has Baroness Anastari/Ramstein the Gorger/Baron Rivendare = the Undead
+side), not by name resemblance -- "main" vs "service" gives no hint which
+Classic side is which. Each Stratholme side is now a fully independent
+`data/dungeons/*.json` record with its own real boss/item/quest lists,
+unlike the old wowtbc-only pipeline which had to synthesize both ids from
+one merged, unsplit wowtbc entry (see `LOOT_KEY_OVERRIDES` in the pre-
+2026-09-22 version of `lib/dungeon-loot.ts`, now removed since it's no
+longer needed).
 
 ### Planner: race is reference-only; URL is `/planner/<class>/<build>`
 Race is no longer app state or a URL segment — it never affects talent
