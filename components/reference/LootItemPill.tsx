@@ -33,7 +33,11 @@ export default function LootItemPill({
   }
 
   const qualityColor = itemQualityColor(item.quality);
-  const missing = item.status === "missing";
+  // "missing" only means "no longer drops" in a loot context -- in the item
+  // catalog it means "beta hasn't touched this Classic item yet" (see
+  // ItemTooltipBody's context-aware status note), so the muted/grayscale
+  // "Gone" treatment below would misrepresent it there.
+  const missing = context === "loot" && item.status === "missing";
   const nameEl = <span style={item.quality !== null ? { color: qualityColor } : undefined}>{item.name}</span>;
 
   return (
