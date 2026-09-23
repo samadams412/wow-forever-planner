@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import GuideImage from "@/components/guides/GuideImage";
+import GuideImageGrid from "@/components/guides/GuideImageGrid";
 
 // Same typographic treatment as guides -- mirrored, not shared, so guide and
 // blog content styling can drift independently if the two ever need to.
@@ -30,4 +31,5 @@ export const blogMdxComponents: Record<string, ComponentType<any>> = {
     />
   ),
   GuideImage,
+  GuideImageGrid,
 };

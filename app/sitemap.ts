@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
-import { getAllProfessions } from "@/lib/professions";
+import { PROFESSION_IDS } from "@/lib/profession-recipes";
 
 const STATIC_ROUTES = [
   "",
@@ -44,11 +44,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // 4. Dynamic profession pages
-  const professions = getAllProfessions();
-  const professionEntries = professions.map((profession) => ({
-    url: `${SITE_URL}/reference/professions/${profession.slug}`,
-    lastModified: profession.date ? new Date(profession.date) : new Date(),
+  // 4. Profession catalog pages -- recipe data, not dated content, so no
+  // per-page lastModified from frontmatter the way guides/blog have.
+  const professionEntries = PROFESSION_IDS.map((id) => ({
+    url: `${SITE_URL}/reference/professions/${id}`,
+    lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
