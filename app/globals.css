@@ -63,10 +63,11 @@ body {
    spellbook's page-flip/parchment (--pg/--ink2 are scoped to
    .spellbook-page itself, untouched by this), the Dungeon Level Ranges
    chart, today's .fx-featured/.fx-standard-hover shimmer/glow (their colors
-   are hardcoded rgba() values, not theme variables), CornerBracket, or the
-   homepage/Blog/Guides hero headline+tagline (.hero-text-accent/
-   .hero-text-muted below) -- those stay exactly as themed in both modes
-   for this pass. */
+   are hardcoded rgba() values, not theme variables), CornerBracket, or
+   anything using .hero-text-accent/.hero-text-muted below (the homepage/
+   Blog/Guides hero headline+tagline, and -- added 2026-09-23 -- the
+   Dungeon Loot index table's per-row background art) -- those stay
+   exactly as themed in both modes for this pass. */
 html.light-mode {
   color-scheme: light;
   --background: #ffffff;
@@ -83,16 +84,20 @@ html.light-mode {
   --gold-hover: #6e5410;
 }
 
-/* Hero headline/tagline text over a photo (homepage, Blog index, Guides
-   index) -- each page's own dark gradient/vignette overlay behind this
-   text is hardcoded and art-directed for light text, not tied to
-   --background, so it was never going to look right once Light mode
-   turned this text dark. Same fix as the talent tree/spellbook/Dungeon
-   chart being scoped out of Light mode entirely: these are fixed
-   colors (matching exactly what the default theme already renders here),
-   not aliases to --accent/--foreground-muted, so they never repaint with
-   the toggle. Everything else on these pages (guide/blog list items, the
-   rest of the page body) is unaffected and still repaints normally. */
+/* Text over a photo with a hardcoded dark scrim behind it, not tied to
+   --background -- originally just the homepage/Blog/Guides hero headline
+   +tagline, and (added 2026-09-23) also each row's dungeon name/level/
+   boss/quest count in the Dungeon Loot index table
+   (app/reference/dungeons/loot/page.tsx), which paints that dungeon's own
+   background art plus a fixed rgba(13,11,7,...) gradient behind every
+   row. Either way, art-directed for light text, so it was never going to
+   look right once Light mode turned it dark. Same fix as the talent tree/
+   spellbook/Dungeon chart being scoped out of Light mode entirely: these
+   are fixed colors (matching exactly what the default theme already
+   renders here), not aliases to --accent/--foreground-muted, so they
+   never repaint with the toggle. Everything else on these pages/that
+   table (guide/blog list items, the loot index's own Level/Bosses/Quests
+   header row) is unaffected and still repaints normally. */
 .hero-text-accent {
   color: #c9a961;
 }

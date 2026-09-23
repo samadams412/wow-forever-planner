@@ -9,7 +9,93 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-22
+## Session handoff — 2026-09-23
+
+**Stable and shipped this session:** five follow-ups on the dungeon loot
+feature from 2026-09-22, each verified live and committed separately.
+- **Quest field label hierarchy fix**
+  (`components/reference/LootQuestRewardsCard.tsx` and
+  `DungeonInlinePanel.tsx`'s `QuestDetail`): the "Starts/Comes after/Slay/
+  Bring back/Reward" `dt` labels were rendering in nearly the same muted
+  color/weight as the quest description text above them. Reused the
+  site's existing muted-gold small-caps citation convention (`text-
+  [#c8aa6e] text-[10px] font-semibold uppercase tracking-wide` — already
+  used for "Classic's version"/"Compared to Classic" in `LootItemPill`/
+  `TooltipCard`, see that architecture note below) for the labels, and
+  promoted the `dd` values to plain `text-foreground` instead of muted.
+  Also filled in `DungeonInlinePanel`'s `QuestDetail` with the Comes-
+  after/Reward fields it was missing entirely (`LootQuestRewardsCard`
+  already had them) so the inline panel and the full loot-table page
+  show the same fields with the same hierarchy. Verified against Ragefire
+  Chasm's "Returning the Lost Satchel" (multi-reward-choice, Comes-after
+  chain, Horde-only tag) on both surfaces.
+- **Quest reward items enriched with full item data** — see the updated
+  "Dungeon loot" architecture note below for the id-based join against
+  the full item catalog (100% match rate, no name-fallback needed) and
+  the new `scripts/lib/fc-item.js` shared module.
+- **Boss NPC portraits**, hotlinked from foreverchanges.pro — see the new
+  dedicated architecture note below.
+- **New `/reference/items` page** — a filterable table over the full
+  21,458-item catalog — see the new dedicated architecture note below.
+- **Dungeon loot index table** (`/reference/dungeons/loot`) rows now show
+  that dungeon's own background art, darkened with a gradient scrim,
+  using the `.hero-text-accent`/`.hero-text-muted` fixed-color classes
+  (`app/globals.css`) instead of the normal `text-foreground`/`text-
+  foreground-muted` so the text stays legible over the photo in both
+  Light and Themed mode — verified live in both modes (toggled via
+  `document.documentElement.classList.add('light-mode')` since the
+  `ModeToggle` button's own click didn't register through the browser
+  tool this session; not investigated further, low-priority). Updated
+  `globals.css`'s own comment enumerating `.hero-text-*` consumers (it
+  previously only listed the homepage/Blog/Guides hero banners) to keep
+  it accurate now that a plain data table uses the same classes.
+
+**Open / mid-flight:**
+- Mobile-viewport re-verification for the new `/reference/items` table
+  and the loot index background art wasn't done live this session —
+  `resize_window` is still unreliable in this environment (see existing
+  Tooling note below); both reuse this codebase's established `overflow-
+  x-auto`-in-its-own-container table pattern rather than a new technique,
+  so it's a low-risk carry-over, not unverified from scratch.
+- The task description for the loot-index background art mentioned
+  "level-band shading/gridlines already on this chart" as if it were the
+  same page — that shading actually lives on the separate `/reference/
+  dungeons` Level Ranges timeline (`DungeonsTimeline.tsx`), a different
+  component from the plain loot index table this change touched.
+  Confirmed the timeline page is untouched and still renders correctly.
+  Worth keeping in mind that these are two different dungeon pages next
+  time a task talks about "the dungeon chart."
+- The Reference landing page's "Dungeon Loot" card
+  (`app/reference/page.tsx`) still describes the loot data as "community-
+  sourced from wowtbc.gg" — stale copy left over from before the
+  2026-09-22 foreverchanges rebuild (most dungeons now prefer
+  foreverchanges; wowtbc is the fallback for only 2). Not fixed this
+  session since it wasn't part of what was asked — flagging so it isn't
+  missed indefinitely.
+- `data/items.json` (the new full item catalog, built by `scripts/
+  build-items.js`) is a large generated file (~8.5MB, deliberately
+  unformatted/compact JSON, unlike the pretty-printed `data/dungeons/
+  *.json`) committed to the repo. Server-only — `lib/items.ts` reads it
+  with `fs` and it's never shipped to the client — but worth knowing it's
+  there if repo size or clone time ever becomes a concern.
+- `/reference/items` is a deliberate first pass, not feature parity with
+  foreverchanges.pro/items: no level-range/slot/type/class filters and no
+  sort-by (foreverchanges has all of these). `lib/items.ts`'s `queryItems`
+  is structured so adding those later means extending one function, not
+  rewriting the page.
+
+**Suggested next:**
+- A real mobile-viewport check for `/reference/items` and the loot index
+  table's background art, next time a real narrow window is available
+  (see the claude-in-chrome Tooling notes below for the known
+  workarounds/limitations).
+- Fix the stale "wowtbc.gg"-only copy on the Reference landing page's
+  Dungeon Loot card description (see Open/mid-flight above).
+- If `/reference/items` ever needs the level-range/slot/class filters
+  foreverchanges has, extend `lib/items.ts`'s `queryItems` rather than
+  adding ad-hoc filtering logic in the page component.
+
+**Session from 2026-09-22:**
 
 **Stable and shipped this session:**
 - **Dungeon loot feature rebuilt on foreverchanges.pro data, replacing the
@@ -167,8 +253,7 @@ serving as a fixed project brief.
   already matched the script's own output exactly.
 
 
-
-**Stable and shipped this session:**
+**Session from 2026-09-19:**
 - Vercel Web Analytics actually wired up (`app/layout.tsx`): the prior
   session had installed `@vercel/analytics` and imported `Analytics` from
   `@vercel/analytics/next`, but never rendered the component — so despite
@@ -479,6 +564,35 @@ specifically reuse this same `LootItem` shape (built by
 separate lighter type, which is why a quest reward pill and a boss-loot
 pill are the literal same component.
 
+**Quest reward items are enriched from a third source: the full item
+catalog (added 2026-09-23).** The quest-chain scrape
+(`*.quests.json`) only ever gives a reward as a bare `{itemHref, name,
+type}` -- no icon, quality, stats, or Classic-comparison data, unlike
+boss loot which gets all of that straight from the per-dungeon pull.
+`data/sources/foreverchanges_items/{new,changed,same,missing}.json`
+(the same full-catalog pull `/reference/items` reads, see that
+architecture note below) has real item id/icon/quality/tooltip data for
+every item in the game, keyed by the same numeric id `itemHref` encodes
+(`/item/15452` -> `15452`). `questRewardItemToUnified` in
+`scripts/build-dungeons.js` looks a reward up by that id in an id-keyed
+index built from the catalog and, when found, runs it through the same
+`fcItemToUnified` mapping boss loot uses -- so a quest reward pill ends
+up with the exact same icon/quality/tooltip/Classic-diff shape a boss-
+loot pill has. Checked reliability before trusting id as the join key
+(per this project's own "don't assume name-matching is reliable if an
+id exists" caution): 422/422 reward items and 325/325 "bring back"
+objective items resolve by id with zero misses across all 35 dungeons,
+so there's no name-matching fallback -- an unmatched id falls back to
+the old bare shape (kept for robustness, not currently exercised).
+
+`fcItemToUnified` (and the `deriveTypeFromTooltip` helper it uses) now
+lives in `scripts/lib/fc-item.js`, shared between `build-dungeons.js`
+and the new `build-items.js` (see below) -- previously duplicated
+verbatim in `build-dungeons.js` alone. Extracting it was verified
+behavior-preserving by re-running `build-dungeons.js` and diffing
+`data/dungeons/*.json` against the pre-extraction commit (zero diff)
+before it was trusted.
+
 **Slug mapping is non-trivial and lives in one place**
 (`scripts/dungeon-source-map.js`): our own dungeon ids, foreverchanges'
 slugs, and foreverchanges' *background-art* slugs are three different
@@ -500,6 +614,89 @@ unlike the old wowtbc-only pipeline which had to synthesize both ids from
 one merged, unsplit wowtbc entry (see `LOOT_KEY_OVERRIDES` in the pre-
 2026-09-22 version of `lib/dungeon-loot.ts`, now removed since it's no
 longer needed).
+
+### Boss NPC portraits: hotlinked from foreverchanges.pro's own asset folder
+Added 2026-09-23. Each boss in a foreverchanges dungeon pull
+(`data/sources/foreverchanges_dungeon_data/<fc-slug>.json`) carries a
+`display` field -- the beta client's own creature display id.
+foreverchanges hosts its own portrait render for these at
+`https://foreverchanges.pro/wow-ui/bosses/<display>.webp` -- the same
+hotlink-not-mirror discipline this site already uses for
+wow.zamimg.com item icons (see the icon-slug note above), just a
+different host since Wowhead's zamimg CDN has no equivalent public
+per-NPC-portrait path to key off of.
+
+**Verified before wiring it up, same discipline as icon-slug
+verification elsewhere on this site:** all 223 distinct `display` ids
+across all 35 dungeons resolve to a real, non-empty `.webp` (200
+status); a bad/absent id 404s cleanly rather than returning a fake
+placeholder image. `display` is absent for "Trash mobs" groupings and
+lootable objects (no single NPC to portray) -- roughly a dozen entries
+across the full dungeon set, confirmed to render with no portrait at
+all rather than a broken-image icon.
+
+`scripts/build-dungeons.js` resolves `display` -> a full `portraitUrl`
+at build time (`null` for wowtbc-sourced bosses, which have no
+equivalent asset) and writes it onto every `data/dungeons/<id>.json`
+boss record; `LootBoss.portraitUrl` (`lib/dungeon-loot.ts`) carries the
+type. `components/reference/BossPortrait.tsx` is a small client
+component (needs `"use client"` for its `onError` fallback -- a plain
+`<img>`'s error handler can't be passed from a Server Component) that
+renders the circular portrait and renders nothing at all if `src` is
+null or the image fails to load, rather than a broken-image icon.
+Rendered in both places a boss name appears: `LootBossCard.tsx` (the
+full loot-table page) and `DungeonInlinePanel.tsx`'s boss detail header
+(the Level Ranges timeline's inline panel).
+
+### `/reference/items`: full item catalog, filtered server-side
+Added 2026-09-23. Lists every item in the WoW Forever beta client
+(21,458 total) from `data/sources/foreverchanges_items/{new,changed,
+same,missing}.json` -- new/changed/unchanged/not-yet-touched vs.
+Classic, the same four buckets foreverchanges.pro/items itself uses
+(status tabs on that page read "New in Forever 5,335 / Changed 4,271 /
+Unchanged 9,813 / No Forever data yet 2,039" -- this site's own tab
+counts match exactly). Studied that live page for the filtering pattern
+(status tabs with counts, name search) but rebuilt it in this site's
+own theme rather than copying markup -- a compact table instead of
+their inline-tooltip card grid, and this site's existing spellbook
+filter-tab convention (`inline-flex rounded border`, `bg-accent/20`
+active state -- see `SpellbookBook.tsx`'s `FILTERS` buttons) instead of
+their control styling.
+
+**Deliberate first pass, not feature parity:** no level-range/slot/
+type/class filters or sort-by (foreverchanges has all of these) — just
+status tabs, name search, and pagination. Easy to extend later against
+the same query function if wanted (see below).
+
+**Kept off the client entirely, to protect this project's own "load
+fast, minimal client JS" priority:** the full catalog is large enough
+(`data/items.json`, ~8.5MB, built by `scripts/build-items.js` from the
+per-status source files via the shared `fcItemToUnified` mapping — see
+the quest-reward-enrichment note above) that shipping it to the browser
+for client-side filtering was rejected outright. Instead:
+- `lib/items.ts`'s `queryItems({status, q, page, pageSize})` does all
+  filtering and pagination server-side, reading `data/items.json` via
+  `fs` (module-level cache, same pattern as `lib/dungeon-loot.ts`'s
+  `loadAll`) -- never imported by anything that runs in the browser.
+- `app/reference/items/page.tsx` is a plain async Server Component
+  reading `searchParams` (`status`, `q`, `page`); status tabs and
+  pagination are ordinary `Link`s that update those params.
+- The only client-side piece is `ItemsSearchInput.tsx`, a small
+  component that debounces typing (300ms) into a `?q=` param via
+  `router.replace` -- no copy of the item list ever reaches it.
+- Only the current page's ~60 rows are ever serialized to the client,
+  each as a `LootItemPill` (full icon/quality/tooltip data included,
+  since that's what the tooltip needs) -- reused directly rather than a
+  second tooltip implementation, per the task that added this page.
+
+**`new.json`'s 7-item `"rebuilt"` status outlier** (Classic items
+foreverchanges rebuilt under a new item id) is folded into `"new"` at
+build time in `build-items.js` -- foreverchanges' own site groups these
+into its "New in Forever" tab too (5,335 = 5,328 `new` + 7 `rebuilt`)
+rather than exposing a fourth bucket, so this matches the source's own
+grouping rather than inventing a status. Don't be surprised to find
+`"rebuilt"` in a raw `new.json` entry; it's normalized away by the time
+`data/items.json` is built.
 
 ### Planner: race is reference-only; URL is `/planner/<class>/<build>`
 Race is no longer app state or a URL segment — it never affects talent
