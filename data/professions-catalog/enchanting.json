@@ -30,13 +30,15 @@
    "item": {
     "name": "Runed Copper Rod",
     "slot": null,
-    "type": null,
+    "type": "Enchanting",
     "itemId": 6218,
     "icon": "inv_staff_goldfeathered_01",
     "quality": 1,
     "itemLevel": 5,
     "requiredLevel": 1,
-    "tooltip": null,
+    "tooltip": [
+     "Enchanting"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -53,13 +55,15 @@
      "item": {
       "name": "Copper Rod",
       "slot": null,
-      "type": null,
+      "type": "Enchanting",
       "itemId": 6217,
       "icon": "inv_misc_flute_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Enchanting"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -206,13 +210,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -454,13 +460,15 @@
      "item": {
       "name": "Maple Seed",
       "slot": null,
-      "type": null,
+      "type": "Reagent",
       "itemId": 17034,
       "icon": "inv_misc_food_02",
       "quality": 1,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Reagent"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -476,13 +484,15 @@
      "item": {
       "name": "Empty Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3371,
       "icon": "inv_potion_84",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -547,13 +557,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -700,13 +712,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1376,13 +1390,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2097,13 +2113,15 @@
    "item": {
     "name": "Runed Silver Rod",
     "slot": null,
-    "type": null,
+    "type": "Enchanting",
     "itemId": 6339,
     "icon": "inv_staff_01",
     "quality": 1,
     "itemLevel": 20,
     "requiredLevel": 1,
-    "tooltip": null,
+    "tooltip": [
+     "Enchanting"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -2120,13 +2138,15 @@
      "item": {
       "name": "Silver Rod",
       "slot": null,
-      "type": null,
+      "type": "Enchanting",
       "itemId": 6338,
       "icon": "inv_staff_01",
       "quality": 1,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Enchanting"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2198,13 +2218,15 @@
      "item": {
       "name": "Shadowgem",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 1210,
       "icon": "inv_misc_gem_amethyst_01",
       "quality": 2,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -3007,13 +3029,15 @@
      "item": {
       "name": "Fire Oil",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 6371,
       "icon": "inv_potion_38",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -3182,13 +3206,14 @@
      "item": {
       "name": "Red-speckled Mushroom",
       "slot": null,
-      "type": null,
+      "type": "Food & Drink",
       "itemId": 4605,
       "icon": "inv_mushroom_11",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 5,
       "tooltip": [
+       "Food & Drink",
        "Requires Level 5"
       ],
       "tooltipSynthesized": true,
@@ -3330,13 +3355,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -3477,13 +3504,15 @@
      "item": {
       "name": "Scroll of Protection",
       "slot": null,
-      "type": null,
+      "type": "Scrolls",
       "itemId": 3013,
       "icon": "inv_scroll_07",
       "quality": 1,
       "itemLevel": 10,
       "requiredLevel": 1,
-      "tooltip": null,
+      "tooltip": [
+       "Scrolls"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -4163,13 +4192,15 @@
      "item": {
       "name": "Silver Ore",
       "slot": null,
-      "type": null,
+      "type": "Metal & Stone",
       "itemId": 2775,
       "icon": "inv_stone_16",
       "quality": 2,
       "itemLevel": 10,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Metal & Stone"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -4455,13 +4486,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -4905,13 +4938,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -4983,13 +5018,15 @@
      "item": {
       "name": "Shadowgem",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 1210,
       "icon": "inv_misc_gem_amethyst_01",
       "quality": 2,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -5568,13 +5605,15 @@
      "item": {
       "name": "Blackmouth Oil",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 6370,
       "icon": "inv_drink_12",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -5654,13 +5693,15 @@
      "item": {
       "name": "Kingsblood",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 3356,
       "icon": "inv_misc_herb_03",
       "quality": 1,
       "itemLevel": 24,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -5740,13 +5781,15 @@
      "item": {
       "name": "Iron Ore",
       "slot": null,
-      "type": null,
+      "type": "Metal & Stone",
       "itemId": 2772,
       "icon": "inv_ore_iron_01",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Metal & Stone"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -5833,13 +5876,15 @@
      "item": {
       "name": "Maple Seed",
       "slot": null,
-      "type": null,
+      "type": "Reagent",
       "itemId": 17034,
       "icon": "inv_misc_food_02",
       "quality": 1,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Reagent"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -5855,13 +5900,15 @@
      "item": {
       "name": "Leaded Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3372,
       "icon": "inv_potion_85",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -6074,13 +6121,15 @@
    "item": {
     "name": "Runed Golden Rod",
     "slot": null,
-    "type": null,
+    "type": "Enchanting",
     "itemId": 11130,
     "icon": "inv_staff_10",
     "quality": 1,
     "itemLevel": 30,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Enchanting"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -6097,13 +6146,15 @@
      "item": {
       "name": "Golden Rod",
       "slot": null,
-      "type": null,
+      "type": "Enchanting",
       "itemId": 11128,
       "icon": "inv_staff_10",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Enchanting"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -6119,13 +6170,15 @@
      "item": {
       "name": "Iridescent Pearl",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 5500,
       "icon": "inv_misc_gem_pearl_02",
       "quality": 2,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -6496,13 +6549,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -6584,13 +6639,15 @@
      "item": {
       "name": "Large Fang",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 5637,
       "icon": "inv_misc_bone_08",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -6670,13 +6727,15 @@
      "item": {
       "name": "Elemental Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7067,
       "icon": "inv_ore_iron_01",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -7011,13 +7070,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -7347,13 +7408,15 @@
      "item": {
       "name": "Wintersbite",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 3819,
       "icon": "inv_misc_flower_03",
       "quality": 1,
       "itemLevel": 39,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -7499,13 +7562,15 @@
      "item": {
       "name": "Elemental Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7068,
       "icon": "spell_fire_fire",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -7562,13 +7627,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -7988,13 +8055,15 @@
      "item": {
       "name": "Stranglethorn Seed",
       "slot": null,
-      "type": null,
+      "type": "Reagent",
       "itemId": 17035,
       "icon": "inv_misc_food_02",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Reagent"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -8010,13 +8079,15 @@
      "item": {
       "name": "Leaded Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3372,
       "icon": "inv_potion_85",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -8096,13 +8167,15 @@
      "item": {
       "name": "Green Whelp Scale",
       "slot": null,
-      "type": null,
+      "type": "Leather",
       "itemId": 7392,
       "icon": "inv_misc_monsterscales_12",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Leather"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -9282,13 +9355,14 @@
      "item": {
       "name": "Scroll of Strength II",
       "slot": null,
-      "type": null,
+      "type": "Scrolls",
       "itemId": 2289,
       "icon": "inv_scroll_02",
       "quality": 1,
       "itemLevel": 35,
       "requiredLevel": 25,
       "tooltip": [
+       "Scrolls",
        "Requires Level 25"
       ],
       "tooltipSynthesized": true,
@@ -9482,13 +9556,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -9679,13 +9755,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -10076,13 +10154,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -10162,13 +10242,15 @@
      "item": {
       "name": "Truesilver Bar",
       "slot": null,
-      "type": null,
+      "type": "Metal & Stone",
       "itemId": 6037,
       "icon": "inv_ingot_08",
       "quality": 2,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Metal & Stone"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -10406,13 +10488,15 @@
    "item": {
     "name": "Runed Truesilver Rod",
     "slot": null,
-    "type": null,
+    "type": "Enchanting",
     "itemId": 11145,
     "icon": "inv_staff_11",
     "quality": 1,
     "itemLevel": 40,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Enchanting"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -10429,13 +10513,15 @@
      "item": {
       "name": "Truesilver Rod",
       "slot": null,
-      "type": null,
+      "type": "Enchanting",
       "itemId": 11144,
       "icon": "inv_staff_11",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Enchanting"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -10451,13 +10537,15 @@
      "item": {
       "name": "Black Pearl",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 7971,
       "icon": "inv_misc_gem_pearl_01",
       "quality": 2,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -10628,13 +10716,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -10976,13 +11066,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -11202,13 +11294,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -11375,13 +11469,15 @@
      "item": {
       "name": "Truesilver Bar",
       "slot": null,
-      "type": null,
+      "type": "Metal & Stone",
       "itemId": 6037,
       "icon": "inv_ingot_08",
       "quality": 2,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Metal & Stone"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -11980,13 +12076,15 @@
      "item": {
       "name": "Sungrass",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8838,
       "icon": "inv_misc_herb_18",
       "quality": 1,
       "itemLevel": 46,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -12476,13 +12574,14 @@
      "item": {
       "name": "Frost Oil",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3829,
       "icon": "inv_potion_20",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 30,
       "tooltip": [
+       "Other",
        "Requires Level 30"
       ],
       "tooltipSynthesized": true,
@@ -12721,13 +12820,15 @@
      "item": {
       "name": "Aquamarine",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 7909,
       "icon": "inv_misc_gem_crystal_02",
       "quality": 2,
       "itemLevel": 45,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -13027,13 +13128,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -13219,13 +13322,15 @@
    "item": {
     "name": "Enchanted Leather",
     "slot": null,
-    "type": null,
+    "type": "Leather",
     "itemId": 12810,
     "icon": "inv_misc_rune_05",
     "quality": 1,
     "itemLevel": 55,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Leather"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -13242,13 +13347,15 @@
      "item": {
       "name": "Rugged Leather",
       "slot": null,
-      "type": null,
+      "type": "Leather",
       "itemId": 8170,
       "icon": "inv_misc_leatherscrap_02",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Leather"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -13304,13 +13411,15 @@
    "item": {
     "name": "Enchanted Thorium Bar",
     "slot": null,
-    "type": null,
+    "type": "Metal & Stone",
     "itemId": 12655,
     "icon": "inv_ingot_eternium",
     "quality": 1,
     "itemLevel": 55,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Metal & Stone"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -13327,13 +13436,15 @@
      "item": {
       "name": "Thorium Bar",
       "slot": null,
-      "type": null,
+      "type": "Metal & Stone",
       "itemId": 12359,
       "icon": "inv_ingot_07",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Metal & Stone"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -13447,13 +13558,15 @@
      "item": {
       "name": "Purple Lotus",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8831,
       "icon": "inv_misc_herb_17",
       "quality": 1,
       "itemLevel": 42,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -13469,13 +13582,15 @@
      "item": {
       "name": "Crystal Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 8925,
       "icon": "inv_potion_86",
       "quality": 1,
       "itemLevel": 35,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -13555,13 +13670,15 @@
      "item": {
       "name": "Cured Rugged Hide",
       "slot": null,
-      "type": null,
+      "type": "Leather",
       "itemId": 15407,
       "icon": "inv_misc_pelt_bear_03",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Leather"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14327,13 +14444,15 @@
      "item": {
       "name": "Heart of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7077,
       "icon": "spell_fire_lavaspawn",
       "quality": 1,
       "itemLevel": 45,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14349,13 +14468,15 @@
      "item": {
       "name": "Core of Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7075,
       "icon": "inv_stone_05",
       "quality": 1,
       "itemLevel": 45,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14371,13 +14492,15 @@
      "item": {
       "name": "Globe of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7079,
       "icon": "inv_misc_orb_01",
       "quality": 1,
       "itemLevel": 45,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14393,13 +14516,15 @@
      "item": {
       "name": "Breath of Wind",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7081,
       "icon": "spell_nature_cyclone",
       "quality": 1,
       "itemLevel": 45,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14415,13 +14540,15 @@
      "item": {
       "name": "Ichor of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7972,
       "icon": "inv_misc_slime_01",
       "quality": 1,
       "itemLevel": 45,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14565,13 +14692,15 @@
      "item": {
       "name": "Essence of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7078,
       "icon": "spell_fire_volcano",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14642,13 +14771,15 @@
      "item": {
       "name": "Blood of the Mountain",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11382,
       "icon": "inv_misc_gem_bloodstone_03",
       "quality": 2,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14664,13 +14795,15 @@
      "item": {
       "name": "Essence of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7078,
       "icon": "spell_fire_volcano",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -14777,13 +14910,15 @@
      "item": {
       "name": "Wildvine",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8153,
       "icon": "inv_misc_herb_03",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15083,13 +15218,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15176,13 +15313,15 @@
      "item": {
       "name": "Firebloom",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 4625,
       "icon": "inv_misc_herb_19",
       "quality": 1,
       "itemLevel": 41,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15198,13 +15337,15 @@
      "item": {
       "name": "Crystal Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 8925,
       "icon": "inv_potion_86",
       "quality": 1,
       "itemLevel": 35,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15532,13 +15673,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15692,13 +15835,15 @@
      "item": {
       "name": "Blood of the Mountain",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11382,
       "icon": "inv_misc_gem_bloodstone_03",
       "quality": 2,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15714,13 +15859,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15809,13 +15956,15 @@
      "item": {
       "name": "Blood of the Mountain",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11382,
       "icon": "inv_misc_gem_bloodstone_03",
       "quality": 2,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15831,13 +15980,15 @@
      "item": {
       "name": "Essence of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12808,
       "icon": "spell_shadow_shadetruesight",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15926,13 +16077,15 @@
      "item": {
       "name": "Blood of the Mountain",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11382,
       "icon": "inv_misc_gem_bloodstone_03",
       "quality": 2,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -15948,13 +16101,15 @@
      "item": {
       "name": "Essence of Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7076,
       "icon": "spell_nature_strengthofearthtotem02",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16125,13 +16280,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16147,13 +16304,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16169,13 +16328,15 @@
      "item": {
       "name": "Icecap",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 13467,
       "icon": "inv_misc_herb_icecap",
       "quality": 1,
       "itemLevel": 58,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16308,13 +16469,15 @@
      "item": {
       "name": "Arcane Crystal",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 12363,
       "icon": "inv_misc_gem_topaz_01",
       "quality": 2,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16450,13 +16613,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16565,13 +16730,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16800,13 +16967,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16942,13 +17111,15 @@
      "item": {
       "name": "Essence of Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7076,
       "icon": "spell_nature_strengthofearthtotem02",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -16975,13 +17146,15 @@
    "item": {
     "name": "Runed Arcanite Rod",
     "slot": null,
-    "type": null,
+    "type": "Enchanting",
     "itemId": 16207,
     "icon": "inv_wand_09",
     "quality": 1,
     "itemLevel": 58,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Enchanting"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -16998,13 +17171,15 @@
      "item": {
       "name": "Arcanite Rod",
       "slot": null,
-      "type": null,
+      "type": "Enchanting",
       "itemId": 16206,
       "icon": "inv_staff_19",
       "quality": 1,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Enchanting"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -17020,13 +17195,15 @@
      "item": {
       "name": "Golden Pearl",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 13926,
       "icon": "inv_misc_gem_pearl_04",
       "quality": 2,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -17824,13 +18001,15 @@
      "item": {
       "name": "Essence of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12808,
       "icon": "spell_shadow_shadetruesight",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -18037,13 +18216,15 @@
      "item": {
       "name": "Purple Lotus",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8831,
       "icon": "inv_misc_herb_17",
       "quality": 1,
       "itemLevel": 42,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -18059,13 +18240,15 @@
      "item": {
       "name": "Imbued Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 18256,
       "icon": "inv_potion_87",
       "quality": 1,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -18152,13 +18335,15 @@
      "item": {
       "name": "Firebloom",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 4625,
       "icon": "inv_misc_herb_19",
       "quality": 1,
       "itemLevel": 41,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -18174,13 +18359,15 @@
      "item": {
       "name": "Imbued Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 18256,
       "icon": "inv_potion_87",
       "quality": 1,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -19558,13 +19745,15 @@
      "item": {
       "name": "Essence of Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7076,
       "icon": "spell_nature_strengthofearthtotem02",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -19580,13 +19769,15 @@
      "item": {
       "name": "Essence of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12808,
       "icon": "spell_shadow_shadetruesight",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -19745,13 +19936,15 @@
      "item": {
       "name": "Blood of Heroes",
       "slot": null,
-      "type": null,
+      "type": "Quest",
       "itemId": 12938,
       "icon": "inv_potion_33",
       "quality": 1,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Quest"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -19767,13 +19960,15 @@
      "item": {
       "name": "Purple Lotus",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8831,
       "icon": "inv_misc_herb_17",
       "quality": 1,
       "itemLevel": 42,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -19882,13 +20077,15 @@
      "item": {
       "name": "Essence of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12808,
       "icon": "spell_shadow_shadetruesight",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -19904,13 +20101,15 @@
      "item": {
       "name": "Purple Lotus",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8831,
       "icon": "inv_misc_herb_17",
       "quality": 1,
       "itemLevel": 42,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -20046,13 +20245,15 @@
      "item": {
       "name": "Living Essence",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12803,
       "icon": "spell_nature_abolishmagic",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -20475,13 +20676,15 @@
      "item": {
       "name": "Essence of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7078,
       "icon": "spell_fire_volcano",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -20588,13 +20791,15 @@
      "item": {
       "name": "Guardian Stone",
       "slot": null,
-      "type": null,
+      "type": "Metal & Stone",
       "itemId": 12809,
       "icon": "inv_stone_02",
       "quality": 2,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Metal & Stone"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -20701,13 +20906,15 @@
      "item": {
       "name": "Essence of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7078,
       "icon": "spell_fire_volcano",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -20814,13 +21021,15 @@
      "item": {
       "name": "Living Essence",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12803,
       "icon": "spell_nature_abolishmagic",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -20927,13 +21136,15 @@
      "item": {
       "name": "Black Lotus",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 13468,
       "icon": "inv_misc_herb_blacklotus",
       "quality": 2,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21040,13 +21251,15 @@
      "item": {
       "name": "Black Diamond",
       "slot": null,
-      "type": null,
+      "type": "Quest",
       "itemId": 11754,
       "icon": "inv_misc_gem_01",
       "quality": 2,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Quest"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21153,13 +21366,15 @@
      "item": {
       "name": "Essence of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7078,
       "icon": "spell_fire_volcano",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21266,13 +21481,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21379,13 +21596,15 @@
      "item": {
       "name": "Righteous Orb",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 12811,
       "icon": "inv_misc_gem_pearl_03",
       "quality": 2,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21608,13 +21827,15 @@
      "item": {
       "name": "Essence of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12808,
       "icon": "spell_shadow_shadetruesight",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21721,13 +21942,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21836,13 +22059,15 @@
      "item": {
       "name": "Essence of Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7076,
       "icon": "spell_nature_strengthofearthtotem02",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -21949,13 +22174,15 @@
      "item": {
       "name": "Larval Acid",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 18512,
       "icon": "inv_potion_22",
       "quality": 1,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22062,13 +22289,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22175,13 +22404,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22288,13 +22519,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22310,13 +22543,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22423,13 +22658,15 @@
      "item": {
       "name": "Blood of Heroes",
       "slot": null,
-      "type": null,
+      "type": "Quest",
       "itemId": 12938,
       "icon": "inv_potion_33",
       "quality": 1,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Quest"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22536,13 +22773,15 @@
      "item": {
       "name": "Essence of Earth",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7076,
       "icon": "spell_nature_strengthofearthtotem02",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22622,13 +22861,15 @@
      "item": {
       "name": "Righteous Orb",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 12811,
       "icon": "inv_misc_gem_pearl_03",
       "quality": 2,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22737,13 +22978,15 @@
      "item": {
       "name": "Living Essence",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12803,
       "icon": "spell_nature_abolishmagic",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22759,13 +23002,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22781,13 +23026,15 @@
      "item": {
       "name": "Righteous Orb",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 12811,
       "icon": "inv_misc_gem_pearl_03",
       "quality": 2,
       "itemLevel": 60,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22867,13 +23114,15 @@
      "item": {
       "name": "Essence of Undeath",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12808,
       "icon": "spell_shadow_shadetruesight",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -22889,13 +23138,15 @@
      "item": {
       "name": "Living Essence",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 12803,
       "icon": "spell_nature_abolishmagic",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -23244,13 +23495,15 @@
      "item": {
       "name": "Essence of Fire",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7078,
       "icon": "spell_fire_volcano",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -23266,13 +23519,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -23288,13 +23543,15 @@
      "item": {
       "name": "Essence of Air",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7082,
       "icon": "spell_nature_earthbind",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -23310,13 +23567,15 @@
      "item": {
       "name": "Golden Pearl",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 13926,
       "icon": "inv_misc_gem_pearl_04",
       "quality": 2,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -23620,13 +23879,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -23837,13 +24098,14 @@
      "item": {
       "name": "Scroll of Intellect IV",
       "slot": null,
-      "type": null,
+      "type": "Scrolls",
       "itemId": 10308,
       "icon": "inv_scroll_01",
       "quality": 1,
       "itemLevel": 60,
       "requiredLevel": 50,
       "tooltip": [
+       "Scrolls",
        "Requires Level 50"
       ],
       "tooltipSynthesized": true,
@@ -24056,13 +24318,15 @@
      "item": {
       "name": "Star Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 11291,
       "icon": "inv_tradeskillitem_03",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",

@@ -1711,14 +1711,14 @@
     {
      "name": "Tunneler's Boots",
      "slot": "Feet",
-     "type": null,
+     "type": "Mail",
      "itemId": 2037,
      "icon": "inv_boots_01",
      "quality": 2,
      "itemLevel": 18,
      "requiredLevel": 0,
      "tooltip": [
-      "Feet\t"
+      "Feet\tMail"
      ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
@@ -1731,14 +1731,14 @@
     {
      "name": "Dusty Mining Gloves",
      "slot": "Hands",
-     "type": null,
+     "type": "Leather",
      "itemId": 2036,
      "icon": "inv_gauntlets_05",
      "quality": 2,
      "itemLevel": 18,
      "requiredLevel": 0,
      "tooltip": [
-      "Hands\t"
+      "Hands\tLeather"
      ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
@@ -1955,14 +1955,14 @@
     {
      "name": "Miner's Revenge",
      "slot": "Two-Hand",
-     "type": null,
+     "type": "Axe",
      "itemId": 1893,
      "icon": "inv_pick_03",
      "quality": 2,
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Two-Hand\t",
+      "Two-Hand\tAxe",
       "\tSpeed 3.50",
       "(13 damage per second)"
      ],

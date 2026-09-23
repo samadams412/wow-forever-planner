@@ -711,13 +711,15 @@
     {
      "name": "Sparklematic-Wrapped Box",
      "slot": null,
-     "type": null,
+     "type": "Junk",
      "itemId": 9363,
      "icon": "inv_misc_gift_01",
      "quality": 1,
      "itemLevel": 1,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Junk"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",
@@ -1309,13 +1311,15 @@
     {
      "name": "Goblin Transponder",
      "slot": null,
-     "type": null,
+     "type": "Quest",
      "itemId": 9173,
      "icon": "inv_battery_01",
      "quality": 1,
      "itemLevel": 1,
      "requiredLevel": 1,
-     "tooltip": null,
+     "tooltip": [
+      "Quest"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",

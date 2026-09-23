@@ -22,13 +22,15 @@
    "item": {
     "name": "Linen Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 1251,
     "icon": "inv_misc_bandage_15",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -45,13 +47,15 @@
      "item": {
       "name": "Linen Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 2589,
       "icon": "inv_fabric_linen_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -78,13 +82,15 @@
    "item": {
     "name": "Minor Healing Potion",
     "slot": null,
-    "type": null,
+    "type": "Potions",
     "itemId": 118,
     "icon": "inv_potion_49",
     "quality": 1,
     "itemLevel": 5,
     "requiredLevel": 1,
-    "tooltip": null,
+    "tooltip": [
+     "Potions"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -101,13 +107,15 @@
      "item": {
       "name": "Empty Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3371,
       "icon": "inv_potion_84",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -151,13 +159,15 @@
      "item": {
       "name": "Peacebloom",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 2447,
       "icon": "inv_misc_flower_02",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -211,13 +221,15 @@
      "item": {
       "name": "Linen Bandage",
       "slot": null,
-      "type": null,
+      "type": "Bandages",
       "itemId": 1251,
       "icon": "inv_misc_bandage_15",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Bandages"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -233,13 +245,15 @@
      "item": {
       "name": "Refreshing Spring Water",
       "slot": null,
-      "type": null,
+      "type": "Food & Drink",
       "itemId": 159,
       "icon": "inv_drink_07",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 1,
-      "tooltip": null,
+      "tooltip": [
+       "Food & Drink"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -266,13 +280,15 @@
    "item": {
     "name": "Heavy Linen Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 2581,
     "icon": "inv_misc_bandage_18",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -289,13 +305,15 @@
      "item": {
       "name": "Linen Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 2589,
       "icon": "inv_fabric_linen_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -322,13 +340,14 @@
    "item": {
     "name": "Lesser Healing Potion",
     "slot": null,
-    "type": null,
+    "type": "Potions",
     "itemId": 858,
     "icon": "inv_potion_50",
     "quality": 1,
     "itemLevel": 13,
     "requiredLevel": 3,
     "tooltip": [
+     "Potions",
      "Requires Level 3"
     ],
     "tooltipSynthesized": true,
@@ -347,13 +366,15 @@
      "item": {
       "name": "Empty Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3371,
       "icon": "inv_potion_84",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -397,13 +418,15 @@
      "item": {
       "name": "Briarthorn",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 2450,
       "icon": "inv_misc_root_01",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -430,13 +453,15 @@
    "item": {
     "name": "Anti-Venom",
     "slot": null,
-    "type": null,
+    "type": "Other",
     "itemId": 6452,
     "icon": "inv_misc_slime_01",
     "quality": 1,
     "itemLevel": 16,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Other"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -453,13 +478,15 @@
      "item": {
       "name": "Small Venom Sac",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 1475,
       "icon": "inv_misc_organ_02",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -486,13 +513,15 @@
    "item": {
     "name": "Wool Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 3530,
     "icon": "inv_misc_bandage_14",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -509,13 +538,15 @@
      "item": {
       "name": "Wool Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 2592,
       "icon": "inv_fabric_wool_01",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -569,13 +600,15 @@
      "item": {
       "name": "Spider Ichor",
       "slot": null,
-      "type": null,
+      "type": "Cooking",
       "itemId": 3174,
       "icon": "inv_misc_slime_01",
       "quality": 1,
       "itemLevel": 10,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cooking"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -619,13 +652,15 @@
      "item": {
       "name": "Bottle of Dalaran Noir",
       "slot": null,
-      "type": null,
+      "type": "Food & Drink",
       "itemId": 2723,
       "icon": "inv_drink_10",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 1,
-      "tooltip": null,
+      "tooltip": [
+       "Food & Drink"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -652,13 +687,14 @@
    "item": {
     "name": "Healing Potion",
     "slot": null,
-    "type": null,
+    "type": "Potions",
     "itemId": 929,
     "icon": "inv_potion_51",
     "quality": 1,
     "itemLevel": 22,
     "requiredLevel": 12,
     "tooltip": [
+     "Potions",
      "Requires Level 12"
     ],
     "tooltipSynthesized": true,
@@ -677,13 +713,15 @@
      "item": {
       "name": "Leaded Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3372,
       "icon": "inv_potion_85",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -728,13 +766,15 @@
      "item": {
       "name": "Bruiseweed",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 2453,
       "icon": "inv_misc_herb_01",
       "quality": 1,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -761,13 +801,15 @@
    "item": {
     "name": "Heavy Wool Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 3531,
     "icon": "inv_misc_bandage_17",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -784,13 +826,15 @@
      "item": {
       "name": "Wool Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 2592,
       "icon": "inv_fabric_wool_01",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -844,13 +888,15 @@
      "item": {
       "name": "Wool Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 2592,
       "icon": "inv_fabric_wool_01",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -866,13 +912,15 @@
      "item": {
       "name": "Fine Thread",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 2321,
       "icon": "inv_fabric_wool_02",
       "quality": 1,
       "itemLevel": 20,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -899,13 +947,15 @@
    "item": {
     "name": "Strong Anti-Venom",
     "slot": null,
-    "type": null,
+    "type": "Other",
     "itemId": 6453,
     "icon": "inv_misc_slime_01",
     "quality": 1,
     "itemLevel": 26,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Other"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -922,13 +972,15 @@
      "item": {
       "name": "Large Venom Sac",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 1288,
       "icon": "inv_misc_organ_01",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -982,13 +1034,15 @@
      "item": {
       "name": "Anti-Venom",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 6452,
       "icon": "inv_misc_slime_01",
       "quality": 1,
       "itemLevel": 16,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1004,13 +1058,15 @@
      "item": {
       "name": "Mageweave Bandage",
       "slot": null,
-      "type": null,
+      "type": "Bandages",
       "itemId": 8544,
       "icon": "inv_misc_bandage_19",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Bandages"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1026,13 +1082,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1086,13 +1144,15 @@
      "item": {
       "name": "Murloc Fin",
       "slot": null,
-      "type": null,
+      "type": "Cooking",
       "itemId": 1468,
       "icon": "inv_misc_monsterscales_02",
       "quality": 1,
       "itemLevel": 16,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cooking"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1137,13 +1197,15 @@
      "item": {
       "name": "Thunder Ale",
       "slot": null,
-      "type": null,
+      "type": "Food & Drink",
       "itemId": 2686,
       "icon": "inv_drink_13",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 1,
-      "tooltip": null,
+      "tooltip": [
+       "Food & Drink"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1170,13 +1232,15 @@
    "item": {
     "name": "Silk Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 6450,
     "icon": "inv_misc_bandage_01",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -1193,13 +1257,15 @@
      "item": {
       "name": "Silk Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 4306,
       "icon": "inv_fabric_silk_01",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1226,13 +1292,14 @@
    "item": {
     "name": "Greater Healing Potion",
     "slot": null,
-    "type": null,
+    "type": "Potions",
     "itemId": 1710,
     "icon": "inv_potion_52",
     "quality": 1,
     "itemLevel": 31,
     "requiredLevel": 21,
     "tooltip": [
+     "Potions",
      "Requires Level 21"
     ],
     "tooltipSynthesized": true,
@@ -1251,13 +1318,15 @@
      "item": {
       "name": "Leaded Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 3372,
       "icon": "inv_potion_85",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1302,13 +1371,15 @@
      "item": {
       "name": "Liferoot",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 3357,
       "icon": "inv_misc_root_02",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1335,13 +1406,15 @@
    "item": {
     "name": "Heavy Silk Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 6451,
     "icon": "inv_misc_bandage_02",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -1358,13 +1431,15 @@
      "item": {
       "name": "Silk Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 4306,
       "icon": "inv_fabric_silk_01",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1418,13 +1493,15 @@
      "item": {
       "name": "Thick Leather",
       "slot": null,
-      "type": null,
+      "type": "Leather",
       "itemId": 4304,
       "icon": "inv_misc_leatherscrap_08",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Leather"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1440,13 +1517,15 @@
      "item": {
       "name": "Silken Thread",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 4291,
       "icon": "inv_fabric_silk_02",
       "quality": 1,
       "itemLevel": 30,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1473,13 +1552,15 @@
    "item": {
     "name": "Mageweave Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 8544,
     "icon": "inv_misc_bandage_19",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -1496,13 +1577,15 @@
      "item": {
       "name": "Mageweave Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 4338,
       "icon": "inv_fabric_mageweave_01",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1556,13 +1639,15 @@
      "item": {
       "name": "Elemental Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7070,
       "icon": "inv_potion_03",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1607,13 +1692,15 @@
      "item": {
       "name": "Skin of Dwarven Stout",
       "slot": null,
-      "type": null,
+      "type": "Food & Drink",
       "itemId": 2596,
       "icon": "inv_drink_milk_02",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Food & Drink"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1703,13 +1790,14 @@
    "item": {
     "name": "Superior Healing Potion",
     "slot": null,
-    "type": null,
+    "type": "Potions",
     "itemId": 3928,
     "icon": "inv_potion_53",
     "quality": 1,
     "itemLevel": 45,
     "requiredLevel": 35,
     "tooltip": [
+     "Potions",
      "Requires Level 35"
     ],
     "tooltipSynthesized": true,
@@ -1728,13 +1816,15 @@
      "item": {
       "name": "Crystal Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 8925,
       "icon": "inv_potion_86",
       "quality": 1,
       "itemLevel": 35,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1779,13 +1869,15 @@
      "item": {
       "name": "Sungrass",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 8838,
       "icon": "inv_misc_herb_18",
       "quality": 1,
       "itemLevel": 46,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1812,13 +1904,15 @@
    "item": {
     "name": "Heavy Mageweave Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 8545,
     "icon": "inv_misc_bandage_20",
     "quality": 1,
     "itemLevel": 1,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -1835,13 +1929,15 @@
      "item": {
       "name": "Mageweave Cloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 4338,
       "icon": "inv_fabric_mageweave_01",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1868,13 +1964,15 @@
    "item": {
     "name": "Runecloth Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 14529,
     "icon": "inv_misc_bandage_11",
     "quality": 1,
     "itemLevel": 52,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -1891,13 +1989,15 @@
      "item": {
       "name": "Runecloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 14047,
       "icon": "inv_fabric_purplefire_01",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1951,13 +2051,15 @@
      "item": {
       "name": "Rugged Leather",
       "slot": null,
-      "type": null,
+      "type": "Leather",
       "itemId": 8170,
       "icon": "inv_misc_leatherscrap_02",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Leather"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1973,13 +2075,15 @@
      "item": {
       "name": "Runecloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 14047,
       "icon": "inv_fabric_purplefire_01",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -1995,13 +2099,15 @@
      "item": {
       "name": "Heavy Silken Thread",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 8343,
       "icon": "inv_fabric_silk_02",
       "quality": 1,
       "itemLevel": 40,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2028,13 +2134,14 @@
    "item": {
     "name": "Major Healing Potion",
     "slot": null,
-    "type": null,
+    "type": "Potions",
     "itemId": 13446,
     "icon": "inv_potion_54",
     "quality": 1,
     "itemLevel": 55,
     "requiredLevel": 45,
     "tooltip": [
+     "Potions",
      "Requires Level 45"
     ],
     "tooltipSynthesized": true,
@@ -2053,13 +2160,15 @@
      "item": {
       "name": "Crystal Vial",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 8925,
       "icon": "inv_potion_86",
       "quality": 1,
       "itemLevel": 35,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2104,13 +2213,15 @@
      "item": {
       "name": "Golden Sansam",
       "slot": null,
-      "type": null,
+      "type": "Herb",
       "itemId": 13464,
       "icon": "inv_misc_herb_sansamroot",
       "quality": 1,
       "itemLevel": 52,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Herb"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2164,13 +2275,15 @@
      "item": {
       "name": "Essence of Water",
       "slot": null,
-      "type": null,
+      "type": "Elemental",
       "itemId": 7080,
       "icon": "spell_nature_acid_01",
       "quality": 2,
       "itemLevel": 55,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Elemental"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2215,13 +2328,15 @@
      "item": {
       "name": "Flagon of Dwarven Honeymead",
       "slot": null,
-      "type": null,
+      "type": "Food & Drink",
       "itemId": 2594,
       "icon": "inv_drink_05",
       "quality": 1,
       "itemLevel": 25,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Food & Drink"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2248,13 +2363,15 @@
    "item": {
     "name": "Heavy Runecloth Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 14530,
     "icon": "inv_misc_bandage_12",
     "quality": 1,
     "itemLevel": 58,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -2271,13 +2388,15 @@
      "item": {
       "name": "Runecloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 14047,
       "icon": "inv_fabric_purplefire_01",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2304,13 +2423,15 @@
    "item": {
     "name": "Crystal Infused Bandage",
     "slot": null,
-    "type": null,
+    "type": "Bandages",
     "itemId": 23684,
     "icon": "inv_misc_bandage_16",
     "quality": 1,
     "itemLevel": 60,
     "requiredLevel": 0,
-    "tooltip": null,
+    "tooltip": [
+     "Bandages"
+    ],
     "tooltipSynthesized": true,
     "classicTooltip": null,
     "status": "same",
@@ -2349,13 +2470,15 @@
      "item": {
       "name": "Runecloth",
       "slot": null,
-      "type": null,
+      "type": "Cloth",
       "itemId": 14047,
       "icon": "inv_fabric_purplefire_01",
       "quality": 1,
       "itemLevel": 50,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Cloth"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2409,13 +2532,15 @@
      "item": {
       "name": "Simple Wood",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 4470,
       "icon": "inv_tradeskillitem_01",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2431,13 +2556,15 @@
      "item": {
       "name": "Strong Anti-Venom",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 6453,
       "icon": "inv_misc_slime_01",
       "quality": 1,
       "itemLevel": 26,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2453,13 +2580,15 @@
      "item": {
       "name": "Heavy Runecloth Bandage",
       "slot": null,
-      "type": null,
+      "type": "Bandages",
       "itemId": 14530,
       "icon": "inv_misc_bandage_12",
       "quality": 1,
       "itemLevel": 58,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Bandages"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2519,13 +2648,15 @@
      "item": {
       "name": "Huge Venom Sac",
       "slot": null,
-      "type": null,
+      "type": "Other",
       "itemId": 19441,
       "icon": "inv_misc_organ_04",
       "quality": 1,
       "itemLevel": 1,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Other"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",
@@ -2575,13 +2706,15 @@
      "item": {
       "name": "Heavy Runecloth Bandage",
       "slot": null,
-      "type": null,
+      "type": "Bandages",
       "itemId": 14530,
       "icon": "inv_misc_bandage_12",
       "quality": 1,
       "itemLevel": 58,
       "requiredLevel": 0,
-      "tooltip": null,
+      "tooltip": [
+       "Bandages"
+      ],
       "tooltipSynthesized": true,
       "classicTooltip": null,
       "status": "same",

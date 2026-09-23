@@ -1447,13 +1447,15 @@
     {
      "name": "Scepter of Celebras",
      "slot": null,
-     "type": null,
+     "type": "Quest",
      "itemId": 17191,
      "icon": "inv_staff_16",
      "quality": 3,
      "itemLevel": 1,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Quest"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",

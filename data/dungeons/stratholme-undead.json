@@ -3777,13 +3777,14 @@
     {
      "name": "Superior Healing Potion",
      "slot": null,
-     "type": null,
+     "type": "Potions",
      "itemId": 3928,
      "icon": "inv_potion_53",
      "quality": 1,
      "itemLevel": 45,
      "requiredLevel": 35,
      "tooltip": [
+      "Potions",
       "Requires Level 35"
      ],
      "tooltipSynthesized": true,
@@ -3797,13 +3798,14 @@
     {
      "name": "Greater Mana Potion",
      "slot": null,
-     "type": null,
+     "type": "Potions",
      "itemId": 6149,
      "icon": "inv_potion_73",
      "quality": 1,
      "itemLevel": 41,
      "requiredLevel": 31,
      "tooltip": [
+      "Potions",
       "Requires Level 31"
      ],
      "tooltipSynthesized": true,
@@ -4130,13 +4132,15 @@
     {
      "name": "Ysida's Satchel",
      "slot": null,
-     "type": null,
+     "type": "Junk",
      "itemId": 22137,
      "icon": "inv_misc_bag_20",
      "quality": 1,
      "itemLevel": 1,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Junk"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",

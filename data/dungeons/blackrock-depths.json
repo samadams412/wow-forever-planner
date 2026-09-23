@@ -5191,13 +5191,15 @@
     {
      "name": "Shadowforge Key",
      "slot": null,
-     "type": null,
+     "type": "Key",
      "itemId": 11000,
      "icon": "inv_misc_key_08",
      "quality": 1,
      "itemLevel": 1,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Key"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",
@@ -6024,13 +6026,15 @@
     {
      "name": "Dark Dwarven Lager",
      "slot": null,
-     "type": null,
+     "type": "Food & Drink",
      "itemId": 12003,
      "icon": "inv_drink_05",
      "quality": 1,
      "itemLevel": 55,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Food & Drink"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",
@@ -6081,13 +6085,15 @@
     {
      "name": "A Dingy Fanny Pack",
      "slot": null,
-     "type": null,
+     "type": "Junk",
      "itemId": 11883,
      "icon": "inv_misc_bag_09_black",
      "quality": 1,
      "itemLevel": 56,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Junk"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",
@@ -6839,13 +6845,14 @@
     {
      "name": "Superior Healing Potion",
      "slot": null,
-     "type": null,
+     "type": "Potions",
      "itemId": 3928,
      "icon": "inv_potion_53",
      "quality": 1,
      "itemLevel": 45,
      "requiredLevel": 35,
      "tooltip": [
+      "Potions",
       "Requires Level 35"
      ],
      "tooltipSynthesized": true,
@@ -6859,13 +6866,14 @@
     {
      "name": "Greater Mana Potion",
      "slot": null,
-     "type": null,
+     "type": "Potions",
      "itemId": 6149,
      "icon": "inv_potion_73",
      "quality": 1,
      "itemLevel": 41,
      "requiredLevel": 31,
      "tooltip": [
+      "Potions",
       "Requires Level 31"
      ],
      "tooltipSynthesized": true,

@@ -3314,13 +3314,15 @@
     {
      "name": "Demon Kissed Sack",
      "slot": null,
-     "type": null,
+     "type": "Quest",
      "itemId": 12849,
      "icon": "inv_misc_bag_13",
      "quality": 2,
      "itemLevel": 61,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Quest"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",
@@ -3415,13 +3417,15 @@
     {
      "name": "Eggscilloscope",
      "slot": null,
-     "type": null,
+     "type": "Key",
      "itemId": 12144,
      "icon": "inv_gizmo_09",
      "quality": 1,
      "itemLevel": 1,
      "requiredLevel": 0,
-     "tooltip": null,
+     "tooltip": [
+      "Key"
+     ],
      "tooltipSynthesized": true,
      "classicTooltip": null,
      "status": "same",
@@ -3713,14 +3717,14 @@
     {
      "name": "Drakefire Amulet",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 16309,
      "icon": "inv_jewelry_talisman_11",
      "quality": 3,
      "itemLevel": 63,
      "requiredLevel": 50,
      "tooltip": [
-      "Neck\t",
+      "Neck\tTrinket",
       "Requires Level 50"
      ],
      "tooltipSynthesized": true,
@@ -4195,14 +4199,14 @@
     {
      "name": "Drakefire Amulet",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 16309,
      "icon": "inv_jewelry_talisman_11",
      "quality": 3,
      "itemLevel": 63,
      "requiredLevel": 50,
      "tooltip": [
-      "Neck\t",
+      "Neck\tTrinket",
       "Requires Level 50"
      ],
      "tooltipSynthesized": true,
