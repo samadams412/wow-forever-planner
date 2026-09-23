@@ -60,9 +60,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 9c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -126,9 +127,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Use: Restores 10 health over 15 sec. Must remain seated while eating.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -142,8 +145,8 @@
   {
    "name": "Charred Wolf Meat",
    "rank": "1",
-   "category": "Other Buffs",
-   "categoryConfident": false,
+   "category": "Health and Mana Only",
+   "categoryConfident": true,
    "source": "Trainer",
    "skills": {
     "orange": "1",
@@ -161,9 +164,11 @@
     "itemLevel": 10,
     "requiredLevel": 1,
     "tooltip": [
-     "Food & Drink"
+     "Food & Drink",
+     "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+     "Sell Price: 5c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -186,9 +191,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -252,9 +258,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -297,7 +304,7 @@
    "name": "Gingerbread Cookie",
    "rank": "1",
    "category": "Other Buffs",
-   "categoryConfident": false,
+   "categoryConfident": true,
    "source": "Recipe",
    "skills": {
     "orange": "1",
@@ -315,9 +322,11 @@
     "itemLevel": 10,
     "requiredLevel": 1,
     "tooltip": [
-     "Food & Drink"
+     "Food & Drink",
+     "Use: Restores 17 health over 18 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 2 Stamina and Spirit for 15 min.",
+     "Sell Price: 10c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -340,9 +349,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -366,7 +376,7 @@
       "tooltip": [
        "Holiday"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -430,9 +440,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -524,9 +535,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 3c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -590,9 +602,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Use: Restores 10 health over 15 sec. Must remain seated while eating.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -656,9 +670,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 3c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -722,9 +737,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -785,9 +801,11 @@
     "itemLevel": 10,
     "requiredLevel": 1,
     "tooltip": [
-     "Food & Drink"
+     "Food & Drink",
+     "Use: Heals 70 damage over 21 sec, assuming you don't bite down on a poison sac.",
+     "Sell Price: 10c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -810,9 +828,10 @@
       "itemLevel": 8,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 8c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -872,9 +891,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -924,9 +945,10 @@
       "itemLevel": 1,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 82c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -987,9 +1009,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1074,9 +1097,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1098,9 +1123,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 10c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1160,9 +1186,10 @@
       "itemLevel": 22,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 71c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1254,9 +1281,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 5c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1278,9 +1306,11 @@
       "itemLevel": 1,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: A fairly weak alcoholic beverage.",
+       "Sell Price: 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1341,9 +1371,10 @@
       "itemLevel": 13,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 11c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1383,7 +1414,7 @@
    "name": "Egg Nog",
    "rank": "35",
    "category": "Other Buffs",
-   "categoryConfident": false,
+   "categoryConfident": true,
    "source": "Recipe",
    "skills": {
     "orange": "35",
@@ -1401,9 +1432,11 @@
     "itemLevel": 10,
     "requiredLevel": 1,
     "tooltip": [
-     "Food & Drink"
+     "Food & Drink",
+     "Use: Restores 17 health over 18 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 2 Stamina and Spirit for 15 min. Also packs quite a kick...",
+     "Sell Price: 9c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -1426,9 +1459,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1451,9 +1485,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking.",
+       "Sell Price: 6c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1475,9 +1511,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: A fairly weak alcoholic beverage.",
+       "Sell Price: 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1501,7 +1539,7 @@
       "tooltip": [
        "Holiday"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1565,9 +1603,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 7c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1660,9 +1699,10 @@
       "itemLevel": 11,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1727,9 +1767,10 @@
       "itemLevel": 14,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1751,9 +1792,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1819,9 +1862,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 10c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1887,9 +1931,10 @@
       "itemLevel": 15,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -1983,9 +2028,10 @@
       "itemLevel": 12,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2080,9 +2126,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Cooking",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+       "Sell Price: 2c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2177,9 +2225,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Cooking",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2246,9 +2296,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Cooking",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+       "Sell Price: 2c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2313,9 +2365,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 9c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2337,9 +2390,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2405,9 +2460,10 @@
       "itemLevel": 11,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2429,9 +2485,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 18c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2453,9 +2510,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2523,9 +2581,10 @@
       "itemLevel": 15,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2547,9 +2606,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2610,9 +2671,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2706,9 +2768,10 @@
       "itemLevel": 13,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2797,9 +2860,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2893,9 +2957,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 17c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2917,9 +2982,10 @@
       "itemLevel": 11,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -2941,9 +3007,10 @@
       "itemLevel": 12,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 27c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3009,9 +3076,10 @@
       "itemLevel": 14,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3105,9 +3173,10 @@
       "itemLevel": 14,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3202,9 +3271,11 @@
       "requiredLevel": 10,
       "tooltip": [
        "Cooking",
-       "Requires Level 10"
+       "Requires Level 10",
+       "Use: Restores 37 health and 75 mana over 21 sec. Must remain seated while eating.",
+       "Sell Price: 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3297,9 +3368,10 @@
       "itemLevel": 13,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 11c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3360,9 +3432,11 @@
     "itemLevel": 10,
     "requiredLevel": 1,
     "tooltip": [
-     "Food & Drink"
+     "Food & Drink",
+     "Use: Eat me. (10 Sec Cooldown)",
+     "Sell Price: 5c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -3385,9 +3459,11 @@
       "itemLevel": 15,
       "requiredLevel": 0,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Eat me. (10 Sec Cooldown)",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3567,9 +3643,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 11s 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3635,9 +3712,10 @@
       "itemLevel": 14,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3660,9 +3738,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking.",
+       "Sell Price: 6c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3756,9 +3836,10 @@
       "itemLevel": 1,
       "requiredLevel": 0,
       "tooltip": [
-       "Quest"
+       "Quest",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3823,9 +3904,10 @@
       "itemLevel": 16,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 28c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3916,9 +3998,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking.",
+       "Sell Price: 6c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -3940,9 +4024,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 20c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4004,9 +4089,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking.",
+       "Sell Price: 6c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4056,9 +4143,10 @@
       "itemLevel": 10,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4124,9 +4212,10 @@
       "itemLevel": 15,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4148,9 +4237,10 @@
       "itemLevel": 15,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 78c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4217,9 +4307,11 @@
       "requiredLevel": 15,
       "tooltip": [
        "Cooking",
-       "Requires Level 15"
+       "Requires Level 15",
+       "Use: Restores 58 health over 21 sec. Must remain seated while eating.",
+       "Sell Price: 2c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4285,9 +4377,10 @@
       "itemLevel": 22,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 28c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4382,9 +4475,10 @@
       "itemLevel": 19,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 24c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4478,9 +4572,10 @@
       "itemLevel": 14,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4575,9 +4670,10 @@
       "itemLevel": 21,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 45c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4672,9 +4768,10 @@
       "itemLevel": 25,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4769,9 +4866,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 30c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4865,9 +4963,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -4958,9 +5057,11 @@
       "requiredLevel": 15,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 15"
+       "Requires Level 15",
+       "Use: Restores 174 mana over 24 sec. Must remain seated while drinking.",
+       "Sell Price: 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5011,9 +5112,10 @@
       "itemLevel": 16,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 28c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5075,9 +5177,11 @@
       "requiredLevel": 15,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 15"
+       "Requires Level 15",
+       "Use: Restores 174 mana over 24 sec. Must remain seated while drinking.",
+       "Sell Price: 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5099,9 +5203,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 75c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5116,7 +5221,7 @@
    "name": "Goblin Deviled Clams",
    "rank": "125",
    "category": "Other Buffs",
-   "categoryConfident": false,
+   "categoryConfident": true,
    "source": "Trainer",
    "skills": {
     "orange": "125",
@@ -5135,9 +5240,11 @@
     "requiredLevel": 15,
     "tooltip": [
      "Food & Drink",
-     "Requires Level 15"
+     "Requires Level 15",
+     "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 6 Stamina and Spirit for 15 min.",
+     "Sell Price: 95c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -5160,9 +5267,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 22c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5257,9 +5365,10 @@
       "itemLevel": 19,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 24c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5353,9 +5462,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 55c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5450,9 +5560,10 @@
       "itemLevel": 22,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 71c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5541,9 +5652,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5565,9 +5677,10 @@
       "itemLevel": 35,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5662,9 +5775,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5759,9 +5873,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 55c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5857,9 +5972,11 @@
       "requiredLevel": 25,
       "tooltip": [
        "Cooking",
-       "Requires Level 25"
+       "Requires Level 25",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating.",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -5920,9 +6037,10 @@
       "itemLevel": 45,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6012,9 +6130,10 @@
       "itemLevel": 21,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 45c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6109,9 +6228,10 @@
       "itemLevel": 35,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 81c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6206,9 +6326,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6303,9 +6424,10 @@
       "itemLevel": 35,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 71c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6400,9 +6522,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6497,9 +6620,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6521,9 +6645,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6545,9 +6671,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6614,9 +6742,11 @@
       "requiredLevel": 25,
       "tooltip": [
        "Cooking",
-       "Requires Level 25"
+       "Requires Level 25",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating.",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6682,9 +6812,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6706,9 +6837,11 @@
       "itemLevel": 15,
       "requiredLevel": 0,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: A typical alcoholic beverage.",
+       "Sell Price: 30c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6774,9 +6907,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6872,9 +7006,11 @@
       "requiredLevel": 30,
       "tooltip": [
        "Cooking",
-       "Requires Level 30"
+       "Requires Level 30",
+       "Use: Restores 135 health and 210 mana over 21 sec. Must remain seated while eating.",
+       "Sell Price: 1s 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -6969,9 +7105,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7062,9 +7199,11 @@
       "requiredLevel": 25,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 25"
+       "Requires Level 25",
+       "Use: Restores 249 mana over 27 sec. Must remain seated while drinking.",
+       "Sell Price: 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7115,9 +7254,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 75c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7179,9 +7319,11 @@
       "requiredLevel": 25,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 25"
+       "Requires Level 25",
+       "Use: Restores 249 mana over 27 sec. Must remain seated while drinking.",
+       "Sell Price: 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7203,9 +7345,10 @@
       "itemLevel": 32,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 1s 25c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7266,9 +7409,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 3c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7421,9 +7565,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 332 mana over 30 sec. Must remain seated while drinking.",
+       "Sell Price: 1s"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7474,9 +7620,10 @@
       "itemLevel": 25,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 2s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7537,9 +7684,10 @@
       "itemLevel": 11,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 16c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7561,9 +7709,10 @@
       "itemLevel": 40,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7654,9 +7803,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 332 mana over 30 sec. Must remain seated while drinking.",
+       "Sell Price: 1s"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7678,9 +7829,10 @@
       "itemLevel": 46,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 60c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7746,9 +7898,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7770,9 +7923,10 @@
       "itemLevel": 25,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 2s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7867,9 +8021,10 @@
       "itemLevel": 35,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7920,9 +8075,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -7988,9 +8145,10 @@
       "itemLevel": 40,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8057,9 +8215,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Cooking",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+       "Sell Price: 1s 60c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8125,9 +8285,10 @@
       "itemLevel": 34,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 1s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8149,9 +8310,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8212,9 +8375,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8304,9 +8468,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 30c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8498,9 +8663,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Cooking",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 6c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8596,9 +8763,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Cooking",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8654,9 +8823,10 @@
       "itemLevel": 45,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8751,9 +8921,10 @@
       "itemLevel": 40,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8849,9 +9020,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Cooking",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8917,9 +9090,10 @@
       "itemLevel": 40,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -8962,8 +9136,8 @@
   {
    "name": "Undermine Clam Chowder",
    "rank": "225",
-   "category": "Other Buffs",
-   "categoryConfident": false,
+   "category": "Health and Mana Only",
+   "categoryConfident": true,
    "source": "Recipe",
    "skills": {
     "orange": "225",
@@ -8982,9 +9156,11 @@
     "requiredLevel": 35,
     "tooltip": [
      "Food & Drink",
-     "Requires Level 35"
+     "Requires Level 35",
+     "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+     "Sell Price: 1s"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -9007,9 +9183,10 @@
       "itemLevel": 45,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9061,9 +9238,11 @@
       "requiredLevel": 5,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 5"
+       "Requires Level 5",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking.",
+       "Sell Price: 6c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9235,9 +9414,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Cooking",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 9c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9328,9 +9509,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 489 mana over 30 sec. Must remain seated while drinking.",
+       "Sell Price: 2s"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9381,9 +9564,10 @@
       "itemLevel": 45,
       "requiredLevel": 0,
       "tooltip": [
-       "Other"
+       "Other",
+       "Sell Price: 5s"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9445,9 +9629,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 489 mana over 30 sec. Must remain seated while drinking.",
+       "Sell Price: 2s"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9469,9 +9655,10 @@
       "itemLevel": 56,
       "requiredLevel": 0,
       "tooltip": [
-       "Herb"
+       "Herb",
+       "Sell Price: 1s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9538,9 +9725,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Cooking",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 10c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9562,9 +9751,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9631,9 +9822,11 @@
       "requiredLevel": 35,
       "tooltip": [
        "Cooking",
-       "Requires Level 35"
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 10c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9694,9 +9887,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9786,9 +9980,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9878,9 +10073,10 @@
       "itemLevel": 45,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -9970,9 +10166,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10062,9 +10259,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10154,9 +10352,10 @@
       "itemLevel": 23,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 30c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10246,9 +10445,10 @@
       "itemLevel": 21,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 45c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10338,9 +10538,10 @@
       "itemLevel": 35,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 81c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10430,9 +10631,10 @@
       "itemLevel": 5,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 4c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10618,9 +10820,10 @@
       "itemLevel": 30,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 87c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10716,9 +10919,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Cooking",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+       "Sell Price: 5c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10814,9 +11019,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Cooking",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+       "Sell Price: 12c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10838,9 +11045,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -10907,9 +11116,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -11034,9 +11245,11 @@
       "requiredLevel": 45,
       "tooltip": [
        "Food & Drink",
-       "Requires Level 45"
+       "Requires Level 45",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+       "Sell Price: 15c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -11150,9 +11363,11 @@
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "Food & Drink"
+       "Food & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+       "Sell Price: 1c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -11276,9 +11491,11 @@
       "itemLevel": 42,
       "requiredLevel": 0,
       "tooltip": [
-       "Parts"
+       "Parts",
+       "\"Used by Goblin Engineers to power their creations\"",
+       "Sell Price: 2s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -11300,9 +11517,10 @@
       "itemLevel": 40,
       "requiredLevel": 0,
       "tooltip": [
-       "Leather"
+       "Leather",
+       "Sell Price: 2s 50c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -11326,7 +11544,7 @@
       "tooltip": [
        "Cooking"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,
@@ -11340,8 +11558,8 @@
   {
    "name": "Smoked Desert Dumplings",
    "rank": "–",
-   "category": "Other Buffs",
-   "categoryConfident": false,
+   "category": "Strength and Attack Power",
+   "categoryConfident": true,
    "source": "Trainer",
    "skills": {
     "orange": "–",
@@ -11360,9 +11578,11 @@
     "requiredLevel": 45,
     "tooltip": [
      "Food & Drink",
-     "Requires Level 45"
+     "Requires Level 45",
+     "Use: Restores 358 health over 30 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 20 Strength for 15 min.",
+     "Sell Price: 2s 50c"
     ],
-    "tooltipSynthesized": true,
+    "tooltipSynthesized": false,
     "classicTooltip": null,
     "status": "same",
     "dropChance": null,
@@ -11385,9 +11605,10 @@
       "itemLevel": 55,
       "requiredLevel": 0,
       "tooltip": [
-       "Cooking"
+       "Cooking",
+       "Sell Price: 1s 75c"
       ],
-      "tooltipSynthesized": true,
+      "tooltipSynthesized": false,
       "classicTooltip": null,
       "status": "same",
       "dropChance": null,

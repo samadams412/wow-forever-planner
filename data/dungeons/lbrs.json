@@ -469,7 +469,7 @@
     {
      "name": "Magus Ring",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13283,
      "icon": "spell_holy_innerfire",
      "quality": 3,
@@ -496,7 +496,7 @@
     {
      "name": "Globe of D'sak",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13261,
      "icon": "inv_wand_09",
      "quality": 3,
@@ -795,7 +795,7 @@
     {
      "name": "Talisman of Evasion",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13177,
      "icon": "inv_jewelry_amulet_04",
      "quality": 3,
@@ -1174,7 +1174,7 @@
     {
      "name": "Smolderweb's Eye",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13213,
      "icon": "inv_misc_gem_pearl_01",
      "quality": 3,
@@ -1405,7 +1405,7 @@
     {
      "name": "Rosewine Circle",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13178,
      "icon": "inv_jewelry_ring_22",
      "quality": 3,
@@ -1574,7 +1574,7 @@
     {
      "name": "Halycon's Spiked Collar",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13212,
      "icon": "inv_belt_14",
      "quality": 3,
@@ -1917,7 +1917,7 @@
     {
      "name": "Mark of the Dragon Lord",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13143,
      "icon": "inv_jewelry_ring_17",
      "quality": 4,
@@ -2016,7 +2016,7 @@
     {
      "name": "Heart of the Scale",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13164,
      "icon": "inv_misc_gem_bloodstone_01",
      "quality": 3,
@@ -2041,7 +2041,7 @@
     {
      "name": "Heart of Wyrmthalak",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22321,
      "icon": "inv_misc_gem_bloodstone_01",
      "quality": 3,
@@ -3207,7 +3207,7 @@
     {
      "name": "Ragged John's Neverending Cup",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 15873,
      "icon": "inv_drink_03",
      "quality": 3,
@@ -3340,9 +3340,11 @@
      "itemLevel": 61,
      "requiredLevel": 0,
      "tooltip": [
+      "Binds when picked up",
+      "Unique",
       "Quest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3389,7 +3391,7 @@
     {
      "name": "Prismcharm",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 15867,
      "icon": "inv_misc_gem_variety_02",
      "quality": 2,
@@ -3502,9 +3504,12 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Key"
+      "Binds when picked up",
+      "Unique",
+      "Key",
+      "Use: Freeze a nearby Rookery Egg. (5 Sec Cooldown)"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3604,7 +3609,7 @@
     {
      "name": "Seal of Ascension",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12344,
      "icon": "inv_jewelry_ring_01",
      "quality": 3,

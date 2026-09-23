@@ -215,7 +215,7 @@
     {
      "name": "Snakeskin Bag",
      "slot": "Bag",
-     "type": null,
+     "type": "Bag",
      "itemId": 6446,
      "icon": "inv_misc_bag_12",
      "quality": 2,
@@ -244,7 +244,7 @@
     {
      "name": "Snake Eye Kaleidoscope",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 273088,
      "icon": "inv_misc_eye_01",
      "quality": 3,
@@ -531,7 +531,7 @@
     {
      "name": "Skum's Bucket",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 273137,
      "icon": "inv_misc_1h_bucket_c_01",
      "quality": 3,
@@ -1123,9 +1123,13 @@
      "itemLevel": 25,
      "requiredLevel": 0,
      "tooltip": [
-      "Bag\tBag"
+      "Binds when picked up",
+      "Unique",
+      "Bag",
+      "10 Slot Bag",
+      "Sell Price: 12s 50c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,

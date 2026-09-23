@@ -271,7 +271,7 @@
     {
      "name": "Enthralled Sphere",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11625,
      "icon": "inv_misc_orb_03",
      "quality": 3,
@@ -506,7 +506,7 @@
     {
      "name": "Bloodclot Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22257,
      "icon": "inv_jewelry_ring_36",
      "quality": 3,
@@ -925,7 +925,7 @@
     {
      "name": "Cyclopean Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11824,
      "icon": "inv_jewelry_ring_08",
      "quality": 3,
@@ -1431,7 +1431,7 @@
     {
      "name": "Magma Forged Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22255,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -1512,7 +1512,7 @@
     {
      "name": "Dark Iron Ring",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11945,
      "icon": "inv_jewelry_ring_15",
      "quality": 2,
@@ -1535,7 +1535,7 @@
     {
      "name": "Fire Opal Necklace",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11946,
      "icon": "inv_jewelry_necklace_02",
      "quality": 2,
@@ -1750,7 +1750,7 @@
     {
      "name": "Verek's Collar",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11755,
      "icon": "inv_misc_bandage_14",
      "quality": 3,
@@ -1841,7 +1841,7 @@
     {
      "name": "Magma Forged Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22255,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -2042,7 +2042,7 @@
     {
      "name": "Master Builder's Shirt",
      "slot": "Shirt",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11840,
      "icon": "inv_shirt_black_01",
      "quality": 1,
@@ -2398,7 +2398,7 @@
     {
      "name": "Force of Will",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11810,
      "icon": "inv_jewelry_amulet_01",
      "quality": 3,
@@ -2568,7 +2568,7 @@
     {
      "name": "Naglering",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11669,
      "icon": "inv_jewelry_ring_05",
      "quality": 3,
@@ -2595,7 +2595,7 @@
     {
      "name": "Second Wind",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11819,
      "icon": "inv_jewelry_talisman_06",
      "quality": 3,
@@ -2847,7 +2847,7 @@
     {
      "name": "Wayfarer's Knapsack",
      "slot": "Bag",
-     "type": null,
+     "type": "Bag",
      "itemId": 11742,
      "icon": "inv_misc_bag_20",
      "quality": 2,
@@ -3255,7 +3255,7 @@
     {
      "name": "Burst of Knowledge",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11832,
      "icon": "inv_jewelry_amulet_07",
      "quality": 3,
@@ -3710,7 +3710,7 @@
     {
      "name": "Magmus Stone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11935,
      "icon": "inv_misc_orb_05",
      "quality": 3,
@@ -3966,7 +3966,7 @@
     {
      "name": "Imperial Jewel",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11933,
      "icon": "inv_misc_gem_sapphire_01",
      "quality": 3,
@@ -4102,7 +4102,7 @@
     {
      "name": "Emperor's Seal",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11934,
      "icon": "inv_jewelry_ring_24",
      "quality": 3,
@@ -4127,7 +4127,7 @@
     {
      "name": "Hand of Justice",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11815,
      "icon": "inv_jewelry_talisman_01",
      "quality": 3,
@@ -4153,7 +4153,7 @@
     {
      "name": "Thaurissan's Royal Scepter",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11928,
      "icon": "inv_mace_13",
      "quality": 3,
@@ -5198,9 +5198,12 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Key"
+      "Quest Item",
+      "Unique",
+      "Key",
+      "\"Master Key to the Depths, Courtesy of F.F.F.\""
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -6033,9 +6036,11 @@
      "itemLevel": 55,
      "requiredLevel": 0,
      "tooltip": [
-      "Food & Drink"
+      "Food & Drink",
+      "Use: An extremely potent alcoholic beverage.",
+      "Sell Price: 2s 50c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -6092,9 +6097,10 @@
      "itemLevel": 56,
      "requiredLevel": 0,
      "tooltip": [
+      "Binds when picked up",
       "Junk"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -6253,7 +6259,7 @@
     {
      "name": "Ward of the Elements",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12065,
      "icon": "inv_jewelry_talisman_02",
      "quality": 2,
@@ -6333,7 +6339,7 @@
     {
      "name": "Magni's Will",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12548,
      "icon": "inv_jewelry_ring_05",
      "quality": 3,
@@ -6358,7 +6364,7 @@
     {
      "name": "Songstone of Ironforge",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12543,
      "icon": "inv_jewelry_ring_05",
      "quality": 3,
@@ -6453,7 +6459,7 @@
     {
      "name": "Lagrave's Seal",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12038,
      "icon": "inv_jewelry_ring_03",
      "quality": 2,
@@ -6675,7 +6681,7 @@
     {
      "name": "Thrall's Resolve",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12544,
      "icon": "inv_jewelry_ring_05",
      "quality": 3,
@@ -6699,7 +6705,7 @@
     {
      "name": "Eye of Orgrimmar",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12545,
      "icon": "inv_jewelry_ring_05",
      "quality": 3,
@@ -6853,9 +6859,11 @@
      "requiredLevel": 35,
      "tooltip": [
       "Potions",
-      "Requires Level 35"
+      "Requires Level 35",
+      "Use: Restores 700 to 900 health. (2 Min Cooldown)",
+      "Sell Price: 2s 50c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -6874,9 +6882,11 @@
      "requiredLevel": 31,
      "tooltip": [
       "Potions",
-      "Requires Level 31"
+      "Requires Level 31",
+      "Use: Restores 700 to 900 mana. (2 Min Cooldown)",
+      "Sell Price: 1s 20c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -6919,7 +6929,7 @@
     {
      "name": "Conqueror's Medallion",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12059,
      "icon": "inv_jewelry_amulet_03",
      "quality": 3,

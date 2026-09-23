@@ -222,7 +222,7 @@
     {
      "name": "Tempest Talisman",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18317,
      "icon": "inv_jewelry_necklace_03",
      "quality": 3,
@@ -467,7 +467,7 @@
     {
      "name": "Band of Vigor",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18302,
      "icon": "inv_jewelry_ring_20",
      "quality": 2,
@@ -717,7 +717,7 @@
     {
      "name": "Ring of Demonic Guile",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18314,
      "icon": "inv_jewelry_ring_31",
      "quality": 3,
@@ -742,7 +742,7 @@
     {
      "name": "Ring of Demonic Potency",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18315,
      "icon": "inv_jewelry_ring_28",
      "quality": 3,
@@ -775,7 +775,7 @@
     {
      "name": "Barbed Thorn Necklace",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18289,
      "icon": "inv_jewelry_necklace_09",
      "quality": 3,
@@ -1077,7 +1077,7 @@
     {
      "name": "Eidolon Talisman",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18340,
      "icon": "inv_jewelry_talisman_14",
      "quality": 3,
@@ -1102,7 +1102,7 @@
     {
      "name": "Petrified Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18343,
      "icon": "inv_jewelry_ring_14",
      "quality": 2,
@@ -1154,7 +1154,7 @@
     {
      "name": "Pimgib's Collar",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18354,
      "icon": "inv_jewelry_amulet_05",
      "quality": 3,
@@ -1364,7 +1364,7 @@
     {
      "name": "Gordok Nose Ring",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18464,
      "icon": "inv_jewelry_ring_06",
      "quality": 2,
@@ -1653,7 +1653,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18466,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -1715,7 +1715,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18471,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -1777,7 +1777,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18465,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -1839,7 +1839,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18467,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -1901,7 +1901,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18469,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -1964,7 +1964,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18468,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -2026,7 +2026,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18470,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -2088,7 +2088,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18473,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -2150,7 +2150,7 @@
     {
      "name": "Royal Seal of Eldre'Thalas",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18472,
      "icon": "inv_jewelry_talisman_10",
      "quality": 3,
@@ -2346,9 +2346,12 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Other"
+      "Binds when picked up",
+      "Other",
+      "Use: Increases Stamina by 10 for 15 min and gets you drunk to boot. Green means it's good!",
+      "Sell Price: 3s 75c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -2366,9 +2369,12 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Other"
+      "Binds when picked up",
+      "Other",
+      "Use: Increases Spirit by 25, but decreases Intelligence by 5 for 15 min. Smoooooth.",
+      "Sell Price: 3s 75c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -2453,7 +2459,7 @@
     {
      "name": "Beads of Ogre Might",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22150,
      "icon": "inv_jewelry_amulet_05",
      "quality": 3,
@@ -2485,7 +2491,7 @@
     {
      "name": "Beads of Ogre Mojo",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22149,
      "icon": "inv_jewelry_amulet_05",
      "quality": 3,

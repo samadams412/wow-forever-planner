@@ -80,7 +80,7 @@
     {
      "name": "Heart of Noxxion",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17744,
      "icon": "inv_misc_gem_pearl_06",
      "quality": 3,
@@ -602,7 +602,7 @@
     {
      "name": "Cloud Stone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17737,
      "icon": "inv_misc_orb_01",
      "quality": 3,
@@ -891,7 +891,7 @@
     {
      "name": "Gemshard Heart",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17707,
      "icon": "inv_stone_01",
      "quality": 3,
@@ -971,7 +971,7 @@
     {
      "name": "Blackstone Ring",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17713,
      "icon": "inv_jewelry_ring_17",
      "quality": 3,
@@ -1219,7 +1219,7 @@
     {
      "name": "Mark of the Chosen",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17774,
      "icon": "inv_jewelry_talisman_08",
      "quality": 2,
@@ -1454,9 +1454,12 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Quest"
+      "Binds when picked up",
+      "Unique",
+      "Quest",
+      "Use: Creates a portal, teleporting group members that use it to Earth Song Falls in inner Maraudon. (30 Sec Cooldown)"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -1541,7 +1544,7 @@
     {
      "name": "Zealous Shadowshard Pendant",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17772,
      "icon": "inv_jewelry_necklace_06",
      "quality": 2,
@@ -1564,7 +1567,7 @@
     {
      "name": "Prodigious Shadowshard Pendant",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17773,
      "icon": "inv_jewelry_necklace_06",
      "quality": 2,
@@ -1632,7 +1635,7 @@
     {
      "name": "Woodseed Hoop",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17768,
      "icon": "inv_jewelry_ring_18",
      "quality": 2,
@@ -1878,7 +1881,7 @@
     {
      "name": "Zealous Shadowshard Pendant",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17772,
      "icon": "inv_jewelry_necklace_06",
      "quality": 2,
@@ -1901,7 +1904,7 @@
     {
      "name": "Prodigious Shadowshard Pendant",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17773,
      "icon": "inv_jewelry_necklace_06",
      "quality": 2,
@@ -1969,7 +1972,7 @@
     {
      "name": "Woodseed Hoop",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17768,
      "icon": "inv_jewelry_ring_18",
      "quality": 2,

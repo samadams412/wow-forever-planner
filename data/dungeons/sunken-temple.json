@@ -926,7 +926,7 @@
     {
      "name": "Drakeclaw Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10795,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -950,7 +950,7 @@
     {
      "name": "Drakestone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10796,
      "icon": "inv_misc_orb_03",
      "quality": 3,
@@ -1142,7 +1142,7 @@
     {
      "name": "Drakeclaw Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10795,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -1166,7 +1166,7 @@
     {
      "name": "Drakestone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10796,
      "icon": "inv_misc_orb_03",
      "quality": 3,
@@ -1358,7 +1358,7 @@
     {
      "name": "Drakeclaw Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10795,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -1382,7 +1382,7 @@
     {
      "name": "Drakestone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10796,
      "icon": "inv_misc_orb_03",
      "quality": 3,
@@ -1574,7 +1574,7 @@
     {
      "name": "Drakeclaw Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10795,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -1598,7 +1598,7 @@
     {
      "name": "Drakestone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10796,
      "icon": "inv_misc_orb_03",
      "quality": 3,
@@ -1682,7 +1682,7 @@
     {
      "name": "Dragon's Eye",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10829,
      "icon": "inv_jewelry_amulet_04",
      "quality": 3,
@@ -1982,7 +1982,7 @@
     {
      "name": "Mindseye Circle",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10634,
      "icon": "inv_jewelry_ring_10",
      "quality": 3,
@@ -2216,7 +2216,7 @@
     {
      "name": "Mark of Hakkar",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10780,
      "icon": "inv_jewelry_ring_05",
      "quality": 2,
@@ -2443,7 +2443,7 @@
     {
      "name": "Drakeclaw Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10795,
      "icon": "inv_jewelry_ring_04",
      "quality": 3,
@@ -2467,7 +2467,7 @@
     {
      "name": "Drakestone",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10796,
      "icon": "inv_misc_orb_03",
      "quality": 3,
@@ -3095,9 +3095,10 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
+      "Binds when picked up",
       "Junk"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3144,7 +3145,7 @@
     {
      "name": "Chained Essence of Eranikus",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 10455,
      "icon": "inv_stone_03",
      "quality": 2,
@@ -3206,7 +3207,7 @@
     {
      "name": "Guardian Talisman",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 1490,
      "icon": "inv_jewelry_talisman_05",
      "quality": 2,
@@ -3269,7 +3270,7 @@
     {
      "name": "Guardian Talisman",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 1490,
      "icon": "inv_jewelry_talisman_05",
      "quality": 2,

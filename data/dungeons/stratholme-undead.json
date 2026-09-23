@@ -345,7 +345,7 @@
     {
      "name": "Anastari Heirloom",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18728,
      "icon": "inv_jewelry_necklace_11",
      "quality": 3,
@@ -1009,7 +1009,7 @@
     {
      "name": "Skull of Burning Shadows",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13524,
      "icon": "inv_misc_bone_humanskull_01",
      "quality": 3,
@@ -1271,7 +1271,7 @@
     {
      "name": "Animated Chain Necklace",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18723,
      "icon": "inv_jewelry_necklace_01",
      "quality": 3,
@@ -1323,7 +1323,7 @@
     {
      "name": "Band of Flesh",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13373,
      "icon": "inv_misc_bone_04",
      "quality": 3,
@@ -1350,7 +1350,7 @@
     {
      "name": "Ramstein's Lightning Bolts",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13515,
      "icon": "inv_misc_gear_06",
      "quality": 3,
@@ -1684,7 +1684,7 @@
     {
      "name": "Seal of Rivendare",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13345,
      "icon": "inv_jewelry_ring_16",
      "quality": 3,
@@ -3232,7 +3232,7 @@
     {
      "name": "Star of Mystaria",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12103,
      "icon": "inv_jewelry_talisman_08",
      "quality": 3,
@@ -3642,7 +3642,7 @@
     {
      "name": "Will of the Martyr",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17044,
      "icon": "inv_jewelry_talisman_07",
      "quality": 3,
@@ -3666,7 +3666,7 @@
     {
      "name": "Blood of the Martyr",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17045,
      "icon": "inv_jewelry_ring_25",
      "quality": 3,
@@ -3754,7 +3754,7 @@
     {
      "name": "Band of the Penitent",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13217,
      "icon": "inv_jewelry_ring_30",
      "quality": 2,
@@ -3785,9 +3785,11 @@
      "requiredLevel": 35,
      "tooltip": [
       "Potions",
-      "Requires Level 35"
+      "Requires Level 35",
+      "Use: Restores 700 to 900 health. (2 Min Cooldown)",
+      "Sell Price: 2s 50c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3806,9 +3808,11 @@
      "requiredLevel": 31,
      "tooltip": [
       "Potions",
-      "Requires Level 31"
+      "Requires Level 31",
+      "Use: Restores 700 to 900 mana. (2 Min Cooldown)",
+      "Sell Price: 1s 20c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3858,7 +3862,7 @@
     {
      "name": "Seal of the Dawn",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13209,
      "icon": "inv_misc_armorkit_18",
      "quality": 3,
@@ -3882,7 +3886,7 @@
     {
      "name": "Rune of the Dawn",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 19812,
      "icon": "inv_misc_rune_06",
      "quality": 3,
@@ -3983,7 +3987,7 @@
     {
      "name": "Smokey's Lighter",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13171,
      "icon": "spell_fire_searingtotem",
      "quality": 2,
@@ -4038,7 +4042,7 @@
     {
      "name": "Testament of Hope",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13315,
      "icon": "inv_misc_book_06",
      "quality": 2,
@@ -4139,9 +4143,11 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Junk"
+      "Binds when picked up",
+      "Junk",
+      "Sell Price: 12c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -4291,7 +4297,7 @@
     {
      "name": "Royal Seal of Alexis",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18022,
      "icon": "inv_jewelry_ring_30",
      "quality": 3,
@@ -4316,7 +4322,7 @@
     {
      "name": "Elemental Circle",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17001,
      "icon": "inv_jewelry_ring_29",
      "quality": 2,

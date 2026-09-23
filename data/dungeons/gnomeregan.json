@@ -718,9 +718,11 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Junk"
+      "Binds when picked up",
+      "Junk",
+      "Sell Price: 12c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -1318,9 +1320,11 @@
      "itemLevel": 1,
      "requiredLevel": 1,
      "tooltip": [
+      "Quest Item",
+      "Unique",
       "Quest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,

@@ -71,7 +71,7 @@
     {
      "name": "Emberfury Talisman",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12929,
      "icon": "inv_jewelry_necklace_05",
      "quality": 3,
@@ -149,7 +149,7 @@
     {
      "name": "Flaming Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12926,
      "icon": "spell_holy_innerfire",
      "quality": 3,
@@ -437,7 +437,7 @@
     {
      "name": "Briarwood Reed",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12930,
      "icon": "inv_misc_root_02",
      "quality": 3,
@@ -1219,7 +1219,7 @@
     {
      "name": "Band of Rumination",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 18103,
      "icon": "inv_jewelry_ring_16",
      "quality": 3,
@@ -1770,7 +1770,7 @@
     {
      "name": "Tooth of Gnarr",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13141,
      "icon": "inv_jewelry_necklace_09",
      "quality": 3,
@@ -1849,7 +1849,7 @@
     {
      "name": "Painweaver Band",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13098,
      "icon": "inv_jewelry_ring_18",
      "quality": 3,
@@ -1876,7 +1876,7 @@
     {
      "name": "Draconic Infused Emblem",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22268,
      "icon": "inv_jewelry_talisman_09",
      "quality": 3,
@@ -1901,7 +1901,7 @@
     {
      "name": "Tome of the Lost",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22253,
      "icon": "inv_misc_book_06",
      "quality": 3,
@@ -3188,7 +3188,7 @@
     {
      "name": "Ragged John's Neverending Cup",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 15873,
      "icon": "inv_drink_03",
      "quality": 3,
@@ -3321,9 +3321,11 @@
      "itemLevel": 61,
      "requiredLevel": 0,
      "tooltip": [
+      "Binds when picked up",
+      "Unique",
       "Quest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3424,9 +3426,12 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Key"
+      "Binds when picked up",
+      "Unique",
+      "Key",
+      "Use: Freeze a nearby Rookery Egg. (5 Sec Cooldown)"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3473,7 +3478,7 @@
     {
      "name": "Seal of Ascension",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12344,
      "icon": "inv_jewelry_ring_01",
      "quality": 3,
@@ -3724,10 +3729,15 @@
      "itemLevel": 63,
      "requiredLevel": 50,
      "tooltip": [
-      "Neck\tTrinket",
-      "Requires Level 50"
+      "Binds when picked up",
+      "Unique",
+      "Neck",
+      "+10 Stamina",
+      "+15 Fire Resistance",
+      "Requires Level 50",
+      "\"The Blood of Drakkisath Flows Within...\""
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3840,7 +3850,7 @@
     {
      "name": "Mark of Tyranny",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13966,
      "icon": "inv_jewelry_talisman_09",
      "quality": 3,
@@ -3865,7 +3875,7 @@
     {
      "name": "Eye of the Beast",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13968,
      "icon": "inv_jewelry_talisman_08",
      "quality": 3,
@@ -3889,7 +3899,7 @@
     {
      "name": "Blackhand's Breadth",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13965,
      "icon": "inv_misc_armorkit_09",
      "quality": 3,
@@ -4206,10 +4216,15 @@
      "itemLevel": 63,
      "requiredLevel": 50,
      "tooltip": [
-      "Neck\tTrinket",
-      "Requires Level 50"
+      "Binds when picked up",
+      "Unique",
+      "Neck",
+      "+10 Stamina",
+      "+15 Fire Resistance",
+      "Requires Level 50",
+      "\"The Blood of Drakkisath Flows Within...\""
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -4259,7 +4274,7 @@
     {
      "name": "Mark of Tyranny",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13966,
      "icon": "inv_jewelry_talisman_09",
      "quality": 3,
@@ -4284,7 +4299,7 @@
     {
      "name": "Eye of the Beast",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13968,
      "icon": "inv_jewelry_talisman_08",
      "quality": 3,
@@ -4308,7 +4323,7 @@
     {
      "name": "Blackhand's Breadth",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13965,
      "icon": "inv_misc_armorkit_09",
      "quality": 3,

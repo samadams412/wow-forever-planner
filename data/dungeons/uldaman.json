@@ -792,7 +792,7 @@
     {
      "name": "Archaedic Stone",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 11118,
      "icon": "inv_stone_15",
      "quality": 3,
@@ -1119,7 +1119,7 @@
     {
      "name": "Beacon of Hope",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 9393,
      "icon": "inv_misc_lantern_01",
      "quality": 3,
@@ -2009,7 +2009,7 @@
     {
      "name": "Explorer's League Lodestar",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 9627,
      "icon": "inv_misc_lantern_01",
      "quality": 2,
@@ -2072,7 +2072,7 @@
     {
      "name": "Medal of Courage",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 6723,
      "icon": "inv_jewelry_amulet_03",
      "quality": 2,
@@ -2143,9 +2143,11 @@
      "requiredLevel": 32,
      "tooltip": [
       "Potions",
-      "Requires Level 32"
+      "Requires Level 32",
+      "Use: Removes 1 magic, curse, poison or disease effect on you every 5 seconds for 30 seconds. (2 Min Cooldown)",
+      "Sell Price: 2s"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -2289,7 +2291,7 @@
     {
      "name": "Talvash's Enhancing Necklace",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 7673,
      "icon": "inv_jewelry_necklace_02",
      "quality": 3,
@@ -2481,9 +2483,11 @@
      "requiredLevel": 32,
      "tooltip": [
       "Potions",
-      "Requires Level 32"
+      "Requires Level 32",
+      "Use: Removes 1 magic, curse, poison or disease effect on you every 5 seconds for 30 seconds. (2 Min Cooldown)",
+      "Sell Price: 2s"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -2689,7 +2693,7 @@
     {
      "name": "Jarkal's Enhancing Necklace",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 7888,
      "icon": "inv_jewelry_necklace_02",
      "quality": 3,

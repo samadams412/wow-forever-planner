@@ -376,7 +376,7 @@
     {
      "name": "Piccolo of the Flaming Fire",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13379,
      "icon": "inv_misc_flute_01",
      "quality": 3,
@@ -709,7 +709,7 @@
     {
      "name": "The Postmaster's Seal",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13392,
      "icon": "inv_jewelry_ring_23",
      "quality": 3,
@@ -1072,7 +1072,7 @@
     {
      "name": "Nacreous Shell Necklace",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22403,
      "icon": "inv_jewelry_necklace_10",
      "quality": 3,
@@ -1181,7 +1181,7 @@
     {
      "name": "Cannonball Runner",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13382,
      "icon": "inv_misc_bomb_04",
      "quality": 3,
@@ -1472,7 +1472,7 @@
     {
      "name": "Tome of Knowledge",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13385,
      "icon": "inv_misc_book_05",
      "quality": 3,
@@ -1560,7 +1560,7 @@
     {
      "name": "Book of the Dead",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13353,
      "icon": "inv_misc_book_06",
      "quality": 4,
@@ -1717,7 +1717,7 @@
     {
      "name": "Star of Mystaria",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12103,
      "icon": "inv_jewelry_talisman_08",
      "quality": 3,
@@ -1881,7 +1881,7 @@
     {
      "name": "Band of Mending",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 22334,
      "icon": "inv_jewelry_ring_05",
      "quality": 3,
@@ -2969,7 +2969,7 @@
     {
      "name": "Star of Mystaria",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 12103,
      "icon": "inv_jewelry_talisman_08",
      "quality": 3,
@@ -3341,7 +3341,7 @@
     {
      "name": "Will of the Martyr",
      "slot": "Neck",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17044,
      "icon": "inv_jewelry_talisman_07",
      "quality": 3,
@@ -3365,7 +3365,7 @@
     {
      "name": "Blood of the Martyr",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 17045,
      "icon": "inv_jewelry_ring_25",
      "quality": 3,
@@ -3453,7 +3453,7 @@
     {
      "name": "Band of the Penitent",
      "slot": "Finger",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13217,
      "icon": "inv_jewelry_ring_30",
      "quality": 2,
@@ -3484,9 +3484,11 @@
      "requiredLevel": 35,
      "tooltip": [
       "Potions",
-      "Requires Level 35"
+      "Requires Level 35",
+      "Use: Restores 700 to 900 health. (2 Min Cooldown)",
+      "Sell Price: 2s 50c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3505,9 +3507,11 @@
      "requiredLevel": 31,
      "tooltip": [
       "Potions",
-      "Requires Level 31"
+      "Requires Level 31",
+      "Use: Restores 700 to 900 mana. (2 Min Cooldown)",
+      "Sell Price: 1s 20c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -3557,7 +3561,7 @@
     {
      "name": "Seal of the Dawn",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13209,
      "icon": "inv_misc_armorkit_18",
      "quality": 3,
@@ -3581,7 +3585,7 @@
     {
      "name": "Rune of the Dawn",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 19812,
      "icon": "inv_misc_rune_06",
      "quality": 3,
@@ -3675,7 +3679,7 @@
     {
      "name": "Smokey's Lighter",
      "slot": "Trinket",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13171,
      "icon": "spell_fire_searingtotem",
      "quality": 2,
@@ -3730,7 +3734,7 @@
     {
      "name": "Testament of Hope",
      "slot": "Held In Off-hand",
-     "type": null,
+     "type": "Trinket",
      "itemId": 13315,
      "icon": "inv_misc_book_06",
      "quality": 2,
@@ -3866,9 +3870,11 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Junk"
+      "Binds when picked up",
+      "Junk",
+      "Sell Price: 12c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
