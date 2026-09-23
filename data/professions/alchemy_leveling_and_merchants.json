@@ -5,7 +5,10 @@
       "requirement": "from any Alchemy trainer, up to 75",
       "steps": [
         {
-          "range": [1, 11],
+          "range": [
+            1,
+            11
+          ],
           "item": {
             "name": "Elixir of Minor Force",
             "url": "https://foreverchanges.pro/item/247755"
@@ -20,7 +23,10 @@
           ]
         },
         {
-          "range": [11, 23],
+          "range": [
+            11,
+            23
+          ],
           "item": {
             "name": "Mana Well",
             "url": "https://foreverchanges.pro/item/279956"
@@ -35,7 +41,10 @@
           ]
         },
         {
-          "range": [23, 25],
+          "range": [
+            23,
+            25
+          ],
           "item": {
             "name": "Minor Troll's Blood Elixir",
             "url": "https://foreverchanges.pro/item/3382"
@@ -50,7 +59,10 @@
           ]
         },
         {
-          "range": [25, 40],
+          "range": [
+            25,
+            40
+          ],
           "item": {
             "name": "Minor Mana Potion",
             "url": "https://foreverchanges.pro/item/2455"
@@ -65,7 +77,10 @@
           ]
         },
         {
-          "range": [40, 56],
+          "range": [
+            40,
+            56
+          ],
           "item": {
             "name": "Elixir of Minor Defense",
             "url": "https://foreverchanges.pro/item/5997"
@@ -80,7 +95,10 @@
           ]
         },
         {
-          "range": [56, 60],
+          "range": [
+            56,
+            60
+          ],
           "item": {
             "name": "Minor Mana Potion",
             "url": "https://foreverchanges.pro/item/2455"
@@ -95,7 +113,10 @@
           ]
         },
         {
-          "range": [60, 75],
+          "range": [
+            60,
+            75
+          ],
           "item": {
             "name": "Rage Potion",
             "url": "https://foreverchanges.pro/item/5631"
@@ -116,7 +137,10 @@
       "requirement": "from the trainer, from skill 50 and level 10, up to 150",
       "steps": [
         {
-          "range": [75, 90],
+          "range": [
+            75,
+            90
+          ],
           "item": {
             "name": "Rage Potion",
             "url": "https://foreverchanges.pro/item/5631"
@@ -131,7 +155,10 @@
           ]
         },
         {
-          "range": [90, 100],
+          "range": [
+            90,
+            100
+          ],
           "item": {
             "name": "Draught of Water Breathing",
             "url": "https://foreverchanges.pro/item/5996"
@@ -146,7 +173,10 @@
           ]
         },
         {
-          "range": [100, 140],
+          "range": [
+            100,
+            140
+          ],
           "item": {
             "name": "Swim Speed Potion",
             "url": "https://foreverchanges.pro/item/6372"
@@ -161,7 +191,10 @@
           ]
         },
         {
-          "range": [140, 150],
+          "range": [
+            140,
+            150
+          ],
           "item": {
             "name": "Elixir of Fire Power",
             "url": "https://foreverchanges.pro/item/6373"
@@ -183,7 +216,10 @@
       "requirement": "from the trainer, from skill 125 and level 20, up to 225",
       "steps": [
         {
-          "range": [150, 165],
+          "range": [
+            150,
+            165
+          ],
           "item": {
             "name": "Free Action Potion",
             "url": "https://foreverchanges.pro/item/5634"
@@ -199,7 +235,10 @@
           ]
         },
         {
-          "range": [165, 225],
+          "range": [
+            165,
+            225
+          ],
           "item": {
             "name": "Fire Protection Potion",
             "url": "https://foreverchanges.pro/item/6049"
@@ -220,7 +259,10 @@
       "requirement": "from the trainer, from skill 200 and level 35, up to 300",
       "steps": [
         {
-          "range": [225, 268],
+          "range": [
+            225,
+            268
+          ],
           "item": {
             "name": "Gold Bar",
             "url": "https://foreverchanges.pro/item/3577"
@@ -235,7 +277,10 @@
           ]
         },
         {
-          "range": [268, 279],
+          "range": [
+            268,
+            279
+          ],
           "item": {
             "name": "Potion of Demonslaying",
             "url": "https://foreverchanges.pro/item/9224"
@@ -250,7 +295,10 @@
           ]
         },
         {
-          "range": [279, 295],
+          "range": [
+            279,
+            295
+          ],
           "item": {
             "name": "Elixir of Greater Defense",
             "url": "https://foreverchanges.pro/item/13445"
@@ -266,7 +314,10 @@
           ]
         },
         {
-          "range": [295, 300],
+          "range": [
+            295,
+            300
+          ],
           "item": {
             "name": "Major Mana Potion",
             "url": "https://foreverchanges.pro/item/13444"
@@ -438,5 +489,74 @@
     {
       "tier": "240 Merchant's Favor (skill 290 to 300)"
     }
-  ]
+  ],
+  "camp_section": {
+    "milestones": [
+      {
+        "name": "Journeyman Alchemist",
+        "icon": "trade_alchemy",
+        "item_url": null,
+        "description": "First time at skill 150 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Expert Alchemist",
+        "icon": "trade_alchemy",
+        "item_url": null,
+        "description": "First time at skill 225 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Artisan Alchemist",
+        "icon": "trade_alchemy",
+        "item_url": null,
+        "description": "First time at skill 300 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Alchemy Certification",
+        "icon": "inv_scroll_15",
+        "item_url": "https://foreverchanges.pro/item/271621",
+        "description": "The title the Alchemist for the whole account, bought with Merchant's Favor",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": null
+      }
+    ],
+    "camp_objects": [
+      {
+        "name": "Mana Well",
+        "icon": "spell_arcane_manatap",
+        "item_url": "https://foreverchanges.pro/item/279956",
+        "description": "29 Mana every 5 sec to everyone sitting nearby, like Blessing of Wisdom (at level 60, scaling with level)",
+        "legacy_points": null,
+        "skill": 20,
+        "blueprint_url": null
+      },
+      {
+        "name": "Fermenter",
+        "icon": "inv_alchemy_90_cauldron",
+        "item_url": "https://foreverchanges.pro/item/279970",
+        "description": "Makes certain Alchemy reagents, and gives the Mana Well buff",
+        "legacy_points": null,
+        "skill": 140,
+        "blueprint_url": "https://foreverchanges.pro/item/273085"
+      },
+      {
+        "name": "Alchemy Laboratory",
+        "icon": "10prof_portabletable_alchemy01",
+        "item_url": "https://foreverchanges.pro/item/279990",
+        "description": "Needed for the most advanced Alchemy recipes, and gives the Mana Well buff",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": "https://foreverchanges.pro/item/273112"
+      }
+    ]
+  }
 }

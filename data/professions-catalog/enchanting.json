@@ -26958,5 +26958,234 @@
     }
    ]
   }
- ]
+ ],
+ "camp": {
+  "milestones": [
+   {
+    "name": "Journeyman Enchanter",
+    "icon": "trade_engraving",
+    "description": "First time at skill 150 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Expert Enchanter",
+    "icon": "trade_engraving",
+    "description": "First time at skill 225 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Artisan Enchanter",
+    "icon": "trade_engraving",
+    "description": "First time at skill 300 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Enchanting Certification",
+    "icon": null,
+    "description": "The title the Enchanter for the whole account, bought with Merchant's Favor",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Enchanting Certification",
+     "slot": null,
+     "type": "Other",
+     "itemId": 271624,
+     "icon": "inv_scroll_15",
+     "quality": 2,
+     "itemLevel": 1,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "\tOther",
+      "Requires Enchanting (300)",
+      "Use: Permanently unlock \"the Enchanter\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Enchanting."
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   }
+  ],
+  "campObjects": [
+   {
+    "name": "Enchanted Lute",
+    "icon": null,
+    "description": "Armor, stats and resistances to everyone sitting nearby, like Mark of the Wild (at level 60, scaling with level)",
+    "legacyPoints": null,
+    "skill": 20,
+    "item": {
+     "name": "Enchanted Lute",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279976,
+     "icon": "inv_10_enchanting2_magicswirl_bronze",
+     "quality": 1,
+     "itemLevel": 4,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Enchanting (20)",
+      "Use: Summons an enchanted lute that allows you and others sitting nearby to gain 308 increase to Armor, 13 increase to all stats, and 22 increase to all resistances, exclusive with Mark of the Wild. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   },
+   {
+    "name": "Arcane Salvager",
+    "icon": null,
+    "description": "Disenchants more efficiently, and gives the Enchanted Lute buff",
+    "legacyPoints": null,
+    "skill": 140,
+    "item": {
+     "name": "Arcane Salvager",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279985,
+     "icon": "inv_eng_bottledelements",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Enchanting (140)",
+      "Use: Places an Arcane Salvager that enables more efficient disenchanting, and provides all the benefits of an Enchanted Lute. Requires a Campfire nearby. May be placed over an Enchanted Lute to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Arcane Salvager",
+     "slot": null,
+     "type": "Enchanting",
+     "itemId": 273103,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (140)",
+      "Use: Craft an Arcane Salvager.",
+      "\"Teaches you how to place an Arcane Salvager at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   },
+   {
+    "name": "Arcane Forge",
+    "icon": null,
+    "description": "Needed for the most advanced Enchanting recipes, and gives the Enchanted Lute buff",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Arcane Forge",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279987,
+     "icon": "inv_enchanting_modifiedcraftingreagent_indigo",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Enchanting (300)",
+      "Use: Places an Arcane Forge usable for recipes that require it, and provides all the benefits of an Enchanted Lute. Requires a Campfire nearby. May be placed over an Enchanted Lute to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Arcane Forge",
+     "slot": null,
+     "type": "Enchanting",
+     "itemId": 273116,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (300)",
+      "Use: Craft an Arcane Forge.",
+      "\"Teaches you how to place an Arcane Forge at a campsite.\"",
+      "Sell Price: 12g"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   }
+  ],
+  "legacyPerks": [
+   {
+    "id": "professions_performance_bonus",
+    "name": "Performance Bonus",
+    "icon": "racial_dwarf_findtreasure",
+    "maxRank": 3,
+    "gate": 5,
+    "prereqName": "Bountiful Harvest",
+    "description": "You have a 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics."
+   },
+   {
+    "id": "professions_working_overtime",
+    "name": "Working Overtime",
+    "icon": "inv_misc_pocketwatch_03",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 20%."
+   },
+   {
+    "id": "professions_dedicated_study",
+    "name": "Dedicated Study",
+    "icon": "inv_misc_book_08",
+    "maxRank": 1,
+    "gate": 10,
+    "prereqName": "Bartering",
+    "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+   }
+  ]
+ }
 }

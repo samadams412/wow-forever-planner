@@ -63091,5 +63091,234 @@
     }
    ]
   }
- ]
+ ],
+ "camp": {
+  "milestones": [
+   {
+    "name": "Journeyman Tailor",
+    "icon": "trade_tailoring",
+    "description": "First time at skill 150 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Expert Tailor",
+    "icon": "trade_tailoring",
+    "description": "First time at skill 225 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Artisan Tailor",
+    "icon": "trade_tailoring",
+    "description": "First time at skill 300 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Tailoring Certification",
+    "icon": null,
+    "description": "The title the Tailor for the whole account, bought with Merchant's Favor",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Tailoring Certification",
+     "slot": null,
+     "type": "Other",
+     "itemId": 271627,
+     "icon": "inv_scroll_15",
+     "quality": 2,
+     "itemLevel": 1,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "\tOther",
+      "Requires Tailoring (300)",
+      "Use: Permanently unlock \"the Tailor\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Tailoring."
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   }
+  ],
+  "campObjects": [
+   {
+    "name": "Faction Banner",
+    "icon": null,
+    "description": "32 Spirit to everyone of your faction sitting nearby, like Divine Spirit (at level 60, scaling with level)",
+    "legacyPoints": null,
+    "skill": 20,
+    "item": {
+     "name": "Faction Banner",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279972,
+     "icon": "inv_banner_03",
+     "quality": 1,
+     "itemLevel": 4,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Tailoring (20)",
+      "Use: Unrolls a banner that allows you and others members of the Horde sitting nearby to gain 32 increased Spirit, exclusive with Divine Spirit. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   },
+   {
+    "name": "Spinning Wheel",
+    "icon": null,
+    "description": "Makes certain Tailoring reagents, and gives the Faction Banner buff",
+    "legacyPoints": null,
+    "skill": 140,
+    "item": {
+     "name": "Spinning Wheel",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279943,
+     "icon": "10prof_table_tailoring01",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Tailoring (140)",
+      "Use: Places a Spinning Wheel that allows the creation of certain reagents, and provides all the benefits of a Faction Banner. Requires a Campfire nearby. May be placed over a Faction Banner to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Spinning Wheel",
+     "slot": null,
+     "type": "Tailoring",
+     "itemId": 273099,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (140)",
+      "Use: Craft a Spinning Wheel.",
+      "\"Teaches you how to place a Spinning Wheel at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   },
+   {
+    "name": "Loom",
+    "icon": null,
+    "description": "Needed for the most advanced Tailoring recipes, and gives the Faction Banner buff",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Loom",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279959,
+     "icon": "inv_tailoring_80_tidespraylinen",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Tailoring (300)",
+      "Use: Places a Loom usable for recipes that require it, and provides all the benefits of a Faction Banner. Requires a Campfire nearby. May be placed over a Faction Banner to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Loom",
+     "slot": null,
+     "type": "Tailoring",
+     "itemId": 273124,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (300)",
+      "Use: Craft a Loom.",
+      "\"Teaches you how to place a Loom at a campsite.\"",
+      "Sell Price: 12g"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   }
+  ],
+  "legacyPerks": [
+   {
+    "id": "professions_performance_bonus",
+    "name": "Performance Bonus",
+    "icon": "racial_dwarf_findtreasure",
+    "maxRank": 3,
+    "gate": 5,
+    "prereqName": "Bountiful Harvest",
+    "description": "You have a 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics."
+   },
+   {
+    "id": "professions_working_overtime",
+    "name": "Working Overtime",
+    "icon": "inv_misc_pocketwatch_03",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 20%."
+   },
+   {
+    "id": "professions_dedicated_study",
+    "name": "Dedicated Study",
+    "icon": "inv_misc_book_08",
+    "maxRank": 1,
+    "gate": 10,
+    "prereqName": "Bartering",
+    "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+   }
+  ]
+ }
 }

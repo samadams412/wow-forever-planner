@@ -287,5 +287,37 @@
       ]
     }
   ],
-  "favor_section": null
+  "favor_section": null,
+  "camp_section": {
+    "milestones": [],
+    "camp_objects": [
+      {
+        "name": "First Aid Kit",
+        "icon": "inv_misc_bandage_11",
+        "item_url": "https://foreverchanges.pro/item/279968",
+        "description": "56 Stamina to everyone sitting nearby, like Power Word: Fortitude (at level 60, scaling with level)",
+        "legacy_points": null,
+        "skill": 20,
+        "blueprint_url": null
+      },
+      {
+        "name": "Toxin Study",
+        "icon": "inv_misc_potiona3",
+        "item_url": "https://foreverchanges.pro/item/279940",
+        "description": "Holds healing potions and anti-venom, and gives the First Aid Kit buff",
+        "legacy_points": null,
+        "skill": 140,
+        "blueprint_url": "https://foreverchanges.pro/item/273105"
+      },
+      {
+        "name": "Plague Doctor's Laboratory",
+        "icon": "inv_10_alchemy_incenseholder_color1",
+        "item_url": "https://foreverchanges.pro/item/279951",
+        "description": "Holds healing potions and poultices, and gives the First Aid Kit buff",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": "https://foreverchanges.pro/item/273118"
+      }
+    ]
+  }
 }

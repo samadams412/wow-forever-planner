@@ -1102,5 +1102,74 @@
         }
       ]
     }
-  ]
+  ],
+  "camp_section": {
+    "milestones": [
+      {
+        "name": "Journeyman Leatherworker",
+        "icon": "trade_leatherworking",
+        "item_url": null,
+        "description": "First time at skill 150 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Expert Leatherworker",
+        "icon": "trade_leatherworking",
+        "item_url": null,
+        "description": "First time at skill 225 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Artisan Leatherworker",
+        "icon": "trade_leatherworking",
+        "item_url": null,
+        "description": "First time at skill 300 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Leatherworking Certification",
+        "icon": "inv_scroll_15",
+        "item_url": "https://foreverchanges.pro/item/271626",
+        "description": "The title the Leatherworker for the whole account, bought with Merchant's Favor",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": null
+      }
+    ],
+    "camp_objects": [
+      {
+        "name": "Camp Tent",
+        "icon": "inv_misc_leatherscrap_01",
+        "item_url": "https://foreverchanges.pro/item/279978",
+        "description": "Rested experience up to 5% of a level for everyone sitting nearby",
+        "legacy_points": null,
+        "skill": 20,
+        "blueprint_url": null
+      },
+      {
+        "name": "Tanning Rack",
+        "icon": "inv_10_skinning_leather_rarehide_color1",
+        "item_url": "https://foreverchanges.pro/item/279941",
+        "description": "Makes certain Leatherworking reagents, and gives the Camp Tent bonus",
+        "legacy_points": null,
+        "skill": 140,
+        "blueprint_url": "https://foreverchanges.pro/item/273096"
+      },
+      {
+        "name": "Sewing Machine",
+        "icon": "inv_tailoring_modifiedcraftingreagent_orange",
+        "item_url": "https://foreverchanges.pro/item/279945",
+        "description": "Needed for the most advanced Leatherworking recipes, and gives the Camp Tent bonus",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": "https://foreverchanges.pro/item/273121"
+      }
+    ]
+  }
 }

@@ -21841,5 +21841,234 @@
    "tier": "240 Merchant's Favor (skill 290 to 300)",
    "items": []
   }
- ]
+ ],
+ "camp": {
+  "milestones": [
+   {
+    "name": "Journeyman Alchemist",
+    "icon": "trade_alchemy",
+    "description": "First time at skill 150 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Expert Alchemist",
+    "icon": "trade_alchemy",
+    "description": "First time at skill 225 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Artisan Alchemist",
+    "icon": "trade_alchemy",
+    "description": "First time at skill 300 on the account",
+    "legacyPoints": "+1 Legacy point",
+    "skill": null,
+    "item": null,
+    "blueprint": null
+   },
+   {
+    "name": "Alchemy Certification",
+    "icon": null,
+    "description": "The title the Alchemist for the whole account, bought with Merchant's Favor",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Alchemy Certification",
+     "slot": null,
+     "type": "Other",
+     "itemId": 271621,
+     "icon": "inv_scroll_15",
+     "quality": 2,
+     "itemLevel": 1,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "\tOther",
+      "Requires Alchemy (300)",
+      "Use: Permanently unlock \"the Alchemist\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Alchemy."
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   }
+  ],
+  "campObjects": [
+   {
+    "name": "Mana Well",
+    "icon": null,
+    "description": "29 Mana every 5 sec to everyone sitting nearby, like Blessing of Wisdom (at level 60, scaling with level)",
+    "legacyPoints": null,
+    "skill": 20,
+    "item": {
+     "name": "Mana Well",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279956,
+     "icon": "spell_arcane_manatap",
+     "quality": 1,
+     "itemLevel": 4,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Alchemy (20)",
+      "Use: Constructs a mana well that allows you and others sitting nearby to regenerate 29 Mana every 5 sec, exclusive with Blessing of Wisdom. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": null
+   },
+   {
+    "name": "Fermenter",
+    "icon": null,
+    "description": "Makes certain Alchemy reagents, and gives the Mana Well buff",
+    "legacyPoints": null,
+    "skill": 140,
+    "item": {
+     "name": "Fermenter",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279970,
+     "icon": "inv_alchemy_90_cauldron",
+     "quality": 1,
+     "itemLevel": 28,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Alchemy (140)",
+      "Use: Places a fermenter that allows the creation of certain reagents, and provides all of the benefits of a Mana Well. Requires a Campfire nearby. May be placed over a Mana Well to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Fermenter",
+     "slot": null,
+     "type": "Alchemy",
+     "itemId": 273085,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tAlchemy",
+      "Requires Alchemy (140)",
+      "Use: Craft a Fermenter.",
+      "\"Teaches you how to place a Fermenter at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   },
+   {
+    "name": "Alchemy Laboratory",
+    "icon": null,
+    "description": "Needed for the most advanced Alchemy recipes, and gives the Mana Well buff",
+    "legacyPoints": null,
+    "skill": 300,
+    "item": {
+     "name": "Alchemy Laboratory",
+     "slot": null,
+     "type": "Other",
+     "itemId": 279990,
+     "icon": "10prof_portabletable_alchemy01",
+     "quality": 1,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tOther",
+      "Requires Alchemy (300)",
+      "Use: Places an Alchemy Laboratory usable for recipes that require it, and provides all of the benefits of a Mana Well. Requires a Campfire nearby. May be placed over a Mana Well to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    "blueprint": {
+     "name": "Blueprint: Alchemy Laboratory",
+     "slot": null,
+     "type": "Alchemy",
+     "itemId": 273112,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 60,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tAlchemy",
+      "Requires Alchemy (300)",
+      "Use: Craft an Alchemy Laboratory.",
+      "\"Teaches you how to place an Alchemy Laboratory at a campsite.\"",
+      "Sell Price: 12g"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   }
+  ],
+  "legacyPerks": [
+   {
+    "id": "professions_performance_bonus",
+    "name": "Performance Bonus",
+    "icon": "racial_dwarf_findtreasure",
+    "maxRank": 3,
+    "gate": 5,
+    "prereqName": "Bountiful Harvest",
+    "description": "You have a 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics."
+   },
+   {
+    "id": "professions_working_overtime",
+    "name": "Working Overtime",
+    "icon": "inv_misc_pocketwatch_03",
+    "maxRank": 5,
+    "gate": 0,
+    "prereqName": null,
+    "description": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 20%."
+   },
+   {
+    "id": "professions_dedicated_study",
+    "name": "Dedicated Study",
+    "icon": "inv_misc_book_08",
+    "maxRank": 1,
+    "gate": 10,
+    "prereqName": "Bartering",
+    "description": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence."
+   }
+  ]
+ }
 }

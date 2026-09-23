@@ -57,6 +57,51 @@ export type FavorTier = {
   items: FavorItem[];
 };
 
+// One entry in either "Legacy points and title" (milestones -- skill-rank
+// titles plus the account-wide Certification) or "At camp" (campObjects --
+// placeable camp objects, each unlocked at a skill threshold). Same shape
+// either way: item is the real linked item when there is one (every camp
+// object and the Certification; a plain skill-rank milestone has none, so
+// item falls back to the site's usual unresolved-item rendering).
+export type CampMilestone = {
+  name: string;
+  // The row's own trade/profession icon slug, for a plain skill-rank
+  // milestone with no real linked item (null once `item` is non-null --
+  // that item's own icon is what renders then).
+  icon: string | null;
+  description: string;
+  legacyPoints: string | null;
+  skill: number | null;
+  item: LootItem | null;
+  blueprint: LootItem | null;
+};
+
+// A Legacy Perk relevant to this profession page -- NOT profession-specific
+// data (foreverchanges.pro shows the identical 3 "Professions" Legacy tree
+// perks on every profession's page); reused directly from
+// data/legacy-perks.json rather than duplicated per profession. Kept as a
+// loose shape here (this project's LegacyPerk type lives with the Legacy
+// Perks reference page, not this module) since only name/description/
+// meta fields are rendered on the profession page, not the full tree
+// interaction data.
+export type CampLegacyPerk = {
+  id: string;
+  name: string;
+  icon: string;
+  maxRank: number;
+  gate: number;
+  prereqName: string | null;
+  // The max-rank (fully invested) effect text -- this is a static summary
+  // list, not the interactive per-rank tree /reference/legacy-perks is.
+  description: string;
+};
+
+export type CampSection = {
+  milestones: CampMilestone[];
+  campObjects: CampMilestone[];
+  legacyPerks: CampLegacyPerk[];
+};
+
 export type ProfessionCatalog = {
   id: string;
   name: string;
@@ -64,6 +109,7 @@ export type ProfessionCatalog = {
   recipes: Recipe[];
   leveling: LevelingRank[] | null;
   favor: FavorTier[] | null;
+  camp: CampSection | null;
 };
 
 const CATALOG_DIR = path.join(process.cwd(), "data", "professions-catalog");

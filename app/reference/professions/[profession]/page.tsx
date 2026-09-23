@@ -6,6 +6,7 @@ import ProfessionCategorySidebar from "@/components/professions/ProfessionCatego
 import ProfessionRecipeTable from "@/components/professions/ProfessionRecipeTable";
 import ProfessionLevelingGuide from "@/components/professions/ProfessionLevelingGuide";
 import ProfessionMerchantsFavor from "@/components/professions/ProfessionMerchantsFavor";
+import ProfessionCamp from "@/components/professions/ProfessionCamp";
 import { getProfessionCatalog, getProfessionIds } from "@/lib/profession-recipes";
 import { mediumIconUrl } from "@/lib/wow-data";
 
@@ -72,7 +73,7 @@ export default async function ProfessionPage({
   if (!catalog) notFound();
 
   const { category, view, page: pageParam } = await searchParams;
-  const activeView = view === "leveling" || view === "favor" ? view : "recipes";
+  const activeView = view === "leveling" || view === "favor" || view === "camp" ? view : "recipes";
   const activeCategory = category && catalog.categories.includes(category) ? category : "All";
 
   const counts: Record<string, number> = {};
@@ -120,6 +121,9 @@ export default async function ProfessionPage({
         </Link>
         <Link href={`/reference/professions/${catalog.id}?view=favor`} className={viewLinkClass("favor")}>
           Merchant&apos;s Favor
+        </Link>
+        <Link href={`/reference/professions/${catalog.id}?view=camp`} className={viewLinkClass("camp")}>
+          Camp, Skill Rewards and Perks
         </Link>
       </div>
 
@@ -176,6 +180,13 @@ export default async function ProfessionPage({
           <ProfessionMerchantsFavor favor={catalog.favor} professionId={catalog.id} />
         ) : (
           <ComingSoon label="Merchant's Favor" />
+        ))}
+
+      {activeView === "camp" &&
+        (catalog.camp ? (
+          <ProfessionCamp camp={catalog.camp} professionId={catalog.id} />
+        ) : (
+          <ComingSoon label="Camp, Skill Rewards and Perks" />
         ))}
     </main>
   );

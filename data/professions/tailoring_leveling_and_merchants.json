@@ -897,5 +897,74 @@
         }
       ]
     }
-  ]
+  ],
+  "camp_section": {
+    "milestones": [
+      {
+        "name": "Journeyman Tailor",
+        "icon": "trade_tailoring",
+        "item_url": null,
+        "description": "First time at skill 150 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Expert Tailor",
+        "icon": "trade_tailoring",
+        "item_url": null,
+        "description": "First time at skill 225 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Artisan Tailor",
+        "icon": "trade_tailoring",
+        "item_url": null,
+        "description": "First time at skill 300 on the account",
+        "legacy_points": "+1 Legacy point",
+        "skill": null,
+        "blueprint_url": null
+      },
+      {
+        "name": "Tailoring Certification",
+        "icon": "inv_scroll_15",
+        "item_url": "https://foreverchanges.pro/item/271627",
+        "description": "The title the Tailor for the whole account, bought with Merchant's Favor",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": null
+      }
+    ],
+    "camp_objects": [
+      {
+        "name": "Faction Banner",
+        "icon": "inv_banner_03",
+        "item_url": "https://foreverchanges.pro/item/279972",
+        "description": "32 Spirit to everyone of your faction sitting nearby, like Divine Spirit (at level 60, scaling with level)",
+        "legacy_points": null,
+        "skill": 20,
+        "blueprint_url": null
+      },
+      {
+        "name": "Spinning Wheel",
+        "icon": "10prof_table_tailoring01",
+        "item_url": "https://foreverchanges.pro/item/279943",
+        "description": "Makes certain Tailoring reagents, and gives the Faction Banner buff",
+        "legacy_points": null,
+        "skill": 140,
+        "blueprint_url": "https://foreverchanges.pro/item/273099"
+      },
+      {
+        "name": "Loom",
+        "icon": "inv_tailoring_80_tidespraylinen",
+        "item_url": "https://foreverchanges.pro/item/279959",
+        "description": "Needed for the most advanced Tailoring recipes, and gives the Faction Banner buff",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": "https://foreverchanges.pro/item/273124"
+      }
+    ]
+  }
 }

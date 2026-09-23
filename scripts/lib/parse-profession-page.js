@@ -148,6 +148,78 @@ function parseFavorSection(html) {
   return tiers;
 }
 
+// One <li> from either "Legacy points and title" (plain <ol class="pr-
+// milestones">) or "At camp" (<ol class="pr-milestones pr-camp">) -- same
+// per-<li> shape either way: an icon, a name (plain <strong> text, or a
+// linked <strong><a> when the milestone is a real item -- the Certification
+// title and every camp object are; the skill-rank milestones aren't), a
+// description line, and a trailing reward -- "+1 Legacy point" for a
+// milestone, or "Skill N[ <a>Blueprint</a>]" for a camp object/the
+// Certification entry.
+function parseMilestoneItems(olHtml) {
+  const items = [];
+  const liRe = /<li>([\s\S]*?)<\/li>/g;
+  let match;
+  while ((match = liRe.exec(olHtml))) {
+    const inner = match[1];
+    // The row's own icon -- for a skill-rank milestone (Journeyman/Expert/
+    // Artisan) this is the profession's trade icon, not any real item's
+    // icon (those milestones have no item at all); kept separately from
+    // any resolved item so the UI doesn't need to fake an item icon for a
+    // row that isn't one.
+    const iconMatch = inner.match(/<img src="\/icon\/([^".]+)\.jpg"/);
+    const icon = iconMatch ? iconMatch[1] : null;
+    const nameMatch = inner.match(/<strong>(?:<a href="([^"]+)">)?(.*?)(?:<\/a>)?<\/strong>/);
+    const name = cleanText(nameMatch?.[2] ?? "");
+    const itemUrl = nameMatch?.[1] ? absUrl(nameMatch[1]) : null;
+    const descMatch = inner.match(/<\/strong><span>([\s\S]*?)<\/span><\/span>/);
+    const description = cleanText(descMatch?.[1] ?? "");
+
+    const pointsMatch = inner.match(/<span class="pr-points">([\s\S]*?)<\/span>/);
+    const skillMatch = inner.match(/<span class="pr-camp-skill">Skill (\d+)(?:<!-- -->\s*<a href="([^"]+)">Blueprint<\/a>)?<\/span>/);
+
+    items.push({
+      name,
+      icon,
+      item_url: itemUrl,
+      description,
+      legacy_points: pointsMatch ? cleanText(pointsMatch[1]) : null,
+      skill: skillMatch ? parseInt(skillMatch[1], 10) : null,
+      blueprint_url: skillMatch?.[2] ? absUrl(skillMatch[2]) : null,
+    });
+  }
+  return items;
+}
+
+// The "Camp, skill rewards and perks" chapter (id="camp") has two <ol>
+// lists (Legacy milestones, then camp objects) plus a "Legacy perks" list
+// that is NOT parsed here -- studied live across multiple professions
+// (Leatherworking, Tailoring) and confirmed byte-for-byte identical prose/
+// values on every profession's page (same 3 "Professions" Legacy tree
+// perks, same descriptions, same /legacy-perks#perk= anchors) -- it's not
+// profession-specific content, just the same generic tree shown on every
+// page. That data already exists in data/legacy-perks.json from an earlier
+// session; the build step reuses it by id instead of re-scraping the same
+// 3 perks 8 times.
+function parseCampSection(html) {
+  const chapterIdx = html.indexOf('id="camp"');
+  if (chapterIdx === -1) return null;
+  // Camp is the last chapter on the page (confirmed live -- no further
+  // "<section id=" follows it, unlike every earlier chapter), so there's
+  // no next-chapter marker to bound against; the page footer is the
+  // reliable end-of-content boundary instead.
+  const footerIdx = html.indexOf("<footer", chapterIdx);
+  const chapterHtml = html.slice(chapterIdx, footerIdx === -1 ? undefined : footerIdx);
+
+  const milestonesMatch = chapterHtml.match(/<ol class="pr-milestones">([\s\S]*?)<\/ol>/);
+  const campMatch = chapterHtml.match(/<ol class="pr-milestones pr-camp">([\s\S]*?)<\/ol>/);
+
+  return {
+    milestones: milestonesMatch ? parseMilestoneItems(milestonesMatch[1]) : [],
+    camp_objects: campMatch ? parseMilestoneItems(campMatch[1]) : [],
+  };
+}
+
 async function fetchProfessionPage(slug) {
   const res = await fetch(`${BASE}/professions/${slug}`, { headers: { "User-Agent": "Mozilla/5.0" } });
   if (!res.ok) return { ok: false, status: res.status };
@@ -156,7 +228,8 @@ async function fetchProfessionPage(slug) {
     ok: true,
     leveling_section: parseLevelingSection(html),
     favor_section: parseFavorSection(html),
+    camp_section: parseCampSection(html),
   };
 }
 
-module.exports = { fetchProfessionPage, parseLevelingSection, parseFavorSection };
+module.exports = { fetchProfessionPage, parseLevelingSection, parseFavorSection, parseCampSection };

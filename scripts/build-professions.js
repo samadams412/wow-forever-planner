@@ -133,6 +133,81 @@ function normalizeRange(range) {
   return [null, null];
 }
 
+// Camp milestones/objects come with a real foreverchanges.pro item URL
+// already (e.g. ".../item/271627"), unlike recipe/reagent names elsewhere
+// in this pipeline -- resolve by id, not name, per this project's own
+// "prefer an id join over a name guess when an id is available" convention
+// (see the quest-reward-enrichment precedent in build-dungeons.js).
+function itemIdFromUrl(url) {
+  if (!url) return null;
+  const match = url.match(/\/item\/(\d+)/);
+  return match ? parseInt(match[1], 10) : null;
+}
+
+function buildCampMilestones(rawItems, byId) {
+  return (rawItems || []).map((raw) => {
+    const id = itemIdFromUrl(raw.item_url);
+    const item = id !== null ? byId.get(id) : null;
+    return {
+      name: raw.name,
+      // The row's own trade/profession icon (e.g. "trade_tailoring") for a
+      // plain skill-rank milestone with no real item -- null once a real
+      // item resolved, since that item's own icon is what LootItemPill
+      // renders instead.
+      icon: item ? null : raw.icon,
+      description: raw.description,
+      legacyPoints: raw.legacy_points,
+      skill: raw.skill,
+      // Genuinely null (not unresolvedItemRef) when the source page never
+      // linked an item at all -- a skill-rank milestone with no item is a
+      // different, correct state from a real item we failed to resolve.
+      item: id !== null ? itemRef(item) || unresolvedItemRef(raw.name) : null,
+      blueprint: (() => {
+        const bpId = itemIdFromUrl(raw.blueprint_url);
+        const bpItem = bpId !== null ? byId.get(bpId) : null;
+        return bpId !== null ? itemRef(bpItem) || unresolvedItemRef("Blueprint") : null;
+      })(),
+    };
+  });
+}
+
+// The "Legacy perks" list on every profession's own "Camp, skill rewards
+// and perks" chapter is NOT profession-specific -- verified live against
+// multiple professions (Leatherworking, Tailoring): identical names,
+// descriptions, and /legacy-perks#perk= anchors on every one, since it's
+// just the same generic "Professions" Legacy tree shown everywhere. That
+// tree already exists in data/legacy-perks.json from an earlier session,
+// so these 3 are looked up by id there instead of re-scraping the same
+// content 8 times. If foreverchanges ever shows a 4th, adjust this list
+// from a fresh look at the live page rather than assuming it's still 3.
+const CAMP_LEGACY_PERK_IDS = ["professions_performance_bonus", "professions_working_overtime", "professions_dedicated_study"];
+
+function loadCampLegacyPerks() {
+  const legacyPerksPath = path.join(ROOT, "data", "legacy-perks.json");
+  const data = JSON.parse(fs.readFileSync(legacyPerksPath, "utf8"));
+  const professionsTree = data.trees.find((t) => t.name === "Professions");
+  return CAMP_LEGACY_PERK_IDS.map((id) => {
+    const perk = professionsTree.perks.find((p) => p.id === id);
+    if (!perk) throw new Error(`Legacy perk "${id}" not found in data/legacy-perks.json's Professions tree`);
+    // The tree only stores a prereq's id -- resolve its display name here so
+    // the profession page's simple perk list doesn't need its own copy of
+    // the whole Professions tree just to answer "which perk is that".
+    const prereqName = perk.prereq ? professionsTree.perks.find((p) => p.id === perk.prereq.id)?.name ?? null : null;
+    return {
+      id: perk.id,
+      name: perk.name,
+      icon: perk.icon,
+      maxRank: perk.maxRank,
+      gate: perk.gate,
+      prereqName,
+      // The max-rank description is the "fully invested" effect -- the
+      // clearest single line to show in a static list (this tab isn't the
+      // interactive per-rank tree /reference/legacy-perks already is).
+      description: perk.ranks[perk.ranks.length - 1],
+    };
+  });
+}
+
 function buildLevelingSection(sections, byName) {
   if (!sections) return null;
   return sections.map((rank) => ({
@@ -189,6 +264,8 @@ function buildFavorSection(sections, byName, recipesByName) {
 function main() {
   const items = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "items.json"), "utf8")).items;
   const byName = buildNameIndex(items);
+  const byId = new Map(items.map((i) => [i.itemId, i]));
+  const campLegacyPerks = loadCampLegacyPerks();
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
@@ -209,12 +286,20 @@ function main() {
 
     let leveling = null;
     let favor = null;
+    let camp = null;
     if (prof.hasLeveling) {
       const levelingPath = path.join(PROF_DIR, `${prof.dataFile}_leveling_and_merchants.json`);
       if (fs.existsSync(levelingPath)) {
         const raw = JSON.parse(fs.readFileSync(levelingPath, "utf8"));
         leveling = buildLevelingSection(raw.leveling_section, byName);
         favor = buildFavorSection(raw.favor_section, byName, recipesByName);
+        if (raw.camp_section) {
+          camp = {
+            milestones: buildCampMilestones(raw.camp_section.milestones, byId),
+            campObjects: buildCampMilestones(raw.camp_section.camp_objects, byId),
+            legacyPerks: campLegacyPerks,
+          };
+        }
       }
     }
 
@@ -225,6 +310,7 @@ function main() {
       recipes,
       leveling,
       favor,
+      camp,
     };
     fs.writeFileSync(path.join(OUT_DIR, `${prof.id}.json`), JSON.stringify(catalog, null, 1));
 
@@ -236,7 +322,7 @@ function main() {
     const byCategory = {};
     for (const r of recipes) byCategory[r.category] = (byCategory[r.category] || 0) + 1;
     console.log(
-      `${prof.id}: ${recipes.length} recipes, ${uncertain.length} uncertain, leveling=${!!leveling}, favor=${!!favor}`
+      `${prof.id}: ${recipes.length} recipes, ${uncertain.length} uncertain, leveling=${!!leveling}, favor=${!!favor}, camp=${!!camp}`
     );
     console.log(`  ${JSON.stringify(byCategory)}`);
   }

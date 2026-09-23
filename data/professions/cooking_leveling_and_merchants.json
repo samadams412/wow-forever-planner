@@ -309,5 +309,55 @@
         }
       ]
     }
-  ]
+  ],
+  "camp_section": {
+    "milestones": [],
+    "camp_objects": [
+      {
+        "name": "Basic Campfire Kit",
+        "icon": "inv_camelot_camping_welcomingcampfire",
+        "item_url": "https://foreverchanges.pro/item/279981",
+        "description": "A campfire for cooking, with room for 3 camp objects",
+        "legacy_points": null,
+        "skill": 1,
+        "blueprint_url": null
+      },
+      {
+        "name": "Cookie's Feast",
+        "icon": "inv_cooking_80_majorfeast",
+        "item_url": "https://foreverchanges.pro/item/279957",
+        "description": "Stamina food for everyone at camp",
+        "legacy_points": null,
+        "skill": 140,
+        "blueprint_url": "https://foreverchanges.pro/item/273102"
+      },
+      {
+        "name": "Journeyman Campfire Kit",
+        "icon": "inv_camelot_camping_welcomingcampfire",
+        "item_url": "https://foreverchanges.pro/item/279961",
+        "description": "A campfire with room for 5 camp objects",
+        "legacy_points": null,
+        "skill": 140,
+        "blueprint_url": "https://foreverchanges.pro/item/273087"
+      },
+      {
+        "name": "Expert Campfire Kit",
+        "icon": "inv_camelot_camping_welcomingcampfire",
+        "item_url": "https://foreverchanges.pro/item/279974",
+        "description": "A campfire with room for 10 camp objects",
+        "legacy_points": null,
+        "skill": 220,
+        "blueprint_url": "https://foreverchanges.pro/item/273101"
+      },
+      {
+        "name": "Iron Oven",
+        "icon": "achievement_cooking_masteroftheoven",
+        "item_url": "https://foreverchanges.pro/item/279982",
+        "description": "Needed for the most advanced Cooking recipes",
+        "legacy_points": null,
+        "skill": 300,
+        "blueprint_url": "https://foreverchanges.pro/item/273115"
+      }
+    ]
+  }
 }
