@@ -39,9 +39,24 @@ export default function DungeonLootIndexPage() {
           </thead>
           <tbody>
             {rows.map((d) => (
-              <tr key={d.id} className="border-b border-border/60 last:border-b-0 hover:bg-surface-hover">
+              <tr
+                key={d.id}
+                className="border-b border-border/60 last:border-b-0 hover:bg-surface-hover"
+                style={
+                  d.backgroundImage
+                    ? {
+                        backgroundImage: `linear-gradient(to right, rgba(13,11,7,0.94) 0%, rgba(13,11,7,0.8) 55%, rgba(13,11,7,0.55) 100%), url(${d.backgroundImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }
+                    : undefined
+                }
+              >
                 <td className="px-3 py-2">
-                  <Link href={`/reference/dungeons/loot/${d.id}`} className="font-medium text-foreground hover:text-accent hover:underline">
+                  <Link
+                    href={`/reference/dungeons/loot/${d.id}`}
+                    className="hero-text-accent font-medium [text-shadow:0_1px_2px_rgba(0,0,0,0.8)] hover:underline"
+                  >
                     {d.name}
                   </Link>
                   {d.faction && (
@@ -52,11 +67,13 @@ export default function DungeonLootIndexPage() {
                     </span>
                   )}
                 </td>
-                <td className="whitespace-nowrap px-3 py-2 text-foreground-muted">
+                <td className="hero-text-muted whitespace-nowrap px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
                   {d.levelMin}-{d.levelMax}
                 </td>
-                <td className="px-3 py-2 text-foreground-muted">{d.bossCount}</td>
-                <td className="px-3 py-2 text-foreground-muted">{d.questCount || "--"}</td>
+                <td className="hero-text-muted px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">{d.bossCount}</td>
+                <td className="hero-text-muted px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
+                  {d.questCount || "--"}
+                </td>
               </tr>
             ))}
           </tbody>
