@@ -28,8 +28,7 @@ function TooltipLine({ line, index }: { line: string; index: number }) {
     const [slot, type] = line.split("\t");
     return (
       <div key={index} className="mt-1 text-xs font-medium uppercase tracking-wide text-[#ffd100]">
-        {slot}
-        {type ? `, ${type}` : ""}
+        {[slot, type].filter(Boolean).join(", ")}
       </div>
     );
   }
@@ -148,7 +147,7 @@ export default function LootItemPill({ item, tooltipId }: { item: LootItem; tool
                     </div>
                     {item.classicTooltip.map((line, i) => (
                       <div key={i} className="mt-0.5 text-[11px] text-gray-500">
-                        {line.includes("\t") ? line.replace("\t", ", ") : line}
+                        {line.includes("\t") ? line.split("\t").filter(Boolean).join(", ") : line}
                       </div>
                     ))}
                   </div>
