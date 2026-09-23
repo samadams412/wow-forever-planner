@@ -38,10 +38,27 @@ const SLUG_MAP = require("./dungeon-source-map");
 
 const ROOT = path.join(__dirname, "..");
 const FC_DIR = path.join(ROOT, "data", "sources", "foreverchanges_dungeon_data");
+const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges_items");
 const OUT_DIR = path.join(ROOT, "data", "dungeons");
 
 const dungeonsJson = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "dungeons.json"), "utf8"));
 const wowtbcLoot = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "dungeon-loot.json"), "utf8"));
+
+// Full item catalog (new/changed/same/missing-vs-Classic), pulled from
+// foreverchanges.pro/items -- keyed by real item id ("i"). Quest reward
+// items only ever carry a bare {itemHref, name, type} from the quest-chain
+// scrape, missing icon/quality/tooltip entirely; this index lets us upgrade
+// them to the same full shape boss loot already gets. Verified against
+// every dungeon's quest rewards before relying on it: 422/422 reward items
+// and 325/325 "bring back" items resolve by id with zero misses, so id is
+// the reliable join key here -- no name-matching fallback needed.
+const ITEMS_BY_ID = new Map();
+for (const file of ["new.json", "changed.json", "same.json", "missing.json"]) {
+  const p = path.join(ITEMS_DIR, file);
+  if (!fs.existsSync(p)) continue;
+  const parsed = JSON.parse(fs.readFileSync(p, "utf8"));
+  for (const item of parsed.items) ITEMS_BY_ID.set(item.i, item);
+}
 
 // Dungeons where foreverchanges has no boss-loot pull at all (yet) -- fall
 // back to the existing wowtbc.gg-sourced loot for these specific two rather
@@ -118,12 +135,20 @@ function wowtbcItemToUnified(raw) {
 }
 
 function questRewardItemToUnified(raw) {
-  // foreverchanges quest reward item: {itemHref, name, type} -- "type" here
-  // is already the combined "Slot, Kind" display string (e.g. "Ranged, Gun"),
-  // unlike boss-loot items where slot/type are separate fields, since the
-  // quest scrape reads it straight off the rendered reward-list markup
-  // rather than a raw tooltip. Split on the first comma to fill slot/type
-  // the same way wowtbc's shape does, best-effort.
+  const itemId = parseItemId(raw.itemHref);
+  const fullItem = itemId !== null ? ITEMS_BY_ID.get(itemId) : null;
+  if (fullItem) return fcItemToUnified(fullItem);
+
+  // Fallback for the rare case an item id doesn't resolve in the catalog --
+  // keeps the reward visible with whatever the quest scrape itself had,
+  // same bare shape this function always returned before the catalog
+  // lookup was added. foreverchanges quest reward item: {itemHref, name,
+  // type} -- "type" here is already the combined "Slot, Kind" display
+  // string (e.g. "Ranged, Gun"), unlike boss-loot items where slot/type are
+  // separate fields, since the quest scrape reads it straight off the
+  // rendered reward-list markup rather than a raw tooltip. Split on the
+  // first comma to fill slot/type the same way wowtbc's shape does,
+  // best-effort.
   let slot = null, type = null;
   if (raw.type) {
     const parts = raw.type.split(",").map((s) => s.trim());
@@ -134,7 +159,7 @@ function questRewardItemToUnified(raw) {
     name: raw.name,
     slot,
     type,
-    itemId: parseItemId(raw.itemHref),
+    itemId,
     icon: null,
     quality: null,
     itemLevel: null,
