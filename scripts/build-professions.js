@@ -120,15 +120,28 @@ function buildRecipe(raw, byName, categorizer) {
   };
 }
 
+// Alchemy's and Blacksmithing's *_leveling_and_merchants.json don't share
+// one schema, confirmed by hand when Blacksmithing's leveling guide
+// rendered "–" ranges and blank rank-requirement text live: Alchemy's
+// range is a [min, max] tuple and its rank requirement field is
+// "requirement" (singular); Blacksmithing's range is a {min, max} object
+// and its field is "requirements" (plural). Normalize both here rather
+// than assuming a second data file matches the first one's shape.
+function normalizeRange(range) {
+  if (Array.isArray(range)) return [range[0], range[1]];
+  if (range && typeof range === "object") return [range.min, range.max];
+  return [null, null];
+}
+
 function buildLevelingSection(sections, byName) {
   if (!sections) return null;
   return sections.map((rank) => ({
     rank: rank.rank,
-    requirement: rank.requirement,
+    requirement: rank.requirement || rank.requirements || "",
     steps: (rank.steps || []).map((step) => {
       const { item } = resolveItemByName(byName, step.item.name);
       return {
-        range: step.range,
+        range: normalizeRange(step.range),
         item: itemRef(item) || unresolvedItemRef(step.item.name),
         source: step.source,
         count: step.count,
@@ -147,7 +160,14 @@ function buildLevelingSection(sections, byName) {
 function buildFavorSection(sections, byName, recipesByName) {
   if (!sections) return null;
   return sections.map((tier) => ({
-    tier: tier.tier,
+    // Alchemy's own tier string already embeds the skill range ("45
+    // Merchant's Favor (skill 65 to 140)"); Blacksmithing's doesn't ("30
+    // Merchant's Favor") and carries it in a separate skill_range object
+    // instead -- append it so both professions' tier headers read the same.
+    tier:
+      tier.skill_range && !/skill/i.test(tier.tier)
+        ? `${tier.tier} (skill ${tier.skill_range.min} to ${tier.skill_range.max})`
+        : tier.tier,
     items: (tier.items || []).map((fav) => {
       const { item } = resolveItemByName(byName, fav.name);
       // Pull the full orange/yellow/green/grey set from the main recipe

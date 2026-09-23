@@ -54581,12 +54581,13 @@
  "leveling": [
   {
    "rank": "Apprentice",
+   "requirement": "from any Blacksmithing trainer, up to 75",
    "steps": [
     {
-     "range": {
-      "min": 1,
-      "max": 11
-     },
+     "range": [
+      1,
+      11
+     ],
      "item": {
       "name": "Copper Rod",
       "slot": null,
@@ -54632,10 +54633,10 @@
      ]
     },
     {
-     "range": {
-      "min": 11,
-      "max": 36
-     },
+     "range": [
+      11,
+      36
+     ],
      "item": {
       "name": "Rough Sharpening Stone",
       "slot": null,
@@ -54681,10 +54682,10 @@
      ]
     },
     {
-     "range": {
-      "min": 36,
-      "max": 75
-     },
+     "range": [
+      36,
+      75
+     ],
      "item": {
       "name": "Rough Grinding Stone",
       "slot": null,
@@ -54733,12 +54734,13 @@
   },
   {
    "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
    "steps": [
     {
-     "range": {
-      "min": 75,
-      "max": 85
-     },
+     "range": [
+      75,
+      85
+     ],
      "item": {
       "name": "Acolyte's Chain Shirt",
       "slot": "Chest",
@@ -54794,10 +54796,10 @@
      ]
     },
     {
-     "range": {
-      "min": 85,
-      "max": 95
-     },
+     "range": [
+      85,
+      95
+     ],
      "item": {
       "name": "Acolyte's Chain Leggings",
       "slot": "Legs",
@@ -54853,10 +54855,10 @@
      ]
     },
     {
-     "range": {
-      "min": 95,
-      "max": 105
-     },
+     "range": [
+      95,
+      105
+     ],
      "item": {
       "name": "Rough Bronze Boots",
       "slot": "Feet",
@@ -54915,10 +54917,10 @@
      ]
     },
     {
-     "range": {
-      "min": 105,
-      "max": 120
-     },
+     "range": [
+      105,
+      120
+     ],
      "item": {
       "name": "Rough Bronze Leggings",
       "slot": "Legs",
@@ -54967,10 +54969,10 @@
      ]
     },
     {
-     "range": {
-      "min": 120,
-      "max": 140
-     },
+     "range": [
+      120,
+      140
+     ],
      "item": {
       "name": "Patterned Bronze Bracers",
       "slot": "Wrist",
@@ -55019,10 +55021,10 @@
      ]
     },
     {
-     "range": {
-      "min": 140,
-      "max": 150
-     },
+     "range": [
+      140,
+      150
+     ],
      "item": {
       "name": "Bronze Warhammer",
       "slot": "Two-Hand",
@@ -55085,12 +55087,13 @@
   },
   {
    "rank": "Expert",
+   "requirement": "from the trainer, from skill 125 and level 20, up to 225",
    "steps": [
     {
-     "range": {
-      "min": 150,
-      "max": 165
-     },
+     "range": [
+      150,
+      165
+     ],
      "item": {
       "name": "Bronze Warhammer",
       "slot": "Two-Hand",
@@ -55150,10 +55153,10 @@
      ]
     },
     {
-     "range": {
-      "min": 165,
-      "max": 181
-     },
+     "range": [
+      165,
+      181
+     ],
      "item": {
       "name": "Green Iron Bracers",
       "slot": "Wrist",
@@ -55212,10 +55215,10 @@
      ]
     },
     {
-     "range": {
-      "min": 181,
-      "max": 185
-     },
+     "range": [
+      181,
+      185
+     ],
      "item": {
       "name": "Golden Scale Coif",
       "slot": "Head",
@@ -55277,10 +55280,10 @@
      ]
     },
     {
-     "range": {
-      "min": 185,
-      "max": 200
-     },
+     "range": [
+      185,
+      200
+     ],
      "item": {
       "name": "Golden Scale Bracers",
       "slot": "Wrist",
@@ -55338,10 +55341,10 @@
      ]
     },
     {
-     "range": {
-      "min": 200,
-      "max": 205
-     },
+     "range": [
+      200,
+      205
+     ],
      "item": {
       "name": "Mithril Plate Bracers",
       "slot": "Wrist",
@@ -55403,10 +55406,10 @@
      ]
     },
     {
-     "range": {
-      "min": 205,
-      "max": 210
-     },
+     "range": [
+      205,
+      210
+     ],
      "item": {
       "name": "Mithril Plate Pants",
       "slot": "Legs",
@@ -55468,10 +55471,10 @@
      ]
     },
     {
-     "range": {
-      "min": 210,
-      "max": 225
-     },
+     "range": [
+      210,
+      225
+     ],
      "item": {
       "name": "Mithril Plate Bracers",
       "slot": "Wrist",
@@ -55536,12 +55539,13 @@
   },
   {
    "rank": "Artisan",
+   "requirement": "from the trainer, from skill 200 and level 35, up to 300",
    "steps": [
     {
-     "range": {
-      "min": 225,
-      "max": 230
-     },
+     "range": [
+      225,
+      230
+     ],
      "item": {
       "name": "Shining Mithril Helm",
       "slot": "Head",
@@ -55595,10 +55599,10 @@
      ]
     },
     {
-     "range": {
-      "min": 230,
-      "max": 235
-     },
+     "range": [
+      230,
+      235
+     ],
      "item": {
       "name": "Heavy Mithril Breastplate",
       "slot": "Chest",
@@ -55658,10 +55662,10 @@
      ]
     },
     {
-     "range": {
-      "min": 235,
-      "max": 243
-     },
+     "range": [
+      235,
+      243
+     ],
      "item": {
       "name": "Heavy Mithril Boots",
       "slot": "Feet",
@@ -55721,10 +55725,10 @@
      ]
     },
     {
-     "range": {
-      "min": 243,
-      "max": 250
-     },
+     "range": [
+      243,
+      250
+     ],
      "item": {
       "name": "Ebon Shiv",
       "slot": "One-Hand",
@@ -55786,10 +55790,10 @@
      ]
     },
     {
-     "range": {
-      "min": 250,
-      "max": 291
-     },
+     "range": [
+      250,
+      291
+     ],
      "item": {
       "name": "Ornate Thorium Handaxe",
       "slot": "One-Hand",
@@ -55851,10 +55855,10 @@
      ]
     },
     {
-     "range": {
-      "min": 291,
-      "max": 300
-     },
+     "range": [
+      291,
+      300
+     ],
      "item": {
       "name": "Bold Dirk",
       "slot": "One-Hand",
@@ -55913,7 +55917,7 @@
  ],
  "favor": [
   {
-   "tier": "30 Merchant's Favor",
+   "tier": "30 Merchant's Favor (skill 45 to 125)",
    "items": [
     {
      "item": {
