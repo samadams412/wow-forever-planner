@@ -11,7 +11,83 @@ serving as a fixed project brief.
 
 ## Session handoff — 2026-09-23
 
-**Stable and shipped this session:** individual item pages plus a batch of
+**Stable and shipped this session:** `/reference/professions/[profession]`
+rebuilt as a real recipe catalog (Recipes / Leveling 1 to 300 / Merchant's
+Favor) for all 8 crafting professions, replacing the old MDX write-up
+pages, which moved to `/blog`. Full details in the new "Professions
+recipe catalog" and "`/items/[itemId]`"-adjacent architecture notes below
+(search for "profession"). Headline points:
+- **Data pipeline** (`scripts/build-professions.js` + `scripts/lib/
+  profession-categories/*.js`): resolves every recipe/reagent name in
+  `data/professions/*.json` against the item catalog (99.84% resolve),
+  assigns each recipe a category, and writes `data/professions-catalog/
+  <id>.json`. Alchemy's categorization is a hardcoded ground-truth map
+  read directly off foreverchanges.pro's own sidebar (0 uncertain, by
+  construction); the other 7 lean on item slot / recipe-name pattern /
+  tooltip-buff-text signals with a documented fallback, and 101 of 2,165
+  recipes (4.7%) came out with a low-confidence guess, collected in
+  `data/professions-catalog/uncertain.json` for review rather than
+  silently trusted -- breakdown: engineering 77, cooking 12, tailoring 5,
+  first-aid 3, leatherworking 3, blacksmithing 1, alchemy/enchanting 0.
+- **Two real category-list gaps found and resolved with the user before
+  building:** Enchanting's 10 given categories are all slot-based but 55
+  of 222 recipes (wands/rods/oils/relics) fit none of them -- added an
+  11th "Other" category. Cooking's given list had "Stamina and Spirit"
+  and a separate standalone "Spirit" bucket that turned out to be the
+  same thing (no cooking item grants a combined buff) -- collapsed to
+  one. A third near-miss caught by hand rather than the user: an early
+  regex for parsing "Enchant Off-Hand - X" split on the hyphen *inside*
+  "Off-Hand" itself and miscounted 3 real Off-Hand recipes as
+  uncategorizable -- fixed to split on " - " instead.
+- **Every profession recipe/reagent/leveling-step/favor item is a full
+  `LootItem`**, not a slim ref -- reuses `LootItemPill` (Part A's shared
+  item-rendering component) directly, so hovering any material anywhere
+  in a profession page gets the exact same tooltip, and clicking one
+  goes to `/items/[itemId]`, as everywhere else on the site.
+- **A real data-provisioning bug caught before building anything on top
+  of it:** `data/professions/tailoring.json` as first provided this
+  session was byte-identical to `engineering.json` (242 "recipes" that
+  were all engineering items -- bombs, goggles, no cloth at all). Flagged
+  to the user immediately rather than guessed around; they supplied the
+  correct 417-recipe file, used from then on.
+- **A second schema mismatch caught live, not assumed:** Alchemy's and
+  Blacksmithing's `*_leveling_and_merchants.json` don't share one shape
+  (`range` is a `[min,max]` tuple for one, a `{min,max}` object for the
+  other; the rank-requirement field is singular vs. plural; Blacksmithing's
+  Merchant's Favor tier strings don't embed their own skill range the way
+  Alchemy's do). Blacksmithing's leveling guide rendered "–" for every
+  range until this was normalized in the build script.
+- Migrated all 7 profession write-ups from `content/professions/` to
+  `content/blog/` (images too), fixing two credit-line mismatches this
+  surfaced along the way: blog's shared `GuideImage` defaults to a
+  Blizzard-press-still credit that would have misattributed both the
+  WarcraftTavern tooltip screenshots in each post's body (now an explicit
+  per-image `credit="Tooltip screenshot courtesy of WarcraftTavern."`)
+  and the hero image (now an explicit empty `heroCredit: ""`, matching
+  the old dedicated `ProfessionImage` component's deliberate no-credit
+  behavior for an image of unknown provenance).
+
+**Open / not done this session:**
+- The 101 uncertain-category recipes in `data/professions-catalog/
+  uncertain.json` haven't been individually reviewed/corrected --
+  flagged for the user rather than resolved blind, per this session's
+  own instruction. Engineering's 77 (32% of its 242 recipes) is the
+  real concentration; the profession has the weakest slot/name signal of
+  the 8 by a wide margin.
+- The `data/professions/*_leveling_and_merchants.json` gap for the other
+  6 professions (only Alchemy and Blacksmithing have one) is a data
+  problem, not a code one -- `ProfessionLevelingGuide`/
+  `ProfessionMerchantsFavor` are already written generically; a 3rd
+  profession's leveling data just needs the file added and `hasLeveling:
+  true` set in `scripts/lib/professions-config.js`, no component changes.
+- Merchant's Favor's 240-tier for Alchemy (skill 290-300) has no
+  recorded items in the provided data, even though foreverchanges.pro's
+  own live page currently shows 2 (Major Frenzy Potion, Elixir of the
+  Grizzly) -- rendered as an honest "no recipes recorded for this tier
+  yet" rather than hand-filled from the live page, since the rest of
+  this profession's data came from a snapshot, not a live re-pull.
+
+**Session from earlier 2026-09-23:** individual item pages plus a batch of
 small data/copy fixes, each verified live and committed separately (this
 session picks up right after the dungeon-loot follow-ups below, same day).
 - **`/items/[itemId]`** — individual item pages, studied against
@@ -855,6 +931,78 @@ page, not a pre-existing note carried forward. `context` defaults to
 `"loot"` (most `LootItemPill` call sites are loot-related); only
 `ItemsTable` and the item page itself pass `"catalog"`.
 
+### Professions recipe catalog: `/reference/professions/[profession]`
+Added 2026-09-23, same session as the item pages above (Part B of a
+two-part task). `data/professions/<dataFile>.json` (one per profession;
+`data/professions/firstaid.json` on disk, `first-aid` as the route slug
+-- see `scripts/lib/professions-config.js` for the id/dataFile/name/
+category-list mapping for all 8) is a raw recipe list with **no item
+ids and no category** -- name only. `scripts/build-professions.js`
+resolves every recipe and reagent name against `data/items.json` by
+exact match (a trailing "x2"/"x3"/"x200" with no space, e.g. "Fire
+Oilx2", is a scrape artifact meaning "craft yields N" -- stripped before
+lookup, carried through as `makesQty`, same pattern as the item-page
+work's own "OLD" prefix investigation taught: check what a string
+artifact actually means before stripping it blind), assigns a category
+per `scripts/lib/profession-categories/<id>.js`, and writes
+`data/professions-catalog/<id>.json` -- read at request time by
+`lib/profession-recipes.ts` (fs + module cache, same pattern as
+`lib/items.ts`/`lib/dungeon-loot.ts`).
+
+**Categorization is per-profession, not one heuristic** -- see each
+file in `scripts/lib/profession-categories/` for its own reasoning
+(slot-based for the armor/weapon professions, recipe-name parsing for
+Enchanting's "Enchant \<Slot\> - \<Effect\>" convention, tooltip buff-text
+regex for Cooking, a hardcoded ground-truth map for Alchemy). Every
+recipe gets a category either way (never left blank), but a
+low-confidence guess sets `categoryConfident: false` and is collected
+into `data/professions-catalog/uncertain.json` (101 of 2,165 recipes,
+4.7% -- concentrated in Engineering, 77/242, which has by far the
+weakest slot/name signal of the 8). **This hasn't been reviewed yet** --
+flagged to the user at the end of the session that built it, not
+silently trusted or silently left uncategorized.
+
+**Every item reference in a profession's catalog JSON is a full
+`LootItem`**, not a slim `{id, icon, name}` ref -- same reasoning as the
+item-pages note above: `ProfessionRecipeTable`/`ProfessionLevelingGuide`/
+`ProfessionMerchantsFavor` all render items through the shared
+`LootItemPill`, so a reagent gets the exact same rich tooltip (including
+a "same"-status synthesized one) and `/items/[itemId]` link as
+everywhere else. `unresolvedItemRef()` in the build script gives the
+~0.2% of names that don't resolve the same `unknown: true` degradation
+(muted italic, no icon, no link) wowtbc-sourced "not yet discovered"
+items already get elsewhere.
+
+**The page itself** (`app/reference/professions/[profession]/page.tsx`)
+stacks three views behind a `?view=` param (default `recipes`) --
+`Recipes` (a `?category=` filter sidebar, server-rendered `Link`s, same
+pattern `/reference/items`' status tabs use, no client JS needed just to
+filter), `Leveling 1 to 300`, and `Merchant's Favor`. Only Alchemy and
+Blacksmithing have leveling/Merchant's-Favor data this session
+(`data/professions/<id>_leveling_and_merchants.json`) -- every other
+profession's Leveling/Favor view renders a "coming soon" state gated on
+`catalog.leveling`/`catalog.favor` being `null`, not a profession
+allowlist, so adding a 9th profession's leveling data later is a data +
+`hasLeveling: true` change, not a component change.
+
+**The two leveling/merchants-favor source files don't share one JSON
+schema** -- found live, not assumed, when Blacksmithing's guide first
+rendered "–" for every skill range: Alchemy's step `range` is a
+`[min, max]` tuple, Blacksmithing's is a `{min, max}` object; the rank
+field is `requirement` for one, `requirements` for the other;
+Blacksmithing's Merchant's Favor tier strings don't embed their own
+skill range in the tier text the way Alchemy's do (carried in a
+separate `skill_range` field instead). `build-professions.js` normalizes
+all three -- don't assume a 3rd profession's leveling file matches
+either existing shape without checking first.
+
+**Old MDX write-ups moved to Blog** (see the Blog/Content-type notes
+elsewhere in this file for the migration itself) -- `/reference/
+professions/[profession]` used to be `[slug]`, MDX-driven, one page per
+profession's "new recipes" narrative post. Same URL shape, so old
+`/reference/professions/<slug>` links still resolve, just to the
+catalog now instead of a write-up.
+
 ### Planner: race is reference-only; URL is `/planner/<class>/<build>`
 Race is no longer app state or a URL segment — it never affects talent
 calculations. `RaceReferenceTable` (`components/reference/RaceReferenceTable.tsx`)
@@ -1265,43 +1413,18 @@ Don't be surprised to find `/guides/dungeons` referenced in old
 conversation history or external links — the redirect handles it, no
 further action needed there.
 
-### Professions content type
-New `/reference/professions` (index, card-list like the Guides index) and
-`/reference/professions/[slug]` (individual page, same shell as an
-individual guide page — Breadcrumbs, h1, hero image, MDX body — but
-matching the no-big-banner pattern every other Reference subpage uses).
-See `lib/content.ts` above for the data layer.
-
-All 7 profession write-ups (alchemy, blacksmithing, cooking, enchanting,
-engineering, first-aid, tailoring) were migrated this session from
-`content/guides/` (where they'd been sitting with `status: "draft"`,
-invisible on the live Guides listing) to `content/professions/`, and their
-images from `public/images/guides/professions/<profession>/` to
-`public/images/professions/<profession>/`. Status was flipped to
-`"published"` as part of the migration — they read as finished write-ups,
-not stubs, and Professions now has a real home for them. While fixing each
-file's image paths for the move, several **pre-existing** broken
-references were found and fixed (not introduced by the migration): most
-body `<GuideImage>` tags were missing the `professions/` path segment
-entirely, cooking had a filename typo and a stale filename, and
-first-aid's four images are actually `.jpg` despite every reference saying
-`.webp`. **Still broken, deliberately not fabricated:** every profession's
-`heroImage` points at a `hero.webp` that doesn't exist anywhere on disk —
-flag this if asked why a profession page's top image is missing rather
-than inventing a substitute.
-
-Images render via a new `components/professions/ProfessionImage.tsx`, not
-the shared `GuideImage` — `GuideImage` hardcodes an "official Blizzard
-reveal screenshot" credit line that's accurate for guides/blog (real press
-stills) but would misattribute profession images, which are clearly
-concept art per their alt text (a gnomish poultryizer, glowing potion
-flasks, etc.). `ProfessionImage` renders no credit line at all rather than
-guessing at a real one. Profession `.mdx` bodies still use the
-`<GuideImage>` tag name unchanged (prose wasn't rewritten during the
-migration) — `components/professions/mdx-components.tsx` just maps that
-tag to `ProfessionImage` instead, mirroring the existing "own file per
-content type, not shared" convention already used by
-`components/blog/mdx-components.tsx`.
+### Professions content type — retired 2026-09-23, folded into Blog + the recipe catalog
+This section used to describe an MDX "Professions" content type
+(`content/professions/*.mdx`, `lib/professions.ts`, `components/
+professions/ProfessionImage.tsx`) rendered at `/reference/professions/
+[slug]` — one narrative "new recipes/updates" write-up per profession.
+That's gone: the write-ups moved to `content/blog/` (see the Blog note
+below), and `/reference/professions/[profession]` is now a real recipe
+catalog built from `data/professions/*.json` — see the "Professions
+recipe catalog" architecture note above (search for "profession"). If
+you see `ProfessionImage`, `lib/professions.ts`, or `content/
+professions/` referenced in old conversation history, that's what it
+meant — none of those files exist anymore.
 
 ### Open Graph images: shared template + file-convention routes
 `lib/og-template.tsx` exports `renderOgImage({ title, subtitle?,
@@ -1310,9 +1433,11 @@ file convention, not a Route Handler) colocated in every route segment that
 needs one — both static (`/reference`, `/reference/racials`,
 `/reference/legacy-perks`, `/reference/class-spellbooks`,
 `/reference/dungeons`, `/reference/professions`, `/guides`, `/blog`) and
-dynamic-slug (`/guides/[slug]`, `/reference/professions/[slug]`,
-`/blog/[slug]`, each pulling `title`/`summary`/`heroImage` straight from
-that post's frontmatter). Unlike the planner's build-code image (see
+dynamic-slug (`/guides/[slug]`, `/reference/professions/[profession]`
+(reads `catalog.name`/recipe count, not frontmatter — see that route's
+own architecture note), `/blog/[slug]`, the latter two pulling `title`/
+`summary`/`heroImage` straight from that post's frontmatter). Unlike the
+planner's build-code image (see
 above), none of these routes sit under a catch-all segment, so the plain
 file convention works directly and Next.js wires up the `<meta
 property="og:image">` tags automatically — no manual `generateMetadata`
