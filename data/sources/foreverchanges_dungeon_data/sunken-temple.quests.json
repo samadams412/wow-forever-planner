@@ -1,0 +1,417 @@
+{
+ "id": "sunken-temple",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions5 quests",
+   "quests": [
+    {
+     "id": "quest-1446",
+     "name": "Jammal'an the Prophet",
+     "levelText": "Level 53, from level 38",
+     "questText": "The Atal'ai Exile in The Hinterlands wants the Head of Jammal'an.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Atal'ai Exile, The Hinterlands",
+       "mapRef": {
+        "name": "Atal'ai Exile",
+        "href": "/map/eastern-kingdoms#pin=Atal&#x27;ai%20Exile"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of Jammal'anJammal'an the Prophet",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6212",
+         "name": "Head of Jammal'an",
+         "qty": null,
+         "source": "Jammal'an the Prophet"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,550 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11123",
+       "name": "Rainstrider Leggings",
+       "type": "Legs, Cloth"
+      },
+      {
+       "itemHref": "/item/11124",
+       "name": "Helm of Exile",
+       "type": "Head, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-3528",
+     "name": "The God Hakkar",
+     "levelText": "Level 53, from level 40",
+     "questText": "Bring the Filled Egg of Hakkar to Yeh'kinya in Tanaris.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Ancient Egg, from Yeh'kinya, Tanaris",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Yeh'kinya, Tanaris",
+       "mapRef": {
+        "name": "Yeh'kinya",
+        "href": "/map/kalimdor#pin=Yeh&#x27;kinya"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Filled Egg of Hakkar",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10662",
+         "name": "Filled Egg of Hakkar",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 40s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10749",
+       "name": "Avenguard Helm",
+       "type": "Head, Plate"
+      },
+      {
+       "itemHref": "/item/10750",
+       "name": "Lifeforce Dirk",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/10751",
+       "name": "Gemburst Circlet",
+       "type": "Head, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-3446",
+     "name": "Into the Depths",
+     "levelText": "Level 51, from level 46",
+     "questText": "Find the Altar of Hakkar in the Sunken Temple in Swamp of Sorrows.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Stone Circle, from Marvon Rivetseeker, Tanaris",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Marvon Rivetseeker, Tanaris",
+       "mapRef": {
+        "name": "Marvon Rivetseeker",
+        "href": "/map/kalimdor#pin=Marvon%20Rivetseeker"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Atal'ai Stone Circle",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10466",
+         "name": "Atal'ai Stone Circle",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-3447",
+     "name": "Secret of the Circle",
+     "levelText": "Level 51, from level 46",
+     "questText": "Travel into the Sunken Temple and discover the secret hidden in the circle of statues.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Stone Circle, from Marvon Rivetseeker, Tanaris",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Marvon Rivetseeker, Tanaris",
+       "mapRef": {
+        "name": "Marvon Rivetseeker",
+        "href": "/map/kalimdor#pin=Marvon%20Rivetseeker"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "6,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10773",
+       "name": "Hakkari Urn",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-3373",
+     "name": "The Essence of Eranikus",
+     "levelText": "Level 55, from level 48",
+     "questText": "Place the Essence of Eranikus in the Essence Font located in this lair in the Sunken Temple.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Essence of Eranikus",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Essence of EranikusShade of Eranikus",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10454",
+         "name": "Essence of Eranikus",
+         "qty": null,
+         "source": "Shade of Eranikus"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,800 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10455",
+       "name": "Chained Essence of Eranikus",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance1 quest",
+   "quests": [
+    {
+     "id": "quest-1475",
+     "name": "Into The Temple of Atal'Hakkar",
+     "levelText": "Level 50, from level 41",
+     "questText": "Gather 10 Atal'ai Tablets for Brohann Caskbelly in Stormwind.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Rhapsody's Tale, from Rhapsody Shindigger, The Hinterlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Brohann Caskbelly, Stormwind City",
+       "mapRef": {
+        "name": "Brohann Caskbelly",
+        "href": "/map/eastern-kingdoms#pin=Brohann%20Caskbelly"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Atal'ai Tablet ×10Atal'ai Tablet",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6288",
+         "name": "Atal'ai Tablet",
+         "qty": "×10",
+         "source": "Atal'ai Tablet"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/1490",
+       "name": "Guardian Talisman",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde2 quests",
+   "quests": [
+    {
+     "id": "quest-1445",
+     "name": "The Temple of Atal'Hakkar",
+     "levelText": "Level 50, from level 38",
+     "questText": "Collect 20 Fetishes of Hakkar and bring them to Fel'Zerul in Stonard.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Return to Fel'Zerul, from Atal'ai Exile, The Hinterlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Fel'zerul, Swamp of Sorrows",
+       "mapRef": {
+        "name": "Fel'zerul",
+        "href": "/map/eastern-kingdoms#pin=Fel&#x27;zerul"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Fetish of Hakkar ×20Atal'ai Corpse Eater, Atal'ai Deathwalker and Atal'ai High Priest and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6181",
+         "name": "Fetish of Hakkar",
+         "qty": "×20",
+         "source": "Atal'ai Corpse Eater, Atal'ai Deathwalker and Atal'ai High Priest and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/1490",
+       "name": "Guardian Talisman",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4146",
+     "name": "Zapper Fuel",
+     "levelText": "Level 52, from level 47",
+     "questText": "Deliver the Unloaded Zapper and 5 samples of Atal'ai Haze to Larion in Marshal's Refuge.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Marvon's Workshop, from Larion, Un'Goro Crater",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Liv Rizzlefix, The Barrens",
+       "mapRef": {
+        "name": "Liv Rizzlefix",
+        "href": "/map/kalimdor#pin=Liv%20Rizzlefix"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Unloaded ZapperAtal'ai Haze ×5Deep Lurker, Murk Worm and Saturated Ooze",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11319",
+         "name": "Unloaded Zapper",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/11318",
+         "name": "Atal'ai Haze",
+         "qty": "×5",
+         "source": "Deep Lurker, Murk Worm and Saturated Ooze"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

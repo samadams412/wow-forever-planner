@@ -1,0 +1,497 @@
+{
+ "id": "blackfathom-deeps",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Alliance4 quests",
+   "quests": [
+    {
+     "id": "quest-971",
+     "name": "Knowledge in the Deeps",
+     "levelText": "Level 23, from level 10",
+     "questText": "Bring the Lorgalis Manuscript to Gerrig Bonegrip in the Forlorn Cavern in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Gerrig Bonegrip, Dun Morogh",
+       "mapRef": {
+        "name": "Gerrig Bonegrip",
+        "href": "/map/eastern-kingdoms#pin=Gerrig%20Bonegrip"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lorgalis ManuscriptDocument Chest and Pitted Iron Chest",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5359",
+         "name": "Lorgalis Manuscript",
+         "qty": null,
+         "source": "Document Chest and Pitted Iron Chest"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "10,313 XP in the Forever beta2,750 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6743",
+       "name": "Sustaining Ring",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-1275",
+     "name": "Researching the Corruption",
+     "levelText": "Level 24, from level 18",
+     "questText": "Gershala Nightwhisper in Auberdine wants 8 Corrupt Brain stems.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Gershala Nightwhisper, Darkshore",
+       "mapRef": {
+        "name": "Gershala Nightwhisper",
+        "href": "/map/kalimdor#pin=Gershala%20Nightwhisper"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Corrupted Brain Stem ×8Blackfathom Myrmidon, Blackfathom Oracle and Blackfathom Sea Witch and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5952",
+         "name": "Corrupted Brain Stem",
+         "qty": "×8",
+         "source": "Blackfathom Myrmidon, Blackfathom Oracle and Blackfathom Sea Witch and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,400 XP",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "35s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7003",
+       "name": "Beetle Clasps",
+       "type": "Wrist, Mail"
+      },
+      {
+       "itemHref": "/item/7004",
+       "name": "Prelacy Cape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/270021",
+       "name": "Staghide Armguards",
+       "type": "Wrist, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-1200",
+     "name": "Blackfathom Villainy",
+     "levelText": "Level 27, from level 18",
+     "questText": "Bring the head of Twilight Lord Kelris to Dawnwatcher Selgorm in Darnassus.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "In Search of Thaelrid, from Dawnwatcher Shaedlass, Darnassus",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Argent Guard Thaelrid, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of KelrisTwilight Lord Kelris",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5881",
+         "name": "Head of Kelris",
+         "qty": null,
+         "source": "Twilight Lord Kelris"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "12,375 XP in the Forever beta1,700 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7001",
+       "name": "Gravestone Scepter",
+       "type": "Ranged, Wand"
+      },
+      {
+       "itemHref": "/item/7002",
+       "name": "Arctic Buckler",
+       "type": "Off Hand, Shield"
+      },
+      {
+       "itemHref": "/item/270031",
+       "name": "Dark Ritual Leggings",
+       "type": "Legs, Leather"
+      },
+      {
+       "itemHref": "/item/270032",
+       "name": "Cultist's Armguards",
+       "type": "Wrist, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-1199",
+     "name": "Twilight Falls",
+     "levelText": "Level 25, from level 20",
+     "questText": "Bring 10 Twilight Pendants to Argent Guard Manados in Darnassus.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Argent Guard Manados, Darnassus",
+       "mapRef": {
+        "name": "Argent Guard Manados",
+        "href": "/map/kalimdor#pin=Argent%20Guard%20Manados"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Twilight Pendant ×10Twilight Acolyte, Twilight Aquamancer and Twilight Elementalist and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5879",
+         "name": "Twilight Pendant",
+         "qty": "×10",
+         "source": "Twilight Acolyte, Twilight Aquamancer and Twilight Elementalist and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,563 XP in the Forever beta2,550 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6998",
+       "name": "Nimbus Boots",
+       "type": "Feet, Cloth"
+      },
+      {
+       "itemHref": "/item/7000",
+       "name": "Heartwood Girdle",
+       "type": "Waist, Leather"
+      },
+      {
+       "itemHref": "/item/270025",
+       "name": "Silvered Gauntlets",
+       "type": "Hands, Mail"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde5 quests",
+   "quests": [
+    {
+     "id": "quest-6564",
+     "name": "Allegiance to the Old Gods",
+     "levelText": "Level 22, from level 17",
+     "questText": "Bring the Damp Note to Je'neu Sancrea in Ashenvale.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Damp Note",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Damp NoteBlackfathom Tide Priestess",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/16790",
+         "name": "Damp Note",
+         "qty": null,
+         "source": "Blackfathom Tide Priestess"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,300 XP in the Forever beta1,750 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "11s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-6563",
+     "name": "The Essence of Aku'Mai",
+     "levelText": "Level 22, from level 17",
+     "questText": "Bring 20 Sapphires of Aku'Mai to Je'neu Sancrea in Ashenvale.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Trouble in the Deeps, from Tsunaman, Stonetalon Mountains",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Je'neu Sancrea, Ashenvale",
+       "mapRef": {
+        "name": "Je'neu Sancrea",
+        "href": "/map/kalimdor#pin=Je&#x27;neu%20Sancrea"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Sapphire of Aku'Mai ×20Sapphire of Aku'Mai",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/16784",
+         "name": "Sapphire of Aku'Mai",
+         "qty": "×20",
+         "source": "Sapphire of Aku'Mai"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,750 XP",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "14s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-6565",
+     "name": "Allegiance to the Old Gods",
+     "levelText": "Level 26, from level 17",
+     "questText": "Kill Lorgus Jett in Blackfathom Deeps and then return to Je'neu Sancrea in Ashenvale.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Je'neu Sancrea, Ashenvale",
+       "mapRef": {
+        "name": "Je'neu Sancrea",
+        "href": "/map/kalimdor#pin=Je&#x27;neu%20Sancrea"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Lorgus Jett",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,938 XP in the Forever beta2,650 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "40s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17694",
+       "name": "Band of the Fist",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17695",
+       "name": "Chestnut Mantle",
+       "type": "Shoulder, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-6561",
+     "name": "Blackfathom Villainy",
+     "levelText": "Level 27, from level 18",
+     "questText": "Bring the head of Twilight Lord Kelris to Bashana Runetotem in Thunder Bluff.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Argent Guard Thaelrid, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of KelrisTwilight Lord Kelris",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5881",
+         "name": "Head of Kelris",
+         "qty": null,
+         "source": "Twilight Lord Kelris"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "12,375 XP in the Forever beta1,700 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7001",
+       "name": "Gravestone Scepter",
+       "type": "Ranged, Wand"
+      },
+      {
+       "itemHref": "/item/7002",
+       "name": "Arctic Buckler",
+       "type": "Off Hand, Shield"
+      },
+      {
+       "itemHref": "/item/270031",
+       "name": "Dark Ritual Leggings",
+       "type": "Legs, Leather"
+      },
+      {
+       "itemHref": "/item/270032",
+       "name": "Cultist's Armguards",
+       "type": "Wrist, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-6921",
+     "name": "Amongst the Ruins",
+     "levelText": "Level 27, from level 21",
+     "questText": "Bring the Fathom Core to Je'neu Sancrea at Zoram'gar Outpost, Ashenvale.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Je'neu Sancrea, Ashenvale",
+       "mapRef": {
+        "name": "Je'neu Sancrea",
+        "href": "/map/kalimdor#pin=Je&#x27;neu%20Sancrea"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Fathom CoreFathom Stone",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/16762",
+         "name": "Fathom Core",
+         "qty": null,
+         "source": "Fathom Stone"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "10,313 XP in the Forever beta2,750 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "45s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "id": "hall-of-thanes",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions2 quests",
+   "quests": [
+    {
+     "id": "quest-96395",
+     "name": "An Ancient Grudge",
+     "levelText": "Level 15, from level 10",
+     "questText": "Put the spirit of Faldrim Anvilmar to rest in the Hall of Thanes.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Ghostly Attendant, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Faldrim Anvilmar",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "3,570 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279899",
+       "name": "Catacomb Cloak",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/279900",
+       "name": "Deepgrave Trousers",
+       "type": "Legs, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-96403",
+     "name": "Important Heirlooms",
+     "levelText": "Level 15, from level 10",
+     "questText": "Collect 8 Dwarven Heirlooms from the Hall of Thanes.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Thom Filch, Ironforge",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Dwarven Heirloom ×8",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/274289",
+         "name": "Dwarven Heirloom",
+         "qty": "×8",
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,590 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "7s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279898",
+       "name": "Dwarven Tome",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/280096",
+       "name": "Tomb Robber's Gloves",
+       "type": "Hands, Cloth"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance2 quests",
+   "quests": [
+    {
+     "id": "quest-96393",
+     "name": "Old Ironforge Incursion",
+     "levelText": "Level 16, from level 9",
+     "questText": "Enter the Hall of Thanes beneath Old Ironforge and claim the Head of Durgen Dirgehammer.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Earthseer Farsen, Dun Morogh",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Durgen Dirgehammer's HeadDurgen Dirgehammer",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/274286",
+         "name": "Durgen Dirgehammer's Head",
+         "qty": null,
+         "source": "Durgen Dirgehammer"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,930 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "8s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279894",
+       "name": "Calibrated Blunderbuss",
+       "type": "Ranged, Gun"
+      },
+      {
+       "itemHref": "/item/279895",
+       "name": "Ironforge Greathammer",
+       "type": "Two-Hand, Mace"
+      },
+      {
+       "itemHref": "/item/279896",
+       "name": "Deepblaze",
+       "type": "Ranged, Wand"
+      }
+     ]
+    },
+    {
+     "id": "quest-96394",
+     "name": "The Restless Dead",
+     "levelText": "Level 15, from level 10",
+     "questText": "Kill 15 Enraged Apparitions, 10 Tormented Souls and put the spirit of Anvilmar to rest.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Afadra Dunwall, Ironforge",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Enraged Apparition ×15, Tormented Soul ×10",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "3,570 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "7s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279897",
+       "name": "Dusty Belt",
+       "type": "Waist, Leather"
+      },
+      {
+       "itemHref": "/item/280095",
+       "name": "Cryptwalker Bracers",
+       "type": "Wrist, Mail"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1003 @@
+{
+ "id": "dire-maul-north",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions20 quests",
+   "quests": [
+    {
+     "id": "quest-7499",
+     "name": "Codex of Defense",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Codex of Defense",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Codex of DefenseA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18357",
+         "name": "Codex of Defense",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18466",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7505",
+     "name": "Frost Shock and You",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Frost Shock and You",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Frost Shock and YouA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18363",
+         "name": "Frost Shock and You",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18471",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7498",
+     "name": "Garona: A Study on Stealth and Treachery",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Garona: A Study on Stealth and Treachery",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Garona: A Study on Stealth and TreacheryA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18356",
+         "name": "Garona: A Study on Stealth and Treachery",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18465",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7502",
+     "name": "Harnessing Shadows",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Harnessing Shadows",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Harnessing ShadowsA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18360",
+         "name": "Harnessing Shadows",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18467",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7504",
+     "name": "Holy Bologna: What the Light Won't Tell You",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Holy Bologna: What the Light Won't Tell You",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Holy Bologna: What the Light Won't Tell YouA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18362",
+         "name": "Holy Bologna: What the Light Won't Tell You",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18469",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7500",
+     "name": "The Arcanist's Cookbook",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item The Arcanist's Cookbook",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Arcanist's CookbookA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18358",
+         "name": "The Arcanist's Cookbook",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18468",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7506",
+     "name": "The Emerald Dream...",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item The Emerald Dream",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Emerald DreamA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18364",
+         "name": "The Emerald Dream",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18470",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7503",
+     "name": "The Greatest Race of Hunters",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item The Greatest Race of Hunters",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Greatest Race of HuntersA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18361",
+         "name": "The Greatest Race of Hunters",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18473",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7501",
+     "name": "The Light and How To Swing It",
+     "levelText": "Level 60, from level 54",
+     "questText": "Return the book to its rightful owners.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item The Light and How to Swing It",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Light and How to Swing ItA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18359",
+         "name": "The Light and How to Swing It",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18472",
+       "name": "Royal Seal of Eldre'Thalas",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5518",
+     "name": "The Gordok Ogre Suit",
+     "levelText": "Level 60, from level 56",
+     "questText": "Bring 4 Bolts of Runecloth, 8 Rugged Leather, 2 Rune Threads, and Ogre Tannin to Knot Thimblejack.  He is currently chained inside the Gordok wing of Dire Maul.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Knot Thimblejack, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Bolt of Runecloth ×4Felsteel Chest and Twilight Lord EverunRugged Leather ×8Rune Thread ×2Ogre TanninDoomguard Minion, Gordok Bushwacker and Gordok Reaver and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/14048",
+         "name": "Bolt of Runecloth",
+         "qty": "×4",
+         "source": "Felsteel Chest and Twilight Lord Everun"
+        },
+        {
+         "itemHref": "/item/8170",
+         "name": "Rugged Leather",
+         "qty": "×8",
+         "source": null
+        },
+        {
+         "itemHref": "/item/14341",
+         "name": "Rune Thread",
+         "qty": "×2",
+         "source": null
+        },
+        {
+         "itemHref": "/item/18240",
+         "name": "Ogre Tannin",
+         "qty": null,
+         "source": "Doomguard Minion, Gordok Bushwacker and Gordok Reaver and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18258",
+       "name": "Gordok Ogre Suit",
+       "type": "Quest"
+      }
+     ]
+    },
+    {
+     "id": "quest-1318",
+     "name": "Unfinished Gordok Business",
+     "levelText": "Level 60, from level 56",
+     "questText": "Find the Gauntlet of Gordok Might and return it to Captain Kromcrush in Dire Maul.  According to Kromcrush, the \"old timey story\" says that Tortheldrin - a \"creepy\" elf who called himself a prince - stole it from one of the Gordok kings.",
+     "fields": [
+      {
+       "label": "Bring back",
+       "value": "Gauntlet of Gordok MightThe Prince's Chest",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18336",
+         "name": "Gauntlet of Gordok Might",
+         "qty": null,
+         "source": "The Prince's Chest"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18366",
+       "name": "Gordok's Handguards",
+       "type": "Hands, Plate"
+      },
+      {
+       "itemHref": "/item/18367",
+       "name": "Gordok's Gauntlets",
+       "type": "Hands, Mail"
+      },
+      {
+       "itemHref": "/item/18368",
+       "name": "Gordok's Gloves",
+       "type": "Hands, Leather"
+      },
+      {
+       "itemHref": "/item/18369",
+       "name": "Gordok's Handwraps",
+       "type": "Hands, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-5525",
+     "name": "Free Knot!",
+     "levelText": "Level 60, from level 57",
+     "questText": null,
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Knot Thimblejack, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Gordok Shackle KeyCaptain Kromcrush, Gordok Brute and Gordok Bushwacker and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18250",
+         "name": "Gordok Shackle Key",
+         "qty": null,
+         "source": "Captain Kromcrush, Gordok Brute and Gordok Bushwacker and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5528",
+     "name": "The Gordok Taste Test",
+     "levelText": "Level 60, from level 57",
+     "questText": null,
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Stomper Kreeg, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18269",
+       "name": "Gordok Green Grog",
+       "type": "Other"
+      },
+      {
+       "itemHref": "/item/18284",
+       "name": "Kreeg's Stout Beatdown",
+       "type": "Other"
+      }
+     ]
+    },
+    {
+     "id": "quest-8948",
+     "name": "Anthion's Old Friend",
+     "levelText": "Level 60, from level 58",
+     "questText": "Take the incomplete Banner of Provocation to Falrin Treeshaper at the library in Dire Maul.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Anthion's Strange Request, from Anthion Harmon, Eastern Plaguelands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Anthion Harmon, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Anthion Harmon",
+        "href": "/map/eastern-kingdoms#pin=Anthion%20Harmon"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Incomplete Banner of Provocation",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/21983",
+         "name": "Incomplete Banner of Provocation",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8949",
+     "name": "Falrin's Vendetta",
+     "levelText": "Level 60, from level 58",
+     "questText": "Collect 25 Ogre Warbeads from Ogres inside Dire Maul or Blackrock Spire and return to Falrin Treeshaper inside the Athenaeum in Dire Maul.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Falrin Treeshaper, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Ogre Warbeads ×25Gordok Brute, Gordok Bushwacker and Gordok Captain and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/21982",
+         "name": "Ogre Warbeads",
+         "qty": "×25",
+         "source": "Gordok Brute, Gordok Bushwacker and Gordok Captain and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/22150",
+       "name": "Beads of Ogre Might",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/22149",
+       "name": "Beads of Ogre Mojo",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-8950",
+     "name": "The Instigator's Enchantment",
+     "levelText": "Level 60, from level 58",
+     "questText": "Bring the following to Falrin Treeshaper inside Dire Maul: 1 Jeering Spectre's Essence, 4 Dark Runes and 8 Large Brilliant Shards.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Falrin Treeshaper, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Jeering Spectre's EssenceEldreth Apparition, Eldreth Phantasm and Eldreth Sorcerer and othersDark Rune ×4Instructor Malicia, Lady Illucia Barov and Lorekeeper Polkelt and othersLarge Brilliant Shard ×8",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22224",
+         "name": "Jeering Spectre's Essence",
+         "qty": null,
+         "source": "Eldreth Apparition, Eldreth Phantasm and Eldreth Sorcerer and others"
+        },
+        {
+         "itemHref": "/item/20520",
+         "name": "Dark Rune",
+         "qty": "×4",
+         "source": "Instructor Malicia, Lady Illucia Barov and Lorekeeper Polkelt and others"
+        },
+        {
+         "itemHref": "/item/14344",
+         "name": "Large Brilliant Shard",
+         "qty": "×8",
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8967",
+     "name": "The Left Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth the spirit of Isalien and slay her. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Left Piece of Lord Valthalak's AmuletIsalien, Jarien and Kormok and othersBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/21984",
+         "name": "Left Piece of Lord Valthalak's Amulet",
+         "qty": null,
+         "source": "Isalien, Jarien and Kormok and others"
+        },
+        {
+         "itemHref": "/item/22050",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Isalien",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8990",
+     "name": "The Right Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth the spirit of Isalien and slay her. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "More Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lord Valthalak's AmuletBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22048",
+         "name": "Lord Valthalak's Amulet",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/22050",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Isalien",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-7507",
+     "name": "Foror's Compendium",
+     "levelText": "Level 60, from level 60",
+     "questText": "Return Foror's Compendium of Dragon Slaying to the Athenaeum.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Foror's Compendium of Dragon Slaying",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Foror's Compendium of Dragon SlayingA Dusty Tome",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18401",
+         "name": "Foror's Compendium of Dragon Slaying",
+         "qty": null,
+         "source": "A Dusty Tome"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-7508",
+     "name": "The Forging of Quel'Serrar",
+     "levelText": "Level 60, from level 60",
+     "questText": "Give the Dull and Flat Elven Blade to Lorekeeper Lydros.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item A Dull and Flat Elven Blade",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "A Dull and Flat Elven Blade",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18513",
+         "name": "A Dull and Flat Elven Blade",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance1 quest",
+   "quests": [
+    {
+     "id": "quest-7462",
+     "name": "The Treasure of the Shen'dralar",
+     "levelText": "Level 60, from level 56",
+     "questText": "Return to the Athenaeum and find the Treasure of the Shen'dralar. Claim your reward!",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Madness Within, from Shen'dralar Ancient",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Shen'dralar Ancient, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "675 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18420",
+       "name": "Bonecrusher",
+       "type": "Two-Hand, Mace"
+      },
+      {
+       "itemHref": "/item/18421",
+       "name": "Backwood Helm",
+       "type": "Head, Mail"
+      },
+      {
+       "itemHref": "/item/18424",
+       "name": "Sedge Boots",
+       "type": "Feet, Leather"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde1 quest",
+   "quests": [
+    {
+     "id": "quest-7877",
+     "name": "The Treasure of the Shen'dralar",
+     "levelText": "Level 60, from level 56",
+     "questText": "Return to the Athenaeum and find the Treasure of the Shen'dralar. Claim your reward!",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Madness Within, from Shen'dralar Ancient",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Shen'dralar Ancient, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "675 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18420",
+       "name": "Bonecrusher",
+       "type": "Two-Hand, Mace"
+      },
+      {
+       "itemHref": "/item/18421",
+       "name": "Backwood Helm",
+       "type": "Head, Mail"
+      },
+      {
+       "itemHref": "/item/18424",
+       "name": "Sedge Boots",
+       "type": "Feet, Leather"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

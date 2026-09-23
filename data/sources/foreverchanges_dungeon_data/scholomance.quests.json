@@ -1,0 +1,579 @@
+{
+ "id": "scholomance",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions9 quests",
+   "quests": [
+    {
+     "id": "quest-5529",
+     "name": "Plagued Hatchlings",
+     "levelText": "Level 58, from level 55",
+     "questText": "Kill 20 Plagued Hatchlings, then return to Betina Bigglezink at the Light's Hope Chapel.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Betina Bigglezink, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Betina Bigglezink",
+        "href": "/map/eastern-kingdoms#pin=Betina%20Bigglezink"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Plagued Hatchling ×20",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "6,200 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "90s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5382",
+     "name": "Doctor Theolen Krastinov, the Butcher",
+     "levelText": "Level 60, from level 55",
+     "questText": "Find Doctor Theolen Krastinov inside the Scholomance. Destroy him, then burn the Remains of Eva Sarkhoff and the Remains of Lucien Sarkhoff. Return to Eva Sarkhoff when the task is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Eva Sarkhoff, Western Plaguelands",
+       "mapRef": {
+        "name": "Eva Sarkhoff",
+        "href": "/map/eastern-kingdoms#pin=Eva%20Sarkhoff"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Doctor Theolen Krastinov, Remains of Eva Sarkhoff, Remains of Lucien Sarkhoff",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5384",
+     "name": "Kirtonos the Herald",
+     "levelText": "Level 60, from level 55",
+     "questText": "Return to the Scholomance with the Blood of Innocents. Find the porch and place the Blood of Innocents in the brazier. Kirtonos will come to feast upon your soul.  Fight valiantly, do not give an inch! Destroy Kirtonos and return to Eva Sarkhoff.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Eva Sarkhoff, Western Plaguelands",
+       "mapRef": {
+        "name": "Eva Sarkhoff",
+        "href": "/map/eastern-kingdoms#pin=Eva%20Sarkhoff"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Kirtonos the Herald",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/15805",
+       "name": "Penelope's Rose",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/15806",
+       "name": "Mirah's Song",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/13544",
+       "name": "Spectral Essence",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5515",
+     "name": "Krastinov's Bag of Horrors",
+     "levelText": "Level 60, from level 55",
+     "questText": "Locate Jandice Barov in the Scholomance and destroy her. From her corpse recover Krastinov's Bag of Horrors. Return the bag to Eva Sarkhoff.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Eva Sarkhoff, Western Plaguelands",
+       "mapRef": {
+        "name": "Eva Sarkhoff",
+        "href": "/map/eastern-kingdoms#pin=Eva%20Sarkhoff"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Krastinov's Bag of HorrorsJandice Barov",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13725",
+         "name": "Krastinov's Bag of Horrors",
+         "qty": null,
+         "source": "Jandice Barov"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5531",
+     "name": "Betina Bigglezink",
+     "levelText": "Level 60, from level 57",
+     "questText": "Bring the Frozen Eggs to Betina Bigglezink.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Leonid Barthalomew, from Tinkee Steamboil, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Leonid Barthalomew the Revered, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Leonid Barthalomew the Revered",
+        "href": "/map/eastern-kingdoms#pin=Leonid%20Barthalomew%20the%20Revered"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Frozen Eggs",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13761",
+         "name": "Frozen Eggs",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4771",
+     "name": "Dawn's Gambit",
+     "levelText": "Level 60, from level 57",
+     "questText": "Place Dawn's Gambit in the Viewing Room of the Scholomance.  Defeat Vectus, then return to Betina Bigglezink.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Betina Bigglezink, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Betina Bigglezink",
+        "href": "/map/eastern-kingdoms#pin=Betina%20Bigglezink"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Vectus",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/15853",
+       "name": "Windreaper",
+       "type": "One-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/15854",
+       "name": "Dancing Sliver",
+       "type": "Two-Hand, Staff"
+      }
+     ]
+    },
+    {
+     "id": "quest-5466",
+     "name": "The Lich, Ras Frostwhisper",
+     "levelText": "Level 60, from level 57",
+     "questText": "Find Ras Frostwhisper in the Scholomance. When you have found him, use the Soulbound Keepsake on his undead visage. Should you succeed in reverting him to a mortal, strike him down and recover the Human Head of Ras Frostwhisper. Take the head back to Magistrate Marduke.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Soulbound Keepsake, from Leonid Barthalomew the Revered, Eastern Plaguelands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Magistrate Marduke, Western Plaguelands",
+       "mapRef": {
+        "name": "Magistrate Marduke",
+        "href": "/map/eastern-kingdoms#pin=Magistrate%20Marduke"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Human Head of Ras FrostwhisperRas Frostwhisper",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13626",
+         "name": "Human Head of Ras Frostwhisper",
+         "qty": null,
+         "source": "Ras Frostwhisper"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13982",
+       "name": "Warblade of Caer Darrow",
+       "type": "Two-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/13986",
+       "name": "Crown of Caer Darrow",
+       "type": "Head, Cloth"
+      },
+      {
+       "itemHref": "/item/13984",
+       "name": "Darrowspike",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/14002",
+       "name": "Darrowshire Strongguard",
+       "type": "Off Hand, Shield"
+      }
+     ]
+    },
+    {
+     "id": "quest-8969",
+     "name": "The Left Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth the spirit of Kormok and slay him. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Left Piece of Lord Valthalak's AmuletIsalien, Jarien and Kormok and othersBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/21984",
+         "name": "Left Piece of Lord Valthalak's Amulet",
+         "qty": null,
+         "source": "Isalien, Jarien and Kormok and others"
+        },
+        {
+         "itemHref": "/item/22052",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Kormok",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8992",
+     "name": "The Right Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth the spirit of Kormok and slay him. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "More Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lord Valthalak's AmuletBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22048",
+         "name": "Lord Valthalak's Amulet",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/22052",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Kormok",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance1 quest",
+   "quests": [
+    {
+     "id": "quest-5343",
+     "name": "Barov Family Fortune",
+     "levelText": "Level 60, from level 52",
+     "questText": "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Weldon Barov when you have completed this task.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Weldon Barov, Western Plaguelands",
+       "mapRef": {
+        "name": "Weldon Barov",
+        "href": "/map/eastern-kingdoms#pin=Weldon%20Barov"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Deed to BrillThe Deed to BrillThe Deed to Caer DarrowThe Deed to Caer DarrowThe Deed to SouthshoreThe Deed to SouthshoreThe Deed to Tarren MillThe Deed to Tarren Mill",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13471",
+         "name": "The Deed to Brill",
+         "qty": null,
+         "source": "The Deed to Brill"
+        },
+        {
+         "itemHref": "/item/13448",
+         "name": "The Deed to Caer Darrow",
+         "qty": null,
+         "source": "The Deed to Caer Darrow"
+        },
+        {
+         "itemHref": "/item/13450",
+         "name": "The Deed to Southshore",
+         "qty": null,
+         "source": "The Deed to Southshore"
+        },
+        {
+         "itemHref": "/item/13451",
+         "name": "The Deed to Tarren Mill",
+         "qty": null,
+         "source": "The Deed to Tarren Mill"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde1 quest",
+   "quests": [
+    {
+     "id": "quest-5341",
+     "name": "Barov Family Fortune",
+     "levelText": "Level 60, from level 52",
+     "questText": "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Alexi Barov when you have completed this task.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Alexi Barov, Tirisfal Glades",
+       "mapRef": {
+        "name": "Alexi Barov",
+        "href": "/map/eastern-kingdoms#pin=Alexi%20Barov"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Deed to BrillThe Deed to BrillThe Deed to Caer DarrowThe Deed to Caer DarrowThe Deed to SouthshoreThe Deed to SouthshoreThe Deed to Tarren MillThe Deed to Tarren Mill",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13471",
+         "name": "The Deed to Brill",
+         "qty": null,
+         "source": "The Deed to Brill"
+        },
+        {
+         "itemHref": "/item/13448",
+         "name": "The Deed to Caer Darrow",
+         "qty": null,
+         "source": "The Deed to Caer Darrow"
+        },
+        {
+         "itemHref": "/item/13450",
+         "name": "The Deed to Southshore",
+         "qty": null,
+         "source": "The Deed to Southshore"
+        },
+        {
+         "itemHref": "/item/13451",
+         "name": "The Deed to Tarren Mill",
+         "qty": null,
+         "source": "The Deed to Tarren Mill"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

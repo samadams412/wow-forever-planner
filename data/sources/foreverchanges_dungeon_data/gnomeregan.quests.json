@@ -1,0 +1,678 @@
+{
+ "id": "gnomeregan",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions4 quests",
+   "quests": [
+    {
+     "id": "quest-2904",
+     "name": "A Fine Mess",
+     "levelText": "Level 30, from level 24",
+     "questText": "Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Kernobee, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,188 XP in the Forever beta2,450 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9535",
+       "name": "Fire-welded Bracers",
+       "type": "Wrist, Mail"
+      },
+      {
+       "itemHref": "/item/9536",
+       "name": "Fairywing Mantle",
+       "type": "Shoulder, Cloth"
+      },
+      {
+       "itemHref": "/item/270042",
+       "name": "Technician's Bracers",
+       "type": "Wrist, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-2951",
+     "name": "The Sparklematic 5200!",
+     "levelText": "Level 30, from level 25",
+     "questText": "Insert a Grime-Encrusted Item into the Sparklematic 5200, and be sure to have three silver coins to start the machine.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "The Sparklematic 5200, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Grime-Encrusted ObjectCaverndeep Ambusher, Caverndeep Burrower and Caverndeep Invader and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9308",
+         "name": "Grime-Encrusted Object",
+         "qty": null,
+         "source": "Caverndeep Ambusher, Caverndeep Burrower and Caverndeep Invader and others"
+        }
+       ]
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2952",
+     "name": "The Sparklematic 5200!",
+     "levelText": "Level 30, from level 25",
+     "questText": null,
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "The Sparklematic 5200, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "2,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9363",
+       "name": "Sparklematic-Wrapped Box",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-2945",
+     "name": "Grime-Encrusted Ring",
+     "levelText": "Level 34, from level 28",
+     "questText": "Figure out a way to remove the grime from the Grime-Encrusted Ring.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Grime-Encrusted Ring",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Grime-Encrusted RingDark Iron Agent",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9326",
+         "name": "Grime-Encrusted Ring",
+         "qty": null,
+         "source": "Dark Iron Agent"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,700 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance8 quests",
+   "quests": [
+    {
+     "id": "quest-2922",
+     "name": "Save Techbot's Brain!",
+     "levelText": "Level 26, from level 20",
+     "questText": "Bring Techbot's Memory Core to Tinkmaster Overspark in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Tinkmaster Overspark, Dun Morogh",
+       "mapRef": {
+        "name": "Tinkmaster Overspark",
+        "href": "/map/eastern-kingdoms#pin=Tinkmaster%20Overspark"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Techbot's Memory CoreTechbot",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9277",
+         "name": "Techbot's Memory Core",
+         "qty": null,
+         "source": "Techbot"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,890 XP in the Forever beta2,650 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "20s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2926",
+     "name": "Gnogaine",
+     "levelText": "Level 27, from level 20",
+     "questText": "Use the Empty Leaden Collection Phial on Irradiated Invaders or Irradiated Pillagers to collect radioactive fallout. Once it is full, take it back to Ozzie Togglevolt in Kharanos.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Day After, from Gnoarn, Dun Morogh",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Ozzie Togglevolt, Dun Morogh",
+       "mapRef": {
+        "name": "Ozzie Togglevolt",
+        "href": "/map/eastern-kingdoms#pin=Ozzie%20Togglevolt"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Full Leaden Collection Phial",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9284",
+         "name": "Full Leaden Collection Phial",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,720 XP in the Forever beta2,200 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "22s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2928",
+     "name": "Gyrodrillmatic Excavationators",
+     "levelText": "Level 30, from level 20",
+     "questText": "Bring twenty-four Robo-mechanical Guts to Shoni in Stormwind.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Shoni the Shilent, Stormwind City",
+       "mapRef": {
+        "name": "Shoni the Shilent",
+        "href": "/map/eastern-kingdoms#pin=Shoni%20the%20Shilent"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Robo-mechanical Guts ×24Arcane Nullifier X-21, Caverndeep Ambusher and Caverndeep Burrower and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9309",
+         "name": "Robo-mechanical Guts",
+         "qty": "×24",
+         "source": "Arcane Nullifier X-21, Caverndeep Ambusher and Caverndeep Burrower and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,370 XP in the Forever beta2,450 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9608",
+       "name": "Shoni's Disarming Tool",
+       "type": "Off Hand, Axe"
+      },
+      {
+       "itemHref": "/item/9609",
+       "name": "Shilly Mitts",
+       "type": "Hands, Cloth"
+      },
+      {
+       "itemHref": "/item/270045",
+       "name": "Operator's Gloves",
+       "type": "Hands, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-2962",
+     "name": "The Only Cure is More Green Glow",
+     "levelText": "Level 30, from level 20",
+     "questText": "Travel to Gnomeregan and bring back High Potency Radioactive Fallout. Be warned, the fallout is unstable and will collapse rather quickly.  Ozzie will also require your Heavy Leaden Collection Phial when the task is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Ozzie Togglevolt, Dun Morogh",
+       "mapRef": {
+        "name": "Ozzie Togglevolt",
+        "href": "/map/eastern-kingdoms#pin=Ozzie%20Togglevolt"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "High Potency Radioactive FalloutHeavy Leaden Collection Phial",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9365",
+         "name": "High Potency Radioactive Fallout",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/9364",
+         "name": "Heavy Leaden Collection Phial",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,370 XP in the Forever beta2,450 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "25s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2924",
+     "name": "Essential Artificials",
+     "levelText": "Level 30, from level 24",
+     "questText": "Bring 12 Essential Artificials to Klockmort Spannerspan in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Klockmort Spannerspan, Dun Morogh",
+       "mapRef": {
+        "name": "Klockmort Spannerspan",
+        "href": "/map/eastern-kingdoms#pin=Klockmort%20Spannerspan"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Essential Artificial ×12Artificial Extrapolator",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9278",
+         "name": "Essential Artificial",
+         "qty": "×12",
+         "source": "Artificial Extrapolator"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "55s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2930",
+     "name": "Data Rescue",
+     "levelText": "Level 30, from level 25",
+     "questText": "Bring a Prismatic Punch Card to Master Mechanic Castpipe in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Master Mechanic Castpipe, Dun Morogh",
+       "mapRef": {
+        "name": "Master Mechanic Castpipe",
+        "href": "/map/eastern-kingdoms#pin=Master%20Mechanic%20Castpipe"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Prismatic Punch Card",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9316",
+         "name": "Prismatic Punch Card",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "25s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9605",
+       "name": "Repairman's Cape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/9604",
+       "name": "Mechanic's Pipehammer",
+       "type": "Two-Hand, Mace"
+      }
+     ]
+    },
+    {
+     "id": "quest-2929",
+     "name": "The Grand Betrayal",
+     "levelText": "Level 35, from level 25",
+     "questText": "Venture to Gnomeregan and kill Mekgineer Thermaplugg. Return to High Tinker Mekkatorque when the task is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "High Tinker Mekkatorque, Dun Morogh",
+       "mapRef": {
+        "name": "High Tinker Mekkatorque",
+        "href": "/map/eastern-kingdoms#pin=High%20Tinker%20Mekkatorque"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Mekgineer Thermaplugg",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "2,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "35s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9623",
+       "name": "Civinad Robes",
+       "type": "Chest, Cloth"
+      },
+      {
+       "itemHref": "/item/9624",
+       "name": "Triprunner Dungarees",
+       "type": "Legs, Leather"
+      },
+      {
+       "itemHref": "/item/9625",
+       "name": "Dual Reinforced Leggings",
+       "type": "Legs, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-2947",
+     "name": "Return of the Ring",
+     "levelText": "Level 34, from level 28",
+     "questText": "You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "The Sparklematic 5200, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Brilliant Gold Ring",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9362",
+         "name": "Brilliant Gold Ring",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,700 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde3 quests",
+   "quests": [
+    {
+     "id": "quest-2843",
+     "name": "Gnomer-gooooone!",
+     "levelText": "Level 35, from level 20",
+     "questText": "Wait for Scooty to calibrate the Goblin Transponder.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Chief Engineer Scooty, from Sovik, Orgrimmar",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Scooty, Stranglethorn Vale",
+       "mapRef": {
+        "name": "Scooty",
+        "href": "/map/eastern-kingdoms#pin=Scooty"
+       },
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9173",
+       "name": "Goblin Transponder",
+       "type": "Quest"
+      }
+     ]
+    },
+    {
+     "id": "quest-2841",
+     "name": "Rig Wars",
+     "levelText": "Level 35, from level 25",
+     "questText": "Retrieve the Rig Blueprints and Thermaplugg's Safe Combination from Gnomeregan and bring them to Nogg in Orgrimmar.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Nogg, Orgrimmar",
+       "mapRef": {
+        "name": "Nogg",
+        "href": "/map/kalimdor#pin=Nogg"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Rig BlueprintsThermaplugg's SafeThermaplugg's Safe CombinationMekgineer Thermaplugg",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9153",
+         "name": "Rig Blueprints",
+         "qty": null,
+         "source": "Thermaplugg's Safe"
+        },
+        {
+         "itemHref": "/item/9299",
+         "name": "Thermaplugg's Safe Combination",
+         "qty": null,
+         "source": "Mekgineer Thermaplugg"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9623",
+       "name": "Civinad Robes",
+       "type": "Chest, Cloth"
+      },
+      {
+       "itemHref": "/item/9624",
+       "name": "Triprunner Dungarees",
+       "type": "Legs, Leather"
+      },
+      {
+       "itemHref": "/item/9625",
+       "name": "Dual Reinforced Leggings",
+       "type": "Legs, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-2949",
+     "name": "Return of the Ring",
+     "levelText": "Level 34, from level 28",
+     "questText": "You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "The Sparklematic 5200, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Brilliant Gold Ring",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9362",
+         "name": "Brilliant Gold Ring",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,700 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

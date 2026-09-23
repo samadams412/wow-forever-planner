@@ -1,0 +1,309 @@
+{
+ "id": "the-deadmines",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Alliance5 quests",
+   "quests": [
+    {
+     "id": "quest-214",
+     "name": "Red Silk Bandanas",
+     "levelText": "Level 17, from level 14",
+     "questText": "Scout Riell at the Sentinel Hill Tower wants you to bring her 10 Red Silk Bandanas.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Defias Brotherhood, from The Defias Traitor, Westfall",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Scout Riell, Westfall",
+       "mapRef": {
+        "name": "Scout Riell",
+        "href": "/map/eastern-kingdoms#pin=Scout%20Riell"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Red Silk Bandana ×10Defias Blackguard, Defias Conjurer and Defias Digger and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/915",
+         "name": "Red Silk Bandana",
+         "qty": "×10",
+         "source": "Defias Blackguard, Defias Conjurer and Defias Digger and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,688 XP in the Forever beta1,250 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/2074",
+       "name": "Solid Shortblade",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/2089",
+       "name": "Scrimshaw Dagger",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/6094",
+       "name": "Piercing Axe",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/270005",
+       "name": "Monastic Hammer",
+       "type": "Main Hand, Mace"
+      }
+     ]
+    },
+    {
+     "id": "quest-168",
+     "name": "Collecting Memories",
+     "levelText": "Level 18, from level 14",
+     "questText": "Retrieve 4 Miners' Union Cards and return them to Wilder Thistlenettle in Stormwind.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Wilder Thistlenettle, Stormwind City",
+       "mapRef": {
+        "name": "Wilder Thistlenettle",
+        "href": "/map/eastern-kingdoms#pin=Wilder%20Thistlenettle"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Miners' Union Card ×4Skeletal Miner, Undead Dynamiter and Undead Excavator",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/1894",
+         "name": "Miners' Union Card",
+         "qty": "×4",
+         "source": "Skeletal Miner, Undead Dynamiter and Undead Excavator"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,350 XP",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/2037",
+       "name": "Tunneler's Boots",
+       "type": "Feet, Mail"
+      },
+      {
+       "itemHref": "/item/2036",
+       "name": "Dusty Mining Gloves",
+       "type": "Hands, Leather"
+      },
+      {
+       "itemHref": "/item/270007",
+       "name": "Worn Miner's Waistcord",
+       "type": "Waist, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-166",
+     "name": "The Defias Brotherhood",
+     "levelText": "Level 22, from level 14",
+     "questText": "Kill Edwin VanCleef and bring his head to Gryan Stoutmantle.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Defias Brotherhood, from The Defias Traitor, Westfall",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Gryan Stoutmantle, Westfall",
+       "mapRef": {
+        "name": "Gryan Stoutmantle",
+        "href": "/map/eastern-kingdoms#pin=Gryan%20Stoutmantle"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of VanCleefEdwin VanCleef",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/3637",
+         "name": "Head of VanCleef",
+         "qty": null,
+         "source": "Edwin VanCleef"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,750 XP in the Forever beta2,600 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6087",
+       "name": "Chausses of Westfall",
+       "type": "Legs, Mail"
+      },
+      {
+       "itemHref": "/item/2041",
+       "name": "Tunic of Westfall",
+       "type": "Chest, Leather"
+      },
+      {
+       "itemHref": "/item/2042",
+       "name": "Staff of Westfall",
+       "type": "Two-Hand, Staff"
+      }
+     ]
+    },
+    {
+     "id": "quest-167",
+     "name": "Oh Brother. . .",
+     "levelText": "Level 20, from level 15",
+     "questText": "Bring Foreman Thistlenettle's Explorers' League Badge to Wilder Thistlenettle in Stormwind.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Wilder Thistlenettle, Stormwind City",
+       "mapRef": {
+        "name": "Wilder Thistlenettle",
+        "href": "/map/eastern-kingdoms#pin=Wilder%20Thistlenettle"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Thistlenettle's BadgeForeman Thistlenettle",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/1875",
+         "name": "Thistlenettle's Badge",
+         "qty": null,
+         "source": "Foreman Thistlenettle"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,550 XP",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/1893",
+       "name": "Miner's Revenge",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/270012",
+       "name": "Miner's Workgloves",
+       "type": "Hands, Cloth"
+      },
+      {
+       "itemHref": "/item/270013",
+       "name": "Miner's Workboots",
+       "type": "Feet, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-2040",
+     "name": "Underground Assault",
+     "levelText": "Level 20, from level 15",
+     "questText": "Retrieve the Gnoam Sprecklesprocket from the Deadmines and return it to Shoni the Shilent in Stormwind.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Shoni the Shilent, Stormwind City",
+       "mapRef": {
+        "name": "Shoni the Shilent",
+        "href": "/map/eastern-kingdoms#pin=Shoni%20the%20Shilent"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Gnoam SprecklesprocketSneed's Shredder",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7365",
+         "name": "Gnoam Sprecklesprocket",
+         "qty": null,
+         "source": "Sneed's Shredder"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,813 XP in the Forever beta1,550 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7606",
+       "name": "Polar Gauntlets",
+       "type": "Hands, Mail"
+      },
+      {
+       "itemHref": "/item/7607",
+       "name": "Sable Wand",
+       "type": "Ranged, Wand"
+      },
+      {
+       "itemHref": "/item/270015",
+       "name": "Bravo's Armbands",
+       "type": "Wrist, Leather"
+      },
+      {
+       "itemHref": "/item/270016",
+       "name": "Dreamer's Leggings",
+       "type": "Legs, Leather"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

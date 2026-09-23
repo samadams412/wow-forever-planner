@@ -1,0 +1,567 @@
+{
+ "id": "maraudon",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions5 quests",
+   "quests": [
+    {
+     "id": "quest-7067",
+     "name": "The Pariah's Instructions",
+     "levelText": "Level 48, from level 39",
+     "questText": "Read the Pariah's Instructions. Afterwards, obtain the Amulet of Union from Maraudon and return it to the Centaur Pariah in southern Desolace.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Centaur Pariah, Desolace",
+       "mapRef": {
+        "name": "Centaur Pariah",
+        "href": "/map/kalimdor#pin=Centaur%20Pariah"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Amulet of Union",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17758",
+         "name": "Amulet of Union",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 40s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17774",
+       "name": "Mark of the Chosen",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7028",
+     "name": "Twisted Evils",
+     "levelText": "Level 47, from level 41",
+     "questText": "Collect 15 Theradric Crystal Carvings for Willow in Desolace.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Willow, Desolace",
+       "mapRef": {
+        "name": "Willow",
+        "href": "/map/kalimdor#pin=Willow"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Theradric Crystal Carving ×15Barbed Lasher, Cavern Lurker and Cavern Shambler and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17684",
+         "name": "Theradric Crystal Carving",
+         "qty": "×15",
+         "source": "Barbed Lasher, Cavern Lurker and Cavern Shambler and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17775",
+       "name": "Acumen Robes",
+       "type": "Chest, Cloth"
+      },
+      {
+       "itemHref": "/item/17776",
+       "name": "Sprightring Helm",
+       "type": "Head, Leather"
+      },
+      {
+       "itemHref": "/item/17777",
+       "name": "Relentless Chain",
+       "type": "Chest, Mail"
+      },
+      {
+       "itemHref": "/item/17779",
+       "name": "Hulkstone Pauldrons",
+       "type": "Shoulder, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-7044",
+     "name": "Legends of Maraudon",
+     "levelText": "Level 49, from level 41",
+     "questText": "Recover the two parts of the Scepter of Celebras: the Celebrian Rod and the Celebrian Diamond.  Find a way to speak with Celebras.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Cavindra, Desolace",
+       "mapRef": {
+        "name": "Cavindra",
+        "href": "/map/kalimdor#pin=Cavindra"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Celebrian DiamondLord VyletongueCelebrian RodNoxxion",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17703",
+         "name": "Celebrian Diamond",
+         "qty": null,
+         "source": "Lord Vyletongue"
+        },
+        {
+         "itemHref": "/item/17702",
+         "name": "Celebrian Rod",
+         "qty": null,
+         "source": "Noxxion"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-7046",
+     "name": "The Scepter of Celebras",
+     "levelText": "Level 49, from level 41",
+     "questText": "Assist Celebras the Redeemed while he creates the Scepter of Celebras.  Speak with him when the ritual is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Celebras the Redeemed, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,700 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17191",
+       "name": "Scepter of Celebras",
+       "type": "Quest"
+      }
+     ]
+    },
+    {
+     "id": "quest-7066",
+     "name": "Seed of Life",
+     "levelText": "Level 51, from level 45",
+     "questText": "Seek out Remulos in Moonglade and give him the Seed of Life.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Zaetar's Spirit, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Seed of Life",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17760",
+         "name": "Seed of Life",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 50s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance3 quests",
+   "quests": [
+    {
+     "id": "quest-7070",
+     "name": "Shadowshard Fragments",
+     "levelText": "Level 42, from level 38",
+     "questText": "Collect 10 Shadowshard Fragments from Maraudon and return them to Archmage Tervosh in Theramore on the coast of Dustwallow Marsh.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Archmage Tervosh, Dustwallow Marsh",
+       "mapRef": {
+        "name": "Archmage Tervosh",
+        "href": "/map/kalimdor#pin=Archmage%20Tervosh"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shadowshard Fragment ×10Shadowshard Rumbler and Shadowshard Smasher",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17756",
+         "name": "Shadowshard Fragment",
+         "qty": "×10",
+         "source": "Shadowshard Rumbler and Shadowshard Smasher"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17772",
+       "name": "Zealous Shadowshard Pendant",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17773",
+       "name": "Prodigious Shadowshard Pendant",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7041",
+     "name": "Vyletongue Corruption",
+     "levelText": "Level 47, from level 41",
+     "questText": "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.  Use the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.  Heal 8 plants by killing these Noxxious Scion, then return to Talendria in Nijel's Point.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Talendria, Desolace",
+       "mapRef": {
+        "name": "Talendria",
+        "href": "/map/kalimdor#pin=Talendria"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Filled Cerulean Vial",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17696",
+         "name": "Filled Cerulean Vial",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Noxxious Scion ×8",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17768",
+       "name": "Woodseed Hoop",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17778",
+       "name": "Sagebrush Girdle",
+       "type": "Waist, Leather"
+      },
+      {
+       "itemHref": "/item/17770",
+       "name": "Branchclaw Gauntlets",
+       "type": "Hands, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-7065",
+     "name": "Corruption of Earth and Seed",
+     "levelText": "Level 51, from level 45",
+     "questText": "Slay Princess Theradras and return to Keeper Marandis at Nijel's Point in Desolace.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Keeper Marandis, Desolace",
+       "mapRef": {
+        "name": "Keeper Marandis",
+        "href": "/map/kalimdor#pin=Keeper%20Marandis"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Princess Theradras",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "6,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17705",
+       "name": "Thrash Blade",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/17743",
+       "name": "Resurgence Rod",
+       "type": "Two-Hand, Staff"
+      },
+      {
+       "itemHref": "/item/17753",
+       "name": "Verdant Keeper's Aim",
+       "type": "Ranged, Bow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde3 quests",
+   "quests": [
+    {
+     "id": "quest-7068",
+     "name": "Shadowshard Fragments",
+     "levelText": "Level 42, from level 38",
+     "questText": "Collect 10 Shadowshard Fragments from Maraudon and return them to Uthel'nay in Orgrimmar.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Uthel'nay, Orgrimmar",
+       "mapRef": {
+        "name": "Uthel'nay",
+        "href": "/map/kalimdor#pin=Uthel&#x27;nay"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shadowshard Fragment ×10Shadowshard Rumbler and Shadowshard Smasher",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17756",
+         "name": "Shadowshard Fragment",
+         "qty": "×10",
+         "source": "Shadowshard Rumbler and Shadowshard Smasher"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17772",
+       "name": "Zealous Shadowshard Pendant",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17773",
+       "name": "Prodigious Shadowshard Pendant",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-7029",
+     "name": "Vyletongue Corruption",
+     "levelText": "Level 47, from level 41",
+     "questText": "Fill the Coated Cerulean Vial at the orange crystal pool in Maraudon.  Use the Filled Cerulean Vial on the Vylestem Vines to force the corrupted Noxxious Scion to emerge.  Heal 8 plants by killing these Noxxious Scion, then return to Vark Battlescar in Shadowprey Village.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Vark Battlescar, Desolace",
+       "mapRef": {
+        "name": "Vark Battlescar",
+        "href": "/map/kalimdor#pin=Vark%20Battlescar"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Filled Cerulean Vial",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17696",
+         "name": "Filled Cerulean Vial",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Noxxious Scion ×8",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17768",
+       "name": "Woodseed Hoop",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17778",
+       "name": "Sagebrush Girdle",
+       "type": "Waist, Leather"
+      },
+      {
+       "itemHref": "/item/17770",
+       "name": "Branchclaw Gauntlets",
+       "type": "Hands, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-7064",
+     "name": "Corruption of Earth and Seed",
+     "levelText": "Level 51, from level 45",
+     "questText": "Slay Princess Theradras and return to Selendra near Shadowprey Village in Desolace.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Selendra, Desolace",
+       "mapRef": {
+        "name": "Selendra",
+        "href": "/map/kalimdor#pin=Selendra"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Princess Theradras",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "6,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17705",
+       "name": "Thrash Blade",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/17743",
+       "name": "Resurgence Rod",
+       "type": "Two-Hand, Staff"
+      },
+      {
+       "itemHref": "/item/17753",
+       "name": "Verdant Keeper's Aim",
+       "type": "Ranged, Bow"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

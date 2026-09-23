@@ -1,0 +1,394 @@
+{
+ "id": "ruins-of-lordaeron",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Alliance4 quests",
+   "quests": [
+    {
+     "id": "quest-95250",
+     "name": "Abominable Creatures",
+     "levelText": "Level 21, from level 16",
+     "questText": "Collect the Head of the Baron in the Ruins of Lordaeron and bring it back to Captain Truman.",
+     "fields": [
+      {
+       "label": "Bring back",
+       "value": "Head of the BaronThe Baron",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/268518",
+         "name": "Head of the Baron",
+         "qty": null,
+         "source": "The Baron"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,188 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279864",
+       "name": "Monstrous Cleaver",
+       "type": "Two-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/279865",
+       "name": "Grave Shroud",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/279867",
+       "name": "Slain Baron's Signet",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-95195",
+     "name": "Bloodied Insignia",
+     "levelText": "Level 22, from level 16",
+     "questText": "Collect 10 Bloodied Insignias and take them to General Marcus Jonathan in Stormwind City.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Bloodied Insignia",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Bloodied Insignia ×10",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/268540",
+         "name": "Bloodied Insignia",
+         "qty": "×10",
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,750 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "45s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279868",
+       "name": "Duty Bound Leggings",
+       "type": "Legs, Leather"
+      },
+      {
+       "itemHref": "/item/279869",
+       "name": "Remembrance Armor",
+       "type": "Chest, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-92415",
+     "name": "Remember That I Love You",
+     "levelText": "Level 22, from level 15",
+     "questText": "Bring the Blood-Stained Letter to Orphan Matron Nightingale in Stormwind City.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Blood-Stained Letter",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,750 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279870",
+       "name": "Tarnished Locket",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-95189",
+     "name": "Crest of Lordaeron",
+     "levelText": "Level 22, from level 16",
+     "questText": "Return the Crest of Lordaeron to Lady Dena Kennedy in Stormwind City.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Crest of Lordaeron",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,750 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/280567",
+       "name": "Small Sack of Gems",
+       "type": "Other"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde6 quests",
+   "quests": [
+    {
+     "id": "quest-92422",
+     "name": "The Wrath of Rath'mael",
+     "levelText": "Level 22, from level 15",
+     "questText": "Kill Rath'mael in the Ruins of Lordaeron for Deathguard Kristof in Brill.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Deathguard Kristof, Tirisfal Glades",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Rath'mael",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/251533",
+       "name": "Forsaken Greataxe",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/251534",
+       "name": "Gnarled Necromancer's Staff",
+       "type": "Two-Hand, Staff"
+      }
+     ]
+    },
+    {
+     "id": "quest-92421",
+     "name": "Light's Justice",
+     "levelText": "Level 22, from level 15",
+     "questText": "Collect 25 Intact Limbs within The Ruins of Lordaeron for Morbin Lightbane in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Morbin Lightbane, Undercity",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Intact Limbs ×25",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/268580",
+         "name": "Intact Limbs",
+         "qty": "×25",
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,040 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "45s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279874",
+       "name": "The Stitcher",
+       "type": "Main Hand, Mace"
+      },
+      {
+       "itemHref": "/item/279875",
+       "name": "Spare Part Bindings",
+       "type": "Wrist, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-92401",
+     "name": "A Frightened Request",
+     "levelText": "Level 22, from level 15",
+     "questText": "Investigate the disappearance of Edward Heartweaver in the Ruins of Lordaeron.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Tabitha Heartweaver, Silverpine Forest",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "7,040 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/251485",
+       "name": "Edwards' Knife",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/251486",
+       "name": "Tabitha's Cuffs",
+       "type": "Wrist, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-95216",
+     "name": "The New Plague",
+     "levelText": "Level 22, from level 16",
+     "questText": "Collect the Highly Toxic Strain from Witherfang in Ruins of Lordaeron for Theodore Griffs in Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Theodore Griffs, Undercity",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Highly Toxic StrainWitherfang",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/275443",
+         "name": "Highly Toxic Strain",
+         "qty": null,
+         "source": "Witherfang"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,320 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279876",
+       "name": "Plaguefang",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/279877",
+       "name": "Blight Gloves",
+       "type": "Hands, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-97288",
+     "name": "Unending Torment",
+     "levelText": "Level 21, from level 16",
+     "questText": "Deliver the Abominable Head to someone within the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Abominable Head",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,280 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-95204",
+     "name": "Crest of Lordaeron",
+     "levelText": "Level 22, from level 16",
+     "questText": "Bring the Crest of Lordaeron to Oran Snakewrithe in Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Crest of Lordaeron",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,320 XP in the Forever beta",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/280567",
+       "name": "Small Sack of Gems",
+       "type": "Other"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

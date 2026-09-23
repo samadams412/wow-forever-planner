@@ -1,0 +1,366 @@
+{
+ "id": "zulfarrak",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions6 quests",
+   "quests": [
+    {
+     "id": "quest-2865",
+     "name": "Scarab Shells",
+     "levelText": "Level 45, from level 40",
+     "questText": "Bring 5 Uncracked Scarab Shells to Tran'rek in Gadgetzan.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Tran'rek, Tanaris",
+       "mapRef": {
+        "name": "Tran'rek",
+        "href": "/map/kalimdor#pin=Tran&#x27;rek"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Uncracked Scarab Shell ×5Scarab",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9238",
+         "name": "Uncracked Scarab Shell",
+         "qty": "×5",
+         "source": "Scarab"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-3042",
+     "name": "Troll Temper",
+     "levelText": "Level 45, from level 40",
+     "questText": "Bring 20 Vials of Troll Temper to Trenton Lighthammer in Gadgetzan.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Trenton Lighthammer, Tanaris",
+       "mapRef": {
+        "name": "Trenton Lighthammer",
+        "href": "/map/kalimdor#pin=Trenton%20Lighthammer"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Troll Temper ×20Antu'sul, Chief Ukorz Sandscalp and Dustwraith and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9523",
+         "name": "Troll Temper",
+         "qty": "×20",
+         "source": "Antu'sul, Chief Ukorz Sandscalp and Dustwraith and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 95s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2846",
+     "name": "Tiara of the Deep",
+     "levelText": "Level 46, from level 40",
+     "questText": "Bring the Tiara of the Deep to Tabetha in Dustwallow Marsh.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Tabetha, Dustwallow Marsh",
+       "mapRef": {
+        "name": "Tabetha",
+        "href": "/map/kalimdor#pin=Tabetha"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Tiara of the DeepHydromancer Velratha",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9234",
+         "name": "Tiara of the Deep",
+         "qty": null,
+         "source": "Hydromancer Velratha"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9527",
+       "name": "Spellshifter Rod",
+       "type": "Two-Hand, Staff"
+      },
+      {
+       "itemHref": "/item/9531",
+       "name": "Gemshale Pauldrons",
+       "type": "Shoulder, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-2768",
+     "name": "Divino-matic Rod",
+     "levelText": "Level 47, from level 40",
+     "questText": "Bring the Divino-matic Rod to Chief Engineer Bilgewhizzle in Gadgetzan.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Chief Engineer Bilgewhizzle, Tanaris",
+       "mapRef": {
+        "name": "Chief Engineer Bilgewhizzle",
+        "href": "/map/kalimdor#pin=Chief%20Engineer%20Bilgewhizzle"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Divino-matic RodSergeant Bly",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8548",
+         "name": "Divino-matic Rod",
+         "qty": null,
+         "source": "Sergeant Bly"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9533",
+       "name": "Masons Fraternity Ring",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/9534",
+       "name": "Engineer's Guild Headpiece",
+       "type": "Head, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-3527",
+     "name": "The Prophecy of Mosh'aru",
+     "levelText": "Level 47, from level 40",
+     "questText": "Bring the First and Second Mosh'aru Tablets to Yeh'kinya in Tanaris.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Screecher Spirits, from Yeh'kinya, Tanaris",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Yeh'kinya, Tanaris",
+       "mapRef": {
+        "name": "Yeh'kinya",
+        "href": "/map/kalimdor#pin=Yeh&#x27;kinya"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "First Mosh'aru TabletTheka the Martyr and Theka the Martyr ShapeshiftSecond Mosh'aru TabletHydromancer Velratha",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10660",
+         "name": "First Mosh'aru Tablet",
+         "qty": null,
+         "source": "Theka the Martyr and Theka the Martyr Shapeshift"
+        },
+        {
+         "itemHref": "/item/10661",
+         "name": "Second Mosh'aru Tablet",
+         "qty": null,
+         "source": "Hydromancer Velratha"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2770",
+     "name": "Gahz'rilla",
+     "levelText": "Level 50, from level 40",
+     "questText": "Bring Gahz'rilla's Electrified Scale to Wizzle Brassbolts in the Shimmering Flats.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Wizzle Brassbolts, Thousand Needles",
+       "mapRef": {
+        "name": "Wizzle Brassbolts",
+        "href": "/map/kalimdor#pin=Wizzle%20Brassbolts"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Gahz'rilla's Electrified ScaleGahz'rilla",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8707",
+         "name": "Gahz'rilla's Electrified Scale",
+         "qty": null,
+         "source": "Gahz'rilla"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "75s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11122",
+       "name": "Carrot on a Stick",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance1 quest",
+   "quests": [
+    {
+     "id": "quest-2991",
+     "name": "Nekrum's Medallion",
+     "levelText": "Level 47, from level 40",
+     "questText": "Bring Nekrum's Medallion to Thadius Grimshade in the Blasted Lands.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Thadius Grimshade, from Gryphon Master Talonaxe, The Hinterlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Thadius Grimshade, Blasted Lands",
+       "mapRef": {
+        "name": "Thadius Grimshade",
+        "href": "/map/eastern-kingdoms#pin=Thadius%20Grimshade"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Nekrum's MedallionNekrum Gutchewer",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9471",
+         "name": "Nekrum's Medallion",
+         "qty": null,
+         "source": "Nekrum Gutchewer"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

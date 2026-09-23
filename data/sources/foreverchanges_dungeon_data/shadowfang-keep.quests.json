@@ -1,0 +1,160 @@
+{
+ "id": "shadowfang-keep",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Horde3 quests",
+   "quests": [
+    {
+     "id": "quest-1013",
+     "name": "The Book of Ur",
+     "levelText": "Level 26, from level 16",
+     "questText": "Bring the Book of Ur to Keeper Bel'dugur at the Apothecarium in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Keeper Bel'dugur, Undercity",
+       "mapRef": {
+        "name": "Keeper Bel'dugur",
+        "href": "/map/eastern-kingdoms#pin=Keeper%20Bel&#x27;dugur"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Book of UrThe Book of Ur",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6283",
+         "name": "The Book of Ur",
+         "qty": null,
+         "source": "The Book of Ur"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,135 XP in the Forever beta2,100 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6335",
+       "name": "Grizzled Boots",
+       "type": "Feet, Leather"
+      },
+      {
+       "itemHref": "/item/4534",
+       "name": "Steel-clasped Bracers",
+       "type": "Wrist, Mail"
+      },
+      {
+       "itemHref": "/item/270030",
+       "name": "Tattered Mittens",
+       "type": "Hands, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-1098",
+     "name": "Deathstalkers in Shadowfang",
+     "levelText": "Level 25, from level 18",
+     "questText": "Find the Deathstalker Adamant and Deathstalker Vincent.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "High Executor Hadrec, Silverpine Forest",
+       "mapRef": {
+        "name": "High Executor Hadrec",
+        "href": "/map/eastern-kingdoms#pin=High%20Executor%20Hadrec"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,700 XP in the Forever beta2,000 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "18s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/3324",
+       "name": "Ghostly Mantle",
+       "type": "Shoulder, Cloth"
+      },
+      {
+       "itemHref": "/item/270023",
+       "name": "Tanned Shoulderpads",
+       "type": "Shoulder, Leather"
+      },
+      {
+       "itemHref": "/item/270024",
+       "name": "Bronzed Shoulderguards",
+       "type": "Shoulder, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-1014",
+     "name": "Arugal Must Die",
+     "levelText": "Level 27, from level 18",
+     "questText": "Kill Arugal and bring his head to Dalar Dawnweaver at the Sepulcher.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Dalar Dawnweaver, Silverpine Forest",
+       "mapRef": {
+        "name": "Dalar Dawnweaver",
+        "href": "/map/eastern-kingdoms#pin=Dalar%20Dawnweaver"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of ArugalArchmage Arugal",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5442",
+         "name": "Head of Arugal",
+         "qty": null,
+         "source": "Archmage Arugal"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "14,355 XP in the Forever beta3,300 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6414",
+       "name": "Seal of Sylvanas",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

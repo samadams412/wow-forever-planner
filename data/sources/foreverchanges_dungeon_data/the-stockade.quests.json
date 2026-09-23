@@ -1,0 +1,302 @@
+{
+ "id": "the-stockade",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Alliance6 quests",
+   "quests": [
+    {
+     "id": "quest-391",
+     "name": "The Stockade Riots",
+     "levelText": "Level 29, from level 16",
+     "questText": "Kill Bazil Thredd and bring his head back to Warden Thelwater at the Stockade.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Bazil Thredd, from Baros Alexston, Stormwind City",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Warden Thelwater, Stormwind City",
+       "mapRef": {
+        "name": "Warden Thelwater",
+        "href": "/map/eastern-kingdoms#pin=Warden%20Thelwater"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of Bazil ThreddBazil Thredd",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/2926",
+         "name": "Head of Bazil Thredd",
+         "qty": null,
+         "source": "Bazil Thredd"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,520 XP in the Forever beta2,650 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "25s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-386",
+     "name": "What Comes Around...",
+     "levelText": "Level 25, from level 22",
+     "questText": "Bring the head of Targorr the Dread to Guard Berton in Lakeshire.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Guard Berton, Redridge Mountains",
+       "mapRef": {
+        "name": "Guard Berton",
+        "href": "/map/eastern-kingdoms#pin=Guard%20Berton"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of TargorrTargorr the Dread",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/3630",
+         "name": "Head of Targorr",
+         "qty": null,
+         "source": "Targorr the Dread"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in the Forever beta2,000 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/3400",
+       "name": "Lucine Longsword",
+       "type": "Main Hand, Sword"
+      },
+      {
+       "itemHref": "/item/1317",
+       "name": "Hardened Root Staff",
+       "type": "Two-Hand, Staff"
+      }
+     ]
+    },
+    {
+     "id": "quest-377",
+     "name": "Crime and Punishment",
+     "levelText": "Level 26, from level 22",
+     "questText": "Councilman Millstipe of Darkshire wants you to bring him the hand of Dextren Ward.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Councilman Millstipe, Duskwood",
+       "mapRef": {
+        "name": "Councilman Millstipe",
+        "href": "/map/eastern-kingdoms#pin=Councilman%20Millstipe"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Hand of Dextren WardDextren Ward",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/3628",
+         "name": "Hand of Dextren Ward",
+         "qty": null,
+         "source": "Dextren Ward"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,720 XP in the Forever beta2,100 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/2033",
+       "name": "Ambassador's Boots",
+       "type": "Feet, Leather"
+      },
+      {
+       "itemHref": "/item/2906",
+       "name": "Darkshire Mail Leggings",
+       "type": "Legs, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-387",
+     "name": "Quell The Uprising",
+     "levelText": "Level 26, from level 22",
+     "questText": "Warden Thelwater of Stormwind wants you to kill 10 Defias Prisoners, 8 Defias Convicts, and 8 Defias Insurgents in The Stockade.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Warden Thelwater, Stormwind City",
+       "mapRef": {
+        "name": "Warden Thelwater",
+        "href": "/map/eastern-kingdoms#pin=Warden%20Thelwater"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Defias Prisoner ×10, Defias Convict ×8, Defias Insurgent ×8",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,480 XP in the Forever beta2,650 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "60s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-388",
+     "name": "The Color of Blood",
+     "levelText": "Level 26, from level 22",
+     "questText": "Nikova Raskol of Stormwind wants you to collect 10 Red Wool Bandanas.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Nikova Raskol, Stormwind City",
+       "mapRef": {
+        "name": "Nikova Raskol",
+        "href": "/map/eastern-kingdoms#pin=Nikova%20Raskol"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Red Wool Bandana ×10Bazil Thredd, Bruegal Ironknuckle and Defias Captive and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/2909",
+         "name": "Red Wool Bandana",
+         "qty": "×10",
+         "source": "Bazil Thredd, Bruegal Ironknuckle and Defias Captive and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,480 XP in the Forever beta2,650 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "60s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-378",
+     "name": "The Fury Runs Deep",
+     "levelText": "Level 27, from level 22",
+     "questText": "Motley Garmason wants Kam Deepfury's head brought to him at Dun Modr.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Dark Iron War, from Motley Garmason, Wetlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Motley Garmason, Wetlands",
+       "mapRef": {
+        "name": "Motley Garmason",
+        "href": "/map/eastern-kingdoms#pin=Motley%20Garmason"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of DeepfuryKam Deepfury",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/3640",
+         "name": "Head of Deepfury",
+         "qty": null,
+         "source": "Kam Deepfury"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/3562",
+       "name": "Belt of Vindication",
+       "type": "Waist, Leather"
+      },
+      {
+       "itemHref": "/item/1264",
+       "name": "Headbasher",
+       "type": "Two-Hand, Mace"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

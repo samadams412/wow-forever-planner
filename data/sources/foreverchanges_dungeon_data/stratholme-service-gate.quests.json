@@ -1,0 +1,662 @@
+{
+ "id": "stratholme-service-gate",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions12 quests",
+   "quests": [
+    {
+     "id": "quest-5848",
+     "name": "Of Love and Family",
+     "levelText": "Level 60, from level 52",
+     "questText": "Travel to Stratholme, in the northern part of the Plaguelands. It is in the Scarlet Bastion that you will find the painting 'Of Love and Family,' hidden behind another painting depicting the twin moons of our world.  Return the painting to Tirion Fordring.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Of Love and Family, from Tirion Fordring, Eastern Plaguelands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Artist Renfray, Western Plaguelands",
+       "mapRef": {
+        "name": "Artist Renfray",
+        "href": "/map/eastern-kingdoms#pin=Artist%20Renfray"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Of Love and FamilyUnfinished Painting",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/14679",
+         "name": "Of Love and Family",
+         "qty": null,
+         "source": "Unfinished Painting"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5263",
+     "name": "Above and Beyond",
+     "levelText": "Level 60, from level 55",
+     "questText": "Venture to Stratholme and destroy Baron Rivendare. Take his head and return to Duke Nicholas Zverenhoff.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Truth Comes Crashing Down, from the item Head of Balnazzar",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Duke Nicholas Zverenhoff, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Duke Nicholas Zverenhoff",
+        "href": "/map/eastern-kingdoms#pin=Duke%20Nicholas%20Zverenhoff"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of Baron RivendareBaron Rivendare",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13251",
+         "name": "Head of Baron Rivendare",
+         "qty": null,
+         "source": "Baron Rivendare"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5125",
+     "name": "Aurius' Reckoning",
+     "levelText": "Level 60, from level 55",
+     "questText": null,
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Medallion of Faith, from Aurius",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Aurius, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,850 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17044",
+       "name": "Will of the Martyr",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17045",
+       "name": "Blood of the Martyr",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5243",
+     "name": "Houses of the Holy",
+     "levelText": "Level 60, from level 55",
+     "questText": "Travel to Stratholme, in the north. Search the supply crates that litter the city and recover 5 Stratholme Holy Water. Return to Leonid Barthalomew the Revered when you have collected enough of the blessed fluid.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Leonid Barthalomew the Revered, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Leonid Barthalomew the Revered",
+        "href": "/map/eastern-kingdoms#pin=Leonid%20Barthalomew%20the%20Revered"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Stratholme Holy Water ×5Stratholme Supply Crate and Supply Crate",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13180",
+         "name": "Stratholme Holy Water",
+         "qty": "×5",
+         "source": "Stratholme Supply Crate and Supply Crate"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13216",
+       "name": "Crown of the Penitent",
+       "type": "Head, Cloth"
+      },
+      {
+       "itemHref": "/item/13217",
+       "name": "Band of the Penitent",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/3928",
+       "name": "Superior Healing Potion",
+       "type": "Potions"
+      },
+      {
+       "itemHref": "/item/6149",
+       "name": "Greater Mana Potion",
+       "type": "Potions"
+      }
+     ]
+    },
+    {
+     "id": "quest-5213",
+     "name": "The Active Agent",
+     "levelText": "Level 60, from level 55",
+     "questText": "Travel to Stratholme and search the ziggurats. Find and return new Scourge Data to Betina Bigglezink.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Betina Bigglezink, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Betina Bigglezink",
+        "href": "/map/eastern-kingdoms#pin=Betina%20Bigglezink"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Scourge DataScourge Data",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13176",
+         "name": "Scourge Data",
+         "qty": null,
+         "source": "Scourge Data"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,850 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13209",
+       "name": "Seal of the Dawn",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/19812",
+       "name": "Rune of the Dawn",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5212",
+     "name": "The Flesh Does Not Lie",
+     "levelText": "Level 60, from level 55",
+     "questText": "Recover 10 Plagued Flesh Samples from Stratholme and return them to Betina Bigglezink. You suspect that any creature in Stratholme would have said flesh sample.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Betina Bigglezink, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Betina Bigglezink",
+        "href": "/map/eastern-kingdoms#pin=Betina%20Bigglezink"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Plagued Flesh Sample ×10Baron Rivendare, Baroness Anastari and Bile Spewer and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13174",
+         "name": "Plagued Flesh Sample",
+         "qty": "×10",
+         "source": "Baron Rivendare, Baroness Anastari and Bile Spewer and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5214",
+     "name": "The Great Fras Siabi",
+     "levelText": "Level 60, from level 55",
+     "questText": "Find Fras Siabi's smoke shop in Stratholme and recover a box of Siabi's Premium Tobacco. Return to Smokey LaRue when the job is done.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Smokey LaRue, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Smokey LaRue",
+        "href": "/map/eastern-kingdoms#pin=Smokey%20LaRue"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Siabi's Premium TobaccoFras Siabi",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13172",
+         "name": "Siabi's Premium Tobacco",
+         "qty": null,
+         "source": "Fras Siabi"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,550 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13171",
+       "name": "Smokey's Lighter",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5282",
+     "name": "The Restless Souls",
+     "levelText": "Level 60, from level 55",
+     "questText": "Use Egan's Blaster on the ghostly and spectral citizens of Stratholme. When the restless souls break free from their ghostly shells, use the blaster again - freedom will be theirs!  Free 15 Restless Souls and return to Egan.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Restless Souls, from Caretaker Alen, Eastern Plaguelands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Egan, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Egan",
+        "href": "/map/eastern-kingdoms#pin=Egan"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Restless Soul ×15",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,850 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13315",
+       "name": "Testament of Hope",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5463",
+     "name": "Menethil's Gift",
+     "levelText": "Level 60, from level 57",
+     "questText": "Travel to Stratholme and find Menethil's Gift. Place the Keepsake of Remembrance upon the unholy ground.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Dying, Ras Frostwhisper, from Magistrate Marduke, Western Plaguelands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Leonid Barthalomew the Revered, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Leonid Barthalomew the Revered",
+        "href": "/map/eastern-kingdoms#pin=Leonid%20Barthalomew%20the%20Revered"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Keepsake of RemembranceKeepsake of Remembrance",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/13585",
+         "name": "Keepsake of Remembrance",
+         "qty": null,
+         "source": "Keepsake of Remembrance"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8945",
+     "name": "Dead Man's Plea",
+     "levelText": "Level 60, from level 58",
+     "questText": "Go into Stratholme and rescue Ysida Harmon from Baron Rivendare.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Anthion Harmon, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Anthion Harmon",
+        "href": "/map/eastern-kingdoms#pin=Anthion%20Harmon"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Ysida Harmon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/22137",
+       "name": "Ysida's Satchel",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-8968",
+     "name": "The Left Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth Jarien and Sothos and slay them. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Left Piece of Lord Valthalak's AmuletIsalien, Jarien and Kormok and othersBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/21984",
+         "name": "Left Piece of Lord Valthalak's Amulet",
+         "qty": null,
+         "source": "Isalien, Jarien and Kormok and others"
+        },
+        {
+         "itemHref": "/item/22051",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Jarien, Sothos",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8991",
+     "name": "The Right Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth Jarien and Sothos and slay them. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "More Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lord Valthalak's AmuletBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22048",
+         "name": "Lord Valthalak's Amulet",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/22051",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Jarien, Sothos",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde1 quest",
+   "quests": [
+    {
+     "id": "quest-6163",
+     "name": "Ramstein",
+     "levelText": "Level 60, from level 56",
+     "questText": "Travel to Stratholme and slay Ramstein the Gorger. Take his head as a souvenir for Nathanos.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Duskwing, Oh How I Hate Thee..., from Nathanos Blightcaller, Eastern Plaguelands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Nathanos Blightcaller, Eastern Plaguelands",
+       "mapRef": {
+        "name": "Nathanos Blightcaller",
+        "href": "/map/eastern-kingdoms#pin=Nathanos%20Blightcaller"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of Ramstein the GorgerRamstein the Gorger",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/15880",
+         "name": "Head of Ramstein the Gorger",
+         "qty": null,
+         "source": "Ramstein the Gorger"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18022",
+       "name": "Royal Seal of Alexis",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/17001",
+       "name": "Elemental Circle",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

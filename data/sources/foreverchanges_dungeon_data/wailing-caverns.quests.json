@@ -1,0 +1,399 @@
+{
+ "id": "wailing-caverns",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions5 quests",
+   "quests": [
+    {
+     "id": "quest-1486",
+     "name": "Deviate Hides",
+     "levelText": "Level 17, from level 13",
+     "questText": "Nalpak in the Wailing Caverns wants 20 Deviate Hides.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Nalpak, The Barrens",
+       "mapRef": {
+        "name": "Nalpak",
+        "href": "/map/kalimdor#pin=Nalpak"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Deviate Hide ×20Deviate Adder, Deviate Coiler and Deviate Creeper and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6443",
+         "name": "Deviate Hide",
+         "qty": "×20",
+         "source": "Deviate Adder, Deviate Coiler and Deviate Creeper and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,640 XP in the Forever beta1,600 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "18s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/918",
+       "name": "Deviate Hide Pack",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/6480",
+       "name": "Slick Deviate Leggings",
+       "type": "Legs, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-1491",
+     "name": "Smart Drinks",
+     "levelText": "Level 18, from level 13",
+     "questText": "Bring 6 portions of Wailing Essence to Mebok Mizzyrix in Ratchet.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Raptor Horns, from Mebok Mizzyrix, The Barrens",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Mebok Mizzyrix, The Barrens",
+       "mapRef": {
+        "name": "Mebok Mizzyrix",
+        "href": "/map/kalimdor#pin=Mebok%20Mizzyrix"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Wailing Essence ×6Devouring Ectoplasm, Evolving Ectoplasm and Nightmare Ectoplasm",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6464",
+         "name": "Wailing Essence",
+         "qty": "×6",
+         "source": "Devouring Ectoplasm, Evolving Ectoplasm and Nightmare Ectoplasm"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,915 XP in the Forever beta1,350 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "10s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-959",
+     "name": "Trouble at the Docks",
+     "levelText": "Level 18, from level 14",
+     "questText": "Crane Operator Bigglefuzz in Ratchet wants you to retrieve the bottle of 99-Year-Old Port from Mad Magglish who is hiding in the Wailing Caverns.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Crane Operator Bigglefuzz, The Barrens",
+       "mapRef": {
+        "name": "Crane Operator Bigglefuzz",
+        "href": "/map/kalimdor#pin=Crane%20Operator%20Bigglefuzz"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "99-Year-Old PortMad Magglish",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5334",
+         "name": "99-Year-Old Port",
+         "qty": null,
+         "source": "Mad Magglish"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,915 XP in the Forever beta1,350 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "10s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-1487",
+     "name": "Deviate Eradication",
+     "levelText": "Level 21, from level 15",
+     "questText": "Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Ebru, The Barrens",
+       "mapRef": {
+        "name": "Ebru",
+        "href": "/map/kalimdor#pin=Ebru"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Deviate Ravager ×7, Deviate Viper ×7, Deviate Shambler ×7, Deviate Dreadfang ×7",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,945 XP in the Forever beta2,050 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "25s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6476",
+       "name": "Pattern: Deviate Scale Belt",
+       "type": "Leatherworking"
+      },
+      {
+       "itemHref": "/item/8071",
+       "name": "Sizzle Stick",
+       "type": "Ranged, Wand"
+      },
+      {
+       "itemHref": "/item/6481",
+       "name": "Dagmire Gauntlets",
+       "type": "Hands, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-6981",
+     "name": "The Glowing Shard",
+     "levelText": "Level 26, from level 15",
+     "questText": "Travel to Ratchet to find someone that can tell you more about the glowing shard.  Then, deliver the shard as you are directed.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Glowing Shard",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Glowing ShardMutanus the Devourer",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10441",
+         "name": "Glowing Shard",
+         "qty": null,
+         "source": "Mutanus the Devourer"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,685 XP in the Forever beta2,650 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde2 quests",
+   "quests": [
+    {
+     "id": "quest-914",
+     "name": "Leaders of the Fang",
+     "levelText": "Level 22, from level 11",
+     "questText": "Bring the Gems of Cobrahn, Anacondra, Pythas and Serpentis to Nara Wildmane in Thunder Bluff.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Nara Wildmane, from Arch Druid Hamuul Runetotem, Thunder Bluff",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Nara Wildmane, Thunder Bluff",
+       "mapRef": {
+        "name": "Nara Wildmane",
+        "href": "/map/kalimdor#pin=Nara%20Wildmane"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Gem of CobrahnLord CobrahnGem of AnacondraLady AnacondraGem of PythasLord PythasGem of SerpentisLord Serpentis",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/9738",
+         "name": "Gem of Cobrahn",
+         "qty": null,
+         "source": "Lord Cobrahn"
+        },
+        {
+         "itemHref": "/item/9739",
+         "name": "Gem of Anacondra",
+         "qty": null,
+         "source": "Lady Anacondra"
+        },
+        {
+         "itemHref": "/item/9740",
+         "name": "Gem of Pythas",
+         "qty": null,
+         "source": "Lord Pythas"
+        },
+        {
+         "itemHref": "/item/9741",
+         "name": "Gem of Serpentis",
+         "qty": null,
+         "source": "Lord Serpentis"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,380 XP in the Forever beta2,200 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6505",
+       "name": "Crescent Staff",
+       "type": "Two-Hand, Staff"
+      },
+      {
+       "itemHref": "/item/6504",
+       "name": "Wingblade",
+       "type": "Main Hand, Sword"
+      },
+      {
+       "itemHref": "/item/270018",
+       "name": "Hammerbone",
+       "type": "Two-Hand, Mace"
+      }
+     ]
+    },
+    {
+     "id": "quest-962",
+     "name": "Serpentbloom",
+     "levelText": "Level 18, from level 14",
+     "questText": "Apothecary Zamah in Thunder Bluff wants you to collect 10 Serpentbloom.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Apothecary Zamah, Thunder Bluff",
+       "mapRef": {
+        "name": "Apothecary Zamah",
+        "href": "/map/kalimdor#pin=Apothecary%20Zamah"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Serpentbloom ×10Serpentbloom",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5339",
+         "name": "Serpentbloom",
+         "qty": "×10",
+         "source": "Serpentbloom"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,930 XP in the Forever beta1,350 in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "10s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10919",
+       "name": "Apothecary Gloves",
+       "type": "Hands, Cloth"
+      },
+      {
+       "itemHref": "/item/270008",
+       "name": "Heat Resistant Mitts",
+       "type": "Hands, Leather"
+      },
+      {
+       "itemHref": "/item/270009",
+       "name": "Safety Boots",
+       "type": "Feet, Mail"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

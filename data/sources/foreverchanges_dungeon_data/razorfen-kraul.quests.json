@@ -1,0 +1,326 @@
+{
+ "id": "razorfen-kraul",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions2 quests",
+   "quests": [
+    {
+     "id": "quest-1221",
+     "name": "Blueleaf Tubers",
+     "levelText": "Level 26, from level 20",
+     "questText": "Grab a Crate with Holes. Grab a Snufflenose Command Stick. Grab and read the Snufflenose Owner's Manual.  In Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers.  Bring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate with Holes to Mebok Mizzyrix in Ratchet.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Mebok Mizzyrix, The Barrens",
+       "mapRef": {
+        "name": "Mebok Mizzyrix",
+        "href": "/map/kalimdor#pin=Mebok%20Mizzyrix"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Blueleaf Tuber ×6Blueleaf TuberCrate With HolesCrate with HolesSnufflenose Owner's ManualSnufflenose Owner's ManualSnufflenose Command StickSnufflenose Command Sticks",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5876",
+         "name": "Blueleaf Tuber",
+         "qty": "×6",
+         "source": "Blueleaf Tuber"
+        },
+        {
+         "itemHref": "/item/5880",
+         "name": "Crate With Holes",
+         "qty": null,
+         "source": "Crate with Holes"
+        },
+        {
+         "itemHref": "/item/5897",
+         "name": "Snufflenose Owner's Manual",
+         "qty": null,
+         "source": "Snufflenose Owner's Manual"
+        },
+        {
+         "itemHref": "/item/6684",
+         "name": "Snufflenose Command Stick",
+         "qty": null,
+         "source": "Snufflenose Command Sticks"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,875 XP in the Forever beta2,100 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6755",
+       "name": "A Small Container of Gems",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-1144",
+     "name": "Willix the Importer",
+     "levelText": "Level 30, from level 23",
+     "questText": "Escort Willix the Importer out of Razorfen Kraul.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Willix the Importer, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "11,438 XP in the Forever beta3,050 in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6748",
+       "name": "Monkey Ring",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/6750",
+       "name": "Snake Hoop",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/6749",
+       "name": "Tiger Band",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance2 quests",
+   "quests": [
+    {
+     "id": "quest-1142",
+     "name": "Mortality Wanes",
+     "levelText": "Level 30, from level 25",
+     "questText": "Find and return Treshala's Pendant to Treshala Fallowbrook in Darnassus.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Heralath Fallowbrook, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Treshala's PendantAggem Thorncurse, Charlga Razorflank and Death Speaker Jargba and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5825",
+         "name": "Treshala's Pendant",
+         "qty": null,
+         "source": "Aggem Thorncurse, Charlga Razorflank and Death Speaker Jargba and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6751",
+       "name": "Mourning Shawl",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/6752",
+       "name": "Lancer Boots",
+       "type": "Feet, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-1101",
+     "name": "The Crone of the Kraul",
+     "levelText": "Level 34, from level 29",
+     "questText": "Bring Razorflank's Medallion to Falfindel Waywarder in Thalanaar.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Lonebrow's Journal, from the item Henrig Lonebrow's Journal",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Falfindel Waywarder, Feralas",
+       "mapRef": {
+        "name": "Falfindel Waywarder",
+        "href": "/map/kalimdor#pin=Falfindel%20Waywarder"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Razorflank's MedallionCharlga Razorflank",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5792",
+         "name": "Razorflank's Medallion",
+         "qty": null,
+         "source": "Charlga Razorflank"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,350 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/4197",
+       "name": "Berylline Pads",
+       "type": "Shoulder, Cloth"
+      },
+      {
+       "itemHref": "/item/6742",
+       "name": "Stonefist Girdle",
+       "type": "Waist, Mail"
+      },
+      {
+       "itemHref": "/item/6725",
+       "name": "Marbled Buckler",
+       "type": "Off Hand, Shield"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde2 quests",
+   "quests": [
+    {
+     "id": "quest-1102",
+     "name": "A Vengeful Fate",
+     "levelText": "Level 34, from level 29",
+     "questText": "Bring Razorflank's Heart to Auld Stonespire in Thunder Bluff.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Auld Stonespire, Thunder Bluff",
+       "mapRef": {
+        "name": "Auld Stonespire",
+        "href": "/map/kalimdor#pin=Auld%20Stonespire"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Razorflank's HeartCharlga Razorflank",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5793",
+         "name": "Razorflank's Heart",
+         "qty": null,
+         "source": "Charlga Razorflank"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/4197",
+       "name": "Berylline Pads",
+       "type": "Shoulder, Cloth"
+      },
+      {
+       "itemHref": "/item/6742",
+       "name": "Stonefist Girdle",
+       "type": "Waist, Mail"
+      },
+      {
+       "itemHref": "/item/6725",
+       "name": "Marbled Buckler",
+       "type": "Off Hand, Shield"
+      }
+     ]
+    },
+    {
+     "id": "quest-1109",
+     "name": "Going, Going, Guano!",
+     "levelText": "Level 33, from level 30",
+     "questText": "Bring 1 pile of Kraul Guano to Master Apothecary Faranell in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Master Apothecary Faranell, Undercity",
+       "mapRef": {
+        "name": "Master Apothecary Faranell",
+        "href": "/map/eastern-kingdoms#pin=Master%20Apothecary%20Faranell"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Kraul GuanoGreater Kraul Bat and Kraul Bat",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5801",
+         "name": "Kraul Guano",
+         "qty": null,
+         "source": "Greater Kraul Bat and Kraul Bat"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

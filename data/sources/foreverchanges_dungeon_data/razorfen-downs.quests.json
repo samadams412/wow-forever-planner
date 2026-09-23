@@ -1,0 +1,321 @@
+{
+ "id": "razorfen-downs",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions3 quests",
+   "quests": [
+    {
+     "id": "quest-6626",
+     "name": "A Host of Evil",
+     "levelText": "Level 35, from level 28",
+     "questText": "Kill 8 Razorfen Battleguard, 8 Razorfen Thornweavers, and 8 Death's Head Cultists and return to Myriam Moonsinger near the entrance to Razorfen Downs.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Myriam Moonsinger, The Barrens",
+       "mapRef": {
+        "name": "Myriam Moonsinger",
+        "href": "/map/kalimdor#pin=Myriam%20Moonsinger"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Razorfen Battleguard ×8, Razorfen Thornweaver ×8, Death's Head Cultist ×8",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "3,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "75s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-3525",
+     "name": "Extinguishing the Idol",
+     "levelText": "Level 37, from level 32",
+     "questText": "Escort Belnistrasz to the Quilboar's idol in Razorfen Downs.  Protect Belnistrasz while he performs the ritual to shut down the idol.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Belnistrasz, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "4,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10710",
+       "name": "Dragonclaw Ring",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-3523",
+     "name": "Scourge of the Downs",
+     "levelText": "Level 37, from level 32",
+     "questText": "If you agree to aid Belnistrasz, speak with him again and hand the Oathstone he gave you back to him.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Belnistrasz, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Belnistrasz's Oathstone",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10682",
+         "name": "Belnistrasz's Oathstone",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "290 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance1 quest",
+   "quests": [
+    {
+     "id": "quest-3636",
+     "name": "Bring the Light",
+     "levelText": "Level 42, from level 39",
+     "questText": "Archbishop Bendictus wants you to slay Amnennar the Coldbringer in Razorfen Downs.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Archbishop Benedictus, Stormwind City",
+       "mapRef": {
+        "name": "Archbishop Benedictus",
+        "href": "/map/eastern-kingdoms#pin=Archbishop%20Benedictus"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Amnennar the Coldbringer",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "4,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10823",
+       "name": "Vanquisher's Sword",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/10824",
+       "name": "Amberglow Talisman",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde3 quests",
+   "quests": [
+    {
+     "id": "quest-6521",
+     "name": "An Unholy Alliance",
+     "levelText": "Level 36, from level 28",
+     "questText": "Bring Ambassador Malcin's Head to Varimathras in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Varimathras, Undercity",
+       "mapRef": {
+        "name": "Varimathras",
+        "href": "/map/eastern-kingdoms#pin=Varimathras"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Ambassador Malcin's HeadAmbassador Malcin",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17009",
+         "name": "Ambassador Malcin's Head",
+         "qty": null,
+         "source": "Ambassador Malcin"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "20s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/17039",
+       "name": "Skullbreaker",
+       "type": "Main Hand, Mace"
+      },
+      {
+       "itemHref": "/item/17042",
+       "name": "Nail Spitter",
+       "type": "Ranged, Gun"
+      },
+      {
+       "itemHref": "/item/17043",
+       "name": "Zealot's Robe",
+       "type": "Chest, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-6522",
+     "name": "An Unholy Alliance",
+     "levelText": "Level 36, from level 28",
+     "questText": "Take the Small Scroll to Varimathras in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Small Scroll",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Small ScrollCharlga Razorflank",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/17008",
+         "name": "Small Scroll",
+         "qty": null,
+         "source": "Charlga Razorflank"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,500 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "40s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-3341",
+     "name": "Bring the End",
+     "levelText": "Level 42, from level 37",
+     "questText": "Andrew Brownell wants you to kill Amnennar the Coldbringer and return his skull.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Andrew Brownell, Undercity",
+       "mapRef": {
+        "name": "Andrew Brownell",
+        "href": "/map/eastern-kingdoms#pin=Andrew%20Brownell"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Skull of the ColdbringerAmnennar the Coldbringer",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10420",
+         "name": "Skull of the Coldbringer",
+         "qty": null,
+         "source": "Amnennar the Coldbringer"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "4,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/10823",
+       "name": "Vanquisher's Sword",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/10824",
+       "name": "Amberglow Talisman",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

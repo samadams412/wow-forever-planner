@@ -1,0 +1,1024 @@
+{
+ "id": "uldaman",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions2 quests",
+   "quests": [
+    {
+     "id": "quest-2418",
+     "name": "Power Stones",
+     "levelText": "Level 36, from level 30",
+     "questText": "Bring 8 Dentrium Power Stones and 8 An'Alleum Power Stones to Rigglefuzz in the Badlands.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Rigglefuzz, Badlands",
+       "mapRef": {
+        "name": "Rigglefuzz",
+        "href": "/map/eastern-kingdoms#pin=Rigglefuzz"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Dentrium Power Stone ×8Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and othersAn'Alleum Power Stone ×8Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8009",
+         "name": "Dentrium Power Stone",
+         "qty": "×8",
+         "source": "Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and others"
+        },
+        {
+         "itemHref": "/item/8052",
+         "name": "An'Alleum Power Stone",
+         "qty": "×8",
+         "source": "Shadowforge Ambusher, Shadowforge Archaeologist and Shadowforge Darkcaster and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,500 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9522",
+       "name": "Energized Stone Circle",
+       "type": "Off Hand, Shield"
+      },
+      {
+       "itemHref": "/item/10358",
+       "name": "Duracin Bracers",
+       "type": "Wrist, Mail"
+      },
+      {
+       "itemHref": "/item/10359",
+       "name": "Everlast Boots",
+       "type": "Feet, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-709",
+     "name": "Solution to Doom",
+     "levelText": "Level 40, from level 30",
+     "questText": "Bring the Tablet of Ryun'eh to Theldurin the Lost.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Theldurin the Lost, Badlands",
+       "mapRef": {
+        "name": "Theldurin the Lost",
+        "href": "/map/eastern-kingdoms#pin=Theldurin%20the%20Lost"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Tablet of Ryun'ehAncient Chest",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/4631",
+         "name": "Tablet of Ryun'eh",
+         "qty": null,
+         "source": "Ancient Chest"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,150 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/4746",
+       "name": "Doomsayer's Robe",
+       "type": "Chest, Cloth"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance12 quests",
+   "quests": [
+    {
+     "id": "quest-704",
+     "name": "Agmond's Fate",
+     "levelText": "Level 38, from level 30",
+     "questText": "Bring 4 Carved Stone Urns to Prospector Ironband in Loch Modan.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Murdaloc, from Battered Dwarven Skeleton, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Prospector Ironband, Loch Modan",
+       "mapRef": {
+        "name": "Prospector Ironband",
+        "href": "/map/eastern-kingdoms#pin=Prospector%20Ironband"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Carved Stone Urn ×4Carved Stone Urn",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/4610",
+         "name": "Carved Stone Urn",
+         "qty": "×4",
+         "source": "Carved Stone Urn"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,850 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/4980",
+       "name": "Prospector Gloves",
+       "type": "Hands, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-1360",
+     "name": "Reclaimed Treasures",
+     "levelText": "Level 43, from level 33",
+     "questText": "Get Krom Stoutarm's treasured possession from his chest in the North Common Hall of Uldaman, and bring it to him in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Krom Stoutarm, Dun Morogh",
+       "mapRef": {
+        "name": "Krom Stoutarm",
+        "href": "/map/eastern-kingdoms#pin=Krom%20Stoutarm"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Krom Stoutarm's TreasureKrom Stoutarm's Chest",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8027",
+         "name": "Krom Stoutarm's Treasure",
+         "qty": null,
+         "source": "Krom Stoutarm's Chest"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "60s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-722",
+     "name": "Amulet of Secrets",
+     "levelText": "Level 40, from level 35",
+     "questText": "Find Hammertoe's Amulet and return it to him in Uldaman.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "A Sign of Hope, from Prospector Ryedol, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Hammertoe Grez, Loch Modan",
+       "mapRef": {
+        "name": "Hammertoe Grez",
+        "href": "/map/eastern-kingdoms#pin=Hammertoe%20Grez"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Hammertoe's AmuletMagregan Deepshadow",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/4635",
+         "name": "Hammertoe's Amulet",
+         "qty": null,
+         "source": "Magregan Deepshadow"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,150 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2240",
+     "name": "The Hidden Chamber",
+     "levelText": "Level 40, from level 35",
+     "questText": "Read Baelog's Journal, explore the hidden chamber, then report to Prospector Stormpike.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Lost Dwarves, from Prospector Stormpike, Dun Morogh",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Baelog, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "3,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9626",
+       "name": "Dwarven Charge",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/9627",
+       "name": "Explorer's League Lodestar",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-1139",
+     "name": "The Lost Tablets of Will",
+     "levelText": "Level 45, from level 35",
+     "questText": "Find the Tablet of Will, and return them to Advisor Belgrum in Ironforge.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "An Ambassador of Evil, from Historian Karnik, Dun Morogh",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Advisor Belgrum, Dun Morogh",
+       "mapRef": {
+        "name": "Advisor Belgrum",
+        "href": "/map/eastern-kingdoms#pin=Advisor%20Belgrum"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Tablet of WillTablet of Will",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5824",
+         "name": "Tablet of Will",
+         "qty": null,
+         "source": "Tablet of Will"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,850 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 30s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6723",
+       "name": "Medal of Courage",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-17",
+     "name": "Uldaman Reagent Run",
+     "levelText": "Level 42, from level 36",
+     "questText": "Bring 12 Magenta Fungus Caps to Ghak Healtouch in Thelsamar.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Badlands Reagent Run, from Ghak Healtouch, Loch Modan",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Ghak Healtouch, Loch Modan",
+       "mapRef": {
+        "name": "Ghak Healtouch",
+        "href": "/map/eastern-kingdoms#pin=Ghak%20Healtouch"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Magenta Fungus Cap ×12Magenta Cap Clusters",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8047",
+         "name": "Magenta Fungus Cap",
+         "qty": "×12",
+         "source": "Magenta Cap Clusters"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "55s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9030",
+       "name": "Restorative Potion",
+       "type": "Potions"
+      }
+     ]
+    },
+    {
+     "id": "quest-2199",
+     "name": "Lore for a Price",
+     "levelText": "Level 41, from level 37",
+     "questText": "Bring five silver bars to Talvash del Kissel in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Talvash del Kissel, Dun Morogh",
+       "mapRef": {
+        "name": "Talvash del Kissel",
+        "href": "/map/eastern-kingdoms#pin=Talvash%20del%20Kissel"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Silver Bar ×5Alliance Chest, Alliance Strongbox and Battered Chest and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/2842",
+         "name": "Silver Bar",
+         "qty": "×5",
+         "source": "Alliance Chest, Alliance Strongbox and Battered Chest and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2198",
+     "name": "The Shattered Necklace",
+     "levelText": "Level 41, from level 37",
+     "questText": "Search for the original creator of the shattered necklace to learn of its potential value.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Shattered Necklace",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shattered NecklaceShadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7666",
+         "name": "Shattered Necklace",
+         "qty": null,
+         "source": "Shadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2204",
+     "name": "Restoring the Necklace",
+     "levelText": "Level 44, from level 37",
+     "questText": "Obtain a power source from the most powerful construct you can find in Uldaman, and deliver it to Talvash del Kissel in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Talvash's Scrying Bowl, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shattered Necklace Power SourceArchaedas",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7672",
+         "name": "Shattered Necklace Power Source",
+         "qty": null,
+         "source": "Archaedas"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "925 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2361",
+     "name": "Restoring the Necklace",
+     "levelText": "Level 44, from level 37",
+     "questText": null,
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Talvash del Kissel, Dun Morogh",
+       "mapRef": {
+        "name": "Talvash del Kissel",
+        "href": "/map/eastern-kingdoms#pin=Talvash%20del%20Kissel"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7673",
+       "name": "Talvash's Enhancing Necklace",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-2201",
+     "name": "Find the Gems",
+     "levelText": "Level 43, from level 40",
+     "questText": "Find the ruby, sapphire, and topaz that are scattered throughout Uldaman.  Once acquired, contact Talvash del Kissel remotely by using the Phial of Scrying he previously gave you.  From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz has been hidden in an urn in one of the Trogg areas, near some Alliance dwarves.  * The sapphire has been claimed by Grimlok, the trogg leader.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Back to Uldaman, from Talvash del Kissel, Dun Morogh",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Remains of a Paladin, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shattered Necklace RubyShadowforge CacheShattered Necklace SapphireGrimlokShattered Necklace TopazConspicuous Urn",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7669",
+         "name": "Shattered Necklace Ruby",
+         "qty": null,
+         "source": "Shadowforge Cache"
+        },
+        {
+         "itemHref": "/item/7670",
+         "name": "Shattered Necklace Sapphire",
+         "qty": null,
+         "source": "Grimlok"
+        },
+        {
+         "itemHref": "/item/7671",
+         "name": "Shattered Necklace Topaz",
+         "qty": null,
+         "source": "Conspicuous Urn"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2279",
+     "name": "The Platinum Discs",
+     "levelText": "Level 47, from level 40",
+     "questText": "Take the miniature version of the Discs of Norgannon to the Explorers' League in Ironforge.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Platinum Discs, from The Discs of Norgannon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "The Discs of Norgannon, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Miniature Platinum Discs",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6064",
+         "name": "Miniature Platinum Discs",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde8 quests",
+   "quests": [
+    {
+     "id": "quest-2342",
+     "name": "Reclaimed Treasures",
+     "levelText": "Level 43, from level 33",
+     "questText": "Get Patrick Garrett's family treasure from their family chest in the South Common Hall of Uldaman, and bring it to him in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Patrick Garrett, Undercity",
+       "mapRef": {
+        "name": "Patrick Garrett",
+        "href": "/map/eastern-kingdoms#pin=Patrick%20Garrett"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Garrett Family TreasureGarrett Family Chest",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8026",
+         "name": "Garrett Family Treasure",
+         "qty": null,
+         "source": "Garrett Family Chest"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "60s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2202",
+     "name": "Uldaman Reagent Run",
+     "levelText": "Level 42, from level 36",
+     "questText": "Bring 12 Magenta Fungus Caps to Jarkal Mossmeld in Kargath.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Badlands Reagent Run, from Jarkal Mossmeld, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Jarkal Mossmeld, Badlands",
+       "mapRef": {
+        "name": "Jarkal Mossmeld",
+        "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Magenta Fungus Cap ×12Magenta Cap Clusters",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8047",
+         "name": "Magenta Fungus Cap",
+         "qty": "×12",
+         "source": "Magenta Cap Clusters"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "55s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/9030",
+       "name": "Restorative Potion",
+       "type": "Potions"
+      }
+     ]
+    },
+    {
+     "id": "quest-2283",
+     "name": "Necklace Recovery",
+     "levelText": "Level 41, from level 37",
+     "questText": "Look for a valuable necklace within the Uldaman dig site and bring it back to Dran Droffers in Orgrimmar.  The necklace may be damaged.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Dran Droffers, Orgrimmar",
+       "mapRef": {
+        "name": "Dran Droffers",
+        "href": "/map/kalimdor#pin=Dran%20Droffers"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shattered NecklaceShadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7666",
+         "name": "Shattered Necklace",
+         "qty": null,
+         "source": "Shadowforge Digger, Shadowforge Ruffian and Shadowforge Surveyor and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2338",
+     "name": "Translating the Journal",
+     "levelText": "Level 42, from level 37",
+     "questText": "Let Jarkal borrow the necklace.  In exchange, he will translate the journal for you.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Translating the Journal, from Remains of a Paladin",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Jarkal Mossmeld, Badlands",
+       "mapRef": {
+        "name": "Jarkal Mossmeld",
+        "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Untranslated Journal",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7886",
+         "name": "Untranslated Journal",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "350 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2340",
+     "name": "Deliver the Gems",
+     "levelText": "Level 44, from level 37",
+     "questText": "Deliver the Necklace and Gem Salvage to Dran Droffers in Orgrimmar.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Jarkal Mossmeld, Badlands",
+       "mapRef": {
+        "name": "Jarkal Mossmeld",
+        "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Necklace and Gem Salvage",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7887",
+         "name": "Necklace and Gem Salvage",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,850 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 25s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2339",
+     "name": "Find the Gems and Power Source",
+     "levelText": "Level 44, from level 37",
+     "questText": "Recover all three gems and a power source for the necklace from Uldaman, and then bring them to Jarkal Mossmeld in Kargath.  Jarkal believes a power source might be found on the strongest construct present in Uldaman.  From the journal, you know... * The ruby has been stashed in a barricaded Shadowforge area. * The topaz has been hidden in an urn in one of the Trogg areas, near some Alliance dwarves. * The sapphire has been claimed by Grimlok, the trogg leader.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Jarkal Mossmeld, Badlands",
+       "mapRef": {
+        "name": "Jarkal Mossmeld",
+        "href": "/map/eastern-kingdoms#pin=Jarkal%20Mossmeld"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Shattered Necklace RubyShadowforge CacheShattered Necklace SapphireGrimlokShattered Necklace TopazConspicuous UrnShattered Necklace Power SourceArchaedas",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7669",
+         "name": "Shattered Necklace Ruby",
+         "qty": null,
+         "source": "Shadowforge Cache"
+        },
+        {
+         "itemHref": "/item/7670",
+         "name": "Shattered Necklace Sapphire",
+         "qty": null,
+         "source": "Grimlok"
+        },
+        {
+         "itemHref": "/item/7671",
+         "name": "Shattered Necklace Topaz",
+         "qty": null,
+         "source": "Conspicuous Urn"
+        },
+        {
+         "itemHref": "/item/7672",
+         "name": "Shattered Necklace Power Source",
+         "qty": null,
+         "source": "Archaedas"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-2341",
+     "name": "Necklace Recovery, Take 3",
+     "levelText": "Level 44, from level 40",
+     "questText": "Visit Jarkal Mossmeld in Kargath to see if he was successful.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Dran Droffers, Orgrimmar",
+       "mapRef": {
+        "name": "Dran Droffers",
+        "href": "/map/kalimdor#pin=Dran%20Droffers"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7888",
+       "name": "Jarkal's Enhancing Necklace",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-2280",
+     "name": "The Platinum Discs",
+     "levelText": "Level 47, from level 40",
+     "questText": "Take the miniature version of the Discs of Norgannon to the one of the sages in Thunder Bluff.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Platinum Discs, from The Discs of Norgannon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "The Discs of Norgannon, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Miniature Platinum Discs",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/6064",
+         "name": "Miniature Platinum Discs",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,250 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  }
+ ]
+}

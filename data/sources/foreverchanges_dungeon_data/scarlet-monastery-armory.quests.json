@@ -1,0 +1,366 @@
+{
+ "id": "scarlet-monastery-armory",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Alliance2 quests",
+   "quests": [
+    {
+     "id": "quest-1050",
+     "name": "Mythology of the Titans",
+     "levelText": "Level 38, from level 28",
+     "questText": "Retrieve Mythology of the Titans from the Monastery and bring it to Librarian Mae Paledust in Ironforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Librarian Mae Paledust, Dun Morogh",
+       "mapRef": {
+        "name": "Librarian Mae Paledust",
+        "href": "/map/eastern-kingdoms#pin=Librarian%20Mae%20Paledust"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Mythology of the TitansMythology of the Titans",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5536",
+         "name": "Mythology of the Titans",
+         "qty": null,
+         "source": "Mythology of the Titans"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,550 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7746",
+       "name": "Explorers' League Commendation",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-1053",
+     "name": "In the Name of the Light",
+     "levelText": "Level 40, from level 34",
+     "questText": "Kill High Inquisitor Whitemane, Scarlet Commander Mograine,  Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Raleigh the Devout in Southshore.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Down the Scarlet Path, from Brother Anton, Desolace",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Raleigh the Devout, Hillsbrad Foothills",
+       "mapRef": {
+        "name": "Raleigh the Devout",
+        "href": "/map/eastern-kingdoms#pin=Raleigh%20the%20Devout"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, Houndmaster Loksey",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "4,700 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6829",
+       "name": "Sword of Serenity",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/6830",
+       "name": "Bonebiter",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/6831",
+       "name": "Black Menace",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/11262",
+       "name": "Orb of Lorica",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde5 quests",
+   "quests": [
+    {
+     "id": "quest-1051",
+     "name": "Vorrel's Revenge",
+     "levelText": "Level 33, from level 25",
+     "questText": "Return Vorrel Sengutz's wedding ring to Monika Sengutz in Tarren Mill.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Vorrel Sengutz, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Vorrel's Wedding RingNancy Vishas",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5538",
+         "name": "Vorrel's Wedding Ring",
+         "qty": null,
+         "source": "Nancy Vishas"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7750",
+       "name": "Mantle of Woe",
+       "type": "Shoulder, Cloth"
+      },
+      {
+       "itemHref": "/item/4643",
+       "name": "Grimsteel Cape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/7751",
+       "name": "Vorrel's Boots",
+       "type": "Feet, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-1160",
+     "name": "Test of Lore",
+     "levelText": "Level 36, from level 25",
+     "questText": "Find The Beginnings of the Undead Threat, and return it to Parqual Fintallas in Undercity.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Test of Lore, from Braug Dimspirit, Stonetalon Mountains",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Parqual Fintallas, Undercity",
+       "mapRef": {
+        "name": "Parqual Fintallas",
+        "href": "/map/eastern-kingdoms#pin=Parqual%20Fintallas"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Beginnings of the Undead ThreatBeginnings of the Undead Threat",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5861",
+         "name": "Beginnings of the Undead Threat",
+         "qty": null,
+         "source": "Beginnings of the Undead Threat"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-1049",
+     "name": "Compendium of the Fallen",
+     "levelText": "Level 38, from level 28",
+     "questText": "Retrieve the Compendium of the Fallen from the Monastery in Tirisfal Glades and return to Sage Truthseeker in Thunder Bluff.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Sage Truthseeker, Thunder Bluff",
+       "mapRef": {
+        "name": "Sage Truthseeker",
+        "href": "/map/kalimdor#pin=Sage%20Truthseeker"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Compendium of the FallenCompendium of the Fallen and Rituals of Power",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5535",
+         "name": "Compendium of the Fallen",
+         "qty": null,
+         "source": "Compendium of the Fallen and Rituals of Power"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,550 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/7747",
+       "name": "Vile Protector",
+       "type": "Off Hand, Shield"
+      },
+      {
+       "itemHref": "/item/17508",
+       "name": "Forcestone Buckler",
+       "type": "Off Hand, Shield"
+      },
+      {
+       "itemHref": "/item/7749",
+       "name": "Omega Orb",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-1113",
+     "name": "Hearts of Zeal",
+     "levelText": "Level 33, from level 30",
+     "questText": "Master Apothecary Faranell in the Undercity wants 20 Hearts of Zeal.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Going, Going, Guano!, from Master Apothecary Faranell, Undercity",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Master Apothecary Faranell, Undercity",
+       "mapRef": {
+        "name": "Master Apothecary Faranell",
+        "href": "/map/eastern-kingdoms#pin=Master%20Apothecary%20Faranell"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Heart of Zeal ×20Arcanist Doan, Herod and High Inquisitor Whitemane and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/5805",
+         "name": "Heart of Zeal",
+         "qty": "×20",
+         "source": "Arcanist Doan, Herod and High Inquisitor Whitemane and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "3,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-1048",
+     "name": "Into The Scarlet Monastery",
+     "levelText": "Level 42, from level 33",
+     "questText": "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Varimathras in the Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Varimathras, Undercity",
+       "mapRef": {
+        "name": "Varimathras",
+        "href": "/map/eastern-kingdoms#pin=Varimathras"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, Houndmaster Loksey",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,150 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/6802",
+       "name": "Sword of Omen",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/6803",
+       "name": "Prophetic Cane",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/10711",
+       "name": "Dragon's Blood Necklace",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

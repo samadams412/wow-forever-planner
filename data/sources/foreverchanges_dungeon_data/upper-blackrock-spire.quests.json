@@ -1,0 +1,1220 @@
+{
+ "id": "upper-blackrock-spire",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions13 quests",
+   "quests": [
+    {
+     "id": "quest-4788",
+     "name": "The Final Tablets",
+     "levelText": "Level 58, from level 40",
+     "questText": "Bring the Fifth and Sixth Mosh'aru Tablets to Prospector Ironboot in Tanaris.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Lost Tablets of Mosh'aru, from Prospector Ironboot, Tanaris",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Prospector Ironboot, Tanaris",
+       "mapRef": {
+        "name": "Prospector Ironboot",
+        "href": "/map/kalimdor#pin=Prospector%20Ironboot"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Fifth Mosh'aru TabletFifth Mosh'aru TabletSixth Mosh'aru TabletSixth Mosh'aru Tablet",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12740",
+         "name": "Fifth Mosh'aru Tablet",
+         "qty": null,
+         "source": "Fifth Mosh'aru Tablet"
+        },
+        {
+         "itemHref": "/item/12741",
+         "name": "Sixth Mosh'aru Tablet",
+         "qty": null,
+         "source": "Sixth Mosh'aru Tablet"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4862",
+     "name": "En-Ay-Es-Tee-Why",
+     "levelText": "Level 59, from level 55",
+     "questText": "Travel to Blackrock Spire and collect 15 Spire Spider Eggs for Kibler.  By the sound of it, these eggs could be found near spiders.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Kibler, Burning Steppes",
+       "mapRef": {
+        "name": "Kibler",
+        "href": "/map/eastern-kingdoms#pin=Kibler"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Spire Spider Egg ×15Spire Spider Egg",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12530",
+         "name": "Spire Spider Egg",
+         "qty": "×15",
+         "source": "Spire Spider Egg"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "90s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12529",
+       "name": "Smolderweb Carrier",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-4729",
+     "name": "Kibler's Exotic Pets",
+     "levelText": "Level 59, from level 55",
+     "questText": "Travel to Blackrock Spire and find Bloodaxe Worg Pups. Use the cage to carry the ferocious little beasts. Bring back a Caged Worg Pup to Kibler.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Kibler, Burning Steppes",
+       "mapRef": {
+        "name": "Kibler",
+        "href": "/map/eastern-kingdoms#pin=Kibler"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Caged Worg Pup",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12263",
+         "name": "Caged Worg Pup",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "90s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12264",
+       "name": "Worg Carrier",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-5047",
+     "name": "Finkle Einhorn, At Your Service!",
+     "levelText": "Level 60, from level 55",
+     "questText": "Talk to Malyfous Darkhammer in Everlook.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Finkle Einhorn, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Glowing Hunk of the Beast's Flesh",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12710",
+         "name": "Glowing Hunk of the Beast's Flesh",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4866",
+     "name": "Mother's Milk",
+     "levelText": "Level 60, from level 55",
+     "questText": "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Ragged John, Burning Steppes",
+       "mapRef": {
+        "name": "Ragged John",
+        "href": "/map/eastern-kingdoms#pin=Ragged%20John"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/15873",
+       "name": "Ragged John's Neverending Cup",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5127",
+     "name": "The Demon Forge",
+     "levelText": "Level 60, from level 55",
+     "questText": "Travel to Blackrock Spire and find Goraluk Anvilcrack. Slay him and then use the Blood Stained Pike upon his corpse. After his soul has been siphoned, the pike will be Soul Stained.  You must also find the Unforged Rune Covered Breastplate.  Return both the Soul Stained Pike and the Unforged Rune Covered Breastplate to Lorax in Winterspring.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Lorax's Tale, from Lorax, Winterspring",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Lorax, Winterspring",
+       "mapRef": {
+        "name": "Lorax",
+        "href": "/map/kalimdor#pin=Lorax"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Soul Stained PikeUnforged Rune Covered BreastplateUnforged Runic Breastplate",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12847",
+         "name": "Soul Stained Pike",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/12806",
+         "name": "Unforged Rune Covered Breastplate",
+         "qty": null,
+         "source": "Unforged Runic Breastplate"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12696",
+       "name": "Plans: Demon Forged Breastplate",
+       "type": "Blacksmithing"
+      },
+      {
+       "itemHref": "/item/9224",
+       "name": "Potion of Demonslaying",
+       "type": "Elixirs"
+      },
+      {
+       "itemHref": "/item/12849",
+       "name": "Demon Kissed Sack",
+       "type": "Quest"
+      }
+     ]
+    },
+    {
+     "id": "quest-4735",
+     "name": "Egg Collection",
+     "levelText": "Level 60, from level 57",
+     "questText": "Bring 8 Collected Dragon Eggs and the Collectronic Module to Tinkee Steamboil at Flame Crest in the Burning Steppes.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Tinkee Steamboil, Burning Steppes",
+       "mapRef": {
+        "name": "Tinkee Steamboil",
+        "href": "/map/eastern-kingdoms#pin=Tinkee%20Steamboil"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Collected Dragon Egg ×8Collectronic Module",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12241",
+         "name": "Collected Dragon Egg",
+         "qty": "×8",
+         "source": null
+        },
+        {
+         "itemHref": "/item/12287",
+         "name": "Collectronic Module",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4734",
+     "name": "Egg Freezing",
+     "levelText": "Level 60, from level 57",
+     "questText": "Use the Eggscilloscope Prototype on an egg in the Rookery.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Tinkee Steamboil, Burning Steppes",
+       "mapRef": {
+        "name": "Tinkee Steamboil",
+        "href": "/map/eastern-kingdoms#pin=Tinkee%20Steamboil"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Eggscilloscope Prototype",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12286",
+         "name": "Eggscilloscope Prototype",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12144",
+       "name": "Eggscilloscope",
+       "type": "Key"
+      }
+     ]
+    },
+    {
+     "id": "quest-4743",
+     "name": "Seal of Ascension",
+     "levelText": "Level 60, from level 57",
+     "questText": "Travel to the Wyrmbog in Dustwallow Marsh. Find the ancient drake, Emberstrife and beat him without mercy until his will is broken.  It is at that moment which you must place the Unforged Seal of Ascension before the great beast. You must then be quick to use the Orb of Draconic Energy on his weakened form and claim dominion over his mental faculties. Control the beast and force the Flames of the Black Dragonflight upon the Unforged Seal of Ascension!",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Seal of Ascension, from Vaelan",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Vaelan, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Forged Seal of AscensionForged Seal of Ascension",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12324",
+         "name": "Forged Seal of Ascension",
+         "qty": null,
+         "source": "Forged Seal of Ascension"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12344",
+       "name": "Seal of Ascension",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5160",
+     "name": "The Matron Protectorate",
+     "levelText": "Level 60, from level 57",
+     "questText": "Travel to Winterspring and find Haleh. Give her Awbee's scale.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Awbee, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Awbee's Scale",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12923",
+         "name": "Awbee's Scale",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8995",
+     "name": "Mea Culpa, Lord Valthalak",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon Lord Valthalak. Dispatch him, and use Lord Valthalak's Amulet on the corpse. Then, return Lord Valthalak's Amulet to the Spirit of Lord Valthalak.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Final Preparations, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lord Valthalak's Amulet",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22048",
+         "name": "Lord Valthalak's Amulet",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Lord Valthalak",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8966",
+     "name": "The Left Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth the spirit of Mor Grayhoof and slay him. Return to Bodley inside Blackrock Mountain with the Left Piece of Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Left Piece of Lord Valthalak's AmuletIsalien, Jarien and Kormok and othersBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/21984",
+         "name": "Left Piece of Lord Valthalak's Amulet",
+         "qty": null,
+         "source": "Isalien, Jarien and Kormok and others"
+        },
+        {
+         "itemHref": "/item/22049",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Mor Grayhoof",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-8989",
+     "name": "The Right Piece of Lord Valthalak's Amulet",
+     "levelText": "Level 60, from level 58",
+     "questText": "Use the Brazier of Beckoning to summon forth the spirit of Mor Grayhoof and slay him. Return to Bodley inside Blackrock Mountain with the recombined Lord Valthalak's Amulet and the Brazier of Beckoning.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "More Components of Importance, from Bodley, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bodley, Burning Steppes",
+       "mapRef": {
+        "name": "Bodley",
+        "href": "/map/eastern-kingdoms#pin=Bodley"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lord Valthalak's AmuletBrazier of Beckoning",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22048",
+         "name": "Lord Valthalak's Amulet",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/22049",
+         "name": "Brazier of Beckoning",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Mor Grayhoof",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance6 quests",
+   "quests": [
+    {
+     "id": "quest-6502",
+     "name": "Drakefire Amulet",
+     "levelText": "Level 60, from level 50",
+     "questText": "You must retrieve the Blood of the Black Dragon Champion from General Drakkisath. Drakkisath can be found in his throne room behind the Halls of Ascension in Blackrock Spire.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Dragon's Eye, from Highlord Bolvar Fordragon, Stormwind City",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Haleh, Winterspring",
+       "mapRef": {
+        "name": "Haleh",
+        "href": "/map/kalimdor#pin=Haleh"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Blood of the Black Dragon ChampionGeneral Drakkisath",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/16663",
+         "name": "Blood of the Black Dragon Champion",
+         "qty": null,
+         "source": "General Drakkisath"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/16309",
+       "name": "Drakefire Amulet",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-5001",
+     "name": "Bijou's Belongings",
+     "levelText": "Level 59, from level 55",
+     "questText": "Find Bijou's Belongings and return them to her. Good luck!",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Bijou, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Bijou's BelongingsBijou's Belongings",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12345",
+         "name": "Bijou's Belongings",
+         "qty": null,
+         "source": "Bijou's Belongings"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5002",
+     "name": "Message to Maxwell",
+     "levelText": "Level 59, from level 55",
+     "questText": "Travel to the Burning Steppes and give Bijou's Information to Marshal Maxwell.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Bijou, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Bijou's Information",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12770",
+         "name": "Bijou's Information",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-5102",
+     "name": "General Drakkisath's Demise",
+     "levelText": "Level 60, from level 55",
+     "questText": "Travel to Blackrock Spire and destroy General Drakkisath. Return to Marshal Maxwell when the job is done.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "General Drakkisath's Command, from the item General Drakkisath's Command",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Marshal Maxwell, Burning Steppes",
+       "mapRef": {
+        "name": "Marshal Maxwell",
+        "href": "/map/eastern-kingdoms#pin=Marshal%20Maxwell"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "General Drakkisath",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13966",
+       "name": "Mark of Tyranny",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/13968",
+       "name": "Eye of the Beast",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/13965",
+       "name": "Blackhand's Breadth",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4765",
+     "name": "Delivery to Ridgewell",
+     "levelText": "Level 60, from level 57",
+     "questText": "Bring Ridgewell's Crate to Remington Ridgewell in Stormwind.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Mayara Brightwing, Burning Steppes",
+       "mapRef": {
+        "name": "Mayara Brightwing",
+        "href": "/map/eastern-kingdoms#pin=Mayara%20Brightwing"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Ridgewell's Crate",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12437",
+         "name": "Ridgewell's Crate",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/15861",
+       "name": "Swiftfoot Treads",
+       "type": "Feet, Leather"
+      },
+      {
+       "itemHref": "/item/15860",
+       "name": "Blinkstrike Armguards",
+       "type": "Wrist, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-4764",
+     "name": "Doomrigger's Clasp",
+     "levelText": "Level 60, from level 57",
+     "questText": "Bring Doomrigger's Clasp to Mayara Brightwing in the Burning Steppes.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Mayara Brightwing, Burning Steppes",
+       "mapRef": {
+        "name": "Mayara Brightwing",
+        "href": "/map/eastern-kingdoms#pin=Mayara%20Brightwing"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Doomrigger's ClaspDoomrigger's Coffer",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12352",
+         "name": "Doomrigger's Clasp",
+         "qty": null,
+         "source": "Doomrigger's Coffer"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "1,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde5 quests",
+   "quests": [
+    {
+     "id": "quest-4982",
+     "name": "Bijou's Belongings",
+     "levelText": "Level 59, from level 55",
+     "questText": "Find Bijou's Belongings and return them to her. You recall her mentioning that she stashed them on the bottom floor of the city.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Operative Bijou, from Lexlort, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Bijou, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Bijou's BelongingsBijou's Belongings",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12345",
+         "name": "Bijou's Belongings",
+         "qty": null,
+         "source": "Bijou's Belongings"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4983",
+     "name": "Bijou's Reconnaissance Report",
+     "levelText": "Level 59, from level 55",
+     "questText": "Take Bijou's Reconnaissance Report back to Grandmaster Lexlort in Kargath.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Bijou, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Bijou's Reconnaissance Report",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12652",
+         "name": "Bijou's Reconnaissance Report",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,400 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/15858",
+       "name": "Freewind Gloves",
+       "type": "Hands, Cloth"
+      },
+      {
+       "itemHref": "/item/15859",
+       "name": "Seapost Girdle",
+       "type": "Waist, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-6602",
+     "name": "Blood of the Black Dragon Champion",
+     "levelText": "Level 60, from level 55",
+     "questText": "Travel to Blackrock Spire and slay General Drakkisath. Gather his blood and return it to Rexxar.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Ascension..., from Emberstrife, Dustwallow Marsh",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Rexxar, Feralas",
+       "mapRef": {
+        "name": "Rexxar",
+        "href": "/map/kalimdor#pin=Rexxar"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Blood of the Black Dragon ChampionGeneral Drakkisath",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/16663",
+         "name": "Blood of the Black Dragon Champion",
+         "qty": null,
+         "source": "General Drakkisath"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/16309",
+       "name": "Drakefire Amulet",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4974",
+     "name": "For The Horde!",
+     "levelText": "Level 60, from level 55",
+     "questText": "Travel to Blackrock Spire and slay Warchief Rend Blackhand. Take his head and return to Orgrimmar.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Eitrigg's Wisdom, from Warlord Goretooth, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Thrall, Orgrimmar",
+       "mapRef": {
+        "name": "Thrall",
+        "href": "/map/kalimdor#pin=Thrall"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of Rend BlackhandWarchief Rend Blackhand",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12630",
+         "name": "Head of Rend Blackhand",
+         "qty": null,
+         "source": "Warchief Rend Blackhand"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "10,900 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/13966",
+       "name": "Mark of Tyranny",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/13968",
+       "name": "Eye of the Beast",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/13965",
+       "name": "Blackhand's Breadth",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4768",
+     "name": "The Darkstone Tablet",
+     "levelText": "Level 60, from level 57",
+     "questText": "Bring the Darkstone Tablet to Shadow Mage Vivian Lagrave in Kargath.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Shadowmage Vivian Lagrave, Badlands",
+       "mapRef": {
+        "name": "Shadowmage Vivian Lagrave",
+        "href": "/map/eastern-kingdoms#pin=Shadowmage%20Vivian%20Lagrave"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Darkstone TabletDarkstone Tablet",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/12358",
+         "name": "Darkstone Tablet",
+         "qty": null,
+         "source": "Darkstone Tablet"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "8,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/15861",
+       "name": "Swiftfoot Treads",
+       "type": "Feet, Leather"
+      },
+      {
+       "itemHref": "/item/15860",
+       "name": "Blinkstrike Armguards",
+       "type": "Wrist, Plate"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

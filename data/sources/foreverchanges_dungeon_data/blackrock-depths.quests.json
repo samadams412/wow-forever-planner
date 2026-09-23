@@ -1,0 +1,1400 @@
+{
+ "id": "blackrock-depths",
+ "source": "foreverchanges.pro",
+ "section": "quests",
+ "groups": [
+  {
+   "groupNameFull": "Both factions8 quests",
+   "quests": [
+    {
+     "id": "quest-4083",
+     "name": "The Spectral Chalice",
+     "levelText": "Level 55, from level 40",
+     "questText": null,
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Spectral Chalice, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Star Ruby ×2Abomination, Adamantite Bound Chest and Akubar the Seer and othersGold Bar ×20Alliance Chest, Alliance Strongbox and Battered Chest and othersTruesilver Bar ×10Adamantite Bound Chest, Alliance Chest and Alliance Strongbox and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/7910",
+         "name": "Star Ruby",
+         "qty": "×2",
+         "source": "Abomination, Adamantite Bound Chest and Akubar the Seer and others"
+        },
+        {
+         "itemHref": "/item/3577",
+         "name": "Gold Bar",
+         "qty": "×20",
+         "source": "Alliance Chest, Alliance Strongbox and Battered Chest and others"
+        },
+        {
+         "itemHref": "/item/6037",
+         "name": "Truesilver Bar",
+         "qty": "×10",
+         "source": "Adamantite Bound Chest, Alliance Chest and Alliance Strongbox and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "575 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-3802",
+     "name": "Dark Iron Legacy",
+     "levelText": "Level 52, from level 48",
+     "questText": "Slay Fineous Darkvire and recover the great hammer, Ironfel. Take Ironfel to the Shrine of Thaurissan and place it on the statue of Franclorn Forgewright.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Dark Iron Legacy, from Franclorn Forgewright, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Franclorn Forgewright, Burning Steppes",
+       "mapRef": {
+        "name": "Franclorn Forgewright",
+        "href": "/map/eastern-kingdoms#pin=Franclorn%20Forgewright"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "IronfelFineous Darkvire",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/10999",
+         "name": "Ironfel",
+         "qty": null,
+         "source": "Fineous Darkvire"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 30s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11000",
+       "name": "Shadowforge Key",
+       "type": "Key"
+      }
+     ]
+    },
+    {
+     "id": "quest-4136",
+     "name": "Ribbly Screwspigot",
+     "levelText": "Level 53, from level 48",
+     "questText": "Bring Ribbly's Head to Yuka Screwspigot in the Burning Steppes.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Yuka Screwspigot, Burning Steppes",
+       "mapRef": {
+        "name": "Yuka Screwspigot",
+        "href": "/map/eastern-kingdoms#pin=Yuka%20Screwspigot"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Ribbly's HeadRibbly Screwspigot",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11313",
+         "name": "Ribbly's Head",
+         "qty": null,
+         "source": "Ribbly Screwspigot"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "2,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "60s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11865",
+       "name": "Rancor Boots",
+       "type": "Feet, Cloth"
+      },
+      {
+       "itemHref": "/item/11963",
+       "name": "Penance Spaulders",
+       "type": "Shoulder, Leather"
+      },
+      {
+       "itemHref": "/item/12049",
+       "name": "Splintsteel Armor",
+       "type": "Chest, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-4201",
+     "name": "The Love Potion",
+     "levelText": "Level 54, from level 50",
+     "questText": "Bring 4 Gromsblood, 10 Giant Silver Veins and Nagmara's Filled Vial to Mistress Nagmara in Blackrock Depths.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Mistress Nagmara, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Gromsblood ×4Alshirr Banebreath, Angerclaw Bear and Angerclaw Grizzly and othersGiant Silver Vein ×10Cliff Breaker, Cliff Thunderer and Cliff WalkerNagmara's Filled Vial",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/8846",
+         "name": "Gromsblood",
+         "qty": "×4",
+         "source": "Alshirr Banebreath, Angerclaw Bear and Angerclaw Grizzly and others"
+        },
+        {
+         "itemHref": "/item/11405",
+         "name": "Giant Silver Vein",
+         "qty": "×10",
+         "source": "Cliff Breaker, Cliff Thunderer and Cliff Walker"
+        },
+        {
+         "itemHref": "/item/11413",
+         "name": "Nagmara's Filled Vial",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "80s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11962",
+       "name": "Manacle Cuffs",
+       "type": "Wrist, Cloth"
+      },
+      {
+       "itemHref": "/item/11866",
+       "name": "Nagmara's Whipping Belt",
+       "type": "Waist, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-4123",
+     "name": "The Heart of the Mountain",
+     "levelText": "Level 55, from level 50",
+     "questText": "Bring the Heart of the Mountain to Maxwort Uberglint in the Burning Steppes.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Maxwort Uberglint, Burning Steppes",
+       "mapRef": {
+        "name": "Maxwort Uberglint",
+        "href": "/map/eastern-kingdoms#pin=Maxwort%20Uberglint"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Heart of the MountainHeart of the Mountain",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11309",
+         "name": "The Heart of the Mountain",
+         "qty": null,
+         "source": "Heart of the Mountain"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "85s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4024",
+     "name": "A Taste of Flame",
+     "levelText": "Level 58, from level 52",
+     "questText": "Travel to Blackrock Depths and slay Bael'Gar.  You only know that the giant resides inside Blackrock Depths. Remember to use the Altered Black Dragonflight Molt on Bael'Gar's remains to capture the Fiery Essence.  Return the Encased Fiery Essence to Cyrus Therepentous.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "A Taste of Flame, from Cyrus Therepentous, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Cyrus Therepentous, Burning Steppes",
+       "mapRef": {
+        "name": "Cyrus Therepentous",
+        "href": "/map/eastern-kingdoms#pin=Cyrus%20Therepentous"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Encased Fiery Essence",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11230",
+         "name": "Encased Fiery Essence",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,200 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12066",
+       "name": "Shaleskin Cape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/12082",
+       "name": "Wyrmhide Spaulders",
+       "type": "Shoulder, Leather"
+      },
+      {
+       "itemHref": "/item/12083",
+       "name": "Valconian Sash",
+       "type": "Waist, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-9015",
+     "name": "The Challenge",
+     "levelText": "Level 60, from level 58",
+     "questText": "Travel to the Ring of the Law in Blackrock Depths and place the Banner of Provocation in its center as you are sentenced by High Justice Grimstone.  Slay Theldren and his gladiators and return to Anthion Harmon in the Eastern Plaguelands with the first piece of Lord Valthalak's amulet.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Instigator's Enchantment, from Falrin Treeshaper",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Falrin Treeshaper, Dire Maul",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Top Piece of Lord Valthalak's AmuletTheldren",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/22047",
+         "name": "Top Piece of Lord Valthalak's Amulet",
+         "qty": null,
+         "source": "Theldren"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,600 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-7604",
+     "name": "A Binding Contract",
+     "levelText": "Level 60, from level 60",
+     "questText": "Turn the Thorium Brotherhood Contract in to Lokhtos Darkbargainer if you would like to receive the plans for Sulfuron.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Thorium Brotherhood Contract",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Thorium Brotherhood ContractSulfuron IngotGolemagg the Incinerator",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/18628",
+         "name": "Thorium Brotherhood Contract",
+         "qty": null,
+         "source": null
+        },
+        {
+         "itemHref": "/item/17203",
+         "name": "Sulfuron Ingot",
+         "qty": null,
+         "source": "Golemagg the Incinerator"
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/18592",
+       "name": "Plans: Sulfuron Hammer",
+       "type": "Blacksmithing"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance9 quests",
+   "quests": [
+    {
+     "id": "quest-4242",
+     "name": "Abandoned Hope",
+     "levelText": "Level 54, from level 48",
+     "questText": "Give Marshal Maxwell the bad news.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Marshal Windsor, from Marshal Maxwell, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Marshal Windsor, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12018",
+       "name": "Conservator Helm",
+       "type": "Head, Mail"
+      },
+      {
+       "itemHref": "/item/12021",
+       "name": "Shieldplate Sabatons",
+       "type": "Feet, Plate"
+      },
+      {
+       "itemHref": "/item/12041",
+       "name": "Windshear Leggings",
+       "type": "Legs, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-4263",
+     "name": "Incendius!",
+     "levelText": "Level 56, from level 48",
+     "questText": "Find Lord Incendius in Blackrock Depths and destroy him!",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Overmaster Pyron, from Jalinda Sprig, Burning Steppes",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Jalinda Sprig, Burning Steppes",
+       "mapRef": {
+        "name": "Jalinda Sprig",
+        "href": "/map/eastern-kingdoms#pin=Jalinda%20Sprig"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Lord Incendius",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,800 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "85s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12113",
+       "name": "Sunborne Cape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/12114",
+       "name": "Nightfall Gloves",
+       "type": "Hands, Leather"
+      },
+      {
+       "itemHref": "/item/12112",
+       "name": "Crypt Demon Bracers",
+       "type": "Wrist, Mail"
+      },
+      {
+       "itemHref": "/item/12115",
+       "name": "Stalwart Clutch",
+       "type": "Waist, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-4126",
+     "name": "Hurley Blackbreath",
+     "levelText": "Level 55, from level 50",
+     "questText": "Bring the Lost Thunderbrew Recipe to Ragnar Thunderbrew in Kharanos.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Ragnar Thunderbrew, Dun Morogh",
+       "mapRef": {
+        "name": "Ragnar Thunderbrew",
+        "href": "/map/eastern-kingdoms#pin=Ragnar%20Thunderbrew"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lost Thunderbrew RecipeBlackbreath Crony and Hurley Blackbreath",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11312",
+         "name": "Lost Thunderbrew Recipe",
+         "qty": null,
+         "source": "Blackbreath Crony and Hurley Blackbreath"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11964",
+       "name": "Swiftstrike Cudgel",
+       "type": "Main Hand, Mace"
+      },
+      {
+       "itemHref": "/item/12000",
+       "name": "Limb Cleaver",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/12003",
+       "name": "Dark Dwarven Lager",
+       "type": "Food & Drink"
+      }
+     ]
+    },
+    {
+     "id": "quest-4286",
+     "name": "The Good Stuff",
+     "levelText": "Level 56, from level 50",
+     "questText": "Travel to Blackrock Depths and recover 20 Dark Iron Fanny Packs. Return to Oralius when you have completed this task. You assume that the Dark Iron dwarves inside Blackrock Depths carry these 'fanny pack' contraptions.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Oralius, Burning Steppes",
+       "mapRef": {
+        "name": "Oralius",
+        "href": "/map/eastern-kingdoms#pin=Oralius"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Dark Iron Fanny Pack ×20Anvilrage Captain, Anvilrage Footman and Anvilrage Guardsman and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11468",
+         "name": "Dark Iron Fanny Pack",
+         "qty": "×20",
+         "source": "Anvilrage Captain, Anvilrage Footman and Anvilrage Guardsman and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,800 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "85s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11883",
+       "name": "A Dingy Fanny Pack",
+       "type": "Junk"
+      }
+     ]
+    },
+    {
+     "id": "quest-4264",
+     "name": "A Crumpled Up Note",
+     "levelText": "Level 58, from level 50",
+     "questText": "You may have just stumbled on to something that Marshal Windsor would be interested in seeing. There may be hope, after all.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item A Crumpled Up Note",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "A Crumpled Up NoteAmbassador Flamelash, Anub'shiah and Anvilrage Captain and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11446",
+         "name": "A Crumpled Up Note",
+         "qty": null,
+         "source": "Ambassador Flamelash, Anub'shiah and Anvilrage Captain and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,200 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4282",
+     "name": "A Shred of Hope",
+     "levelText": "Level 58, from level 50",
+     "questText": "Return Marshal Windsor's Lost Information.  Marshal Windsor believes that the information is being held by Golem Lord Argelmach and General Angerforge.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Marshal Windsor, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Marshal Windsor's Lost InformationGeneral AngerforgeMarshal Windsor's Lost InformationGolem Lord Argelmach",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11464",
+         "name": "Marshal Windsor's Lost Information",
+         "qty": null,
+         "source": "General Angerforge"
+        },
+        {
+         "itemHref": "/item/11465",
+         "name": "Marshal Windsor's Lost Information",
+         "qty": null,
+         "source": "Golem Lord Argelmach"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,200 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "90s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4322",
+     "name": "Jail Break!",
+     "levelText": "Level 58, from level 50",
+     "questText": "Help Marshal Windsor get his gear back and free his friends. Return to Marshal Maxwell if you succeed.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Marshal Windsor, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "7,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 75s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12061",
+       "name": "Blade of Reckoning",
+       "type": "One-Hand, Sword"
+      },
+      {
+       "itemHref": "/item/12062",
+       "name": "Skilled Fighting Blade",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/12065",
+       "name": "Ward of the Elements",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4362",
+     "name": "The Fate of the Kingdom",
+     "levelText": "Level 59, from level 50",
+     "questText": "Return to Blackrock Depths and rescue Princess Moira Bronzebeard from the evil clutches of Emperor Dagran Thaurissan.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Bearer of Bad News, from Kharan Mighthammer",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "King Magni Bronzebeard, Dun Morogh",
+       "mapRef": {
+        "name": "King Magni Bronzebeard",
+        "href": "/map/eastern-kingdoms#pin=King%20Magni%20Bronzebeard"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Emperor Dagran Thaurissan",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4363",
+     "name": "The Princess's Surprise",
+     "levelText": "Level 59, from level 50",
+     "questText": "Return to Ironforge and speak with King Magni Bronzebeard.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Princess Moira Bronzebeard, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12548",
+       "name": "Magni's Will",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/12543",
+       "name": "Songstone of Ironforge",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde10 quests",
+   "quests": [
+    {
+     "id": "quest-4081",
+     "name": "KILL ON SIGHT: Dark Iron Dwarves",
+     "levelText": "Level 52, from level 48",
+     "questText": "Venture to Blackrock Depths and destroy the vile aggressors!  Warlord Goretooth wants you to kill 15 Anvilrage Guardsmen, 10 Anvilrage Wardens and 5 Anvilrage Footmen. Return to him once your task is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "WANTED, Badlands",
+       "mapRef": {
+        "name": "WANTED",
+        "href": "/map/eastern-kingdoms#pin=WANTED"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Anvilrage Guardsman ×15, Anvilrage Warden ×10, Anvilrage Footman ×5",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,100 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 55s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-7201",
+     "name": "The Last Element",
+     "levelText": "Level 54, from level 48",
+     "questText": "Travel to Blackrock Depths and recover 10 Essence of the Elements. Your first inclination is to search the golems and golem makers. You remember Vivian Lagrave also muttering something about elementals.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Shadowmage Vivian Lagrave, Badlands",
+       "mapRef": {
+        "name": "Shadowmage Vivian Lagrave",
+        "href": "/map/eastern-kingdoms#pin=Shadowmage%20Vivian%20Lagrave"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Essence of the Elements ×10Ambassador Flamelash, Blazing Fireguard and Fireguard and others",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11129",
+         "name": "Essence of the Elements",
+         "qty": "×10",
+         "source": "Ambassador Flamelash, Blazing Fireguard and Fireguard and others"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 45s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12038",
+       "name": "Lagrave's Seal",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-3907",
+     "name": "Disharmony of Fire",
+     "levelText": "Level 56, from level 48",
+     "questText": "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Disharmony of Flame, from Thunderheart, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Thunderheart, Badlands",
+       "mapRef": {
+        "name": "Thunderheart",
+        "href": "/map/eastern-kingdoms#pin=Thunderheart"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Tablet of KurniyaLord Incendius",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11126",
+         "name": "Tablet of Kurniya",
+         "qty": null,
+         "source": "Lord Incendius"
+        }
+       ]
+      },
+      {
+       "label": "Slay",
+       "value": "Lord Incendius",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "7,300 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 55s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12113",
+       "name": "Sunborne Cape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/12114",
+       "name": "Nightfall Gloves",
+       "type": "Hands, Leather"
+      },
+      {
+       "itemHref": "/item/12112",
+       "name": "Crypt Demon Bracers",
+       "type": "Wrist, Mail"
+      },
+      {
+       "itemHref": "/item/12115",
+       "name": "Stalwart Clutch",
+       "type": "Waist, Plate"
+      }
+     ]
+    },
+    {
+     "id": "quest-4003",
+     "name": "The Royal Rescue",
+     "levelText": "Level 59, from level 48",
+     "questText": "Slay Emperor Dagran Thaurissan and free Princess Moira Bronzebeard from his evil spell.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Eastern Kingdom, from Thrall, Orgrimmar",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Thrall, Orgrimmar",
+       "mapRef": {
+        "name": "Thrall",
+        "href": "/map/kalimdor#pin=Thrall"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Emperor Dagran Thaurissan",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "8,050 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4004",
+     "name": "The Princess Saved?",
+     "levelText": "Level 60, from level 48",
+     "questText": "Return to Thrall!",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Princess Moira Bronzebeard, inside the dungeon",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "9,950 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 70s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12544",
+       "name": "Thrall's Resolve",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/12545",
+       "name": "Eye of Orgrimmar",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4082",
+     "name": "KILL ON SIGHT: High Ranking Dark Iron Officials",
+     "levelText": "Level 54, from level 50",
+     "questText": "Venture to Blackrock Depths and destroy the vile aggressors!  Warlord Goretooth wants you to kill 10 Anvilrage Medics, 10 Anvilrage Soldiers and 10 Anvilrage Officers. Return to him once your task is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "KILL ON SIGHT, Badlands",
+       "mapRef": {
+        "name": "KILL ON SIGHT",
+        "href": "/map/eastern-kingdoms#pin=KILL%20ON%20SIGHT"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Anvilrage Medic ×10, Anvilrage Soldier ×10, Anvilrage Officer ×10",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "5,450 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "1g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4134",
+     "name": "Lost Thunderbrew Recipe",
+     "levelText": "Level 55, from level 50",
+     "questText": "Bring the Lost Thunderbrew Recipe to Vivian Lagrave in Kargath.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Shadowmage Vivian Lagrave, Badlands",
+       "mapRef": {
+        "name": "Shadowmage Vivian Lagrave",
+        "href": "/map/eastern-kingdoms#pin=Shadowmage%20Vivian%20Lagrave"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Lost Thunderbrew RecipeBlackbreath Crony and Hurley Blackbreath",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11312",
+         "name": "Lost Thunderbrew Recipe",
+         "qty": null,
+         "source": "Blackbreath Crony and Hurley Blackbreath"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "5,650 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "85s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/11964",
+       "name": "Swiftstrike Cudgel",
+       "type": "Main Hand, Mace"
+      },
+      {
+       "itemHref": "/item/12000",
+       "name": "Limb Cleaver",
+       "type": "Two-Hand, Axe"
+      },
+      {
+       "itemHref": "/item/3928",
+       "name": "Superior Healing Potion",
+       "type": "Potions"
+      },
+      {
+       "itemHref": "/item/6149",
+       "name": "Greater Mana Potion",
+       "type": "Potions"
+      }
+     ]
+    },
+    {
+     "id": "quest-4132",
+     "name": "Operation: Death to Angerforge",
+     "levelText": "Level 58, from level 52",
+     "questText": "Travel to Blackrock Depths and slay General Angerforge! Return to Warlord Goretooth when the task is complete.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Warlord Goretooth, Badlands",
+       "mapRef": {
+        "name": "Warlord Goretooth",
+        "href": "/map/eastern-kingdoms#pin=Warlord%20Goretooth"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "General Angerforge",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Experience",
+       "value": "7,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Reward",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12059",
+       "name": "Conqueror's Medallion",
+       "type": ""
+      }
+     ]
+    },
+    {
+     "id": "quest-4121",
+     "name": "Precarious Predicament",
+     "levelText": "Level 58, from level 52",
+     "questText": "Escort your prisoner, Grark Lorkrub, through Burning Steppes and through Blackrock Mountain to the Searing Gorge.  You recall Lexlort mentioning that he would have his men waiting on the other side to take Grark into custody.  You will also be required to hand over your Thorium Shackles to Lexlort.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "Grark Lorkrub, from Lexlort, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Grark Lorkrub, Burning Steppes",
+       "mapRef": {
+        "name": "Grark Lorkrub",
+        "href": "/map/eastern-kingdoms#pin=Grark%20Lorkrub"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Thorium Shackles",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11286",
+         "name": "Thorium Shackles",
+         "qty": null,
+         "source": null
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "7,750 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-4063",
+     "name": "The Rise of the Machines",
+     "levelText": "Level 58, from level 52",
+     "questText": "Find and slay Golem Lord Argelmach. Return his head to Lotwil. You will also need to collect 10 Intact Elemental Cores from the Ragereaver Golems and Warbringer Constructs protecting Argelmach. You know this because you are psychic.",
+     "fields": [
+      {
+       "label": "Comes after",
+       "value": "The Rise of the Machines, from Hierophant Theodora Mulvadania, Badlands",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Starts",
+       "value": "Lotwil Veriatus, Badlands",
+       "mapRef": {
+        "name": "Lotwil Veriatus",
+        "href": "/map/eastern-kingdoms#pin=Lotwil%20Veriatus"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Head of ArgelmachGolem Lord ArgelmachIntact Elemental Core ×10Molten War Golem, Ragereaver Golem, Warbringer Construct and Wrath Hammer Construct",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/11268",
+         "name": "Head of Argelmach",
+         "qty": null,
+         "source": "Golem Lord Argelmach"
+        },
+        {
+         "itemHref": "/item/11269",
+         "name": "Intact Elemental Core",
+         "qty": "×10",
+         "source": "Molten War Golem, Ragereaver Golem, Warbringer Construct and Wrath Hammer Construct"
+        }
+       ]
+      },
+      {
+       "label": "Experience",
+       "value": "6,200 XP in Classic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Money",
+       "value": "2g 65s",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/12109",
+       "name": "Azure Moon Amice",
+       "type": "Shoulder, Cloth"
+      },
+      {
+       "itemHref": "/item/12110",
+       "name": "Raincaster Drape",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/12108",
+       "name": "Basaltscale Armor",
+       "type": "Chest, Mail"
+      },
+      {
+       "itemHref": "/item/12111",
+       "name": "Lavaplate Gauntlets",
+       "type": "Hands, Plate"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
