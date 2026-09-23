@@ -101,7 +101,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/dungeons/loot"
             title="Dungeon Loot"
-            description="Boss-by-boss loot for every dungeon, community-sourced from wowtbc.gg -- not confirmed against the beta client like the rest of this site's data."
+            description="Boss-by-boss loot and quest rewards for every dungeon, read straight from the beta client via foreverchanges.pro -- wowtbc.gg's community reports fill in the couple of dungeons it hasn't reached yet."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_misc_bag_10")} alt="" className="h-7 w-7 rounded-sm" />
