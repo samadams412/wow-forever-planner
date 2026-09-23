@@ -78,7 +78,7 @@ export default function LootItemPill({
             className={`h-5 w-5 rounded-sm ${missing ? "grayscale" : ""}`}
           />
           {qty !== undefined && qty > 1 && (
-            <span className="absolute -bottom-1 -right-1 rounded-sm bg-black/80 px-0.5 text-[9px] font-bold leading-tight text-white">
+            <span className="absolute -bottom-1.5 -right-1.5 rounded-sm bg-black/80 px-1 text-[11px] font-bold leading-tight text-white">
               {qty}
             </span>
           )}
