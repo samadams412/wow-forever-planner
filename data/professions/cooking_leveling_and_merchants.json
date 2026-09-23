@@ -1,0 +1,299 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirement": "from any Cooking trainer, up to 75",
+      "steps": [
+        {
+          "range": [
+            1,
+            46
+          ],
+          "item": {
+            "name": "Slitherskin Mackerel",
+            "url": "https://foreverchanges.pro/item/787"
+          },
+          "source": "Recipe sold by Tansy Puddlefizz (Alliance) or Zansoa (Horde) and 1 more",
+          "count": "~45crafts",
+          "mats": [
+            {
+              "name": "Raw Slitherskin Mackerel",
+              "url": "https://foreverchanges.pro/item/6303"
+            }
+          ]
+        },
+        {
+          "range": [
+            46,
+            75
+          ],
+          "item": {
+            "name": "Smoked Bear Meat",
+            "url": "https://foreverchanges.pro/item/6890"
+          },
+          "source": "Recipe sold by Drac Roughcut (Alliance) or Andrew Hilbert (Horde)",
+          "count": "~29crafts",
+          "mats": [
+            {
+              "name": "Bear Meat",
+              "url": "https://foreverchanges.pro/item/3173"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": [
+            75,
+            81
+          ],
+          "item": {
+            "name": "Smoked Bear Meat",
+            "url": "https://foreverchanges.pro/item/6890"
+          },
+          "source": "Recipe sold by Drac Roughcut (Alliance) or Andrew Hilbert (Horde)",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "Bear Meat",
+              "url": "https://foreverchanges.pro/item/3173"
+            }
+          ]
+        },
+        {
+          "range": [
+            81,
+            100
+          ],
+          "item": {
+            "name": "Rainbow Fin Albacore",
+            "url": "https://foreverchanges.pro/item/5095"
+          },
+          "source": "Recipe sold by Heldan Galesong (Alliance) or Zansoa (Horde) and 1 more",
+          "count": "~21crafts",
+          "mats": [
+            {
+              "name": "Raw Rainbow Fin Albacore",
+              "url": "https://foreverchanges.pro/item/6361"
+            }
+          ]
+        },
+        {
+          "range": [
+            100,
+            150
+          ],
+          "item": {
+            "name": "Bristle Whisker Catfish",
+            "url": "https://foreverchanges.pro/item/4593"
+          },
+          "source": "Recipe sold by Derak Nightfall (Horde) or Lindea Rabonne (Alliance) and 1 more",
+          "count": "~52crafts",
+          "mats": [
+            {
+              "name": "Raw Bristle Whisker Catfish",
+              "url": "https://foreverchanges.pro/item/6308"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirement": "from the book Expert Cookbook, sold for gold, from skill 125, up to 225",
+      "steps": [
+        {
+          "range": [
+            150,
+            161
+          ],
+          "item": {
+            "name": "Bristle Whisker Catfish",
+            "url": "https://foreverchanges.pro/item/4593"
+          },
+          "source": "Recipe sold by Derak Nightfall (Horde) or Lindea Rabonne (Alliance) and 1 more",
+          "count": "~18crafts",
+          "mats": [
+            {
+              "name": "Raw Bristle Whisker Catfish",
+              "url": "https://foreverchanges.pro/item/6308"
+            }
+          ]
+        },
+        {
+          "range": [
+            161,
+            166
+          ],
+          "item": {
+            "name": "Lean Wolf Steak",
+            "url": "https://foreverchanges.pro/item/12209"
+          },
+          "source": "Recipe sold by Super-Seller 680 (Desolace)",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "Lean Wolf Flank",
+              "url": "https://foreverchanges.pro/item/1015"
+            },
+            {
+              "name": "Mild Spices",
+              "url": "https://foreverchanges.pro/item/2678"
+            }
+          ]
+        },
+        {
+          "range": [
+            166,
+            175
+          ],
+          "item": {
+            "name": "Curiously Tasty Omelet",
+            "url": "https://foreverchanges.pro/item/3665"
+          },
+          "source": "Recipe sold by Keena (Horde) or Kendor Kabonka (Alliance) and 1 more",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "Raptor Egg",
+              "url": "https://foreverchanges.pro/item/3685"
+            },
+            {
+              "name": "Hot Spices",
+              "url": "https://foreverchanges.pro/item/2692"
+            }
+          ]
+        },
+        {
+          "range": [
+            175,
+            191
+          ],
+          "item": {
+            "name": "Rockscale Cod",
+            "url": "https://foreverchanges.pro/item/4594"
+          },
+          "source": "Recipe sold by Wik'Tar (Horde) or Heldan Galesong (Alliance) and 1 more",
+          "count": "~16crafts",
+          "mats": [
+            {
+              "name": "Raw Rockscale Cod",
+              "url": "https://foreverchanges.pro/item/6362"
+            }
+          ]
+        },
+        {
+          "range": [
+            191,
+            225
+          ],
+          "item": {
+            "name": "Mithril Head Trout",
+            "url": "https://foreverchanges.pro/item/8364"
+          },
+          "source": "Recipe sold by Wik'Tar (Horde) or Heldan Galesong (Alliance) and 1 more",
+          "count": "~36crafts",
+          "mats": [
+            {
+              "name": "Raw Mithril Head Trout",
+              "url": "https://foreverchanges.pro/item/8365"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirement": "from a quest of Dirge Quikcleave in Gadgetzan, Tanaris, from skill 225 and level 35, up to 300",
+      "steps": [
+        {
+          "range": [
+            225,
+            266
+          ],
+          "item": {
+            "name": "Filet of Redgill",
+            "url": "https://foreverchanges.pro/item/13930"
+          },
+          "source": "Recipe sold by Kelsey Yance (Stranglethorn Vale)",
+          "count": "~41crafts",
+          "mats": [
+            {
+              "name": "Raw Redgill",
+              "url": "https://foreverchanges.pro/item/13758"
+            }
+          ]
+        },
+        {
+          "range": [
+            266,
+            300
+          ],
+          "item": {
+            "name": "Poached Sunscale Salmon",
+            "url": "https://foreverchanges.pro/item/13932"
+          },
+          "source": "Recipe sold by Gikkix (Tanaris)",
+          "count": "~36crafts",
+          "mats": [
+            {
+              "name": "Raw Sunscale Salmon",
+              "url": "https://foreverchanges.pro/item/13760"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "favor_section": [
+    {
+      "tier": "30 Merchant's Favor (skill 25 to 125)",
+      "items": [
+        {
+          "name": "Venomous Smoothie",
+          "url": "https://foreverchanges.pro/item/249871",
+          "skill_threshold": 25
+        },
+        {
+          "name": "Slimy Smoothie",
+          "url": "https://foreverchanges.pro/item/249872",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Mrrggl Smrrthle",
+          "url": "https://foreverchanges.pro/item/249873",
+          "skill_threshold": 125
+        }
+      ]
+    },
+    {
+      "tier": "60 Merchant's Favor (skill 180 to 200)",
+      "items": [
+        {
+          "name": "Calcified Smoothie",
+          "url": "https://foreverchanges.pro/item/249874",
+          "skill_threshold": 180
+        },
+        {
+          "name": "Spicy Smoothie",
+          "url": "https://foreverchanges.pro/item/249875",
+          "skill_threshold": 200
+        }
+      ]
+    },
+    {
+      "tier": "90 Merchant's Favor (skill 250)",
+      "items": [
+        {
+          "name": "Wicked Smoothie",
+          "url": "https://foreverchanges.pro/item/249876",
+          "skill_threshold": 250
+        }
+      ]
+    }
+  ]
+}

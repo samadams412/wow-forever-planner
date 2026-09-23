@@ -1,0 +1,622 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirement": "from any Enchanting trainer, up to 75",
+      "steps": [
+        {
+          "range": [
+            1,
+            null
+          ],
+          "item": {
+            "name": "Make a Runed Copper Rod",
+            "url": null
+          },
+          "source": "Every enchant from here on needs it in your bags.",
+          "count": "1craft",
+          "mats": [
+            {
+              "name": "Copper Rod",
+              "url": "https://foreverchanges.pro/item/6217"
+            },
+            {
+              "name": "Mote of Magic",
+              "url": "https://foreverchanges.pro/item/247786"
+            }
+          ]
+        },
+        {
+          "range": [
+            1,
+            25
+          ],
+          "item": {
+            "name": "Enchant Bracer - Inferior Stamina",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~31crafts",
+          "mats": [
+            {
+              "name": "Mote of Magic",
+              "url": "https://foreverchanges.pro/item/247786"
+            }
+          ]
+        },
+        {
+          "range": [
+            25,
+            75
+          ],
+          "item": {
+            "name": "Enchant Chest - Inferior Stamina",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~51crafts",
+          "mats": [
+            {
+              "name": "Strange Dust",
+              "url": "https://foreverchanges.pro/item/10940"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": [
+            75,
+            91
+          ],
+          "item": {
+            "name": "Enchant Chest - Inferior Stamina",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~24crafts",
+          "mats": [
+            {
+              "name": "Strange Dust",
+              "url": "https://foreverchanges.pro/item/10940"
+            }
+          ]
+        },
+        {
+          "range": [
+            91,
+            121
+          ],
+          "item": {
+            "name": "Enchant Bracer - Minor Stamina",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~39crafts",
+          "mats": [
+            {
+              "name": "2 Strange Dust",
+              "url": "https://foreverchanges.pro/item/10940"
+            }
+          ]
+        },
+        {
+          "range": [
+            121,
+            130
+          ],
+          "item": {
+            "name": "Enchant Shield - Minor Stamina",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~9crafts",
+          "mats": [
+            {
+              "name": "Lesser Astral Essence",
+              "url": "https://foreverchanges.pro/item/10998"
+            },
+            {
+              "name": "Strange Dust",
+              "url": "https://foreverchanges.pro/item/10940"
+            }
+          ]
+        },
+        {
+          "range": [
+            130,
+            null
+          ],
+          "item": {
+            "name": "Make a Runed Silver Rod",
+            "url": null
+          },
+          "source": "Every enchant from here on needs it in your bags.",
+          "count": "1craft",
+          "mats": [
+            {
+              "name": "Silver Rod",
+              "url": "https://foreverchanges.pro/item/6338"
+            },
+            {
+              "name": "3 Strange Dust",
+              "url": "https://foreverchanges.pro/item/10940"
+            },
+            {
+              "name": "4 Lesser Magic Essence",
+              "url": "https://foreverchanges.pro/item/10938"
+            },
+            {
+              "name": "Shadowgem",
+              "url": "https://foreverchanges.pro/item/1210"
+            }
+          ]
+        },
+        {
+          "range": [
+            130,
+            140
+          ],
+          "item": {
+            "name": "Enchant Bracer - Lesser Stamina",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "Soul Dust",
+              "url": "https://foreverchanges.pro/item/11083"
+            }
+          ]
+        },
+        {
+          "range": [
+            140,
+            150
+          ],
+          "item": {
+            "name": "Enchant Bracer - Lesser Strength",
+            "url": null
+          },
+          "source": "Formula sold by Dalria (Alliance) or Kulwia (Horde)",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "Soul Dust",
+              "url": "https://foreverchanges.pro/item/11083"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+      "steps": [
+        {
+          "range": [
+            150,
+            186
+          ],
+          "item": {
+            "name": "Enchant Bracer - Lesser Strength",
+            "url": null
+          },
+          "source": "Formula sold by Dalria (Alliance) or Kulwia (Horde)",
+          "count": "~45crafts",
+          "mats": [
+            {
+              "name": "Soul Dust",
+              "url": "https://foreverchanges.pro/item/11083"
+            }
+          ]
+        },
+        {
+          "range": [
+            186,
+            null
+          ],
+          "item": {
+            "name": "Make a Runed Golden Rod",
+            "url": null
+          },
+          "source": "Every enchant from here on needs it in your bags.",
+          "count": "1craft",
+          "mats": [
+            {
+              "name": "Golden Rod",
+              "url": "https://foreverchanges.pro/item/11128"
+            },
+            {
+              "name": "Iridescent Pearl",
+              "url": "https://foreverchanges.pro/item/5500"
+            },
+            {
+              "name": "Greater Astral Essence",
+              "url": "https://foreverchanges.pro/item/11082"
+            },
+            {
+              "name": "Soul Dust",
+              "url": "https://foreverchanges.pro/item/11083"
+            }
+          ]
+        },
+        {
+          "range": [
+            186,
+            194
+          ],
+          "item": {
+            "name": "Enchant Boots - Lesser Agility",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~11crafts",
+          "mats": [
+            {
+              "name": "Soul Dust",
+              "url": "https://foreverchanges.pro/item/11083"
+            }
+          ]
+        },
+        {
+          "range": [
+            194,
+            218
+          ],
+          "item": {
+            "name": "Enchant Bracer - Strength",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~30crafts",
+          "mats": [
+            {
+              "name": "Vision Dust",
+              "url": "https://foreverchanges.pro/item/11137"
+            }
+          ]
+        },
+        {
+          "range": [
+            218,
+            null
+          ],
+          "item": {
+            "name": "Make a Runed Truesilver Rod",
+            "url": null
+          },
+          "source": "Every enchant from here on needs it in your bags.",
+          "count": "1craft",
+          "mats": [
+            {
+              "name": "Truesilver Rod",
+              "url": "https://foreverchanges.pro/item/11144"
+            },
+            {
+              "name": "Black Pearl",
+              "url": "https://foreverchanges.pro/item/7971"
+            },
+            {
+              "name": "Greater Mystic Essence",
+              "url": "https://foreverchanges.pro/item/11135"
+            },
+            {
+              "name": "Vision Dust",
+              "url": "https://foreverchanges.pro/item/11137"
+            }
+          ]
+        },
+        {
+          "range": [
+            218,
+            225
+          ],
+          "item": {
+            "name": "Enchant Cloak - Greater Defense",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~7crafts",
+          "mats": [
+            {
+              "name": "Vision Dust",
+              "url": "https://foreverchanges.pro/item/11137"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+      "steps": [
+        {
+          "range": [
+            225,
+            262
+          ],
+          "item": {
+            "name": "Enchant Gloves - Agility",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~68crafts",
+          "mats": [
+            {
+              "name": "Vision Dust",
+              "url": "https://foreverchanges.pro/item/11137"
+            }
+          ]
+        },
+        {
+          "range": [
+            262,
+            277
+          ],
+          "item": {
+            "name": "Enchant Bracer - Greater Strength",
+            "url": null
+          },
+          "source": "Learned from the trainer",
+          "count": "~20crafts",
+          "mats": [
+            {
+              "name": "Dream Dust",
+              "url": "https://foreverchanges.pro/item/11176"
+            },
+            {
+              "name": "2 Lesser Nether Essence",
+              "url": "https://foreverchanges.pro/item/11174"
+            }
+          ]
+        },
+        {
+          "range": [
+            277,
+            300
+          ],
+          "item": {
+            "name": "Enchant Shield - Greater Stamina",
+            "url": null
+          },
+          "source": "Formula sold by Mythrin'dir (Alliance) or Daniel Bartlett (Horde)",
+          "count": "~27crafts",
+          "mats": [
+            {
+              "name": "6 Dream Dust",
+              "url": "https://foreverchanges.pro/item/11176"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "favor_section": [
+    {
+      "tier": "45 Merchant's Favor (skill 130 to 140)",
+      "items": [
+        {
+          "name": "Tenets of the Silver Hand",
+          "url": "https://foreverchanges.pro/item/249397",
+          "skill_threshold": 130
+        },
+        {
+          "name": "Polished Driftwood Icon",
+          "url": "https://foreverchanges.pro/item/249398",
+          "skill_threshold": 130
+        },
+        {
+          "name": "Mystic Mushroom",
+          "url": "https://foreverchanges.pro/item/249396",
+          "skill_threshold": 130
+        },
+        {
+          "name": "Soulstaff",
+          "url": "https://foreverchanges.pro/item/249393",
+          "skill_threshold": 140
+        },
+        {
+          "name": "Orb of Souls",
+          "url": "https://foreverchanges.pro/item/249395",
+          "skill_threshold": 140
+        },
+        {
+          "name": "Orb of Mystic Insight",
+          "url": "https://foreverchanges.pro/item/249394",
+          "skill_threshold": 140
+        },
+        {
+          "name": "Glimmering Staff",
+          "url": "https://foreverchanges.pro/item/249392",
+          "skill_threshold": 140
+        },
+        {
+          "name": "Weapon - Insight",
+          "url": "https://foreverchanges.pro/item/249479",
+          "skill_threshold": 140
+        },
+        {
+          "name": "Weapon - Recovery",
+          "url": "https://foreverchanges.pro/item/249480",
+          "skill_threshold": 140
+        },
+        {
+          "name": "Weapon - Revelation",
+          "url": "https://foreverchanges.pro/item/249481",
+          "skill_threshold": 140
+        }
+      ]
+    },
+    {
+      "tier": "120 Merchant's Favor (skill 210 to 220)",
+      "items": [
+        {
+          "name": "Dreamstaff",
+          "url": "https://foreverchanges.pro/item/249454",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Totem of Ancestral Protection",
+          "url": "https://foreverchanges.pro/item/249443",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Talons of Wrath",
+          "url": "https://foreverchanges.pro/item/249441",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Libram of Invocation",
+          "url": "https://foreverchanges.pro/item/249442",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Necklace - Strength",
+          "url": "https://foreverchanges.pro/item/249496",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Necklace - Spell Power",
+          "url": "https://foreverchanges.pro/item/249502",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Necklace - Healing Power",
+          "url": "https://foreverchanges.pro/item/249503",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Necklace - Agility",
+          "url": "https://foreverchanges.pro/item/249504",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Necklace - Deflection",
+          "url": "https://foreverchanges.pro/item/249505",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Twisting Essence Jar",
+          "url": "https://foreverchanges.pro/item/249456",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Truesilver Conduit",
+          "url": "https://foreverchanges.pro/item/249455",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Radiant Staff",
+          "url": "https://foreverchanges.pro/item/249453",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Chest - Absorption",
+          "url": "https://foreverchanges.pro/item/249510",
+          "skill_threshold": 220
+        }
+      ]
+    },
+    {
+      "tier": "180 Merchant's Favor (skill 275)",
+      "items": [
+        {
+          "name": "Brilliant Wand",
+          "url": "https://foreverchanges.pro/item/249385",
+          "skill_threshold": 275
+        }
+      ]
+    },
+    {
+      "tier": "240 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Gloves - Holy Power",
+          "url": "https://foreverchanges.pro/item/249536",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Gloves - Arcane Power",
+          "url": "https://foreverchanges.pro/item/249534",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Bracer - Superior Intellect",
+          "url": "https://foreverchanges.pro/item/249538",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Bracer - Superior Deflection",
+          "url": "https://foreverchanges.pro/item/249539",
+          "skill_threshold": 300
+        },
+        {
+          "name": "2H Weapon - Mighty Spell Power",
+          "url": "https://foreverchanges.pro/item/249525",
+          "skill_threshold": 300
+        },
+        {
+          "name": "2H Weapon - Mighty Healing Power",
+          "url": "https://foreverchanges.pro/item/249526",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Off-Hand - Wisdom",
+          "url": "https://foreverchanges.pro/item/274393",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Gloves - Superior Strength",
+          "url": "https://foreverchanges.pro/item/274398",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Cloak - Agility",
+          "url": "https://foreverchanges.pro/item/274399",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Bracer - Greater Spellpower",
+          "url": "https://foreverchanges.pro/item/274401",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Gloves - Natural Power",
+          "url": "https://foreverchanges.pro/item/249535",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Idol of the Dream",
+          "url": "https://foreverchanges.pro/item/249529",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Libram of Holy Alacrity",
+          "url": "https://foreverchanges.pro/item/249530",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Totem of Thunder",
+          "url": "https://foreverchanges.pro/item/249532",
+          "skill_threshold": 300
+        },
+        {
+          "name": "2H Weapon - Spellblasting",
+          "url": "https://foreverchanges.pro/item/274394",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Enchanting Certification",
+          "url": "https://foreverchanges.pro/item/271624",
+          "skill_threshold": 300
+        }
+      ]
+    }
+  ]
+}

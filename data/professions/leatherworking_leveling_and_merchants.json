@@ -1,0 +1,1044 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirement": "from any Leatherworking trainer, up to 75",
+      "steps": [
+        {
+          "range": [
+            1,
+            15
+          ],
+          "item": {
+            "name": "Camp Tent",
+            "url": "https://foreverchanges.pro/item/279978"
+          },
+          "source": "Learned from the trainer",
+          "count": "~14crafts",
+          "mats": [
+            {
+              "name": "5 Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            }
+          ]
+        },
+        {
+          "range": [
+            15,
+            58
+          ],
+          "item": {
+            "name": "Light Armor Kit",
+            "url": "https://foreverchanges.pro/item/2304"
+          },
+          "source": "Learned from the trainer",
+          "count": "~90crafts",
+          "mats": [
+            {
+              "name": "Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            }
+          ]
+        },
+        {
+          "range": [
+            58,
+            62
+          ],
+          "item": {
+            "name": "Handstitched Leather Belt",
+            "url": "https://foreverchanges.pro/item/4237"
+          },
+          "source": "Learned from the trainer",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "6 Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            },
+            {
+              "name": "Coarse Thread",
+              "url": "https://foreverchanges.pro/item/2320"
+            }
+          ]
+        },
+        {
+          "range": [
+            62,
+            75
+          ],
+          "item": {
+            "name": "Embossed Leather Gloves",
+            "url": "https://foreverchanges.pro/item/4239"
+          },
+          "source": "Learned from the trainer",
+          "count": "~14crafts",
+          "mats": [
+            {
+              "name": "3 Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            },
+            {
+              "name": "2 Coarse Thread",
+              "url": "https://foreverchanges.pro/item/2320"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": [
+            75,
+            80
+          ],
+          "item": {
+            "name": "Embossed Leather Gloves",
+            "url": "https://foreverchanges.pro/item/4239"
+          },
+          "source": "Learned from the trainer",
+          "count": "~7crafts",
+          "mats": [
+            {
+              "name": "3 Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            },
+            {
+              "name": "2 Coarse Thread",
+              "url": "https://foreverchanges.pro/item/2320"
+            }
+          ]
+        },
+        {
+          "range": [
+            80,
+            95
+          ],
+          "item": {
+            "name": "Fine Leather Belt",
+            "url": "https://foreverchanges.pro/item/4246"
+          },
+          "source": "Learned from the trainer",
+          "count": "~17crafts",
+          "mats": [
+            {
+              "name": "6 Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            },
+            {
+              "name": "2 Coarse Thread",
+              "url": "https://foreverchanges.pro/item/2320"
+            }
+          ]
+        },
+        {
+          "range": [
+            95,
+            113
+          ],
+          "item": {
+            "name": "Light Leather Pants",
+            "url": "https://foreverchanges.pro/item/7282"
+          },
+          "source": "Learned from the trainer",
+          "count": "~22crafts",
+          "mats": [
+            {
+              "name": "10 Light Leather",
+              "url": "https://foreverchanges.pro/item/2318"
+            },
+            {
+              "name": "Cured Light Hide",
+              "url": "https://foreverchanges.pro/item/4231"
+            },
+            {
+              "name": "Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        },
+        {
+          "range": [
+            113,
+            120
+          ],
+          "item": {
+            "name": "Earthen Leather Shoulders",
+            "url": "https://foreverchanges.pro/item/7352"
+          },
+          "source": "Pattern sold by Zixil (Hillsbrad Foothills)",
+          "count": "~7crafts",
+          "mats": [
+            {
+              "name": "6 Medium Leather",
+              "url": "https://foreverchanges.pro/item/2319"
+            },
+            {
+              "name": "Elemental Earth",
+              "url": "https://foreverchanges.pro/item/7067"
+            },
+            {
+              "name": "2 Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        },
+        {
+          "range": [
+            120,
+            125
+          ],
+          "item": {
+            "name": "Nimble Leather Gloves",
+            "url": "https://foreverchanges.pro/item/7285"
+          },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "Elixir of Minor Agility",
+              "url": "https://foreverchanges.pro/item/2457"
+            },
+            {
+              "name": "6 Medium Leather",
+              "url": "https://foreverchanges.pro/item/2319"
+            },
+            {
+              "name": "Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        },
+        {
+          "range": [
+            125,
+            130
+          ],
+          "item": {
+            "name": "Heavy Leather Ball",
+            "url": "https://foreverchanges.pro/item/18662"
+          },
+          "source": "Pattern sold by Bombus Finespindle (Alliance) or Tamar (Horde)",
+          "count": "~7crafts",
+          "mats": [
+            {
+              "name": "2 Heavy Leather",
+              "url": "https://foreverchanges.pro/item/4234"
+            },
+            {
+              "name": "Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        },
+        {
+          "range": [
+            130,
+            135
+          ],
+          "item": {
+            "name": "Hillman's Shoulders",
+            "url": "https://foreverchanges.pro/item/4251"
+          },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "Cured Medium Hide",
+              "url": "https://foreverchanges.pro/item/4233"
+            },
+            {
+              "name": "4 Medium Leather",
+              "url": "https://foreverchanges.pro/item/2319"
+            },
+            {
+              "name": "Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        },
+        {
+          "range": [
+            135,
+            150
+          ],
+          "item": {
+            "name": "Earthen Leather Shoulders",
+            "url": "https://foreverchanges.pro/item/7352"
+          },
+          "source": "Pattern sold by Zixil (Hillsbrad Foothills)",
+          "count": "~23crafts",
+          "mats": [
+            {
+              "name": "6 Medium Leather",
+              "url": "https://foreverchanges.pro/item/2319"
+            },
+            {
+              "name": "Elemental Earth",
+              "url": "https://foreverchanges.pro/item/7067"
+            },
+            {
+              "name": "2 Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+      "steps": [
+        {
+          "range": [
+            150,
+            160
+          ],
+          "item": {
+            "name": "Heavy Armor Kit",
+            "url": "https://foreverchanges.pro/item/4265"
+          },
+          "source": "Learned from the trainer",
+          "count": "~21crafts",
+          "mats": [
+            {
+              "name": "5 Heavy Leather",
+              "url": "https://foreverchanges.pro/item/4234"
+            },
+            {
+              "name": "Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            }
+          ]
+        },
+        {
+          "range": [
+            160,
+            165
+          ],
+          "item": {
+            "name": "Barbaric Leggings",
+            "url": "https://foreverchanges.pro/item/5963"
+          },
+          "source": "Pattern sold by Hammon Karwn (Alliance) or Keena (Horde) and 1 more",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "10 Heavy Leather",
+              "url": "https://foreverchanges.pro/item/4234"
+            },
+            {
+              "name": "2 Fine Thread",
+              "url": "https://foreverchanges.pro/item/2321"
+            },
+            {
+              "name": "Moss Agate",
+              "url": "https://foreverchanges.pro/item/1206"
+            }
+          ]
+        },
+        {
+          "range": [
+            165,
+            190
+          ],
+          "item": {
+            "name": "Green Whelp Bracers",
+            "url": "https://foreverchanges.pro/item/7386"
+          },
+          "source": "Pattern sold by Saenorion (Alliance) or Jangdor Swiftstrider (Horde) and 1 more",
+          "count": "~26crafts",
+          "mats": [
+            {
+              "name": "6 Green Whelp Scale",
+              "url": "https://foreverchanges.pro/item/7392"
+            },
+            {
+              "name": "8 Heavy Leather",
+              "url": "https://foreverchanges.pro/item/4234"
+            },
+            {
+              "name": "2 Silken Thread",
+              "url": "https://foreverchanges.pro/item/4291"
+            }
+          ]
+        },
+        {
+          "range": [
+            190,
+            200
+          ],
+          "item": {
+            "name": "Guardian Gloves",
+            "url": "https://foreverchanges.pro/item/5966"
+          },
+          "source": "Learned from the trainer",
+          "count": "~21crafts",
+          "mats": [
+            {
+              "name": "4 Heavy Leather",
+              "url": "https://foreverchanges.pro/item/4234"
+            },
+            {
+              "name": "Cured Heavy Hide",
+              "url": "https://foreverchanges.pro/item/4236"
+            },
+            {
+              "name": "Silken Thread",
+              "url": "https://foreverchanges.pro/item/4291"
+            }
+          ]
+        },
+        {
+          "range": [
+            200,
+            205
+          ],
+          "item": {
+            "name": "Thick Armor Kit",
+            "url": "https://foreverchanges.pro/item/8173"
+          },
+          "source": "Learned from the trainer",
+          "count": "~8crafts",
+          "mats": [
+            {
+              "name": "5 Thick Leather",
+              "url": "https://foreverchanges.pro/item/4304"
+            },
+            {
+              "name": "Silken Thread",
+              "url": "https://foreverchanges.pro/item/4291"
+            }
+          ]
+        },
+        {
+          "range": [
+            205,
+            214
+          ],
+          "item": {
+            "name": "Nightscape Headband",
+            "url": "https://foreverchanges.pro/item/8176"
+          },
+          "source": "Learned from the trainer",
+          "count": "~18crafts",
+          "mats": [
+            {
+              "name": "5 Thick Leather",
+              "url": "https://foreverchanges.pro/item/4304"
+            },
+            {
+              "name": "2 Silken Thread",
+              "url": "https://foreverchanges.pro/item/4291"
+            }
+          ]
+        },
+        {
+          "range": [
+            214,
+            225
+          ],
+          "item": {
+            "name": "Turtle Scale Breastplate",
+            "url": "https://foreverchanges.pro/item/8189"
+          },
+          "source": "Learned from the trainer",
+          "count": "~61crafts",
+          "mats": [
+            {
+              "name": "6 Thick Leather",
+              "url": "https://foreverchanges.pro/item/4304"
+            },
+            {
+              "name": "12 Turtle Scale",
+              "url": "https://foreverchanges.pro/item/8167"
+            },
+            {
+              "name": "Heavy Silken Thread",
+              "url": "https://foreverchanges.pro/item/8343"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+      "steps": [
+        {
+          "range": [
+            225,
+            235
+          ],
+          "item": {
+            "name": "Thick Leather Ammo Pouch",
+            "url": "https://foreverchanges.pro/item/8218"
+          },
+          "source": "Learned from the trainer",
+          "count": "~21crafts",
+          "mats": [
+            {
+              "name": "10 Thick Leather",
+              "url": "https://foreverchanges.pro/item/4304"
+            },
+            {
+              "name": "Cured Thick Hide",
+              "url": "https://foreverchanges.pro/item/8172"
+            },
+            {
+              "name": "Elixir of Defense",
+              "url": "https://foreverchanges.pro/item/8951"
+            },
+            {
+              "name": "6 Silken Thread",
+              "url": "https://foreverchanges.pro/item/4291"
+            }
+          ]
+        },
+        {
+          "range": [
+            235,
+            240
+          ],
+          "item": {
+            "name": "Wicked Leather Gauntlets",
+            "url": "https://foreverchanges.pro/item/15083"
+          },
+          "source": "Pattern sold by Werg Thickblade (Horde) or Leonard Porter (Alliance)",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "8 Rugged Leather",
+              "url": "https://foreverchanges.pro/item/8170"
+            },
+            {
+              "name": "Black Dye",
+              "url": "https://foreverchanges.pro/item/2325"
+            },
+            {
+              "name": "Rune Thread",
+              "url": "https://foreverchanges.pro/item/14341"
+            }
+          ]
+        },
+        {
+          "range": [
+            240,
+            250
+          ],
+          "item": {
+            "name": "Chimeric Gloves",
+            "url": "https://foreverchanges.pro/item/15074"
+          },
+          "source": "Pattern sold by Blimo Gadgetspring (Azshara)",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "6 Rugged Leather",
+              "url": "https://foreverchanges.pro/item/8170"
+            },
+            {
+              "name": "6 Chimera Leather",
+              "url": "https://foreverchanges.pro/item/15423"
+            },
+            {
+              "name": "Rune Thread",
+              "url": "https://foreverchanges.pro/item/14341"
+            }
+          ]
+        },
+        {
+          "range": [
+            250,
+            281
+          ],
+          "item": {
+            "name": "Frostsaber Boots",
+            "url": "https://foreverchanges.pro/item/15071"
+          },
+          "source": "Pattern sold by Qia (Winterspring)",
+          "count": "~36crafts",
+          "mats": [
+            {
+              "name": "4 Rugged Leather",
+              "url": "https://foreverchanges.pro/item/8170"
+            },
+            {
+              "name": "6 Frostsaber Leather",
+              "url": "https://foreverchanges.pro/item/15422"
+            },
+            {
+              "name": "Rune Thread",
+              "url": "https://foreverchanges.pro/item/14341"
+            }
+          ]
+        },
+        {
+          "range": [
+            281,
+            300
+          ],
+          "item": {
+            "name": "Heavy Scorpid Helm",
+            "url": "https://foreverchanges.pro/item/15080"
+          },
+          "source": "Pattern sold by Zannok Hidepiercer (Silithus)",
+          "count": "~23crafts",
+          "mats": [
+            {
+              "name": "8 Rugged Leather",
+              "url": "https://foreverchanges.pro/item/8170"
+            },
+            {
+              "name": "12 Heavy Scorpid Scale",
+              "url": "https://foreverchanges.pro/item/15408"
+            },
+            {
+              "name": "Cured Rugged Hide",
+              "url": "https://foreverchanges.pro/item/15407"
+            },
+            {
+              "name": "Rune Thread",
+              "url": "https://foreverchanges.pro/item/14341"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "favor_section": [
+    {
+      "tier": "30 Merchant's Favor (skill 60 to 110)",
+      "items": [
+        {
+          "name": "Wisdom's Leather Belt",
+          "url": "https://foreverchanges.pro/item/252433",
+          "skill_threshold": 60
+        },
+        {
+          "name": "Defender's Leather Belt",
+          "url": "https://foreverchanges.pro/item/252430",
+          "skill_threshold": 60
+        },
+        {
+          "name": "Brawler's Leather Belt",
+          "url": "https://foreverchanges.pro/item/252428",
+          "skill_threshold": 60
+        },
+        {
+          "name": "Totemic Leather Belt",
+          "url": "https://foreverchanges.pro/item/252431",
+          "skill_threshold": 60
+        },
+        {
+          "name": "Trapper's Leather Belt",
+          "url": "https://foreverchanges.pro/item/252429",
+          "skill_threshold": 60
+        },
+        {
+          "name": "Stormrider's Leather Belt",
+          "url": "https://foreverchanges.pro/item/252432",
+          "skill_threshold": 60
+        },
+        {
+          "name": "Stormrider's Leather Tunic",
+          "url": "https://foreverchanges.pro/item/252510",
+          "skill_threshold": 80
+        },
+        {
+          "name": "Trapper's Leather Tunic",
+          "url": "https://foreverchanges.pro/item/252509",
+          "skill_threshold": 80
+        },
+        {
+          "name": "Defender's Leather Tunic",
+          "url": "https://foreverchanges.pro/item/252450",
+          "skill_threshold": 80
+        },
+        {
+          "name": "Brawler's Leather Tunic",
+          "url": "https://foreverchanges.pro/item/252508",
+          "skill_threshold": 80
+        },
+        {
+          "name": "Totemic Leather Tunic",
+          "url": "https://foreverchanges.pro/item/252451",
+          "skill_threshold": 80
+        },
+        {
+          "name": "Wisdom's Leather Tunic",
+          "url": "https://foreverchanges.pro/item/252511",
+          "skill_threshold": 80
+        },
+        {
+          "name": "Wisdom's Leather Leggings",
+          "url": "https://foreverchanges.pro/item/252519",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Trapper's Leather Legguards",
+          "url": "https://foreverchanges.pro/item/252517",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Brawler's Leather Legguards",
+          "url": "https://foreverchanges.pro/item/252516",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Totemic Leather Leggings",
+          "url": "https://foreverchanges.pro/item/252458",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Defender's Leather Kilt",
+          "url": "https://foreverchanges.pro/item/252457",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Stormrider's Leather Kilt",
+          "url": "https://foreverchanges.pro/item/252518",
+          "skill_threshold": 100
+        },
+        {
+          "name": "Wisdom's Leather Hood",
+          "url": "https://foreverchanges.pro/item/252507",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Trapper's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252495",
+          "skill_threshold": 90
+        },
+        {
+          "name": "Wisdom's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252499",
+          "skill_threshold": 90
+        },
+        {
+          "name": "Defender's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252496",
+          "skill_threshold": 90
+        },
+        {
+          "name": "Totemic Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252497",
+          "skill_threshold": 90
+        },
+        {
+          "name": "Stormrider's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252498",
+          "skill_threshold": 90
+        },
+        {
+          "name": "Brawler's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252494",
+          "skill_threshold": 90
+        },
+        {
+          "name": "Defender's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252441",
+          "skill_threshold": 70
+        },
+        {
+          "name": "Wisdom's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252444",
+          "skill_threshold": 70
+        },
+        {
+          "name": "Totemic Leather Boots",
+          "url": "https://foreverchanges.pro/item/252442",
+          "skill_threshold": 70
+        },
+        {
+          "name": "Stormrider's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252443",
+          "skill_threshold": 70
+        },
+        {
+          "name": "Brawler's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252439",
+          "skill_threshold": 70
+        },
+        {
+          "name": "Trapper's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252440",
+          "skill_threshold": 70
+        },
+        {
+          "name": "Trapper's Leather Hood",
+          "url": "https://foreverchanges.pro/item/252505",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Brawler's Leather Hood",
+          "url": "https://foreverchanges.pro/item/252504",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Totemic Leather Hood",
+          "url": "https://foreverchanges.pro/item/252448",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Stormrider's Leather Hood",
+          "url": "https://foreverchanges.pro/item/252506",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Defender's Leather Hood",
+          "url": "https://foreverchanges.pro/item/252447",
+          "skill_threshold": 110
+        }
+      ]
+    },
+    {
+      "tier": "60 Merchant's Favor (skill 185 to 210)",
+      "items": [
+        {
+          "name": "Prowler's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252524",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Skycaller's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252529",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Stalker's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252526",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Mender's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252530",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Forceful Thick Armor Kit",
+          "url": "https://foreverchanges.pro/item/252463",
+          "skill_threshold": 185
+        },
+        {
+          "name": "Warden's Leather Shoulder",
+          "url": "https://foreverchanges.pro/item/252536",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Skycaller's Mail Shoulder",
+          "url": "https://foreverchanges.pro/item/252567",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Mender's Mail Shoulder",
+          "url": "https://foreverchanges.pro/item/252569",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Prowler's Leather Shoulder",
+          "url": "https://foreverchanges.pro/item/252534",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Skulker's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252525",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Skirmisher's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252528",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Warden's Leather Gloves",
+          "url": "https://foreverchanges.pro/item/252527",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Stalker's Mail Shoulder",
+          "url": "https://foreverchanges.pro/item/252566",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Skulker's Leather Shoulder",
+          "url": "https://foreverchanges.pro/item/252535",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Skirmisher's Mail Shoulder",
+          "url": "https://foreverchanges.pro/item/252568",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Mender's Leather Shoulder",
+          "url": "https://foreverchanges.pro/item/252538",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Skycaller's Leather Shoulder",
+          "url": "https://foreverchanges.pro/item/252537",
+          "skill_threshold": 210
+        }
+      ]
+    },
+    {
+      "tier": "90 Merchant's Favor (skill 220 to 235)",
+      "items": [
+        {
+          "name": "Skycaller's Mail Bracers",
+          "url": "https://foreverchanges.pro/item/252571",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Skulker's Leather Waistguard",
+          "url": "https://foreverchanges.pro/item/252474",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Mender's Leather Bracers",
+          "url": "https://foreverchanges.pro/item/252543",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Stalker's Mail Bracers",
+          "url": "https://foreverchanges.pro/item/252570",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Skulker's Leather Bracers",
+          "url": "https://foreverchanges.pro/item/252540",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Skirmisher's Mail Bracers",
+          "url": "https://foreverchanges.pro/item/252572",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Skycaller's Leather Bracers",
+          "url": "https://foreverchanges.pro/item/252542",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Warden's Leather Bracers",
+          "url": "https://foreverchanges.pro/item/252541",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Mender's Mail Bracers",
+          "url": "https://foreverchanges.pro/item/252573",
+          "skill_threshold": 220
+        },
+        {
+          "name": "Skycaller's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252471",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Mender's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252472",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Skirmisher's Mail Sabatons",
+          "url": "https://foreverchanges.pro/item/252578",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Mender's Mail Sabatons",
+          "url": "https://foreverchanges.pro/item/252579",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Skycaller's Mail Sabatons",
+          "url": "https://foreverchanges.pro/item/252577",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Prowler's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252468",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Warden's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252470",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Skulker's Leather Boots",
+          "url": "https://foreverchanges.pro/item/252469",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Stalker's Mail Sabatons",
+          "url": "https://foreverchanges.pro/item/252576",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Mystic Rugged Armor Kit",
+          "url": "https://foreverchanges.pro/item/252487",
+          "skill_threshold": 235
+        },
+        {
+          "name": "Prowler's Leather Waistguard",
+          "url": "https://foreverchanges.pro/item/252473",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Skycaller's Leather Waistguard",
+          "url": "https://foreverchanges.pro/item/252476",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Stalker's Mail Belt",
+          "url": "https://foreverchanges.pro/item/252588",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Skycaller's Mail Belt",
+          "url": "https://foreverchanges.pro/item/252589",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Mender's Mail Belt",
+          "url": "https://foreverchanges.pro/item/252591",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Warden's Leather Waistguard",
+          "url": "https://foreverchanges.pro/item/252475",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Mender's Leather Waistguard",
+          "url": "https://foreverchanges.pro/item/252477",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Skirmisher's Mail Belt",
+          "url": "https://foreverchanges.pro/item/252590",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Prowler's Leather Bracers",
+          "url": "https://foreverchanges.pro/item/252539",
+          "skill_threshold": 220
+        }
+      ]
+    },
+    {
+      "tier": "1,000 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Leatherworking Certification",
+          "url": "https://foreverchanges.pro/item/271626",
+          "skill_threshold": 300
+        }
+      ]
+    }
+  ]
+}

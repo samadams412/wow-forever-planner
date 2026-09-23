@@ -29684,6 +29684,3122 @@
    ]
   }
  ],
- "leveling": null,
- "favor": null
+ "leveling": [
+  {
+   "rank": "Apprentice",
+   "requirement": "from any Engineering trainer, up to 75",
+   "steps": [
+    {
+     "range": [
+      1,
+      21
+     ],
+     "item": {
+      "name": "Rough Blasting Powder",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 4357,
+      "icon": "inv_misc_dust_01",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 4c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~20crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Rough Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2835,
+        "icon": "inv_stone_06",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      21,
+      30
+     ],
+     "item": {
+      "name": "Crafted Light Shot",
+      "slot": "Ammo",
+      "type": "Bullet",
+      "itemId": 8067,
+      "icon": "inv_ammo_bullet_02",
+      "quality": 1,
+      "itemLevel": 10,
+      "requiredLevel": 5,
+      "tooltip": [
+       "Ammo\tBullet",
+       "Damage set by hand\tSpeed 3.00",
+       "Requires Level 5"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Ammo\tBullet",
+       "2 - 2 Damage\tSpeed 3.00",
+       "(0.7 damage per second)",
+       "Requires Level 5"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~9crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Rough Blasting Powder",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4357,
+        "icon": "inv_misc_dust_01",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 4c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Copper Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2840,
+        "icon": "inv_ingot_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      30,
+      54
+     ],
+     "item": {
+      "name": "Handful of Copper Bolts",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 4359,
+      "icon": "inv_misc_gear_06",
+      "quality": 1,
+      "itemLevel": 8,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~29crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Copper Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2840,
+        "icon": "inv_ingot_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      54,
+      62
+     ],
+     "item": {
+      "name": "Rough Copper Bomb",
+      "slot": null,
+      "type": "Explosives",
+      "itemId": 4360,
+      "icon": "inv_misc_bomb_09",
+      "quality": 1,
+      "itemLevel": 14,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Explosives",
+       "Requires Engineering (30)",
+       "Use: Inflicts 22 to 28 Fire damage and stuns targets in a 3 yard radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
+       "Sell Price: 60c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~9crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Copper Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2840,
+        "icon": "inv_ingot_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Handful of Copper Bolts",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4359,
+        "icon": "inv_misc_gear_06",
+        "quality": 1,
+        "itemLevel": 8,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 12c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Rough Blasting Powder",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2589,
+        "icon": "inv_fabric_linen_01",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 13c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      62,
+      75
+     ],
+     "item": {
+      "name": "Rough Boomstick",
+      "slot": "Ranged",
+      "type": "Gun",
+      "itemId": 4362,
+      "icon": "inv_weapon_rifle_03",
+      "quality": 2,
+      "itemLevel": 10,
+      "requiredLevel": 5,
+      "tooltip": [
+       "Binds when equipped",
+       "Ranged\tGun",
+       "6 - 13 Damage\tSpeed 2.30",
+       "(4.1 damage per second)",
+       "+1 Stamina",
+       "Requires Level 5",
+       "Sell Price: 1s 87c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Ranged\tGun",
+       "6 - 13 Damage\tSpeed 2.30",
+       "(4.1 damage per second)",
+       "Requires Level 5",
+       "Sell Price: 1s 87c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~13crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Copper Tube",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4361,
+        "icon": "inv_gizmo_pipe_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 1s 20c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Handful of Copper Bolts",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4359,
+        "icon": "inv_misc_gear_06",
+        "quality": 1,
+        "itemLevel": 8,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 12c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Wooden Stock",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4399,
+        "icon": "inv_mace_11",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      88
+     ],
+     "item": {
+      "name": "Coarse Blasting Powder",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 4364,
+      "icon": "inv_misc_dust_02",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~14crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2836,
+        "icon": "inv_stone_09",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      88,
+      100
+     ],
+     "item": {
+      "name": "Coarse Dynamite",
+      "slot": null,
+      "type": "Explosives",
+      "itemId": 4365,
+      "icon": "inv_misc_bomb_06",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Explosives",
+       "Requires Engineering (75)",
+       "Use: Inflicts 51 to 69 Fire damage in a 5 yard radius. (1 Min Cooldown)",
+       "Sell Price: 75c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~18crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Coarse Blasting Powder",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2589,
+        "icon": "inv_fabric_linen_01",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 13c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      100,
+      120
+     ],
+     "item": {
+      "name": "Practice Lock",
+      "slot": null,
+      "type": "Junk",
+      "itemId": 6712,
+      "icon": "inv_box_01",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Junk",
+       "Sell Price: 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~21crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bronze Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2841,
+        "icon": "inv_ingot_bronze",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Handful of Copper Bolts",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Weak Flux",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2880,
+        "icon": "inv_misc_ammo_gunpowder_02",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "\"Used by Blacksmiths to remove impurities.\"",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      120,
+      125
+     ],
+     "item": {
+      "name": "Target Dummy",
+      "slot": null,
+      "type": "Device",
+      "itemId": 4366,
+      "icon": "inv_crate_06",
+      "quality": 1,
+      "itemLevel": 17,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Device",
+       "Requires Engineering (85)",
+       "Use: Drops a target dummy on the ground that attracts nearby monsters to attack it. Lasts for 15 seconds or until killed. (2 Min Cooldown)",
+       "Sell Price: 75c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Copper Modulator",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4363,
+        "icon": "inv_gizmo_03",
+        "quality": 1,
+        "itemLevel": 13,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Handful of Copper Bolts",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bronze Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2841,
+        "icon": "inv_ingot_bronze",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Wool Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2592,
+        "icon": "inv_fabric_wool_01",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 33c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      125,
+      141
+     ],
+     "item": {
+      "name": "Heavy Blasting Powder",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 4377,
+      "icon": "inv_misc_dust_06",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 1s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~31crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Heavy Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 2838,
+        "icon": "inv_stone_12",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 60c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      141,
+      145
+     ],
+     "item": {
+      "name": "Whirring Bronze Gizmo",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 4375,
+      "icon": "inv_gizmo_02",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 1s 15c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Bronze Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Wool Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2592,
+        "icon": "inv_fabric_wool_01",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 33c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      145,
+      150
+     ],
+     "item": {
+      "name": "Bronze Framework",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 4382,
+      "icon": "inv_gizmo_bronzeframework_01",
+      "quality": 1,
+      "itemLevel": 29,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 6s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Bronze Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Medium Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 2319,
+        "icon": "inv_misc_leatherscrap_05",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Wool Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2592,
+        "icon": "inv_fabric_wool_01",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 33c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Expert",
+   "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+   "steps": [
+    {
+     "range": [
+      150,
+      155
+     ],
+     "item": {
+      "name": "Green Firework",
+      "slot": null,
+      "type": "Other",
+      "itemId": 9313,
+      "icon": "spell_nature_abolishmagic",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Other",
+       "Use: Shoots a firework into the air that bursts into a thousand green stars.",
+       "Sell Price: 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Schematic sold by Crazk Sparks (Stranglethorn Vale) or Gagsprocket (The Barrens)",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Heavy Blasting Powder",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4377,
+        "icon": "inv_misc_dust_06",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Heavy Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 4234,
+        "icon": "inv_misc_leatherscrap_07",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      155,
+      175
+     ],
+     "item": {
+      "name": "Ice Deflector",
+      "slot": null,
+      "type": "Device",
+      "itemId": 4386,
+      "icon": "inv_gizmo_01",
+      "quality": 1,
+      "itemLevel": 31,
+      "requiredLevel": 21,
+      "tooltip": [
+       "Device",
+       "Requires Level 21",
+       "Use: Absorbs 600 frost damage. Lasts 1 min. (15 Min Cooldown)",
+       "Sell Price: 1s 75c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Schematic sold by Rizz Loosebolt (Alterac Mountains)",
+     "count": "~20crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Whirring Bronze Gizmo",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4375,
+        "icon": "inv_gizmo_02",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 1s 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Frost Oil",
+        "slot": null,
+        "type": "Other",
+        "itemId": 3829,
+        "icon": "inv_potion_20",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 30,
+        "tooltip": [
+         "Other",
+         "Requires Level 30",
+         "Use: When applied to a melee weapon it gives a 10% chance of casting Frostbolt at the opponent when it hits. Lasts 30 minutes.",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      175,
+      188
+     ],
+     "item": {
+      "name": "Solid Blasting Powder",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 10505,
+      "icon": "inv_misc_powder_black",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 2s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~21crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Solid Stone",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      188,
+      195
+     ],
+     "item": {
+      "name": "Iron Grenade",
+      "slot": null,
+      "type": "Explosives",
+      "itemId": 4390,
+      "icon": "inv_misc_bomb_08",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Explosives",
+       "Requires Engineering (175)",
+       "Use: Inflicts 132 to 218 Fire damage and stuns targets for 3 sec in a 3 yard radius. Any damage will break the effect. (1 Min Cooldown)",
+       "Sell Price: 5s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~12crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Iron Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3575,
+        "icon": "inv_ingot_iron",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 2s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Heavy Blasting Powder",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 4377,
+        "icon": "inv_misc_dust_06",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Silk Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4306,
+        "icon": "inv_fabric_silk_01",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      195,
+      200
+     ],
+     "item": {
+      "name": "Mithril Tube",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 10559,
+      "icon": "inv_musket_01",
+      "quality": 1,
+      "itemLevel": 39,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 7s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Mithril Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      200,
+      205
+     ],
+     "item": {
+      "name": "Plans: Inlaid Mithril Cylinder",
+      "slot": null,
+      "type": "Blacksmithing",
+      "itemId": 10713,
+      "icon": "inv_scroll_05",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tBlacksmithing",
+       "Requires Blacksmithing (200)",
+       "\"Teaches you how to make an Inlaid Mithril Cylinder.  This item is used by Gnomish Engineers.\"",
+       "Sell Price: 5s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tBlacksmithing",
+       "Requires Blacksmithing (200)",
+       "Use: Teaches you how to make an Inlaid Mithril Cylinder. This item is used by Gnomish Engineers.",
+       "Sell Price: 5s"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Blank Parchment",
+        "slot": null,
+        "type": "Other",
+        "itemId": 10648,
+        "icon": "inv_misc_note_02",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 1s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Engineer's Ink",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 10647,
+        "icon": "inv_potion_65",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      205,
+      210
+     ],
+     "item": {
+      "name": "Mithril Tube",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 10559,
+      "icon": "inv_musket_01",
+      "quality": 1,
+      "itemLevel": 39,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 7s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~8crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Mithril Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      210,
+      215
+     ],
+     "item": {
+      "name": "Hi-Impact Mithril Slugs",
+      "slot": "Ammo",
+      "type": "Bullet",
+      "itemId": 10512,
+      "icon": "inv_ammo_bullet_01",
+      "quality": 2,
+      "itemLevel": 42,
+      "requiredLevel": 37,
+      "tooltip": [
+       "Ammo\tBullet",
+       "Damage set by hand\tSpeed 3.00",
+       "Requires Level 37",
+       "Sell Price: 2c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Ammo\tBullet",
+       "12 - 13 Damage\tSpeed 3.00",
+       "(4.2 damage per second)",
+       "Requires Level 37",
+       "Sell Price: 2c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mithril Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 3860,
+        "icon": "inv_ingot_06",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Solid Blasting Powder",
+        "slot": null,
+        "type": "Parts",
+        "itemId": 10505,
+        "icon": "inv_misc_powder_black",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Parts",
+         "Sell Price: 2s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      215,
+      225
+     ],
+     "item": {
+      "name": "Mithril Casing",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 10561,
+      "icon": "inv_gizmo_mithrilcasing_01",
+      "quality": 1,
+      "itemLevel": 43,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 10s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~12crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Mithril Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Artisan",
+   "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+   "steps": [
+    {
+     "range": [
+      225,
+      245
+     ],
+     "item": {
+      "name": "Mithril Casing",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 10561,
+      "icon": "inv_gizmo_mithrilcasing_01",
+      "quality": 1,
+      "itemLevel": 43,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 10s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~43crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Mithril Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      245,
+      250
+     ],
+     "item": {
+      "name": "Mithril Gyro-Shot",
+      "slot": "Ammo",
+      "type": "Bullet",
+      "itemId": 10513,
+      "icon": "inv_ammo_bullet_01",
+      "quality": 2,
+      "itemLevel": 49,
+      "requiredLevel": 44,
+      "tooltip": [
+       "Ammo\tBullet",
+       "Damage set by hand\tSpeed 3.00",
+       "Requires Level 44",
+       "Sell Price: 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Ammo\tBullet",
+       "15 - 15 Damage\tSpeed 3.00",
+       "(5.0 damage per second)",
+       "Requires Level 44",
+       "Sell Price: 5c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Mithril Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Solid Blasting Powder",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      250,
+      259
+     ],
+     "item": {
+      "name": "Dense Blasting Powder",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 15992,
+      "icon": "inv_misc_ammo_gunpowder_01",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 2s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~20crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Dense Stone",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      259,
+      260
+     ],
+     "item": {
+      "name": "Mithril Gyro-Shot",
+      "slot": "Ammo",
+      "type": "Bullet",
+      "itemId": 10513,
+      "icon": "inv_ammo_bullet_01",
+      "quality": 2,
+      "itemLevel": 49,
+      "requiredLevel": 44,
+      "tooltip": [
+       "Ammo\tBullet",
+       "Damage set by hand\tSpeed 3.00",
+       "Requires Level 44",
+       "Sell Price: 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Ammo\tBullet",
+       "15 - 15 Damage\tSpeed 3.00",
+       "(5.0 damage per second)",
+       "Requires Level 44",
+       "Sell Price: 5c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~2crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Mithril Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Solid Blasting Powder",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      260,
+      285
+     ],
+     "item": {
+      "name": "Thorium Widget",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 15994,
+      "icon": "inv_gizmo_04",
+      "quality": 1,
+      "itemLevel": 52,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 25s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Schematic sold by Gearcutter Cogspinner (Alliance) or Sovik (Horde)",
+     "count": "~26crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Thorium Bar",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Runecloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14047,
+        "icon": "inv_fabric_purplefire_01",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      285,
+      300
+     ],
+     "item": {
+      "name": "Delicate Arcanite Converter",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 16006,
+      "icon": "inv_gizmo_07",
+      "quality": 1,
+      "itemLevel": 58,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Parts",
+       "Sell Price: 1g"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Schematic sold by Xizzer Fizzbolt (Winterspring)",
+     "count": "~15crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Arcanite Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemId": 12360,
+        "icon": "inv_misc_stonetablet_05",
+        "quality": 2,
+        "itemLevel": 55,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 50s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Ironweb Spider Silk",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14227,
+        "icon": "spell_nature_web",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "favor": [
+  {
+   "tier": "45 Merchant's Favor (skill 25 to 145)",
+   "items": [
+    {
+     "item": {
+      "name": "SAF-T Copper Bomb",
+      "slot": null,
+      "type": "Explosives",
+      "itemId": 260793,
+      "icon": "inv_misc_bomb_09",
+      "quality": 1,
+      "itemLevel": 19,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tExplosives",
+       "Use: Inflicts 22 to 28 Fire damage and stuns targets in a 3 yard radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
+       "\"SAF-T Brand bombs *almost* never blow up in your hands (or your paws!)\"",
+       "Sell Price: 60c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 55,
+     "skills": {
+      "orange": "55",
+      "yellow": "55",
+      "green": "60",
+      "grey": "65"
+     }
+    },
+    {
+     "item": {
+      "name": "SAF-T Tabs",
+      "slot": null,
+      "type": "Reagent",
+      "itemId": 260784,
+      "icon": "inv_misc_punchcards_white",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tReagent",
+       "\"SAF-T brand tabs make it SAF to hand out dynamite to all your friends!\"",
+       "Sell Price: 4c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 25,
+     "skills": {
+      "orange": "25",
+      "yellow": "25",
+      "green": "27",
+      "grey": "30"
+     }
+    },
+    {
+     "item": {
+      "name": "SAF-T Dynamite",
+      "slot": null,
+      "type": "Explosives",
+      "itemId": 260792,
+      "icon": "inv_misc_bomb_06",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tExplosives",
+       "Use: Inflicts 26 to 34 Fire damage in a 5 yard radius. (1 Min Cooldown)",
+       "\"Easy to throw, and SAF-T too!\"",
+       "Sell Price: 75c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 25,
+     "skills": {
+      "orange": "25",
+      "yellow": "25",
+      "green": "30",
+      "grey": "35"
+     }
+    },
+    {
+     "item": {
+      "name": "EZ-Thro Wrap",
+      "slot": null,
+      "type": "Reagent",
+      "itemId": 260794,
+      "icon": "inv_misc_giftwrap_03",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tReagent",
+       "Sell Price: 1s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "100",
+      "green": "102",
+      "grey": "105"
+     }
+    },
+    {
+     "item": {
+      "name": "No Slip SAF-T Padding",
+      "slot": null,
+      "type": "Reagent",
+      "itemId": 260796,
+      "icon": "inv_misc_leatherscrap_11",
+      "quality": 1,
+      "itemLevel": 29,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tReagent",
+       "\"SAF-T Padding prevents those easy throwing accidents.\"",
+       "Sell Price: 2s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 145,
+     "skills": {
+      "orange": "145",
+      "yellow": "145",
+      "green": "147",
+      "grey": "150"
+     }
+    },
+    {
+     "item": {
+      "name": "EZ-Thro Copper Bomb XL",
+      "slot": null,
+      "type": "Explosives",
+      "itemId": 260795,
+      "icon": "inv_misc_bomb_01",
+      "quality": 1,
+      "itemLevel": 31,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tExplosives",
+       "Use: Inflicts 43 to 57 Fire damage and stuns targets in a 5 yard radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
+       "Sell Price: 1s 75c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 130,
+     "skills": {
+      "orange": "130",
+      "yellow": "130",
+      "green": "155",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Satchel of Copper Bombs",
+      "slot": "Thrown",
+      "type": "Speed 2.00",
+      "itemId": 285275,
+      "icon": "inv_misc_bag_05",
+      "quality": 2,
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "tooltip": [
+       "Binds when picked up",
+       "Unique",
+       "Thrown",
+       "11 - 21 Damage\tSpeed 2.00",
+       "(8.0 damage per second)",
+       "+2 Stamina",
+       "Requires Level 13",
+       "Requires Engineering (85)",
+       "Equip: Thrown attacks explode on impact, causing 1 to 11 Fire damage to nearby enemies.",
+       "Sell Price: 9c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "90",
+      "green": "92",
+      "grey": "95"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "180 Merchant's Favor (skill 165 to 200)",
+   "items": [
+    {
+     "item": {
+      "name": "Whimsical Waistwrap",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 280306,
+      "icon": "inv_belt_06",
+      "quality": 2,
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "26 Armor",
+       "Requires Level 30",
+       "Requires Engineering (175)",
+       "Sell Price: 17s 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 175,
+     "skills": {
+      "orange": "175",
+      "yellow": "180",
+      "green": "182",
+      "grey": "185"
+     }
+    },
+    {
+     "item": {
+      "name": "Gizmo Girdle",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 280307,
+      "icon": "inv_belt_06",
+      "quality": 2,
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "57 Armor",
+       "Requires Level 30",
+       "Requires Engineering (175)",
+       "Sell Price: 17s 16c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 175,
+     "skills": {
+      "orange": "175",
+      "yellow": "180",
+      "green": "182",
+      "grey": "185"
+     }
+    },
+    {
+     "item": {
+      "name": "Clanking Cord",
+      "slot": "Waist",
+      "type": "Mail",
+      "itemId": 280308,
+      "icon": "inv_belt_34",
+      "quality": 2,
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tMail",
+       "120 Armor",
+       "Requires Level 30",
+       "Requires Engineering (175)",
+       "Sell Price: 17s 22c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 175,
+     "skills": {
+      "orange": "175",
+      "yellow": "180",
+      "green": "182",
+      "grey": "185"
+     }
+    },
+    {
+     "item": {
+      "name": "Floppy Goggles",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 280310,
+      "icon": "inv_helmet_47",
+      "quality": 2,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "48 Armor",
+       "Requires Level 40",
+       "Requires Engineering (200)",
+       "Use: Allows you to look far into the distance.",
+       "Sell Price: 49s 87c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "200",
+      "yellow": "205",
+      "green": "207",
+      "grey": "210"
+     }
+    },
+    {
+     "item": {
+      "name": "EZ-Thro Fireproof Fuse",
+      "slot": null,
+      "type": "Reagent",
+      "itemId": 260801,
+      "icon": "inv_jewelcrafting_delicatecopperwire",
+      "quality": 1,
+      "itemLevel": 39,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tReagent",
+       "\"Guaranteed not to burn!\"",
+       "Sell Price: 3s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 190,
+     "skills": {
+      "orange": "190",
+      "yellow": "190",
+      "green": "192",
+      "grey": "195"
+     }
+    },
+    {
+     "item": {
+      "name": "Stuckbutton Goggles",
+      "slot": "Head",
+      "type": "Mail",
+      "itemId": 280312,
+      "icon": "inv_helmet_47",
+      "quality": 2,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tMail",
+       "202 Armor",
+       "Requires Level 40",
+       "Requires Engineering (200)",
+       "Use: Allows you to look far into the distance.",
+       "Sell Price: 75s 68c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "200",
+      "yellow": "205",
+      "green": "207",
+      "grey": "210"
+     }
+    },
+    {
+     "item": {
+      "name": "Dented Goggles",
+      "slot": "Head",
+      "type": "Plate",
+      "itemId": 280313,
+      "icon": "inv_helmet_47",
+      "quality": 2,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tPlate",
+       "355 Armor",
+       "Requires Level 40",
+       "Requires Engineering (200)",
+       "Use: Allows you to look far into the distance.",
+       "Sell Price: 88s 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "200",
+      "yellow": "205",
+      "green": "207",
+      "grey": "210"
+     }
+    },
+    {
+     "item": {
+      "name": "SAF-T Bell",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 260799,
+      "icon": "inv_misc_bell_01",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tParts",
+       "\"Do you know where your Sheep is?! SAF-T Knows.\"",
+       "Sell Price: 2s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 175,
+     "skills": {
+      "orange": "175",
+      "yellow": "175",
+      "green": "177",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Bent Goggles",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 280311,
+      "icon": "inv_helmet_47",
+      "quality": 2,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "99 Armor",
+       "Requires Level 40",
+       "Requires Engineering (200)",
+       "Use: Allows you to look far into the distance.",
+       "Sell Price: 62s 73c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "200",
+      "yellow": "205",
+      "green": "207",
+      "grey": "210"
+     }
+    },
+    {
+     "item": {
+      "name": "Satchel of Bronze Bombs",
+      "slot": "Thrown",
+      "type": "Speed 2.00",
+      "itemId": 285276,
+      "icon": "inv_misc_bag_09_black",
+      "quality": 2,
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "tooltip": [
+       "Binds when picked up",
+       "Unique",
+       "Thrown",
+       "21 - 40 Damage\tSpeed 2.00",
+       "(15.3 damage per second)",
+       "+4 Stamina",
+       "Requires Level 28",
+       "Requires Engineering (165)",
+       "Equip: Thrown attacks explode on impact, causing 2 to 19 Fire damage to nearby enemies.",
+       "Sell Price: 9c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 165,
+     "skills": {
+      "orange": "165",
+      "yellow": "170",
+      "green": "172",
+      "grey": "175"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "270 Merchant's Favor (skill 225 to 285)",
+   "items": [
+    {
+     "item": {
+      "name": "Emergency Field Cloak",
+      "slot": "Trinket",
+      "type": "Trinket",
+      "itemId": 260806,
+      "icon": "inv_misc_enggizmos_14",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "Unique-Equipped",
+       "Trinket",
+       "Use: Gives invisibility for 10 sec. (60 Min Cooldown)",
+       "\"SAF-T means not getting caught.\"",
+       "Sell Price: 50s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "225",
+      "yellow": "245",
+      "green": "255",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Compact Critter Carrier",
+      "slot": null,
+      "type": "Other",
+      "itemId": 260807,
+      "icon": "inv_box_birdcage_01",
+      "quality": 1,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "\tOther",
+       "Classes: Hunter",
+       "Requires Level 40",
+       "Use: Place a Compact Critter Carrier for 3 min that allows Hunters in your group to access their stabled pets.",
+       "Sell Price: 2s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "225",
+      "yellow": "230",
+      "green": "232",
+      "grey": "235"
+     }
+    },
+    {
+     "item": {
+      "name": "Gnomish Army Knife",
+      "slot": null,
+      "type": "Parts",
+      "itemId": 260811,
+      "icon": "inv_misc_enggizmos_swissarmy",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "\tParts",
+       "Requires Level 45",
+       "\"It's got everything: a spanner, a wrench, a hammer... even a mining pick.\"",
+       "Sell Price: 10s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 250,
+     "skills": {
+      "orange": "250",
+      "yellow": "250",
+      "green": "252",
+      "grey": "255"
+     }
+    },
+    {
+     "item": {
+      "name": "SAF-T Disposable Parachute",
+      "slot": "Back",
+      "type": "Cloth",
+      "itemId": 260810,
+      "icon": "inv_misc_cape_11",
+      "quality": 1,
+      "itemLevel": 50,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when equipped",
+       "Back\tCloth",
+       "31 Armor",
+       "Use: Reduces your fall speed for 10 sec. (30 Min Cooldown)",
+       "\"SAF-T in case you need to jump.\"",
+       "Sell Price: 46s 96c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 250,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Loot-A-Rang",
+      "slot": null,
+      "type": "Other",
+      "itemId": 260812,
+      "icon": "inv_eng_mechanicalboomerang",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when used",
+       "\tOther",
+       "Requires Level 50",
+       "Requires Engineering (250)",
+       "Use: Retrieves the loot from a nearby corpse. (3 Sec Cooldown)",
+       "Sell Price: 20s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 275,
+     "skills": {
+      "orange": "275",
+      "yellow": "275",
+      "green": "277",
+      "grey": "280"
+     }
+    },
+    {
+     "item": {
+      "name": "Satchel of Iron Bombs",
+      "slot": "Thrown",
+      "type": "Speed 2.00",
+      "itemId": 285277,
+      "icon": "inv_misc_bag_10_black",
+      "quality": 2,
+      "itemLevel": 46,
+      "requiredLevel": 41,
+      "tooltip": [
+       "Binds when picked up",
+       "Unique",
+       "Thrown",
+       "34 - 64 Damage\tSpeed 2.00",
+       "(24.5 damage per second)",
+       "+6 Stamina",
+       "Requires Level 41",
+       "Requires Engineering (230)",
+       "Equip: Thrown attacks explode on impact, causing 3 to 30 Fire damage to nearby enemies.",
+       "Sell Price: 9c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 230,
+     "skills": {
+      "orange": "230",
+      "yellow": "235",
+      "green": "237",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Satchel of Dark Iron Bombs",
+      "slot": "Thrown",
+      "type": "Speed 2.00",
+      "itemId": 285278,
+      "icon": "inv_misc_bag_07_black",
+      "quality": 2,
+      "itemLevel": 57,
+      "requiredLevel": 52,
+      "tooltip": [
+       "Binds when picked up",
+       "Thrown",
+       "42 - 80 Damage\tSpeed 2.00",
+       "(30.5 damage per second)",
+       "+8 Stamina",
+       "Requires Level 52",
+       "Requires Engineering (285)",
+       "Equip: Thrown attacks explode on impact, causing 4 to 37 Fire damage to nearby enemies.",
+       "Sell Price: 9c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 285,
+     "skills": {
+      "orange": "285",
+      "yellow": "290",
+      "green": "292",
+      "grey": "295"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "360 Merchant's Favor (skill 300)",
+   "items": [
+    {
+     "item": {
+      "name": "Gnomish Poultryizer",
+      "slot": "Trinket",
+      "type": "Trinket",
+      "itemId": 260824,
+      "icon": "inv_misc_enggizmos_06",
+      "quality": 3,
+      "itemLevel": 60,
+      "requiredLevel": 60,
+      "tooltip": [
+       "Binds when picked up",
+       "Unique-Equipped",
+       "Trinket",
+       "Requires Level 60",
+       "Use: Turns the target into a chicken for 15 sec. Well, that is assuming the transmogrification polarity has not been reversed... (5 Min Cooldown)",
+       "Sell Price: 50s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "330",
+      "grey": "340"
+     }
+    },
+    {
+     "item": {
+      "name": "Ultrasafe Rechargeable Battery",
+      "slot": null,
+      "type": "Device",
+      "itemId": 260822,
+      "icon": "inv_gizmo_electrifiedether",
+      "quality": 2,
+      "itemLevel": 60,
+      "requiredLevel": 60,
+      "tooltip": [
+       "\tDevice",
+       "Requires Level 60",
+       "Use: Restores 3 charges to a SAF-T or EZ-Thro brand device in your possession that does not involve explosions. It would be completely Unsafe with explosives. (1 Min Cooldown)",
+       "Sell Price: 25s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "330",
+      "grey": "340"
+     }
+    },
+    {
+     "item": {
+      "name": "Ultralight Goblin Glider",
+      "slot": null,
+      "type": "Other",
+      "itemId": 260825,
+      "icon": "inv_misc_clothscrap_01",
+      "quality": 2,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Binds when used",
+       "\tOther",
+       "Requires Engineering (250)",
+       "Use: Glide downward through the air for 10 sec while controlling your direction of travel. (3 Min Cooldown)"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "330",
+      "grey": "340"
+     }
+    },
+    {
+     "item": {
+      "name": "Stealthman 52",
+      "slot": null,
+      "type": "Device",
+      "itemId": 260827,
+      "icon": "inv_misc_enggizmos_04",
+      "quality": 2,
+      "itemLevel": 60,
+      "requiredLevel": 55,
+      "tooltip": [
+       "\tDevice",
+       "Requires Level 55",
+       "Requires Engineering (250)",
+       "Use: Cloaks the user in a stealth field for up to 1 min. Cannot be used in combat. The field lasts for up to 6 sec after moving. (5 Min Cooldown)",
+       "\"Used by real secret agents.\"",
+       "Sell Price: 50s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "330",
+      "grey": "340"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "1,000 Merchant's Favor (skill 300)",
+   "items": [
+    {
+     "item": {
+      "name": "Engineering Certification",
+      "slot": null,
+      "type": "Other",
+      "itemId": 271625,
+      "icon": "inv_scroll_15",
+      "quality": 2,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tOther",
+       "Requires Engineering (300)",
+       "Use: Permanently unlock \"the Engineer\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Engineering."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    }
+   ]
+  }
+ ]
 }

@@ -71693,6 +71693,5279 @@
    ]
   }
  ],
- "leveling": null,
- "favor": null
+ "leveling": [
+  {
+   "rank": "Apprentice",
+   "requirement": "from any Leatherworking trainer, up to 75",
+   "steps": [
+    {
+     "range": [
+      1,
+      15
+     ],
+     "item": {
+      "name": "Camp Tent",
+      "slot": null,
+      "type": "Other",
+      "itemId": 279978,
+      "icon": "inv_misc_leatherscrap_01",
+      "quality": 1,
+      "itemLevel": 4,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "Requires Leatherworking (20)",
+       "Use: Builds a tent that allows you and others sitting nearby to increase Rested experience to 5% of a level. No effect if Rested experience already exceeds that value. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~14crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "5 Light Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      15,
+      58
+     ],
+     "item": {
+      "name": "Light Armor Kit",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 2304,
+      "icon": "inv_misc_armorkit_17",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently increase the Stamina value by 1 and the Armor value by 8 of an item worn on the chest, legs, hands or feet.",
+       "Sell Price: 15c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Use: Permanently increase the armor value of an item worn on the chest, legs, hands or feet by 8.",
+       "Sell Price: 15c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~90crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Light Leather",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 2318,
+        "icon": "inv_misc_leatherscrap_03",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      58,
+      62
+     ],
+     "item": {
+      "name": "Handstitched Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 4237,
+      "icon": "inv_belt_04",
+      "quality": 2,
+      "itemLevel": 10,
+      "requiredLevel": 5,
+      "tooltip": [
+       "Binds when equipped",
+       "Waist\tLeather",
+       "31 Armor",
+       "+1 Strength",
+       "Requires Level 5",
+       "Sell Price: 34c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Waist\tLeather",
+       "29 Armor",
+       "Requires Level 5",
+       "Sell Price: 34c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Light Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2320,
+        "icon": "inv_fabric_linen_03",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      62,
+      75
+     ],
+     "item": {
+      "name": "Embossed Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 4239,
+      "icon": "inv_gauntlets_05",
+      "quality": 2,
+      "itemLevel": 13,
+      "requiredLevel": 8,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "41 Armor",
+       "+1 Agility",
+       "+1 Stamina",
+       "Requires Level 8",
+       "Sell Price: 71c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Hands\tLeather",
+       "39 Armor",
+       "Requires Level 8",
+       "Sell Price: 71c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~14crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Light Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Coarse Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      80
+     ],
+     "item": {
+      "name": "Embossed Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 4239,
+      "icon": "inv_gauntlets_05",
+      "quality": 2,
+      "itemLevel": 13,
+      "requiredLevel": 8,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "41 Armor",
+       "+1 Agility",
+       "+1 Stamina",
+       "Requires Level 8",
+       "Sell Price: 71c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Hands\tLeather",
+       "39 Armor",
+       "Requires Level 8",
+       "Sell Price: 71c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Light Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Coarse Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      80,
+      95
+     ],
+     "item": {
+      "name": "Fine Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 4246,
+      "icon": "inv_belt_04",
+      "quality": 2,
+      "itemLevel": 16,
+      "requiredLevel": 11,
+      "tooltip": [
+       "Binds when equipped",
+       "Waist\tLeather",
+       "40 Armor",
+       "+2 Agility",
+       "+2 Stamina",
+       "Requires Level 11",
+       "Sell Price: 1s 25c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Waist\tLeather",
+       "38 Armor",
+       "Requires Level 11",
+       "Sell Price: 1s 25c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~17crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Light Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Coarse Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      95,
+      113
+     ],
+     "item": {
+      "name": "Light Leather Pants",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 7282,
+      "icon": "inv_pants_02",
+      "quality": 2,
+      "itemLevel": 19,
+      "requiredLevel": 14,
+      "tooltip": [
+       "Binds when equipped",
+       "Legs\tLeather",
+       "66 Armor",
+       "+5 Agility",
+       "+3 Stamina",
+       "Requires Level 14",
+       "Sell Price: 5s 99c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Legs\tLeather",
+       "66 Armor",
+       "+5 Agility",
+       "+3 Spirit",
+       "Requires Level 14",
+       "Sell Price: 5s 99c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~22crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "10 Light Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Cured Light Hide",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 4231,
+        "icon": "inv_misc_pelt_wolf_01",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 1s 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      113,
+      120
+     ],
+     "item": {
+      "name": "Earthen Leather Shoulders",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 7352,
+      "icon": "inv_shoulder_06",
+      "quality": 2,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when equipped",
+       "Shoulder\tLeather",
+       "67 Armor",
+       "+7 Stamina",
+       "Requires Level 22",
+       "Sell Price: 13s 6c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Zixil (Hillsbrad Foothills)",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Medium Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Elemental Earth",
+        "slot": null,
+        "type": "Elemental",
+        "itemId": 7067,
+        "icon": "inv_ore_iron_01",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Elemental",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      120,
+      125
+     ],
+     "item": {
+      "name": "Nimble Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 7285,
+      "icon": "inv_gauntlets_05",
+      "quality": 2,
+      "itemLevel": 24,
+      "requiredLevel": 19,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "52 Armor",
+       "+4 Agility",
+       "+4 Stamina",
+       "Requires Level 19",
+       "Sell Price: 5s 88c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "52 Armor",
+       "+4 Agility",
+       "+4 Spirit",
+       "Requires Level 19",
+       "Sell Price: 5s 88c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Elixir of Minor Agility",
+        "slot": null,
+        "type": "Elixirs",
+        "itemId": 2457,
+        "icon": "inv_potion_91",
+        "quality": 1,
+        "itemLevel": 12,
+        "requiredLevel": 2,
+        "tooltip": [
+         "Elixirs",
+         "Requires Level 2",
+         "Use: Increases Agility by 4 for 1 hr. (3 Sec Cooldown)",
+         "Sell Price: 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Medium Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      125,
+      130
+     ],
+     "item": {
+      "name": "Heavy Leather Ball",
+      "slot": null,
+      "type": "Other",
+      "itemId": 18662,
+      "icon": "inv_misc_throwingball_01",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Unique (10)",
+       "Other",
+       "Use: Throw the ball to a friendly player. If they have free room in their pack they will catch it!",
+       "Sell Price: 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Bombus Finespindle (Alliance) or Tamar (Horde)",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Heavy Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      130,
+      135
+     ],
+     "item": {
+      "name": "Hillman's Shoulders",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 4251,
+      "icon": "inv_shoulder_08",
+      "quality": 2,
+      "itemLevel": 26,
+      "requiredLevel": 21,
+      "tooltip": [
+       "Binds when equipped",
+       "Shoulder\tLeather",
+       "65 Armor",
+       "+5 Stamina",
+       "+3 Spirit",
+       "Requires Level 21",
+       "Sell Price: 11s 99c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Shoulder\tLeather",
+       "65 Armor",
+       "+5 Stamina",
+       "+4 Spirit",
+       "Requires Level 21",
+       "Sell Price: 11s 99c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Cured Medium Hide",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 4233,
+        "icon": "inv_misc_pelt_bear_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 2s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Medium Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      135,
+      150
+     ],
+     "item": {
+      "name": "Earthen Leather Shoulders",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 7352,
+      "icon": "inv_shoulder_06",
+      "quality": 2,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when equipped",
+       "Shoulder\tLeather",
+       "67 Armor",
+       "+7 Stamina",
+       "Requires Level 22",
+       "Sell Price: 13s 6c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Zixil (Hillsbrad Foothills)",
+     "count": "~23crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Medium Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Elemental Earth",
+        "slot": null,
+        "type": "Elemental",
+        "itemId": 7067,
+        "icon": "inv_ore_iron_01",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Elemental",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Expert",
+   "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+   "steps": [
+    {
+     "range": [
+      150,
+      160
+     ],
+     "item": {
+      "name": "Heavy Armor Kit",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 4265,
+      "icon": "inv_misc_armorkit_16",
+      "quality": 1,
+      "itemLevel": 30,
+      "requiredLevel": 20,
+      "tooltip": [
+       "\tPermanent",
+       "Requires Level 20",
+       "Use: Permanently increase the Stamina value by 3 and armor value by 24 of an item worn on the chest, legs, hands or feet. Only usable on items level 15 and above.",
+       "Sell Price: 6s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 20",
+       "Use: Permanently increase the armor value of an item worn on the chest, legs, hands or feet by 24. Only usable on items level 15 and above.",
+       "Sell Price: 6s 50c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~21crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "5 Heavy Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      160,
+      165
+     ],
+     "item": {
+      "name": "Barbaric Leggings",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 5963,
+      "icon": "inv_pants_12",
+      "quality": 2,
+      "itemLevel": 34,
+      "requiredLevel": 29,
+      "tooltip": [
+       "Binds when equipped",
+       "Legs\tLeather",
+       "87 Armor",
+       "+7 Stamina",
+       "+7 Strength",
+       "+7 Agility",
+       "Requires Level 29",
+       "Sell Price: 31s 51c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Legs\tLeather",
+       "87 Armor",
+       "+7 Stamina",
+       "+7 Spirit",
+       "+7 Agility",
+       "Requires Level 29",
+       "Sell Price: 31s 51c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Hammon Karwn (Alliance) or Keena (Horde) and 1 more",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "10 Heavy Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Moss Agate",
+        "slot": null,
+        "type": "Other",
+        "itemId": 1206,
+        "icon": "inv_misc_gem_emerald_02",
+        "quality": 2,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      165,
+      190
+     ],
+     "item": {
+      "name": "Green Whelp Bracers",
+      "slot": "Wrist",
+      "type": "Leather",
+      "itemId": 7386,
+      "icon": "inv_bracer_06",
+      "quality": 2,
+      "itemLevel": 38,
+      "requiredLevel": 33,
+      "tooltip": [
+       "Binds when equipped",
+       "Wrist\tLeather",
+       "47 Armor",
+       "+8 Intellect",
+       "Requires Level 33",
+       "Equip: +9 Nature Spell Damage",
+       "Sell Price: 23s 87c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Wrist\tLeather",
+       "47 Armor",
+       "+8 Spirit",
+       "Requires Level 33",
+       "Sell Price: 23s 87c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Saenorion (Alliance) or Jangdor Swiftstrider (Horde) and 1 more",
+     "count": "~26crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Green Whelp Scale",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "8 Heavy Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      190,
+      200
+     ],
+     "item": {
+      "name": "Guardian Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 5966,
+      "icon": "inv_gauntlets_05",
+      "quality": 2,
+      "itemLevel": 38,
+      "requiredLevel": 33,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "66 Armor",
+       "+8 Intellect",
+       "Requires Level 33",
+       "Equip: +8 Spell Power",
+       "Sell Price: 13s 74c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Hands\tLeather",
+       "63 Armor",
+       "Requires Level 33",
+       "Sell Price: 13s 74c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~21crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Heavy Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Cured Heavy Hide",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 4236,
+        "icon": "inv_misc_pelt_wolf_02",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 2s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Silken Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4291,
+        "icon": "inv_fabric_silk_02",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      200,
+      205
+     ],
+     "item": {
+      "name": "Thick Armor Kit",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 8173,
+      "icon": "inv_misc_armorkit_07",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 30,
+      "tooltip": [
+       "\tPermanent",
+       "Requires Level 30",
+       "Use: Permanently increase the Stamina value by 4 and armor value by 32 of an item worn on the chest, legs, hands or feet. Only usable on items level 25 and above.",
+       "Sell Price: 10s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 30",
+       "Use: Permanently increase the armor value of an item worn on the chest, legs, hands or feet by 32. Only usable on items level 25 and above.",
+       "Sell Price: 10s"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~8crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "5 Thick Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Silken Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4291,
+        "icon": "inv_fabric_silk_02",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      205,
+      214
+     ],
+     "item": {
+      "name": "Nightscape Headband",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 8176,
+      "icon": "inv_belt_24",
+      "quality": 2,
+      "itemLevel": 41,
+      "requiredLevel": 36,
+      "tooltip": [
+       "Binds when equipped",
+       "Head\tLeather",
+       "91 Armor",
+       "+12 Agility",
+       "+11 Stamina",
+       "Requires Level 36",
+       "Sell Price: 44s 95c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~18crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "5 Thick Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      214,
+      225
+     ],
+     "item": {
+      "name": "Turtle Scale Breastplate",
+      "slot": "Chest",
+      "type": "Mail",
+      "itemId": 8189,
+      "icon": "inv_chest_chain_12",
+      "quality": 2,
+      "itemLevel": 42,
+      "requiredLevel": 37,
+      "tooltip": [
+       "Binds when equipped",
+       "Chest\tMail",
+       "238 Armor",
+       "+9 Stamina",
+       "+9 Intellect",
+       "Requires Level 37",
+       "Equip: +9 Spell Power",
+       "Sell Price: 75s 67c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Chest\tMail",
+       "238 Armor",
+       "+9 Stamina",
+       "+9 Spirit",
+       "+9 Intellect",
+       "Requires Level 37",
+       "Sell Price: 75s 67c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~61crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Thick Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "12 Turtle Scale",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Heavy Silken Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 8343,
+        "icon": "inv_fabric_silk_02",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Artisan",
+   "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+   "steps": [
+    {
+     "range": [
+      225,
+      235
+     ],
+     "item": {
+      "name": "Thick Leather Ammo Pouch",
+      "slot": "Bag",
+      "type": "Ammo Pouch",
+      "itemId": 8218,
+      "icon": "inv_misc_bag_09_black",
+      "quality": 2,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Bag\tAmmo Pouch",
+       "16 Slot Ammo Pouch",
+       "Requires Level 40",
+       "Equip: Increases ranged attack speed by 13%.",
+       "Sell Price: 10s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~21crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "10 Thick Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Cured Thick Hide",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 8172,
+        "icon": "inv_misc_pelt_bear_01",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Elixir of Defense",
+        "slot": null,
+        "type": "Elixirs",
+        "itemId": 8951,
+        "icon": "inv_potion_65",
+        "quality": 1,
+        "itemLevel": 39,
+        "requiredLevel": 29,
+        "tooltip": [
+         "\tElixirs",
+         "Requires Level 29",
+         "Use: Increases armor by 250 for 1 hr. (3 Sec Cooldown)",
+         "Sell Price: 2s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tConsumable",
+         "Requires Level 29",
+         "Use: Increases armor by 250 for 1 hr. (3 Sec Cooldown)",
+         "Sell Price: 2s"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      235,
+      240
+     ],
+     "item": {
+      "name": "Wicked Leather Gauntlets",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 15083,
+      "icon": "inv_gauntlets_31",
+      "quality": 2,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "86 Armor",
+       "+12 Agility",
+       "+11 Stamina",
+       "Requires Level 47",
+       "Sell Price: 68s 72c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Werg Thickblade (Horde) or Leonard Porter (Alliance)",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "8 Rugged Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Black Dye",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2325,
+        "icon": "inv_potion_63",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 2s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Rune Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14341,
+        "icon": "spell_shadow_antimagicshell",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 12s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      240,
+      250
+     ],
+     "item": {
+      "name": "Chimeric Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 15074,
+      "icon": "inv_gauntlets_23",
+      "quality": 2,
+      "itemLevel": 53,
+      "requiredLevel": 48,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "87 Armor",
+       "+8 Stamina",
+       "+12 Arcane Resistance",
+       "+12 Nature Resistance",
+       "Requires Level 48",
+       "Sell Price: 68s 67c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Hands\tLeather",
+       "87 Armor",
+       "+12 Nature Resistance",
+       "+11 Arcane Resistance",
+       "Requires Level 48",
+       "Sell Price: 68s 67c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Blimo Gadgetspring (Azshara)",
+     "count": "~10crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Rugged Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Chimera Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Rune Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14341,
+        "icon": "spell_shadow_antimagicshell",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 12s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      250,
+      281
+     ],
+     "item": {
+      "name": "Frostsaber Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 15071,
+      "icon": "inv_boots_05",
+      "quality": 2,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when equipped",
+       "Feet\tLeather",
+       "99 Armor",
+       "+9 Stamina",
+       "+12 Fire Resistance",
+       "+12 Shadow Resistance",
+       "Requires Level 50",
+       "Sell Price: 1g 14s 43c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Feet\tLeather",
+       "99 Armor",
+       "+12 Frost Resistance",
+       "+12 Shadow Resistance",
+       "Requires Level 50",
+       "Sell Price: 1g 14s 43c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Qia (Winterspring)",
+     "count": "~36crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Rugged Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Frostsaber Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Rune Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14341,
+        "icon": "spell_shadow_antimagicshell",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 12s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      281,
+      300
+     ],
+     "item": {
+      "name": "Heavy Scorpid Helm",
+      "slot": "Head",
+      "type": "Mail",
+      "itemId": 15080,
+      "icon": "inv_helmet_20",
+      "quality": 2,
+      "itemLevel": 59,
+      "requiredLevel": 54,
+      "tooltip": [
+       "Binds when equipped",
+       "Head\tMail",
+       "258 Armor",
+       "+20 Stamina",
+       "+13 Agility",
+       "Requires Level 54",
+       "Sell Price: 1g 82s 30c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Head\tMail",
+       "258 Armor",
+       "+20 Stamina",
+       "+13 Spirit",
+       "Requires Level 54",
+       "Sell Price: 1g 82s 30c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Zannok Hidepiercer (Silithus)",
+     "count": "~23crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "8 Rugged Leather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "12 Heavy Scorpid Scale",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Cured Rugged Hide",
+        "slot": null,
+        "type": "Leather",
+        "itemId": 15407,
+        "icon": "inv_misc_pelt_bear_03",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Leather",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Rune Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14341,
+        "icon": "spell_shadow_antimagicshell",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 12s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "favor": [
+  {
+   "tier": "30 Merchant's Favor (skill 60 to 110)",
+   "items": [
+    {
+     "item": {
+      "name": "Wisdom's Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252433,
+      "icon": "inv_belt_06",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "45 Armor",
+       "+4 Intellect",
+       "+3 Stamina",
+       "Requires Level 12",
+       "Equip: +3 Spell Damage",
+       "Equip: +8 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "90",
+      "green": "105",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Defender's Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252430,
+      "icon": "inv_belt_24",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "74 Armor",
+       "+4 Stamina",
+       "+4 Strength",
+       "Requires Level 12"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "90",
+      "green": "105",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Brawler's Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252428,
+      "icon": "inv_belt_04",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "45 Armor",
+       "+4 Agility",
+       "+3 Stamina",
+       "+4 Strength",
+       "Requires Level 12"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "90",
+      "green": "105",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Totemic Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252431,
+      "icon": "inv_belt_06",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "45 Armor",
+       "+3 Stamina",
+       "+4 Strength",
+       "Requires Level 12",
+       "Equip: +4 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "90",
+      "green": "105",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Trapper's Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252429,
+      "icon": "inv_belt_05",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "45 Armor",
+       "+4 Agility",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "90",
+      "green": "105",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Stormrider's Leather Belt",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252432,
+      "icon": "inv_belt_16",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "45 Armor",
+       "+4 Intellect",
+       "+3 Stamina",
+       "Requires Level 12",
+       "Equip: +4 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "90",
+      "green": "105",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Stormrider's Leather Tunic",
+      "slot": "Chest",
+      "type": "Leather",
+      "itemId": 252510,
+      "icon": "inv_chest_leather_02",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tLeather",
+       "98 Armor",
+       "+6 Intellect",
+       "+5 Spirit",
+       "+6 Stamina",
+       "Requires Level 22",
+       "Equip: +10 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 80,
+     "skills": {
+      "orange": "110",
+      "yellow": "135",
+      "green": "147",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Trapper's Leather Tunic",
+      "slot": "Chest",
+      "type": "Leather",
+      "itemId": 252509,
+      "icon": "inv_chest_leather_01",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tLeather",
+       "98 Armor",
+       "+8 Agility",
+       "+6 Intellect",
+       "+5 Spirit",
+       "+6 Stamina",
+       "Requires Level 22"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 80,
+     "skills": {
+      "orange": "110",
+      "yellow": "135",
+      "green": "147",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Defender's Leather Tunic",
+      "slot": "Chest",
+      "type": "Leather",
+      "itemId": 252450,
+      "icon": "inv_chest_leather_07",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tLeather",
+       "149 Armor",
+       "+6 Agility",
+       "+8 Stamina",
+       "+6 Strength",
+       "Requires Level 22"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 80,
+     "skills": {
+      "orange": "110",
+      "yellow": "135",
+      "green": "147",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Brawler's Leather Tunic",
+      "slot": "Chest",
+      "type": "Leather",
+      "itemId": 252508,
+      "icon": "inv_chest_leather_02",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tLeather",
+       "98 Armor",
+       "+8 Agility",
+       "+5 Spirit",
+       "+6 Stamina",
+       "+6 Strength",
+       "Requires Level 22"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 80,
+     "skills": {
+      "orange": "110",
+      "yellow": "135",
+      "green": "147",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Totemic Leather Tunic",
+      "slot": "Chest",
+      "type": "Leather",
+      "itemId": 252451,
+      "icon": "inv_chest_leather_02",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tLeather",
+       "98 Armor",
+       "+5 Intellect",
+       "+6 Stamina",
+       "+8 Strength",
+       "Requires Level 22",
+       "Equip: +7 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 80,
+     "skills": {
+      "orange": "110",
+      "yellow": "135",
+      "green": "147",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Wisdom's Leather Tunic",
+      "slot": "Chest",
+      "type": "Leather",
+      "itemId": 252511,
+      "icon": "inv_chest_leather_01",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tLeather",
+       "98 Armor",
+       "+6 Intellect",
+       "+6 Spirit",
+       "+5 Stamina",
+       "Requires Level 22",
+       "Equip: +6 Spell Damage",
+       "Equip: +18 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 80,
+     "skills": {
+      "orange": "110",
+      "yellow": "135",
+      "green": "147",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Wisdom's Leather Leggings",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 252519,
+      "icon": "inv_pants_02",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tLeather",
+       "90 Armor",
+       "+7 Intellect",
+       "+7 Spirit",
+       "+6 Stamina",
+       "Requires Level 25",
+       "Equip: +7 Spell Damage",
+       "Equip: +21 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "125",
+      "yellow": "150",
+      "green": "160",
+      "grey": "170"
+     }
+    },
+    {
+     "item": {
+      "name": "Trapper's Leather Legguards",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 252517,
+      "icon": "inv_pants_05",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tLeather",
+       "90 Armor",
+       "+9 Agility",
+       "+7 Intellect",
+       "+6 Spirit",
+       "+7 Stamina",
+       "Requires Level 25"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "125",
+      "yellow": "150",
+      "green": "160",
+      "grey": "170"
+     }
+    },
+    {
+     "item": {
+      "name": "Brawler's Leather Legguards",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 252516,
+      "icon": "inv_pants_leather_19",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tLeather",
+       "90 Armor",
+       "+9 Agility",
+       "+6 Spirit",
+       "+7 Stamina",
+       "+7 Strength",
+       "Requires Level 25"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "125",
+      "yellow": "150",
+      "green": "160",
+      "grey": "170"
+     }
+    },
+    {
+     "item": {
+      "name": "Totemic Leather Leggings",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 252458,
+      "icon": "inv_pants_01",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tLeather",
+       "90 Armor",
+       "+6 Intellect",
+       "+7 Stamina",
+       "+9 Strength",
+       "Requires Level 25",
+       "Equip: +8 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "125",
+      "yellow": "150",
+      "green": "160",
+      "grey": "170"
+     }
+    },
+    {
+     "item": {
+      "name": "Defender's Leather Kilt",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 252457,
+      "icon": "inv_kilt_cloth_04v4",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tLeather",
+       "148 Armor",
+       "+7 Agility",
+       "+9 Stamina",
+       "+7 Strength",
+       "Requires Level 25"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "125",
+      "yellow": "150",
+      "green": "160",
+      "grey": "170"
+     }
+    },
+    {
+     "item": {
+      "name": "Stormrider's Leather Kilt",
+      "slot": "Legs",
+      "type": "Leather",
+      "itemId": 252518,
+      "icon": "inv_kilt_cloth_01",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tLeather",
+       "90 Armor",
+       "+7 Intellect",
+       "+11 Spirit",
+       "+6 Stamina",
+       "+7 Strength",
+       "Requires Level 25"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "125",
+      "yellow": "150",
+      "green": "160",
+      "grey": "170"
+     }
+    },
+    {
+     "item": {
+      "name": "Wisdom's Leather Hood",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 252507,
+      "icon": "inv_helmet_33",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "76 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +6 Spell Damage",
+       "Equip: +17 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "137",
+      "grey": "150"
+     }
+    },
+    {
+     "item": {
+      "name": "Trapper's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252495,
+      "icon": "inv_gauntlets_10",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "53 Armor",
+       "+4 Agility",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 90,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "112",
+      "grey": "125"
+     }
+    },
+    {
+     "item": {
+      "name": "Wisdom's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252499,
+      "icon": "inv_gauntlets_60",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "53 Armor",
+       "+4 Intellect",
+       "+3 Stamina",
+       "Requires Level 15",
+       "Equip: +3 Spell Damage",
+       "Equip: +10 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 90,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "112",
+      "grey": "125"
+     }
+    },
+    {
+     "item": {
+      "name": "Defender's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252496,
+      "icon": "inv_gauntlets_24",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "87 Armor",
+       "+4 Stamina",
+       "+4 Strength",
+       "Requires Level 15"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 90,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "112",
+      "grey": "125"
+     }
+    },
+    {
+     "item": {
+      "name": "Totemic Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252497,
+      "icon": "inv_gauntlets_12",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "53 Armor",
+       "+3 Stamina",
+       "+4 Strength",
+       "Requires Level 15",
+       "Equip: +5 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 90,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "112",
+      "grey": "125"
+     }
+    },
+    {
+     "item": {
+      "name": "Stormrider's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252498,
+      "icon": "inv_gauntlets_24",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "53 Armor",
+       "+4 Intellect",
+       "+3 Stamina",
+       "Requires Level 15",
+       "Equip: +5 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 90,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "112",
+      "grey": "125"
+     }
+    },
+    {
+     "item": {
+      "name": "Brawler's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252494,
+      "icon": "inv_gauntlets_21",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "53 Armor",
+       "+4 Agility",
+       "+3 Stamina",
+       "+4 Strength",
+       "Requires Level 15"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 90,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "112",
+      "grey": "125"
+     }
+    },
+    {
+     "item": {
+      "name": "Defender's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252441,
+      "icon": "inv_boots_cloth_07",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "99 Armor",
+       "+5 Stamina",
+       "+5 Strength",
+       "Requires Level 17"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 70,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "122",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Wisdom's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252444,
+      "icon": "inv_boots_chain_03",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "61 Armor",
+       "+5 Intellect",
+       "+4 Stamina",
+       "Requires Level 17",
+       "Equip: +4 Spell Damage",
+       "Equip: +11 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 70,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "122",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Totemic Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252442,
+      "icon": "inv_boots_chain_12",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "61 Armor",
+       "+4 Stamina",
+       "+5 Strength",
+       "Requires Level 17",
+       "Equip: +6 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 70,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "122",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Stormrider's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252443,
+      "icon": "inv_boots_chain_05",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "61 Armor",
+       "+5 Intellect",
+       "+4 Stamina",
+       "Requires Level 17",
+       "Equip: +6 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 70,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "122",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Brawler's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252439,
+      "icon": "inv_boots_09",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "61 Armor",
+       "+5 Agility",
+       "+4 Stamina",
+       "+5 Strength",
+       "Requires Level 17"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 70,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "122",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Trapper's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252440,
+      "icon": "inv_boots_cloth_04",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "61 Armor",
+       "+5 Agility",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 70,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "122",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Trapper's Leather Hood",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 252505,
+      "icon": "inv_helmet_33",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "76 Armor",
+       "+8 Intellect",
+       "+10 Stamina",
+       "Requires Level 20"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "137",
+      "grey": "150"
+     }
+    },
+    {
+     "item": {
+      "name": "Brawler's Leather Hood",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 252504,
+      "icon": "inv_helmet_31",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "76 Armor",
+       "+10 Stamina",
+       "+8 Agility",
+       "Requires Level 20"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "137",
+      "grey": "150"
+     }
+    },
+    {
+     "item": {
+      "name": "Totemic Leather Hood",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 252448,
+      "icon": "inv_helmet_15",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "76 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +9 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "137",
+      "grey": "150"
+     }
+    },
+    {
+     "item": {
+      "name": "Stormrider's Leather Hood",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 252506,
+      "icon": "inv_helmet_29",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "76 Armor",
+       "+9 Spirit",
+       "+10 Stamina",
+       "Requires Level 20"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "137",
+      "grey": "150"
+     }
+    },
+    {
+     "item": {
+      "name": "Defender's Leather Hood",
+      "slot": "Head",
+      "type": "Leather",
+      "itemId": 252447,
+      "icon": "inv_helmet_48",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tLeather",
+       "76 Armor",
+       "+10 Stamina",
+       "+8 Strength",
+       "Requires Level 20"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "137",
+      "grey": "150"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "60 Merchant's Favor (skill 185 to 210)",
+   "items": [
+    {
+     "item": {
+      "name": "Prowler's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252524,
+      "icon": "inv_gauntlets_18",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "76 Armor",
+       "+9 Agility",
+       "+7 Stamina",
+       "+10 Strength",
+       "Requires Level 35"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252529,
+      "icon": "inv_gauntlets_14",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "76 Armor",
+       "+9 Intellect",
+       "+7 Stamina",
+       "Requires Level 35",
+       "Equip: +11 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Stalker's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252526,
+      "icon": "inv_gauntlets_51",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "76 Armor",
+       "+10 Agility",
+       "+7 Intellect",
+       "+9 Stamina",
+       "Requires Level 35"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252530,
+      "icon": "inv_gauntlets_20",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "76 Armor",
+       "+9 Intellect",
+       "+7 Stamina",
+       "Requires Level 35",
+       "Equip: +7 Spell Damage",
+       "Equip: +21 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Forceful Thick Armor Kit",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 252463,
+      "icon": "inv_misc_armorkit_07",
+      "quality": 2,
+      "itemLevel": 40,
+      "requiredLevel": 40,
+      "tooltip": [
+       "\tPermanent",
+       "Requires Level 40",
+       "Use: Permanently increase the Attack Power value by 8 and armor value by 32 of an item worn on the chest, legs, hands or feet. Only usable on items level 25 and above."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 185,
+     "skills": {
+      "orange": "185",
+      "yellow": "205",
+      "green": "215",
+      "grey": "225"
+     }
+    },
+    {
+     "item": {
+      "name": "Warden's Leather Shoulder",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 252536,
+      "icon": "inv_shoulder_06",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tLeather",
+       "169 Armor",
+       "+7 Agility",
+       "+11 Stamina",
+       "+9 Strength",
+       "Requires Level 42"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "230",
+      "green": "240",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Mail Shoulder",
+      "slot": "Shoulder",
+      "type": "Mail",
+      "itemId": 252567,
+      "icon": "inv_shoulder_12",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tMail",
+       "213 Armor",
+       "+9 Intellect",
+       "+6 Spirit",
+       "+7 Stamina",
+       "Requires Level 42",
+       "Equip: +13 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Mail Shoulder",
+      "slot": "Shoulder",
+      "type": "Mail",
+      "itemId": 252569,
+      "icon": "inv_shoulder_08",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tMail",
+       "213 Armor",
+       "+9 Intellect",
+       "+7 Spirit",
+       "+6 Stamina",
+       "Requires Level 42",
+       "Equip: +8 Spell Damage",
+       "Equip: +24 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Prowler's Leather Shoulder",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 252534,
+      "icon": "inv_shoulder_17",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tLeather",
+       "104 Armor",
+       "+9 Agility",
+       "+6 Intellect",
+       "+7 Stamina",
+       "+11 Strength",
+       "Requires Level 42"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "230",
+      "green": "240",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Skulker's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252525,
+      "icon": "inv_gauntlets_22",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "76 Armor",
+       "+10 Agility",
+       "+7 Stamina",
+       "+9 Strength",
+       "Requires Level 35"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Skirmisher's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252528,
+      "icon": "inv_gauntlets_22",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "76 Armor",
+       "+7 Stamina",
+       "+10 Strength",
+       "Requires Level 35",
+       "Equip: +10 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Warden's Leather Gloves",
+      "slot": "Hands",
+      "type": "Leather",
+      "itemId": 252527,
+      "icon": "inv_gauntlets_18",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tLeather",
+       "148 Armor",
+       "+10 Stamina",
+       "+9 Strength",
+       "Requires Level 35"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "175",
+      "yellow": "195",
+      "green": "205",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Stalker's Mail Shoulder",
+      "slot": "Shoulder",
+      "type": "Mail",
+      "itemId": 252566,
+      "icon": "inv_shoulder_18",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tMail",
+       "213 Armor",
+       "+11 Agility",
+       "+7 Intellect",
+       "+6 Spirit",
+       "+9 Stamina",
+       "Requires Level 42"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Skulker's Leather Shoulder",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 252535,
+      "icon": "inv_shoulders_mail_warfrontsforsaken_d_01",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tLeather",
+       "104 Armor",
+       "+11 Agility",
+       "+6 Spirit",
+       "+7 Stamina",
+       "+9 Strength",
+       "Requires Level 42"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "230",
+      "green": "240",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Skirmisher's Mail Shoulder",
+      "slot": "Shoulder",
+      "type": "Mail",
+      "itemId": 252568,
+      "icon": "inv_shoulder_23",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tMail",
+       "213 Armor",
+       "+6 Intellect",
+       "+7 Stamina",
+       "+11 Strength",
+       "Requires Level 42",
+       "Equip: +10 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Leather Shoulder",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 252538,
+      "icon": "inv_shoulder_17",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tLeather",
+       "104 Armor",
+       "+9 Intellect",
+       "+7 Spirit",
+       "+6 Stamina",
+       "Requires Level 42",
+       "Equip: +8 Spell Damage",
+       "Equip: +24 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "230",
+      "green": "240",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Leather Shoulder",
+      "slot": "Shoulder",
+      "type": "Leather",
+      "itemId": 252537,
+      "icon": "inv_shoulder_25",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tLeather",
+       "104 Armor",
+       "+9 Intellect",
+       "+6 Spirit",
+       "+7 Stamina",
+       "Requires Level 42",
+       "Equip: +13 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "230",
+      "green": "240",
+      "grey": "250"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "90 Merchant's Favor (skill 220 to 235)",
+   "items": [
+    {
+     "item": {
+      "name": "Skycaller's Mail Bracers",
+      "slot": "Wrist",
+      "type": "Mail",
+      "itemId": 252571,
+      "icon": "inv_bracer_25",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tMail",
+       "131 Armor",
+       "+7 Intellect",
+       "+5 Spirit",
+       "+6 Stamina",
+       "Requires Level 45",
+       "Equip: +10 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Skulker's Leather Waistguard",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252474,
+      "icon": "inv_belt_43",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "89 Armor",
+       "+14 Agility",
+       "+10 Stamina",
+       "+12 Strength",
+       "Requires Level 50"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Leather Bracers",
+      "slot": "Wrist",
+      "type": "Leather",
+      "itemId": 252543,
+      "icon": "inv_bracer_07",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tLeather",
+       "64 Armor",
+       "+7 Intellect",
+       "+6 Spirit",
+       "+5 Stamina",
+       "Requires Level 45",
+       "Equip: +6 Spell Damage",
+       "Equip: +19 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "245",
+      "green": "255",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Stalker's Mail Bracers",
+      "slot": "Wrist",
+      "type": "Mail",
+      "itemId": 252570,
+      "icon": "inv_bracer_31a",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tMail",
+       "131 Armor",
+       "+9 Agility",
+       "+6 Intellect",
+       "+5 Spirit",
+       "+7 Stamina",
+       "Requires Level 45"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Skulker's Leather Bracers",
+      "slot": "Wrist",
+      "type": "Leather",
+      "itemId": 252540,
+      "icon": "inv_bracer_21c",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tLeather",
+       "64 Armor",
+       "+9 Agility",
+       "+5 Spirit",
+       "+6 Stamina",
+       "+7 Strength",
+       "Requires Level 45"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "245",
+      "green": "255",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Skirmisher's Mail Bracers",
+      "slot": "Wrist",
+      "type": "Mail",
+      "itemId": 252572,
+      "icon": "inv_bracer_31",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tMail",
+       "131 Armor",
+       "+5 Intellect",
+       "+6 Stamina",
+       "+9 Strength",
+       "Requires Level 45",
+       "Equip: +8 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Leather Bracers",
+      "slot": "Wrist",
+      "type": "Leather",
+      "itemId": 252542,
+      "icon": "inv_bracer_22a",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tLeather",
+       "64 Armor",
+       "+7 Intellect",
+       "+5 Spirit",
+       "+6 Stamina",
+       "Requires Level 45",
+       "Equip: +10 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "245",
+      "green": "255",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Warden's Leather Bracers",
+      "slot": "Wrist",
+      "type": "Leather",
+      "itemId": 252541,
+      "icon": "inv_bracer_22",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tLeather",
+       "116 Armor",
+       "+6 Agility",
+       "+9 Stamina",
+       "+7 Strength",
+       "Requires Level 45"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "245",
+      "green": "255",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Mail Bracers",
+      "slot": "Wrist",
+      "type": "Mail",
+      "itemId": 252573,
+      "icon": "inv_bracer_02",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tMail",
+       "131 Armor",
+       "+7 Intellect",
+       "+6 Spirit",
+       "+5 Stamina",
+       "Requires Level 45",
+       "Equip: +6 Spell Damage",
+       "Equip: +19 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "220",
+      "green": "230",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252471,
+      "icon": "inv_boots_leather_cataclysm_b_02",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "104 Armor",
+       "+11 Intellect",
+       "+9 Stamina",
+       "Requires Level 47",
+       "Equip: +15 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252472,
+      "icon": "inv_boots_cloth_03",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "104 Armor",
+       "+11 Intellect",
+       "+9 Stamina",
+       "Requires Level 47",
+       "Equip: +9 Spell Damage",
+       "Equip: +28 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Skirmisher's Mail Sabatons",
+      "slot": "Feet",
+      "type": "Mail",
+      "itemId": 252578,
+      "icon": "inv_boots_chain_13",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tMail",
+       "214 Armor",
+       "+9 Stamina",
+       "+13 Strength",
+       "Requires Level 47",
+       "Equip: +13 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Mail Sabatons",
+      "slot": "Feet",
+      "type": "Mail",
+      "itemId": 252579,
+      "icon": "inv_boots_chain_02",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tMail",
+       "214 Armor",
+       "+11 Intellect",
+       "+9 Stamina",
+       "Requires Level 47",
+       "Equip: +9 Spell Damage",
+       "Equip: +28 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Mail Sabatons",
+      "slot": "Feet",
+      "type": "Mail",
+      "itemId": 252577,
+      "icon": "inv_boots_chain_12",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tMail",
+       "214 Armor",
+       "+11 Intellect",
+       "+9 Stamina",
+       "Requires Level 47",
+       "Equip: +15 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Prowler's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252468,
+      "icon": "inv_boots_chain_06",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "104 Armor",
+       "+11 Agility",
+       "+9 Stamina",
+       "+13 Strength",
+       "Requires Level 47"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Warden's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252470,
+      "icon": "inv_boots_04",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "197 Armor",
+       "+13 Stamina",
+       "+11 Strength",
+       "Requires Level 47"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Skulker's Leather Boots",
+      "slot": "Feet",
+      "type": "Leather",
+      "itemId": 252469,
+      "icon": "inv_boots_cloth_25purple",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tLeather",
+       "104 Armor",
+       "+13 Agility",
+       "+9 Stamina",
+       "+11 Strength",
+       "Requires Level 47"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Stalker's Mail Sabatons",
+      "slot": "Feet",
+      "type": "Mail",
+      "itemId": 252576,
+      "icon": "inv_boots_chain_12",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tMail",
+       "214 Armor",
+       "+13 Agility",
+       "+9 Intellect",
+       "+11 Stamina",
+       "Requires Level 47"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "255",
+      "green": "265",
+      "grey": "275"
+     }
+    },
+    {
+     "item": {
+      "name": "Mystic Rugged Armor Kit",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 252487,
+      "icon": "inv_misc_armorkit_09",
+      "quality": 2,
+      "itemLevel": 50,
+      "requiredLevel": 50,
+      "tooltip": [
+       "\tPermanent",
+       "Requires Level 50",
+       "Use: Permanently increase the Spell Power value by 6 and armor value by 40 of an item worn on the chest, legs, hands or feet. Only usable on items level 35 and above."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "235",
+      "green": "245",
+      "grey": "255"
+     }
+    },
+    {
+     "item": {
+      "name": "Prowler's Leather Waistguard",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252473,
+      "icon": "inv_belt_37b",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "89 Armor",
+       "+12 Agility",
+       "+10 Stamina",
+       "+14 Strength",
+       "Requires Level 50"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Leather Waistguard",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252476,
+      "icon": "inv_belt_43a",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "89 Armor",
+       "+12 Intellect",
+       "+10 Stamina",
+       "Requires Level 50",
+       "Equip: +16 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Stalker's Mail Belt",
+      "slot": "Waist",
+      "type": "Mail",
+      "itemId": 252588,
+      "icon": "inv_belt_17",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tMail",
+       "184 Armor",
+       "+14 Agility",
+       "+10 Intellect",
+       "+12 Stamina",
+       "Requires Level 50"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Skycaller's Mail Belt",
+      "slot": "Waist",
+      "type": "Mail",
+      "itemId": 252589,
+      "icon": "inv_belt_22",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tMail",
+       "184 Armor",
+       "+12 Intellect",
+       "+10 Stamina",
+       "Requires Level 50",
+       "Equip: +16 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Mail Belt",
+      "slot": "Waist",
+      "type": "Mail",
+      "itemId": 252591,
+      "icon": "inv_belt_37c",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tMail",
+       "184 Armor",
+       "+12 Intellect",
+       "+10 Stamina",
+       "Requires Level 50",
+       "Equip: +10 Spell Damage",
+       "Equip: +30 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Warden's Leather Waistguard",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252475,
+      "icon": "inv_belt_04",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "191 Armor",
+       "+14 Stamina",
+       "+12 Strength",
+       "Requires Level 50"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Mender's Leather Waistguard",
+      "slot": "Waist",
+      "type": "Leather",
+      "itemId": 252477,
+      "icon": "inv_belt_16",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tLeather",
+       "89 Armor",
+       "+12 Intellect",
+       "+10 Stamina",
+       "Requires Level 50",
+       "Equip: +10 Spell Damage",
+       "Equip: +30 Healing"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Skirmisher's Mail Belt",
+      "slot": "Waist",
+      "type": "Mail",
+      "itemId": 252590,
+      "icon": "inv_belt_39c",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tMail",
+       "184 Armor",
+       "+10 Stamina",
+       "+14 Strength",
+       "Requires Level 50",
+       "Equip: +15 Spell Power"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 225,
+     "skills": {
+      "orange": "250",
+      "yellow": "270",
+      "green": "280",
+      "grey": "290"
+     }
+    },
+    {
+     "item": {
+      "name": "Prowler's Leather Bracers",
+      "slot": "Wrist",
+      "type": "Leather",
+      "itemId": 252539,
+      "icon": "inv_bracer_21c",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tLeather",
+       "64 Armor",
+       "+7 Agility",
+       "+5 Intellect",
+       "+6 Stamina",
+       "+9 Strength",
+       "Requires Level 45"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "225",
+      "yellow": "245",
+      "green": "255",
+      "grey": "265"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "1,000 Merchant's Favor (skill 300)",
+   "items": [
+    {
+     "item": {
+      "name": "Leatherworking Certification",
+      "slot": null,
+      "type": "Other",
+      "itemId": 271626,
+      "icon": "inv_scroll_15",
+      "quality": 2,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tOther",
+       "Requires Leatherworking (300)",
+       "Use: Permanently unlock \"the Leatherworker\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Leatherworking."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    }
+   ]
+  }
+ ]
 }

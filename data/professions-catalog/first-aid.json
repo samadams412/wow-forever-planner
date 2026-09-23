@@ -2841,6 +2841,828 @@
    ]
   }
  ],
- "leveling": null,
+ "leveling": [
+  {
+   "rank": "Apprentice",
+   "requirement": "from any First Aid trainer, up to 75",
+   "steps": [
+    {
+     "range": [
+      1,
+      15
+     ],
+     "item": {
+      "name": "First Aid Kit",
+      "slot": null,
+      "type": "Other",
+      "itemId": 279968,
+      "icon": "inv_misc_bandage_11",
+      "quality": 1,
+      "itemLevel": 4,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "Requires First Aid (20)",
+       "Use: Unpacks a first aid kit that allows you and others sitting nearby to gain 56 increased Stamina, exclusive with Power Word: Fortitude. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~14crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Linen Bandage",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Refreshing Spring Water",
+        "slot": null,
+        "type": "Food & Drink",
+        "itemId": 159,
+        "icon": "inv_drink_07",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 1,
+        "tooltip": [
+         "Food & Drink",
+         "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      15,
+      46
+     ],
+     "item": {
+      "name": "Linen Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 1251,
+      "icon": "inv_misc_bandage_15",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (1)",
+       "Use: Heals 66 damage over 6 sec.",
+       "Sell Price: 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~38crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2589,
+        "icon": "inv_fabric_linen_01",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 13c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      46,
+      75
+     ],
+     "item": {
+      "name": "Heavy Linen Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 2581,
+      "icon": "inv_misc_bandage_18",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (20)",
+       "Use: Heals 114 damage over 6 sec.",
+       "Sell Price: 20c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~39crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Linen Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      80
+     ],
+     "item": {
+      "name": "Simple Poultice",
+      "slot": null,
+      "type": "Reagent",
+      "itemId": 255716,
+      "icon": "inv_10_alchemy2_quenchingfluid_color2",
+      "quality": 1,
+      "itemLevel": 16,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tReagent",
+       "Use: Target is cured of diseases up to level 25. Not useable in combat. (1 Min Cooldown)",
+       "Sell Price: 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Spider Ichor",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 3174,
+        "icon": "inv_misc_slime_01",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cooking",
+         "Sell Price: 16c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mild Spices",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2678,
+        "icon": "inv_misc_food_wheat_02",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tOther",
+         "\"Used to somewhat enhance the flavor in cooking recipes.\""
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "\"Used to enhance the flavor in cooking recipes.\""
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bottle of Dalaran Noir",
+        "slot": null,
+        "type": "Food & Drink",
+        "itemId": 2723,
+        "icon": "inv_drink_10",
+        "quality": 1,
+        "itemLevel": 1,
+        "requiredLevel": 1,
+        "tooltip": [
+         "Food & Drink",
+         "Use: A fairly weak alcoholic beverage.",
+         "Sell Price: 12c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      80,
+      116
+     ],
+     "item": {
+      "name": "Anti-Venom",
+      "slot": null,
+      "type": "Other",
+      "itemId": 6452,
+      "icon": "inv_misc_slime_01",
+      "quality": 1,
+      "itemLevel": 16,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Other",
+       "Use: Target is cured of poisons up to level 25. (1 Min Cooldown)",
+       "Sell Price: 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~51crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Small Venom Sac",
+        "slot": null,
+        "type": "Other",
+        "itemId": 1475,
+        "icon": "inv_misc_organ_02",
+        "quality": 1,
+        "itemLevel": 1,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 82c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      116,
+      150
+     ],
+     "item": {
+      "name": "Heavy Wool Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 3531,
+      "icon": "inv_misc_bandage_17",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (75)",
+       "Use: Heals 301 damage over 7 sec.",
+       "Sell Price: 57c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~48crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Wool Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Expert",
+   "requirement": "from the book Expert First Aid - Under Wraps, sold for gold, from skill 125, up to 225",
+   "steps": [
+    {
+     "range": [
+      150,
+      181
+     ],
+     "item": {
+      "name": "Silk Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 6450,
+      "icon": "inv_misc_bandage_01",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (100)",
+       "Use: Heals 400 damage over 8 sec.",
+       "Sell Price: 2s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~44crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Silk Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4306,
+        "icon": "inv_fabric_silk_01",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      181,
+      210
+     ],
+     "item": {
+      "name": "Heavy Silk Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 6451,
+      "icon": "inv_misc_bandage_02",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (125)",
+       "Use: Heals 640 damage over 8 sec.",
+       "Sell Price: 4s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+     "count": "~41crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Silk Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      210,
+      225
+     ],
+     "item": {
+      "name": "Mageweave Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 8544,
+      "icon": "inv_misc_bandage_19",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (150)",
+       "Use: Heals 800 damage over 8 sec.",
+       "Sell Price: 4s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+     "count": "~18crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mageweave Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4338,
+        "icon": "inv_fabric_mageweave_01",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Artisan",
+   "requirement": "from the quest Triage, in Theramore (Alliance) or Hammerfall (Horde), from skill 225 and level 35, up to 300",
+   "steps": [
+    {
+     "range": [
+      225,
+      241
+     ],
+     "item": {
+      "name": "Mageweave Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 8544,
+      "icon": "inv_misc_bandage_19",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (150)",
+       "Use: Heals 800 damage over 8 sec.",
+       "Sell Price: 4s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+     "count": "~26crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mageweave Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4338,
+        "icon": "inv_fabric_mageweave_01",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      241,
+      260
+     ],
+     "item": {
+      "name": "Heavy Mageweave Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 8545,
+      "icon": "inv_misc_bandage_20",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (175)",
+       "Use: Heals 1104 damage over 8 sec.",
+       "Sell Price: 6s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~24crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Mageweave Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      260,
+      291
+     ],
+     "item": {
+      "name": "Runecloth Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 14529,
+      "icon": "inv_misc_bandage_11",
+      "quality": 1,
+      "itemLevel": 52,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (200)",
+       "Use: Heals 1360 damage over 8 sec.",
+       "Sell Price: 5s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~44crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Runecloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 14047,
+        "icon": "inv_fabric_purplefire_01",
+        "quality": 1,
+        "itemLevel": 50,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 4s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      291,
+      300
+     ],
+     "item": {
+      "name": "Heavy Runecloth Bandage",
+      "slot": null,
+      "type": "Bandages",
+      "itemId": 14530,
+      "icon": "inv_misc_bandage_12",
+      "quality": 1,
+      "itemLevel": 58,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bandages",
+       "Requires First Aid (225)",
+       "Use: Heals 2000 damage over 8 sec.",
+       "Sell Price: 10s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~10crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Runecloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
  "favor": null
 }

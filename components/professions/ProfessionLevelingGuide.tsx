@@ -22,7 +22,17 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
             {rank.steps.map((step, si) => (
               <div key={si} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
                 <span className="w-16 shrink-0 text-xs font-medium text-foreground-muted">
-                  {step.range[0]}&ndash;{step.range[1]}
+                  {/* A one-time prerequisite step (e.g. Enchanting's "Make a
+                      Runed Copper Rod") renders as a single level on
+                      foreverchanges' own page, not a range -- step.range[1]
+                      is genuinely absent for these, not a missing value. */}
+                  {step.range[1] != null ? (
+                    <>
+                      {step.range[0]}&ndash;{step.range[1]}
+                    </>
+                  ) : (
+                    step.range[0]
+                  )}
                 </span>
                 <LootItemPill item={step.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}`} context="catalog" />
                 <span className="text-xs text-foreground-muted">{step.source}</span>

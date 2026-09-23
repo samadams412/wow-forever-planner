@@ -11649,6 +11649,1048 @@
    ]
   }
  ],
- "leveling": null,
- "favor": null
+ "leveling": [
+  {
+   "rank": "Apprentice",
+   "requirement": "from any Cooking trainer, up to 75",
+   "steps": [
+    {
+     "range": [
+      1,
+      46
+     ],
+     "item": {
+      "name": "Slitherskin Mackerel",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 787,
+      "icon": "inv_misc_fish_24",
+      "quality": 1,
+      "itemLevel": 10,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tFood & Drink",
+       "Use: Restores 58 health over 21 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 6 Attack Power for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+       "Sell Price: 1c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Tansy Puddlefizz (Alliance) or Zansoa (Horde) and 1 more",
+     "count": "~45crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Slitherskin Mackerel",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 6303,
+        "icon": "inv_misc_fish_24",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 1,
+        "tooltip": [
+         "Cooking",
+         "Use: Restores 10 health over 15 sec. Must remain seated while eating.",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      46,
+      75
+     ],
+     "item": {
+      "name": "Smoked Bear Meat",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 6890,
+      "icon": "inv_misc_food_13",
+      "quality": 1,
+      "itemLevel": 10,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tFood & Drink",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 1 Strength for 15 min.",
+       "Sell Price: 6c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 5",
+       "Use: Restores 58 health over 21 sec. Must remain seated while eating.",
+       "Sell Price: 6c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Drac Roughcut (Alliance) or Andrew Hilbert (Horde)",
+     "count": "~29crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bear Meat",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 3173,
+        "icon": "inv_misc_food_71",
+        "quality": 1,
+        "itemLevel": 11,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cooking",
+         "Sell Price: 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      81
+     ],
+     "item": {
+      "name": "Smoked Bear Meat",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 6890,
+      "icon": "inv_misc_food_13",
+      "quality": 1,
+      "itemLevel": 10,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tFood & Drink",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 1 Strength for 15 min.",
+       "Sell Price: 6c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 5",
+       "Use: Restores 58 health over 21 sec. Must remain seated while eating.",
+       "Sell Price: 6c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Drac Roughcut (Alliance) or Andrew Hilbert (Horde)",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bear Meat",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 3173,
+        "icon": "inv_misc_food_71",
+        "quality": 1,
+        "itemLevel": 11,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cooking",
+         "Sell Price: 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      81,
+      100
+     ],
+     "item": {
+      "name": "Rainbow Fin Albacore",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 5095,
+      "icon": "inv_misc_fish_27",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 5,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 5",
+       "Use: Restores 17 health over 18 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 1 Spell Damage for 15 min.",
+       "Sell Price: 3c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 5",
+       "Use: Restores 58 health over 21 sec. Must remain seated while eating.",
+       "Sell Price: 3c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Heldan Galesong (Alliance) or Zansoa (Horde) and 1 more",
+     "count": "~21crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Rainbow Fin Albacore",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 6361,
+        "icon": "inv_misc_fish_25",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 5,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 5",
+         "Use: Restores 17 health over 18 sec. Must remain seated while eating.",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      100,
+      150
+     ],
+     "item": {
+      "name": "Bristle Whisker Catfish",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 4593,
+      "icon": "inv_misc_fish_30",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 15,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 8 Fishing Skill for 15 min.",
+       "Sell Price: 4c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating.",
+       "Sell Price: 4c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Derak Nightfall (Horde) or Lindea Rabonne (Alliance) and 1 more",
+     "count": "~52crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Bristle Whisker Catfish",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 6308,
+        "icon": "inv_misc_fish_30",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 15,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 15",
+         "Use: Restores 58 health over 21 sec. Must remain seated while eating.",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Expert",
+   "requirement": "from the book Expert Cookbook, sold for gold, from skill 125, up to 225",
+   "steps": [
+    {
+     "range": [
+      150,
+      161
+     ],
+     "item": {
+      "name": "Bristle Whisker Catfish",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 4593,
+      "icon": "inv_misc_fish_30",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 15,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 8 Fishing Skill for 15 min.",
+       "Sell Price: 4c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating.",
+       "Sell Price: 4c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Derak Nightfall (Horde) or Lindea Rabonne (Alliance) and 1 more",
+     "count": "~18crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Bristle Whisker Catfish",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 6308,
+        "icon": "inv_misc_fish_30",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 15,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 15",
+         "Use: Restores 58 health over 21 sec. Must remain seated while eating.",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      161,
+      166
+     ],
+     "item": {
+      "name": "Lean Wolf Steak",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 12209,
+      "icon": "inv_misc_food_47",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 15,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 5 Agility for 15 min.",
+       "Sell Price: 95c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 6 Stamina and Spirit for 15 min.",
+       "Sell Price: 95c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Super-Seller 680 (Desolace)",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Lean Wolf Flank",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 1015,
+        "icon": "inv_misc_food_14",
+        "quality": 1,
+        "itemLevel": 19,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cooking",
+         "Sell Price: 24c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mild Spices",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2678,
+        "icon": "inv_misc_food_wheat_02",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tOther",
+         "\"Used to somewhat enhance the flavor in cooking recipes.\""
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "\"Used to enhance the flavor in cooking recipes.\""
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      166,
+      175
+     ],
+     "item": {
+      "name": "Curiously Tasty Omelet",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 3665,
+      "icon": "inv_egg_04",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 15,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 5 Stamina for 15 min.",
+       "Sell Price: 1s 50c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 15",
+       "Use: Restores 115 health over 24 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 6 Stamina and Spirit for 15 min.",
+       "Sell Price: 1s 50c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Keena (Horde) or Kendor Kabonka (Alliance) and 1 more",
+     "count": "~10crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raptor Egg",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 3685,
+        "icon": "inv_egg_03",
+        "quality": 1,
+        "itemLevel": 22,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cooking",
+         "Sell Price: 71c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Hot Spices",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2692,
+        "icon": "inv_misc_food_legion_dalapenopepper",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tOther",
+         "\"Used to dangerously enhance the flavor in cooking recipes.\"",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "Sell Price: 10c"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      175,
+      191
+     ],
+     "item": {
+      "name": "Rockscale Cod",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 4594,
+      "icon": "inv_misc_fish_04",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 25,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 25",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 12 Fishing Skill for 15 min.",
+       "Sell Price: 6c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 25",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 6c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Wik'Tar (Horde) or Heldan Galesong (Alliance) and 1 more",
+     "count": "~16crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Rockscale Cod",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 6362,
+        "icon": "inv_misc_fish_04",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 25,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 25",
+         "Use: Restores 115 health over 24 sec. Must remain seated while eating.",
+         "Sell Price: 4c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      191,
+      225
+     ],
+     "item": {
+      "name": "Mithril Head Trout",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 8364,
+      "icon": "inv_misc_fish_02",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 25,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 25",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 20 Attack Power for 15 min.",
+       "Sell Price: 6c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 25",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+       "Sell Price: 6c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Wik'Tar (Horde) or Heldan Galesong (Alliance) and 1 more",
+     "count": "~36crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Mithril Head Trout",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 8365,
+        "icon": "inv_misc_fish_02",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 25,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 25",
+         "Use: Restores 115 health over 24 sec. Must remain seated while eating.",
+         "Sell Price: 4c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Artisan",
+   "requirement": "from a quest of Dirge Quikcleave in Gadgetzan, Tanaris, from skill 225 and level 35, up to 300",
+   "steps": [
+    {
+     "range": [
+      225,
+      266
+     ],
+     "item": {
+      "name": "Filet of Redgill",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 13930,
+      "icon": "inv_misc_fish_06",
+      "quality": 1,
+      "itemLevel": 45,
+      "requiredLevel": 35,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 35",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 18 Fishing Skill for 15 min.",
+       "Sell Price: 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 35",
+       "Use: Restores 232 health over 30 sec. Must remain seated while eating.",
+       "Sell Price: 5c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Kelsey Yance (Stranglethorn Vale)",
+     "count": "~41crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Redgill",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 13758,
+        "icon": "inv_misc_fish_06",
+        "quality": 1,
+        "itemLevel": 45,
+        "requiredLevel": 35,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 35",
+         "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+         "Sell Price: 4c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      266,
+      300
+     ],
+     "item": {
+      "name": "Poached Sunscale Salmon",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 13932,
+      "icon": "inv_misc_fish_19",
+      "quality": 1,
+      "itemLevel": 45,
+      "requiredLevel": 35,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 35",
+       "Use: Restores 358 health over 30 sec. Must remain seated while eating. If you spend at least 10 seconds eating you will become well fed and gain 40 Attack Power for 15 min.",
+       "Sell Price: 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "\tConsumable",
+       "Requires Level 35",
+       "Use: Restores 162 health over 27 sec. Must remain seated while eating. Also restores 6 health every 5 seconds for 10 min.",
+       "Sell Price: 12c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Recipe sold by Gikkix (Tanaris)",
+     "count": "~36crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Raw Sunscale Salmon",
+        "slot": null,
+        "type": "Cooking",
+        "itemId": 13760,
+        "icon": "inv_misc_fish_19",
+        "quality": 1,
+        "itemLevel": 45,
+        "requiredLevel": 35,
+        "tooltip": [
+         "Cooking",
+         "Requires Level 35",
+         "Use: Restores 162 health over 27 sec. Must remain seated while eating.",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "favor": [
+  {
+   "tier": "30 Merchant's Favor (skill 25 to 125)",
+   "items": [
+    {
+     "item": {
+      "name": "Venomous Smoothie",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 249871,
+      "icon": "inv_drink_21",
+      "quality": 1,
+      "itemLevel": 5,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tFood & Drink",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 1 Spirit for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 25,
+     "skills": {
+      "orange": "25",
+      "yellow": "5",
+      "green": "10",
+      "grey": "15"
+     }
+    },
+    {
+     "item": {
+      "name": "Slimy Smoothie",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 249872,
+      "icon": "inv_drink_15_color03",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 5,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 5",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 3 Spirit for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "85",
+      "green": "90",
+      "grey": "95"
+     }
+    },
+    {
+     "item": {
+      "name": "Mrrggl Smrrthle",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 249873,
+      "icon": "inv_drink_21_color01",
+      "quality": 1,
+      "itemLevel": 25,
+      "requiredLevel": 15,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 15",
+       "Use: Restores 174 mana over 24 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 5 Spirit for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "135",
+      "green": "140",
+      "grey": "145"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "60 Merchant's Favor (skill 180 to 200)",
+   "items": [
+    {
+     "item": {
+      "name": "Calcified Smoothie",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 249874,
+      "icon": "inv_drink_15_color01",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 25,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 25",
+       "Use: Restores 249 mana over 27 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 10 Spirit for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 180,
+     "skills": {
+      "orange": "180",
+      "yellow": "185",
+      "green": "190",
+      "grey": "195"
+     }
+    },
+    {
+     "item": {
+      "name": "Spicy Smoothie",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 249875,
+      "icon": "inv_drink_21_color04",
+      "quality": 1,
+      "itemLevel": 45,
+      "requiredLevel": 35,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 35",
+       "Use: Restores 332 mana over 30 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 15 Spirit for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 200,
+     "skills": {
+      "orange": "200",
+      "yellow": "215",
+      "green": "220",
+      "grey": "225"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "90 Merchant's Favor (skill 250)",
+   "items": [
+    {
+     "item": {
+      "name": "Wicked Smoothie",
+      "slot": null,
+      "type": "Food & Drink",
+      "itemId": 249876,
+      "icon": "inv_drink_15_color04",
+      "quality": 1,
+      "itemLevel": 55,
+      "requiredLevel": 45,
+      "tooltip": [
+       "\tFood & Drink",
+       "Requires Level 45",
+       "Use: Restores 489 mana over 30 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 20 Spirit for 15 min.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 250,
+     "skills": {
+      "orange": "250",
+      "yellow": "240",
+      "green": "245",
+      "grey": "250"
+     }
+    }
+   ]
+  }
+ ]
 }

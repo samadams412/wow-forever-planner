@@ -24487,6 +24487,2447 @@
    ]
   }
  ],
- "leveling": null,
- "favor": null
+ "leveling": [
+  {
+   "rank": "Apprentice",
+   "requirement": "from any Enchanting trainer, up to 75",
+   "steps": [
+    {
+     "range": [
+      1,
+      null
+     ],
+     "item": {
+      "name": "Make a Runed Copper Rod",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "source": "Every enchant from here on needs it in your bags.",
+     "count": "1craft",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Copper Rod",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 6217,
+        "icon": "inv_misc_flute_01",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Enchanting",
+         "\"Needed by an Enchanter to make a runed copper rod.\"",
+         "Sell Price: 24c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mote of Magic",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 247786,
+        "icon": "inv_elemental_mote_mana",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "\"Available from enchanting vendors.\"",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "new",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      1,
+      25
+     ],
+     "item": {
+      "name": "Enchant Bracer - Inferior Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273458,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant bracers to increase the Stamina of the wearer by 2."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~31crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Mote of Magic",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 247786,
+        "icon": "inv_elemental_mote_mana",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "\"Available from enchanting vendors.\"",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "new",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      25,
+      75
+     ],
+     "item": {
+      "name": "Enchant Chest - Inferior Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273459,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant a piece of chest armor so that it increases the Stamina of the wearer by 2."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~51crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Strange Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      91
+     ],
+     "item": {
+      "name": "Enchant Chest - Inferior Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273459,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant a piece of chest armor so that it increases the Stamina of the wearer by 2."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~24crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Strange Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      91,
+      121
+     ],
+     "item": {
+      "name": "Enchant Bracer - Minor Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273464,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant bracers so they increase the wearer's Stamina by 3."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~39crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Strange Dust",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      121,
+      130
+     ],
+     "item": {
+      "name": "Enchant Shield - Minor Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273480,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant a shield so that it increases the Stamina of the bearer by 3."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~9crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Lesser Astral Essence",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 10998,
+        "icon": "inv_enchant_essenceastralsmall",
+        "quality": 2,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Use: Turn three lesser astral essences into a greater one.",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "Use: Turn three lesser astral essences into a greater one."
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Strange Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 10940,
+        "icon": "inv_enchant_duststrange",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      130,
+      null
+     ],
+     "item": {
+      "name": "Make a Runed Silver Rod",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "source": "Every enchant from here on needs it in your bags.",
+     "count": "1craft",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Silver Rod",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 6338,
+        "icon": "inv_staff_01",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Enchanting",
+         "\"Needed by Enchanters.\"",
+         "Sell Price: 1s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Strange Dust",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Lesser Magic Essence",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Shadowgem",
+        "slot": null,
+        "type": "Other",
+        "itemId": 1210,
+        "icon": "inv_misc_gem_amethyst_01",
+        "quality": 2,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 2s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      130,
+      140
+     ],
+     "item": {
+      "name": "Enchant Bracer - Lesser Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273486,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant a bracer so it increases the wearer's Stamina by 4."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~10crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Soul Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11083,
+        "icon": "inv_enchant_dustsoul",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      140,
+      150
+     ],
+     "item": {
+      "name": "Enchant Bracer - Lesser Strength",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273490,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tPermanent",
+       "Use: Permanently enchant a bracer so it increases the wearer's Strength by 4."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Formula sold by Dalria (Alliance) or Kulwia (Horde)",
+     "count": "~10crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Soul Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11083,
+        "icon": "inv_enchant_dustsoul",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Expert",
+   "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+   "steps": [
+    {
+     "range": [
+      150,
+      186
+     ],
+     "item": {
+      "name": "Enchant Bracer - Lesser Strength",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273490,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tPermanent",
+       "Use: Permanently enchant a bracer so it increases the wearer's Strength by 4."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Formula sold by Dalria (Alliance) or Kulwia (Horde)",
+     "count": "~45crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Soul Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11083,
+        "icon": "inv_enchant_dustsoul",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      186,
+      null
+     ],
+     "item": {
+      "name": "Make a Runed Golden Rod",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "source": "Every enchant from here on needs it in your bags.",
+     "count": "1craft",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Golden Rod",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11128,
+        "icon": "inv_staff_10",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Enchanting",
+         "\"Needed by Enchanters.\"",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Iridescent Pearl",
+        "slot": null,
+        "type": "Other",
+        "itemId": 5500,
+        "icon": "inv_misc_gem_pearl_02",
+        "quality": 2,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 7s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Greater Astral Essence",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11082,
+        "icon": "inv_enchant_essenceastrallarge",
+        "quality": 2,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Use: Turn a greater astral essence into three lesser ones.",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "Use: Turn a greater astral essence into three lesser ones."
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Soul Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11083,
+        "icon": "inv_enchant_dustsoul",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      186,
+      194
+     ],
+     "item": {
+      "name": "Enchant Boots - Lesser Agility",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273500,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant boots to give +4 Agility."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~11crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Soul Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11083,
+        "icon": "inv_enchant_dustsoul",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      194,
+      218
+     ],
+     "item": {
+      "name": "Enchant Bracer - Strength",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273510,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant bracers to give +5 Strength."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~30crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Vision Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11137,
+        "icon": "inv_enchant_dustvision",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      218,
+      null
+     ],
+     "item": {
+      "name": "Make a Runed Truesilver Rod",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "source": "Every enchant from here on needs it in your bags.",
+     "count": "1craft",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Truesilver Rod",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11144,
+        "icon": "inv_staff_11",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Enchanting",
+         "\"Needed by Enchanters.\"",
+         "Sell Price: 10s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Black Pearl",
+        "slot": null,
+        "type": "Other",
+        "itemId": 7971,
+        "icon": "inv_misc_gem_pearl_01",
+        "quality": 2,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 10s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Greater Mystic Essence",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11135,
+        "icon": "inv_enchant_essencemysticallarge",
+        "quality": 2,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Use: Turn a greater mystic essence into three lesser ones.",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods",
+         "Use: Turn a greater mystic essence into three lesser ones."
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Vision Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11137,
+        "icon": "inv_enchant_dustvision",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      218,
+      225
+     ],
+     "item": {
+      "name": "Enchant Cloak - Greater Defense",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273518,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant a cloak to give 60 additional armor."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Vision Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11137,
+        "icon": "inv_enchant_dustvision",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Artisan",
+   "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+   "steps": [
+    {
+     "range": [
+      225,
+      262
+     ],
+     "item": {
+      "name": "Enchant Gloves - Agility",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273520,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant gloves to grant +7 Agility."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~68crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Vision Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11137,
+        "icon": "inv_enchant_dustvision",
+        "quality": 1,
+        "itemLevel": 35,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      262,
+      277
+     ],
+     "item": {
+      "name": "Enchant Bracer - Greater Strength",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273539,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant bracers to give +7 Strength."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~20crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Dream Dust",
+        "slot": null,
+        "type": "Enchanting",
+        "itemId": 11176,
+        "icon": "inv_enchant_dustdream",
+        "quality": 1,
+        "itemLevel": 45,
+        "requiredLevel": 0,
+        "tooltip": [
+         "\tEnchanting",
+         "Sell Price: 1c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": [
+         "\tTrade Goods"
+        ],
+        "status": "changed",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Lesser Nether Essence",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      277,
+      300
+     ],
+     "item": {
+      "name": "Enchant Shield - Greater Stamina",
+      "slot": null,
+      "type": "Permanent",
+      "itemId": 273554,
+      "icon": "inv_misc_enchantedscroll",
+      "quality": 1,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "\tPermanent",
+       "Use: Permanently enchant a shield to give +9 Stamina."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Formula sold by Mythrin'dir (Alliance) or Daniel Bartlett (Horde)",
+     "count": "~27crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Dream Dust",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "favor": [
+  {
+   "tier": "45 Merchant's Favor (skill 130 to 140)",
+   "items": [
+    {
+     "item": {
+      "name": "Tenets of the Silver Hand",
+      "slot": "Relic",
+      "type": "Libram",
+      "itemId": 249397,
+      "icon": "inv_misc_book_13",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Relic\tLibram",
+       "Classes: Paladin",
+       "Requires Level 20",
+       "Equip: Increases your damage against Undead by 1%.",
+       "\"A pristine copy of the holy tome.\"",
+       "Sell Price: 10s 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 130,
+     "skills": {
+      "orange": "130",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Polished Driftwood Icon",
+      "slot": "Relic",
+      "type": "Totem",
+      "itemId": 249398,
+      "icon": "spell_shaman_totemrecall",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Relic\tTotem",
+       "Classes: Shaman",
+       "Requires Level 20",
+       "Equip: Allows 8% of your Mana regeneration to continue while casting.",
+       "Sell Price: 10s 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 130,
+     "skills": {
+      "orange": "130",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Mystic Mushroom",
+      "slot": "Relic",
+      "type": "Idol",
+      "itemId": 249396,
+      "icon": "inv_mushroom_11",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Relic\tIdol",
+       "Classes: Druid",
+       "Requires Level 20",
+       "Equip: Increases Spirit by 5%.",
+       "Sell Price: 10s 12c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 130,
+     "skills": {
+      "orange": "130",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Soulstaff",
+      "slot": "Two-Hand",
+      "type": "Staff",
+      "itemId": 249393,
+      "icon": "inv_staff_31",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Two-Hand\tStaff",
+       "26 - 40 Damage\tSpeed 1.80",
+       "(18.3 damage per second)",
+       "+11 Stamina",
+       "+11 Spirit",
+       "Requires Level 25",
+       "Equip: +34 Spell Power",
+       "Sell Price: 6s 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": {
+      "orange": "140",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Orb of Souls",
+      "slot": "Held In Off-hand",
+      "type": "Trinket",
+      "itemId": 249395,
+      "icon": "inv_misc_orb_04",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Held In Off-hand",
+       "+6 Spirit",
+       "Requires Level 25",
+       "Equip: +13 Healing",
+       "Equip: +4 Spell Damage",
+       "Sell Price: 21s 56c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": {
+      "orange": "140",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Orb of Mystic Insight",
+      "slot": "Held In Off-hand",
+      "type": "Trinket",
+      "itemId": 249394,
+      "icon": "inv_misc_orb_blue",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Held In Off-hand",
+       "+6 Intellect",
+       "Requires Level 25",
+       "Equip: +7 Spell Power",
+       "Sell Price: 21s 56c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": {
+      "orange": "140",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Glimmering Staff",
+      "slot": "Two-Hand",
+      "type": "Staff",
+      "itemId": 249392,
+      "icon": "inv_staff_19",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Two-Hand\tStaff",
+       "32 - 48 Damage\tSpeed 2.20",
+       "(18.2 damage per second)",
+       "+11 Intellect",
+       "+11 Stamina",
+       "Requires Level 25",
+       "Equip: +34 Spell Power",
+       "Sell Price: 6s 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": {
+      "orange": "140",
+      "yellow": "140",
+      "green": "160",
+      "grey": "180"
+     }
+    },
+    {
+     "item": {
+      "name": "Weapon - Insight",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Weapon - Recovery",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Weapon - Revelation",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 140,
+     "skills": null
+    }
+   ]
+  },
+  {
+   "tier": "120 Merchant's Favor (skill 210 to 220)",
+   "items": [
+    {
+     "item": {
+      "name": "Dreamstaff",
+      "slot": "Two-Hand",
+      "type": "Staff",
+      "itemId": 249454,
+      "icon": "inv_staff_14",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Two-Hand\tStaff",
+       "61 - 93 Damage\tSpeed 2.40",
+       "(32.1 damage per second)",
+       "+19 Spirit",
+       "+19 Stamina",
+       "Requires Level 45",
+       "Equip: +105 Healing",
+       "Equip: +35 Spell Damage",
+       "Sell Price: 6s 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "220",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Totem of Ancestral Protection",
+      "slot": "Relic",
+      "type": "Totem",
+      "itemId": 249443,
+      "icon": "inv_relics_totemofrage",
+      "quality": 3,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Relic\tTotem",
+       "Requires Level 40",
+       "Equip: Reduces the cooldown of Grounding Totem by 1 sec.",
+       "Sell Price: 1g 18s 80c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Talons of Wrath",
+      "slot": "Relic",
+      "type": "Idol",
+      "itemId": 249441,
+      "icon": "spell_nature_natureswrath",
+      "quality": 3,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Relic\tIdol",
+       "Classes: Druid",
+       "Requires Level 40",
+       "Equip: Causes Wrath to have a 50% chance to restore 35 Mana.",
+       "Sell Price: 58s 33c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Libram of Invocation",
+      "slot": "Relic",
+      "type": "Libram",
+      "itemId": 249442,
+      "icon": "inv_relics_libramofhope",
+      "quality": 3,
+      "itemLevel": 45,
+      "requiredLevel": 40,
+      "tooltip": [
+       "Binds when picked up",
+       "Relic\tLibram",
+       "Requires Level 40",
+       "Equip: Reduces the mana cost of your Seal spells by 5%.",
+       "Sell Price: 58s 33c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": {
+      "orange": "210",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Necklace - Strength",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Necklace - Spell Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Necklace - Healing Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Necklace - Agility",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Necklace - Deflection",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 210,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Twisting Essence Jar",
+      "slot": "Held In Off-hand",
+      "type": "Trinket",
+      "itemId": 249456,
+      "icon": "inv_10_misc_dragonorb_color1",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Held In Off-hand",
+       "+8 Spirit",
+       "+8 Stamina",
+       "Requires Level 45",
+       "Equip: +19 Healing",
+       "Equip: +6 Spell Damage",
+       "Sell Price: 21s 56c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "220",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Truesilver Conduit",
+      "slot": "Held In Off-hand",
+      "type": "Trinket",
+      "itemId": 249455,
+      "icon": "inv_rod_enchantedadamantite",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Held In Off-hand",
+       "+8 Intellect",
+       "+8 Stamina",
+       "Requires Level 45",
+       "Equip: +10 Spell Power",
+       "Sell Price: 21s 56c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "220",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Radiant Staff",
+      "slot": "Two-Hand",
+      "type": "Staff",
+      "itemId": 249453,
+      "icon": "inv_staff_13",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Two-Hand\tStaff",
+       "61 - 93 Damage\tSpeed 2.40",
+       "(32.1 damage per second)",
+       "+19 Intellect",
+       "+19 Stamina",
+       "Requires Level 45",
+       "Equip: +56 Spell Power",
+       "Sell Price: 6s 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": {
+      "orange": "220",
+      "yellow": "225",
+      "green": "245",
+      "grey": "265"
+     }
+    },
+    {
+     "item": {
+      "name": "Chest - Absorption",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 220,
+     "skills": null
+    }
+   ]
+  },
+  {
+   "tier": "180 Merchant's Favor (skill 275)",
+   "items": [
+    {
+     "item": {
+      "name": "Brilliant Wand",
+      "slot": "Ranged",
+      "type": "Wand",
+      "itemId": 249385,
+      "icon": "inv_wand_07",
+      "quality": 3,
+      "itemLevel": 60,
+      "requiredLevel": 55,
+      "tooltip": [
+       "Binds when picked up",
+       "Ranged\tWand",
+       "50 - 93 Fire Damage\tSpeed 1.20",
+       "(59.6 damage per second)",
+       "+7 Intellect",
+       "Requires Level 55",
+       "Equip: +9 Spell Power",
+       "Sell Price: 52s 63c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 275,
+     "skills": {
+      "orange": "275",
+      "yellow": "320",
+      "green": "340",
+      "grey": "360"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "240 Merchant's Favor (skill 300)",
+   "items": [
+    {
+     "item": {
+      "name": "Gloves - Holy Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Gloves - Arcane Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Bracer - Superior Intellect",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Bracer - Superior Deflection",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "2H Weapon - Mighty Spell Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "2H Weapon - Mighty Healing Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Off-Hand - Wisdom",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Gloves - Superior Strength",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Cloak - Agility",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Bracer - Greater Spellpower",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Gloves - Natural Power",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Idol of the Dream",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "340",
+      "grey": "360"
+     }
+    },
+    {
+     "item": {
+      "name": "Libram of Holy Alacrity",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "340",
+      "grey": "360"
+     }
+    },
+    {
+     "item": {
+      "name": "Totem of Thunder",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "320",
+      "green": "340",
+      "grey": "360"
+     }
+    },
+    {
+     "item": {
+      "name": "2H Weapon - Spellblasting",
+      "slot": null,
+      "type": null,
+      "itemId": null,
+      "icon": null,
+      "quality": null,
+      "itemLevel": null,
+      "requiredLevel": null,
+      "tooltip": null,
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": null,
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": true,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    },
+    {
+     "item": {
+      "name": "Enchanting Certification",
+      "slot": null,
+      "type": "Other",
+      "itemId": 271624,
+      "icon": "inv_scroll_15",
+      "quality": 2,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tOther",
+       "Requires Enchanting (300)",
+       "Use: Permanently unlock \"the Enchanter\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Enchanting."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    }
+   ]
+  }
+ ]
 }

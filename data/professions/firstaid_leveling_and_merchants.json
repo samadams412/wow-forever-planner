@@ -1,0 +1,275 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirement": "from any First Aid trainer, up to 75",
+      "steps": [
+        {
+          "range": [
+            1,
+            15
+          ],
+          "item": {
+            "name": "First Aid Kit",
+            "url": "https://foreverchanges.pro/item/279968"
+          },
+          "source": "Learned from the trainer",
+          "count": "~14crafts",
+          "mats": [
+            {
+              "name": "3 Linen Bandage",
+              "url": "https://foreverchanges.pro/item/1251"
+            },
+            {
+              "name": "Refreshing Spring Water",
+              "url": "https://foreverchanges.pro/item/159"
+            }
+          ]
+        },
+        {
+          "range": [
+            15,
+            46
+          ],
+          "item": {
+            "name": "Linen Bandage",
+            "url": "https://foreverchanges.pro/item/1251"
+          },
+          "source": "Learned from the trainer",
+          "count": "~38crafts",
+          "mats": [
+            {
+              "name": "Linen Cloth",
+              "url": "https://foreverchanges.pro/item/2589"
+            }
+          ]
+        },
+        {
+          "range": [
+            46,
+            75
+          ],
+          "item": {
+            "name": "Heavy Linen Bandage",
+            "url": "https://foreverchanges.pro/item/2581"
+          },
+          "source": "Learned from the trainer",
+          "count": "~39crafts",
+          "mats": [
+            {
+              "name": "2 Linen Cloth",
+              "url": "https://foreverchanges.pro/item/2589"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": [
+            75,
+            80
+          ],
+          "item": {
+            "name": "Simple Poultice",
+            "url": "https://foreverchanges.pro/item/255716"
+          },
+          "source": "Learned from the trainer",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "Spider Ichor",
+              "url": "https://foreverchanges.pro/item/3174"
+            },
+            {
+              "name": "Mild Spices",
+              "url": "https://foreverchanges.pro/item/2678"
+            },
+            {
+              "name": "Bottle of Dalaran Noir",
+              "url": "https://foreverchanges.pro/item/2723"
+            }
+          ]
+        },
+        {
+          "range": [
+            80,
+            116
+          ],
+          "item": {
+            "name": "Anti-Venom",
+            "url": "https://foreverchanges.pro/item/6452"
+          },
+          "source": "Learned from the trainer",
+          "count": "~51crafts",
+          "mats": [
+            {
+              "name": "Small Venom Sac",
+              "url": "https://foreverchanges.pro/item/1475"
+            }
+          ]
+        },
+        {
+          "range": [
+            116,
+            150
+          ],
+          "item": {
+            "name": "Heavy Wool Bandage",
+            "url": "https://foreverchanges.pro/item/3531"
+          },
+          "source": "Learned from the trainer",
+          "count": "~48crafts",
+          "mats": [
+            {
+              "name": "2 Wool Cloth",
+              "url": "https://foreverchanges.pro/item/2592"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirement": "from the book Expert First Aid - Under Wraps, sold for gold, from skill 125, up to 225",
+      "steps": [
+        {
+          "range": [
+            150,
+            181
+          ],
+          "item": {
+            "name": "Silk Bandage",
+            "url": "https://foreverchanges.pro/item/6450"
+          },
+          "source": "Learned from the trainer",
+          "count": "~44crafts",
+          "mats": [
+            {
+              "name": "Silk Cloth",
+              "url": "https://foreverchanges.pro/item/4306"
+            }
+          ]
+        },
+        {
+          "range": [
+            181,
+            210
+          ],
+          "item": {
+            "name": "Heavy Silk Bandage",
+            "url": "https://foreverchanges.pro/item/6451"
+          },
+          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "count": "~41crafts",
+          "mats": [
+            {
+              "name": "2 Silk Cloth",
+              "url": "https://foreverchanges.pro/item/4306"
+            }
+          ]
+        },
+        {
+          "range": [
+            210,
+            225
+          ],
+          "item": {
+            "name": "Mageweave Bandage",
+            "url": "https://foreverchanges.pro/item/8544"
+          },
+          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "count": "~18crafts",
+          "mats": [
+            {
+              "name": "Mageweave Cloth",
+              "url": "https://foreverchanges.pro/item/4338"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirement": "from the quest Triage, in Theramore (Alliance) or Hammerfall (Horde), from skill 225 and level 35, up to 300",
+      "steps": [
+        {
+          "range": [
+            225,
+            241
+          ],
+          "item": {
+            "name": "Mageweave Bandage",
+            "url": "https://foreverchanges.pro/item/8544"
+          },
+          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "count": "~26crafts",
+          "mats": [
+            {
+              "name": "Mageweave Cloth",
+              "url": "https://foreverchanges.pro/item/4338"
+            }
+          ]
+        },
+        {
+          "range": [
+            241,
+            260
+          ],
+          "item": {
+            "name": "Heavy Mageweave Bandage",
+            "url": "https://foreverchanges.pro/item/8545"
+          },
+          "source": "Learned from the trainer",
+          "count": "~24crafts",
+          "mats": [
+            {
+              "name": "2 Mageweave Cloth",
+              "url": "https://foreverchanges.pro/item/4338"
+            }
+          ]
+        },
+        {
+          "range": [
+            260,
+            291
+          ],
+          "item": {
+            "name": "Runecloth Bandage",
+            "url": "https://foreverchanges.pro/item/14529"
+          },
+          "source": "Learned from the trainer",
+          "count": "~44crafts",
+          "mats": [
+            {
+              "name": "Runecloth",
+              "url": "https://foreverchanges.pro/item/14047"
+            }
+          ]
+        },
+        {
+          "range": [
+            291,
+            300
+          ],
+          "item": {
+            "name": "Heavy Runecloth Bandage",
+            "url": "https://foreverchanges.pro/item/14530"
+          },
+          "source": "Learned from the trainer",
+          "count": "~10crafts",
+          "mats": [
+            {
+              "name": "2 Runecloth",
+              "url": "https://foreverchanges.pro/item/14047"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "favor_section": null
+}

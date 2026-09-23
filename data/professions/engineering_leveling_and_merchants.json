@@ -1,0 +1,786 @@
+{
+  "leveling_section": [
+    {
+      "rank": "Apprentice",
+      "requirement": "from any Engineering trainer, up to 75",
+      "steps": [
+        {
+          "range": [
+            1,
+            21
+          ],
+          "item": {
+            "name": "Rough Blasting Powder",
+            "url": "https://foreverchanges.pro/item/4357"
+          },
+          "source": "Learned from the trainer",
+          "count": "~20crafts",
+          "mats": [
+            {
+              "name": "Rough Stone",
+              "url": "https://foreverchanges.pro/item/2835"
+            }
+          ]
+        },
+        {
+          "range": [
+            21,
+            30
+          ],
+          "item": {
+            "name": "Crafted Light Shot",
+            "url": "https://foreverchanges.pro/item/8067"
+          },
+          "source": "Learned from the trainer",
+          "count": "~9crafts",
+          "mats": [
+            {
+              "name": "Rough Blasting Powder",
+              "url": "https://foreverchanges.pro/item/4357"
+            },
+            {
+              "name": "Copper Bar",
+              "url": "https://foreverchanges.pro/item/2840"
+            }
+          ]
+        },
+        {
+          "range": [
+            30,
+            54
+          ],
+          "item": {
+            "name": "Handful of Copper Bolts",
+            "url": "https://foreverchanges.pro/item/4359"
+          },
+          "source": "Learned from the trainer",
+          "count": "~29crafts",
+          "mats": [
+            {
+              "name": "Copper Bar",
+              "url": "https://foreverchanges.pro/item/2840"
+            }
+          ]
+        },
+        {
+          "range": [
+            54,
+            62
+          ],
+          "item": {
+            "name": "Rough Copper Bomb",
+            "url": "https://foreverchanges.pro/item/4360"
+          },
+          "source": "Learned from the trainer",
+          "count": "~9crafts",
+          "mats": [
+            {
+              "name": "Copper Bar",
+              "url": "https://foreverchanges.pro/item/2840"
+            },
+            {
+              "name": "Handful of Copper Bolts",
+              "url": "https://foreverchanges.pro/item/4359"
+            },
+            {
+              "name": "2 Rough Blasting Powder",
+              "url": "https://foreverchanges.pro/item/4357"
+            },
+            {
+              "name": "Linen Cloth",
+              "url": "https://foreverchanges.pro/item/2589"
+            }
+          ]
+        },
+        {
+          "range": [
+            62,
+            75
+          ],
+          "item": {
+            "name": "Rough Boomstick",
+            "url": "https://foreverchanges.pro/item/4362"
+          },
+          "source": "Learned from the trainer",
+          "count": "~13crafts",
+          "mats": [
+            {
+              "name": "Copper Tube",
+              "url": "https://foreverchanges.pro/item/4361"
+            },
+            {
+              "name": "Handful of Copper Bolts",
+              "url": "https://foreverchanges.pro/item/4359"
+            },
+            {
+              "name": "Wooden Stock",
+              "url": "https://foreverchanges.pro/item/4399"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Journeyman",
+      "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+      "steps": [
+        {
+          "range": [
+            75,
+            88
+          ],
+          "item": {
+            "name": "Coarse Blasting Powder",
+            "url": "https://foreverchanges.pro/item/4364"
+          },
+          "source": "Learned from the trainer",
+          "count": "~14crafts",
+          "mats": [
+            {
+              "name": "Coarse Stone",
+              "url": "https://foreverchanges.pro/item/2836"
+            }
+          ]
+        },
+        {
+          "range": [
+            88,
+            100
+          ],
+          "item": {
+            "name": "Coarse Dynamite",
+            "url": "https://foreverchanges.pro/item/4365"
+          },
+          "source": "Learned from the trainer",
+          "count": "~18crafts",
+          "mats": [
+            {
+              "name": "3 Coarse Blasting Powder",
+              "url": "https://foreverchanges.pro/item/4364"
+            },
+            {
+              "name": "Linen Cloth",
+              "url": "https://foreverchanges.pro/item/2589"
+            }
+          ]
+        },
+        {
+          "range": [
+            100,
+            120
+          ],
+          "item": {
+            "name": "Practice Lock",
+            "url": "https://foreverchanges.pro/item/6712"
+          },
+          "source": "Learned from the trainer",
+          "count": "~21crafts",
+          "mats": [
+            {
+              "name": "Bronze Bar",
+              "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "2 Handful of Copper Bolts",
+              "url": "https://foreverchanges.pro/item/4359"
+            },
+            {
+              "name": "Weak Flux",
+              "url": "https://foreverchanges.pro/item/2880"
+            }
+          ]
+        },
+        {
+          "range": [
+            120,
+            125
+          ],
+          "item": {
+            "name": "Target Dummy",
+            "url": "https://foreverchanges.pro/item/4366"
+          },
+          "source": "Learned from the trainer",
+          "count": "~7crafts",
+          "mats": [
+            {
+              "name": "Copper Modulator",
+              "url": "https://foreverchanges.pro/item/4363"
+            },
+            {
+              "name": "2 Handful of Copper Bolts",
+              "url": "https://foreverchanges.pro/item/4359"
+            },
+            {
+              "name": "Bronze Bar",
+              "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "Wool Cloth",
+              "url": "https://foreverchanges.pro/item/2592"
+            }
+          ]
+        },
+        {
+          "range": [
+            125,
+            141
+          ],
+          "item": {
+            "name": "Heavy Blasting Powder",
+            "url": "https://foreverchanges.pro/item/4377"
+          },
+          "source": "Learned from the trainer",
+          "count": "~31crafts",
+          "mats": [
+            {
+              "name": "Heavy Stone",
+              "url": "https://foreverchanges.pro/item/2838"
+            }
+          ]
+        },
+        {
+          "range": [
+            141,
+            145
+          ],
+          "item": {
+            "name": "Whirring Bronze Gizmo",
+            "url": "https://foreverchanges.pro/item/4375"
+          },
+          "source": "Learned from the trainer",
+          "count": "~7crafts",
+          "mats": [
+            {
+              "name": "2 Bronze Bar",
+              "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "Wool Cloth",
+              "url": "https://foreverchanges.pro/item/2592"
+            }
+          ]
+        },
+        {
+          "range": [
+            145,
+            150
+          ],
+          "item": {
+            "name": "Bronze Framework",
+            "url": "https://foreverchanges.pro/item/4382"
+          },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "2 Bronze Bar",
+              "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "Medium Leather",
+              "url": "https://foreverchanges.pro/item/2319"
+            },
+            {
+              "name": "Wool Cloth",
+              "url": "https://foreverchanges.pro/item/2592"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Expert",
+      "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+      "steps": [
+        {
+          "range": [
+            150,
+            155
+          ],
+          "item": {
+            "name": "Green Firework",
+            "url": "https://foreverchanges.pro/item/9313"
+          },
+          "source": "Schematic sold by Crazk Sparks (Stranglethorn Vale) or Gagsprocket (The Barrens)",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "Heavy Blasting Powder",
+              "url": "https://foreverchanges.pro/item/4377"
+            },
+            {
+              "name": "Heavy Leather",
+              "url": "https://foreverchanges.pro/item/4234"
+            }
+          ]
+        },
+        {
+          "range": [
+            155,
+            175
+          ],
+          "item": {
+            "name": "Ice Deflector",
+            "url": "https://foreverchanges.pro/item/4386"
+          },
+          "source": "Schematic sold by Rizz Loosebolt (Alterac Mountains)",
+          "count": "~20crafts",
+          "mats": [
+            {
+              "name": "Whirring Bronze Gizmo",
+              "url": "https://foreverchanges.pro/item/4375"
+            },
+            {
+              "name": "Frost Oil",
+              "url": "https://foreverchanges.pro/item/3829"
+            }
+          ]
+        },
+        {
+          "range": [
+            175,
+            188
+          ],
+          "item": {
+            "name": "Solid Blasting Powder",
+            "url": "https://foreverchanges.pro/item/10505"
+          },
+          "source": "Learned from the trainer",
+          "count": "~21crafts",
+          "mats": [
+            {
+              "name": "2 Solid Stone",
+              "url": "https://foreverchanges.pro/item/7912"
+            }
+          ]
+        },
+        {
+          "range": [
+            188,
+            195
+          ],
+          "item": {
+            "name": "Iron Grenade",
+            "url": "https://foreverchanges.pro/item/4390"
+          },
+          "source": "Learned from the trainer",
+          "count": "~12crafts",
+          "mats": [
+            {
+              "name": "Iron Bar",
+              "url": "https://foreverchanges.pro/item/3575"
+            },
+            {
+              "name": "Heavy Blasting Powder",
+              "url": "https://foreverchanges.pro/item/4377"
+            },
+            {
+              "name": "Silk Cloth",
+              "url": "https://foreverchanges.pro/item/4306"
+            }
+          ]
+        },
+        {
+          "range": [
+            195,
+            200
+          ],
+          "item": {
+            "name": "Mithril Tube",
+            "url": "https://foreverchanges.pro/item/10559"
+          },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "3 Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            }
+          ]
+        },
+        {
+          "range": [
+            200,
+            205
+          ],
+          "item": {
+            "name": "Plans: Inlaid Mithril Cylinder",
+            "url": "https://foreverchanges.pro/item/10713"
+          },
+          "source": "Learned from the trainer",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "Blank Parchment",
+              "url": "https://foreverchanges.pro/item/10648"
+            },
+            {
+              "name": "Engineer's Ink",
+              "url": "https://foreverchanges.pro/item/10647"
+            }
+          ]
+        },
+        {
+          "range": [
+            205,
+            210
+          ],
+          "item": {
+            "name": "Mithril Tube",
+            "url": "https://foreverchanges.pro/item/10559"
+          },
+          "source": "Learned from the trainer",
+          "count": "~8crafts",
+          "mats": [
+            {
+              "name": "3 Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            }
+          ]
+        },
+        {
+          "range": [
+            210,
+            215
+          ],
+          "item": {
+            "name": "Hi-Impact Mithril Slugs",
+            "url": "https://foreverchanges.pro/item/10512"
+          },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "Solid Blasting Powder",
+              "url": "https://foreverchanges.pro/item/10505"
+            }
+          ]
+        },
+        {
+          "range": [
+            215,
+            225
+          ],
+          "item": {
+            "name": "Mithril Casing",
+            "url": "https://foreverchanges.pro/item/10561"
+          },
+          "source": "Learned from the trainer",
+          "count": "~12crafts",
+          "mats": [
+            {
+              "name": "3 Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rank": "Artisan",
+      "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+      "steps": [
+        {
+          "range": [
+            225,
+            245
+          ],
+          "item": {
+            "name": "Mithril Casing",
+            "url": "https://foreverchanges.pro/item/10561"
+          },
+          "source": "Learned from the trainer",
+          "count": "~43crafts",
+          "mats": [
+            {
+              "name": "3 Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            }
+          ]
+        },
+        {
+          "range": [
+            245,
+            250
+          ],
+          "item": {
+            "name": "Mithril Gyro-Shot",
+            "url": "https://foreverchanges.pro/item/10513"
+          },
+          "source": "Learned from the trainer",
+          "count": "~6crafts",
+          "mats": [
+            {
+              "name": "2 Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "2 Solid Blasting Powder",
+              "url": "https://foreverchanges.pro/item/10505"
+            }
+          ]
+        },
+        {
+          "range": [
+            250,
+            259
+          ],
+          "item": {
+            "name": "Dense Blasting Powder",
+            "url": "https://foreverchanges.pro/item/15992"
+          },
+          "source": "Learned from the trainer",
+          "count": "~20crafts",
+          "mats": [
+            {
+              "name": "2 Dense Stone",
+              "url": "https://foreverchanges.pro/item/12365"
+            }
+          ]
+        },
+        {
+          "range": [
+            259,
+            260
+          ],
+          "item": {
+            "name": "Mithril Gyro-Shot",
+            "url": "https://foreverchanges.pro/item/10513"
+          },
+          "source": "Learned from the trainer",
+          "count": "~2crafts",
+          "mats": [
+            {
+              "name": "2 Mithril Bar",
+              "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "2 Solid Blasting Powder",
+              "url": "https://foreverchanges.pro/item/10505"
+            }
+          ]
+        },
+        {
+          "range": [
+            260,
+            285
+          ],
+          "item": {
+            "name": "Thorium Widget",
+            "url": "https://foreverchanges.pro/item/15994"
+          },
+          "source": "Schematic sold by Gearcutter Cogspinner (Alliance) or Sovik (Horde)",
+          "count": "~26crafts",
+          "mats": [
+            {
+              "name": "3 Thorium Bar",
+              "url": "https://foreverchanges.pro/item/12359"
+            },
+            {
+              "name": "Runecloth",
+              "url": "https://foreverchanges.pro/item/14047"
+            }
+          ]
+        },
+        {
+          "range": [
+            285,
+            300
+          ],
+          "item": {
+            "name": "Delicate Arcanite Converter",
+            "url": "https://foreverchanges.pro/item/16006"
+          },
+          "source": "Schematic sold by Xizzer Fizzbolt (Winterspring)",
+          "count": "~15crafts",
+          "mats": [
+            {
+              "name": "Arcanite Bar",
+              "url": "https://foreverchanges.pro/item/12360"
+            },
+            {
+              "name": "Ironweb Spider Silk",
+              "url": "https://foreverchanges.pro/item/14227"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "favor_section": [
+    {
+      "tier": "45 Merchant's Favor (skill 25 to 145)",
+      "items": [
+        {
+          "name": "SAF-T Copper Bomb",
+          "url": "https://foreverchanges.pro/item/260793",
+          "skill_threshold": 55
+        },
+        {
+          "name": "SAF-T Tabs",
+          "url": "https://foreverchanges.pro/item/260784",
+          "skill_threshold": 25
+        },
+        {
+          "name": "SAF-T Dynamite",
+          "url": "https://foreverchanges.pro/item/260792",
+          "skill_threshold": 25
+        },
+        {
+          "name": "EZ-Thro Wrap",
+          "url": "https://foreverchanges.pro/item/260794",
+          "skill_threshold": 100
+        },
+        {
+          "name": "No Slip SAF-T Padding",
+          "url": "https://foreverchanges.pro/item/260796",
+          "skill_threshold": 145
+        },
+        {
+          "name": "EZ-Thro Copper Bomb XL",
+          "url": "https://foreverchanges.pro/item/260795",
+          "skill_threshold": 130
+        },
+        {
+          "name": "Satchel of Copper Bombs",
+          "url": "https://foreverchanges.pro/item/285275",
+          "skill_threshold": 85
+        }
+      ]
+    },
+    {
+      "tier": "180 Merchant's Favor (skill 165 to 200)",
+      "items": [
+        {
+          "name": "Whimsical Waistwrap",
+          "url": "https://foreverchanges.pro/item/280306",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Gizmo Girdle",
+          "url": "https://foreverchanges.pro/item/280307",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Clanking Cord",
+          "url": "https://foreverchanges.pro/item/280308",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Floppy Goggles",
+          "url": "https://foreverchanges.pro/item/280310",
+          "skill_threshold": 200
+        },
+        {
+          "name": "EZ-Thro Fireproof Fuse",
+          "url": "https://foreverchanges.pro/item/260801",
+          "skill_threshold": 190
+        },
+        {
+          "name": "Stuckbutton Goggles",
+          "url": "https://foreverchanges.pro/item/280312",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Dented Goggles",
+          "url": "https://foreverchanges.pro/item/280313",
+          "skill_threshold": 200
+        },
+        {
+          "name": "SAF-T Bell",
+          "url": "https://foreverchanges.pro/item/260799",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Bent Goggles",
+          "url": "https://foreverchanges.pro/item/280311",
+          "skill_threshold": 200
+        },
+        {
+          "name": "Satchel of Bronze Bombs",
+          "url": "https://foreverchanges.pro/item/285276",
+          "skill_threshold": 165
+        }
+      ]
+    },
+    {
+      "tier": "270 Merchant's Favor (skill 225 to 285)",
+      "items": [
+        {
+          "name": "Emergency Field Cloak",
+          "url": "https://foreverchanges.pro/item/260806",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Compact Critter Carrier",
+          "url": "https://foreverchanges.pro/item/260807",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Gnomish Army Knife",
+          "url": "https://foreverchanges.pro/item/260811",
+          "skill_threshold": 250
+        },
+        {
+          "name": "SAF-T Disposable Parachute",
+          "url": "https://foreverchanges.pro/item/260810",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Loot-A-Rang",
+          "url": "https://foreverchanges.pro/item/260812",
+          "skill_threshold": 275
+        },
+        {
+          "name": "Satchel of Iron Bombs",
+          "url": "https://foreverchanges.pro/item/285277",
+          "skill_threshold": 230
+        },
+        {
+          "name": "Satchel of Dark Iron Bombs",
+          "url": "https://foreverchanges.pro/item/285278",
+          "skill_threshold": 285
+        }
+      ]
+    },
+    {
+      "tier": "360 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Gnomish Poultryizer",
+          "url": "https://foreverchanges.pro/item/260824",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Ultrasafe Rechargeable Battery",
+          "url": "https://foreverchanges.pro/item/260822",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Ultralight Goblin Glider",
+          "url": "https://foreverchanges.pro/item/260825",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Stealthman 52",
+          "url": "https://foreverchanges.pro/item/260827",
+          "skill_threshold": 300
+        }
+      ]
+    },
+    {
+      "tier": "1,000 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Engineering Certification",
+          "url": "https://foreverchanges.pro/item/271625",
+          "skill_threshold": 300
+        }
+      ]
+    }
+  ]
+}

@@ -58728,6 +58728,4284 @@
    ]
   }
  ],
- "leveling": null,
- "favor": null
+ "leveling": [
+  {
+   "rank": "Apprentice",
+   "requirement": "from any Tailoring trainer, up to 75",
+   "steps": [
+    {
+     "range": [
+      1,
+      21
+     ],
+     "item": {
+      "name": "Faction Banner",
+      "slot": null,
+      "type": "Other",
+      "itemId": 279972,
+      "icon": "inv_banner_03",
+      "quality": 1,
+      "itemLevel": 4,
+      "requiredLevel": 0,
+      "tooltip": [
+       "\tOther",
+       "Requires Tailoring (20)",
+       "Use: Unrolls a banner that allows you and others members of the Horde sitting nearby to gain 32 increased Spirit, exclusive with Divine Spirit. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~20crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bolt of Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2996,
+        "icon": "inv_fabric_linen_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 40c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2320,
+        "icon": "inv_fabric_linen_03",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      21,
+      36
+     ],
+     "item": {
+      "name": "Brown Linen Shirt",
+      "slot": "Shirt",
+      "type": "Trinket",
+      "itemId": 4344,
+      "icon": "inv_shirt_02",
+      "quality": 1,
+      "itemLevel": 7,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Shirt",
+       "Sell Price: 11c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~15crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bolt of Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2996,
+        "icon": "inv_fabric_linen_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 40c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2320,
+        "icon": "inv_fabric_linen_03",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      36,
+      41
+     ],
+     "item": {
+      "name": "Simple Linen Pants",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 10045,
+      "icon": "inv_pants_11",
+      "quality": 1,
+      "itemLevel": 7,
+      "requiredLevel": 2,
+      "tooltip": [
+       "Legs\tCloth",
+       "12 Armor",
+       "Requires Level 2",
+       "Sell Price: 23c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bolt of Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2996,
+        "icon": "inv_fabric_linen_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 40c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2320,
+        "icon": "inv_fabric_linen_03",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      41,
+      46
+     ],
+     "item": {
+      "name": "Brown Linen Vest",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 2568,
+      "icon": "inv_shirt_05",
+      "quality": 1,
+      "itemLevel": 8,
+      "requiredLevel": 3,
+      "tooltip": [
+       "Chest\tCloth",
+       "15 Armor",
+       "Requires Level 3",
+       "Sell Price: 31c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bolt of Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2996,
+        "icon": "inv_fabric_linen_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 40c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2320,
+        "icon": "inv_fabric_linen_03",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      46,
+      75
+     ],
+     "item": {
+      "name": "Linen Belt",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 7026,
+      "icon": "inv_belt_05",
+      "quality": 1,
+      "itemLevel": 9,
+      "requiredLevel": 4,
+      "tooltip": [
+       "Waist\tCloth",
+       "9 Armor",
+       "Requires Level 4",
+       "Sell Price: 22c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~47crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bolt of Linen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2996,
+        "icon": "inv_fabric_linen_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 40c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Coarse Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2320,
+        "icon": "inv_fabric_linen_03",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      104
+     ],
+     "item": {
+      "name": "Woolen Cape",
+      "slot": "Back",
+      "type": "Cloth",
+      "itemId": 2584,
+      "icon": "inv_misc_cape_10",
+      "quality": 2,
+      "itemLevel": 16,
+      "requiredLevel": 11,
+      "tooltip": [
+       "Binds when equipped",
+       "Back\tCloth",
+       "15 Armor",
+       "+1 Spirit",
+       "Requires Level 11",
+       "Equip: +1 Spell Power",
+       "Sell Price: 1s 42c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Back\tCloth",
+       "14 Armor",
+       "Requires Level 11",
+       "Sell Price: 1s 42c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~45crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "Bolt of Woolen Cloth",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2997,
+        "icon": "inv_fabric_wool_03",
+        "quality": 1,
+        "itemLevel": 25,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      104,
+      110
+     ],
+     "item": {
+      "name": "Red Woolen Bag",
+      "slot": "Bag",
+      "type": "Bag",
+      "itemId": 5763,
+      "icon": "inv_misc_bag_10_red",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bag",
+       "8 Slot Bag",
+       "Sell Price: 7s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Valdaron (Alliance) or Zixil (Hillsbrad Foothills) and 1 more",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Bolt of Woolen Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Red Dye",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2604,
+        "icon": "inv_potion_11",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 12c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      110,
+      120
+     ],
+     "item": {
+      "name": "Double-Stitched Woolen Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 4314,
+      "icon": "inv_shoulder_06",
+      "quality": 2,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when equipped",
+       "Shoulder\tCloth",
+       "27 Armor",
+       "+4 Stamina",
+       "Requires Level 17",
+       "Equip: +4 Spell Power",
+       "Sell Price: 3s 31c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Shoulder\tCloth",
+       "26 Armor",
+       "Requires Level 17",
+       "Sell Price: 3s 31c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~12crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Bolt of Woolen Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      120,
+      130
+     ],
+     "item": {
+      "name": "Red Woolen Bag",
+      "slot": "Bag",
+      "type": "Bag",
+      "itemId": 5763,
+      "icon": "inv_misc_bag_10_red",
+      "quality": 1,
+      "itemLevel": 15,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Bag",
+       "8 Slot Bag",
+       "Sell Price: 7s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Valdaron (Alliance) or Zixil (Hillsbrad Foothills) and 1 more",
+     "count": "~14crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Bolt of Woolen Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Red Dye",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2604,
+        "icon": "inv_potion_11",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 12c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Fine Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 2321,
+        "icon": "inv_fabric_wool_02",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      130,
+      145
+     ],
+     "item": {
+      "name": "Gloves of Meditation",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 4318,
+      "icon": "inv_gauntlets_05",
+      "quality": 2,
+      "itemLevel": 26,
+      "requiredLevel": 21,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tCloth",
+       "25 Armor",
+       "+7 Spirit",
+       "Requires Level 21",
+       "Equip: +5 Spell Power",
+       "Sell Price: 6s 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Hands\tCloth",
+       "25 Armor",
+       "+7 Spirit",
+       "Requires Level 21",
+       "Sell Price: 6s 10c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~27crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "4 Bolt of Woolen Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Elixir of Wisdom",
+        "slot": null,
+        "type": "Elixirs",
+        "itemId": 3383,
+        "icon": "inv_potion_06",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 10,
+        "tooltip": [
+         "Elixirs",
+         "Requires Level 10",
+         "Use: Increases Intellect by 6 for 1 hr. (3 Sec Cooldown)",
+         "Sell Price: 1s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      145,
+      150
+     ],
+     "item": {
+      "name": "Enchanter's Cowl",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 4322,
+      "icon": "inv_helmet_31",
+      "quality": 2,
+      "itemLevel": 33,
+      "requiredLevel": 28,
+      "tooltip": [
+       "Binds when equipped",
+       "Head\tCloth",
+       "37 Armor",
+       "+10 Intellect",
+       "Requires Level 28",
+       "Equip: +6 Spell Power",
+       "Sell Price: 18s 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Head\tCloth",
+       "37 Armor",
+       "+10 Intellect",
+       "+6 Spirit",
+       "Requires Level 28",
+       "Sell Price: 18s 10c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Xizk Goodstitch (Stranglethorn Vale)",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Bolt of Silk Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Thick Spider's Silk",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Expert",
+   "requirement": "from the trainer, from skill 125 and level 20, up to 225",
+   "steps": [
+    {
+     "range": [
+      150,
+      170
+     ],
+     "item": {
+      "name": "Azure Silk Cloak",
+      "slot": "Back",
+      "type": "Cloth",
+      "itemId": 7053,
+      "icon": "inv_chest_cloth_14",
+      "quality": 2,
+      "itemLevel": 35,
+      "requiredLevel": 30,
+      "tooltip": [
+       "Binds when equipped",
+       "Back\tCloth",
+       "23 Armor",
+       "+3 Spirit",
+       "Requires Level 30",
+       "Equip: +10 Frost Spell Damage",
+       "Sell Price: 22s 40c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Back\tCloth",
+       "23 Armor",
+       "+3 Spirit",
+       "Requires Level 30",
+       "Equip: Increases damage done by Frost spells and effects by up to 10.",
+       "Sell Price: 22s 40c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Jun'ha (Horde) or Brienna Starglow (Alliance)",
+     "count": "~22crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Bolt of Silk Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Blue Dye",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Fine Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      170,
+      178
+     ],
+     "item": {
+      "name": "Black Swashbuckler's Shirt",
+      "slot": "Shirt",
+      "type": "Trinket",
+      "itemId": 4336,
+      "icon": "inv_shirt_black_01",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Shirt",
+       "Sell Price: 15s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Narkk (Stranglethorn Vale)",
+     "count": "~9crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "5 Bolt of Silk Cloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Black Dye",
+        "slot": null,
+        "type": "Other",
+        "itemId": 2325,
+        "icon": "inv_potion_63",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Other",
+         "Sell Price: 2s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Silken Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 4291,
+        "icon": "inv_fabric_silk_02",
+        "quality": 1,
+        "itemLevel": 30,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 1s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      178,
+      185
+     ],
+     "item": {
+      "name": "Icy Cloak",
+      "slot": "Back",
+      "type": "Cloth",
+      "itemId": 4327,
+      "icon": "inv_misc_cape_04",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when equipped",
+       "Back\tCloth",
+       "29 Armor",
+       "+6 Spirit",
+       "+8 Frost Resistance",
+       "Requires Level 35",
+       "Equip: +7 Spell Power",
+       "Sell Price: 37s 88c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+       "Binds when equipped",
+       "Back\tCloth",
+       "29 Armor",
+       "+6 Spirit",
+       "+11 Frost Resistance",
+       "Requires Level 35",
+       "Sell Price: 37s 88c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Ghok'kah (Horde) or Micha Yance (Alliance)",
+     "count": "~7crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Bolt of Mageweave",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Frost Oil",
+        "slot": null,
+        "type": "Other",
+        "itemId": 3829,
+        "icon": "inv_potion_20",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 30,
+        "tooltip": [
+         "Other",
+         "Requires Level 30",
+         "Use: When applied to a melee weapon it gives a 10% chance of casting Frostbolt at the opponent when it hits. Lasts 30 minutes.",
+         "Sell Price: 1s 50c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Thick Spider's Silk",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      185,
+      191
+     ],
+     "item": {
+      "name": "Orange Martial Shirt",
+      "slot": "Shirt",
+      "type": "Trinket",
+      "itemId": 10052,
+      "icon": "inv_shirt_orange_01",
+      "quality": 1,
+      "itemLevel": 40,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Shirt",
+       "Sell Price: 15s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Elynna (Alliance) or Mahu (Horde)",
+     "count": "~6crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Bolt of Mageweave",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Orange Dye",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "Heavy Silken Thread",
+        "slot": null,
+        "type": "Cloth",
+        "itemId": 8343,
+        "icon": "inv_fabric_silk_02",
+        "quality": 1,
+        "itemLevel": 40,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Cloth",
+         "Sell Price: 5s"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      191,
+      201
+     ],
+     "item": {
+      "name": "Lavender Mageweave Shirt",
+      "slot": "Shirt",
+      "type": "Trinket",
+      "itemId": 10054,
+      "icon": "inv_shirt_purple_01",
+      "quality": 1,
+      "itemLevel": 46,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Shirt",
+       "Sell Price: 30s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Outfitter Eric (Alliance) or Borya (Horde)",
+     "count": "~13crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Bolt of Mageweave",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Purple Dye",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Heavy Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      201,
+      225
+     ],
+     "item": {
+      "name": "Admiral's Hat",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 10030,
+      "icon": "inv_helmet_29",
+      "quality": 2,
+      "itemLevel": 48,
+      "requiredLevel": 43,
+      "tooltip": [
+       "Binds when equipped",
+       "Head\tCloth",
+       "51 Armor",
+       "Requires Level 43",
+       "Use: Gives 10 additional stamina to party members within 30 yards. (1 Min Cooldown)",
+       "Sell Price: 60s 7c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Cowardly Crosby (Stranglethorn Vale)",
+     "count": "~26crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Bolt of Mageweave",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Long Elegant Feather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Heavy Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Artisan",
+   "requirement": "from the trainer, from skill 200 and level 35, up to 300",
+   "steps": [
+    {
+     "range": [
+      225,
+      230
+     ],
+     "item": {
+      "name": "Admiral's Hat",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 10030,
+      "icon": "inv_helmet_29",
+      "quality": 2,
+      "itemLevel": 48,
+      "requiredLevel": 43,
+      "tooltip": [
+       "Binds when equipped",
+       "Head\tCloth",
+       "51 Armor",
+       "Requires Level 43",
+       "Use: Gives 10 additional stamina to party members within 30 yards. (1 Min Cooldown)",
+       "Sell Price: 60s 7c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Cowardly Crosby (Stranglethorn Vale)",
+     "count": "~9crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "3 Bolt of Mageweave",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "6 Long Elegant Feather",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      },
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Heavy Silken Thread",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      230,
+      300
+     ],
+     "item": {
+      "name": "Mooncloth",
+      "slot": null,
+      "type": "Cloth",
+      "itemId": 14342,
+      "icon": "inv_fabric_moonrag_01",
+      "quality": 1,
+      "itemLevel": 55,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Cloth",
+       "Sell Price: 40s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Pattern sold by Qia (Winterspring)",
+     "count": "~160crafts",
+     "mats": [
+      {
+       "qty": 1,
+       "item": {
+        "name": "2 Felcloth",
+        "slot": null,
+        "type": null,
+        "itemId": null,
+        "icon": null,
+        "quality": null,
+        "itemLevel": null,
+        "requiredLevel": null,
+        "tooltip": null,
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": null,
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": true,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "favor": [
+  {
+   "tier": "30 Merchant's Favor (skill 60 to 125)",
+   "items": [
+    {
+     "item": {
+      "name": "Shining Boots",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 253899,
+      "icon": "inv_boots_cloth_08",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12",
+       "Equip: +6 Holy Spell Damage",
+       "Sell Price: 3s 30c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "85",
+      "green": "102",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Shadow Boots",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 253895,
+      "icon": "inv_boots_cloth_05",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12",
+       "Equip: +6 Shadow Spell Damage",
+       "Sell Price: 3s 25c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "85",
+      "green": "102",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Pristine Boots",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 253889,
+      "icon": "inv_boots_cloth_03",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12",
+       "Equip: +9 Healing",
+       "Equip: +3 Spell Damage",
+       "Sell Price: 3s 51c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "85",
+      "green": "102",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Pearly Boots",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 253897,
+      "icon": "inv_boots_05",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12",
+       "Equip: +6 Arcane Spell Damage",
+       "Sell Price: 3s 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "85",
+      "green": "102",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Flame Boots",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 253893,
+      "icon": "inv_boots_cloth_02",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12",
+       "Equip: +6 Fire Spell Damage",
+       "Sell Price: 3s 23c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "85",
+      "green": "102",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Silky Boots",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 253891,
+      "icon": "inv_boots_cloth_01",
+      "quality": 3,
+      "itemLevel": 17,
+      "requiredLevel": 12,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 12",
+       "Equip: +6 Frost Spell Damage",
+       "Sell Price: 3s 20c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 60,
+     "skills": {
+      "orange": "60",
+      "yellow": "85",
+      "green": "102",
+      "grey": "120"
+     }
+    },
+    {
+     "item": {
+      "name": "Shining Gown",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 253971,
+      "icon": "inv_chest_cloth_26",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tCloth",
+       "45 Armor",
+       "+7 Intellect",
+       "+6 Stamina",
+       "+4 Spirit",
+       "Requires Level 22",
+       "Equip: +13 Holy Spell Damage",
+       "Sell Price: 15s 84c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "110",
+      "yellow": "130",
+      "green": "145",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Shadow Gown",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 253967,
+      "icon": "inv_chest_cloth_48",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tCloth",
+       "45 Armor",
+       "+7 Intellect",
+       "+6 Stamina",
+       "+4 Spirit",
+       "Requires Level 22",
+       "Equip: +13 Shadow Spell Damage",
+       "Sell Price: 15s 60c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "110",
+      "yellow": "130",
+      "green": "145",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Pristine Gown",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 253961,
+      "icon": "inv_chest_cloth_32",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tCloth",
+       "45 Armor",
+       "+7 Intellect",
+       "+6 Stamina",
+       "+4 Spirit",
+       "Requires Level 22",
+       "Equip: +20 Healing",
+       "Equip: +7 Spell Damage",
+       "Sell Price: 16s 43c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "110",
+      "yellow": "130",
+      "green": "145",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Pearly Gown",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 253969,
+      "icon": "inv_chest_cloth_51",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tCloth",
+       "45 Armor",
+       "+7 Intellect",
+       "+6 Stamina",
+       "+4 Spirit",
+       "Requires Level 22",
+       "Equip: +13 Arcane Spell Damage",
+       "Sell Price: 15s 72c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "110",
+      "yellow": "130",
+      "green": "145",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Flame Gown",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 253965,
+      "icon": "inv_chest_cloth_02",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tCloth",
+       "45 Armor",
+       "+7 Intellect",
+       "+6 Stamina",
+       "+4 Spirit",
+       "Requires Level 22",
+       "Equip: +13 Fire Spell Damage",
+       "Sell Price: 15s 48c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "110",
+      "yellow": "130",
+      "green": "145",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Silky Gown",
+      "slot": "Chest",
+      "type": "Cloth",
+      "itemId": 253963,
+      "icon": "inv_chest_cloth_03",
+      "quality": 3,
+      "itemLevel": 27,
+      "requiredLevel": 22,
+      "tooltip": [
+       "Binds when picked up",
+       "Chest\tCloth",
+       "45 Armor",
+       "+7 Intellect",
+       "+6 Stamina",
+       "+4 Spirit",
+       "Requires Level 22",
+       "Equip: +13 Frost Spell Damage",
+       "Sell Price: 16s 55c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 110,
+     "skills": {
+      "orange": "110",
+      "yellow": "130",
+      "green": "145",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Shining Circlet",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 253959,
+      "icon": "inv_crown_01",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "35 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +11 Holy Spell Damage",
+       "Sell Price: 9s 84c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "142",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Shadow Circlet",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 253955,
+      "icon": "inv_crown_01",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "35 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +11 Shadow Spell Damage",
+       "Sell Price: 9s 70c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "142",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Pristine Circlet",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 253949,
+      "icon": "inv_crown_01",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "35 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +18 Healing",
+       "Equip: +6 Spell Damage",
+       "Sell Price: 9s 48c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "142",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Pearly Circlet",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 253957,
+      "icon": "inv_crown_01",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "35 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +11 Arcane Spell Damage",
+       "Sell Price: 9s 77c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "142",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Flame Circlet",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 253953,
+      "icon": "inv_crown_01",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "35 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +11 Fire Spell Damage",
+       "Sell Price: 9s 62c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "142",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Silky Circlet",
+      "slot": "Head",
+      "type": "Cloth",
+      "itemId": 253951,
+      "icon": "inv_crown_01",
+      "quality": 3,
+      "itemLevel": 25,
+      "requiredLevel": 20,
+      "tooltip": [
+       "Binds when picked up",
+       "Head\tCloth",
+       "35 Armor",
+       "+10 Stamina",
+       "Requires Level 20",
+       "Equip: +11 Frost Spell Damage",
+       "Sell Price: 9s 55c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 100,
+     "skills": {
+      "orange": "100",
+      "yellow": "125",
+      "green": "142",
+      "grey": "160"
+     }
+    },
+    {
+     "item": {
+      "name": "Shining Sash",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 253935,
+      "icon": "inv_belt_43b",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "22 Armor",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17",
+       "Equip: +7 Holy Spell Damage",
+       "Sell Price: 4s 48c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "127",
+      "grey": "145"
+     }
+    },
+    {
+     "item": {
+      "name": "Shadow Sash",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 253931,
+      "icon": "inv_belt_43",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "22 Armor",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17",
+       "Equip: +7 Shadow Spell Damage",
+       "Sell Price: 4s 29c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "127",
+      "grey": "145"
+     }
+    },
+    {
+     "item": {
+      "name": "Pristine Sash",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 253925,
+      "icon": "inv_belt_43",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "22 Armor",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17",
+       "Equip: +11 Healing",
+       "Equip: +4 Spell Damage",
+       "Sell Price: 4s 65c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "127",
+      "grey": "145"
+     }
+    },
+    {
+     "item": {
+      "name": "Pearly Sash",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 253933,
+      "icon": "inv_belt_43a",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "22 Armor",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17",
+       "Equip: +7 Arcane Spell Damage",
+       "Sell Price: 4s 45c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "127",
+      "grey": "145"
+     }
+    },
+    {
+     "item": {
+      "name": "Flame Sash",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 253929,
+      "icon": "inv_belt_43c",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "22 Armor",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17",
+       "Equip: +7 Fire Spell Damage",
+       "Sell Price: 4s 71c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "127",
+      "grey": "145"
+     }
+    },
+    {
+     "item": {
+      "name": "Silky Sash",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 253927,
+      "icon": "inv_belt_43a",
+      "quality": 3,
+      "itemLevel": 22,
+      "requiredLevel": 17,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "22 Armor",
+       "+4 Intellect",
+       "+5 Stamina",
+       "Requires Level 17",
+       "Equip: +7 Frost Spell Damage",
+       "Sell Price: 4s 68c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 85,
+     "skills": {
+      "orange": "85",
+      "yellow": "110",
+      "green": "127",
+      "grey": "145"
+     }
+    },
+    {
+     "item": {
+      "name": "Shining Gloves",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 253923,
+      "icon": "inv_gauntlets_21",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15",
+       "Equip: +7 Holy Spell Damage",
+       "Sell Price: 3s 49c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 75,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "117",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Shadow Gloves",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 253919,
+      "icon": "inv_gauntlets_27",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15",
+       "Equip: +7 Shadow Spell Damage",
+       "Sell Price: 3s 44c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 75,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "117",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Pristine Gloves",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 253913,
+      "icon": "inv_gauntlets_16",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15",
+       "Equip: +11 Healing",
+       "Equip: +4 Spell Damage",
+       "Sell Price: 3s 27c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 75,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "117",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Pearly Gloves",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 253921,
+      "icon": "inv_gauntlets_20",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15",
+       "Equip: +7 Arcane Spell Damage",
+       "Sell Price: 3s 46c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 75,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "117",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Flame Gloves",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 253917,
+      "icon": "inv_gauntlets_19",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15",
+       "Equip: +7 Fire Spell Damage",
+       "Sell Price: 3s 41c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 75,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "117",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Silky Gloves",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 253915,
+      "icon": "inv_gauntlets_17",
+      "quality": 3,
+      "itemLevel": 20,
+      "requiredLevel": 15,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "23 Armor",
+       "+3 Intellect",
+       "+4 Stamina",
+       "Requires Level 15",
+       "Equip: +7 Frost Spell Damage",
+       "Sell Price: 3s 30c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 75,
+     "skills": {
+      "orange": "75",
+      "yellow": "100",
+      "green": "117",
+      "grey": "135"
+     }
+    },
+    {
+     "item": {
+      "name": "Flame Leggings",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 253991,
+      "icon": "inv_pants_06",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tCloth",
+       "41 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 25",
+       "Equip: +14 Fire Spell Damage",
+       "Sell Price: 21s 8c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "145",
+      "green": "160",
+      "grey": "175"
+     }
+    },
+    {
+     "item": {
+      "name": "Pearly Leggings",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 253995,
+      "icon": "inv_pants_10",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tCloth",
+       "41 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 25",
+       "Equip: +14 Arcane Spell Damage",
+       "Sell Price: 21s 39c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "145",
+      "green": "160",
+      "grey": "175"
+     }
+    },
+    {
+     "item": {
+      "name": "Pristine Leggings",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 253987,
+      "icon": "inv_pants_01",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tCloth",
+       "41 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 25",
+       "Equip: +22 Healing",
+       "Equip: +7 Spell Damage",
+       "Sell Price: 20s 76c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "145",
+      "green": "160",
+      "grey": "175"
+     }
+    },
+    {
+     "item": {
+      "name": "Shadow Leggings",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 253993,
+      "icon": "inv_pants_11",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tCloth",
+       "41 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 25",
+       "Equip: +14 Shadow Spell Damage",
+       "Sell Price: 21s 24c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "145",
+      "green": "160",
+      "grey": "175"
+     }
+    },
+    {
+     "item": {
+      "name": "Shining Leggings",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 253997,
+      "icon": "inv_pants_cloth_01",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tCloth",
+       "41 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 25",
+       "Equip: +14 Holy Spell Damage",
+       "Sell Price: 21s 55c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "145",
+      "green": "160",
+      "grey": "175"
+     }
+    },
+    {
+     "item": {
+      "name": "Silky Leggings",
+      "slot": "Legs",
+      "type": "Cloth",
+      "itemId": 253989,
+      "icon": "inv_pants_08",
+      "quality": 3,
+      "itemLevel": 30,
+      "requiredLevel": 25,
+      "tooltip": [
+       "Binds when picked up",
+       "Legs\tCloth",
+       "41 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 25",
+       "Equip: +14 Frost Spell Damage",
+       "Sell Price: 20s 92c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 125,
+     "skills": {
+      "orange": "125",
+      "yellow": "145",
+      "green": "160",
+      "grey": "175"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "60 Merchant's Favor (skill 165 to 215)",
+   "items": [
+    {
+     "item": {
+      "name": "Netherfroth Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 254051,
+      "icon": "inv_shoulder_02",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tCloth",
+       "51 Armor",
+       "+8 Intellect",
+       "+8 Stamina",
+       "+6 Spirit",
+       "Requires Level 42",
+       "Equip: +17 Frost Spell Damage",
+       "Sell Price: 68s 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 195,
+     "skills": {
+      "orange": "195",
+      "yellow": "210",
+      "green": "225",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherflame Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 254053,
+      "icon": "inv_shoulder_23",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tCloth",
+       "51 Armor",
+       "+8 Intellect",
+       "+8 Stamina",
+       "+6 Spirit",
+       "Requires Level 42",
+       "Equip: +17 Fire Spell Damage",
+       "Sell Price: 68s 79c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 195,
+     "skills": {
+      "orange": "195",
+      "yellow": "210",
+      "green": "225",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Radiant Handwraps",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 254031,
+      "icon": "inv_gauntlets_16",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "36 Armor",
+       "+7 Intellect",
+       "+9 Stamina",
+       "Requires Level 35",
+       "Equip: +14 Holy Spell Damage",
+       "Sell Price: 26s 56c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 165,
+     "skills": {
+      "orange": "165",
+      "yellow": "185",
+      "green": "200",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Golden Handwraps",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 254029,
+      "icon": "inv_gauntlets_23",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "36 Armor",
+       "+7 Intellect",
+       "+9 Stamina",
+       "Requires Level 35",
+       "Equip: +14 Arcane Spell Damage",
+       "Sell Price: 25s 67c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 165,
+     "skills": {
+      "orange": "165",
+      "yellow": "185",
+      "green": "200",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Frothing Handwraps",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 254023,
+      "icon": "inv_gauntlets_30",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "36 Armor",
+       "+7 Intellect",
+       "+9 Stamina",
+       "Requires Level 35",
+       "Equip: +14 Frost Spell Damage",
+       "Sell Price: 27s 73c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 165,
+     "skills": {
+      "orange": "165",
+      "yellow": "185",
+      "green": "200",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Fiery Handwraps",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 254025,
+      "icon": "inv_gauntlets_13",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "36 Armor",
+       "+7 Intellect",
+       "+9 Stamina",
+       "Requires Level 35",
+       "Equip: +14 Fire Spell Damage",
+       "Sell Price: 25s 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 165,
+     "skills": {
+      "orange": "165",
+      "yellow": "185",
+      "green": "200",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Black Handwraps",
+      "slot": "Hands",
+      "type": "Cloth",
+      "itemId": 254027,
+      "icon": "inv_gauntlets_27",
+      "quality": 3,
+      "itemLevel": 40,
+      "requiredLevel": 35,
+      "tooltip": [
+       "Binds when picked up",
+       "Hands\tCloth",
+       "36 Armor",
+       "+7 Intellect",
+       "+9 Stamina",
+       "Requires Level 35",
+       "Equip: +14 Shadow Spell Damage"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 165,
+     "skills": {
+      "orange": "165",
+      "yellow": "185",
+      "green": "200",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Mageweave Reagent Bag",
+      "slot": "Bag",
+      "type": "Reagent Bag",
+      "itemId": 254035,
+      "icon": "inv_misc_bag_01",
+      "quality": 1,
+      "itemLevel": 35,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Binds when equipped",
+       "Bag\tReagent Bag",
+       "12 Slot Reagent Bag",
+       "Sell Price: 2s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 190,
+     "skills": {
+      "orange": "190",
+      "yellow": "205",
+      "green": "210",
+      "grey": "215"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherpearl Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 254055,
+      "icon": "inv_shoulder_25",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tCloth",
+       "51 Armor",
+       "+8 Intellect",
+       "+8 Stamina",
+       "+6 Spirit",
+       "Requires Level 42",
+       "Equip: +17 Shadow Spell Damage",
+       "Sell Price: 69s 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 195,
+     "skills": {
+      "orange": "195",
+      "yellow": "210",
+      "green": "225",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Nethershine Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 254057,
+      "icon": "inv_shoulder_09",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tCloth",
+       "51 Armor",
+       "+8 Intellect",
+       "+8 Stamina",
+       "+6 Spirit",
+       "Requires Level 42",
+       "Equip: +17 Arcane Spell Damage",
+       "Sell Price: 69s 79c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 195,
+     "skills": {
+      "orange": "195",
+      "yellow": "210",
+      "green": "225",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherflame Cuffs",
+      "slot": "Wrist",
+      "type": "Cloth",
+      "itemId": 254065,
+      "icon": "inv_bracer_23a",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tCloth",
+       "31 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 45",
+       "Equip: +13 Fire Spell Damage",
+       "Sell Price: 55s 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 205,
+     "skills": {
+      "orange": "205",
+      "yellow": "220",
+      "green": "235",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherfroth Cuffs",
+      "slot": "Wrist",
+      "type": "Cloth",
+      "itemId": 254063,
+      "icon": "inv_bracer_22a",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tCloth",
+       "31 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 45",
+       "Equip: +13 Frost Spell Damage",
+       "Sell Price: 54s 63c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 205,
+     "skills": {
+      "orange": "205",
+      "yellow": "220",
+      "green": "235",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Nethergeld Cuffs",
+      "slot": "Wrist",
+      "type": "Cloth",
+      "itemId": 254061,
+      "icon": "inv_bracer_23b",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tCloth",
+       "31 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 45",
+       "Equip: +20 Healing",
+       "Equip: +7 Spell Damage",
+       "Sell Price: 58s 35c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 205,
+     "skills": {
+      "orange": "205",
+      "yellow": "220",
+      "green": "235",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherlight Cuffs",
+      "slot": "Wrist",
+      "type": "Cloth",
+      "itemId": 254071,
+      "icon": "inv_bracer_20b",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tCloth",
+       "31 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 45",
+       "Equip: +13 Holy Spell Damage",
+       "Sell Price: 56s 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 205,
+     "skills": {
+      "orange": "205",
+      "yellow": "220",
+      "green": "235",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherpearl Cuffs",
+      "slot": "Wrist",
+      "type": "Cloth",
+      "itemId": 254067,
+      "icon": "inv_bracer_13",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tCloth",
+       "31 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 45",
+       "Equip: +13 Shadow Spell Damage",
+       "Sell Price: 55s 46c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 205,
+     "skills": {
+      "orange": "205",
+      "yellow": "220",
+      "green": "235",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Nethershine Cuffs",
+      "slot": "Wrist",
+      "type": "Cloth",
+      "itemId": 254069,
+      "icon": "inv_bracer_21b",
+      "quality": 3,
+      "itemLevel": 50,
+      "requiredLevel": 45,
+      "tooltip": [
+       "Binds when picked up",
+       "Wrist\tCloth",
+       "31 Armor",
+       "+7 Intellect",
+       "+7 Stamina",
+       "+5 Spirit",
+       "Requires Level 45",
+       "Equip: +13 Arcane Spell Damage",
+       "Sell Price: 55s 87c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 205,
+     "skills": {
+      "orange": "205",
+      "yellow": "220",
+      "green": "235",
+      "grey": "250"
+     }
+    },
+    {
+     "item": {
+      "name": "Black Waistcord",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 254087,
+      "icon": "inv_belt_04",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "42 Armor",
+       "+9 Intellect",
+       "+12 Stamina",
+       "Requires Level 47",
+       "Equip: +19 Shadow Spell Damage",
+       "Sell Price: 62s 89c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    },
+    {
+     "item": {
+      "name": "Fiery Waistcord",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 254085,
+      "icon": "inv_belt_37a",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "42 Armor",
+       "+9 Intellect",
+       "+12 Stamina",
+       "Requires Level 47",
+       "Equip: +19 Fire Spell Damage",
+       "Sell Price: 62s 42c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    },
+    {
+     "item": {
+      "name": "Frothing Waistcord",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 254083,
+      "icon": "inv_belt_39a",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "42 Armor",
+       "+9 Intellect",
+       "+12 Stamina",
+       "Requires Level 47",
+       "Equip: +19 Frost Spell Damage",
+       "Sell Price: 61s 96c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    },
+    {
+     "item": {
+      "name": "Gilded Waistcord",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 254081,
+      "icon": "inv_belt_07",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "42 Armor",
+       "+9 Intellect",
+       "+12 Stamina",
+       "Requires Level 47",
+       "Equip: +29 Healing",
+       "Equip: +10 Spell Damage",
+       "Sell Price: 61s 49c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    },
+    {
+     "item": {
+      "name": "Golden Waistcord",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 254089,
+      "icon": "inv_belt_32",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "42 Armor",
+       "+9 Intellect",
+       "+12 Stamina",
+       "Requires Level 47",
+       "Equip: +19 Arcane Spell Damage",
+       "Sell Price: 63s 36c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    },
+    {
+     "item": {
+      "name": "Radiant Waistcord",
+      "slot": "Waist",
+      "type": "Cloth",
+      "itemId": 254091,
+      "icon": "inv_belt_43",
+      "quality": 3,
+      "itemLevel": 52,
+      "requiredLevel": 47,
+      "tooltip": [
+       "Binds when picked up",
+       "Waist\tCloth",
+       "42 Armor",
+       "+9 Intellect",
+       "+12 Stamina",
+       "Requires Level 47",
+       "Equip: +19 Holy Spell Damage",
+       "Sell Price: 63s 83c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    },
+    {
+     "item": {
+      "name": "Netherlight Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 254059,
+      "icon": "inv_shoulder_05",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tCloth",
+       "51 Armor",
+       "+8 Intellect",
+       "+8 Stamina",
+       "+6 Spirit",
+       "Requires Level 42",
+       "Equip: +17 Holy Spell Damage",
+       "Sell Price: 70s 28c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 195,
+     "skills": {
+      "orange": "195",
+      "yellow": "210",
+      "green": "225",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Nethergeld Shoulders",
+      "slot": "Shoulder",
+      "type": "Cloth",
+      "itemId": 254049,
+      "icon": "inv_shoulder_22",
+      "quality": 3,
+      "itemLevel": 47,
+      "requiredLevel": 42,
+      "tooltip": [
+       "Binds when picked up",
+       "Shoulder\tCloth",
+       "51 Armor",
+       "+8 Intellect",
+       "+8 Stamina",
+       "+6 Spirit",
+       "Requires Level 42",
+       "Equip: +26 Healing",
+       "Equip: +9 Spell Damage",
+       "Sell Price: 67s 79c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 195,
+     "skills": {
+      "orange": "195",
+      "yellow": "210",
+      "green": "225",
+      "grey": "240"
+     }
+    },
+    {
+     "item": {
+      "name": "Runecloth Reagent Bag",
+      "slot": "Bag",
+      "type": "Reagent Bag",
+      "itemId": 254079,
+      "icon": "inv_misc_bag_01",
+      "quality": 1,
+      "itemLevel": 52,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Binds when equipped",
+       "Bag\tReagent Bag",
+       "14 Slot Reagent Bag",
+       "Sell Price: 2s"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 215,
+     "skills": {
+      "orange": "215",
+      "yellow": "230",
+      "green": "245",
+      "grey": "260"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "90 Merchant's Favor (skill 235)",
+   "items": [
+    {
+     "item": {
+      "name": "Gilded Sandals",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 254107,
+      "icon": "inv_boots_cloth_06",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "54 Armor",
+       "+9 Intellect",
+       "+13 Stamina",
+       "Requires Level 50",
+       "Equip: +31 Healing",
+       "Equip: +11 Spell Damage",
+       "Sell Price: 1g 12s 36c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "250",
+      "green": "265",
+      "grey": "280"
+     }
+    },
+    {
+     "item": {
+      "name": "Frothing Sandals",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 254109,
+      "icon": "inv_boots_07",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "54 Armor",
+       "+9 Intellect",
+       "+13 Stamina",
+       "Requires Level 50",
+       "Equip: +20 Frost Spell Damage",
+       "Sell Price: 1g 13s 19c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "250",
+      "green": "265",
+      "grey": "280"
+     }
+    },
+    {
+     "item": {
+      "name": "Black Sandals",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 254113,
+      "icon": "inv_boots_05",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "54 Armor",
+       "+9 Intellect",
+       "+13 Stamina",
+       "Requires Level 50",
+       "Equip: +20 Shadow Spell Damage",
+       "Sell Price: 1g 17s 87c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "250",
+      "green": "265",
+      "grey": "280"
+     }
+    },
+    {
+     "item": {
+      "name": "Fiery Sandals",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 254111,
+      "icon": "inv_boots_05",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "54 Armor",
+       "+9 Intellect",
+       "+13 Stamina",
+       "Requires Level 50",
+       "Equip: +20 Fire Spell Damage",
+       "Sell Price: 1g 17s 4c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "250",
+      "green": "265",
+      "grey": "280"
+     }
+    },
+    {
+     "item": {
+      "name": "Golden Sandals",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 254115,
+      "icon": "inv_boots_cloth_11",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "54 Armor",
+       "+9 Intellect",
+       "+13 Stamina",
+       "Requires Level 50",
+       "Equip: +20 Arcane Spell Damage",
+       "Sell Price: 1g 18s 70c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "250",
+      "green": "265",
+      "grey": "280"
+     }
+    },
+    {
+     "item": {
+      "name": "Radiant Sandals",
+      "slot": "Feet",
+      "type": "Cloth",
+      "itemId": 254117,
+      "icon": "inv_boots_cloth_03",
+      "quality": 3,
+      "itemLevel": 55,
+      "requiredLevel": 50,
+      "tooltip": [
+       "Binds when picked up",
+       "Feet\tCloth",
+       "54 Armor",
+       "+9 Intellect",
+       "+13 Stamina",
+       "Requires Level 50",
+       "Equip: +20 Holy Spell Damage",
+       "Sell Price: 1g 8s 16c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 235,
+     "skills": {
+      "orange": "235",
+      "yellow": "250",
+      "green": "265",
+      "grey": "280"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "1,000 Merchant's Favor (skill 300)",
+   "items": [
+    {
+     "item": {
+      "name": "Tailoring Certification",
+      "slot": null,
+      "type": "Other",
+      "itemId": 271627,
+      "icon": "inv_scroll_15",
+      "quality": 2,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tOther",
+       "Requires Tailoring (300)",
+       "Use: Permanently unlock \"the Tailor\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Tailoring."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    }
+   ]
+  }
+ ]
 }

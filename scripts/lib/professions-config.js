@@ -35,7 +35,7 @@ const PROFESSIONS = [
     id: "cooking",
     dataFile: "cooking",
     name: "Cooking",
-    hasLeveling: false,
+    hasLeveling: true,
     categories: [
       "Stamina and Spirit", "Strength and Attack Power", "Agility",
       "Intellect/Spell Power/Mana", "Other Buffs", "Health and Mana Only",
@@ -46,7 +46,7 @@ const PROFESSIONS = [
     id: "enchanting",
     dataFile: "enchanting",
     name: "Enchanting",
-    hasLeveling: false,
+    hasLeveling: true,
     categories: [
       "Weapon", "Two-Hand", "Shield", "Off-Hand", "Chest", "Cloak",
       "Bracers", "Gloves", "Boots", "Neck", "Other",
@@ -56,7 +56,7 @@ const PROFESSIONS = [
     id: "engineering",
     dataFile: "engineering",
     name: "Engineering",
-    hasLeveling: false,
+    hasLeveling: true,
     categories: [
       "Bombs and Explosives", "Trinkets and Devices", "Goggles and Helms",
       "Other Gear", "Guns and Scopes", "Ammunition", "Fireworks and Toys",
@@ -67,14 +67,14 @@ const PROFESSIONS = [
     id: "first-aid",
     dataFile: "firstaid",
     name: "First Aid",
-    hasLeveling: false,
+    hasLeveling: true,
     categories: ["Bandages", "Anti-Venoms and Potions", "Camp Objects"],
   },
   {
     id: "leatherworking",
     dataFile: "leatherworking",
     name: "Leatherworking",
-    hasLeveling: false,
+    hasLeveling: true,
     categories: [
       "Head", "Shoulders", "Cloaks", "Chest", "Bracers", "Gloves", "Belts",
       "Legs", "Boots", "Armor Kits", "Bags", "Cured Leather", "Other",
@@ -85,7 +85,7 @@ const PROFESSIONS = [
     id: "tailoring",
     dataFile: "tailoring",
     name: "Tailoring",
-    hasLeveling: false,
+    hasLeveling: true,
     categories: [
       "Head", "Shoulders", "Cloaks", "Chest", "Bracers", "Gloves", "Belts",
       "Legs", "Boots", "Shirts and Robes for Show", "Bags", "Bolts of Cloth",

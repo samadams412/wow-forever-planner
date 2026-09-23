@@ -1,0 +1,135 @@
+// Parses foreverchanges.pro's own /professions/<slug> page HTML (plain SSR,
+// no JSON API -- confirmed the same way as the item pages) into the same
+// leveling_section/favor_section shape data/professions/
+// alchemy_leveling_and_merchants.json already uses (a [min,max] range
+// tuple, singular "requirement", tier text with the skill range embedded --
+// scripts/build-professions.js already normalizes this shape and
+// Blacksmithing's differently-shaped one, so matching Alchemy's is enough).
+
+const BASE = "https://foreverchanges.pro";
+
+function cleanText(html) {
+  return html
+    .replace(/<!-- -->/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&#x27;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/<[^>]+>/g, "")
+    .trim();
+}
+
+function absUrl(href) {
+  return href.startsWith("http") ? href : `${BASE}${href}`;
+}
+
+function parseLevelingSection(html) {
+  const chapterIdx = html.indexOf('id="leveling"');
+  if (chapterIdx === -1) return null;
+  const olStart = html.indexOf('<ol class="en3-lv">', chapterIdx);
+  if (olStart === -1) return null;
+  const olEnd = html.indexOf("</ol>", olStart);
+  const olHtml = html.slice(olStart, olEnd);
+
+  // A step's class is sometimes "en3-lv-step en3-lv-rod" (the one-time
+  // "Make a Runed Copper Rod" prerequisite step every enchanting leveling
+  // path starts with) -- match on the leading class only, not an exact
+  // full-attribute match, or that step silently drops entirely.
+  const liRe = /<li class="(en3-lv-rank|en3-lv-step)(?:\s[^"]*)?">([\s\S]*?)<\/li>/g;
+  const ranks = [];
+  let current = null;
+  let match;
+  while ((match = liRe.exec(olHtml))) {
+    const [, kind, inner] = match;
+    if (kind === "en3-lv-rank") {
+      const rankName = cleanText(inner.match(/<strong>(.*?)<\/strong>/)?.[1] ?? "");
+      const requirement = cleanText(inner.replace(/<strong>.*?<\/strong>/, ""));
+      current = { rank: rankName, requirement, steps: [] };
+      ranks.push(current);
+    } else if (kind === "en3-lv-step" && current) {
+      const rangeText = cleanText(inner.match(/<span class="en3-lv-range"><b>(.*?)<\/b>/)?.[1] ?? "");
+      const [min, max] = rangeText.split(/[–-]/).map((n) => parseInt(n.trim(), 10));
+
+      const whatMatch = inner.match(/<span class="en3-lv-what">([\s\S]*?)<\/span>(?=<span class="en3-lv-count")/);
+      const whatHtml = whatMatch?.[1] ?? "";
+      const madeMatch = whatHtml.match(/<a href="([^"]+)" class="en3-lv-made"><strong>(.*?)<\/strong><\/a>/);
+      // Enchanting's leveling steps make an enchant, not a craftable item --
+      // no en3-lv-made link at all, just a bare <strong> ("Enchant Bracer -
+      // Inferior Stamina"). Keep the name with a null url rather than
+      // dropping the step: resolveItemByName in build-professions.js
+      // correctly won't find a real item match for enchant text and falls
+      // back to the same unresolved-item treatment used elsewhere on the
+      // site, which is the right outcome here, not a bug to work around.
+      const item = madeMatch
+        ? { name: cleanText(madeMatch[2]), url: absUrl(madeMatch[1]) }
+        : { name: cleanText(whatHtml.match(/<strong>(.*?)<\/strong>/)?.[1] ?? ""), url: null };
+      const source = cleanText(whatHtml.match(/<small>([\s\S]*?)<\/small>/)?.[1] ?? "");
+
+      const count = cleanText(inner.match(/<span class="en3-lv-count">([\s\S]*?)<\/span>/)?.[1] ?? "");
+
+      const mats = [];
+      const matsBlock = inner.match(/<span class="cr-mats">([\s\S]*?)<\/span>\s*<\/li>|<span class="cr-mats">([\s\S]*)$/);
+      const matsHtml = (matsBlock?.[1] ?? matsBlock?.[2]) ?? inner;
+      const matRe = /<a href="([^"]+)" class="cr-mat" aria-label="([^"]*)"/g;
+      let matMatch;
+      while ((matMatch = matRe.exec(matsHtml))) {
+        mats.push({ name: cleanText(matMatch[2]), url: absUrl(matMatch[1]) });
+      }
+
+      current.steps.push({
+        range: [min, max],
+        item,
+        source,
+        count,
+        mats,
+      });
+    }
+  }
+  return ranks;
+}
+
+function parseFavorSection(html) {
+  const chapterIdx = html.indexOf('id="favor"');
+  if (chapterIdx === -1) return null;
+  const nextChapterIdx = html.indexOf('class="dgx-chapter"', chapterIdx + 20);
+  const chapterHtml = html.slice(chapterIdx, nextChapterIdx === -1 ? undefined : nextChapterIdx);
+
+  const tierRe = /<div class="en3-tier">([\s\S]*?)<\/div>\s*(?=<div class="en3-tier">|<p class="en3|$)/g;
+  const tiers = [];
+  let match;
+  while ((match = tierRe.exec(chapterHtml))) {
+    const inner = match[1];
+    const h3Match = inner.match(/<h3 class="en3-h3">(.*?)<\/h3>/);
+    if (!h3Match) continue;
+    const h3Inner = h3Match[1];
+    const smallMatch = h3Inner.match(/<small>(.*?)<\/small>/);
+    const tierTitle = cleanText(h3Inner.replace(/<small>.*?<\/small>/, ""));
+    const skillRange = smallMatch ? cleanText(smallMatch[1]) : "";
+    const tierText = skillRange ? `${tierTitle} (${skillRange})` : tierTitle;
+
+    const items = [];
+    const itemRe = /<li><a href="([^"]+)">[\s\S]*?<span class="q\d">(.*?)<\/span>[\s\S]*?<span class="en3-skill[^"]*">(\d+)<\/span>/g;
+    let itemMatch;
+    while ((itemMatch = itemRe.exec(inner))) {
+      items.push({
+        name: cleanText(itemMatch[2]),
+        url: absUrl(itemMatch[1]),
+        skill_threshold: parseInt(itemMatch[3], 10),
+      });
+    }
+    tiers.push({ tier: tierText, items });
+  }
+  return tiers;
+}
+
+async function fetchProfessionPage(slug) {
+  const res = await fetch(`${BASE}/professions/${slug}`, { headers: { "User-Agent": "Mozilla/5.0" } });
+  if (!res.ok) return { ok: false, status: res.status };
+  const html = await res.text();
+  return {
+    ok: true,
+    leveling_section: parseLevelingSection(html),
+    favor_section: parseFavorSection(html),
+  };
+}
+
+module.exports = { fetchProfessionPage, parseLevelingSection, parseFavorSection };
