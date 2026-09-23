@@ -67,11 +67,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
       )}
 
-      {data.bosses.length > 0 && (
-        <div className="mt-4">
-          <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
-        </div>
-      )}
+    
 
       {data.bosses.length === 0 ? (
         <p className="mt-6 text-sm text-foreground-muted">
@@ -96,6 +92,12 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
             <LootDisclaimer source={data.questSource} dungeonType={dungeon.type} />
           )}
           <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} />
+        </div>
+      )}
+
+        {data.bosses.length > 0 && (
+        <div className="mt-4">
+          <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
         </div>
       )}
     </main>
