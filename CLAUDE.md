@@ -9,7 +9,138 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
-## Session handoff — 2026-09-23
+## Session handoff — 2026-09-23 (gathering professions + reagent-qty fix)
+
+**Stable and shipped this session:**
+- **Reagent-quantity parsing bug fixed across every profession's Leveling
+  1-300 tab.** Root cause: foreverchanges.pro embeds a leveling mat's
+  quantity in its `aria-label` text ("5 Light Leather") plus a separate
+  `<b>5</b>` icon-overlay badge -- `scripts/lib/parse-profession-page.js`'s
+  mats extraction only ever read the aria-label as a raw item name, so
+  every such reagent both failed to resolve (no real item is named "5
+  Light Leather") and silently fell back to a hardcoded "x1". Scoped to
+  the 6 professions scraped in the prior session (Cooking, Enchanting,
+  Engineering, First Aid, Leatherworking, Tailoring) -- Alchemy/
+  Blacksmithing's hand-provided data already had a clean `quantity`
+  field, confirmed unaffected before assuming otherwise. Fixed by reading
+  the `<b>N</b>` badge directly (immune to a reagent name that happens to
+  start with a digit); verified 0 remaining "N Name"-shaped names across
+  all 8 professions' 223 leveling-step reagents afterward.
+- **Reagent counts now render as an icon-overlay badge**, matching
+  foreverchanges' own convention (studied live: a `<b>` badge on the
+  icon corner, present only when qty > 1 -- no "x1" ever shown) --
+  `LootItemPill` gained an optional `qty` prop for this, used only by
+  profession recipes/leveling mats. A *different* convention, deliberately
+  untouched: a recipe's own crafted-**output** count ("Roasted Kodo Meat
+  ×2") renders as plain text next to the name on foreverchanges too, not
+  an icon badge -- `ProfessionRecipeTable`'s `makesQty` label stays as-is.
+- **New "Camp, Skill Rewards and Perks" tab** on every one of the 8
+  crafting profession pages: Legacy-point skill-rank milestones
+  (Journeyman/Expert/Artisan + the account-wide Certification item),
+  placeable camp objects with their unlock skill and Blueprint item, and
+  the Legacy Perks relevant to professions. The perks part is deliberately
+  **not** scraped per-profession -- checked live against multiple
+  professions and found byte-identical content on every one (it's just
+  the same "Professions" Legacy tree, not a per-profession reward) --
+  reused directly from `data/legacy-perks.json` by perk id.
+- **Added the 3 gathering professions (Mining, Herbalism, Skinning) as
+  their own page type**, not squeezed into the crafting schema. Checked
+  each one live before assuming the crafting scraper/shape would work
+  unmodified (it wouldn't): no reagent-based recipes, no category
+  sidebar, no Merchant's Favor, no Legacy-point milestone track; Mining
+  alone gets an extra Smelting chapter; Skinning has no separate "nodes"
+  chapter at all -- its single level-band list doubles as both node list
+  and leveling guide. Gathering pages also show a *different* Legacy Perk
+  trio (Bountiful Harvest in place of crafting's Performance Bonus).
+  Extracted `itemRef`/`unresolvedItemRef`/`buildCampMilestones`/
+  `loadLegacyPerks` out of `build-professions.js` into `scripts/lib/
+  item-ref.js` and `scripts/lib/camp-section.js` so the new gathering
+  pipeline doesn't duplicate them -- verified behavior-preserving (zero
+  diff on the 8 existing catalogs) before building on top of it.
+- Full architecture detail for both of the above lives in the "Professions
+  recipe catalog" note below (search for "gathering" and "camp section").
+- **Reference source note (not acted on beyond a sanity check):**
+  wago.tools publishes structured Blizzard DB2 table exports per beta
+  build -- `https://wago.tools/db2/Item?build=1.60.1.69913` (the raw item
+  table: ClassID/SubclassID are exactly the `c`/`u` fields this project's
+  own item-category-label work already derived from foreverchanges,
+  cross-checked directly for item 2455 and 765 and both agreed) and
+  `https://wago.tools/db2/TraitCurrencySource?build=1.60.1.69913` (how
+  Legacy Points are actually earned -- by player level, quest, or
+  achievement; useful if `data/legacy-perks.json`'s earn-source data ever
+  needs expanding past its current prose `earnCapNote`). A legitimate
+  citable public source, comparable to talentsforever.com's own beta
+  export -- known and available for future item/legacy-perk data gaps,
+  not something this session did a full import from.
+
+**Two real class-matching bugs caught before trusting scraped output,
+same failure class as last session's "en3-lv-step en3-lv-rod" fix:**
+- A gathering node past the beta's current skill cap carries an extra
+  `en3-lv-later` class (`<li class="gt-node en3-lv-later">`) -- an
+  exact-class-match regex silently dropped 10 of Herbalism's 28 herbs,
+  cutting off exactly at the "beta stops at 225" divider. Fixed to match
+  on the leading class only; all 28 now present.
+- `getProfessionIds()`/`getAllProfessionSummaries()` (`lib/profession-
+  recipes.ts`) would have picked up the 3 new gathering catalog files
+  (same `data/professions-catalog/` directory) and thrown on
+  `catalog.recipes.length`, which doesn't exist on a gathering catalog's
+  shape -- excluded by id there before it ever shipped; gathering ids are
+  added back in separately wherever they're actually needed
+  (`generateStaticParams`, `app/sitemap.ts`, the profession opengraph-image
+  route).
+
+**Open / not done this session:** none flagged -- all 4 items verified
+live and committed separately.
+
+## Session handoff — 2026-09-23 (professions data-quality pass, prior conversation)
+
+**Stable and shipped this session** (this is the conversation that ran
+immediately after the "Professions recipe catalog" session below, before
+the gathering-professions one above; its own commits never got a CLAUDE.md
+write-up at the time, added here retroactively from the actual commits):
+- **Root-caused and fixed "Slot/type unknown" for unchanged items
+  site-wide.** `same.json`'s bulk export never carries a tooltip (`x`/`y`)
+  at all, but it does carry `c`/`u` (Blizzard's own item class/subclass
+  ids) that `scripts/lib/fc-item.js` never read. Since only 81 distinct
+  `c:u` combos exist across the whole 21,458-item catalog, `scripts/
+  build-item-category-labels.js` pulls the real displayed label for each
+  from foreverchanges.pro's own per-item pages once (`data/sources/
+  item-category-labels.json`) and `buildSyntheticTooltip` now uses it --
+  fixes every reagent/trade-good/armor-type display without any per-item
+  scrape.
+- **Scoped re-fetch for the 751 items still missing real tooltip text**
+  after the fix above (referenced from profession recipes or dungeon
+  quest rewards; boss loot already had full text from a richer source) --
+  `scripts/fetch-referenced-item-tooltips.js` /
+  `scripts/lib/fetch-item-tooltip.js`, output as a dated overlay
+  (`data/sources/item-tooltip-overlay-2026-09-23.json`) `fc-item.js`
+  merges onto `raw.x` before building each item's tooltip.
+- **Item icon now renders inside the tooltip body itself** (`Item
+  TooltipBody.tsx`), not just on the triggering pill/row.
+- **Real profession-page hover-lag bug found and fixed**, not guessed at
+  -- confirmed by instrumenting `LootItemPill`'s render count directly:
+  `useIsActiveTooltip` (`lib/active-tooltip.ts`) used a shared
+  `useSyncExternalStore` snapshot, so every tooltip on the page re-rendered
+  on every single hover transition (measured: 680 re-renders from 2 hovers
+  on a 169-pill page). Fixed with a per-subscriber selector closure; same
+  measurement after: 10 re-renders, a ~68x reduction.
+- **Pulled Leveling/Merchant's Favor data for the 6 professions that never
+  had it** (only Alchemy/Blacksmithing did before) -- `scripts/lib/
+  parse-profession-page.js` + `scripts/fetch-profession-leveling-favor.js`,
+  same live-HTML-plus-regex technique as the dungeon quest pull, no JSON
+  API exists for this either (confirmed the same way as the item pages).
+  Caught two real bugs before trusting the output: a step's class is
+  sometimes `"en3-lv-step en3-lv-rod"` (Enchanting's one-time "Make a
+  Runed Copper Rod" prerequisite), and Enchanting's own leveling steps
+  "make" an enchant, not a craftable item, so there's no `en3-lv-made`
+  link at all -- both now handled explicitly rather than silently dropped
+  or crashing.
+
+Full detail for all of the above already lives in the dedicated
+architecture notes below (search "category label", "tooltip overlay",
+"active-tooltip", "profession Leveling").
+
+## Session handoff — 2026-09-23 (original professions recipe catalog build)
 
 **Stable and shipped this session:** `/reference/professions/[profession]`
 rebuilt as a real recipe catalog (Recipes / Leveling 1 to 300 / Merchant's
@@ -974,16 +1105,19 @@ everywhere else. `unresolvedItemRef()` in the build script gives the
 items already get elsewhere.
 
 **The page itself** (`app/reference/professions/[profession]/page.tsx`)
-stacks three views behind a `?view=` param (default `recipes`) --
+stacks four views behind a `?view=` param (default `recipes`) --
 `Recipes` (a `?category=` filter sidebar, server-rendered `Link`s, same
 pattern `/reference/items`' status tabs use, no client JS needed just to
-filter), `Leveling 1 to 300`, and `Merchant's Favor`. Only Alchemy and
-Blacksmithing have leveling/Merchant's-Favor data this session
-(`data/professions/<id>_leveling_and_merchants.json`) -- every other
-profession's Leveling/Favor view renders a "coming soon" state gated on
-`catalog.leveling`/`catalog.favor` being `null`, not a profession
-allowlist, so adding a 9th profession's leveling data later is a data +
-`hasLeveling: true` change, not a component change.
+filter), `Leveling 1 to 300`, `Merchant's Favor`, and `Camp, Skill Rewards
+and Perks` (added a later session -- see its own note below). All 8
+crafting professions now have leveling/Merchant's-Favor data (originally
+only Alchemy/Blacksmithing did; the other 6 were pulled in a later
+session, see that session's handoff above) -- a profession's Leveling/
+Favor view renders a "coming soon" state gated on `catalog.leveling`/
+`catalog.favor` being `null`, not a profession allowlist, which is why
+First Aid (a secondary profession with genuinely no Merchant's Favor
+vendor on its own live page) correctly still shows "coming soon" there
+without needing special-casing.
 
 **The two leveling/merchants-favor source files don't share one JSON
 schema** -- found live, not assumed, when Blacksmithing's guide first
@@ -1002,6 +1136,91 @@ professions/[profession]` used to be `[slug]`, MDX-driven, one page per
 profession's "new recipes" narrative post. Same URL shape, so old
 `/reference/professions/<slug>` links still resolve, just to the
 catalog now instead of a write-up.
+
+### Profession "Camp, Skill Rewards and Perks" tab
+Added in the gathering-professions session (see that handoff above).
+`scripts/lib/parse-profession-page.js`'s `parseCampSection` reads the
+`id="camp"` chapter -- present on every profession page, crafting and
+gathering alike, same markup either way. Two `<ol class="pr-milestones">`
+lists (Legacy-point skill-rank milestones, then placeable camp objects)
+plus a "Legacy perks" list that is **not** parsed here at all: checked
+live against multiple professions of both types and found the perk
+list identical within each type (all 8 crafting professions show
+Performance Bonus/Working Overtime/Dedicated Study; all 3 gathering
+professions show Bountiful Harvest/Working Overtime/Dedicated Study) --
+it's just the "Professions" Legacy tree, not a per-profession reward, so
+`scripts/lib/camp-section.js`'s `loadLegacyPerks(perkIds)` pulls the
+right 3 by id from `data/legacy-perks.json` (built in an earlier session)
+instead of re-scraping the same content 11 times. A milestone/camp-object
+resolves its item by id extracted straight from foreverchanges' own item
+URL (`buildCampMilestones` in `camp-section.js`), never by name -- these
+rows come with a real link already, unlike recipe/reagent text elsewhere
+in this pipeline.
+
+A plain skill-rank milestone (Journeyman/Expert/Artisan) has no linked
+item at all -- `item: null` on the built record, with its own trade-icon
+slug carried separately (`icon`), rather than being forced through
+`unresolvedItemRef`'s "we don't know what this real item is" treatment,
+which would misrepresent it.
+
+### Gathering professions: Mining, Herbalism, Skinning are their own page type
+Added in the same session as the Camp tab above. These 3 are genuinely
+not the crafting-profession shape -- checked each one live before writing
+any parser, not assumed from Mining alone: no reagent-based recipes, no
+category sidebar (no slot-based grouping concept exists for gathering at
+all), no Merchant's Favor, no Legacy-point milestone track. Mining alone
+gets an extra Smelting chapter (bars from ore, structurally identical to
+a crafting profession's Recipes list -- same `cr-row`/`cr-mats`/
+`en3-skill` markup). Herbalism has nodes + leveling only. **Skinning has
+no separate "nodes" chapter at all** -- its one `id="skin"` list (level
+bands, not named nodes: "Beasts of level 1 to 10", not "Copper Vein")
+doubles as both the node list and the leveling guide.
+
+Pipeline: `scripts/lib/parse-gathering-page.js` (live-HTML-plus-regex,
+same discipline as every other pull in this project -- no JSON API exists
+here either) -> `scripts/fetch-gathering-professions.js` (one dated
+snapshot, `data/sources/gathering-professions-<date>.json`, all 3
+professions together) -> `scripts/build-gathering-professions.js` ->
+`data/professions-catalog/{mining,herbalism,skinning}.json`, read by the
+new `lib/gathering-professions.ts` (a separate reader/type module, not
+squeezed into `lib/profession-recipes.ts`'s crafting shapes). Every
+node/step/smelting-recipe item resolves by id (every one comes with a
+real foreverchanges item URL already) via `scripts/lib/item-ref.js`'s
+`resolveItemByUrl` -- no name-matching anywhere in this pipeline.
+
+`scripts/lib/item-ref.js` (itemRef/unresolvedItemRef/itemIdFromUrl) and
+`scripts/lib/camp-section.js` (buildCampMilestones/loadLegacyPerks) were
+extracted out of `build-professions.js` so this second pipeline doesn't
+duplicate them -- verified the extraction was behavior-preserving by
+rebuilding the 8 existing crafting catalogs and diffing against the
+pre-extraction commit (zero diff) before building gathering on top of it.
+
+**A node past the beta's current skill cap carries an extra class**
+(`<li class="gt-node en3-lv-later">`) -- an exact-class-match regex
+silently dropped 10 of Herbalism's 28 herbs at first, cutting off exactly
+at the "beta stops at 225" divider (same failure class as the prior
+session's "en3-lv-step en3-lv-rod" fix for Enchanting's leveling data --
+watch for this pattern generally: foreverchanges adds a second class to a
+list item for "this row is special" state changes, and an exact
+`class="foo"` match instead of a leading-class match silently drops that
+whole row). Fixed to match on the leading class only in `parseNodes`;
+verified all 28 present after.
+
+**The page route branches early** on `isGatheringProfessionId(profession)`
+(`app/reference/professions/[profession]/page.tsx`) into an entirely
+separate `GatheringProfessionPage` render path with its own per-profession
+tab set (Mining: Ore by Skill/Leveling/Smelting/Camp; Herbalism: Herbs by
+Skill/Leveling/Camp; Skinning: What to Skin/Camp only) -- not a shared
+component stretched to fit both shapes. **Real bug caught before it
+shipped:** `getProfessionIds()`/`getAllProfessionSummaries()`
+(`lib/profession-recipes.ts`) read every `.json` in `data/professions-
+catalog/`, which now also holds the 3 gathering catalogs -- those would
+have been treated as crafting catalogs and thrown on `catalog.recipes
+.length` (gathering catalogs have no such field). Excluded by id in
+`getProfessionIds()`; gathering ids are added back in separately wherever
+actually needed (`generateStaticParams`, `app/sitemap.ts`, the profession
+`opengraph-image` route) rather than papered over with an optional-chain
+that would've silently under-listed pages instead of crashing loudly.
 
 ### Planner: race is reference-only; URL is `/planner/<class>/<build>`
 Race is no longer app state or a URL segment — it never affects talent
