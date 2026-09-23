@@ -25,6 +25,21 @@ const PROFESSION_ICON: Record<string, string> = {
   tailoring: "trade_tailoring",
 };
 
+// Pagination over a fixed-height inner-scroll region, since pagination
+// composes better with the category filter already in place (and any
+// future search/filter addition) -- same reasoning /reference/items'
+// pagination was built on, whose Previous/Page N of M/Next control this
+// mirrors exactly rather than inventing new styling.
+const PAGE_SIZE = 50;
+
+function buildRecipesHref(professionId: string, category: string, page: number): string {
+  const usp = new URLSearchParams();
+  if (category !== "All") usp.set("category", category);
+  if (page > 1) usp.set("page", String(page));
+  const qs = usp.toString();
+  return qs ? `/reference/professions/${professionId}?${qs}` : `/reference/professions/${professionId}`;
+}
+
 export function generateStaticParams() {
   return getProfessionIds().map((profession) => ({ profession }));
 }
@@ -50,13 +65,13 @@ export default async function ProfessionPage({
   searchParams,
 }: {
   params: Promise<{ profession: string }>;
-  searchParams: Promise<{ category?: string; view?: string }>;
+  searchParams: Promise<{ category?: string; view?: string; page?: string }>;
 }) {
   const { profession } = await params;
   const catalog = getProfessionCatalog(profession);
   if (!catalog) notFound();
 
-  const { category, view } = await searchParams;
+  const { category, view, page: pageParam } = await searchParams;
   const activeView = view === "leveling" || view === "favor" ? view : "recipes";
   const activeCategory = category && catalog.categories.includes(category) ? category : "All";
 
@@ -65,6 +80,10 @@ export default async function ProfessionPage({
 
   const filteredRecipes =
     activeCategory === "All" ? catalog.recipes : catalog.recipes.filter((r) => r.category === activeCategory);
+
+  const pageCount = Math.max(1, Math.ceil(filteredRecipes.length / PAGE_SIZE));
+  const activePage = Math.min(Math.max(1, Number(pageParam) || 1), pageCount);
+  const pagedRecipes = filteredRecipes.slice((activePage - 1) * PAGE_SIZE, activePage * PAGE_SIZE);
 
   const icon = PROFESSION_ICON[catalog.id];
 
@@ -113,7 +132,34 @@ export default async function ProfessionPage({
             active={activeCategory}
           />
           <div className="min-w-0 flex-1">
-            <ProfessionRecipeTable recipes={filteredRecipes} professionId={catalog.id} />
+            <ProfessionRecipeTable recipes={pagedRecipes} professionId={catalog.id} />
+            {pageCount > 1 && (
+              <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">
+                {activePage > 1 ? (
+                  <Link
+                    href={buildRecipesHref(catalog.id, activeCategory, activePage - 1)}
+                    className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                  >
+                    &larr; Previous
+                  </Link>
+                ) : (
+                  <div />
+                )}
+                <span className="text-xs text-foreground-muted">
+                  Page <strong className="text-foreground">{activePage}</strong> of {pageCount}
+                </span>
+                {activePage < pageCount ? (
+                  <Link
+                    href={buildRecipesHref(catalog.id, activeCategory, activePage + 1)}
+                    className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                  >
+                    Next &rarr;
+                  </Link>
+                ) : (
+                  <div />
+                )}
+              </nav>
+            )}
           </div>
         </div>
       )}
