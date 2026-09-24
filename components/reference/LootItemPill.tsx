@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { createPortal } from "react-dom";
+import { useEffect, useRef } from "react";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { useLongPress } from "@/lib/use-long-press";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import { TooltipCard } from "@/components/planner/TooltipCard";
 import ItemTooltipBody from "@/components/reference/ItemTooltipBody";
@@ -52,6 +54,35 @@ export default function LootItemPill({
     hide();
   }
 
+  // On mobile, a normal tap should still navigate to the item page (so the
+  // link behavior isn't lost) -- a long-press instead peeks the tooltip
+  // without navigating, same pattern as the talent tree's long-press-to-read
+  // (see lib/use-long-press.ts). Only onLongPress/onLongPressEnd are wired
+  // up; onTap is left undefined so a plain tap falls through to the
+  // browser's default click/navigation instead of being intercepted here.
+  const longPress = useLongPress({
+    onLongPress: handleShow,
+    onLongPressEnd: handleHide,
+  });
+
+  // Same scroll-dismiss approach as the mobile talent tree tooltip and the
+  // spellbook tooltip (a real scroll listener, not a timeout) -- without
+  // this, tapping/long-pressing an item open on mobile and then scrolling
+  // left the tooltip floating in place over whatever scrolled underneath
+  // it. Attached once per mount and read through a ref so the listener
+  // doesn't need to be re-added every render.
+  const hideRef = useRef(handleHide);
+  useEffect(() => {
+    hideRef.current = handleHide;
+  });
+  useEffect(() => {
+    function handleScroll() {
+      hideRef.current();
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const qualityColor = itemQualityColor(item.quality);
   // "missing" only means "no longer drops" in a loot context -- in the item
   // catalog it means "beta hasn't touched this Classic item yet" (see
@@ -68,6 +99,9 @@ export default function LootItemPill({
       onMouseLeave={handleHide}
       onFocus={handleShow}
       onBlur={handleHide}
+      onTouchStart={longPress.onTouchStart}
+      onTouchMove={longPress.onTouchMove}
+      onTouchEnd={longPress.onTouchEnd}
       className={`inline-flex cursor-default items-center gap-1.5 rounded border transition-colors ${
         iconOnly ? "p-0.5" : "px-1.5 py-1 text-xs"
       } ${
