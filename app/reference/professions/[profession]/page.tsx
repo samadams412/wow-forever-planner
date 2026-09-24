@@ -13,25 +13,8 @@ import ProfessionSmeltingTable from "@/components/professions/ProfessionSmelting
 import { getProfessionCatalog, getProfessionIds } from "@/lib/profession-recipes";
 import { getGatheringCatalog, isGatheringProfessionId, GATHERING_PROFESSION_IDS } from "@/lib/gathering-professions";
 import { mediumIconUrl } from "@/lib/wow-data";
-
-// Trade-window icon slugs, the same ones the old profession write-up pages
-// used in their frontmatter (verified against those before reusing them --
-// "trade_engraving" is genuinely Enchanting's real Blizzard icon slug, not
-// a typo). Leatherworking never had a write-up to carry one forward, so
-// its slug is the standard one every other WoW reference site uses.
-const PROFESSION_ICON: Record<string, string> = {
-  alchemy: "trade_alchemy",
-  blacksmithing: "trade_blacksmithing",
-  cooking: "inv_misc_food_15",
-  enchanting: "trade_engraving",
-  engineering: "trade_engineering",
-  "first-aid": "spell_holy_sealofsacrifice",
-  leatherworking: "trade_leatherworking",
-  tailoring: "trade_tailoring",
-  mining: "trade_mining",
-  herbalism: "trade_herbalism",
-  skinning: "inv_misc_pelt_wolf_01",
-};
+import { PROFESSION_ICON } from "@/lib/profession-icons";
+import ProfessionCrossLinks from "@/components/professions/ProfessionCrossLinks";
 
 // Pagination over a fixed-height inner-scroll region, since pagination
 // composes better with the category filter already in place (and any
@@ -214,6 +197,8 @@ export default async function ProfessionPage({
         ) : (
           <ComingSoon label="Camp, Skill Rewards and Perks" />
         ))}
+
+      <ProfessionCrossLinks activeId={catalog.id} />
     </main>
   );
 }
@@ -302,6 +287,8 @@ async function GatheringProfessionPage({
         ) : (
           <ComingSoon label="Camp, Skill Rewards and Perks" />
         ))}
+
+      <ProfessionCrossLinks activeId={catalog.id} />
     </main>
   );
 }

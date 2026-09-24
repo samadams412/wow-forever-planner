@@ -4,20 +4,7 @@ import Breadcrumbs from "@/components/site/Breadcrumbs";
 import { getAllProfessionSummaries } from "@/lib/profession-recipes";
 import { getAllGatheringSummaries } from "@/lib/gathering-professions";
 import { mediumIconUrl } from "@/lib/wow-data";
-
-const PROFESSION_ICON: Record<string, string> = {
-  alchemy: "trade_alchemy",
-  blacksmithing: "trade_blacksmithing",
-  cooking: "inv_misc_food_15",
-  enchanting: "trade_engraving",
-  engineering: "trade_engineering",
-  "first-aid": "spell_holy_sealofsacrifice",
-  leatherworking: "trade_leatherworking",
-  tailoring: "trade_tailoring",
-  mining: "trade_mining",
-  herbalism: "trade_herbalism",
-  skinning: "inv_misc_pelt_wolf_01",
-};
+import { PROFESSION_ICON } from "@/lib/profession-icons";
 
 export const metadata: Metadata = {
   title: "Professions",
