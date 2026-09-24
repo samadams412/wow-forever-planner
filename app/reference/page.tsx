@@ -60,8 +60,8 @@ export default function ReferencePage() {
         </p>
       </div>
 
-      <div className="mx-auto w-full max-w-2xl px-4 py-8">
-        <div className="grid gap-3">
+      <div className="mx-auto w-full max-w-4xl px-4 py-8">
+        <div className="grid gap-3 sm:grid-cols-2">
           <Card
             href="/reference/legacy-perks"
             title="Legacy Perks"
