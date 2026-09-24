@@ -25,7 +25,7 @@ const fs = require("fs");
 const path = require("path");
 const { PROFESSIONS } = require("./lib/professions-config");
 const { buildNameIndex, resolveItemByName, parseReagentText } = require("./lib/profession-item-resolver");
-const { itemRef, unresolvedItemRef } = require("./lib/item-ref");
+const { itemRef, unresolvedItemRef, resolveItemByUrl } = require("./lib/item-ref");
 const { buildCampMilestones, loadLegacyPerks, CRAFTING_LEGACY_PERK_IDS } = require("./lib/camp-section");
 
 const ROOT = path.join(__dirname, "..");
@@ -129,7 +129,7 @@ function buildLevelingSection(sections, byName, recipesByName) {
   }));
 }
 
-function buildFavorSection(sections, byName, recipesByName) {
+function buildFavorSection(sections, byId, recipesByName) {
   if (!sections) return null;
   return sections.map((tier) => ({
     // Alchemy's own tier string already embeds the skill range ("45
@@ -141,7 +141,15 @@ function buildFavorSection(sections, byName, recipesByName) {
         ? `${tier.tier} (skill ${tier.skill_range.min} to ${tier.skill_range.max})`
         : tier.tier,
     items: (tier.items || []).map((fav) => {
-      const { item } = resolveItemByName(byName, fav.name);
+      // Resolve by the id embedded in fav.url, not fav.name -- a favor
+      // item's display name on the source page (e.g. "Gloves - Holy
+      // Power") often doesn't match the catalog item's own full name
+      // (e.g. "Formula: Enchant Gloves - Holy Power"), so a name-based
+      // lookup silently failed and rendered "Slot/Type Unknown" even
+      // though the linked item has full tooltip data. Every favor item
+      // carries a real /item/<id> url (confirmed: 0 missing across all
+      // 8 professions), so there's no need for a name-match fallback.
+      const item = resolveItemByUrl(byId, fav.url, fav.name);
       // Pull the full orange/yellow/green/grey set from the main recipe
       // list when this same item appears there (by name) -- favor_section
       // only ever gives one raw skill_threshold number, but it's always
@@ -150,7 +158,7 @@ function buildFavorSection(sections, byName, recipesByName) {
       // data, not inferred.
       const recipe = recipesByName.get(fav.name.trim().toLowerCase());
       return {
-        item: itemRef(item) || unresolvedItemRef(fav.name),
+        item,
         skillThreshold: fav.skill_threshold,
         skills: recipe ? recipe.skills : null,
       };
@@ -189,7 +197,7 @@ function main() {
       if (fs.existsSync(levelingPath)) {
         const raw = JSON.parse(fs.readFileSync(levelingPath, "utf8"));
         leveling = buildLevelingSection(raw.leveling_section, byName, recipesByName);
-        favor = buildFavorSection(raw.favor_section, byName, recipesByName);
+        favor = prof.hasFavor === false ? null : buildFavorSection(raw.favor_section, byId, recipesByName);
         if (raw.camp_section) {
           camp = {
             milestones: buildCampMilestones(raw.camp_section.milestones, byId),
@@ -207,6 +215,7 @@ function main() {
       recipes,
       leveling,
       favor,
+      favorSupported: prof.hasFavor !== false,
       camp,
     };
     fs.writeFileSync(path.join(OUT_DIR, `${prof.id}.json`), JSON.stringify(catalog, null, 1));

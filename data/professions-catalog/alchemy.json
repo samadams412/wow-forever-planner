@@ -23338,9 +23338,110 @@
   },
   {
    "tier": "240 Merchant's Favor (skill 290 to 300)",
-   "items": []
+   "items": [
+    {
+     "item": {
+      "name": "Major Frenzy Potion",
+      "slot": null,
+      "type": "Potions",
+      "itemClass": 0,
+      "itemId": 250943,
+      "icon": "inv_potione_6",
+      "quality": 1,
+      "itemLevel": 55,
+      "requiredLevel": 55,
+      "tooltip": [
+       "\tPotions",
+       "Requires Level 55",
+       "Use: Increases your Attack Power by 40 for 30 sec.",
+       "Sell Price: 1c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 290,
+     "skills": {
+      "orange": "290",
+      "yellow": "295",
+      "green": "297",
+      "grey": "300"
+     }
+    },
+    {
+     "item": {
+      "name": "Elixir of the Grizzly",
+      "slot": null,
+      "type": "Elixirs",
+      "itemClass": 0,
+      "itemId": 250351,
+      "icon": "inv_potion_160",
+      "quality": 1,
+      "itemLevel": 55,
+      "requiredLevel": 55,
+      "tooltip": [
+       "\tElixirs",
+       "Requires Level 55",
+       "Use: Drink to increase your Strength by 25 and chance to critically hit by 2%. Lasts for 30 min. (3 Sec Cooldown)",
+       "Sell Price: 1s 25c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": {
+      "orange": "300",
+      "yellow": "305",
+      "green": "307",
+      "grey": "310"
+     }
+    }
+   ]
+  },
+  {
+   "tier": "1,000 Merchant's Favor (skill 300)",
+   "items": [
+    {
+     "item": {
+      "name": "Alchemy Certification",
+      "slot": null,
+      "type": "Other",
+      "itemClass": 15,
+      "itemId": 271621,
+      "icon": "inv_scroll_15",
+      "quality": 2,
+      "itemLevel": 1,
+      "requiredLevel": 1,
+      "tooltip": [
+       "Binds when picked up",
+       "\tOther",
+       "Requires Alchemy (300)",
+       "Use: Permanently unlock \"the Alchemist\" title for all characters on your account. Characters that wish to display this title must have 300 skill in Alchemy."
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "new",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "skillThreshold": 300,
+     "skills": null
+    }
+   ]
   }
  ],
+ "favorSupported": true,
  "camp": {
   "milestones": [
    {

@@ -68,6 +68,12 @@ const PROFESSIONS = [
     dataFile: "firstaid",
     name: "First Aid",
     hasLeveling: true,
+    // Confirmed against foreverchanges.pro's own live First Aid page:
+    // it has no Merchant's Favor vendor/section at all, unlike every
+    // other profession -- not a scrape gap. build-professions.js skips
+    // parsing favor_section for this profession, and the page hides the
+    // tab entirely rather than showing an empty "coming soon" state.
+    hasFavor: false,
     categories: ["Bandages", "Anti-Venoms and Potions", "Camp Objects"],
   },
   {

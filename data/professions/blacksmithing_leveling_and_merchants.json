@@ -445,11 +445,7 @@
   ],
   "favor_section": [
     {
-      "tier": "30 Merchant's Favor",
-      "skill_range": {
-        "min": 45,
-        "max": 125
-      },
+      "tier": "30 Merchant's Favor (skill 45 to 125)",
       "items": [
         {
           "name": "Guard's Chain Belt",
@@ -518,7 +514,7 @@
         },
         {
           "name": "Protector's Gloves",
-          "url": "https://foreverchanges.pro/item/250501",
+          "url": "https://foreverchanges.pro/item/250510",
           "skill_threshold": 80
         },
         {
@@ -555,6 +551,226 @@
           "name": "Protector's Silvered Chain Shirt",
           "url": "https://foreverchanges.pro/item/250520",
           "skill_threshold": 110
+        },
+        {
+          "name": "Guard's Silvered Chain Shirt",
+          "url": "https://foreverchanges.pro/item/250519",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Crusader's Silvered Chain Shirt",
+          "url": "https://foreverchanges.pro/item/250522",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Acolyte's Silvered Chain Shirt",
+          "url": "https://foreverchanges.pro/item/250521",
+          "skill_threshold": 110
+        },
+        {
+          "name": "Veteran's Silvered Chain Helm",
+          "url": "https://foreverchanges.pro/item/250528",
+          "skill_threshold": 95
+        },
+        {
+          "name": "Protector's Silvered Chain Helm",
+          "url": "https://foreverchanges.pro/item/250530",
+          "skill_threshold": 95
+        },
+        {
+          "name": "Guard's Silvered Chain Helm",
+          "url": "https://foreverchanges.pro/item/250529",
+          "skill_threshold": 95
+        },
+        {
+          "name": "Crusader's Silvered Chain Helm",
+          "url": "https://foreverchanges.pro/item/250532",
+          "skill_threshold": 95
+        },
+        {
+          "name": "Acolyte's Silvered Chain Helm",
+          "url": "https://foreverchanges.pro/item/250531",
+          "skill_threshold": 95
+        }
+      ]
+    },
+    {
+      "tier": "60 Merchant's Favor (skill 175 to 210)",
+      "items": [
+        {
+          "name": "Justicar's Gauntlet",
+          "url": "https://foreverchanges.pro/item/250570",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Officer's Gauntlet",
+          "url": "https://foreverchanges.pro/item/250566",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Prefect's Gauntlet",
+          "url": "https://foreverchanges.pro/item/250569",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Sentinel's Gauntlet",
+          "url": "https://foreverchanges.pro/item/250567",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Warder's Gauntlet",
+          "url": "https://foreverchanges.pro/item/250568",
+          "skill_threshold": 175
+        },
+        {
+          "name": "Justicar's Pauldrons",
+          "url": "https://foreverchanges.pro/item/250580",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Officer's Pauldrons",
+          "url": "https://foreverchanges.pro/item/250576",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Prefect's Pauldrons",
+          "url": "https://foreverchanges.pro/item/250579",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Sentinel's Pauldrons",
+          "url": "https://foreverchanges.pro/item/250577",
+          "skill_threshold": 210
+        },
+        {
+          "name": "Warder's Pauldrons",
+          "url": "https://foreverchanges.pro/item/250578",
+          "skill_threshold": 210
+        }
+      ]
+    },
+    {
+      "tier": "90 Merchant's Favor (skill 225 to 250)",
+      "items": [
+        {
+          "name": "Justicar's Wristguards",
+          "url": "https://foreverchanges.pro/item/250585",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Prefect's Wristguards",
+          "url": "https://foreverchanges.pro/item/250584",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Warder's Wristguards",
+          "url": "https://foreverchanges.pro/item/250583",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Sentinel's Wristguards",
+          "url": "https://foreverchanges.pro/item/250582",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Officer's Wristguards",
+          "url": "https://foreverchanges.pro/item/250581",
+          "skill_threshold": 225
+        },
+        {
+          "name": "Warder's Waistguard",
+          "url": "https://foreverchanges.pro/item/250573",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Justicar's Sabatons",
+          "url": "https://foreverchanges.pro/item/250565",
+          "skill_threshold": 240
+        },
+        {
+          "name": "Officer's Sabatons",
+          "url": "https://foreverchanges.pro/item/250561",
+          "skill_threshold": 240
+        },
+        {
+          "name": "Prefect's Sabatons",
+          "url": "https://foreverchanges.pro/item/250564",
+          "skill_threshold": 240
+        },
+        {
+          "name": "Sentinel's Sabatons",
+          "url": "https://foreverchanges.pro/item/250562",
+          "skill_threshold": 240
+        },
+        {
+          "name": "Warder's Sabatons",
+          "url": "https://foreverchanges.pro/item/250563",
+          "skill_threshold": 240
+        },
+        {
+          "name": "Justicar's Waistguard",
+          "url": "https://foreverchanges.pro/item/250575",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Officer's Waistguard",
+          "url": "https://foreverchanges.pro/item/250571",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Blacksmithing Certification",
+          "url": "https://foreverchanges.pro/item/251426",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Sentinel's Waistguard",
+          "url": "https://foreverchanges.pro/item/250572",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Thorium Cestus",
+          "url": "https://foreverchanges.pro/item/250614",
+          "skill_threshold": 250
+        },
+        {
+          "name": "Thorium Greatmace",
+          "url": "https://foreverchanges.pro/item/250613",
+          "skill_threshold": 250
+        }
+      ]
+    },
+    {
+      "tier": "120 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Enriched Thorium Breastplate",
+          "url": "https://foreverchanges.pro/item/250595",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Enriched Thorium Helm",
+          "url": "https://foreverchanges.pro/item/250597",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Enriched Thorium Leggings",
+          "url": "https://foreverchanges.pro/item/250596",
+          "skill_threshold": 300
+        },
+        {
+          "name": "Legionite Glaive",
+          "url": "https://foreverchanges.pro/item/250619",
+          "skill_threshold": 300
+        }
+      ]
+    },
+    {
+      "tier": "1,000 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Blacksmithing Certification",
+          "url": "https://foreverchanges.pro/item/271622",
+          "skill_threshold": 300
         }
       ]
     }

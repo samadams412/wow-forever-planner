@@ -109,6 +109,11 @@ export type ProfessionCatalog = {
   recipes: Recipe[];
   leveling: LevelingRank[] | null;
   favor: FavorTier[] | null;
+  // false only for First Aid, confirmed to have no Merchant's Favor
+  // vendor at all on foreverchanges.pro -- distinct from favor === null
+  // elsewhere, which means "not yet scraped" and should still show a
+  // coming-soon tab rather than hide it.
+  favorSupported: boolean;
   camp: CampSection | null;
 };
 

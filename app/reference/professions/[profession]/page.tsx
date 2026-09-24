@@ -96,7 +96,8 @@ export default async function ProfessionPage({
   if (!catalog) notFound();
 
   const { category, view, page: pageParam } = await searchParams;
-  const activeView = view === "leveling" || view === "favor" || view === "camp" ? view : "recipes";
+  const requestedView = view === "leveling" || view === "favor" || view === "camp" ? view : "recipes";
+  const activeView = requestedView === "favor" && !catalog.favorSupported ? "recipes" : requestedView;
   const activeCategory = category && catalog.categories.includes(category) ? category : "All";
 
   const counts: Record<string, number> = {};
@@ -142,9 +143,11 @@ export default async function ProfessionPage({
         <Link href={`/reference/professions/${catalog.id}?view=leveling`} className={viewLinkClass("leveling")}>
           Leveling 1 to 300
         </Link>
-        <Link href={`/reference/professions/${catalog.id}?view=favor`} className={viewLinkClass("favor")}>
-          Merchant&apos;s Favor
-        </Link>
+        {catalog.favorSupported && (
+          <Link href={`/reference/professions/${catalog.id}?view=favor`} className={viewLinkClass("favor")}>
+            Merchant&apos;s Favor
+          </Link>
+        )}
         <Link href={`/reference/professions/${catalog.id}?view=camp`} className={viewLinkClass("camp")}>
           Camp, Skill Rewards and Perks
         </Link>

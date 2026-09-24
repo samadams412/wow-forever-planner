@@ -487,7 +487,29 @@
       ]
     },
     {
-      "tier": "240 Merchant's Favor (skill 290 to 300)"
+      "tier": "240 Merchant's Favor (skill 290 to 300)",
+      "items": [
+        {
+          "name": "Major Frenzy Potion",
+          "url": "https://foreverchanges.pro/item/250943",
+          "skill_threshold": 290
+        },
+        {
+          "name": "Elixir of the Grizzly",
+          "url": "https://foreverchanges.pro/item/250351",
+          "skill_threshold": 300
+        }
+      ]
+    },
+    {
+      "tier": "1,000 Merchant's Favor (skill 300)",
+      "items": [
+        {
+          "name": "Alchemy Certification",
+          "url": "https://foreverchanges.pro/item/271621",
+          "skill_threshold": 300
+        }
+      ]
     }
   ],
   "camp_section": {
