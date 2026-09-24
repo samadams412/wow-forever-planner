@@ -16,6 +16,7 @@ export default function LootItemPill({
   tooltipId,
   context = "loot",
   qty,
+  iconOnly,
 }: {
   item: LootItem;
   tooltipId: string;
@@ -30,6 +31,14 @@ export default function LootItemPill({
   // to the output icon too as of 2026-09-24, replacing that separate "×N"
   // text line, which looked poor and is exactly the same "count" concept.
   qty?: number;
+  // Icon + qty badge only, no visible name/status text -- used by the
+  // Leveling 1-300 view's reagent list specifically (ProfessionLevelingGuide),
+  // where icon+name for every reagent was wide enough to push a step off a
+  // single row. Hover/focus tooltip behavior (full name, tooltip text,
+  // Classic diff) and the item-page link are unchanged -- only the visible
+  // label disappears, same as every other icon-only item elsewhere on the
+  // site that relies on hover for its name.
+  iconOnly?: boolean;
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
   const isClaimed = useIsActiveTooltip(tooltipId);
@@ -59,7 +68,9 @@ export default function LootItemPill({
       onMouseLeave={handleHide}
       onFocus={handleShow}
       onBlur={handleHide}
-      className={`inline-flex cursor-default items-center gap-1.5 rounded border px-1.5 py-1 text-xs transition-colors ${
+      className={`inline-flex cursor-default items-center gap-1.5 rounded border transition-colors ${
+        iconOnly ? "p-0.5" : "px-1.5 py-1 text-xs"
+      } ${
         item.unknown
           ? "border-border/60 bg-surface/40 italic text-foreground-muted/70"
           : missing
@@ -67,34 +78,46 @@ export default function LootItemPill({
             : "border-border bg-surface/60 text-foreground hover:border-accent"
       }`}
     >
-      {item.icon && (
-        <span className="relative inline-block h-5 w-5 shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={mediumIconUrl(item.icon)}
-            alt=""
-            className={`h-5 w-5 rounded-sm ${missing ? "grayscale" : ""}`}
-          />
-          {qty !== undefined && qty > 1 && (
-            <span className="absolute -bottom-1.5 -right-1.5 rounded-sm bg-black/80 px-1 text-[11px] font-bold leading-tight text-white">
-              {qty}
+      {item.icon &&
+        (() => {
+          const iconEl = (
+            <span className="relative inline-block h-5 w-5 shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={mediumIconUrl(item.icon)}
+                alt=""
+                className={`h-5 w-5 rounded-sm ${missing ? "grayscale" : ""}`}
+              />
+              {qty !== undefined && qty > 1 && (
+                <span className="absolute -bottom-1.5 -right-1.5 rounded-sm bg-black/80 px-1 text-[11px] font-bold leading-tight text-white">
+                  {qty}
+                </span>
+              )}
             </span>
-          )}
-        </span>
-      )}
-      {item.itemId !== null ? (
-        <Link href={`/items/${item.itemId}`} className="hover:underline">
-          {nameEl}
-        </Link>
-      ) : (
-        nameEl
-      )}
-      {item.status === "new" && (
+          );
+          // iconOnly drops the visible name (and with it, the name's own
+          // Link) -- put the link on the icon itself instead so the item
+          // is still reachable by click, not just by hover.
+          return iconOnly && item.itemId !== null ? (
+            <Link href={`/items/${item.itemId}`}>{iconEl}</Link>
+          ) : (
+            iconEl
+          );
+        })()}
+      {!iconOnly &&
+        (item.itemId !== null ? (
+          <Link href={`/items/${item.itemId}`} className="hover:underline">
+            {nameEl}
+          </Link>
+        ) : (
+          nameEl
+        ))}
+      {!iconOnly && item.status === "new" && (
         <span className="rounded-sm border border-green-300/70 bg-green-600 px-1 text-[9px] font-semibold uppercase tracking-wide text-white">
           New
         </span>
       )}
-      {missing && (
+      {!iconOnly && missing && (
         <span className="rounded-sm bg-foreground-muted/20 px-1 text-[9px] font-semibold uppercase tracking-wide text-foreground-muted">
           Gone
         </span>

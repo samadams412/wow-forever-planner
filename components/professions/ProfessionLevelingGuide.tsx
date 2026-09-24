@@ -59,6 +59,11 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
                   <span className="text-xs font-medium text-accent">
                     {step.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
                   </span>
+                  {/* iconOnly: icon+name for 3-4 reagents was wide enough
+                      to push a step onto a second row on this page
+                      specifically -- the Recipes tab's reagent list is
+                      untouched and still shows the name. Hover/focus still
+                      gets the full tooltip, same as everywhere else. */}
                   <div className="flex flex-wrap gap-1">
                     {step.mats.map((mat, mi) => (
                       <LootItemPill
@@ -67,6 +72,7 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
                         tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`}
                         context="catalog"
                         qty={mat.qty}
+                        iconOnly
                       />
                     ))}
                   </div>
