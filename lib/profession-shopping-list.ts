@@ -35,15 +35,21 @@ export function buildCraftableRanks(recipes: Recipe[]): Map<number, number | nul
   return map;
 }
 
-// Sums each reagent's per-step qty (lib/profession-recipes.ts's
-// LevelingStep.mats[].qty, the same number already rendered next to that
-// reagent's icon on the Leveling 1-300 tab) across every step in the given
-// ranks -- deliberately a plain sum of the visible per-step counts, not
-// multiplied by the step's own "~N crafts" estimate. Cross-checked against
-// foreverchanges.pro's own shopping list feature, whose larger totals do
-// apply that multiplier -- not replicated here since this list's totals
-// need to stay directly traceable back to the numbers already shown above
-// it on this same tab.
+// LevelingStep.count is always "~Ncrafts"/"~Ncraft" (verified across all 8
+// professions' leveling data -- no other shape exists), the same estimate
+// rendered as "~N crafts" next to the step's row above this section. Total
+// materials needed for a step is its own reagent qty times this estimate,
+// not the bare per-craft qty -- a step needing 1 Peacebloom per craft over
+// ~15 crafts really does need ~15 Peacebloom, not 1.
+function parseCraftCount(count: string): number {
+  const match = /(\d+)/.exec(count);
+  return match ? Number(match[1]) : 1;
+}
+
+// Sums each reagent's total qty (its per-craft LevelingStep.mats[].qty
+// times that step's own "~N crafts" estimate) across every step in the
+// given ranks -- the real quantity needed to walk this range, not just the
+// bare per-craft numbers shown next to each reagent icon above.
 export function aggregateShoppingList(
   ranks: LevelingRank[],
   craftableRanks: Map<number, number | null>
@@ -61,15 +67,17 @@ export function aggregateShoppingList(
   const byKey = new Map<string, ShoppingListItem>();
   for (const rank of ranks) {
     for (const step of rank.steps) {
+      const crafts = parseCraftCount(step.count);
       for (const mat of step.mats) {
         const key = mat.item.itemId !== null ? `id:${mat.item.itemId}` : `name:${mat.item.name}`;
+        const totalQty = mat.qty * crafts;
         const existing = byKey.get(key);
         if (existing) {
-          existing.qty += mat.qty;
+          existing.qty += totalQty;
         } else {
           const craftRank = mat.item.itemId !== null ? craftableRanks.get(mat.item.itemId) : undefined;
           const madeAlongTheWay = craftRank !== undefined && (craftRank === null || craftRank <= maxSkill);
-          byKey.set(key, { item: mat.item, qty: mat.qty, madeAlongTheWay });
+          byKey.set(key, { item: mat.item, qty: totalQty, madeAlongTheWay });
           order.push(key);
         }
       }
