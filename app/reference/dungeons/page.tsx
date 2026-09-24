@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DungeonsTimeline from "@/components/reference/DungeonsTimeline";
+import DungeonLevelRangesMobile from "@/components/reference/DungeonLevelRangesMobile";
 import { dungeons } from "@/lib/dungeons";
 import { getDungeonData, type DungeonData } from "@/lib/dungeon-loot";
 
@@ -36,8 +37,16 @@ export default function DungeonsPage() {
         loot and quests right here; hover any dungeon for its full name and level range.
       </p>
 
-      <div className="mt-6">
+      {/* Desktop: the horizontal level-range timeline, unchanged. Mobile:
+          a genuinely different component (a plain vertical list), not a
+          CSS reflow of the timeline -- see DungeonLevelRangesMobile's own
+          header comment. Switches at `sm`, the same breakpoint every other
+          table-to-card mobile split on this site already uses. */}
+      <div className="mt-6 hidden sm:block">
         <DungeonsTimeline dungeonData={dungeonData} />
+      </div>
+      <div className="mt-6 sm:hidden">
+        <DungeonLevelRangesMobile dungeons={dungeons} dungeonData={dungeonData} />
       </div>
 
       <p className="mt-4 text-[11px] text-foreground-muted/70">
