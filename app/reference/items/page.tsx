@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   title: "Items",
   description:
     "Every item in the World of Warcraft: Forever beta client, filterable by new/changed/unchanged-since-Classic, sourced from foreverchanges.pro.",
+  // Every filter/status/page combination renders through this one route with
+  // the same title/description -- canonicalize to the bare URL so Google
+  // consolidates ranking signal here instead of splitting it across dozens
+  // of ?status=&rarity=&page= permutations (same reasoning as the planner's
+  // own canonical for its build-code URLs).
+  alternates: { canonical: "/reference/items" },
 };
 
 type FilterParams = {

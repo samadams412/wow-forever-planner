@@ -51,6 +51,24 @@ export function getItemStatusCounts(): Record<ItemStatus | "all", number> {
   return counts;
 }
 
+// "new" and "changed" items are the ones with genuinely distinct content
+// from Classic (real informational value -- what a visitor would actually
+// search for); "same" and "missing" are thin/duplicate-ish pages (a "same
+// as Classic" synthesized tooltip, or a Classic item the beta hasn't
+// touched at all) that exist for completeness but aren't worth indexing at
+// 20k+ pages. Used by both app/sitemap.ts (which of the 21,458 /items/<id>
+// pages to list) and the item page's own generateMetadata (robots.index) --
+// kept as one shared predicate so the two never drift apart.
+export function isIndexableItemStatus(status: ItemStatus | null): boolean {
+  return status === "new" || status === "changed";
+}
+
+export function getIndexableItemIds(): number[] {
+  return loadAll()
+    .filter((item) => item.itemId !== null && isIndexableItemStatus(item.status))
+    .map((item) => item.itemId as number);
+}
+
 // Ordered to match foreverchanges.pro/items' own category sidebar (largest
 // buckets first isn't the point -- matching a familiar reading order is).
 // Every value here is a real Blizzard item-class id present in this

@@ -57,12 +57,18 @@ export async function generateMetadata({
   params: Promise<{ profession: string }>;
 }): Promise<Metadata> {
   const { profession } = await params;
+  // Every ?view=/?category=/?page= combination on this route shares the
+  // same title/description below -- canonicalize to the bare profession URL
+  // so those don't split ranking signal across near-duplicate permutations
+  // (same reasoning as /reference/items' own canonical).
+  const canonical = `/reference/professions/${profession}`;
   if (isGatheringProfessionId(profession)) {
     const catalog = getGatheringCatalog(profession);
     if (!catalog) return {};
     return {
       title: catalog.name,
       description: `Every ${catalog.name} node in World of Warcraft: Forever -- the skill it asks, what it yields, and which to work from 1 to 300, sourced from the WoW Forever beta client.`,
+      alternates: { canonical },
     };
   }
   const catalog = getProfessionCatalog(profession);
@@ -70,6 +76,7 @@ export async function generateMetadata({
   return {
     title: catalog.name,
     description: `Every ${catalog.name} recipe in World of Warcraft: Forever -- reagents, trainer or recipe source, and skill-up thresholds, sourced from the WoW Forever beta client.`,
+    alternates: { canonical },
   };
 }
 

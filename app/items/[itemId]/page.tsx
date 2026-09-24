@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemTooltipBody from "@/components/reference/ItemTooltipBody";
-import { getItemById } from "@/lib/items";
+import { getItemById, isIndexableItemStatus } from "@/lib/items";
 import { mediumIconUrl, itemQualityColor, itemQualityName } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 
@@ -56,6 +56,13 @@ export async function generateMetadata({
   return {
     title: item.name,
     description: `${item.name} -- ${itemQualityName(item.quality)}${item.slot ? `, ${item.slot}` : ""} item data for World of Warcraft: Forever, sourced from foreverchanges.pro.`,
+    // Only "new"/"changed" items (genuinely distinct from Classic) are worth
+    // indexing at 21,458 pages -- "same"/"missing" items are thin/duplicate-
+    // ish content that stays crawlable (follow: true, so link equity from
+    // dungeon loot/profession reagent links still flows through) but out of
+    // the index. See lib/items.ts's isIndexableItemStatus for the shared
+    // rule the sitemap also uses.
+    robots: { index: isIndexableItemStatus(item.status), follow: true },
   };
 }
 

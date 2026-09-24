@@ -4,6 +4,8 @@ import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
 import { PROFESSION_IDS } from "@/lib/profession-recipes";
 import { GATHERING_PROFESSION_IDS } from "@/lib/gathering-professions";
+import { getDungeonLootIndex } from "@/lib/dungeon-loot";
+import { getIndexableItemIds } from "@/lib/items";
 
 const STATIC_ROUTES = [
   "",
@@ -13,7 +15,9 @@ const STATIC_ROUTES = [
   "/reference/legacy-perks",
   "/reference/class-spellbooks",
   "/reference/dungeons",
+  "/reference/dungeons/loot",
   "/reference/professions",
+  "/reference/items",
   "/guides",
   "/blog",
 ];
@@ -56,10 +60,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // 5. Dungeon loot detail pages -- one per dungeon, same 35 ids
+  // generateStaticParams on app/reference/dungeons/loot/[slug]/page.tsx
+  // builds from.
+  const dungeonLootEntries = getDungeonLootIndex().map((d) => ({
+    url: `${SITE_URL}/reference/dungeons/loot/${d.id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  // 6. Individual item pages -- only "new"/"changed" items (9,606 of
+  // 21,458), matching the item page's own robots.index rule
+  // (isIndexableItemStatus). The other ~11,850 "same"/"missing" items are
+  // thin/duplicate-ish content vs. Classic and are noindexed rather than
+  // sitemap-listed -- deliberate exclusion, not an oversight (see
+  // lib/items.ts's isIndexableItemStatus for the shared reasoning).
+  const itemEntries = getIndexableItemIds().map((id) => ({
+    url: `${SITE_URL}/items/${id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.4,
+  }));
+
   return [
     ...staticEntries,
     ...guideEntries,
     ...blogEntries,
     ...professionEntries,
+    ...dungeonLootEntries,
+    ...itemEntries,
   ];
 }
