@@ -24,8 +24,12 @@ export default function ProfessionSmeltingTable({ recipes, professionId }: { rec
           {recipes.map((recipe, i) => (
             <tr key={i} className="border-b border-border/60 last:border-b-0 even:bg-surface/40">
               <td className="px-3 py-1.5">
-                <LootItemPill item={recipe.item} tooltipId={`prof:${professionId}:smelt:${i}:item`} context="catalog" />
-                {recipe.makesQty && <span className="ml-1.5 text-xs text-foreground-muted">&times;{recipe.makesQty}</span>}
+                <LootItemPill
+                  item={recipe.item}
+                  tooltipId={`prof:${professionId}:smelt:${i}:item`}
+                  context="catalog"
+                  qty={recipe.makesQty ?? undefined}
+                />
               </td>
               <td className="px-3 py-1.5">
                 <div className="flex flex-wrap gap-1">

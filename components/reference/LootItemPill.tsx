@@ -20,17 +20,15 @@ export default function LootItemPill({
   item: LootItem;
   tooltipId: string;
   context?: "loot" | "catalog";
-  // A reagent's consumption count (profession recipes/leveling-guide mats
-  // only -- boss loot, quest rewards, and the items catalog never pass
-  // this). Rendered as a small badge overlaid on the icon's corner, not a
-  // separate "xN" text label -- matches foreverchanges.pro's own real
+  // A reagent's consumption count, or a recipe's crafted-output count
+  // (ProfessionRecipeTable/ProfessionSmeltingTable's `makesQty`) -- either
+  // way, rendered as a small badge overlaid on the icon's corner, not a
+  // separate "xN" text label. Matches foreverchanges.pro's own real
   // in-game-tooltip-style convention for a reagent (studied live:
   // <a class="cr-mat"><img/><b>5</b></a>, with NO <b> at all for qty 1,
-  // same as WoW's own UI never badging a single-count reagent). This is
-  // deliberately a different convention from a recipe's own crafted-output
-  // count ("Roasted Kodo Meat ×2"), which foreverchanges renders as plain
-  // text next to the name, not an icon badge -- that one stays a text
-  // label (ProfessionRecipeTable's makesQty), not migrated here.
+  // same as WoW's own UI never badging a single-count reagent) -- extended
+  // to the output icon too as of 2026-09-24, replacing that separate "×N"
+  // text line, which looked poor and is exactly the same "count" concept.
   qty?: number;
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
