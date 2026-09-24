@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllGuides } from "@/lib/guides";
+import Card from "@/components/site/Card";
+import { mediumIconUrl } from "@/lib/wow-data";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -59,6 +61,28 @@ export default function GuidesPage() {
       </div>
 
       <div className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
+        {/* Not a guide post itself -- a permanent pointer to the step-by-
+            step 1-300 leveling paths already living under Reference
+            (/reference/professions/<id>?view=leveling), since those are
+            exactly the kind of practical, actionable content someone
+            landing on Guides is looking for. One card linking to the
+            Professions index rather than 8+ separate cards (one per
+            profession, gathering ones included) -- keeps this page from
+            being dominated by profession links before any real guide
+            posts exist, and the Professions index itself already lists
+            every profession one click away. */}
+        <div className="mb-6 grid gap-3 sm:grid-cols-2">
+          <Card
+            href="/reference/professions"
+            title="Profession Leveling Guides"
+            description="Step-by-step 1-300 leveling paths for every profession -- what to craft, where to buy the recipe, and what it takes, all in one tab per profession."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("inv_scroll_03")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
+        </div>
+
         <div className="space-y-3">
           {/* Guides List */}
           {guides.length === 0 ? (
