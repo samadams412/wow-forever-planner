@@ -3,7 +3,15 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemsTable from "@/components/reference/ItemsTable";
 import ItemsSearchInput from "@/components/reference/ItemsSearchInput";
-import { CATEGORY_VALUES, getItemCategoryCounts, getItemStatusCounts, queryItems, STATUS_TABS, type ItemStatus } from "@/lib/items";
+import {
+  CATEGORY_VALUES,
+  getDungeonFilterOptions,
+  getItemCategoryCounts,
+  getItemStatusCounts,
+  queryItems,
+  STATUS_TABS,
+  type ItemStatus,
+} from "@/lib/items";
 import { ITEM_CLASS_NAME, ITEM_QUALITY_NAME, itemQualityColor } from "@/lib/wow-data";
 
 // 0-6, matching this catalog's own real quality values (checked via
@@ -22,6 +30,7 @@ type FilterParams = {
   q: string;
   rarity?: number;
   category?: number;
+  dungeon?: string;
   itemLevelMin?: number;
   itemLevelMax?: number;
   requiredLevelMin?: number;
@@ -35,6 +44,7 @@ function buildHref(params: FilterParams): string {
   if (params.q) usp.set("q", params.q);
   if (params.rarity !== undefined) usp.set("rarity", String(params.rarity));
   if (params.category !== undefined) usp.set("category", String(params.category));
+  if (params.dungeon !== undefined) usp.set("dungeon", params.dungeon);
   if (params.itemLevelMin !== undefined) usp.set("ilvlMin", String(params.itemLevelMin));
   if (params.itemLevelMax !== undefined) usp.set("ilvlMax", String(params.itemLevelMax));
   if (params.requiredLevelMin !== undefined) usp.set("reqMin", String(params.requiredLevelMin));
@@ -58,6 +68,7 @@ export default async function ItemsPage({
     q?: string;
     rarity?: string;
     category?: string;
+    dungeon?: string;
     ilvlMin?: string;
     ilvlMax?: string;
     reqMin?: string;
@@ -72,6 +83,8 @@ export default async function ItemsPage({
   const q = resolved.q ?? "";
   const rarity = RARITY_VALUES.includes(Number(resolved.rarity)) ? Number(resolved.rarity) : undefined;
   const category = CATEGORY_VALUES.includes(Number(resolved.category)) ? Number(resolved.category) : undefined;
+  const dungeonOptions = getDungeonFilterOptions();
+  const dungeon = dungeonOptions.some((d) => d.id === resolved.dungeon) ? resolved.dungeon : undefined;
   const itemLevelMin = parseIntParam(resolved.ilvlMin);
   const itemLevelMax = parseIntParam(resolved.ilvlMax);
   const requiredLevelMin = parseIntParam(resolved.reqMin);
@@ -85,6 +98,7 @@ export default async function ItemsPage({
     q,
     rarity,
     category,
+    dungeon,
     itemLevelMin,
     itemLevelMax,
     requiredLevelMin,
@@ -95,6 +109,7 @@ export default async function ItemsPage({
     status,
     q,
     rarity,
+    dungeon,
     category,
     itemLevelMin,
     itemLevelMax,
@@ -102,7 +117,11 @@ export default async function ItemsPage({
     requiredLevelMax,
   };
   const hasRangeFilter =
-    itemLevelMin !== undefined || itemLevelMax !== undefined || requiredLevelMin !== undefined || requiredLevelMax !== undefined;
+    dungeon !== undefined ||
+    itemLevelMin !== undefined ||
+    itemLevelMax !== undefined ||
+    requiredLevelMin !== undefined ||
+    requiredLevelMax !== undefined;
 
   return (
     <main className="mx-auto w-full max-w-4xl px-3 py-8 sm:px-4">
@@ -188,6 +207,21 @@ export default async function ItemsPage({
         {rarity !== undefined && <input type="hidden" name="rarity" value={rarity} />}
         {category !== undefined && <input type="hidden" name="category" value={category} />}
         <label className="flex flex-col gap-1 text-foreground-muted">
+          Drops in
+          <select
+            name="dungeon"
+            defaultValue={dungeon ?? ""}
+            className="w-40 rounded border border-border bg-surface px-2 py-1 text-foreground"
+          >
+            <option value="">Any dungeon</option>
+            {dungeonOptions.map((d) => (
+              <option key={d.id} value={d.id}>
+                {d.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="flex flex-col gap-1 text-foreground-muted">
           Required level
           <span className="flex items-center gap-1">
             <input
@@ -241,10 +275,17 @@ export default async function ItemsPage({
         </button>
         {hasRangeFilter && (
           <Link
-            href={buildHref({ ...baseFilters, itemLevelMin: undefined, itemLevelMax: undefined, requiredLevelMin: undefined, requiredLevelMax: undefined })}
+            href={buildHref({
+              ...baseFilters,
+              dungeon: undefined,
+              itemLevelMin: undefined,
+              itemLevelMax: undefined,
+              requiredLevelMin: undefined,
+              requiredLevelMax: undefined,
+            })}
             className="text-foreground-muted underline hover:text-foreground"
           >
-            Clear range filters
+            Clear advanced filters
           </Link>
         )}
       </form>

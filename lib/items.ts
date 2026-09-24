@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { LootItem } from "@/lib/dungeon-loot";
+import { getAllDungeonData, getDungeonLootIndex } from "@/lib/dungeon-loot";
 
 // The full item catalog (data/items.json, built by scripts/build-items.js
 // from data/sources/foreverchanges/items/*.json) -- every item in the
@@ -66,11 +67,41 @@ export function getItemCategoryCounts(): Record<number, number> {
   return counts;
 }
 
+// Every dungeon that has loot data, for the dungeon-drop filter dropdown --
+// same list/order the Dungeon Loot index page already uses.
+export function getDungeonFilterOptions(): { id: string; name: string }[] {
+  return getDungeonLootIndex().map((d) => ({ id: d.id, name: d.name }));
+}
+
+// itemId -> every dungeon id that drops it, built once from the already-
+// normalized per-dungeon data (boss/trash/rare loot and quest rewards --
+// the exact same two drop sources the per-dungeon loot page itself shows).
+// Not every drop has a real itemId (wowtbc-sourced or unresolved items are
+// null) -- those simply can't participate in this filter, same as they
+// already can't link to /items/[itemId] anywhere else on the site.
+let dungeonsByItemId: Map<number, Set<string>> | null = null;
+function loadDungeonsByItemId(): Map<number, Set<string>> {
+  if (dungeonsByItemId) return dungeonsByItemId;
+  const index = new Map<number, Set<string>>();
+  const add = (itemId: number | null, dungeonId: string) => {
+    if (itemId === null) return;
+    if (!index.has(itemId)) index.set(itemId, new Set());
+    index.get(itemId)!.add(dungeonId);
+  };
+  for (const dungeon of getAllDungeonData()) {
+    for (const boss of dungeon.bosses) for (const item of boss.items) add(item.itemId, dungeon.id);
+    for (const quest of dungeon.quests) for (const item of quest.rewards) add(item.itemId, dungeon.id);
+  }
+  dungeonsByItemId = index;
+  return index;
+}
+
 export type ItemQuery = {
   status?: ItemStatus | "all";
   q?: string;
   rarity?: number;
   category?: number;
+  dungeon?: string;
   itemLevelMin?: number;
   itemLevelMax?: number;
   requiredLevelMin?: number;
@@ -92,6 +123,7 @@ export function queryItems({
   q = "",
   rarity,
   category,
+  dungeon,
   itemLevelMin,
   itemLevelMax,
   requiredLevelMin,
@@ -103,6 +135,10 @@ export function queryItems({
   if (status !== "all") items = items.filter((item) => item.status === status);
   if (rarity !== undefined) items = items.filter((item) => item.quality === rarity);
   if (category !== undefined) items = items.filter((item) => item.itemClass === category);
+  if (dungeon !== undefined) {
+    const byItemId = loadDungeonsByItemId();
+    items = items.filter((item) => item.itemId !== null && byItemId.get(item.itemId)?.has(dungeon));
+  }
   // A range bound excludes an item with a null level rather than treating
   // null as 0 or "no opinion" -- foreverchanges' own item level column
   // shows "--" for these (mostly quest/consumable/misc items with no real

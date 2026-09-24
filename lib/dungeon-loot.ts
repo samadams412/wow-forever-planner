@@ -117,6 +117,13 @@ export function getDungeonData(dungeonId: string): DungeonData | undefined {
   return loadAll().get(dungeonId);
 }
 
+// Every dungeon's full boss/quest data at once -- for building a reverse
+// item -> dungeon index (lib/items.ts's dungeon-drop filter) without
+// exposing the module-private loadAll()/cache directly.
+export function getAllDungeonData(): DungeonData[] {
+  return [...loadAll().values()];
+}
+
 export function hasDungeonLoot(dungeonId: string): boolean {
   const d = getDungeonData(dungeonId);
   return !!d && (d.bosses.length > 0 || d.quests.length > 0);
