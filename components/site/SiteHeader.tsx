@@ -40,6 +40,13 @@ const NAV_LINKS: NavLink[] = [
 export default function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  // Desktop dropdown open state. Previously pure CSS (group-hover/
+  // group-focus-within, no JS at all) -- but a click on a dropdown link
+  // navigates without the mouse ever leaving the trigger, so :hover stays
+  // true and the panel was left open, floating over the new page, until
+  // the mouse actually moved away. Tracked explicitly so a link click can
+  // close it outright instead of only ever relying on hover-out.
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="relative border-b border-border bg-surface">
@@ -68,12 +75,30 @@ export default function SiteHeader() {
               );
             }
 
+            const isOpen = openDropdown === link.href;
             return (
-              <div key={link.href} className="group relative">
-                <Link href={link.href} className={linkClass}>
+              <div
+                key={link.href}
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(link.href)}
+                onMouseLeave={() => setOpenDropdown((cur) => (cur === link.href ? null : cur))}
+                onFocus={() => setOpenDropdown(link.href)}
+                onBlur={(e) => {
+                  // Only close if focus actually left this group (not just
+                  // moved from one child link to another inside it).
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+                    setOpenDropdown((cur) => (cur === link.href ? null : cur));
+                  }
+                }}
+              >
+                <Link href={link.href} className={linkClass} onClick={() => setOpenDropdown(null)}>
                   {link.label}
                 </Link>
-                <div className="invisible absolute left-0 top-full z-20 w-56 pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div
+                  className={`absolute left-0 top-full z-20 w-56 pt-2 transition-opacity ${
+                    isOpen ? "visible opacity-100" : "invisible opacity-0"
+                  }`}
+                >
                   <div className="overflow-hidden rounded-lg border border-border bg-surface py-1 shadow-lg shadow-black/40">
                     {link.children.map((child) => {
                       const childActive = pathname === child.href;
@@ -81,6 +106,7 @@ export default function SiteHeader() {
                         <Link
                           key={child.href}
                           href={child.href}
+                          onClick={() => setOpenDropdown(null)}
                           className={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors hover:bg-surface-hover hover:text-foreground ${
                             childActive ? "font-medium text-accent" : "text-foreground-muted"
                           }`}
