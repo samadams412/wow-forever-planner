@@ -41,16 +41,7 @@ export default async function ItemsPage({
 
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Items</h1>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-        Every item in the WoW Forever beta client -- {counts.all.toLocaleString()} total -- sourced from{" "}
-        <a
-          href="https://foreverchanges.pro/items"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline hover:text-accent-hover"
-        >
-          foreverchanges.pro
-        </a>
-        , which reads the beta client directly. &quot;No Forever Data&quot; means the beta client hasn&apos;t
+        Every item in the WoW Forever beta client -- {counts.all.toLocaleString()} total --  &quot;No Forever Data&quot; means the beta client hasn&apos;t
         touched that Classic item yet -- not that it&apos;s been removed.
       </p>
 
@@ -105,6 +96,19 @@ export default async function ItemsPage({
           )}
         </nav>
       )}
+      <div className="mt-6 text-xs text-foreground-muted">
+        Sourced from{" "}
+        <a
+          href="https://foreverchanges.pro/items"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline hover:text-accent-hover"
+        >
+          foreverchanges.pro
+        </a>
+        , which reads the beta client directly.
+      </div>
+     
     </main>
   );
 }
