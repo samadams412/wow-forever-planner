@@ -21,9 +21,19 @@ const FALLBACK_BACKGROUND = "/images/hero/homepage-hero.webp";
 
 // Fonts don't depend on request data, so read them once at module scope
 // (see https://nextjs.org/docs/app/getting-started/caching#predictable-values).
-const [cinzelBold, ebGaramondItalic] = await Promise.all([
+// The subtitle used to render in EBGaramond-Italic -- legible in a browser
+// at body-text sizes, but a thin italic serif at 30px on a photo background
+// read poorly once actually rendered as a flat OG-card image (checked live:
+// /reference/dungeons's "Every dungeon, one level-range timeline." was
+// noticeably harder to read than the bold Cinzel title above it). Switched
+// to the upright EBGaramond-Regular -- already pulled into assets/fonts/
+// for exactly this future use, per its own header comment -- since upright
+// glyphs have more vertical stroke weight than an italic cut of the same
+// face and read faster at a glance; the title's Cinzel Bold treatment is
+// untouched.
+const [cinzelBold, ebGaramondRegular] = await Promise.all([
   fs.readFile(path.join(process.cwd(), "assets/fonts/Cinzel-Bold.ttf")),
-  fs.readFile(path.join(process.cwd(), "assets/fonts/EBGaramond-Italic.ttf")),
+  fs.readFile(path.join(process.cwd(), "assets/fonts/EBGaramond-Regular.ttf")),
 ]);
 
 // The gold talent-tree hexagon mark (same artwork as
@@ -166,9 +176,9 @@ export async function renderOgImage({
               style={{
                 display: "flex",
                 fontFamily: "EB Garamond",
-                fontStyle: "italic",
-                fontSize: 30,
-                color: CREAM,
+                fontStyle: "normal",
+                fontSize: 32,
+                color: "#f5efe0",
                 marginTop: 20,
                 maxWidth: 760,
                 lineHeight: 1.4,
@@ -200,7 +210,7 @@ export async function renderOgImage({
       ...OG_SIZE,
       fonts: [
         { name: "Cinzel", data: cinzelBold, weight: 700, style: "normal" },
-        { name: "EB Garamond", data: ebGaramondItalic, weight: 400, style: "italic" },
+        { name: "EB Garamond", data: ebGaramondRegular, weight: 400, style: "normal" },
       ],
     }
   );
