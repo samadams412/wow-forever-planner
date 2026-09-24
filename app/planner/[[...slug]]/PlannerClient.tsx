@@ -285,7 +285,7 @@ export default function PlannerClient({
         <div className="mt-8">
           <Collapsible
             title={`${classLabel(classData.class)} Spellbook`}
-            subtitle={`Demo race: ${spellbooks.classes[classData.class].demoRace}`}
+            // subtitle={`Demo race: ${spellbooks.classes[classData.class].demoRace}`}
             icon={
               // eslint-disable-next-line @next/next/no-img-element
               <img src={mediumIconUrl(CLASS_ICON[classData.class])} alt="" className="h-8 w-8 rounded" />

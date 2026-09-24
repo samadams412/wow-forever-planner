@@ -57,7 +57,7 @@ function ClassSection({ classId, compareMode }: { classId: string; compareMode: 
   return (
     <Collapsible
       title={`${classLabel(classId)} Spellbook`}
-      subtitle={`Demo race: ${book.demoRace}`}
+      // subtitle={`Demo race: ${book.demoRace}`}
       icon={
         // eslint-disable-next-line @next/next/no-img-element
         <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-8 w-8 rounded" />
