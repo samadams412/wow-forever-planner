@@ -14,7 +14,7 @@ export default function GuidesPage() {
 
   return (
     <main className="w-full">
-      <div className="relative flex min-h-64 items-end overflow-hidden px-6 py-10 sm:min-h-80 sm:py-14">
+      <div className="relative flex min-h-48 items-end overflow-hidden px-6 py-8 sm:min-h-64 sm:py-10">
         {/* Official World of Warcraft: Forever zone press still */}
         <Image
           src="/images/guides/hero.webp"
