@@ -1,17 +1,30 @@
 # Forevercraft — Site Overview & Audit
 
-**Last verified:** 2026-09-20, against commit `10845ff` on `main`, by direct
-inspection of the codebase (routes, components, data files, `npm audit`,
-`git log`) — not from memory of past sessions. Where this document's
-findings disagree with `CLAUDE.md`'s own architecture notes or
+**Last full audit:** 2026-09-20, against commit `10845ff` on `main`, by
+direct inspection of the codebase (routes, components, data files,
+`npm audit`, `git log`) — not from memory of past sessions. Where this
+document's findings disagree with `CLAUDE.md`'s own architecture notes or
 `docs/adding-content.md`, that's called out explicitly rather than quietly
 preferring one source.
 
-**Follow-up pass, same day:** several quick-win gaps this audit surfaced
-were fixed immediately after review rather than left to rot as a backlog —
-see §4 for the marked-done list. `docs/adding-content.md` was corrected in
-the same pass. Findings below describe what was found; §4 tracks what was
-actually done about it.
+**Drift-correction pass, 2026-09-24:** everything below was written
+2026-09-20, before nearly all of the professions-recipe-catalog/gathering-
+professions/dungeon-loot/items-catalog buildout `CLAUDE.md`'s own session
+handoffs describe in detail (2026-09-22 through 2026-09-24). This pass
+corrected the sections that had gone factually wrong as a result — the
+`app/` routing table (§1.1), the professions content-type note (§1.3), and
+the SEO section (§3e), which was the most stale (a new sitemap, canonical
+tags, and item-indexability policy all landed since 2026-09-20). **This is
+not a fresh full re-audit at the original's depth** — sections not called
+out as touched (component/lib inventories, the security review, the
+gap-audit content notes) still reflect 2026-09-20's state and may have
+their own undiscovered drift; treat them as dated, not re-verified.
+
+**Follow-up pass, same day (2026-09-20):** several quick-win gaps this
+audit surfaced were fixed immediately after review rather than left to rot
+as a backlog — see §4 for the marked-done list. `docs/adding-content.md`
+was corrected in the same pass. Findings below describe what was found;
+§4 tracks what was actually done about it.
 
 **On scope:** the task that produced this document asked to read
 `CLAUDE.md` and `CLAUDE_CMS.md` first. **`CLAUDE_CMS.md` does not exist
@@ -48,7 +61,11 @@ to host a Route Handler the file-convention OG-image mechanism can't reach.
 | `/reference/class-spellbooks` | static | static `metadata` | own `opengraph-image.tsx` |
 | `/reference/dungeons` | static | static `metadata` | own `opengraph-image.tsx` |
 | `/reference/professions` (index) | static | static `metadata` | own `opengraph-image.tsx` |
-| `/reference/professions/[slug]` | dynamic slug | `generateMetadata` (async, per-profession frontmatter) | own dynamic `opengraph-image.tsx` |
+| `/reference/professions/[profession]` | dynamic slug (renamed from `[slug]`; **retired as an MDX content route 2026-09-23** — now a real recipe-catalog page reading `data/professions-catalog/*.json`, branching internally into a crafting-profession render path or a gathering-profession one for Mining/Herbalism/Skinning, see `CLAUDE.md`'s "Professions recipe catalog" and "Gathering professions" architecture notes) | `generateMetadata` (async, per-catalog, not frontmatter) — as of 2026-09-24 also sets `alternates.canonical` to the bare `/reference/professions/<id>` URL, since the page renders many `?view=`/`?category=`/`?page=` permutations through the same title/description | own dynamic `opengraph-image.tsx` (reads `catalog.name`/recipe count, not frontmatter) |
+| `/reference/items` (added 2026-09-23) | static (all filtering is server-side via `searchParams`, not a distinct route per filter) | static `metadata`; as of 2026-09-24 sets `alternates.canonical: "/reference/items"` for the same many-permutations reason above | none of its own yet — falls back to the root layout default |
+| `/items/[itemId]` (added 2026-09-23) | dynamic slug, **deliberately not statically generated** (no `generateStaticParams` — 21,458 items rendered on demand) | `generateMetadata` (async, per-item); as of 2026-09-24 also sets `robots: {index: <status is new/changed>, follow: true}` — see §3e | none of its own yet — falls back to the root layout default |
+| `/reference/dungeons/loot` (index, added 2026-09-22) | static | static `metadata` | none of its own yet — falls back to the root layout default |
+| `/reference/dungeons/loot/[slug]` (added 2026-09-22) | dynamic slug, `generateStaticParams` from `getDungeonLootIndex()` (only the 28 of 35 dungeons that actually have loot data — 7 have none in the beta yet, see `CLAUDE.md`) | `generateMetadata` (async) | none of its own yet — falls back to the root layout default |
 | `/guides` (index) | static | static `metadata` | own `opengraph-image.tsx` |
 | `/guides/[slug]` | dynamic slug | `generateMetadata` (async) | own dynamic `opengraph-image.tsx` |
 | `/blog` (index) | static | static `metadata` | own `opengraph-image.tsx` |
@@ -58,11 +75,15 @@ to host a Route Handler the file-convention OG-image mechanism can't reach.
 | `app/sitemap.ts` | Route Handler (metadata file convention) | — | — |
 | `app/not-found.tsx` | special file | — | — |
 
-None of the three dynamic-slug content routes (`guides/[slug]`,
-`blog/[slug]`, `reference/professions/[slug]`) set an explicit
-`alternates.canonical` — only `/planner` does, deliberately, to consolidate
-every class/build variant's ranking signal onto the bare `/planner` URL.
-See §3e for whether the other three should follow suit.
+**Canonical tags, updated 2026-09-24:** `/planner`, `/reference/items`, and
+`/reference/professions/[profession]` all set an explicit
+`alternates.canonical` today — the latter two added this session, once
+those pages existed and were confirmed to render many near-duplicate
+filtered/paginated URLs through one title/description. `guides/[slug]` and
+`blog/[slug]` still don't set one, but unlike the other three, those routes
+take no `searchParams` at all — there's no permutation to consolidate, so
+a canonical there would just point a page at its own URL. Lower-priority
+than the original 2026-09-20 finding assumed; see §3e.
 
 ### 1.2 `data/` — game data
 
@@ -98,13 +119,41 @@ benign, not orphaned data:
 Both `-v2`/`-v3` files deliberately don't match the plain naming pattern so
 the diff script's two-most-recent picker skips them.
 
+**Addendum, 2026-09-24 (data added since this table was written):** three
+whole new data domains landed between 2026-09-22 and 2026-09-24, each with
+its own dedicated `CLAUDE.md` architecture note (search that file for the
+bolded terms below) rather than being re-described in full here:
+
+- **`data/professions-catalog/*.json`** (built by `scripts/
+  build-professions.js` from `data/professions/*.json` and the item
+  catalog) — one file per crafting profession (8) plus Mining/Herbalism/
+  Skinning (a structurally different gathering shape, read by
+  `lib/gathering-professions.ts`, not `lib/profession-recipes.ts`) and a
+  shared `uncertain.json` report. Backs `/reference/professions/
+  [profession]`, replacing the old MDX content type (§1.3).
+- **`data/dungeons/<id>.json`** (35 files, built by `scripts/
+  build-dungeons.js`) — replaced the older single `data/dungeon-loot.json`
+  as the primary loot/quest source, reconciling two independent sources
+  (foreverchanges.pro primary, wowtbc.gg fallback) per dungeon per data
+  type. Backs `/reference/dungeons/loot` and its 35 (28 with real loot
+  data) detail pages.
+- **`data/items.json`** (~8.5MB, built by `scripts/build-items.js`) — the
+  full 21,458-item Forever beta catalog, new/changed/same/missing vs.
+  Classic. Backs `/reference/items` and `/items/[itemId]`, read server-only
+  via `lib/items.ts`'s module-level cache (never shipped to the client).
+- **`data/sources/` was reorganized by source** into `{talentsforever,
+  wowtbc,foreverchanges}/` subfolders (2026-09-23) — the flat-directory
+  description in the paragraphs above this addendum, and the `-old`/`-v2`/
+  `-v3` filename notes, describe the pre-reorg layout. Current layout is
+  documented in `data/sources/README.md`'s own "Layout" section.
+
 ### 1.3 `content/` — guides/blog/professions
 
 | Directory | Count | Notes |
 |---|---|---|
 | `content/blog/*.mdx` | 5 published | `classic-plus-new`, `deep-dive-panel-notes-2`, `launch-day-beta`, `mount-hyjal`, `zephras-isle` |
 | `content/guides/*.mdx` | **0** | **Clarified after this audit's first pass:** `content/guides/` was confirmed to be an empty, untracked directory (git doesn't track empty dirs) — literally empty because everything ever placed there was moved out over time: a Mount Hyjal zone guide moved to `content/blog/` early on, then the 7 profession write-ups that later drafted there moved to `content/professions/`. The now-empty directory itself was removed as a follow-up to this audit (harmless — `lib/content.ts`'s loader already tolerates a missing directory, returning `[]`, confirmed by rebuilding after removal). **This does not close the underlying gap**, though: guides remain a stated core content pillar in the site brief, the `/guides` route and full pipeline (`lib/guides.ts`, MDX component mapping, sitemap inclusion) are live and working, and there is currently zero authored guide content to put through it. See §3c. |
-| `content/professions/*.mdx` | 7 published | alchemy, blacksmithing, cooking, enchanting, engineering, first-aid, tailoring — migrated from `content/guides/` drafts in an earlier session (see above) |
+| `content/professions/*.mdx` | **Retired 2026-09-23, migrated to `content/blog/`** — `/reference/professions/[profession]` is no longer this MDX content type at all; it's a real recipe catalog built from `data/professions-catalog/*.json` (§1.2 addendum below). The 7 write-ups (alchemy, blacksmithing, cooking, enchanting, engineering, first-aid, tailoring) that used to live here now render as ordinary blog posts. `lib/professions.ts` (below) describes the now-removed reader; if you see it or `ProfessionImage`/`content/professions/` referenced anywhere older than this, that's what it meant. |
 
 `lib/content.ts` is a small shared loader (`listContentSlugs(dir)`,
 `readContentFile<Frontmatter>(dir, slug)` — gray-matter over the
@@ -466,6 +515,15 @@ own findings, into one place so nothing gets rediscovered from scratch:
   (`lib/saved-builds.ts`, §1.4) and is easy to conflate with the Phase 2
   accounts roadmap item — worth clarifying in any future roadmap
   discussion that these are two different things at two different scopes.
+- **No world map exists** — investigated (not built) 2026-09-24, in
+  response to an explicit "investigate, don't build" request. Full
+  findings live in `CLAUDE.md`'s "foreverchanges.pro/map recon"
+  architecture note; headline: foreverchanges.pro's 2D map is an ordinary
+  Leaflet.js tile map (well within this project's existing skills/
+  conventions), but its 3D view is a genuine custom WebGL heightmap-
+  terrain-streaming engine with its own data pipeline — a much larger,
+  separate undertaking. Treat 2D and 3D as two different decisions, not
+  one feature, if this is raised again.
 
 ### 3d. Security
 
@@ -526,55 +584,78 @@ worth revisiting once Phase 2 (auth) lands.
 
 ### 3e. SEO
 
-**Sitemap (`app/sitemap.ts`)** — the long-standing "guides/blog missing"
-claim from earlier sessions is **confirmed fixed**: static routes plus
-every guide (`getAllGuides()`) and every blog post (`getAllPosts()`) were
-already included dynamically. Two further gaps were found, and **both are
-now fixed as a follow-up to this audit**:
+**Rewritten 2026-09-24** — the section below as of 2026-09-20 described a
+sitemap that only covered static routes, guides, blog, and 7 profession
+write-up pages; nearly all of it was stale before this pass, since the
+professions/items/dungeon-loot buildout shipped a large amount of new
+route surface with no SEO audit of its own until now.
 
-- ~~`/reference/racials` was missing~~ from the static routes list — the
-  only Reference subpage left out. **Fixed:** added to `STATIC_ROUTES`.
-- ~~`/reference/professions/[slug]` individual pages were missing~~ —
-  `lib/professions.ts` exports `getAllProfessions()`, but `app/sitemap.ts`
-  never called it, so none of the 7 published profession pages were in the
-  sitemap despite having their own metadata and OG images. **Fixed:**
-  `app/sitemap.ts` now calls `getAllProfessions()` and includes all 7.
-- `/whats-new` is correctly excluded, consistent with its noindex.
-- Verified live: `/sitemap.xml` now lists `/reference/racials` and all 7
-  `/reference/professions/<slug>` URLs alongside everything already there.
+**Sitemap (`app/sitemap.ts`)** now covers 6 categories: static routes,
+guides, blog posts, all profession pages (8 crafting + 3 gathering,
+sharing one URL shape), all 28 dungeon-loot detail pages that actually
+have data (`getDungeonLootIndex()` — the 7 with no loot in the beta yet
+are correctly excluded, matching what `generateStaticParams` itself
+builds), and individual item pages — but **only "new"/"changed" items**
+(9,606 of 21,458), not the full catalog. That last one is a deliberate,
+documented decision (`lib/items.ts`'s `isIndexableItemStatus`), not an
+oversight: a "same as Classic"/"no Forever data yet" item page is
+thin/duplicate-ish content relative to Classic, worth keeping reachable
+but not worth indexing at 20k+ pages. Verified live: `/sitemap.xml` has
+9,669 URLs total.
+
+`/reference/dungeons/loot` (the index) and `/reference/items` (the
+catalog page) are both included as single static-route entries — their
+own filter/status/dungeon/level-range query permutations are not
+separately listed, consistent with the canonical-tag policy below.
+
+`/whats-new` remains correctly excluded, consistent with its noindex.
 
 **Redirects:** `next.config.ts`'s permanent `/guides/dungeons` →
-`/reference/dungeons` redirect is confirmed still present. No other
-redirects/headers/trailing-slash config exist.
+`/reference/dungeons` redirect is still present (unchanged since
+2026-09-20, not re-verified this pass).
 
-**Canonical tags:** only `/planner` sets an explicit `alternates.canonical`
-anywhere in the app tree (deliberately, to consolidate ranking signal
-across build variants). The root layout sets `metadataBase`, which lets
-Next.js resolve relative OG/image URLs, but no other route — including the
-three dynamic content-slug routes — declares its own canonical. Worth a
-look for `/guides/[slug]`, `/blog/[slug]`, `/reference/professions/[slug]`.
+**Canonical tags:** three routes set an explicit `alternates.canonical`
+today — `/planner` (original, consolidating build-code variants),
+`/reference/items`, and `/reference/professions/[profession]` (both added
+2026-09-24, once those pages existed and were confirmed to render many
+`?status=`/`?category=`/`?page=`/`?view=` permutations through one fixed
+title/description). `guides/[slug]` and `blog/[slug]` still don't set
+one — the 2026-09-20 finding flagged this as worth a look, but those two
+routes take no `searchParams` at all, so there's no permutation to
+consolidate and a canonical there would be inert (pointing a URL at
+itself). Lower priority than this section previously implied.
+
+**Item-page indexability (`robots`), new 2026-09-24:** `/items/[itemId]`'s
+`generateMetadata` sets `robots: {index: <new-or-changed>, follow: true}`
+per item — noindexing the ~11,850 "same"/"missing" items while keeping
+them crawlable so link equity still flows from the dungeon-loot and
+profession-reagent pages that link to them. Verified live: a "new"-status
+item returns `index, follow`; a "same"-status item returns `noindex,
+follow`.
 
 **Metadata coverage:** every route has either a static `metadata` export
 or a `generateMetadata` function, **except the homepage**, which has
-neither and fully inherits the root layout's defaults.
+neither and fully inherits the root layout's defaults — unchanged since
+2026-09-20. `/reference/items` and `/items/[itemId]` (both new since then)
+also have their own metadata, so this exception is still just the one
+page.
 
 **Robots:** `app/robots.ts` exists, `allow: "/"` for all agents, points at
 the sitemap, no disallow rules — the right pattern for keeping
-`/whats-new` crawlable-but-noindexed via its page-level meta tag
-(confirmed present) rather than hiding it from crawlers entirely (which
-would hide the noindex tag from them too).
+`/whats-new` crawlable-but-noindexed via its page-level meta tag, and now
+also the right pattern for the same-status item pages above (not
+re-verified this pass beyond confirming the file still exists).
 
-**OG images:** 11 `opengraph-image.tsx` files, exactly matching the list
-`CLAUDE.md` claims — confirmed complete and accurate. The homepage's
-static-PNG exception and the planner's custom Route Handler are both
-documented, deliberate exceptions, not gaps.
+**OG images:** still 11 `opengraph-image.tsx` files, **unchanged since
+2026-09-20** — none of `/reference/items`, `/reference/dungeons/loot`,
+`/reference/dungeons/loot/[slug]`, or `/items/[itemId]` (all added since)
+have their own OG image yet; they fall back to the root layout's static
+default. Not part of any task asked of recent sessions, so not built —
+worth a look if any of these pages end up shared on social platforms.
 
-**Structured data:** **not absent, as had been assumed** — `/planner`
-emits a static `application/ld+json` `WebApplication` schema (hardcoded,
-no user input, no injection risk — see §3d). Nothing else in the codebase
-emits JSON-LD: no `Article`/`BlogPosting` schema on guides/blog posts, no
-`BreadcrumbList` despite the site having a working `Breadcrumbs` component
-that could back one directly.
+**Structured data:** unchanged since 2026-09-20, not re-verified this
+pass — `/planner` emits a static `application/ld+json` `WebApplication`
+schema; nothing else in the codebase emits JSON-LD.
 
 ---
 
@@ -606,15 +687,28 @@ original punch list rather than quietly editing history.
    added to all three; verified an unknown slug now 404s cleanly.
 6. ~~Decide on `data/talents/talent_data.json` (§1.2, §3a)~~ — **done.**
    Deleted; confirmed zero references anywhere in the codebase beforehand.
-7. **Canonical tags on the three content-slug route types (§3e) — still
-   open.** Lower urgency than the sitemap fix since these pages aren't
-   duplicated elsewhere, but cheap to add next time metadata is touched.
+7. ~~Canonical tags on the content route types that actually render
+   duplicate-content permutations (§3e)~~ — **partially done, 2026-09-24.**
+   `/reference/items` and `/reference/professions/[profession]` (both of
+   which take filter/view `searchParams`) now set `alternates.canonical`.
+   `guides/[slug]`/`blog/[slug]` still don't, but — reassessed this
+   pass — those two take no `searchParams` at all, so there's no
+   permutation to consolidate; a canonical there would be inert. Downgrade
+   this from "still open" to "not actually needed," pending disagreement.
 8. Everything else in §3c is either genuinely low-priority by its own
    disclosed reasoning (Legacy Perks mobile, square-cell geometry,
    inferred-sourcing distinction) or blocked on a real external input
    (the racials "Requires" mystery needs a source; the profession hero
    images need actual art) — worth keeping visible in this document, but
-   not worth scheduling ahead of item 3 or 7.
+   not worth scheduling ahead of item 3.
+9. **New since 2026-09-20, not yet done:** none of `/reference/items`,
+   `/reference/dungeons/loot`, `/reference/dungeons/loot/[slug]`, or
+   `/items/[itemId]` have their own `opengraph-image.tsx` (§3e) — worth
+   adding if any of these pages end up shared on social platforms. Also
+   worth a fresh, full re-audit of this document at some point — the
+   2026-09-24 pass corrected the sections that had gone factually wrong,
+   but wasn't a from-scratch re-verification of everything (see the note
+   at the top of this document).
 
 Deliberately not re-prioritized here: the Phase 2 roadmap (auth, Postgres,
 account-backed builds, an admin content editor) — `CLAUDE.md`'s own

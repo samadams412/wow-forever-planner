@@ -9,6 +9,119 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-24 (Merchant's Favor fixes, profession nav/polish, SEO pass, OG legibility, item filter layout)
+
+**Stable and shipped this session** (8 commits, each independently
+verified live before committing):
+
+- **`data/dungeons/hall-of-thanes.json` quest-96403 faction bug closed
+  out -- with a correction to the premise.** The prior session's own
+  handoff (below) said the generated file's hand-patched "Alliance" was
+  the correct value and the source (still "Both") needed to catch up.
+  Live-checked foreverchanges.pro/dungeons/hall-of-thanes directly before
+  touching anything: "Important Heirlooms" (quest-96403) is listed under
+  "Both factions" (with "An Ancient Grudge"), not the Alliance-only group
+  ("Old Ironforge Incursion", "The Restless Dead") -- matching the source
+  file exactly. The hand-patch was the actual error. Re-ran
+  `build-dungeons.js` from the untouched source, which correctly reverted
+  the field to `"Both"` -- verified this was the only change across all
+  35 regenerated dungeon files.
+- **Merchant's Favor data gaps fixed.** Root cause for one of three
+  reported issues: `buildFavorSection()` in `scripts/build-professions.js`
+  resolved favor items **by name** against the item catalog, but a favor
+  item's display name on foreverchanges.pro (e.g. "Gloves - Holy Power")
+  often doesn't match the catalog item's own full name (e.g. "Formula:
+  Enchant Gloves - Holy Power") -- silently falling back to
+  `unresolvedItemRef` and a "Slot/Type Unknown" tooltip even though the
+  linked item has full data. Every favor item already carries a real
+  `/item/<id>` url (0 missing across all 8 professions) -- switched to
+  `resolveItemByUrl` (the id-over-name-match convention already used for
+  camp milestones and quest rewards). Separately, Blacksmithing was
+  missing everything past its 30-favor tier and Alchemy was missing its
+  240/1000 tiers entirely -- re-scraped both live via
+  `fetchProfessionPage` (reusing last session's scraper), merging fresh
+  `favor_section` data onto their existing hand-provided `leveling_section`
+  (left untouched). Verified against each profession's own live-page
+  totals: Alchemy 30 Merchant's Favor recipes (8+6+13+2+1), Blacksmithing
+  61 (29+10+17+4+1) -- both match exactly. First Aid confirmed to have no
+  Merchant's Favor vendor at all on its live page (not a scrape gap) --
+  added `hasFavor: false` to its `professions-config.js` entry and a new
+  `favorSupported` catalog field so the page hides that tab entirely for
+  First Aid only, instead of showing an empty "coming soon" state.
+- **Cross-profession nav row** (`components/professions/
+  ProfessionCrossLinks.tsx`) added to the bottom of every profession page
+  -- crafting and gathering alike -- linking to all 8 crafting
+  professions with icons, so a visitor can jump between professions
+  without returning to the `/reference/professions` index. Also
+  de-duplicated the `PROFESSION_ICON` map (previously hand-copied
+  identically in two files) into `lib/profession-icons.ts`.
+- **Subtle alternating row shading** on the Leveling 1-300 step list
+  (`ProfessionLevelingGuide.tsx`) -- `even:bg-surface-hover/30` per step,
+  reusing the same token this card's own rank-header divider already uses
+  for contrast against the card's `bg-surface` background. Restarts per
+  rank group automatically (CSS `nth-child` scoped to each rank's own
+  steps container), so it doesn't fight the rank dividers.
+- **Tab icons** added to the 4 profession-page tabs (Recipes/Leveling/
+  Merchant's Favor/Camp) -- `inv_scroll_03`, `achievement_level_10`,
+  `inv_misc_coin_02`, `spell_fire_fire`, each checked against
+  wow.zamimg.com for existence first. Scoped to the crafting-profession
+  tab bar only; gathering pages' own tab set is untouched.
+- **SEO pass** across everything shipped in recent sessions
+  (professions/items/dungeon-loot):
+  - `app/sitemap.ts` now includes `/reference/dungeons/loot` plus all 28
+    dungeon loot detail pages that actually have data (matching
+    `generateStaticParams`'s own `getDungeonLootIndex()`), and
+    `/reference/items`.
+  - Individual `/items/[itemId]` pages: explicit decision to sitemap-list
+    and index only "new"/"changed" items (9,606 of 21,458) -- real
+    informational value, genuinely distinct from Classic. "same"/
+    "missing" items (~11,850) are thin/duplicate-ish content, excluded
+    from the sitemap and explicitly noindexed (`robots: {index: false,
+    follow: true}` -- `follow: true` keeps link equity flowing from
+    dungeon-loot/profession-reagent pages that link to them). The shared
+    rule lives in `lib/items.ts`'s new `isIndexableItemStatus` so the
+    sitemap and the item page's own `generateMetadata` can't drift apart.
+  - Canonical tags added to `/reference/items` and `/reference/
+    professions/[profession]`, both of which render many `?status=`/
+    `?category=`/`?page=`/`?view=` permutations through one title/
+    description -- canonicalized to the bare URL, same reasoning as the
+    planner's own existing build-code canonical.
+  - Every other route type already had `generateMetadata` or a static
+    `metadata` export -- no further gaps found.
+- **OG image subtitle legibility fixed.** The subtitle line (e.g. "Every
+  dungeon, one level-range timeline." on `/reference/dungeons`) rendered
+  in `EBGaramond-Italic` at 30px -- legible as browser body text, but
+  noticeably harder to read once actually rendered as a flat OG-card
+  image (checked live). Switched to `EBGaramond-Regular` (already sitting
+  in `assets/fonts/` for exactly this future use per its own header
+  comment, never wired into `ImageResponse` until now), bumped to 32px,
+  lightened slightly. Title's Cinzel Bold treatment untouched.
+- **`/reference/items` filter UI cleanup:** category filters moved out of
+  an inline pill row into a new `ItemCategorySidebar`, matching
+  `ProfessionCategorySidebar`'s own layout/styling for visual consistency
+  between the site's two big filterable-catalog pages (widened the page's
+  `max-w` from `4xl` to `5xl` to match). Rarity filter pills now always
+  render in their real WoW quality color (Poor gray/Common white/
+  Uncommon green/Rare blue/Epic purple/Legendary orange/Artifact gold),
+  not just when selected, with a ring+background for the active state
+  instead of relying on color alone.
+
+**Open / not done this session:** none flagged -- all 8 items verified
+live and committed separately.
+
+**Suggested next:**
+- None of `/reference/items`, `/reference/dungeons/loot`,
+  `/reference/dungeons/loot/[slug]`, or `/items/[itemId]` have their own
+  `opengraph-image.tsx` yet (still 11 OG image routes total, unchanged
+  this session) -- worth adding if these pages ever get shared on social
+  platforms; not part of this session's task list so not built.
+- `docs/site-overview.md` was last fully audited 2026-09-20, before
+  nearly all of the professions/items/dungeon-loot buildout -- updated
+  this session to correct the most significant drift (routing table,
+  SEO section, professions content-type note), but it is not a full
+  re-audit at the same depth as its original pass. A fresh from-scratch
+  audit pass would still find more to tighten.
+
 ## Session handoff — 2026-09-24 (quick-fix batch + item filters + map recon)
 
 **Stable and shipped this session** (13 commits, each independently
