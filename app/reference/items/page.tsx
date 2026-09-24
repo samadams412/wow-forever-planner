@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemsTable from "@/components/reference/ItemsTable";
 import ItemsSearchInput from "@/components/reference/ItemsSearchInput";
+import ItemCategorySidebar from "@/components/reference/ItemCategorySidebar";
 import {
   CATEGORY_VALUES,
   getDungeonFilterOptions,
@@ -130,7 +131,7 @@ export default async function ItemsPage({
     requiredLevelMax !== undefined;
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-3 py-8 sm:px-4">
+    <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
       <Breadcrumbs items={[{ label: "Reference", href: "/reference" }, { label: "Items" }]} />
 
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Items</h1>
@@ -169,9 +170,13 @@ export default async function ItemsPage({
           <Link
             key={value}
             href={buildHref({ ...baseFilters, rarity: value })}
-            style={{ color: rarity === value ? itemQualityColor(value) : undefined }}
+            // Colored whether active or not -- matching the WoW-standard
+            // rarity colors the item rows themselves already use, so the
+            // filter controls visually match what they filter for, not
+            // just a plain label until clicked.
+            style={{ color: itemQualityColor(value) }}
             className={`rounded-sm px-2 py-1 font-medium transition-colors ${
-              rarity === value ? "bg-accent/20" : "text-foreground-muted hover:text-foreground"
+              rarity === value ? "bg-accent/20 ring-1 ring-inset ring-accent/50" : "hover:bg-surface-hover"
             }`}
           >
             {ITEM_QUALITY_NAME[value]}
@@ -179,157 +184,149 @@ export default async function ItemsPage({
         ))}
       </div>
 
-      <div className="mt-2 inline-flex flex-wrap items-center gap-1 rounded border border-border bg-surface p-0.5 text-xs">
-        <Link
-          href={buildHref({ ...baseFilters, category: undefined })}
-          className={`rounded-sm px-2 py-1 transition-colors ${
-            category === undefined ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
-          }`}
-        >
-          All categories
-        </Link>
-        {CATEGORY_VALUES.map((value) => (
-          <Link
-            key={value}
-            href={buildHref({ ...baseFilters, category: value })}
-            className={`rounded-sm px-2 py-1 transition-colors ${
-              category === value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
-            }`}
-          >
-            {ITEM_CLASS_NAME[value]} <span className="text-foreground-muted">{categoryCounts[value].toLocaleString()}</span>
-          </Link>
-        ))}
+      <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+        <ItemCategorySidebar
+          buildHref={(value) => buildHref({ ...baseFilters, category: value })}
+          categoryValues={CATEGORY_VALUES}
+          categoryNames={ITEM_CLASS_NAME}
+          counts={categoryCounts}
+          totalCount={counts.all}
+          active={category}
+        />
+
+        <div className="min-w-0 flex-1">
+          {/* Plain GET form -- no client JS needed, matching this page's other
+              filters. Typing a range and hitting Enter/"Apply" navigates to the
+              same ?ilvlMin=&ilvlMax=&reqMin=&reqMax= params buildHref already
+              knows how to read back out, so pagination/tab/rarity links above
+              keep the range active via baseFilters the same way they already
+              preserve q/rarity. */}
+          <form action="/reference/items" className="flex flex-wrap items-end gap-3 text-xs">
+            <input type="hidden" name="status" value={status} />
+            <input type="hidden" name="q" value={q} />
+            {rarity !== undefined && <input type="hidden" name="rarity" value={rarity} />}
+            {category !== undefined && <input type="hidden" name="category" value={category} />}
+            <label className="flex flex-col gap-1 text-foreground-muted">
+              Drops in
+              <select
+                name="dungeon"
+                defaultValue={dungeon ?? ""}
+                className="w-40 rounded border border-border bg-surface px-2 py-1 text-foreground"
+              >
+                <option value="">Any dungeon</option>
+                {dungeonOptions.map((d) => (
+                  <option key={d.id} value={d.id}>
+                    {d.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="flex flex-col gap-1 text-foreground-muted">
+              Required level
+              <span className="flex items-center gap-1">
+                <input
+                  type="number"
+                  name="reqMin"
+                  min={0}
+                  max={60}
+                  defaultValue={requiredLevelMin}
+                  placeholder="min"
+                  className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+                />
+                <span>&ndash;</span>
+                <input
+                  type="number"
+                  name="reqMax"
+                  min={0}
+                  max={60}
+                  defaultValue={requiredLevelMax}
+                  placeholder="max"
+                  className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+                />
+              </span>
+            </label>
+            <label className="flex flex-col gap-1 text-foreground-muted">
+              Item level
+              <span className="flex items-center gap-1">
+                <input
+                  type="number"
+                  name="ilvlMin"
+                  min={0}
+                  defaultValue={itemLevelMin}
+                  placeholder="min"
+                  className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+                />
+                <span>&ndash;</span>
+                <input
+                  type="number"
+                  name="ilvlMax"
+                  min={0}
+                  defaultValue={itemLevelMax}
+                  placeholder="max"
+                  className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+                />
+              </span>
+            </label>
+            <button
+              type="submit"
+              className="rounded border border-accent/60 px-3 py-1.5 font-medium text-accent transition-colors hover:bg-surface-hover"
+            >
+              Apply
+            </button>
+            {hasRangeFilter && (
+              <Link
+                href={buildHref({
+                  ...baseFilters,
+                  dungeon: undefined,
+                  itemLevelMin: undefined,
+                  itemLevelMax: undefined,
+                  requiredLevelMin: undefined,
+                  requiredLevelMax: undefined,
+                })}
+                className="text-foreground-muted underline hover:text-foreground"
+              >
+                Clear advanced filters
+              </Link>
+            )}
+          </form>
+
+          <p className="mt-3 text-xs text-foreground-muted">
+            {result.total.toLocaleString()} item{result.total === 1 ? "" : "s"}
+            {q ? ` matching "${q}"` : ""}
+          </p>
+
+          <ItemsTable items={result.items} />
+
+          {result.pageCount > 1 && (
+            <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">
+              {result.page > 1 ? (
+                <Link
+                  href={buildHref({ ...baseFilters, page: result.page - 1 })}
+                  className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                >
+                  &larr; Previous
+                </Link>
+              ) : (
+                <div />
+              )}
+              <span className="text-xs text-foreground-muted">
+                Page <strong className="text-foreground">{result.page}</strong> of {result.pageCount}
+              </span>
+              {result.page < result.pageCount ? (
+                <Link
+                  href={buildHref({ ...baseFilters, page: result.page + 1 })}
+                  className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                >
+                  Next &rarr;
+                </Link>
+              ) : (
+                <div />
+              )}
+            </nav>
+          )}
+        </div>
       </div>
 
-      {/* Plain GET form -- no client JS needed, matching this page's other
-          filters. Typing a range and hitting Enter/"Apply" navigates to the
-          same ?ilvlMin=&ilvlMax=&reqMin=&reqMax= params buildHref already
-          knows how to read back out, so pagination/tab/rarity links above
-          keep the range active via baseFilters the same way they already
-          preserve q/rarity. */}
-      <form action="/reference/items" className="mt-2 flex flex-wrap items-end gap-3 text-xs">
-        <input type="hidden" name="status" value={status} />
-        <input type="hidden" name="q" value={q} />
-        {rarity !== undefined && <input type="hidden" name="rarity" value={rarity} />}
-        {category !== undefined && <input type="hidden" name="category" value={category} />}
-        <label className="flex flex-col gap-1 text-foreground-muted">
-          Drops in
-          <select
-            name="dungeon"
-            defaultValue={dungeon ?? ""}
-            className="w-40 rounded border border-border bg-surface px-2 py-1 text-foreground"
-          >
-            <option value="">Any dungeon</option>
-            {dungeonOptions.map((d) => (
-              <option key={d.id} value={d.id}>
-                {d.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col gap-1 text-foreground-muted">
-          Required level
-          <span className="flex items-center gap-1">
-            <input
-              type="number"
-              name="reqMin"
-              min={0}
-              max={60}
-              defaultValue={requiredLevelMin}
-              placeholder="min"
-              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
-            />
-            <span>&ndash;</span>
-            <input
-              type="number"
-              name="reqMax"
-              min={0}
-              max={60}
-              defaultValue={requiredLevelMax}
-              placeholder="max"
-              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
-            />
-          </span>
-        </label>
-        <label className="flex flex-col gap-1 text-foreground-muted">
-          Item level
-          <span className="flex items-center gap-1">
-            <input
-              type="number"
-              name="ilvlMin"
-              min={0}
-              defaultValue={itemLevelMin}
-              placeholder="min"
-              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
-            />
-            <span>&ndash;</span>
-            <input
-              type="number"
-              name="ilvlMax"
-              min={0}
-              defaultValue={itemLevelMax}
-              placeholder="max"
-              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
-            />
-          </span>
-        </label>
-        <button
-          type="submit"
-          className="rounded border border-accent/60 px-3 py-1.5 font-medium text-accent transition-colors hover:bg-surface-hover"
-        >
-          Apply
-        </button>
-        {hasRangeFilter && (
-          <Link
-            href={buildHref({
-              ...baseFilters,
-              dungeon: undefined,
-              itemLevelMin: undefined,
-              itemLevelMax: undefined,
-              requiredLevelMin: undefined,
-              requiredLevelMax: undefined,
-            })}
-            className="text-foreground-muted underline hover:text-foreground"
-          >
-            Clear advanced filters
-          </Link>
-        )}
-      </form>
-
-      <p className="mt-3 text-xs text-foreground-muted">
-        {result.total.toLocaleString()} item{result.total === 1 ? "" : "s"}
-        {q ? ` matching "${q}"` : ""}
-      </p>
-
-      <ItemsTable items={result.items} />
-
-      {result.pageCount > 1 && (
-        <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">
-          {result.page > 1 ? (
-            <Link
-              href={buildHref({ ...baseFilters, page: result.page - 1 })}
-              className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
-            >
-              &larr; Previous
-            </Link>
-          ) : (
-            <div />
-          )}
-          <span className="text-xs text-foreground-muted">
-            Page <strong className="text-foreground">{result.page}</strong> of {result.pageCount}
-          </span>
-          {result.page < result.pageCount ? (
-            <Link
-              href={buildHref({ ...baseFilters, page: result.page + 1 })}
-              className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
-            >
-              Next &rarr;
-            </Link>
-          ) : (
-            <div />
-          )}
-        </nav>
-      )}
       <div className="mt-6 text-xs text-foreground-muted">
         Sourced from{" "}
         <a
