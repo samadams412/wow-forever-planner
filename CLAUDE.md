@@ -9,6 +9,125 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-24 (quick-fix batch + item filters + map recon)
+
+**Stable and shipped this session** (13 commits, each independently
+verified live before committing -- see individual commit messages for
+full detail, summarized here):
+
+- **Regenerated `data/talent-spell-links.json`** (`e02bbe5`) -- it hadn't
+  been rebuilt since 2026-09-18 despite `data/spellbooks.json` gaining
+  spells on 2026-09-20, so Priest's Renewed Hope only linked a bare
+  "Heal" where the real text says "Greater Heal" (now a real candidate
+  name once rebuilt). Root cause was staleness, not a matching-logic bug
+  -- the longest-match-first algorithm in both `scripts/build-talent-
+  spell-links.js` and `lib/talent-spell-links.ts` already handles this
+  correctly; confirmed via a sitewide sweep across all 9 classes that
+  found no other short-name-inside-long-name collisions.
+- **Profession Leveling 1-300 rows** (`7ddd977`) -- a long vendor source
+  string (e.g. Cooking's multi-vendor lines) used to wrap onto its own
+  line at the row's left edge, disconnected from its item. Split into two
+  rows (range+item, then source/count/mats indented under it) in
+  `ProfessionLevelingGuide.tsx`.
+- **Reference landing page** (`bd92b0e`) now uses the same
+  `sm:grid-cols-2` card-grid convention `app/page.tsx` already has,
+  instead of a single column mostly-empty at desktop width.
+- **Hero banners** on `/reference`, `/guides`, `/blog` (`2bcc90c`)
+  shrunk from `min-h-64`/`sm:min-h-80` to `min-h-48`/`sm:min-h-64` --
+  all three share identical markup, kept in sync.
+- **Profession category sidebar icons** (`5110c68`) -- all 50 unique
+  category names across the 8 crafting professions got a small Wowhead-
+  hotlinked icon. Every slug was checked against wow.zamimg.com for
+  existence (a bad slug returns 200 with a ~146-byte placeholder, not a
+  404 -- checked by size), but a handful are approximate/best-guess
+  matches flagged inline in `ProfessionCategorySidebar.tsx`'s
+  `CATEGORY_ICON` map -- worth a human pass if exact-icon accuracy
+  matters here: Transmutes, Oils and Other, Shield Spikes/Chain/Spurs,
+  Off-Hand, Goggles and Helms, Fireworks and Toys, Anti-Venoms and
+  Potions, Bolts of Cloth, and all 6 Cooking stat-buckets.
+- **Double-cursor bug fixed** (`c249e6d`) -- two independent causes: (1)
+  Tailwind v4 layer ordering means any element's own `cursor-pointer`/
+  `cursor-default` utility always beats this site's `html.js-custom-
+  cursor {cursor: none}` rules (deliberately in `@layer base` so
+  `disabled:cursor-not-allowed` can still win -- see that rule's own
+  comment in `globals.css`), so the JS gauntlet overlay drew on top of
+  the item search input, LootItemPill pills, and LegacyPerkNode
+  placeholders. Fixed generically in `CustomCursor.tsx`'s
+  `resolveState()` rather than patching each call site -- see that
+  file's own new comment. (2) `DungeonsTimeline.tsx`'s dungeon buttons
+  carried a stray `data-cursor="gauntlet-active"`, not a real state;
+  removed.
+- **Guides page** (`df449e1`) gets one card linking to the Professions
+  index (leveling guides), not 8+ per-profession cards -- sits above the
+  guide-post list since it isn't a post itself.
+- **`data/sources/` reorganized by source** (`9742559`) --
+  `{talentsforever,wowtbc,foreverchanges}/` subfolders instead of one
+  flat directory. Every script and `lib/whats-new.ts` updated in the
+  same commit; verified by re-running every offline build script and
+  confirming zero unintended output changes. Full new layout in
+  `data/sources/README.md`'s "Layout" section and this file's own
+  "`data/sources/` reorganization" architecture note (search for it).
+  **Surfaced a real pre-existing issue**: re-running `build-dungeons.js`
+  reverted a hand-edit to generated `data/dungeons/hall-of-thanes.json`
+  (quest-96403's faction) because the prior commit patched that
+  generated file directly instead of its foreverchanges source
+  (`data/sources/foreverchanges/dungeon_data/hall-of-thanes.quests.json`,
+  which still says "Both" and was open in the editor at session start).
+  Restored via `git checkout` each time this happened rather than acted
+  on -- **if that quest's faction still needs to be "Alliance", it needs
+  to change in the source file**, or the next `build-dungeons.js` run
+  will silently revert it back to "Both" again.
+- **Item filters on `/reference/items`**, built and verified
+  incrementally (`f4615e6`, `596ef67`, `3bf01a9`, `dc45a39`):
+  - Rarity (Poor through Legendary, plus a new Artifact/quality-6 tier --
+    added to `lib/wow-data.ts`'s `ITEM_QUALITY_COLOR`/`NAME` maps, real
+    in this catalog: both Warglaives of Azzinoth, the Twin Blades, etc.)
+  - Item level and required level min/max ranges (a plain GET `<form>`,
+    no client JS -- null level/reqLevel is excluded from a range rather
+    than treated as 0)
+  - Full 12-category item-type taxonomy (Weapon/Armor/Container/
+    Consumable/Trade Goods/Projectile/Quiver/Recipe/Reagent/
+    Miscellaneous/Quest/Key) -- derived from `raw.c` (Blizzard's item-
+    class id), which `fc-item.js` already read internally for
+    `categoryLabelFor` but never exposed. Now a real `itemClass` field
+    on every `LootItem` everywhere on the site (dungeon loot, quest
+    rewards, profession recipes included, not just the catalog), added
+    to all 4 `LootItem`-construction sites. New `lib/wow-data.ts`
+    `ITEM_CLASS_NAME` map verified against this catalog's actual `c`
+    distribution -- matches foreverchanges.pro/items' own sidebar counts
+    exactly. Required rebuilding `data/items.json`, every
+    `data/dungeons/*.json`, and every profession catalog -- each
+    rebuild verified purely additive before trusting it (this is where
+    the hall-of-thanes issue above was caught).
+  - Dungeon-drop filter: a "Drops in" dropdown, cross-referenced via a
+    new lazy itemId -> dungeon-id reverse index in `lib/items.ts`
+    (`getAllDungeonData()`, a new export from `lib/dungeon-loot.ts`,
+    scans every dungeon's boss loot + quest rewards). Verified against
+    Ragefire Chasm: 18 items either way, matching
+    `/reference/dungeons/loot/ragefire-chasm`'s own 18 unique item links.
+
+**Investigated, no code changes (as instructed)**: foreverchanges.pro/map,
+for a future decision on whether to build an equivalent. Full findings
+below in a new "foreverchanges.pro/map recon" note -- headline: the 2D
+view is a normal, very achievable Leaflet.js tile map; the 3D view is a
+genuine custom WebGL heightmap-terrain-streaming engine (736 terrain
+chunks per continent, its own data pipeline) and would be a much larger,
+separate undertaking. Recommend treating 2D and 3D as two different
+decisions, not one feature, if this comes up again.
+
+**Suggested next:**
+- Review the flagged-approximate category icons above if exact accuracy
+  matters (item 5's own commit message and `CATEGORY_ICON`'s comments
+  have the full list).
+- Resolve the hall-of-thanes quest-96403 faction question in its actual
+  source file (see above) before the next `build-dungeons.js` run
+  silently reverts the generated file's hand-edit again.
+- If a world map ever gets built: start with the 2D view only (see the
+  recon note below) -- it reuses this project's existing "hotlink icons,
+  own theme" discipline and Leaflet is a mature, well-documented library;
+  the 3D view is a separate, much bigger decision requiring its own
+  terrain-data pipeline this project has no equivalent of yet.
+
 ## Session handoff — 2026-09-23 (gathering professions + reagent-qty fix)
 
 **Stable and shipped this session:**
@@ -813,6 +932,57 @@ further, so the underlying cause is still unconfirmed — worth revisiting
 if it blocks something more important later.
 
 ## Architecture notes
+
+### foreverchanges.pro/map recon (2026-09-24, investigation only -- nothing built)
+Explored live via claude-in-chrome (network requests + a couple of global-
+scope checks, not just visual inspection) to scope what building an
+equivalent world map would actually take, per an explicit "investigate,
+don't build" instruction. Two genuinely different features living behind
+one "2D/3D" toggle, not one feature with two render modes of similar cost:
+
+**2D view -- a normal Leaflet.js tile map.** `window.L` (Leaflet's global)
+is present on the page. Standard slippy-map tile pyramid:
+`/map/<continent>/tiles/<zoom>/<col>_<row>.webp` (zoom "2" for the default
+overview), plus `/map/<continent>/areas.png` -- almost certainly a flat-
+color zone-id mask sampled via canvas `getImageData` for "which zone is
+under the cursor" hit-testing (a common technique, not confirmed by
+reading source). Per-continent POI data ships as separate JSON files
+matching the sidebar's own category checkboxes -- `pins.json`,
+`services.json`, `quests.json`, `books.json`, `commerce.json`,
+`rares.json` -- each rendered as small PNG icon sprites
+(`/map/icons/svc-*.png`, `poi-*.png`). Everything is versioned by the
+beta build number in the query string (`?v=1.60.1.69876`, plus a `-5`
+data-revision suffix on the POI JSON specifically) for cache-busting
+across patches. This is well within reach with this project's existing
+skills and conventions (hotlinked icons, its own theme, a small per-
+continent JSON data layer) -- Leaflet is mature and thoroughly documented.
+
+**3D view -- a real custom WebGL terrain-streaming engine, not a toggle
+on the same map.** Clicking "View in 3D" loads an entirely different
+asset pipeline and shows "Loading terrain... N of 736" while streaming
+in chunks. Confirmed via network requests: `/map/<continent>/height/
+<col>_<row>.png` (grayscale heightmap tiles -- vertex-displace a mesh
+from these, the standard technique for heightmap terrain), a second,
+deeper-zoom pass of the same `tiles/<zoom>/<col>_<row>.webp` color
+textures draped over that mesh, and `water.json` (vector water-plane
+regions rendered as their own overlay). A second `<canvas>` element
+exists in this mode with a genuine WebGL context (checked via
+`canvas.getContext('webgl2'||'webgl')`); no `THREE`/`BABYLON` global was
+present, so it's either a from-scratch WebGL2 renderer or a bundled
+library that doesn't expose a global -- not confirmed which. Camera is a
+real fly/orbit controller (drag to pan, right-drag to tilt, double-click
+to fly to a point, a "Top down" toggle, a compass reset). Building an
+equivalent would need, at minimum, a terrain-data extraction pipeline
+this project has nothing like today (heightmap + textured-tile generation
+per continent, presumably from the game client's own terrain files) on
+top of the renderer itself -- closer in scope to a small game-engine
+feature than a typical web-map integration.
+
+**Takeaway for a future decision:** if a map ever gets greenlit, treat 2D
+and 3D as two separate proposals with very different costs, not one. The
+2D view alone would deliver most of the practical value (zone/dungeon/POI
+navigation, matching what a fan planner site's users would actually want)
+at a small fraction of the 3D view's effort and risk.
 
 ### Dungeon loot: two independent sources, reconciled per-dungeon-per-data-type, never blended
 `data/dungeons/<id>.json` (one file per dungeon, 35 total, same ids as
