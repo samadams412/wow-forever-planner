@@ -144,7 +144,7 @@ export default async function ProfessionPage({
       </div>
       <p className="mt-2 text-sm text-foreground-muted">{catalog.recipes.length} recipes</p>
 
-      <div className="mt-4 inline-flex rounded border border-border bg-surface p-0.5 text-xs">
+      <div className="mt-4 inline-flex flex-wrap rounded border border-border bg-surface p-0.5 text-xs">
         <Link href={`/reference/professions/${catalog.id}`} className={viewLinkClass("recipes")}>
           {tabIcon("recipes")}
           Recipes
