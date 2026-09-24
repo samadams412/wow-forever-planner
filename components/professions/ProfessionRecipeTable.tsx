@@ -48,6 +48,7 @@ export default function ProfessionRecipeTable({ recipes, professionId }: { recip
                       tooltipId={`prof:${professionId}:${i}:reagent:${j}`}
                       context="catalog"
                       qty={reagent.qty}
+                      iconOnly
                     />
                   ))}
                 </div>
