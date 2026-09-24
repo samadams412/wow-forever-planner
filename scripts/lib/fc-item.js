@@ -137,6 +137,13 @@ function fcItemToUnified(raw) {
     name: raw.n,
     slot: raw.s ?? null,
     type,
+    // Blizzard's own stable item-class id (raw.c -- Weapon/Armor/Container/
+    // etc, see lib/wow-data.ts's ITEM_CLASS_NAME for the full map), not to
+    // be confused with `type` above, which is the finer-grained subclass
+    // label ("Cloth", "Axe", "Herb"). Distinct from itemId/quality/etc in
+    // never being reconstructed or overlaid -- every raw record carries it
+    // directly, foreverchanges' bulk exports included.
+    itemClass: raw.c ?? null,
     itemId: raw.i ?? null,
     icon: raw.k ?? null,
     quality: raw.q ?? null,

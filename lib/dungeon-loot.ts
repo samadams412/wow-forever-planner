@@ -17,6 +17,12 @@ export type LootItem = {
   name: string;
   slot: string | null;
   type: string | null;
+  // Blizzard's stable item-class id (Weapon/Armor/Container/etc -- see
+  // lib/wow-data.ts's ITEM_CLASS_NAME), not the finer subclass `type`
+  // above. null for wowtbc-sourced items (no equivalent field at that
+  // source) and for the couple of retail-only "WoW Token" items that carry
+  // a class id (18) with no real Classic-era category.
+  itemClass: number | null;
   // foreverchanges-only fields (null when source === "wowtbc")
   itemId: number | null;
   icon: string | null;

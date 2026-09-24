@@ -257,3 +257,34 @@ export function itemQualityName(quality: number | null | undefined): string {
   if (quality === null || quality === undefined) return "Unknown";
   return ITEM_QUALITY_NAME[quality] ?? "Unknown";
 }
+
+// Blizzard's own stable item-class ids (unchanged since Classic, not beta
+// data that drifts) -- matches foreverchanges.pro/items' own 12-category
+// sidebar exactly, confirmed by cross-tabulating data/items.json's raw `c`
+// values against that page's own per-category counts before trusting this
+// mapping (id 3/Gem, 8/Generic, 10/Money, 14/Permanent are real Blizzard
+// ids but have zero items in this catalog and no foreverchanges category
+// either -- omitted here as a result, not overlooked). Two "WoW Token"
+// items (id 18, a retail-only class with no Classic-era meaning) exist in
+// the raw beta export but aren't covered by any of these -- itemClass
+// resolves them to null-category (no match), same as foreverchanges'
+// own sidebar not listing them under anything.
+export const ITEM_CLASS_NAME: Record<number, string> = {
+  0: "Consumable",
+  1: "Container",
+  2: "Weapon",
+  4: "Armor",
+  5: "Reagent",
+  6: "Projectile",
+  7: "Trade Goods",
+  9: "Recipe",
+  11: "Quiver",
+  12: "Quest",
+  13: "Key",
+  15: "Miscellaneous",
+};
+
+export function itemClassName(itemClass: number | null | undefined): string | null {
+  if (itemClass === null || itemClass === undefined) return null;
+  return ITEM_CLASS_NAME[itemClass] ?? null;
+}

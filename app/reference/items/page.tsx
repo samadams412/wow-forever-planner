@@ -3,8 +3,8 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemsTable from "@/components/reference/ItemsTable";
 import ItemsSearchInput from "@/components/reference/ItemsSearchInput";
-import { getItemStatusCounts, queryItems, STATUS_TABS, type ItemStatus } from "@/lib/items";
-import { ITEM_QUALITY_NAME, itemQualityColor } from "@/lib/wow-data";
+import { CATEGORY_VALUES, getItemCategoryCounts, getItemStatusCounts, queryItems, STATUS_TABS, type ItemStatus } from "@/lib/items";
+import { ITEM_CLASS_NAME, ITEM_QUALITY_NAME, itemQualityColor } from "@/lib/wow-data";
 
 // 0-6, matching this catalog's own real quality values (checked via
 // data/items.json rather than assumed -- Artifact/6 is a real, if tiny,
@@ -21,6 +21,7 @@ type FilterParams = {
   status: string;
   q: string;
   rarity?: number;
+  category?: number;
   itemLevelMin?: number;
   itemLevelMax?: number;
   requiredLevelMin?: number;
@@ -33,6 +34,7 @@ function buildHref(params: FilterParams): string {
   if (params.status !== "all") usp.set("status", params.status);
   if (params.q) usp.set("q", params.q);
   if (params.rarity !== undefined) usp.set("rarity", String(params.rarity));
+  if (params.category !== undefined) usp.set("category", String(params.category));
   if (params.itemLevelMin !== undefined) usp.set("ilvlMin", String(params.itemLevelMin));
   if (params.itemLevelMax !== undefined) usp.set("ilvlMax", String(params.itemLevelMax));
   if (params.requiredLevelMin !== undefined) usp.set("reqMin", String(params.requiredLevelMin));
@@ -55,6 +57,7 @@ export default async function ItemsPage({
     status?: string;
     q?: string;
     rarity?: string;
+    category?: string;
     ilvlMin?: string;
     ilvlMax?: string;
     reqMin?: string;
@@ -68,6 +71,7 @@ export default async function ItemsPage({
     | "all";
   const q = resolved.q ?? "";
   const rarity = RARITY_VALUES.includes(Number(resolved.rarity)) ? Number(resolved.rarity) : undefined;
+  const category = CATEGORY_VALUES.includes(Number(resolved.category)) ? Number(resolved.category) : undefined;
   const itemLevelMin = parseIntParam(resolved.ilvlMin);
   const itemLevelMax = parseIntParam(resolved.ilvlMax);
   const requiredLevelMin = parseIntParam(resolved.reqMin);
@@ -75,8 +79,28 @@ export default async function ItemsPage({
   const page = Math.max(1, Number(resolved.page) || 1);
 
   const counts = getItemStatusCounts();
-  const result = queryItems({ status, q, rarity, itemLevelMin, itemLevelMax, requiredLevelMin, requiredLevelMax, page });
-  const baseFilters: FilterParams = { status, q, rarity, itemLevelMin, itemLevelMax, requiredLevelMin, requiredLevelMax };
+  const categoryCounts = getItemCategoryCounts();
+  const result = queryItems({
+    status,
+    q,
+    rarity,
+    category,
+    itemLevelMin,
+    itemLevelMax,
+    requiredLevelMin,
+    requiredLevelMax,
+    page,
+  });
+  const baseFilters: FilterParams = {
+    status,
+    q,
+    rarity,
+    category,
+    itemLevelMin,
+    itemLevelMax,
+    requiredLevelMin,
+    requiredLevelMax,
+  };
   const hasRangeFilter =
     itemLevelMin !== undefined || itemLevelMax !== undefined || requiredLevelMin !== undefined || requiredLevelMax !== undefined;
 
@@ -130,6 +154,28 @@ export default async function ItemsPage({
         ))}
       </div>
 
+      <div className="mt-2 inline-flex flex-wrap items-center gap-1 rounded border border-border bg-surface p-0.5 text-xs">
+        <Link
+          href={buildHref({ ...baseFilters, category: undefined })}
+          className={`rounded-sm px-2 py-1 transition-colors ${
+            category === undefined ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
+          }`}
+        >
+          All categories
+        </Link>
+        {CATEGORY_VALUES.map((value) => (
+          <Link
+            key={value}
+            href={buildHref({ ...baseFilters, category: value })}
+            className={`rounded-sm px-2 py-1 transition-colors ${
+              category === value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
+            }`}
+          >
+            {ITEM_CLASS_NAME[value]} <span className="text-foreground-muted">{categoryCounts[value].toLocaleString()}</span>
+          </Link>
+        ))}
+      </div>
+
       {/* Plain GET form -- no client JS needed, matching this page's other
           filters. Typing a range and hitting Enter/"Apply" navigates to the
           same ?ilvlMin=&ilvlMax=&reqMin=&reqMax= params buildHref already
@@ -140,6 +186,7 @@ export default async function ItemsPage({
         <input type="hidden" name="status" value={status} />
         <input type="hidden" name="q" value={q} />
         {rarity !== undefined && <input type="hidden" name="rarity" value={rarity} />}
+        {category !== undefined && <input type="hidden" name="category" value={category} />}
         <label className="flex flex-col gap-1 text-foreground-muted">
           Required level
           <span className="flex items-center gap-1">
