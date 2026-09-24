@@ -1,0 +1,1054 @@
+{
+ "id": "gnomeregan",
+ "bosses": [
+  {
+   "name": "Techbot",
+   "kind": "boss",
+   "level": 26,
+   "display": 7288,
+   "items": [
+    {
+     "i": 9444,
+     "n": "Techbot CPU Shell",
+     "q": 1,
+     "l": 26,
+     "r": 21,
+     "s": "Shield",
+     "c": 4,
+     "u": 6,
+     "t": "same",
+     "k": "inv_shield_09",
+     "x": [
+      "Off Hand\tShield",
+      "475 Armor",
+      "Requires Level 21",
+      "Sell Price: 11s 20c"
+     ],
+     "z": 47.56
+    }
+   ]
+  },
+  {
+   "name": "Grubbis",
+   "kind": "boss",
+   "level": 32,
+   "display": 6533,
+   "items": [
+    {
+     "i": 9445,
+     "n": "Grubbis Paws",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Hands",
+     "c": 4,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_gauntlets_17",
+     "x": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "144 Armor",
+      "+5 Agility",
+      "+6 Strength",
+      "+9 Spirit",
+      "Requires Level 29",
+      "Sell Price: 23s 67c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "Hands\tMail",
+      "144 Armor",
+      "+5 Agility",
+      "+6 Strength",
+      "+9 Spirit",
+      "Requires Level 29",
+      "Sell Price: 22s 60c"
+     ],
+     "z": 8.85
+    }
+   ]
+  },
+  {
+   "name": "Viscous Fallout",
+   "kind": "boss",
+   "level": 30,
+   "display": 5497,
+   "items": [
+    {
+     "i": 9454,
+     "n": "Acidic Walkers",
+     "q": 3,
+     "l": 32,
+     "r": 27,
+     "s": "Feet",
+     "c": 4,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_boots_05",
+     "x": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "34 Armor",
+      "+8 Intellect",
+      "+4 Spirit",
+      "+5 Nature Resistance",
+      "Requires Level 27",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 5.",
+      "Sell Price: 19s 84c"
+     ],
+     "z": 60.81
+    },
+    {
+     "i": 9453,
+     "n": "Toxic Revenger",
+     "q": 3,
+     "l": 32,
+     "r": 27,
+     "s": "One-Hand",
+     "c": 2,
+     "u": 15,
+     "t": "changed",
+     "k": "inv_weapon_shortblade_02",
+     "x": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "One-Hand\tDagger",
+      "27 - 51 Damage\tSpeed 1.90",
+      "(20.5 damage per second)",
+      "Requires Level 27",
+      "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+      "Sell Price: 65s 22c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "Unique",
+      "One-Hand\tDagger",
+      "27 - 51 Damage\tSpeed 1.90",
+      "(20.5 damage per second)",
+      "Requires Level 27",
+      "Chance on hit: Deals 5 Nature damage every 5 sec to any enemy in an 8 yard radius around the caster for 15 sec.",
+      "Sell Price: 65s 92c"
+     ],
+     "z": 17.53
+    },
+    {
+     "i": 9452,
+     "n": "Hydrocane",
+     "q": 3,
+     "l": 32,
+     "r": 27,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 10,
+     "t": "missing",
+     "k": "inv_staff_15",
+     "x": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "48 - 73 Damage\tSpeed 2.80",
+      "(21.6 damage per second)",
+      "+15 Frost Resistance",
+      "Requires Level 27",
+      "Equip: Allows underwater breathing.",
+      "Sell Price: 82s 10c"
+     ],
+     "z": 18.78
+    }
+   ]
+  },
+  {
+   "name": "Electrocutioner 6000",
+   "kind": "boss",
+   "level": 32,
+   "display": 6915,
+   "items": [
+    {
+     "i": 9447,
+     "n": "Electrocutioner Lagnut",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Finger",
+     "c": 4,
+     "u": 0,
+     "t": "missing",
+     "k": "inv_misc_gear_04",
+     "x": [
+      "Binds when picked up",
+      "Unique",
+      "Finger",
+      "+9 Spirit",
+      "+4 Stamina",
+      "Requires Level 29",
+      "Sell Price: 32s 37c"
+     ],
+     "z": 31.06
+    },
+    {
+     "i": 9446,
+     "n": "Electrocutioner Leg",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Main Hand",
+     "c": 2,
+     "u": 7,
+     "t": "changed",
+     "k": "inv_sword_30",
+     "x": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "26 - 49 Damage\tSpeed 1.70",
+      "(22.1 damage per second)",
+      "Requires Level 29",
+      "Chance on hit: Blasts a target for 19 to 37 Nature damage. Mechanical targets take 2x damage.",
+      "Sell Price: 78s 92c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "Main Hand\tSword",
+      "26 - 49 Damage\tSpeed 1.70",
+      "(22.1 damage per second)",
+      "Requires Level 29",
+      "Chance on hit: Blasts a target for 10 to 20 Nature damage.",
+      "Sell Price: 75s 64c"
+     ],
+     "z": 16.19
+    },
+    {
+     "i": 9448,
+     "n": "Spidertank Oilrag",
+     "q": 2,
+     "l": 33,
+     "r": 28,
+     "s": "Wrist",
+     "c": 4,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_misc_bandage_09",
+     "x": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "20 Armor",
+      "Requires Level 28",
+      "Equip: Restores 3 mana per 5 sec.",
+      "Sell Price: 11s 54c"
+     ],
+     "z": 41.22
+    },
+    {
+     "i": 6893,
+     "n": "Workshop Key",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 13,
+     "u": 0,
+     "t": "same",
+     "k": "inv_misc_key_06",
+     "x": [
+      "Binds when picked up",
+      "Unique",
+      "\tKey"
+     ],
+     "z": 79.36
+    }
+   ]
+  },
+  {
+   "name": "Crowd Pummeler 9-60",
+   "kind": "boss",
+   "level": 32,
+   "display": 6774,
+   "items": [
+    {
+     "i": 9449,
+     "n": "Manual Crowd Pummeler",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Two-Hand",
+     "k": "inv_mace_14",
+     "t": "changed",
+     "x": [
+      "Binds when picked up",
+      "Unique",
+      "Two-Hand\tMace",
+      "46 - 70 Damage\tSpeed 2.00",
+      "(29.0 damage per second)",
+      "+16 Strength",
+      "+5 Agility",
+      "Use: Increases your attack speed by 50% for 30 sec.",
+      "Requires Level 29"
+     ],
+     "w": 1,
+     "y": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "46 - 70 Damage\tSpeed 2.00",
+      "(29.0 damage per second)",
+      "+16 Strength",
+      "+5 Agility",
+      "Requires Level 29",
+      "Use: Increases your attack speed by 50% for 30 sec.",
+      "Sell Price: 95s 64c"
+     ],
+     "p": 3,
+     "z": 32.62
+    },
+    {
+     "i": 9450,
+     "n": "Gnomebot Operating Boots",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Feet",
+     "c": 4,
+     "u": 2,
+     "t": "changed",
+     "k": "inv_boots_03",
+     "x": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "76 Armor",
+      "+12 Stamina",
+      "Requires Level 29",
+      "Equip: +11 Healing",
+      "Equip: +4 Spell Damage",
+      "Sell Price: 29s 67c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "68 Armor",
+      "+8 Stamina",
+      "+3 Spirit",
+      "Requires Level 28",
+      "Sell Price: 21s 81c"
+     ],
+     "z": 65.28
+    }
+   ]
+  },
+  {
+   "name": "Dark Iron Ambassador",
+   "kind": "rare",
+   "level": 33,
+   "display": 6669,
+   "items": [
+    {
+     "i": 9455,
+     "n": "Emissary Cuffs",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Wrist",
+     "c": 4,
+     "u": 2,
+     "t": "missing",
+     "k": "inv_bracer_09",
+     "x": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "47 Armor",
+      "+5 Arcane Resistance",
+      "Requires Level 28",
+      "Sell Price: 18s 25c"
+     ],
+     "z": 42.93
+    },
+    {
+     "i": 9456,
+     "n": "Glass Shooter",
+     "q": 3,
+     "l": 35,
+     "r": 30,
+     "s": "Ranged",
+     "c": 2,
+     "u": 3,
+     "t": "missing",
+     "k": "inv_weapon_rifle_02",
+     "x": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "36 - 68 Damage\tSpeed 2.90",
+      "(17.9 damage per second)",
+      "Requires Level 30",
+      "Sell Price: 66s 52c"
+     ],
+     "z": 32.46
+    },
+    {
+     "i": 9457,
+     "n": "Royal Diplomatic Scepter",
+     "q": 3,
+     "l": 35,
+     "r": 30,
+     "s": "One-Hand",
+     "c": 2,
+     "u": 4,
+     "t": "missing",
+     "k": "inv_mace_08",
+     "x": [
+      "Binds when picked up",
+      "One-Hand\tMace",
+      "37 - 69 Damage\tSpeed 2.30",
+      "(23.0 damage per second)",
+      "+7 Spirit",
+      "+2 Stamina",
+      "Requires Level 30",
+      "Sell Price: 89s 2c"
+     ],
+     "z": 20.94
+    }
+   ]
+  },
+  {
+   "name": "Mekgineer Thermaplugg",
+   "kind": "boss",
+   "level": 34,
+   "display": 6980,
+   "items": [
+    {
+     "i": 9492,
+     "n": "Electromagnetic Gigaflux Reactivator",
+     "q": 3,
+     "l": 37,
+     "r": 32,
+     "s": "Head",
+     "c": 4,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_gizmo_01",
+     "x": [
+      "Binds when picked up",
+      "Head\tCloth",
+      "44 Armor",
+      "+12 Spirit",
+      "+15 Intellect",
+      "Requires Level 32",
+      "Use: Channels a bolt of lightning and hurls it towards all enemies in front of the caster causing 147 to 167 Nature damage. The caster is then surrounded by a barrier of electricity for 10 min. (30 Min Cooldown)",
+      "Sell Price: 31s 72c"
+     ],
+     "z": 9.52
+    },
+    {
+     "i": 9461,
+     "n": "Charged Gear",
+     "q": 3,
+     "l": 37,
+     "r": 32,
+     "s": "Finger",
+     "c": 4,
+     "u": 0,
+     "t": "missing",
+     "k": "inv_misc_gear_01",
+     "x": [
+      "Binds when picked up",
+      "Finger",
+      "+5 Nature Resistance",
+      "+5 Arcane Resistance",
+      "Requires Level 32",
+      "Sell Price: 45s 86c"
+     ],
+     "z": 32.26
+    },
+    {
+     "i": 9458,
+     "n": "Thermaplugg's Central Core",
+     "q": 3,
+     "l": 37,
+     "r": 32,
+     "s": "Shield",
+     "c": 4,
+     "u": 6,
+     "t": "missing",
+     "k": "inv_shield_10",
+     "x": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "795 Armor",
+      "+3 Spirit",
+      "Requires Level 32",
+      "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker.",
+      "Sell Price: 69s 17c"
+     ],
+     "z": 31.84
+    },
+    {
+     "i": 9459,
+     "n": "Thermaplugg's Left Arm",
+     "q": 3,
+     "l": 37,
+     "r": 32,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_axe_03",
+     "x": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "70 - 106 Damage\tSpeed 2.70",
+      "(32.6 damage per second)",
+      "+18 Strength",
+      "+7 Stamina",
+      "Requires Level 32",
+      "Sell Price: 1g 35s 60c"
+     ],
+     "z": 18.27
+    },
+    {
+     "i": 4415,
+     "n": "Schematic: Craftsman's Monocle",
+     "q": 3,
+     "l": 37,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_scroll_03",
+     "x": [
+      "\tEngineering",
+      "Requires Engineering (185)",
+      "\"Teaches you how to make a Craftsman's Monocle.\"",
+      "Sell Price: 5s 50c"
+     ],
+     "y": [
+      "\tEngineering",
+      "Requires Engineering (185)",
+      "Use: Teaches you how to make a Craftman's Monocle.",
+      "Sell Price: 5s 50c"
+     ],
+     "z": 0.51
+    },
+    {
+     "i": 4413,
+     "n": "Schematic: Discombobulator Ray",
+     "q": 2,
+     "l": 32,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_scroll_06",
+     "x": [
+      "\tEngineering",
+      "Requires Engineering (160)",
+      "\"Teaches you how to make a Discombobulator Ray.\"",
+      "Sell Price: 4s 50c"
+     ],
+     "y": [
+      "\tEngineering",
+      "Requires Engineering (160)",
+      "Use: Teaches you how to make a Discombobulator Ray.",
+      "Sell Price: 4s 50c"
+     ],
+     "z": 0.42
+    },
+    {
+     "i": 4411,
+     "n": "Schematic: Flame Deflector",
+     "q": 2,
+     "l": 25,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_scroll_03",
+     "x": [
+      "\tEngineering",
+      "Requires Engineering (125)",
+      "\"Teaches you how to make a Flame Deflector.\"",
+      "Sell Price: 2s 75c"
+     ],
+     "y": [
+      "\tEngineering",
+      "Requires Engineering (125)",
+      "Use: Teaches you how to make a Flame Deflector.",
+      "Sell Price: 2s 75c"
+     ],
+     "z": 0.54
+    },
+    {
+     "i": 7742,
+     "n": "Schematic: Gnomish Cloaking Device",
+     "q": 1,
+     "l": 40,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_scroll_03",
+     "x": [
+      "Binds when picked up",
+      "\tEngineering",
+      "Requires Engineering (200)",
+      "\"Teaches you how to make a Gnomish Cloaking Device.\"",
+      "Sell Price: 6s"
+     ],
+     "y": [
+      "\tEngineering",
+      "Requires Engineering (200)",
+      "Use: Teaches you how to make a Gnomish Cloaking Device.",
+      "Sell Price: 6s"
+     ],
+     "z": 0.28
+    },
+    {
+     "i": 11828,
+     "n": "Schematic: Pet Bombling",
+     "q": 2,
+     "l": 41,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tEngineering",
+      "Requires Engineering (205)",
+      "\"Teaches you how to make a Pet Bombling.\"",
+      "Sell Price: 6s 75c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "\tEngineering",
+      "Requires Engineering (205)",
+      "Use: Teaches you how to make a Pet Bombling.",
+      "Sell Price: 6s 75c"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "items": [
+    {
+     "i": 9508,
+     "n": "Mechbuilder's Overalls",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Chest",
+     "c": 4,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_shirt_14",
+     "x": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "48 Armor",
+      "+15 Intellect",
+      "+5 Stamina",
+      "+5 Arcane Resistance",
+      "Requires Level 26",
+      "Requires Engineering (75)",
+      "Sell Price: 23s 52c"
+     ],
+     "z": 0.03
+    },
+    {
+     "i": 9491,
+     "n": "Hotshot Pilot's Gloves",
+     "q": 3,
+     "l": 32,
+     "r": 27,
+     "s": "Hands",
+     "c": 4,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_gauntlets_16",
+     "x": [
+      "Binds when equipped",
+      "Hands\tCloth",
+      "31 Armor",
+      "+8 Intellect",
+      "+5 Spirit",
+      "+5 Stamina",
+      "+3 Agility",
+      "Requires Level 27",
+      "Sell Price: 13s 8c"
+     ],
+     "z": 0.03
+    },
+    {
+     "i": 9509,
+     "n": "Petrolspill Leggings",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Legs",
+     "c": 4,
+     "u": 2,
+     "t": "missing",
+     "k": "inv_pants_08",
+     "x": [
+      "Binds when equipped",
+      "Legs\tLeather",
+      "90 Armor",
+      "+14 Agility",
+      "+6 Stamina",
+      "-10 Fire Resistance",
+      "Requires Level 25",
+      "\"Keep away from fire.\"",
+      "Sell Price: 26s 83c"
+     ],
+     "z": 0.04
+    },
+    {
+     "i": 9510,
+     "n": "Caverndeep Trudgers",
+     "q": 3,
+     "l": 32,
+     "r": 27,
+     "s": "Feet",
+     "c": 4,
+     "u": 3,
+     "t": "missing",
+     "k": "inv_boots_01",
+     "x": [
+      "Binds when equipped",
+      "Feet\tMail",
+      "154 Armor",
+      "+4 Agility",
+      "+4 Strength",
+      "+10 Stamina",
+      "Requires Level 27",
+      "Sell Price: 29s 45c"
+     ],
+     "z": 0.04
+    },
+    {
+     "i": 9487,
+     "n": "Hi-tech Supergun",
+     "q": 3,
+     "l": 29,
+     "r": 24,
+     "s": "Ranged",
+     "c": 2,
+     "u": 3,
+     "t": "missing",
+     "k": "inv_weapon_rifle_06",
+     "x": [
+      "Binds when equipped",
+      "Ranged\tGun",
+      "23 - 43 Damage\tSpeed 2.30",
+      "(14.3 damage per second)",
+      "Requires Level 24",
+      "Sell Price: 36s 32c"
+     ],
+     "z": 0.03
+    },
+    {
+     "i": 9485,
+     "n": "Vibroblade",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "One-Hand",
+     "c": 2,
+     "u": 0,
+     "t": "missing",
+     "k": "inv_axe_14",
+     "x": [
+      "Binds when equipped",
+      "One-Hand\tAxe",
+      "21 - 40 Damage\tSpeed 1.60",
+      "(19.1 damage per second)",
+      "Requires Level 25",
+      "Chance on hit: Punctures target's armor lowering it by 100.",
+      "Sell Price: 52s 88c"
+     ],
+     "z": 0.02
+    },
+    {
+     "i": 9488,
+     "n": "Oscillating Power Hammer",
+     "q": 3,
+     "l": 28,
+     "r": 23,
+     "s": "One-Hand",
+     "c": 2,
+     "u": 4,
+     "t": "missing",
+     "k": "inv_hammer_08",
+     "x": [
+      "Binds when equipped",
+      "One-Hand\tMace",
+      "24 - 46 Damage\tSpeed 2.00",
+      "(17.5 damage per second)",
+      "+5 Strength",
+      "+1 Stamina",
+      "Requires Level 23",
+      "Sell Price: 44s 19c"
+     ],
+     "z": 0.03
+    },
+    {
+     "i": 9486,
+     "n": "Supercharger Battle Axe",
+     "q": 3,
+     "l": 28,
+     "r": 23,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 1,
+     "t": "missing",
+     "k": "inv_axe_21",
+     "x": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "51 - 78 Damage\tSpeed 2.80",
+      "(23.0 damage per second)",
+      "Requires Level 23",
+      "Chance on hit: Blasts a target for 80 to 100 Nature damage.",
+      "Sell Price: 54s 83c"
+     ],
+     "z": 0.04
+    },
+    {
+     "i": 9490,
+     "n": "Gizmotron Megachopper",
+     "q": 3,
+     "l": 29,
+     "r": 24,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 8,
+     "t": "missing",
+     "k": "inv_sword_37",
+     "x": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "61 - 92 Damage\tSpeed 3.20",
+      "(23.9 damage per second)",
+      "+14 Strength",
+      "+5 Agility",
+      "Requires Level 24",
+      "Sell Price: 61s 21c"
+     ],
+     "z": 0.03
+    },
+    {
+     "i": 9489,
+     "n": "Gyromatic Icemaker",
+     "q": 2,
+     "l": 31,
+     "r": 26,
+     "s": "Ranged",
+     "c": 2,
+     "u": 19,
+     "t": "missing",
+     "k": "inv_wand_05",
+     "x": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "24 - 46 Frost Damage\tSpeed 1.40",
+      "(25.0 damage per second)",
+      "+5 Frost Resistance",
+      "Requires Level 26",
+      "Sell Price: 36s 90c"
+     ],
+     "z": 0.05
+    },
+    {
+     "i": 11827,
+     "n": "Schematic: Lil' Smoky",
+     "q": 2,
+     "l": 40,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "changed",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tEngineering",
+      "Requires Engineering (205)",
+      "\"Teaches you how to make your own Lil' Smoky robot.\"",
+      "Sell Price: 6s 75c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "\tEngineering",
+      "Requires Engineering (205)",
+      "Use: Teaches you how to make your own Lil' Smoky robot.",
+      "Sell Price: 6s 75c"
+     ]
+    },
+    {
+     "i": 9327,
+     "n": "Security DELTA Data Access Card",
+     "q": 2,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ingot_04",
+     "x": [
+      "Unique",
+      "\tQuest",
+      "Requires Engineering (1)",
+      "Sell Price: 6s 25c"
+     ]
+    },
+    {
+     "i": 7191,
+     "n": "Fused Wiring",
+     "q": 1,
+     "l": 26,
+     "r": 0,
+     "s": null,
+     "c": 7,
+     "u": 1,
+     "t": "same",
+     "k": "inv_misc_gear_03",
+     "x": [
+      "\tParts"
+     ]
+    },
+    {
+     "i": 9308,
+     "n": "Grime-Encrusted Object",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ammo_firetar",
+     "x": [
+      "\tQuest",
+      "\"Caked grime obscures the true identity of this object.\"",
+      "Sell Price: 38c"
+     ]
+    },
+    {
+     "i": 9326,
+     "n": "Grime-Encrusted Ring",
+     "q": 1,
+     "l": 28,
+     "r": 28,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_stone_04",
+     "x": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tQuest",
+      "Requires Level 28"
+     ]
+    },
+    {
+     "i": 9279,
+     "n": "White Punch Card",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ingot_01",
+     "x": [
+      "Binds when picked up",
+      "Unique",
+      "\tQuest",
+      "\"Grants access to Matrix Punchograph 3005-A\"",
+      "Sell Price: 45c"
+     ]
+    },
+    {
+     "i": 9280,
+     "n": "Yellow Punch Card",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ingot_01",
+     "x": [
+      "Quest Item",
+      "Unique",
+      "\tQuest",
+      "\"Grants access to Matrix Punchograph 3005-B\""
+     ]
+    },
+    {
+     "i": 9282,
+     "n": "Blue Punch Card",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ingot_01",
+     "x": [
+      "Quest Item",
+      "Unique",
+      "\tQuest",
+      "\"Grants access to Matrix Punchograph 3005-C\""
+     ]
+    },
+    {
+     "i": 9281,
+     "n": "Red Punch Card",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ingot_01",
+     "x": [
+      "Quest Item",
+      "Unique",
+      "\tQuest",
+      "\"Grants access to Matrix Punchograph 3005-D\""
+     ]
+    },
+    {
+     "i": 9316,
+     "n": "Prismatic Punch Card",
+     "q": 1,
+     "l": 1,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "same",
+     "k": "inv_ingot_01",
+     "x": [
+      "Quest Item",
+      "Unique",
+      "\tQuest",
+      "\"Data card only\""
+     ]
+    }
+   ]
+  }
+ ],
+ "hints": []
+}

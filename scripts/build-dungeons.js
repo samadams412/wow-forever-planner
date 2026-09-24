@@ -62,11 +62,15 @@ for (const file of ["new.json", "changed.json", "same.json", "missing.json"]) {
 }
 
 // Dungeons where foreverchanges has no boss-loot pull at all (yet) -- fall
-// back to the existing wowtbc.gg-sourced loot for these specific two rather
-// than shipping an empty bosses list. Not "known-empty" dungeons (those
-// have real reasons to be empty on both sources -- see below); this is
-// purely "that pull hasn't been done."
-const BOSS_LOOT_FALLBACK = new Set(["gnomeregan", "sm-library"]);
+// back to the existing wowtbc.gg-sourced loot for these rather than shipping
+// an empty bosses list. Not "known-empty" dungeons (those have real reasons
+// to be empty on both sources -- see below); this is purely "that pull
+// hasn't been done." Empty as of 2026-09-24: foreverchanges.pro's own
+// /dungeons/<slug>.json endpoint (see scripts/fetch-foreverchanges-dungeon-
+// loot.js) now has data for the 2 dungeons that used to need this
+// (gnomeregan, sm-library) -- pulled and merged in, so this set is empty
+// until/unless a future dungeon needs the same fallback again.
+const BOSS_LOOT_FALLBACK = new Set([]);
 
 function readJsonIfExists(p) {
   if (!fs.existsSync(p)) return null;
