@@ -14,7 +14,11 @@ export default function ProfessionCrossLinks({ activeId }: { activeId: string })
   return (
     <div className="mt-8 border-t border-border pt-6">
       <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Other professions</h2>
-      <div className="mt-3 flex flex-wrap gap-2">
+      {/* Always exactly 8 other professions -- a fixed grid (2 columns on
+          mobile, 4x2 on desktop) instead of flex-wrap, so the layout is
+          deterministic rather than depending on how each profession's own
+          name width happens to wrap at a given viewport. */}
+      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {professions.map((profession) =>
           profession.id === activeId ? (
             <span
