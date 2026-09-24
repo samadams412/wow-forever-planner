@@ -146,6 +146,15 @@
       "icon": "inv_sword_48"
     }
   ],
+  "warrior:fury_improved_intercept": [
+    {
+      "name": "Intercept",
+      "kind": "spell",
+      "source": "Warrior spell, rank 3",
+      "description": "Charge an enemy, causing 65 damage and stunning it for 3 sec.",
+      "icon": "ability_rogue_sprint"
+    }
+  ],
   "warrior:fury_improved_berserker_rage": [
     {
       "name": "Berserker Rage",
@@ -281,7 +290,7 @@
       "kind": "spell",
       "source": "Paladin spell, rank 8",
       "description": "An instant strike that causes 40% weapon damage plus an additional 32 to 42 as Holy damage.",
-      "icon": "spell_holy_crusaderstrike"
+      "icon": "classicon_paladin"
     }
   ],
   "paladin:holy_healing_light": [
@@ -332,6 +341,13 @@
   ],
   "paladin:holy_purifying_power": [
     {
+      "name": "Cleanse",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Cleanses a friendly target, removing 1 poison effect, 1 disease effect, and 1 magic effect.",
+      "icon": "spell_holy_renew"
+    },
+    {
       "name": "Purify",
       "kind": "spell",
       "source": "Paladin spell",
@@ -344,6 +360,13 @@
       "source": "Paladin spell, rank 6",
       "description": "Causes 475 to 529 Holy damage to an Undead or Demon target.",
       "icon": "spell_holy_excorcism_02"
+    },
+    {
+      "name": "Holy Wrath",
+      "kind": "spell",
+      "source": "Paladin spell, rank 2",
+      "description": "Sends bolts of holy power in all directions, causing 490 to 576 Holy damage to all Undead and Demon targets within 20 yds and stunning them for 2 sec.",
+      "icon": "spell_holy_excorcism"
     }
   ],
   "paladin:holy_infusion_of_light": [
@@ -471,7 +494,7 @@
       "kind": "spell",
       "source": "Paladin spell, rank 7",
       "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy causes 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
-      "icon": "spell_holy_sealoffury"
+      "icon": "spell_holy_retributionaura"
     }
   ],
   "paladin:protection_improved_righteous_fury": [
@@ -530,7 +553,7 @@
       "kind": "spell",
       "source": "Paladin spell, rank 8",
       "description": "An instant strike that causes 40% weapon damage plus an additional 32 to 42 as Holy damage.",
-      "icon": "spell_holy_crusaderstrike"
+      "icon": "classicon_paladin"
     },
     {
       "name": "Righteous Fury",
@@ -567,11 +590,25 @@
       "icon": "spell_holy_innerfire"
     },
     {
+      "name": "Holy Wrath",
+      "kind": "spell",
+      "source": "Paladin spell, rank 2",
+      "description": "Sends bolts of holy power in all directions, causing 490 to 576 Holy damage to all Undead and Demon targets within 20 yds and stunning them for 2 sec.",
+      "icon": "spell_holy_excorcism"
+    },
+    {
       "name": "Exorcism",
       "kind": "spell",
       "source": "Paladin spell, rank 6",
       "description": "Causes 475 to 529 Holy damage to an Undead or Demon target.",
       "icon": "spell_holy_excorcism_02"
+    },
+    {
+      "name": "Hammer of Wrath",
+      "kind": "spell",
+      "source": "Paladin spell, rank 3",
+      "description": "Hurls a hammer that strikes an enemy for 474 to 522 Holy damage. Only usable on enemies that have 20% or less health.",
+      "icon": "ability_thunderclap"
     }
   ],
   "paladin:retribution_sanctified_judgement": [
@@ -589,7 +626,7 @@
       "kind": "spell",
       "source": "Paladin spell, rank 8",
       "description": "An instant strike that causes 40% weapon damage plus an additional 32 to 42 as Holy damage.",
-      "icon": "spell_holy_crusaderstrike"
+      "icon": "classicon_paladin"
     },
     {
       "name": "Judgement",
@@ -600,6 +637,13 @@
     }
   ],
   "paladin:retribution_instrument_of_law": [
+    {
+      "name": "Hammer of Wrath",
+      "kind": "spell",
+      "source": "Paladin spell, rank 3",
+      "description": "Hurls a hammer that strikes an enemy for 474 to 522 Holy damage. Only usable on enemies that have 20% or less health.",
+      "icon": "ability_thunderclap"
+    },
     {
       "name": "Righteous Fury",
       "kind": "spell",
@@ -628,7 +672,7 @@
       "kind": "spell",
       "source": "Paladin spell, rank 7",
       "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy causes 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
-      "icon": "spell_holy_sealoffury"
+      "icon": "spell_holy_retributionaura"
     },
     {
       "name": "Seal of Justice",
@@ -684,6 +728,13 @@
       "source": "Hunter spell",
       "description": "The hunter takes on the aspects of a cheetah, increasing movement speed by 30%. If the hunter takes damage, he will be dazed for 4 sec. Only one Aspect can be active at a time.",
       "icon": "ability_mount_jungletiger"
+    },
+    {
+      "name": "Aspect of the Pack",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "The hunter and group members within 30 yards take on the aspects of a pack of cheetahs, increasing movement speed by 30%. If a pack member takes damage, they will be dazed for 4 sec. Only one Aspect can be active at a time.",
+      "icon": "ability_mount_whitetiger"
     }
   ],
   "hunter:beast_mastery_improved_revive_pet": [
@@ -800,6 +851,13 @@
       "source": "Hunter spell, rank 6",
       "description": "An aimed shot that increases ranged damage by 166. Aimed Shot shares its cooldown with Multi-Shot.",
       "icon": "inv_spear_07"
+    },
+    {
+      "name": "Volley",
+      "kind": "spell",
+      "source": "Hunter spell, rank 3",
+      "description": "Continuously fires a volley of ammo at the target area, causing 112 Arcane damage to enemy targets within 8 yards every 1 sec for 6 sec.",
+      "icon": "ability_marksmanship"
     }
   ],
   "hunter:survival_deflection": [
@@ -1505,6 +1563,13 @@
       "icon": "spell_holy_heal"
     },
     {
+      "name": "Greater Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 5",
+      "description": "A slow casting spell that heals a single target for 1,853 to 2,067.",
+      "icon": "spell_holy_greaterheal"
+    },
+    {
       "name": "Penance",
       "kind": "talent",
       "source": "Talent · Discipline, row 5",
@@ -1542,6 +1607,13 @@
       "source": "Priest spell, rank 4",
       "description": "Heal your target for 633 to 713.",
       "icon": "spell_holy_heal"
+    },
+    {
+      "name": "Greater Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 5",
+      "description": "A slow casting spell that heals a single target for 1,853 to 2,067.",
+      "icon": "spell_holy_greaterheal"
     }
   ],
   "priest:holy_holy_reach": [
@@ -1588,6 +1660,13 @@
       "source": "Priest spell, rank 4",
       "description": "Heal your target for 633 to 713.",
       "icon": "spell_holy_heal"
+    },
+    {
+      "name": "Greater Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 5",
+      "description": "A slow casting spell that heals a single target for 1,853 to 2,067.",
+      "icon": "spell_holy_greaterheal"
     },
     {
       "name": "Penance",
@@ -1680,7 +1759,16 @@
       "kind": "spell",
       "source": "Priest spell, rank 6",
       "description": "Afflicts the target with a disease that causes 848 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
-      "icon": "spell_shadow_blackplague"
+      "icon": "spell_shadow_devouringplague"
+    }
+  ],
+  "priest:shadow_early_demise": [
+    {
+      "name": "Shadow Word: Death",
+      "kind": "spell",
+      "source": "Priest spell, rank 4",
+      "description": "A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+      "icon": "spell_shadow_demonicfortitude"
     }
   ],
   "shaman:elemental_convection": [
@@ -2088,6 +2176,15 @@
       "source": "Shaman spell, rank 10",
       "description": "Heals a friendly target for 1,508 to 1,722.",
       "icon": "spell_nature_magicimmunity"
+    }
+  ],
+  "shaman:restoration_riptide": [
+    {
+      "name": "Chain Heal",
+      "kind": "spell",
+      "source": "Shaman spell, rank 3",
+      "description": "Heals the friendly target for 474 to 538, then jumps to heal additional nearby targets. If cast on a party member, the heal will only jump to other party members. Each jump is 50% as effective as the previous target. Heals 3 total targets.",
+      "icon": "spell_nature_healingwavegreater"
     }
   ],
   "mage:arcane_improved_channeling": [
@@ -2520,11 +2617,11 @@
       "icon": "spell_shadow_curseofsargeras"
     },
     {
-      "name": "Bane",
-      "kind": "talent",
-      "source": "Talent · Destruction, row 1",
-      "description": "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.5 sec and your Soul Fire spell by 2 sec.",
-      "icon": "spell_shadow_deathpact"
+      "name": "Bane of Doom",
+      "kind": "spell",
+      "source": "Warlock spell",
+      "description": "Afflicts the target with impending doom, causing 1,742 Shadow damage after 1 min. If the target dies from this damage, there is a chance that a Doomguard will be summoned. Cannot be cast on players. Only one Bane per Warlock can be active on any one target.",
+      "icon": "spell_shadow_auraofdarkness"
     },
     {
       "name": "Drain Soul",
@@ -2624,6 +2721,22 @@
       "icon": "spell_shadow_lifedrain"
     }
   ],
+  "warlock:demonology_improved_imp": [
+    {
+      "name": "Firebolt",
+      "kind": "spell",
+      "source": "Warlock spell, rank 7",
+      "description": "Deals 42 to 48 Fire damage to a target.",
+      "icon": "spell_fire_firebolt"
+    },
+    {
+      "name": "Fire Shield",
+      "kind": "spell",
+      "source": "Warlock spell, rank 5",
+      "description": "Surrounds the target in a shield of fire. Every strike against the target causes 13 Fire damage to the attacker. Lasts 3 min. Your pet cannot cast Fire Shield on itself.",
+      "icon": "spell_fire_firearmor"
+    }
+  ],
   "warlock:demonology_demonic_aegis": [
     {
       "name": "Demon Skin",
@@ -2640,6 +2753,36 @@
       "icon": "spell_shadow_ragingscream"
     }
   ],
+  "warlock:demonology_improved_voidwalker": [
+    {
+      "name": "Torment",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Taunts the creature, increasing the chance that it will attack the Voidwalker. More effective than Torment (Rank 5).",
+      "icon": "spell_shadow_gathershadows"
+    },
+    {
+      "name": "Consume Shadows",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "The Voidwalker consumes nearby shadows to bolster its form, recovering 1,940 health over 10 sec. Cannot be used while in combat.",
+      "icon": "spell_shadow_antishadow"
+    },
+    {
+      "name": "Sacrifice",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "Sacrifices the Voidwalker, giving its owner a shield that will absorb 1,930 damage for 30 sec. While the shield holds, spellcasting will not be interrupted by damage.",
+      "icon": "spell_shadow_sacrificialshield"
+    },
+    {
+      "name": "Suffering",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Taunts all enemies within 10 yards, increasing the chance that they will attack the Voidwalker. More effective than Suffering (Rank 3).",
+      "icon": "spell_shadow_blackplague"
+    }
+  ],
   "warlock:demonology_demonic_energies": [
     {
       "name": "Life Tap",
@@ -2649,7 +2792,44 @@
       "icon": "spell_shadow_burningspirit"
     }
   ],
+  "warlock:demonology_improved_sayaad": [
+    {
+      "name": "Lash of Pain",
+      "kind": "spell",
+      "source": "Warlock spell, rank 6",
+      "description": "An instant attack that lashes the target, causing 50 Shadow damage.",
+      "icon": "spell_shadow_curse"
+    },
+    {
+      "name": "Soothing Kiss",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Soothes the target, increasing the chance that it will attack something else. More effective than Soothing Kiss (Rank 3).",
+      "icon": "spell_shadow_soothingkiss"
+    },
+    {
+      "name": "Seduction",
+      "kind": "spell",
+      "source": "Warlock spell",
+      "description": "Seduces the target, preventing all actions for up to 15 sec. Any damage caused will remove the effect. Only works against Humanoids.",
+      "icon": "spell_shadow_mindsteal"
+    },
+    {
+      "name": "Lesser Invisibility",
+      "kind": "spell",
+      "source": "Warlock spell",
+      "description": "Gives your summoned demon Lesser Invisibility for up to 5 min. This spell can only be used out of combat.",
+      "icon": "spell_magic_lesserinvisibilty"
+    }
+  ],
   "warlock:demonology_decimation": [
+    {
+      "name": "Soul Fire",
+      "kind": "spell",
+      "source": "Warlock spell, rank 2",
+      "description": "Burn the enemy's soul, causing 390 to 486 Fire damage.",
+      "icon": "spell_fire_fireball02"
+    },
     {
       "name": "Shadow Bolt",
       "kind": "spell",
@@ -2688,6 +2868,13 @@
       "source": "Warlock spell, rank 4",
       "description": "Purges 1 harmful magic effect from a friend or 1 beneficial magic effect from an enemy. If an effect is devoured, the Felhunter will be healed for 618.",
       "icon": "spell_nature_purge"
+    },
+    {
+      "name": "Paranoia",
+      "kind": "spell",
+      "source": "Warlock spell",
+      "description": "Increases the stealth detection of all party members within 30 yds of the Felhunter as if they were 6 levels higher.",
+      "icon": "spell_shadow_auraofdarkness"
     },
     {
       "name": "Spell Lock",
@@ -2736,6 +2923,13 @@
       "source": "Talent · Destruction, row 7",
       "description": "Deals 99 to 113 Fire damage to your target and an additional 25% damage if the target is afflicted by Immolate.",
       "icon": "spell_fire_burnout"
+    },
+    {
+      "name": "Soul Fire",
+      "kind": "spell",
+      "source": "Warlock spell, rank 2",
+      "description": "Burn the enemy's soul, causing 390 to 486 Fire damage.",
+      "icon": "spell_fire_fireball02"
     }
   ],
   "warlock:destruction_aftermath": [
@@ -2773,6 +2967,13 @@
     }
   ],
   "warlock:destruction_pyroclasm": [
+    {
+      "name": "Soul Fire",
+      "kind": "spell",
+      "source": "Warlock spell, rank 2",
+      "description": "Burn the enemy's soul, causing 390 to 486 Fire damage.",
+      "icon": "spell_fire_fireball02"
+    },
     {
       "name": "Rain of Fire",
       "kind": "spell",
@@ -2991,6 +3192,13 @@
       "icon": "ability_racial_bearform"
     },
     {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
@@ -3055,6 +3263,13 @@
       "icon": "ability_druid_catform"
     },
     {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
       "name": "Moonkin Form",
       "kind": "talent",
       "source": "Talent · Balance, row 7",
@@ -3108,6 +3323,13 @@
       "icon": "ability_racial_bearform"
     },
     {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
@@ -3122,6 +3344,13 @@
       "source": "Druid spell, rank 5",
       "description": "Shred the target, causing 155% damage plus 180 to the target. Must be behind the target. Awards 1 combo point.",
       "icon": "spell_shadow_vampiricaura"
+    },
+    {
+      "name": "Lacerate",
+      "kind": "spell",
+      "source": "Druid spell, rank 3",
+      "description": "Lacerates the enemy target, making them bleed for 75 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
+      "icon": "ability_druid_lacerate"
     }
   ],
   "druid:feral_predatory_strikes": [
@@ -3138,6 +3367,13 @@
       "source": "Druid spell",
       "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
     }
   ],
   "druid:feral_primal_fury": [
@@ -3146,6 +3382,13 @@
       "kind": "spell",
       "source": "Druid spell",
       "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
@@ -3169,6 +3412,13 @@
       "kind": "spell",
       "source": "Druid spell",
       "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     }
   ],
@@ -3196,6 +3446,13 @@
       "kind": "spell",
       "source": "Druid spell",
       "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
