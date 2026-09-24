@@ -28,7 +28,13 @@ export default function ProfessionGatheringLeveling({ steps, professionId }: { s
           <div className="ml-auto flex flex-wrap gap-1">
             {step.items.length > 0
               ? step.items.map((item, j) => (
-                  <LootItemPill key={j} item={item} tooltipId={`prof:${professionId}:lvl:${i}:${j}`} context="catalog" />
+                  <LootItemPill
+                    key={j}
+                    item={item}
+                    tooltipId={`prof:${professionId}:lvl:${i}:${j}`}
+                    context="catalog"
+                    iconOnly
+                  />
                 ))
               : step.icons.map((icon, j) => (
                   // eslint-disable-next-line @next/next/no-img-element

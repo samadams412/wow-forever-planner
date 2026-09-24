@@ -39,7 +39,13 @@ export default function ProfessionNodeList({ nodes, professionId }: { nodes: Gat
               <td className="px-3 py-1.5">
                 <div className="flex flex-wrap gap-1">
                   {node.items.map((item, j) => (
-                    <LootItemPill key={j} item={item} tooltipId={`prof:${professionId}:node:${i}:${j}`} context="catalog" />
+                    <LootItemPill
+                      key={j}
+                      item={item}
+                      tooltipId={`prof:${professionId}:node:${i}:${j}`}
+                      context="catalog"
+                      iconOnly
+                    />
                   ))}
                 </div>
               </td>

@@ -34,7 +34,13 @@ export default function ProfessionSmeltingTable({ recipes, professionId }: { rec
               <td className="px-3 py-1.5">
                 <div className="flex flex-wrap gap-1">
                   {recipe.mats.map((mat, j) => (
-                    <LootItemPill key={j} item={mat} tooltipId={`prof:${professionId}:smelt:${i}:mat:${j}`} context="catalog" />
+                    <LootItemPill
+                      key={j}
+                      item={mat}
+                      tooltipId={`prof:${professionId}:smelt:${i}:mat:${j}`}
+                      context="catalog"
+                      iconOnly
+                    />
                   ))}
                 </div>
               </td>
