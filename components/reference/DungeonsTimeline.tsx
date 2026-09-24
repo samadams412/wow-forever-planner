@@ -117,7 +117,6 @@ function DungeonBar({
     <button
       ref={textRef as React.RefObject<HTMLButtonElement>}
       type="button"
-      data-cursor="gauntlet-active"
       aria-pressed={selected}
       onClick={() => onSelect(dungeon)}
       style={style}
