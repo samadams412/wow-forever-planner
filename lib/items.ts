@@ -53,6 +53,7 @@ export function getItemStatusCounts(): Record<ItemStatus | "all", number> {
 export type ItemQuery = {
   status?: ItemStatus | "all";
   q?: string;
+  rarity?: number;
   page?: number;
   pageSize?: number;
 };
@@ -65,9 +66,10 @@ export type ItemQueryResult = {
   pageCount: number;
 };
 
-export function queryItems({ status = "all", q = "", page = 1, pageSize = 60 }: ItemQuery): ItemQueryResult {
+export function queryItems({ status = "all", q = "", rarity, page = 1, pageSize = 60 }: ItemQuery): ItemQueryResult {
   let items = loadAll();
   if (status !== "all") items = items.filter((item) => item.status === status);
+  if (rarity !== undefined) items = items.filter((item) => item.quality === rarity);
 
   const needle = q.trim().toLowerCase();
   if (needle) items = items.filter((item) => item.name.toLowerCase().includes(needle));

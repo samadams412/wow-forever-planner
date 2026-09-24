@@ -231,6 +231,11 @@ export const ITEM_QUALITY_COLOR: Record<number, string> = {
   3: "#0070dd",
   4: "#a335ee",
   5: "#ff8000",
+  // Artifact -- above Legendary, reserved in-game for a handful of unique
+  // items (the Warglaives/Twin Blades of Azzinoth, Atiesh-style items).
+  // Confirmed present in this catalog (10 items, e.g. both Warglaives of
+  // Azzinoth) rather than added speculatively.
+  6: "#e6cc80",
 };
 
 export function itemQualityColor(quality: number | null | undefined): string {
@@ -245,6 +250,7 @@ export const ITEM_QUALITY_NAME: Record<number, string> = {
   3: "Rare",
   4: "Epic",
   5: "Legendary",
+  6: "Artifact",
 };
 
 export function itemQualityName(quality: number | null | undefined): string {
