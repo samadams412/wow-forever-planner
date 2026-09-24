@@ -14,7 +14,12 @@ import type { CampSection, CampMilestone } from "@/lib/profession-recipes";
 // couldn't identify, rather than "there's no item here."
 function MilestoneRow({ milestone, tooltipId }: { milestone: CampMilestone; tooltipId: string }) {
   return (
-    <li className="flex items-start gap-3 py-2">
+    // Row/column on desktop (name+icon, description, stats each get their
+    // own space in one line); stacked on mobile, since name+icon and stats
+    // are both fixed-width and together leave the flex-1 description almost
+    // no room at phone widths -- forced into a few-pixel-wide column whose
+    // wrapped text visibly ran into the stats column beside it.
+    <li className="flex flex-col gap-1.5 py-2 sm:flex-row sm:items-start sm:gap-3">
       {milestone.item ? (
         <LootItemPill item={milestone.item} tooltipId={tooltipId} context="catalog" />
       ) : (
@@ -26,12 +31,12 @@ function MilestoneRow({ milestone, tooltipId }: { milestone: CampMilestone; tool
           {milestone.name}
         </span>
       )}
-      <span className="min-w-0 flex-1 text-xs text-foreground-muted">{milestone.description}</span>
-      <span className="shrink-0 text-right text-xs">
+      <span className="min-w-0 text-xs text-foreground-muted sm:flex-1">{milestone.description}</span>
+      <span className="flex shrink-0 items-center gap-1.5 text-xs sm:text-right">
         {milestone.legacyPoints && <span className="font-medium text-accent">{milestone.legacyPoints}</span>}
         {milestone.skill !== null && <span className="text-foreground-muted">Skill {milestone.skill}</span>}
         {milestone.blueprint && (
-          <span className="ml-1.5 inline-block align-middle">
+          <span className="inline-block align-middle">
             <LootItemPill item={milestone.blueprint} tooltipId={`${tooltipId}:blueprint`} context="catalog" />
           </span>
         )}
