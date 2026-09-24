@@ -2,18 +2,23 @@ import { TooltipName, TooltipType, TooltipDataNote } from "@/components/planner/
 import { itemQualityColor, iconUrl } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 
-// "missing" means two different things depending on where an item is shown:
-// on a dungeon loot page it's a boss/quest drop that isn't confirmed in
-// Forever's loot table anymore; in the full item catalog it just means the
-// beta client hasn't touched that Classic item's data yet (lib/items.ts's
-// own "No Forever Data" tab label is the accurate claim there) -- neither
-// wording is right in the other context, so the caller says which one it is.
+// "new"/"changed"/"same" read slightly differently depending on where an
+// item is shown (a loot drop vs. a catalog entry), so the caller says which
+// one it is. "missing" does NOT differ, despite an earlier version of this
+// note claiming a loot drop's "missing" meant "no longer drops in Forever" --
+// verified directly against foreverchanges.pro that this was wrong: a
+// dungeon whose entire loot table is "missing" status (e.g. Scarlet
+// Monastery: Armory) renders its own page with "Nobody has seen these drops
+// in the beta yet: the stats and chances are Classic's for now," and a
+// "missing" item's own /item/<id> page describes it as "(No Forever data
+// yet)" -- the exact same claim the catalog makes. Both contexts use the
+// same wording now.
 const STATUS_NOTE: Record<"loot" | "catalog", Record<NonNullable<LootItem["status"]>, string>> = {
   loot: {
     new: "New in Forever -- not in Classic's loot table.",
     changed: "Changed from Classic (see below).",
     same: "Unchanged from Classic.",
-    missing: "No longer drops in Forever -- this was Classic's loot table.",
+    missing: "No Forever data yet -- stats and drop chance shown are Classic's for now.",
   },
   catalog: {
     new: "New in Forever -- the Classic Era client has no item with this id.",

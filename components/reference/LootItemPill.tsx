@@ -84,11 +84,17 @@ export default function LootItemPill({
   }, []);
 
   const qualityColor = itemQualityColor(item.quality);
-  // "missing" only means "no longer drops" in a loot context -- in the item
-  // catalog it means "beta hasn't touched this Classic item yet" (see
-  // ItemTooltipBody's context-aware status note), so the muted/grayscale
-  // "Gone" treatment below would misrepresent it there.
-  const missing = context === "loot" && item.status === "missing";
+  // "missing" means the same thing everywhere it appears: the beta client
+  // hasn't touched this Classic item/drop yet -- NOT "removed from the
+  // game." Verified directly against foreverchanges.pro: a dungeon whose
+  // entire loot table is "missing" status (e.g. Scarlet Monastery: Armory)
+  // renders its own page with the disclaimer "Nobody has seen these drops
+  // in the beta yet: the stats and chances are Classic's for now," and a
+  // "missing" item's own /item/<id> page describes it as "(No Forever data
+  // yet)" -- neither shows any "removed"/"no longer drops" treatment. There
+  // is currently no real "this was removed from Forever" signal anywhere in
+  // the sourced data, so no muted/grayscale/"Gone" treatment is applied for
+  // any status here.
   const nameEl = <span style={item.quality !== null ? { color: qualityColor } : undefined}>{item.name}</span>;
 
   return (
@@ -107,9 +113,7 @@ export default function LootItemPill({
       } ${
         item.unknown
           ? "border-border/60 bg-surface/40 italic text-foreground-muted/70"
-          : missing
-            ? "border-border/40 bg-surface/30 text-foreground-muted/60"
-            : "border-border bg-surface/60 text-foreground hover:border-accent"
+          : "border-border bg-surface/60 text-foreground hover:border-accent"
       }`}
     >
       {item.icon &&
@@ -117,11 +121,7 @@ export default function LootItemPill({
           const iconEl = (
             <span className="relative inline-block h-5 w-5 shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={mediumIconUrl(item.icon)}
-                alt=""
-                className={`h-5 w-5 rounded-sm ${missing ? "grayscale" : ""}`}
-              />
+              <img src={mediumIconUrl(item.icon)} alt="" className="h-5 w-5 rounded-sm" />
               {qty !== undefined && qty > 1 && (
                 <span className="absolute -bottom-1.5 -right-1.5 rounded-sm bg-black/80 px-1 text-[11px] font-bold leading-tight text-white">
                   {qty}
@@ -151,12 +151,6 @@ export default function LootItemPill({
           New
         </span>
       )}
-      {!iconOnly && missing && (
-        <span className="rounded-sm bg-foreground-muted/20 px-1 text-[9px] font-semibold uppercase tracking-wide text-foreground-muted">
-          Gone
-        </span>
-      )}
-
       {pos &&
         isClaimed &&
         createPortal(
