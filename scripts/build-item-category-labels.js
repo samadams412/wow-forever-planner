@@ -1,7 +1,7 @@
 // One-time pull: fetch one representative item per distinct {c (item class),
 // u (item subclass)} combo from foreverchanges.pro's individual item pages,
 // and record the exact category label text the site displays for that
-// combo. This is what data/sources/foreverchanges_items/*.json's bulk
+// combo. This is what data/sources/foreverchanges/items/*.json's bulk
 // exports never carry (see fc-item.js's buildSyntheticTooltip) -- only the
 // per-item page renders it, as plain server-rendered HTML, not a JSON API
 // (confirmed: zero XHR/fetch requests on an item page's Network tab).
@@ -10,15 +10,15 @@
 // (stable Blizzard item-class/subclass IDs, not beta data that drifts), so
 // this is a one-time ~81-request pull, not a per-item scrape. Run again only
 // if a future data pull introduces a c:u combo not in
-// data/sources/item-category-labels.json.
+// data/sources/foreverchanges/item-category-labels.json.
 //
 // Usage: node scripts/build-item-category-labels.js
 
 const fs = require("fs");
 const path = require("path");
 
-const SOURCES_DIR = path.join(__dirname, "..", "data", "sources", "foreverchanges_items");
-const OUT_PATH = path.join(__dirname, "..", "data", "sources", "item-category-labels.json");
+const SOURCES_DIR = path.join(__dirname, "..", "data", "sources", "foreverchanges", "items");
+const OUT_PATH = path.join(__dirname, "..", "data", "sources", "foreverchanges", "item-category-labels.json");
 
 async function main() {
   const seen = new Map(); // "c:u" -> representative item id

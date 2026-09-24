@@ -102,7 +102,13 @@ function build() {
   const links = {};
   let spellDescSnapshot;
   try {
-    spellDescSnapshot = require(path.join(ROOT, "data", "sources", "talentsforever-2026-09-18-v3-spelldesc.json"));
+    spellDescSnapshot = require(path.join(
+      ROOT,
+      "data",
+      "sources",
+      "talentsforever",
+      "talentsforever-2026-09-18-v3-spelldesc.json"
+    ));
   } catch {
     console.error("Missing fresh vendor snapshot with full per-rank spell_desc; aborting.");
     process.exit(1);

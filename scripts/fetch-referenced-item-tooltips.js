@@ -1,4 +1,4 @@
-// One-time, scoped re-fetch: data/sources/foreverchanges_items/same.json (the
+// One-time, scoped re-fetch: data/sources/foreverchanges/items/same.json (the
 // bulk "unchanged from Classic" export) never carries full tooltip text --
 // see fc-item.js's header comment -- so any "same"-status item resolved
 // through it (profession recipes/reagents, dungeon quest rewards -- NOT
@@ -13,9 +13,10 @@
 // labels.js) -- computed by scanning data/professions-catalog/*.json and
 // data/dungeons/*.json for itemId + status:"same" + tooltipSynthesized:true.
 //
-// Output is a dated overlay (data/sources/item-tooltip-overlay-<date>.json,
-// following this project's "immutable dated snapshot, never overwrite in
-// place" convention for data/sources/) mapping item id -> real Forever-beta
+// Output is a dated overlay (data/sources/foreverchanges/
+// item-tooltip-overlay-<date>.json, following this project's "immutable
+// dated snapshot, never overwrite in place" convention for data/sources/)
+// mapping item id -> real Forever-beta
 // tooltip line array, loaded and merged onto the raw record's `x` field by
 // fc-item.js before it's used, so every existing consumer (build-items.js,
 // build-dungeons.js, build-professions.js via data/items.json) picks it up
@@ -29,7 +30,7 @@ const { fetchItemTooltip } = require("./lib/fetch-item-tooltip");
 
 const ROOT = path.join(__dirname, "..");
 const today = new Date().toISOString().slice(0, 10);
-const OUT_PATH = path.join(ROOT, "data", "sources", `item-tooltip-overlay-${today}.json`);
+const OUT_PATH = path.join(ROOT, "data", "sources", "foreverchanges", `item-tooltip-overlay-${today}.json`);
 
 function collectScopeIds() {
   const ids = new Map(); // itemId -> name (for logging)

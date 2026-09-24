@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Normalizes foreverchanges.pro's full item catalog (data/sources/
-// foreverchanges_items/{new,changed,same,missing}.json -- the same source
+// foreverchanges/items/{new,changed,same,missing}.json -- the same source
 // build-dungeons.js already reads for quest-reward enrichment) into one
 // flat data/items.json for the /reference/items page. Each entry comes out
 // in the exact same LootItem shape dungeon loot already uses (lib/
@@ -20,7 +20,7 @@ const path = require("path");
 const { fcItemToUnified } = require("./lib/fc-item");
 
 const ROOT = path.join(__dirname, "..");
-const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges_items");
+const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges", "items");
 const OUT_FILE = path.join(ROOT, "data", "items.json");
 
 function main() {

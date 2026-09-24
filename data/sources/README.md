@@ -5,6 +5,48 @@ as-received so later sessions can diff what changed between pulls instead
 of only ever seeing the latest state. Never overwrite an existing snapshot
 in place -- a new pull gets a new dated file alongside the old one.
 
+## Layout (reorganized 2026-09-23, grouped by source)
+
+```
+data/sources/
+  talentsforever/         talentsforever.com pulls -- talents, racials,
+                           class abilities, spellbooks, spell_desc tooltip
+                           text, and the Legacy Perk trees. See below.
+    talentsforever-YYYY-MM-DD.json
+    diffs/                scripts/diff-talentsforever.js's output --
+                           {old}_to_{new}.md/.json per pull, read by both
+                           future sessions applying a changelog and
+                           lib/whats-new.ts (/whats-new page)
+  wowtbc/                 wowtbc.gg community-reported dungeon loot --
+                           now only the fallback for the 2 dungeons
+                           (gnomeregan, sm-library) foreverchanges.pro has
+                           no boss-loot pull for yet
+    wowtbc-loot-YYYY-MM-DD.json
+  foreverchanges/         everything pulled from foreverchanges.pro: the
+                           primary dungeon loot/quest source, the full
+                           item catalog, and the 3 gathering professions
+    dungeon_data/         <slug>.json (boss/trash/rare loot) and
+                           <slug>.quests.json (quest chains), per dungeon
+    items/                new.json / changed.json / same.json /
+                           missing.json -- the full ~21k-item catalog
+    item-category-labels.json      c:u item-class/subclass -> display
+                                    label, built by
+                                    build-item-category-labels.js
+    item-tooltip-overlay-<date>.json   scoped re-fetch of "same"-status
+                                        items actually referenced site-
+                                        wide, merged onto items/*.json at
+                                        build time (see fc-item.js)
+    gathering-professions-<date>.json  Mining/Herbalism/Skinning raw pull
+```
+
+Before this reorg, every dated file and both foreverchanges_* directories
+sat flat under `data/sources/` together -- functionally fine, but it made
+"which source does this file belong to" a guessing game as the number of
+sources grew from one (talentsforever) to three. Every script under
+`scripts/` and the one runtime reader (`lib/whats-new.ts`) were updated to
+the new paths in the same change that moved the files; if you're reading
+an older commit's version of a script, expect the flat paths instead.
+
 ## talentsforever-YYYY-MM-DD.json
 
 Full `data.json` export from talentsforever.com (a fan-made WoW: Forever
@@ -140,7 +182,7 @@ brand-new field it's never seen before, so a schema addition doesn't go
 unnoticed just because nothing yet reads it. Apply only what the diff
 shows changed; don't re-verify or re-transcribe sections it says are
 identical. It writes both a markdown summary and the raw JSON diff to
-`data/sources/diffs/`, and prints the markdown to stdout.
+`data/sources/talentsforever/diffs/`, and prints the markdown to stdout.
 
 It's a pure JSON-field diff, so it can't see a changelog item with no
 data-level signal at all -- a UI/UX rebuild, a CSS-only fix, copy changed

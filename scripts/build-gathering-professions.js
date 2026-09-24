@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Builds data/professions-catalog/{mining,herbalism,skinning}.json from
-// the latest data/sources/gathering-professions-<date>.json snapshot (see
+// the latest data/sources/foreverchanges/gathering-professions-<date>.json
+// snapshot (see
 // scripts/fetch-gathering-professions.js). A separate pipeline from
 // build-professions.js's crafting one -- these 3 pages have a genuinely
 // different shape (no reagent-based recipes, no category sidebar, no
@@ -20,7 +21,7 @@ const { itemRef, unresolvedItemRef, resolveItemByUrl } = require("./lib/item-ref
 const { buildCampMilestones, loadLegacyPerks, GATHERING_LEGACY_PERK_IDS } = require("./lib/camp-section");
 
 const ROOT = path.join(__dirname, "..");
-const SOURCES_DIR = path.join(ROOT, "data", "sources");
+const SOURCES_DIR = path.join(ROOT, "data", "sources", "foreverchanges");
 const OUT_DIR = path.join(ROOT, "data", "professions-catalog");
 
 const GATHERING_PROFESSIONS = [
@@ -76,7 +77,9 @@ function buildSmelting(raw, byId) {
 function main() {
   const snapshotPath = latestSnapshotPath();
   if (!snapshotPath) {
-    console.error("No data/sources/gathering-professions-*.json snapshot found -- run scripts/fetch-gathering-professions.js first.");
+    console.error(
+      "No data/sources/foreverchanges/gathering-professions-*.json snapshot found -- run scripts/fetch-gathering-professions.js first."
+    );
     process.exit(1);
   }
   console.log(`Reading ${snapshotPath}`);

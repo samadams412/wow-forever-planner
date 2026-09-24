@@ -1,7 +1,7 @@
 // Maps our own dungeon ids (data/dungeons.json) to the id schemes used by
 // the two outside sources this feature pulls from:
 //   - fc:  foreverchanges.pro's own dungeon slug (used for both
-//          data/sources/foreverchanges_dungeon_data/<fc>.json loot pulls
+//          data/sources/foreverchanges/dungeon_data/<fc>.json loot pulls
 //          and <fc>.quests.json quest pulls)
 //   - art: the art slug in foreverchanges' own CDN path
 //          (https://foreverchanges.pro/wow-ui/dungeons/art-<art>.webp) --

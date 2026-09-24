@@ -32,7 +32,7 @@ function loadCategoryLabels() {
   if (_categoryLabels === null) {
     const fs = require("fs");
     const path = require("path");
-    const labelsPath = path.join(__dirname, "..", "..", "data", "sources", "item-category-labels.json");
+    const labelsPath = path.join(__dirname, "..", "..", "data", "sources", "foreverchanges", "item-category-labels.json");
     _categoryLabels = JSON.parse(fs.readFileSync(labelsPath, "utf8"));
   }
   return _categoryLabels;
@@ -60,7 +60,7 @@ function loadTooltipOverlay() {
   if (_tooltipOverlay === null) {
     const fs = require("fs");
     const path = require("path");
-    const sourcesDir = path.join(__dirname, "..", "..", "data", "sources");
+    const sourcesDir = path.join(__dirname, "..", "..", "data", "sources", "foreverchanges");
     const overlayFiles = fs
       .readdirSync(sourcesDir)
       .filter((f) => /^item-tooltip-overlay-\d{4}-\d{2}-\d{2}\.json$/.test(f))

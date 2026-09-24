@@ -1,6 +1,6 @@
 // Fetches one item's live page from foreverchanges.pro and extracts its
 // full Forever-beta tooltip as an array of strings in the same format
-// data/sources/foreverchanges_items/new.json's/changed.json's own "x"
+// data/sources/foreverchanges/items/new.json's/changed.json's own "x"
 // arrays use (tab-separated "Slot\tType" for the combined line, plain
 // strings for everything else) -- so the result can drop straight into a
 // raw item record's `x` field and fcItemToUnified renders it exactly like

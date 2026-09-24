@@ -3,7 +3,7 @@ import path from "path";
 import type { LootItem } from "@/lib/dungeon-loot";
 
 // The full item catalog (data/items.json, built by scripts/build-items.js
-// from data/sources/foreverchanges_items/*.json) -- every item in the
+// from data/sources/foreverchanges/items/*.json) -- every item in the
 // Forever beta client, new/changed/unchanged/not-yet-touched vs Classic.
 // Read and filtered entirely server-side (this file has no "use client"
 // dependents) so /reference/items never ships the full ~21k-item catalog

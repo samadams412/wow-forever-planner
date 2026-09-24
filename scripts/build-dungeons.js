@@ -2,7 +2,7 @@
 // Normalizes dungeon data from two independently-sourced places into one
 // consistent per-dungeon file our own pages read from:
 //   - data/dungeons.json                          (our own base metadata)
-//   - data/sources/foreverchanges_dungeon_data/*.json / *.quests.json
+//   - data/sources/foreverchanges/dungeon_data/*.json / *.quests.json
 //                                                   (item ids/icons/quality/
 //                                                    tooltips + full quest
 //                                                    chains, pulled from
@@ -38,8 +38,8 @@ const SLUG_MAP = require("./dungeon-source-map");
 const { fcItemToUnified } = require("./lib/fc-item");
 
 const ROOT = path.join(__dirname, "..");
-const FC_DIR = path.join(ROOT, "data", "sources", "foreverchanges_dungeon_data");
-const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges_items");
+const FC_DIR = path.join(ROOT, "data", "sources", "foreverchanges", "dungeon_data");
+const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges", "items");
 const OUT_DIR = path.join(ROOT, "data", "dungeons");
 
 const dungeonsJson = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "dungeons.json"), "utf8"));

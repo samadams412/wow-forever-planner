@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Parses raw get_page_text dumps of wowtbc.gg's WoW Forever dungeon loot
 // pages (https://wowtbc.gg/warcraftforever/loot-tables/dungeons/<slug>/)
-// into the data/sources/wowtbc-loot-YYYY-MM-DD.json snapshot shape (see
+// into the data/sources/wowtbc/wowtbc-loot-YYYY-MM-DD.json snapshot shape (see
 // lib/dungeon-loot.ts's DungeonLoot/LootBoss/QuestReward/LootItem types).
 //
 // This does NOT fetch the pages itself -- wowtbc.gg has no API, so each

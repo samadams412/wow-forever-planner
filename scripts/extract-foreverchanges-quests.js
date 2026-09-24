@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Fetches each dungeon's /dungeons/<slug> page from foreverchanges.pro and
 // extracts ONLY the #quests chapter (quest name, giver, objectives, rewards,
-// and /map link references) into data/sources/foreverchanges_dungeon_data/<slug>.quests.json
+// and /map link references) into data/sources/foreverchanges/dungeon_data/<slug>.quests.json
 //
 // Deliberately skips "Before You Go", "Quest Items" and "Where Quests Start" --
 // their relevant content is already duplicated inside the quests section itself.
@@ -24,7 +24,7 @@ const ALL_SLUGS = [
   "upper-blackrock-spire",
 ];
 
-const OUT_DIR = path.join(__dirname, "..", "data", "sources", "foreverchanges_dungeon_data");
+const OUT_DIR = path.join(__dirname, "..", "data", "sources", "foreverchanges", "dungeon_data");
 
 function decodeEntities(str) {
   return str

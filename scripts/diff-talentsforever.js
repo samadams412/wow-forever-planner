@@ -5,10 +5,12 @@
 // Usage:
 //   node scripts/diff-talentsforever.js [oldPath] [newPath]
 //   node scripts/diff-talentsforever.js                       # defaults to
-//     the two most recent data/sources/talentsforever-*.json files
+//     the two most recent data/sources/talentsforever/talentsforever-*.json
+//     files
 //
 // Writes a human-readable markdown summary and a machine-readable JSON
-// diff into data/sources/diffs/, and prints the markdown to stdout.
+// diff into data/sources/talentsforever/diffs/, and prints the markdown to
+// stdout.
 //
 // Scope: this catches anything that shows up as a JSON field change --
 // added/removed/changed talents, legacy perks, and spellbook entries, plus
@@ -23,7 +25,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const SOURCES_DIR = path.join(__dirname, "..", "data", "sources");
+const SOURCES_DIR = path.join(__dirname, "..", "data", "sources", "talentsforever");
 const DIFFS_DIR = path.join(SOURCES_DIR, "diffs");
 
 function findDefaultSnapshots() {

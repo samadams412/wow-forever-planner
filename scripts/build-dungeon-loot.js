@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Rebuilds data/dungeon-loot.json from the latest data/sources/wowtbc-loot-*.json
+// Rebuilds data/dungeon-loot.json from the latest data/sources/wowtbc/wowtbc-loot-*.json
 // snapshot -- mirrors scripts/build-spellbooks.js's own latest-snapshot pattern.
 // This is an occasional manual pull (wowtbc.gg's community loot tables), not a
 // recurring automated sync, so there's no diff-script counterpart for this one --
@@ -12,7 +12,7 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 
 function findLatestSnapshot() {
-  const sourcesDir = path.join(ROOT, "data", "sources");
+  const sourcesDir = path.join(ROOT, "data", "sources", "wowtbc");
   const files = fs
     .readdirSync(sourcesDir)
     .filter((f) => /^wowtbc-loot-\d{4}-\d{2}-\d{2}\.json$/.test(f))

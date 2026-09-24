@@ -1515,13 +1515,53 @@ confirmation becomes meaningful again and this mechanism (or something
 like it) would be worth rebuilding, but re-add it from that evidence, not
 speculatively.
 
+### `data/sources/` reorganization (2026-09-23)
+Every dated snapshot and pulled-data folder under `data/sources/` used to
+sit flat in one directory (12 `talentsforever-*.json` files, a lone
+`wowtbc-loot-*.json`, and `foreverchanges_dungeon_data/`/
+`foreverchanges_items/` all as siblings) — workable with one source, a
+guessing game once there were three. Regrouped by source into
+`data/sources/{talentsforever,wowtbc,foreverchanges}/`, each holding that
+source's own dated snapshots/pulled data; `diffs/` moved under
+`talentsforever/` specifically, since it's only ever a diff between two
+talentsforever snapshots. Full layout and what lives in each subfolder is
+documented in `data/sources/README.md`'s own "Layout" section — read that
+before hunting for a source file by feel.
+
+**Every script (and `lib/whats-new.ts`, the one runtime reader) was
+updated to the new paths in the same change**, then verified by re-running
+every offline build script that reads from `data/sources/`
+(`build-dungeons.js`, `build-items.js`, `build-dungeon-loot.js`,
+`build-spellbooks.js`, `build-talent-spell-links.js`,
+`diff-talentsforever.js`) and confirming `git diff --stat` showed no
+unintended output changes — only `diff-talentsforever.js`'s own diff file
+changed, and only in the `oldPath`/`newPath` fields it records verbatim
+from the snapshots' new locations, which is the correct, expected
+difference. (`build-item-category-labels.js` and
+`fetch-gathering-professions.js` do live network pulls and weren't
+re-run for this verification -- their path updates are the same
+mechanical `path.join` edit as every other script here, not exercised
+live.) One unrelated, pre-existing finding surfaced by this verification:
+re-running `build-dungeons.js` reverted a hand-edit to the generated
+`data/dungeons/hall-of-thanes.json` (quest-96403's faction, "Alliance" →
+back to "Both") because the prior commit that made that edit patched the
+generated output directly rather than the foreverchanges source file
+(`data/sources/foreverchanges/dungeon_data/hall-of-thanes.quests.json`,
+which still says "Both" and was open in the editor at the start of this
+session) — restored via `git checkout` before committing anything, not
+acted on further since it looks like in-progress work on that source
+file. If that quest's faction still needs to change, it needs to change
+in the source file, or the next `build-dungeons.js` run will revert it
+again.
+
 ### Daily data-diff workflow
 `data/sources/` holds dated, **immutable** snapshots of talentsforever.com's
-export (`talentsforever-YYYY-MM-DD.json`) — a new pull always gets a new
-dated file, never overwrites an existing one in place (see
-`data/sources/README.md`). `node scripts/diff-talentsforever.js` diffs the
-two most recent snapshots and writes both a markdown summary and the raw
-JSON diff to `data/sources/diffs/` — **this is the standard first step
+export (`talentsforever/talentsforever-YYYY-MM-DD.json`) — a new pull
+always gets a new dated file, never overwrites an existing one in place
+(see `data/sources/README.md`). `node scripts/diff-talentsforever.js` diffs
+the two most recent snapshots and writes both a markdown summary and the
+raw JSON diff to `data/sources/talentsforever/diffs/` — **this is the
+standard first step
 before applying any changelog update**, so changes get applied from the
 diff's actual field-level output rather than re-transcribing the whole
 export by hand. The script is a pure JSON-field diff — it can't see

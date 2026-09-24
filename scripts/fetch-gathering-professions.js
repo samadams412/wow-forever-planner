@@ -10,8 +10,9 @@
 // Herbalism has nodes+leveling only; Skinning has no separate "nodes" list
 // at all -- its single band list doubles as both.
 //
-// Output: one dated snapshot file (data/sources/gathering-professions-
-// <date>.json, following this project's "immutable dated snapshot"
+// Output: one dated snapshot file (data/sources/foreverchanges/
+// gathering-professions-<date>.json, following this project's "immutable
+// dated snapshot"
 // convention) holding all 3 professions' raw parsed data plus their camp
 // section (reusing parseCampSection from parse-profession-page.js -- the
 // #camp chapter markup is identical between crafting and gathering pages).
@@ -26,7 +27,7 @@ const { parseCampSection } = require("./lib/parse-profession-page");
 const ROOT = path.join(__dirname, "..");
 const BASE = "https://foreverchanges.pro";
 const today = new Date().toISOString().slice(0, 10);
-const OUT_PATH = path.join(ROOT, "data", "sources", `gathering-professions-${today}.json`);
+const OUT_PATH = path.join(ROOT, "data", "sources", "foreverchanges", `gathering-professions-${today}.json`);
 
 const GATHERING_PROFESSIONS = [
   { id: "mining", name: "Mining" },

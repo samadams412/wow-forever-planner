@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 
 // Reads the structured diff JSON that scripts/diff-talentsforever.js already
-// writes to data/sources/diffs/ (see that script and data/sources/README.md)
+// writes to data/sources/talentsforever/diffs/ (see that script and
+// data/sources/README.md)
 // and turns it into plain-language "what changed" content for /whats-new.
 // This deliberately only covers talent add/remove/move/prereq changes --
 // the four categories the page's headline breakdown shows -- not every
@@ -15,7 +16,7 @@ import path from "path";
 // visible in the linked raw diff files; this page just doesn't count them
 // in the headline numbers.
 
-const DIFFS_DIR = path.join(process.cwd(), "data", "sources", "diffs");
+const DIFFS_DIR = path.join(process.cwd(), "data", "sources", "talentsforever", "diffs");
 
 type RawTalentRef = {
   className: string;

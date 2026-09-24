@@ -5,7 +5,7 @@
 // character happened to have by BlizzCon 2026) with the real thing.
 //
 // Usage: node scripts/build-spellbooks.js [snapshotPath]
-//   Defaults to the most recent data/sources/talentsforever-*.json snapshot
+//   Defaults to the most recent data/sources/talentsforever/talentsforever-*.json snapshot
 //   (a plain-dated file, matching diff-talentsforever.js's own picker) --
 //   not a hardcoded date, since that goes stale the moment a new pull lands.
 //
@@ -135,7 +135,7 @@ function buildClassSpellbook(classId, snapshot, oldSpellbook) {
 }
 
 function findLatestSnapshot() {
-  const sourcesDir = path.join(ROOT, "data", "sources");
+  const sourcesDir = path.join(ROOT, "data", "sources", "talentsforever");
   const files = fs
     .readdirSync(sourcesDir)
     .filter((f) => /^talentsforever-\d{4}-\d{2}-\d{2}\.json$/.test(f))
