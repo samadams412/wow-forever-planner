@@ -20,41 +20,56 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
           </div>
           <div className="flex flex-col gap-2.5 p-3">
             {rank.steps.map((step, si) => (
-              <div key={si} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
-                <span className="w-16 shrink-0 text-xs font-medium text-foreground-muted">
-                  {/* A one-time prerequisite step (e.g. Enchanting's "Make a
-                      Runed Copper Rod") renders as a single level on
-                      foreverchanges' own page, not a range -- step.range[1]
-                      is genuinely absent for these, not a missing value. */}
-                  {step.range[1] != null ? (
-                    <>
-                      {step.range[0]}&ndash;{step.range[1]}
-                    </>
-                  ) : (
-                    step.range[0]
-                  )}
-                </span>
-                <LootItemPill item={step.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}`} context="catalog" />
-                <span className="text-xs text-foreground-muted">{step.source}</span>
-                {/* Distinct from the muted source/mats text so the craft
-                    estimate is easy to pick out at a glance -- same
-                    "give the number its own color" hierarchy this page's
-                    rank header (text-accent) already uses, not the orange/
-                    yellow/green/grey skill-threshold colors, which mean a
-                    specific different thing (ProfessionSkillColors). */}
-                <span className="text-xs font-medium text-accent">
-                  {step.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
-                </span>
-                <div className="flex flex-wrap gap-1">
-                  {step.mats.map((mat, mi) => (
-                    <LootItemPill
-                      key={mi}
-                      item={mat.item}
-                      tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`}
-                      context="catalog"
-                      qty={mat.qty}
-                    />
-                  ))}
+              // Two rows, not one flat flex-wrap bag: a long source string
+              // (e.g. "Recipe sold by Derak Nightfall (Horde) or Lindea
+              // Rabonne (Alliance) and 1 more") used to sit in the same
+              // wrap flow as the range/item/count, so once it wrapped onto
+              // its own line it started flush at the row's left edge --
+              // disconnected from the item it was describing, with mats
+              // sometimes landing on a third orphaned line. Keeping range +
+              // item on their own row and indenting source/count/mats to
+              // align under the item (pl-16 matches the range column's
+              // w-16) keeps everything legible at any width without
+              // truncating real vendor names.
+              <div key={si} className="flex flex-col gap-1 text-sm">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span className="w-16 shrink-0 text-xs font-medium text-foreground-muted">
+                    {/* A one-time prerequisite step (e.g. Enchanting's "Make a
+                        Runed Copper Rod") renders as a single level on
+                        foreverchanges' own page, not a range -- step.range[1]
+                        is genuinely absent for these, not a missing value. */}
+                    {step.range[1] != null ? (
+                      <>
+                        {step.range[0]}&ndash;{step.range[1]}
+                      </>
+                    ) : (
+                      step.range[0]
+                    )}
+                  </span>
+                  <LootItemPill item={step.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}`} context="catalog" />
+                </div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pl-16">
+                  <span className="text-xs text-foreground-muted">{step.source}</span>
+                  {/* Distinct from the muted source/mats text so the craft
+                      estimate is easy to pick out at a glance -- same
+                      "give the number its own color" hierarchy this page's
+                      rank header (text-accent) already uses, not the orange/
+                      yellow/green/grey skill-threshold colors, which mean a
+                      specific different thing (ProfessionSkillColors). */}
+                  <span className="text-xs font-medium text-accent">
+                    {step.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
+                  </span>
+                  <div className="flex flex-wrap gap-1">
+                    {step.mats.map((mat, mi) => (
+                      <LootItemPill
+                        key={mi}
+                        item={mat.item}
+                        tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`}
+                        context="catalog"
+                        qty={mat.qty}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
