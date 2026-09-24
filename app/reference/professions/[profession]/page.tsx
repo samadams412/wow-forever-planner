@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ProfessionCategorySidebar from "@/components/professions/ProfessionCategorySidebar";
 import ProfessionRecipeTable from "@/components/professions/ProfessionRecipeTable";
 import ProfessionLevelingGuide from "@/components/professions/ProfessionLevelingGuide";
+import ProfessionShoppingList from "@/components/professions/ProfessionShoppingList";
 import ProfessionMerchantsFavor from "@/components/professions/ProfessionMerchantsFavor";
 import ProfessionCamp from "@/components/professions/ProfessionCamp";
 import ProfessionNodeList from "@/components/professions/ProfessionNodeList";
@@ -207,7 +208,19 @@ export default async function ProfessionPage({
 
       {activeView === "leveling" &&
         (catalog.leveling ? (
-          <ProfessionLevelingGuide leveling={catalog.leveling} professionId={catalog.id} />
+          <>
+            <p className="mt-4 text-xs text-foreground-muted">
+              <a href="#items-needed" className="text-accent hover:underline">
+                Jump to items needed &darr;
+              </a>
+            </p>
+            <ProfessionLevelingGuide leveling={catalog.leveling} professionId={catalog.id} />
+            <ProfessionShoppingList
+              leveling={catalog.leveling}
+              recipes={catalog.recipes}
+              professionId={catalog.id}
+            />
+          </>
         ) : (
           <ComingSoon label="Leveling 1 to 300" />
         ))}
