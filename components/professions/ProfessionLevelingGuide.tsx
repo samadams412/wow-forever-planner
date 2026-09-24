@@ -31,7 +31,7 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
               // align under the item (pl-16 matches the range column's
               // w-16) keeps everything legible at any width without
               // truncating real vendor names.
-              <div key={si} className="flex flex-col gap-1 text-sm">
+              <div key={si} className="-mx-3 flex flex-col gap-1 rounded-sm px-3 py-1 text-sm even:bg-surface-hover/30">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   <span className="w-16 shrink-0 text-xs font-medium text-foreground-muted">
                     {/* A one-time prerequisite step (e.g. Enchanting's "Make a
