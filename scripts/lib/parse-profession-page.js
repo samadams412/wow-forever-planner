@@ -220,6 +220,113 @@ function parseCampSection(html) {
   };
 }
 
+// The "Recipes" tab's per-item skill-color data (learn/yellow/green/grey)
+// isn't in the page's plain SSR HTML at all, unlike every other chapter
+// this file parses -- it's client-hydrated from a "rows" array embedded in
+// the page's React Server Components flight payload, itself double-JSON-
+// escaped (the payload is a JSON string inside the page, and each row's
+// own fields are escaped one level again -- `\"id\":6730` in the raw HTML
+// bytes). Confirmed present for every recipe on the page regardless of
+// which category tab is active in the browser (the DOM only *renders* the
+// active category's rows, but the underlying data for every category ships
+// in this one array on first load) -- verified against Blacksmithing: all
+// 437 rows extracted this way, "Ironforge Chain" (item 6730) resolving to
+// learn:65/yellow:80/green:100/grey:120, matching the live rendered page's
+// own "65" column exactly.
+//
+// Used for backfilling `rank` (== `learn`) on recipes whose hand-provided
+// data/professions/<id>.json has "–" for it -- see
+// scripts/fetch-profession-recipe-ranks.js. Returns null (not a throw) if
+// the marker isn't found or the array doesn't parse, so a format change on
+// the vendor's side degrades to "nothing backfillable this run" rather than
+// crashing every profession's fetch.
+//
+// Shared by parseRecipeRows (the "rows" key, 7 of 8 professions) and
+// parseEnchantRows (Enchanting's "enchants" key -- see that function's own
+// comment for why Enchanting needs a second, differently-shaped source).
+function extractEscapedJsonArray(html, key) {
+  const marker = `\\"${key}\\":[`;
+  const start = html.indexOf(marker);
+  if (start === -1) return null;
+  const arrStart = start + marker.length - 1;
+
+  // Unescape a generous raw window first (backslash-quote -> quote,
+  // backslash-backslash -> backslash, single left-to-right pass so nothing
+  // gets double-processed), THEN bracket-count on the now-clean text to
+  // find the real matching "]" -- bracket-counting the still-escaped text
+  // directly was tried and is unreliable (a stray reference/backreference
+  // elsewhere in the flight payload can desync the depth count).
+  const rawWindow = html.slice(arrStart, arrStart + 2_000_000);
+  let clean = "";
+  for (let i = 0; i < rawWindow.length; i++) {
+    const c = rawWindow[i];
+    if (c === "\\" && (rawWindow[i + 1] === '"' || rawWindow[i + 1] === "\\")) {
+      clean += rawWindow[i + 1];
+      i++;
+    } else {
+      clean += c;
+    }
+  }
+
+  let depth = 0;
+  let inString = false;
+  let end = -1;
+  for (let i = 0; i < clean.length; i++) {
+    const c = clean[i];
+    if (inString) {
+      if (c === "\\") { i++; continue; }
+      if (c === '"') inString = false;
+      continue;
+    }
+    if (c === '"') { inString = true; continue; }
+    if (c === "[") depth++;
+    else if (c === "]") {
+      depth--;
+      if (depth === 0) { end = i; break; }
+    }
+  }
+  if (end === -1) return null;
+
+  try {
+    return JSON.parse(clean.slice(0, end + 1));
+  } catch {
+    return null;
+  }
+}
+
+function parseRecipeRows(html) {
+  return extractEscapedJsonArray(html, "rows");
+}
+
+// Enchanting's own recipe table has no "rows" array at all -- confirmed by
+// checking the raw page directly. It splits into two genuinely different
+// sources instead:
+// 1. Pure enchant-effect recipes ("Enchant Bracer - Inferior Stamina") have
+//    no distinct craftable item of their own, so they live in an
+//    "enchants" array keyed by the enchant's own name, not an item id.
+// 2. The handful of physical items Enchanting also makes (wands, rods,
+//    enchanted materials) render as plain SSR HTML instead of JSON at
+//    all -- <li id="r-<itemId>">...<span class="en3-skill...">RANK</span>
+//    -- see parseEnchantOtherItemRanks below.
+function parseEnchantRows(html) {
+  return extractEscapedJsonArray(html, "enchants");
+}
+
+// The non-enchant-effect items on Enchanting's page (wands, rods, enchanted
+// bars/leather) -- plain visible HTML, not a JSON payload, matching this
+// project's usual parsing technique elsewhere on this site. Returns a Map
+// keyed by itemId -> rank string, or an empty Map if none found (never
+// null -- there's always at least a few of these on Enchanting's page).
+function parseEnchantOtherItemRanks(html) {
+  const re = /<li id="r-(\d+)">[\s\S]*?<span class="en3-skill[^"]*">(\d+)<\/span>/g;
+  const byId = new Map();
+  let m;
+  while ((m = re.exec(html))) {
+    byId.set(Number(m[1]), m[2]);
+  }
+  return byId;
+}
+
 async function fetchProfessionPage(slug) {
   const res = await fetch(`${BASE}/professions/${slug}`, { headers: { "User-Agent": "Mozilla/5.0" } });
   if (!res.ok) return { ok: false, status: res.status };
@@ -229,7 +336,18 @@ async function fetchProfessionPage(slug) {
     leveling_section: parseLevelingSection(html),
     favor_section: parseFavorSection(html),
     camp_section: parseCampSection(html),
+    recipe_rows: parseRecipeRows(html),
+    enchant_rows: parseEnchantRows(html),
+    enchant_other_item_ranks: parseEnchantOtherItemRanks(html),
   };
 }
 
-module.exports = { fetchProfessionPage, parseLevelingSection, parseFavorSection, parseCampSection };
+module.exports = {
+  fetchProfessionPage,
+  parseLevelingSection,
+  parseFavorSection,
+  parseCampSection,
+  parseRecipeRows,
+  parseEnchantRows,
+  parseEnchantOtherItemRanks,
+};
