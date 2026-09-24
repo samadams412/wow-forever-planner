@@ -17,20 +17,50 @@ export const metadata: Metadata = {
     "Every item in the World of Warcraft: Forever beta client, filterable by new/changed/unchanged-since-Classic, sourced from foreverchanges.pro.",
 };
 
-function buildHref(params: { status: string; q: string; rarity?: number; page?: number }): string {
+type FilterParams = {
+  status: string;
+  q: string;
+  rarity?: number;
+  itemLevelMin?: number;
+  itemLevelMax?: number;
+  requiredLevelMin?: number;
+  requiredLevelMax?: number;
+  page?: number;
+};
+
+function buildHref(params: FilterParams): string {
   const usp = new URLSearchParams();
   if (params.status !== "all") usp.set("status", params.status);
   if (params.q) usp.set("q", params.q);
   if (params.rarity !== undefined) usp.set("rarity", String(params.rarity));
+  if (params.itemLevelMin !== undefined) usp.set("ilvlMin", String(params.itemLevelMin));
+  if (params.itemLevelMax !== undefined) usp.set("ilvlMax", String(params.itemLevelMax));
+  if (params.requiredLevelMin !== undefined) usp.set("reqMin", String(params.requiredLevelMin));
+  if (params.requiredLevelMax !== undefined) usp.set("reqMax", String(params.requiredLevelMax));
   if (params.page && params.page > 1) usp.set("page", String(params.page));
   const qs = usp.toString();
   return qs ? `/reference/items?${qs}` : "/reference/items";
 }
 
+function parseIntParam(value: string | undefined): number | undefined {
+  if (!value) return undefined;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : undefined;
+}
+
 export default async function ItemsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ status?: string; q?: string; rarity?: string; page?: string }>;
+  searchParams: Promise<{
+    status?: string;
+    q?: string;
+    rarity?: string;
+    ilvlMin?: string;
+    ilvlMax?: string;
+    reqMin?: string;
+    reqMax?: string;
+    page?: string;
+  }>;
 }) {
   const resolved = await searchParams;
   const status = (STATUS_TABS.some((t) => t.value === resolved.status) ? resolved.status : "all") as
@@ -38,10 +68,17 @@ export default async function ItemsPage({
     | "all";
   const q = resolved.q ?? "";
   const rarity = RARITY_VALUES.includes(Number(resolved.rarity)) ? Number(resolved.rarity) : undefined;
+  const itemLevelMin = parseIntParam(resolved.ilvlMin);
+  const itemLevelMax = parseIntParam(resolved.ilvlMax);
+  const requiredLevelMin = parseIntParam(resolved.reqMin);
+  const requiredLevelMax = parseIntParam(resolved.reqMax);
   const page = Math.max(1, Number(resolved.page) || 1);
 
   const counts = getItemStatusCounts();
-  const result = queryItems({ status, q, rarity, page });
+  const result = queryItems({ status, q, rarity, itemLevelMin, itemLevelMax, requiredLevelMin, requiredLevelMax, page });
+  const baseFilters: FilterParams = { status, q, rarity, itemLevelMin, itemLevelMax, requiredLevelMin, requiredLevelMax };
+  const hasRangeFilter =
+    itemLevelMin !== undefined || itemLevelMax !== undefined || requiredLevelMin !== undefined || requiredLevelMax !== undefined;
 
   return (
     <main className="mx-auto w-full max-w-4xl px-3 py-8 sm:px-4">
@@ -58,7 +95,7 @@ export default async function ItemsPage({
           {STATUS_TABS.map((tab) => (
             <Link
               key={tab.value}
-              href={buildHref({ status: tab.value, q, rarity })}
+              href={buildHref({ ...baseFilters, status: tab.value })}
               className={`rounded-sm px-2 py-1 transition-colors ${
                 status === tab.value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
               }`}
@@ -72,7 +109,7 @@ export default async function ItemsPage({
 
       <div className="mt-2 inline-flex flex-wrap items-center gap-1 rounded border border-border bg-surface p-0.5 text-xs">
         <Link
-          href={buildHref({ status, q })}
+          href={buildHref({ ...baseFilters, rarity: undefined })}
           className={`rounded-sm px-2 py-1 font-medium transition-colors ${
             rarity === undefined ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
           }`}
@@ -82,7 +119,7 @@ export default async function ItemsPage({
         {RARITY_VALUES.map((value) => (
           <Link
             key={value}
-            href={buildHref({ status, q, rarity: value })}
+            href={buildHref({ ...baseFilters, rarity: value })}
             style={{ color: rarity === value ? itemQualityColor(value) : undefined }}
             className={`rounded-sm px-2 py-1 font-medium transition-colors ${
               rarity === value ? "bg-accent/20" : "text-foreground-muted hover:text-foreground"
@@ -92,6 +129,78 @@ export default async function ItemsPage({
           </Link>
         ))}
       </div>
+
+      {/* Plain GET form -- no client JS needed, matching this page's other
+          filters. Typing a range and hitting Enter/"Apply" navigates to the
+          same ?ilvlMin=&ilvlMax=&reqMin=&reqMax= params buildHref already
+          knows how to read back out, so pagination/tab/rarity links above
+          keep the range active via baseFilters the same way they already
+          preserve q/rarity. */}
+      <form action="/reference/items" className="mt-2 flex flex-wrap items-end gap-3 text-xs">
+        <input type="hidden" name="status" value={status} />
+        <input type="hidden" name="q" value={q} />
+        {rarity !== undefined && <input type="hidden" name="rarity" value={rarity} />}
+        <label className="flex flex-col gap-1 text-foreground-muted">
+          Required level
+          <span className="flex items-center gap-1">
+            <input
+              type="number"
+              name="reqMin"
+              min={0}
+              max={60}
+              defaultValue={requiredLevelMin}
+              placeholder="min"
+              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+            />
+            <span>&ndash;</span>
+            <input
+              type="number"
+              name="reqMax"
+              min={0}
+              max={60}
+              defaultValue={requiredLevelMax}
+              placeholder="max"
+              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+            />
+          </span>
+        </label>
+        <label className="flex flex-col gap-1 text-foreground-muted">
+          Item level
+          <span className="flex items-center gap-1">
+            <input
+              type="number"
+              name="ilvlMin"
+              min={0}
+              defaultValue={itemLevelMin}
+              placeholder="min"
+              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+            />
+            <span>&ndash;</span>
+            <input
+              type="number"
+              name="ilvlMax"
+              min={0}
+              defaultValue={itemLevelMax}
+              placeholder="max"
+              className="w-16 rounded border border-border bg-surface px-2 py-1 text-foreground"
+            />
+          </span>
+        </label>
+        <button
+          type="submit"
+          className="rounded border border-accent/60 px-3 py-1.5 font-medium text-accent transition-colors hover:bg-surface-hover"
+        >
+          Apply
+        </button>
+        {hasRangeFilter && (
+          <Link
+            href={buildHref({ ...baseFilters, itemLevelMin: undefined, itemLevelMax: undefined, requiredLevelMin: undefined, requiredLevelMax: undefined })}
+            className="text-foreground-muted underline hover:text-foreground"
+          >
+            Clear range filters
+          </Link>
+        )}
+      </form>
 
       <p className="mt-3 text-xs text-foreground-muted">
         {result.total.toLocaleString()} item{result.total === 1 ? "" : "s"}
@@ -104,7 +213,7 @@ export default async function ItemsPage({
         <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">
           {result.page > 1 ? (
             <Link
-              href={buildHref({ status, q, rarity, page: result.page - 1 })}
+              href={buildHref({ ...baseFilters, page: result.page - 1 })}
               className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
             >
               &larr; Previous
@@ -117,7 +226,7 @@ export default async function ItemsPage({
           </span>
           {result.page < result.pageCount ? (
             <Link
-              href={buildHref({ status, q, rarity, page: result.page + 1 })}
+              href={buildHref({ ...baseFilters, page: result.page + 1 })}
               className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
             >
               Next &rarr;

@@ -54,6 +54,10 @@ export type ItemQuery = {
   status?: ItemStatus | "all";
   q?: string;
   rarity?: number;
+  itemLevelMin?: number;
+  itemLevelMax?: number;
+  requiredLevelMin?: number;
+  requiredLevelMax?: number;
   page?: number;
   pageSize?: number;
 };
@@ -66,10 +70,31 @@ export type ItemQueryResult = {
   pageCount: number;
 };
 
-export function queryItems({ status = "all", q = "", rarity, page = 1, pageSize = 60 }: ItemQuery): ItemQueryResult {
+export function queryItems({
+  status = "all",
+  q = "",
+  rarity,
+  itemLevelMin,
+  itemLevelMax,
+  requiredLevelMin,
+  requiredLevelMax,
+  page = 1,
+  pageSize = 60,
+}: ItemQuery): ItemQueryResult {
   let items = loadAll();
   if (status !== "all") items = items.filter((item) => item.status === status);
   if (rarity !== undefined) items = items.filter((item) => item.quality === rarity);
+  // A range bound excludes an item with a null level rather than treating
+  // null as 0 or "no opinion" -- foreverchanges' own item level column
+  // shows "--" for these (mostly quest/consumable/misc items with no real
+  // item level), and silently including them in e.g. an "80-100" range
+  // would misrepresent them as meeting a bound they don't actually carry.
+  if (itemLevelMin !== undefined) items = items.filter((item) => item.itemLevel !== null && item.itemLevel >= itemLevelMin);
+  if (itemLevelMax !== undefined) items = items.filter((item) => item.itemLevel !== null && item.itemLevel <= itemLevelMax);
+  if (requiredLevelMin !== undefined)
+    items = items.filter((item) => item.requiredLevel !== null && item.requiredLevel >= requiredLevelMin);
+  if (requiredLevelMax !== undefined)
+    items = items.filter((item) => item.requiredLevel !== null && item.requiredLevel <= requiredLevelMax);
 
   const needle = q.trim().toLowerCase();
   if (needle) items = items.filter((item) => item.name.toLowerCase().includes(needle));

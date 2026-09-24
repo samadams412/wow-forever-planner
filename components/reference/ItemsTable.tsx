@@ -31,6 +31,7 @@ export default function ItemsTable({ items }: { items: LootItem[] }) {
           <tr className="border-b border-border bg-surface text-left text-[11px] uppercase tracking-wide text-foreground-muted">
             <th className="px-3 py-2 font-semibold">Item</th>
             <th className="px-3 py-2 font-semibold">Req. Level</th>
+            <th className="px-3 py-2 font-semibold">Item Level</th>
             <th className="px-3 py-2 font-semibold">Slot</th>
             <th className="px-3 py-2 font-semibold">Quality</th>
             <th className="px-3 py-2 font-semibold">Status</th>
@@ -43,6 +44,7 @@ export default function ItemsTable({ items }: { items: LootItem[] }) {
                 <LootItemPill item={item} tooltipId={`items-catalog:${item.itemId}:${i}`} context="catalog" />
               </td>
               <td className="px-3 py-1.5 text-foreground-muted">{item.requiredLevel ?? "--"}</td>
+              <td className="px-3 py-1.5 text-foreground-muted">{item.itemLevel ?? "--"}</td>
               <td className="px-3 py-1.5 text-foreground-muted">{item.slot ?? "--"}</td>
               <td className="px-3 py-1.5" style={{ color: itemQualityColor(item.quality) }}>
                 {itemQualityName(item.quality)}
