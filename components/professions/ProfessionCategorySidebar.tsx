@@ -107,7 +107,7 @@ export default function ProfessionCategorySidebar({
     <nav className="flex shrink-0 flex-row flex-wrap gap-1 sm:w-56 sm:flex-col sm:flex-nowrap sm:gap-0.5">
       <Link
         href={`/reference/professions/${professionId}`}
-        className={`flex items-center justify-between rounded px-2.5 py-1.5 text-sm transition-colors ${
+        className={`grid grid-cols-[1fr_auto] items-baseline gap-x-2 rounded px-2.5 py-1.5 text-sm transition-colors ${
           active === "All" ? "bg-accent/20 text-accent" : "text-foreground-muted hover:bg-surface-hover hover:text-foreground"
         }`}
       >
@@ -120,20 +120,29 @@ export default function ProfessionCategorySidebar({
         <Link
           key={category}
           href={`/reference/professions/${professionId}?category=${encodeURIComponent(category)}`}
-          className={`flex items-center justify-between rounded px-2.5 py-1.5 text-sm transition-colors ${
+          // A grid, not a flex row -- a long name (e.g. Blacksmithing's
+          // "Sharpening/Weight/Grinding Stones") wraps onto a second line
+          // inside the fixed 1fr label column while the count stays in its
+          // own auto-width column, top-aligned with the label's first line.
+          // A flex row here used to vertically center the count against the
+          // full wrapped height, so it visually mashed into the wrapped
+          // second line -- (items-baseline)-aligning both columns to the
+          // label's first line avoids that regardless of how many lines it
+          // wraps to.
+          className={`grid grid-cols-[1fr_auto] items-baseline gap-x-2 rounded px-2.5 py-1.5 text-sm transition-colors ${
             active === category
               ? "bg-accent/20 text-accent"
               : "text-foreground-muted hover:bg-surface-hover hover:text-foreground"
           }`}
         >
-          <span className="flex items-center gap-1.5">
+          <span className="flex items-baseline gap-1.5">
             {CATEGORY_ICON[category] && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={mediumIconUrl(CATEGORY_ICON[category])} alt="" className="h-4 w-4 shrink-0 rounded-sm" />
+              <img src={mediumIconUrl(CATEGORY_ICON[category])} alt="" className="h-4 w-4 shrink-0 self-center rounded-sm" />
             )}
             {category}
           </span>
-          <span className="text-xs text-foreground-muted">{counts[category] ?? 0}</span>
+          <span className="shrink-0 text-xs text-foreground-muted">{counts[category] ?? 0}</span>
         </Link>
       ))}
     </nav>

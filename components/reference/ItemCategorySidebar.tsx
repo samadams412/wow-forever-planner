@@ -28,7 +28,7 @@ export default function ItemCategorySidebar({
     <nav className="flex shrink-0 flex-row flex-wrap gap-1 sm:w-56 sm:flex-col sm:flex-nowrap sm:gap-0.5">
       <Link
         href={buildHref(undefined)}
-        className={`flex items-center justify-between rounded px-2.5 py-1.5 text-sm transition-colors ${
+        className={`grid grid-cols-[1fr_auto] items-baseline gap-x-2 rounded px-2.5 py-1.5 text-sm transition-colors ${
           active === undefined ? "bg-accent/20 text-accent" : "text-foreground-muted hover:bg-surface-hover hover:text-foreground"
         }`}
       >
@@ -39,12 +39,18 @@ export default function ItemCategorySidebar({
         <Link
           key={value}
           href={buildHref(value)}
-          className={`flex items-center justify-between rounded px-2.5 py-1.5 text-sm transition-colors ${
+          // Grid, not a flex row, so a name long enough to wrap keeps the
+          // count top-aligned with its first line instead of vertically
+          // centered against the full wrapped height -- see
+          // ProfessionCategorySidebar's identical fix for the reasoning
+          // (no current item category is this long, but this mirrors that
+          // component deliberately, per this file's own header comment).
+          className={`grid grid-cols-[1fr_auto] items-baseline gap-x-2 rounded px-2.5 py-1.5 text-sm transition-colors ${
             active === value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:bg-surface-hover hover:text-foreground"
           }`}
         >
           <span>{categoryNames[value]}</span>
-          <span className="text-xs text-foreground-muted">{(counts[value] ?? 0).toLocaleString()}</span>
+          <span className="shrink-0 text-xs text-foreground-muted">{(counts[value] ?? 0).toLocaleString()}</span>
         </Link>
       ))}
     </nav>
