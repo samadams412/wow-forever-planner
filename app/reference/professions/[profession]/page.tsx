@@ -23,6 +23,20 @@ import ProfessionCrossLinks from "@/components/professions/ProfessionCrossLinks"
 // mirrors exactly rather than inventing new styling.
 const PAGE_SIZE = 50;
 
+// Small icons next to each tab label for faster visual recognition, using
+// this site's existing convention of hotlinked Wowhead/wow.zamimg trade &
+// spell icons rather than an abstract icon-font set (there's no equivalent
+// UI-icon library elsewhere on the site) -- each slug checked directly
+// against wow.zamimg.com for existence before use (a bad slug 404s to a
+// ~146-byte placeholder, same check this project already does for profession
+// category icons).
+const TAB_ICON: Record<string, string> = {
+  recipes: "inv_scroll_03",
+  leveling: "achievement_level_10",
+  favor: "inv_misc_coin_02",
+  camp: "spell_fire_fire",
+};
+
 function buildRecipesHref(professionId: string, category: string, page: number): string {
   const usp = new URLSearchParams();
   if (category !== "All") usp.set("category", category);
@@ -96,9 +110,12 @@ export default async function ProfessionPage({
   const icon = PROFESSION_ICON[catalog.id];
 
   const viewLinkClass = (v: string) =>
-    `rounded-sm px-2.5 py-1 text-xs font-medium transition-colors ${
+    `inline-flex items-center gap-1.5 rounded-sm px-2.5 py-1 text-xs font-medium transition-colors ${
       activeView === v ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
     }`;
+  const tabIcon = (v: string) =>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={mediumIconUrl(TAB_ICON[v])} alt="" className="h-3.5 w-3.5 shrink-0 rounded-sm" />;
 
   return (
     <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
@@ -121,17 +138,21 @@ export default async function ProfessionPage({
 
       <div className="mt-4 inline-flex rounded border border-border bg-surface p-0.5 text-xs">
         <Link href={`/reference/professions/${catalog.id}`} className={viewLinkClass("recipes")}>
+          {tabIcon("recipes")}
           Recipes
         </Link>
         <Link href={`/reference/professions/${catalog.id}?view=leveling`} className={viewLinkClass("leveling")}>
+          {tabIcon("leveling")}
           Leveling 1 to 300
         </Link>
         {catalog.favorSupported && (
           <Link href={`/reference/professions/${catalog.id}?view=favor`} className={viewLinkClass("favor")}>
+            {tabIcon("favor")}
             Merchant&apos;s Favor
           </Link>
         )}
         <Link href={`/reference/professions/${catalog.id}?view=camp`} className={viewLinkClass("camp")}>
+          {tabIcon("camp")}
           Camp, Skill Rewards and Perks
         </Link>
       </div>
