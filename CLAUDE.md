@@ -9,6 +9,76 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-25 (world map: wow.export tiles + Leaflet proof of concept)
+
+**Stable and shipped this session:** a small, deliberately-scoped proof of
+concept at `/reference/map` (not linked from nav/index, same "reachable but
+not advertised" treatment as `/whats-new`) -- a real Leaflet map, panning
+and zooming over actual client art extracted via wow.export (the user's own
+tool, already installed), not hand-drawn SVG (see the 2026-09-24 revert
+below) and not hotlinked third-party tiles. One dungeon pin (Uldaman) with
+a working popup and link-through to its existing loot page. Full technical
+detail in the new "World map proof of concept" architecture note further
+down this file (search for "wow.export") -- headline points:
+
+- The user exported Eastern Kingdoms (and Kalimdor, in two halves) as
+  single huge stitched PNGs via wow.export's own map-export feature, each
+  with a JSON sidecar giving real world-coordinate corners. This is a
+  fundamentally better art source than hand-drawn SVG -- verified visually
+  (a crop centered on Uldaman's real coordinates showed unmistakable,
+  correct Badlands canyon terrain) and is what the rest of this feature is
+  built on.
+- **Three real, non-obvious coordinate bugs were found and fixed, each
+  confirmed against live evidence, not guessed:** wow.export's image axes
+  are swapped relative to the game's own `world_x`/`world_y` (confirmed by
+  exact tile-count arithmetic, not approximation); `next/dynamic(...,
+  { ssr: false })` isn't allowed directly in a Server Component in this
+  Next.js version (build error surfaced it immediately); and `L.CRS.Simple`
+  negates `lat` by default, which was silently sending Leaflet's tile
+  requests to negative row indices (caught from the user's own browser
+  console output showing 404s for tiles like `0_-1.webp` against a pyramid
+  that only has rows 0/1) -- not a CSS or rendering problem, despite
+  initially looking like one (a *separate*, real bug -- missing Leaflet
+  CSS because its import lived inside the `ssr:false`-loaded chunk -- was
+  found and fixed first, and was a genuine problem, just not the last one).
+- Scoped to a tiny 2-zoom, 20-tile crop around the Loch Modan/Badlands
+  border by explicit decision, before any full-continent tiling or a
+  storage-strategy decision (a full pyramid would be several thousand
+  files) -- see the architecture note for the concrete next steps this
+  unblocks.
+- Wowhead's `robots.txt` explicitly disallows `anthropic-ai`/`Claude-Web`/
+  `ClaudeBot` site-wide -- investigated this session for a possible
+  zone-quest data source and declined to scrape it for that reason (a
+  one-zone proof of concept was never run). foreverchanges.pro's own
+  `robots.txt` has no such restriction, consistent with how this project
+  already uses it throughout.
+
+**Also this session:** the entire prior single-zone SVG map MVP (Loch
+Modan/Badlands hand-drawn shapes, the Uldaman pin, the Classic/Forever
+toggle -- built across the two sessions before this one) was reverted at
+explicit request before this proof of concept was started. Confirmed via
+`git diff --stat` across its full commit range that every file it touched
+was a pure addition, so the revert was a clean `git rm` of 7 files, not a
+partial unwind -- verified via a full-codebase grep that nothing else ever
+referenced it. That revert is its own commit, separate from this session's
+new work.
+
+**Open for a future session:**
+- No storage-strategy decision has been made for full-continent tiling
+  (likely several thousand files) -- the crop-based proof deliberately
+  avoided this decision, not settled it.
+- Kalimdor's two halves (top/bottom, see the architecture note) haven't
+  been fed through the tiling script yet -- only Eastern Kingdoms has.
+- The feature is hardcoded to one dungeon (Uldaman) and one crop
+  (`proof-badlands`) -- generalizing to more dungeons/zones needs a real
+  per-dungeon location dataset, which doesn't exist yet (the previous SVG
+  MVP's `data/dungeon-locations.json` was hand-authored and was removed in
+  the revert along with everything else).
+- Zone-level (non-dungeon) quest location data is still unresolved --
+  foreverchanges.pro only has it for dungeon quest givers; Wowhead has a
+  full zone/quest database but isn't scrapable per the robots.txt finding
+  above.
+
 ## Session handoff — 2026-09-24/25 (What's New rebuilt)
 
 `/whats-new` went from a shelved placeholder to an active, nav-linked
@@ -1229,6 +1299,117 @@ and 3D as two separate proposals with very different costs, not one. The
 2D view alone would deliver most of the practical value (zone/dungeon/POI
 navigation, matching what a fan planner site's users would actually want)
 at a small fraction of the 3D view's effort and risk.
+
+### World map proof of concept: wow.export tiles + Leaflet CRS.Simple
+Added 2026-09-25, superseding an earlier hand-drawn-SVG attempt (see the
+"reverted" note below). Sourcing decision: real client art extracted via
+wow.export (the user's own tool, already installed locally against the
+WoW Forever beta client), not hand-drawn shapes and not hotlinked
+third-party tiles -- the strongest map-art source this project has found,
+and one it can regenerate itself rather than depend on another site for.
+
+**The export.** wow.export's own "Maps" feature stitches every ADT tile of
+a whole continent into one huge PNG plus a JSON sidecar
+(`{map_id, map_dir, map_name, tile_size, tiles: {min_x,max_x,min_y,max_y,
+wide,high}, image: {width,height}, corners: {top_left,bottom_right}
+{world_x,world_y}}`). The user exported Eastern Kingdoms this way
+(11776×21504px, `azeroth_ec7b93ee.png`/`.json`) and Kalimdor in two halves
+since it was too large in one pass (`kalimdor_e750bc91.png` "top",
+`kalimdor_8bf8e9c5.png` "bottom" -- **confirmed to tile together exactly**:
+top's bottom edge `world_x: -4266.67` matches bottom's top edge exactly,
+and bottom's horizontal tile offset (`min_x: 23`) lines up precisely with
+23 × 533.33 = the world_y difference between them -- no gap, no overlap,
+no need to physically merge them into one file). None of this lives in the
+repo -- these are large source exports on the user's own machine
+(`C:\Users\<user>\wow.export\maps\...`), read by `scripts/
+slice-map-tiles.js` at generation time, not committed.
+
+**The coordinate system -- two real, non-obvious bugs, both confirmed
+against hard evidence, not guessed:**
+1. **wow.export's image axes are swapped relative to the game's own
+   world_x/world_y.** WoW's engine has +X as north (row) and +Y as west
+   (column) -- rotated from the image's own horizontal/vertical axes. A
+   first attempt at `worldToPixel` (mapping world_x→pixel-x, world_y→
+   pixel-y directly) landed a known-Uldaman coordinate in Searing Gorge's
+   volcanic terrain, not Badlands -- visibly wrong. Confirmed the actual
+   mapping two ways: exact tile-count arithmetic (`tiles.wide × 533.333 ==
+   |Δworld_y|` and `tiles.high × 533.333 == |Δworld_x|`, both matching to
+   the decimal, where 533.333 = 1600/3 is the constant ADT tile size) and
+   visually (the corrected pixel landed exactly on the real Loch Modan/
+   Badlands zone border, matching what foreverchanges.pro's own map showed
+   for Uldaman in an earlier session). The fix: pixel-x comes from
+   `world_y` against the sidecar's `world_y` corners, pixel-y from
+   `world_x` against the `world_x` corners -- see `lib/map-tiles.ts`'s
+   `worldToZone0LatLng`.
+2. **`L.CRS.Simple` negates `lat` by default** (`point.y = -lat`). Feeding
+   it a plain top-down pixel Y (0 at top, increasing downward, matching
+   both the crop's own pixel space and the tile files' own row numbering)
+   silently sent Leaflet's tile requests to *negative* row indices --
+   caught directly from the user's own browser console showing 404s for
+   `tiles/0/0_-1.webp`/`0_-2.webp` against a pyramid that only has rows
+   0/1, not guessed at. Fixed by negating the `lat` component everywhere a
+   LatLng is constructed (`worldToZone0LatLng`, `getZone0Bounds`) rather
+   than fighting CRS.Simple's own convention or renumbering tile files.
+
+**A separate, real bug on the way to finding that one:** the map initially
+rendered as a plain white box with a correctly-positioned marker but zero
+tile textures -- a *different* problem from the coordinate bug above, found
+and fixed first. `LeafletZoneMap.tsx` is loaded via `next/dynamic(...,
+{ ssr: false })` (required -- Leaflet touches `window` at import time and
+this Next.js version doesn't allow `ssr:false` dynamic imports directly in
+a Server Component either, which is why there's a thin `"use client"`
+`LeafletZoneMapLoader.tsx` wrapper in between). A `leaflet/dist/leaflet.css`
+side-effect import living inside that lazily-loaded chunk doesn't reliably
+make it into the page's stylesheet with this project's bundler (Turbopack)
+-- confirmed by curling the served CSS and finding zero `.leaflet-*` rules.
+Fixed by importing the CSS from the page itself (a Server Component) instead
+of the client-only chunk, which is part of the initial render regardless of
+when/whether the dynamic chunk loads.
+
+**Scope, deliberately small.** `scripts/slice-map-tiles.js` crops a single
+2048×2048px region around Uldaman's real world coordinates out of the full
+Eastern Kingdoms export and slices it into a 2-zoom (0 = half-res, 1 =
+native, 512px tiles) pyramid -- 20 tiles, ~1MB total, under `public/map/
+proof-badlands/`. This was an explicit decision, not a shortcut: a full
+multi-zoom pyramid for both continents would be several thousand files
+(repo-size/git-performance implications this project hasn't faced before,
+the largest generated asset so far being one 8.5MB JSON file), and no
+storage-strategy decision (commit to git / restrict zoom range / store
+outside git) has been made for that yet. Don't scale this up without
+revisiting that decision first.
+
+**What a future session needs to generalize this:** (1) the storage
+decision above; (2) Kalimdor's two halves fed through the tiling script
+(only Eastern Kingdoms has been so far); (3) a real per-dungeon location
+dataset -- currently hardcoded to one dungeon (`ULDAMAN_WORLD` in `app/
+reference/map/page.tsx`), since the previous SVG MVP's hand-authored
+`data/dungeon-locations.json` was removed in the revert below along with
+everything else. `worldToZone0LatLng`/`getZone0Bounds`/`getMapTileConfig`
+in `lib/map-tiles.ts` are already written generically per-`mapName`
+(reading a `public/map/<name>/meta.json` sidecar the slicing script also
+writes), so a second cropped region is mostly a re-run of the script with a
+different center, not new code.
+
+### Reverted: single-zone hand-drawn SVG world map MVP (2026-09-24)
+Two sessions built a single-zone world map -- `/reference/map`,
+`components/map/{ZoneMap,DungeonPinMarker,WorldMapZone,zoneShapes}.tsx`,
+`data/dungeon-locations.json`, `lib/dungeon-locations.ts` -- originally-
+drawn SVG zone art (Loch Modan, then corrected to Badlands once the
+Uldaman/Loch Modan pairing was found to be wrong: Uldaman's entrance and
+its quest givers Rigglefuzz/Theldurin the Lost are in the Badlands, per
+`data/dungeons/uldaman.json`'s own quest location fields), a dungeon-
+entrance pin with click-through, and a Classic/Forever pin-set toggle
+(never exercised for real -- Uldaman is a plain classic-type dungeon,
+`appearsIn: "both"`). All of it was reverted at explicit request on
+2026-09-25 -- the SVG-art approach wasn't the direction being pursued, not
+a quality problem with what was built, and the wow.export-based proof of
+concept above replaced it. Every file the feature touched was a pure
+addition across its 6 commits (confirmed via `git diff --stat` before
+deleting anything), so the revert was a clean `git rm`, not a partial
+unwind of any shared file -- verified via a full-codebase grep that
+nothing else ever referenced it (it really was never linked from nav).
+The commits themselves are untouched in git history if any of that art or
+the toggle mechanism turns out to be worth revisiting.
 
 ### Dungeon loot: two independent sources, reconciled per-dungeon-per-data-type, never blended
 `data/dungeons/<id>.json` (one file per dungeon, 35 total, same ids as
