@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import ZoneMap from "@/components/map/ZoneMap";
+import DungeonPinMarker from "@/components/map/DungeonPinMarker";
+import { getDungeonPinsForZone } from "@/lib/dungeon-locations";
+import { getDungeon } from "@/lib/dungeons";
 
 // World map MVP -- deliberately scoped to one zone (Loch Modan) while the
 // approach gets proven out. Not yet linked from the Reference nav or index
@@ -13,6 +16,13 @@ export const metadata: Metadata = {
 };
 
 export default function MapPage() {
+  const pins = getDungeonPinsForZone("loch-modan")
+    .map((pin) => {
+      const dungeon = getDungeon(pin.dungeonId);
+      return dungeon ? { ...pin, dungeon } : null;
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null);
+
   return (
     <main className="mx-auto w-full max-w-3xl px-4 py-8">
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">World Map</h1>
@@ -21,7 +31,17 @@ export default function MapPage() {
         Loch Modan is the first zone while the approach gets proven out.
       </p>
       <div className="mt-6">
-        <ZoneMap zoneId="loch-modan" zoneName="Loch Modan" levelRange="10-20" />
+        <ZoneMap zoneId="loch-modan" zoneName="Loch Modan" levelRange="10-20">
+          {pins.map((pin) => (
+            <DungeonPinMarker
+              key={pin.dungeonId}
+              x={pin.x}
+              y={pin.y}
+              name={pin.dungeon.name}
+              levelRange={`${pin.dungeon.levelMin}-${pin.dungeon.levelMax}`}
+            />
+          ))}
+        </ZoneMap>
       </div>
     </main>
   );

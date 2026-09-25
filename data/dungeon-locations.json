@@ -1,0 +1,9 @@
+{
+  "_readme": "Dungeon-entrance pin positions for the world map MVP (components/map/ZoneMap.tsx). Hand-authored from well-known Classic WoW zone geography, not scraped or measured from any site -- foreverchanges.pro's own map does have real coordinates for a couple of these (seen live during scoping), but this project draws its own simplified/stylized zone shapes rather than reusing their tile system, so x/y here just means 'roughly where in OUR OWN illustrated shape does this pin sit' (0-100 percent of the zone artwork's own viewBox), not a real percent-of-real-map figure. Only Loch Modan/Uldaman is filled in for the single-zone MVP -- the other 34 dungeons still need a zone assignment, a drawn zone shape in components/map/zoneShapes.tsx, and a pin position here before they can show up on the map. Add them incrementally, one zone at a time, the same way this one was built.",
+  "zones": {
+    "loch-modan": { "name": "Loch Modan", "continent": "Eastern Kingdoms", "levelRange": "10-20" }
+  },
+  "dungeonPins": [
+    { "dungeonId": "uldaman", "zoneId": "loch-modan", "x": 40, "y": 76 }
+  ]
+}
