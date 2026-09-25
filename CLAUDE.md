@@ -9,6 +9,21 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-24/25 (What's New rebuilt)
+
+`/whats-new` went from a shelved placeholder to an active, nav-linked
+feature; full structure in the "What's New (/whats-new)" architecture note
+below (search for it). Highlights: Blizzard's September 24 notes are on the
+forum at https://us.forums.blizzard.com/en/wow/t/2360696 (readable as
+`.json` -- the first post's `cooked` HTML), which is how the full text was
+finally read; the earlier two "patch-note sessions" were the same build
+(1.60.1.70009), not two builds. Known-open from this work: Bastion/Focused
+Rage swap and Crusade are in the notes/client but not both in our data (see
+the corrected item 4 below), Tauren Cultivation's level requirement and
+Retribution Aura/Thorns spell-power scaling are shown on /whats-new but not
+edited into racial/spell tooltip text (no confirmed in-game tooltip wording
+to copy). Not verified in a browser.
+
 ## Session handoff — 2026-09-24 (talentsforever 09-24 pull + Blizzard patch notes)
 
 New snapshot `data/sources/talentsforever/talentsforever-2026-09-24.json`
@@ -29,9 +44,17 @@ and the prompt's own summary of it, not the primary source itself.
 3. *Improved Holy Strike removed*: applied, build-code v3 (above). Holy
    Strike baseline (10 sec CD; 25/29/32/36/39/43/46/50% weapon damage) came
    through `build-spellbooks.js` and matches the notes exactly.
-4. *Bastion / Focused Rage*: **no change needed** -- current data
-   (Bastion 5.4, Focused Rage 6.3, from the 2026-09-18 Vitality removal)
-   already equals the pull, which did not change them in 09-24.
+4. *Bastion / Focused Rage*: **CORRECTION -- this is NOT a no-op.** An
+   earlier version of this note said our rows already matched. They
+   don't: Blizzard's notes SWAP the two (Bastion is Row 5, Focused Rage is
+   Row 6 now; after the swap Focused Rage comes first, per the developer
+   note "give players Focused Rage sooner"). The 09-24 pull does not have
+   the swap yet (foreverchanges says the client data lags too), so it is
+   deliberately NOT applied to `data/talents/warrior.json` -- the exact
+   post-swap columns aren't known, and forcing it early risks a wrong
+   layout plus another build-code bump. Apply it when a pull carries it (it
+   needs a frozen Warrior Protection order in `lib/build-code.ts`). It is
+   listed under "Not yet reflected in our planner data" on /whats-new.
 5. *Elemental Fury / Alacrity swap*: applied incl. prerequisite chain
    (Alacrity 3.3 -> Call of Thunder 4.3 -> Fury 6.3); build-code v3.
 6. *Eureka!*: **there was never per-class variant scaffolding** -- Gnome's
@@ -2047,30 +2070,56 @@ clip anyway (a `background-image` never paints outside its own element's
 box). Mobile renders the same five links indented under "Reference" in
 the existing flat mobile menu overlay, not a separate nested toggle.
 
-### "What's New" is built but intentionally unlinked from navigation
-Shelved, not broken or abandoned: the planner header's "What's new" badge
-(a `Link` to `/whats-new` with an unread-change-count pill) was removed
-along with the now-unused `latestChangeCount` prop threaded from
-`app/planner/[[...slug]]/page.tsx` through to `PlannerClient.tsx` (that
-page's own `getLatestDiffSummary()` call went with it). Nothing else was
-touched — `/whats-new`'s own page, `components/whats-new/*`,
-`lib/whats-new.ts`/`lib/whats-new-style.ts`, and
-`scripts/diff-talentsforever.js`'s diff-generation pipeline it reads from
-are all fully intact and functional.
+### What's New (/whats-new): active feature, in primary nav
+Was shelved (unlinked, noindex) until 2026-09-24; now a real feature, linked
+in `SiteHeader`'s `NAV_LINKS`, in the sitemap, and indexable. The
+planner-header "What's new" badge / `latestChangeCount` prop are NOT
+restored -- the nav link replaced that idea. The homepage card grid is
+unchanged (4 cards in a 2-column grid; a 5th would unbalance it).
 
-The route itself is a deliberate middle ground, not a hard removal: it's
-left fully reachable for anyone with the direct URL (no redirect, no 404)
-since the feature isn't broken, just not something the site is currently
-pointing people toward -- but its metadata now sets `robots: { index:
-false, follow: false }` so it doesn't surface in search results while
-unlinked. If this comes back to nav, drop that `robots` block along with
-re-adding the link.
+Two tabs (`WhatsNewTabs`, URL hash `#site` via useSyncExternalStore):
 
-**Don't "clean up" any of this as dead code** without checking here first
-— it's mid-shelf, not mid-removal. Re-link it (and re-thread
-`latestChangeCount` back through, or redesign that badge) once the page
-itself is fleshed out further; until then this note is the reason it
-looks unreachable-but-present.
+- **In Game** (`InGameSection`): one card per beta build, newest first, from
+  `data/patch-notes/<build>.json` (hand-authored; read by `lib/patch-notes.ts`).
+  Shape: build/date/title/summary/sourceUrl/sourceNote, optional
+  `pendingInData` (things the notes describe that our planner data doesn't
+  have yet -- shown in an amber callout), `classes` (classId -> entries),
+  `races`, `other` (heading + bullet points, summarized). An entry is
+  `{name, label?, kind, spec?, race?, raceId?, oldName?, text, changes?:
+  [{label?, before, after}], devNote?}`. `lib/patch-notes.ts` resolves each
+  `name` at build time (talent by name, then trainer spell, then Priest class
+  racial when `race` is set, or a general racial when `raceId` is set) into
+  a small `ResolvedRef` -- so the client never receives whole talent/spell
+  datasets. Unresolvable names (removed talents, spells we don't track)
+  render as plain names. `PatchNoteRef` is the linked pill + hover tooltip
+  (same `useHoverTooltip`/`TooltipCard`/`claimActiveTooltip` pattern as
+  `LootItemPill`), `PatchNoteEntryRow` the row (kind badge, summary, diff,
+  developer note). Before -> after uses the EXISTING `TooltipClassicDiff`
+  (`components/planner/TooltipCard.tsx`), which gained optional
+  `heading`/`oldLabel`/`newLabel`/`bare` props (defaults unchanged) and is
+  wrapped in an always-dark card since its colors assume a dark background.
+  Class sections and "Race changes" are collapsible (controlled, class chips
+  jump to/open them); "Other changes" is collapsed and muted. The older raw
+  talent-diff view (`WhatsNewView` + `lib/whats-new.ts`, fed by
+  `data/sources/talentsforever/diffs/*.json`) still exists, now under a
+  collapsed "Talent data syncs (raw)" section at the bottom.
+- **On the Site** (`SiteChangelog`): `data/site-changelog.json`, a short
+  hand-written user-facing list (CLAUDE.md handoffs were the source but are
+  too technical to publish as-is).
+
+**Adding a build:** copy an existing `data/patch-notes/*.json`, fill it in,
+run nothing else. Check every named thing resolves (a name that doesn't
+match a talent/spell just renders unlinked -- fine for removed things, a typo
+otherwise). Developer notes are quoted verbatim from Blizzard; everything
+else is paraphrased. Builds 69977/69913/69893 are lighter entries (no
+Blizzard text was on hand) sourced from ForeverChanges' build log
+(foreverchanges.pro/beta#builds, itself a good structural reference) and our
+own 09-18 sync record, and say so in their `sourceNote`.
+
+**Verified via** `tsc`, eslint, dev-server HTML and server-rendering the
+entry components -- NOT visually in a browser (the extension was not
+connected), so hover tooltips, the class chip jump-scroll and the tab switch
+are unverified live.
 
 ### Dungeon Level Ranges lives under Reference, not Guides
 Moved from `/guides/dungeons` to `/reference/dungeons` this session — it's

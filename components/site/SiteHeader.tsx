@@ -35,6 +35,7 @@ const NAV_LINKS: NavLink[] = [
   },
   { href: "/guides", label: "Guides" },
   { href: "/blog", label: "Blog" },
+  { href: "/whats-new", label: "What's New" },
 ];
 
 export default function SiteHeader() {
