@@ -397,11 +397,11 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
-            "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 2 Rage or Energy.",
-            "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 3 Rage or Energy.",
-            "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 4 Rage or Energy.",
-            "Reduces the cost of your Maul, Mangle, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 2 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 3 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 4 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -643,13 +643,13 @@
           "passive": true
         },
         {
-          "id": "feral_mangle",
-          "name": "Mangle",
+          "id": "feral_primal_bite",
+          "name": "Primal Bite",
           "tier": 4,
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Mangle the target for 100% normal damage plus 26."
+            "Bite the target for 100% normal damage plus 26."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -658,7 +658,7 @@
           },
           "reqText": "Requires Bear Form, Dire Bear Form",
           "status": "new",
-          "icon": "ability_druid_mangle2",
+          "icon": "ability_racial_cannibalize",
           "classic": {
             "status": "new"
           },
@@ -692,8 +692,8 @@
           "passive": true
         },
         {
-          "id": "feral_primal_fury",
-          "name": "Primal Fury",
+          "id": "feral_blood_frenzy",
+          "name": "Blood Frenzy",
           "tier": 4,
           "col": 4,
           "maxRank": 2,
@@ -707,14 +707,14 @@
             "ranks": 2
           },
           "status": "changed",
-          "icon": "ability_racial_cannibalize",
+          "icon": "ability_ghoulfrenzy",
           "classic": {
             "status": "changed",
             "tree": "Feral Combat",
             "tier": 4,
-            "col": 4,
+            "col": 3,
             "maxRank": 2,
-            "text": "Gives you a 50% chance to gain an additional 5 Rage anytime you get a critical strike while in Bear and Dire Bear Form."
+            "text": "Your critical strikes from Cat Form abilities that add combo points have a 50% chance to add an additional combo point."
           },
           "passive": true
         },
@@ -835,7 +835,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Causes your Mangle ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec."
+            "Causes your Primal Bite ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec."
           ],
           "confidence": "confirmed",
           "prereq": {

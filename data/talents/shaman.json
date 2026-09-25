@@ -186,7 +186,7 @@
         {
           "id": "elemental_elemental_fury",
           "name": "Elemental Fury",
-          "tier": 3,
+          "tier": 6,
           "col": 3,
           "maxRank": 5,
           "ranks": [
@@ -197,7 +197,10 @@
             "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%."
           ],
           "confidence": "confirmed",
-          "prereq": null,
+          "prereq": {
+            "id": "elemental_call_of_thunder",
+            "ranks": 1
+          },
           "status": "moved",
           "icon": "spell_fire_volcano",
           "classic": {
@@ -271,8 +274,8 @@
           ],
           "confidence": "confirmed",
           "prereq": {
-            "id": "elemental_elemental_fury",
-            "ranks": 5
+            "id": "elemental_elemental_alacrity",
+            "ranks": 3
           },
           "status": "moved",
           "icon": "spell_nature_callstorm",
@@ -352,7 +355,7 @@
         {
           "id": "elemental_elemental_alacrity",
           "name": "Elemental Alacrity",
-          "tier": 6,
+          "tier": 3,
           "col": 3,
           "maxRank": 3,
           "ranks": [
@@ -361,14 +364,11 @@
             "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.50 sec."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "elemental_call_of_thunder",
-            "ranks": 1
-          },
-          "status": "changed",
+          "prereq": null,
+          "status": "moved",
           "icon": "spell_lightning_lightningbolt01",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Elemental",
             "tier": 6,
             "col": 3,
@@ -385,7 +385,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "You hurl molten lava at the target, dealing 106 to 134 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+            "You hurl molten lava at the target, dealing 150 to 192 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -819,7 +819,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Increases your melee attack speed and spell casting speed by 30% for 25 sec."
+            "Increases your attack speed by 30% for 25 sec."
           ],
           "confidence": "confirmed",
           "prereq": {

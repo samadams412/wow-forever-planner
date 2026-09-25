@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 2;
+const CURRENT_VERSION = 3;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -37,6 +37,13 @@ export function encodeBuild(classData: ClassTalentData, ranks: RankState): strin
 export function decodeBuild(classData: ClassTalentData, code: string): RankState {
   const segments = code.split("-");
   if (segments.length === classData.trees.length + 1 && /^\d+$/.test(segments[0])) {
+    // Version 2 codes predate the 2026-09-24 reshape of 3 trees (see
+    // V2_TREE_ORDER below): anything older than CURRENT_VERSION decodes
+    // those trees against their frozen v2 order. Current-version codes
+    // decode straight against live data.
+    if (parseInt(segments[0], 10) < CURRENT_VERSION) {
+      return decodeAgainstFrozenOrders(classData, segments.slice(1), V2_TREE_ORDER);
+    }
     return decodeVersionedBuild(classData, segments.slice(1));
   }
   // No recognizable version segment -> a pre-versioning (legacy) code,
@@ -165,16 +172,131 @@ const LEGACY_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
-// Old talent id -> current talent id, for the 4 trees above only. `null`
+// Old talent id -> current talent id, for the 4 trees above plus the two
+// 2026-09-24 removals (see V2_TREE_ORDER below). `null`
 // means the talent was removed outright with no replacement (points in it
 // are dropped, not reassigned to anything). Ids not listed here are
 // unchanged -- same id before and after.
 const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
+  // Removed 2026-09-24 (see V2_TREE_ORDER below).
+  holy_improved_holy_strike: null,
+  retribution_crusade: null,
   protection_vitality: null,
   combat_restless_blades: "combat_flawless_execution",
   affliction_drain_hope: "affliction_wrack",
   balance_balance_of_nature: null,
 };
+
+// --- v2 tree shape (2026-09-18 .. 2026-09-24) ---------------------------------
+//
+// The 2026-09-24 data sync changed 3 more trees' shape: Paladin Holy lost
+// Improved Holy Strike (its effect became baseline), Paladin Retribution
+// lost Crusade, and Shaman Elemental swapped Elemental Fury (row 3 -> 6) and
+// Elemental Alacrity (row 6 -> 3), which reorders every talent between them.
+// (Druid Feral Combat's Mangle -> Primal Bite and Primal Fury -> Blood Frenzy
+// are same-slot renames, so positional decoding is unaffected -- no entry.)
+//
+// V2_TREE_ORDER freezes each of those trees' tier/col-sorted id order as it
+// stood at CURRENT_VERSION 2. Like LEGACY_TREE_ORDER, never edit after the
+// fact. It is used for BOTH version-2 codes and unversioned (pre-v2) codes:
+// those 3 trees were unchanged between the pre-v2 shape and v2, so one
+// frozen order covers both.
+const V2_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  paladin: {
+    Holy: [
+      "holy_improved_holy_strike",
+      "holy_divine_strength",
+      "holy_divine_intellect",
+      "holy_healing_light",
+      "holy_spiritual_focus",
+      "holy_improved_seals",
+      "holy_unyielding_faith",
+      "holy_voice_of_truth",
+      "holy_reverence",
+      "holy_purifying_power",
+      "holy_infusion_of_light",
+      "holy_illumination",
+      "holy_divine_favor",
+      "holy_divine_precision",
+      "holy_holy_shock",
+      "holy_consecrated_ground",
+      "holy_holy_power",
+      "holy_lights_vigil",
+    ],
+    Retribution: [
+      "retribution_deflection",
+      "retribution_benediction",
+      "retribution_improved_judgement",
+      "retribution_holy_conduit",
+      "retribution_conviction",
+      "retribution_vindication",
+      "retribution_sanctified_judgement",
+      "retribution_seal_of_command",
+      "retribution_pursuit_of_justice",
+      "retribution_eye_for_an_eye",
+      "retribution_sacred_arbiter",
+      "retribution_crusade",
+      "retribution_two_handed_weapon_specialization",
+      "retribution_vengeance",
+      "retribution_repentance",
+      "retribution_champion_of_the_light",
+      "retribution_instrument_of_law",
+      "retribution_twist_of_light",
+    ],
+  },
+  shaman: {
+    Elemental: [
+      "elemental_convection",
+      "elemental_concussion",
+      "elemental_elemental_warding",
+      "elemental_reverberation",
+      "elemental_call_of_flame",
+      "elemental_elemental_devastation",
+      "elemental_elemental_focus",
+      "elemental_elemental_fury",
+      "elemental_improved_fire_nova",
+      "elemental_eye_of_the_storm",
+      "elemental_call_of_thunder",
+      "elemental_elemental_reach",
+      "elemental_lightning_overload",
+      "elemental_earthbound",
+      "elemental_elemental_alacrity",
+      "elemental_lava_burst",
+    ],
+  },
+};
+
+// Decodes a versioned code older than CURRENT_VERSION, whose per-tree digits
+// are positioned against a frozen older tree order for whichever trees have
+// one in `orders`; every other tree decodes against live data exactly as a
+// current-version code would. Removed talents translate to null and drop.
+function decodeAgainstFrozenOrders(
+  classData: ClassTalentData,
+  treeCodes: string[],
+  orders: Record<string, Record<string, string[]>>
+): RankState {
+  const ranks: RankState = {};
+  const currentById = new Map<string, Talent>();
+  for (const tree of classData.trees) {
+    for (const t of tree.talents) currentById.set(t.id, t);
+  }
+  const live = orderedTalents(classData);
+  classData.trees.forEach((tree, i) => {
+    const order = orders[classData.class]?.[tree.name] ?? live[i].map((t) => t.id);
+    const treeCode = treeCodes[i] ?? "";
+    order.forEach((oldId, j) => {
+      const char = treeCode[j];
+      const rank = char ? parseInt(char, 36) : 0;
+      if (!Number.isFinite(rank) || rank <= 0) return;
+      const newId = oldId in LEGACY_ID_TRANSLATION ? LEGACY_ID_TRANSLATION[oldId] : oldId;
+      if (!newId) return;
+      const talent = currentById.get(newId);
+      if (!talent) return;
+      ranks[talent.id] = Math.min(rank, talent.maxRank);
+    });
+  });
+  return ranks;
+}
 
 function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): RankState {
   const ranks: RankState = {};
@@ -184,7 +306,8 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
   }
 
   classData.trees.forEach((tree, i) => {
-    const legacyOrder = LEGACY_TREE_ORDER[classData.class]?.[tree.name];
+    const legacyOrder =
+      LEGACY_TREE_ORDER[classData.class]?.[tree.name] ?? V2_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {
