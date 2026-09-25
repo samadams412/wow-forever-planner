@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-09-24",
+    "title": "Build 70009 in the planner, and a new What's New",
+    "points": [
+      "Talent trees updated for build 1.60.1.70009: Improved Holy Strike and Crusade are gone, Elemental Fury and Alacrity swapped places, Mangle is now Primal Bite and Primal Fury is Blood Frenzy. Shared planner links from before the update still open with your points in the right talents.",
+      "Spellbooks and item tooltips refreshed to the new build, including Holy Strike's new numbers and the Wizard Oil and wand changes.",
+      "This page: every beta build's changes class by class, with hoverable talents and spells, before/after numbers and Blizzard's developer notes."
+    ],
+    "link": { "label": "Open the planner", "href": "/planner" }
+  },
+  {
+    "date": "2026-09-24",
+    "title": "Item catalog filters and profession page polish",
+    "points": [
+      "The item catalog can be filtered by rarity, item level, required level, item type and which dungeon drops it.",
+      "Every profession page now has a row linking to the other crafting professions, tab icons, and category icons in the recipe sidebar.",
+      "Fixed missing Merchant's Favor recipes for Alchemy and Blacksmithing, and gave every favor item its full tooltip."
+    ],
+    "link": { "label": "Browse items", "href": "/reference/items" }
+  },
+  {
+    "date": "2026-09-23",
+    "title": "Professions, individual item pages and boss portraits",
+    "points": [
+      "Every crafting profession has a full recipe catalog with a 1-300 leveling guide, Merchant's Favor recipes, and a Camp, Skill Rewards and Perks tab. Mining, Herbalism and Skinning have their own pages.",
+      "Every item on the site now links to its own page with its full tooltip and, when it changed, the Classic version.",
+      "New Items reference page listing every item in the beta, with status tabs and search.",
+      "Boss portraits on dungeon loot pages, and fuller quest details (givers, objectives, rewards)."
+    ],
+    "link": { "label": "Professions", "href": "/reference/professions" }
+  },
+  {
+    "date": "2026-09-22",
+    "title": "Dungeon loot rebuilt on beta-client data",
+    "points": [
+      "Dungeon loot tables now show real icons, quality colors, full tooltips and what changed from Classic, for 28 dungeons.",
+      "The Dungeon Level Ranges timeline opens an inline boss and quest panel for every dungeon, with each dungeon's own artwork."
+    ],
+    "link": { "label": "Dungeon loot", "href": "/reference/dungeons/loot" }
+  },
+  {
+    "date": "2026-09-20",
+    "title": "Talent-granted spells in the spellbook",
+    "points": [
+      "Spells you only get from a talent (Shaman's Water Shield, Druid's Berserk) now appear in the class spellbook, tagged as talent spells."
+    ],
+    "link": { "label": "Class spellbooks", "href": "/reference/class-spellbooks" }
+  },
+  {
+    "date": "2026-09-18",
+    "title": "Planner and reference upgrades",
+    "points": [
+      "Hold Ctrl over a talent to see the spells and talents its text mentions, each with its own tooltip.",
+      "\"Copy build for AI\" puts a plain-text summary of your build on the clipboard.",
+      "Talent tooltips now always stay on screen, and the desktop talent tree was resized and centered.",
+      "Legacy Perks is now an interactive three-column tree.",
+      "Older shared planner links keep working when talent trees change."
+    ],
+    "link": { "label": "Legacy Perks", "href": "/reference/legacy-perks" }
+  }
+]
