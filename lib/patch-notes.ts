@@ -49,8 +49,10 @@ type RawBuild = {
   date: string;
   title: string;
   summary: string;
-  sourceLabel: string;
-  sourceUrl: string;
+  // Only ever an official Blizzard forum post -- never a third-party site.
+  // Omit both when there is no official post for a build.
+  sourceLabel?: string;
+  sourceUrl?: string;
   sourceNote: string;
   // Changes in the notes that our planner data doesn't reflect yet.
   pendingInData?: string[];

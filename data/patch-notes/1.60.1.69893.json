@@ -3,23 +3,51 @@
   "date": "2026-09-16",
   "title": "The build the beta opened on",
   "summary": "Put online the day before the beta opened, with many changes from the BlizzCon demo: spellbooks go to level 60 with every rank, and several talent trees changed shape.",
-  "sourceLabel": "ForeverChanges beta build log",
-  "sourceUrl": "https://foreverchanges.pro/beta#builds",
-  "sourceNote": "We don't have Blizzard's original notes for this build. The talent changes below come from our own record of the September 18 data sync against the BlizzCon demo, not from patch notes.",
+  "sourceNote": "No official Blizzard post is linked for this build. The talent changes below come from our own record of the September 18 data sync against the BlizzCon demo, not from patch notes.",
   "classes": {
     "warlock": [
-      { "name": "Wrack", "kind": "new", "spec": "Affliction", "text": "New talent, taking the slot where Drain Hope used to be." },
-      { "name": "Drain Hope", "kind": "removed", "spec": "Affliction", "text": "Gone from the Affliction tree." }
+      {
+        "name": "Wrack",
+        "kind": "new",
+        "spec": "Affliction",
+        "text": "New talent, taking the slot where Drain Hope used to be."
+      },
+      {
+        "name": "Drain Hope",
+        "kind": "removed",
+        "spec": "Affliction",
+        "text": "Gone from the Affliction tree."
+      }
     ],
     "rogue": [
-      { "name": "Flawless Execution", "kind": "new", "spec": "Combat", "text": "New talent, taking the slot where Restless Blades used to be." },
-      { "name": "Restless Blades", "kind": "removed", "spec": "Combat", "text": "Gone from the Combat tree." }
+      {
+        "name": "Flawless Execution",
+        "kind": "new",
+        "spec": "Combat",
+        "text": "New talent, taking the slot where Restless Blades used to be."
+      },
+      {
+        "name": "Restless Blades",
+        "kind": "removed",
+        "spec": "Combat",
+        "text": "Gone from the Combat tree."
+      }
     ],
     "warrior": [
-      { "name": "Vitality", "kind": "removed", "spec": "Protection", "text": "Gone from the Protection tree; Bastion and Focused Rage each moved into a vacated slot." }
+      {
+        "name": "Vitality",
+        "kind": "removed",
+        "spec": "Protection",
+        "text": "Gone from the Protection tree; Bastion and Focused Rage each moved into a vacated slot."
+      }
     ],
     "druid": [
-      { "name": "Balance of Nature", "kind": "removed", "spec": "Balance", "text": "Gone from the Balance tree." }
+      {
+        "name": "Balance of Nature",
+        "kind": "removed",
+        "spec": "Balance",
+        "text": "Gone from the Balance tree."
+      }
     ]
   },
   "races": [],

@@ -94,11 +94,22 @@ function BuildCard({ build, isLatest }: { build: PatchBuild; isLatest: boolean }
       <div className="mt-1 text-sm font-medium text-foreground">{build.title}</div>
       <p className="mt-1.5 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{build.summary}</p>
       <p className="mt-2 text-xs text-foreground-muted/80">
-        Source:{" "}
-        <a href={build.sourceUrl} target="_blank" rel="noreferrer" className="text-accent hover:underline">
-          {build.sourceLabel}
-        </a>
-        . {build.sourceNote}
+        {build.sourceUrl && (
+          <>
+            Source:{" "}
+            {/* Blizzard blue; a darker blue on the Light theme's white background. */}
+            <a
+              href={build.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-[#1a8cff] hover:text-[#5aa9ff] hover:underline [.light-mode_&]:text-[#0b5cbd] [.light-mode_&]:hover:text-[#08458f]"
+            >
+              {build.sourceLabel ?? "Blizzard forums"}
+            </a>
+            .{" "}
+          </>
+        )}
+        {build.sourceNote}
       </p>
 
       {hasBody && (
