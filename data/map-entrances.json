@@ -1,0 +1,566 @@
+{
+  "hall-of-thanes": {
+    "kind": "dungeon",
+    "mapId": "3065",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 3065 (The Hall of Thanes) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "ruins-of-lordaeron": {
+    "kind": "dungeon",
+    "mapId": "2999",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2999 (Ruins of Lordaeron) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "excavation-site": {
+    "kind": "dungeon",
+    "mapId": "2998",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2998 (Excavation Site: Wetlands) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "city-of-dalaran": {
+    "kind": "dungeon",
+    "mapId": "2959",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2959 (City of Dalaran) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "ragefire-chasm": {
+    "kind": "dungeon",
+    "mapId": "389",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": 1816.755859375,
+      "y": -4423.37158203125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "wailing-caverns": {
+    "kind": "dungeon",
+    "mapId": "43",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -751.1312255859375,
+      "y": -2209.240478515625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "deadmines": {
+    "kind": "dungeon",
+    "mapId": "36",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -11207.798828125,
+      "y": 1681.15087890625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "shadowfang-keep": {
+    "kind": "dungeon",
+    "mapId": "33",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -230.98936462402344,
+      "y": 1571.5703125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "blackfathom-deeps": {
+    "kind": "dungeon",
+    "mapId": "48",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": 4249.12060546875,
+      "y": 748.3870849609375
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "the-stockade": {
+    "kind": "dungeon",
+    "mapId": "34",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -8762.37890625,
+      "y": 848.0103149414062
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "razorfen-kraul": {
+    "kind": "dungeon",
+    "mapId": "47",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -4459.44921875,
+      "y": -1660.2117919921875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "gnomeregan": {
+    "kind": "dungeon",
+    "mapId": "90",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -5162.66162109375,
+      "y": 931.5987548828125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "sm-graveyard": {
+    "kind": "dungeon",
+    "mapId": "189",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 2892.2353515625,
+      "y": -811.263671875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "sm-library": {
+    "kind": "dungeon",
+    "mapId": "189",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 2892.2353515625,
+      "y": -811.263671875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "sm-armory": {
+    "kind": "dungeon",
+    "mapId": "189",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 2892.2353515625,
+      "y": -811.263671875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "sm-cathedral": {
+    "kind": "dungeon",
+    "mapId": "189",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 2892.2353515625,
+      "y": -811.263671875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "razorfen-downs": {
+    "kind": "dungeon",
+    "mapId": "129",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -4662.8828125,
+      "y": -2535.87158203125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "uldaman": {
+    "kind": "dungeon",
+    "mapId": "70",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -6060.181640625,
+      "y": -2954.997314453125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "zulfarrak": {
+    "kind": "dungeon",
+    "mapId": "209",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -6790.57666015625,
+      "y": -2891.278076171875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "maraudon": {
+    "kind": "dungeon",
+    "mapId": "349",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -1432.6971435546875,
+      "y": 2924.9775390625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "sunken-temple": {
+    "kind": "dungeon",
+    "mapId": "109",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -10170.099609375,
+      "y": -3995.969970703125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "blackrock-depths": {
+    "kind": "dungeon",
+    "mapId": "230",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -7178.0947265625,
+      "y": -928.6394653320312
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "dire-maul-east": {
+    "kind": "dungeon",
+    "mapId": "429",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -3908.030029296875,
+      "y": 1130
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "dire-maul-west": {
+    "kind": "dungeon",
+    "mapId": "429",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -3908.030029296875,
+      "y": 1130
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "dire-maul-north": {
+    "kind": "dungeon",
+    "mapId": "429",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -3908.030029296875,
+      "y": 1130
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "lbrs": {
+    "kind": "dungeon",
+    "mapId": "229",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -7522.52685546875,
+      "y": -1233.04150390625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "ubrs": {
+    "kind": "dungeon",
+    "mapId": "229",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -7522.52685546875,
+      "y": -1233.04150390625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "scholomance": {
+    "kind": "dungeon",
+    "mapId": "289",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 1274.78125,
+      "y": -2552.56396484375
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "stratholme-undead": {
+    "kind": "dungeon",
+    "mapId": "329",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 3392.31689453125,
+      "y": -3378.483154296875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "stratholme-live": {
+    "kind": "dungeon",
+    "mapId": "329",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": 3392.31689453125,
+      "y": -3378.483154296875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "onyxias-lair": {
+    "kind": "raid",
+    "mapId": "249",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -4753.3125,
+      "y": -3752.421142578125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "zulgurub": {
+    "kind": "raid",
+    "mapId": "309",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -11916.0595703125,
+      "y": -1224.5771484375
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "molten-core": {
+    "kind": "raid",
+    "mapId": "409",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -7510.56494140625,
+      "y": -1036.6981201171875
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "blackwing-lair": {
+    "kind": "raid",
+    "mapId": "469",
+    "continent": "eastern-kingdoms",
+    "worldPosition": {
+      "x": -7663.41015625,
+      "y": -1218.6700439453125
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "ahn-qiraj-ruins": {
+    "kind": "raid",
+    "mapId": "509",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -8114.46435546875,
+      "y": 1526.36572265625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "ahn-qiraj-temple": {
+    "kind": "raid",
+    "mapId": "531",
+    "continent": "kalimdor",
+    "worldPosition": {
+      "x": -8111.72412109375,
+      "y": 1526.7857666015625
+    },
+    "source": "map.corpse",
+    "confidence": "confirmed",
+    "note": null
+  },
+  "naxxramas": {
+    "kind": "raid",
+    "mapId": "533",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 533 (Naxxramas) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "the-tainted-scar": {
+    "kind": "raid",
+    "mapId": "2789",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2789 (The Tainted Scar) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "storm-cliffs": {
+    "kind": "raid",
+    "mapId": "2791",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2791 (Storm Cliffs) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "the-crystal-vale": {
+    "kind": "raid",
+    "mapId": "2804",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2804 (The Crystal Vale) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "nightmare-grove": {
+    "kind": "raid",
+    "mapId": "2832",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2832 (Nightmare Grove) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "scarlet-enclave": {
+    "kind": "raid",
+    "mapId": "2856",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 2856 (Scarlet Enclave) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "emerald-dream": {
+    "kind": "raid",
+    "mapId": "169",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 169 (Emerald Dream) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "alterac-valley": {
+    "kind": "battleground",
+    "mapId": "30",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 30 (Alterac Valley) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "warsong-gulch": {
+    "kind": "battleground",
+    "mapId": "489",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 489 (Warsong Gulch) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "arathi-basin": {
+    "kind": "battleground",
+    "mapId": "529",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 529 (Arathi Basin) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "battle-for-gilneas": {
+    "kind": "battleground",
+    "mapId": "3005",
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "Map.csv row 3005 (Battle for Gilneas) has no corpse position set (Corpse=0,0) -- not yet placed in this beta build"
+  },
+  "drowned-city": {
+    "kind": "dungeon",
+    "mapId": null,
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "no Map.csv row found for this dungeon in this export at all (not just missing corpse data)"
+  },
+  "kroldok-stronghold": {
+    "kind": "dungeon",
+    "mapId": null,
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "no Map.csv row found for this dungeon in this export at all (not just missing corpse data)"
+  },
+  "alcaz-prison": {
+    "kind": "dungeon",
+    "mapId": null,
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "no Map.csv row found for this dungeon in this export at all (not just missing corpse data)"
+  },
+  "blackmaw-hold": {
+    "kind": "dungeon",
+    "mapId": null,
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "no Map.csv row found for this dungeon in this export at all (not just missing corpse data)"
+  },
+  "shapers-terrace": {
+    "kind": "dungeon",
+    "mapId": null,
+    "continent": null,
+    "worldPosition": null,
+    "source": null,
+    "confidence": "none",
+    "note": "no Map.csv row found for this dungeon in this export at all (not just missing corpse data)"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_readme": "Hand-authored, same shape as data/dungeons.json (id/name/levelMin/levelMax), for the raid entries data/map-entrances.json references. Every original Classic raid (Onyxia's Lair, Molten Core, Blackwing Lair, Zul'Gurub, both Ahn'Qiraj wings, Naxxramas) is unambiguously a level-60 raid -- well-established, not guessed. The 6 new-in-Forever raids (the-tainted-scar, storm-cliffs, the-crystal-vale, nightmare-grove, scarlet-enclave, emerald-dream) have no confirmed level requirement anywhere in this project's data yet, so levelMin/levelMax are null rather than assumed -- don't fill these in without a real source.",
+  "raids": [
+    { "id": "onyxias-lair", "name": "Onyxia's Lair", "levelMin": 60, "levelMax": 60 },
+    { "id": "zulgurub", "name": "Zul'Gurub", "levelMin": 60, "levelMax": 60 },
+    { "id": "molten-core", "name": "Molten Core", "levelMin": 60, "levelMax": 60 },
+    { "id": "blackwing-lair", "name": "Blackwing Lair", "levelMin": 60, "levelMax": 60 },
+    { "id": "ahn-qiraj-ruins", "name": "Ruins of Ahn'Qiraj", "levelMin": 60, "levelMax": 60 },
+    { "id": "ahn-qiraj-temple", "name": "Temple of Ahn'Qiraj", "levelMin": 60, "levelMax": 60 },
+    { "id": "naxxramas", "name": "Naxxramas", "levelMin": 60, "levelMax": 60 },
+    { "id": "the-tainted-scar", "name": "The Tainted Scar", "levelMin": null, "levelMax": null },
+    { "id": "storm-cliffs", "name": "Storm Cliffs", "levelMin": null, "levelMax": null },
+    { "id": "the-crystal-vale", "name": "The Crystal Vale", "levelMin": null, "levelMax": null },
+    { "id": "nightmare-grove", "name": "Nightmare Grove", "levelMin": null, "levelMax": null },
+    { "id": "scarlet-enclave", "name": "Scarlet Enclave", "levelMin": null, "levelMax": null },
+    { "id": "emerald-dream", "name": "Emerald Dream", "levelMin": null, "levelMax": null }
+  ]
+}

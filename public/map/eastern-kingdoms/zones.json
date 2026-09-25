@@ -1,0 +1,577 @@
+[
+  {
+    "areaId": 1,
+    "uiMapId": 1426,
+    "name": "Dun Morogh",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -7160.41650390625,
+      "minY": -3122.91650390625,
+      "maxX": -3877.083251953125,
+      "maxY": 1802.083251953125
+    },
+    "levelRange": [
+      1,
+      10
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "alliance",
+    "labelAnchor": [
+      -5160.94,
+      -1310.94
+    ]
+  },
+  {
+    "areaId": 3,
+    "uiMapId": 1418,
+    "name": "Badlands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -7547.91650390625,
+      "minY": -4566.66650390625,
+      "maxX": -5889.5830078125,
+      "maxY": -2079.16650390625
+    },
+    "levelRange": [
+      35,
+      45
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -6802.08,
+      -3339.58
+    ]
+  },
+  {
+    "areaId": 4,
+    "uiMapId": 1419,
+    "name": "Blasted Lands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -12800,
+      "minY": -4591.66650390625,
+      "maxX": -10566.666015625,
+      "maxY": -1241.6666259765625
+    },
+    "levelRange": [
+      43,
+      55
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -11465.62,
+      -3063.54
+    ]
+  },
+  {
+    "areaId": 8,
+    "uiMapId": 1435,
+    "name": "Swamp of Sorrows",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -11150,
+      "minY": -4516.66650390625,
+      "maxX": -9620.8330078125,
+      "maxY": -2222.91650390625
+    },
+    "levelRange": [
+      35,
+      45
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -10312.5,
+      -3862.5
+    ]
+  },
+  {
+    "areaId": 10,
+    "uiMapId": 1431,
+    "name": "Duskwood",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -11516.666015625,
+      "minY": -1866.6666259765625,
+      "maxX": -9716.666015625,
+      "maxY": 833.3333129882812
+    },
+    "levelRange": [
+      18,
+      30
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -10622.92,
+      -814.58
+    ]
+  },
+  {
+    "areaId": 11,
+    "uiMapId": 1437,
+    "name": "Wetlands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -4904.16650390625,
+      "minY": -4525,
+      "maxX": -2147.91650390625,
+      "maxY": -389.58331298828125
+    },
+    "levelRange": [
+      20,
+      30
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -3547.92,
+      -2931.25
+    ]
+  },
+  {
+    "areaId": 12,
+    "uiMapId": 1429,
+    "name": "Elwynn Forest",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -10254.166015625,
+      "minY": -1935.4166259765625,
+      "maxX": -7939.5830078125,
+      "maxY": 1535.4166259765625
+    },
+    "levelRange": [
+      1,
+      10
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "alliance",
+    "labelAnchor": [
+      -9162.86,
+      -412.91
+    ]
+  },
+  {
+    "areaId": 28,
+    "uiMapId": 1422,
+    "name": "Western Plaguelands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": 499.9999694824219,
+      "minY": -3883.333251953125,
+      "maxX": 3366.66650390625,
+      "maxY": 416.6666564941406
+    },
+    "levelRange": [
+      50,
+      60
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      1655.73,
+      -1840.1
+    ]
+  },
+  {
+    "areaId": 33,
+    "uiMapId": 1434,
+    "name": "Stranglethorn Vale",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -15422.916015625,
+      "minY": -4160.41650390625,
+      "maxX": -11168.75,
+      "maxY": 2220.833251953125
+    },
+    "levelRange": [
+      30,
+      45
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -12378.91,
+      -1015.36
+    ]
+  },
+  {
+    "areaId": 36,
+    "uiMapId": 1416,
+    "name": "Alterac Mountains",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -366.6666564941406,
+      "minY": -2016.6666259765625,
+      "maxX": 1500,
+      "maxY": 783.3333129882812
+    },
+    "levelRange": null,
+    "levelRangeSource": "unavailable",
+    "confidence": "none",
+    "faction": "contested",
+    "labelAnchor": [
+      702.08,
+      -489.58
+    ]
+  },
+  {
+    "areaId": 38,
+    "uiMapId": 1432,
+    "name": "Loch Modan",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -6327.0830078125,
+      "minY": -4752.0830078125,
+      "maxX": -4487.5,
+      "maxY": -1993.7498779296875
+    },
+    "levelRange": [
+      10,
+      20
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "alliance",
+    "labelAnchor": [
+      -5330.99,
+      -3713.8
+    ]
+  },
+  {
+    "areaId": 40,
+    "uiMapId": 1436,
+    "name": "Westfall",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -11733.3330078125,
+      "minY": -483.33331298828125,
+      "maxX": -9400,
+      "maxY": 3016.66650390625
+    },
+    "levelRange": [
+      10,
+      20
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "alliance",
+    "labelAnchor": [
+      -10714.32,
+      1416.93
+    ]
+  },
+  {
+    "areaId": 41,
+    "uiMapId": 1430,
+    "name": "Deadwind Pass",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -11533.3330078125,
+      "minY": -3333.333251953125,
+      "maxX": -9866.666015625,
+      "maxY": -833.3333129882812
+    },
+    "levelRange": null,
+    "levelRangeSource": "unavailable",
+    "confidence": "none",
+    "faction": "contested",
+    "labelAnchor": [
+      -10870.83,
+      -2004.17
+    ]
+  },
+  {
+    "areaId": 44,
+    "uiMapId": 1433,
+    "name": "Redridge Mountains",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -10022.916015625,
+      "minY": -3852.083984375,
+      "maxX": -8575,
+      "maxY": -1681.25
+    },
+    "levelRange": [
+      15,
+      25
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -9362.24,
+      -2324.22
+    ]
+  },
+  {
+    "areaId": 45,
+    "uiMapId": 1417,
+    "name": "Arathi Highlands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -2533.333251953125,
+      "minY": -4466.66650390625,
+      "maxX": -133.3333282470703,
+      "maxY": -866.6666259765625
+    },
+    "levelRange": [
+      30,
+      40
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -1500,
+      -2433.33
+    ]
+  },
+  {
+    "areaId": 46,
+    "uiMapId": 1428,
+    "name": "Burning Steppes",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -8983.3330078125,
+      "minY": -3195.833251953125,
+      "maxX": -7031.24951171875,
+      "maxY": -266.6666564941406
+    },
+    "levelRange": [
+      50,
+      60
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -7996.35,
+      -1959.9
+    ]
+  },
+  {
+    "areaId": 47,
+    "uiMapId": 1425,
+    "name": "The Hinterlands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -1100,
+      "minY": -5425,
+      "maxX": 1466.6666259765625,
+      "maxY": -1575
+    },
+    "levelRange": [
+      40,
+      50
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      179.69,
+      -3841.15
+    ]
+  },
+  {
+    "areaId": 51,
+    "uiMapId": 1427,
+    "name": "Searing Gorge",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -7587.49951171875,
+      "minY": -2554.16650390625,
+      "maxX": -6100,
+      "maxY": -322.9166564941406
+    },
+    "levelRange": [
+      43,
+      55
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -6749.48,
+      -1158.85
+    ]
+  },
+  {
+    "areaId": 85,
+    "uiMapId": 1420,
+    "name": "Tirisfal Glades",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": 824.9999389648438,
+      "minY": -1485.4166259765625,
+      "maxX": 3837.499755859375,
+      "maxY": 3033.333251953125
+    },
+    "levelRange": [
+      1,
+      10
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "horde",
+    "labelAnchor": [
+      2221.88,
+      -98.96
+    ]
+  },
+  {
+    "areaId": 130,
+    "uiMapId": 1421,
+    "name": "Silverpine Forest",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -1133.333251953125,
+      "minY": -750,
+      "maxX": 1666.6666259765625,
+      "maxY": 3449.999755859375
+    },
+    "levelRange": [
+      10,
+      20
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "horde",
+    "labelAnchor": [
+      879.95,
+      1164.84
+    ]
+  },
+  {
+    "areaId": 139,
+    "uiMapId": 1423,
+    "name": "Eastern Plaguelands",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": 825,
+      "minY": -6558.333984375,
+      "maxX": 3691.6669921875,
+      "maxY": -2256.25
+    },
+    "levelRange": [
+      50,
+      60
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      2923.96,
+      -3982.29
+    ]
+  },
+  {
+    "areaId": 267,
+    "uiMapId": 1424,
+    "name": "Hillsbrad Foothills",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -1733.333251953125,
+      "minY": -2133.333251953125,
+      "maxX": 400,
+      "maxY": 1066.6666259765625
+    },
+    "levelRange": [
+      18,
+      30
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -463.54,
+      -1155.21
+    ]
+  },
+  {
+    "areaId": 1497,
+    "uiMapId": 1458,
+    "name": "Undercity",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": 1237.8411865234375,
+      "minY": -86.18240356445312,
+      "maxX": 1877.9453125,
+      "maxY": 873.192626953125
+    },
+    "levelRange": null,
+    "levelRangeSource": "unavailable",
+    "confidence": "none",
+    "faction": "horde"
+  },
+  {
+    "areaId": 1519,
+    "uiMapId": 1453,
+    "name": "Stormwind City",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -9154.169921875,
+      "minY": -14.583999633789062,
+      "maxX": -7995.830078125,
+      "maxY": 1722.9200439453125
+    },
+    "levelRange": null,
+    "levelRangeSource": "unavailable",
+    "confidence": "none",
+    "faction": "alliance",
+    "labelAnchor": [
+      -8629.69,
+      829.69
+    ]
+  },
+  {
+    "areaId": 1537,
+    "uiMapId": 1455,
+    "name": "Ironforge",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -5096.845703125,
+      "minY": -1504.2164306640625,
+      "maxX": -4569.2412109375,
+      "maxY": -713.5913696289062
+    },
+    "levelRange": null,
+    "levelRangeSource": "unavailable",
+    "confidence": "none",
+    "faction": "alliance"
+  },
+  {
+    "areaId": 16591,
+    "uiMapId": 2548,
+    "name": "Riverglades",
+    "continent": "eastern-kingdoms",
+    "worldBounds": {
+      "minX": -9700,
+      "minY": -6741.666015625,
+      "maxX": -6466.666015625,
+      "maxY": -1891.666015625
+    },
+    "levelRange": [
+      35,
+      45
+    ],
+    "levelRangeSource": "data/sources/leveling-ranges/2026-09-25.md",
+    "confidence": "estimated",
+    "faction": "contested",
+    "labelAnchor": [
+      -7895.96,
+      -4730.6
+    ]
+  }
+]

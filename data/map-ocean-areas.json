@@ -1,0 +1,30 @@
+{
+  "_readme": "Committed exclude list for scripts/build-zone-areas.js's Step 1 (ocean removal before roll-up/tracing). Every id here is a raw AreaTable AreaId whose ZoneName is one of the game's administrative open-ocean labels (TheGreatSea / TheVeiledSea / TheForbiddingSea / SouthSeas) -- these are the huge water-body ids that get ParentAreaID-assigned to a single neighboring coastal zone in Blizzard's own data, which is exactly what caused the ocean-ballooning offenders in the prior session's check (b) (see CLAUDE.md's 'zone polygons from raw ADTs' session note). Derived by grepping data/sources/client-db2/1.60.1.70009/areatable.csv for these four ZoneName values (NOT a raw 'sea'/'ocean' text search -- that also matches 'SearingGorge' and 'TheSeaofCinders', a real lava lake in Searing Gorge that must NOT be treated as ocean; both were checked by hand and excluded from this list). 'chunks' is the raw per-continent chunk count observed in this build's own zone-grid-<continent>.bin caches before any exclusion is applied -- an id with 0 chunks on both continents (e.g. the base 'TheGreatSea' id 214, or the never-placed 'TheForbiddingSeaInstance' id 16035, which belongs to a separate instance-map ContinentID entirely) is omitted here since it never appears in either grid. Regenerate this file's numbers by re-running the ocean-candidate probe in scripts/build-zone-areas.js's own console output if areatable.csv is ever re-pulled from a newer build.",
+  "areas": [
+    { "id": 2317, "name": "South Seas", "parentAreaId": 440, "chunks": { "kalimdor": 16418 } },
+    { "id": 2318, "name": "The Great Sea", "parentAreaId": 15, "chunks": { "kalimdor": 5627 } },
+    { "id": 2319, "name": "The Great Sea", "parentAreaId": 17, "chunks": { "kalimdor": 683 } },
+    { "id": 2320, "name": "The Great Sea", "parentAreaId": 14, "chunks": { "kalimdor": 4385 } },
+    { "id": 2321, "name": "The Great Sea", "parentAreaId": 16, "chunks": { "kalimdor": 6431 } },
+    { "id": 2322, "name": "The Veiled Sea", "parentAreaId": 141, "chunks": { "kalimdor": 21138 } },
+    { "id": 2323, "name": "The Veiled Sea", "parentAreaId": 357, "chunks": { "kalimdor": 5689 } },
+    { "id": 2324, "name": "The Veiled Sea", "parentAreaId": 405, "chunks": { "kalimdor": 4215 } },
+    { "id": 2325, "name": "The Veiled Sea", "parentAreaId": 331, "chunks": { "kalimdor": 3092 } },
+    { "id": 2326, "name": "The Veiled Sea", "parentAreaId": 148, "chunks": { "kalimdor": 13097 } },
+    { "id": 2338, "name": "South Seas", "parentAreaId": 33, "chunks": { "eastern-kingdoms": 8105 } },
+    { "id": 2339, "name": "The Great Sea", "parentAreaId": 33, "chunks": { "eastern-kingdoms": 3040 } },
+    { "id": 2364, "name": "The Great Sea", "parentAreaId": 40, "chunks": { "eastern-kingdoms": 7989 } },
+    { "id": 2365, "name": "The Great Sea", "parentAreaId": 11, "chunks": { "eastern-kingdoms": 5881 } },
+    { "id": 2397, "name": "The Great Sea", "parentAreaId": 267, "chunks": { "eastern-kingdoms": 1082 } },
+    { "id": 2398, "name": "The Great Sea", "parentAreaId": 130, "chunks": { "eastern-kingdoms": 5982 } },
+    { "id": 2399, "name": "The Great Sea", "parentAreaId": 85, "chunks": { "eastern-kingdoms": 13585 } },
+    { "id": 2400, "name": "The Forbidding Sea", "parentAreaId": 47, "chunks": { "eastern-kingdoms": 3032 } },
+    { "id": 2401, "name": "The Forbidding Sea", "parentAreaId": 45, "chunks": { "eastern-kingdoms": 2437 } },
+    { "id": 2402, "name": "The Forbidding Sea", "parentAreaId": 11, "chunks": { "eastern-kingdoms": 5824 } },
+    { "id": 2403, "name": "The Forbidding Sea", "parentAreaId": 8, "chunks": { "eastern-kingdoms": 5710 } },
+    { "id": 2477, "name": "The Veiled Sea", "parentAreaId": 1377, "chunks": { "kalimdor": 12958 } },
+    { "id": 16361, "name": "The Forbidding Sea", "parentAreaId": 139, "chunks": { "eastern-kingdoms": 1714 } },
+    { "id": 16820, "name": "The Forbidding Sea", "parentAreaId": 16591, "chunks": { "eastern-kingdoms": 5342 } },
+    { "id": 332, "name": "The Great Sea", "parentAreaId": 0, "chunks": { "kalimdor": 35 }, "note": "ParentAreaID 0 -- an orphan that never rolled up to any zone anyway (see the prior session's 'unresolved raw AreaIds' report), but it's still genuinely open ocean, so it's zeroed here too rather than left as a silent leftover nonzero raw cell." }
+  ]
+}

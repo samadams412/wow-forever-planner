@@ -1,0 +1,9 @@
+{
+  "_readme": "Hand-authored names for the battleground entries data/map-entrances.json references. No levelMin/levelMax field, deliberately: unlike a dungeon or raid, a Classic battleground has no single canonical player level -- it's queued via 10-level brackets up through 60, so 'the battleground's own level range' isn't a well-defined single fact the way it is for a dungeon. Don't add one without deciding what it should actually mean first.",
+  "battlegrounds": [
+    { "id": "alterac-valley", "name": "Alterac Valley" },
+    { "id": "warsong-gulch", "name": "Warsong Gulch" },
+    { "id": "arathi-basin", "name": "Arathi Basin" },
+    { "id": "battle-for-gilneas", "name": "Battle for Gilneas" }
+  ]
+}
