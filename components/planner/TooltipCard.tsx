@@ -185,36 +185,13 @@ export function TooltipSourceNote({ confirmed, source }: { confirmed: boolean; s
 // Forever line highlights words only Forever has, shared wording stays
 // plain in both. Only rendered when classicStatus is "changed" (nothing to
 // diff for "same"/"new").
-//
-// The heading/labels default to the Classic-vs-Forever wording the tooltips
-// use; /whats-new reuses this same diff for a patch's before -> after
-// numbers ("Before"/"After") rather than growing a second implementation.
-// `heading={null}` drops the header line, and `bare` drops the top rule and
-// margin for use inside a card of its own instead of under other tooltip
-// content.
-export function TooltipClassicDiff({
-  classicText,
-  foreverText,
-  heading = "Changed from Classic",
-  oldLabel = "Classic",
-  newLabel = "Forever",
-  bare = false,
-}: {
-  classicText: string;
-  foreverText: string;
-  heading?: string | null;
-  oldLabel?: string;
-  newLabel?: string;
-  bare?: boolean;
-}) {
+export function TooltipClassicDiff({ classicText, foreverText }: { classicText: string; foreverText: string }) {
   const tokens = diffWords(classicText, foreverText);
   return (
-    <div className={bare ? "" : "mt-2 border-t border-[#c8aa6e]/30 pt-1.5"}>
-      {heading !== null && (
-        <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">{heading}</div>
-      )}
+    <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
+      <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">Changed from Classic</div>
       <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
-        <span className="mr-1 font-semibold text-[#ff6b6b]">{oldLabel}:</span>
+        <span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>
         {tokens
           .filter((t) => t.op !== "add")
           .map((t, i) =>
@@ -230,7 +207,7 @@ export function TooltipClassicDiff({
           )}
       </p>
       <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
-        <span className="mr-1 font-semibold text-[#ffd100]">{newLabel}:</span>
+        <span className="mr-1 font-semibold text-[#ffd100]">Forever:</span>
         {tokens
           .filter((t) => t.op !== "remove")
           .map((t, i) =>

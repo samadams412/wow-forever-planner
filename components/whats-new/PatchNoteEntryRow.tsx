@@ -1,8 +1,8 @@
 "use client";
 
-import { TooltipClassicDiff } from "@/components/planner/TooltipCard";
 import { NOTE_KIND_BADGE_CLASS, NOTE_KIND_LABEL } from "@/lib/whats-new-style";
 import type { NoteEntry } from "@/lib/patch-notes";
+import PatchChangeDiff from "./PatchChangeDiff";
 import PatchNoteRef from "./PatchNoteRef";
 
 // One line of a build's patch notes: the linked talent/spell (or plain name
@@ -33,27 +33,7 @@ export default function PatchNoteEntryRow({ entry, idPrefix }: { entry: NoteEntr
 
       <p className="mt-1.5 text-sm leading-relaxed text-foreground-muted">{entry.text}</p>
 
-      {entry.changes && entry.changes.length > 0 && (
-        // Always-dark card like the tooltips this diff normally lives in --
-        // its red/gold colors are tuned for that background, not the page's.
-        <div className="mt-2 space-y-2 rounded border border-[#c8aa6e]/40 bg-[#0a0f1a]/95 p-2.5">
-          {entry.changes.map((c, i) => (
-            <div key={i}>
-              {c.label && (
-                <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">{c.label}</div>
-              )}
-              <TooltipClassicDiff
-                classicText={c.before}
-                foreverText={c.after}
-                heading={null}
-                oldLabel="Before"
-                newLabel="After"
-                bare
-              />
-            </div>
-          ))}
-        </div>
-      )}
+      {entry.changes && entry.changes.length > 0 && <PatchChangeDiff changes={entry.changes} />}
 
       {entry.devNote && (
         <blockquote className="mt-2 border-l-2 border-accent/50 pl-2.5 text-xs italic leading-relaxed text-foreground-muted/90">
