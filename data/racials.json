@@ -156,7 +156,7 @@
     {
       "name": "Eureka!",
       "type": "active",
-      "description": "Instant, 2 min cooldown. Your next 3 damaging abilities cost less (50% less Mana, 40% less Rage, 20% less Energy; 15% less Mana for healers, who also heal 10% more) and deal 10% more damage.",
+      "description": "Instant, 2 min cooldown. Your next 3 damaging abilities cost 10% less (Mana, Rage or Energy) and deal 10% more damage. For healers, your next 3 damaging or healing abilities cost 10% less Mana and do 10% more.",
       "confidence": "confirmed",
       "icon": "inv_gnometoy"
     }
@@ -230,7 +230,7 @@
     {
       "name": "Touch of the Grave",
       "type": "passive",
-      "description": "Your spells and attacks have a chance (10% for casters, 5% for melee) to drain Health from the target, up to 5% of your maximum Health. 1 sec internal cooldown.",
+      "description": "Your spells and attacks with a damage part have a chance (10% for casters, 5% for melee) to drain Health from the target, up to 5% of your maximum Health. 1 sec internal cooldown. Does not break crowd control.",
       "confidence": "confirmed",
       "icon": "spell_shadow_fingerofdeath"
     }

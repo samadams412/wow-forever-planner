@@ -100,15 +100,19 @@ function findMentions(text, candidateNames) {
 
 function build() {
   const links = {};
+  // Newest plain-dated snapshot (same picker build-spellbooks.js/diff-talentsforever.js
+  // use) -- was hardcoded to 2026-09-18-v3-spelldesc.json, which silently left every
+  // non-talent spell's Ctrl-hold text frozen at that pull's wording.
+  const snapDir = path.join(ROOT, "data", "sources", "talentsforever");
+  const latest = fs
+    .readdirSync(snapDir)
+    .filter((f) => /^talentsforever-\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .sort()
+    .pop();
   let spellDescSnapshot;
   try {
-    spellDescSnapshot = require(path.join(
-      ROOT,
-      "data",
-      "sources",
-      "talentsforever",
-      "talentsforever-2026-09-18-v3-spelldesc.json"
-    ));
+    spellDescSnapshot = require(path.join(snapDir, latest));
+    if (!spellDescSnapshot.spell_desc) throw new Error("no spell_desc");
   } catch {
     console.error("Missing fresh vendor snapshot with full per-rank spell_desc; aborting.");
     process.exit(1);

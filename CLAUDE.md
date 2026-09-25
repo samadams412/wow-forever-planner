@@ -9,6 +9,67 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-24 (talentsforever 09-24 pull + Blizzard patch notes)
+
+New snapshot `data/sources/talentsforever/talentsforever-2026-09-24.json`
+(beta build 1.60.1.70009), diffed against 09-21
+(`diffs/2026-09-21_to_2026-09-24.{md,json}`) and applied. **The full Blizzard
+patch-notes text was never pasted into this session** (the placeholder was
+left in the prompt), so every patch-note item was checked against the pull
+and the prompt's own summary of it, not the primary source itself.
+
+**Step 2 reconciliation:**
+1. *Mangle -> Primal Bite*: already in the pull as an in-place rename.
+   Applied (`feral_primal_bite`, Bite text, icon `ability_racial_cannibalize`),
+   plus Ferocity/Berserk text, the spellbook entry (Mangle removed, Primal Bite
+   added via `build-spellbooks.js`) and `talent-spell-links.json` (0 stale
+   "Mangle" references remain).
+2. *Primal Fury -> Blood Frenzy*: Druid only (not Warrior). Applied with the
+   pull's own icon `ability_ghoulfrenzy` and its Classic block (Feral 4.3).
+3. *Improved Holy Strike removed*: applied, build-code v3 (above). Holy
+   Strike baseline (10 sec CD; 25/29/32/36/39/43/46/50% weapon damage) came
+   through `build-spellbooks.js` and matches the notes exactly.
+4. *Bastion / Focused Rage*: **no change needed** -- current data
+   (Bastion 5.4, Focused Rage 6.3, from the 2026-09-18 Vitality removal)
+   already equals the pull, which did not change them in 09-24.
+5. *Elemental Fury / Alacrity swap*: applied incl. prerequisite chain
+   (Alacrity 3.3 -> Call of Thunder 4.3 -> Fury 6.3); build-code v3.
+6. *Eureka!*: **there was never per-class variant scaffolding** -- Gnome's
+   Eureka! and Expansive Mind are each one prose string in
+   `data/racials.json`; nothing to collapse. Text updated to the new wording,
+   which still has a separate healer clause (so it is not fully class-flat).
+   Expansive Mind untouched.
+
+**Also applied (in the pull, not listed in the task):** Paladin Retribution
+**Crusade removed** (same build-code handling), Holy Strike/Light's Vigil/etc.
+text, Lava Burst, Strider Kick, Wake of Fire, Hot Streak, Devouring Contagion
+wording, class-abilities.json (Holy Strike 10 sec, Slam 18 sec), Touch of the
+Grave text, Legacy Perk Reagent Economy text, plus several spellbook value
+changes (Lightning Bolt, Windfury Totem range, etc.) that came through the
+regenerated `data/spellbooks.json`. Five single-rank spells (Greater Blessing
+of Light, Multi-Shot, Scorpid Sting, Prayer of Shadow Protection, Arcane
+Brilliance) lost their "Rank 1" label in the vendor data (now `rank: null`).
+
+**Fixed:** `scripts/build-talent-spell-links.js` was hardcoded to the
+2026-09-18-v3-spelldesc snapshot, so every non-talent spell's Ctrl-hold text
+was frozen at that pull. Now reads the newest plain-dated snapshot.
+
+**Not in this pull (patch-note items to expect in a later one):** Retribution
+Aura / Thorns spell-power scaling, Tauren Cultivation's per-herb level
+requirement.
+
+**Deliberately not applied -- pre-existing, still open:** Shaman Restoration
+Totemic Focus (now 1.3) / Tidal Mastery (now 4.1) position swap. The vendor
+has had it since 09-18; the 09-18 ingest deferred it "pending visual
+verification" and it was never resolved, so our data still has the old
+positions (Tidal Mastery 1.3, Totemic Focus 4.1). Applying it needs another
+build-code frozen-order entry for Restoration.
+
+**Verification gap:** the browser extension was not connected, so structural
+changes were verified by `tsc`, build-code round-trip tests, and dev-server
+HTTP/SSR checks only -- **not visually** (connector arrows for the new
+Elemental prerequisite chain, Holy/Ret layout after the removals).
+
 ## Session handoff — 2026-09-24 (world map MVP reverted)
 
 **Reverted, not lost:** the two sessions immediately prior to this one built
@@ -1569,7 +1630,7 @@ would have done to old links with points in Warrior Protection's tier
 5-7, Rogue Combat, Warlock Affliction, or Druid Balance.
 
 Fixed with a version segment: `encodeBuild` prepends a version number
-(currently `2`) as an extra `-`-separated segment, so a versioned code has
+(currently `3`; was `2` until 2026-09-24 -- see the addendum below) as an extra `-`-separated segment, so a versioned code has
 `classData.trees.length + 1` segments vs. exactly `classData.trees.length`
 for a pre-versioning code — detected by segment count, not a special
 character, so codes stay plain base36+`-` and drop safely into any URL
@@ -1592,6 +1653,23 @@ like unused-most-of-the-time machinery; it exists specifically because
 array-position encoding plus a tree reshuffle is a silent-corruption
 scenario, verified directly against constructed legacy codes for all 4
 trees affected on 2026-09-18 (see that commit for the exact repro).
+
+**Addendum, 2026-09-24 (version 2 -> 3):** Paladin Holy lost Improved Holy
+Strike, Paladin Retribution lost Crusade, and Shaman Elemental swapped
+Elemental Fury (row 3 -> 6) and Elemental Alacrity (row 6 -> 3). Bumped
+`CURRENT_VERSION` to 3 and froze those 3 trees' pre-change id order as
+`V2_TREE_ORDER`. A version-2 code (any version below current) now decodes
+through `decodeAgainstFrozenOrders`, which uses `V2_TREE_ORDER` for those 3
+trees and live order for every other tree; unversioned pre-v2 codes fall
+back to `V2_TREE_ORDER` too (those trees didn't change on 2026-09-18, so one
+frozen order covers both eras). The two removed ids were added to
+`LEGACY_ID_TRANSLATION` as `null` (points dropped). Druid's Mangle -> Primal
+Bite and Primal Fury -> Blood Frenzy are same-slot renames, so positional
+decoding needs nothing (ids changed: `feral_mangle` -> `feral_primal_bite`,
+`feral_primal_fury` -> `feral_blood_frenzy`). Verified by encoding real old
+codes (v2 and unversioned) against the pre-change data from git and
+decoding against the new data for Shaman, Paladin, Druid and an untouched
+Warrior tree -- all decode to the intended talents.
 
 ### Legacy Perks: interactive 3-column tree (`/reference/legacy-perks`)
 Rebuilt 2026-09-18 to match the vendor's real Legacy Tree UI (three
