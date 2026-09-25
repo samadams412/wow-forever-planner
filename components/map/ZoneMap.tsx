@@ -35,8 +35,33 @@ export default function ZoneMap({
               <stop offset="0%" stopColor={shape.landColors?.from ?? "#5a4a2c"} />
               <stop offset="100%" stopColor={shape.landColors?.to ?? "#382d1c"} />
             </radialGradient>
+            {shape.innerLand && (
+              <radialGradient id={`inner-${zoneId}`} cx="40%" cy="35%" r="75%">
+                <stop offset="0%" stopColor={shape.innerLand.colors.from} />
+                <stop offset="100%" stopColor={shape.innerLand.colors.to} />
+              </radialGradient>
+            )}
           </defs>
           <path d={shape.land} fill={`url(#land-${zoneId})`} stroke="#c9a961" strokeWidth={2} strokeOpacity={0.7} />
+          {shape.innerLand && (
+            <path
+              d={shape.innerLand.d}
+              fill={`url(#inner-${zoneId})`}
+              stroke="#c9a961"
+              strokeWidth={1}
+              strokeOpacity={0.35}
+            />
+          )}
+          {shape.wash && (
+            <path
+              d={shape.wash.d}
+              fill="none"
+              stroke={shape.wash.color}
+              strokeWidth={3}
+              strokeLinecap="round"
+              strokeOpacity={0.55}
+            />
+          )}
           {shape.water && (
             <ellipse
               cx={shape.water.cx}
