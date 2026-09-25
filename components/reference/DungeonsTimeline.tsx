@@ -250,9 +250,9 @@ export default function DungeonsTimeline({ dungeonData }: { dungeonData: Record<
         </div>
       </div>
 
-      <p className="mt-2 text-[11px] text-foreground-muted">
+      {/* <p className="mt-2 text-[11px] text-foreground-muted">
         Tip: Scroll horizontally across the chart on mobile devices to view full level brackets clearly.
-      </p>
+      </p> */}
     </div>
   );
 }

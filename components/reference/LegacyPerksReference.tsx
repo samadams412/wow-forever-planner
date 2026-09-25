@@ -84,7 +84,7 @@ export default function LegacyPerksReference() {
         its own points independently in its own set of Legacy Trees. Click an icon below to try out a
         spend order; nothing here is saved or shared, it's a scratch pad for planning.
       </p>
-      <p className="mt-1 max-w-[70ch] text-[11px] text-foreground-muted/60">Source: {legacyPerks.source}</p>
+      
 
       <div className="mt-3 flex items-start gap-2 rounded-lg border border-accent/40 bg-accent/5 p-3">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -154,6 +154,7 @@ export default function LegacyPerksReference() {
           {legacyPerks.expansionNote}
         </p>
       </section>
+      <p className="mt-1 max-w-[70ch] text-[11px] text-foreground-muted/60">Source: {legacyPerks.source}</p>
     </div>
   );
 }
