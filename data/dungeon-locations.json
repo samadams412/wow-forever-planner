@@ -1,9 +1,0 @@
-{
-  "_readme": "Dungeon-entrance pin positions for the world map MVP (components/map/ZoneMap.tsx). Hand-authored from well-known Classic WoW zone geography, not scraped from any site. CORRECTION (see commit history): this file originally placed Uldaman in Loch Modan, which was wrong -- Uldaman's entrance and its immediate quest givers (Rigglefuzz, Theldurin the Lost) are in the Badlands, confirmed directly from this repo's own data/dungeons/uldaman.json quest location fields (already scraped from foreverchanges, no new fetch needed) plus general Classic WoW knowledge; Loch Modan only appears there as the *neighboring* zone a Badlands quest sends you back to ('Badlands Reagent Run, from Ghak Healtouch, Loch Modan'). Audited the rest of this file at the same time: there was and is exactly one entry, so there was nothing else to cross-check yet. x/y are percent of the zone artwork's own SVG viewBox (components/map/zoneShapes.tsx), not a real percent-of-real-map figure -- this project draws its own stylized shapes rather than reusing any site's tile/coordinate system. Every future addition here should have its zone checked against a reliable source (e.g. Wowhead's zone pages, read individually -- not bulk-scraped, per this project's robots.txt finding) before being trusted, the same way this fix was. Each pin's `appearsIn` ('classic' | 'forever' | 'both') feeds the Classic/Forever map toggle (components/map/WorldMapZone.tsx) -- Uldaman is 'both' since it's a plain classic-type dungeon per data/dungeons.json, unchanged between the two.",
-  "zones": {
-    "badlands": { "name": "Badlands", "continent": "Eastern Kingdoms", "levelRange": "36-45" }
-  },
-  "dungeonPins": [
-    { "dungeonId": "uldaman", "zoneId": "badlands", "x": 34, "y": 40, "appearsIn": "both" }
-  ]
-}

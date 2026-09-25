@@ -9,6 +9,31 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-24 (world map MVP reverted)
+
+**Reverted, not lost:** the two sessions immediately prior to this one built
+a single-zone world map MVP -- `/reference/map`, `components/map/*`
+(`ZoneMap`, `DungeonPinMarker`, `WorldMapZone`, `zoneShapes`),
+`data/dungeon-locations.json`, `lib/dungeon-locations.ts` -- originally-
+drawn SVG zone art (Loch Modan, then corrected to Badlands once the
+Uldaman/Loch Modan pairing was found to be wrong), a dungeon-entrance pin
+with click-through to its loot page, and a Classic/Forever pin-set toggle.
+All of it was removed in this session at explicit request: the SVG-zone-art
+approach isn't the direction being pursued, not a quality problem with what
+was built. Every file the feature touched was a pure addition (confirmed via
+`git diff --stat` across the whole range before deleting anything), so the
+revert was a clean `git rm`, not a partial unwind -- no other file was ever
+edited to reference the feature, confirmed by grepping the full codebase for
+every identifier and route path before committing this revert. The commits
+themselves (`b0b6685`..`b10e7bc`) are untouched in git history if any of
+that art or the toggle mechanism turns out to be worth reviving later.
+**This gap is deliberate, not an oversight** -- the map feature is being
+reconsidered with a different approach/tooling, not currently in progress.
+The existing "foreverchanges.pro/map recon" architecture note further down
+this file (real 2D tile map via Leaflet, real coordinate/POI data) is still
+accurate background for whatever comes next and was deliberately left
+in place.
+
 ## Session handoff — 2026-09-24 (Merchant's Favor fixes, profession nav/polish, SEO pass, OG legibility, item filter layout)
 
 **Stable and shipped this session** (8 commits, each independently
