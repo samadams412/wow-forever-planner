@@ -9,6 +9,1166 @@ the codebase; it's kept in sync with what's actually implemented (verified
 against real files, not assumed from an earlier description) rather than
 serving as a fixed project brief.
 
+## Session handoff — 2026-09-25 (map sidebar: zone list, search, layer toggles, URL hash, mobile)
+
+Render + a small amount of state-management refactoring, stopped before
+committing. Builds directly on the same day's "data-driven dungeon/raid/
+battleground entrance markers" session below -- read that one first.
+
+**Architecture change: selection and layer toggles are now controlled
+state, owned by a new `components/map/MapExplorer.tsx`.** Previously
+`LeafletZoneMap.tsx` managed its own zone-selection style as an internal
+closure variable, invisible outside the component. Since the sidebar now
+needs to select a zone (and the map needs to react), and the map needs to
+tell the sidebar when ITS OWN border click changed the selection, neither
+side can own this alone -- `MapExplorer` is the single source of truth for
+`selectedZoneId`/`selectedEntranceId`/`layers`, passed down as props to
+both `MapSidebar` (new, fully rewritten) and `LeafletZoneMap` (now a
+`forwardRef` component with a `LeafletZoneMapHandle` imperative API:
+`flyToWorldBounds`/`flyToWorldPoint`/`openEntrancePopup`, for one-shot
+"fly to X" actions from the sidebar that aren't persistent state the way
+selection/layers are). `MapLayers`/`DEFAULT_MAP_LAYERS` moved to a new
+`lib/map-layers.ts` with no Leaflet import, specifically so `MapExplorer`
+can use the DEFAULT VALUE at import time without pulling in
+`LeafletZoneMap.tsx`'s own `import L from "leaflet"` (which touches
+`window` at import time -- see that file's own header comment) into a
+component that isn't behind the `ssr:false` dynamic loader.
+
+**Two real bugs found and fixed while wiring up the combined URL hash**
+(`#x=&y=&z=&sel=&off=`, one string covering view + selection + layer
+toggles, written by ONE function in `MapExplorer` so no two independent
+writers can strip each other's part -- same reasoning `LeafletZoneMap.tsx`
+already documents for its own `reportView`/hash-writing split):
+- **Stale-closure bug**: `LeafletZoneMap`'s mount effect binds `onViewChange`
+  to a Leaflet `moveend` listener ONCE (selection/layers are deliberately
+  excluded from that effect's own deps -- see its header comment) --
+  making `writeHash` (and therefore `onViewChange`) close over
+  `selectedZoneId`/`layers` REACT STATE meant its identity changed every
+  render, so the listener stayed bound to whatever those looked like AT
+  MOUNT TIME forever. Confirmed live, not just reasoned about: clicking a
+  zone row wrote `#sel=zone:12` immediately, then the fly animation's own
+  `moveend` firing (via the STALE closure) silently overwrote it with a
+  hash that had dropped `sel=` entirely. Fixed by having `writeHash` read
+  ONLY from refs (`selectedZoneIdRef`/`layersRef`, kept in sync by a
+  separate effect) instead of closing over the state directly -- this
+  makes `writeHash`'s (and `onViewChange`'s) identity permanently stable.
+- **Reload-clobber bug**, found immediately after fixing the first one:
+  the hash-restore effect's own `setSelectedZoneId`/`setLayers` calls (on
+  mount, from a shared link) triggered the ref-sync effect on the VERY
+  NEXT render -- before `LeafletZoneMap` (an async `next/dynamic(ssr:
+  false)` component) had necessarily mounted and read `window.location.
+  hash` for ITS OWN x/y/z restoration -- and `writeHash()` firing at that
+  point (with `viewRef.current` still `null`) destructively stripped x/y/z
+  out of the URL before the map ever got a chance to read them. Confirmed
+  live: `sel=`/`off=` restored correctly on reload, but the view silently
+  fell back to the default fit-bounds every time. Fixed by additionally
+  gating the ref-sync effect's `writeHash()` call on `viewRef.current !==
+  null` (i.e., the map has reported at least one real view), not just on
+  the hash having been restored.
+
+**`components/map/MapSidebar.tsx`** (full rewrite, still mounted under the
+existing continent `<select>` per the task's own instruction) adds:
+- **Zone list**: sorted by `levelRange[0]` ascending (zones with no data
+  sort last, via `?? Infinity`), a text filter box, a territory-colored
+  dot (reusing `ZoneFaction`/`FACTION_COLOR` -- see the earlier "zone
+  level ranges + real faction data" session), row click -> `onSelectZoneRow`
+  (fly + select). A selected-via-map-click row auto-`scrollIntoView`s.
+- **Search** (`/` focuses it, ignored while already typing in a field):
+  matches zone names (tagged "Zone", or "City" for the 6 real capital-city
+  zones -- Stormwind City/Ironforge/Undercity/Orgrimmar/Thunder Bluff/
+  Darnassus, hardcoded since zones.json has no such flag) and entrance
+  names -- both a group's own combined name ("Blackrock Mountain") AND
+  each of its members' individual names ("Molten Core" is independently
+  searchable even though it has no marker of its own, routing to its
+  group's marker/popup). Picking a zone result flies+selects; picking an
+  entrance flies to its marker at z5 and opens its popup (group or
+  single, whichever it is).
+- **Layer toggles**: 6 `aria-pressed` buttons (zone borders/labels, level
+  lines, dungeons/raids/battlegrounds), the three entrance types showing a
+  live count (summed across both single markers and every group member,
+  not just visible marker count) from the `entrances` prop.
+
+**Mobile (<768px, Tailwind's own default `md` breakpoint -- matches the
+task's own "~768px" exactly)**: the sidebar becomes a `fixed inset-0`
+overlay toggled by a `md:hidden` "Map menu" button; on `md:` and up the
+same markup reverts to a normal static side-by-side layout via `md:block
+md:static md:inset-auto`. No JS viewport detection needed -- pure Tailwind
+responsive classes.
+
+**Verified live** (fresh tabs throughout; `resize_window` confirmed
+non-functional again -- see below): zone list renders sorted with correct
+colored dots on both continents; clicking a row flies to and exactly fits
+the zone's bounds, applies the selected border style, and updates the URL
+hash; clicking a zone border ON THE MAP (Western Plaguelands, picked
+arbitrarily) correctly highlighted and auto-scrolled to its sidebar row --
+confirming the map-to-sidebar direction, not just sidebar-to-map; search
+found all three required terms ("Uldaman" -> Dungeon, flies + opens its
+popup at the exact same position as before; "Blackrock" -> matches both
+the group and all 4 of its dungeon members individually, picking the
+group flies + opens the full 5-member popup; "Barrens" -> matches The
+Barrens zone, flies + selects); toggling "Zone labels" off live-hides
+every name label at z3 (confirmed against an otherwise-identical prior
+screenshot that had them); a full hash
+(`#x=-9097&y=-200&z=3.50&sel=zone:12&off=battlegrounds,levelLines`) pasted
+into a fresh tab correctly restored the exact view, the exact zone
+selection (border + sidebar row), AND the exact layer state on reload, all
+three together, after the two bugs above were fixed. Zero console errors
+across every page load and interaction checked, both continents.
+
+**Mobile tooling note**: `resize_window` reports success but leaves
+`window.innerWidth` unchanged (same finding as this project's own existing
+Tooling notes). Per that same note's own established resolution, the user
+was asked and opened a second real ~390px-wide Chrome window; a tab
+attached there confirmed genuine `innerWidth: 393` and showed the
+collapsed-sidebar/"Map menu"-toggle/full-width-map layout correctly, both
+open and closed. Also reproduced the already-documented "a second window
+can screenshot but time out on click dispatch" issue -- worked around
+(as that note already suggests trying) by dispatching a real `.click()`
+via `javascript_exec` instead of the coordinate-based click tool, which
+worked cleanly both times it was needed.
+
+**Suggested next:** none of this session's own work needs a follow-up by
+itself. Out of scope for this task, confirmed still unbuilt: "where to
+level" filter, a selection info card, the in-game (parchment) map style
+toggle -- all explicitly excluded per instruction.
+
+## Session handoff — 2026-09-25 (data-driven dungeon/raid/battleground entrance markers)
+
+Render + a small amount of new hand-authored data, stopped before
+committing. Builds on the same day's earlier "zone borders+labels render"
+session -- read that one first for the pane/CSS-var/StrictMode-cleanup
+conventions this reuses.
+
+**Step 0 -- icon art investigation (blocked, reported rather than
+guessed):** `UiTextureAtlas.csv`/`UiTextureAtlasMember.csv` ARE exported to
+the raw wow.export folder (2,803 / 20,523 rows). Found real client icons
+for all three types, all in the SAME atlas texture: `UiTextureAtlas` id
+647 -> FileDataID **1121272** (a 1024x1024 sheet). Members: `dungeon`
+(CommittedLeft/Right/Top/Bottom 203/253/321/371, 50x50), `raid`
+(203/253/373/423, 50x50), `crossedflags` (379/411/718/750, 32x32, used as
+the battleground icon -- a real client member, not a raid/dungeon-specific
+one, but "crossed flags" is Blizzard's own established PvP/battleground
+motif elsewhere in the UI too). **The texture itself (FileDataID 1121272)
+has not been exported** -- confirmed by searching the entire wow.export
+output folder for it, nothing found. **What to export, exactly:** open
+wow.export's Textures tab, search FileDataID `1121272`, export as PNG.
+Once it lands anywhere in the wow.export output folder, crop the three
+rectangles above with `sharp` and save into `public/map/icons/` (now
+gitignored, added to `.gitignore` proactively this session even though the
+folder doesn't exist yet -- same local-only policy as the tiles). Until
+then, `LeafletZoneMap.tsx`'s `entranceIconSvg()` renders three small
+**original SVG placeholders** (a portal-ring for dungeon, a ring+dot for
+raid, crossed lines for battleground -- teal/purple/red) explicitly marked
+in its own comment as a swap-in-later placeholder, not a "no client icon
+exists" fallback -- all three types DO have real client icons, they're
+just not extracted yet.
+
+**Step 1 -- new `lib/map-entrances.ts`**, replacing the old hardcoded
+Uldaman-only marker and the "3b eastern-kingdoms-only" gate in
+`app/reference/map/[continent]/page.tsx` entirely:
+- Resolves each `data/map-entrances.json` entry's display name/level range
+  from `data/dungeons.json` (dungeons -- already existed) or two NEW small
+  hand-authored files, **`data/raids.json`** and **`data/battlegrounds.json`**
+  (same id/name/levelMin/levelMax shape as dungeons.json). Every original
+  Classic raid is an unambiguous level 60 (well-established, not guessed);
+  the 6 new-in-Forever raids get `levelMin/levelMax: null` since nothing in
+  this project's data confirms their level yet. Battlegrounds get NO level
+  field at all, deliberately -- a Classic battleground has no single
+  canonical level the way a dungeon does (10-level queue brackets up to
+  60), so inventing one would misrepresent the data; `data/battlegrounds.json`'s
+  own `_readme` explains this.
+- **Skips**, with a stated reason each: any entry with no `worldPosition`
+  (20 total -- see the full list in this session's chat report, matches
+  the "expect Naxxramas/new-Forever-dungeon/BG gaps" pattern already
+  documented elsewhere in this file), plus Emerald Dream explicitly (real
+  client data, but not a confirmed Classic/Forever raid this project
+  tracks anywhere else, pending a decision either way -- it also has no
+  position in this build regardless, so this skip is currently redundant
+  with the no-position one, but stays explicit so the reason survives once
+  a future build gives it a real position).
+- **Grouping**: plain union-find over pairwise distance, same-continent
+  only, threshold `ENTRANCE_GROUP_DISTANCE_YARDS = 600` -- picked
+  empirically, not guessed: every real multi-entrance-instance pair
+  (Scarlet Monastery's 4 wings, Dire Maul's 3, Stratholme's 2, Ahn'Qiraj's
+  2, and Blackrock Mountain's 5 -- Lower/Upper Blackrock Spire, Blackrock
+  Depths, Molten Core, AND Blackwing Lair, which turned out to chain-
+  connect through LBRS/UBRS at <=350 yards each, confirmed live in the
+  popup, not assumed from the task's own 3 named examples) sits under 600
+  yards apart, while the nearest unrelated-dungeon pair on the whole map
+  (Uldaman/Zul'Farrak, 733 yards) sits safely outside it -- computed by
+  checking every pairwise distance among all 32 positioned entrances
+  before picking the number, not tuned after the fact. 5 groups found
+  total (3 on EK, 2 on Kalimdor) -- see the chat report for the full
+  membership list.
+- **Group labels** are derived, not hand-mapped, for 4 of the 5 groups: a
+  shared `"X: Y"` name prefix (Scarlet Monastery/Dire Maul/Stratholme) or a
+  shared trailing word (`"Ruins of Ahn'Qiraj"`/`"Temple of Ahn'Qiraj"` ->
+  `"Ahn'Qiraj"`). Blackrock Mountain's five members are five fully
+  independently-named real places with no shared naming convention at all
+  -- the one deliberate override in `GROUP_LABEL_OVERRIDES`, keyed by the
+  cluster's own sorted member-id signature (computed from the real
+  clustering, not hand-guessed membership).
+
+**Step 2 -- zoom behavior**, one exported `ENTRANCE_ICON_ZOOM` config
+constant in `LeafletZoneMap.tsx`: `fadeInFrom: 2.5`, `sizeAtFadeIn: 16`,
+`sizeAtMax: 32`, `maxZoomForSizing: 6`, `raidSizeMultiplier: 1.15`. Size
+and opacity are both driven by a single `--entrance-icon-size`/
+`--entrance-icon-opacity` CSS custom property pair set ONCE per zoom
+change on the shared `pins` pane element and inherited by every marker's
+inner icon element -- satisfies "resize via a CSS variable... not by
+re-creating markers" literally: markers are created once, only the pane's
+own two style properties ever change on zoomend. Each marker's OUTER
+`divIcon` wrapper is a fixed 32x32 box (`iconAnchor` always `[16,16]`)
+regardless of the icon's current visual size, with the actual resizing
+inner element centered inside it -- this is what keeps the marker's real
+geographic anchor point from drifting as the visible icon grows/shrinks;
+sizing the icon via the divIcon's own `iconSize` instead would have moved
+the anchor every zoom step.
+
+**Step 3 -- hover/click:** hover brightens the icon via a `filter` swap on
+`marker.getElement()`'s own inner element (no re-render). Click opens
+Leaflet's own bound popup (no custom handler needed, `L.Marker` already
+opens `bindPopup` content on click) in the project's existing popup style
+(`#0d0b07` background, gold name) -- single-entrance popups show name,
+"Dungeon/Raid/Battleground &middot; Level X-Y" (omitted when no level
+data), a provenance line (`entranceProvenanceLabel()` maps the data's own
+`source: "map.corpse"` to "client data (Map.Corpse)"; a future `"manual"`
+source would read "manual"), world coordinates, and a loot-page link only
+when `hasDungeonLoot()` says one exists (raids/battlegrounds never link --
+no such page exists for them yet). Grouped markers list every member with
+its own name/type/level/link, matching the task's own "each with its own
+link" requirement.
+
+**Verified live, both continents, fresh tabs (same CDP same-tab-renav
+quirk as the prior session -- fresh tabs used throughout, not same-tab
+hash edits):** Uldaman's popup shows "Dungeon &middot; Level 44-50 /
+Position: client data (Map.Corpse) / world -6060, -2955" -- pixel-identical
+position to the old hardcoded pin (map.corpse's own -6060.18,-2954.997
+rounds to the same integers the old hardcoded `ULDAMAN_WORLD` used).
+Blackrock Mountain's popup lists all 5 members with correct per-member
+levels and links (raids correctly have no link). Dire Maul's popup lists
+all 3 wings. Icons are invisible at the default (z0.75) fit-bounds view,
+appear and grow through z3 (visibly mid-size) to z6 (visibly at the 32px
+cap). Zero console errors across every page load checked. `public/map/
+icons/` doesn't exist (extraction is blocked, see Step 0), so `git status`
+shows no icon images -- trivially satisfied, not yet meaningfully tested
+(there's nothing to gitignore yet).
+
+**Suggested next:** export FileDataID 1121272 per Step 0 above, crop the
+three rectangles, and swap `entranceIconSvg()`'s placeholder output for
+real `<img>` tags pointing at `public/map/icons/{dungeon,raid,
+battleground}.png` -- everything else (sizing, fade, hover, panes) needs
+no change. Resolve the Emerald Dream question (belongs on the map or not)
+and the duplicate-Naxxramas-Map-row question, both still open from the
+original map-entrances.json session. If any of the 6 new-Forever raids
+ever get a confirmed level requirement, fill it into `data/raids.json`
+directly.
+
+## Session handoff — 2026-09-25 (fixed: boxes-in-rivers hole bug in zone-areas.json)
+
+Data-only, stopped before committing. Root cause and fix in
+`scripts/build-zone-areas.js`; full technical detail already in that
+file's own header comment, summarized here.
+
+**Diagnosis (before fixing anything):** a new `classifyHoles()` function
+samples every grid cell inside every zone's traced polygon holes and
+buckets each cell by what's actually there (another real zone = legitimate,
+Step-1 ocean-ID removal, Step-2 coastal-trim removal, raw AreaId 0, or an
+unresolved raw ID). Run against the pre-fix ("naive") grid: **EK had 24
+holes, ALL of them "removed by coastal trim (Step 2)"** (Western
+Plaguelands, Arathi Highlands, Wetlands, Riverglades, Duskwood, and a
+21-cell one in Stranglethorn Vale specifically); **Kalimdor had 54**, a mix
+of the same Step-2 artifact (Teldrassil, Moonglade, Darkshore, Felwood,
+Azshara, Ashenvale, The Barrens, Dustwallow Marsh -- one cluster there had
+16+9+6+3+2+2+2+1+1+1+1 cells scattered through the swamp -- Feralas,
+Un'Goro Crater) plus the handful of genuinely legitimate other-zone holes
+that were already expected (Darnassus in Teldrassil, Orgrimmar in Durotar,
+Thunder Bluff in Mulgore, 3 tiny Durotar slivers in Ashenvale). Root cause:
+a wide/slow river or swamp segment can occasionally satisfy Step 2's own
+liquidType+height criterion in complete isolation from any real ocean,
+producing an "island" removal in the middle of dry land.
+
+**Fix:** Step 2 now runs in two parts. 2a computes the same naive
+candidate-removal set as before (unchanged criterion). 2b is new: a
+candidate only stays removed if 4-connected -- travelling only through
+other removed-or-never-assigned cells -- to a real Step-1 ocean cell or the
+outer edge of the 1024x1024 world grid (plain BFS/flood-fill, array-index
+queue, not `Array.shift()`, since the candidate set can be 100k+ cells).
+An isolated candidate is restored to its original zone. **Real-world raw-
+AreaId-0 cells (mostly open ocean/void beyond the landmass) count as
+passable travel-through cells but are NOT seeds themselves** -- only actual
+Step-1 ocean removals and the grid edge seed the flood, matching the task's
+own "through other removed or empty cells... to the Step-1 ocean cells or
+the grid edge" wording exactly.
+
+**Result:** EK -- 213 of 16,854 naive Step-2 candidates were isolated
+pockets, restored; **zero holes remain**, all 24 boxes gone. Kalimdor --
+263 of 17,532 restored; **6 holes remain, and every one of them is now
+purely `zone:<name>`** (the same legitimate other-zone holes listed above,
+untouched by the fix since they were never Step-2 removals to begin with)
+-- confirmed by re-running `classifyHoles()` against the fixed grid, not
+assumed.
+
+**Verified live** (debug images + a byte-level pixel diff, not eyeballing
+alone): Stranglethorn Vale's river -- visibly full of small boxes in
+`debug-output/zone-areas/before/eastern-kingdoms.png`, completely clean in
+`after/`; the western coastline in the same crop is still trimmed exactly
+as before (the coastal-trim's own value is untouched, only the isolated-
+pocket false positives are gone); Kalimdor's Dustwallow Marsh swamp shows
+the same before/after cleanup, with its real coastal cove/small-island
+holes preserved; **Loch Modan's crop is byte-for-byte pixel-identical
+before vs. after** (0 of 494,844 bytes differ); Elwynn Forest's Stormwind
+City hole is still there, unchanged. Check (c) (gaps/overlaps) is 0/0 on
+both continents; every Prompt-6 point-in-zone check still passes.
+
+`public/map/{eastern-kingdoms,kalimdor}/zone-areas.json` and `zones.json`
+(labelAnchor) were regenerated from the fixed grid. Re-run via `node
+scripts/build-zone-areas.js` any time the source data changes -- the
+connectivity fix is not behind a flag (it's a correctness fix, not a
+comparison feature like Step 2 itself).
+
+## Session handoff — 2026-09-25 (zone level ranges + real faction data)
+
+Follow-on to the same day's "ocean/coastal grid trim, then zone borders+
+labels render" session below -- this one filled in the two pieces that
+session's labels left dark (levelRange, faction). Stopped before
+committing, per instruction.
+
+- **`data/sources/leveling-ranges/2026-09-25.md`**: the user's own pasted
+  leveling-route text, saved verbatim with a `source =` / `date =` header.
+  Source is credited as "Sam's leveling notes (pasted directly in chat; no
+  external URL given)" -- the user's own instruction template left the
+  source blank, so this is a stated assumption, not a verified citation;
+  flag if wrong.
+- **`data/zone-levels.json`** (hand-authored, committed, own `_readme`):
+  one `{name, min, max, source, confidence: "estimated"}` entry per zone
+  the source text gives an explicit number for -- 21 EK zones, 18 Kalimdor
+  zones, plus Zephras Isle (areaId 16593, included per instruction even
+  though it isn't a zone on either continent's own zones.json -- MapID
+  2991, a separate map; the merge step below only ever touches zones that
+  already exist in a continent's zones.json, so this entry is inert unless
+  Zephras Isle is ever registered as a real zone). Interpretation calls
+  made (all flagged, not silently resolved):
+  - **Ashenvale -> 18-30**, combining an implied ~20-30 ("Wetlands
+    (20-30), with Ashenvale as an alternative") with an explicit 18-30
+    (Horde's "Ashenvale, Hillsbrad Foothills (18-30)") -- widest span, per
+    the task's own worked example.
+  - **Mount Hyjal -> 60-60**, "at 60" treated as a single-level range, per
+    instruction.
+  - **Hillsbrad Foothills -> 18-30 only**: it's named twice (once with no
+    number, as a bare next-step after Silverpine Forest on the Undead
+    path; once explicitly "(18-30)" on the Horde ladder) -- only the
+    explicit mention contributed a number, the bare mention added nothing
+    to merge.
+  - The two "most likely" Skyborne continuations (Alliance: "most likely
+    through Darkshore, Westfall, or Loch Modan"; Horde: "most likely The
+    Barrens, Silverpine Forest") were read and considered but produced no
+    new/changed data -- every zone they name already has its own
+    independent explicit range elsewhere in the text, and "most likely"
+    is explicitly hedged, not a number to encode.
+  - "Desolace or Arathi Highlands (30-40)" and "Redridge Mountains" and
+    every other multi-zone-one-number line ("Tanaris, Feralas, The
+    Hinterlands (40-50)", etc.) were NOT treated as interpretation calls --
+    one explicit number applied to N named zones is direct, not ambiguous.
+  - Every zone name in the text matched a zones.json entry exactly (no
+    apostrophe/spelling mismatches found, despite the task's own
+    Shen'dralas/Un'Goro/"The Hinterlands" examples -- none of those
+    particular names happen to appear in this text) -- the only non-match
+    is Zephras Isle, which is expected/by design, not a typo.
+  - **Zones left with no level range** (10, exactly matching the task's
+    own prediction): Alterac Mountains, Deadwind Pass (EK); Moonglade,
+    Shen'dralas (Kalimdor); every city (Undercity, Stormwind City,
+    Ironforge, Orgrimmar, Thunder Bluff, Darnassus).
+- **`scripts/build-map-zones.js`** now merges `data/zone-levels.json` into
+  each zone's `levelRange`/`levelRangeSource`/`confidence` at build time --
+  zones.json is never hand-edited. Since this script REBUILDS zones.json
+  from scratch every run (it's the only writer of the zone list), and
+  `labelAnchor` is written by a *different*, later script
+  (`build-zone-areas.js`) as a post-process, a plain rebuild here would
+  have silently dropped every zone's labelAnchor -- fixed by reading the
+  existing zones.json first and carrying `labelAnchor` forward by areaId
+  before overwriting. New check (e) reports the merge (39/49 zones got a
+  range) and cross-checks for zone-levels.json entries with no matching
+  zone (only Zephras Isle, expected).
+- **Real faction data found and used, not proposed.** Checked Prompt 7's
+  own reasoning first (it always fell back to "contested" because the
+  *trimmed* `data/sources/client-db2/*/areatable.csv` snapshot has no
+  faction column) -- but the RAW wow.export `AreaTable.csv` this project's
+  own trim script reads from DOES have one: `FactionGroupMask`. Verified
+  its values (0/2/4, no other combination appears across all 49 zones)
+  against every EK/Kalimdor zone's real known Classic territory before
+  trusting it -- exact match everywhere (starting zones and capital-city
+  zones get 2=Alliance/4=Horde, every regular/shared leveling zone gets
+  0=Contested, including well-known contested PvP zones like Ashenvale,
+  Hillsbrad Foothills, and Stranglethorn Vale). Since this is real client
+  data (not the "propose from standard Classic territory" fallback the
+  task described for the no-data case), it was used directly per the
+  task's own "if AreaTable has a faction field... use it" branch, not held
+  back pending approval -- that approval gate was explicitly attached to
+  the *proposal* fallback only, which this session never needed. Flag if
+  this reading is wrong; reverting is a small, isolated change (see below).
+  - `scripts/trim-client-db2.js`'s `areatable` column list gained
+    `FactionGroupMask`; the snapshot was re-pulled (purely additive --
+    every existing column unchanged).
+  - `scripts/build-map-zones.js`'s `factionFor()` maps `0/2/4` ->
+    `contested/alliance/horde` (falls back to `contested` for anything
+    else, though nothing else occurs); every zone entry gets a `faction`
+    field. New check (f) prints every zone's derived faction (see the
+    script's own console output for the full per-zone list) and confirms
+    no unexpected mask values.
+  - `lib/zone-areas.ts` gained a `ZoneFaction` type and `faction` field on
+    `ZoneAreaData`; `LeafletZoneMap.tsx`'s `labelHtml` now colors the
+    level-range line from `FACTION_COLOR[zone.faction]` instead of always
+    Contested -- the hardcoded-gold fallback code from the prior session's
+    handoff is gone, this is real data now.
+- **Verified live on both continents** (fresh tabs, matching this
+  project's own established hash-restore reliability note): Elwynn Forest
+  shows "1-10" in Alliance blue, Westfall "10-20" blue, The Barrens
+  "10-25" in Horde red, Durotar "1-10" red, Stranglethorn Vale "30-45"
+  gold/contested, Mount Hyjal "60-60" gold/contested, Ashenvale "18-30"
+  gold, Darkshore "10-20" blue -- all exactly matching the derived data.
+  Stormwind City/Deadwind Pass/Orgrimmar show their name with no level
+  line and no blank gap. Collision culling still holds with the taller
+  two-line labels at a dense EK cluster (Dun Morogh/Loch Modan/Wetlands/
+  Searing Gorge/Badlands all visible with no overlap). Zero console
+  errors on every view checked.
+
+**Suggested next:** none of this session's work needs a follow-up by
+itself -- the level-line/faction rendering code was already fully built
+in the prior session and just needed real data, which it now has.
+
+## Session handoff — 2026-09-25 (ocean/coastal grid trim, then zone borders+labels render)
+
+Two back-to-back tasks in one session, explicitly scoped not to overlap:
+Task A was data-only (no map UI touched); Task B was render-only (no data
+regenerated). Both stopped before committing, per instruction.
+
+**Task A -- ocean removed from the zone grid before roll-up/tracing, in two
+steps, both applied in `scripts/build-zone-areas.js`:**
+
+- **Step 1 (mandatory, name-based):** `data/map-ocean-areas.json` is a
+  committed, commented exclude list of 25 raw AreaIds whose ZoneName is one
+  of the game's administrative open-ocean labels (TheGreatSea/TheVeiledSea/
+  TheForbiddingSea/SouthSeas) -- derived by grepping `areatable.csv` for
+  those exact ZoneName values, NOT a raw "sea"/"ocean" text search (that
+  also matches "SearingGorge" and "TheSeaofCinders", a real lava lake in
+  Searing Gorge that must stay). Any raw cell matching one of these ids is
+  treated as empty before rollup. Removed 69,723 cells (EK) / 93,768 cells
+  (Kalimdor).
+- **Step 2 (flagged, `--no-coastal-trim` to disable, on by default):**
+  liquid-based coastal trim. `scripts/lib/adt-liquid.js` reads MH2O per-
+  chunk (found empirically: this build's exporter doesn't populate MCNK's
+  own sub-chunk offset fields, so MCVT is located by scanning sequentially
+  from the fixed 128-byte header end, same "no real offset table" pattern
+  already documented for the missing MCIN; MCNK's `position` C3Vector DOES
+  read correctly at a fixed offset, verified by matching it against the
+  independently-computed chunk world coordinates for 8 samples across 2
+  tiles). A cell not already removed by Step 1 is additionally emptied only
+  if it has a real MH2O layer whose liquidType matches what Step 1's own
+  cells empirically turned out to be made of (discovered at run time per
+  continent from Step-1 cells, not hardcoded -- came out to `1250` on both
+  continents, confirmed distinct from Loch Modan's lake liquidType `1325`)
+  AND the chunk's own terrain (MCVT) is entirely below that layer's lowest
+  recorded height. Removed 16,854 more cells (EK) / 17,532 more (Kalimdor).
+- **Checks, all reported:** 0 gaps/0 overlaps on the final grid (both
+  continents); every Prompt-6 point-in-zone check reproduced the same
+  answers (Uldaman -> Loch Modan, Stormwind's city-label pin -> Elwynn
+  Forest, etc. -- see the script's own `runChecks`); 8 zones lost more than
+  25% of their Step-1-only cell count to Step 2 (Stranglethorn Vale,
+  Westfall, Eastern Plaguelands, Stormwind City on EK; Durotar, Azshara,
+  Darkshore, Feralas on Kalimdor) -- every one individually visually
+  confirmed via before/after debug images
+  (`debug-output/zone-areas/{before,after}/<continent>.png`, plus named
+  crops for Eastern Plaguelands, Durotar and Loch Modan) to be real open-
+  ocean overhang being trimmed off a coastal zone's administrative
+  rectangle, not real land -- Eastern Plaguelands' huge rectangular ocean
+  spill north of the continent (visible in the "before" image) is
+  completely gone in "after," now hugging the real coastline. **Loch
+  Modan's lake was confirmed pixel-identical before vs. after** (its
+  liquidType never matches the discovered ocean type), proving inland
+  water survives Step 2 untouched.
+- `public/map/{eastern-kingdoms,kalimdor}/zone-areas.json` and `zones.json`
+  (labelAnchor) were regenerated from this final grid; both already
+  committed-shape files, not new. Re-run via `node scripts/build-zone-
+  areas.js` any time the source ADTs, `zones.json`, or the ocean exclude
+  list change.
+
+**Task B -- zone borders and name labels rendered on the existing Leaflet
+map (`components/map/LeafletZoneMap.tsx`, `app/reference/map/
+[continent]/page.tsx`, new `lib/zone-areas.ts`):**
+
+- **Panes:** `zones` (450, above tiles), `pins` (600, the existing Uldaman
+  marker moved into it), `names` (650, `pointer-events:none` so a label
+  never blocks a pin or border click) -- matches docs/map-reference-
+  foreverchanges.md section 3's own layering.
+- **Borders:** every zone's GeoJSON geometry (`lib/zone-areas.ts` merges
+  `zones.json` + `zone-areas.json` server-side into one `ZoneAreaData[]`
+  prop) drawn on ONE shared `L.canvas()` renderer -- a faint dark underlay
+  polygon (non-interactive) plus a thin gold (`#ffd100`, weight 1, opacity
+  0.55) border polygon per zone, both using the same renderer/pane.
+  Hover/click both switch to a brighter/thicker style (`#fad961`, weight
+  2.5); a selection persists until a click on empty map space (the
+  border's own click handler calls `L.DomEvent.stopPropagation`, so the
+  map-level click-to-clear listener only ever fires for genuine empty-space
+  clicks). No selection card, per the task's own out-of-scope list.
+- **Labels:** `divIcon` markers at each zone's `labelAnchor`, bold
+  uppercase gold text with a triple black text-shadow, recomputed on
+  `zoomend`/`moveend` only (`ZONE_LABEL_ZOOM` exported constant:
+  `namesFrom: 1`, `levelLineFrom: 3`). Collision culling keeps the larger
+  zone (by `worldBounds` bbox area) when two labels' estimated boxes
+  overlap. A zone's own label hides once all four viewport corners
+  (projected to the same pixel space as the zone's own outer ring) fall
+  inside it -- verified live: deep inside Loch Modan's lake at z5, zero
+  zone labels render; the same continent's Durotar at z5 still showed its
+  label because the coastline (a real border) was also in view, which is
+  correct, not a bug. The level-range sub-line is faction-colored (`#6fb1ff`
+  Alliance / `#ff7a6b` Horde / `#ffd100` Contested) but **never actually
+  renders yet** -- `zones.json`'s `levelRange` is `null` for every zone in
+  this build (see the "Client DB2 zone/entrance data" note below: no level-
+  range source exists in the current DB2 snapshot) and there is no
+  AreaTable faction field in the snapshot either, so the faction branch
+  always falls through to Contested. Both are wired correctly and will
+  light up automatically the moment either field gets real data -- nothing
+  else needs to change.
+- **A real bug found and fixed, not just a data problem:** the map's very
+  first `setView`/`fitBounds` call (before Leaflet considers itself
+  "loaded") never fires `moveend`, so the label system's own moveend
+  listener never ran for the initial view -- confirmed live, a synchronous
+  `updateLabels()` call right after `setView` produced zero labels because
+  `map.getSize()` still returned a stale pre-layout value. Fixed with a
+  nested `requestAnimationFrame` (outer: `invalidateSize()`; inner:
+  `updateLabels()`), which reliably runs after the container's real size
+  has painted.
+- **A second real bug found via React StrictMode's dev-mode double-invoke**
+  (mount -> cleanup -> mount): the first mount's scheduled `rAF` callback
+  wasn't cancelled on cleanup, so it fired after that first `L.Map` instance
+  was already `.remove()`d, throwing inside Leaflet's own
+  `containerPointToLayerPoint` ("Cannot read properties of undefined
+  (reading '_leaflet_pos')") -- this silently aborted `updateLabels()` and
+  was why a zone-border click could appear to do nothing. Fixed by storing
+  both rAF ids and cancelling them in the effect's cleanup.
+- **Verified live on both continents** (screenshots at z1.5/z3/z5 taken
+  during this session, not saved to the repo -- debug artifacts only):
+  borders align with real coastline and city edges at z6-equivalent detail;
+  hover/click/deselect all work via a border click computed from the
+  zone's own projected ring coordinates (clicking blind on visually-
+  estimated pixel coordinates was unreliable -- canvas hit-testing for a
+  `fill:false` polygon only responds near the actual stroked line); the
+  Uldaman pin's popup still opens correctly through/above the zone borders;
+  zone names appear from z1 without overlapping and thin out correctly;
+  zooming inside a zone (Loch Modan) hides its own label with no blank gap
+  left behind; zero console errors after the two fixes above. **Not
+  verified**: the `+`/`-` zoom control buttons and scroll-wheel zoom didn't
+  register clicks/scroll through this session's browser-automation tooling
+  (a known, previously-documented environment limitation -- see this same
+  file's own "Tooling notes" section on click/scroll registration issues,
+  not a regression) -- all zoom-level testing instead went through the
+  existing URL-hash view-restore mechanism, which is real, user-reachable
+  functionality (a shared link), not a test-only workaround. Also
+  **not verified**: same-tab CDP re-navigation to a hash-only-different URL
+  was found to NOT reliably re-apply the hash on this specific dev-tooling
+  setup (a fresh tab always worked correctly, matching this project's own
+  prior "brand-new tab" verification note for the hash mechanism) -- if
+  this resurfaces, test via a fresh tab per zoom level, not same-tab re-
+  navigation.
+
+**Suggested next:**
+- If `AreaTable`'s faction field or a level-range source is ever added to
+  the DB2 snapshot, the label ladder's level-line/faction-color code in
+  `LeafletZoneMap.tsx` needs no changes -- just populate `zones.json`'s
+  `levelRange` (and, if faction data ever exists, extend `ZoneAreaData`/
+  `lib/zone-areas.ts` with it and swap the hardcoded Contested fallback).
+- No selection card, sidebar zone filter, subzone labels, or dungeon/raid
+  icons yet -- all explicitly out of scope for this session's task.
+- Kalimdor's own before/after coastal-trim crops weren't individually
+  named/saved this session (only Eastern Plaguelands, Durotar and Loch
+  Modan were) -- the full before/after mosaic images cover it, but a named
+  Kalimdor coastline crop would be a quick follow-up if ever needed again.
+
+## Session handoff — 2026-09-25 (zone polygons from raw ADTs, no UI changes)
+
+Data-only task, explicitly scoped to never touch `public/map/*/tiles/` or
+the map UI. All 6 numbered steps done, all 5 checks reported. Stopped
+before committing, per instruction.
+
+**Step 0 -- format confirmed empirically before writing any parser, not
+assumed:** root `.adt` files exist for both continents
+(`C:/Users/samue/wow.export/maps/{azeroth,kalimdor}/<mapDir>_<col>_<row>.adt`).
+This build uses split ADTs (root + `_lod`/`_obj0`/`_obj1`/`_tex0` per tile,
+confirmed by file listing and size -- the root is the only large one, ~400KB+
+vs. a few KB for the others). MCNK headers ARE in the root file, and this
+build's root ADTs have **no MCIN offset table** -- all 256 MCNK chunks
+follow MHDR/MH2O sequentially in row-major order. Confirmed two ways before
+trusting it: each MCNK's own `IndexX`/`IndexY` header fields exactly match
+its position in that sequential list for every chunk checked, and a
+known-Dun-Morogh tile (`azeroth_33_42.adt`) reads AreaId 1 for its interior
+chunks and 138 (Misty Pine Refuge, a real Dun Morogh subzone) at one border
+-- using the task's own suggested offset, 0x34, which turned out correct.
+`scripts/lib/adt-areas.js` still handles an MCIN-based layout defensively
+(cheap to support, never assume one build's format holds forever), but this
+build never exercises that path.
+
+**Step 1 -- the grid.** `scripts/build-zone-areas.js` reads every root ADT's
+256 MCNK AreaIds into a 1024x1024 grid (`Uint16Array`, row-major, index =
+`gRow*1024+gCol`) -- 64 ADTs x 16 chunks/tile per side, 33.3333 world units
+per chunk (`scripts/lib/chunk-grid-coords.js`'s `CHUNK_WORLD_SIZE`). The raw
+grid (subzone ids, pre-roll-up) is cached to
+`data/sources/client-db2/<build>/zone-grid-<continent>.bin` (2MB/continent,
+raw `Uint16Array` bytes) -- **gitignored** (`data/sources/client-db2/*/
+zone-grid-*.bin`), a build artifact for re-runs, not source data.
+
+**Step 2 -- roll-up.** `ParentAreaID` was already in the trimmed
+`areatable.csv` snapshot from the previous session's task, so no re-trim was
+needed. For each raw AreaId present in the grid, `resolve()` walks
+`ParentAreaID` upward until it hits an id present in that continent's own
+`zones.json` (from the previous session), or gives up (no parent, unknown
+id, or a cycle). Reported, not silently dropped or guessed at:
+- **AreaId 0 (never-assigned) chunk counts:** 872,416 (EK) / 816,144
+  (Kalimdor) out of 1,048,576 total cells -- expected, not a bug: only
+  736/988 of the 4,096 possible 64x64 ADT-grid positions have any real
+  terrain at all (matches the tile pyramid's own "empty tiles skipped"
+  stats from an earlier session), so most of the 1024x1024 grid is
+  legitimately outside the landmass.
+- **Raw AreaIds that don't roll up to a known zone** -- 6 on EK, 2 on
+  Kalimdor, all real, explainable client quirks, not parsing bugs: Gilneas
+  (17065, +City/Ruins/Northern Headlands/Shark-Infested Waters, 2270+
+  chunks) has real terrain in this build but no `UiMapAssignment` zone
+  entry yet; Gillijim's Isle (408) is a known long-standing un-zoned Vanilla
+  island near Stranglethorn; Gates of Ahn'Qiraj (3478, Kalimdor) and The
+  Great Sea (332, Kalimdor) are real areas with no dedicated zone-map entry
+  either. None of these are in `zones.json`; their chunks stay `0` in the
+  rolled grid.
+- **Zones with zero chunks in this build:** Undercity (1497) and Ironforge
+  (1537) -- both underground cities carved into a mountain, whose surface
+  footprint is apparently tagged with the surrounding zone's own AreaId
+  (Tirisfal/Dun Morogh) rather than their own city id in this build. Not an
+  error -- `zone-areas.json` simply has no entry for either, and
+  `zones.json`'s `labelAnchor` is likewise absent for both.
+
+**Step 3 -- tracing (`scripts/lib/raster-to-polygons.js`).** A generic
+rectilinear-polygon-with-holes tracer, unit-tested against a single cell, a
+3x3-with-a-hole "donut," and a two-piece multipart shape before being
+trusted on real data (all three passed exactly as expected -- see the
+script's own header comment for the algorithm and the specific edge-
+direction/winding-sign convention it relies on). Only strictly collinear
+points are removed -- no smoothing, no per-polygon simplification -- so two
+neighboring zones' shared border is bit-for-bit identical on both sides
+(each is retraced from the exact same underlying grid cells). 11 "pinch
+point" vertices (two same-label regions touching at one corner only) were
+hit and resolved deterministically on Kalimdor, 0 on EK -- reported, not
+silently possible to go unnoticed.
+
+**Step 4 -- label anchors.** `scripts/lib/polylabel.js` is a from-scratch
+~150-line reimplementation of Mapbox's polylabel (pole-of-inaccessibility)
+algorithm -- this repo has no `polylabel` package and the algorithm is small
+enough that adding a dependency for it wasn't worth it. Unit-tested against
+a plain square (exact center), a known "L-shape" tricky case, and a donut
+(all three gave geometrically correct, expected answers) before use.
+`labelAnchor` is computed on each zone's LARGEST part (by traced area, so a
+multipart zone's label doesn't end up in its smallest sliver) and written
+into that continent's own `zones.json` (both continents got a full
+regenerate of `zones.json` — from data/sources/client-db2 — the earlier
+session's other fields on that file are untouched, only `labelAnchor` was
+added per zone).
+
+**Coordinate space -- deliberately NOT routed through `lib/map-coords.ts`.**
+`scripts/lib/chunk-grid-coords.js` converts grid cell <-> world coordinates
+directly from the one truly fundamental relationship (the 64x64 ADT grid is
+centered on the world origin, 533.3333 world units per tile -- the same
+constant `slice-map-tiles.js`'s own "full-grid corner sanity check" already
+asserts as exactly ±17066.667 on both axes), NOT by reusing
+`lib/map-coords.ts`'s image-pixel-corner math. Two reasons: that module
+bridges wow.export's stitched TILE IMAGE pixels <-> world coordinates, a
+different (if numerically equivalent) relationship than chunk-index <->
+world coordinates; and `lib/` is TypeScript consumed by Next while
+`scripts/` is plain CommonJS with no TS runner installed in this repo
+(checked -- no `ts-node`/`tsx`/etc.), so importing one from the other isn't
+wired up anywhere in this codebase. The SAME axis-swap convention documented
+in `lib/map-coords.ts`/CLAUDE.md's world-map note still applies here: a
+chunk's COLUMN maps to `worldY`, its ROW maps to `worldX`. GeoJSON
+coordinates are written as plain `[worldX, worldY]` pairs (not lng/lat --
+this project's own world-coordinate convention throughout, just reusing
+GeoJSON's structural format as the task asked for).
+
+**`public/map/<continent>/zone-areas.json` shape:** a plain object keyed by
+`areaId` (string keys, JSON requires it), each value a standalone GeoJSON
+`Feature` (`properties: {areaId, name}`, `geometry` a `Polygon` for a
+single-part zone or `MultiPolygon` for a multipart one) -- not one big
+`FeatureCollection`, since the task asked for "GeoJSON, keyed by areaId."
+Every ring inside is independently valid GeoJSON-shaped coordinate data.
+
+**Checks, all reported:**
+- **(a) Point-in-zone.** Tested via direct rolled-grid lookup at the
+  point's own grid cell (equivalent to testing the traced polygon, since the
+  polygon is an exact re-expression of the grid, and cheaper/no edge-case
+  risk). 4 of 7 test points landed exactly as expected: Goldshire ->
+  Elwynn Forest (12); Riverglades' own bbox center -> Riverglades (16591, no
+  independent landmark point exists for this new zone in this export, noted
+  honestly rather than treated as a strong check); Thunder Bluff -> Thunder
+  Bluff (1638); Stormwind Harbor -> Stormwind City (1519). **3 came back
+  different from what was expected, each independently verified as a real
+  client-data fact, not a pipeline bug** (confirmed by reading the raw,
+  pre-rollup grid cell directly, bypassing the rollup/tracer entirely, for
+  each one):
+  - **Uldaman's `map.corpse` point resolves to Loch Modan (38), not
+    Badlands (3).** The raw AreaId at that exact cell is 923 ("Stonesplinter
+    Valley"), a real, well-known Vanilla subzone with `ParentAreaID` 38
+    (Loch Modan) -- not 3. This is a common mix-up (Uldaman is usually
+    *associated* with Badlands by level range/lore) but the entrance's
+    actual client-tagged terrain has apparently always been Loch Modan's
+    Stonesplinter Valley, not Badlands proper. The task's own stated
+    expectation was wrong here, not this pipeline.
+  - **Stormwind's plain city-label `AreaPOI` pin (id 16) resolves to Elwynn
+    Forest (12), not Stormwind City.** Its raw cell is genuinely 12.
+    **Stormwind Harbor** (a different, more specific POI) resolves correctly
+    to 1519. The generic city-label pin sits right at/just across the city's
+    own polygon edge, not safely inside it.
+  - **Orgrimmar's plain city-label `AreaPOI` pin resolves to Durotar (14),
+    not Orgrimmar (1637)**, for the same reason -- its raw cell is genuinely
+    14. Thunder Bluff's own city-label pin, by contrast, DOES land correctly
+    inside Thunder Bluff (1638). Not a uniform quirk of all city pins, just
+    Stormwind's and Orgrimmar's specifically, in this build.
+- **(b) Polygon bbox vs. `UiMapAssignment` rectangle.** Every zone was
+  checked; the great majority of "offenders" (dozens on each continent) are
+  fully explained by ONE cause, confirmed by identifying each offending
+  zone's largest contributing raw subzone (the build script's own console
+  output does this automatically now): a few massive administrative "sea"
+  AreaIds -- The Great Sea, The Veiled Sea, South Seas, The Forbidding Sea --
+  each spanning thousands of chunks of open ocean along a huge stretch of
+  coastline, get `ParentAreaID`-assigned to a SINGLE neighboring coastal
+  zone in Blizzard's own data, so that one zone's rolled-up polygon balloons
+  to cover a huge ocean rectangle far beyond its nominal `UiMapAssignment`
+  box. This is exactly the "ocean clipping" the task's own out-of-scope list
+  named -- not attempted here, and this is why. A handful of zones (Loch
+  Modan +221, Redridge +110, Searing Gorge +1023 on one axis, Darnassus +295
+  via a real subzone "The Temple Gardens") show small, land-based, genuine
+  overshoot instead -- boundary jaggedness at chunk resolution, not a bug.
+- **(c) Gaps/overlaps -- 0 and 0, on both continents.** Every traced
+  polygon was independently re-rasterized (point-in-polygon over its own
+  bbox) and compared cell-by-cell against the rolled grid it came from: zero
+  cells that should have a zone but aren't covered by any traced polygon,
+  zero cells covered by 2+ zone polygons. This is the tracer's own internal
+  consistency proven directly against real data, not just the earlier
+  synthetic unit tests.
+- **(d) File size, comfortably under target, nothing simplified to get
+  there:** `zone-areas.json` is 48 KB (EK) / 57 KB (Kalimdor), vs. the ~500
+  KB target.
+- **(e) Debug images** -- each continent's z3 tile mosaic (8x8 tiles =
+  4096x4096px, exactly 4px/chunk-grid-cell, so no world-coordinate math
+  needed for this step at all) with every traced polygon, its label anchor
+  dot, and its name drawn on top via one `sharp` SVG-overlay composite.
+  Written to **`debug-output/zone-areas/{eastern-kingdoms,kalimdor}.png`**
+  -- a new top-level gitignored folder (`/debug-output/`), not `public/`.
+  Visually confirmed before trusting the rest of this write-up: tight,
+  terrain-hugging boundaries (Un'Goro Crater's traced ring sits exactly on
+  the crater's own visible rim; Teldrassil's ring sits exactly on the
+  tree-island) match the real coastline pixel-for-pixel, the huge
+  rectangular "ocean-dominated" zones from check (b) are visually obvious
+  and exactly as explained, and the excluded GM Island cluster (step 5)
+  shows up as a bare, unoutlined patch of terrain in the mosaic's corner --
+  confirming it's excluded from THIS data but still present in the
+  (untouched) tile pyramid underneath, a real pre-existing visual quirk in
+  the already-shipped map tiles worth a separate future fix if the tile
+  pyramid is ever regenerated.
+
+**Step 5 -- Kalimdor's stray NW tile(s).** Turned out to be a 3x3 block of 9
+ADT tiles (`kalimdor_{0,1,2}_{0,1,2}.adt`), not literally one tile --
+confirmed, not assumed, by reading every one of the 9 files' own MCNK
+AreaIds directly: all 9 are uniformly AreaId 876, **"GM Island"** (a
+real, long-standing Blizzard internal test/GM-only island, always tucked in
+a far corner of the world grid). Excluded from the grid-building loop
+entirely (`EXCLUDE_ADT_TILES` in `build-zone-areas.js`, keyed by exact ADT
+tile coordinate). Also explains why Kalimdor's `meta.json` (from an earlier
+session's tiling work) has `populated.minCol: 0` -- the real landmass
+doesn't start until column ~19; that stray cluster is almost certainly why
+the tile pyramid's own populated-bounds calculation extended to column 0.
+**Not fixed** (out of scope -- tiles are untouched this session): the tile
+pyramid itself likely still renders this island as a small floating patch
+of terrain in Kalimdor's NW corner (visible in the check-e debug image,
+underneath where no zone outline is drawn). Worth a from-scratch Kalimdor
+re-tile with this same 3x3 exclusion applied at the image-slicing stage, in
+a future session that's allowed to touch tiles.
+
+**Step 6 -- classic-era map exports, noted only, not processed.**
+`C:/Users/samue/wow.export/maps/kalimdor/kalimdor_classic_era/` and
+`.../azeroth/eastern_kngdoms_classic_era/` each hold one huge stitched PNG
+(114-183 MB) + a JSON sidecar in the exact same shape as the Forever-era
+exports the existing tile pyramid was built from (`map_id`/`map_dir`/
+`tiles.{min_x,max_x,min_y,max_y}`/`image.{width,height}`/`corners`). Not
+tiled, not touched, not referenced by any code this session -- flagged here
+purely so a future "Classic vs. Forever map toggle" task knows this source
+material already exists locally and doesn't need a fresh wow.export pass.
+
+**Regenerate command:** `node scripts/build-zone-areas.js [build]
+[wowExportRoot]` (defaults: build `1.60.1.70009`, wow.export root
+`C:/Users/samue/wow.export`) -- rebuilds the raw grid cache, rolls up,
+retraces, rewrites both continents' `zone-areas.json` and the
+`labelAnchor` field in `zones.json`, reruns every check, and re-renders the
+two debug images. Safe to re-run any time the source ADTs or `zones.json`
+change; it doesn't touch anything under `public/map/*/tiles/`.
+
+**Suggested next:**
+- Re-tile Kalimdor from scratch with the GM Island 3x3 block excluded at
+  the image-slicing stage (see step 5), so the tile pyramid itself no
+  longer shows the stray island and `meta.json`'s `populated.minCol`
+  reflects the real landmass.
+- Gilneas (and its City/Ruins/Northern Headlands/Shark-Infested Waters
+  subzones) has real terrain in this build but no `UiMapAssignment` zone
+  entry -- worth registering as a real zone once/if it's meant to be
+  reachable, rather than staying permanently unresolved in every future
+  `build-zone-areas.js` run.
+- If zone borders/labels ever get drawn on the live map (explicitly out of
+  scope this session), the ocean-dominated polygons from check (b) will
+  need real clipping first (also explicitly out of scope) -- don't render
+  Tirisfal Glades' polygon as-is, it currently includes a huge slice of The
+  Great Sea.
+
+## Session handoff — 2026-09-25 (client DB2 zone/entrance data, no UI changes)
+
+Data-only task, explicitly scoped to not touch anything under
+`public/map/*/tiles/` or the map UI itself. All 5 numbered steps done;
+stopped before committing, per instruction.
+
+**1. Trimmed DB2 snapshot.** `scripts/trim-client-db2.js` reads wow.export's
+raw per-table CSVs (`C:/Users/samue/wow.export/*.csv`, outside this repo)
+and writes only the columns actually used into
+`data/sources/client-db2/1.60.1.70009/{uimapassignment,areatable,
+contenttuning,map,areapoi}.csv` (28-60KB each, trivial to commit). Build
+`1.60.1.70009` wasn't stated anywhere in the export itself -- confirmed
+instead against this machine's own `C:\Program Files (x86)\World of
+Warcraft\.build.info`, whose `wow_classic_beta` line reads `1.60.1.70009`,
+matching this project's own already-tracked latest build
+(`data/patch-notes/1.60.1.70009.json`). **`uimap.csv` was NOT present in the
+wow.export folder** -- only `UiMapAssignment.csv` (the child/region table)
+was exported, not the base `UiMap.csv` (display name/type/flags). The script
+skips it and says so rather than fabricating it; nothing this session needed
+(zone name comes from AreaTable, continent name from Map, the UiMapID itself
+straight from UiMapAssignment) required it, but export `UiMap.csv` from
+wow.export before anything needs a UiMapID's own type/flags later.
+
+**2. `public/map/{eastern-kingdoms,kalimdor}/zones.json`** --
+`scripts/build-map-zones.js`. A "zone" is a `UiMapAssignment` row with
+`MapID` 0 or 1 (the continents' own Map ids) and a nonzero `AreaID` (0 marks
+the continent-overview assignment itself) and a plain `0,0`/`1,1`
+`UiMin`/`UiMax` (excludes UiMapID 947's two fractional rows, the combined
+"Azeroth" world-map overview that places both continents side by side in one
+0-1 space). 26 EK zones, 23 Kalimdor zones. `worldBounds` comes straight from
+`Region`'s own `minX,minY,minZ,maxX,maxY,maxZ` (Z always ±1,000,000 here,
+i.e. unbounded, unused) -- the same world-coordinate space
+`lib/map-coords.ts` already uses, so these bounds drop onto the existing
+tile map with zero further conversion. **`levelRange` is `null`, on
+purpose** -- see check (b).
+
+**3. Checks, all reported, none hand-typed:**
+- **(a) 1002:668 aspect ratio:** every one of the 49 zone rectangles matches
+  within 1% (`Math.abs(ratio/1.5 - 1) <= 0.01`). No offenders.
+- **(b) Level ranges vs. ContentTuning:** every open-world zone's
+  `AreaTable.ContentTuningID` is `0` (empty) in this export, Dun Morogh/
+  Westfall/Loch Modan/Silverpine/Redridge included -- confirmed by checking
+  all 1,371 AreaTable rows, not just these 5. The 21 rows that DO have a
+  nonzero `ContentTuningID` all belong to dungeon *interior* areas (e.g.
+  Uldaman's own area entry, id 1337) and hold a single
+  `MinLevelSquish`/`MaxLevelSquish` scaling target (Uldaman: 35/35; Hall of
+  Thanes: 13/13) -- a level-squish/scaling value, not a player-facing
+  min-max range, and not matching our existing ranges either way. There is
+  nothing in this export to derive open-world zone level ranges from, even
+  indirectly -- `zones.json`'s `levelRange` stays `null` rather than
+  hand-typing the 5 known values or anything else.
+- **(c) New Forever zone continents:** Riverglades -> MapID 0 (Eastern
+  Kingdoms, included). Mount Hyjal -> MapID 1 (Kalimdor, included).
+  Shen'dralas (areaId 16651 -- note the apostrophe; `ZoneName` is
+  "Shendralas" but the real display name `AreaName_lang` is "Shen'dralas")
+  -> MapID 1 (Kalimdor, included). Darkspear Islands -> MapID 2997, its own
+  separate map, excluded. Zephras Isle -> MapID 2991, also separate,
+  excluded (matches the task's own example).
+- **(d) Zone PNG <-> zones.json cross-check:** 54 PNGs in
+  `C:/Users/samue/wow.export/zones`, 49 zones.json entries. Every
+  zones.json entry has a matching PNG. 5 PNGs have no zones.json entry, and
+  all 5 are legitimate exclusions already accounted for above, not orphans:
+  Zephras Isle (16593) and Darkspear Islands (16606) are on separate maps
+  (c, above); Alterac Valley (2597), Warsong Gulch (3277) and Arathi Basin
+  (3358) are battleground-instance Map ids (30/489/529), not MapID 0/1.
+
+**4. `data/map-entrances.json`** -- `scripts/build-map-entrances.js` +
+`scripts/map-entrance-source-map.js` (the id -> `Map.csv` `Directory`
+correspondence table, hand-verified per entry the same way
+`scripts/dungeon-source-map.js` verifies its own foreverchanges slugs, not
+guessed from name similarity). Source is `Map.csv`'s own `Corpse` field --
+a dungeon/raid Map's graveyard-release position on its parent continent,
+which is effectively "right outside the entrance" for every instance
+checked here -- keyed to continent via `CorpseMapID`. A `Corpse` of exactly
+`0,0` is treated as **no data**, not a real position at the world origin:
+every dungeon/raid/BG confirmed to have no client-side placement in this
+build uses that same placeholder, and a literal reading would have silently
+stacked all of them at one point instead of reporting them missing.
+52 entries total: the 35 existing dungeon ids from `data/dungeons.json`,
+plus 12 new raid ids and 4 new battleground ids invented for this file
+(kebab-case, matching the dungeon-id convention -- **no prior id existed for
+raids/battlegrounds anywhere in this project**, flagging that these ids are
+new, not pulled from an existing source). Shared-building entries (Scarlet
+Monastery's 4 wings, Dire Maul's 3, Blackrock Spire's 2, Stratholme's 2) all
+resolve to the one real Map.csv row for that building and get the identical
+position, not a fabricated per-wing offset -- same sharing this project's
+own dungeon-art slug map already documents.
+- **No client position (reported, not filled in), 20 of 52:** the 4 new
+  Forever dungeons that DO have a Map.csv row (Hall of Thanes, Ruins of
+  Lordaeron, Excavation Site: Wetlands, City of Dalaran) all have
+  `Corpse=0,0` -- not yet placed in this beta build. The other 5 new Forever
+  dungeons (Drowned City, Krol'dok Stronghold, Alcaz Prison, Blackmaw Hold,
+  Shaper's Terrace) have **no Map.csv row in this export at all** -- checked
+  by grepping the raw export directly for each name, not just absent from
+  the source-map table by oversight. All 6 new Forever raids
+  (`emerald-dream` included, flagged below) and all 4 battlegrounds
+  (including Naxxramas, which is its own oddity, also flagged below) are
+  likewise `Corpse=0,0`.
+- **Two real data anomalies surfaced, not silently resolved:** (1)
+  `Map.csv` has *two* rows referencing Naxxramas -- id `533`, Directory
+  literally `"Stratholme Raid"` but `MapName_lang` "Naxxramas" (`Corpse=0,0`,
+  included in `map-entrances.json` as `naxxramas`), and id `2921`, Directory
+  `"2921"`, MapName_lang also "Naxxramas" but `InstanceType 1` (dungeon, not
+  raid) -- not resolved into one entry or guessed at; `map-entrances.json`
+  only uses `533`, and `2921` is unaccounted for. (2) `Emerald Dream` (id
+  `169`, InstanceType 2/raid) is real client data but isn't a Classic-era or
+  confirmed Forever raid this project tracks anywhere else -- included in
+  `map-entrances.json` as `emerald-dream` for completeness rather than
+  silently dropped, flagged here for a decision on whether it belongs.
+- **Check: Uldaman vs. the existing hardcoded pin (`-6060, -2955`, from
+  `app/reference/map/[continent]/page.tsx`'s `ULDAMAN_WORLD`).** `map.corpse`
+  gives `(-6060.18, -2954.997)` -- matches the existing pin to the nearest
+  unit exactly. A *second*, independent source, `AreaPOI`'s own entrance
+  marker (id 1027, "Uldaman"), gives `(-6092.01, -3179.35)` instead -- a
+  real, different point about 227 units away (likely the doorway/marker
+  position vs. the graveyard-release spot, both legitimately "at Uldaman"
+  but not identical). `map.corpse` was used as the authoritative source
+  throughout this file, both because it's listed first in the task's own
+  source-preference order and because it's what the existing pin already
+  matches almost exactly.
+
+**5. Deployment readiness confirmed, not just assumed:** `.gitignore`'s
+`public/map/*/tiles/` rule is scoped to the tile-image subfolder only --
+verified with `git add -n` that `public/map/{eastern-kingdoms,kalimdor}/
+{meta,zones}.json` stage normally while every `tiles/` file underneath stays
+untracked. Every new file this session added is small text (JSON/CSV, 4KB-
+60KB each) with no size or build concern for either git or a Vercel deploy.
+No code currently reads `zones.json` or `map-entrances.json` yet (this was a
+data-only task) -- wiring them into the map UI (zone borders/labels, dungeon
+pins beyond the single hardcoded Uldaman one) is future work, not started.
+
+**Verified via:** `tsc --noEmit` (clean) and inspecting the actual generated
+JSON output directly (spot-checked Loch Modan's bounds contain the Uldaman
+point, per the existing pin's own "Loch Modan/Badlands border" description).
+Not a UI change, so nothing to check live in a browser this session.
+
+**Suggested next:**
+- Resolve the two anomalies above (the duplicate Naxxramas Map row, whether
+  Emerald Dream belongs in `map-entrances.json` at all) before this file is
+  treated as final.
+- Export `UiMap.csv` from wow.export if a UiMapID's own display name/type/
+  flags are ever needed (see item 1).
+- The 5 new-Forever-dungeons and 6 new-Forever-raids/1-new-BG with no
+  client position at all will need a source once Blizzard places them in a
+  later build -- re-run `trim-client-db2.js`/`build-map-entrances.js`
+  against a newer export rather than hand-filling coordinates now, per this
+  session's own instruction not to.
+- Nothing in the planner/map UI reads either new file yet -- the natural
+  next step (zone borders/labels on the tiled map, real dungeon/raid/BG
+  pins beyond the single hardcoded Uldaman one) is a separate task.
+
+## Session handoff — 2026-09-25 (fractional zoom + overzoom, URL-hash view state, doc policy fix)
+
+**Shipped, not yet committed at session end (stopped before committing, per
+instruction):**
+- **Fractional zoom + overzoom.** `LeafletZoneMap.tsx`'s map now sets
+  `zoomSnap: 0.25` (scroll/pinch land on quarter-zoom increments) and
+  `zoomDelta: 1` (the +/- buttons and keyboard still step by a full level,
+  matching foreverchanges.pro/map's own button behavior even though free
+  zoom is now finer -- see the reference doc's Section 1). `maxZoom` is now
+  `maxNativeZoom + OVERZOOM_LEVELS` (2), so both continents go to z8; the
+  `TileLayer` keeps its own separate `maxNativeZoom` option so Leaflet
+  fetches the real z6 tile and scales it up for z7/z8 instead of requesting
+  nonexistent tile files. `maxBounds`/`maxBoundsViscosity` are untouched.
+  Verified live on both continents: at z=8.00 the DOM's `.leaflet-tile`
+  elements are real `tiles/6/<col>_<row>.webp` files (200, 512px each), not
+  a 404 or a blank pane, over real terrain (a bridge/settlement on
+  Kalimdor, confirmed by direct `fetch()` against the tile URLs from the
+  page's own console, not just a screenshot).
+- **URL-hash view state**, in real WoW world coordinates, not lat/lng or
+  Leaflet's internal CRS.Simple pixel space: `#x=<world_x>&y=<world_y>&z=<zoom>`.
+  Written via `history.replaceState` on `moveend` (after panning/zooming
+  settles, not per animation frame -- matches foreverchanges.pro/map's own
+  "hash lags the animation" behavior, see the reference doc). Restored on
+  mount if present and valid (finite numbers, zoom within
+  `[minZoom, maxZoom]`, and the resulting LatLng actually inside this
+  continent's own populated `bounds`); falls back to the existing
+  `fitBounds` default otherwise. Verified live: copying a hash URL into a
+  brand-new tab restores a pixel-identical view on both continents; a
+  garbage hash (`#z=99&x=abc`) loads the default whole-continent view with
+  zero console errors, also on both continents.
+- **New `lib/map-coords.ts`**: the world-coordinate <-> LatLng math
+  (previously only server-side, inline in `lib/map-continents.ts`) is now a
+  pure module with no `fs`/Node-only imports, exporting both directions
+  (`worldToLatLng`/`latLngToWorld`) plus the native-pixel intermediate step.
+  Shared by `lib/map-continents.ts` (server, unchanged behavior -- reads
+  `meta.json`) and the new client-side hash read/write in
+  `LeafletZoneMap.tsx`, which needs the exact same formula in reverse. One
+  copy, both directions, deliberately -- see the file's own header comment;
+  this project has already hit real bugs from the "same" coordinate formula
+  living in two places with a subtle difference (the axis-swap and
+  CRS.Simple-negates-lat bugs from the proof-of-concept phase).
+- **`docs/map-reference-foreverchanges.md` Section 7 and the "Icons
+  recommendation"** Go ahead for deployment. 
+
+
+
+If this comes up again: that edit is a one-line change to a file outside
+this repo, still pending an explicit go-ahead.
+
+## Session handoff — 2026-09-25 (Kalimdor tiled, continent dropdown, black background)
+
+**Shipped, not yet committed at session end (waiting on explicit review):**
+Kalimdor run through the continent tiler (both source halves -- 1,377
+tiles, ~42MB, ~36 min, 312.5MB peak RSS, 1,324 empty native tiles
+correctly skipped); `kalimdor` registered in `lib/map-continents.ts`
+(config-entry-only, as asked); the map's empty background (outside tiles
+and behind transparent/skipped-tile regions) is now solid black on both
+continents instead of Leaflet's own default light grey; a minimal
+`MapSidebar`/`ContinentSelect` dropdown navigates between `/reference/map/
+eastern-kingdoms` and `/reference/map/kalimdor`. Full technical detail in
+the new "Kalimdor registered" architecture note (search for "hardcoded-
+marker bug").
+
+**One real bug caught and flagged, per instruction, rather than silently
+patched or left broken:** registering `kalimdor` alone would have left the
+page still unconditionally placing the Uldaman marker (Eastern-Kingdoms-
+only world coordinates) onto whichever continent was being viewed,
+including Kalimdor, where those coordinates are meaningless. Fixed with
+the minimal correct gate (only show it on `eastern-kingdoms`) -- this is
+the "if anything else needs changing, stop and tell me" case the task
+asked about.
+
+**A second, smaller issue found and fixed along the way, not part of the
+original ask:** registering `kalimdor` in the config *before* its tiling
+run finished broke the *already-working* Eastern Kingdoms page too (every
+continent page's sidebar lists all registered continents by name, and
+Kalimdor's `meta.json` didn't exist yet). Fixed by having that lookup skip
+a continent whose `meta.json` isn't readable instead of throwing.
+
+**Seam verified at z6, z3, and z2 with actual tile coordinates**, not just
+reasoned about: cols 25-40/rows 37-42 at z6 (96 tiles), cols 3-5/rows 4-5
+at z3, cols 1-2/row 2 at z2, all straddling the real row-39/row-40 seam
+between Kalimdor's two source halves. A magenta test background made any
+real gap impossible to miss against actual terrain; none appeared, and
+Un'Goro Crater/Tanaris/Feralas all render as one continuous landmass across
+the join at every level checked.
+
+**Also noticed, not touched:** an untracked `docs/map-reference-
+foreverchanges.md` appeared during this session (UI/behavior research notes
+on foreverchanges.pro/map, dated today) that this session did not create --
+left completely alone, not staged, not referenced as this session's own
+work. If picking this up later, don't assume it came from this work without
+checking who actually wrote it.
+
+**All of this task's acceptance criteria verified live:** Kalimdor pans/
+zooms/clamps like Eastern Kingdoms; the seam is genuinely seamless; empty
+areas are black on both continents; the dropdown switches both ways with
+Eastern Kingdoms (Uldaman pin included) unchanged after the round trip.
+Stopped before committing, per instruction.
+
+## Session handoff — 2026-09-25 (real continent map route + a second sharp composite bug)
+
+**Shipped, not yet committed at session end (waiting on explicit review):**
+per-continent config (`lib/map-continents.ts`) replacing the old crop-
+specific `lib/map-tiles.ts`; a real dynamic route,
+`/reference/map/[continent]` (only `eastern-kingdoms` registered), replacing
+the old flat `/reference/map` proof-of-concept page; a local-only guard
+(`process.env.VERCEL`) that shows a plain notice instead of the map on any
+Vercel deployment, since tiles are gitignored and genuinely aren't there;
+`public/map/proof-badlands/` and `lib/map-tiles.ts` both deleted, their job
+done. Full detail in the new "Real `/reference/map/[continent]` route"
+architecture note (search for "fitBounds").
+
+**A second real sharp/libvips bug, same category as the earlier `.stats()`
+one:** `.composite()` chained directly into `.resize()` silently drops any
+child not positioned at `(0,0)` -- found because the continent map's
+initial render, after fixing an unrelated hand-computed-zoom bug, showed a
+correctly shaped Eastern Kingdoms silhouette that was mostly blank in
+several large patches. Isolated with a minimal repro (single known-real
+tile, composited at a non-origin offset, with vs. without a chained
+`.resize()`) before touching the real script. Fixed in `scripts/slice-map-
+tiles.js`'s `buildLowerLevels` the same way as before: materialize to a
+buffer, start a fresh `sharp()` instance for the next step. Eastern
+Kingdoms was re-tiled after the fix (~15 min, 230.0MB peak RSS, same 1,029
+tiles as before but now ~27MB instead of ~23MB since the previously-blank
+z0-z4 tiles now hold their real content) and re-verified live.
+
+**Also found and fixed:** a hand-computed `defaultZoom`/`defaultCenter`
+heuristic (added as part of "three changes" to `LeafletZoneMap.tsx`, since
+removed) didn't know the real container size and produced an off-center,
+non-fitting initial view -- replaced with `map.fitBounds(bounds)`, verified
+correct afterward. `maxBounds`/`maxBoundsViscosity` were added to actually
+enforce "can't scroll past the edge into the void," which nothing in the
+component did before despite the task requiring it.
+
+**Incident, self-corrected but worth flagging:** repeatedly deleted `.next`
+and ran `next build` (including once with `VERCEL=1` to verify the
+production-notice branch) while a separate, already-running `next dev`
+server for this same project was actively serving requests -- this
+corrupted that dev server's Turbopack state (`500`s with a `SyntaxError:
+Unexpected non-whitespace character after JSON`, not a real application
+bug -- both builds succeeded cleanly on their own). Fixed by finding the
+exact PID bound to port 3000 via `netstat` and restarting only that
+process, not a blanket `taskkill /IM node.exe` (a mistake made and
+self-corrected earlier in this project's history) -- confirmed the
+restarted server serves correctly. **Lesson for next time:** don't run a
+second `next build`/`next dev` against the same project directory while
+another one is live serving real traffic, even briefly for verification;
+if a second check is needed, ask before running it, or verify via the
+already-running server instead.
+
+**Verified live, all three of the task's acceptance criteria** (pan/zoom
+without escaping into void, Uldaman pin position matching the deleted proof
+crop exactly, popup + loot-page link both working) -- see the architecture
+note for specifics. Stopped before committing, per instruction.
+
+## Session handoff — 2026-09-25 (continent tile pyramid, investigation + build)
+
+**Investigation only, no files changed, reported back before building:**
+tile-generation mechanics for the existing `proof-badlands` crop (script/
+inputs/outputs), whether commit `d3d2087` added tile images to git (yes --
+20 files, ~0.89MB, confirmed by summing the actual committed byte sizes),
+full-continent tile-count/size estimates at several possible top-zoom
+choices for both Eastern Kingdoms and Kalimdor (math shown, based on the
+proof crop's own ~45KB/tile average), how Kalimdor's two export halves fit
+together (contiguous, no overlap, confirmed via their own JSON metadata --
+not physically merged), and what in the map component was hardcoded to the
+20-tile proof area. This report is what the storage/scope decisions below
+were made from.
+
+**Decisions made and acted on this session:** tiles are local-only and
+gitignored (`public/map/*/tiles/`, added to `.gitignore` before generating
+anything); only each continent's `meta.json` is committed; top zoom is
+native (512px, no downscaling at the finest level); tiles are addressed by
+the global 64x64 ADT grid (not per-image local indices), giving a standard
+z0-z6 pyramid where z6 lines up exactly with real ADT tiles.
+`scripts/slice-map-tiles.js` was rewritten from the single-crop proof-of-
+concept tool into a general continent tiler implementing all of this -- run
+for Eastern Kingdoms only (1,029 tiles, ~23MB, 23.4 min, 247.6MB peak RSS,
+230 empty native tiles correctly skipped). Full technical detail, the real
+run's numbers, and a real `sharp`/libvips `.stats()` bug found and fixed
+along the way are in the new "Continent tile pyramid" architecture note
+further down this file (search for "global ADT grid").
+
+**Spot-checked and confirmed correct:** the z6 tile containing Uldaman's
+real world coordinates shows the actual Loch Modan/Badlands border; its z2
+ancestor tile shows the correct broader region of the continent (dominated
+visually by neighboring forest zones at that zoom, which is expected --
+each z2 tile spans a large area).
+
+**Explicitly out of scope, not started:** Kalimdor hasn't been tiled yet
+(config for it exists and was reasoned through, untested in practice); no
+map page/route changes; no new pins. `public/map/proof-badlands/` and
+commit `d3d2087` were left untouched, as instructed.
+
 ## Session handoff — 2026-09-25 (world map: wow.export tiles + Leaflet proof of concept)
 
 **Stable and shipped this session:** a small, deliberately-scoped proof of
@@ -1366,29 +2526,331 @@ Fixed by importing the CSS from the page itself (a Server Component) instead
 of the client-only chunk, which is part of the initial render regardless of
 when/whether the dynamic chunk loads.
 
-**Scope, deliberately small.** `scripts/slice-map-tiles.js` crops a single
+**Scope at the time, deliberately small -- since superseded and removed.**
+The first version of `scripts/slice-map-tiles.js` cropped a single
 2048×2048px region around Uldaman's real world coordinates out of the full
-Eastern Kingdoms export and slices it into a 2-zoom (0 = half-res, 1 =
+Eastern Kingdoms export and sliced it into a 2-zoom (0 = half-res, 1 =
 native, 512px tiles) pyramid -- 20 tiles, ~1MB total, under `public/map/
-proof-badlands/`. This was an explicit decision, not a shortcut: a full
-multi-zoom pyramid for both continents would be several thousand files
-(repo-size/git-performance implications this project hasn't faced before,
-the largest generated asset so far being one 8.5MB JSON file), and no
-storage-strategy decision (commit to git / restrict zoom range / store
-outside git) has been made for that yet. Don't scale this up without
-revisiting that decision first.
+proof-badlands/`, read by `lib/map-tiles.ts`'s `worldToZone0LatLng`/
+`getZone0Bounds`/`getMapTileConfig`. That was an explicit decision, not a
+shortcut: a full multi-zoom pyramid for both continents would be several
+thousand files, and no storage-strategy decision had been made yet. **Once
+the real continent tiler below was built, verified, and wired into a real
+route, `public/map/proof-badlands/` and `lib/map-tiles.ts` were both
+deleted** (2026-09-25, same session as the "Real `/reference/map/
+[continent]` route" note further down) -- their only job was proving the
+Leaflet+CRS.Simple approach worked at all, which it did; every bug found
+against this crop (the axis swap, the CSS-loading order, the lat-negation)
+carried forward correctly into the real continent map, so nothing from
+this phase needed re-discovering.
 
-**What a future session needs to generalize this:** (1) the storage
-decision above; (2) Kalimdor's two halves fed through the tiling script
-(only Eastern Kingdoms has been so far); (3) a real per-dungeon location
-dataset -- currently hardcoded to one dungeon (`ULDAMAN_WORLD` in `app/
-reference/map/page.tsx`), since the previous SVG MVP's hand-authored
-`data/dungeon-locations.json` was removed in the revert below along with
-everything else. `worldToZone0LatLng`/`getZone0Bounds`/`getMapTileConfig`
-in `lib/map-tiles.ts` are already written generically per-`mapName`
-(reading a `public/map/<name>/meta.json` sidecar the slicing script also
-writes), so a second cropped region is mostly a re-run of the script with a
-different center, not new code.
+### Continent tile pyramid: gitignored, global ADT grid, z0-z6
+Added 2026-09-25, once storage/scope decisions were made (see below).
+`scripts/slice-map-tiles.js` was rewritten from the single-crop tool above
+into a general continent tiler: `node scripts/slice-map-tiles.js
+<continent>` (`eastern-kingdoms` or `kalimdor`; per-continent source paths
+are a small `CONTINENTS` config object at the top of the script, not CLI
+flags -- there are only two continents and the source export paths are
+machine-specific anyway).
+
+**Storage decision:** tiles are local-only. `public/map/<continent>/tiles/`
+is gitignored (`.gitignore`'s `public/map/*/tiles/` rule, added *before*
+generating anything, per instruction); `public/map/<continent>/meta.json`
+is committed normally (a few hundred bytes, not matched by that pattern).
+Regenerate with `node scripts/slice-map-tiles.js <continent>` any time the
+source wow.export files change -- there is no other way to reproduce the
+tiles, so don't `git clean` or otherwise discard this directory without
+knowing you can re-run the script.
+
+**Tile addressing: the global 64x64 ADT grid, not per-image local
+indices.** Every WoW continent map has a fixed 64x64 tile grid (`GRID_SIZE`
+in the script); a given continent's terrain only occupies some sub-region
+of it (Eastern Kingdoms: columns 23-45, rows 20-61). Tiles are named by
+their position in that GLOBAL grid (`<globalCol>_<globalRow>.webp` =
+`sourceMeta.tiles.min_x/min_y` + the tile's own local position within
+whichever source image it came from), not a 0-based index local to one
+source image. This is what lets Kalimdor's two separate source halves
+contribute tiles to the same coordinate space without ever being merged
+into one file, and it produces a standard slippy-map z/x/y scheme for
+free: zoom z has exactly 2^z tiles per side, and z6 (native, 2^6 = 64)
+lines up exactly with the real ADT grid. z0 is a single tile covering the
+entire 64x64 grid at the coarsest resolution; z6 is 1:1 with real 512px
+ADT tiles, the finest level this project generates (matching the "top
+zoom = native" decision -- no interpolated detail beyond what the source
+actually has).
+
+**Lower zoom levels (z5..z0) are built from the OUTPUT TREE, never
+re-derived from the source images.** For each level from z6 down to z1,
+every existing child tile's parent (`floor(col/2), floor(row/2)`) is
+computed, up to 4 children are composited onto a transparent 1024x1024
+canvas at their quadrant offset, then downsampled to 512px. A parent with
+zero existing children is never created (no empty tiles written); missing
+quadrants (1-3 of 4) simply stay transparent. This is required, not just
+convenient: Kalimdor's two source halves are correctly positioned in world-
+coordinate terms (see the note above) but 533.333-world-unit ADT tiles
+don't necessarily land on shared parent-tile boundaries a few levels down
+across an arbitrary two-way image split -- combining from the already-
+tiled output sidesteps that entirely, since by z6 every source's
+contribution is already in the same global coordinate space, one tile at a
+time.
+
+**A second real sharp/libvips quirk, found the same way as the `.stats()`
+one below: `.composite()` chained directly into `.resize()` in one pipeline
+silently drops any child NOT positioned at (0,0).** First surfaced as 18 of
+202 z5 tiles (and their descendants up the pyramid, including z0 itself)
+coming back completely blank despite having verified-real z6 children --
+confirmed live in the browser first (the map rendered a correctly-sized,
+correctly-centered, but entirely empty grey box), then isolated with a
+minimal repro: compositing one known-real tile at `left:512,top:0` onto a
+blank canvas and immediately calling `.resize()` produced all-zero output,
+while the identical composite at `left:0,top:0` worked, and the identical
+`left:512` composite WITHOUT a chained `.resize()` also worked (confirmed
+by extracting just that region afterward). Fixed the same way as the
+`.stats()` quirk: materialize the composite to a real buffer
+(`.png().toBuffer()`) before starting a fresh `sharp()` pipeline for
+resize+encode, rather than chaining resize directly onto the composite.
+`buildLowerLevels` also now runs a `.stats()` check (on the final encoded
+buffer, via a fresh `sharp()` instance -- not chained, per the lesson
+above) on every composited parent before writing it, skipping (and
+counting) any that come back fully blank -- belt-and-suspenders against
+this exact class of bug recurring silently, not just a fix for the one
+instance found. **General lesson for this file, now proven twice:** don't
+trust a second pixel-reading or pixel-transforming operation chained
+directly onto an in-progress sharp pipeline in this version -- materialize
+to a buffer and start fresh.
+
+**Emptiness detection -- confirmed against real pixel data, not assumed.**
+Every extracted native tile is checked before writing: `sharp`'s own
+`.stats()` on a `.clone().extract(...)` chain was found to silently ignore
+the extract and return whole-image stats instead (verified live -- two
+extracts of visibly different, far-apart regions produced byte-identical
+`.stats()` output). Fixed by re-wrapping the already-encoded tile buffer in
+a fresh `sharp(buffer)` before calling `.stats()`. Confirmed source's own
+"no data" representation is fully transparent `RGBA(0,0,0,0)`, not solid
+black -- a known-void corner tile (the bounding box's own top-left, outside
+any real landmass) came back flat `0/0/0/0` across all four channels.
+Emptiness = alpha channel's max is 0.
+
+**`limitInputPixels` and memory.** Every source is opened with
+`limitInputPixels: false` -- Eastern Kingdoms (~253M px) is under sharp's
+default ~268M-px limit, but Kalimdor's top half (~514M px) is not, and the
+config needs to work for both without touching the code again when
+Kalimdor is run. `sequentialRead: true` matches the script's own row-major,
+top-to-bottom access pattern. One `sharp()` pipeline is opened per source
+image (not per tile); each tile does one `.clone().extract(...).webp()`
+encode, reused for both the emptiness check and the file write.
+
+**Real runs, both continents, after the composite-bug fix above:**
+
+| zoom | EK tiles | EK size | Kalimdor tiles | Kalimdor size |
+|---|---|---|---|---|
+| 6 (native) | 736 written, 230 empty skipped | 17.4 MB | 988 written, 1,324 empty skipped | 27.9 MB |
+| 5 | 202 | 4.5 MB | 273 | 7.3 MB |
+| 4 | 60 | 1.6 MB | 76 | 2.5 MB |
+| 3 | 20 | 0.50 MB | 25 | 0.75 MB |
+| 2 | 6 | 0.13 MB | 10 | 0.19 MB |
+| 1 | 4 | 0.03 MB | 4 | 0.05 MB |
+| 0 | 1 | 0.01 MB | 1 | 0.01 MB |
+| **total** | **1,029 tiles** | **~27 MB** | **1,377 tiles** | **~42 MB** |
+
+(EK sizes are from the fixed run -- larger than the first, buggy run's
+numbers, since z0-z4 now actually contain the content they were silently
+dropping before.) Kalimdor runtime 2,145.8s (~35.75 min) across both source
+halves (top half alone: 680 written/1,280 skipped of 1,960 candidates --
+nearly twice EK's total candidate count, and the reason this run took
+longer); peak RSS 312.5 MB. Kalimdor's much higher empty-tile fraction
+(1,324/2,312 candidates, ~57%, vs. EK's 23.8%) reflects its source images'
+own bounding rectangles covering a lot more open ocean around a narrower,
+more irregular landmass, not a bug -- confirmed by inspecting the actual
+shape (see below). Zero parents came back blank-after-composite on either
+run.
+
+**Multi-source addressing confirmed correct, not just reasoned about.**
+Kalimdor's two source halves write into the exact same `tiles/6/`
+directory using their own `min_x`/`min_y` offsets (see "Tile addressing"
+above) -- verified this produces a genuinely seamless join, not just
+non-overlapping files, by rendering the actual pixel content at three zoom
+levels straddling the real seam (row 39 [top half] / row 40 [bottom half]):
+**z6** (cols 25-40, rows 37-42, 96 tiles, all present) -- no gap, overlap,
+or offset visible where Feralas/Thousand Needles-type terrain crosses the
+boundary; **z3** (cols 3-5, rows 4-5, 6 tiles) and **z2** (cols 1-2, row 2,
+2 tiles) -- both show Un'Goro Crater's distinctive circular shape, Tanaris'
+desert, and Feralas joining the northern landmass with no visible seam line
+at any of the three levels. A magenta test background (instead of the
+usual transparent) was used during this check specifically so any real gap
+would be impossible to miss against actual terrain colors -- none appeared
+anywhere except genuinely empty ocean/void at the continent's own edges.
+
+**Sanity check, not just informational:** the full grid's own world-
+coordinate corners are computed by extrapolating from whichever source's
+`corners`/`tiles.min_x`/`min_y` are available (`computeFullGridCorners`),
+and are asserted to equal exactly ±17,066.667 on every axis --
+`(GRID_SIZE/2) * ADT_WORLD_SIZE`, WoW's well-known universal per-continent
+coordinate extent, independent of which sub-region is actually populated.
+Confirmed exact for both Eastern Kingdoms and Kalimdor (`OK` in the
+script's own output both times -- Kalimdor's check uses its first source,
+the top half, per `writeMeta`'s `continent.sources[0]._meta`, which is
+valid regardless of which of a continent's sources is picked since the
+formula only depends on that source's own `min_x`/`min_y`/`corners`, all
+of which describe the same underlying coordinate system). A mismatch here
+on a future run would mean a wrong assumption upstream, not something to
+silently accept.
+
+**`meta.json` shape:**
+```json
+{
+  "mapId": 0, "mapDir": "azeroth", "mapName": "Eastern Kingdoms",
+  "tileSize": 512, "gridSize": 64, "nativeZoom": 6,
+  "adtWorldSize": 533.3333333333334,
+  "populated": { "minCol": 23, "maxCol": 45, "minRow": 20, "maxRow": 61 },
+  "fullGridCorners": { "top_left": {...}, "bottom_right": {...} }
+}
+```
+Read by `lib/map-continents.ts` -- see the "Real `/reference/map/
+[continent]` route" note below for how. Both continents have one now.
+
+### Real `/reference/map/[continent]` route: per-continent config, fitBounds, maxBounds
+Added 2026-09-25, replacing the flat `/reference/map` proof-of-concept page
+(deleted, along with `public/map/proof-badlands/` and `lib/map-tiles.ts` --
+see the note above). Dynamic route, `generateStaticParams`/`dynamicParams =
+false` so only registered continents resolve (`eastern-kingdoms` and, as of
+the same-day follow-up below, `kalimdor`; unregistered ids 404 via an
+explicit `notFound()` check in the page too, not just the static-params
+mechanism). `lib/map-continents.ts` replaces the old crop-specific
+`lib/map-tiles.ts`: `getContinentMapConfig(id)` reads that continent's
+`meta.json` and derives everything the map needs (name, tile URL template,
+bounds, min/max zoom, default center/zoom) rather than any of it being
+hand-typed per continent.
+
+**Local-only guard.** Tiles are gitignored (see the tile-pyramid note
+above), so any Vercel deployment -- Preview or Production alike, both
+equally lack the tiles -- would serve a map with no textures. The page
+checks `process.env.VERCEL` (set on every Vercel build, not just
+`VERCEL_ENV === "production"` specifically, since a Preview deploy has the
+exact same missing-tiles problem) and renders a plain notice instead of the
+map when true. Confirmed both branches directly: a normal `next build`
+prerenders the real Leaflet page; `VERCEL=1 next build` prerenders the
+notice instead -- checked by grepping the actual prerendered HTML output
+for each, not just reasoned about.
+
+**`LeafletZoneMap.tsx` changes, plus one the component needed that wasn't
+on the original list of three:** `minZoom` is now a prop (was hardcoded
+`0`); the fixed `h-[520px]` container is now `heightClassName` (defaults to
+`h-[70vh] min-h-[360px]`, overridable). The fourth change:
+**`maxBounds`/`maxBoundsViscosity: 1` were added to the map, using the
+existing `bounds` prop** -- without this, nothing stopped panning past the
+continent's real edge into blank space, which the task's own acceptance
+criteria required ("can't scroll into the empty void"). Verified live: with
+the fix, dragging repeatedly toward open water/off-map space produced zero
+movement once the view was already at the populated area's boundary.
+
+**A `defaultZoom` prop was added, then removed again, in favor of
+`map.fitBounds(bounds)`.** The per-continent config computes a `defaultZoom`
+analytically (target on-screen size ÷ the populated area's own size in
+zoom-0-equivalent units) -- this exists on `ContinentMapConfig` and is
+still exposed, but the component does **not** consume it. Verified live
+that the hand-computed value, not knowing the real container's rendered
+size, produced a view with real content pushed into one corner and blank
+space filling the rest -- not the earlier proof crop's problem (that one
+just had a wrong CSS-loading bug), a genuinely different bug. Replaced with
+`map.fitBounds(bounds)`, which asks Leaflet to compute the fit against the
+container's actual measured size -- confirmed correct afterward (the whole
+continent silhouette centered symmetrically, matching its real shape).
+This was flagged as a deliberate deviation from "keep the component as
+written plus exactly three changes," not a silent one: fitBounds was
+avoided for the original crop specifically because it couldn't be verified
+without live devtools at the time; this session had live browser access
+throughout, so the same concern didn't apply once a real problem was found.
+
+**Coordinate math** (`worldToContinentLatLng` in `lib/map-continents.ts`)
+reuses the exact same two conventions proven on the proof crop: the world-
+axis swap and the CRS.Simple lat-negation, just scaled by the continent's
+own `nativeZoom` (64x, since z6 is native) instead of a crop's
+`maxNativeZoom` (2x, for proof-badlands). `bounds` are computed by running
+the *same* pixel-to-LatLng conversion on the `populated` min/max col/row
+from `meta.json`, rather than a separately-derived formula with its own
+chance of a sign mistake.
+
+**Verified live, all three of the task's stated acceptance criteria:** the
+whole continent pans and zooms and cannot be dragged past its own real
+edge into empty space (confirmed by repeated failed drag attempts at the
+boundary); the Uldaman pin sits exactly on the real Loch Modan/Badlands
+border, pixel-for-pixel matching the deleted proof crop; its popup shows
+"Uldaman / Level 44-50" and the "View loot & quests →" link navigates
+correctly to `/reference/dungeons/loot/uldaman` (confirmed via a dispatched
+click, the same reliable technique used earlier in this project when the
+browser tool's own coordinate-based click doesn't register).
+
+**Still hardcoded/out of scope for this task (unchanged from before):** one
+dungeon (Uldaman). A real multi-dungeon, multi-continent location dataset
+is still open -- see the follow-up note below for the one hardcoding issue
+this surfaced when Kalimdor was registered.
+
+### Kalimdor registered: continent dropdown, black empty-space background, a hardcoded-marker bug caught
+Same day as the note above, once Kalimdor's tiles existed (see the tile-
+pyramid note's real-run numbers). `lib/map-continents.ts`'s
+`REGISTERED_CONTINENTS` is the only place a continent needs adding once its
+tiles/meta.json exist -- confirmed by doing exactly that and nothing else
+for the config layer.
+
+**A real hardcoded-marker bug this surfaced, flagged rather than silently
+worked around.** The page unconditionally computed and rendered the
+Uldaman marker for *every* continent, since it was written when only
+Eastern Kingdoms existed -- registering Kalimdor without any other change
+would have placed a marker built from Uldaman's Eastern-Kingdoms-only world
+coordinates onto Kalimdor's own, independent coordinate space, landing it
+somewhere meaningless on the wrong map. Fixed with the minimal correct
+gate (`continent === "eastern-kingdoms" ? [marker] : []`) rather than
+building a real per-continent marker dataset, which is still out of scope.
+This is the "if anything else needs changing, stop and tell me" case the
+task asked to watch for -- flagged in-session, then fixed, rather than left
+broken or silently patched without mention.
+
+**`getRegisteredContinents()` (added for the dropdown, see below) skips a
+continent whose `meta.json` isn't readable yet** instead of throwing --
+caught live: registering `kalimdor` in the config *before* its tiling run
+finished broke the *already-working* Eastern Kingdoms page too, because
+every continent page's sidebar tries to list every registered continent by
+name. Fixed by having that lookup skip (not crash on) a missing meta.json,
+which is also just generally the right behavior for "a continent is
+registered but its tiles haven't finished generating yet," not a one-off
+patch for this specific timing accident.
+
+**Black background, everywhere outside real tile content.** The map
+container previously used a `bg-background` Tailwind class, which Leaflet's
+own default CSS (`.leaflet-container { background: #ddd }`) was found to
+win over regardless of the site's theme tokens (confirmed live -- the map
+showed light grey, not the theme's dark background, in every empty area).
+Switched to an inline `style={{ backgroundColor: "#000" }}` on the
+container div, which always wins on specificity regardless of stylesheet
+load order. This covers both "outside every tile" (open water past the
+continent's own silhouette, before `maxBounds` stops you) and "behind a
+tile's own transparent pixels" (missing-children regions within a
+composited lower-zoom tile) in one place, since nothing else in Leaflet's
+DOM structure between the tile images and this container sets its own
+background.
+
+**Continent dropdown -- a minimal sidebar, explicitly not a real one yet.**
+`components/map/MapSidebar.tsx` is a plain `<aside>` holding only
+`components/map/ContinentSelect.tsx` (a `"use client"` `<select>` using
+`next/navigation`'s `useRouter().push()` on change, the same client-router
+pattern already used by `ItemsSearchInput.tsx` elsewhere in this project).
+No zone list, filters, or icons -- explicitly out of scope for this task,
+and the component is deliberately named/shaped to be extended later rather
+than replaced. `getRegisteredContinents()` in `lib/map-continents.ts`
+supplies the `{id, name}` list from each continent's own `meta.json` rather
+than hand-typing display names a second time.
+
+**Verified live, all of this task's acceptance criteria:** `/reference/
+map/kalimdor` pans and zooms and is clamped at its own real edges the same
+way Eastern Kingdoms is (repeated drag attempts at the boundary produced
+zero movement); the seam between Kalimdor's two source halves is genuinely
+seamless at z6, z3, and z2 (see the tile-pyramid note's real-run section
+for the exact tile coordinates inspected and what was checked); empty areas
+render solid black on both continents; the dropdown navigates
+Eastern-Kingdoms-to-Kalimdor and back, and Eastern Kingdoms' own page
+(including the Uldaman pin, popup, and link-through) is unchanged after
+the round trip.
 
 ### Reverted: single-zone hand-drawn SVG world map MVP (2026-09-24)
 Two sessions built a single-zone world map -- `/reference/map`,

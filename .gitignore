@@ -42,3 +42,32 @@ next-env.d.ts
 
 # local design/reference screenshots -- not site assets, not committed
 /.reference/
+
+# Generated world-map tile pyramids (scripts/slice-map-tiles.js) -- local
+# only, regenerate with `node scripts/slice-map-tiles.js <continent>`.
+# A full continent pyramid is thousands of files/tens-to-hundreds of MB,
+# too large to commit -- see CLAUDE.md's world-map architecture note. Each
+# continent's own meta.json (small, describes the tile grid) is NOT
+# ignored -- the pattern only matches the tiles/ subdirectory, not the
+# whole public/map/<continent>/ folder. public/map/proof-badlands/ predates
+# this rule and stays committed as-is (untouched by this change -- .gitignore
+# never un-tracks files that were already committed).
+public/map/*/tiles/
+
+# Client-extracted world-map pin icons (dungeon/raid/battleground entrance
+# art, once extracted from the atlas texture -- see CLAUDE.md's "entrance
+# icon art" session note) -- same local-only/gitignored policy as the tiles
+# above, not a site asset until a rights decision is made before deploying.
+public/map/icons/
+
+# Raw per-chunk AreaId grid cache (scripts/build-zone-areas.js), 2MB/continent
+# -- a build artifact for that script's own re-runs (so later work on zone
+# labels doesn't need to re-parse every ADT), not source data. The small
+# derived public/map/*/zone-areas.json this script also writes is NOT
+# ignored -- that's the real deliverable.
+data/sources/client-db2/*/zone-grid-*.bin
+
+# One-off debug renders (scripts/build-zone-areas.js's check-e image, zone
+# polygons drawn over the z3 tile mosaic) -- a local eyeball-check artifact,
+# not a site asset or committed data. Regenerate by re-running that script.
+/debug-output/
