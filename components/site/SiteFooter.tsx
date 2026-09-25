@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ModeToggle from "@/components/site/ModeToggle";
 
 export default function SiteFooter() {
@@ -12,7 +13,13 @@ export default function SiteFooter() {
         <p className="text-foreground-muted">
           Forevercraft is a free, fan-made project and is not affiliated with Blizzard Entertainment.
         </p>
-        <ModeToggle />
+        <div className="flex items-center gap-4">
+          {/* Deliberately low-key: discoverable if you look, not advertised in the nav. */}
+          <Link href="/whats-new" className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline">
+            What&apos;s new
+          </Link>
+          <ModeToggle />
+        </div>
       </div>
     </footer>
   );

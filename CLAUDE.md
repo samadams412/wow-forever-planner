@@ -2070,11 +2070,14 @@ clip anyway (a `background-image` never paints outside its own element's
 box). Mobile renders the same five links indented under "Reference" in
 the existing flat mobile menu overlay, not a separate nested toggle.
 
-### What's New (/whats-new): active feature, in primary nav
-Was shelved (unlinked, noindex) until 2026-09-24; now a real feature, linked
-in `SiteHeader`'s `NAV_LINKS`, in the sitemap, and indexable. The
-planner-header "What's new" badge / `latestChangeCount` prop are NOT
-restored -- the nav link replaced that idea. The homepage card grid is
+### What's New (/whats-new): active feature, low-key footer link
+Was shelved (unlinked, noindex) until 2026-09-24; now a real feature, in the
+sitemap and indexable. It was briefly a primary-nav item, then deliberately
+moved (2026-09-25) to a small muted text link in `SiteFooter` -- "discoverable
+if you look, not advertised" -- so do NOT re-add it to `SiteHeader`'s
+`NAV_LINKS`. The old planner-header badge / `latestChangeCount` prop are still
+not restored (a text link near the planner heading is the obvious next
+low-key placement if the footer proves too hidden). The homepage card grid is
 unchanged (4 cards in a 2-column grid; a 5th would unbalance it).
 
 Two tabs (`WhatsNewTabs`, URL hash `#site` via useSyncExternalStore):
@@ -2094,10 +2097,13 @@ Two tabs (`WhatsNewTabs`, URL hash `#site` via useSyncExternalStore):
   render as plain names. `PatchNoteRef` is the linked pill + hover tooltip
   (same `useHoverTooltip`/`TooltipCard`/`claimActiveTooltip` pattern as
   `LootItemPill`), `PatchNoteEntryRow` the row (kind badge, summary, diff,
-  developer note). Before -> after uses the EXISTING `TooltipClassicDiff`
-  (`components/planner/TooltipCard.tsx`), which gained optional
-  `heading`/`oldLabel`/`newLabel`/`bare` props (defaults unchanged) and is
-  wrapped in an always-dark card since its colors assume a dark background.
+  developer note). Before -> after uses `PatchChangeDiff`, What's New's OWN copy of the
+  Compare-to-Classic visual pattern (struck red old words, gold-highlighted new
+  words, always-dark card) labeled "Previously"/"Now" -- NOT the shared
+  `TooltipClassicDiff`, whose Classic/Forever wording is only correct for
+  talent tooltips (a patch change is relative to the previous build, and
+  new-in-Forever spells have no Classic state). `TooltipClassicDiff` is back to
+  its original unparameterized form; don't add label props to it again.
   Class sections and "Race changes" are collapsible (controlled, class chips
   jump to/open them); "Other changes" is collapsed and muted. The older raw
   talent-diff view (`WhatsNewView` + `lib/whats-new.ts`, fed by
@@ -2107,14 +2113,20 @@ Two tabs (`WhatsNewTabs`, URL hash `#site` via useSyncExternalStore):
   hand-written user-facing list (CLAUDE.md handoffs were the source but are
   too technical to publish as-is).
 
+**Source links (rule):** a build's `sourceUrl` may ONLY be an official Blizzard
+forum post -- never foreverchanges.pro or any other third-party aggregator, even
+if that's where data was cross-checked. If a build has no official post on
+hand, omit `sourceUrl`/`sourceLabel` entirely and say so in `sourceNote` (builds
+69977/69913/69893 do this). The link renders in Blizzard blue (darker on the
+Light theme).
+
 **Adding a build:** copy an existing `data/patch-notes/*.json`, fill it in,
 run nothing else. Check every named thing resolves (a name that doesn't
 match a talent/spell just renders unlinked -- fine for removed things, a typo
 otherwise). Developer notes are quoted verbatim from Blizzard; everything
 else is paraphrased. Builds 69977/69913/69893 are lighter entries (no
-Blizzard text was on hand) sourced from ForeverChanges' build log
-(foreverchanges.pro/beta#builds, itself a good structural reference) and our
-own 09-18 sync record, and say so in their `sourceNote`.
+Blizzard text was on hand) built from our own data-pull history, with no source
+link (see the rule above).
 
 **Verified via** `tsc`, eslint, dev-server HTML and server-rendering the
 entry components -- NOT visually in a browser (the extension was not
