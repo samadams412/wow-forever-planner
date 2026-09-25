@@ -1,4 +1,5 @@
 import type { TalentChangeKind } from "@/lib/whats-new";
+import type { NoteKind } from "@/lib/patch-notes";
 
 // Reuses the site's existing new/changed/moved status colors (lib/talent-status.ts)
 // for the semantically matching categories here -- added maps to "new" (violet,
@@ -35,3 +36,25 @@ export const CHANGE_KIND_TEXT_CLASS: Record<TalentChangeKind, string> = {
 };
 
 export const CHANGE_KIND_ORDER: TalentChangeKind[] = ["added", "removed", "moved", "ruleChanged"];
+
+// Patch-note entry kinds (lib/patch-notes.ts). Same palette rules as above:
+// "new" reuses the site-wide violet, "moved" the sky blue, "removed" rose,
+// "changed" amber; "fix" (a bug fix, not a design change) and "renamed" get
+// their own quieter/teal treatment so the eye goes to real design changes.
+export const NOTE_KIND_LABEL: Record<NoteKind, string> = {
+  changed: "Changed",
+  fix: "Fix",
+  renamed: "Renamed",
+  removed: "Removed",
+  moved: "Moved",
+  new: "New",
+};
+
+export const NOTE_KIND_BADGE_CLASS: Record<NoteKind, string> = {
+  changed: "border-amber-300/50 text-amber-300",
+  fix: "border-border text-foreground-muted",
+  renamed: "border-teal-300/50 text-teal-300",
+  removed: "border-rose-400/50 text-rose-400",
+  moved: "border-sky-400/50 text-sky-400",
+  new: "border-violet/50 text-violet",
+};

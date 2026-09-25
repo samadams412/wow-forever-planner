@@ -1,37 +1,41 @@
 import type { Metadata } from "next";
+import Collapsible from "@/components/site/Collapsible";
+import InGameSection from "@/components/whats-new/InGameSection";
 import WhatsNewView from "@/components/whats-new/WhatsNewView";
 import { getAllDiffSummaries } from "@/lib/whats-new";
+import { getPatchBuilds } from "@/lib/patch-notes";
 
-// Intentionally unlinked from site navigation right now (see CLAUDE.md) --
-// the page itself is left fully working for anyone with the direct URL, but
-// noindex keeps it out of search results while it's not something the site
-// is pointing people toward yet.
 export const metadata: Metadata = {
   title: "What's New",
-  description: "Talent changes from the latest WoW Forever beta data sync, class by class.",
-  robots: { index: false, follow: false },
+  description:
+    "What changed in each WoW Forever beta build, class by class, with before and after numbers and Blizzard's developer notes.",
 };
 
 export default function WhatsNewPage() {
-  const all = getAllDiffSummaries();
-  const latest = all[all.length - 1];
-  const history = all.slice(0, -1);
+  const builds = getPatchBuilds();
+  const syncs = getAllDiffSummaries();
+  const latestSync = syncs[syncs.length - 1];
 
   return (
     <main className="mx-auto w-full max-w-4xl px-3 py-6 sm:px-4">
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">What&apos;s New</h1>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-        Talent data changes pulled from the WoW Forever beta client, synced from talentsforever.com and
-        applied to our own data files. This tracks game data changes, not our own site&apos;s UI updates.
+        What changed in each WoW Forever beta build, class by class. Hover a talent or spell to read its
+        current text.
       </p>
 
-      {latest ? (
-        <div className="mt-5">
-          <WhatsNewView latest={latest} history={history} />
-        </div>
-      ) : (
-        <p className="mt-5 text-sm text-foreground-muted">No data syncs recorded yet.</p>
-      )}
+      <div className="mt-5">
+        <InGameSection builds={builds}>
+          {latestSync && (
+            <Collapsible
+              title="Talent data syncs (raw)"
+              subtitle="Field-level talent changes between our own data pulls from the beta client, newest first"
+            >
+              <WhatsNewView latest={latestSync} history={syncs.slice(0, -1)} />
+            </Collapsible>
+          )}
+        </InGameSection>
+      </div>
     </main>
   );
 }

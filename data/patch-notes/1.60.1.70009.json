@@ -1,0 +1,413 @@
+{
+  "build": "1.60.1.70009",
+  "date": "2026-09-24",
+  "title": "First balance changes of the beta",
+  "summary": "The first balance pass of the beta, put online during the September 24 maintenance, alongside the Cooldown Manager, new gamepad options and a temporary 1 silver respec.",
+  "sourceLabel": "Blizzard's beta development notes (September 24)",
+  "sourceUrl": "https://us.forums.blizzard.com/en/wow/t/2360696",
+  "sourceNote": "Change descriptions are summarized in our own words; before/after numbers and the highlighted 'Developers' notes' are from Blizzard's post. Read the original for the full text.",
+  "pendingInData": [
+    "Warrior Protection: Bastion and Focused Rage swap places (rows 5 and 6). Blizzard's notes describe it, but the beta client data we read from does not have it yet, so our planner still shows the old order until a later data pull includes it.",
+    "Paladin Retribution: Crusade is gone from the tree in the beta client data, but Blizzard's notes do not mention it."
+  ],
+  "classes": {
+    "druid": [
+      { "name": "Rejuvenation", "kind": "fix", "spec": "Restoration", "text": "Can now land critical hits." },
+      { "name": "Tranquility", "kind": "fix", "spec": "Restoration", "text": "Can now land critical hits." },
+      { "name": "Wild Growth", "kind": "fix", "spec": "Restoration", "text": "Can now land critical hits." },
+      { "name": "Wrath", "kind": "changed", "spec": "Balance", "text": "Base damage increased by about 50%." },
+      {
+        "name": "Thorns",
+        "kind": "changed",
+        "text": "Its damage now updates dynamically from the caster's spell power. If the caster can't be found or is too far away, Thorns falls back to its base values."
+      },
+      {
+        "name": "Primal Bite",
+        "kind": "renamed",
+        "spec": "Feral",
+        "oldName": "Mangle",
+        "text": "Mangle is now Primal Bite. Its signature debuff was removed, so the old name no longer described it. Every talent that referenced Mangle now references Primal Bite."
+      },
+      {
+        "name": "Blood Frenzy",
+        "kind": "renamed",
+        "spec": "Feral",
+        "oldName": "Primal Fury",
+        "text": "The Primal Fury talent is renamed back to Blood Frenzy, with its original icon."
+      },
+      { "name": "Feral Charge", "kind": "fix", "spec": "Feral", "text": "The Cat version can no longer be cast on allies." }
+    ],
+    "hunter": [
+      { "name": "Furious Howl", "kind": "changed", "spec": "Pets", "text": "The Attack Power bonus is reduced by 40%." },
+      { "name": "Sonic Blast", "kind": "fix", "spec": "Pets", "text": "Now properly available to Bat pets." },
+      { "name": "Tame Beast", "kind": "changed", "spec": "Pets", "text": "No longer works on beasts higher level than the Hunter." },
+      {
+        "name": "Lone Wolf",
+        "kind": "fix",
+        "spec": "Marksmanship",
+        "text": "Talenting out of Lone Wolf no longer leaves the Hunter with -4% damage while their pet is active."
+      },
+      { "name": "Lacerating Strikes", "kind": "fix", "spec": "Survival", "text": "Can now land critical hits." },
+      {
+        "name": "Strider Kick",
+        "kind": "changed",
+        "spec": "Survival",
+        "text": "Now also grants movement speed.",
+        "changes": [
+          {
+            "before": "A powerful kick that deals 100% melee weapon damage.",
+            "after": "A powerful kick that deals 100% melee weapon damage and increases movement speed by 30% for 3 sec."
+          }
+        ]
+      }
+    ],
+    "mage": [
+      {
+        "name": "Arcane Missiles",
+        "kind": "changed",
+        "text": "Line of sight is now checked once, when the channel begins, instead of on every missile. A target moving out of sight mid-channel no longer stops the missiles."
+      },
+      {
+        "name": "Wake of Fire",
+        "kind": "changed",
+        "spec": "Fire",
+        "text": "The Fire Blast buff lasts longer.",
+        "changes": [{ "label": "Buff duration", "before": "20 sec", "after": "30 sec" }],
+        "devNote": "Wake of Fire was difficult to make proper use of while leveling, due to the Mage needing to restore mana between combat. The increased duration should help smooth out the experience."
+      },
+      {
+        "name": "Hot Streak",
+        "kind": "changed",
+        "spec": "Fire",
+        "text": "The buff lasts longer.",
+        "changes": [{ "label": "Buff duration", "before": "15 sec", "after": "20 sec" }]
+      },
+      { "name": "Ignite", "kind": "fix", "spec": "Fire", "text": "No longer double-dips on % damage increase modifiers." }
+    ],
+    "paladin": [
+      {
+        "name": "Holy Strike",
+        "kind": "changed",
+        "text": "More damage at nearly every rank, and a shorter cooldown (the cooldown change comes from Improved Holy Strike's removal, below).",
+        "changes": [
+          {
+            "label": "% of weapon damage, ranks 1-8",
+            "before": "25% / 25% / 30% / 30% / 35% / 35% / 40% / 40%",
+            "after": "25% / 29% / 32% / 36% / 39% / 43% / 46% / 50%"
+          },
+          { "label": "Cooldown", "before": "12 sec", "after": "10 sec" }
+        ],
+        "devNote": "This increases Holy Strike's damage at all points while leveling, and increases how much it contributes to your rotation. Early ranks of Holy Strike didn't always feel like an upgrade when purchasing a new rank, and we wanted to adjust that."
+      },
+      {
+        "name": "Improved Holy Strike",
+        "kind": "removed",
+        "spec": "Holy",
+        "text": "Removed from the Holy talent tree. Its cooldown reduction is now baseline on Holy Strike.",
+        "devNote": "Even though there are sometimes cases where talents feel 'required' by classes, like Relentless Strikes for Rogues, having one that reduces the cooldown of a core ability so early on in a healing talent tree made this feel like a talent that was required. So we've removed it and made its behavior baseline."
+      },
+      {
+        "name": "Holy Power",
+        "kind": "changed",
+        "spec": "Holy",
+        "text": "Its critical strike bonus now also covers Holy Strike (15% at max rank); everything else about it is unchanged.",
+        "changes": [
+          {
+            "label": "Max rank",
+            "before": "Increases the critical strike chance of your Holy Shock spell by 15%, and all other spells by 5%.",
+            "after": "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 15%, and all other spells by 5%."
+          }
+        ]
+      },
+      {
+        "name": "Light's Vigil",
+        "kind": "changed",
+        "spec": "Holy",
+        "text": "Tooltip reorganized to make clear that only the damage version returns some of the Mana cost."
+      },
+      {
+        "name": "Vengeance",
+        "kind": "changed",
+        "spec": "Retribution",
+        "text": "Now triggers off non-periodic critical strikes only, and stacks less.",
+        "changes": [{ "label": "Max stacks", "before": "5", "after": "3" }]
+      },
+      {
+        "name": "Two-Handed Weapon Specialization",
+        "kind": "changed",
+        "spec": "Retribution",
+        "text": "Smaller damage increase per rank.",
+        "changes": [{ "label": "Damage increase", "before": "3% / 6% / 9%", "after": "2% / 4% / 6%" }]
+      },
+      {
+        "name": "Sacred Arbiter",
+        "kind": "changed",
+        "spec": "Retribution",
+        "text": "Bigger Holy Strike damage bonus.",
+        "changes": [{ "label": "Holy Strike damage", "before": "+10%", "after": "+20%" }]
+      },
+      {
+        "name": "Twist of Light",
+        "kind": "changed",
+        "spec": "Retribution",
+        "text": "Also reduces the Mana cost of your Seal spells by 20%."
+      },
+      { "name": "Echo of Justice", "kind": "fix", "spec": "Retribution", "text": "Had a higher than intended chance to activate; corrected." },
+      {
+        "name": "Righteous Fury",
+        "kind": "changed",
+        "text": "Less Holy threat.",
+        "changes": [{ "label": "Holy threat increase", "before": "90%", "after": "60%" }]
+      },
+      {
+        "name": "Retribution Aura",
+        "kind": "changed",
+        "text": "Its damage now updates dynamically from the caster's spell power."
+      },
+      { "name": "Flash of Light", "kind": "fix", "text": "The cast animation now plays at the end of the cast." },
+      {
+        "name": "Consecration",
+        "kind": "fix",
+        "text": "Several fixes: it now applies its increased damage to every target, its vertical reach is consistent, and it no longer pulls targets from above or below the caster."
+      }
+    ],
+    "priest": [
+      { "name": "Renew", "kind": "fix", "text": "Can now land critical hits." },
+      {
+        "name": "Power Word: Shield",
+        "kind": "fix",
+        "text": "Can now always overwrite an existing Power Word: Shield on a target that does not have Weakened Soul."
+      },
+      { "name": "Contingency Plan", "kind": "fix", "race": "Gnome", "text": "Can now land critical hits." },
+      {
+        "name": "Confounding Flash",
+        "kind": "changed",
+        "race": "Gnome",
+        "text": "Now has a cast visual, more Holy-flavored than Arcane, with matching sounds."
+      },
+      {
+        "name": "Starshards",
+        "kind": "fix",
+        "race": "Night Elf",
+        "text": "Now correctly gains resistance to spell pushback from the Twilight Focus talent."
+      },
+      {
+        "name": "Dark Sacrifice",
+        "kind": "fix",
+        "race": "Undead",
+        "text": "No longer breaks crowd control that breaks on damage. Its tooltip now correctly says the Mana gained scales with Spirit."
+      }
+    ],
+    "rogue": [
+      { "name": "Sap", "kind": "fix", "text": "Now correctly flags the Rogue for PvP when used on a PvP-flagged target." }
+    ],
+    "shaman": [
+      {
+        "name": "Lightning Bolt",
+        "kind": "changed",
+        "text": "Damage on ranks 3 and 4 increased so they are always upgrades over the previous rank, despite their changed cast times."
+      },
+      {
+        "name": "Elemental Fury",
+        "kind": "moved",
+        "spec": "Elemental",
+        "text": "Swaps places with Elemental Alacrity: Elemental Fury moves from row 3 to row 6, and now requires Call of Thunder.",
+        "changes": [{ "label": "Position", "before": "Row 3", "after": "Row 6" }],
+        "devNote": "Critical Strike damage increases early on in trees are exciting for other specializations, but its not as exciting for the core specialization while leveling, since they don't have enough critical strike chance to really appreciate it. So we're moving one of the better talents for Elemental Shaman functionality, earlier in the tree, to allow them to feel like they're hitting important progression moments (something Elemental has lacked in the early levels). We understand that this affects Enhancement Shaman's critical strike damage with spells, but we will use this room created to add more to Enhancement Shaman in the future."
+      },
+      {
+        "name": "Elemental Alacrity",
+        "kind": "moved",
+        "spec": "Elemental",
+        "text": "Moves up to row 3 and no longer requires Call of Thunder. Call of Thunder now requires Elemental Alacrity instead of Elemental Fury.",
+        "changes": [{ "label": "Position", "before": "Row 6", "after": "Row 3" }]
+      },
+      {
+        "name": "Lava Burst",
+        "kind": "changed",
+        "spec": "Elemental",
+        "text": "Damage on ranks 1 and 2 raised to be about 10% more base damage than the Lightning Bolt rank learned around the same level.",
+        "changes": [
+          { "label": "Rank 1", "before": "106 to 134 Fire damage", "after": "150 to 192 Fire damage" },
+          { "label": "Rank 2", "before": "164 to 210 Fire damage", "after": "179 to 229 Fire damage" }
+        ]
+      },
+      {
+        "name": "Rage of the Farseer",
+        "kind": "changed",
+        "spec": "Enhancement",
+        "text": "No longer increases spell casting speed.",
+        "changes": [
+          {
+            "before": "Increases your melee attack speed and spell casting speed by 30% for 25 sec.",
+            "after": "Increases your attack speed by 30% for 25 sec."
+          }
+        ],
+        "devNote": "Rage of the Far Seer's spell casting speed was not necessary to include for the core functionality of this ability. So we removed it."
+      },
+      { "name": "Riptide", "kind": "fix", "spec": "Restoration", "text": "Can now land critical hits." },
+      {
+        "name": "Flametongue Totem",
+        "kind": "changed",
+        "text": "No longer has a duration and is replaced instantly when another totem is placed. It can no longer be stacked by recasting it, and no longer stacks with Flametongue Weapon or Windfury Totem. Its buff is now labeled 'Flametongue Totem'."
+      },
+      {
+        "name": "Windfury Totem",
+        "kind": "changed",
+        "text": "Its buff is now labeled 'Windfury Totem'. It no longer stacks with Grace of Air Totem or Tranquil Air Totem, even when used by different Shamans in the same group."
+      }
+    ],
+    "warlock": [
+      {
+        "name": "Life Tap",
+        "kind": "fix",
+        "text": "Tooltip now shows the correct amount of Life converted, and only states that the Mana gained scales with Spirit."
+      },
+      {
+        "name": "Sacrifice",
+        "label": "Voidwalker Sacrifice",
+        "kind": "fix",
+        "text": "Now correctly scales with 10% of the Warlock's spell healing."
+      }
+    ],
+    "warrior": [
+      {
+        "name": "Bloodthrill",
+        "kind": "changed",
+        "spec": "Arms",
+        "text": "Twice the chance to activate, but only from Main Hand melee attacks (Cleave and Heroic Strike included).",
+        "changes": [{ "label": "Chance to activate", "before": "2% / 4% / 6% / 8% / 10%", "after": "4% / 8% / 12% / 16% / 20%" }]
+      },
+      {
+        "name": "Slam",
+        "kind": "changed",
+        "spec": "Arms",
+        "text": "Longer cooldown.",
+        "changes": [{ "label": "Cooldown", "before": "15 sec", "after": "18 sec" }]
+      },
+      {
+        "name": "Improved Slam",
+        "kind": "changed",
+        "spec": "Arms",
+        "text": "Now also reduces Slam's cooldown, by 1.5 sec at rank 1 and 3 sec at rank 2, and Slam no longer delays your melee swing."
+      },
+      {
+        "name": "Sunder Armor",
+        "kind": "fix",
+        "text": "Threat values corrected on every rank, including a small increase to the threat generated from Attack Power."
+      },
+      {
+        "name": "Bastion",
+        "kind": "moved",
+        "spec": "Protection",
+        "text": "Swaps places with Focused Rage (rows 5 and 6). Not yet in the beta client data our planner reads, so the planner still shows the old order.",
+        "devNote": "We wanted to give players Focused Rage sooner to smooth out progression, as opposed to more damage from Bastion. This should smooth out some of the feeling while leveling as Protection before obtaining Shield Slam."
+      },
+      {
+        "name": "Focused Rage",
+        "kind": "moved",
+        "spec": "Protection",
+        "text": "The other half of the Bastion swap: Focused Rage is meant to come earlier in the tree."
+      }
+    ]
+  },
+  "races": [
+    {
+      "name": "Eureka!",
+      "kind": "changed",
+      "race": "Gnome",
+      "raceId": "gnome",
+      "text": "Now a flat 10% discount on Mana, Rage or Energy abilities for every class, instead of a different discount per class.",
+      "changes": [
+        {
+          "before": "Your next 3 damaging abilities cost less (50% less Mana, 40% less Rage, 20% less Energy; 15% less Mana for healers, who also heal 10% more) and deal 10% more damage.",
+          "after": "Your next 3 damaging abilities cost 10% less (Mana, Rage or Energy) and deal 10% more damage. For healers, your next 3 damaging or healing abilities cost 10% less Mana and do 10% more."
+        }
+      ]
+    },
+    {
+      "name": "Will to Survive",
+      "kind": "changed",
+      "race": "Human",
+      "raceId": "human",
+      "text": "Its visual now matches Dispel Magic instead of Will of the Forsaken."
+    },
+    {
+      "name": "Cultivation",
+      "kind": "changed",
+      "race": "Tauren",
+      "raceId": "tauren",
+      "text": "Every herb now has a player-level requirement: the herb's Herbalism skill requirement divided by 5. Herbs needing more than 300 Herbalism skill can be Cultivated at player level 60."
+    },
+    {
+      "name": "Touch of the Grave",
+      "kind": "changed",
+      "race": "Undead",
+      "raceId": "undead",
+      "text": "No longer breaks crowd control, and only activates from spells and abilities with a damage component.",
+      "changes": [
+        {
+          "before": "Your spells and attacks have a chance (10% for casters, 5% for melee) to drain Health from the target, up to 5% of your maximum Health. 1 sec internal cooldown.",
+          "after": "Your spells and attacks with a damage part have a chance (10% for casters, 5% for melee) to drain Health from the target, up to 5% of your maximum Health. 1 sec internal cooldown. Does not break crowd control."
+        }
+      ],
+      "devNote": "This means that Shadow Word: Pain activates it on cast, but not on periodic damage. Distract won't activate it, you can't pull Rogues and Druids out of Stealth with Distract and it activating, and you won't activate it off of Pickpocketing. Spells like Polymorph already didn't get broken by Touch of the Grave, but Polymorph will no longer be able to activate it."
+    }
+  ],
+  "other": [
+    {
+      "heading": "Items",
+      "points": [
+        {
+          "text": "Wizard Oils go back to their Classic Era values: Minor 8, Lesser 16, plain Wizard Oil 24. Brilliant Wizard Oil is unchanged.",
+          "links": [
+            { "label": "Minor Wizard Oil", "href": "/items/20744" },
+            { "label": "Lesser Wizard Oil", "href": "/items/20746" },
+            { "label": "Wizard Oil", "href": "/items/20750" }
+          ]
+        },
+        { "text": "Wands no longer gain any additional damage from the user's spell damage." },
+        { "text": "A number of quest rewards were updated to the correct item level, and a small number of early caster rewards were adjusted." },
+        { "text": "A handful of guns and bows that weren't correctly using ammunition were fixed." }
+      ]
+    },
+    {
+      "heading": "Talent respec (temporary)",
+      "points": [
+        {
+          "text": "For the beta only, a respec costs 1 silver if you haven't recently changed talents. After the first reset the next cost is much higher, dropping back to 1 silver after an hour."
+        }
+      ]
+    },
+    {
+      "heading": "Cooldown Manager and gamepad (client features)",
+      "points": [
+        {
+          "text": "A new Cooldown Manager (off by default, Options > Gameplay Enhancement) can move tracked buffs and cooldowns to a customizable spot. Druid, Mage, Priest, Warrior and Warlock are testable; it doesn't support spell ranks yet."
+        },
+        {
+          "text": "Gamepad: class-specific flyouts (Druid forms, Hunter/Warlock pets, Paladin auras, Warrior stances), a compact action bar, fixed party targeting, and several layout options."
+        }
+      ]
+    },
+    {
+      "heading": "Quests",
+      "points": [
+        {
+          "text": "Many respawn, spawn-count and objective tweaks across Dun Morogh, Durotar, Elwynn Forest, Mulgore, Silverpine, Teldrassil (\"Bounty: Gnarlpine Furbolg\" now asks for 15, was 20), Undercity, Westfall and Zephras Isle; a Silithus event removed from the beta; dungeon quests are no longer shareable."
+        }
+      ]
+    },
+    {
+      "heading": "Bug fixes and interface",
+      "points": [
+        {
+          "text": "Fixes for caster precast animations, Campfire buffs while sitting or crafting, Pet Happiness at max loyalty, several Mac display problems, a memory leak, and mail ignoring surnames; plus updated Nameplate and Personal Resource Display visuals and a few sound tweaks."
+        },
+        {
+          "text": "Blizzard also lists known issues (mostly Cooldown Manager tracking gaps and a Stormwind minimap display bug) in the original post."
+        }
+      ]
+    }
+  ]
+}
