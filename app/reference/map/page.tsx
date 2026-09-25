@@ -37,6 +37,7 @@ export default function MapPage() {
               key={pin.dungeonId}
               x={pin.x}
               y={pin.y}
+              dungeonId={pin.dungeonId}
               name={pin.dungeon.name}
               levelRange={`${pin.dungeon.levelMin}-${pin.dungeon.levelMax}`}
             />
