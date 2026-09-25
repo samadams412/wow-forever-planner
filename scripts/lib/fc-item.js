@@ -74,6 +74,37 @@ function loadTooltipOverlay() {
   return _tooltipOverlay;
 }
 
+// Unlike the overlay above (fills in tooltips a "same" item never had), a
+// refresh OVERRIDES a raw record's own x/l with newer live-page values --
+// for items whose bulk export went stale after a beta patch (see
+// scripts/fetch-item-refresh.js). Every item-refresh-*.json is merged, later
+// date wins per id. Only the fields a patch actually changed are present
+// ({x?: tooltip lines, l?: item level}).
+let _itemRefresh = null;
+function loadItemRefresh() {
+  if (_itemRefresh === null) {
+    const fs = require("fs");
+    const path = require("path");
+    const sourcesDir = path.join(__dirname, "..", "..", "data", "sources", "foreverchanges");
+    const files = fs
+      .readdirSync(sourcesDir)
+      .filter((f) => /^item-refresh-\d{4}-\d{2}-\d{2}\.json$/.test(f))
+      .sort();
+    const merged = {};
+    for (const file of files) {
+      Object.assign(merged, JSON.parse(fs.readFileSync(path.join(sourcesDir, file), "utf8")));
+    }
+    _itemRefresh = merged;
+  }
+  return _itemRefresh;
+}
+
+function applyItemRefresh(raw) {
+  const patch = raw.i === undefined ? null : loadItemRefresh()[raw.i];
+  if (!patch) return raw;
+  return { ...raw, ...(patch.x ? { x: patch.x } : {}), ...(patch.l != null ? { l: patch.l } : {}) };
+}
+
 function overlayTooltipFor(raw) {
   if (raw.i === undefined) return null;
   return loadTooltipOverlay()[raw.i] ?? null;
@@ -117,7 +148,8 @@ function buildSyntheticTooltip(raw) {
   return lines.length ? lines : null;
 }
 
-function fcItemToUnified(raw) {
+function fcItemToUnified(rawIn) {
+  const raw = applyItemRefresh(rawIn);
   const overlayTooltip = raw.x ? null : overlayTooltipFor(raw);
   const tooltip = raw.x ?? overlayTooltip ?? buildSyntheticTooltip(raw);
   // Real text either way once an overlay hit is available -- overlayTooltip

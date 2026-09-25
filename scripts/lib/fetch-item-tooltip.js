@@ -38,7 +38,10 @@ async function fetchItemTooltip(itemId) {
   const bodyEnd = html.indexOf("it-foot", bodyStart);
   const bodyHtml = html.slice(bodyStart, bodyEnd === -1 ? undefined : bodyEnd);
 
-  const lineRe = /it-line it-\w+">(.*?)<\/div>/g;
+  // A line can carry extra classes after its colour class (e.g. `it-line
+  // it-green it-add` for a line the beta added) -- `[^"]*` keeps those,
+  // where a bare `">` right after the colour class silently dropped them.
+  const lineRe = /it-line it-\w+[^"]*">(.*?)<\/div>/g;
   const lines = [];
   let match;
   while ((match = lineRe.exec(bodyHtml))) {
@@ -52,7 +55,12 @@ async function fetchItemTooltip(itemId) {
     }
   }
 
-  return { ok: true, lines: lines.length ? lines : null };
+  // The Forever pane header carries the beta client's own item level
+  // ("Item level 15") -- some patches change a reward's level without
+  // touching its tooltip text, so callers comparing against the bulk export
+  // need it too.
+  const ilvlMatch = html.slice(foreverIdx, bodyStart).match(/it-ilvl">Item level (\d+)/);
+  return { ok: true, lines: lines.length ? lines : null, itemLevel: ilvlMatch ? parseInt(ilvlMatch[1], 10) : null };
 }
 
 module.exports = { fetchItemTooltip, FLAG_LINE };

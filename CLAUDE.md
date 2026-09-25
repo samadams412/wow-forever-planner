@@ -65,6 +65,30 @@ verification" and it was never resolved, so our data still has the old
 positions (Tidal Mastery 1.3, Totemic Focus 4.1). Applying it needs another
 build-code frozen-order entry for Restoration.
 
+**Item-data addendum (same session, separate commit):** the bulk item export
+(`data/sources/foreverchanges/items/*.json`) was stale against the live site,
+which tracks beta build 1.60.1.70009. New `scripts/fetch-item-refresh.js`
+re-fetches live pages for a scoped set (all Wizard Oils, all 132 wands, all
+269 dungeon-quest items -- 406 fetches), and writes only items whose tooltip
+or item level differs to `data/sources/foreverchanges/item-refresh-<date>.json`.
+`scripts/lib/fc-item.js` (`applyItemRefresh`) merges every such file onto the
+raw record (x/l) so a rebuild can't revert it -- the fix for the hall-of-thanes
+class of problem, not a hand-edit of generated JSON. Result: 20 real changes --
+Minor/Lesser/plain Wizard Oil now 8/16/24 (Brilliant unchanged, as the notes
+say), 8 wands (Ember, Umbral, Ivory, Wizard's Hand, Glowstar Rod, Dragon
+Finger, Lunar, Deepblaze) with changed stat lines, and 9 quest rewards with
+changed stats. **Zero item-level (`l`) changes across all 406 items**, so the
+patch note's "quest rewards updated to the correct item level" line is not
+reproduced as item levels in the live data; the changed quest-reward stats
+above are the closest observable effect and it is unconfirmed they correspond
+to that line. No wand tooltip states a spell-damage scaling clause, so
+"wands no longer gain damage from spell damage" needed no text edit.
+**Latent bug fixed in `scripts/lib/fetch-item-tooltip.js`:** its line regex
+required `it-line it-<colour>">` and silently skipped any line with an extra
+class (`it-add`, i.e. exactly the lines the beta added). The 2026-09-23
+`item-tooltip-overlay` (only for "same" items) was built with the old regex;
+it probably rarely hit this but was not re-checked.
+
 **Verification gap:** the browser extension was not connected, so structural
 changes were verified by `tsc`, build-code round-trip tests, and dev-server
 HTTP/SSR checks only -- **not visually** (connector arrows for the new
