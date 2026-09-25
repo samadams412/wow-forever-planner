@@ -32,8 +32,8 @@ export default function ZoneMap({
         <svg viewBox={shape.viewBox} className="h-auto w-full" role="img" aria-label={`${zoneName} map`}>
           <defs>
             <radialGradient id={`land-${zoneId}`} cx="35%" cy="30%" r="80%">
-              <stop offset="0%" stopColor="#5a4a2c" />
-              <stop offset="100%" stopColor="#382d1c" />
+              <stop offset="0%" stopColor={shape.landColors?.from ?? "#5a4a2c"} />
+              <stop offset="100%" stopColor={shape.landColors?.to ?? "#382d1c"} />
             </radialGradient>
           </defs>
           <path d={shape.land} fill={`url(#land-${zoneId})`} stroke="#c9a961" strokeWidth={2} strokeOpacity={0.7} />
