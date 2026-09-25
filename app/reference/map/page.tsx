@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import ZoneMap from "@/components/map/ZoneMap";
-import DungeonPinMarker from "@/components/map/DungeonPinMarker";
+import WorldMapZone from "@/components/map/WorldMapZone";
 import { getMapZone, getDungeonPinsForZone } from "@/lib/dungeon-locations";
 import { getDungeon } from "@/lib/dungeons";
 
@@ -22,7 +21,15 @@ export default function MapPage() {
   const pins = getDungeonPinsForZone(ZONE_ID)
     .map((pin) => {
       const dungeon = getDungeon(pin.dungeonId);
-      return dungeon ? { ...pin, dungeon } : null;
+      if (!dungeon) return null;
+      return {
+        dungeonId: pin.dungeonId,
+        x: pin.x,
+        y: pin.y,
+        appearsIn: pin.appearsIn,
+        name: dungeon.name,
+        levelRange: `${dungeon.levelMin}-${dungeon.levelMax}`,
+      };
     })
     .filter((p): p is NonNullable<typeof p> => p !== null);
 
@@ -34,18 +41,7 @@ export default function MapPage() {
         {zone.name} is the first zone while the approach gets proven out.
       </p>
       <div className="mt-6">
-        <ZoneMap zoneId={zone.id} zoneName={zone.name} levelRange={zone.levelRange}>
-          {pins.map((pin) => (
-            <DungeonPinMarker
-              key={pin.dungeonId}
-              x={pin.x}
-              y={pin.y}
-              dungeonId={pin.dungeonId}
-              name={pin.dungeon.name}
-              levelRange={`${pin.dungeon.levelMin}-${pin.dungeon.levelMax}`}
-            />
-          ))}
-        </ZoneMap>
+        <WorldMapZone zoneId={zone.id} zoneName={zone.name} levelRange={zone.levelRange} pins={pins} />
       </div>
     </main>
   );
