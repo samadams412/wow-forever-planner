@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import ContinentSelect from "./ContinentSelect";
 import type { ZoneAreaData, ZoneFaction } from "@/lib/zone-areas";
 import type { EntranceMarker } from "@/lib/map-entrances";
+import type { FlightMaster } from "@/lib/map-flight-masters";
 import type { MapLayers } from "@/lib/map-layers";
 
 const FACTION_DOT_COLOR: Record<ZoneFaction, string> = {
@@ -38,6 +39,12 @@ const LAYER_ROWS: { key: keyof MapLayers; label: string; countKind?: "dungeon" |
   { key: "battlegrounds", label: "Battlegrounds", countKind: "battleground" },
 ];
 
+// A separate section/heading from Layers -- these are individually-placed
+// points of interest (flight masters), not tree/label/entrance-icon display
+// toggles, even though the toggle mechanism itself (a MapLayers key, on by
+// default, persisted in the same URL hash) is identical.
+const POI_ROWS: { key: keyof MapLayers; label: string }[] = [{ key: "flightMasters", label: "Flight masters" }];
+
 // Zone list + search + layer toggles, all under the existing continent
 // dropdown -- see components/map/MapExplorer.tsx for the state (selection,
 // layers) this is driven by; this component is purely presentational.
@@ -46,6 +53,7 @@ export default function MapSidebar({
   current,
   zoneAreas,
   entrances,
+  flightMasters,
   selectedZoneId,
   onSelectZoneRow,
   onSearchPick,
@@ -56,6 +64,7 @@ export default function MapSidebar({
   current: string;
   zoneAreas: ZoneAreaData[];
   entrances: EntranceMarker[];
+  flightMasters: FlightMaster[];
   selectedZoneId: number | null;
   onSelectZoneRow: (areaId: number) => void;
   onSearchPick: (result: SearchResult) => void;
@@ -220,6 +229,26 @@ export default function MapSidebar({
             >
               <span>{row.label}</span>
               {row.countKind && <span className="text-xs opacity-70">{entranceCounts[row.countKind]}</span>}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Points of interest</h2>
+        <div className="mt-1 flex flex-col gap-1">
+          {POI_ROWS.map((row) => (
+            <button
+              key={row.key}
+              type="button"
+              aria-pressed={layers[row.key]}
+              onClick={() => onToggleLayer(row.key)}
+              className={`flex items-center justify-between rounded border px-2 py-1 text-left text-sm ${
+                layers[row.key] ? "border-accent/60 bg-accent/10 text-foreground" : "border-border text-foreground-muted"
+              }`}
+            >
+              <span>{row.label}</span>
+              <span className="text-xs opacity-70">{flightMasters.length}</span>
             </button>
           ))}
         </div>

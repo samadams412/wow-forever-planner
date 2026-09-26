@@ -70,6 +70,26 @@ const TABLES = {
     file: "AreaPOI.csv",
     columns: ["ID", "Name_lang", "Pos", "ContinentID", "AreaID", "Icon", "Importance"],
   },
+  taxinodes: {
+    file: "TaxiNodes.csv",
+    // Flight-master nodes. Flags is the real faction-visibility bitmask
+    // (1 = Alliance, 2 = Horde, 3 = both -- confirmed against known nodes:
+    // Ironforge/Stormwind = 1, Orgrimmar/Thunder Bluff = 2, Ratchet/Marshal's
+    // Refuge/the four Eastern Plaguelands towers = 3), not a guess -- see
+    // scripts/build-flight-masters.js's header comment for the full
+    // derivation and MountCreatureID cross-check. CharacterBitNumber kept
+    // for reference only, not used for exclusion (several legitimate nodes,
+    // e.g. the EPL towers, carry 0 there).
+    columns: [
+      "ID",
+      "Name_lang",
+      "Pos",
+      "ContinentID",
+      "CharacterBitNumber",
+      "Flags",
+      "MountCreatureID",
+    ],
+  },
   // uimap: intentionally absent from this run -- see header comment.
 };
 

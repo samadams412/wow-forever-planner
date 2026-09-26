@@ -1,0 +1,742 @@
+{
+  "_readme": "Flight-master nodes from the client's own TaxiNodes table (data/sources/client-db2/<build>/taxinodes.csv), built by scripts/build-flight-masters.js -- see that script's own header comment for the Flags-bitmask faction derivation, its MountCreatureID cross-check, and the full exclusion reasoning (16 non-player/inactive nodes, plus 2 real flight points on the Alterac Valley battleground instance map that this project's two-continent map doesn't render). `id` is a name slug plus the client's own numeric TaxiNodes id, for traceability back to the source row.",
+  "flightMasters": [
+    {
+      "id": "aerie-peak-the-hinterlands-43",
+      "name": "Aerie Peak, The Hinterlands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 283.739990234375,
+        "y": -2002.760009765625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "booty-bay-stranglethorn-18",
+      "name": "Booty Bay, Stranglethorn",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -14444.2900390625,
+        "y": 509.6199951171875
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "booty-bay-stranglethorn-19",
+      "name": "Booty Bay, Stranglethorn",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -14473.0498046875,
+        "y": 464.1499938964844
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "chillwind-camp-western-plaguelands-66",
+      "name": "Chillwind Camp, Western Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 931.3200073242188,
+        "y": -1430.1099853515625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "crown-guard-tower-eastern-plaguelands-87",
+      "name": "Crown Guard Tower, Eastern Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 1857.56005859375,
+        "y": -3658.469970703125
+      },
+      "faction": "Both",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "darkshire-duskwood-12",
+      "name": "Darkshire, Duskwood",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10515.4599609375,
+        "y": -1261.6500244140625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "eastwall-tower-eastern-plaguelands-86",
+      "name": "Eastwall Tower, Eastern Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 2499.22998046875,
+        "y": -4742.85009765625
+      },
+      "faction": "Both",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "flame-crest-burning-steppes-70",
+      "name": "Flame Crest, Burning Steppes",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -7504.02978515625,
+        "y": -2187.5400390625
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "gromgol-stranglethorn-20",
+      "name": "Grom'gol, Stranglethorn",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -12414.1796875,
+        "y": 146.2899932861328
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "hammerfall-arathi-17",
+      "name": "Hammerfall, Arathi",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -916.2899780273438,
+        "y": -3496.889892578125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "ironforge-dun-morogh-6",
+      "name": "Ironforge, Dun Morogh",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -4821.77978515625,
+        "y": -1155.43994140625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "kargath-badlands-21",
+      "name": "Kargath, Badlands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -6633.990234375,
+        "y": -2180.050048828125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "lakeshire-redridge-5",
+      "name": "Lakeshire, Redridge",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -9429.099609375,
+        "y": -2231.39990234375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "lights-hope-chapel-eastern-plaguelands-67",
+      "name": "Light's Hope Chapel, Eastern Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 2271.090087890625,
+        "y": -5340.7998046875
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "lights-hope-chapel-eastern-plaguelands-68",
+      "name": "Light's Hope Chapel, Eastern Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 2327.409912109375,
+        "y": -5286.89013671875
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "menethil-harbor-wetlands-7",
+      "name": "Menethil Harbor, Wetlands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -3792.260009765625,
+        "y": -783.2899780273438
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "morgans-vigil-burning-steppes-71",
+      "name": "Morgan's Vigil, Burning Steppes",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -8364.6103515625,
+        "y": -2738.35009765625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "nethergarde-keep-blasted-lands-45",
+      "name": "Nethergarde Keep, Blasted Lands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -11112.25,
+        "y": -3435.739990234375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "northpass-tower-eastern-plaguelands-85",
+      "name": "Northpass Tower, Eastern Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 3109.31005859375,
+        "y": -4285.1298828125
+      },
+      "faction": "Both",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "plaguewood-tower-eastern-plaguelands-84",
+      "name": "Plaguewood Tower, Eastern Plaguelands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 2998.7099609375,
+        "y": -3050.10009765625
+      },
+      "faction": "Both",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "refuge-pointe-arathi-16",
+      "name": "Refuge Pointe, Arathi",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -1240.530029296875,
+        "y": -2515.110107421875
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "revantusk-village-the-hinterlands-76",
+      "name": "Revantusk Village, The Hinterlands",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -635.260009765625,
+        "y": -4720.5
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "sentinel-hill-westfall-4",
+      "name": "Sentinel Hill, Westfall",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10628.8896484375,
+        "y": 1036.6800537109375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "southshore-hillsbrad-14",
+      "name": "Southshore, Hillsbrad",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -711.47998046875,
+        "y": -515.47998046875
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "stonard-swamp-of-sorrows-56",
+      "name": "Stonard, Swamp of Sorrows",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10456.9697265625,
+        "y": -3279.25
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "stormwind-elwynn-2",
+      "name": "Stormwind, Elwynn",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -8840.5595703125,
+        "y": 489.70001220703125
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "tarren-mill-hillsbrad-13",
+      "name": "Tarren Mill, Hillsbrad",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -0.05999999865889549,
+        "y": -859.9099731445312
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "the-sepulcher-silverpine-forest-10",
+      "name": "The Sepulcher, Silverpine Forest",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 478.8599853515625,
+        "y": 1536.5899658203125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "thelsamar-loch-modan-8",
+      "name": "Thelsamar, Loch Modan",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -5421.91015625,
+        "y": -2930.010009765625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "thorium-point-searing-gorge-74",
+      "name": "Thorium Point, Searing Gorge",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -6552.58984375,
+        "y": -1168.27001953125
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "thorium-point-searing-gorge-75",
+      "name": "Thorium Point, Searing Gorge",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -6554.93017578125,
+        "y": -1100.050048828125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "undercity-tirisfal-11",
+      "name": "Undercity, Tirisfal",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 1568.6199951171875,
+        "y": 267.9700012207031
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "astranaar-ashenvale-28",
+      "name": "Astranaar, Ashenvale",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2827.340087890625,
+        "y": -289.239990234375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "auberdine-darkshore-26",
+      "name": "Auberdine, Darkshore",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 6341.3798828125,
+        "y": 557.6799926757812
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "bloodvenom-post-felwood-48",
+      "name": "Bloodvenom Post, Felwood",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 5068.39990234375,
+        "y": -337.2200012207031
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "brackenwall-village-dustwallow-marsh-55",
+      "name": "Brackenwall Village, Dustwallow Marsh",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -3147.389892578125,
+        "y": -2842.179931640625
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "camp-mojache-feralas-42",
+      "name": "Camp Mojache, Feralas",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -4419.85986328125,
+        "y": 199.30999755859375
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "camp-taurajo-the-barrens-77",
+      "name": "Camp Taurajo, The Barrens",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -2380.669921875,
+        "y": -1882.6700439453125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "cenarion-hold-silithus-72",
+      "name": "Cenarion Hold, Silithus",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -6811.39013671875,
+        "y": 836.739990234375
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "cenarion-hold-silithus-73",
+      "name": "Cenarion Hold, Silithus",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -6761.830078125,
+        "y": 772.030029296875
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "crossroads-the-barrens-25",
+      "name": "Crossroads, The Barrens",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -441.79998779296875,
+        "y": -2596.080078125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "everlook-winterspring-52",
+      "name": "Everlook, Winterspring",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 6799.240234375,
+        "y": -4742.43994140625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "everlook-winterspring-53",
+      "name": "Everlook, Winterspring",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 6813.06005859375,
+        "y": -4611.1201171875
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "feathermoon-feralas-41",
+      "name": "Feathermoon, Feralas",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -4373.7998046875,
+        "y": 3338.64990234375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "freewind-post-thousand-needles-30",
+      "name": "Freewind Post, Thousand Needles",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -5407.7099609375,
+        "y": -2414.300048828125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "gadgetzan-tanaris-39",
+      "name": "Gadgetzan, Tanaris",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -7223.97021484375,
+        "y": -3734.590087890625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "gadgetzan-tanaris-40",
+      "name": "Gadgetzan, Tanaris",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -7048.89013671875,
+        "y": -3780.360107421875
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "marshals-refuge-ungoro-crater-79",
+      "name": "Marshal's Refuge, Un'Goro Crater",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -6113.81982421875,
+        "y": -1142.699951171875
+      },
+      "faction": "Both",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "moonglade-49",
+      "name": "Moonglade",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 7458.4501953125,
+        "y": -2487.2099609375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "moonglade-69",
+      "name": "Moonglade",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 7470.39013671875,
+        "y": -2123.3798828125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "nighthaven-moonglade-62",
+      "name": "Nighthaven, Moonglade",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 7793.60986328125,
+        "y": -2403.469970703125
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "nighthaven-moonglade-63",
+      "name": "Nighthaven, Moonglade",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 7787.72021484375,
+        "y": -2404.10009765625
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "nijels-point-desolace-37",
+      "name": "Nijel's Point, Desolace",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 139.24000549316406,
+        "y": 1325.8199462890625
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "orgrimmar-durotar-23",
+      "name": "Orgrimmar, Durotar",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 1677.5899658203125,
+        "y": -4315.7099609375
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "ratchet-the-barrens-80",
+      "name": "Ratchet, The Barrens",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -894.5900268554688,
+        "y": -3773.010009765625
+      },
+      "faction": "Both",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "ruttheran-village-teldrassil-27",
+      "name": "Rut'theran Village, Teldrassil",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 8643.58984375,
+        "y": 841.0499877929688
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "shadowprey-village-desolace-38",
+      "name": "Shadowprey Village, Desolace",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -1767.6400146484375,
+        "y": 3263.889892578125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "splintertree-post-ashenvale-61",
+      "name": "Splintertree Post, Ashenvale",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2302.389892578125,
+        "y": -2524.550048828125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "stonetalon-peak-stonetalon-mountains-33",
+      "name": "Stonetalon Peak, Stonetalon Mountains",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2681.1298828125,
+        "y": 1461.6800537109375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "sun-rock-retreat-stonetalon-mountains-29",
+      "name": "Sun Rock Retreat, Stonetalon Mountains",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 966.5700073242188,
+        "y": 1040.3199462890625
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "talonbranch-glade-felwood-65",
+      "name": "Talonbranch Glade, Felwood",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 6205.8798828125,
+        "y": -1949.6300048828125
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "talrendis-point-azshara-64",
+      "name": "Talrendis Point, Azshara",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2721.989990234375,
+        "y": -3880.639892578125
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "thalanaar-feralas-31",
+      "name": "Thalanaar, Feralas",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -4491.8798828125,
+        "y": -775.8900146484375
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "theramore-dustwallow-marsh-32",
+      "name": "Theramore, Dustwallow Marsh",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -3825.3701171875,
+        "y": -4516.580078125
+      },
+      "faction": "Alliance",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "thunder-bluff-mulgore-22",
+      "name": "Thunder Bluff, Mulgore",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -1197.2099609375,
+        "y": 29.709999084472656
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "valormok-azshara-44",
+      "name": "Valormok, Azshara",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 3661.52001953125,
+        "y": -4390.3798828125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    },
+    {
+      "id": "zoramgar-outpost-ashenvale-58",
+      "name": "Zoram'gar Outpost, Ashenvale",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 3374.7099609375,
+        "y": 996.969970703125
+      },
+      "faction": "Horde",
+      "source": "Forever client (TaxiNodes)"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { DEFAULT_MAP_LAYERS, type MapLayers } from "@/lib/map-layers";
 import type { FullGridCorners } from "@/lib/map-coords";
 import type { ZoneAreaData } from "@/lib/zone-areas";
 import type { EntranceMarker } from "@/lib/map-entrances";
+import type { FlightMaster } from "@/lib/map-flight-masters";
 
 // Owns every piece of state that has to be shared between the sidebar and
 // the map (selection, layer toggles) plus the URL hash that persists them
@@ -18,13 +19,21 @@ import type { EntranceMarker } from "@/lib/map-entrances";
 
 const LAYER_KEYS = Object.keys(DEFAULT_MAP_LAYERS) as (keyof MapLayers)[];
 
-function parseHash(hash: string): { sel: string | null; off: Set<keyof MapLayers> } {
+function parseHash(hash: string): {
+  sel: string | null;
+  off: Set<keyof MapLayers>;
+  view: { x: number; y: number; z: number } | null;
+} {
   const params = new URLSearchParams(hash.replace(/^#/, ""));
   const off = new Set<keyof MapLayers>();
   for (const key of (params.get("off") ?? "").split(",")) {
     if (LAYER_KEYS.includes(key as keyof MapLayers)) off.add(key as keyof MapLayers);
   }
-  return { sel: params.get("sel"), off };
+  const x = parseFloat(params.get("x") ?? "");
+  const y = parseFloat(params.get("y") ?? "");
+  const z = parseFloat(params.get("z") ?? "");
+  const view = Number.isFinite(x) && Number.isFinite(y) && Number.isFinite(z) ? { x, y, z } : null;
+  return { sel: params.get("sel"), off, view };
 }
 
 export default function MapExplorer({
@@ -33,6 +42,7 @@ export default function MapExplorer({
   mapConfig,
   zoneAreas,
   entrances,
+  flightMasters,
 }: {
   continentId: string;
   registeredContinents: { id: string; name: string }[];
@@ -47,6 +57,7 @@ export default function MapExplorer({
   };
   zoneAreas: ZoneAreaData[];
   entrances: EntranceMarker[];
+  flightMasters: FlightMaster[];
 }) {
   const [selectedZoneId, setSelectedZoneId] = useState<number | null>(null);
   const [selectedEntranceId, setSelectedEntranceId] = useState<string | null>(null);
@@ -125,7 +136,23 @@ export default function MapExplorer({
   // case react-hooks/set-state-in-effect's own docs call out as a
   // legitimate (if edge-case) use of an effect.
   useEffect(() => {
-    const { sel, off } = parseHash(window.location.hash);
+    const { sel, off, view } = parseHash(window.location.hash);
+    // Primes viewRef directly from the hash, without waiting for a real
+    // moveend -- LeafletZoneMap's own mount effect independently parses this
+    // same x/y/z and calls map.setView() with it, but per that component's
+    // own header comment, a map's very first setView (before Leaflet
+    // considers itself "loaded") never fires moveend, so onViewChange/
+    // reportView would otherwise never run and viewRef.current would stay
+    // null until the user's first real pan/zoom. Confirmed live: without
+    // this, toggling a layer (or picking a sidebar zone) immediately after
+    // opening a shared link -- before ever touching the map -- silently
+    // failed to persist, since writeHash's own `viewRef.current !== null`
+    // guard (see that function's header comment for why the guard exists at
+    // all) blocked it. Priming from the hash is safe specifically because
+    // it's the same value LeafletZoneMap is about to render anyway, unlike
+    // the reload-clobber bug that guard was originally added for, where the
+    // ref was null because the true view genuinely wasn't known yet.
+    if (view) viewRef.current = view;
     if (off.size) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setLayers((prev) => {
@@ -218,6 +245,7 @@ export default function MapExplorer({
           current={continentId}
           zoneAreas={zoneAreas}
           entrances={entrances}
+          flightMasters={flightMasters}
           selectedZoneId={selectedZoneId}
           onSelectZoneRow={handleSelectZoneRow}
           onSearchPick={handleSearchPick}
@@ -238,6 +266,7 @@ export default function MapExplorer({
           fullGridCorners={mapConfig.fullGridCorners}
           zoneAreas={zoneAreas}
           entrances={entrances}
+          flightMasters={flightMasters}
           selectedZoneId={selectedZoneId}
           onSelectZone={handleSelectZoneOnMap}
           onViewChange={handleViewChange}

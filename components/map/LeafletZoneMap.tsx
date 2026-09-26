@@ -5,6 +5,7 @@ import L from "leaflet";
 import { worldToLatLng, latLngToWorld, type FullGridCorners } from "@/lib/map-coords";
 import type { ZoneAreaData, ZoneAreaGeometry } from "@/lib/zone-areas";
 import type { EntranceMarker, EntranceInfo, EntranceKind } from "@/lib/map-entrances";
+import type { FlightMaster, FlightMasterFaction } from "@/lib/map-flight-masters";
 import type { MapLayers } from "@/lib/map-layers";
 // NOT imported here -- this component is loaded via next/dynamic(...,
 // { ssr: false }) (see LeafletZoneMapLoader.tsx), and a CSS side-effect
@@ -60,6 +61,30 @@ const ENTRANCE_ICON_COLOR: Record<EntranceKind, string> = {
   battleground: "#ff6b6b",
 };
 
+// Same fade-in/scale curve as ENTRANCE_ICON_ZOOM above (see that constant's
+// own comment for the mechanics -- a single CSS custom property set on the
+// shared "pins" pane on zoomend, read by every marker's inner element), just
+// a later fadeInFrom: flight masters are far more numerous than dungeon/
+// raid/battleground entrances, so they'd clutter a whole-continent view if
+// they appeared as early as z2.5.
+export const FLIGHT_MASTER_ICON_ZOOM = {
+  fadeInFrom: 3,
+  sizeAtFadeIn: 16,
+  sizeAtMax: 32,
+  maxZoomForSizing: 6,
+} as const;
+
+// Reuses this map's existing faction color language (alliance blue / horde
+// red / contested-or-neutral gold -- see FACTION_COLOR above) rather than
+// inventing a second palette. "Both" isn't literally "contested" the way a
+// zone's territory can be, but it's the same "neither side alone" case
+// visually, so it gets the same gold.
+const FLIGHT_MASTER_FACTION_COLOR: Record<FlightMasterFaction, string> = {
+  Alliance: FACTION_COLOR.alliance,
+  Horde: FACTION_COLOR.horde,
+  Both: FACTION_COLOR.contested,
+};
+
 const ENTRANCE_KIND_LABEL: Record<EntranceKind, string> = {
   dungeon: "Dungeon",
   raid: "Raid",
@@ -103,6 +128,35 @@ function entranceIconSvg(kind: EntranceKind): string {
     return `<svg viewBox="0 0 32 32" width="100%" height="100%"><circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/><path d="M9 9 L23 23 M23 9 L9 23" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/></svg>`;
   }
   return `<svg viewBox="0 0 32 32" width="100%" height="100%"><circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/><path d="M10 20 V13 A6 6 0 0 1 22 13 V20" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+}
+
+// A simple original glyph (not client art -- see entranceIconSvg's own
+// comment on the same policy): an L-profile boot (shaft, heel, flat sole)
+// with two feather shapes fanning off the ankle. Tinted by faction via
+// FLIGHT_MASTER_FACTION_COLOR. Checked at full render size before trusting
+// it -- an earlier version (a plain vertical bar with a flared base) read
+// as the numeral "1" once shrunk to icon size, not a boot at all.
+function flightMasterIconSvg(faction: FlightMasterFaction): string {
+  const color = FLIGHT_MASTER_FACTION_COLOR[faction];
+  return (
+    `<svg viewBox="0 0 32 32" width="100%" height="100%">` +
+    `<circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/>` +
+    `<path d="M15 9 Q7 5 4 10 Q9 11 15 10 Z" fill="${color}" opacity="0.55"/>` +
+    `<path d="M15 11 Q8 9 6 14 Q11 14 15 12 Z" fill="${color}" opacity="0.8"/>` +
+    `<path d="M13 6 L19 6 L19 17 L19 19 L24 19 Q27 19 27 21.5 Q27 24 24 24 L8 24 L8 19.5 Q8 17.5 10 17 L13 17 Z" fill="${color}"/>` +
+    `</svg>`
+  );
+}
+
+function flightMasterPopupHtml(f: FlightMaster): string {
+  return (
+    `<div style="font-family:inherit;text-align:center;min-width:180px">` +
+    `<strong style="color:#c9a961;font-size:14px">${f.name}</strong><br/>` +
+    `<span style="opacity:.85">${f.faction} flight master</span>` +
+    `<div style="margin-top:5px;font-size:11px;opacity:.6">Source: ${f.source}</div>` +
+    `<div style="font-size:11px;opacity:.6">world ${Math.round(f.worldPosition.x)}, ${Math.round(f.worldPosition.y)}</div>` +
+    `</div>`
+  );
 }
 
 function entranceLevelText(m: { levelMin: number | null; levelMax: number | null }): string {
@@ -219,6 +273,7 @@ type ZoneEntry = {
 };
 
 type EntranceMarkerEntry = { id: string; kind: EntranceKind; marker: L.Marker };
+type FlightMasterMarkerEntry = { id: string; marker: L.Marker };
 
 // Real tiled map (wow.export-extracted client art, sliced by
 // scripts/slice-map-tiles.js), rendered with Leaflet's CRS.Simple -- this
@@ -244,6 +299,7 @@ const LeafletZoneMap = forwardRef<
     fullGridCorners: FullGridCorners;
     zoneAreas: ZoneAreaData[];
     entrances: EntranceMarker[];
+    flightMasters: FlightMaster[];
     selectedZoneId: number | null;
     onSelectZone: (areaId: number | null) => void;
     onViewChange: (view: { x: number; y: number; z: number }) => void;
@@ -264,6 +320,7 @@ const LeafletZoneMap = forwardRef<
     fullGridCorners,
     zoneAreas,
     entrances,
+    flightMasters,
     selectedZoneId,
     onSelectZone,
     onViewChange,
@@ -276,6 +333,7 @@ const LeafletZoneMap = forwardRef<
   const mapRef = useRef<L.Map | null>(null);
   const zoneEntriesRef = useRef<Map<number, ZoneEntry>>(new Map());
   const entranceMarkersRef = useRef<EntranceMarkerEntry[]>([]);
+  const flightMasterMarkersRef = useRef<FlightMasterMarkerEntry[]>([]);
   const appliedSelectionRef = useRef<number | null>(null);
   const layersRef = useRef<MapLayers>(layers);
   const updateLabelsRef = useRef<() => void>(() => {});
@@ -618,6 +676,59 @@ const LeafletZoneMap = forwardRef<
       if (!layersRef.current[layerKey]) leafletMarker.getElement()!.style.display = "none";
     }
 
+    // --- Flight master markers ---
+    // Own CSS var pair (distinct from --entrance-icon-*) so this layer's
+    // fade-in/scale curve (FLIGHT_MASTER_ICON_ZOOM, fading in later than
+    // entrance icons) is independent of the dungeon/raid/battleground one,
+    // even though both are set on the same shared "pins" pane and follow
+    // the identical mechanism -- see ENTRANCE_ICON_ZOOM's own comment.
+    pinsPane.style.setProperty("--flight-master-icon-size", `${FLIGHT_MASTER_ICON_ZOOM.sizeAtFadeIn}px`);
+    pinsPane.style.setProperty("--flight-master-icon-opacity", "0");
+
+    function updateFlightMasterIconStyle() {
+      const zoom = map.getZoom();
+      const t = Math.max(
+        0,
+        Math.min(1, (zoom - FLIGHT_MASTER_ICON_ZOOM.fadeInFrom) / (FLIGHT_MASTER_ICON_ZOOM.maxZoomForSizing - FLIGHT_MASTER_ICON_ZOOM.fadeInFrom))
+      );
+      const size = FLIGHT_MASTER_ICON_ZOOM.sizeAtFadeIn + t * (FLIGHT_MASTER_ICON_ZOOM.sizeAtMax - FLIGHT_MASTER_ICON_ZOOM.sizeAtFadeIn);
+      pinsPane.style.setProperty("--flight-master-icon-size", `${size}px`);
+      pinsPane.style.setProperty("--flight-master-icon-opacity", zoom >= FLIGHT_MASTER_ICON_ZOOM.fadeInFrom ? "1" : "0");
+    }
+    map.on("zoomend", updateFlightMasterIconStyle);
+    updateFlightMasterIconStyle();
+
+    const flightMasterMarkerEntries: FlightMasterMarkerEntry[] = [];
+    flightMasterMarkersRef.current = flightMasterMarkerEntries;
+
+    for (const fm of flightMasters) {
+      const innerStyle =
+        `width:var(--flight-master-icon-size, 16px);height:var(--flight-master-icon-size, 16px);` +
+        `opacity:var(--flight-master-icon-opacity, 0);transition:opacity 200ms ease,filter 120ms ease;` +
+        `pointer-events:auto;cursor:pointer;filter:drop-shadow(0 0 3px rgba(0,0,0,.8))`;
+      const icon = L.divIcon({
+        className: "",
+        html:
+          `<div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;pointer-events:none">` +
+          `<div class="flight-master-icon-inner" style="${innerStyle}">${flightMasterIconSvg(fm.faction)}</div>` +
+          `</div>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
+      });
+      const latlng = worldToLatLng(fullGridCorners, gridSize, tileSize, maxNativeZoom, fm.worldPosition.x, fm.worldPosition.y);
+      const leafletMarker = L.marker(latlng, { icon, pane: "pins" }).addTo(map).bindPopup(flightMasterPopupHtml(fm));
+      leafletMarker.on("mouseover", () => {
+        const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".flight-master-icon-inner");
+        if (el) el.style.filter = "drop-shadow(0 0 5px rgba(255,255,255,.85)) brightness(1.3)";
+      });
+      leafletMarker.on("mouseout", () => {
+        const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".flight-master-icon-inner");
+        if (el) el.style.filter = "drop-shadow(0 0 3px rgba(0,0,0,.8))";
+      });
+      flightMasterMarkerEntries.push({ id: fm.id, marker: leafletMarker });
+      if (!layersRef.current.flightMasters) leafletMarker.getElement()!.style.display = "none";
+    }
+
     return () => {
       cancelAnimationFrame(rafOuter);
       cancelAnimationFrame(rafInner);
@@ -625,7 +736,7 @@ const LeafletZoneMap = forwardRef<
       mapRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- selectedZoneId/layers/onSelectZone/onViewChange are intentionally handled by their own effects/refs below, not remount triggers
-  }, [mapName, bounds, minZoom, maxNativeZoom, tileSize, gridSize, fullGridCorners, zoneAreas, entrances]);
+  }, [mapName, bounds, minZoom, maxNativeZoom, tileSize, gridSize, fullGridCorners, zoneAreas, entrances, flightMasters]);
 
   // Applies `selectedZoneId` changes to border styling without touching
   // the rest of the map -- keeps MapExplorer's state as the single source
@@ -655,6 +766,10 @@ const LeafletZoneMap = forwardRef<
     for (const entry of entranceMarkersRef.current) {
       const el = entry.marker.getElement();
       if (el) el.style.display = layers[ENTRANCE_LAYER_KEY[entry.kind]] ? "" : "none";
+    }
+    for (const entry of flightMasterMarkersRef.current) {
+      const el = entry.marker.getElement();
+      if (el) el.style.display = layers.flightMasters ? "" : "none";
     }
     updateLabelsRef.current();
   }, [layers]);

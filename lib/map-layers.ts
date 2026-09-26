@@ -14,6 +14,7 @@ export type MapLayers = {
   dungeons: boolean;
   raids: boolean;
   battlegrounds: boolean;
+  flightMasters: boolean;
 };
 
 export const DEFAULT_MAP_LAYERS: MapLayers = {
@@ -23,4 +24,5 @@ export const DEFAULT_MAP_LAYERS: MapLayers = {
   dungeons: true,
   raids: true,
   battlegrounds: true,
+  flightMasters: true,
 };
