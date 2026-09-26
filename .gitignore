@@ -43,16 +43,14 @@ next-env.d.ts
 # local design/reference screenshots -- not site assets, not committed
 /.reference/
 
-# Generated world-map tile pyramids (scripts/slice-map-tiles.js) -- local
-# only, regenerate with `node scripts/slice-map-tiles.js <continent>`.
-# A full continent pyramid is thousands of files/tens-to-hundreds of MB,
-# too large to commit -- see CLAUDE.md's world-map architecture note. Each
-# continent's own meta.json (small, describes the tile grid) is NOT
-# ignored -- the pattern only matches the tiles/ subdirectory, not the
-# whole public/map/<continent>/ folder. public/map/proof-badlands/ predates
-# this rule and stays committed as-is (untouched by this change -- .gitignore
-# never un-tracks files that were already committed).
-public/map/*/tiles/
+# NOTE: the Forever-era tile pyramids (public/map/{eastern-kingdoms,
+# kalimdor}/tiles/) used to be excluded here and were local-only -- reversed
+# 2026-09-25 once actual size was confirmed modest (~69MB / 2,406 files for
+# both continents combined) and committed directly instead, so the deployed
+# site can serve the real map. See CLAUDE.md's world-map architecture notes
+# and docs/map-tile-cdn-plan.md (the future Classic-era toggle, whose source
+# images are far larger, is planned to use object storage + a CDN instead of
+# git -- don't commit those the same way without reading that doc first).
 
 # Client-extracted world-map pin icons (dungeon/raid/battleground entrance
 # art, once extracted from the atlas texture -- see CLAUDE.md's "entrance

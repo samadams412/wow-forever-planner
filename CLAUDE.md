@@ -2544,7 +2544,7 @@ against this crop (the axis swap, the CSS-loading order, the lat-negation)
 carried forward correctly into the real continent map, so nothing from
 this phase needed re-discovering.
 
-### Continent tile pyramid: gitignored, global ADT grid, z0-z6
+### Continent tile pyramid: global ADT grid, z0-z6, now committed
 Added 2026-09-25, once storage/scope decisions were made (see below).
 `scripts/slice-map-tiles.js` was rewritten from the single-crop tool above
 into a general continent tiler: `node scripts/slice-map-tiles.js
@@ -2553,14 +2553,23 @@ are a small `CONTINENTS` config object at the top of the script, not CLI
 flags -- there are only two continents and the source export paths are
 machine-specific anyway).
 
-**Storage decision:** tiles are local-only. `public/map/<continent>/tiles/`
-is gitignored (`.gitignore`'s `public/map/*/tiles/` rule, added *before*
-generating anything, per instruction); `public/map/<continent>/meta.json`
-is committed normally (a few hundred bytes, not matched by that pattern).
-Regenerate with `node scripts/slice-map-tiles.js <continent>` any time the
-source wow.export files change -- there is no other way to reproduce the
-tiles, so don't `git clean` or otherwise discard this directory without
-knowing you can re-run the script.
+**Storage decision, reversed 2026-09-25 (same day, later session):**
+tiles were originally local-only/gitignored (`public/map/*/tiles/`); once
+real size was confirmed modest (~69MB / 2,406 files for both continents
+combined -- well within normal git/GitHub/Vercel limits), they were
+committed directly instead, so the deployed site actually serves the map
+rather than showing a "local-only" notice (the `process.env.VERCEL` gate in
+`app/reference/map/[continent]/page.tsx` that used to show that notice is
+gone). `public/map/<continent>/meta.json` was already committed either way
+(a few hundred bytes, never matched the old gitignore pattern). Regenerate
+with `node scripts/slice-map-tiles.js <continent>` any time the source
+wow.export files change, and commit the result -- there is no other way to
+reproduce the tiles, so don't `git clean` or otherwise discard this
+directory without knowing you can re-run the script. **This decision does
+NOT extend to the future Classic-era map toggle** -- its source images are
+far larger (114-183MB stitched PNGs each, before tiling); see
+`docs/map-tile-cdn-plan.md` for the planned object-storage-+-CDN approach
+for that specifically, written before any of it is built.
 
 **Tile addressing: the global 64x64 ADT grid, not per-image local
 indices.** Every WoW continent map has a fixed 64x64 tile grid (`GRID_SIZE`
@@ -2722,16 +2731,14 @@ mechanism). `lib/map-continents.ts` replaces the old crop-specific
 bounds, min/max zoom, default center/zoom) rather than any of it being
 hand-typed per continent.
 
-**Local-only guard.** Tiles are gitignored (see the tile-pyramid note
-above), so any Vercel deployment -- Preview or Production alike, both
-equally lack the tiles -- would serve a map with no textures. The page
-checks `process.env.VERCEL` (set on every Vercel build, not just
-`VERCEL_ENV === "production"` specifically, since a Preview deploy has the
-exact same missing-tiles problem) and renders a plain notice instead of the
-map when true. Confirmed both branches directly: a normal `next build`
-prerenders the real Leaflet page; `VERCEL=1 next build` prerenders the
-notice instead -- checked by grepping the actual prerendered HTML output
-for each, not just reasoned about.
+**Local-only guard -- removed 2026-09-25.** This page used to check
+`process.env.VERCEL` and render a plain notice instead of the map on any
+Vercel deployment, since tiles were gitignored and genuinely weren't there
+(Preview and Production equally lacked them). Once tiles were committed
+directly (see the tile-pyramid note's "reversed" update above), this guard
+had nothing left to protect against and was deleted outright, along with
+the "Local-only for now" line in the page's own copy -- a Vercel deploy now
+serves the real map, no special-casing needed.
 
 **`LeafletZoneMap.tsx` changes, plus one the component needed that wasn't
 on the original list of three:** `minZoom` is now a prop (was hardcoded
