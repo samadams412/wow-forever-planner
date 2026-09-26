@@ -69,3 +69,9 @@ data/sources/client-db2/*/zone-grid-*.bin
 # polygons drawn over the z3 tile mosaic) -- a local eyeball-check artifact,
 # not a site asset or committed data. Regenerate by re-running that script.
 /debug-output/
+
+# Ad-hoc debug report from a zone-areas build run, not produced by any
+# current script and not a site asset -- accidentally committed once
+# (85.93MB) via a broad `git add`/`git commit` outside a Claude session;
+# untracked and ignored so it can't happen again.
+/.zone-areas-report.json
