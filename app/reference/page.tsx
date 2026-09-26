@@ -125,6 +125,15 @@ export default function ReferencePage() {
               <img src={mediumIconUrl("inv_misc_gem_01")} alt="" className="h-7 w-7 rounded-sm" />
             }
           />
+          <Card
+            href="/reference/map"
+            title="World Map"
+            description="Interactive world map with all the new content and changes from the beta client."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("inv_misc_map_01")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
         </div>
       </div>
     </main>
