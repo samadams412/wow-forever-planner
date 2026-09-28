@@ -53,6 +53,41 @@ body {
   color: var(--foreground);
 }
 
+/* Keep the crafting quantity field's custom +/- controls as its only steppers. */
+.craft-quantity-input {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.craft-quantity-input::-webkit-inner-spin-button,
+.craft-quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.craft-recipe-options {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--surface);
+}
+
+.craft-recipe-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.craft-recipe-options::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+.craft-recipe-options::-webkit-scrollbar-thumb {
+  border: 2px solid var(--surface);
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.craft-recipe-options::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-hover);
+}
+
 /* ==========================================================================
    Light mode
    ==========================================================================

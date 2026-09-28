@@ -117,6 +117,15 @@ export default function ReferencePage() {
             }
           />
           <Card
+            href="/reference/crafting-calculator"
+            title="Crafting Calculator"
+            description="Choose a recipe and quantity to calculate the raw materials and intermediate crafts needed across professions."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("trade_engineering")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
+          <Card
             href="/reference/items"
             title="Items"
             description="Every item in the beta client, filterable by new/changed/unchanged-since-Classic, sourced from foreverchanges.pro."
