@@ -72,19 +72,37 @@
             "min": 75,
             "max": 85
           },
+          "tag": "primary",
           "item": {
-            "name": "Acolyte's Chain Shirt",
-            "url": "https://foreverchanges.pro/item/250491"
+            "name": "Runed Copper Belt",
+            "url": "https://foreverchanges.pro/item/2857"
           },
           "source": "Learned from the trainer",
-          "count": "~10crafts",
+          "count": "~5 crafts",
           "mats": [
             {
-              "name": "Bronze Bar",
-              "quantity": 4,
-              "url": "https://foreverchanges.pro/item/2841"
+              "name": "Copper Bar",
+              "quantity": 5,
+              "url": "https://foreverchanges.pro/item/2840"
+            }
+          ],
+          "alternatives": [
+            {
+              "item": {
+                "name": "Silver Rod"
+              },
+              "source": "Learned from the trainer",
+              "count": "~5 crafts",
+              "tag": "alternative",
+              "mats": [
+                {
+                  "name": "Silver Bar",
+                  "quantity": 1
+                }
+              ]
             }
           ]
+          
         },
         {
           "range": {

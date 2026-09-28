@@ -7,6 +7,8 @@ import type { ZoneAreaData, ZoneAreaGeometry } from "@/lib/zone-areas";
 import type { EntranceMarker, EntranceInfo, EntranceKind } from "@/lib/map-entrances";
 import type { FlightMaster, FlightMasterFaction } from "@/lib/map-flight-masters";
 import type { MapLayers } from "@/lib/map-layers";
+import { preloadSubzoneLookup, lookupArea } from "@/lib/subzone-lookup";
+import { worldToZoneCoords } from "@/lib/zone-coords";
 // NOT imported here -- this component is loaded via next/dynamic(...,
 // { ssr: false }) (see LeafletZoneMapLoader.tsx), and a CSS side-effect
 // import inside a client-only-loaded chunk doesn't reliably make it into
@@ -337,9 +339,16 @@ const LeafletZoneMap = forwardRef<
   const appliedSelectionRef = useRef<number | null>(null);
   const layersRef = useRef<MapLayers>(layers);
   const updateLabelsRef = useRef<() => void>(() => {});
+  const readoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
+    // Guards the async popup-restore callback below (subzoneLookupReady is
+    // a fetch, genuinely async) against firing after THIS pass's own
+    // cleanup has already torn the map down -- set true in that cleanup,
+    // same StrictMode-double-invoke concern as MapExplorer's own
+    // restoredRef reset (see that component's matching comment).
+    let cancelled = false;
 
     const maxZoom = maxNativeZoom + OVERZOOM_LEVELS;
 
@@ -444,9 +453,127 @@ const LeafletZoneMap = forwardRef<
       });
     }
 
-    // Clicking empty map space (not a zone border -- those stop
-    // propagation above) clears the current selection.
-    map.on("click", () => onSelectZone(null));
+    // --- Area lookup: click popup (any click not on a zone border or a
+    // marker -- both stop propagation before reaching here) ---
+    const subzoneLookupReady = preloadSubzoneLookup(mapName);
+    const zoneByAreaId = new Map(zoneAreas.map((z) => [z.areaId, z]));
+
+    function areaFactionInfo(subzoneMask: number | null, zone: ZoneAreaData): { label: string; color: string } {
+      const key = subzoneMask === 2 ? "alliance" : subzoneMask === 4 ? "horde" : zone.faction;
+      const label = key === "alliance" ? "Alliance" : key === "horde" ? "Horde" : "Contested";
+      return { label, color: FACTION_COLOR[key] };
+    }
+
+    function areaPopupHtml(worldX: number, worldY: number, zone: ZoneAreaData, subzoneName: string | null, subzoneMask: number | null): string {
+      const { label, color } = areaFactionInfo(subzoneMask, zone);
+      const title = subzoneName
+        ? `${subzoneName} <span style="opacity:.7;font-weight:400">in ${zone.name}</span>`
+        : zone.name;
+      const levelText = zone.levelRange ? `Level ${zone.levelRange[0]}-${zone.levelRange[1]}` : null;
+      const { x, y } = worldToZoneCoords(worldX, worldY, zone.worldBounds);
+      return (
+        `<div style="font-family:inherit;text-align:center;min-width:190px">` +
+        `<strong style="color:#c9a961;font-size:14px">${title}</strong><br/>` +
+        (levelText ? `<span style="opacity:.85">${levelText}</span><br/>` : "") +
+        `<span style="color:${color};font-weight:600">${label}</span>` +
+        `<div style="margin-top:5px;font-size:11px;opacity:.65">zone coords ${x.toFixed(1)}, ${y.toFixed(1)}</div>` +
+        `<div style="font-size:11px;opacity:.5">world ${Math.round(worldX)}, ${Math.round(worldY)}</div>` +
+        `<button type="button" class="area-popup-copy-link" style="margin-top:7px;font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid rgba(201,169,97,.5);background:transparent;color:#c9a961;cursor:pointer">Copy link</button>` +
+        `</div>`
+      );
+    }
+
+    // Builds the exact URL a fresh page load re-derives the same popup
+    // from (see the hash-restore block below) -- a one-off snapshot string
+    // for the clipboard, not a live `history.replaceState` write, so this
+    // doesn't need to go through MapExplorer's own writeHash() the way the
+    // live URL bar does (no risk of two writers racing over one target).
+    // Same param names/format as that mechanism regardless, so a real
+    // reload of the resulting link is handled by the exact same generic
+    // `off=`-parsing code either way.
+    function buildAreaShareUrl(worldX: number, worldY: number): string {
+      const params = new URLSearchParams();
+      params.set("x", String(Math.round(worldX)));
+      params.set("y", String(Math.round(worldY)));
+      params.set("z", "6.00");
+      params.set("popup", `${Math.round(worldX)},${Math.round(worldY)}`);
+      const offKeys = (Object.keys(layersRef.current) as (keyof MapLayers)[]).filter((k) => !layersRef.current[k]);
+      if (offKeys.length) params.set("off", offKeys.join(","));
+      return `${window.location.origin}${window.location.pathname}#${params.toString()}`;
+    }
+
+    // Wires the popup's "Copy link" button directly, right after opening
+    // it -- NOT via popup.on("add", ...): openOn(map) already adds the
+    // popup (and fires its own "add" event) synchronously before
+    // returning, so a listener registered afterward never fires (confirmed
+    // live: the button existed in the DOM but its click handler was never
+    // attached). getElement() already has the real, current content by the
+    // time openOn() returns, so there's nothing to wait for.
+    function wireAreaPopupCopyLink(popup: L.Popup, worldX: number, worldY: number) {
+      const el = popup.getElement();
+      const btn = el?.querySelector<HTMLButtonElement>(".area-popup-copy-link");
+      if (!btn) return;
+      btn.addEventListener("click", async () => {
+        const url = buildAreaShareUrl(worldX, worldY);
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(url);
+            const original = btn.textContent;
+            btn.textContent = "Copied";
+            setTimeout(() => {
+              if (btn.isConnected) btn.textContent = original;
+            }, 1500);
+            return;
+          } catch {
+            // fall through to the selectable-field fallback below
+          }
+        }
+        // Clipboard unavailable -- same fallback policy as the toolbar's
+        // Share view button, just small enough to fit in a popup.
+        let fallback = el?.querySelector<HTMLInputElement>(".area-popup-copy-fallback");
+        if (!fallback) {
+          fallback = document.createElement("input");
+          fallback.type = "text";
+          fallback.readOnly = true;
+          fallback.className = "area-popup-copy-fallback";
+          fallback.style.cssText =
+            "display:block;margin-top:6px;width:100%;box-sizing:border-box;font-size:10px;padding:3px 5px;border-radius:3px;border:1px solid rgba(201,169,97,.4);background:#1a150e;color:#e8dcc0";
+          btn.insertAdjacentElement("afterend", fallback);
+        }
+        fallback.value = url;
+        fallback.focus();
+        fallback.select();
+        popup.update();
+      });
+    }
+
+    function showAreaPopup(worldX: number, worldY: number) {
+      const info = lookupArea(mapName, worldX, worldY);
+      if (!info) return; // open sea, or lookup data not loaded yet -- show nothing
+      const zone = zoneByAreaId.get(info.zoneId);
+      if (!zone) return;
+      onSelectZone(zone.areaId);
+      const latlng = worldToLatLng(fullGridCorners, gridSize, tileSize, maxNativeZoom, worldX, worldY);
+      const popup = L.popup({ className: "area-popup" })
+        .setLatLng(latlng)
+        .setContent(areaPopupHtml(worldX, worldY, zone, info.subzoneName, info.subzoneFactionMask))
+        .openOn(map);
+      wireAreaPopupCopyLink(popup, worldX, worldY);
+    }
+
+    // Clicking empty map space (not a zone border or a marker -- both stop
+    // propagation before this) looks up what's under the cursor and either
+    // opens the area popup (also selecting that zone's border, same as a
+    // border click) or, over open sea, just clears the current selection.
+    map.on("click", (e) => {
+      const { worldX, worldY } = latLngToWorld(fullGridCorners, gridSize, tileSize, maxNativeZoom, e.latlng.lat, e.latlng.lng);
+      const info = lookupArea(mapName, worldX, worldY);
+      if (!info) {
+        onSelectZone(null);
+        return;
+      }
+      showAreaPopup(worldX, worldY);
+    });
 
     // --- Zone name labels: divIcon markers, recomputed on zoomend/moveend ---
     const namesLayer = L.layerGroup().addTo(map);
@@ -569,6 +696,25 @@ const LeafletZoneMap = forwardRef<
       // container's actual measured size instead, which is what it's for.
       map.fitBounds(bounds);
     }
+
+    // A "Copy link" click (see showAreaPopup/wireAreaPopupCopyLink below)
+    // encodes the clicked point as `popup=<worldX>,<worldY>` -- parsed here
+    // (once, from the same initial hash the view itself was just restored
+    // from) but not acted on until subzone-lookup data has actually loaded,
+    // via the `preloadSubzoneLookup` promise captured further down.
+    const popupHashParams = new URLSearchParams(window.location.hash.replace(/^#/, "")).get("popup");
+    const popupRestorePoint = (() => {
+      if (!popupHashParams) return null;
+      const [px, py] = popupHashParams.split(",").map(Number);
+      return Number.isFinite(px) && Number.isFinite(py) ? { x: px, y: py } : null;
+    })();
+    if (popupRestorePoint) {
+      subzoneLookupReady.then(() => {
+        if (cancelled) return;
+        showAreaPopup(popupRestorePoint.x, popupRestorePoint.y);
+      });
+    }
+
     // Guards against the container being measured at 0x0 the instant
     // L.map() was constructed (a known React-ref-timing gotcha with
     // Leaflet) -- cheap no-op if sizing was already correct. Also: the
@@ -670,6 +816,12 @@ const LeafletZoneMap = forwardRef<
         const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".entrance-icon-inner");
         if (el) el.style.filter = "drop-shadow(0 0 3px rgba(0,0,0,.8))";
       });
+      // Unlike Path/Polygon (the zone borders above), L.Marker has no
+      // bubblingMouseEvents option -- its click would otherwise reach the
+      // map's own "click" handler too, which now opens the area-lookup
+      // popup for the same point. Stopped explicitly so an entrance icon
+      // click only ever opens its own bound popup.
+      leafletMarker.on("click", (e) => L.DomEvent.stopPropagation(e));
       const entranceId = entrance.type === "group" ? entrance.id : entrance.id;
       entranceMarkerEntries.push({ id: entranceId, kind: entrance.kind, marker: leafletMarker });
       const layerKey = ENTRANCE_LAYER_KEY[entrance.kind];
@@ -725,11 +877,63 @@ const LeafletZoneMap = forwardRef<
         const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".flight-master-icon-inner");
         if (el) el.style.filter = "drop-shadow(0 0 3px rgba(0,0,0,.8))";
       });
+      // See the entrance markers' own identical handler above for why this
+      // is needed (L.Marker has no bubblingMouseEvents option).
+      leafletMarker.on("click", (e) => L.DomEvent.stopPropagation(e));
       flightMasterMarkerEntries.push({ id: fm.id, marker: leafletMarker });
       if (!layersRef.current.flightMasters) leafletMarker.getElement()!.style.display = "none";
     }
 
+    // --- Cursor readout (bottom-left overlay) ---
+    // Skipped entirely on touch devices -- there's no hover concept there,
+    // and the element would otherwise sit permanently invisible-but-present
+    // (matchMedia read once at mount; a device's coarse/fine pointer type
+    // doesn't change mid-session, so no listener is needed for this).
+    if (readoutRef.current && !window.matchMedia("(pointer: coarse)").matches) {
+      const readoutEl = readoutRef.current;
+      let rafPending = false;
+      let lastLatLng: L.LatLng | null = null;
+
+      function renderReadout() {
+        rafPending = false;
+        if (!lastLatLng) return;
+        const { worldX, worldY } = latLngToWorld(fullGridCorners, gridSize, tileSize, maxNativeZoom, lastLatLng.lat, lastLatLng.lng);
+        const info = lookupArea(mapName, worldX, worldY);
+        const zone = info ? zoneByAreaId.get(info.zoneId) : undefined;
+        console.log("[DEBUG] renderReadout", { worldX, worldY, info, zoneName: zone?.name });
+        if (!info || !zone) {
+          readoutEl.hidden = true;
+          return;
+        }
+        const { x, y } = worldToZoneCoords(worldX, worldY, zone.worldBounds);
+        const levelText = zone.levelRange ? ` · lvl ${zone.levelRange[0]}–${zone.levelRange[1]}` : "";
+        const label = info.subzoneName ? `${info.subzoneName}, ${zone.name}` : zone.name;
+        readoutEl.textContent = `${label} · ${x.toFixed(1)}, ${y.toFixed(1)}${levelText} · world ${Math.round(worldX)}, ${Math.round(worldY)}`;
+        readoutEl.hidden = false;
+      }
+
+      const onMapMouseMove = (e: L.LeafletMouseEvent) => {
+        lastLatLng = e.latlng;
+        renderReadout(); // TEMP DEBUG: bypass rAF (backgrounded-tab throttling diagnosis)
+        if (!rafPending) {
+          rafPending = true;
+          requestAnimationFrame(renderReadout);
+        }
+      };
+      const onMapMouseOut = () => {
+        lastLatLng = null;
+        readoutEl.hidden = true;
+      };
+      // No explicit map.off() in this effect's own cleanup below -- Leaflet's
+      // map.remove() already unbinds every listener registered via map.on(),
+      // same as it does for the moveend/zoomend/click listeners bound
+      // earlier in this same effect with no individual cleanup of their own.
+      map.on("mousemove", onMapMouseMove);
+      map.on("mouseout", onMapMouseOut);
+    }
+
     return () => {
+      cancelled = true;
       cancelAnimationFrame(rafOuter);
       cancelAnimationFrame(rafInner);
       map.remove();
@@ -806,12 +1010,43 @@ const LeafletZoneMap = forwardRef<
   // tile" and "behind a tile's own transparent pixels" (missing-children
   // areas within a composited tile) in one place, without depending on
   // stylesheet load order.
+  //
+  // `isolate` (isolation: isolate) makes this element its own stacking
+  // context, so Leaflet's own internal z-indexes (panes up to 650, our own
+  // "names" pane at 650, the control container at 1000) are contained
+  // inside it instead of comparing directly against unrelated page chrome
+  // in the root stacking context -- confirmed live this was letting the
+  // Reference nav dropdown (a plain z-20 absolute panel with no isolation
+  // of its own) render BEHIND the map wherever the two overlapped, since
+  // z-20 lost to Leaflet's z-1000 control container in that shared root
+  // context. With isolation, the whole map behaves as one unit at its own
+  // position in normal stacking order, which the dropdown's explicit z-20
+  // beats outright.
   return (
-    <div
-      ref={containerRef}
-      className={`w-full rounded-md border border-border/60 ${heightClassName}`}
-      style={{ backgroundColor: "#000" }}
-    />
+    <div className="relative">
+      <div
+        ref={containerRef}
+        className={`isolate w-full rounded-md border border-border/60 ${heightClassName}`}
+        style={{ backgroundColor: "#000" }}
+      />
+      {/* Cursor readout -- a plain HUD overlay outside Leaflet's own pane
+          system entirely (a sibling of the map div, not inside it), so it
+          stays fixed at the viewport's bottom-left regardless of pan/zoom.
+          Bottom-left is free on both axes: the zoom control sits top-left,
+          and attributionControl is disabled (see the map's own constructor
+          options above) so nothing occupies bottom-right/bottom-left
+          either. pointer-events:none so it never itself becomes what a
+          click/hover lands on. Hidden by default (via the plain `hidden`
+          className, toggled through the ref directly in the mousemove
+          handler above rather than React state -- this updates on every
+          throttled mousemove tick and re-rendering the component for that
+          would defeat the point of throttling in the first place). */}
+      <div
+        ref={readoutRef}
+        hidden
+        className="pointer-events-none absolute bottom-2 left-2 z-[500] max-w-[92%] truncate rounded border border-border/60 bg-surface/90 px-2 py-1 text-xs text-foreground shadow-lg"
+      />
+    </div>
   );
 });
 

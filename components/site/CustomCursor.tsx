@@ -28,7 +28,19 @@ const DISABLED_SELECTOR = "button:disabled, [aria-disabled='true'], .cursor-not-
 // <input>, ...), hiding the JS overlay here whenever the native cursor is
 // already going to show through is the one fix that covers all of them
 // (present and future) instead of patching each call site.
-const NATIVE_CURSOR_SELECTOR = "input, textarea, select, [contenteditable], .cursor-pointer, .cursor-text, .cursor-default";
+// .leaflet-container added for the world map: Leaflet draws its own
+// meaningful native cursors (grab/grabbing while panning, pointer over an
+// interactive border/pin) on plain <div>s that match none of the three
+// categories above, so resolveState() fell through to "default" over the
+// whole map -- showing the native Leaflet cursor AND the JS gauntlet
+// overlay at once, confirmed live. Matching the ENTIRE container (not just
+// specific inner elements) means every native cursor Leaflet sets anywhere
+// inside it wins outright, same as this list's other "let the real cursor
+// through" entries -- a nested real <a> (e.g. a popup's "View loot &
+// quests" link) still wins over it via closest()'s nearest-ancestor rule,
+// since that <a> is checked first while walking up from the target.
+const NATIVE_CURSOR_SELECTOR =
+  "input, textarea, select, [contenteditable], .cursor-pointer, .cursor-text, .cursor-default, .leaflet-container";
 
 type CursorState = "default" | "active" | "hearth" | "gear" | "hidden";
 
