@@ -378,7 +378,16 @@ export default function CraftingCalculator({
             onFocus={() => { setQuery(""); setShowChoices(true); }}
             onChange={(event) => { setQuery(event.target.value); setShowChoices(true); }}
             onBlur={(event) => {
-              if (!event.currentTarget.parentElement?.contains(event.relatedTarget as Node | null)) setShowChoices(false);
+              // On touch browsers the input blurs before the option's click
+              // fires, and relatedTarget is commonly null. Delay dismissal so
+              // the option can receive that click and update the selection.
+              const container = event.currentTarget.parentElement;
+              const nextTarget = event.relatedTarget as Node | null;
+              if (!container?.contains(nextTarget)) {
+                window.setTimeout(() => {
+                  if (!container?.contains(document.activeElement)) setShowChoices(false);
+                }, 250);
+              }
             }}
             onKeyDown={(event) => { if (event.key === "Escape") setShowChoices(false); }}
             placeholder="Type an item or recipe name…"
