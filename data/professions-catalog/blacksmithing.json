@@ -60972,22 +60972,22 @@
     {
      "range": [
       1,
-      11
+      25
      ],
      "item": {
-      "name": "Copper Rod",
+      "name": "Rough Sharpening Stone",
       "slot": null,
-      "type": "Enchanting",
-      "itemClass": 7,
-      "itemId": 6217,
-      "icon": "inv_misc_flute_01",
+      "type": "Other",
+      "itemClass": 0,
+      "itemId": 2862,
+      "icon": "inv_stone_sharpeningstone_01",
       "quality": 1,
       "itemLevel": 5,
-      "requiredLevel": 0,
+      "requiredLevel": 1,
       "tooltip": [
-       "Enchanting",
-       "\"Needed by an Enchanter to make a runed copper rod.\"",
-       "Sell Price: 24c"
+       "Other",
+       "Use: Increase sharp weapon damage by 2 for 30 minutes.",
+       "Sell Price: 3c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -60998,10 +60998,370 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~10crafts",
+     "count": "~30crafts",
      "mats": [
       {
        "qty": 1,
+       "item": {
+        "name": "Rough Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemClass": 7,
+        "itemId": 2835,
+        "icon": "inv_stone_06",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      25,
+      50
+     ],
+     "item": {
+      "name": "Rough Grinding Stone",
+      "slot": null,
+      "type": "Metal & Stone",
+      "itemClass": 7,
+      "itemId": 3470,
+      "icon": "inv_stone_grindingstone_01",
+      "quality": 1,
+      "itemLevel": 10,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Metal & Stone",
+       "Sell Price: 5c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~30crafts",
+     "mats": [
+      {
+       "qty": 2,
+       "item": {
+        "name": "Rough Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemClass": 7,
+        "itemId": 2835,
+        "icon": "inv_stone_06",
+        "quality": 1,
+        "itemLevel": 5,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 2c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      50,
+      70
+     ],
+     "item": {
+      "name": "Coarse Grinding Stone",
+      "slot": null,
+      "type": "Metal & Stone",
+      "itemClass": 7,
+      "itemId": 3478,
+      "icon": "inv_stone_grindingstone_02",
+      "quality": 1,
+      "itemLevel": 20,
+      "requiredLevel": 0,
+      "tooltip": [
+       "Metal & Stone",
+       "Sell Price: 10c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": null,
+      "status": "same",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~60crafts",
+     "mats": [
+      {
+       "qty": 2,
+       "item": {
+        "name": "Coarse Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemClass": 7,
+        "itemId": 2836,
+        "icon": "inv_stone_09",
+        "quality": 1,
+        "itemLevel": 15,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 15c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    },
+    {
+     "range": [
+      70,
+      75
+     ],
+     "item": {
+      "name": "Runed Copper Gauntlets",
+      "slot": "Hands",
+      "type": "Mail",
+      "itemClass": 4,
+      "itemId": 3472,
+      "icon": "inv_gauntlets_04",
+      "quality": 2,
+      "itemLevel": 12,
+      "requiredLevel": 7,
+      "tooltip": [
+       "Binds when equipped",
+       "Hands\tMail",
+       "77 Armor",
+       "+1 Strength",
+       "+1 Stamina",
+       "Requires Level 7",
+       "Sell Price: 71c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+        "Hands\tMail",
+        "73 Armor",
+        "Requires Level 7",
+        "Sell Price: 71c"
+      ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 8,
+       "item": {
+        "name": "Copper Bar",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemClass": 7,
+        "itemId": 2840,
+        "icon": "inv_ingot_02",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 10c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      },
+        {
+       "qty": 2,
+       "item": {
+        "name": "Rough Grinding Stone",
+        "slot": null,
+        "type": "Metal & Stone",
+        "itemClass": 7,
+        "itemId": 3470,
+        "icon": "inv_stone_grindingstone_01",
+        "quality": 1,
+        "itemLevel": 10,
+        "requiredLevel": 0,
+        "tooltip": [
+         "Metal & Stone",
+         "Sell Price: 5c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rank": "Journeyman",
+   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
+   "steps": [
+    {
+     "range": [
+      75,
+      80
+     ],
+     "item": {
+      "name": "Runed Copper Belt",
+      "slot": "Waist",
+      "type": "Mail",
+      "itemClass": 4,
+      "itemId": 2857,
+      "icon": "inv_belt_03",
+      "quality": 2,
+      "itemLevel": 18,
+      "requiredLevel": 13,
+      "tooltip": [
+       "Binds when equipped",
+       "Waist\tMail",
+       "91 Armor",
+       "+3 Strength",
+       "+2 Stamina",
+       "Requires Level 13",
+       "Sell Price: 1s 98c"
+      ],
+      "tooltipSynthesized": false,
+      "classicTooltip": [
+        "Waist\tMail",
+        "86 Armor",
+        "Requires Level 13",
+        "Sell Price: 1s 98c"
+    ],
+      "status": "changed",
+      "dropChance": null,
+      "dropChanceUnder": false,
+      "unknown": false,
+      "source": "foreverchanges"
+     },
+     "alternatives": [
+    {
+      "item": {
+        "name": "Silver Rod",
+        "slot": "null",
+        "type": "Enchanting",
+        "itemClass": 7,
+        "itemId": 6338,
+        "icon": "inv_staff_01",
+        "quality": 1,
+        "itemLevel": 20,
+        "requiredLevel": 0,
+        "tooltip": [
+          "Enchanting",
+          "\"Needed by Enchanters.\"",
+          "Sell Price: 1s 25c"
+        ],
+        "tooltipSynthesized": false,
+        "classicTooltip": null,
+        "status": "same",
+        "dropChance": null,
+        "dropChanceUnder": false,
+        "unknown": false,
+        "source": "foreverchanges"
+      },
+      "source": "Learned from the trainer",
+      "count": "~5crafts",
+      "mats": [
+       {
+        "qty": 1,
+         "item": {
+          "name": "Silver Bar",
+          "slot": null,
+          "type": "Metal & Stone",
+          "itemClass": 7,
+          "itemId": 2842,
+          "icon": "inv_ingot_01",
+          "quality": 2,
+          "itemLevel": 10,
+          "requiredLevel": 0,
+          "tooltip": [
+           "Metal & Stone",
+           "Sell Price: 1s"
+          ],
+          "tooltipSynthesized": false,
+          "classicTooltip": null,
+          "status": "same",
+          "dropChance": null,
+          "dropChanceUnder": false,
+          "unknown": false,
+          "source": "foreverchanges"
+         }
+       },
+       {
+        "qty": 2,
+         "item": {
+          "name": "Rough Grinding Stone",
+          "slot": null,
+          "type": "Metal & Stone",
+          "itemClass": 7,
+          "itemId": 3470,
+          "icon": "inv_stone_grindingstone_01",
+          "quality": 1,
+          "itemLevel": 10,
+          "requiredLevel": 0,
+          "tooltip": [
+           "Metal & Stone",
+           "Sell Price: 5c"
+          ],
+          "tooltipSynthesized": false,
+          "classicTooltip": null,
+          "status": "same",
+          "dropChance": null,
+          "dropChanceUnder": false,
+          "unknown": false,
+          "source": "foreverchanges"
+         }
+       }
+      ]
+    }
+  ],
+     "source": "Learned from the trainer",
+     "count": "~5crafts",
+     "mats": [
+      {
+       "qty": 10,
        "item": {
         "name": "Copper Bar",
         "slot": null,
@@ -61029,453 +61389,8 @@
     },
     {
      "range": [
-      11,
-      36
-     ],
-     "item": {
-      "name": "Rough Sharpening Stone",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 0,
-      "itemId": 2862,
-      "icon": "inv_stone_sharpeningstone_01",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 1,
-      "tooltip": [
-       "Other",
-       "Use: Increase sharp weapon damage by 2 for 30 minutes.",
-       "Sell Price: 3c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
-     },
-     "source": "Learned from the trainer",
-     "count": "~34crafts",
-     "mats": [
-      {
-       "qty": 1,
-       "item": {
-        "name": "Rough Stone",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 2835,
-        "icon": "inv_stone_06",
-        "quality": 1,
-        "itemLevel": 5,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 2c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      }
-     ]
-    },
-    {
-     "range": [
-      36,
-      75
-     ],
-     "item": {
-      "name": "Rough Grinding Stone",
-      "slot": null,
-      "type": "Metal & Stone",
-      "itemClass": 7,
-      "itemId": 3470,
-      "icon": "inv_stone_grindingstone_01",
-      "quality": 1,
-      "itemLevel": 10,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Metal & Stone",
-       "Sell Price: 5c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
-     },
-     "source": "Learned from the trainer",
-     "count": "~63crafts",
-     "mats": [
-      {
-       "qty": 2,
-       "item": {
-        "name": "Rough Stone",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 2835,
-        "icon": "inv_stone_06",
-        "quality": 1,
-        "itemLevel": 5,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 2c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "rank": "Journeyman",
-   "requirement": "from the trainer, from skill 50 and level 10, up to 150",
-   "steps": [
-    {
-     "range": [
-      75,
-      85
-     ],
-     "item": {
-      "name": "Acolyte's Chain Shirt",
-      "slot": "Chest",
-      "type": "Mail",
-      "itemClass": 4,
-      "itemId": 250491,
-      "icon": "inv_chest_chain_08",
-      "quality": 3,
-      "itemLevel": 20,
-      "requiredLevel": 15,
-      "tooltip": [
-       "Binds when picked up",
-       "Chest\tMail",
-       "184 Armor",
-       "+5 Intellect",
-       "+4 Stamina",
-       "Requires Level 15",
-       "Equip: +5 Spell Damage",
-       "Equip: +16 Healing",
-       "Sell Price: 9s 85c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "new",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
-     },
-     "source": "Learned from the trainer",
-     "count": "~10crafts",
-     "mats": [
-      {
-       "qty": 4,
-       "item": {
-        "name": "Bronze Bar",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 2841,
-        "icon": "inv_ingot_bronze",
-        "quality": 1,
-        "itemLevel": 20,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      },
-      {
-       "qty": 2,
-       "item": {
-        "name": "Rough Grinding Stone",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 3470,
-        "icon": "inv_stone_grindingstone_01",
-        "quality": 1,
-        "itemLevel": 10,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 5c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      },
-      {
-       "qty": 2,
-       "item": {
-        "name": "Strange Dust",
-        "slot": null,
-        "type": "Enchanting",
-        "itemClass": 7,
-        "itemId": 10940,
-        "icon": "inv_enchant_duststrange",
-        "quality": 1,
-        "itemLevel": 10,
-        "requiredLevel": 0,
-        "tooltip": [
-         "\tEnchanting",
-         "Sell Price: 1c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": [
-         "\tTrade Goods"
-        ],
-        "status": "changed",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      }
-     ]
-    },
-    {
-     "range": [
-      85,
+      80,
       95
-     ],
-     "item": {
-      "name": "Acolyte's Chain Leggings",
-      "slot": "Legs",
-      "type": "Mail",
-      "itemClass": 4,
-      "itemId": 250496,
-      "icon": "inv_pants_mail_17",
-      "quality": 3,
-      "itemLevel": 25,
-      "requiredLevel": 20,
-      "tooltip": [
-       "Binds when picked up",
-       "Legs\tMail",
-       "176 Armor",
-       "+7 Intellect",
-       "+5 Stamina",
-       "Requires Level 20",
-       "Equip: +7 Spell Damage",
-       "Equip: +21 Healing",
-       "Sell Price: 19s 68c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "new",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
-     },
-     "source": "Learned from the trainer",
-     "count": "~10crafts",
-     "mats": [
-      {
-       "qty": 6,
-       "item": {
-        "name": "Bronze Bar",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 2841,
-        "icon": "inv_ingot_bronze",
-        "quality": 1,
-        "itemLevel": 20,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      },
-      {
-       "qty": 2,
-       "item": {
-        "name": "Coarse Grinding Stone",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 3478,
-        "icon": "inv_stone_grindingstone_02",
-        "quality": 1,
-        "itemLevel": 20,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 10c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      },
-      {
-       "qty": 4,
-       "item": {
-        "name": "Strange Dust",
-        "slot": null,
-        "type": "Enchanting",
-        "itemClass": 7,
-        "itemId": 10940,
-        "icon": "inv_enchant_duststrange",
-        "quality": 1,
-        "itemLevel": 10,
-        "requiredLevel": 0,
-        "tooltip": [
-         "\tEnchanting",
-         "Sell Price: 1c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": [
-         "\tTrade Goods"
-        ],
-        "status": "changed",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      }
-     ]
-    },
-    {
-     "range": [
-      95,
-      105
-     ],
-     "item": {
-      "name": "Rough Bronze Boots",
-      "slot": "Feet",
-      "type": "Mail",
-      "itemClass": 4,
-      "itemId": 6350,
-      "icon": "inv_boots_01",
-      "quality": 2,
-      "itemLevel": 18,
-      "requiredLevel": 13,
-      "tooltip": [
-       "Binds when equipped",
-       "Feet\tMail",
-       "111 Armor",
-       "+2 Strength",
-       "+3 Stamina",
-       "Requires Level 13",
-       "Sell Price: 2s 95c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "Feet\tMail",
-       "106 Armor",
-       "Requires Level 13",
-       "Sell Price: 2s 95c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
-     },
-     "source": "Learned from the trainer",
-     "count": "~11crafts",
-     "mats": [
-      {
-       "qty": 6,
-       "item": {
-        "name": "Bronze Bar",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 2841,
-        "icon": "inv_ingot_bronze",
-        "quality": 1,
-        "itemLevel": 20,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      },
-      {
-       "qty": 6,
-       "item": {
-        "name": "Rough Grinding Stone",
-        "slot": null,
-        "type": "Metal & Stone",
-        "itemClass": 7,
-        "itemId": 3470,
-        "icon": "inv_stone_grindingstone_01",
-        "quality": 1,
-        "itemLevel": 10,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Metal & Stone",
-         "Sell Price: 5c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      }
-     ]
-    },
-    {
-     "range": [
-      105,
-      120
      ],
      "item": {
       "name": "Rough Bronze Leggings",
@@ -61536,8 +61451,8 @@
     },
     {
      "range": [
-      120,
-      140
+      95,
+      125
      ],
      "item": {
       "name": "Patterned Bronze Bracers",
@@ -61566,7 +61481,7 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~26crafts",
+     "count": "~30crafts",
      "mats": [
       {
        "qty": 5,
@@ -61622,7 +61537,7 @@
     },
     {
      "range": [
-      140,
+      125,
       150
      ],
      "item": {
@@ -61659,7 +61574,7 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~10crafts",
+     "count": "~25crafts",
      "mats": [
       {
        "qty": 8,

@@ -36,66 +36,116 @@ export default function ProfessionLevelingGuide({ leveling, professionId }: { le
         </div>
       </div>
 
-      {leveling.map((rank, ri) => (
-        <div key={rank.rank} className="rounded-lg border border-border bg-surface">
-          <div className="border-b border-border bg-surface-hover/40 px-4 py-2">
-            <span className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">{rank.rank}</span>
-            <span className="ml-2 text-xs text-foreground-muted">{rank.requirement}</span>
-          </div>
-          <div className="flex flex-col gap-2.5 p-3">
-            {rank.steps.map((step, si) => (
-              // One row: range, item, source, craft count, and mats (now
-              // icon-only, so they no longer force this onto a second/third
-              // line the way named reagent pills used to).
-              <div
-                key={si}
-                className="-mx-3 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-sm px-3 py-1 text-sm even:bg-surface-hover/30"
-              >
-                <span className="w-16 shrink-0 text-xs font-medium text-foreground-muted">
-                  {/* A one-time prerequisite step (e.g. Enchanting's "Make a
-                      Runed Copper Rod") renders as a single level on
-                      foreverchanges' own page, not a range -- step.range[1]
-                      is genuinely absent for these, not a missing value. */}
-                  {step.range[1] != null ? (
-                    <>
-                      {step.range[0]}&ndash;{step.range[1]}
-                    </>
-                  ) : (
-                    step.range[0]
-                  )}
-                </span>
-                <LootItemPill item={step.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}`} context="catalog" />
-                <span className="text-xs text-foreground-muted">{step.source}</span>
-                {/* Distinct from the muted source/mats text so the craft
-                    estimate is easy to pick out at a glance -- same
-                    "give the number its own color" hierarchy this page's
-                    rank header (text-accent) already uses, not the orange/
-                    yellow/green/grey skill-threshold colors, which mean a
-                    specific different thing (ProfessionSkillColors). */}
-                <span className="text-xs font-medium text-accent">
-                  {step.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
-                </span>
-                {/* iconOnly: icon+name for 3-4 reagents was wide enough to
-                    push this row onto a second line -- the Recipes tab's
-                    reagent list is untouched and still shows the name.
-                    Hover/focus still gets the full tooltip either way. */}
-                <div className="flex flex-wrap gap-1">
-                  {step.mats.map((mat, mi) => (
-                    <LootItemPill
-                      key={mi}
-                      item={mat.item}
-                      tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`}
-                      context="catalog"
-                      qty={mat.qty}
-                      iconOnly
-                    />
+      {leveling.map((rank, ri) => {
+        const isArtisan = rank.rank.toLowerCase() === "artisan" || ri === leveling.length - 1;
+
+        return (
+          <div key={rank.rank} className="rounded-lg border border-border bg-surface">
+            <div className="border-b border-border bg-surface-hover/40 px-4 py-2">
+              <span className="font-heading text-sm font-semibold uppercase tracking-wide text-accent">{rank.rank}</span>
+              <span className="ml-2 text-xs text-foreground-muted">{rank.requirement}</span>
+            </div>
+
+            {isArtisan && (
+              <div className="border-b border-border bg-red-500/10 px-4 py-2.5 text-xs ">
+                <span className="font-semibold text-amber-300">Note:</span> We can only get to 225 skill in the beta, therefore the leveling guide data for this rank is speculative.
+              </div>
+            )}
+
+            <div className="flex flex-col gap-2.5 p-3">
+              {rank.steps.map((step, si) => (
+                <div key={si} className="flex flex-col gap-1.5">
+                  {/* Primary Step Row */}
+                  <div
+                    className="-mx-3 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-sm px-3 py-1 text-sm even:bg-surface-hover/30"
+                  >
+                    <span className="w-16 shrink-0 text-xs font-medium text-foreground-muted">
+                      {step.range[1] != null ? (
+                        <>
+                          {step.range[0]}&ndash;{step.range[1]}
+                        </>
+                      ) : (
+                        step.range[0]
+                      )}
+                    </span>
+                    <LootItemPill item={step.item} tooltipId={`prof:${professionId}:lvl:${ri}:${si}`} context="catalog" />
+                    <span className="text-xs text-foreground-muted">{step.source}</span>
+                      {/* Additional step properties/craft counts can be rendered here */}
+                      {/* Distinct from the muted source/mats text so the craft
+                          estimate is easy to pick out at a glance -- same
+                          "give the number its own color" hierarchy this page's
+                          rank header (text-accent) already uses, not the orange/
+                          yellow/green/grey skill-threshold colors, which mean a
+                          specific different thing (ProfessionSkillColors). */}
+                    <span className="text-xs font-medium text-accent">
+                      {step.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
+                    </span>
+                    {/* iconOnly: icon+name for 3-4 reagents was wide enough to
+                        push this row onto a second line -- the Recipes tab's
+                        reagent list is untouched and still shows the name.
+                        Hover/focus still gets the full tooltip either way. */}
+                    <div className="flex flex-wrap gap-1">
+                      {step.mats.map((mat, mi) => (
+                        <LootItemPill
+                          key={mi}
+                          item={mat.item}
+                          tooltipId={`prof:${professionId}:lvl:${ri}:${si}:mat:${mi}`}
+                          context="catalog"
+                          qty={mat.qty}
+                          iconOnly
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Alternative Steps (if available) */}
+                  {step.alternatives && step.alternatives.map((alt, ai) => (
+                    <div
+                      key={ai}
+                      className="-mx-3 ml-6 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-sm border-l-2 border-accent/40 bg-surface-hover/10 px-3 py-1 text-sm"
+                    >
+                      <span className="w-16 shrink-0 text-xs font-semibold text-accent">
+                        Alt
+                      </span>
+                      
+                      <LootItemPill 
+                        item={alt.item} 
+                        tooltipId={`prof:${professionId}:lvl:${ri}:${si}:alt:${ai}`} 
+                        context="catalog" 
+                      />
+  
+                      {alt.source && (
+                        <span className="text-xs text-foreground-muted">{alt.source}</span>
+                      )}
+                      
+                      {alt.count && (
+                        <span className="text-xs font-medium text-accent">
+                          {alt.count.replace(/^(~?\d+)crafts?$/, "$1 crafts")}
+                        </span>
+                      )}
+                    
+                      {alt.mats && alt.mats.length > 0 && (
+                        <div className="flex flex-wrap  gap-1">
+                          {alt.mats.map((mat, mi) => (
+                            <LootItemPill
+                              key={mi}
+                              item={mat.item}
+                              tooltipId={`prof:${professionId}:lvl:${ri}:${si}:alt:${ai}:mat:${mi}`}
+                              context="catalog"
+                              qty={mat.qty}
+                              iconOnly
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

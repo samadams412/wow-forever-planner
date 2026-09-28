@@ -38,6 +38,12 @@ export type LevelingStep = {
   source: string;
   count: string;
   mats: { qty: number; item: LootItem }[];
+  alternatives?: { // optional, only present for steps that have a known alternative recipe
+    item: LootItem;
+    source: string;
+    count: string;
+    mats: { qty: number; item: LootItem }[];
+  }[];
 };
 
 export type LevelingRank = {

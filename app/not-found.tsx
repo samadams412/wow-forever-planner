@@ -36,7 +36,7 @@ export default function NotFound() {
 
       <div className="relative flex w-full max-w-lg flex-col items-center text-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/logo/forevercraft-mark-carved.svg" alt="" className="h-12 w-12" />
+        <img src="/images/logo/forevercraft-mark-carved.svg" alt="" className="h-12 w-12" /> {/* TODO: change logo */}
         <h1 className="mt-4 font-heading text-6xl font-semibold tracking-wide text-accent">404</h1>
         <p className="mt-3 text-lg text-foreground">This path hasn&apos;t been charted.</p>
         <p className="mt-2 max-w-[45ch] text-sm text-foreground-muted">

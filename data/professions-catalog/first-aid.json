@@ -2943,93 +2943,7 @@
     {
      "range": [
       1,
-      15
-     ],
-     "item": {
-      "name": "First Aid Kit",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 0,
-      "itemId": 279968,
-      "icon": "inv_misc_bandage_11",
-      "quality": 1,
-      "itemLevel": 4,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "Requires First Aid (20)",
-       "Use: Unpacks a first aid kit that allows you and others sitting nearby to gain 56 increased Stamina, exclusive with Power Word: Fortitude. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "new",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
-     },
-     "source": "Learned from the trainer",
-     "count": "~14crafts",
-     "mats": [
-      {
-       "qty": 3,
-       "item": {
-        "name": "Linen Bandage",
-        "slot": null,
-        "type": "Bandages",
-        "itemClass": 0,
-        "itemId": 1251,
-        "icon": "inv_misc_bandage_15",
-        "quality": 1,
-        "itemLevel": 1,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Bandages",
-         "Requires First Aid (1)",
-         "Use: Heals 66 damage over 6 sec.",
-         "Sell Price: 10c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      },
-      {
-       "qty": 1,
-       "item": {
-        "name": "Refreshing Spring Water",
-        "slot": null,
-        "type": "Food & Drink",
-        "itemClass": 0,
-        "itemId": 159,
-        "icon": "inv_drink_07",
-        "quality": 1,
-        "itemLevel": 5,
-        "requiredLevel": 1,
-        "tooltip": [
-         "Food & Drink",
-         "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
-         "Sell Price: 1c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
-       }
-      }
-     ]
-    },
-    {
-     "range": [
-      15,
-      46
+      40
      ],
      "item": {
       "name": "Linen Bandage",
@@ -3056,7 +2970,7 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~38crafts",
+     "count": "~50crafts",
      "mats": [
       {
        "qty": 1,
@@ -3087,7 +3001,7 @@
     },
     {
      "range": [
-      46,
+      40,
       75
      ],
      "item": {
@@ -3115,7 +3029,7 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~39crafts",
+     "count": "~40crafts",
      "mats": [
       {
        "qty": 2,
@@ -3153,49 +3067,50 @@
     {
      "range": [
       75,
-      80
+      100
      ],
      "item": {
-      "name": "Simple Poultice",
+      "name": "Lesser Healing Potion",
       "slot": null,
-      "type": "Reagent",
-      "itemClass": 5,
-      "itemId": 255716,
-      "icon": "inv_10_alchemy2_quenchingfluid_color2",
+      "type": "Potions",
+      "itemClass": 0,
+      "itemId": 858,
+      "icon": "inv_potion_50",
       "quality": 1,
-      "itemLevel": 16,
-      "requiredLevel": 0,
+      "itemLevel": 13,
+      "requiredLevel": 3,
       "tooltip": [
-       "\tReagent",
-       "Use: Target is cured of diseases up to level 25. Not useable in combat. (1 Min Cooldown)",
-       "Sell Price: 28c"
+       "Potions",
+       "Requires Level 3",
+       "Use: Restores 140 to 180 health. (2 Min Cooldown)",
+       "Sell Price: 25c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
-      "status": "new",
+      "status": "same",
       "dropChance": null,
       "dropChanceUnder": false,
       "unknown": false,
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~5crafts",
+     "count": "~30crafts",
      "mats": [
       {
        "qty": 1,
        "item": {
-        "name": "Spider Ichor",
+        "name": "Empty Vial",
         "slot": null,
-        "type": "Cooking",
+        "type": "Other",
         "itemClass": 7,
-        "itemId": 3174,
-        "icon": "inv_misc_slime_01",
+        "itemId": 3371,
+        "icon": "inv_potion_84",
         "quality": 1,
-        "itemLevel": 10,
+        "itemLevel": 1,
         "requiredLevel": 0,
         "tooltip": [
-         "Cooking",
-         "Sell Price: 16c"
+         "Other",
+         "Sell Price: 1c"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -3207,7 +3122,7 @@
        }
       },
       {
-       "qty": 1,
+       "qty": 2,
        "item": {
         "name": "Mild Spices",
         "slot": null,
@@ -3237,19 +3152,18 @@
       {
        "qty": 1,
        "item": {
-        "name": "Bottle of Dalaran Noir",
+        "name": "Briarthorn",
         "slot": null,
-        "type": "Food & Drink",
-        "itemClass": 0,
-        "itemId": 2723,
-        "icon": "inv_drink_10",
+        "type": "Herb",
+        "itemClass": 7,
+        "itemId": 2450,
+        "icon": "inv_misc_root_01",
         "quality": 1,
-        "itemLevel": 1,
+        "itemLevel": 15,
         "requiredLevel": 1,
         "tooltip": [
-         "Food & Drink",
-         "Use: A fairly weak alcoholic beverage.",
-         "Sell Price: 12c"
+         "Herb",
+         "Sell Price: 25c"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -3264,22 +3178,23 @@
     },
     {
      "range": [
-      80,
-      116
+      100,
+      115
      ],
      "item": {
-      "name": "Anti-Venom",
+      "name": "Wool Bandage",
       "slot": null,
-      "type": "Other",
+      "type": "Bandages",
       "itemClass": 0,
-      "itemId": 6452,
-      "icon": "inv_misc_slime_01",
+      "itemId": 3530,
+      "icon": "inv_misc_bandage_14",
       "quality": 1,
-      "itemLevel": 16,
+      "itemLevel": 1,
       "requiredLevel": 0,
       "tooltip": [
-       "Other",
-       "Use: Target is cured of poisons up to level 25. (1 Min Cooldown)",
+       "Bandages",
+       "Requires First Aid (50)",
+       "Use: Heals 161 damage over 7 sec.",
        "Sell Price: 28c"
       ],
       "tooltipSynthesized": false,
@@ -3291,23 +3206,23 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~51crafts",
+     "count": "~20crafts",
      "mats": [
       {
        "qty": 1,
        "item": {
-        "name": "Small Venom Sac",
+        "name": "Wool Cloth",
         "slot": null,
-        "type": "Other",
+        "type": "Cloth",
         "itemClass": 7,
-        "itemId": 1475,
-        "icon": "inv_misc_organ_02",
+        "itemId": 2592,
+        "icon": "inv_fabric_wool_01",
         "quality": 1,
-        "itemLevel": 1,
+        "itemLevel": 15,
         "requiredLevel": 0,
         "tooltip": [
-         "Other",
-         "Sell Price: 82c"
+         "Cloth",
+         "Sell Price: 33c"
         ],
         "tooltipSynthesized": false,
         "classicTooltip": null,
@@ -3322,7 +3237,7 @@
     },
     {
      "range": [
-      116,
+      115,
       150
      ],
      "item": {
@@ -3350,7 +3265,7 @@
       "source": "foreverchanges"
      },
      "source": "Learned from the trainer",
-     "count": "~48crafts",
+     "count": "~40crafts",
      "mats": [
       {
        "qty": 2,
