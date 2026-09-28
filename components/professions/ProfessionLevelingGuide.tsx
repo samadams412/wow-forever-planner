@@ -12,6 +12,30 @@ import type { LevelingRank } from "@/lib/profession-recipes";
 export default function ProfessionLevelingGuide({ leveling, professionId }: { leveling: LevelingRank[]; professionId: string }) {
   return (
     <div className="mt-4 flex flex-col gap-4">
+      {/* Active Work in Progress Disclaimer Card */}
+      <div className="flex items-start gap-3 rounded-lg border border-blue-500/30 bg-blue-500/10 p-4 text-blue-200">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="mt-0.5 h-5 w-5 shrink-0 text-blue-400"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
+        </svg>
+        <div className="flex flex-col gap-1 text-sm">
+          <span className="font-semibold text-blue-100">Work in Progress</span>
+          <p className="text-blue-300/90">
+            This leveling guide is currently an active work in progress. Crafting steps and material requirements are subject to adjustments.
+          </p>
+        </div>
+      </div>
+
       {leveling.map((rank, ri) => (
         <div key={rank.rank} className="rounded-lg border border-border bg-surface">
           <div className="border-b border-border bg-surface-hover/40 px-4 py-2">
