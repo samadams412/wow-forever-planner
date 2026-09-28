@@ -15,6 +15,9 @@ export default function SiteFooter() {
         </p>
         <div className="flex items-center gap-4">
           {/* Deliberately low-key: discoverable if you look, not advertised in the nav. */}
+          <Link href="/contact" className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline">
+            Contact
+          </Link>
           <Link href="/whats-new" className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline">
             What&apos;s new
           </Link>
