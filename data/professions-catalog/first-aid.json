@@ -20,55 +20,16 @@
     "grey": "60"
    },
    "item": {
-    "name": "Linen Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 1251,
-    "icon": "inv_misc_bandage_15",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (1)",
-     "Use: Heals 66 damage over 6 sec.",
-     "Sell Price: 10c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Linen Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Linen Cloth",
      "item": {
-      "name": "Linen Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 2589,
-      "icon": "inv_fabric_linen_01",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 13c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Linen Cloth"
      }
     }
    ]
@@ -86,109 +47,30 @@
     "grey": "95"
    },
    "item": {
-    "name": "Minor Healing Potion",
-    "slot": null,
-    "type": "Potions",
-    "itemClass": 0,
     "itemId": 118,
-    "icon": "inv_potion_49",
-    "quality": 1,
-    "itemLevel": 5,
-    "requiredLevel": 1,
-    "tooltip": [
-     "Potions",
-     "Use: Restores 70 to 90 health. (2 Min Cooldown)",
-     "Sell Price: 5c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Minor Healing Potion"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Empty Vial",
      "item": {
-      "name": "Empty Vial",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3371,
-      "icon": "inv_potion_84",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 1c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Empty Vial"
      }
     },
     {
      "qty": 1,
-     "name": "Mild Spices",
      "item": {
-      "name": "Mild Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2678,
-      "icon": "inv_misc_food_wheat_02",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to somewhat enhance the flavor in cooking recipes.\""
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "\"Used to enhance the flavor in cooking recipes.\""
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mild Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Peacebloom",
      "item": {
-      "name": "Peacebloom",
-      "slot": null,
-      "type": "Herb",
-      "itemClass": 7,
       "itemId": 2447,
-      "icon": "inv_misc_flower_02",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Herb",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Peacebloom"
      }
     }
    ]
@@ -206,83 +88,23 @@
     "grey": "25"
    },
    "item": {
-    "name": "First Aid Kit",
-    "slot": null,
-    "type": "Other",
-    "itemClass": 0,
     "itemId": 279968,
-    "icon": "inv_misc_bandage_11",
-    "quality": 1,
-    "itemLevel": 4,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tOther",
-     "Requires First Aid (20)",
-     "Use: Unpacks a first aid kit that allows you and others sitting nearby to gain 56 increased Stamina, exclusive with Power Word: Fortitude. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "First Aid Kit"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 3,
-     "name": "Linen Bandage",
      "item": {
-      "name": "Linen Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 1251,
-      "icon": "inv_misc_bandage_15",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (1)",
-       "Use: Heals 66 damage over 6 sec.",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Linen Bandage"
      }
     },
     {
      "qty": 1,
-     "name": "Refreshing Spring Water",
      "item": {
-      "name": "Refreshing Spring Water",
-      "slot": null,
-      "type": "Food & Drink",
-      "itemClass": 0,
       "itemId": 159,
-      "icon": "inv_drink_07",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 1,
-      "tooltip": [
-       "Food & Drink",
-       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking.",
-       "Sell Price: 1c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Refreshing Spring Water"
      }
     }
    ]
@@ -300,55 +122,16 @@
     "grey": "100"
    },
    "item": {
-    "name": "Heavy Linen Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 2581,
-    "icon": "inv_misc_bandage_18",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (20)",
-     "Use: Heals 114 damage over 6 sec.",
-     "Sell Price: 20c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Heavy Linen Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Linen Cloth",
      "item": {
-      "name": "Linen Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 2589,
-      "icon": "inv_fabric_linen_01",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 13c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Linen Cloth"
      }
     }
    ]
@@ -366,110 +149,30 @@
     "grey": "125"
    },
    "item": {
-    "name": "Lesser Healing Potion",
-    "slot": null,
-    "type": "Potions",
-    "itemClass": 0,
     "itemId": 858,
-    "icon": "inv_potion_50",
-    "quality": 1,
-    "itemLevel": 13,
-    "requiredLevel": 3,
-    "tooltip": [
-     "Potions",
-     "Requires Level 3",
-     "Use: Restores 140 to 180 health. (2 Min Cooldown)",
-     "Sell Price: 25c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Lesser Healing Potion"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Empty Vial",
      "item": {
-      "name": "Empty Vial",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3371,
-      "icon": "inv_potion_84",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 1c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Empty Vial"
      }
     },
     {
      "qty": 2,
-     "name": "Mild Spices",
      "item": {
-      "name": "Mild Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2678,
-      "icon": "inv_misc_food_wheat_02",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to somewhat enhance the flavor in cooking recipes.\""
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "\"Used to enhance the flavor in cooking recipes.\""
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mild Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Briarthorn",
      "item": {
-      "name": "Briarthorn",
-      "slot": null,
-      "type": "Herb",
-      "itemClass": 7,
       "itemId": 2450,
-      "icon": "inv_misc_root_01",
-      "quality": 1,
-      "itemLevel": 15,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Herb",
-       "Sell Price: 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Briarthorn"
      }
     }
    ]
@@ -487,54 +190,16 @@
     "grey": "150"
    },
    "item": {
-    "name": "Anti-Venom",
-    "slot": null,
-    "type": "Other",
-    "itemClass": 0,
     "itemId": 6452,
-    "icon": "inv_misc_slime_01",
-    "quality": 1,
-    "itemLevel": 16,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Other",
-     "Use: Target is cured of poisons up to level 25. (1 Min Cooldown)",
-     "Sell Price: 28c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Anti-Venom"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Small Venom Sac",
      "item": {
-      "name": "Small Venom Sac",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 1475,
-      "icon": "inv_misc_organ_02",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 82c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Small Venom Sac"
      }
     }
    ]
@@ -552,55 +217,16 @@
     "grey": "150"
    },
    "item": {
-    "name": "Wool Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 3530,
-    "icon": "inv_misc_bandage_14",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (50)",
-     "Use: Heals 161 damage over 7 sec.",
-     "Sell Price: 28c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Wool Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Wool Cloth",
      "item": {
-      "name": "Wool Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 2592,
-      "icon": "inv_fabric_wool_01",
-      "quality": 1,
-      "itemLevel": 15,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 33c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Wool Cloth"
      }
     }
    ]
@@ -618,110 +244,30 @@
     "grey": "160"
    },
    "item": {
-    "name": "Simple Poultice",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255716,
-    "icon": "inv_10_alchemy2_quenchingfluid_color2",
-    "quality": 1,
-    "itemLevel": 16,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of diseases up to level 25. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 28c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Simple Poultice"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Spider Ichor",
      "item": {
-      "name": "Spider Ichor",
-      "slot": null,
-      "type": "Cooking",
-      "itemClass": 7,
       "itemId": 3174,
-      "icon": "inv_misc_slime_01",
-      "quality": 1,
-      "itemLevel": 10,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cooking",
-       "Sell Price: 16c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Spider Ichor"
      }
     },
     {
      "qty": 1,
-     "name": "Mild Spices",
      "item": {
-      "name": "Mild Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2678,
-      "icon": "inv_misc_food_wheat_02",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to somewhat enhance the flavor in cooking recipes.\""
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "\"Used to enhance the flavor in cooking recipes.\""
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mild Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Bottle of Dalaran Noir",
      "item": {
-      "name": "Bottle of Dalaran Noir",
-      "slot": null,
-      "type": "Food & Drink",
-      "itemClass": 0,
       "itemId": 2723,
-      "icon": "inv_drink_10",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 1,
-      "tooltip": [
-       "Food & Drink",
-       "Use: A fairly weak alcoholic beverage.",
-       "Sell Price: 12c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Bottle of Dalaran Noir"
      }
     }
    ]
@@ -739,111 +285,30 @@
     "grey": "175"
    },
    "item": {
-    "name": "Healing Potion",
-    "slot": null,
-    "type": "Potions",
-    "itemClass": 0,
     "itemId": 929,
-    "icon": "inv_potion_51",
-    "quality": 1,
-    "itemLevel": 22,
-    "requiredLevel": 12,
-    "tooltip": [
-     "Potions",
-     "Requires Level 12",
-     "Use: Restores 280 to 360 health. (2 Min Cooldown)",
-     "Sell Price: 75c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Healing Potion"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Leaded Vial",
      "item": {
-      "name": "Leaded Vial",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3372,
-      "icon": "inv_potion_85",
-      "quality": 1,
-      "itemLevel": 25,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Leaded Vial"
      }
     },
     {
      "qty": 1,
-     "name": "Hot Spices",
      "item": {
-      "name": "Hot Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2692,
-      "icon": "inv_misc_food_legion_dalapenopepper",
-      "quality": 1,
-      "itemLevel": 20,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 10c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Hot Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Bruiseweed",
      "item": {
-      "name": "Bruiseweed",
-      "slot": null,
-      "type": "Herb",
-      "itemClass": 7,
       "itemId": 2453,
-      "icon": "inv_misc_herb_01",
-      "quality": 1,
-      "itemLevel": 20,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Herb",
-       "Sell Price: 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Bruiseweed"
      }
     }
    ]
@@ -861,55 +326,16 @@
     "grey": "185"
    },
    "item": {
-    "name": "Heavy Wool Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 3531,
-    "icon": "inv_misc_bandage_17",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (75)",
-     "Use: Heals 301 damage over 7 sec.",
-     "Sell Price: 57c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Heavy Wool Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Wool Cloth",
      "item": {
-      "name": "Wool Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 2592,
-      "icon": "inv_fabric_wool_01",
-      "quality": 1,
-      "itemLevel": 15,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 33c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Wool Cloth"
      }
     }
    ]
@@ -927,80 +353,23 @@
     "grey": "190"
    },
    "item": {
-    "name": "Woolen Tourniquet",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255720,
-    "icon": "inv_misc_bandage_05",
-    "quality": 1,
-    "itemLevel": 21,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of bleeds up to level 30. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 50c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Woolen Tourniquet"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Wool Cloth",
      "item": {
-      "name": "Wool Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 2592,
-      "icon": "inv_fabric_wool_01",
-      "quality": 1,
-      "itemLevel": 15,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 33c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Wool Cloth"
      }
     },
     {
      "qty": 2,
-     "name": "Fine Thread",
      "item": {
-      "name": "Fine Thread",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 2321,
-      "icon": "inv_fabric_wool_02",
-      "quality": 1,
-      "itemLevel": 20,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Fine Thread"
      }
     }
    ]
@@ -1018,54 +387,16 @@
     "grey": "200"
    },
    "item": {
-    "name": "Strong Anti-Venom",
-    "slot": null,
-    "type": "Other",
-    "itemClass": 0,
     "itemId": 6453,
-    "icon": "inv_misc_slime_01",
-    "quality": 1,
-    "itemLevel": 26,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Other",
-     "Use: Target is cured of poisons up to level 35. (1 Min Cooldown)",
-     "Sell Price: 62c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Strong Anti-Venom"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Large Venom Sac",
      "item": {
-      "name": "Large Venom Sac",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 1288,
-      "icon": "inv_misc_organ_01",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 1s 85c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Large Venom Sac"
      }
     }
    ]
@@ -1083,109 +414,30 @@
     "grey": "145"
    },
    "item": {
-    "name": "Toxin Study",
-    "slot": null,
-    "type": "Other",
-    "itemClass": 0,
     "itemId": 279940,
-    "icon": "inv_misc_potiona3",
-    "quality": 1,
-    "itemLevel": 28,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tOther",
-     "Requires First Aid (140)",
-     "Use: Places a Toxin Study that contains healing potions, anti-venom, and provides all of the benefits of a First Aid Kit. Requires a Campfire nearby. May be placed over a First Aid Kit to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Toxin Study"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Anti-Venom",
      "item": {
-      "name": "Anti-Venom",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 0,
       "itemId": 6452,
-      "icon": "inv_misc_slime_01",
-      "quality": 1,
-      "itemLevel": 16,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Use: Target is cured of poisons up to level 25. (1 Min Cooldown)",
-       "Sell Price: 28c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Anti-Venom"
      }
     },
     {
      "qty": 2,
-     "name": "Mageweave Bandage",
      "item": {
-      "name": "Mageweave Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 8544,
-      "icon": "inv_misc_bandage_19",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (150)",
-       "Use: Heals 800 damage over 8 sec.",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mageweave Bandage"
      }
     },
     {
      "qty": 2,
-     "name": "Simple Wood",
      "item": {
-      "name": "Simple Wood",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 4470,
-      "icon": "inv_tradeskillitem_01",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 9c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Simple Wood"
      }
     }
    ]
@@ -1203,111 +455,30 @@
     "grey": "220"
    },
    "item": {
-    "name": "Clever Poultice",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255717,
-    "icon": "inv_10_alchemy2_quenchingfluid_color4",
-    "quality": 1,
-    "itemLevel": 26,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of diseases up to level 35. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 62c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Clever Poultice"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Murloc Fin",
      "item": {
-      "name": "Murloc Fin",
-      "slot": null,
-      "type": "Cooking",
-      "itemClass": 7,
       "itemId": 1468,
-      "icon": "inv_misc_monsterscales_02",
-      "quality": 1,
-      "itemLevel": 16,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cooking",
-       "Sell Price: 28c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Murloc Fin"
      }
     },
     {
      "qty": 1,
-     "name": "Soothing Spices",
      "item": {
-      "name": "Soothing Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3713,
-      "icon": "inv_misc_food_vendor_rice",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to effortlessly enhance the flavor in cooking recipes.\"",
-       "Sell Price: 40c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 40c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Soothing Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Thunder Ale",
      "item": {
-      "name": "Thunder Ale",
-      "slot": null,
-      "type": "Food & Drink",
-      "itemClass": 0,
       "itemId": 2686,
-      "icon": "inv_drink_13",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 1,
-      "tooltip": [
-       "Food & Drink",
-       "Use: A fairly weak alcoholic beverage.",
-       "Sell Price: 12c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Thunder Ale"
      }
     }
    ]
@@ -1325,55 +496,16 @@
     "grey": "210"
    },
    "item": {
-    "name": "Silk Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 6450,
-    "icon": "inv_misc_bandage_01",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (100)",
-     "Use: Heals 400 damage over 8 sec.",
-     "Sell Price: 2s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Silk Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Silk Cloth",
      "item": {
-      "name": "Silk Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 4306,
-      "icon": "inv_fabric_silk_01",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 1s 50c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Silk Cloth"
      }
     }
    ]
@@ -1391,111 +523,30 @@
     "grey": "215"
    },
    "item": {
-    "name": "Greater Healing Potion",
-    "slot": null,
-    "type": "Potions",
-    "itemClass": 0,
     "itemId": 1710,
-    "icon": "inv_potion_52",
-    "quality": 1,
-    "itemLevel": 31,
-    "requiredLevel": 21,
-    "tooltip": [
-     "Potions",
-     "Requires Level 21",
-     "Use: Restores 455 to 585 health. (2 Min Cooldown)",
-     "Sell Price: 1s 25c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Greater Healing Potion"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Leaded Vial",
      "item": {
-      "name": "Leaded Vial",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3372,
-      "icon": "inv_potion_85",
-      "quality": 1,
-      "itemLevel": 25,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Leaded Vial"
      }
     },
     {
      "qty": 3,
-     "name": "Hot Spices",
      "item": {
-      "name": "Hot Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2692,
-      "icon": "inv_misc_food_legion_dalapenopepper",
-      "quality": 1,
-      "itemLevel": 20,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 10c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Hot Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Liferoot",
      "item": {
-      "name": "Liferoot",
-      "slot": null,
-      "type": "Herb",
-      "itemClass": 7,
       "itemId": 3357,
-      "icon": "inv_misc_root_02",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Herb",
-       "Sell Price: 75c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Liferoot"
      }
     }
    ]
@@ -1513,55 +564,16 @@
     "grey": "240"
    },
    "item": {
-    "name": "Heavy Silk Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 6451,
-    "icon": "inv_misc_bandage_02",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (125)",
-     "Use: Heals 640 damage over 8 sec.",
-     "Sell Price: 4s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Heavy Silk Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Silk Cloth",
      "item": {
-      "name": "Silk Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 4306,
-      "icon": "inv_fabric_silk_01",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 1s 50c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Silk Cloth"
      }
     }
    ]
@@ -1579,80 +591,23 @@
     "grey": "280"
    },
    "item": {
-    "name": "Leather Tourniquet",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255721,
-    "icon": "inv_misc_bandage_06",
-    "quality": 1,
-    "itemLevel": 36,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of bleeds up to level 45. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 1s 25c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Leather Tourniquet"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Thick Leather",
      "item": {
-      "name": "Thick Leather",
-      "slot": null,
-      "type": "Leather",
-      "itemClass": 7,
       "itemId": 4304,
-      "icon": "inv_misc_leatherscrap_08",
-      "quality": 1,
-      "itemLevel": 40,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Leather",
-       "Sell Price: 3s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Thick Leather"
      }
     },
     {
      "qty": 2,
-     "name": "Silken Thread",
      "item": {
-      "name": "Silken Thread",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 4291,
-      "icon": "inv_fabric_silk_02",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 1s 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Silken Thread"
      }
     }
    ]
@@ -1670,55 +625,16 @@
     "grey": "270"
    },
    "item": {
-    "name": "Mageweave Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 8544,
-    "icon": "inv_misc_bandage_19",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (150)",
-     "Use: Heals 800 damage over 8 sec.",
-     "Sell Price: 4s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Mageweave Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Mageweave Cloth",
      "item": {
-      "name": "Mageweave Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 4338,
-      "icon": "inv_fabric_mageweave_01",
-      "quality": 1,
-      "itemLevel": 40,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 2s 50c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mageweave Cloth"
      }
     }
    ]
@@ -1736,111 +652,30 @@
     "grey": "285"
    },
    "item": {
-    "name": "Superior Poultice",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255718,
-    "icon": "inv_10_alchemy2_quenchingfluid_color3",
-    "quality": 1,
-    "itemLevel": 36,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of diseases up to level 45. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 1s 25c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Superior Poultice"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Elemental Water",
      "item": {
-      "name": "Elemental Water",
-      "slot": null,
-      "type": "Elemental",
-      "itemClass": 7,
       "itemId": 7070,
-      "icon": "inv_potion_03",
-      "quality": 1,
-      "itemLevel": 25,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Elemental",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Elemental Water"
      }
     },
     {
      "qty": 1,
-     "name": "Hot Spices",
      "item": {
-      "name": "Hot Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2692,
-      "icon": "inv_misc_food_legion_dalapenopepper",
-      "quality": 1,
-      "itemLevel": 20,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 10c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Hot Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Skin of Dwarven Stout",
      "item": {
-      "name": "Skin of Dwarven Stout",
-      "slot": null,
-      "type": "Food & Drink",
-      "itemClass": 0,
       "itemId": 2596,
-      "icon": "inv_drink_milk_02",
-      "quality": 1,
-      "itemLevel": 15,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Food & Drink",
-       "Use: A typical alcoholic beverage.",
-       "Sell Price: 30c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Skin of Dwarven Stout"
      }
     }
    ]
@@ -1858,54 +693,16 @@
     "grey": "290"
    },
    "item": {
-    "name": "Potent Anti-Venom",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255715,
-    "icon": "ability_creature_poison_02",
-    "quality": 1,
-    "itemLevel": 36,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of poisons up to level 45. (1 Min Cooldown)",
-     "Sell Price: 1s 25c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Potent Anti-Venom"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Swolen Venom Sac",
      "item": {
-      "name": "Swolen Venom Sac",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 255645,
-      "icon": "inv_misc_organ_06",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "Sell Price: 3s 70c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "new",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Swolen Venom Sac"
      }
     }
    ]
@@ -1923,111 +720,30 @@
     "grey": "270"
    },
    "item": {
-    "name": "Superior Healing Potion",
-    "slot": null,
-    "type": "Potions",
-    "itemClass": 0,
     "itemId": 3928,
-    "icon": "inv_potion_53",
-    "quality": 1,
-    "itemLevel": 45,
-    "requiredLevel": 35,
-    "tooltip": [
-     "Potions",
-     "Requires Level 35",
-     "Use: Restores 700 to 900 health. (2 Min Cooldown)",
-     "Sell Price: 2s 50c"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Superior Healing Potion"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Crystal Vial",
      "item": {
-      "name": "Crystal Vial",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 8925,
-      "icon": "inv_potion_86",
-      "quality": 1,
-      "itemLevel": 35,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 1s 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Crystal Vial"
      }
     },
     {
      "qty": 1,
-     "name": "Soothing Spices",
      "item": {
-      "name": "Soothing Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3713,
-      "icon": "inv_misc_food_vendor_rice",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to effortlessly enhance the flavor in cooking recipes.\"",
-       "Sell Price: 40c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 40c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Soothing Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Sungrass",
      "item": {
-      "name": "Sungrass",
-      "slot": null,
-      "type": "Herb",
-      "itemClass": 7,
       "itemId": 8838,
-      "icon": "inv_misc_herb_18",
-      "quality": 1,
-      "itemLevel": 46,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Herb",
-       "Sell Price: 60c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Sungrass"
      }
     }
    ]
@@ -2045,55 +761,16 @@
     "grey": "300"
    },
    "item": {
-    "name": "Heavy Mageweave Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 8545,
-    "icon": "inv_misc_bandage_20",
-    "quality": 1,
-    "itemLevel": 1,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (175)",
-     "Use: Heals 1104 damage over 8 sec.",
-     "Sell Price: 6s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Heavy Mageweave Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Mageweave Cloth",
      "item": {
-      "name": "Mageweave Cloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 4338,
-      "icon": "inv_fabric_mageweave_01",
-      "quality": 1,
-      "itemLevel": 40,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 2s 50c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mageweave Cloth"
      }
     }
    ]
@@ -2111,55 +788,16 @@
     "grey": "320"
    },
    "item": {
-    "name": "Runecloth Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 14529,
-    "icon": "inv_misc_bandage_11",
-    "quality": 1,
-    "itemLevel": 52,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (200)",
-     "Use: Heals 1360 damage over 8 sec.",
-     "Sell Price: 5s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Runecloth Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Runecloth",
      "item": {
-      "name": "Runecloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 14047,
-      "icon": "inv_fabric_purplefire_01",
-      "quality": 1,
-      "itemLevel": 50,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Runecloth"
      }
     }
    ]
@@ -2177,106 +815,30 @@
     "grey": "340"
    },
    "item": {
-    "name": "Surgical Tourniquet",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255722,
-    "icon": "inv_misc_bandage_09",
-    "quality": 1,
-    "itemLevel": 58,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of bleeds up to level 65. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 5s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Surgical Tourniquet"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Rugged Leather",
      "item": {
-      "name": "Rugged Leather",
-      "slot": null,
-      "type": "Leather",
-      "itemClass": 7,
       "itemId": 8170,
-      "icon": "inv_misc_leatherscrap_02",
-      "quality": 1,
-      "itemLevel": 50,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Leather",
-       "Sell Price: 5s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Rugged Leather"
      }
     },
     {
      "qty": 2,
-     "name": "Runecloth",
      "item": {
-      "name": "Runecloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 14047,
-      "icon": "inv_fabric_purplefire_01",
-      "quality": 1,
-      "itemLevel": 50,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Runecloth"
      }
     },
     {
      "qty": 2,
-     "name": "Heavy Silken Thread",
      "item": {
-      "name": "Heavy Silken Thread",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 8343,
-      "icon": "inv_fabric_silk_02",
-      "quality": 1,
-      "itemLevel": 40,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 5s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Silken Thread"
      }
     }
    ]
@@ -2294,111 +856,30 @@
     "grey": "330"
    },
    "item": {
-    "name": "Major Healing Potion",
-    "slot": null,
-    "type": "Potions",
-    "itemClass": 0,
     "itemId": 13446,
-    "icon": "inv_potion_54",
-    "quality": 1,
-    "itemLevel": 55,
-    "requiredLevel": 45,
-    "tooltip": [
-     "Potions",
-     "Requires Level 45",
-     "Use: Restores 1050 to 1750 health. (2 Min Cooldown)",
-     "Sell Price: 10s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Major Healing Potion"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 1,
-     "name": "Crystal Vial",
      "item": {
-      "name": "Crystal Vial",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 8925,
-      "icon": "inv_potion_86",
-      "quality": 1,
-      "itemLevel": 35,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 1s 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Crystal Vial"
      }
     },
     {
      "qty": 3,
-     "name": "Soothing Spices",
      "item": {
-      "name": "Soothing Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 3713,
-      "icon": "inv_misc_food_vendor_rice",
-      "quality": 1,
-      "itemLevel": 30,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to effortlessly enhance the flavor in cooking recipes.\"",
-       "Sell Price: 40c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 40c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Soothing Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Golden Sansam",
      "item": {
-      "name": "Golden Sansam",
-      "slot": null,
-      "type": "Herb",
-      "itemClass": 7,
       "itemId": 13464,
-      "icon": "inv_misc_herb_sansamroot",
-      "quality": 1,
-      "itemLevel": 52,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Herb",
-       "Sell Price: 1s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Golden Sansam"
      }
     }
    ]
@@ -2416,111 +897,30 @@
     "grey": "355"
    },
    "item": {
-    "name": "Powerful Poultice",
-    "slot": null,
-    "type": "Reagent",
-    "itemClass": 5,
     "itemId": 255719,
-    "icon": "inv_10_alchemy2_quenchingfluid_color1",
-    "quality": 1,
-    "itemLevel": 58,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tReagent",
-     "Use: Target is cured of diseases up to level 65. Not useable in combat. (1 Min Cooldown)",
-     "Sell Price: 5s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Powerful Poultice"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Essence of Water",
      "item": {
-      "name": "Essence of Water",
-      "slot": null,
-      "type": "Elemental",
-      "itemClass": 7,
       "itemId": 7080,
-      "icon": "spell_nature_acid_01",
-      "quality": 2,
-      "itemLevel": 55,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Elemental",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Essence of Water"
      }
     },
     {
      "qty": 1,
-     "name": "Hot Spices",
      "item": {
-      "name": "Hot Spices",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 2692,
-      "icon": "inv_misc_food_legion_dalapenopepper",
-      "quality": 1,
-      "itemLevel": 20,
-      "requiredLevel": 0,
-      "tooltip": [
-       "\tOther",
-       "\"Used to dangerously enhance the flavor in cooking recipes.\"",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": [
-       "\tTrade Goods",
-       "Sell Price: 10c"
-      ],
-      "status": "changed",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Hot Spices"
      }
     },
     {
      "qty": 1,
-     "name": "Flagon of Dwarven Honeymead",
      "item": {
-      "name": "Flagon of Dwarven Honeymead",
-      "slot": null,
-      "type": "Food & Drink",
-      "itemClass": 0,
       "itemId": 2594,
-      "icon": "inv_drink_05",
-      "quality": 1,
-      "itemLevel": 25,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Food & Drink",
-       "Use: A strong alcoholic beverage.",
-       "Sell Price: 3s 75c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Flagon of Dwarven Honeymead"
      }
     }
    ]
@@ -2538,55 +938,16 @@
     "grey": "350"
    },
    "item": {
-    "name": "Heavy Runecloth Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 14530,
-    "icon": "inv_misc_bandage_12",
-    "quality": 1,
-    "itemLevel": 58,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (225)",
-     "Use: Heals 2000 damage over 8 sec.",
-     "Sell Price: 10s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Heavy Runecloth Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Runecloth",
      "item": {
-      "name": "Runecloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 14047,
-      "icon": "inv_fabric_purplefire_01",
-      "quality": 1,
-      "itemLevel": 50,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Runecloth"
      }
     }
    ]
@@ -2604,78 +965,23 @@
     "grey": "360"
    },
    "item": {
-    "name": "Crystal Infused Bandage",
-    "slot": null,
-    "type": "Bandages",
-    "itemClass": 0,
     "itemId": 23684,
-    "icon": "inv_misc_bandage_16",
-    "quality": 1,
-    "itemLevel": 60,
-    "requiredLevel": 0,
-    "tooltip": [
-     "Bandages",
-     "Requires First Aid (225)",
-     "Use: Heals 2500 damage over 10 sec.",
-     "Sell Price: 15s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "same",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Crystal Infused Bandage"
    },
    "makesQty": 4,
    "reagents": [
     {
      "qty": 1,
-     "name": "[PH] Silithus PvP Dust [DEP]",
      "item": {
-      "name": "[PH] Silithus PvP Dust [DEP]",
-      "slot": null,
-      "type": null,
-      "itemClass": null,
       "itemId": null,
-      "icon": null,
-      "quality": null,
-      "itemLevel": null,
-      "requiredLevel": null,
-      "tooltip": null,
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": null,
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": true,
-      "source": "foreverchanges"
+      "name": "[PH] Silithus PvP Dust [DEP]"
      }
     },
     {
      "qty": 10,
-     "name": "Runecloth",
      "item": {
-      "name": "Runecloth",
-      "slot": null,
-      "type": "Cloth",
-      "itemClass": 7,
       "itemId": 14047,
-      "icon": "inv_fabric_purplefire_01",
-      "quality": 1,
-      "itemLevel": 50,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Cloth",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Runecloth"
      }
     }
    ]
@@ -2693,109 +999,30 @@
     "grey": "300"
    },
    "item": {
-    "name": "Plague Doctor's Laboratory",
-    "slot": null,
-    "type": "Other",
-    "itemClass": 0,
     "itemId": 279951,
-    "icon": "inv_10_alchemy_incenseholder_color1",
-    "quality": 1,
-    "itemLevel": 60,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tOther",
-     "Requires First Aid (300)",
-     "Use: Places a Plague Doctor's Laboratory that contains healing potions, poultices, and provides all of the benefits of a First Aid Kit. Requires a Campfire nearby. May be placed over a First Aid Kit to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": "new",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Plague Doctor's Laboratory"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Simple Wood",
      "item": {
-      "name": "Simple Wood",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 4470,
-      "icon": "inv_tradeskillitem_01",
-      "quality": 1,
-      "itemLevel": 5,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 9c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Simple Wood"
      }
     },
     {
      "qty": 2,
-     "name": "Strong Anti-Venom",
      "item": {
-      "name": "Strong Anti-Venom",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 0,
       "itemId": 6453,
-      "icon": "inv_misc_slime_01",
-      "quality": 1,
-      "itemLevel": 26,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Use: Target is cured of poisons up to level 35. (1 Min Cooldown)",
-       "Sell Price: 62c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Strong Anti-Venom"
      }
     },
     {
      "qty": 5,
-     "name": "Heavy Runecloth Bandage",
      "item": {
-      "name": "Heavy Runecloth Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 14530,
-      "icon": "inv_misc_bandage_12",
-      "quality": 1,
-      "itemLevel": 58,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (225)",
-       "Use: Heals 2000 damage over 8 sec.",
-       "Sell Price: 10s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Runecloth Bandage"
      }
     }
    ]
@@ -2813,60 +1040,16 @@
     "grey": "360"
    },
    "item": {
-    "name": "Powerful Anti-Venom",
-    "slot": null,
-    "type": "Other",
-    "itemClass": 0,
     "itemId": 19440,
-    "icon": "inv_drink_14",
-    "quality": 1,
-    "itemLevel": 58,
-    "requiredLevel": 0,
-    "tooltip": [
-     "\tOther",
-     "Requires First Aid (300)",
-     "Use: Target is cured of poisons up to level 65. (1 Min Cooldown)",
-     "Sell Price: 5s"
-    ],
-    "tooltipSynthesized": false,
-    "classicTooltip": [
-     "\tReagent",
-     "Requires First Aid (300)",
-     "Use: Target is cured of poisons up to level 60. (1 Min Cooldown)",
-     "Sell Price: 5s"
-    ],
-    "status": "changed",
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": false,
-    "source": "foreverchanges"
+    "name": "Powerful Anti-Venom"
    },
    "makesQty": 3,
    "reagents": [
     {
      "qty": 1,
-     "name": "Huge Venom Sac",
      "item": {
-      "name": "Huge Venom Sac",
-      "slot": null,
-      "type": "Other",
-      "itemClass": 7,
       "itemId": 19441,
-      "icon": "inv_misc_organ_04",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Other",
-       "Sell Price: 15s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Huge Venom Sac"
      }
     }
    ]
@@ -2884,52 +1067,16 @@
     "grey": "340"
    },
    "item": {
-    "name": "Dense Runecloth Bandage",
-    "slot": null,
-    "type": null,
-    "itemClass": null,
     "itemId": null,
-    "icon": null,
-    "quality": null,
-    "itemLevel": null,
-    "requiredLevel": null,
-    "tooltip": null,
-    "tooltipSynthesized": false,
-    "classicTooltip": null,
-    "status": null,
-    "dropChance": null,
-    "dropChanceUnder": false,
-    "unknown": true,
-    "source": "foreverchanges"
+    "name": "Dense Runecloth Bandage"
    },
    "makesQty": null,
    "reagents": [
     {
      "qty": 2,
-     "name": "Heavy Runecloth Bandage",
      "item": {
-      "name": "Heavy Runecloth Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 14530,
-      "icon": "inv_misc_bandage_12",
-      "quality": 1,
-      "itemLevel": 58,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (225)",
-       "Use: Heals 2000 damage over 8 sec.",
-       "Sell Price: 10s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Runecloth Bandage"
      }
     }
    ]
@@ -2946,28 +1093,8 @@
       40
      ],
      "item": {
-      "name": "Linen Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 1251,
-      "icon": "inv_misc_bandage_15",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (1)",
-       "Use: Heals 66 damage over 6 sec.",
-       "Sell Price: 10c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Linen Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~50crafts",
@@ -2975,26 +1102,8 @@
       {
        "qty": 1,
        "item": {
-        "name": "Linen Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 2589,
-        "icon": "inv_fabric_linen_01",
-        "quality": 1,
-        "itemLevel": 5,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 13c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Linen Cloth"
        }
       }
      ]
@@ -3005,28 +1114,8 @@
       75
      ],
      "item": {
-      "name": "Heavy Linen Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 2581,
-      "icon": "inv_misc_bandage_18",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (20)",
-       "Use: Heals 114 damage over 6 sec.",
-       "Sell Price: 20c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Linen Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~40crafts",
@@ -3034,26 +1123,8 @@
       {
        "qty": 2,
        "item": {
-        "name": "Linen Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 2589,
-        "icon": "inv_fabric_linen_01",
-        "quality": 1,
-        "itemLevel": 5,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 13c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Linen Cloth"
        }
       }
      ]
@@ -3070,28 +1141,8 @@
       100
      ],
      "item": {
-      "name": "Lesser Healing Potion",
-      "slot": null,
-      "type": "Potions",
-      "itemClass": 0,
       "itemId": 858,
-      "icon": "inv_potion_50",
-      "quality": 1,
-      "itemLevel": 13,
-      "requiredLevel": 3,
-      "tooltip": [
-       "Potions",
-       "Requires Level 3",
-       "Use: Restores 140 to 180 health. (2 Min Cooldown)",
-       "Sell Price: 25c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Lesser Healing Potion"
      },
      "source": "Learned from the trainer",
      "count": "~30crafts",
@@ -3099,79 +1150,22 @@
       {
        "qty": 1,
        "item": {
-        "name": "Empty Vial",
-        "slot": null,
-        "type": "Other",
-        "itemClass": 7,
         "itemId": 3371,
-        "icon": "inv_potion_84",
-        "quality": 1,
-        "itemLevel": 1,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Other",
-         "Sell Price: 1c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Empty Vial"
        }
       },
       {
        "qty": 2,
        "item": {
-        "name": "Mild Spices",
-        "slot": null,
-        "type": "Other",
-        "itemClass": 7,
         "itemId": 2678,
-        "icon": "inv_misc_food_wheat_02",
-        "quality": 1,
-        "itemLevel": 5,
-        "requiredLevel": 0,
-        "tooltip": [
-         "\tOther",
-         "\"Used to somewhat enhance the flavor in cooking recipes.\""
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": [
-         "\tTrade Goods",
-         "\"Used to enhance the flavor in cooking recipes.\""
-        ],
-        "status": "changed",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Mild Spices"
        }
       },
       {
        "qty": 1,
        "item": {
-        "name": "Briarthorn",
-        "slot": null,
-        "type": "Herb",
-        "itemClass": 7,
         "itemId": 2450,
-        "icon": "inv_misc_root_01",
-        "quality": 1,
-        "itemLevel": 15,
-        "requiredLevel": 1,
-        "tooltip": [
-         "Herb",
-         "Sell Price: 25c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Briarthorn"
        }
       }
      ]
@@ -3182,28 +1176,8 @@
       115
      ],
      "item": {
-      "name": "Wool Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 3530,
-      "icon": "inv_misc_bandage_14",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (50)",
-       "Use: Heals 161 damage over 7 sec.",
-       "Sell Price: 28c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Wool Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~20crafts",
@@ -3211,26 +1185,8 @@
       {
        "qty": 1,
        "item": {
-        "name": "Wool Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 2592,
-        "icon": "inv_fabric_wool_01",
-        "quality": 1,
-        "itemLevel": 15,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 33c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Wool Cloth"
        }
       }
      ]
@@ -3241,28 +1197,8 @@
       150
      ],
      "item": {
-      "name": "Heavy Wool Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 3531,
-      "icon": "inv_misc_bandage_17",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (75)",
-       "Use: Heals 301 damage over 7 sec.",
-       "Sell Price: 57c"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Wool Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~40crafts",
@@ -3270,26 +1206,8 @@
       {
        "qty": 2,
        "item": {
-        "name": "Wool Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 2592,
-        "icon": "inv_fabric_wool_01",
-        "quality": 1,
-        "itemLevel": 15,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 33c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Wool Cloth"
        }
       }
      ]
@@ -3306,28 +1224,8 @@
       181
      ],
      "item": {
-      "name": "Silk Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 6450,
-      "icon": "inv_misc_bandage_01",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (100)",
-       "Use: Heals 400 damage over 8 sec.",
-       "Sell Price: 2s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Silk Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~44crafts",
@@ -3335,26 +1233,8 @@
       {
        "qty": 1,
        "item": {
-        "name": "Silk Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 4306,
-        "icon": "inv_fabric_silk_01",
-        "quality": 1,
-        "itemLevel": 30,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 1s 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Silk Cloth"
        }
       }
      ]
@@ -3365,28 +1245,8 @@
       210
      ],
      "item": {
-      "name": "Heavy Silk Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 6451,
-      "icon": "inv_misc_bandage_02",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (125)",
-       "Use: Heals 640 damage over 8 sec.",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Silk Bandage"
      },
      "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
      "count": "~41crafts",
@@ -3394,26 +1254,8 @@
       {
        "qty": 2,
        "item": {
-        "name": "Silk Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 4306,
-        "icon": "inv_fabric_silk_01",
-        "quality": 1,
-        "itemLevel": 30,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 1s 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Silk Cloth"
        }
       }
      ]
@@ -3424,28 +1266,8 @@
       225
      ],
      "item": {
-      "name": "Mageweave Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 8544,
-      "icon": "inv_misc_bandage_19",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (150)",
-       "Use: Heals 800 damage over 8 sec.",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mageweave Bandage"
      },
      "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
      "count": "~18crafts",
@@ -3453,26 +1275,8 @@
       {
        "qty": 1,
        "item": {
-        "name": "Mageweave Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 4338,
-        "icon": "inv_fabric_mageweave_01",
-        "quality": 1,
-        "itemLevel": 40,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 2s 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Mageweave Cloth"
        }
       }
      ]
@@ -3489,28 +1293,8 @@
       241
      ],
      "item": {
-      "name": "Mageweave Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 8544,
-      "icon": "inv_misc_bandage_19",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (150)",
-       "Use: Heals 800 damage over 8 sec.",
-       "Sell Price: 4s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Mageweave Bandage"
      },
      "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
      "count": "~26crafts",
@@ -3518,26 +1302,8 @@
       {
        "qty": 1,
        "item": {
-        "name": "Mageweave Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 4338,
-        "icon": "inv_fabric_mageweave_01",
-        "quality": 1,
-        "itemLevel": 40,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 2s 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Mageweave Cloth"
        }
       }
      ]
@@ -3548,28 +1314,8 @@
       260
      ],
      "item": {
-      "name": "Heavy Mageweave Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 8545,
-      "icon": "inv_misc_bandage_20",
-      "quality": 1,
-      "itemLevel": 1,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (175)",
-       "Use: Heals 1104 damage over 8 sec.",
-       "Sell Price: 6s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Mageweave Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~24crafts",
@@ -3577,26 +1323,8 @@
       {
        "qty": 2,
        "item": {
-        "name": "Mageweave Cloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 4338,
-        "icon": "inv_fabric_mageweave_01",
-        "quality": 1,
-        "itemLevel": 40,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 2s 50c"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Mageweave Cloth"
        }
       }
      ]
@@ -3607,28 +1335,8 @@
       291
      ],
      "item": {
-      "name": "Runecloth Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 14529,
-      "icon": "inv_misc_bandage_11",
-      "quality": 1,
-      "itemLevel": 52,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (200)",
-       "Use: Heals 1360 damage over 8 sec.",
-       "Sell Price: 5s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Runecloth Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~44crafts",
@@ -3636,26 +1344,8 @@
       {
        "qty": 1,
        "item": {
-        "name": "Runecloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 14047,
-        "icon": "inv_fabric_purplefire_01",
-        "quality": 1,
-        "itemLevel": 50,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 4s"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Runecloth"
        }
       }
      ]
@@ -3666,28 +1356,8 @@
       300
      ],
      "item": {
-      "name": "Heavy Runecloth Bandage",
-      "slot": null,
-      "type": "Bandages",
-      "itemClass": 0,
       "itemId": 14530,
-      "icon": "inv_misc_bandage_12",
-      "quality": 1,
-      "itemLevel": 58,
-      "requiredLevel": 0,
-      "tooltip": [
-       "Bandages",
-       "Requires First Aid (225)",
-       "Use: Heals 2000 damage over 8 sec.",
-       "Sell Price: 10s"
-      ],
-      "tooltipSynthesized": false,
-      "classicTooltip": null,
-      "status": "same",
-      "dropChance": null,
-      "dropChanceUnder": false,
-      "unknown": false,
-      "source": "foreverchanges"
+      "name": "Heavy Runecloth Bandage"
      },
      "source": "Learned from the trainer",
      "count": "~10crafts",
@@ -3695,26 +1365,8 @@
       {
        "qty": 2,
        "item": {
-        "name": "Runecloth",
-        "slot": null,
-        "type": "Cloth",
-        "itemClass": 7,
         "itemId": 14047,
-        "icon": "inv_fabric_purplefire_01",
-        "quality": 1,
-        "itemLevel": 50,
-        "requiredLevel": 0,
-        "tooltip": [
-         "Cloth",
-         "Sell Price: 4s"
-        ],
-        "tooltipSynthesized": false,
-        "classicTooltip": null,
-        "status": "same",
-        "dropChance": null,
-        "dropChanceUnder": false,
-        "unknown": false,
-        "source": "foreverchanges"
+        "name": "Runecloth"
        }
       }
      ]

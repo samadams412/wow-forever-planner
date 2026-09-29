@@ -97,16 +97,25 @@ export default function ProfessionCategorySidebar({
   categories,
   counts,
   active,
+  query,
 }: {
   professionId: string;
   categories: string[];
   counts: Record<string, number>;
   active: string;
+  query: string;
 }) {
+  const hrefForCategory = (category?: string) => {
+    const params = new URLSearchParams();
+    if (category) params.set("category", category);
+    if (query) params.set("q", query);
+    const search = params.toString();
+    return search ? `/reference/professions/${professionId}?${search}` : `/reference/professions/${professionId}`;
+  };
   return (
     <nav className="flex shrink-0 flex-row flex-wrap gap-1 sm:w-56 sm:flex-col sm:flex-nowrap sm:gap-0.5">
       <Link
-        href={`/reference/professions/${professionId}`}
+        href={hrefForCategory()}
         className={`grid grid-cols-[1fr_auto] items-baseline gap-x-2 rounded px-2.5 py-1.5 text-sm transition-colors ${
           active === "All" ? "bg-accent/20 text-accent" : "text-foreground-muted hover:bg-surface-hover hover:text-foreground"
         }`}
@@ -119,7 +128,7 @@ export default function ProfessionCategorySidebar({
       {categories.map((category) => (
         <Link
           key={category}
-          href={`/reference/professions/${professionId}?category=${encodeURIComponent(category)}`}
+          href={hrefForCategory(category)}
           // A grid, not a flex row -- a long name (e.g. Blacksmithing's
           // "Sharpening/Weight/Grinding Stones") wraps onto a second line
           // inside the fixed 1fr label column while the count stays in its

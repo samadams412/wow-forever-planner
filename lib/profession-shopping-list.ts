@@ -1,5 +1,6 @@
 import type { LootItem } from "@/lib/dungeon-loot";
-import type { LevelingRank, Recipe } from "@/lib/profession-recipes";
+import type { Recipe } from "@/lib/profession-recipes";
+import type { ResolvedLevelingRank } from "@/lib/profession-utils";
 
 export type ShoppingListItem = {
   item: LootItem;
@@ -51,7 +52,7 @@ function parseCraftCount(count: string): number {
 // given ranks -- the real quantity needed to walk this range, not just the
 // bare per-craft numbers shown next to each reagent icon above.
 export function aggregateShoppingList(
-  ranks: LevelingRank[],
+  ranks: ResolvedLevelingRank[],
   craftableRanks: Map<number, number | null>
 ): ShoppingListItem[] {
   // The highest skill reachable within the ranks actually selected -- a

@@ -10,9 +10,8 @@
 // directly before trusting it); a name is stripped of a trailing "x2"/"x3"/
 // "x200" (a scrape artifact meaning "craft yields N", not part of the name,
 // e.g. "Fire Oilx2") before the lookup, with the count carried through as
-// `makesQty`. Unresolved names (mostly enchant spell effects with no
-// physical item) keep `item: null` and render as plain text elsewhere,
-// same degradation this site already uses for unknown items.
+// `makesQty`. The generated catalog stores only itemId/name references;
+// unresolved names keep itemId: null and their display name as a fallback.
 //
 // Also writes data/professions-catalog/uncertain.json -- every recipe whose
 // categorizer wasn't confident, grouped by profession, for review. Nothing
@@ -53,7 +52,7 @@ function buildRecipe(raw, byName, categorizer) {
   const reagents = (raw.reagents || []).map((r) => {
     const { qty, name } = parseReagentText(r);
     const resolved = resolveItemByName(byName, name);
-    return { qty, name: resolved.cleanName, item: itemRef(resolved.item) || unresolvedItemRef(resolved.cleanName) };
+    return { qty, item: professionItemRef(resolved.item, resolved.cleanName) };
   });
   return {
     name: cleanName,
@@ -62,10 +61,14 @@ function buildRecipe(raw, byName, categorizer) {
     categoryConfident: confident,
     source: raw.source,
     skills: raw.skills,
-    item: itemRef(item) || unresolvedItemRef(cleanName),
+    item: professionItemRef(item, cleanName),
     makesQty,
     reagents,
   };
+}
+
+function professionItemRef(item, fallbackName) {
+  return { itemId: item?.itemId ?? null, name: item?.name ?? fallbackName ?? "Unknown item" };
 }
 
 // Alchemy's and Blacksmithing's *_leveling_and_merchants.json don't share
@@ -118,12 +121,31 @@ function buildLevelingSection(sections, byName, recipesByName) {
                 item: itemRef(matItem) || unresolvedItemRef(mat.name),
               };
             });
+      const alternatives = (step.alternatives || []).map((alternative) => {
+        const { item: altItem } = resolveItemByName(byName, alternative.item.name);
+        const altRecipe = recipesByName.get(alternative.item.name.trim().toLowerCase());
+        const altMats =
+          altRecipe && altRecipe.reagents.length
+            ? altRecipe.reagents.map((r) => ({ qty: r.qty, item: r.item }))
+            : (alternative.mats || []).map((mat) => {
+                const { item: matItem } = resolveItemByName(byName, mat.name);
+                return { qty: mat.quantity || 1, item: itemRef(matItem) || unresolvedItemRef(mat.name) };
+              });
+        return {
+          item: professionItemRef(altItem, alternative.item.name),
+          source: alternative.source || "",
+          count: alternative.count || "",
+          mats: altMats.map((mat) => ({ qty: mat.qty, item: professionItemRef(mat.item, mat.item?.name) })),
+        };
+      });
       return {
         range: normalizeRange(step.range),
-        item: itemRef(item) || unresolvedItemRef(step.item.name),
+        item: professionItemRef(item, step.item.name),
         source: step.source,
         count: step.count,
-        mats,
+        ...(step.notes ? { notes: step.notes } : {}),
+        mats: mats.map((mat) => ({ qty: mat.qty, item: professionItemRef(mat.item, mat.item?.name) })),
+        ...(alternatives.length ? { alternatives } : {}),
       };
     }),
   }));

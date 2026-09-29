@@ -1,6 +1,6 @@
 import LootItemPill from "@/components/reference/LootItemPill";
 import ProfessionSkillColors from "@/components/professions/ProfessionSkillColors";
-import type { Recipe } from "@/lib/profession-recipes";
+import type { ResolvedRecipe } from "@/lib/profession-recipes";
 
 // Matches wowtbc.gg's own "Leveling Guide" recipe table layout (Rank / Name
 // / Materials / Source / Level Up columns) -- studied live via
@@ -10,7 +10,7 @@ import type { Recipe } from "@/lib/profession-recipes";
 // other item-rendering surface on the site (see Part A), so hovering any
 // icon here gets the exact same full tooltip, and clicking a linked one
 // goes to its /items/[itemId] page.
-export default function ProfessionRecipeTable({ recipes, professionId }: { recipes: Recipe[]; professionId: string }) {
+export default function ProfessionRecipeTable({ recipes, professionId }: { recipes: ResolvedRecipe[]; professionId: string }) {
   if (recipes.length === 0) {
     return <p className="mt-4 text-sm text-foreground-muted">No recipes in this category.</p>;
   }
@@ -53,6 +53,7 @@ export default function ProfessionRecipeTable({ recipes, professionId }: { recip
                         context="catalog"
                         qty={reagent.qty}
                         iconOnly
+                        iconSize="large"
                       />
                     ))}
                   </div>

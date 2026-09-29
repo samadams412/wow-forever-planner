@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import CraftingCalculator, { type CalculatorItem, type CalculatorProfession } from "@/components/professions/CraftingCalculator";
 import { getProfessionCatalog, getProfessionIds } from "@/lib/profession-recipes";
+import type { ProfessionItemRef } from "@/lib/profession-recipes";
+import { resolveProfessionItem } from "@/lib/profession-utils";
 import type { LootItem } from "@/lib/dungeon-loot";
 
 export const metadata: Metadata = {
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/reference/crafting-calculator" },
 };
 
-function itemKey(item: LootItem) {
+function itemKey(item: ProfessionItemRef) {
   return item.itemId !== null ? `id:${item.itemId}` : `name:${item.name.trim().toLowerCase()}`;
 }
 
@@ -24,11 +26,11 @@ export default function CraftingCalculatorPage() {
     const recipes = catalog.recipes.flatMap((recipe, index) => {
       if (!recipe.item?.name) return [];
       const outputKey = itemKey(recipe.item);
-      items[outputKey] ??= recipe.item;
+      items[outputKey] ??= resolveProfessionItem(recipe.item);
       const reagents = recipe.reagents.flatMap((reagent) => {
         if (!reagent.item?.name || !Number.isFinite(reagent.qty) || reagent.qty <= 0) return [];
         const key = itemKey(reagent.item);
-        items[key] ??= reagent.item;
+        items[key] ??= resolveProfessionItem(reagent.item);
         return [{ key, qty: reagent.qty }];
       });
       return [{ id: `${id}:${index}`, name: recipe.name, category: recipe.category, outputKey, makesQty: recipe.makesQty, reagents }];

@@ -75,3 +75,6 @@ data/sources/client-db2/*/zone-grid-*.bin
 # (85.93MB) via a broad `git add`/`git commit` outside a Claude session;
 # untracked and ignored so it can't happen again.
 /.zone-areas-report.json
+
+# Local branch-spanning handoff notes, kept outside Git history.
+/.handoffs/

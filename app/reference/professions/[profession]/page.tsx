@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ProfessionCategorySidebar from "@/components/professions/ProfessionCategorySidebar";
+import ProfessionRecipeSearchInput from "@/components/professions/ProfessionRecipeSearchInput";
 import ProfessionRecipeTable from "@/components/professions/ProfessionRecipeTable";
 import ProfessionLevelingGuide from "@/components/professions/ProfessionLevelingGuide";
 import ProfessionShoppingList from "@/components/professions/ProfessionShoppingList";
@@ -12,6 +13,7 @@ import ProfessionNodeList from "@/components/professions/ProfessionNodeList";
 import ProfessionGatheringLeveling from "@/components/professions/ProfessionGatheringLeveling";
 import ProfessionSmeltingTable from "@/components/professions/ProfessionSmeltingTable";
 import { getProfessionCatalog, getProfessionIds } from "@/lib/profession-recipes";
+import { resolveLeveling, resolveProfessionRecipes } from "@/lib/profession-utils";
 import { getGatheringCatalog, isGatheringProfessionId, GATHERING_PROFESSION_IDS } from "@/lib/gathering-professions";
 import { mediumIconUrl } from "@/lib/wow-data";
 import { PROFESSION_ICON } from "@/lib/profession-icons";
@@ -38,9 +40,10 @@ const TAB_ICON: Record<string, string> = {
   camp: "spell_fire_fire",
 };
 
-function buildRecipesHref(professionId: string, category: string, page: number): string {
+function buildRecipesHref(professionId: string, category: string, page: number, query: string): string {
   const usp = new URLSearchParams();
   if (category !== "All") usp.set("category", category);
+  if (query) usp.set("q", query);
   if (page > 1) usp.set("page", String(page));
   const qs = usp.toString();
   return qs ? `/reference/professions/${professionId}?${qs}` : `/reference/professions/${professionId}`;
@@ -86,7 +89,7 @@ export default async function ProfessionPage({
   searchParams,
 }: {
   params: Promise<{ profession: string }>;
-  searchParams: Promise<{ category?: string; view?: string; page?: string }>;
+  searchParams: Promise<{ category?: string; view?: string; page?: string; q?: string }>;
 }) {
   const { profession } = await params;
 
@@ -100,20 +103,27 @@ export default async function ProfessionPage({
   const catalog = getProfessionCatalog(profession);
   if (!catalog) notFound();
 
-  const { category, view, page: pageParam } = await searchParams;
+  const { category, view, page: pageParam, q: queryParam } = await searchParams;
   const requestedView = view === "leveling" || view === "favor" || view === "camp" ? view : "recipes";
   const activeView = requestedView === "favor" && !catalog.favorSupported ? "recipes" : requestedView;
   const activeCategory = category && catalog.categories.includes(category) ? category : "All";
+  const query = queryParam?.trim() ?? "";
+  const searchNeedle = query.toLowerCase();
+  const resolvedLeveling = catalog.leveling ? resolveLeveling(catalog.leveling) : null;
 
   const counts: Record<string, number> = {};
   for (const recipe of catalog.recipes) counts[recipe.category] = (counts[recipe.category] || 0) + 1;
 
-  const filteredRecipes =
+  const categoryRecipes =
     activeCategory === "All" ? catalog.recipes : catalog.recipes.filter((r) => r.category === activeCategory);
+  const filteredRecipes = searchNeedle
+    ? categoryRecipes.filter((recipe) => `${recipe.name} ${recipe.item.name}`.toLowerCase().includes(searchNeedle))
+    : categoryRecipes;
 
   const pageCount = Math.max(1, Math.ceil(filteredRecipes.length / PAGE_SIZE));
   const activePage = Math.min(Math.max(1, Number(pageParam) || 1), pageCount);
   const pagedRecipes = filteredRecipes.slice((activePage - 1) * PAGE_SIZE, activePage * PAGE_SIZE);
+  const resolvedPagedRecipes = resolveProfessionRecipes(pagedRecipes);
 
   const icon = PROFESSION_ICON[catalog.id];
 
@@ -166,44 +176,53 @@ export default async function ProfessionPage({
       </div>
 
       {activeView === "recipes" && (
-        <div className="mt-4 flex flex-col gap-4 sm:flex-row">
-          <ProfessionCategorySidebar
-            professionId={catalog.id}
-            categories={catalog.categories}
-            counts={counts}
-            active={activeCategory}
-          />
-          <div className="min-w-0 flex-1">
-            <ProfessionRecipeTable recipes={pagedRecipes} professionId={catalog.id} />
-            {pageCount > 1 && (
-              <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">
-                {activePage > 1 ? (
-                  <Link
-                    href={buildRecipesHref(catalog.id, activeCategory, activePage - 1)}
-                    className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
-                  >
-                    &larr; Previous
-                  </Link>
-                ) : (
-                  <div />
-                )}
-                <span className="text-xs text-foreground-muted">
-                  Page <strong className="text-foreground">{activePage}</strong> of {pageCount}
-                </span>
-                {activePage < pageCount ? (
-                  <Link
-                    href={buildRecipesHref(catalog.id, activeCategory, activePage + 1)}
-                    className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
-                  >
-                    Next &rarr;
-                  </Link>
-                ) : (
-                  <div />
-                )}
-              </nav>
-            )}
+        <>
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <ProfessionRecipeSearchInput initialValue={query} />
+            <span className="text-xs text-foreground-muted">
+              {query ? `${filteredRecipes.length} recipes found` : `${categoryRecipes.length} recipes`}
+            </span>
           </div>
-        </div>
+          <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+            <ProfessionCategorySidebar
+              professionId={catalog.id}
+              categories={catalog.categories}
+              counts={counts}
+              active={activeCategory}
+              query={query}
+            />
+            <div className="min-w-0 flex-1">
+              <ProfessionRecipeTable recipes={resolvedPagedRecipes} professionId={catalog.id} />
+              {pageCount > 1 && (
+                <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">
+                  {activePage > 1 ? (
+                    <Link
+                      href={buildRecipesHref(catalog.id, activeCategory, activePage - 1, query)}
+                      className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                    >
+                      &larr; Previous
+                    </Link>
+                  ) : (
+                    <div />
+                  )}
+                  <span className="text-xs text-foreground-muted">
+                    Page <strong className="text-foreground">{activePage}</strong> of {pageCount}
+                  </span>
+                  {activePage < pageCount ? (
+                    <Link
+                      href={buildRecipesHref(catalog.id, activeCategory, activePage + 1, query)}
+                      className="rounded-lg border border-border bg-surface px-4 py-2 text-sm text-foreground transition-colors hover:border-accent hover:bg-surface-hover"
+                    >
+                      Next &rarr;
+                    </Link>
+                  ) : (
+                    <div />
+                  )}
+                </nav>
+              )}
+            </div>
+          </div>
+        </>
       )}
 
       {activeView === "leveling" &&
@@ -214,9 +233,9 @@ export default async function ProfessionPage({
                 Jump to items needed &darr;
               </a>
             </p>
-            <ProfessionLevelingGuide leveling={catalog.leveling} professionId={catalog.id} />
+            <ProfessionLevelingGuide leveling={resolvedLeveling!} professionId={catalog.id} />
             <ProfessionShoppingList
-              leveling={catalog.leveling}
+              leveling={resolvedLeveling!}
               recipes={catalog.recipes}
               professionId={catalog.id}
             />

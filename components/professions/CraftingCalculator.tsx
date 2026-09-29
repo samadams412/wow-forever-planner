@@ -5,7 +5,7 @@ import { Clipboard, ChevronDown, ChevronRight, Minus, Plus } from "lucide-react"
 import Link from "next/link";
 import LootItemPill from "@/components/reference/LootItemPill";
 import LootItemIcon from "@/components/reference/LootItemIcon";
-import { mediumIconUrl } from "@/lib/wow-data";
+import { itemQualityColor, mediumIconUrl } from "@/lib/wow-data";
 import { PROFESSION_ICON } from "@/lib/profession-icons";
 import type { LootItem } from "@/lib/dungeon-loot";
 
@@ -408,7 +408,12 @@ export default function CraftingCalculator({
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={mediumIconUrl(item.icon)} alt="" className="h-7 w-7 rounded-sm" />
                       )}
-                      <span className="min-w-0 flex-1 truncate">{recipe.name}</span>
+                      <span
+                        className="min-w-0 flex-1 truncate"
+                        style={item && item.quality !== null ? { color: itemQualityColor(item.quality) } : undefined}
+                      >
+                        {recipe.name}
+                      </span>
                       <span className="text-xs text-foreground-muted">{recipe.category}</span>
                     </button>
                   </li>

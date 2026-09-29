@@ -7,33 +7,14 @@
         {
           "range": {
             "min": 1,
-            "max": 11
-          },
-          "item": {
-            "name": "Copper Rod",
-            "url": "https://foreverchanges.pro/item/6217"
-          },
-          "source": "Learned from the trainer",
-          "count": "~10crafts",
-          "mats": [
-            {
-              "name": "Copper Bar",
-              "quantity": 1,
-              "url": "https://foreverchanges.pro/item/2840"
-            }
-          ]
-        },
-        {
-          "range": {
-            "min": 11,
-            "max": 36
+            "max": 25
           },
           "item": {
             "name": "Rough Sharpening Stone",
             "url": "https://foreverchanges.pro/item/2862"
           },
           "source": "Learned from the trainer",
-          "count": "~34crafts",
+          "count": "~30crafts",
           "mats": [
             {
               "name": "Rough Stone",
@@ -44,20 +25,65 @@
         },
         {
           "range": {
-            "min": 36,
-            "max": 75
+            "min": 25,
+            "max": 50
           },
           "item": {
             "name": "Rough Grinding Stone",
             "url": "https://foreverchanges.pro/item/3470"
           },
           "source": "Learned from the trainer",
-          "count": "~63crafts",
+          "count": "~30crafts",
           "mats": [
             {
               "name": "Rough Stone",
               "quantity": 2,
               "url": "https://foreverchanges.pro/item/2835"
+            }
+          ],
+          "notes": "Keep extra Rough Grinding Stones for Runed Copper Gauntlets and the Silver Rod alternative."
+        },
+        {
+          "range": {
+            "min": 50,
+            "max": 70
+          },
+          "item": {
+            "name": "Coarse Grinding Stone",
+            "url": "https://foreverchanges.pro/item/3478"
+          },
+          "source": "Learned from the trainer",
+          "count": "~60crafts",
+          "mats": [
+            {
+              "name": "Coarse Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/2836"
+            }
+          ],
+          "notes": "Keep Coarse Grinding Stones for Patterned Bronze Bracers."
+        },
+        {
+          "range": {
+            "min": 70,
+            "max": 75
+          },
+          "item": {
+            "name": "Runed Copper Gauntlets",
+            "url": "https://foreverchanges.pro/item/3472"
+          },
+          "source": "Learned from the trainer",
+          "count": "~5crafts",
+          "mats": [
+            {
+              "name": "Copper Bar",
+              "quantity": 8,
+              "url": "https://foreverchanges.pro/item/2840"
+            },
+            {
+              "name": "Rough Grinding Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3470"
             }
           ]
         }
@@ -70,64 +96,48 @@
         {
           "range": {
             "min": 75,
-            "max": 85
+            "max": 80
           },
           "item": {
-            "name": "Acolyte's Chain Shirt",
-            "url": "https://foreverchanges.pro/item/250491"
+            "name": "Runed Copper Belt",
+            "url": "https://foreverchanges.pro/item/2857"
           },
           "source": "Learned from the trainer",
-          "count": "~10crafts",
+          "count": "~5crafts",
           "mats": [
             {
-              "name": "Bronze Bar",
-              "quantity": 4,
-              "url": "https://foreverchanges.pro/item/2841"
+              "name": "Copper Bar",
+              "quantity": 10,
+              "url": "https://foreverchanges.pro/item/2840"
+            }
+          ],
+          "alternatives": [
+            {
+              "item": {
+                "name": "Silver Rod",
+                "url": "https://foreverchanges.pro/item/6338"
+              },
+              "source": "Learned from the trainer",
+              "count": "~5crafts",
+              "mats": [
+                {
+                  "name": "Silver Bar",
+                  "quantity": 1,
+                  "url": "https://foreverchanges.pro/item/2842"
+                },
+                {
+                  "name": "Rough Grinding Stone",
+                  "quantity": 2,
+                  "url": "https://foreverchanges.pro/item/3470"
+                }
+              ]
             }
           ]
         },
         {
           "range": {
-            "min": 85,
+            "min": 80,
             "max": 95
-          },
-          "item": {
-            "name": "Acolyte's Chain Leggings",
-            "url": "https://foreverchanges.pro/item/250496"
-          },
-          "source": "Learned from the trainer",
-          "count": "~10crafts",
-          "mats": [
-            {
-              "name": "Bronze Bar",
-              "quantity": 6,
-              "url": "https://foreverchanges.pro/item/2841"
-            }
-          ]
-        },
-        {
-          "range": {
-            "min": 95,
-            "max": 105
-          },
-          "item": {
-            "name": "Rough Bronze Boots",
-            "url": "https://foreverchanges.pro/item/6350"
-          },
-          "source": "Learned from the trainer",
-          "count": "~11crafts",
-          "mats": [
-            {
-              "name": "Bronze Bar",
-              "quantity": 6,
-              "url": "https://foreverchanges.pro/item/2841"
-            }
-          ]
-        },
-        {
-          "range": {
-            "min": 105,
-            "max": 120
           },
           "item": {
             "name": "Rough Bronze Leggings",
@@ -145,26 +155,31 @@
         },
         {
           "range": {
-            "min": 120,
-            "max": 140
+            "min": 95,
+            "max": 125
           },
           "item": {
             "name": "Patterned Bronze Bracers",
             "url": "https://foreverchanges.pro/item/2868"
           },
           "source": "Learned from the trainer",
-          "count": "~26crafts",
+          "count": "~30crafts",
           "mats": [
             {
               "name": "Bronze Bar",
               "quantity": 5,
               "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "Coarse Grinding Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3478"
             }
           ]
         },
         {
           "range": {
-            "min": 140,
+            "min": 125,
             "max": 150
           },
           "item": {
@@ -172,12 +187,22 @@
             "url": "https://foreverchanges.pro/item/7956"
           },
           "source": "Learned from the trainer",
-          "count": "~10crafts",
+          "count": "~25crafts",
           "mats": [
             {
               "name": "Bronze Bar",
               "quantity": 8,
               "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "Strong Flux",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/3466"
+            },
+            {
+              "name": "Medium Leather",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/2319"
             }
           ]
         }
@@ -203,6 +228,16 @@
               "name": "Bronze Bar",
               "quantity": 8,
               "url": "https://foreverchanges.pro/item/2841"
+            },
+            {
+              "name": "Strong Flux",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/3466"
+            },
+            {
+              "name": "Medium Leather",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/2319"
             }
           ]
         },
@@ -222,6 +257,11 @@
               "name": "Iron Bar",
               "quantity": 6,
               "url": "https://foreverchanges.pro/item/3575"
+            },
+            {
+              "name": "Green Dye",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/2605"
             }
           ]
         },
@@ -241,6 +281,16 @@
               "name": "Steel Bar",
               "quantity": 8,
               "url": "https://foreverchanges.pro/item/3859"
+            },
+            {
+              "name": "Gold Bar",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3577"
+            },
+            {
+              "name": "Heavy Grinding Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3486"
             }
           ]
         },
@@ -260,6 +310,11 @@
               "name": "Steel Bar",
               "quantity": 5,
               "url": "https://foreverchanges.pro/item/3859"
+            },
+            {
+              "name": "Heavy Grinding Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3486"
             }
           ]
         },
@@ -279,6 +334,11 @@
               "name": "Mithril Bar",
               "quantity": 8,
               "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "Citrine",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3864"
             }
           ]
         },
@@ -317,6 +377,11 @@
               "name": "Mithril Bar",
               "quantity": 8,
               "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "Citrine",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3864"
             }
           ]
         }
@@ -342,6 +407,21 @@
               "name": "Mithril Bar",
               "quantity": 8,
               "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "Truesilver Bar",
+              "quantity": 9,
+              "url": "https://foreverchanges.pro/item/6037"
+            },
+            {
+              "name": "Heavy Grinding Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/3486"
+            },
+            {
+              "name": "Core of Earth",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/7075"
             }
           ]
         },
@@ -380,6 +460,11 @@
               "name": "Mithril Bar",
               "quantity": 14,
               "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "Thick Leather",
+              "quantity": 4,
+              "url": "https://foreverchanges.pro/item/4304"
             }
           ]
         },
@@ -399,6 +484,26 @@
               "name": "Mithril Bar",
               "quantity": 12,
               "url": "https://foreverchanges.pro/item/3860"
+            },
+            {
+              "name": "Truesilver Bar",
+              "quantity": 6,
+              "url": "https://foreverchanges.pro/item/6037"
+            },
+            {
+              "name": "Star Ruby",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/7910"
+            },
+            {
+              "name": "Solid Grinding Stone",
+              "quantity": 1,
+              "url": "https://foreverchanges.pro/item/7966"
+            },
+            {
+              "name": "Thick Leather",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/4304"
             }
           ]
         },
@@ -418,6 +523,21 @@
               "name": "Thorium Bar",
               "quantity": 20,
               "url": "https://foreverchanges.pro/item/12359"
+            },
+            {
+              "name": "Large Opal",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/12799"
+            },
+            {
+              "name": "Dense Grinding Stone",
+              "quantity": 2,
+              "url": "https://foreverchanges.pro/item/12644"
+            },
+            {
+              "name": "Rugged Leather",
+              "quantity": 4,
+              "url": "https://foreverchanges.pro/item/8170"
             }
           ]
         },
@@ -437,6 +557,21 @@
               "name": "Thorium Bar",
               "quantity": 30,
               "url": "https://foreverchanges.pro/item/12359"
+            },
+            {
+              "name": "Essence of Air",
+              "quantity": 4,
+              "url": "https://foreverchanges.pro/item/7082"
+            },
+            {
+              "name": "Azerothium Bar",
+              "quantity": 10,
+              "url": "https://foreverchanges.pro/item/249726"
+            },
+            {
+              "name": "Rugged Leather",
+              "quantity": 4,
+              "url": "https://foreverchanges.pro/item/8170"
             }
           ]
         }

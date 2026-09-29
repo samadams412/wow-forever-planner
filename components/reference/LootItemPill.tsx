@@ -19,6 +19,7 @@ export default function LootItemPill({
   context = "loot",
   qty,
   iconOnly,
+  iconSize = "normal",
 }: {
   item: LootItem;
   tooltipId: string;
@@ -41,6 +42,9 @@ export default function LootItemPill({
   // label disappears, same as every other icon-only item elsewhere on the
   // site that relies on hover for its name.
   iconOnly?: boolean;
+  // Slightly larger materials in the desktop recipe table are easier to
+  // scan without enlarging the denser mobile recipe cards.
+  iconSize?: "normal" | "large";
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
   const isClaimed = useIsActiveTooltip(tooltipId);
@@ -84,6 +88,7 @@ export default function LootItemPill({
   }, []);
 
   const qualityColor = itemQualityColor(item.quality);
+  const iconClass = iconSize === "large" ? "h-6 w-6" : "h-5 w-5";
   // "missing" means the same thing everywhere it appears: the beta client
   // hasn't touched this Classic item/drop yet -- NOT "removed from the
   // game." Verified directly against foreverchanges.pro: a dungeon whose
@@ -119,9 +124,9 @@ export default function LootItemPill({
       {item.icon &&
         (() => {
           const iconEl = (
-            <span className="relative inline-block h-5 w-5 shrink-0">
+            <span className={`relative inline-block ${iconClass} shrink-0`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={mediumIconUrl(item.icon)} alt="" className="h-5 w-5 rounded-sm" />
+              <img src={mediumIconUrl(item.icon)} alt="" className={`${iconClass} rounded-sm`} />
               {qty !== undefined && qty > 1 && (
                 <span className="absolute -bottom-1.5 -right-1.5 rounded-sm bg-black/80 px-1 text-[11px] font-bold leading-tight text-white">
                   {qty}

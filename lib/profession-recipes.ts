@@ -10,15 +10,13 @@ import type { LootItem } from "@/lib/dungeon-loot";
 // report). This is a plain fs + module-level cache reader, same pattern as
 // lib/dungeon-loot.ts and lib/items.ts.
 //
-// Every item reference here is a full LootItem, not a slim {id, icon, name}
-// ref -- every item on this site renders through the one shared
-// LootItemPill component (see Part A's site-wide item-linking work), so a
-// recipe's crafted item and its reagents carry the same shape that
-// component already expects (full tooltip text, status, etc.), including
-// the `unknown: true` fallback for a name that didn't resolve against the
-// item catalog at all.
+// Recipe, reagent, and leveling data store itemId/name references and are
+// hydrated from data/items.json by lib/profession-utils.ts when rendered.
+// Favor and camp entries still use full LootItem data until separately migrated.
 
 export type SkillColors = { orange: string; yellow: string; green: string; grey: string };
+
+export type ProfessionItemRef = { itemId: number | null; name: string };
 
 export type Recipe = {
   name: string;
@@ -27,22 +25,32 @@ export type Recipe = {
   categoryConfident: boolean;
   source: string;
   skills: SkillColors;
-  item: LootItem;
+  item: ProfessionItemRef;
   makesQty: number | null;
-  reagents: { qty: number; name: string; item: LootItem }[];
+  reagents: { qty: number; item: ProfessionItemRef }[];
+};
+
+// Persist only the stable catalog id and a display-name fallback in leveling
+// data. Enchanting instructions and a few scraped actions have no item id.
+export type LevelingMaterialRef = { qty: number; item: ProfessionItemRef };
+
+export type ResolvedRecipe = Omit<Recipe, "item" | "reagents"> & {
+  item: LootItem;
+  reagents: { qty: number; item: LootItem }[];
 };
 
 export type LevelingStep = {
   range: [number, number];
-  item: LootItem;
+  item: ProfessionItemRef;
   source: string;
   count: string;
-  mats: { qty: number; item: LootItem }[];
+  notes?: string;
+  mats: LevelingMaterialRef[];
   alternatives?: { // optional, only present for steps that have a known alternative recipe
-    item: LootItem;
+    item: ProfessionItemRef;
     source: string;
     count: string;
-    mats: { qty: number; item: LootItem }[];
+    mats: LevelingMaterialRef[];
   }[];
 };
 
