@@ -4,7 +4,7 @@ import ModeToggle from "@/components/site/ModeToggle";
 export default function SiteFooter() {
   return (
     <footer className="mt-auto border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 py-6 text-center text-xs sm:flex-row sm:justify-between sm:text-left">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-6 text-center text-xs sm:flex-row sm:justify-between sm:text-left">
         <div className="flex items-center gap-2 font-heading font-semibold tracking-wide text-accent">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/logo/gold-talent-tree-transparent.svg" alt="" className="h-5 w-5" />
@@ -13,16 +13,31 @@ export default function SiteFooter() {
         <p className="text-foreground-muted">
           Forevercraft is a free, fan-made project and is not affiliated with Blizzard Entertainment.
         </p>
-        <div className="flex items-center gap-4">
+        <nav
+          aria-label="Footer"
+          className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-end"
+        >
           {/* Deliberately low-key: discoverable if you look, not advertised in the nav. */}
-          <Link href="/contact" className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline">
+          <Link
+            href="/contact"
+            className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline"
+          >
             Contact
           </Link>
-          <Link href="/whats-new" className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline">
+          <Link
+            href="/whats-new"
+            className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline"
+          >
             What&apos;s new
           </Link>
+          <Link
+            href="/privacy"
+            className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline"
+          >
+            Privacy
+          </Link>
           <ModeToggle />
-        </div>
+        </nav>
       </div>
     </footer>
   );

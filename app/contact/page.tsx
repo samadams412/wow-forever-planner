@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 // Update this value if the community feedback form changes.
 const GOOGLE_FORM_EMBED_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSfJFb88fn6C35jVGBxE0xuY9gvHUjfKxIJvthesQKxM9vWa5w/viewform?embedded=true";
 
 export const metadata: Metadata = {
-  title: "Community Feedback & Bug Reports",
+  title: "Contact & Community Feedback",
   description:
     "Report incorrect recipe data, bugs, or suggestions for the Forevercraft planner.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact & Community Feedback | Forevercraft",
+    description:
+      "Report incorrect recipe data, bugs, or suggestions to the Forevercraft team.",
+    url: "/contact",
+    siteName: "Forevercraft",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
@@ -33,6 +43,15 @@ export default function ContactPage() {
           Loading…
         </iframe>
       </div>
+      <p className="mt-4 text-xs leading-relaxed text-foreground-muted">
+        By submitting this form, you agree to share the information you enter with Forevercraft and
+        Google so we can review and address your feedback or bug report. A contact email is optional
+        and will only be used to follow up about your submission. See our{" "}
+        <Link href="/privacy" className="text-accent underline underline-offset-4 hover:text-foreground">
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </main>
   );
 }

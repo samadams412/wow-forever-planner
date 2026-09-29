@@ -17,7 +17,10 @@ const STATIC_ROUTES = [
   "/reference/dungeons",
   "/reference/dungeons/loot",
   "/reference/professions",
+  "/reference/crafting-calculator",
   "/reference/items",
+  "/contact",
+  "/privacy",
   "/guides",
   "/blog",
   "/whats-new",
@@ -28,8 +31,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = STATIC_ROUTES.map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: new Date(),
-    changeFrequency: (route === "" ? "daily" : "weekly") as MetadataRoute.Sitemap[number]["changeFrequency"],
-    priority: route === "" ? 1.0 : 0.8,
+    changeFrequency: (
+      route === ""
+        ? "daily"
+        : route === "/privacy" || route === "/contact"
+          ? "monthly"
+          : "weekly"
+    ) as MetadataRoute.Sitemap[number]["changeFrequency"],
+    priority:
+      route === ""
+        ? 1.0
+        : route === "/reference/crafting-calculator"
+          ? 0.8
+          : route === "/privacy" || route === "/contact"
+            ? 0.4
+            : 0.8,
   }));
 
   // 2. Dynamic guides pages

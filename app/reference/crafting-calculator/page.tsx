@@ -7,9 +7,18 @@ import { resolveProfessionItem } from "@/lib/profession-utils";
 import type { LootItem } from "@/lib/dungeon-loot";
 
 export const metadata: Metadata = {
-  title: "Crafting Calculator | Forevercraft",
-  description: "Plan a WoW Forever craft and recursively calculate the raw materials and intermediate components you need.",
+  title: "Profession Crafting Calculator",
+  description:
+    "Look up recipes across WoW Forever professions and recursively calculate the raw materials and intermediate components you need for skill levels 1–300.",
   alternates: { canonical: "/reference/crafting-calculator" },
+  openGraph: {
+    title: "Profession Crafting Calculator | Forevercraft",
+    description:
+      "Plan WoW Forever profession crafts with recursive recipe and material breakdowns.",
+    url: "/reference/crafting-calculator",
+    siteName: "Forevercraft",
+    type: "website",
+  },
 };
 
 function itemKey(item: ProfessionItemRef) {
