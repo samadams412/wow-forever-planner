@@ -871,7 +871,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 25,
                   "description": "A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets. Mounted targets are dismounted.",
                   "lines": [
                     [
@@ -1624,7 +1624,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "When activated, increases your Physical damage done by 20% and makes you immune to Fear effects, but increases all damage you take by 5%. Lasts 30 sec.",
                   "lines": [
                     [
@@ -2378,7 +2378,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 20,
                   "description": "When activated, this ability temporarily grants you 30% of your maximum health for 20 sec. After the effect expires, the health is lost.",
                   "lines": [
                     [
@@ -3229,10 +3229,17 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "9.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Consecrates the land beneath Paladin, doing 64 Holy damage over 8 sec to enemies who enter the area."
+                  "classicDescription": "Consecrates the land beneath Paladin, doing 64 Holy damage over 8 sec to enemies who enter the area.",
+                  "classicLines": [
+                    [
+                      "scales with 4.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -3249,10 +3256,17 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "9.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Consecrates the land beneath Paladin, doing 120 Holy damage over 8 sec to enemies who enter the area."
+                  "classicDescription": "Consecrates the land beneath Paladin, doing 120 Holy damage over 8 sec to enemies who enter the area.",
+                  "classicLines": [
+                    [
+                      "scales with 4.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -3269,10 +3283,17 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "9.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Consecrates the land beneath Paladin, doing 192 Holy damage over 8 sec to enemies who enter the area."
+                  "classicDescription": "Consecrates the land beneath Paladin, doing 192 Holy damage over 8 sec to enemies who enter the area.",
+                  "classicLines": [
+                    [
+                      "scales with 4.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -3289,10 +3310,17 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "9.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Consecrates the land beneath Paladin, doing 280 Holy damage over 8 sec to enemies who enter the area."
+                  "classicDescription": "Consecrates the land beneath Paladin, doing 280 Holy damage over 8 sec to enemies who enter the area.",
+                  "classicLines": [
+                    [
+                      "scales with 4.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -3309,10 +3337,17 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "9.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Consecrates the land beneath Paladin, doing 384 Holy damage over 8 sec to enemies who enter the area."
+                  "classicDescription": "Consecrates the land beneath Paladin, doing 384 Holy damage over 8 sec to enemies who enter the area.",
+                  "classicLines": [
+                    [
+                      "scales with 4.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -3323,7 +3358,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 25,
                   "description": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.",
                   "lines": [
                     [
@@ -3972,6 +4007,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -4002,6 +4038,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -4032,6 +4069,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -4062,6 +4100,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -4243,6 +4282,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 14.3% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -4262,6 +4302,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 14.3% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -4281,6 +4322,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct), 14.3% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -4537,9 +4579,16 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 31.2% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -4556,9 +4605,16 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 46.2% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -4575,6 +4631,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -4594,6 +4651,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -4613,6 +4671,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -4632,6 +4691,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -4651,6 +4711,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "50% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -5647,6 +5708,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5666,6 +5728,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5685,6 +5748,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5704,6 +5768,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5723,6 +5788,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5742,6 +5808,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5761,6 +5828,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "45% and 10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -5853,7 +5921,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 25,
                   "description": "Finishes the remaining cooldown on your Judgement ability and reduces the Mana cost of your next Judgement by 100%.",
                   "lines": [
                     [
@@ -6290,7 +6358,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 20,
+                  "level": 30,
                   "description": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids.",
                   "lines": [
                     [
@@ -6415,6 +6483,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -6434,6 +6503,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -6453,6 +6523,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -6472,6 +6543,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -6491,6 +6563,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -8967,7 +9040,7 @@
               "ranks": [
                 {
                   "rank": 1,
-                  "level": 30,
+                  "level": 25,
                   "description": "A strike that becomes active after parrying an opponent's attack. This attack deals 50% weapon damage plus 13 and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried.",
                   "lines": [
                     [
@@ -8993,7 +9066,8 @@
                       "Instant",
                       "5 sec cooldown"
                     ]
-                  ]
+                  ],
+                  "note": "Row 4 of Survival opens at level 25, so that is when the talent can give it. The game files still put the spell itself at level 30."
                 },
                 {
                   "rank": 2,
@@ -13759,7 +13833,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 25,
                   "description": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, Eviscerate, or Mutilate by 100%.",
                   "lines": [
                     [
@@ -14555,7 +14629,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 40,
                   "description": "Increases your Energy regeneration rate by 100% for 15 sec.",
                   "lines": [
                     [
@@ -14754,7 +14828,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "Increases your melee attack speed by 20% and your melee attacks strike an additional nearby opponent. Lasts 15 sec.",
                   "lines": [
                     [
@@ -15091,7 +15165,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 20,
                   "description": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec.",
                   "lines": [
                     [
@@ -15443,7 +15517,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 20,
                   "description": "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
                   "lines": [
                     [
@@ -15526,7 +15600,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 20,
+                  "level": 25,
                   "description": "Adds 2 Combo Points to your target. You must add to or use those combo points within 20 sec or the combo points are lost.",
                   "lines": [
                     [
@@ -15553,7 +15627,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 30,
                   "description": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities.",
                   "lines": [
                     [
@@ -16421,6 +16495,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -16440,6 +16515,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -16459,6 +16535,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -16478,6 +16555,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -16497,6 +16575,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -16947,7 +17026,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 20,
                   "description": "When activated, reduces the Mana cost of your next spell by 100% and increases its critical effect chance by 25% if it is capable of a critical effect.",
                   "lines": [
                     [
@@ -17113,6 +17192,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "28.5% of spell power (heal), 28.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -17132,6 +17212,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "28.5% of spell power (direct), 28.5% of spell power (heal), 28.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -17151,6 +17232,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "28.5% of spell power (direct), 28.5% of spell power (heal), 28.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -17170,6 +17252,7 @@
                     ]
                   ],
                   "school": "Holy",
+                  "coefficient": "28.5% of spell power (direct), 28.5% of spell power (heal), 28.5% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -17713,6 +17796,10 @@
                     [
                       "Channeled",
                       ""
+                    ],
+                    [
+                      "scales with 10.4% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -17743,6 +17830,10 @@
                     ],
                     [
                       "Channeled",
+                      ""
+                    ],
+                    [
+                      "scales with 15.4% of spell power (per tick)",
                       ""
                     ]
                   ]
@@ -17954,7 +18045,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "42.9% of spell power (heal), 42.9% of spell power (heal)",
+                  "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -17974,7 +18065,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "42.9% of spell power (heal), 42.9% of spell power (heal)",
+                  "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -17994,7 +18085,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "42.9% of spell power (heal), 42.9% of spell power (heal)",
+                  "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -18014,7 +18105,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "42.9% of spell power (heal), 42.9% of spell power (heal)",
+                  "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -18034,7 +18125,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "42.9% of spell power (heal), 42.9% of spell power (heal)",
+                  "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -18054,7 +18145,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "42.9% of spell power (heal), 42.9% of spell power (heal)",
+                  "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -18211,7 +18302,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Instantly heals the caster for 148 to 184."
+                  "classicDescription": "Instantly heals the caster for 148 to 184.",
+                  "classicLines": [
+                    [
+                      "scales with 26.8% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -18228,7 +18325,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Instantly heals the caster for 283 to 345."
+                  "classicDescription": "Instantly heals the caster for 283 to 345.",
+                  "classicLines": [
+                    [
+                      "scales with 39.6% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -18786,7 +18889,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heal your target for 307 to 353."
+                  "classicDescription": "Heal your target for 307 to 353.",
+                  "classicLines": [
+                    [
+                      "scales with 72.9% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -19047,7 +19156,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "10.7% of spell power (direct)",
+                  "coefficient": "10.7% of spell power (direct), 10.7% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -19068,7 +19177,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "10.7% of spell power (direct)",
+                  "coefficient": "10.7% of spell power (direct), 10.7% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -19089,7 +19198,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "10.7% of spell power (direct)",
+                  "coefficient": "10.7% of spell power (direct), 10.7% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -19110,7 +19219,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "10.7% of spell power (direct)",
+                  "coefficient": "10.7% of spell power (direct), 10.7% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -19131,7 +19240,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "10.7% of spell power (direct)",
+                  "coefficient": "10.7% of spell power (direct), 10.7% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -19152,7 +19261,7 @@
                     ]
                   ],
                   "school": "Holy",
-                  "coefficient": "10.7% of spell power (direct)",
+                  "coefficient": "10.7% of spell power (direct), 10.7% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -19182,7 +19291,13 @@
                   "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 12.3% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -19202,7 +19317,13 @@
                   "coefficient": "57.1% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 22.9% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -19223,7 +19344,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heal your target for 143 to 165."
+                  "classicDescription": "Heal your target for 143 to 165.",
+                  "classicLines": [
+                    [
+                      "scales with 44.6% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -19537,7 +19664,13 @@
                   "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 11% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -19558,7 +19691,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heals the target of 100 damage over 15 sec."
+                  "classicDescription": "Heals the target of 100 damage over 15 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.5% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -19853,7 +19992,13 @@
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 12.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -19873,7 +20018,13 @@
                   "coefficient": "57.1% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 27.1% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -19894,7 +20045,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Smite an enemy for 58 to 66 Holy damage."
+                  "classicDescription": "Smite an enemy for 58 to 66 Holy damage.",
+                  "classicLines": [
+                    [
+                      "scales with 55.4% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -20121,6 +20278,10 @@
                     [
                       "Instant",
                       "3 min cooldown"
+                    ],
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -20152,6 +20313,10 @@
                     [
                       "Instant",
                       "3 min cooldown"
+                    ],
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -20183,6 +20348,10 @@
                     [
                       "Instant",
                       "3 min cooldown"
+                    ],
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -20214,6 +20383,10 @@
                     [
                       "Instant",
                       "3 min cooldown"
+                    ],
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -20245,6 +20418,10 @@
                     [
                       "Instant",
                       "3 min cooldown"
+                    ],
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -20276,6 +20453,10 @@
                     [
                       "Instant",
                       "3 min cooldown"
+                    ],
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 }
@@ -20550,7 +20731,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Blasts the target for 42 to 46 Shadow damage, but causes a high amount of threat."
+                  "classicDescription": "Blasts the target for 42 to 46 Shadow damage, but causes a high amount of threat.",
+                  "classicLines": [
+                    [
+                      "scales with 26.8% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -20571,7 +20758,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Blasts the target for 76 to 82 Shadow damage, but causes a high amount of threat."
+                  "classicDescription": "Blasts the target for 76 to 82 Shadow damage, but causes a high amount of threat.",
+                  "classicLines": [
+                    [
+                      "scales with 36.4% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -20809,7 +21002,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Assault the target's mind with Shadow energy, causing 75 Shadow damage over 3 sec and slowing their movement speed by 50%."
+                  "classicDescription": "Assault the target's mind with Shadow energy, causing 75 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+                  "classicLines": [
+                    [
+                      "scales with 15% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -20830,7 +21029,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Assault the target's mind with Shadow energy, causing 126 Shadow damage over 3 sec and slowing their movement speed by 50%."
+                  "classicDescription": "Assault the target's mind with Shadow energy, causing 126 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+                  "classicLines": [
+                    [
+                      "scales with 15% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -20851,7 +21056,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Assault the target's mind with Shadow energy, causing 186 Shadow damage over 3 sec and slowing their movement speed by 50%."
+                  "classicDescription": "Assault the target's mind with Shadow energy, causing 186 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+                  "classicLines": [
+                    [
+                      "scales with 15% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -20872,7 +21083,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Assault the target's mind with Shadow energy, causing 261 Shadow damage over 3 sec and slowing their movement speed by 50%."
+                  "classicDescription": "Assault the target's mind with Shadow energy, causing 261 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+                  "classicLines": [
+                    [
+                      "scales with 15% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -20893,7 +21110,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Assault the target's mind with Shadow energy, causing 330 Shadow damage over 3 sec and slowing their movement speed by 50%."
+                  "classicDescription": "Assault the target's mind with Shadow energy, causing 330 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+                  "classicLines": [
+                    [
+                      "scales with 15% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -20914,7 +21137,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Assault the target's mind with Shadow energy, causing 426 Shadow damage over 3 sec and slowing their movement speed by 50%."
+                  "classicDescription": "Assault the target's mind with Shadow energy, causing 426 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+                  "classicLines": [
+                    [
+                      "scales with 15% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -21312,7 +21541,13 @@
                   "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 6.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -21333,7 +21568,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 66 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 66 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 10.4% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -21354,7 +21595,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 132 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 132 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.4% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -21375,7 +21622,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 234 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 234 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -21396,7 +21649,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 366 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 366 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -21417,7 +21676,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 510 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 510 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 7,
@@ -21438,7 +21703,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 672 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 672 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 8,
@@ -21459,7 +21730,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "A word of darkness that causes 852 Shadow damage over 18 sec."
+                  "classicDescription": "A word of darkness that causes 852 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -21470,7 +21747,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 40,
                   "description": "Assume Shadowform, increasing your Shadow damage by 10%, reducing the Mana cost of all Shadow spells by 50%, increasing the critical strike damage bonus of your Shadow spells by 100%, and reducing Physical damage taken by you by 15%. However, you may not cast healing spells while in this form.",
                   "lines": [
                     [
@@ -21509,6 +21786,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21529,6 +21807,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21549,6 +21828,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21569,6 +21849,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21589,6 +21870,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21609,6 +21891,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21623,7 +21906,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 30,
                   "description": "Silences the target, preventing them from casting spells for 5 sec and interrupting their spellcasts for 3 sec.",
                   "lines": [
                     [
@@ -21662,10 +21945,17 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "10.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "The next melee attack against the caster will cause 8 Shadow damage and reduce the damage caused by the attacker by 2 for 2 min."
+                  "classicDescription": "The next melee attack against the caster will cause 8 Shadow damage and reduce the damage caused by the attacker by 2 for 2 min.",
+                  "classicLines": [
+                    [
+                      "scales with 6.7% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -21682,6 +21972,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "10.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21702,6 +21993,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "10.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21722,6 +22014,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "10.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21742,6 +22035,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "10.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21762,6 +22056,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "10.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -21776,7 +22071,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 30,
+                  "level": 25,
                   "description": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec. Vampiric Embrace also grants a chance for your Spirit Tap talent to trigger when enemies afflicted by it die.",
                   "lines": [
                     [
@@ -21802,7 +22097,8 @@
                       "Instant",
                       "10 sec cooldown"
                     ]
-                  ]
+                  ],
+                  "note": "Row 4 of Shadow opens at level 25, so that is when the talent can give it. The game files still put the spell itself at level 30."
                 }
               ]
             }
@@ -21946,6 +22242,10 @@
                     [
                       "2.5 sec cast",
                       "6 sec cooldown"
+                    ],
+                    [
+                      "scales with 71.4% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -21977,6 +22277,10 @@
                     [
                       "2.5 sec cast",
                       "6 sec cooldown"
+                    ],
+                    [
+                      "scales with 71.4% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -22008,6 +22312,10 @@
                     [
                       "2.5 sec cast",
                       "6 sec cooldown"
+                    ],
+                    [
+                      "scales with 71.4% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -22039,6 +22347,10 @@
                     [
                       "2.5 sec cast",
                       "6 sec cooldown"
+                    ],
+                    [
+                      "scales with 71.4% of spell power (direct)",
+                      ""
                     ]
                   ]
                 }
@@ -22066,7 +22378,13 @@
                   "coefficient": "38.6% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 15.4% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -22086,7 +22404,13 @@
                   "coefficient": "38.6% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 21.2% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -22107,7 +22431,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Instantly shocks the target with concussive force, causing 65 to 69 Nature damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 2 sec. Causes a high amount of threat."
+                  "classicDescription": "Instantly shocks the target with concussive force, causing 65 to 69 Nature damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 2 sec. Causes a high amount of threat.",
+                  "classicLines": [
+                    [
+                      "scales with 29.9% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -22239,6 +22569,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -22258,6 +22589,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "14.3% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -22277,6 +22609,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "14.3% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -22296,6 +22629,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "14.3% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -22315,6 +22649,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "14.3% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "new"
@@ -22344,7 +22679,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Instantly sears the target with fire, causing 25 Fire damage immediately and 28 Fire damage over 12 sec."
+                  "classicDescription": "Instantly sears the target with fire, causing 25 Fire damage immediately and 28 Fire damage over 12 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 13.4% of spell power (direct), 6.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -22365,7 +22706,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Instantly sears the target with fire, causing 51 Fire damage immediately and 48 Fire damage over 12 sec."
+                  "classicDescription": "Instantly sears the target with fire, causing 51 Fire damage immediately and 48 Fire damage over 12 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 19.8% of spell power (direct), 9.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -22632,7 +22979,13 @@
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 12.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -22653,7 +23006,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Casts a bolt of lightning at the target for 28 to 32 Nature damage."
+                  "classicDescription": "Casts a bolt of lightning at the target for 28 to 32 Nature damage.",
+                  "classicLines": [
+                    [
+                      "scales with 31.4% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -22674,7 +23033,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Casts a bolt of lightning at the target for 48 to 56 Nature damage."
+                  "classicDescription": "Casts a bolt of lightning at the target for 48 to 56 Nature damage.",
+                  "classicLines": [
+                    [
+                      "scales with 55.4% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -22703,6 +23068,10 @@
                     ],
                     [
                       "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
                       ""
                     ]
                   ]
@@ -22735,6 +23104,10 @@
                     [
                       "3 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -22765,6 +23138,10 @@
                     ],
                     [
                       "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
                       ""
                     ]
                   ]
@@ -22797,6 +23174,10 @@
                     [
                       "3 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -22827,6 +23208,10 @@
                     ],
                     [
                       "3 sec cast",
+                      ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
                       ""
                     ]
                   ]
@@ -22859,6 +23244,10 @@
                     [
                       "3 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -22890,6 +23279,10 @@
                     [
                       "3 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 85.7% of spell power (direct)",
+                      ""
                     ]
                   ]
                 }
@@ -22914,6 +23307,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -22934,6 +23328,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -22954,6 +23349,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -22974,6 +23370,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23044,9 +23441,16 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "1.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 5.2% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -23063,9 +23467,16 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "1.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -23082,9 +23493,16 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "1.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -23101,9 +23519,16 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "1.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -23120,9 +23545,16 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "1.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -23139,9 +23571,16 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "1.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -23709,6 +24148,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23729,6 +24169,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23749,6 +24190,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23769,6 +24211,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23789,6 +24232,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "10% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23931,9 +24375,16 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 14.7% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -23950,10 +24401,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 29 Nature damage. This expends one lightning ball. Only one ball will fire every few seconds. Lasts 10 min."
+                  "classicDescription": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 29 Nature damage. This expends one lightning ball. Only one ball will fire every few seconds. Lasts 10 min.",
+                  "classicLines": [
+                    [
+                      "scales with 22.7% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -23970,6 +24428,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -23990,6 +24449,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -24010,6 +24470,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -24030,6 +24491,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -24050,6 +24512,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "26.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -24130,7 +24593,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 40,
                   "description": "Increases your attack speed by 30% for 25 sec.",
                   "lines": [
                     [
@@ -24449,7 +24912,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 40,
+                  "level": 25,
                   "description": "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
                   "lines": [
                     [
@@ -24475,7 +24938,8 @@
                       "Instant",
                       "20 sec cooldown"
                     ]
-                  ]
+                  ],
+                  "note": "Row 4 of Enhancement opens at level 25, so that is when the talent can give it. The game files still put the spell itself at level 40."
                 }
               ]
             },
@@ -25265,7 +25729,13 @@
                   "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 12.3% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -25285,7 +25755,13 @@
                   "coefficient": "57.1% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 27.1% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -25306,7 +25782,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heals a friendly target for 136 to 162."
+                  "classicDescription": "Heals a friendly target for 136 to 162.",
+                  "classicLines": [
+                    [
+                      "scales with 50% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -25327,7 +25809,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heals a friendly target for 279 to 327."
+                  "classicDescription": "Heals a friendly target for 279 to 327.",
+                  "classicLines": [
+                    [
+                      "scales with 79.3% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -25682,7 +26170,7 @@
               "ranks": [
                 {
                   "rank": 1,
-                  "level": 40,
+                  "level": 25,
                   "description": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards.",
                   "lines": [
                     [
@@ -25708,7 +26196,8 @@
                       "Instant",
                       "5 min cooldown"
                     ]
-                  ]
+                  ],
+                  "note": "Row 4 of Restoration opens at level 25, so that is when the talent can give it. The game files still put the spell itself at level 40."
                 },
                 {
                   "rank": 2,
@@ -25769,7 +26258,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell.",
                   "lines": [
                     [
@@ -26243,7 +26732,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Causes an explosion of arcane magic around the caster, causing 34 to 38 Arcane damage to all targets within 10 yards."
+                  "classicDescription": "Causes an explosion of arcane magic around the caster, causing 34 to 38 Arcane damage to all targets within 10 yards.",
+                  "classicLines": [
+                    [
+                      "scales with 11.1% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -26477,9 +26972,16 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 13.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -26496,10 +26998,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 37 Arcane damage each second for 4 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 37 Arcane damage each second for 4 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 20.4% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -26516,10 +27025,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 58 Arcane damage each second for 5 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 58 Arcane damage each second for 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 24% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -26536,10 +27052,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 85 Arcane damage each second for 5 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 85 Arcane damage each second for 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 24% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -26556,10 +27079,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 117 Arcane damage each second for 5 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 117 Arcane damage each second for 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 24% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -26576,10 +27106,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 154 Arcane damage each second for 5 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 154 Arcane damage each second for 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 24% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 7,
@@ -26596,10 +27133,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 195 Arcane damage each second for 5 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 195 Arcane damage each second for 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 24% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 8,
@@ -26616,10 +27160,17 @@
                     ]
                   ],
                   "school": "Arcane",
+                  "coefficient": "28.6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 230 Arcane damage each second for 5 sec."
+                  "classicDescription": "Launches Arcane Missiles at the enemy, causing 230 Arcane damage each second for 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 24% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -26630,7 +27181,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 40,
                   "description": "For the next 15 sec, your spells deal 30% more damage while costing 30% more mana to cast.",
                   "lines": [
                     [
@@ -27692,7 +28243,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.",
                   "lines": [
                     [
@@ -28128,7 +28679,13 @@
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 20.4% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -28149,7 +28706,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Blasts the enemy for 62 to 76 Fire damage."
+                  "classicDescription": "Blasts the enemy for 62 to 76 Fire damage.",
+                  "classicLines": [
+                    [
+                      "scales with 33.2% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -28386,7 +28949,13 @@
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 12.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -28407,7 +28976,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Hurls a fiery ball that causes 34 to 48 Fire damage and an additional 3 Fire damage over 6 sec."
+                  "classicDescription": "Hurls a fiery ball that causes 34 to 48 Fire damage and an additional 3 Fire damage over 6 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 27.1% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -28428,7 +29003,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Hurls a fiery ball that causes 57 to 77 Fire damage and an additional 6 Fire damage over 6 sec."
+                  "classicDescription": "Hurls a fiery ball that causes 57 to 77 Fire damage and an additional 6 Fire damage over 6 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 50% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -28449,7 +29030,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Hurls a fiery ball that causes 89 to 121 Fire damage and an additional 12 Fire damage over 8 sec."
+                  "classicDescription": "Hurls a fiery ball that causes 89 to 121 Fire damage and an additional 12 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 79.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -28640,11 +29227,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "15.7% of spell power (direct)",
+                  "coefficient": "15.7% of spell power (direct), 3.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 55 to 71 Fire damage and an additional 48 Fire damage over 8 sec."
+                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 55 to 71 Fire damage and an additional 48 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 13.4% of spell power (direct), 1.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -28661,11 +29254,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "15.7% of spell power (direct)",
+                  "coefficient": "15.7% of spell power (direct), 3.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 100 to 126 Fire damage and an additional 88 Fire damage over 8 sec."
+                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 100 to 126 Fire damage and an additional 88 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.7% of spell power (direct), 2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -28682,11 +29281,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "15.7% of spell power (direct)",
+                  "coefficient": "15.7% of spell power (direct), 3.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 159 to 197 Fire damage and an additional 140 Fire damage over 8 sec."
+                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 159 to 197 Fire damage and an additional 140 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.7% of spell power (direct), 2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -28703,11 +29308,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "15.7% of spell power (direct)",
+                  "coefficient": "15.7% of spell power (direct), 3.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 226 to 278 Fire damage and an additional 196 Fire damage over 8 sec."
+                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 226 to 278 Fire damage and an additional 196 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.7% of spell power (direct), 2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -28724,11 +29335,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "15.7% of spell power (direct)",
+                  "coefficient": "15.7% of spell power (direct), 3.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 298 to 366 Fire damage and an additional 264 Fire damage over 8 sec."
+                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 298 to 366 Fire damage and an additional 264 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.7% of spell power (direct), 2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -28745,11 +29362,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "15.7% of spell power (direct)",
+                  "coefficient": "15.7% of spell power (direct), 3.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 381 to 465 Fire damage and an additional 340 Fire damage over 8 sec."
+                  "classicDescription": "Calls down a pillar of fire, burning all enemies within the area for 381 to 465 Fire damage and an additional 340 Fire damage over 8 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.7% of spell power (direct), 2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -29171,6 +29794,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "4.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -29191,6 +29815,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "4.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -29211,6 +29836,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "4.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -29231,6 +29857,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "4.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -29251,6 +29878,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "4.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -29271,6 +29899,7 @@
                     ]
                   ],
                   "school": "Frost",
+                  "coefficient": "4.2% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -29285,7 +29914,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "Finishes the remaining cooldown on all your other Frost spells.",
                   "lines": [
                     [
@@ -29497,7 +30126,13 @@
                   "coefficient": "2.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 1.8% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -29692,7 +30327,13 @@
                   "coefficient": "40.7% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 16.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -29712,7 +30353,13 @@
                   "coefficient": "48.9% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 26.9% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -29733,7 +30380,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Launches a bolt of frost at the enemy, causing 54 to 60 Frost damage and slowing movement speed by 40% for 6 sec."
+                  "classicDescription": "Launches a bolt of frost at the enemy, causing 54 to 60 Frost damage and slowing movement speed by 40% for 6 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 46.3% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -30081,7 +30734,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 4,
+                  "level": 25,
                   "description": "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move, or cast spells.",
                   "lines": [
                     [
@@ -30284,7 +30937,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 20,
                   "description": "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec.",
                   "lines": [
                     [
@@ -30324,6 +30977,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with agony, causing 84 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Curse reaches its full duration. Only one Curse per Warlock can be active on any one target.",
+                  "classicLines": [
+                    [
+                      "scales with 4.6% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Agony"
                 },
                 {
@@ -30346,6 +31005,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with agony, causing 180 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Curse reaches its full duration. Only one Curse per Warlock can be active on any one target.",
+                  "classicLines": [
+                    [
+                      "scales with 7.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Agony"
                 },
                 {
@@ -30368,6 +31033,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with agony, causing 324 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Curse reaches its full duration. Only one Curse per Warlock can be active on any one target.",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Agony"
                 },
                 {
@@ -30390,6 +31061,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with agony, causing 504 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Curse reaches its full duration. Only one Curse per Warlock can be active on any one target.",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Agony"
                 },
                 {
@@ -30412,6 +31089,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with agony, causing 780 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Curse reaches its full duration. Only one Curse per Warlock can be active on any one target.",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Agony"
                 },
                 {
@@ -30434,6 +31117,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with agony, causing 1,044 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the Curse reaches its full duration. Only one Curse per Warlock can be active on any one target.",
+                  "classicLines": [
+                    [
+                      "scales with 8.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Agony"
                 }
               ]
@@ -30462,6 +31151,12 @@
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
                   "classicDescription": "Curses the target with impending doom, causing 3,200 Shadow damage after 1 min. If the target dies from this damage, there is a chance that a Doomguard will be summoned. Cannot be cast on players.",
+                  "classicLines": [
+                    [
+                      "scales with 100% of spell power (per tick)",
+                      ""
+                    ]
+                  ],
                   "renamedFrom": "Curse of Doom"
                 }
               ]
@@ -30488,7 +31183,13 @@
                   "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -30509,7 +31210,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Corrupts the target, causing 90 Shadow damage over 15 sec."
+                  "classicDescription": "Corrupts the target, causing 90 Shadow damage over 15 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 15.5% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -30530,7 +31237,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Corrupts the target, causing 222 Shadow damage over 18 sec."
+                  "classicDescription": "Corrupts the target, causing 222 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -30551,7 +31264,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Corrupts the target, causing 324 Shadow damage over 18 sec."
+                  "classicDescription": "Corrupts the target, causing 324 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -30572,7 +31291,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Corrupts the target, causing 486 Shadow damage over 18 sec."
+                  "classicDescription": "Corrupts the target, causing 486 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -30593,7 +31318,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Corrupts the target, causing 666 Shadow damage over 18 sec."
+                  "classicDescription": "Corrupts the target, causing 666 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 7,
@@ -30614,7 +31345,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Corrupts the target, causing 822 Shadow damage over 18 sec."
+                  "classicDescription": "Corrupts the target, causing 822 Shadow damage over 18 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 16.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -30625,7 +31362,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 25,
                   "description": "Reduces the target's movement speed by 30% for 12 sec. Only one Curse per Warlock can be active on any one target.",
                   "lines": [
                     [
@@ -31137,7 +31874,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Transfers 10 health every second from the target to the caster. Lasts 5 sec."
+                  "classicDescription": "Transfers 10 health every second from the target to the caster. Lasts 5 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 7.8% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -31351,7 +32094,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Drains the soul of the target, causing 55 Shadow damage over 15 sec. If the target dies while being drained, and yields experience or honor, the caster gains a Soul Shard. Soul Shards are required for other spells."
+                  "classicDescription": "Drains the soul of the target, causing 55 Shadow damage over 15 sec. If the target dies while being drained, and yields experience or honor, the caster gains a Soul Shard. Soul Shards are required for other spells.",
+                  "classicLines": [
+                    [
+                      "scales with 6.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -32393,7 +33142,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 20,
                   "description": "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hrs. The effect is canceled if any Demon is summoned.\n\nImp: Increases your Shadow damage by 15%.\n\nVoidwalker: Restores 2% of your total Mana every 4 sec.\n\nSuccubus/Incubus: Increases your Fire damage by 15%.\n\nFelhunter: Restores 3% of your total Health every 4 sec.",
                   "lines": [
                     [
@@ -32515,7 +33264,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": null,
+                  "level": 25,
                   "description": "Your next Imp, Voidwalker, Succubus, Incubus, or Felhunter Summon spell has its casting time reduced by 5.5 sec and its Mana cost reduced by 50%.",
                   "lines": [
                     [
@@ -32706,6 +33455,7 @@
                     ]
                   ],
                   "school": "Shadow",
+                  "coefficient": "100% of spell power (direct)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "same"
@@ -32880,7 +33630,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 40,
+                  "level": 30,
                   "description": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter Demon instead. In addition, both the Demon and the master will inflict 3% more damage. Lasts as long as the Demon is active.",
                   "lines": [
                     [
@@ -32896,7 +33646,8 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead. In addition, both the demon and master will inflict 3% more damage. Lasts as long as the demon is active."
+                  "classicDescription": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter demon instead. In addition, both the demon and master will inflict 3% more damage. Lasts as long as the demon is active.",
+                  "note": "Row 5 of Demonology opens at level 30, so that is when the talent can give it. The game files still put the spell itself at level 40."
                 }
               ]
             },
@@ -33158,7 +33909,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "Afflicts the target for 5 min, causing 15% of all damage done by the Warlock to other targets to also be dealt to the cursed target. Bane of Havoc is limited to 1 target, and only one Bane per Warlock can be active on any one target.",
                   "lines": [
                     [
@@ -33418,11 +34169,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Burns the enemy for 10 Fire damage and then an additional 20 Fire damage over 15 sec."
+                  "classicDescription": "Burns the enemy for 10 Fire damage and then an additional 20 Fire damage over 15 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 5.8% of spell power (direct), 3.7% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -33439,11 +34196,17 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Burns the enemy for 23 Fire damage and then an additional 40 Fire damage over 15 sec."
+                  "classicDescription": "Burns the enemy for 23 Fire damage and then an additional 40 Fire damage over 15 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 12.5% of spell power (direct), 8.1% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -33460,7 +34223,7 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33481,7 +34244,7 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33502,7 +34265,7 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33523,7 +34286,7 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33544,7 +34307,7 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33565,7 +34328,7 @@
                     ]
                   ],
                   "school": "Fire",
-                  "coefficient": "13% of spell power (per tick), 20% of spell power (direct)",
+                  "coefficient": "20% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33659,6 +34422,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "8.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33679,6 +34443,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "8.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33699,6 +34464,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "8.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33719,6 +34485,7 @@
                     ]
                   ],
                   "school": "Fire",
+                  "coefficient": "8.3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -33749,7 +34516,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Inflict searing pain on the enemy target, causing 38 to 46 Fire damage. Causes a high amount of threat."
+                  "classicDescription": "Inflict searing pain on the enemy target, causing 38 to 46 Fire damage. Causes a high amount of threat.",
+                  "classicLines": [
+                    [
+                      "scales with 39.6% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -33881,7 +34654,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Sends a shadowy bolt at the enemy, causing 13 to 17 Shadow damage."
+                  "classicDescription": "Sends a shadowy bolt at the enemy, causing 13 to 17 Shadow damage.",
+                  "classicLines": [
+                    [
+                      "scales with 14% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -33902,7 +34681,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Sends a shadowy bolt at the enemy, causing 26 to 32 Shadow damage."
+                  "classicDescription": "Sends a shadowy bolt at the enemy, causing 26 to 32 Shadow damage.",
+                  "classicLines": [
+                    [
+                      "scales with 29.9% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -33923,7 +34708,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Sends a shadowy bolt at the enemy, causing 52 to 60 Shadow damage."
+                  "classicDescription": "Sends a shadowy bolt at the enemy, causing 52 to 60 Shadow damage.",
+                  "classicLines": [
+                    [
+                      "scales with 56% of spell power (direct)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -36045,7 +36836,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Roots the target in place and causes 20 Nature damage over 12 sec. Damage caused may interrupt the effect. Only useable outdoors."
+                  "classicDescription": "Roots the target in place and causes 20 Nature damage over 12 sec. Damage caused may interrupt the effect. Only useable outdoors.",
+                  "classicLines": [
+                    [
+                      "scales with 3.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -36066,7 +36863,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Roots the target in place and causes 50 Nature damage over 15 sec. Damage caused may interrupt the effect. Only useable outdoors."
+                  "classicDescription": "Roots the target in place and causes 50 Nature damage over 15 sec. Damage caused may interrupt the effect. Only useable outdoors.",
+                  "classicLines": [
+                    [
+                      "scales with 5.6% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -36087,7 +36890,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Roots the target in place and causes 90 Nature damage over 18 sec. Damage caused may interrupt the effect. Only useable outdoors."
+                  "classicDescription": "Roots the target in place and causes 90 Nature damage over 18 sec. Damage caused may interrupt the effect. Only useable outdoors.",
+                  "classicLines": [
+                    [
+                      "scales with 5% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -36108,7 +36917,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Roots the target in place and causes 140 Nature damage over 21 sec. Damage caused may interrupt the effect. Only useable outdoors."
+                  "classicDescription": "Roots the target in place and causes 140 Nature damage over 21 sec. Damage caused may interrupt the effect. Only useable outdoors.",
+                  "classicLines": [
+                    [
+                      "scales with 4.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -36129,7 +36944,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Roots the target in place and causes 200 Nature damage over 24 sec. Damage caused may interrupt the effect. Only useable outdoors."
+                  "classicDescription": "Roots the target in place and causes 200 Nature damage over 24 sec. Damage caused may interrupt the effect. Only useable outdoors.",
+                  "classicLines": [
+                    [
+                      "scales with 3.8% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -36150,7 +36971,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Roots the target in place and causes 270 Nature damage over 27 sec. Damage caused may interrupt the effect. Only useable outdoors."
+                  "classicDescription": "Roots the target in place and causes 270 Nature damage over 27 sec. Damage caused may interrupt the effect. Only useable outdoors.",
+                  "classicLines": [
+                    [
+                      "scales with 3.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -36334,6 +37161,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36364,6 +37192,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36394,6 +37223,7 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "3% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36418,7 +37248,7 @@
               "ranks": [
                 {
                   "rank": 1,
-                  "level": 20,
+                  "level": 25,
                   "description": "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec.",
                   "lines": [
                     [
@@ -36542,10 +37372,16 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 6% of spell power (direct), 5.2% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -36562,11 +37398,17 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Burns the enemy for 17 to 21 Arcane damage and then an additional 32 Arcane damage over 12 sec."
+                  "classicDescription": "Burns the enemy for 17 to 21 Arcane damage and then an additional 32 Arcane damage over 12 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 9.4% of spell power (direct), 8.1% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -36583,11 +37425,17 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Burns the enemy for 30 to 36 Arcane damage and then an additional 52 Arcane damage over 12 sec."
+                  "classicDescription": "Burns the enemy for 30 to 36 Arcane damage and then an additional 52 Arcane damage over 12 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 12.8% of spell power (direct), 11.1% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -36604,7 +37452,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36625,7 +37473,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36646,7 +37494,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36667,7 +37515,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36688,7 +37536,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36709,7 +37557,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36730,7 +37578,7 @@
                     ]
                   ],
                   "school": "Arcane",
-                  "coefficient": "13% of spell power (per tick), 15% of spell power (direct)",
+                  "coefficient": "15% of spell power (direct), 13% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
@@ -36785,10 +37633,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 1). Only useable outdoors. 1 charge. Lasts 45 sec."
+                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 1). Only useable outdoors. 1 charge. Lasts 45 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 3.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -36805,10 +37660,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 2). Only useable outdoors. 1 charge. Lasts 45 sec."
+                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 2). Only useable outdoors. 1 charge. Lasts 45 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 5.6% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -36825,10 +37687,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 3). Only useable outdoors. 1 charge. Lasts 45 sec."
+                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 3). Only useable outdoors. 1 charge. Lasts 45 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 5% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -36845,10 +37714,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 4). Only useable outdoors. 1 charge. Lasts 45 sec."
+                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 4). Only useable outdoors. 1 charge. Lasts 45 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 4.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 5,
@@ -36865,10 +37741,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 5). Only useable outdoors. 1 charge. Lasts 45 sec."
+                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 5). Only useable outdoors. 1 charge. Lasts 45 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 3.8% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 6,
@@ -36885,10 +37768,17 @@
                     ]
                   ],
                   "school": "Nature",
+                  "coefficient": "6% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 6). Only useable outdoors. 1 charge. Lasts 45 sec."
+                  "classicDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 6). Only useable outdoors. 1 charge. Lasts 45 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 3.3% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 }
               ]
             },
@@ -37318,6 +38208,10 @@
                     [
                       "1.5 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 12.3% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -37349,6 +38243,10 @@
                     [
                       "1.7 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 23.1% of spell power (direct)",
+                      ""
                     ]
                   ]
                 },
@@ -37379,6 +38277,10 @@
                     ],
                     [
                       "2 sec cast",
+                      ""
+                    ],
+                    [
+                      "scales with 44.3% of spell power (direct)",
                       ""
                     ]
                   ]
@@ -39720,7 +40622,13 @@
                   "coefficient": "42.9% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 12.3% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -39740,7 +40648,13 @@
                   "coefficient": "57.1% of spell power (heal)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 31.4% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -39761,7 +40675,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heals a friendly target for 204 to 252."
+                  "classicDescription": "Heals a friendly target for 204 to 252.",
+                  "classicLines": [
+                    [
+                      "scales with 55.4% of spell power (heal)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -40191,7 +41111,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 30,
                   "description": "When activated, your next Nature spell becomes an instant cast spell.",
                   "lines": [
                     [
@@ -40359,6 +41279,10 @@
                     [
                       "2 sec cast",
                       ""
+                    ],
+                    [
+                      "scales with 20% of spell power (heal), 5% of spell power (per tick)",
+                      ""
                     ]
                   ]
                 },
@@ -40389,6 +41313,10 @@
                     ],
                     [
                       "2 sec cast",
+                      ""
+                    ],
+                    [
+                      "scales with 26.4% of spell power (heal), 6.6% of spell power (per tick)",
                       ""
                     ]
                   ]
@@ -40634,7 +41562,13 @@
                   "coefficient": "20% of spell power (per tick)",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
-                  "classicStatus": "same"
+                  "classicStatus": "changed",
+                  "classicLines": [
+                    [
+                      "scales with 8% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 2,
@@ -40655,7 +41589,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heals the target for 56 over 12 sec."
+                  "classicDescription": "Heals the target for 56 over 12 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 12.5% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 3,
@@ -40676,7 +41616,13 @@
                   "confirmed": true,
                   "source": "beta client 1.60.1.70009",
                   "classicStatus": "changed",
-                  "classicDescription": "Heals the target for 116 over 12 sec."
+                  "classicDescription": "Heals the target for 116 over 12 sec.",
+                  "classicLines": [
+                    [
+                      "scales with 17% of spell power (per tick)",
+                      ""
+                    ]
+                  ]
                 },
                 {
                   "rank": 4,
@@ -40982,7 +41928,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 1,
+                  "level": 25,
                   "description": "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells.",
                   "lines": [
                     [
