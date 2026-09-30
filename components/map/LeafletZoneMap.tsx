@@ -792,9 +792,22 @@ const LeafletZoneMap = forwardRef<
         entrance.kind === "raid"
           ? `calc(var(--entrance-icon-size, 16px) * ${ENTRANCE_ICON_ZOOM.raidSizeMultiplier})`
           : "var(--entrance-icon-size, 16px)";
+      // cursor:none here (deliberately, not just "no cursor set") --
+      // CustomCursor.tsx's resolveState() already matches this marker's
+      // role="button" (set by Leaflet) and shows the themed "active"
+      // gauntlet cursor for it. Leaflet's own stylesheet sets
+      // `cursor: pointer` on the marker's outer element (an ancestor of
+      // this div), and CSS `cursor` is inherited -- so merely omitting our
+      // own cursor:pointer still left this element showing Leaflet's
+      // inherited pointer, stacked on top of our custom overlay (confirmed
+      // live: a real double-cursor over every entrance/flight-master
+      // marker, distinct from the plain map background case already fixed
+      // via the .leaflet-container entry in CustomCursor.tsx's own
+      // NATIVE_CURSOR_SELECTOR). Explicit cursor:none overrides that
+      // inherited value instead of just failing to add a new one.
       const innerStyle =
         `width:${sizeExpr};height:${sizeExpr};opacity:var(--entrance-icon-opacity, 0);` +
-        `transition:opacity 200ms ease,filter 120ms ease;pointer-events:auto;cursor:pointer;filter:drop-shadow(0 0 3px rgba(0,0,0,.8))`;
+        `transition:opacity 200ms ease,filter 120ms ease;pointer-events:auto;cursor:none;filter:drop-shadow(0 0 3px rgba(0,0,0,.8))`;
       const icon = L.divIcon({
         className: "",
         html:
@@ -854,10 +867,14 @@ const LeafletZoneMap = forwardRef<
     flightMasterMarkersRef.current = flightMasterMarkerEntries;
 
     for (const fm of flightMasters) {
+      // cursor:none here -- see the matching entrance-marker comment above
+      // for why (Leaflet's own stylesheet sets cursor:pointer on an
+      // ancestor, which CSS inheritance would otherwise carry down here,
+      // fighting the site's custom-cursor overlay).
       const innerStyle =
         `width:var(--flight-master-icon-size, 16px);height:var(--flight-master-icon-size, 16px);` +
         `opacity:var(--flight-master-icon-opacity, 0);transition:opacity 200ms ease,filter 120ms ease;` +
-        `pointer-events:auto;cursor:pointer;filter:drop-shadow(0 0 3px rgba(0,0,0,.8))`;
+        `pointer-events:auto;cursor:none;filter:drop-shadow(0 0 3px rgba(0,0,0,.8))`;
       const icon = L.divIcon({
         className: "",
         html:
@@ -900,7 +917,6 @@ const LeafletZoneMap = forwardRef<
         const { worldX, worldY } = latLngToWorld(fullGridCorners, gridSize, tileSize, maxNativeZoom, lastLatLng.lat, lastLatLng.lng);
         const info = lookupArea(mapName, worldX, worldY);
         const zone = info ? zoneByAreaId.get(info.zoneId) : undefined;
-        console.log("[DEBUG] renderReadout", { worldX, worldY, info, zoneName: zone?.name });
         if (!info || !zone) {
           readoutEl.hidden = true;
           return;
@@ -914,7 +930,6 @@ const LeafletZoneMap = forwardRef<
 
       const onMapMouseMove = (e: L.LeafletMouseEvent) => {
         lastLatLng = e.latlng;
-        renderReadout(); // TEMP DEBUG: bypass rAF (backgrounded-tab throttling diagnosis)
         if (!rafPending) {
           rafPending = true;
           requestAnimationFrame(renderReadout);

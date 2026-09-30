@@ -281,14 +281,25 @@ export default function MapExplorer({
             setMobileSidebarOpen((o) => !o);
             setToolbarMenuOpen(false);
           }}
-          className="rounded border border-border bg-surface px-3 py-2 text-sm text-foreground md:hidden"
+          className={`rounded border border-border bg-surface px-3 py-2 text-sm text-foreground shadow-lg md:hidden ${
+            // The overlay below is `fixed inset-0`, so its own scrollable
+            // content (the zone list) renders directly on top of wherever
+            // this button would otherwise sit in normal page flow --
+            // confirmed live: with this button NOT pinned above the overlay,
+            // clicking where "Close menu" appears actually hit a zone-list
+            // row underneath it, making the menu unreachable once opened.
+            // Pinning it above the overlay's own z-index only while open
+            // keeps it reachable without changing its resting (closed)
+            // appearance at all.
+            mobileSidebarOpen ? "fixed right-4 top-4 z-50" : ""
+          }`}
           aria-expanded={mobileSidebarOpen}
         >
           {mobileSidebarOpen ? "Close menu" : "Map menu"}
         </button>
 
         <div
-          className={`${mobileSidebarOpen ? "block" : "hidden"} scrollbar-gold fixed inset-0 z-40 overflow-y-auto bg-background p-4 md:static md:z-auto md:block md:w-72 md:shrink-0 md:overflow-visible md:bg-transparent md:p-0`}
+          className={`${mobileSidebarOpen ? "block" : "hidden"} scrollbar-gold fixed inset-0 z-40 overflow-y-auto bg-background p-4 pt-16 md:static md:z-auto md:block md:w-72 md:shrink-0 md:overflow-visible md:bg-transparent md:p-0`}
         >
           <MapSidebar
             continents={registeredContinents}

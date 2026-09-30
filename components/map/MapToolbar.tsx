@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Frame, Tag, SlidersHorizontal, Share2, Menu, X, Check } from "lucide-react";
 import type { MapLayers } from "@/lib/map-layers";
 
@@ -132,6 +132,37 @@ export default function MapToolbar({
   mobileOpen: boolean;
   onToggleMobile: () => void;
 }) {
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  // This toolbar's own wrapper is only as wide as the hamburger button --
+  // the header row it sits in (title block + toolbar) is `flex flex-wrap
+  // justify-between`, so on a narrow viewport the toolbar often wraps onto
+  // its own line and lands at the LEFT edge (a single item on a wrapped
+  // flex line sits at flex-start, not space-between's usual opposite ends)
+  // instead of the right edge it sits at on desktop. The dropdown's
+  // default `right-0` anchor assumes the latter -- confirmed live this
+  // pushes it mostly off-screen to the left on a ~440px-wide layout
+  // (rect.left ended up around -172px). Rather than guess which side the
+  // wrapper lands on at a given width, measure after paint and flip to a
+  // left-anchored, viewport-clamped position if the default overflows --
+  // same "measure real rendered size, then correct" approach already used
+  // for tooltip placement in lib/use-hover-tooltip.ts. useLayoutEffect (not
+  // useEffect) so the correction applies before the browser paints, no
+  // visible flash at the wrong position.
+  useLayoutEffect(() => {
+    if (!mobileOpen) return;
+    const el = dropdownRef.current;
+    if (!el) return;
+    const margin = 8;
+    const rect = el.getBoundingClientRect();
+    if (rect.left < margin) {
+      el.style.right = "auto";
+      el.style.left = `${margin}px`;
+    } else if (rect.right > window.innerWidth - margin) {
+      el.style.left = "auto";
+      el.style.right = `${margin}px`;
+    }
+  }, [mobileOpen]);
+
   return (
     <div className="relative shrink-0">
       {/* Desktop: a plain icon-button row, in the empty space to the right of
@@ -158,7 +189,7 @@ export default function MapToolbar({
           {mobileOpen ? <X className="h-4 w-4" aria-hidden="true" /> : <Menu className="h-4 w-4" aria-hidden="true" />}
         </button>
         {mobileOpen && (
-          <div className="absolute right-0 top-full z-30 mt-1.5 w-56 rounded border border-border bg-surface p-2 shadow-lg">
+          <div ref={dropdownRef} className="absolute right-0 top-full z-30 mt-1.5 w-56 rounded border border-border bg-surface p-2 shadow-lg">
             <div className="flex flex-col gap-1">
               {TOGGLE_BUTTONS.map((t) => (
                 <button
