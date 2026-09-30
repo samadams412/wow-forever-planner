@@ -5,10 +5,15 @@ import L from "leaflet";
 import { worldToLatLng, latLngToWorld, type FullGridCorners } from "@/lib/map-coords";
 import type { ZoneAreaData, ZoneAreaGeometry } from "@/lib/zone-areas";
 import type { EntranceMarker, EntranceInfo, EntranceKind } from "@/lib/map-entrances";
-import type { FlightMaster, FlightMasterFaction } from "@/lib/map-flight-masters";
+import type { FlightMaster } from "@/lib/map-flight-masters";
 import type { MapLayers } from "@/lib/map-layers";
 import { preloadSubzoneLookup, lookupArea } from "@/lib/subzone-lookup";
 import { worldToZoneCoords } from "@/lib/zone-coords";
+import {
+  MAP_FACTION_COLOR as FACTION_COLOR,
+  entranceIconSvg,
+  flightMasterIconSvg,
+} from "@/lib/map-icons";
 // NOT imported here -- this component is loaded via next/dynamic(...,
 // { ssr: false }) (see LeafletZoneMapLoader.tsx), and a CSS side-effect
 // import inside a client-only-loaded chunk doesn't reliably make it into
@@ -35,12 +40,6 @@ export const ZONE_LABEL_ZOOM = {
   levelLineFrom: 3, // the level-range sub-line only shows once zoomed in this far
 } as const;
 
-const FACTION_COLOR = {
-  alliance: "#6fb1ff",
-  horde: "#ff7a6b",
-  contested: "#ffd100",
-} as const;
-
 // Zoom behavior for dungeon/raid/battleground entrance icons, one place
 // per the task that added this: hidden below fadeInFrom (a CSS opacity
 // transition on the icon itself handles the actual fade, driven by a
@@ -57,12 +56,6 @@ export const ENTRANCE_ICON_ZOOM = {
   raidSizeMultiplier: 1.15,
 } as const;
 
-const ENTRANCE_ICON_COLOR: Record<EntranceKind, string> = {
-  dungeon: "#4fd8c4",
-  raid: "#b478ff",
-  battleground: "#ff6b6b",
-};
-
 // Same fade-in/scale curve as ENTRANCE_ICON_ZOOM above (see that constant's
 // own comment for the mechanics -- a single CSS custom property set on the
 // shared "pins" pane on zoomend, read by every marker's inner element), just
@@ -75,17 +68,6 @@ export const FLIGHT_MASTER_ICON_ZOOM = {
   sizeAtMax: 32,
   maxZoomForSizing: 6,
 } as const;
-
-// Reuses this map's existing faction color language (alliance blue / horde
-// red / contested-or-neutral gold -- see FACTION_COLOR above) rather than
-// inventing a second palette. "Both" isn't literally "contested" the way a
-// zone's territory can be, but it's the same "neither side alone" case
-// visually, so it gets the same gold.
-const FLIGHT_MASTER_FACTION_COLOR: Record<FlightMasterFaction, string> = {
-  Alliance: FACTION_COLOR.alliance,
-  Horde: FACTION_COLOR.horde,
-  Both: FACTION_COLOR.contested,
-};
 
 const ENTRANCE_KIND_LABEL: Record<EntranceKind, string> = {
   dungeon: "Dungeon",
@@ -112,43 +94,6 @@ export type LeafletZoneMapHandle = {
   flyToWorldPoint: (x: number, y: number, zoom: number) => void;
   openEntrancePopup: (id: string) => void;
 };
-
-// Simple original SVGs, not client art -- the real client world-map pin
-// icons for these (UiTextureAtlas 647's "dungeon"/"raid"/"crossedflags"
-// members, FileDataID 1121272) were found and verified but that texture
-// hasn't been exported from wow.export yet (see CLAUDE.md's "entrance icon
-// art" session note for exactly what to export and the crop rectangles to
-// use once it is) -- these are a placeholder, swappable for a real
-// extracted PNG in public/map/icons/ later with no rendering-logic change,
-// not a permanent design choice.
-function entranceIconSvg(kind: EntranceKind): string {
-  const color = ENTRANCE_ICON_COLOR[kind];
-  if (kind === "raid") {
-    return `<svg viewBox="0 0 32 32" width="100%" height="100%"><circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/><circle cx="16" cy="16" r="8" fill="none" stroke="${color}" stroke-width="1.5"/><circle cx="16" cy="16" r="2.5" fill="${color}"/></svg>`;
-  }
-  if (kind === "battleground") {
-    return `<svg viewBox="0 0 32 32" width="100%" height="100%"><circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/><path d="M9 9 L23 23 M23 9 L9 23" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/></svg>`;
-  }
-  return `<svg viewBox="0 0 32 32" width="100%" height="100%"><circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/><path d="M10 20 V13 A6 6 0 0 1 22 13 V20" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/></svg>`;
-}
-
-// A simple original glyph (not client art -- see entranceIconSvg's own
-// comment on the same policy): an L-profile boot (shaft, heel, flat sole)
-// with two feather shapes fanning off the ankle. Tinted by faction via
-// FLIGHT_MASTER_FACTION_COLOR. Checked at full render size before trusting
-// it -- an earlier version (a plain vertical bar with a flared base) read
-// as the numeral "1" once shrunk to icon size, not a boot at all.
-function flightMasterIconSvg(faction: FlightMasterFaction): string {
-  const color = FLIGHT_MASTER_FACTION_COLOR[faction];
-  return (
-    `<svg viewBox="0 0 32 32" width="100%" height="100%">` +
-    `<circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/>` +
-    `<path d="M15 9 Q7 5 4 10 Q9 11 15 10 Z" fill="${color}" opacity="0.55"/>` +
-    `<path d="M15 11 Q8 9 6 14 Q11 14 15 12 Z" fill="${color}" opacity="0.8"/>` +
-    `<path d="M13 6 L19 6 L19 17 L19 19 L24 19 Q27 19 27 21.5 Q27 24 24 24 L8 24 L8 19.5 Q8 17.5 10 17 L13 17 Z" fill="${color}"/>` +
-    `</svg>`
-  );
-}
 
 function flightMasterPopupHtml(f: FlightMaster): string {
   return (

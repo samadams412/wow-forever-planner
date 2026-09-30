@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MapPin } from "lucide-react";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import LootDisclaimer from "@/components/reference/LootDisclaimer";
 import LootBossCard from "@/components/reference/LootBossCard";
 import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
 import { getDungeonLootIndex, getDungeonWithLoot } from "@/lib/dungeon-loot";
+import { getEntranceMapHref } from "@/lib/map-entrances";
 
 export function generateStaticParams() {
   return getDungeonLootIndex().map((d) => ({ slug: d.id }));
@@ -34,6 +37,9 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
 
   const { dungeon, data } = entry;
   const totalItems = data.bosses.reduce((n, b) => n + b.items.length, 0);
+  // Null for dungeons with no client-placed entrance yet (most new-in-Forever
+  // ones) -- the link is simply omitted rather than pointing at nothing.
+  const mapHref = getEntranceMapHref(dungeon.id);
 
   return (
     <main className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
@@ -58,9 +64,20 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
 
       <div className="mt-3 flex flex-wrap items-baseline justify-between gap-2">
         <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">{dungeon.name}</h1>
-        <span className="text-sm text-foreground-muted">
-          Level {dungeon.levelMin}-{dungeon.levelMax}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-foreground-muted">
+            Level {dungeon.levelMin}-{dungeon.levelMax}
+          </span>
+          {mapHref && (
+            <Link
+              href={mapHref}
+              className="inline-flex items-center gap-1.5 rounded border border-accent/60 bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent transition-colors hover:bg-accent/20"
+            >
+              <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+              View entrance on map
+            </Link>
+          )}
+        </div>
       </div>
       {dungeon.zone && <p className="mt-0.5 text-xs text-foreground-muted">{dungeon.zone}</p>}
       {dungeon.description && (

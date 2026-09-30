@@ -224,6 +224,11 @@ export default function MapExplorer({
 
   const handleSelectZoneRow = useCallback(
     (areaId: number) => {
+      // Closes the mobile overlay (fixed inset-0, so it hides the map
+      // entirely) so the user actually sees the fly-to they just asked for
+      // -- same as handleSearchPick below. A no-op on md+ where the
+      // sidebar is static and this state isn't read.
+      setMobileSidebarOpen(false);
       setSelectedZoneId(areaId);
       setSelectedEntranceId(null);
       const zone = zoneAreas.find((z) => z.areaId === areaId);

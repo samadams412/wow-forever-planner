@@ -1,5 +1,6 @@
 import { getDungeon } from "./dungeons";
 import { hasDungeonLoot } from "./dungeon-loot";
+import { isRegisteredContinent } from "./map-continents";
 import rawEntrancesData from "@/data/map-entrances.json";
 import raidsData from "@/data/raids.json";
 import battlegroundsData from "@/data/battlegrounds.json";
@@ -218,4 +219,34 @@ export function getSkippedEntrances(): { id: string; kind: EntranceKind; reason:
     }
   }
   return out;
+}
+
+// Deep link into /reference/map/<continent> that opens centered on (and
+// with the popup for) the marker containing this entrance -- used by the
+// dungeon loot page header. Reuses MapExplorer's existing shareable-hash
+// format rather than a new query param: `sel=entrance:<markerId>` is what
+// MapExplorer restores on mount (fly to + open popup), and x/y/z primes the
+// initial view on the same point so the map doesn't first render the whole
+// continent and then fly across it. The marker id is the GROUP's id when
+// this entrance was clustered (e.g. Scarlet Monastery wings), since members
+// have no marker of their own -- the group popup lists every member.
+// Returns null when the entrance has no position/continent in this build
+// (e.g. the new-in-Forever dungeons not yet placed), so callers can simply
+// omit the link.
+export const ENTRANCE_LINK_ZOOM = 5;
+
+export function getEntranceMapHref(entranceId: string): string | null {
+  const raw = rawEntrances[entranceId];
+  if (!raw || ALWAYS_SKIP[entranceId] || !raw.continent || !raw.worldPosition) return null;
+  if (!isRegisteredContinent(raw.continent)) return null;
+  const marker = getEntranceMarkers(raw.continent).find((m) =>
+    m.type === "single" ? m.id === entranceId : m.members.some((mem) => mem.id === entranceId)
+  );
+  if (!marker) return null;
+  const params = new URLSearchParams();
+  params.set("x", String(Math.round(marker.worldPosition.x)));
+  params.set("y", String(Math.round(marker.worldPosition.y)));
+  params.set("z", ENTRANCE_LINK_ZOOM.toFixed(2));
+  params.set("sel", `entrance:${marker.id}`);
+  return `/reference/map/${raw.continent}#${params.toString()}`;
 }

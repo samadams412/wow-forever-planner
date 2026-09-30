@@ -6,6 +6,7 @@ import type { ZoneAreaData, ZoneFaction } from "@/lib/zone-areas";
 import type { EntranceMarker } from "@/lib/map-entrances";
 import type { FlightMaster } from "@/lib/map-flight-masters";
 import type { MapLayers } from "@/lib/map-layers";
+import { entranceIconSvg, flightMasterIconSvg } from "@/lib/map-icons";
 
 const FACTION_DOT_COLOR: Record<ZoneFaction, string> = {
   alliance: "#6fb1ff",
@@ -34,17 +35,37 @@ const KIND_TAG: Record<string, "Dungeon" | "Raid" | "Battleground"> = {
 // the map) -- entrance-type toggles stay here in the sidebar for now, per
 // instruction, so this list is deliberately shorter than it used to be. Not
 // duplicated in both places.
-const LAYER_ROWS: { key: keyof MapLayers; label: string; countKind?: "dungeon" | "raid" | "battleground" }[] = [
-  { key: "dungeons", label: "Dungeons", countKind: "dungeon" },
-  { key: "raids", label: "Raids", countKind: "raid" },
-  { key: "battlegrounds", label: "Battlegrounds", countKind: "battleground" },
+//
+// `iconSvg` is the exact same markup the map marker itself renders (shared
+// via lib/map-icons.ts), so each toggle doubles as the map's legend.
+type LayerRow = { key: keyof MapLayers; label: string; iconSvg: string; countKind?: "dungeon" | "raid" | "battleground" };
+
+const LAYER_ROWS: LayerRow[] = [
+  { key: "dungeons", label: "Dungeons", iconSvg: entranceIconSvg("dungeon"), countKind: "dungeon" },
+  { key: "raids", label: "Raids", iconSvg: entranceIconSvg("raid"), countKind: "raid" },
+  { key: "battlegrounds", label: "Battlegrounds", iconSvg: entranceIconSvg("battleground"), countKind: "battleground" },
 ];
 
 // A separate section/heading from Layers -- these are individually-placed
 // points of interest (flight masters), not tree/label/entrance-icon display
 // toggles, even though the toggle mechanism itself (a MapLayers key, on by
 // default, persisted in the same URL hash) is identical.
-const POI_ROWS: { key: keyof MapLayers; label: string }[] = [{ key: "flightMasters", label: "Flight masters" }];
+// Flight-master markers are tinted by faction on the map; the legend uses the
+// neutral ("Both") gold variant since one row stands in for all three.
+const POI_ROWS: LayerRow[] = [{ key: "flightMasters", label: "Flight masters", iconSvg: flightMasterIconSvg("Both") }];
+
+// Static, locally-generated SVG strings (no user/data input), so
+// dangerouslySetInnerHTML is safe here. Dimmed + desaturated when the layer
+// is off so the legend also reads as the toggle's state.
+function LegendIcon({ svg, active }: { svg: string; active: boolean }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`h-5 w-5 shrink-0 transition-[opacity,filter] ${active ? "" : "opacity-40 grayscale"}`}
+      dangerouslySetInnerHTML={{ __html: svg }}
+    />
+  );
+}
 
 // Zone list + search + layer toggles, all under the existing continent
 // dropdown -- see components/map/MapExplorer.tsx for the state (selection,
@@ -228,7 +249,10 @@ export default function MapSidebar({
                 layers[row.key] ? "border-accent/60 bg-accent/10 text-foreground" : "border-border text-foreground-muted"
               }`}
             >
-              <span>{row.label}</span>
+              <span className="flex items-center gap-2">
+                <LegendIcon svg={row.iconSvg} active={layers[row.key]} />
+                {row.label}
+              </span>
               {row.countKind && <span className="text-xs opacity-70">{entranceCounts[row.countKind]}</span>}
             </button>
           ))}
@@ -248,7 +272,10 @@ export default function MapSidebar({
                 layers[row.key] ? "border-accent/60 bg-accent/10 text-foreground" : "border-border text-foreground-muted"
               }`}
             >
-              <span>{row.label}</span>
+              <span className="flex items-center gap-2">
+                <LegendIcon svg={row.iconSvg} active={layers[row.key]} />
+                {row.label}
+              </span>
               <span className="text-xs opacity-70">{flightMasters.length}</span>
             </button>
           ))}
