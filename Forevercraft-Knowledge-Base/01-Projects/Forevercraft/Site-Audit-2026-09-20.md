@@ -6,6 +6,8 @@ status: active
 ---
 
 > Migrated from `docs/site-overview.md` 2026-09-30. Content unchanged; see [[Architecture]] and [[Roadmap]] for current entry points.
+>
+> **2026-09-30:** still-accurate findings were folded forward into [[Architecture]] (routes, data pipelines, SEO, security) and [[Roadmap]] (gaps). This note is now a dated record, not a living doc; don't update it.
 
 # Forevercraft — Site Overview & Audit
 
