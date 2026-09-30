@@ -78,3 +78,11 @@ data/sources/client-db2/*/zone-grid-*.bin
 
 # Local branch-spanning handoff notes, kept outside Git history.
 /.handoffs/
+
+# Obsidian vault (Forevercraft-Knowledge-Base/): evergreen notes are committed;
+# local app state, raw inbox dumps, agent prompts and session handoffs are not
+# (repo is public -- decided 2026-09-30).
+/Forevercraft-Knowledge-Base/.obsidian/
+/Forevercraft-Knowledge-Base/00-Inbox/
+/Forevercraft-Knowledge-Base/02-Agents/
+/Forevercraft-Knowledge-Base/03-Handoffs/

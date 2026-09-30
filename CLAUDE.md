@@ -10,10 +10,10 @@ serving as a fixed project brief.
 
 Full session-by-session history (what was built, bugs found/fixed, data
 pipelines investigated, and every superseded/reverted approach) lives in
-`.handoffs/archive-history.md` — read it if you need forensic detail on
+`Forevercraft-Knowledge-Base/03-Handoffs/archive/2026-09-30-claude-md-archive.md` — read it if you need forensic detail on
 *how* something was built or verified. This file only covers what's true
 *now*: active architecture, data/build protocols, and open items. (Separate
-from that archive, `.handoffs/*.md` also holds individual recent per-task
+from that archive, `Forevercraft-Knowledge-Base/03-Handoffs/*.md` also holds individual recent per-task
 handoffs, e.g. `map-ui-cleanup.md`.)
 
 ## Current state (as of 2026-09-30)
@@ -257,4 +257,4 @@ image/credit conventions, and SEO metadata specifics.
 Full history, bug-hunt narratives, and retired/superseded approaches
 (the original SVG map MVP, the pre-tile-pyramid proof of concept, the
 foreverchanges.pro/map 2D-vs-3D recon, per-session verification detail)
-are in `.handoffs/archive-history.md`.
+are in `Forevercraft-Knowledge-Base/03-Handoffs/archive/2026-09-30-claude-md-archive.md`.
