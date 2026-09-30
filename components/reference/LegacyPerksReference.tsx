@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Info } from "lucide-react";
 import { legacyPerks } from "@/lib/legacy-perks";
 import { canAddLegacyPoint, canRemoveLegacyPoint, pointsSpentInLegacyTree } from "@/lib/legacy-perks";
@@ -9,13 +9,63 @@ import { mediumIconUrl } from "@/lib/wow-data";
 import GoldRule from "@/components/site/GoldRule";
 import LegacyPerkTreeGrid from "./LegacyPerkTreeGrid";
 
+const STORAGE_KEY = "forevercraft:legacy-perks-build";
+
+function readSavedRanks(): RankState {
+  try {
+    const saved: unknown = JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? "null");
+    if (!saved || typeof saved !== "object" || Array.isArray(saved)) return {};
+    const requested: RankState = {};
+    for (const tree of legacyPerks.trees) {
+      for (const perk of tree.perks) {
+        const value = (saved as Record<string, unknown>)[perk.id];
+        if (!perk.placeholder && typeof value === "number" && Number.isInteger(value) && value > 0) {
+          requested[perk.id] = Math.min(value, perk.maxRank);
+        }
+      }
+    }
+    const ranks: RankState = {};
+    let changed = true;
+    while (changed) {
+      changed = false;
+      const total = legacyPerks.trees.reduce((sum, tree) => sum + pointsSpentInLegacyTree(tree, ranks), 0);
+      for (const tree of legacyPerks.trees) {
+        for (const perk of tree.perks) {
+          if ((ranks[perk.id] ?? 0) >= (requested[perk.id] ?? 0)) continue;
+          const spent = legacyPerks.trees.reduce((sum, current) => sum + pointsSpentInLegacyTree(current, ranks), 0);
+          if (canAddLegacyPoint(tree, perk, ranks, spent, legacyPerks.spendCap)) {
+            ranks[perk.id] = (ranks[perk.id] ?? 0) + 1;
+            changed = true;
+          }
+        }
+      }
+      if (total >= legacyPerks.spendCap) break;
+    }
+    return ranks;
+  } catch {
+    return {};
+  }
+}
+
 export default function LegacyPerksReference() {
-  // Perk ids are tree-prefixed (see lib/legacy-perks.ts's data), so one flat
-  // RankState safely covers all 3 trees at once, same as the class planner's
-  // single RankState covers all of a class's trees. Not persisted anywhere
-  // (no build-code/URL/localStorage) -- this is a reference page for trying
-  // out a spend order, not a saved/shared build like the main planner.
+  // Perk ids include their tree name, so one RankState can track all trees.
   const [ranks, setRanks] = useState<RankState>({});
+  const [storageReady, setStorageReady] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setRanks(readSavedRanks());
+    setStorageReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!storageReady) return;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ranks));
+    } catch {
+      // The calculator remains usable when browser storage is unavailable.
+    }
+  }, [ranks, storageReady]);
 
   const totalSpent = legacyPerks.trees.reduce((sum, tree) => sum + pointsSpentInLegacyTree(tree, ranks), 0);
 
@@ -60,29 +110,16 @@ export default function LegacyPerksReference() {
 
   return (
     <div>
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
+      <div className="flex flex-wrap items-baseline gap-2">
         <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Legacy Perks</h1>
-        <div className="flex items-center gap-3">
-          <span className="text-sm text-foreground-muted">
-            {totalSpent} / {legacyPerks.spendCap} pts
-          </span>
-          <button
-            type="button"
-            onClick={resetAll}
-            disabled={totalSpent === 0}
-            className="rounded border border-border px-2.5 py-1 text-xs font-medium text-foreground-muted hover:bg-surface disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            Reset
-          </button>
-        </div>
       </div>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
         Account-wide, non-combat bonuses spent across three trees. You earn Legacy Points by
-        completing Legacy Challenges -- things like leveling a specific class or hitting a
-        tradeskill milestone -- meant to reward play you&apos;re already doing rather than add busywork.
+        completing Legacy Challenges, such as leveling a specific class or reaching a
+        tradeskill milestone. These rewards recognize the play you&apos;re already doing.
         Points are earned account-wide and shared across your characters, but each character spends
-        its own points independently in its own set of Legacy Trees. Click an icon below to try out a
-        spend order; nothing here is saved or shared, it's a scratch pad for planning.
+        its own points independently in its own set of Legacy Trees. Choose perks below to plan
+        a spend order. Your selections are saved in this browser.
       </p>
       
 
@@ -101,8 +138,10 @@ export default function LegacyPerksReference() {
             key={tree.name}
             tree={tree}
             ranks={ranks}
+            spent={pointsSpentInLegacyTree(tree, ranks)}
             totalSpent={totalSpent}
             spendCap={legacyPerks.spendCap}
+            onResetAll={resetAll}
             onAdd={addPoint}
             onRemove={removePoint}
             onResetTree={() => resetTree(tree.name)}
@@ -117,7 +156,7 @@ export default function LegacyPerksReference() {
           Legacy Rewards
         </h2>
         <p className="mt-1 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
-          A separate, cosmetic-only track unlocked by total Legacy Points ever earned -- independent
+          A separate, cosmetic-only track unlocked by total Legacy Points ever earned, independent
           of how many of those points are later spent on perks above. {legacyPerks.rewards.rewardTrackNote}
         </p>
         <div className="mt-2 flex items-start gap-2 rounded-lg border border-accent/40 bg-accent/5 p-3">

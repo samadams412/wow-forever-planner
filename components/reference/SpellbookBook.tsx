@@ -587,10 +587,10 @@ function VerificationBanner({ checked }: { checked?: SpellbookVerification }) {
         <span className="text-[#1eff00]">✓</span>
         <span>
           Every spell, rank and level here is read straight from the {spellbooks.source.replace(" (via talentsforever.com)", "")}
-          , not stream footage.
+          
         </span>
       </div>
-      {checked ? (
+      {/* {checked ? (
         <div className="flex items-start gap-1.5">
           <span className="text-[#1eff00]">✓</span>
           <span>
@@ -605,7 +605,7 @@ function VerificationBanner({ checked }: { checked?: SpellbookVerification }) {
         </div>
       ) : (
         <div className="text-foreground-muted/70">Not yet cross-checked against an in-game trainer for this class.</div>
-      )}
+      )} */}
     </div>
   );
 }

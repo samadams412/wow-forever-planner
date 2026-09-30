@@ -2,12 +2,12 @@ import legacyPerksData from "@/data/legacy-perks.json";
 import type { RankState } from "@/lib/build-code";
 
 // Shaped like lib/wow-data.ts's Talent/TalentTree on purpose (id/tier/col/
-// maxRank/ranks/prereq/icon) so components/planner's grid + connector-arrow
-// rendering can be reused almost as-is -- see components/reference/
+// maxRank/ranks/prereq/icon) so components/planner's grid and connector-arrow
+// rendering can be reused with minor changes. See components/reference/
 // LegacyPerkTreeGrid.tsx. The one real difference is `gate`: a class talent
 // tier unlocks at a fixed 5-points-per-row formula (lib/talent-rules.ts's
 // POINTS_PER_ROW), but Legacy Perks specify an explicit, perk-by-perk point
-// gate that doesn't follow row math at all -- e.g. Resourcefulness's row-1
+// gate that doesn't follow row math at all, such as Resourcefulness's row 1
 // "For Great Honor" has gate:5 while its own row-2 neighbor "Gourmand" has
 // gate:0. Since prereqs here also run strictly within a row (never between
 // rows, unlike class talents), TalentTreeGrid's existing same-tier connector
@@ -22,7 +22,7 @@ export type LegacyPerk = {
   icon: string;
   gate: number;
   prereq: { id: string; ranks: number } | null;
-  // An unrevealed "Unknown" slot -- the vendor's own placeholder for a perk
+  // An unrevealed "Unknown" slot, the vendor's own placeholder for a perk
   // that exists in the tree layout but has no name/effect yet.
   placeholder?: boolean;
 };

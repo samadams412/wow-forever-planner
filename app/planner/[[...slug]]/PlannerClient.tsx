@@ -305,9 +305,9 @@ export default function PlannerClient({
         </div>
       )}
 
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <RaceReferenceTable races={races} />
-      </div>
+      </div> */}
 
       <p className="mt-4 text-[11px] text-foreground-muted/60">
         Source:{" "}

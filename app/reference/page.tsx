@@ -65,7 +65,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/legacy-perks"
             title="Legacy Perks"
-            description="Account-wide perks and cosmetic rewards from the Legacy System -- all three perk trees plus known reward items, sourced from the BlizzCon 2026 demo and Wowhead's beta coverage. Static reference until the point cap is confirmed."
+            description="Account-wide perks and cosmetic rewards from the Legacy System."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_misc_book_09")} alt="" className="h-7 w-7 rounded-sm" />
@@ -74,7 +74,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/class-spellbooks"
             title="Class Spellbooks"
-            description="Every trainer-taught spell for each class, every rank, read straight from the WoW Forever beta client's own files, plus new baseline abilities inferred from talent tooltips."
+            description="Every trainer-taught spell and rank for each class."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_misc_book_11")} alt="" className="h-7 w-7 rounded-sm" />
@@ -92,7 +92,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/dungeons"
             title="Dungeon Level Ranges"
-            description="Every dungeon on one level-range timeline -- the new launch dungeons alongside all of Classic's, with details on the new ones."
+            description="Every dungeon on one level-range timeline."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_misc_key_03")} alt="" className="h-7 w-7 rounded-sm" />
@@ -101,7 +101,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/dungeons/loot"
             title="Dungeon Loot"
-            description="Boss-by-boss loot and quest rewards for every dungeon, read straight from the beta client via foreverchanges.pro -- wowtbc.gg's community reports fill in the couple of dungeons it hasn't reached yet."
+            description="Boss-by-boss loot and quest rewards for every dungeon, read straight from the beta client."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_misc_bag_10")} alt="" className="h-7 w-7 rounded-sm" />
@@ -110,7 +110,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/professions"
             title="Professions"
-            description="Every recipe for all 8 crafting professions -- reagents, source, and skill-up thresholds, plus a full leveling guide for Alchemy and Blacksmithing."
+            description="Every recipe for all 8 crafting professions. Reagents, source, and skill-up thresholds, leveling guides in the works."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("trade_engineering")} alt="" className="h-7 w-7 rounded-sm" />
@@ -128,7 +128,7 @@ export default function ReferencePage() {
           <Card
             href="/reference/items"
             title="Items"
-            description="Every item in the beta client, filterable by new/changed/unchanged-since-Classic, sourced from foreverchanges.pro."
+            description="Every item in the beta client, filterable by new, changed, or unchanged since Classic."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_misc_gem_01")} alt="" className="h-7 w-7 rounded-sm" />

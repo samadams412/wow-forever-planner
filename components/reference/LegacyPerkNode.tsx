@@ -4,6 +4,7 @@ import type { LegacyPerk, LegacyPerkTree } from "@/lib/legacy-perks";
 import { iconUrl } from "@/lib/wow-data";
 import { formatTooltipText } from "@/lib/tooltip";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import {
   TooltipCard,
   TooltipName,
@@ -18,8 +19,8 @@ const TOOLTIP_WIDTH = 260;
 // planner), and the source data has no per-rank confidence/classic-compare
 // concept to show (every Legacy Perk here is beta-client-sourced, see this
 // session's summary), so this is a deliberately smaller fork of
-// components/planner/TalentNode.tsx -- same rank badge/tooltip look and the
-// same click-to-add/shift-click-to-remove interaction, but no touch/long-
+// components/planner/TalentNode.tsx, with the same rank badge/tooltip look
+// and click-to-add/shift-click-to-remove interaction, but no touch or long-
 // press/haptic handling. If that model turns out to be wanted here too,
 // port it from TalentNode rather than rebuilding it from scratch.
 export default function LegacyPerkNode({
@@ -46,12 +47,22 @@ export default function LegacyPerkNode({
   spendCap: number;
 }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const tooltipId = `legacy-perk:${perk.id}`;
+  const tooltipActive = useIsActiveTooltip(tooltipId);
   const { pos: tooltipPos, show, hide } = useHoverTooltip<HTMLButtonElement>(
     TOOLTIP_WIDTH,
     "below",
     200,
     buttonRef
   );
+  const showTooltip = () => {
+    claimActiveTooltip(tooltipId);
+    show();
+  };
+  const hideTooltip = () => {
+    releaseActiveTooltip(tooltipId);
+    hide();
+  };
 
   if (perk.placeholder) {
     return (
@@ -59,16 +70,16 @@ export default function LegacyPerkNode({
         <button
           ref={buttonRef}
           type="button"
-          onMouseEnter={show}
-          onMouseLeave={hide}
-          onFocus={show}
-          onBlur={hide}
+          onMouseEnter={showTooltip}
+          onMouseLeave={hideTooltip}
+          onFocus={showTooltip}
+          onBlur={hideTooltip}
           className="relative block h-full w-full cursor-default overflow-hidden rounded border-2 border-border/40"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={iconUrl(perk.icon)} alt="" className="h-full w-full object-cover grayscale opacity-50" />
         </button>
-        {tooltipPos &&
+        {tooltipActive && tooltipPos &&
           createPortal(
             <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
               <TooltipName>Unknown</TooltipName>
@@ -102,10 +113,10 @@ export default function LegacyPerkNode({
       <button
         ref={buttonRef}
         type="button"
-        onMouseEnter={show}
-        onMouseLeave={hide}
-        onFocus={show}
-        onBlur={hide}
+        onMouseEnter={showTooltip}
+        onMouseLeave={hideTooltip}
+        onFocus={showTooltip}
+        onBlur={hideTooltip}
         onClick={(e) => {
           if (e.shiftKey) onRemove();
           else onAdd();
@@ -129,7 +140,7 @@ export default function LegacyPerkNode({
         </span>
       </button>
 
-      {tooltipPos &&
+      {tooltipActive && tooltipPos &&
         createPortal(
           <TooltipCard style={{ top: tooltipPos.top, left: tooltipPos.left, width: TOOLTIP_WIDTH }}>
             <TooltipName>{perk.name}</TooltipName>
@@ -156,7 +167,7 @@ export default function LegacyPerkNode({
             )}
             {capReached && (
               <TooltipRequirement>
-                All {spendCap} Legacy Points are spent -- unlearn a point elsewhere before you can spend one
+                All {spendCap} Legacy Points are spent. Unlearn a point elsewhere before spending one
                 here.
               </TooltipRequirement>
             )}

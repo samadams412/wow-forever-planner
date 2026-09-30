@@ -3,7 +3,7 @@
   "spendCap": 16,
   "earnCapNote": "Blizzard has confirmed each character can spend up to 16 Legacy Points at launch, drawn from an account-wide pool. An earlier BlizzCon panel put the total earnable pool at 65 points, so it's normal to bank more than any one character can spend.",
   "mountCostNote": "Related change, not a Legacy Point mechanic: mount costs are moving to a Burning Crusade-style model. The gold cost moves off the mount itself and into training the matching riding skill, so once you've trained that skill the mount is free.",
-  "expansionNote": "Blizzard has said this system is meant to grow after launch -- expect new Legacy Challenges, new perks, more ways to spend points, higher caps, and possibly new trees or columns over time.",
+  "expansionNote": "Blizzard has said this system is meant to grow after launch. Expect new Legacy Challenges, new perks, more ways to spend points, higher caps, and possibly new trees or columns over time.",
   "trees": [
     {
       "name": "Adventure",
@@ -418,8 +418,8 @@
     }
   ],
   "rewards": {
-    "note": "The 65-point earn cap is confirmed, but Blizzard hasn't specified how many points each individual reward below actually costs. Only a partial list has been revealed so far, from the BlizzCon gameplay demo -- more rewards likely exist at higher thresholds, and the order below isn't a confirmed unlock order.",
-    "rewardTrackNote": "Points count toward this track as soon as they're earned, whether or not a character has spent them yet -- so a character sitting well below the 16-point spend cap can still be well ahead on rewards, since the reward track follows the account's total earned, not what's currently spent.",
+    "note": "The 65-point earn cap is confirmed, but Blizzard hasn't specified how many points each individual reward below actually costs. Only a partial list has been revealed so far from the BlizzCon gameplay demo. More rewards likely exist at higher thresholds, and the order below isn't a confirmed unlock order.",
+    "rewardTrackNote": "Points count toward this track as soon as they're earned, whether or not a character has spent them yet. A character sitting well below the 16-point spend cap can still be well ahead on rewards, since the reward track follows the account's total earned points rather than what's currently spent.",
     "items": [
       {
         "name": "Replica Ironforge Air Rifle",
