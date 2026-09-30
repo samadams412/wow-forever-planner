@@ -51,19 +51,20 @@ function ClassRacialsSection({ classId }: { classId: string }) {
   );
 }
 
-function ClassSection({ classId, compareMode }: { classId: string; compareMode: boolean }) {
+function ClassSection({ classId, compareMode, onCompareModeChange, open, onToggle }: { classId: string; compareMode: boolean; onCompareModeChange: () => void; open: boolean; onToggle: () => void }) {
   const book = spellbooks.classes[classId];
 
   return (
-    <Collapsible
-      title={`${classLabel(classId)} Spellbook`}
-      // subtitle={`Demo race: ${book.demoRace}`}
-      icon={
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-8 w-8 rounded" />
-      }
-    >
-      <SpellbookBook classId={classId} book={book} compareMode={compareMode} />
+    <section className="overflow-hidden rounded-lg border border-[#8a6d3b]/60 bg-[#17120c] shadow-lg shadow-black/20">
+      <button type="button" onClick={onToggle} aria-expanded={open} className={`flex w-full items-center gap-3 px-3 py-2.5 text-left transition-colors ${open ? "bg-[#302416]" : "hover:bg-[#241b10]"}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className={`h-10 w-10 rounded border ${open ? "border-[#d5b65f]" : "border-[#8a6d3b]/70"}`} />
+        <span className="min-w-0 flex-1"><span className="block font-heading text-sm font-semibold tracking-wide text-accent">{classLabel(classId)}</span><span className="mt-0.5 block text-xs text-foreground-muted">{book.tabs.length} spellbook tabs · {book.tabs.reduce((n, tab) => n + tab.spells.length, 0)} abilities</span></span>
+        <span className="text-accent transition-transform" style={{ transform: open ? "rotate(180deg)" : undefined }}>⌄</span>
+      </button>
+      <div className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+       <div className="min-h-0 overflow-hidden"><div className="border-t border-[#8a6d3b]/40 p-2 sm:p-4">
+      <SpellbookBook classId={classId} book={book} compareMode={compareMode} onCompareModeChange={onCompareModeChange} />
 
       {book.notes.length > 0 && (
         <ul className="mt-4 space-y-2 border-t border-border pt-3 text-xs leading-relaxed text-foreground-muted">
@@ -87,7 +88,9 @@ function ClassSection({ classId, compareMode }: { classId: string; compareMode: 
       <p className="mt-1 text-xs text-foreground-muted/70">Source: {spellbooks.source}</p>
 
       <ClassRacialsSection classId={classId} />
-    </Collapsible>
+       </div></div>
+      </div>
+    </section>
   );
 }
 
@@ -96,7 +99,8 @@ export default function ClassSpellbooksReference() {
   // remount with its default (closed) state -- simpler and more robust
   // than lifting open/close state up into each Collapsible individually.
   const [collapseAllKey, setCollapseAllKey] = useState(0);
-  const collapseAll = () => setCollapseAllKey((k) => k + 1);
+  const [activeClass, setActiveClass] = useState<string | null>(null);
+  const collapseAll = () => { setCollapseAllKey((k) => k + 1); setActiveClass(null); };
   const [compareMode, setCompareMode] = useState(false);
 
   // The header's own "Collapse all" button scrolls out of view on a long
@@ -120,28 +124,30 @@ export default function ClassSpellbooksReference() {
           <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Class Spellbooks</h1>
           <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
             Every trainer-taught spell for each class, every rank and level, read straight from the WoW
-            Forever beta client&apos;s own files -- one collapsible section per class. Spells tagged{" "}
+            Forever beta client&apos;s own files, with every rank ready to browse. Spells tagged{" "}
             <span className="font-semibold text-amber-300">Talent</span> are granted by a talent in the
             Forever talent trees, not trained normally, so they only show up in your own book once you take
             that talent.
           </p>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setCompareMode((v) => !v)}
-          aria-pressed={compareMode}
-          className={`shrink-0 rounded border px-2 py-0.5 text-xs transition-colors ${
-            compareMode
-              ? "border-sky-400/70 bg-sky-400/10 text-sky-300"
-              : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
-          }`}
-        >
-          Compare to Classic
-        </button>
       </div>
 
-      {!headerButtonVisible && (
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground-muted">Choose a class</h2>
+        <div className="flex items-center gap-3">
+          {activeClass && <button type="button" onClick={collapseAll} className="text-xs text-foreground-muted hover:text-accent">Collapse</button>}
+        </div>
+      </div>
+      <div className="mt-2 grid grid-cols-3 gap-2 sm:grid-cols-5 lg:grid-cols-9">
+        {SPELLBOOK_CLASS_ORDER.map((classId) => <button key={classId} type="button" onClick={() => setActiveClass((active) => active === classId ? null : classId)} aria-expanded={activeClass === classId} aria-label={`${activeClass === classId ? "Close" : "Open"} ${classLabel(classId)} spellbook`} className={`group flex flex-col items-center gap-1 rounded-md border p-2 transition-all ${activeClass === classId ? "border-[#d5b65f] bg-[#3a2b18] shadow-[0_0_14px_rgba(201,169,97,0.18)]" : "border-border bg-surface hover:border-accent/60 hover:bg-surface-hover"}`}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={mediumIconUrl(CLASS_ICON[classId])} alt="" className="h-9 w-9 rounded" />
+          <span className={`text-xs ${activeClass === classId ? "text-accent" : "text-foreground-muted group-hover:text-foreground"}`}>{classLabel(classId)}</span>
+        </button>)}
+      </div>
+
+      {/* {!headerButtonVisible && (
         <button
           type="button"
           onClick={collapseAll}
@@ -149,12 +155,10 @@ export default function ClassSpellbooksReference() {
         >
           Collapse all
         </button>
-      )}
+      )} */}
 
-      <div className="mt-5 space-y-3">
-        {SPELLBOOK_CLASS_ORDER.map((classId) => (
-          <ClassSection key={`${classId}-${collapseAllKey}`} classId={classId} compareMode={compareMode} />
-        ))}
+      <div className="mt-3">
+        {activeClass && <ClassSection key={`${activeClass}-${collapseAllKey}`} classId={activeClass} compareMode={compareMode} onCompareModeChange={() => setCompareMode((v) => !v)} open onToggle={() => setActiveClass(null)} />}
       </div>
       
     </div>

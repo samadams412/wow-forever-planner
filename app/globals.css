@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "2002 Spellbook";
+  src: url("../assets/fonts/2002b.ttf") format("truetype");
+  font-display: swap;
+}
+
+.font-spellbook { font-family: "2002 Spellbook", Georgia, serif; }
+
 :root {
   /* Warm forged-metal/parchment palette -- gold is the primary structural
      color (borders, dividers, active states); violet and green are kept
@@ -330,9 +338,10 @@ html.light-mode {
      here rather than global :root since they're specific to the parchment
      look; descendants (spell name spans, the tab heading) read them via
      inheritance instead of repeating the hex values. */
-  --pg: #e4d2a8;
-  --ink2: #3a2812;
+  --pg: #c98f4e;
+  --ink2: #2f1b0b;
   backface-visibility: hidden;
+  box-shadow: inset 0 0 44px rgba(77, 39, 12, 0.2), inset 0 0 3px rgba(65, 35, 12, 0.25);
 }
 
 .spellbook-page.flip-out-forward,

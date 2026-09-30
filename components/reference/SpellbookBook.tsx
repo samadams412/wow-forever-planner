@@ -9,7 +9,6 @@ import {
   type SpellbookEntry,
   type SpellbookTab,
   type SpellRank,
-  type SpellbookVerification,
 } from "@/lib/spellbooks";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
@@ -29,7 +28,7 @@ import CornerBracket from "@/components/site/CornerBracket";
 
 const TOOLTIP_WIDTH = 260;
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 18;
 
 // Some spells share one icon across every class's General tab rather than
 // the per-weapon/per-class icon our data stores -- override by spell name.
@@ -145,7 +144,7 @@ function LevelsRow({ allRanks, currentRank }: { allRanks: SpellRank[]; currentRa
           className={`rounded-sm px-1 text-[10px] font-semibold leading-tight ${
             currentRank?.level === level
               ? "bg-[#c9a961] text-[#2a2010]"
-              : "bg-[#8a6d3b]/15 text-[#6b5a3d]"
+              : "bg-[#8a6d3b]/15 text-[#51351b]"
           }`}
         >
           {level}
@@ -286,7 +285,7 @@ function SpellEntry({
         revealDelayMs !== undefined ? "spellbook-row-reveal" : ""
       }`}
     >
-      <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border-2 border-[#c9a961]/70 transition-colors group-hover:border-[#c9a961]">
+      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-sm border-2 border-[#8a6d3b] bg-[#4a3218] shadow-[0_1px_3px_rgba(35,22,8,0.55)] transition-colors group-hover:border-[#c9a961]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={mediumIconUrl(resolveSpellIcon(spell))}
@@ -302,7 +301,7 @@ function SpellEntry({
       </div>
       <div className="min-w-0">
         <div className="flex flex-wrap items-baseline gap-x-1.5">
-          <span className="text-sm font-semibold text-(--ink2)">{spell.name}</span>
+          <span className="font-spellbook text-base tracking-wide text-(--ink2)">{spell.name}</span>
           {spell.talent && (
             <span className="rounded-sm bg-[#8a6d3b]/20 px-1 text-[9px] font-semibold uppercase tracking-wide text-[#6b4f22]">
               Talent
@@ -310,12 +309,12 @@ function SpellEntry({
           )}
           {status && <StatusPill status={status} />}
         </div>
-        {subtitle && <p className="text-xs text-[#6b5a3d]">{subtitle}</p>}
-        {/* Same muted tone as the subtitle line above it (#6b5a3d, the
+        {subtitle && <p className="text-xs text-[#51351b]">{subtitle}</p>}
+        {/* Same muted tone as the subtitle line above it (#51351b, the
             established parchment-page muted-text color -- see the page's
             "N spells, M ranks" line and Prev/Next) rather than a lighter
             one-off gray that read as too low-contrast against the parchment. */}
-        {tabLabel && <p className="text-[10px] uppercase tracking-wide text-[#6b5a3d]">{tabLabel}</p>}
+        {tabLabel && <p className="text-[10px] uppercase tracking-wide text-[#51351b]">{tabLabel}</p>}
         {!hideLevelsRow && spell.ranks && spell.ranks.length > 1 && (
           <LevelsRow allRanks={spell.ranks} currentRank={rankEntry} />
         )}
@@ -345,6 +344,7 @@ function SpellEntry({
               ))}
               {rankEntry.level !== null && <TooltipLevelReq>Learned at level {rankEntry.level}</TooltipLevelReq>}
               <TooltipDescription>{rankEntry.description}</TooltipDescription>
+              {rankEntry.coefficient && <p className="mt-1 text-[11px] text-gray-400">Spell power: {rankEntry.coefficient}</p>}
               {rankEntry.note && <TooltipDataNote>{rankEntry.note}</TooltipDataNote>}
               {compareMode && rankEntry.classicStatus === "changed" && rankEntry.classicDescription && (
                 <TooltipClassicDiff classicText={rankEntry.classicDescription} foreverText={rankEntry.description} />
@@ -365,6 +365,29 @@ function SpellEntry({
 // by the level each rank is actually learned at) -- matches talentsforever.com's
 // own two view buttons, verified live on their Warlock page.
 type SpellbookView = "book" | "byLevel";
+
+function PageArrowButton({ direction, disabled, onClick }: { direction: "previous" | "next"; disabled: boolean; onClick: () => void }) {
+  const previous = direction === "previous";
+  const label = previous ? "Previous page" : "Next page";
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      title={label}
+      disabled={disabled}
+      onClick={onClick}
+      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-[4px] border-2 bg-[#17120d] shadow-[0_1px_2px_rgba(0,0,0,0.65)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffd100] sm:h-6 sm:w-6 ${
+        disabled
+          ? "border-[#78684c]/60 text-[#746b5b]"
+          : "border-[#9c7738] text-[#ffd100] hover:border-[#f1c64e] hover:bg-[#382711] hover:text-[#ffe47d]"
+      }`}
+    >
+      <svg viewBox="0 0 16 16" aria-hidden="true" className="h-4 w-4">
+        {previous ? <path d="M10.8 2.2 4.9 8l5.9 5.8V2.2Z" fill="currentColor" /> : <path d="m5.2 2.2 5.9 5.8-5.9 5.8V2.2Z" fill="currentColor" />}
+      </svg>
+    </button>
+  );
+}
 
 type LevelRow = { spell: SpellbookEntry; rankEntry: SpellRank; tabName: string };
 
@@ -451,7 +474,7 @@ function ByLevelView({
   const nextLevelAfter = above.length > 0 ? Math.min(...above.map((r) => r.level)) : null;
 
   return (
-    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:p-3">
+    <div className="relative w-full rounded-sm border-2 border-[#8a6d3b]/70 bg-[#21190f] p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:p-3">
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
@@ -469,12 +492,12 @@ function ByLevelView({
           className="pointer-events-none absolute inset-0"
           style={{
             backgroundImage: [
-              "radial-gradient(circle at 12% 18%, rgba(120,88,42,0.16), transparent 38%)",
-              "radial-gradient(circle at 88% 12%, rgba(120,88,42,0.12), transparent 32%)",
-              "radial-gradient(circle at 78% 85%, rgba(101,72,32,0.16), transparent 42%)",
-              "radial-gradient(circle at 8% 82%, rgba(110,80,35,0.14), transparent 38%)",
-              "radial-gradient(circle at 50% 95%, rgba(101,72,32,0.10), transparent 45%)",
-              "radial-gradient(ellipse at center, transparent 55%, rgba(69,50,24,0.18) 100%)",
+              "radial-gradient(ellipse at 50% 42%, rgba(244,195,119,0.42), transparent 66%)",
+              "radial-gradient(circle at 12% 18%, rgba(120,70,26,0.12), transparent 38%)",
+              "radial-gradient(circle at 88% 12%, rgba(120,70,26,0.10), transparent 32%)",
+              "radial-gradient(circle at 78% 85%, rgba(101,56,19,0.13), transparent 42%)",
+              "radial-gradient(circle at 8% 82%, rgba(110,62,20,0.12), transparent 38%)",
+              "radial-gradient(ellipse at center, transparent 56%, rgba(69,39,16,0.2) 100%)",
             ].join(", "),
           }}
         />
@@ -493,7 +516,7 @@ function ByLevelView({
               aria-label="Your level"
               className="ml-1 w-full max-w-64 accent-accent sm:w-48"
             />
-            <span className="w-full text-xs text-[#6b5a3d] sm:w-auto">
+            <span className="w-full text-xs text-[#51351b] sm:w-auto">
               {atOrBelow.length} of {leveled.length} learned by level {characterLevel} ·{" "}
               {nextLevelAfter !== null ? `next at level ${nextLevelAfter}` : "that is all of them"}
             </span>
@@ -510,7 +533,7 @@ function ByLevelView({
                     </span>
                   )}
                 </div>
-                <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+                <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-3">
                   {rows.map((row, i) => (
                     <SpellEntry
                       key={`${row.tabName}-${row.spell.name}-${row.rankEntry.rank ?? row.rankEntry.variant ?? "base"}`}
@@ -531,9 +554,9 @@ function ByLevelView({
               <div>
                 <div className="flex items-baseline gap-2">
                   <h4 className="font-heading text-sm font-semibold text-(--ink2)">From your talents</h4>
-                  <span className="text-[10px] uppercase tracking-wide text-[#6b5a3d]">When you spend the point</span>
+                  <span className="text-[10px] uppercase tracking-wide text-[#51351b]">When you spend the point</span>
                 </div>
-                <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+                <ul className="mt-1.5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-3">
                   {talentGranted.map((row, i) => (
                     <SpellEntry
                       key={`${row.tabName}-${row.spell.name}-${row.rankEntry.rank ?? row.rankEntry.variant ?? "base"}`}
@@ -551,7 +574,7 @@ function ByLevelView({
             )}
 
             {groups.length === 0 && talentGranted.length === 0 && (
-              <p className="text-sm text-[#6b5a3d]">No spells match this filter.</p>
+              <p className="text-sm text-[#51351b]">No spells match this filter.</p>
             )}
           </div>
         </div>
@@ -568,19 +591,7 @@ function ByLevelView({
 // trainer in-game and cross-checked what it sells against these files --
 // currently just Mage (`book.checked`). No promise about when the rest get
 // done; that would go stale the moment it's read after this session.
-function VerificationBanner({ checked }: { checked?: SpellbookVerification }) {
-  // toLocaleDateString on a bare "YYYY-MM-DD" would parse it as UTC midnight
-  // and then render in the browser's local zone, which can roll it back a
-  // day west of UTC -- format from the UTC parts instead so the date always
-  // reads as the calendar day this actually happened on.
-  const checkedDate = checked
-    ? new Date(checked.date).toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        timeZone: "UTC",
-      })
-    : null;
+function VerificationBanner() {
   return (
     <div className="mb-2 flex flex-col gap-1 rounded border border-border bg-surface/50 px-3 py-2 text-xs text-foreground-muted">
       <div className="flex items-start gap-1.5">
@@ -594,7 +605,7 @@ function VerificationBanner({ checked }: { checked?: SpellbookVerification }) {
         <div className="flex items-start gap-1.5">
           <span className="text-[#1eff00]">✓</span>
           <span>
-            Cross-checked against the real trainer -- {checked.npc} in {checked.zone}, {checkedDate}: {checked.rows}{" "}
+            Cross-checked against the real trainer — {checked.npc} in {checked.zone}, {checkedDate}: {checked.rows}{" "}
             spells confirmed
             {checked.lacked > 0 ? `, ${checked.lacked} the trainer didn't actually sell` : ""}
             {checked.levelDiffs > 0
@@ -614,10 +625,12 @@ export default function SpellbookBook({
   classId,
   book,
   compareMode = false,
+  onCompareModeChange,
 }: {
   classId: string;
   book: ClassSpellbook;
   compareMode?: boolean;
+  onCompareModeChange?: () => void;
 }) {
   // Tab order and default selection are independent: General sits first in
   // the rail (restored to its original position), but the tab shown when
@@ -635,6 +648,7 @@ export default function SpellbookBook({
   // live -- the book opens with every rank shown as its own row).
   const [showAllRanks, setShowAllRanks] = useState(true);
   const [filter, setFilter] = useState<SpellbookFilter>("all");
+  const [search, setSearch] = useState("");
   const [display, setDisplay] = useState({ tabIndex: defaultTabIndex, page: 0 });
   const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
@@ -647,7 +661,12 @@ export default function SpellbookBook({
   const reducedMotion = prefersReducedMotion();
 
   const activeTab = tabs[display.tabIndex];
-  const displayRows = buildDisplayRows(activeTab.spells, showAllRanks, filter);
+  const normalizedSearch = search.trim().toLocaleLowerCase();
+  const matchingSpells = (spells: SpellbookEntry[]) => spells.filter((spell) =>
+    !normalizedSearch || spell.name.toLocaleLowerCase().includes(normalizedSearch) ||
+    (spell.ranks ?? []).some((rank) => rank.description.toLocaleLowerCase().includes(normalizedSearch))
+  );
+  const displayRows = buildDisplayRows(matchingSpells(activeTab.spells), showAllRanks, filter);
   const totalPages = Math.max(1, Math.ceil(displayRows.length / PAGE_SIZE));
   const pageRows = displayRows.slice(display.page * PAGE_SIZE, display.page * PAGE_SIZE + PAGE_SIZE);
   const totalRankCount = activeTab.spells.reduce((sum, s) => sum + Math.max(1, s.ranks?.length ?? 0), 0);
@@ -706,9 +725,9 @@ export default function SpellbookBook({
   ];
 
   return (
-    <div className="flex flex-col gap-2">
-      <VerificationBanner checked={book.checked} />
-      <div className="flex flex-wrap items-center justify-between gap-2">
+    <div className="flex min-w-0 flex-col gap-2">
+      <VerificationBanner />
+      <div className="flex flex-wrap items-center gap-2">
         <div className="inline-flex rounded border border-border bg-surface p-0.5 text-xs">
           {VIEWS.map(({ value, label }) => (
             <button
@@ -723,13 +742,14 @@ export default function SpellbookBook({
             </button>
           ))}
         </div>
-        <div className="inline-flex rounded border border-border bg-surface p-0.5 text-xs">
+        <button type="button" onClick={onCompareModeChange} aria-pressed={compareMode} className={`rounded border px-2 py-1 text-xs transition-colors ${compareMode ? "border-sky-400/70 bg-sky-400/10 text-sky-300" : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"}`}>Compare to Classic</button>
+        <div className="ml-auto flex max-w-full flex-wrap rounded border border-border bg-surface p-0.5 text-[11px] sm:text-xs">
           {FILTERS.map(({ value, label }) => (
             <button
               key={value}
               type="button"
               onClick={() => handleFilterChange(value)}
-              className={`rounded-sm px-2 py-1 transition-colors ${
+              className={`rounded-sm px-1.5 py-1 transition-colors sm:px-2 ${
                 filter === value
                   ? "bg-accent/20 text-accent"
                   : "text-foreground-muted hover:text-foreground"
@@ -742,29 +762,27 @@ export default function SpellbookBook({
       </div>
 
       {view === "byLevel" ? (
-        <ByLevelView classId={classId} tabs={tabs} filter={filter} compareMode={compareMode} />
+        <>
+          <label className="flex items-center gap-2 self-end rounded border border-[#8a6d3b]/60 bg-[#120e09] px-2 py-1 text-xs text-[#c9b991] sm:w-60"><span aria-hidden="true">⌕</span><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search abilities, keywords" aria-label="Search abilities and keywords" className="min-w-0 flex-1 bg-transparent text-[#eadfca] outline-none placeholder:text-[#8f8068]" /></label>
+          <ByLevelView classId={classId} tabs={tabs.map((tab) => ({ ...tab, spells: matchingSpells(tab.spells) }))} filter={filter} compareMode={compareMode} />
+        </>
       ) : (
-      <div className="flex flex-col gap-2 sm:flex-row">
-      <div className="order-2 flex gap-1.5 overflow-x-auto sm:order-0 sm:w-14 sm:shrink-0 sm:flex-col sm:overflow-visible">
-        {tabs.map((tab, i) => (
-          <button
-            key={tab.name}
-            type="button"
-            title={tab.name}
-            onClick={() => goTo(i, 0)}
-            className={`flex shrink-0 items-center gap-1.5 rounded border p-1.5 transition-colors sm:justify-center ${
-              i === tabIndex
-                ? "border-accent bg-surface-hover"
-                : "border-border bg-surface hover:border-accent/60 hover:bg-surface-hover"
-            }`}
-          >
+      <>
+      <div className="flex flex-wrap items-center justify-between gap-2 rounded-t border border-[#8a6d3b]/50 bg-[#21190f] px-2 py-1.5">
+        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1">
+          {tabs.map((tab, i) => <button key={tab.name} type="button" onClick={() => goTo(i, 0)} aria-label={`${tab.name} spells`} aria-pressed={i === tabIndex}
+            className={`group/tab relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#ffd100] sm:h-10 sm:w-10 ${i === tabIndex ? "border-[#ffd100] bg-[#ffd100]/15 shadow-[0_0_8px_rgba(255,209,0,0.35)]" : "border-transparent hover:border-[#c9a961]/60 hover:bg-[#c9a961]/10"}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={mediumIconUrl(resolveTabIcon(classId, tab))} alt="" className="h-6 w-6 shrink-0 rounded-sm" />
-          </button>
-        ))}
+            <img src={mediumIconUrl(resolveTabIcon(classId, tab))} alt="" className={`h-7 w-7 rounded-sm transition-[filter] ${i === tabIndex ? "brightness-110" : "group-hover/tab:brightness-125"}`} />
+            <span role="tooltip" className="pointer-events-none absolute left-1/2 top-full z-30 mt-1 -translate-x-1/2 whitespace-nowrap rounded border border-[#8a6d3b] bg-[#11100c]/95 px-2.5 py-1 font-spellbook text-[13px] tracking-wide text-[#f2d28b] opacity-0 shadow-lg shadow-black/50 transition-opacity group-hover/tab:opacity-100 group-focus-visible/tab:opacity-100">{tab.name}</span>
+          </button>)}
+        </div>
+        <label className="flex w-full items-center gap-2 rounded border border-[#8a6d3b]/60 bg-[#120e09] px-2 py-1 text-xs text-[#c9b991] sm:w-60">
+          <span aria-hidden="true">⌕</span><input value={search} onChange={(e) => { setSearch(e.target.value); setPage(0); setDisplay((d) => ({ ...d, page: 0 })); }} placeholder="Search abilities, keywords" aria-label="Search abilities and keywords" className="min-w-0 flex-1 bg-transparent text-[#eadfca] outline-none placeholder:text-[#8f8068]" />
+        </label>
       </div>
-
-      <div className="order-1 relative w-full rounded-sm border-2 border-accent/70 bg-surface p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:order-0 sm:w-175 sm:shrink-0 sm:p-3">
+      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="relative w-full rounded-sm border-2 border-[#8a6d3b]/70 bg-[#21190f] p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:p-3">
         <CornerBracket position="tl" />
         <CornerBracket position="tr" />
         <CornerBracket position="bl" />
@@ -783,55 +801,31 @@ export default function SpellbookBook({
               className="pointer-events-none absolute inset-0"
               style={{
                 backgroundImage: [
-                  "radial-gradient(circle at 12% 18%, rgba(120,88,42,0.16), transparent 38%)",
-                  "radial-gradient(circle at 88% 12%, rgba(120,88,42,0.12), transparent 32%)",
-                  "radial-gradient(circle at 78% 85%, rgba(101,72,32,0.16), transparent 42%)",
-                  "radial-gradient(circle at 8% 82%, rgba(110,80,35,0.14), transparent 38%)",
-                  "radial-gradient(circle at 50% 95%, rgba(101,72,32,0.10), transparent 45%)",
-                  "radial-gradient(ellipse at center, transparent 55%, rgba(69,50,24,0.18) 100%)",
+                  "radial-gradient(ellipse at 50% 42%, rgba(244,195,119,0.42), transparent 66%)",
+                  "radial-gradient(circle at 12% 18%, rgba(120,70,26,0.12), transparent 38%)",
+                  "radial-gradient(circle at 88% 12%, rgba(120,70,26,0.10), transparent 32%)",
+                  "radial-gradient(circle at 78% 85%, rgba(101,56,19,0.13), transparent 42%)",
+                  "radial-gradient(circle at 8% 82%, rgba(110,62,20,0.12), transparent 38%)",
+                  "radial-gradient(ellipse at center, transparent 56%, rgba(69,39,16,0.2) 100%)",
                 ].join(", "),
               }}
             />
-            {/* Spine shadow: where the two halves of an open book would meet.
-                Hidden below sm -- mobile stacks the two columns into one
-                continuous page (see the column-major layout note below), so
-                there's no seam between page halves to shade there. */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-16 -translate-x-1/2 sm:block"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, transparent, rgba(45,32,15,0.22) 45%, rgba(45,32,15,0.28) 50%, rgba(45,32,15,0.22) 55%, transparent)",
-              }}
-            />
-
             <div className="relative">
               <div className="flex items-baseline justify-between gap-2 border-b border-[#8a6d3b]/40 pb-2">
                 <h3 className="font-heading text-lg font-semibold text-(--ink2) sm:text-xl">{activeTab.name}</h3>
-                <span className="shrink-0 text-xs text-[#6b5a3d]">
+                <span className="shrink-0 text-xs text-[#51351b]">
                   {activeTab.spells.length} spells
                   {totalRankCount > activeTab.spells.length ? `, ${totalRankCount} ranks` : ""}
                 </span>
               </div>
-              {activeTab.note && <p className="mt-1 text-[11px] italic text-[#6b5a3d]">{activeTab.note}</p>}
+              {activeTab.note && <p className="mt-1 text-[11px] italic text-[#51351b]">{activeTab.note}</p>}
 
-              {/* Column-major, matching talentsforever.com's actual book layout
-                  (verified against .reference/spellbook_ordering_correct.png):
-                  the left page reads straight top-to-bottom through the first
-                  half of this page's rows, then the right page continues the
-                  same sequence from where the left page left off -- not a
-                  2-column grid's row-major/checkerboard fill (item 1 top-left,
-                  item 2 top-right, item 3 second-left, ...), which is what an
-                  earlier version of this rendered and .reference/
-                  spellbook_ordering_incorrect.png shows. Two independent
-                  single-column lists side by side achieve this directly; on
-                  mobile they stack (flex-col), and stacking the left list
-                  fully above the right list reconstructs the exact same
-                  original order, so no separate mobile-only logic is needed. */}
+              {/* Column-major layout: ranks retain their adjacent source order
+                  while rows flow top-to-bottom through each column before
+                  continuing to the next column. */}
               {(() => {
-                const half = Math.ceil(pageRows.length / 2);
-                const leftRows = pageRows.slice(0, half);
-                const rightRows = pageRows.slice(half);
+                const columnSize = Math.ceil(pageRows.length / 3);
+                const columns = [0, 1, 2].map((column) => pageRows.slice(column * columnSize, (column + 1) * columnSize));
                 const renderColumn = (rows: DisplayRow[], side: "left" | "right") =>
                   rows.map((row, i) => (
                     <SpellEntry
@@ -845,14 +839,13 @@ export default function SpellbookBook({
                     />
                   ));
                 return (
-                  <div key={revealSeq} className="mt-3 flex flex-col gap-3 sm:flex-row sm:gap-x-6">
-                    <ul className="flex flex-col gap-3 sm:w-1/2">{renderColumn(leftRows, "right")}</ul>
-                    <ul className="flex flex-col gap-3 sm:w-1/2">{renderColumn(rightRows, "left")}</ul>
+                  <div key={revealSeq} className="mt-3 grid grid-cols-1 gap-x-5 gap-y-2 sm:grid-cols-3">
+                    {columns.map((rows, column) => <ul key={column} className="flex min-w-0 flex-col gap-2">{renderColumn(rows, column === 0 ? "right" : "left")}</ul>)}
                   </div>
                 );
               })()}
 
-              <div className="mt-4 flex items-center justify-between gap-4 border-t border-[#8a6d3b]/40 pt-2">
+              <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-[#8a6d3b]/40 pt-2">
                 {hasMultiRankSpells ? (
                   // Custom checkbox, not the bare browser default -- built from
                   // this component's own already-established parchment/gold
@@ -864,7 +857,7 @@ export default function SpellbookBook({
                   // and would clash sitting inside it. The real input stays
                   // present and keyboard-focusable (sr-only, not display:none),
                   // with a styled sibling box standing in visually.
-                  <label className="group flex cursor-pointer items-center gap-1.5 text-xs text-[#5a4a30]">
+                  <label className="group flex min-h-8 cursor-pointer items-center gap-1.5 text-xs text-[#5a4a30]">
                     <input
                       type="checkbox"
                       checked={showAllRanks}
@@ -903,35 +896,18 @@ export default function SpellbookBook({
                 ) : (
                   <span />
                 )}
-                {totalPages > 1 && (
-                  <div className="flex items-center gap-4">
-                    <button
-                      type="button"
-                      disabled={page === 0}
-                      onClick={() => goTo(tabIndex, page - 1)}
-                      className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
-                    >
-                      ← Prev
-                    </button>
-                    <span className="text-xs text-[#6b5a3d]">
-                      Page {page + 1} / {totalPages}
-                    </span>
-                    <button
-                      type="button"
-                      disabled={page >= totalPages - 1}
-                      onClick={() => goTo(tabIndex, page + 1)}
-                      className="text-xs font-semibold text-[#5a4a30] disabled:opacity-30"
-                    >
-                      Next →
-                    </button>
-                  </div>
-                )}
+                <div className="ml-auto flex items-center gap-2">
+                  <span className="mr-1 font-spellbook text-sm tracking-wide text-[#3d2814]">Page {page + 1} / {totalPages}</span>
+                  <PageArrowButton direction="previous" disabled={page === 0} onClick={() => goTo(tabIndex, page - 1)} />
+                  <PageArrowButton direction="next" disabled={page >= totalPages - 1} onClick={() => goTo(tabIndex, page + 1)} />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       </div>
+      </>
       )}
     </div>
   );
