@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import LeafletZoneMap from "./LeafletZoneMapLoader";
 import type { LeafletZoneMapHandle } from "./LeafletZoneMap";
 import MapSidebar, { type SearchResult } from "./MapSidebar";
+import MapToolbar from "./MapToolbar";
 import { DEFAULT_MAP_LAYERS, type MapLayers } from "@/lib/map-layers";
 import type { FullGridCorners } from "@/lib/map-coords";
 import type { ZoneAreaData } from "@/lib/zone-areas";
@@ -38,6 +39,7 @@ function parseHash(hash: string): {
 
 export default function MapExplorer({
   continentId,
+  continentName,
   registeredContinents,
   mapConfig,
   zoneAreas,
@@ -45,6 +47,7 @@ export default function MapExplorer({
   flightMasters,
 }: {
   continentId: string;
+  continentName: string;
   registeredContinents: { id: string; name: string }[];
   mapConfig: {
     mapName: string;
@@ -63,6 +66,11 @@ export default function MapExplorer({
   const [selectedEntranceId, setSelectedEntranceId] = useState<string | null>(null);
   const [layers, setLayers] = useState<MapLayers>(DEFAULT_MAP_LAYERS);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  // Separate from the sidebar's own mobile toggle -- mutually exclusive
+  // (opening one closes the other) via the two handlers below, rather than
+  // a single shared boolean, since they're visually and functionally
+  // distinct panels that just happen to both be mobile-only overlays.
+  const [toolbarMenuOpen, setToolbarMenuOpen] = useState(false);
 
   const mapHandleRef = useRef<LeafletZoneMapHandle>(null);
   const viewRef = useRef<{ x: number; y: number; z: number } | null>(null);
@@ -176,6 +184,25 @@ export default function MapExplorer({
       }
     }
     restoredRef.current = true;
+    // Reset on cleanup -- found live, via a real bug this caused: React
+    // StrictMode's dev-mode double-invoke (mount -> cleanup -> mount) does
+    // NOT reset refs between passes on its own, so without this, pass 2's
+    // sync effect above sees restoredRef already true and viewRef already
+    // primed (both set by pass 1, which never got undone) and its guard
+    // wrongly passes, firing a premature writeHash() -- with no real
+    // selection/layer state yet -- before LeafletZoneMap.tsx (an async
+    // next/dynamic(ssr:false) component that mounts later) has even loaded,
+    // let alone read its own popup=/sel= hash params. Confirmed live: a
+    // shared "reopen this popup" link's popup= param was silently stripped
+    // from the URL before LeafletZoneMap's own mount effect ever ran.
+    // Resetting here makes pass 2 behave exactly like production's single
+    // real pass (where this guard correctly stays false until genuinely
+    // restored) instead of incorrectly treating pass 1's now-undone work as
+    // already done.
+    return () => {
+      restoredRef.current = false;
+      viewRef.current = null;
+    };
     // Only ever runs once on mount for this continent -- a continent switch
     // navigates to a new page/route entirely (see MapSidebar's
     // ContinentSelect), which remounts this component fresh.
@@ -227,53 +254,88 @@ export default function MapExplorer({
   );
 
   return (
-    <div className="mt-6 flex flex-col gap-4 md:flex-row">
-      <button
-        type="button"
-        onClick={() => setMobileSidebarOpen((o) => !o)}
-        className="rounded border border-border bg-surface px-3 py-2 text-sm text-foreground md:hidden"
-        aria-expanded={mobileSidebarOpen}
-      >
-        {mobileSidebarOpen ? "Close menu" : "Map menu"}
-      </button>
-
-      <div
-        className={`${mobileSidebarOpen ? "block" : "hidden"} fixed inset-0 z-40 overflow-y-auto bg-background p-4 md:static md:z-auto md:block md:w-72 md:shrink-0 md:overflow-visible md:bg-transparent md:p-0`}
-      >
-        <MapSidebar
-          continents={registeredContinents}
-          current={continentId}
-          zoneAreas={zoneAreas}
-          entrances={entrances}
-          flightMasters={flightMasters}
-          selectedZoneId={selectedZoneId}
-          onSelectZoneRow={handleSelectZoneRow}
-          onSearchPick={handleSearchPick}
+    <>
+      <div className="mt-2 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">{continentName}</h1>
+          <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
+            A tiled map of {continentName}, extracted from the WoW Forever beta client via wow.export -- pan and zoom
+            over real client art.
+          </p>
+        </div>
+        <MapToolbar
           layers={layers}
           onToggleLayer={handleToggleLayer}
+          mobileOpen={toolbarMenuOpen}
+          onToggleMobile={() => {
+            setToolbarMenuOpen((o) => !o);
+            setMobileSidebarOpen(false);
+          }}
         />
       </div>
 
-      <div className="min-w-0 flex-1">
-        <LeafletZoneMap
-          ref={mapHandleRef}
-          mapName={mapConfig.mapName}
-          bounds={mapConfig.bounds}
-          minZoom={mapConfig.minZoom}
-          maxNativeZoom={mapConfig.maxNativeZoom}
-          tileSize={mapConfig.tileSize}
-          gridSize={mapConfig.gridSize}
-          fullGridCorners={mapConfig.fullGridCorners}
-          zoneAreas={zoneAreas}
-          entrances={entrances}
-          flightMasters={flightMasters}
-          selectedZoneId={selectedZoneId}
-          onSelectZone={handleSelectZoneOnMap}
-          onViewChange={handleViewChange}
-          layers={layers}
-        />
+      <div className="mt-6 flex flex-col gap-4 md:flex-row">
+        <button
+          type="button"
+          onClick={() => {
+            setMobileSidebarOpen((o) => !o);
+            setToolbarMenuOpen(false);
+          }}
+          className={`rounded border border-border bg-surface px-3 py-2 text-sm text-foreground shadow-lg md:hidden ${
+            // The overlay below is `fixed inset-0`, so its own scrollable
+            // content (the zone list) renders directly on top of wherever
+            // this button would otherwise sit in normal page flow --
+            // confirmed live: with this button NOT pinned above the overlay,
+            // clicking where "Close menu" appears actually hit a zone-list
+            // row underneath it, making the menu unreachable once opened.
+            // Pinning it above the overlay's own z-index only while open
+            // keeps it reachable without changing its resting (closed)
+            // appearance at all.
+            mobileSidebarOpen ? "fixed right-4 top-4 z-50" : ""
+          }`}
+          aria-expanded={mobileSidebarOpen}
+        >
+          {mobileSidebarOpen ? "Close menu" : "Map menu"}
+        </button>
+
+        <div
+          className={`${mobileSidebarOpen ? "block" : "hidden"} scrollbar-gold fixed inset-0 z-40 overflow-y-auto bg-background p-4 pt-16 md:static md:z-auto md:block md:w-72 md:shrink-0 md:overflow-visible md:bg-transparent md:p-0`}
+        >
+          <MapSidebar
+            continents={registeredContinents}
+            current={continentId}
+            zoneAreas={zoneAreas}
+            entrances={entrances}
+            flightMasters={flightMasters}
+            selectedZoneId={selectedZoneId}
+            onSelectZoneRow={handleSelectZoneRow}
+            onSearchPick={handleSearchPick}
+            layers={layers}
+            onToggleLayer={handleToggleLayer}
+          />
+        </div>
+
+        <div className="min-w-0 flex-1">
+          <LeafletZoneMap
+            ref={mapHandleRef}
+            mapName={mapConfig.mapName}
+            bounds={mapConfig.bounds}
+            minZoom={mapConfig.minZoom}
+            maxNativeZoom={mapConfig.maxNativeZoom}
+            tileSize={mapConfig.tileSize}
+            gridSize={mapConfig.gridSize}
+            fullGridCorners={mapConfig.fullGridCorners}
+            zoneAreas={zoneAreas}
+            entrances={entrances}
+            flightMasters={flightMasters}
+            selectedZoneId={selectedZoneId}
+            onSelectZone={handleSelectZoneOnMap}
+            onViewChange={handleViewChange}
+            layers={layers}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

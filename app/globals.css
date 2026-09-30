@@ -522,6 +522,29 @@ html.light-mode {
   box-shadow: 0 0 30px -10px rgba(201, 169, 97, 0.4);
 }
 
+/* World map's area-lookup click popup (LeafletZoneMap.tsx) -- scoped to
+   this one popup's own `className` (passed to L.popup()), not a sitewide
+   override of .leaflet-popup-content-wrapper: the existing entrance/
+   flight-master popups render on Leaflet's own default white background
+   (confirmed live -- a pre-existing look, not something this rule touches)
+   and changing that wasn't asked for. This popup is new and asked to be
+   "in our theme", so it gets one. */
+.area-popup .leaflet-popup-content-wrapper {
+  background: #0d0b07;
+  color: #e8dcc0;
+  border: 1px solid rgba(201, 169, 97, 0.4);
+  border-radius: 6px;
+}
+
+.area-popup .leaflet-popup-tip {
+  background: #0d0b07;
+  border: 1px solid rgba(201, 169, 97, 0.4);
+}
+
+.area-popup .leaflet-popup-close-button {
+  color: #e8dcc0 !important;
+}
+
 /* ==========================================================================
    Shared interactive effect tiers
    ==========================================================================

@@ -117,6 +117,17 @@ async function main() {
 
   await renderDebugImages(report, "after", "fixed");
   await renderDebugImages(report, "before", "naive");
+
+  // One shared file, not per-continent -- subzone AreaIds never collide
+  // across continents (they're globally unique in the client's own
+  // AreaTable), and the map page already loads at most one continent's
+  // subzone-grid.bin at a time, so there's no benefit to splitting this
+  // small file in two.
+  const allNames = {};
+  for (const continent of CONTINENTS) Object.assign(allNames, report[continent.slug].subzoneNames);
+  const namesPath = path.join(repoRoot, "public", "map", "subzone-names.json");
+  fs.writeFileSync(namesPath, JSON.stringify(allNames));
+  console.log(`\nsubzone-names.json: ${Object.keys(allNames).length} entries, ${(fs.statSync(namesPath).size / 1024).toFixed(1)} KB`);
 }
 
 function worldToGridCell(worldX, worldY) {
@@ -590,6 +601,8 @@ function processContinent(continent) {
 
   console.log(`  Step 2 connectivity fix: ${step2RestoredCount} of ${step2CandidateCount} naive candidates were isolated pockets, restored to their zone`);
 
+  const subzoneNames = writeSubzoneGrid(continent, afterGridFixed, zoneIdSet);
+
   return {
     step1RemovedCount,
     step2CandidateCount,
@@ -598,9 +611,100 @@ function processContinent(continent) {
     oceanLiquidTypes,
     naive,
     fixed,
+    subzoneNames,
     geojsonSizeKB: Math.round(geojsonSize / 1024),
     _diag: { rawGrid, step1Grid, afterGridNaiveFlat: afterGridNaive, afterGridFixedFlat: afterGridFixed, liquidByCell },
   };
+}
+
+// Walks ParentAreaID from a raw (subzone-level) AreaId up to a registered
+// top-level zone id, exactly like rollupAndTrace's own internal `resolve()`
+// (duplicated rather than shared -- that one's cache is scoped to a single
+// rollupAndTrace call and closes over a different `grid` variable, not
+// worth threading through for four lines). Returns null if the chain hits
+// a dead end (unknown id or no ParentAreaID) without ever reaching a known
+// zone -- matches the same "not every raw AreaId resolves" reality
+// documented elsewhere in this file (Gilneas, Gillijim's Isle, etc.).
+function resolveZoneId(rawId, zoneIdSet) {
+  let current = rawId;
+  const visited = new Set();
+  while (true) {
+    if (zoneIdSet.has(current)) return current;
+    const area = areaById.get(String(current));
+    if (!area) return null;
+    const parent = Number(area.ParentAreaID);
+    if (!parent || visited.has(current)) return null;
+    visited.add(current);
+    current = parent;
+  }
+}
+
+// Ships the area-lookup feature's data: a compact per-continent grid of the
+// ocean-cleaned (Step 1 + Step 2b), pre-rollup raw AreaId per cell -- i.e.
+// exactly `afterGridFixed`, subzone-level rather than rolled up to the top
+// zone -- plus, per distinct non-zone-level id found in it, its display
+// name and which registered zone it resolves under. A cell whose raw id
+// IS ALREADY a registered zone (no finer subzone at that point) gets no
+// entry here at all -- the lookup treats "not in this map" as "no subzone,
+// just the zone itself," reusing zones.json directly rather than
+// duplicating its name/id here.
+//
+// Encoding: row-major run-length encoding (index = row*1024+col, same
+// convention as everywhere else in this script) as flat binary pairs of
+// (value: uint16 LE, runLength: uint32 LE) -- 6 bytes/run. RLE rather than
+// a raw 2MB Uint16Array because the grid is overwhelmingly large
+// contiguous blocks (one zone's shape, or open ocean/void) -- see this
+// function's own console output for the real compression ratio achieved.
+// uint32 for runLength (not uint16) because a single run of open ocean/
+// void can exceed 65,535 cells.
+function writeSubzoneGrid(continent, grid, zoneIdSet) {
+  const runs = [];
+  let i = 0;
+  while (i < grid.length) {
+    const v = grid[i];
+    let j = i + 1;
+    while (j < grid.length && grid[j] === v) j++;
+    runs.push([v, j - i]);
+    i = j;
+  }
+
+  const buf = Buffer.alloc(runs.length * 6);
+  let offset = 0;
+  const distinctNonZone = new Set();
+  for (const [value, length] of runs) {
+    buf.writeUInt16LE(value, offset);
+    buf.writeUInt32LE(length, offset + 2);
+    offset += 6;
+    if (value !== 0 && !zoneIdSet.has(value)) distinctNonZone.add(value);
+  }
+
+  const outPath = path.join(repoRoot, "public", "map", continent.slug, "subzone-grid.bin");
+  fs.writeFileSync(outPath, buf);
+  console.log(
+    `  subzone-grid.bin: ${runs.length} runs (from ${grid.length} cells) -> ${(buf.length / 1024).toFixed(1)} KB, ${path.relative(repoRoot, outPath)}`
+  );
+
+  const names = {};
+  let unresolved = 0;
+  for (const id of distinctNonZone) {
+    const zoneId = resolveZoneId(id, zoneIdSet);
+    if (zoneId === null) {
+      unresolved++;
+      continue;
+    }
+    const area = areaById.get(String(id));
+    // 0 = not set on this subzone (the client-side lookup falls back to the
+    // zone's own faction) -- only a handful of subzones carry a real,
+    // different-from-their-zone value (a faction-specific outpost inside an
+    // otherwise contested zone), same "use it when present, don't invent it
+    // otherwise" policy as the zone-level FactionGroupMask read elsewhere.
+    const factionMask = Number(area.FactionGroupMask) || 0;
+    names[id] = { name: area.AreaName_lang || area.ZoneName || `#${id}`, zoneId, factionMask };
+  }
+  if (unresolved) {
+    console.log(`  ${unresolved} distinct subzone id(s) in ${continent.slug}'s grid didn't resolve to any registered zone -- omitted from subzone-names.json`);
+  }
+  return names;
 }
 
 function rollupAndTrace(grid, zones, zoneIdSet, label) {

@@ -30,10 +30,11 @@ const KIND_TAG: Record<string, "Dungeon" | "Raid" | "Battleground"> = {
   battleground: "Battleground",
 };
 
+// Zone borders/labels/level lines moved to MapToolbar.tsx (top-right, above
+// the map) -- entrance-type toggles stay here in the sidebar for now, per
+// instruction, so this list is deliberately shorter than it used to be. Not
+// duplicated in both places.
 const LAYER_ROWS: { key: keyof MapLayers; label: string; countKind?: "dungeon" | "raid" | "battleground" }[] = [
-  { key: "zoneBorders", label: "Zone borders" },
-  { key: "zoneLabels", label: "Zone labels" },
-  { key: "levelLines", label: "Level lines" },
   { key: "dungeons", label: "Dungeons", countKind: "dungeon" },
   { key: "raids", label: "Raids", countKind: "raid" },
   { key: "battlegrounds", label: "Battlegrounds", countKind: "battleground" },
@@ -163,7 +164,7 @@ export default function MapSidebar({
           className="w-full rounded border border-border bg-surface px-2 py-1.5 text-sm text-foreground placeholder:text-foreground-muted/60"
         />
         {searchFocused && query.trim() !== "" && (
-          <div className="absolute z-10 mt-1 max-h-72 w-full overflow-y-auto rounded border border-border bg-surface shadow-lg">
+          <div className="scrollbar-gold absolute z-10 mt-1 max-h-72 w-full overflow-y-auto rounded border border-border bg-surface shadow-lg">
             {searchResults.length === 0 ? (
               <div className="px-2 py-2 text-xs text-foreground-muted">No matches</div>
             ) : (
@@ -190,7 +191,7 @@ export default function MapSidebar({
 
       <div className="mt-4">
         <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Zones</h2>
-        <div className="mt-1 max-h-80 overflow-y-auto rounded border border-border">
+        <div className="scrollbar-gold mt-1 max-h-80 overflow-y-auto rounded border border-border">
           {filteredZones.map((z) => (
             <button
               key={z.areaId}
