@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Safety net: no function should ever read map tiles off disk -- the CDN
+  // serves them directly. (Only tiles/, not meta.json/zones.json/
+  // zone-areas.json/subzone-grid.bin: lib/map-continents.ts and
+  // lib/zone-areas.ts read those, ~200KB per continent.)
+  outputFileTracingExcludes: {
+    "/*": ["./public/map/*/tiles/**"],
+  },
   async redirects() {
     return [
       {
