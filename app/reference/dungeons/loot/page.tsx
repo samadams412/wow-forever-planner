@@ -23,11 +23,10 @@ export default function DungeonLootIndexPage() {
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Dungeon Loot Tables</h1>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
         Boss-by-boss loot for every dungeon, sorted by level. Click a dungeon for its full breakdown,
-        including item stats and quests. Most item data is read from the beta client; each dungeon page
-        says exactly which source its data comes from.
+        including item stats and quests. Most item data is read from the beta client.
       </p>
 
-      <div className="scrollbar-gold mt-6 overflow-x-auto rounded-lg border border-border">
+      <div className="scrollbar-gold mt-6 cursor-default overflow-x-auto rounded-lg border border-border">
         <table className="w-full min-w-[560px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-border bg-surface text-left text-xs uppercase tracking-wide text-foreground-muted">

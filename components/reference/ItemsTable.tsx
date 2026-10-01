@@ -29,7 +29,7 @@ export default function ItemsTable({ items }: { items: LootItem[] }) {
       {/* Desktop: the full 6-column table, unchanged. Hidden below `sm` in
           favor of the card list -- same reasoning/pattern as the Profession
           Recipes tab's own table-to-card split (ProfessionRecipeTable). */}
-      <div className="mt-4 hidden overflow-x-auto rounded-lg border border-border sm:block">
+      <div className="mt-4 hidden cursor-default overflow-x-auto rounded-lg border border-border sm:block">
         <table className="w-full min-w-[560px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-border bg-surface text-left text-[11px] uppercase tracking-wide text-foreground-muted">

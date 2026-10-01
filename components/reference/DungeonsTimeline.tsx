@@ -171,7 +171,7 @@ export default function DungeonsTimeline({ dungeonData }: { dungeonData: Record<
       </div>
 
       <div
-        className="scrollbar-gold overflow-x-auto rounded-lg border border-accent/40 p-3 shadow-inner"
+        className="scrollbar-gold cursor-default overflow-x-auto rounded-lg border border-accent/40 p-3 shadow-inner"
         style={{
           backgroundColor: "#14110e",
           backgroundImage: [

@@ -36,7 +36,7 @@ function RaceRow({ race }: { race: Race }) {
         createPortal(
           <TooltipCard style={{ top: pos.top, left: pos.left, width: POPOVER_WIDTH }}>
             <div className="text-sm font-bold text-white">{race.name} racials</div>
-            <div className="mt-2 max-h-[70vh] space-y-2.5 overflow-y-auto">
+            <div className="mt-2 max-h-[70vh] cursor-default space-y-2.5 overflow-y-auto">
               {racials.map((r) => (
                 <div key={r.name}>
                   <div className="flex items-center gap-1.5">

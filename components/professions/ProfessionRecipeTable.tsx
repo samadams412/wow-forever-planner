@@ -20,7 +20,7 @@ export default function ProfessionRecipeTable({ recipes, professionId }: { recip
       {/* Desktop: the RANK/NAME/MATERIALS/SOURCE/LEVEL UP table, unchanged.
           Hidden below `sm` in favor of the card list, since the 5-column
           layout doesn't fit a mobile viewport without horizontal scroll. */}
-      <div className="mt-4 hidden overflow-x-auto rounded-lg border border-border sm:block">
+      <div className="mt-4 hidden cursor-default overflow-x-auto rounded-lg border border-border sm:block">
         <table className="w-full min-w-[680px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-border bg-surface text-left text-[11px] uppercase tracking-wide text-foreground-muted">

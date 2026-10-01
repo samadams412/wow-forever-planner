@@ -10,7 +10,7 @@ import type { SmeltingRecipe } from "@/lib/gathering-professions";
 // stretching that component to fit a shape it doesn't have.
 export default function ProfessionSmeltingTable({ recipes, professionId }: { recipes: SmeltingRecipe[]; professionId: string }) {
   return (
-    <div className="mt-4 overflow-x-auto rounded-lg border border-border">
+    <div className="mt-4 cursor-default overflow-x-auto rounded-lg border border-border">
       <table className="w-full min-w-[560px] border-collapse text-sm">
         <thead>
           <tr className="border-b border-border bg-surface text-left text-[11px] uppercase tracking-wide text-foreground-muted">

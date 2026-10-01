@@ -336,7 +336,7 @@ function SpellEntry({
                 top of the viewport) so long content scrolls inside the card
                 instead of spilling past the bottom of the screen when the
                 tooltip opens further down. */}
-            <div ref={scrollRef} className="overflow-y-auto" style={{ maxHeight: `calc(100vh - ${pos.top}px - 16px)` }}>
+            <div ref={scrollRef} className="cursor-default overflow-y-auto" style={{ maxHeight: `calc(100vh - ${pos.top}px - 16px)` }}>
               <TooltipName>{spell.name}</TooltipName>
               {subtitle && <TooltipRank>{subtitle}</TooltipRank>}
               {rankEntry.lines.map(([left, right], i) => (

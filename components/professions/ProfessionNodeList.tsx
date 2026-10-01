@@ -14,7 +14,7 @@ import type { GatheringNode } from "@/lib/gathering-professions";
 // those render through the same shared item pill as everywhere else.
 export default function ProfessionNodeList({ nodes, professionId }: { nodes: GatheringNode[]; professionId: string }) {
   return (
-    <div className="mt-4 overflow-x-auto rounded-lg border border-border">
+    <div className="mt-4 cursor-default overflow-x-auto rounded-lg border border-border">
       <table className="w-full min-w-[560px] border-collapse text-sm">
         <thead>
           <tr className="border-b border-border bg-surface text-left text-[11px] uppercase tracking-wide text-foreground-muted">

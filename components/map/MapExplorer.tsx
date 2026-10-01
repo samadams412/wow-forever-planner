@@ -304,7 +304,7 @@ export default function MapExplorer({
         </button>
 
         <div
-          className={`${mobileSidebarOpen ? "block" : "hidden"} scrollbar-gold fixed inset-0 z-40 overflow-y-auto bg-background p-4 pt-16 md:static md:z-auto md:block md:w-72 md:shrink-0 md:overflow-visible md:bg-transparent md:p-0`}
+          className={`${mobileSidebarOpen ? "block" : "hidden"} scrollbar-gold fixed inset-0 z-40 cursor-default overflow-y-auto bg-background p-4 pt-16 md:static md:z-auto md:block md:w-72 md:shrink-0 md:overflow-visible md:bg-transparent md:p-0`}
         >
           <MapSidebar
             continents={registeredContinents}

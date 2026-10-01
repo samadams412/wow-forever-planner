@@ -185,7 +185,7 @@ export default function MapSidebar({
           className="w-full rounded border border-border bg-surface px-2 py-1.5 text-sm text-foreground placeholder:text-foreground-muted/60"
         />
         {searchFocused && query.trim() !== "" && (
-          <div className="scrollbar-gold absolute z-10 mt-1 max-h-72 w-full overflow-y-auto rounded border border-border bg-surface shadow-lg">
+          <div className="scrollbar-gold absolute z-10 mt-1 max-h-72 w-full cursor-default overflow-y-auto rounded border border-border bg-surface shadow-lg">
             {searchResults.length === 0 ? (
               <div className="px-2 py-2 text-xs text-foreground-muted">No matches</div>
             ) : (
@@ -212,7 +212,7 @@ export default function MapSidebar({
 
       <div className="mt-4">
         <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Zones</h2>
-        <div className="scrollbar-gold mt-1 max-h-80 overflow-y-auto rounded border border-border">
+        <div className="scrollbar-gold mt-1 max-h-80 cursor-default overflow-y-auto rounded border border-border">
           {filteredZones.map((z) => (
             <button
               key={z.areaId}

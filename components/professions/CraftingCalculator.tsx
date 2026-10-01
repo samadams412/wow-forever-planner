@@ -412,7 +412,7 @@ export default function CraftingCalculator({
           />
           <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-3 top-2.5 h-4 w-4 text-foreground-muted" />
           {showChoices && (
-            <ul id="craft-recipe-options" className="craft-recipe-options absolute inset-x-0 top-full z-20 mt-1 max-h-72 overflow-y-auto rounded border border-border bg-surface shadow-xl" role="listbox">
+            <ul id="craft-recipe-options" className="craft-recipe-options absolute inset-x-0 top-full z-20 mt-1 max-h-72 cursor-default overflow-y-auto rounded border border-border bg-surface shadow-xl" role="listbox">
               {matchingRecipes.length ? matchingRecipes.map((recipe) => {
                 const item = items[recipe.outputKey];
                 return (
