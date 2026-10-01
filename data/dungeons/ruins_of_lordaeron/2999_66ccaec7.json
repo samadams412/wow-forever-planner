@@ -1,0 +1,29 @@
+{
+	"map_id": 2999,
+	"map_dir": "2999",
+	"map_name": "Ruins of Lordaeron",
+	"tile_size": 512,
+	"tiles": {
+		"min_x": 31,
+		"max_x": 31,
+		"min_y": 28,
+		"max_y": 29,
+		"wide": 1,
+		"high": 2
+	},
+	"image": {
+		"width": 512,
+		"height": 1024
+	},
+	"corners": {
+		"top_left": {
+			"world_x": 2133.3333333333335,
+			"world_y": 533.3333333333334
+		},
+		"bottom_right": {
+			"world_x": 1066.6666666666667,
+			"world_y": 0
+		}
+	},
+	"modf": null
+}

@@ -104,7 +104,11 @@ export type DungeonData = Dungeon & {
 // A literal lookup, not a filesystem scan, per the "no runtime-variable
 // disk reads" rule in CLAUDE.md. Only dungeons that reuse Classic-era zones
 // have an entry -- new-in-Forever dungeons show the "Map coming soon"
-// placeholder instead.
+// placeholder instead, EXCEPT the three below, whose maps were extracted
+// directly from wow.export (not a Classic-era BLP) and cropped via
+// `node scripts/crop-dungeon-maps.js` into public/maps/dungeons/<slug>/map.png
+// -- a separate pipeline/location from the BLP-sourced webp maps above. See
+// 03-Handoffs/2026-10-01-dungeon-maps-extraction.md for how each was cropped.
 const DUNGEON_MAP_IMAGES: Partial<Record<string, string>> = {
   "ragefire-chasm": "/images/dungeon-maps/ragefire-chasm.webp",
   "wailing-caverns": "/images/dungeon-maps/wailing-caverns.webp",
@@ -138,10 +142,22 @@ const DUNGEON_MAP_IMAGES: Partial<Record<string, string>> = {
   // data/dungeons/Classic-Classic.lua. See scripts/convert-dungeon-maps.js.
   "stratholme-undead": "/images/dungeon-maps/stratholme-undead.webp",
   "stratholme-live": "/images/dungeon-maps/stratholme-live.webp",
+  "city-of-dalaran": "/maps/dungeons/city-of-dalaran/map.png",
+  "hall-of-thanes": "/maps/dungeons/hall-of-thanes/map.png",
+  "ruins-of-lordaeron": "/maps/dungeons/ruins-of-lordaeron/map.png",
 };
 
 export function getDungeonMapImage(dungeonId: string): string | null {
   return DUNGEON_MAP_IMAGES[dungeonId] ?? null;
+}
+
+// Dungeons whose map came from a wow.export tile extraction (see
+// scripts/crop-dungeon-maps.js) rather than the Atlas addon's BLP dump --
+// the map panel's attribution caption needs to say something true for these.
+const WOWEXPORT_SOURCED_MAPS = new Set(["city-of-dalaran", "hall-of-thanes", "ruins-of-lordaeron"]);
+
+export function getDungeonMapAttribution(dungeonId: string): string {
+  return WOWEXPORT_SOURCED_MAPS.has(dungeonId) ? "Map extracted via wow.export" : "Map courtesy of Atlas Addon";
 }
 
 // Marker legend for a dungeon's map image (the numbers/letters already baked

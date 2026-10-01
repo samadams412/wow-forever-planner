@@ -10,10 +10,12 @@ export default function DungeonMapPanel({
   src,
   alt,
   legend,
+  attribution = "Map courtesy of Atlas Addon",
 }: {
   src: string;
   alt: string;
   legend?: DungeonMapMarker[];
+  attribution?: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -35,8 +37,8 @@ export default function DungeonMapPanel({
           <DungeonMapLegend markers={legend} />
         </div>
       )}
-      <p className="mt-1 text-center text-[10px] text-foreground-muted/50">Map courtesy of Atlas Addon</p>
-      {open && <DungeonMapModal src={src} alt={alt} legend={legend} onClose={() => setOpen(false)} />}
+      <p className="mt-1 text-center text-[10px] text-foreground-muted/50">{attribution}</p>
+      {open && <DungeonMapModal src={src} alt={alt} legend={legend} attribution={attribution} onClose={() => setOpen(false)} />}
     </div>
   );
 }

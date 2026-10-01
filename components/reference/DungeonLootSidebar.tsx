@@ -11,6 +11,7 @@ export default function DungeonLootSidebar({
   jumpNavEntries,
   mapImage,
   mapLegend,
+  mapAttribution,
   dungeonName,
   authorNotes,
 }: {
@@ -22,6 +23,7 @@ export default function DungeonLootSidebar({
   jumpNavEntries: JumpNavEntry[];
   mapImage: string | null;
   mapLegend?: DungeonMapMarker[] | null;
+  mapAttribution?: string;
   dungeonName: string;
   authorNotes?: string | null;
 }) {
@@ -54,7 +56,7 @@ export default function DungeonLootSidebar({
           <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Dungeon map</h2>
           <div className="mt-1">
             {mapImage ? (
-              <DungeonMapPanel src={mapImage} alt={`${dungeonName} map`} legend={mapLegend ?? undefined} />
+              <DungeonMapPanel src={mapImage} alt={`${dungeonName} map`} legend={mapLegend ?? undefined} attribution={mapAttribution} />
             ) : (
               <div className="flex h-56 w-full items-center justify-center rounded border border-dashed border-border text-xs text-foreground-muted">
                 Map coming soon

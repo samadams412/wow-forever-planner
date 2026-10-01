@@ -12,11 +12,13 @@ export default function DungeonMapModal({
   src,
   alt,
   legend,
+  attribution = "Map courtesy of Atlas Addon",
   onClose,
 }: {
   src: string;
   alt: string;
   legend?: DungeonMapMarker[];
+  attribution?: string;
   onClose: () => void;
 }) {
   useEffect(() => {
@@ -55,7 +57,7 @@ export default function DungeonMapModal({
         </button>
         <div className="min-w-0 flex-1">
           <DungeonMapViewer src={src} alt={alt} heightClassName="h-[60vh]" sizes="80vw" />
-          <p className="mt-1 text-center text-[10px] text-foreground-muted/50">Map courtesy of Atlas Addon</p>
+          <p className="mt-1 text-center text-[10px] text-foreground-muted/50">{attribution}</p>
         </div>
         {legend && legend.length > 0 && (
           <div className="scrollbar-gold w-full shrink-0 cursor-default overflow-y-auto sm:w-56 sm:max-h-[60vh]">

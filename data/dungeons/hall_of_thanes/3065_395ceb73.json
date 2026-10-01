@@ -1,0 +1,29 @@
+{
+	"map_id": 3065,
+	"map_dir": "3065",
+	"map_name": "The Hall of Thanes",
+	"tile_size": 512,
+	"tiles": {
+		"min_x": 31,
+		"max_x": 32,
+		"min_y": 31,
+		"max_y": 32,
+		"wide": 2,
+		"high": 2
+	},
+	"image": {
+		"width": 1024,
+		"height": 1024
+	},
+	"corners": {
+		"top_left": {
+			"world_x": 533.3333333333334,
+			"world_y": 533.3333333333334
+		},
+		"bottom_right": {
+			"world_x": -533.3333333333334,
+			"world_y": -533.3333333333334
+		}
+	},
+	"modf": null
+}

@@ -10,7 +10,7 @@ import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import DungeonLootSidebar from "@/components/reference/DungeonLootSidebar";
 import type { JumpNavEntry } from "@/components/reference/DungeonJumpNav";
-import { getDungeonLootIndex, getDungeonWithLoot, getDungeonMapImage, getDungeonMapLegend } from "@/lib/dungeon-loot";
+import { getDungeonLootIndex, getDungeonWithLoot, getDungeonMapImage, getDungeonMapLegend, getDungeonMapAttribution } from "@/lib/dungeon-loot";
 import { getEntranceMapHref } from "@/lib/map-entrances";
 
 export function generateStaticParams() {
@@ -45,6 +45,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
   const mapHref = getEntranceMapHref(dungeon.id);
   const mapImage = getDungeonMapImage(dungeon.id);
   const mapLegend = getDungeonMapLegend(dungeon.id);
+  const mapAttribution = getDungeonMapAttribution(dungeon.id);
 
   const jumpNavEntries: JumpNavEntry[] = [
     ...data.bosses.map((boss, i) => ({ id: `boss-${i}`, label: boss.name, portraitUrl: boss.portraitUrl })),
@@ -141,6 +142,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
           itemCount={totalItems}
           jumpNavEntries={jumpNavEntries}
           mapImage={mapImage}
+          mapAttribution={mapAttribution}
           mapLegend={mapLegend}
           dungeonName={dungeon.name}
           authorNotes={data.authorNotes}
