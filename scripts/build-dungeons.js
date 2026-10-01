@@ -303,6 +303,7 @@ function main() {
       description: dungeon.description ?? null,
       image: dungeon.image ?? null,
       confidence: dungeon.confidence ?? null,
+      authorNotes: dungeon.authorNotes ?? null,
       backgroundImage: `https://foreverchanges.pro/wow-ui/dungeons/art-${map.art}.webp`,
       bossLootSource,
       bosses,

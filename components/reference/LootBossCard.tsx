@@ -12,10 +12,18 @@ const KIND_LABEL: Partial<Record<LootBoss["kind"], string>> = {
 // Same card language as Card.tsx/blog list items/reference collapsibles --
 // rounded-lg, border-border, bg-surface -- just not a link (nothing to
 // navigate to), so no .fx-standard-hover.
-export default function LootBossCard({ boss, dungeonId }: { boss: LootBoss; dungeonId: string }) {
+export default function LootBossCard({
+  boss,
+  dungeonId,
+  anchorId,
+}: {
+  boss: LootBoss;
+  dungeonId: string;
+  anchorId?: string;
+}) {
   const kindLabel = KIND_LABEL[boss.kind];
   return (
-    <div className="rounded-lg border border-border bg-surface p-4">
+    <div id={anchorId} className="scroll-mt-20 rounded-lg border border-border bg-surface p-4">
       <div className="flex items-center gap-2.5">
         <BossPortrait src={boss.portraitUrl} alt="" />
         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">

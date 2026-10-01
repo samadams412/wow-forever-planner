@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { dungeons, getDungeon, type Dungeon } from "@/lib/dungeons";
+import { DUNGEON_MAP_LEGENDS, type DungeonMapMarker } from "@/lib/dungeon-map-legends.generated";
 
 // Normalized dungeon data -- bosses/loot/quests -- built by
 // scripts/build-dungeons.js from two sources: foreverchanges.pro (item
@@ -95,6 +96,63 @@ export type DungeonData = Dungeon & {
   questSource: "foreverchanges" | "wowtbc" | null;
   quests: Quest[];
 };
+
+// Static map image for a dungeon, converted from its raw .blp source via
+// `node scripts/convert-dungeon-maps.js` (see that script for the
+// dungeonId -> source-texture mapping, including a couple of flagged
+// unverified guesses for UBRS/Stratholme) into public/images/dungeon-maps/.
+// A literal lookup, not a filesystem scan, per the "no runtime-variable
+// disk reads" rule in CLAUDE.md. Only dungeons that reuse Classic-era zones
+// have an entry -- new-in-Forever dungeons show the "Map coming soon"
+// placeholder instead.
+const DUNGEON_MAP_IMAGES: Partial<Record<string, string>> = {
+  "ragefire-chasm": "/images/dungeon-maps/ragefire-chasm.webp",
+  "wailing-caverns": "/images/dungeon-maps/wailing-caverns.webp",
+  deadmines: "/images/dungeon-maps/deadmines.webp",
+  "shadowfang-keep": "/images/dungeon-maps/shadowfang-keep.webp",
+  "blackfathom-deeps": "/images/dungeon-maps/blackfathom-deeps.webp",
+  "the-stockade": "/images/dungeon-maps/the-stockade.webp",
+  "razorfen-kraul": "/images/dungeon-maps/razorfen-kraul.webp",
+  gnomeregan: "/images/dungeon-maps/gnomeregan.webp",
+  "sm-graveyard": "/images/dungeon-maps/sm-graveyard.webp",
+  "sm-library": "/images/dungeon-maps/sm-library.webp",
+  "sm-armory": "/images/dungeon-maps/sm-armory.webp",
+  "sm-cathedral": "/images/dungeon-maps/sm-cathedral.webp",
+  "razorfen-downs": "/images/dungeon-maps/razorfen-downs.webp",
+  uldaman: "/images/dungeon-maps/uldaman.webp",
+  zulfarrak: "/images/dungeon-maps/zulfarrak.webp",
+  maraudon: "/images/dungeon-maps/maraudon.webp",
+  "sunken-temple": "/images/dungeon-maps/sunken-temple.webp",
+  "blackrock-depths": "/images/dungeon-maps/blackrock-depths.webp",
+  "dire-maul-east": "/images/dungeon-maps/dire-maul-east.webp",
+  "dire-maul-west": "/images/dungeon-maps/dire-maul-west.webp",
+  "dire-maul-north": "/images/dungeon-maps/dire-maul-north.webp",
+  lbrs: "/images/dungeon-maps/lbrs.webp",
+  // Originally flagged unverified; confirmed by the Atlas legend data
+  // (lib/dungeon-map-legends.generated.ts) itself naming this key
+  // "BlackrockSpireUpper" -- unambiguously UBRS.
+  ubrs: "/images/dungeon-maps/ubrs.webp",
+  scholomance: "/images/dungeon-maps/scholomance.webp",
+  // Originally an unverified guess, and backwards -- resolved by cross-
+  // referencing the two sides' real boss rosters against
+  // data/dungeons/Classic-Classic.lua. See scripts/convert-dungeon-maps.js.
+  "stratholme-undead": "/images/dungeon-maps/stratholme-undead.webp",
+  "stratholme-live": "/images/dungeon-maps/stratholme-live.webp",
+};
+
+export function getDungeonMapImage(dungeonId: string): string | null {
+  return DUNGEON_MAP_IMAGES[dungeonId] ?? null;
+}
+
+// Marker legend for a dungeon's map image (the numbers/letters already baked
+// into the image itself) -- parsed from the Atlas addon's own data by
+// scripts/build-dungeon-map-legends.js into dungeon-map-legends.generated.ts.
+// stratholme-undead/-live and any new-in-Forever dungeon have no entry (see
+// that script's notes on why Stratholme specifically can't be split), which
+// is fine -- the map viewer and sidebar simply don't render a legend list.
+export function getDungeonMapLegend(dungeonId: string): DungeonMapMarker[] | null {
+  return DUNGEON_MAP_LEGENDS[dungeonId] ?? null;
+}
 
 const DATA_DIR = path.join(process.cwd(), "data", "dungeons");
 let cache: Map<string, DungeonData> | null = null;

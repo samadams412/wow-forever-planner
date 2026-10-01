@@ -8,7 +8,9 @@ import LootDisclaimer from "@/components/reference/LootDisclaimer";
 import LootBossCard from "@/components/reference/LootBossCard";
 import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
-import { getDungeonLootIndex, getDungeonWithLoot } from "@/lib/dungeon-loot";
+import DungeonLootSidebar from "@/components/reference/DungeonLootSidebar";
+import type { JumpNavEntry } from "@/components/reference/DungeonJumpNav";
+import { getDungeonLootIndex, getDungeonWithLoot, getDungeonMapImage, getDungeonMapLegend } from "@/lib/dungeon-loot";
 import { getEntranceMapHref } from "@/lib/map-entrances";
 
 export function generateStaticParams() {
@@ -41,9 +43,18 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
   // Null for dungeons with no client-placed entrance yet (most new-in-Forever
   // ones) -- the link is simply omitted rather than pointing at nothing.
   const mapHref = getEntranceMapHref(dungeon.id);
+  const mapImage = getDungeonMapImage(dungeon.id);
+  const mapLegend = getDungeonMapLegend(dungeon.id);
+
+  const jumpNavEntries: JumpNavEntry[] = [
+    ...data.bosses.map((boss, i) => ({ id: `boss-${i}`, label: boss.name, portraitUrl: boss.portraitUrl })),
+    ...(data.quests.length > 0
+      ? [{ id: "quests", label: "Quests", iconSrc: "/images/icons/available.png" }]
+      : []),
+  ];
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-3 py-8 sm:px-4">
+    <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
       <Breadcrumbs
         items={[
           { label: "Reference", href: "/reference" },
@@ -85,41 +96,56 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
       )}
 
-
-
-      <ItemLinkSourceProvider from={`/reference/dungeons/loot/${dungeon.id}`} fromLabel={dungeon.name}>
-        {data.bosses.length === 0 ? (
-          <p className="mt-6 text-sm text-foreground-muted">
-            Bosses and loot for this dungeon haven&apos;t been discovered yet -- check back as the beta
-            continues.
-          </p>
-        ) : (
-          <div className="mt-6 flex flex-col gap-3">
-            <p className="text-xs text-foreground-muted">
-              {data.bosses.length} boss{data.bosses.length === 1 ? "" : "es"}, {totalItems} item
-              {totalItems === 1 ? "" : "s"}
-            </p>
-            {data.bosses.map((boss, i) => (
-              <LootBossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} />
-            ))}
-          </div>
-        )}
-
-        {data.quests.length > 0 && (
-          <div className="mt-3 flex flex-col gap-3">
-            {data.questSource && data.questSource !== data.bossLootSource && (
-              <LootDisclaimer source={data.questSource} dungeonType={dungeon.type} />
+      <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-start">
+        <div className="min-w-0 flex-1">
+          <ItemLinkSourceProvider from={`/reference/dungeons/loot/${dungeon.id}`} fromLabel={dungeon.name}>
+            {data.bosses.length === 0 ? (
+              <p className="text-sm text-foreground-muted">
+                Bosses and loot for this dungeon haven&apos;t been discovered yet -- check back as the beta
+                continues.
+              </p>
+            ) : (
+              <div className="flex flex-col gap-3">
+                <p className="text-xs text-foreground-muted">
+                  {data.bosses.length} boss{data.bosses.length === 1 ? "" : "es"}, {totalItems} item
+                  {totalItems === 1 ? "" : "s"}
+                </p>
+                {data.bosses.map((boss, i) => (
+                  <LootBossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
+                ))}
+              </div>
             )}
-            <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} />
-          </div>
-        )}
 
-        {data.bosses.length > 0 && (
-          <div className="mt-4">
-            <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
-          </div>
-        )}
-      </ItemLinkSourceProvider>
+            {data.quests.length > 0 && (
+              <div id="quests" className="mt-3 scroll-mt-20 flex flex-col gap-3">
+                {data.questSource && data.questSource !== data.bossLootSource && (
+                  <LootDisclaimer source={data.questSource} dungeonType={dungeon.type} />
+                )}
+                <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} />
+              </div>
+            )}
+
+            {data.bosses.length > 0 && (
+              <div className="mt-4">
+                <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
+              </div>
+            )}
+          </ItemLinkSourceProvider>
+        </div>
+
+        <DungeonLootSidebar
+          levelMin={dungeon.levelMin}
+          levelMax={dungeon.levelMax}
+          zone={dungeon.zone}
+          bossCount={data.bosses.length}
+          itemCount={totalItems}
+          jumpNavEntries={jumpNavEntries}
+          mapImage={mapImage}
+          mapLegend={mapLegend}
+          dungeonName={dungeon.name}
+          authorNotes={data.authorNotes}
+        />
+      </div>
     </main>
   );
 }

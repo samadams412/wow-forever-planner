@@ -12,6 +12,9 @@ export type Dungeon = {
   description?: string;
   image?: string;
   confidence?: "confirmed" | "estimated";
+  // Hand-written editorial callouts for the loot page sidebar -- markdown,
+  // not user-editable, not stored client-side. Omitted/null renders nothing.
+  authorNotes?: string | null;
 };
 
 export const dungeons: Dungeon[] = dungeonsData.dungeons as Dungeon[];

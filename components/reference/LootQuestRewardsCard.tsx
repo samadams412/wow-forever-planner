@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LootItemPill from "@/components/reference/LootItemPill";
 import type { Quest } from "@/lib/dungeon-loot";
 
@@ -85,7 +86,10 @@ export default function LootQuestRewardsCard({ quests, dungeonId }: { quests: Qu
 
   return (
     <div className="rounded-lg border border-border bg-surface p-4">
-      <h3 className="font-heading text-base font-semibold text-accent">Quests</h3>
+      <h3 className="flex items-center gap-1.5 font-heading text-base font-semibold text-accent">
+        <Image src="/images/icons/available.png" alt="" width={18} height={18} />
+        Quests
+      </h3>
       <div className="mt-2 flex flex-col gap-4">
         {quests.map((quest) => (
           <QuestCard key={quest.id} quest={quest} dungeonId={dungeonId} />
