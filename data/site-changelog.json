@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-01",
+    "title": "Real dungeon maps and a loot page sidebar",
+    "points": [
+      "Dungeon loot pages now have a sticky sidebar: quick stats, a jump-nav with boss portraits and scroll-spy highlighting, and a real zoomable dungeon map for 26 dungeons.",
+      "City of Dalaran, Hall of Thanes and Ruins of Lordaeron now show a real cropped map too, tightly fitted with nothing cut off.",
+      "Item links now take you back to the page you came from instead of always landing on the item catalog.",
+      "Fixed the crafting calculator's recipe dropdown defaulting to the wrong recipe."
+    ],
+    "link": { "label": "Dungeon loot", "href": "/reference/dungeons/loot" }
+  },
+  {
+    "date": "2026-09-30",
+    "title": "Racials and Class Spellbooks redesigned",
+    "points": [
+      "Racials reference rebuilt: hover a race or ability for an in-game-style tooltip, faction-colored cards, and a compact accordion for race/class bonuses.",
+      "Class Spellbooks reworked: pick a class from an icon row, browse a three-column spellbook in the game's own font, and search by ability name or keyword.",
+      "Both pages got a mobile pass: bigger touch targets, wrapping controls, and a page-turn control sized for fingers."
+    ],
+    "link": { "label": "Racials", "href": "/reference/racials" }
+  },
+  {
+    "date": "2026-09-30",
+    "title": "World map toolbar, mobile menus and layer icons",
+    "points": [
+      "New map toolbar: toggle zone borders, zone labels and level lines, or share the current view as a link.",
+      "Click empty map space to look up what zone and subzone you clicked, with in-game coordinates.",
+      "Layer toggles now show the actual marker icon as their legend, and dungeon loot pages link straight to that dungeon's spot on the map.",
+      "Mobile map menus (layers and zone list) behave as separate, non-overlapping panels."
+    ],
+    "link": { "label": "World map", "href": "/reference/map/eastern-kingdoms" }
+  },
+  {
     "date": "2026-09-24",
     "title": "Build 70009 in the planner, and a new What's New",
     "points": [

@@ -444,7 +444,19 @@ export default function TalentNode({
                     <br />
                   </>
                 )}
+                {talent.classic.replaces && talent.classic.replaces.length > 0 && (
+                  <>
+                    Replaces {talent.classic.replaces.join(", ")} in Classic.
+                    <br />
+                  </>
+                )}
                 {talent.classic.text ? formatTooltipText(talent.classic.text) : null}
+                {talent.classic.note && (
+                  <>
+                    {talent.classic.text ? <br /> : null}
+                    {talent.classic.note}
+                  </>
+                )}
               </TooltipClassicNote>
             )}
           </TooltipCard>,

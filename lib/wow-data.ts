@@ -38,6 +38,8 @@ export type ClassicTalentInfo = {
   maxRank?: number;
   text?: string;
   renamedFrom?: string;
+  replaces?: string[];
+  note?: string;
 };
 
 export type Talent = {

@@ -1,0 +1,198 @@
+{
+  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever\\talentsforever-2026-09-30.json",
+  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever\\talentsforever-2026-10-01.json",
+  "oldLabel": "2026-09-30",
+  "newLabel": "2026-10-01",
+  "talents": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Seal of Command",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.Unleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 146 if the target is stunned or incapacitated.",
+            "new": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 145 if the target is stunned or incapacitated.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "name": "Holy Nova",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Causes an explosion of holy light around the caster, causing 29 to 34 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 54 to 63. These effects cause no threat.",
+            "new": "Causes an explosion of holy light around the caster, causing 29 to 33 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 54 to 62. These effects cause no threat.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Pyroblast",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec.",
+            "new": "Hurls an immense fiery boulder that causes 148 to 194 Fire damage and an additional 56 Fire damage over 12 sec.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Ice Barrier",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Instantly shields you, absorbing 455 damage. Lasts 1 min. While the shield holds, spells will not be interrupted.",
+            "new": "Instantly shields you, absorbing 454 damage. Lasts 1 min. While the shield holds, spells will not be interrupted.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Demonic Sacrifice",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min. The effect is canceled if any Demon is summoned.Imp: Increases your Fire damage by 15%.Voidwalker: Restores 3% of total Health every 4 sec.Succubus/Incubus: Increases your Shadow damage by 15%.Felhunter: Restores 2% of total Mana every 4 sec.",
+            "new": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min. The effect is canceled if any Demon is summoned. Imp: Increases your Fire damage by 15%. Voidwalker: Restores 3% of total Health every 4 sec. Succubus/Incubus: Increases your Shadow damage by 15%. Felhunter: Restores 2% of total Mana every 4 sec.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Destruction",
+        "name": "Shadowburn",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Instantly blasts the target for 91 to 104 Shadow damage. If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+            "new": "Instantly blasts the target for 91 to 103 Shadow damage. If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Destruction",
+        "name": "Conflagrate",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Ignites a target that is already afflicted by Immolate, dealing 249 to 316 Fire damage and consuming the Immolate spell.",
+            "new": "Ignites a target that is already afflicted by Immolate, dealing 249 to 315 Fire damage and consuming the Immolate spell.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Balance",
+        "name": "Moonkin Form",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. [Reduces all threat from Arcane and Nature spells by 0% while in this form]The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+            "new": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Swiftmend",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.",
+            "new": "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [],
+    "removedArrayAdded": [],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": []
+  },
+  "spellbooks": {
+    "added": [],
+    "removed": [
+      {
+        "className": "Priest",
+        "tabName": "Holy",
+        "key": "Priest|Holy|Lightwell",
+        "name": "Lightwell"
+      }
+    ],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [],
+    "removed": [
+      "Priest|Lightwell|Rank 1",
+      "Priest|Lightwell|Rank 2",
+      "Priest|Lightwell|Rank 3"
+    ],
+    "changed": [
+      "Warrior|Slam|Rank 1",
+      "Paladin|Holy Shock|Rank 1",
+      "Hunter|Trueshot Aura|Rank 1",
+      "Hunter|Trueshot Aura|Rank 2",
+      "Hunter|Counterattack|Rank 2",
+      "Rogue|Premeditation|",
+      "Warlock|Curse of the Elements|Rank 1",
+      "Warlock|Curse of the Elements|Rank 2",
+      "Warlock|Curse of the Elements|Rank 3",
+      "Warlock|Curse of the Elements|Rank 4",
+      "Warlock|Conflagrate|Rank 1",
+      "Warlock|Conflagrate|Rank 2"
+    ],
+    "newFields": [
+      "cx"
+    ]
+  },
+  "opaque": {
+    "racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": true,
+      "newFields": []
+    }
+  }
+}

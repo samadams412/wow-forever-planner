@@ -269,7 +269,8 @@
           "status": "new",
           "icon": "garrison_weaponupgrade",
           "classic": {
-            "status": "new"
+            "status": "new",
+            "replaces": ["Axe Specialization", "Mace Specialization", "Polearm Specialization", "Sword Specialization"]
           },
           "passive": true
         },

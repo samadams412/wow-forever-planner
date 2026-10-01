@@ -771,7 +771,8 @@
           "status": "new",
           "icon": "inv_sword_27",
           "classic": {
-            "status": "new"
+            "status": "new",
+            "replaces": ["Dagger Specialization", "Fist Weapon Specialization", "Mace Specialization", "Sword Specialization"]
           },
           "passive": true
         },
@@ -1136,7 +1137,8 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost."
+            "text": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost.",
+            "note": "no longer requires Stealth (Classic did)"
           },
           "passive": false,
           "cost": "20 yd range | Instant | 2 min cooldown"

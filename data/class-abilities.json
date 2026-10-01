@@ -92,6 +92,11 @@
   "Warrior": {
     "abilities": [
       {
+        "name": "Rage",
+        "description": "Comes from taking damage and from your melee swings. Slower weapons give more Rage per swing, so it comes in at a steady rate instead of scaling with how hard you hit. Out of combat you lose 1.25 Rage a second (75 a minute).",
+        "icon": "ability_warrior_endlessrage"
+      },
+      {
         "name": "Victory Rush",
         "description": "Baseline, in the Arms tab. Instant, 30 sec cooldown: a melee hit that heals you for 10% of your maximum health, usable within 20 sec of killing something non-trivial.",
         "icon": "ability_warrior_devastate"
@@ -113,7 +118,7 @@
       },
       {
         "name": "Thunder Clap",
-        "description": "Changed. Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec and hits up to 4 targets, where Classic was 10% for 30.",
+        "description": "Changed. Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec and hits up to 4 targets, where Classic was 10% for the same 22 sec.",
         "icon": "spell_nature_thunderclap"
       },
       {
@@ -135,6 +140,11 @@
   },
   "Rogue": {
     "abilities": [
+      {
+        "name": "Energy",
+        "description": "Comes back 1 point every 0.1 sec, 10 a second. Same rate as Classic, but no tick to wait for.",
+        "icon": "spell_shadow_fumble"
+      },
       {
         "name": "Mutilate",
         "description": "New talent, Assassination row 5. Hits with both weapons for 75% damage each, 20% more on poisoned targets, and gives 2 combo points. Nine other talents feed it.",
@@ -199,9 +209,14 @@
         "icon": "ability_shaman_totemrelocation"
       },
       {
-        "name": "Call of the Elements",
-        "description": "New: drops up to four totems from your Totem Bar in one 3 sec cast.",
-        "icon": "spell_nature_earthbind"
+        "name": "Totems last 5 min",
+        "description": "Lasting totems last 5 min now. Most were 2 min in Classic, and Healing Stream and Mana Spring were 1 min. Disease Cleansing Totem still lasts 2 min. Searing (30 sec), Magma (20), Stoneclaw (15), Earthbind and Grounding (45) and Mana Tide (12) keep their short timers.",
+        "icon": "spell_nature_strengthofearthtotem02"
+      },
+      {
+        "name": "Call of the Elements, Ancestors and Spirits",
+        "description": "New: each drops up to four totems from its own Totem Bar set in one 3 sec cast. Call of the Elements at 20, Call of the Ancestors at 30, Call of the Spirits at 40, so three saved sets by 40.",
+        "icon": "spell_shaman_dropall_01"
       },
       {
         "name": "Fire Nova",
