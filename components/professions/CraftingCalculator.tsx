@@ -281,8 +281,12 @@ export default function CraftingCalculator({
     ...profession,
     recipes: [...profession.recipes].sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" })),
   })), [catalogProfessions]);
+  // The default recipe is the first one in catalog order (the simplest, lowest-
+  // rank recipe), not the first alphabetically; the selection is tracked by id.
+  const defaultRecipeId = (profession: string | undefined) =>
+    catalogProfessions.find((entry) => entry.id === profession)?.recipes[0]?.id ?? "";
   const [professionId, setProfessionId] = useState(professions[0]?.id ?? "");
-  const [recipeId, setRecipeId] = useState(professions[0]?.recipes[0]?.id ?? "");
+  const [recipeId, setRecipeId] = useState(() => defaultRecipeId(professions[0]?.id));
   const [query, setQuery] = useState("");
   const [showChoices, setShowChoices] = useState(false);
   const [category, setCategory] = useState("All categories");
@@ -292,7 +296,9 @@ export default function CraftingCalculator({
   const [copied, setCopied] = useState(false);
 
   const selectedProfession = professions.find((profession) => profession.id === professionId) ?? professions[0];
-  const selectedRecipe = selectedProfession?.recipes.find((recipe) => recipe.id === recipeId) ?? selectedProfession?.recipes[0];
+  const selectedRecipe = selectedProfession?.recipes.find((recipe) => recipe.id === recipeId)
+    ?? selectedProfession?.recipes.find((recipe) => recipe.id === defaultRecipeId(selectedProfession.id))
+    ?? selectedProfession?.recipes[0];
   const choices = useMemo(() => catalogProfessions.flatMap((profession) => profession.recipes.map((recipe) => ({ ...recipe, professionId: profession.id }))), [catalogProfessions]);
   const recipesByOutput = useMemo(() => {
     const index = new Map<string, RecipeChoice[]>();
@@ -325,7 +331,7 @@ export default function CraftingCalculator({
   function changeProfession(nextId: string) {
     const next = professions.find((profession) => profession.id === nextId);
     setProfessionId(nextId);
-    setRecipeId(next?.recipes[0]?.id ?? "");
+    setRecipeId(defaultRecipeId(next?.id));
     setQuery("");
     setShowChoices(false);
     setCategory("All categories");
