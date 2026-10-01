@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemsTable from "@/components/reference/ItemsTable";
 import ItemsSearchInput from "@/components/reference/ItemsSearchInput";
 import ItemCategorySidebar from "@/components/reference/ItemCategorySidebar";
+import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import {
   CATEGORY_VALUES,
   getDungeonFilterOptions,
@@ -295,7 +296,9 @@ export default async function ItemsPage({
             {q ? ` matching "${q}"` : ""}
           </p>
 
-          <ItemsTable items={result.items} />
+          <ItemLinkSourceProvider from={buildHref({ ...baseFilters, page: result.page })} fromLabel="Item Catalog">
+            <ItemsTable items={result.items} />
+          </ItemLinkSourceProvider>
 
           {result.pageCount > 1 && (
             <nav className="mt-4 flex items-center justify-between border-t border-border pt-4">

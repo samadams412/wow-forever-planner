@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/site/Breadcrumbs";
 import LootDisclaimer from "@/components/reference/LootDisclaimer";
 import LootBossCard from "@/components/reference/LootBossCard";
 import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
+import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import { getDungeonLootIndex, getDungeonWithLoot } from "@/lib/dungeon-loot";
 import { getEntranceMapHref } from "@/lib/map-entrances";
 
@@ -84,39 +85,41 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
       )}
 
-    
 
-      {data.bosses.length === 0 ? (
-        <p className="mt-6 text-sm text-foreground-muted">
-          Bosses and loot for this dungeon haven&apos;t been discovered yet -- check back as the beta
-          continues.
-        </p>
-      ) : (
-        <div className="mt-6 flex flex-col gap-3">
-          <p className="text-xs text-foreground-muted">
-            {data.bosses.length} boss{data.bosses.length === 1 ? "" : "es"}, {totalItems} item
-            {totalItems === 1 ? "" : "s"}
+
+      <ItemLinkSourceProvider from={`/reference/dungeons/loot/${dungeon.id}`} fromLabel={dungeon.name}>
+        {data.bosses.length === 0 ? (
+          <p className="mt-6 text-sm text-foreground-muted">
+            Bosses and loot for this dungeon haven&apos;t been discovered yet -- check back as the beta
+            continues.
           </p>
-          {data.bosses.map((boss, i) => (
-            <LootBossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} />
-          ))}
-        </div>
-      )}
+        ) : (
+          <div className="mt-6 flex flex-col gap-3">
+            <p className="text-xs text-foreground-muted">
+              {data.bosses.length} boss{data.bosses.length === 1 ? "" : "es"}, {totalItems} item
+              {totalItems === 1 ? "" : "s"}
+            </p>
+            {data.bosses.map((boss, i) => (
+              <LootBossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} />
+            ))}
+          </div>
+        )}
 
-      {data.quests.length > 0 && (
-        <div className="mt-3 flex flex-col gap-3">
-          {data.questSource && data.questSource !== data.bossLootSource && (
-            <LootDisclaimer source={data.questSource} dungeonType={dungeon.type} />
-          )}
-          <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} />
-        </div>
-      )}
+        {data.quests.length > 0 && (
+          <div className="mt-3 flex flex-col gap-3">
+            {data.questSource && data.questSource !== data.bossLootSource && (
+              <LootDisclaimer source={data.questSource} dungeonType={dungeon.type} />
+            )}
+            <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} />
+          </div>
+        )}
 
         {data.bosses.length > 0 && (
-        <div className="mt-4">
-          <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
-        </div>
-      )}
+          <div className="mt-4">
+            <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
+          </div>
+        )}
+      </ItemLinkSourceProvider>
     </main>
   );
 }

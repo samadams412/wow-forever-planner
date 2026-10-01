@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BossPortrait from "@/components/reference/BossPortrait";
 import LootItemPill from "@/components/reference/LootItemPill";
+import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import type { DungeonData, LootBoss, Quest } from "@/lib/dungeon-loot";
 
 const FACTION_BADGE_CLASS: Record<"Alliance" | "Horde", string> = {
@@ -79,6 +80,7 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
   const totalItems = data.bosses.reduce((n, b) => n + b.items.length, 0);
 
   return (
+    <ItemLinkSourceProvider from="/reference/dungeons" fromLabel={data.name}>
     <div className="relative mb-4 overflow-hidden rounded-lg border border-accent/40 shadow-lg">
       <div className="relative flex flex-col sm:flex-row">
         {/* Left: art + summary, same background-art treatment as the timeline bars themselves */}
@@ -240,5 +242,6 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
         </div>
       </div>
     </div>
+    </ItemLinkSourceProvider>
   );
 }

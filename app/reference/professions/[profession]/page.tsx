@@ -6,6 +6,7 @@ import {
   GatheringProfessionExplorer,
 } from "@/components/professions/ProfessionExplorer";
 import ProfessionCrossLinks from "@/components/professions/ProfessionCrossLinks";
+import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import { getProfessionCatalog, getProfessionIds } from "@/lib/profession-recipes";
 import { resolveLeveling, resolveProfessionRecipes } from "@/lib/profession-utils";
 import { getGatheringCatalog, isGatheringProfessionId, GATHERING_PROFESSION_IDS } from "@/lib/gathering-professions";
@@ -83,20 +84,22 @@ export default async function ProfessionPage({ params }: { params: Promise<{ pro
       </div>
       {crafting && <p className="mt-2 text-sm text-foreground-muted">{crafting.recipes.length} recipes</p>}
 
-      {gathering && <GatheringProfessionExplorer catalog={gathering} />}
-      {crafting && (
-        <CraftingProfessionExplorer
-          data={{
-            id: crafting.id,
-            categories: crafting.categories,
-            favorSupported: crafting.favorSupported,
-            favor: crafting.favor,
-            camp: crafting.camp,
-            recipes: resolveProfessionRecipes(crafting.recipes),
-            leveling: crafting.leveling ? resolveLeveling(crafting.leveling) : null,
-          }}
-        />
-      )}
+      <ItemLinkSourceProvider from={`/reference/professions/${profession}`} fromLabel={catalog.name}>
+        {gathering && <GatheringProfessionExplorer catalog={gathering} />}
+        {crafting && (
+          <CraftingProfessionExplorer
+            data={{
+              id: crafting.id,
+              categories: crafting.categories,
+              favorSupported: crafting.favorSupported,
+              favor: crafting.favor,
+              camp: crafting.camp,
+              recipes: resolveProfessionRecipes(crafting.recipes),
+              leveling: crafting.leveling ? resolveLeveling(crafting.leveling) : null,
+            }}
+          />
+        )}
+      </ItemLinkSourceProvider>
 
       <ProfessionCrossLinks activeId={catalog.id} />
     </main>

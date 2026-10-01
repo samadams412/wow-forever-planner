@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import CraftingCalculator, { type CalculatorItem, type CalculatorProfession } from "@/components/professions/CraftingCalculator";
+import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import { getProfessionCatalog, getProfessionIds } from "@/lib/profession-recipes";
 import type { ProfessionItemRef } from "@/lib/profession-recipes";
 import { resolveProfessionItem } from "@/lib/profession-utils";
@@ -56,7 +57,9 @@ export default function CraftingCalculatorPage() {
           Choose a recipe and quantity to see the ingredients to gather. Craftable components are broken down recursively across professions.
         </p>
       </div>
-      <CraftingCalculator professions={professions} items={items} />
+      <ItemLinkSourceProvider from="/reference/crafting-calculator" fromLabel="Crafting Calculator">
+        <CraftingCalculator professions={professions} items={items} />
+      </ItemLinkSourceProvider>
     </main>
   );
 }

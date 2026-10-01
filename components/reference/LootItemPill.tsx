@@ -8,6 +8,8 @@ import { useLongPress } from "@/lib/use-long-press";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import { TooltipCard } from "@/components/planner/TooltipCard";
 import ItemTooltipBody from "@/components/reference/ItemTooltipBody";
+import { useItemLinkSource } from "@/components/reference/ItemLinkSource";
+import { buildItemHref } from "@/lib/item-link";
 import { mediumIconUrl, itemQualityColor } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 
@@ -48,6 +50,8 @@ export default function LootItemPill({
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
   const isClaimed = useIsActiveTooltip(tooltipId);
+  const linkSource = useItemLinkSource();
+  const itemHref = item.itemId !== null ? buildItemHref(item.itemId, linkSource) : null;
 
   function handleShow() {
     claimActiveTooltip(tooltipId);
@@ -137,15 +141,11 @@ export default function LootItemPill({
           // iconOnly drops the visible name (and with it, the name's own
           // Link) -- put the link on the icon itself instead so the item
           // is still reachable by click, not just by hover.
-          return iconOnly && item.itemId !== null ? (
-            <Link href={`/items/${item.itemId}`}>{iconEl}</Link>
-          ) : (
-            iconEl
-          );
+          return iconOnly && itemHref ? <Link href={itemHref}>{iconEl}</Link> : iconEl;
         })()}
       {!iconOnly &&
-        (item.itemId !== null ? (
-          <Link href={`/items/${item.itemId}`} className="hover:underline">
+        (itemHref ? (
+          <Link href={itemHref} className="hover:underline">
             {nameEl}
           </Link>
         ) : (
