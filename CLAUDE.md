@@ -26,6 +26,23 @@ handoffs, e.g. `map-ui-cleanup.md`.)
   restorable. See "World map" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
+## Standing rule: no runtime-variable or full-file disk reads in server code
+
+No server-side code (pages, route handlers, OG images, `lib/`) may read
+`public/` or a large data file via a runtime-variable path
+(`path.join(process.cwd(), "public", someVariable)`) or by loading a whole
+big file per request. Next's file tracer can't resolve a variable path, so
+it bundles the entire directory into **every** serverless function (this
+put ~120 MB of `public/map` + `public/images` into all 102 functions,
+2026-09-30). Static reference data must be either generated statically at
+build time, or served from `public/` and fetched by the client. Where a
+server read is unavoidable, use a literal-path lookup map (see
+`scripts/build-og-backgrounds.js` → `lib/og-backgrounds.generated.ts`, run
+as `prebuild`). This applies doubly to the full wow.export dataset (icons,
+dungeon loot, tooltips) landing for Nov 4. After adding any new server-side
+file read, re-run `next build` and check the `.next/server/app/**/*.nft.json`
+sizes. `next.config.ts` also excludes `public/map/*/tiles/**` from all traces.
+
 ## Active architecture
 
 ### Planner
