@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 import fs from "fs/promises";
 import path from "path";
-import sharp from "sharp";
 import { OG_BACKGROUNDS } from "./og-backgrounds.generated";
 
 // Shared visual template for every route's Open Graph image, styled to
@@ -70,19 +69,9 @@ async function readPublicImageAsDataUri(publicPath: string): Promise<string> {
   if (!read) throw new Error(`No OG background registered for ${publicPath}`);
   const bytes = await read();
 
-  // Every source image is re-encoded through sharp before embedding, for
-  // two reasons found by testing directly against this renderer:
-  // 1. satori (next/og's renderer) can't decode WebP from a data URI --
-  //    it crashes the response pipe with an opaque "u2 is not iterable"
-  //    error, while the identical layout with a JPEG/PNG source works.
-  // 2. A full-resolution source (content/blog's hero.webp is 5+MB) blows
-  //    past satori's internal XML buffer limit once base64-inflated --
-  //    resizing to OG-card width keeps every background well under that.
-  const jpeg = await sharp(bytes)
-    .resize({ width: 1600, withoutEnlargement: true })
-    .jpeg({ quality: 82 })
-    .toBuffer();
-  return `data:image/jpeg;base64,${jpeg.toString("base64")}`;
+  // Already a pre-shrunk JPEG (see scripts/build-og-backgrounds.js) --
+  // satori can't decode WebP data URIs and chokes on oversized buffers.
+  return `data:image/jpeg;base64,${bytes.toString("base64")}`;
 }
 
 async function resolveBackgroundImage(requested?: string): Promise<string> {
