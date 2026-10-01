@@ -15,7 +15,7 @@ This is now the living roadmap. `CLAUDE.md` "Open items" is a shorter, older sub
 **Task convention:** [Tasks plugin](https://publish.obsidian.md/tasks/) syntax. Every checkbox carries a priority emoji (🔺 Highest · ⏫ High · 🔼 Medium · 🔽 Low · ⏬ Lowest) plus tags. `📅` is a due date. Items marked *(priority unconfirmed)* got a provisional priority during the 2026-09-30 audit and need an owner's call.
 
 ## Launch-critical (hard deadline: Nov 4, 2026)
-- [ ] **HARD DEADLINE — Nov 4, 2026 (launch).** Use wow.export to extract full game data: icons, dungeon loot, all items, tooltips. 🔺 📅 2026-11-04 #data #wow-export #launch
+- [ ] **HARD DEADLINE — Nov 4, 2026 (launch).** Use wow.export to extract full game data: icons, dungeon loot, all items, tooltips. #data #wow-export #launch 🔺 📅 2026-11-04
   - Supersedes the narrower "export FileDataID 1121272 for real dungeon/raid/battleground icons" item, which is listed under Map (paused) below and could be folded into this extraction.
   - Current data is scraped (foreverchanges.pro, wowtbc.gg, talentsforever), not client-extracted; see [[Architecture]] "Data pipelines".
 - [ ] Data-refresh passes as beta patches land (expect 2–3+ before launch): run `node scripts/diff-talentsforever.js`, read the vendor changelog by hand, apply by name-match. ⏫ 📅 2026-11-04 #data #recurring #launch *(priority unconfirmed; it was listed under "Recurring" with no priority)*
@@ -66,8 +66,8 @@ Home for small text-content and per-page UI fixes (default 🔽 Low), so they st
   - Re-checked 2026-09-30: 954 of 1,017 spells with `classicStatus: "changed"` carry a Classic text; about 63 remain. Much better than the audit's "7+" claim.
 - [ ] Visually verify the spellbook mobile bottom-sheet on a real narrow viewport. 🔽 #mobile #spellbooks *(unknown whether it was verified during the later mobile sweeps)*
 - [ ] Distinguish directly-observed vs. inferred spell-tooltip sourcing (`TooltipSourceNote` is a strict binary). 🔽 #data #spellbooks
-- [ ] Priest's Renewed Hope highlights "Heal" when it is really the tail of "Greater Heal", a spell not tracked in `spellbooks.json`. 🔽 #data #spellbooks
-- [ ] Racials "Requires Shadowform / Spirit of Redemption" lines: unresolvable, since neither phrase exists in any current data. Needs a screenshot or a different source if raised again. ⏬ #data #racials
+- [x] Priest's Renewed Hope highlights "Heal" when it is really the tail of "Greater Heal", a spell not tracked in `spellbooks.json`. #data #spellbooks 🔽 ✅ 2026-09-30
+- [x] Racials "Requires Shadowform / Spirit of Redemption" lines: unresolvable, since neither phrase exists in any current data. Needs a screenshot or a different source if raised again. #data #racials ⏬ ✅ 2026-09-30
 
 ## Later
 - [ ] Lightweight admin view for editing `/data` and drafting posts without a code editor. ⏬ #admin #later *(priority unconfirmed. It was listed under Phase 2 next to Auth/Postgres but doesn't inherently depend on accounts; not assumed shelved with them.)*

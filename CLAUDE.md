@@ -281,6 +281,10 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
+- **Vercel function sizes (open, not urgent):** functions are 24.2 MB each
+  (was ~121 MB) but the dashboard's uniform sizes don't match local trace
+  sizes, and the cause is unexplained. See
+  `Forevercraft-Knowledge-Base/03-Handoffs/2026-09-30-vercel-function-size.md`.
 - Export FileDataID 1121272 from wow.export and crop real dungeon/raid/
   battleground icons (see World map above).
 - Resolve the duplicate-Naxxramas-Map-row and Emerald-Dream-on-the-map
