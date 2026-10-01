@@ -49,8 +49,8 @@ Open questions, as they stand:
 
 ## Small cleanup
 Home for small text-content and per-page UI fixes (default 🔽 Low), so they stop getting scattered.
-- [ ] Crafting calculator: sort the recipe list alphabetically instead of ascending by rank. 🔽 #crafting-calculator #ui
-  - `components/professions/CraftingCalculator.tsx` has no explicit sort on the recipe list (categories and shopping-list rows are already alphabetical), so it follows catalog order.
+- [x] Crafting calculator: sort the recipe list alphabetically instead of ascending by rank. 🔽 #crafting-calculator #ui *(done 2026-10-01)*
+  - Done: `components/professions/CraftingCalculator.tsx` sorts each profession's recipes once (a `useMemo` at the top of the component, `localeCompare` with `sensitivity: "base"`, stable so same-name recipes keep catalog order). The drop-down, first-load default and profession-swap default all use the sorted copy. `recipesByOutput`/`choices` still use catalog order (`catalogProfessions`) so plan calculations are unchanged.
 - [ ] Mobile pass for `DungeonInlinePanel`'s boss/quest two-column sub-layout. 🔽 #mobile #ui *(priority unconfirmed)*
 - [ ] Mobile pass for Legacy Perks' touch interactions (`LegacyPerkNode` already uses `lib/active-tooltip.ts` as of 2026-09-30). 🔽 #mobile #ui *(CLAUDE.md: low priority unless the page gets real mobile traffic)*
 - [ ] Give `/` (home) its own `metadata` export; it currently inherits the root layout's. 🔽 #seo #text *(from the 2026-09-20 audit; re-verified 2026-09-30)*
