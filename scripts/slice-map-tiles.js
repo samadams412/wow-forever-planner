@@ -2,7 +2,7 @@
 // Builds a full-continent Leaflet-compatible tile pyramid from wow.export
 // continent map exports (see CLAUDE.md's world-map architecture note for
 // full background). Output is LOCAL ONLY -- public/map/<continent>/tiles/
-// is gitignored; only public/map/<continent>/meta.json is committed. Run
+// is gitignored; meta.json goes to data/map/<continent>/ (server-read, so not under public/). Run
 // this again any time the source exports change; nothing here depends on
 // prior output except the pyramid-building step, which reads its own
 // previous zoom level (see buildLowerLevels).
@@ -282,7 +282,9 @@ function writeMeta(continentId, continent, populated) {
     // this shape when the map page itself is updated (out of scope here).
     fullGridCorners,
   };
-  fs.writeFileSync(path.join(outDirFor(continentId), "meta.json"), JSON.stringify(meta, null, 1));
+  const metaDir = path.join(__dirname, "..", "data", "map", continentId);
+  fs.mkdirSync(metaDir, { recursive: true });
+  fs.writeFileSync(path.join(metaDir, "meta.json"), JSON.stringify(meta, null, 1));
 }
 
 async function main() {

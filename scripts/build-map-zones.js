@@ -1,4 +1,4 @@
-// Builds public/map/<continent>/zones.json for Eastern Kingdoms and
+// Builds data/map/<continent>/zones.json for Eastern Kingdoms and
 // Kalimdor from the trimmed client DB2 snapshot in
 // data/sources/client-db2/<build>/ (see trim-client-db2.js), and reports the
 // four data-quality checks the task that added this script asked for.
@@ -110,7 +110,7 @@ for (const row of zoneRows) {
 
 for (const [mapId, { slug }] of Object.entries(CONTINENTS)) {
   const zones = zonesByContinent[mapId].sort((a, b) => a.areaId - b.areaId);
-  const outDir = path.join(__dirname, "..", "public", "map", slug);
+  const outDir = path.join(__dirname, "..", "data", "map", slug);
   fs.mkdirSync(outDir, { recursive: true });
 
   // Preserve labelAnchor from any existing zones.json -- this script
@@ -136,7 +136,7 @@ for (const [mapId, { slug }] of Object.entries(CONTINENTS)) {
 
   fs.writeFileSync(existingPath, JSON.stringify(zones, null, 2) + "\n", "utf8");
   const withLevels = zones.filter((z) => z.levelRange).length;
-  console.log(`${slug}: ${zones.length} zones (${withLevels} with a level range) -> public/map/${slug}/zones.json`);
+  console.log(`${slug}: ${zones.length} zones (${withLevels} with a level range) -> data/map/${slug}/zones.json`);
 }
 
 // --- Check (a): world-rectangle aspect ratio ---

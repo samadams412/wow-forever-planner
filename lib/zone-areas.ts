@@ -1,7 +1,6 @@
-import fs from "fs";
-import path from "path";
+import { MAP_DATA } from "./map-data.generated";
 
-// Reads public/map/<continent>/{zones.json,zone-areas.json} (built by
+// Reads data/map/<continent>/{zones.json,zone-areas.json} (static imports via lib/map-data.generated.ts) (built by
 // scripts/build-zone-areas.js -- data-only, never touched by this render
 // work) and merges them into one per-zone shape the map component can
 // render directly: polygon geometry plus the label metadata that goes with
@@ -47,10 +46,10 @@ type ZoneAreaFeature = {
 };
 
 export function getZoneAreaData(continentId: string): ZoneAreaData[] {
-  const zonesPath = path.join(process.cwd(), "public", "map", continentId, "zones.json");
-  const areasPath = path.join(process.cwd(), "public", "map", continentId, "zone-areas.json");
-  const zones = JSON.parse(fs.readFileSync(zonesPath, "utf8")) as ZoneMetaRow[];
-  const areas = JSON.parse(fs.readFileSync(areasPath, "utf8")) as Record<string, ZoneAreaFeature>;
+  const entry = MAP_DATA[continentId];
+  if (!entry) throw new Error(`No map data for continent ${continentId}`);
+  const zones = entry.zones as unknown as ZoneMetaRow[];
+  const areas = entry.areas as unknown as Record<string, ZoneAreaFeature>;
 
   const out: ZoneAreaData[] = [];
   for (const zone of zones) {

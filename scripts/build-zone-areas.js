@@ -1,4 +1,4 @@
-// Builds public/map/<continent>/zone-areas.json (zone polygons, GeoJSON,
+// Builds data/map/<continent>/zone-areas.json (zone polygons, GeoJSON,
 // keyed by areaId) and adds `labelAnchor` to each continent's zones.json.
 // Data only -- never touches public/map/*/tiles/. See CLAUDE.md's "Zone
 // areas from client ADTs" architecture note for the full pipeline writeup;
@@ -561,7 +561,7 @@ function processContinent(continent) {
   }
 
   // --- roll up + trace both variants against the same zones.json ---
-  const zonesPath = path.join(repoRoot, "public", "map", continent.slug, "zones.json");
+  const zonesPath = path.join(repoRoot, "data", "map", continent.slug, "zones.json");
   const zones = JSON.parse(fs.readFileSync(zonesPath, "utf8"));
   const zoneIdSet = new Set(zones.map((z) => z.areaId));
 
@@ -586,7 +586,7 @@ function processContinent(continent) {
     };
   }
 
-  const geojsonPath = path.join(repoRoot, "public", "map", continent.slug, "zone-areas.json");
+  const geojsonPath = path.join(repoRoot, "data", "map", continent.slug, "zone-areas.json");
   fs.writeFileSync(geojsonPath, JSON.stringify(geojson));
   const geojsonSize = fs.statSync(geojsonPath).size;
   console.log(`  zone-areas.json: ${Object.keys(geojson).length} zones, ${(geojsonSize / 1024).toFixed(1)} KB -> ${path.relative(repoRoot, geojsonPath)}`);

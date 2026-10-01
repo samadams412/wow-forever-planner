@@ -1,5 +1,4 @@
-import fs from "fs";
-import path from "path";
+import { MAP_DATA } from "./map-data.generated";
 import { worldToLatLng, type FullGridCorners } from "./map-coords";
 
 export type ContinentMapConfig = {
@@ -37,8 +36,9 @@ const cache = new Map<string, ContinentMeta>();
 function loadMeta(continentId: string): ContinentMeta {
   const cached = cache.get(continentId);
   if (cached) return cached;
-  const file = path.join(process.cwd(), "public", "map", continentId, "meta.json");
-  const meta = JSON.parse(fs.readFileSync(file, "utf8")) as ContinentMeta;
+  const entry = MAP_DATA[continentId];
+  if (!entry) throw new Error(`No map data for continent ${continentId}`);
+  const meta = entry.meta as unknown as ContinentMeta;
   cache.set(continentId, meta);
   return meta;
 }
