@@ -267,12 +267,20 @@ function PlanTree({
 }
 
 export default function CraftingCalculator({
-  professions,
+  professions: catalogProfessions,
   items,
 }: {
   professions: CalculatorProfession[];
   items: Record<string, CalculatorItem>;
 }) {
+  // Recipes are shown alphabetically everywhere (drop-down, first load, and
+  // after a profession swap), so sort a copy once. Array.sort is stable, so
+  // same-name recipes keep catalog (rank) order. Plan lookups below still use
+  // the catalog order via `catalogProfessions`.
+  const professions = useMemo(() => catalogProfessions.map((profession) => ({
+    ...profession,
+    recipes: [...profession.recipes].sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" })),
+  })), [catalogProfessions]);
   const [professionId, setProfessionId] = useState(professions[0]?.id ?? "");
   const [recipeId, setRecipeId] = useState(professions[0]?.recipes[0]?.id ?? "");
   const [query, setQuery] = useState("");
@@ -285,7 +293,7 @@ export default function CraftingCalculator({
 
   const selectedProfession = professions.find((profession) => profession.id === professionId) ?? professions[0];
   const selectedRecipe = selectedProfession?.recipes.find((recipe) => recipe.id === recipeId) ?? selectedProfession?.recipes[0];
-  const choices = useMemo(() => professions.flatMap((profession) => profession.recipes.map((recipe) => ({ ...recipe, professionId: profession.id }))), [professions]);
+  const choices = useMemo(() => catalogProfessions.flatMap((profession) => profession.recipes.map((recipe) => ({ ...recipe, professionId: profession.id }))), [catalogProfessions]);
   const recipesByOutput = useMemo(() => {
     const index = new Map<string, RecipeChoice[]>();
     for (const choice of choices) {
