@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function ProfessionRecipeSearchInput({ initialValue }: { initialValue: string }) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const [value, setValue] = useState(initialValue);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -20,7 +19,9 @@ export default function ProfessionRecipeSearchInput({ initialValue }: { initialV
     setValue(next);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
-      const params = new URLSearchParams(searchParams.toString());
+      // Live URL at fire time, not useSearchParams(): this input also renders in the
+      // page's Suspense fallback, where that hook would force a CSR bailout.
+      const params = new URLSearchParams(window.location.search);
       if (next.trim()) params.set("q", next.trim());
       else params.delete("q");
       params.delete("page");

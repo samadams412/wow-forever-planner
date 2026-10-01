@@ -1,5 +1,4 @@
 import type { LootItem } from "@/lib/dungeon-loot";
-import type { Recipe } from "@/lib/profession-recipes";
 import type { ResolvedLevelingRank } from "@/lib/profession-utils";
 
 export type ShoppingListItem = {
@@ -26,7 +25,7 @@ export type ShoppingListItem = {
 // Alchemy -- checked directly: neither Fire Oil nor Blackmouth Oil is ever
 // a leveling step's own named output, only a reagent one of those steps
 // needs, even though both are perfectly ordinary Alchemy recipes).
-export function buildCraftableRanks(recipes: Recipe[]): Map<number, number | null> {
+export function buildCraftableRanks(recipes: { rank: string; item: { itemId: number | null } }[]): Map<number, number | null> {
   const map = new Map<number, number | null>();
   for (const recipe of recipes) {
     if (recipe.item.itemId === null) continue;

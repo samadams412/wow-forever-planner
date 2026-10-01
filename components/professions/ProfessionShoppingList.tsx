@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import LootItemPill from "@/components/reference/LootItemPill";
 import { aggregateShoppingList, buildCraftableRanks } from "@/lib/profession-shopping-list";
-import type { Recipe } from "@/lib/profession-recipes";
 import type { ResolvedLevelingRank } from "@/lib/profession-utils";
 
 // Studied foreverchanges.pro/professions/<id>#shopping live before building:
@@ -29,7 +28,7 @@ export default function ProfessionShoppingList({
   professionId,
 }: {
   leveling: ResolvedLevelingRank[];
-  recipes: Recipe[];
+  recipes: { rank: string; item: { itemId: number | null } }[];
   professionId: string;
 }) {
   const rankNames = leveling.map((r) => r.rank);
