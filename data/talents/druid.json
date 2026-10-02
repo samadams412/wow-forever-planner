@@ -368,7 +368,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Transforms the Druid into Moonkin Form. While in this form, the armor contribution from items is increased by 360%, Omen of Clarity gains 100% increased chance to trigger, and all party members within 45 yards have their critical strike chance increased by 3%, exclusive with Leader of the Pack. The Moonkin cannot cast healing spells while shapeshifted.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party members within 45 yards have their Critical Strike chance increased by 3%, exclusive with Leader of the Pack. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -619,7 +619,7 @@
         {
           "id": "feral_shredding_attacks",
           "name": "Shredding Attacks",
-          "tier": 4,
+          "tier": 3,
           "col": 1,
           "maxRank": 3,
           "ranks": [
@@ -643,13 +643,35 @@
           "passive": true
         },
         {
+          "id": "feral_shifting_power",
+          "name": "Shifting Power",
+          "tier": 4,
+          "col": 1,
+          "maxRank": 1,
+          "ranks": [
+            "Instantly convert 55% of base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "feral_shredding_attacks",
+            "ranks": 3
+          },
+          "status": "new",
+          "icon": "spell_druid_displacement",
+          "classic": {
+            "status": "new"
+          },
+          "passive": false,
+          "cost": "55% of base mana | Instant | 16 sec cooldown | Requires Cat Form"
+        },
+        {
           "id": "feral_primal_bite",
           "name": "Primal Bite",
           "tier": 4,
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Bite the target for 100% normal damage plus 26."
+            "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -722,7 +744,7 @@
           "id": "feral_predatory_instincts",
           "name": "Predatory Instincts",
           "tier": 5,
-          "col": 1,
+          "col": 4,
           "maxRank": 2,
           "ranks": [
             "Increases the critical strike damage bonus of your melee abilities by 10%.",
@@ -761,20 +783,22 @@
           "passive": true
         },
         {
-          "id": "feral_king_of_the_jungle",
-          "name": "King of the Jungle",
+          "id": "feral_improved_shifting_power",
+          "name": "Improved Shifting Power",
           "tier": 5,
-          "col": 4,
-          "maxRank": 3,
+          "col": 1,
+          "maxRank": 2,
           "ranks": [
-            "Tiger's Fury now instantly grants you 20 Energy.",
-            "Tiger's Fury now instantly grants you 40 Energy.",
-            "Tiger's Fury now instantly grants you 60 Energy."
+            "Reduces the cooldown of your Shifting Power spell by 4 sec.",
+            "Reduces the cooldown of your Shifting Power spell by 8 sec."
           ],
           "confidence": "confirmed",
-          "prereq": null,
+          "prereq": {
+            "id": "feral_shifting_power",
+            "ranks": 1
+          },
           "status": "new",
-          "icon": "ability_druid_kingofthejungle",
+          "icon": "ability_hunter_aspectmastery",
           "classic": {
             "status": "new"
           },

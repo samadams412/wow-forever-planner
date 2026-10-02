@@ -727,13 +727,13 @@
           "passive": true
         },
         {
-          "id": "fire_hot_streak",
-          "name": "Hot Streak",
+          "id": "fire_heating_up",
+          "name": "Heating Up",
           "tier": 4,
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Your non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch grant Hot Streak for 20 sec. Hot Streak reduces the cast time of Pyroblast by 25%, stacking up to 3 times."
+            "Non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch reduce the cast time of your next Pyroblast cast within 20 sec by 25%, stacking up to 3 times."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -741,7 +741,7 @@
             "ranks": 1
           },
           "status": "new",
-          "icon": "ability_mage_hotstreak",
+          "icon": "spell_fire_firebolt",
           "classic": {
             "status": "new"
           },
@@ -855,7 +855,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 4 non-periodic critical strikes with Fire spells."
+            "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 non-periodic critical strikes with Fire spells."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -1357,12 +1357,12 @@
   "inferredBaselineAbilities": [
     {
       "name": "Frostfire Bolt",
-      "description": "A Fire/Frost hybrid bolt spell referenced by Missile Barrage, Improved Fireball, and Hot Streak but never appearing as a talent itself. Not part of vanilla Classic's Mage kit -- inferred to be a new baseline ability in Forever. Not independently confirmed.",
+      "description": "A Fire/Frost hybrid bolt spell referenced by Missile Barrage, Improved Fireball, and Heating Up but never appearing as a talent itself. Not part of vanilla Classic's Mage kit -- inferred to be a new baseline ability in Forever. Not independently confirmed.",
       "confidence": "inferred",
       "mentionedBy": [
         "Missile Barrage",
         "Improved Fireball",
-        "Hot Streak"
+        "Heating Up"
       ]
     }
   ]

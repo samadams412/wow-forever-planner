@@ -178,7 +178,7 @@
       "name": "Bloodrage",
       "kind": "spell",
       "source": "Warrior spell",
-      "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec. The warrior is considered in combat for the duration.",
+      "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec.",
       "icon": "ability_racial_bloodrage"
     }
   ],
@@ -326,7 +326,7 @@
       "name": "Light's Vigil",
       "kind": "talent",
       "source": "Talent · Holy, row 7",
-      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. The Paladin may only have one Light's Vigil active per party.",
+      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. You may only have one Light's Vigil active per party.",
       "icon": "ability_paladin_judgementofthepure"
     }
   ],
@@ -402,7 +402,7 @@
       "name": "Light's Vigil",
       "kind": "talent",
       "source": "Talent · Holy, row 7",
-      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. The Paladin may only have one Light's Vigil active per party.",
+      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. You may only have one Light's Vigil active per party.",
       "icon": "ability_paladin_judgementofthepure"
     },
     {
@@ -441,7 +441,7 @@
       "name": "Consecration",
       "kind": "spell",
       "source": "Paladin spell, rank 5",
-      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
+      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area. The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
       "icon": "spell_holy_innerfire"
     }
   ],
@@ -584,7 +584,7 @@
       "name": "Consecration",
       "kind": "spell",
       "source": "Paladin spell, rank 5",
-      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
+      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area. The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
       "icon": "spell_holy_innerfire"
     },
     {
@@ -995,7 +995,7 @@
       "name": "Expose Armor",
       "kind": "spell",
       "source": "Rogue spell, rank 5",
-      "description": "Finishing move that exposes the target for 30 sec, reducing armor per combo point:\n 1 point : 450 armor\n 2 points: 900 armor\n 3 points: 1,350 armor\n 4 points: 1,800 armor\n 5 points: 2,250 armor",
+      "description": "Finishing move that exposes the target for 30 sec, reducing Armor per combo point:\n 1 point : 450 Armor\n 2 points: 900 Armor\n 3 points: 1,350 Armor\n 4 points: 1,800 Armor\n 5 points: 2,250 Armor",
       "icon": "ability_warrior_riposte"
     }
   ],
@@ -1697,6 +1697,15 @@
       "icon": "spell_holy_holynova"
     }
   ],
+  "priest:shadow_spirit_tap": [
+    {
+      "name": "Vampiric Embrace",
+      "kind": "talent",
+      "source": "Talent · Shadow, row 4",
+      "description": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec.",
+      "icon": "spell_shadow_unsummonbuilding"
+    }
+  ],
   "priest:shadow_improved_shadow_word_pain": [
     {
       "name": "Shadow Word: Pain",
@@ -1740,15 +1749,6 @@
       "source": "Priest spell, rank 6",
       "description": "Fade out, discouraging enemies from attacking you for 10 sec. More effective than Fade (rank 5).",
       "icon": "spell_magic_lesserinvisibilty"
-    }
-  ],
-  "priest:shadow_vampiric_embrace": [
-    {
-      "name": "Spirit Tap",
-      "kind": "talent",
-      "source": "Talent · Shadow, row 1",
-      "description": "Gives you a 100% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
-      "icon": "spell_shadow_requiem"
     }
   ],
   "priest:shadow_devouring_contagion": [
@@ -2345,7 +2345,7 @@
       "icon": "spell_fire_firearmor"
     }
   ],
-  "mage:fire_hot_streak": [
+  "mage:fire_heating_up": [
     {
       "name": "Fireball",
       "kind": "spell",
@@ -2505,7 +2505,7 @@
       "icon": "spell_shadow_abominationexplosion"
     }
   ],
-  "warlock:affliction_soul_harvesting": [
+  "warlock:affliction_soul_harvest": [
     {
       "name": "Drain Soul",
       "kind": "spell",
@@ -2533,7 +2533,7 @@
       "name": "Wrack",
       "kind": "talent",
       "source": "Talent · Affliction, row 7",
-      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "description": "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec.",
       "icon": "ability_deathknight_hemorrhagicfever"
     }
   ],
@@ -2572,7 +2572,7 @@
       "name": "Wrack",
       "kind": "talent",
       "source": "Talent · Affliction, row 7",
-      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "description": "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec.",
       "icon": "ability_deathknight_hemorrhagicfever"
     }
   ],
@@ -2646,7 +2646,7 @@
       "name": "Wrack",
       "kind": "talent",
       "source": "Talent · Affliction, row 7",
-      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "description": "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec.",
       "icon": "ability_deathknight_hemorrhagicfever"
     }
   ],
@@ -2676,7 +2676,7 @@
       "name": "Wrack",
       "kind": "talent",
       "source": "Talent · Affliction, row 7",
-      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "description": "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec.",
       "icon": "ability_deathknight_hemorrhagicfever"
     },
     {
@@ -2706,7 +2706,7 @@
       "name": "Wrack",
       "kind": "talent",
       "source": "Talent · Affliction, row 7",
-      "description": "Tears the target apart from within, dealing 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10%. Lasts 6 sec.",
+      "description": "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec.",
       "icon": "ability_deathknight_hemorrhagicfever"
     }
   ],
@@ -3156,7 +3156,7 @@
       "name": "Primal Bite",
       "kind": "talent",
       "source": "Talent · Feral Combat, row 4",
-      "description": "Bite the target for 100% normal damage plus 26.",
+      "description": "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat.",
       "icon": "ability_racial_cannibalize"
     },
     {
@@ -3186,21 +3186,21 @@
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     }
   ],
@@ -3209,7 +3209,7 @@
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     },
     {
@@ -3250,28 +3250,28 @@
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Moonkin Form",
       "kind": "talent",
       "source": "Talent · Balance, row 7",
-      "description": "Transforms the Druid into Moonkin Form. While in this form, the armor contribution from items is increased by 360%, Omen of Clarity gains 100% increased chance to trigger, and all party members within 45 yards have their critical strike chance increased by 3%, exclusive with Leader of the Pack. The Moonkin cannot cast healing spells while shapeshifted.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party members within 45 yards have their Critical Strike chance increased by 3%, exclusive with Leader of the Pack. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "spell_nature_forceofnature"
     }
   ],
@@ -3317,21 +3317,21 @@
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     }
   ],
@@ -3356,21 +3356,21 @@
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     },
     {
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     }
   ],
@@ -3379,21 +3379,21 @@
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     }
   ],
@@ -3402,31 +3402,31 @@
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     },
     {
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     }
   ],
-  "druid:feral_king_of_the_jungle": [
+  "druid:feral_improved_shifting_power": [
     {
-      "name": "Tiger's Fury",
-      "kind": "spell",
-      "source": "Druid spell",
-      "description": "Increases Physical damage done by 15% for 6 sec.",
-      "icon": "ability_mount_jungletiger"
+      "name": "Shifting Power",
+      "kind": "talent",
+      "source": "Talent · Feral Combat, row 4",
+      "description": "Instantly convert 55% of base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting.",
+      "icon": "spell_druid_displacement"
     }
   ],
   "druid:feral_berserk": [
@@ -3434,7 +3434,7 @@
       "name": "Primal Bite",
       "kind": "talent",
       "source": "Talent · Feral Combat, row 4",
-      "description": "Bite the target for 100% normal damage plus 26.",
+      "description": "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat.",
       "icon": "ability_racial_cannibalize"
     }
   ],
@@ -3443,21 +3443,21 @@
       "name": "Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a bear, increasing melee attack power by 120, armor contribution from items by 180%, and health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Dire Bear Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into a dire bear, increasing melee attack power by 180, armor contribution from items by 360%, and health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_racial_bearform"
     },
     {
       "name": "Cat Form",
       "kind": "spell",
       "source": "Druid spell",
-      "description": "Shapeshift into cat form, increasing melee attack power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "ability_druid_catform"
     }
   ],

@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 3;
+const CURRENT_VERSION = 4;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -41,8 +41,16 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
     // V2_TREE_ORDER below): anything older than CURRENT_VERSION decodes
     // those trees against their frozen v2 order. Current-version codes
     // decode straight against live data.
-    if (parseInt(segments[0], 10) < CURRENT_VERSION) {
-      return decodeAgainstFrozenOrders(classData, segments.slice(1), V2_TREE_ORDER);
+    const version = parseInt(segments[0], 10);
+    if (version < CURRENT_VERSION) {
+      // Version 1-2 codes predate the 2026-09-24 reshape (need V2_TREE_ORDER
+      // for Paladin Holy/Retribution + Shaman Elemental) AND predate today's
+      // 2026-10-02 Druid Feral Combat reshape (need V3_TREE_ORDER too).
+      // Version 3 codes already have the post-09-24 shape for those 3 trees
+      // (so must NOT get V2_TREE_ORDER applied to them) but still predate
+      // today's Druid change, so only need V3_TREE_ORDER.
+      const orders = version < 3 ? { ...V2_TREE_ORDER, ...V3_TREE_ORDER } : V3_TREE_ORDER;
+      return decodeAgainstFrozenOrders(classData, segments.slice(1), orders);
     }
     return decodeVersionedBuild(classData, segments.slice(1));
   }
@@ -185,6 +193,8 @@ const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
   combat_restless_blades: "combat_flawless_execution",
   affliction_drain_hope: "affliction_wrack",
   balance_balance_of_nature: null,
+  // Removed 2026-10-02 (see V3_TREE_ORDER below).
+  feral_king_of_the_jungle: null,
 };
 
 // --- v2 tree shape (2026-09-18 .. 2026-09-24) ---------------------------------
@@ -266,6 +276,45 @@ const V2_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
+// --- v3 tree shape (2026-09-24 .. 2026-10-02) ---------------------------------
+//
+// The 2026-10-02 data pull (beta build 70170) reshaped Druid Feral Combat:
+// Shredding Attacks moved tier 4 -> tier 3 col 1, King of the Jungle was
+// removed outright, and two new talents (Shifting Power at the vacated
+// tier 4 col 1, Improved Shifting Power at tier 5 col 1) pushed Predatory
+// Instincts from tier 5 col 1 to tier 5 col 4. Positions after Savage Fury
+// (tier 3 col 2) all shift, so any build code issued before today needs
+// this frozen order to decode correctly.
+//
+// V3_TREE_ORDER freezes Feral Combat's tier/col-sorted id order as it stood
+// at CURRENT_VERSION 3, immediately before today's change. Never edit after
+// the fact, same rule as LEGACY_TREE_ORDER/V2_TREE_ORDER above.
+const V3_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  druid: {
+    "Feral Combat": [
+      "feral_ferocity",
+      "feral_heart_of_the_wild",
+      "feral_feral_swiftness",
+      "feral_feral_instinct",
+      "feral_brutal_impact",
+      "feral_thick_hide",
+      "feral_savage_fury",
+      "feral_feral_charge",
+      "feral_sharpened_claws",
+      "feral_shredding_attacks",
+      "feral_primal_bite",
+      "feral_predatory_strikes",
+      "feral_blood_frenzy",
+      "feral_predatory_instincts",
+      "feral_leader_of_the_pack",
+      "feral_king_of_the_jungle",
+      "feral_natural_reaction",
+      "feral_rend_and_tear",
+      "feral_berserk",
+    ],
+  },
+};
+
 // Decodes a versioned code older than CURRENT_VERSION, whose per-tree digits
 // are positioned against a frozen older tree order for whichever trees have
 // one in `orders`; every other tree decodes against live data exactly as a
@@ -307,7 +356,9 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
 
   classData.trees.forEach((tree, i) => {
     const legacyOrder =
-      LEGACY_TREE_ORDER[classData.class]?.[tree.name] ?? V2_TREE_ORDER[classData.class]?.[tree.name];
+      LEGACY_TREE_ORDER[classData.class]?.[tree.name] ??
+      V2_TREE_ORDER[classData.class]?.[tree.name] ??
+      V3_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {

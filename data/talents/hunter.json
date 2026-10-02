@@ -495,14 +495,14 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Increased the damage of your Serpent Sting ability by 6%, reduces the cooldown of your Viper Sting ability by 2 sec, and increases the duration of your Scorpid Sting ability by 15 sec.",
-            "Increased the damage of your Serpent Sting ability by 13%, reduces the cooldown of your Viper Sting ability by 4 sec, and increases the duration of your Scorpid Sting ability by 30 sec.",
-            "Increased the damage of your Serpent Sting ability by 20%, reduces the cooldown of your Viper Sting ability by 6 sec, and increases the duration of your Scorpid Sting ability by 45 sec."
+            "Increases the damage of your Serpent Sting ability by 6%, reduces the cooldown of your Viper Sting ability by 2 sec, and increases the duration of your Scorpid Sting ability by 15 sec.",
+            "Increases the damage of your Serpent Sting ability by 13%, reduces the cooldown of your Viper Sting ability by 4 sec, and increases the duration of your Scorpid Sting ability by 30 sec.",
+            "Increases the damage of your Serpent Sting ability by 20%, reduces the cooldown of your Viper Sting ability by 6 sec, and increases the duration of your Scorpid Sting ability by 45 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
           "status": "moved",
-          "icon": "hunter_pvp_spidersting",
+          "icon": "ability_hunter_quickshot",
           "classic": {
             "status": "moved",
             "tree": "Marksmanship",
@@ -634,7 +634,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Increases the Ranged Attack Power of party members within 45 yards by 30. Lasts 30 min."
+            "Increases the Ranged Attack Power of party members within 45 yds by 30."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -786,7 +786,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "A steady snipe that increases ranged damage by 160."
+            "A long-range shot that deals ranged damage plus 160 and increases the range of your next 3 Shots by 10 yards for 10 sec."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -805,7 +805,7 @@
             "renamedFrom": "Aimed Shot"
           },
           "passive": false,
-          "cost": "365 Mana | 8-35 yd range | 4 sec cast | 15 sec cooldown"
+          "cost": "365 Mana | 8-45 yd range | 4 sec cast | 15 sec cooldown"
         }
       ]
     },
@@ -841,18 +841,18 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
+            "Increases your Parry chance by 1%.",
             "Increases your Parry chance by 2%.",
+            "Increases your Parry chance by 3%.",
             "Increases your Parry chance by 4%.",
-            "Increases your Parry chance by 6%.",
-            "Increases your Parry chance by 8%.",
-            "Increases your Parry chance by 10%."
+            "Increases your Parry chance by 5%."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
+          "status": "unchanged",
           "icon": "ability_parry",
           "classic": {
-            "status": "changed",
+            "status": "unchanged",
             "tree": "Survival",
             "tier": 1,
             "col": 3,
@@ -1063,16 +1063,16 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Increases your melee critical strike damage by 6% and your offhand weapon damage by 10%.",
-            "Increases your melee critical strike damage by 12% and your offhand weapon damage by 20%.",
-            "Increases your melee critical strike damage by 18% and your offhand weapon damage by 30%.",
-            "Increases your melee critical strike damage by 24% and your offhand weapon damage by 40%.",
-            "Increases your melee critical strike damage by 30% and your offhand weapon damage by 50%."
+            "Increases your melee critical strike damage by 6% and your Off Hand weapon damage by 10%.",
+            "Increases your melee critical strike damage by 12% and your Off Hand weapon damage by 20%.",
+            "Increases your melee critical strike damage by 18% and your Off Hand weapon damage by 30%.",
+            "Increases your melee critical strike damage by 24% and your Off Hand weapon damage by 40%.",
+            "Increases your melee critical strike damage by 30% and your Off Hand weapon damage by 50%."
           ],
           "confidence": "confirmed",
           "prereq": null,
           "status": "new",
-          "icon": "ability_hunter_hatchettoss",
+          "icon": "ability_dualwield",
           "classic": {
             "status": "new"
           },
@@ -1215,7 +1215,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Your Mongoose Bite also causes the target to Bleed for damage over 21 sec equal to 40% of the damage done by Mongoose Bite."
+            "Your Mongoose Bite also causes the target to Bleed for damage equal to 40% of the damage done by Mongoose Bite over 21 sec"
           ],
           "confidence": "confirmed",
           "prereq": {

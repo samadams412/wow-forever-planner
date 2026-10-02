@@ -16,6 +16,7 @@ export const OG_BACKGROUNDS: Record<string, () => Promise<Buffer>> = {
   "/images/blog/hero.webp": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__blog__hero.jpg")),
   "/images/blog/mount-hyjal/hero.webp": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__blog__mount-hyjal__hero.jpg")),
   "/images/blog/tailoring/WoW_Forever_Announce_Zones_NewWater_006.jpg": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__blog__tailoring__WoW_Forever_Announce_Zones_NewWater_006.jpg")),
+  "/images/blog/wow-forever-podcast-ep2-class-design-highlights/hero.webp": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__blog__wow-forever-podcast-ep2-class-design-highlights__hero.jpg")),
   "/images/blog/zephras-isle/hero.webp": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__blog__zephras-isle__hero.jpg")),
   "/images/guides/hero.webp": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__guides__hero.jpg")),
   "/images/hero/homepage-hero.webp": () => fs.readFile(path.join(process.cwd(), "assets/og-backgrounds/images__hero__homepage-hero.jpg")),
