@@ -8,6 +8,28 @@
 
 .font-spellbook { font-family: "2002 Spellbook", Georgia, serif; }
 
+.talent-tree-view {
+  transition: filter 280ms ease;
+}
+
+.compare-tree-active { filter: saturate(1.04); }
+.compare-legend-enter { animation: compare-legend-enter 240ms ease-out both; }
+.compare-removed-enter { animation: compare-removed-enter 300ms ease-out both; }
+@keyframes compare-legend-enter {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes compare-removed-enter {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .talent-tree-view,
+  .compare-legend-enter,
+  .compare-removed-enter { animation: none; transition: none; }
+}
+
 :root {
   /* Warm forged-metal/parchment palette -- gold is the primary structural
      color (borders, dividers, active states); violet and green are kept

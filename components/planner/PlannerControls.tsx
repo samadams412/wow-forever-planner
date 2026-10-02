@@ -1,4 +1,5 @@
 import { MIN_TALENT_LEVEL, MAX_LEVEL } from "@/lib/talent-rules";
+import CompareClassicToggle from "./CompareClassicToggle";
 
 // Consolidates the level picker and the build-action row (Compare to
 // Classic / Reset / Copy share link / Save build / My Builds) into one
@@ -56,18 +57,7 @@ export default function PlannerControls({
       <span className="text-xs text-foreground-muted">
         {totalSpent} / {maxPoints} pts
       </span>
-      <button
-        type="button"
-        onClick={onToggleCompare}
-        aria-pressed={compareMode}
-        className={`rounded border px-2 py-0.5 text-xs transition-colors ${
-          compareMode
-            ? "border-sky-400/70 bg-sky-400/10 text-sky-300"
-            : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"
-        }`}
-      >
-        Compare to Classic
-      </button>
+      <CompareClassicToggle checked={compareMode} onToggle={onToggleCompare} />
       <button
         type="button"
         onClick={onReset}

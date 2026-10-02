@@ -1,12 +1,77 @@
+import { createPortal } from "react-dom";
+import { useRef, useState } from "react";
 import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
 import { treeBackgroundUrl, mediumIconUrl, getTreeIcon } from "@/lib/wow-data";
+import foreverTalentSource from "@/data/sources/talentsforever/talentsforever-2026-10-01.json";
 import { canAddPoint, pointsSpentInTree } from "@/lib/talent-rules";
 import CornerBracket from "@/components/site/CornerBracket";
 import TalentNode from "./TalentNode";
+import { getLinkedSpells } from "@/lib/talent-spell-links";
+import { useHoverTooltip } from "@/lib/use-hover-tooltip";
+import { TooltipCard, TooltipName, TooltipRank, TooltipDescription } from "./TooltipCard";
+import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 
 const TIERS = 7;
 const COLS = 4;
+
+type RemovedTalent = { name: string; max: number; text: string; row: number };
+type SourceTree = { name: string; removed?: RemovedTalent[] };
+type SourceClass = { trees: SourceTree[] };
+const classicSource = foreverTalentSource.talents as Record<string, SourceClass>;
+type SourceSpellbookClass = { general?: [string, string][]; tabs?: { spells?: [string, string][] }[] };
+const sourceSpellbooks = foreverTalentSource.spellbooks as unknown as Record<string, SourceSpellbookClass>;
+
+function isBaselineAbility(classId: string, name: string): boolean {
+  const className = classId.charAt(0).toUpperCase() + classId.slice(1);
+  const book = sourceSpellbooks[className];
+  return [...(book?.general ?? []), ...(book?.tabs ?? []).flatMap((tab) => tab.spells ?? [])]
+    .some(([spellName]) => spellName.toLocaleLowerCase() === name.toLocaleLowerCase());
+}
+
+function RemovedTalentEntry({ talent, classId, treeName }: { talent: RemovedTalent; classId: string; treeName: string }) {
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
+  const { pos, show, hide } = useHoverTooltip<HTMLButtonElement>(260, "below", 130, triggerRef, { sharedTooltipRef: tooltipRef });
+  const tooltipId = `removed:${classId}:${treeName}:${talent.name}`;
+  const isActive = useIsActiveTooltip(tooltipId);
+  const baseline = isBaselineAbility(classId, talent.name);
+  function openTooltip() {
+    claimActiveTooltip(tooltipId);
+    show();
+  }
+  function closeTooltip() {
+    releaseActiveTooltip(tooltipId);
+    hide();
+  }
+  return (
+    <>
+      <li>
+        <button
+          ref={triggerRef}
+          type="button"
+          onMouseEnter={openTooltip}
+          onMouseLeave={closeTooltip}
+          onFocus={openTooltip}
+          onBlur={closeTooltip}
+          aria-label={`${talent.name}${baseline ? ", now a baseline ability" : ", removed from this tree"}`}
+          className={`text-left text-[11px] underline decoration-dotted underline-offset-2 transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#e2bd68] ${baseline ? "text-[#70d27b] hover:text-[#9aefa1]" : "text-[#d6d0c4] hover:text-[#ffe28a]"}`}
+        >
+          {talent.name}
+          {baseline && <span className="ml-1 text-[#9a9a9a] no-underline">· baseline</span>}
+        </button>
+      </li>
+      {pos && isActive && createPortal(
+        <TooltipCard divRef={tooltipRef} style={{ top: pos.top, left: pos.left, width: 260 }}>
+          <TooltipName>{talent.name}</TooltipName>
+          <TooltipRank>Classic talent · {talent.max} rank{talent.max === 1 ? "" : "s"} · row {talent.row}</TooltipRank>
+          {talent.text && <TooltipDescription>{talent.text}</TooltipDescription>}
+        </TooltipCard>,
+        document.body
+      )}
+    </>
+  );
+}
 
 export default function TalentTreeGrid({
   classId,
@@ -37,11 +102,17 @@ export default function TalentTreeGrid({
   onPeek: (talentId: string | null) => void;
   onResetTree: () => void;
 }) {
+  const [hoveredTalentId, setHoveredTalentId] = useState<string | null>(null);
   const byId = new Map(tree.talents.map((t) => [t.id, t]));
+  const hoveredTalent = hoveredTalentId ? byId.get(hoveredTalentId) : undefined;
+  const linkedNames = hoveredTalent ? getLinkedSpells(classId, hoveredTalent.id).map((entry) => entry.name.toLocaleLowerCase()) : [];
+  const linkedTalentIds = new Set(tree.talents.filter((talent) => linkedNames.includes(talent.name.toLocaleLowerCase())).map((talent) => talent.id));
+  const prerequisiteId = hoveredTalent?.prereq?.id;
   const spent = pointsSpentInTree(tree, ranks);
+  const sourceTree = classicSource[classId.charAt(0).toUpperCase() + classId.slice(1)]?.trees.find((item) => item.name === tree.name);
 
   return (
-    <div className="relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:max-w-[296px]">
+    <div className={`relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] transition-[border-color,box-shadow] duration-500 sm:max-w-[296px] ${compareMode ? "border-[#b38a3e] shadow-[0_0_18px_rgba(201,169,97,0.16)]" : ""}`}>
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
@@ -73,21 +144,20 @@ export default function TalentTreeGrid({
           </button>
         </div>
       </div>
-      <div
-        className="relative grid gap-3.5 rounded bg-cover bg-center p-2.5 sm:gap-5"
-        style={{
-          gridTemplateColumns: `repeat(${COLS}, minmax(44px, 1fr))`,
-          gridTemplateRows: `repeat(${TIERS}, 1fr)`,
-          backgroundImage: `linear-gradient(rgba(12,13,16,0.55), rgba(12,13,16,0.55)), url(${treeBackgroundUrl(classId, tree.name)})`,
-        }}
-      >
+      <div className="relative rounded bg-cover bg-center p-2.5 sm:gap-5" style={{ backgroundImage: `linear-gradient(rgba(12,13,16,0.55), rgba(12,13,16,0.55)), url(${treeBackgroundUrl(classId, tree.name)})` }}>
+        <div className="grid">
+        <div
+          className={`talent-tree-view grid gap-3.5 sm:gap-5 ${compareMode ? "compare-tree-active" : ""}`}
+          style={{ gridArea: "1 / 1", gridTemplateColumns: `repeat(${COLS}, minmax(44px, 1fr))`, gridTemplateRows: `repeat(${TIERS}, 1fr)` }}
+        >
         {tree.talents
           .filter((t) => t.prereq)
           .map((t) => {
             const prereq = byId.get(t.prereq!.id);
             if (!prereq) return null;
             const met = (ranks[prereq.id] ?? 0) >= t.prereq!.ranks;
-            const barClass = met ? "bg-accent" : "bg-foreground-muted/40";
+            const isHoveredPath = hoveredTalentId === t.id;
+            const barClass = isHoveredPath ? "bg-[#f4c95d] shadow-[0_0_9px_rgba(244,201,93,0.9)]" : met ? "bg-accent" : "bg-foreground-muted/40";
 
             // Same-tier prereq (e.g. Paladin Holy Shock -> Divine Precision,
             // Priest Mind Flay -> Improved Mind Flay): the two talents sit
@@ -100,7 +170,7 @@ export default function TalentTreeGrid({
               return (
                 <div
                   key={`connector-${t.id}`}
-                  className="pointer-events-none flex items-center justify-stretch"
+                  className={`pointer-events-none flex items-center justify-stretch transition-[filter] duration-200 ${isHoveredPath ? "drop-shadow-[0_0_4px_rgba(244,201,93,0.8)]" : ""}`}
                   style={{
                     gridColumn: `${minCol} / ${maxCol + 1}`,
                     gridRow: t.tier,
@@ -114,7 +184,7 @@ export default function TalentTreeGrid({
             return (
               <div
                 key={`connector-${t.id}`}
-                className="pointer-events-none flex items-stretch justify-center"
+                className={`pointer-events-none flex items-stretch justify-center transition-[filter] duration-200 ${isHoveredPath ? "drop-shadow-[0_0_4px_rgba(244,201,93,0.8)]" : ""}`}
                 style={{
                   gridColumn: t.col,
                   gridRow: `${prereq.tier} / ${t.tier + 1}`,
@@ -143,6 +213,9 @@ export default function TalentTreeGrid({
             onTap={onTap}
             peekTalentId={peekTalentId}
             onPeek={onPeek}
+            onHoverTalent={setHoveredTalentId}
+            highlightPrerequisite={t.id === prerequisiteId}
+            highlightLinked={linkedTalentIds.has(t.id)}
           />
         ))}
 
@@ -164,14 +237,14 @@ export default function TalentTreeGrid({
               return (
                 <div
                   key={`arrow-${t.id}`}
-                  className="pointer-events-none relative"
+                  className={`pointer-events-none relative transition-[filter] duration-200 ${hoveredTalentId === t.id ? "drop-shadow-[0_0_5px_rgba(244,201,93,0.9)]" : ""}`}
                   style={{ gridColumn: t.col, gridRow: t.tier }}
                 >
                   <div
                     className={`absolute top-1/2 h-0 w-0 -translate-y-1/2 border-y-[7px] border-y-transparent sm:border-y-[6px] ${
                       prereqIsRight
-                        ? `-right-[7px] border-r-[10px] sm:-right-[6px] sm:border-r-[8px] ${met ? "border-r-accent" : "border-r-foreground-muted/40"}`
-                        : `-left-[7px] border-l-[10px] sm:-left-[6px] sm:border-l-[8px] ${met ? "border-l-accent" : "border-l-foreground-muted/40"}`
+                        ? `-right-[7px] border-r-[10px] sm:-right-[6px] sm:border-r-[8px] ${hoveredTalentId === t.id ? "border-r-[#f4c95d] drop-shadow-[0_0_5px_rgba(244,201,93,0.9)]" : met ? "border-r-accent" : "border-r-foreground-muted/40"}`
+                        : `-left-[7px] border-l-[10px] sm:-left-[6px] sm:border-l-[8px] ${hoveredTalentId === t.id ? "border-l-[#f4c95d] drop-shadow-[0_0_5px_rgba(244,201,93,0.9)]" : met ? "border-l-accent" : "border-l-foreground-muted/40"}`
                     }`}
                   />
                 </div>
@@ -181,18 +254,29 @@ export default function TalentTreeGrid({
             return (
               <div
                 key={`arrow-${t.id}`}
-                className="pointer-events-none relative"
+                  className={`pointer-events-none relative transition-[filter] duration-200 ${hoveredTalentId === t.id ? "drop-shadow-[0_0_5px_rgba(244,201,93,0.9)]" : ""}`}
                 style={{ gridColumn: t.col, gridRow: t.tier }}
               >
                 <div
-                  className={`absolute -top-[7px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[7px] border-x-transparent border-t-[10px] sm:-top-[6px] sm:border-x-[6px] sm:border-t-[8px] ${
-                    met ? "border-t-accent" : "border-t-foreground-muted/40"
+                  className={`absolute -top-[7px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[7px] border-x-transparent border-t-[10px] sm:-top-[6px] sm:border-x-[6px] sm:border-t-[8px] transition-[filter] duration-200 ${
+                    hoveredTalentId === t.id ? "border-t-[#f4c95d] drop-shadow-[0_0_5px_rgba(244,201,93,0.9)]" : met ? "border-t-accent" : "border-t-foreground-muted/40"
                   }`}
                 />
               </div>
             );
           })}
+
+        </div>
+        </div>
       </div>
+      {compareMode && (sourceTree?.removed?.length ?? 0) > 0 && (
+        <div className="compare-removed-enter mt-2 rounded-sm border border-black/60 bg-black/50 px-2.5 py-2">
+          <h4 className="text-[10px] font-bold uppercase tracking-wider text-[#ff6b6b]">No longer a talent</h4>
+          <ul className="mt-1 flex flex-wrap gap-x-2 gap-y-0.5">
+            {sourceTree!.removed!.map((talent) => <RemovedTalentEntry key={talent.name} talent={talent} classId={classId} treeName={tree.name} />)}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

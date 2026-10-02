@@ -1,18 +1,17 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { races, getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
+import { getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
 import { buildAiTextSummary } from "@/lib/build-text-export";
 import { canAddPoint, canRemovePoint, totalPointsSpent, pointsAtLevel, MAX_LEVEL } from "@/lib/talent-rules";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
 import ClassPicker from "@/components/planner/ClassPicker";
 import PlannerControls from "@/components/planner/PlannerControls";
-import RaceReferenceTable from "@/components/reference/RaceReferenceTable";
 import ClassHero from "@/components/planner/ClassHero";
 import TalentTreeGrid from "@/components/planner/TalentTreeGrid";
-import CompareLegend from "@/components/planner/CompareLegend";
 import TalentLegend from "@/components/planner/TalentLegend";
+import CompareLegend from "@/components/planner/CompareLegend";
 import Dialog from "@/components/site/Dialog";
 import Collapsible from "@/components/site/Collapsible";
 import SpellbookBook from "@/components/reference/SpellbookBook";
@@ -249,7 +248,12 @@ export default function PlannerClient({
           savedBuildsCount={savedBuilds.length}
         />
 
-        {compareMode && <CompareLegend />}
+        {compareMode && (
+          <div className="compare-legend-enter flex flex-col gap-1 rounded border border-[#9c7738]/45 bg-black/20 px-2.5 py-2 sm:flex-row sm:items-center sm:justify-between">
+            <CompareLegend />
+            <p className="text-[11px] text-foreground-muted">Classic text appears in each tooltip; removed Classic talents are listed under each tree.</p>
+          </div>
+        )}
 
         {classData && (
           <ClassHero classId={classData.class} trees={classData.trees} ranks={ranks} maxPoints={maxPoints} />
@@ -299,6 +303,7 @@ export default function PlannerClient({
               classId={classData.class}
               book={spellbooks.classes[classData.class]}
               compareMode={compareMode}
+              onCompareModeChange={() => setCompareMode((value) => !value)}
             />
             <ClassAbilitiesSection classId={classData.class} />
           </Collapsible>

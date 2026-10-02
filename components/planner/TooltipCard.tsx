@@ -5,9 +5,9 @@ import { diffWords } from "@/lib/text-diff";
 import { iconUrl } from "@/lib/wow-data";
 import type { DescriptionSegment, LinkedSpell } from "@/lib/talent-spell-links";
 
-// Classic WoW tooltip color language: dark navy card, thin gold border,
-// bold white name, grey rank line, gold-yellow type label, green effect
-// text, red requirement text. This card is NEVER part of the Light/Themed
+// In-game inspired tooltip language: charcoal card, forged-gold border,
+// 2002 font name, muted rank line, gold effect text, red requirement text.
+// This card is NEVER part of the Light/Themed
 // toggle -- always the same dark navy, in both modes -- so anything inside
 // it that reads a theme-aware color custom property needs pinning back to
 // its dark-mode value here. Concretely: item quality 1 (Common) renders via
@@ -42,7 +42,7 @@ export function TooltipCard({
   return (
     <div
       ref={divRef}
-      className={`fixed z-50 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-3 text-left shadow-lg [--quality-common:#ffffff] ${
+      className={`fixed z-50 rounded-md border border-[#9c7738]/90 bg-[rgba(12,12,14,0.97)] p-2.5 text-left shadow-[0_12px_36px_rgba(0,0,0,0.72)] [--quality-common:#ffffff] ${
         interactive ? "pointer-events-auto" : "pointer-events-none"
       }`}
       style={style}
@@ -55,11 +55,11 @@ export function TooltipCard({
 }
 
 export function TooltipName({ children }: { children: ReactNode }) {
-  return <div className="text-base font-bold tracking-wide text-white">{children}</div>;
+  return <div className="font-spellbook text-base font-bold leading-tight tracking-wide text-[#ffd65a]">{children}</div>;
 }
 
 export function TooltipRank({ children }: { children: ReactNode }) {
-  return <div className="text-xs text-gray-400">{children}</div>;
+  return <div className="text-[11px] text-gray-400">{children}</div>;
 }
 
 // A spell's "Learned at level N" line -- sits right after the cost/range
@@ -72,27 +72,27 @@ export function TooltipLevelReq({ children }: { children: ReactNode }) {
 
 export function TooltipType({ children }: { children: ReactNode }) {
   return (
-    <div className="mt-1 text-xs font-medium uppercase tracking-wide text-[#ffd100]">{children}</div>
+    <div className="mt-1 text-[11px] font-medium uppercase tracking-wide text-[#ffd100]">{children}</div>
   );
 }
 
 export function TooltipDescription({ children }: { children: ReactNode }) {
-  return <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-[#1eff00]">{children}</p>;
+  return <p className="mt-1.5 max-w-[60ch] text-sm leading-snug text-[#f2d25c]">{children}</p>;
 }
 
 // Same description styling as TooltipDescription, but for text already
 // split into segments (splitTextWithLinks) -- a segment naming another
 // spell/talent this one modifies renders as a white, underlined inline
-// highlight within the green effect text, matching talentsforever.com's
+// highlight within the gold effect text, matching talentsforever.com's
 // treatment of the same information (see the Ctrl-hold study in this
 // project's session notes) without copying their cream/white base text
-// color, which would clash with this site's classic-tooltip green.
+// color, which would clash with this tooltip's gold effect text.
 export function TooltipDescriptionWithLinks({ segments }: { segments: DescriptionSegment[] }) {
   return (
-    <p className="mt-1.5 max-w-[60ch] text-sm leading-relaxed text-[#1eff00]">
+    <p className="mt-1.5 max-w-[60ch] text-sm leading-snug text-[#f2d25c]">
       {segments.map((seg, i) =>
         seg.linked ? (
-          <span key={i} className="font-semibold text-white underline decoration-dotted underline-offset-2">
+          <span key={i} className="rounded-sm bg-[#ae7cff]/15 px-0.5 font-semibold text-[#d8bdff] underline decoration-[#ae7cff] decoration-dotted underline-offset-2">
             {seg.text}
           </span>
         ) : (
@@ -109,9 +109,11 @@ export function TooltipDescriptionWithLinks({ segments }: { segments: Descriptio
 // it's promising are showing right below it at that point.
 export function TooltipCtrlPrompt({ count }: { count: number }) {
   return (
-    <p className="mt-1 text-[11px] text-gray-500">
-      Hold Ctrl to explain {count} name{count === 1 ? "" : "s"}
-    </p>
+    <div className="mt-1.5 flex items-center gap-1.5 rounded border border-[#c8aa6e]/45 bg-[#c8aa6e]/10 px-1.5 py-1 text-[10px] leading-tight text-[#ead8b0]">
+      <span>Hold</span>
+      <span aria-hidden="true" className="rounded border border-[#d9bd7a]/80 bg-[#2a2418] px-1 py-0.5 font-mono text-[9px] font-bold text-[#ffe28a]">Ctrl</span>
+      <span>to show details for <strong className="text-white">{count} name{count === 1 ? "" : "s"}</strong></span>
+    </div>
   );
 }
 
@@ -122,31 +124,31 @@ export function TooltipCtrlPrompt({ count }: { count: number }) {
 // this talent itself does," gray is "background on a spell it mentions."
 export function TooltipLinkedSpell({ entry }: { entry: LinkedSpell }) {
   return (
-    <div className="mt-1.5 flex gap-2 border-t border-[#c8aa6e]/20 pt-1.5">
+    <div className="mt-1 flex gap-1.5 border-t border-[#c8aa6e]/20 pt-1">
       {entry.icon && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={iconUrl(entry.icon)} alt="" className="h-7 w-7 shrink-0 rounded-sm" />
+        <img src={iconUrl(entry.icon)} alt="" className="h-8 w-8 shrink-0 rounded border border-[#9c7738]/70 bg-black/50 object-cover shadow-sm" />
       )}
       <div className="min-w-0">
-        <div className="text-xs leading-tight">
+        <div className="text-[11px] leading-tight">
           <span className="font-semibold text-white">{entry.name}</span>{" "}
           <span className="text-[#c8aa6e]">{entry.source}</span>
         </div>
-        <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{entry.description}</p>
+        <p className="mt-0.5 text-[10px] leading-snug text-gray-400">{entry.description}</p>
       </div>
     </div>
   );
 }
 
 export function TooltipRequirement({ children }: { children: ReactNode }) {
-  return <p className="mt-1.5 text-xs text-[#ff4040]">{children}</p>;
+  return <p className="mt-1 text-[11px] text-[#ff4040]">{children}</p>;
 }
 
 // A cost/range/cast-time/cooldown row, e.g. ["15 Rage", "Melee Range"] --
 // mirrors the two-column stat lines under a spell's name in-game.
 export function TooltipStatLine({ left, right }: { left: string; right: string }) {
   return (
-    <div className="mt-0.5 flex justify-between gap-3 text-xs text-gray-300">
+    <div className="mt-0.5 flex justify-between gap-3 text-[11px] text-gray-300">
       <span>{left}</span>
       {right && <span>{right}</span>}
     </div>
@@ -185,43 +187,45 @@ export function TooltipSourceNote({ confirmed, source }: { confirmed: boolean; s
 // Forever line highlights words only Forever has, shared wording stays
 // plain in both. Only rendered when classicStatus is "changed" (nothing to
 // diff for "same"/"new").
-export function TooltipClassicDiff({ classicText, foreverText }: { classicText: string; foreverText: string }) {
-  const tokens = diffWords(classicText, foreverText);
+export function TooltipClassicDiff({
+  classicText,
+  foreverText,
+  classicLines,
+  foreverLines,
+}: {
+  classicText?: string;
+  foreverText: string;
+  classicLines?: [string, string][];
+  foreverLines?: [string, string][];
+}) {
+  const tokens = classicText ? diffWords(classicText, foreverText) : [];
+  const classicStats = classicLines?.flat().filter(Boolean) ?? [];
+  const statChanges = (classicLines && foreverLines ? classicLines.flatMap((classicRow, rowIndex) =>
+    classicRow.map((classicValue, columnIndex) => {
+      const foreverValue = foreverLines[rowIndex]?.[columnIndex] ?? "";
+      if (classicValue === foreverValue) return null;
+      if (!classicValue) return `Added ${foreverValue}`;
+      if (!foreverValue) return `Removed ${classicValue}`;
+      return `Changed ${classicValue} to ${foreverValue}`;
+    })
+  ).filter((change): change is string => Boolean(change)) : []);
   return (
     <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
-      <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">Changed from Classic</div>
-      <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
-        <span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>
-        {tokens
-          .filter((t) => t.op !== "add")
-          .map((t, i) =>
-            t.op === "remove" ? (
-              <del key={i} className="text-[#ff6b6b]/80 decoration-[#ff6b6b]/80">
-                {t.text}
-              </del>
-            ) : (
-              <span key={i} className="text-gray-400">
-                {t.text}
-              </span>
-            )
-          )}
-      </p>
-      <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
-        <span className="mr-1 font-semibold text-[#ffd100]">Forever:</span>
-        {tokens
-          .filter((t) => t.op !== "remove")
-          .map((t, i) =>
-            t.op === "add" ? (
-              <mark key={i} className="rounded-sm bg-[#ffd100]/25 text-[#ffd100]">
-                {t.text}
-              </mark>
-            ) : (
-              <span key={i} className="text-gray-400">
-                {t.text}
-              </span>
-            )
-          )}
-      </p>
+      <div className="text-xs font-semibold uppercase tracking-wide text-[#c8aa6e]">Reworked since Classic</div>
+      {classicStats.length > 0 && <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed text-gray-400"><span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>{classicStats.join(" · ")}</p>}
+      {statChanges.map((change, i) => <p key={`stat-${i}`} className="mt-1 text-[11px] leading-relaxed text-[#ffd65a]">{change}</p>)}
+      {classicText && (
+        <>
+          <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
+            <span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>
+            {tokens.filter((t) => t.op !== "add").map((t, i) => t.op === "remove" ? <del key={i} className="text-[#ff6b6b]/80 decoration-[#ff6b6b]/80">{t.text}</del> : <span key={i} className="text-gray-400">{t.text}</span>)}
+          </p>
+          <p className="mt-1 max-w-[60ch] text-[11px] leading-relaxed">
+            <span className="mr-1 font-semibold text-[#ffd100]">Forever:</span>
+            {tokens.filter((t) => t.op !== "remove").map((t, i) => t.op === "add" ? <mark key={i} className="rounded-sm bg-[#ffd100]/25 text-[#ffd100]">{t.text}</mark> : <span key={i} className="text-gray-400">{t.text}</span>)}
+          </p>
+        </>
+      )}
     </div>
   );
 }
@@ -257,6 +261,52 @@ export function TooltipClassicNote({
         {position ? ` — was ${position}` : ""}
       </div>
       {children && <p className="mt-1 max-w-[60ch] text-xs leading-relaxed text-gray-400">{children}</p>}
+    </div>
+  );
+}
+
+export function TooltipClassicTalentDiff({
+  status,
+  position,
+  classicName,
+  classicRanks,
+  foreverRanks,
+  classicText,
+  foreverText,
+  note,
+}: {
+  status: TalentStatus;
+  position?: string;
+  classicName?: string;
+  classicRanks?: number;
+  foreverRanks: number;
+  classicText?: string;
+  foreverText: string;
+  note?: string;
+}) {
+  const tokens = classicText ? diffWords(classicText, foreverText) : [];
+  const statusLabel = status === "changed" ? "Changed from Classic" : status === "moved" ? "Moved since Classic" : status === "new" ? "New in Forever" : "Same as Classic";
+  return (
+    <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
+      <div className={`text-xs font-semibold tracking-wide ${STATUS_TEXT_CLASS[status]}`}>
+        {statusLabel}{position ? ` — was ${position}` : ""}
+      </div>
+      {classicName && <p className="mt-1 text-[11px] text-gray-400">Was called &quot;{classicName}&quot; in Classic.</p>}
+      {classicRanks && <p className="mt-0.5 text-[11px] text-gray-400">{classicRanks === foreverRanks ? `${foreverRanks} ranks` : `was ${classicRanks} ranks, now ${foreverRanks}`}</p>}
+      {classicText && status !== "unchanged" && (
+        <p className="mt-1 text-[11px] leading-relaxed text-gray-400">
+          <span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>{classicText}
+        </p>
+      )}
+      {classicText && status !== "unchanged" && (
+        <p className="mt-1 text-[11px] leading-relaxed">
+          <span className="mr-1 font-semibold text-[#ffd100]">Forever:</span>
+          {tokens.filter((token) => token.op !== "remove").map((token, index) => token.op === "add"
+            ? <mark key={index} className="rounded-sm bg-[#ffd100]/25 text-[#ffd100]">{token.text}</mark>
+            : <span key={index} className="text-gray-300">{token.text}</span>)}
+        </p>
+      )}
+      {note && <p className="mt-1 text-[11px] leading-relaxed text-gray-400">{note}</p>}
     </div>
   );
 }

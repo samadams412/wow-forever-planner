@@ -12,6 +12,7 @@ import {
 } from "@/lib/spellbooks";
 import { useHoverTooltip } from "@/lib/use-hover-tooltip";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
+import CompareClassicToggle from "@/components/planner/CompareClassicToggle";
 import {
   TooltipCard,
   TooltipName,
@@ -346,8 +347,13 @@ function SpellEntry({
               <TooltipDescription>{rankEntry.description}</TooltipDescription>
               {rankEntry.coefficient && <p className="mt-1 text-[11px] text-gray-400">Spell power: {rankEntry.coefficient}</p>}
               {rankEntry.note && <TooltipDataNote>{rankEntry.note}</TooltipDataNote>}
-              {compareMode && rankEntry.classicStatus === "changed" && rankEntry.classicDescription && (
-                <TooltipClassicDiff classicText={rankEntry.classicDescription} foreverText={rankEntry.description} />
+              {compareMode && rankEntry.classicStatus === "changed" && (rankEntry.classicDescription || rankEntry.classicLines) && (
+                <TooltipClassicDiff
+                  classicText={rankEntry.classicDescription}
+                  foreverText={rankEntry.description}
+                  classicLines={rankEntry.classicLines}
+                  foreverLines={rankEntry.lines}
+                />
               )}
               {compareMode && rankEntry.classicStatus === "note" && rankEntry.classicNote && (
                 <TooltipClassicStatusNote>{rankEntry.classicNote}</TooltipClassicStatusNote>
@@ -742,7 +748,7 @@ export default function SpellbookBook({
             </button>
           ))}
         </div>
-        <button type="button" onClick={onCompareModeChange} aria-pressed={compareMode} className={`rounded border px-2 py-1 text-xs transition-colors ${compareMode ? "border-sky-400/70 bg-sky-400/10 text-sky-300" : "border-border text-foreground-muted hover:border-accent/60 hover:text-foreground"}`}>Compare to Classic</button>
+        <CompareClassicToggle checked={compareMode} onToggle={onCompareModeChange} />
         <div className="ml-auto flex max-w-full flex-wrap rounded border border-border bg-surface p-0.5 text-[11px] sm:text-xs">
           {FILTERS.map(({ value, label }) => (
             <button

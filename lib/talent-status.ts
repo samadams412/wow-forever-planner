@@ -8,14 +8,14 @@ export const STATUS_LABEL: Record<TalentStatus, string> = {
 };
 
 export const STATUS_TEXT_CLASS: Record<TalentStatus, string> = {
-  new: "text-violet",
+  new: "text-emerald-400",
   changed: "text-amber-300",
   moved: "text-sky-400",
   unchanged: "text-foreground-muted",
 };
 
 export const STATUS_DOT_CLASS: Record<TalentStatus, string> = {
-  new: "bg-violet",
+  new: "bg-emerald-400",
   changed: "bg-amber-300",
   moved: "bg-sky-400",
   unchanged: "bg-foreground-muted/50",

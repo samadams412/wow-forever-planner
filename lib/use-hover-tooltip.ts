@@ -7,9 +7,42 @@ const MOBILE_BREAKPOINT_PX = 640;
 const EDGE_GAP = 8;
 const TRIGGER_GAP = 6;
 
+function smartTooltipPosition(
+  trigger: DOMRect,
+  width: number,
+  height: number,
+  viewportWidth: number,
+  viewportHeight: number,
+  avoid?: DOMRect
+) {
+  const maxLeft = Math.max(EDGE_GAP, viewportWidth - width - EDGE_GAP);
+  const maxTop = Math.max(EDGE_GAP, viewportHeight - height - EDGE_GAP);
+  const centerLeft = trigger.left + trigger.width / 2 - width / 2;
+  const raw = [
+    { left: trigger.right + TRIGGER_GAP, top: trigger.top + trigger.height / 2 - height / 2 },
+    { left: trigger.left - width - TRIGGER_GAP, top: trigger.top + trigger.height / 2 - height / 2 },
+    { left: centerLeft, top: trigger.top - height - TRIGGER_GAP },
+    { left: centerLeft, top: trigger.bottom + TRIGGER_GAP },
+  ];
+  const candidates = raw.map(({ left, top }) => ({
+    left: Math.min(Math.max(left, EDGE_GAP), maxLeft),
+    top: Math.min(Math.max(top, EDGE_GAP), maxTop),
+  }));
+  const overlapArea = (a: { left: number; top: number; width: number; height: number }, b: DOMRect) =>
+    Math.max(0, Math.min(a.left + a.width, b.right) - Math.max(a.left, b.left)) *
+    Math.max(0, Math.min(a.top + a.height, b.bottom) - Math.max(a.top, b.top));
+  const scored = candidates.map((candidate, index) => {
+    const box = { ...candidate, width, height };
+    const treeOverlap = avoid ? overlapArea(box, avoid) : 0;
+    const triggerOverlap = overlapArea(box, trigger);
+    return { ...candidate, score: treeOverlap + triggerOverlap * 4 + index * 0.01 };
+  });
+  return scored.reduce((best, candidate) => candidate.score < best.score ? candidate : best);
+}
+
 export function useHoverTooltip<T extends HTMLElement>(
   width: number,
-  placement: "below" | "left" | "right" = "below",
+  placement: "below" | "left" | "right" | "smart" = "below",
   estimatedHeight = 220,
   // Pass an existing ref to position off of it (e.g. sharing one button
   // between a desktop hover tooltip and a mobile tap tooltip) instead of
@@ -53,6 +86,12 @@ export function useHoverTooltip<T extends HTMLElement>(
 
     const w = tooltipEl.offsetWidth || width;
     const h = tooltipEl.offsetHeight || estimatedHeight;
+    if (placement === "smart") {
+      const treeRect = ref.current?.closest(".talent-tree-view")?.getBoundingClientRect();
+      const { top, left } = smartTooltipPosition(rect, w, h, window.innerWidth, window.innerHeight, treeRect);
+      setPos((prev) => (prev && prev.top === top && prev.left === left ? prev : { ...prev, top, left }));
+      return;
+    }
     const maxLeft = Math.max(EDGE_GAP, window.innerWidth - w - EDGE_GAP);
     const maxTop = Math.max(EDGE_GAP, window.innerHeight - h - EDGE_GAP);
 
@@ -92,6 +131,13 @@ export function useHoverTooltip<T extends HTMLElement>(
   const show = () => {
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
+
+    if (placement === "smart") {
+      const treeRect = ref.current?.closest(".talent-tree-view")?.getBoundingClientRect();
+      const { top, left } = smartTooltipPosition(rect, width, estimatedHeight, window.innerWidth, window.innerHeight, treeRect);
+      setPos({ top, left });
+      return;
+    }
 
     if (options?.mobileBottomSheet && window.innerWidth < MOBILE_BREAKPOINT_PX) {
       const sheetWidth = window.innerWidth - 16;

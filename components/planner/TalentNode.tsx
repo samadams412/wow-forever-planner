@@ -19,7 +19,7 @@ import {
   TooltipCtrlPrompt,
   TooltipLinkedSpell,
   TooltipRequirement,
-  TooltipClassicNote,
+  TooltipClassicTalentDiff,
 } from "./TooltipCard";
 
 const TOOLTIP_WIDTH = 260;
@@ -43,6 +43,9 @@ export default function TalentNode({
   onTap,
   peekTalentId,
   onPeek,
+  onHoverTalent,
+  highlightPrerequisite,
+  highlightLinked,
 }: {
   classId: string;
   talent: Talent;
@@ -65,6 +68,9 @@ export default function TalentNode({
   // spending a point, reverting to tappedTalentId on release.
   peekTalentId: string | null;
   onPeek: (talentId: string | null) => void;
+  onHoverTalent: (talentId: string | null) => void;
+  highlightPrerequisite: boolean;
+  highlightLinked: boolean;
 }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   // Shared across both hook calls below -- only one <TooltipCard> is ever
@@ -73,7 +79,7 @@ export default function TalentNode({
   const tooltipElRef = useRef<HTMLDivElement>(null);
   const { pos: hoverPos, show: showHover, hide: hideHover } = useHoverTooltip<HTMLButtonElement>(
     TOOLTIP_WIDTH,
-    "below",
+    "smart",
     220,
     buttonRef,
     { sharedTooltipRef: tooltipElRef }
@@ -84,7 +90,7 @@ export default function TalentNode({
   // taps meant for icons underneath/behind it still land on those icons.
   const { pos: activePos, show: showActive, hide: hideActive } = useHoverTooltip<HTMLButtonElement>(
     TOOLTIP_WIDTH,
-    "below",
+    "smart",
     220,
     buttonRef,
     { sharedTooltipRef: tooltipElRef }
@@ -247,16 +253,19 @@ export default function TalentNode({
     if (justTouchedRef.current) return;
     claimActiveTooltip(tooltipId);
     showHover();
+    onHoverTalent(talent.id);
   }
 
   function handleHoverEnter() {
     claimActiveTooltip(tooltipId);
     showHover();
+    onHoverTalent(talent.id);
   }
 
   function handleHoverLeave() {
     releaseActiveTooltip(tooltipId);
     hideHover();
+    onHoverTalent(null);
   }
 
   const invested = rank > 0;
@@ -269,6 +278,7 @@ export default function TalentNode({
   // same text as both "current" and "next".
   const currentRankText = rank > 0 ? talent.ranks[rank - 1] : talent.maxRank === 1 ? talent.ranks[0] : null;
   const nextRankText = talent.maxRank > 1 && rank < talent.maxRank ? talent.ranks[rank] : null;
+  const comparisonText = currentRankText ?? nextRankText ?? talent.ranks[0];
   const typeLabel = talent.passive ? "Passive" : (talent.cost ?? "Active");
   const tierPointsRequired = POINTS_PER_ROW * (talent.tier - 1);
   const tierLocked = !tierUnlocked(talent.tier, pointsInTree);
@@ -287,6 +297,7 @@ export default function TalentNode({
   // confirm an unlearned-but-available talent (0/5) gets the identical
   // green border their in-progress talents do.
   const borderClass = locked ? "border-border/40" : maxed ? "border-amber-400" : "border-green-500";
+  const unchangedInCompare = compareMode && talent.status === "unchanged";
 
   const badgeTextClass = locked
     ? "text-foreground-muted"
@@ -297,7 +308,11 @@ export default function TalentNode({
         : "text-foreground";
 
   return (
-    <div style={{ gridColumn: talent.col, gridRow: talent.tier }} className="relative aspect-square">
+    <div
+      data-talent-status={talent.status}
+      style={{ gridColumn: talent.col, gridRow: talent.tier }}
+      className={`relative aspect-square rounded transition-[opacity,filter,box-shadow] duration-200 ${unchangedInCompare ? "opacity-45 grayscale" : "opacity-100"} ${highlightPrerequisite ? "z-[1] shadow-[0_0_0_3px_rgba(244,201,93,0.95),0_0_16px_rgba(244,201,93,0.75)]" : highlightLinked ? "z-[1] shadow-[0_0_0_3px_rgba(174,124,255,0.95),0_0_16px_rgba(174,124,255,0.65)]" : ""}`}
+    >
       <button
         ref={buttonRef}
         type="button"
@@ -429,35 +444,21 @@ export default function TalentNode({
                 spend one here.
               </TooltipRequirement>
             )}
-            {compareMode && talent.classic && (
-              <TooltipClassicNote
+            {compareMode && (talent.classic || talent.status === "unchanged") && (
+              <TooltipClassicTalentDiff
                 status={talent.status}
                 position={
-                  talent.status === "moved" && talent.classic.tree && talent.classic.tier && talent.classic.col
+                  talent.classic?.tree && talent.classic.tier && talent.classic.col
                     ? `${talent.classic.tree} tier ${talent.classic.tier}, col ${talent.classic.col}`
                     : undefined
                 }
-              >
-                {talent.classic.renamedFrom && (
-                  <>
-                    Was called &quot;{talent.classic.renamedFrom}&quot; in Classic.
-                    <br />
-                  </>
-                )}
-                {talent.classic.replaces && talent.classic.replaces.length > 0 && (
-                  <>
-                    Replaces {talent.classic.replaces.join(", ")} in Classic.
-                    <br />
-                  </>
-                )}
-                {talent.classic.text ? formatTooltipText(talent.classic.text) : null}
-                {talent.classic.note && (
-                  <>
-                    {talent.classic.text ? <br /> : null}
-                    {talent.classic.note}
-                  </>
-                )}
-              </TooltipClassicNote>
+                classicName={talent.classic?.renamedFrom}
+                classicRanks={talent.classic?.maxRank}
+                foreverRanks={talent.maxRank}
+                classicText={talent.classic?.text ?? (talent.status === "unchanged" ? comparisonText : undefined)}
+                foreverText={comparisonText}
+                note={talent.classic?.note ?? (talent.classic?.replaces?.length ? `Replaces ${talent.classic.replaces.join(", ")} in Classic.` : undefined)}
+              />
             )}
           </TooltipCard>,
           document.body
