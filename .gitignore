@@ -86,3 +86,8 @@ data/sources/client-db2/*/zone-grid-*.bin
 /Forevercraft-Knowledge-Base/00-Inbox/
 /Forevercraft-Knowledge-Base/02-Agents/
 /Forevercraft-Knowledge-Base/03-Handoffs/
+
+# Raw Wowhead Forever quest-page scrape (5.4MB, includes page-script junk);
+# parsed into data/sources/wowhead/quest-text.json by
+# scripts/build-wowhead-quest-text.js -- only the parsed output is committed.
+/data/sources/wowhead/quests/scraped_quests_output.json

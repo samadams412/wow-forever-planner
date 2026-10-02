@@ -32,6 +32,7 @@ const NAV_LINKS: NavLink[] = [
       { href: "/reference/professions", label: "Professions", icon: "https://wow.zamimg.com/images/wow/icons/medium/trade_engineering.jpg" },
       { href: "/reference/crafting-calculator", label: "Crafting Calculator", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_note_01.jpg" },
       { href: "/reference/items", label: "Items", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_gem_01.jpg" },
+      { href: "/reference/quests", label: "Quests", icon: "https://wow.zamimg.com/images/wow/icons/medium/achievement_quests_completed_07.jpg" },
       { href: "/reference/map/eastern-kingdoms", label: "World Map", icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_map_01.jpg" },
     ],
   },

@@ -22,6 +22,7 @@ export default function LootItemPill({
   qty,
   iconOnly,
   iconSize = "normal",
+  showSlotType,
 }: {
   item: LootItem;
   tooltipId: string;
@@ -47,6 +48,15 @@ export default function LootItemPill({
   // Slightly larger materials in the desktop recipe table are easier to
   // scan without enlarging the denser mobile recipe cards.
   iconSize?: "normal" | "large";
+  // Shows the item's slot/type (e.g. "Chest, Cloth") as a small muted tag
+  // next to the name, so loot/reward choices are scannable at a glance
+  // without needing the hover tooltip -- used by LootBossCard and
+  // LootQuestRewardsCard, where several options sit side by side and
+  // "which is the plate chest vs. the caster trinket" is exactly what a
+  // glance should answer. Non-gear items (reagents, trade goods, bags,
+  // ammo, ...) never get a label even when this is set -- see
+  // isEquippableGear below.
+  showSlotType?: boolean;
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
   const isClaimed = useIsActiveTooltip(tooltipId);
@@ -105,6 +115,17 @@ export default function LootItemPill({
   // the sourced data, so no muted/grayscale/"Gone" treatment is applied for
   // any status here.
   const nameEl = <span style={item.quality !== null ? { color: qualityColor } : undefined}>{item.name}</span>;
+  // Only equippable gear/weapons get a slot/type tag -- reagents, trade
+  // goods, quest items, bags, and ammo all carry a `slot` value too (e.g.
+  // "Bag") but aren't what "slot/type" means to a player glancing at loot.
+  // foreverchanges-sourced items know their real itemClass (2 = Weapon,
+  // 4 = Armor); wowtbc-sourced items never carry itemClass (see LootItem's
+  // comment), so fall back to excluding the couple of non-gear slot values
+  // that source still fills in.
+  const NON_GEAR_SLOTS = new Set(["Bag", "Ammo"]);
+  const isEquippableGear =
+    item.itemClass !== null ? item.itemClass === 2 || item.itemClass === 4 : !!item.slot && !NON_GEAR_SLOTS.has(item.slot);
+  const slotTypeLabel = item.unknown || !isEquippableGear ? null : [item.slot, item.type].filter(Boolean).join(", ");
 
   return (
     <span
@@ -151,6 +172,9 @@ export default function LootItemPill({
         ) : (
           nameEl
         ))}
+      {!iconOnly && showSlotType && slotTypeLabel && (
+        <span className="text-[10px] text-foreground-muted">{slotTypeLabel}</span>
+      )}
       {!iconOnly && item.status === "new" && (
         <span className="rounded-sm border border-green-300/70 bg-green-600 px-1 text-[9px] font-semibold uppercase tracking-wide text-white">
           New

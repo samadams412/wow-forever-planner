@@ -9,7 +9,13 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 // the URL (via router.replace, no history entry per keystroke) after a
 // short pause, which re-renders the server-side ItemsTable with the new
 // filter. Resets to page 1 whenever the query text actually changes.
-export default function ItemsSearchInput({ initialValue }: { initialValue: string }) {
+export default function ItemsSearchInput({
+  initialValue,
+  placeholder = "Search item names...",
+}: {
+  initialValue: string;
+  placeholder?: string;
+}) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -39,7 +45,7 @@ export default function ItemsSearchInput({ initialValue }: { initialValue: strin
       type="text"
       value={value}
       onChange={(e) => handleChange(e.target.value)}
-      placeholder="Search item names..."
+      placeholder={placeholder}
       className="w-full max-w-xs rounded border border-border bg-surface px-3 py-1.5 text-sm text-foreground placeholder:text-foreground-muted/60 focus:border-accent focus:outline-none"
     />
   );

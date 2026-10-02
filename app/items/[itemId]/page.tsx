@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemTooltipBody from "@/components/reference/ItemTooltipBody";
+import ItemSourceCard from "@/components/reference/ItemSourceCard";
 import { getItemById, isIndexableItemStatus } from "@/lib/items";
+import { getItemSource, getSourceSiblings } from "@/lib/item-sources";
 import { mediumIconUrl, itemQualityColor, itemQualityName } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 
@@ -90,6 +92,8 @@ export default async function ItemPage({
     Boolean
   );
   const callout = item.status ? STATUS_CALLOUT[item.status] : null;
+  const source = item.itemId !== null ? getItemSource(item.itemId) : undefined;
+  const siblings = source && item.itemId !== null ? getSourceSiblings(item.itemId) : [];
 
   return (
     <main className="mx-auto w-full max-w-2xl px-3 py-8 sm:px-4">
@@ -124,6 +128,12 @@ export default async function ItemPage({
       <div className="mt-4 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-4 text-left shadow-lg [--quality-common:#ffffff]">
         <ItemTooltipBody item={item} context="catalog" />
       </div>
+
+      {source && (
+        <div className="mt-4">
+          <ItemSourceCard source={source} siblings={siblings} />
+        </div>
+      )}
 
       <Link
         href={backHref}

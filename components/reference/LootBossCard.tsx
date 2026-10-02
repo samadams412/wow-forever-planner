@@ -38,7 +38,7 @@ export default function LootBossCard({
       </div>
       <div className="mt-2 flex flex-wrap gap-1.5">
         {boss.items.map((item, i) => (
-          <LootItemPill key={`${item.name}-${i}`} item={item} tooltipId={`${dungeonId}:${boss.name}:${i}`} />
+          <LootItemPill key={`${item.name}-${i}`} item={item} tooltipId={`${dungeonId}:${boss.name}:${i}`} showSlotType />
         ))}
       </div>
     </div>

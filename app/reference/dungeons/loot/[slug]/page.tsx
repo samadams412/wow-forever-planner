@@ -123,7 +123,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
                 {data.questSource && data.questSource !== data.bossLootSource && (
                   <LootDisclaimer source={data.questSource} dungeonType={dungeon.type} />
                 )}
-                <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} />
+                <LootQuestRewardsCard quests={data.quests} dungeonId={dungeon.id} dungeonName={dungeon.name} />
               </div>
             )}
 

@@ -1,6 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 import LootItemPill from "@/components/reference/LootItemPill";
 import type { Quest } from "@/lib/dungeon-loot";
+
+// Dungeon quest ids are "quest-<n>" (foreverchanges' own prefix) where <n>
+// is the same numeric id this site's /quests/<id> catalog uses (both trace
+// back to the same foreverchanges list -- confirmed by cross-checking
+// quest-2904 "A Fine Mess" against data/sources/foreverchanges/quests/list.json's
+// i:2904 row, same name). Falls back to no link if the id doesn't parse.
+function questDetailHref(questId: string): string | null {
+  const match = /^quest-(\d+)$/.exec(questId);
+  return match ? `/quests/${match[1]}` : null;
+}
 
 const FACTION_BADGE_CLASS: Record<"Alliance" | "Horde" | "Both", string> = {
   Alliance: "bg-sky-500/15 text-sky-300",
@@ -13,11 +24,29 @@ const FACTION_BADGE_CLASS: Record<"Alliance" | "Horde" | "Both", string> = {
 // list (mirroring foreverchanges' own "Starts / Slay / Bring back" layout,
 // rebuilt in this site's own card language rather than copied), then its
 // reward choices as the same LootItemPill row every boss-loot card uses.
-function QuestCard({ quest, dungeonId }: { quest: Quest; dungeonId: string }) {
+function QuestCard({
+  quest,
+  dungeonId,
+  dungeonName,
+}: {
+  quest: Quest;
+  dungeonId: string;
+  dungeonName: string;
+}) {
+  const href = questDetailHref(quest.id);
   return (
     <div>
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-        <span className="text-sm font-medium text-foreground">{quest.name}</span>
+        {href ? (
+          <Link
+            href={`${href}?from=${encodeURIComponent(`/reference/dungeons/loot/${dungeonId}`)}&fromLabel=${encodeURIComponent(dungeonName)}`}
+            className="text-sm font-medium text-foreground underline decoration-dotted hover:text-accent"
+          >
+            {quest.name}
+          </Link>
+        ) : (
+          <span className="text-sm font-medium text-foreground">{quest.name}</span>
+        )}
         {quest.level !== null && (
           <span className="text-[11px] text-foreground-muted">
             Level {quest.level}
@@ -67,7 +96,7 @@ function QuestCard({ quest, dungeonId }: { quest: Quest; dungeonId: string }) {
       {quest.rewards.length > 0 && (
         <div className="mt-1.5 flex flex-wrap gap-1.5">
           {quest.rewards.map((item, j) => (
-            <LootItemPill key={`${item.name}-${j}`} item={item} tooltipId={`${dungeonId}:${quest.id}:${j}`} />
+            <LootItemPill key={`${item.name}-${j}`} item={item} tooltipId={`${dungeonId}:${quest.id}:${j}`} showSlotType />
           ))}
         </div>
       )}
@@ -81,7 +110,15 @@ function QuestCard({ quest, dungeonId }: { quest: Quest; dungeonId: string }) {
 // Only") renders as a small badge next to each quest's own name rather than
 // a separate grouping wrapper, since the underlying data already resolves
 // down to one faction value per quest.
-export default function LootQuestRewardsCard({ quests, dungeonId }: { quests: Quest[]; dungeonId: string }) {
+export default function LootQuestRewardsCard({
+  quests,
+  dungeonId,
+  dungeonName,
+}: {
+  quests: Quest[];
+  dungeonId: string;
+  dungeonName: string;
+}) {
   if (quests.length === 0) return null;
 
   return (
@@ -92,7 +129,7 @@ export default function LootQuestRewardsCard({ quests, dungeonId }: { quests: Qu
       </h3>
       <div className="mt-2 flex flex-col gap-4">
         {quests.map((quest) => (
-          <QuestCard key={quest.id} quest={quest} dungeonId={dungeonId} />
+          <QuestCard key={quest.id} quest={quest} dungeonId={dungeonId} dungeonName={dungeonName} />
         ))}
       </div>
     </div>

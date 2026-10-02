@@ -135,6 +135,15 @@ export default function ReferencePage() {
             }
           />
           <Card
+            href="/reference/quests"
+            title="Quests"
+            description="Every quest in the beta client, filterable by zone, dungeon, raid, or battleground, with level ranges and rewards."
+            icon={
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={mediumIconUrl("achievement_quests_completed_07")} alt="" className="h-7 w-7 rounded-sm" />
+            }
+          />
+          <Card
             href="/reference/map"
             title="World Map"
             description="Interactive world map with all the new content and changes from the beta client."

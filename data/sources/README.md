@@ -9,6 +9,36 @@ in place -- a new pull gets a new dated file alongside the old one.
 
 ```
 data/sources/
+  cmangos/                quest-text.json -- narrative quest text (title/
+                           details/objectives/offer-reward/request-items/
+                           end text) plus Classic-era chain links
+                           (prevQuestId/nextQuestId/nextQuestInChain)
+                           pulled from cmangos/classic-db (GPL-3.0) via
+                           scripts/build-cmangos-quest-text.js. Not dated/
+                           archived like the other sources below -- it's a
+                           point-in-time pull from an upstream repo, not a
+                           recurring beta-data pull; re-run the script to
+                           refresh in place. See lib/quests.ts for how this
+                           cross-references against foreverchanges' quests/
+                           list.json, and for the $N/$B/$C/.../$G...:...;
+                           client-escape-code sanitizing applied before
+                           this text is ever rendered. A handful of
+                           quest_template rows' own chain-link columns point
+                           at a duplicate-named, empty-text stub row instead
+                           of the real one -- lib/quests.ts's
+                           CHAIN_LINK_OVERRIDES patches the one confirmed
+                           case (quest 2) rather than hand-editing this
+                           generated file (see that constant's own comment
+                           for the rest of the scan).
+
+                           quest-givers.json -- quest-start giver name(s)
+                           per quest id, from creature_questrelation/
+                           gameobject_questrelation joined against
+                           creature_template/gameobject_template (same dump,
+                           via scripts/build-cmangos-quest-givers.js). Name
+                           only, no coordinates -- see lib/quests.ts's
+                           giverName. Covers the same Classic-carryover
+                           quest set quest-text.json does.
   talentsforever/         talentsforever.com pulls -- talents, racials,
                            class abilities, spellbooks, spell_desc tooltip
                            text, and the Legacy Perk trees. See below.
@@ -27,8 +57,36 @@ data/sources/
                            item catalog, and the 3 gathering professions
     dungeon_data/         <slug>.json (boss/trash/rare loot) and
                            <slug>.quests.json (quest chains), per dungeon
+    quests/               list.json -- flat 5,049-quest structured listing
+                           (name/level/rewards/location, short keys -- see
+                           lib/quests.ts's QUEST_FIELD comment). Consumed by
+                           /reference/quests + /quests/<id>, cross-referenced
+                           against cmangos/quest-text.json for narrative text.
+                           missing-cmangos-text.json -- the 845 list.json
+                           quests with no cmangos match (new to Forever, no
+                           Classic-era precedent), name/level/zone included,
+                           generated via `npx tsx
+                           scripts/build-missing-quest-text-list.js`.
     items/                new.json / changed.json / same.json /
                            missing.json -- the full ~21k-item catalog
+      archive/<version>-<date>/   previous pull's four bucket files,
+                           archived here (unchanged filenames, just
+                           moved) before the live files are overwritten
+                           with a new pull. Folder name is
+                           <forever_build>-<forever_build_date>, e.g.
+                           archive/1.60.1.69913-2026-09-18/. Keep every
+                           pull's archive permanently, same as
+                           talentsforever/'s dated files.
+                           scripts/diff-foreverchanges-items.js's no-arg
+                           mode diffs the most recent archive/ subfolder
+                           against the current live files.
+      sources.json         per-item single source (quest/vendor/mob/
+                           crafted/world-drop/rare/dungeon-trash),
+                           `{forever_build, items: {id: [code, label,
+                           location]}}`. Covers ~54% of the catalog
+                           (11,625/21,561 ids as of 1.60.1.70170); not
+                           read by any build script as of 2026-10-02,
+                           see item detail page for the consuming code.
     item-category-labels.json      c:u item-class/subclass -> display
                                     label, built by
                                     build-item-category-labels.js
@@ -191,3 +249,9 @@ fix) something the vendor's site changed without it ever showing up in
 this raw export. Read the vendor's own `changelog` array in the new
 snapshot by hand for those; the script only tells you what the data
 itself changed.
+
+## wowhead/
+
+- `wowhead/quests/scraped_quests_output.json` -- raw local scrape of Wowhead Forever quest pages (5.4MB, 838 entries, contains page-script junk). **Gitignored**; not needed at runtime.
+- `wowhead/quest-text.json` -- parsed output (816 quests) in the same row shape as `cmangos/quest-text.json`, built by `node scripts/build-wowhead-quest-text.js`. Only consulted by `lib/quests.ts` for quests cMaNGOS has no row for.
+- `wowhead/quest-extras.json` -- optional per-quest fields from the same scrape (829 quests): `xp`, `reputation`, `start`/`end` NPC name+id, `items` (mentioned item ids), `points` (start/end zone-percent map coords, stored but not rendered yet). Written by the same script. `lib/quests.ts` merges XP (only where list.json has 0), reputation, giver/turn-in and mentioned items.

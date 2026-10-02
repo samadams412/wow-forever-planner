@@ -46,7 +46,7 @@ export function worldToLatLng(
   return nativePixelToLatLng(nativeZoom, nativePixelX, nativePixelY);
 }
 
-// Inverse of the above -- a Leaflet [lat, lng] -> real WoW world coordinate.
+// Inverse of worldToLatLng -- a Leaflet [lat, lng] -> real WoW world coordinate.
 // Used to write the URL-hash view state from the map's current center.
 export function latLngToWorld(
   corners: FullGridCorners,

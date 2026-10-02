@@ -6,6 +6,7 @@ import { PROFESSION_IDS } from "@/lib/profession-recipes";
 import { GATHERING_PROFESSION_IDS } from "@/lib/gathering-professions";
 import { getDungeonLootIndex } from "@/lib/dungeon-loot";
 import { getIndexableItemIds } from "@/lib/items";
+import { getAllQuestIds } from "@/lib/quests";
 
 const STATIC_ROUTES = [
   "",
@@ -19,6 +20,7 @@ const STATIC_ROUTES = [
   "/reference/professions",
   "/reference/crafting-calculator",
   "/reference/items",
+  "/reference/quests",
   "/contact",
   "/privacy",
   "/guides",
@@ -100,6 +102,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
+  // 7. Individual quest pages -- all 5,049, same priority tier as item pages.
+  const questEntries = getAllQuestIds().map((id) => ({
+    url: `${SITE_URL}/quests/${id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.4,
+  }));
+
   return [
     ...staticEntries,
     ...guideEntries,
@@ -107,5 +117,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...professionEntries,
     ...dungeonLootEntries,
     ...itemEntries,
+    ...questEntries,
   ];
 }
