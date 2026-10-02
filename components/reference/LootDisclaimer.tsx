@@ -46,6 +46,18 @@ function WowtbcDisclaimer() {
   );
 }
 
+export function QuestRewardNerfDisclaimer() {
+  return (
+    <div className="rounded border border-amber-400/40 bg-amber-400/5 px-3 py-2.5 text-xs text-foreground-muted">
+      <p>
+        <span className="font-semibold text-amber-300">Some quest rewards shown here were nerfed</span> in a
+        recent beta patch and this page hasn&apos;t been updated to reflect it yet -- stats/levels below may be
+        out of date for those items.
+      </p>
+    </div>
+  );
+}
+
 export default function LootDisclaimer({
   source,
   dungeonType,
