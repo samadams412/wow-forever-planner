@@ -513,6 +513,44 @@ html.light-mode {
   animation: talent-pulse-remove 160ms ease-out;
 }
 
+/* Blocked-attempt feedback: a quick side-to-side shake on the icon, and a
+   gold wash behind the tooltip's requirement line that fades out. */
+@keyframes talent-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+.talent-shake {
+  animation: talent-shake 320ms ease-in-out;
+}
+
+@keyframes talent-requirement-flash {
+  0% {
+    background-color: rgba(244, 201, 93, 0.55);
+  }
+  100% {
+    background-color: rgba(244, 201, 93, 0);
+  }
+}
+
+.talent-requirement-flash {
+  animation: talent-requirement-flash 900ms ease-out;
+}
+
 /* Gold/bronze scrollbar for the dungeons timeline's horizontal scroll
    container, in place of the browser-default gray bar. scrollbar-color
    covers Firefox; the ::-webkit-scrollbar rules cover Chrome/Safari/Edge. */

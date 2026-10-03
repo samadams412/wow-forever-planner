@@ -151,6 +151,85 @@ export default function TalentNode({
   const pulseCounter = useRef(0);
   const [pulse, setPulse] = useState<{ dir: "add" | "remove"; key: number } | null>(null);
 
+  // Blocked-attempt feedback (Enter, or holding on a locked talent): bumping
+  // this key restarts the shake on the icon and the requirement flash in the
+  // tooltip. Keyed so back-to-back attempts replay the animation.
+  const [blockedKey, setBlockedKey] = useState(0);
+  function signalBlocked() {
+    setBlockedKey((k) => k + 1);
+    if (typeof navigator !== "undefined" && navigator.vibrate) {
+      try {
+        navigator.vibrate([12, 40, 12]);
+      } catch {
+        // Same restricted-context guard as the add/remove tick above.
+      }
+    }
+  }
+
+  // Hold-to-fill (mouse only). Holding left-click past HOLD_DELAY_MS starts
+  // repeating add calls every HOLD_INTERVAL_MS until the mouse is released,
+  // or the add stops being valid (max rank / point pool / locked). The refs
+  // below let the timer read the latest props without restarting itself.
+  const HOLD_DELAY_MS = 250;
+  const HOLD_INTERVAL_MS = 110;
+  const canAddRef = useRef(canAdd);
+  const onAddRef = useRef(onAdd);
+  const holdTimeout = useRef<number | null>(null);
+  const holdInterval = useRef<number | null>(null);
+  const holdEnd = useRef<(() => void) | null>(null);
+  // Set once a hold has actually fired, so the click the browser sends on
+  // release doesn't add one more point on top of the hold.
+  const holdFired = useRef(false);
+
+  function stopHold() {
+    if (holdTimeout.current !== null) window.clearTimeout(holdTimeout.current);
+    if (holdInterval.current !== null) window.clearInterval(holdInterval.current);
+    holdTimeout.current = null;
+    holdInterval.current = null;
+    if (holdEnd.current) {
+      window.removeEventListener("pointerup", holdEnd.current);
+      window.removeEventListener("pointercancel", holdEnd.current);
+      holdEnd.current = null;
+    }
+  }
+
+  function handleMouseDown(e: React.PointerEvent<HTMLButtonElement>) {
+    if (e.pointerType !== "mouse" || e.button !== 0 || e.shiftKey) return;
+    stopHold();
+    holdFired.current = false;
+    // Window-level release, so letting go outside the icon still ends the fill.
+    const end = () => stopHold();
+    holdEnd.current = end;
+    window.addEventListener("pointerup", end);
+    window.addEventListener("pointercancel", end);
+    holdTimeout.current = window.setTimeout(() => {
+      holdTimeout.current = null;
+      holdFired.current = true;
+      if (!canAddRef.current) {
+        // Locked, capped or maxed: no points change. Just tell the player why
+        // the hold did nothing.
+        stopHold();
+        signalBlocked();
+        return;
+      }
+      onAddRef.current();
+      holdInterval.current = window.setInterval(() => {
+        if (!canAddRef.current) {
+          stopHold();
+          return;
+        }
+        onAddRef.current();
+      }, HOLD_INTERVAL_MS);
+    }, HOLD_DELAY_MS);
+  }
+
+  useEffect(() => {
+    canAddRef.current = canAdd;
+    onAddRef.current = onAdd;
+  });
+
+  useEffect(() => stopHold, []);
+
   useEffect(() => {
     if (isActive) {
       claimActiveTooltip(tooltipId);
@@ -280,6 +359,7 @@ export default function TalentNode({
       e.preventDefault();
       touchChangeRef.current = false;
       if (canAdd) onAdd();
+      else signalBlocked();
     } else if (e.key === "Backspace") {
       e.preventDefault();
       touchChangeRef.current = false;
@@ -358,10 +438,17 @@ export default function TalentNode({
         onFocus={handleFocus}
         onBlur={handleHoverLeave}
         onKeyDown={handleKeyDown}
+        onPointerDown={handleMouseDown}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onClick={(e) => {
+          // The hold above already added its points on this press; the
+          // click that follows release is the same gesture, not a new add.
+          if (holdFired.current) {
+            holdFired.current = false;
+            return;
+          }
           // A real mouse click, not touch -- don't let a pulse fire for it,
           // and invalidate any leftover touch flag from an earlier tap that
           // never actually changed rank (e.g. a locked/capped talent).
@@ -379,16 +466,18 @@ export default function TalentNode({
         {/* Wrapped separately from the button so the pulse animation (keyed
             to force a restart on every rapid repeat tap) only remounts this
             small span, never the interactive button/ref itself. */}
-        <span
-          key={pulse ? `${pulse.dir}-${pulse.key}` : "idle"}
-          className={`block h-full w-full ${pulse ? (pulse.dir === "add" ? "talent-pulse-add" : "talent-pulse-remove") : ""}`}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={iconUrl(talent.icon)}
-            alt={talent.name}
-            className={`h-full w-full object-cover ${locked ? "grayscale" : ""}`}
-          />
+        <span key={`shake-${blockedKey}`} className={`block h-full w-full ${blockedKey > 0 ? "talent-shake" : ""}`}>
+          <span
+            key={pulse ? `${pulse.dir}-${pulse.key}` : "idle"}
+            className={`block h-full w-full ${pulse ? (pulse.dir === "add" ? "talent-pulse-add" : "talent-pulse-remove") : ""}`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={iconUrl(talent.icon)}
+              alt={talent.name}
+              className={`h-full w-full object-cover ${locked ? "grayscale" : ""}`}
+            />
+          </span>
         </span>
         <span
           className={`absolute bottom-0 right-0 rounded-tl bg-background/80 px-0.5 text-[12px] font-semibold leading-tight sm:text-[10px] ${badgeTextClass}`}
@@ -468,20 +557,20 @@ export default function TalentNode({
               ctrlHeld &&
               linkedSpells.map((entry) => <TooltipLinkedSpell key={entry.name} entry={entry} />)}
             {talent.prereq && (
-              <TooltipRequirement>
+              <TooltipRequirement flashKey={blockedKey}>
                 Requires {talent.prereq.ranks} rank{talent.prereq.ranks > 1 ? "s" : ""} in{" "}
                 {prereqName ?? "prerequisite talent"}
               </TooltipRequirement>
             )}
-            {talent.reqText && <TooltipRequirement>{talent.reqText}</TooltipRequirement>}
+            {talent.reqText && <TooltipRequirement flashKey={blockedKey}>{talent.reqText}</TooltipRequirement>}
             {talent.confidenceNote && <TooltipConfidenceNote>{talent.confidenceNote}</TooltipConfidenceNote>}
             {tierLocked && (
-              <TooltipRequirement>
+              <TooltipRequirement flashKey={blockedKey}>
                 Requires {tierPointsRequired} points in {treeName} Talents
               </TooltipRequirement>
             )}
             {capReached && (
-              <TooltipRequirement>
+              <TooltipRequirement flashKey={blockedKey}>
                 All {MAX_TALENT_POINTS} talent points are spent -- unlearn a point elsewhere before you can
                 spend one here.
               </TooltipRequirement>

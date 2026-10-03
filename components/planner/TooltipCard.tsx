@@ -174,8 +174,18 @@ export function TooltipLinkedSpell({ entry }: { entry: LinkedSpell }) {
   );
 }
 
-export function TooltipRequirement({ children }: { children: ReactNode }) {
-  return <p className="mt-1 text-[11px] text-[#ff4040]">{children}</p>;
+// flashKey: bump to replay the highlight flash (used when a keyboard or
+// hold attempt is blocked by this requirement). Keyed so each bump restarts
+// the animation instead of being a no-op on an already-running one.
+export function TooltipRequirement({ children, flashKey = 0 }: { children: ReactNode; flashKey?: number }) {
+  return (
+    <p
+      key={flashKey}
+      className={`mt-1 rounded-sm text-[11px] text-[#ff4040] ${flashKey > 0 ? "talent-requirement-flash" : ""}`}
+    >
+      {children}
+    </p>
+  );
 }
 
 // A caveat about this talent's own Forever-side data (e.g. a prereq arrow
