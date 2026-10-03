@@ -1,10 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useReducer, useState } from "react";
 import { getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
-import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
+import { encodeBuild, decodeBuild } from "@/lib/build-code";
 import { buildAiTextSummary } from "@/lib/build-text-export";
-import { canAddPoint, canRemovePoint, totalPointsSpent, pointsAtLevel, MAX_LEVEL } from "@/lib/talent-rules";
+import { totalPointsSpent, pointsAtLevel, MAX_LEVEL } from "@/lib/talent-rules";
+import { buildReducer, isTextEditingTarget, type BuildState } from "@/lib/build-history";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
 import ClassPicker from "@/components/planner/ClassPicker";
 import PlannerControls from "@/components/planner/PlannerControls";
@@ -37,10 +38,14 @@ export default function PlannerClient({
   initialBuildCode: string | null;
 }) {
   const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
-  const [ranks, setRanks] = useState<RankState>(() => {
+  // ranks plus its own undo/redo stacks, so every point change and its
+  // history entry land in one state transition (see lib/build-history.ts).
+  const [buildState, dispatch] = useReducer(buildReducer, null, (): BuildState => {
     const classData = getClassTalentData(initialClassId ?? DEFAULT_CLASS_ID);
-    return classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
+    const ranks = classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
+    return { ranks, past: [], future: [] };
   });
+  const ranks = buildState.ranks;
   // Not part of the URL/build code (talentsforever.com's own level control
   // works the same way -- it's a local planning aid, not part of the shared
   // build). Defaults to the level cap so a fresh/shared build always starts
@@ -99,9 +104,28 @@ export default function PlannerClient({
     window.history.replaceState(null, "", buildPlannerPath(classId, code));
   }, [classId, ranks, classData]);
 
+  // Ctrl+Z / Ctrl+Y (Cmd on Mac) for point history. Skipped while focus is in
+  // a text field, so the browser's own undo still works there.
+  useEffect(() => {
+    function handleHistoryKey(e: KeyboardEvent) {
+      if (!(e.ctrlKey || e.metaKey) || e.altKey) return;
+      if (isTextEditingTarget(e.target)) return;
+      const key = e.key.toLowerCase();
+      if (key === "z" && !e.shiftKey) {
+        e.preventDefault();
+        dispatch({ type: "undo" });
+      } else if (key === "y" || (key === "z" && e.shiftKey)) {
+        e.preventDefault();
+        dispatch({ type: "redo" });
+      }
+    }
+    window.addEventListener("keydown", handleHistoryKey);
+    return () => window.removeEventListener("keydown", handleHistoryKey);
+  }, []);
+
   const handleSelectClass = useCallback((id: string) => {
     setClassId(id);
-    setRanks({});
+    dispatch({ type: "load", ranks: {} });
     setTappedTalentId(null);
     setPeekTalentId(null);
   }, []);
@@ -112,15 +136,10 @@ export default function PlannerClient({
       const tree = classData.trees.find((t) => t.talents.some((tal) => tal.id === talentId));
       const talent = tree?.talents.find((tal) => tal.id === talentId);
       if (!tree || !talent) return;
-      // Re-check against prev (not the ranks closure) inside the updater --
-      // rapid repeated taps can queue several addPoint calls before a
-      // single one of them has re-rendered, and checking the stale outer
-      // `ranks` let every queued call see the same pre-tap count and pass
-      // the max-rank/points-left guard, overshooting past the real cap.
-      setRanks((prev) => {
-        if (!canAddPoint(tree, talent, prev, totalPointsSpent(classData.trees, prev), maxPoints)) return prev;
-        return { ...prev, [talentId]: (prev[talentId] ?? 0) + 1 };
-      });
+      // Validation runs inside the reducer against the latest state, not a
+      // closure over `ranks`, so rapid repeated taps (or hold-fill ticks)
+      // can't overshoot the max-rank/points-left cap.
+      dispatch({ type: "add", trees: classData.trees, tree, talent, maxPoints });
     },
     [classData, maxPoints]
   );
@@ -131,18 +150,13 @@ export default function PlannerClient({
       const tree = classData.trees.find((t) => t.talents.some((tal) => tal.id === talentId));
       const talent = tree?.talents.find((tal) => tal.id === talentId);
       if (!tree || !talent) return;
-      setRanks((prev) => {
-        if (!canRemovePoint(tree, talent, prev)) return prev;
-        const next = { ...prev, [talentId]: (prev[talentId] ?? 0) - 1 };
-        if (next[talentId] <= 0) delete next[talentId];
-        return next;
-      });
+      dispatch({ type: "remove", tree, talent });
     },
     [classData]
   );
 
   const resetBuild = useCallback(() => {
-    setRanks({});
+    dispatch({ type: "reset" });
     setTappedTalentId(null);
     setPeekTalentId(null);
   }, []);
@@ -151,11 +165,7 @@ export default function PlannerClient({
   // leaving the other trees (and their tapped/peeked state) untouched.
   const resetTree = useCallback((tree: TalentTree) => {
     const treeTalentIds = new Set(tree.talents.map((t) => t.id));
-    setRanks((prev) => {
-      const next = { ...prev };
-      for (const id of treeTalentIds) delete next[id];
-      return next;
-    });
+    dispatch({ type: "resetTree", tree });
     setTappedTalentId((prev) => (prev && treeTalentIds.has(prev) ? null : prev));
     setPeekTalentId((prev) => (prev && treeTalentIds.has(prev) ? null : prev));
   }, []);
@@ -207,7 +217,10 @@ export default function PlannerClient({
     (build: SavedBuild) => {
       setClassId(build.classId);
       const buildClassData = getClassTalentData(build.classId);
-      setRanks(buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {});
+      dispatch({
+        type: "load",
+        ranks: buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {},
+      });
       setTappedTalentId(null);
       setPeekTalentId(null);
       setMyBuildsOpen(false);
