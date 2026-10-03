@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import ItemTooltipBody from "@/components/reference/ItemTooltipBody";
 import ItemSourceCard from "@/components/reference/ItemSourceCard";
+import ItemBackLink from "@/components/reference/ItemBackLink";
 import { getItemById, isIndexableItemStatus } from "@/lib/items";
 import { getItemSource, getSourceSiblings } from "@/lib/item-sources";
 import { mediumIconUrl, itemQualityColor, itemQualityName } from "@/lib/wow-data";
@@ -73,22 +73,15 @@ export async function generateMetadata({
 
 export default async function ItemPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ itemId: string }>;
-  searchParams: Promise<{ from?: string; fromLabel?: string }>;
 }) {
   const { itemId } = await params;
   const id = parseItemId(itemId);
   const item = id !== null ? getItemById(id) : undefined;
   if (!item) notFound();
 
-  const { from, fromLabel } = await searchParams;
-  // Only trust an internal path -- `from` is attacker-controlled query input,
-  // so an absolute/external URL here is never followed.
-  const backHref = from && from.startsWith("/") && !from.startsWith("//") ? from : "/reference/items";
-  const backLabel = from && fromLabel ? fromLabel : "Reference";
-
+  // ?from= / ?fromLabel= are read client-side in ItemBackLink (see its header).
   const qualityColor = itemQualityColor(item.quality);
   const metaParts = [itemQualityName(item.quality), item.slot, item.type, item.itemLevel ? `item level ${item.itemLevel}` : null].filter(
     Boolean
@@ -137,12 +130,7 @@ export default async function ItemPage({
         </div>
       )}
 
-      <Link
-        href={backHref}
-        className="mt-4 inline-flex items-center rounded border border-border px-3 py-2 text-sm text-accent transition-colors hover:border-accent hover:bg-surface-hover hover:underline"
-      >
-        &larr; Back to {backLabel}
-      </Link>
+      <ItemBackLink fallbackHref="/reference/items" fallbackLabel="Reference" />
     </main>
   );
 }
