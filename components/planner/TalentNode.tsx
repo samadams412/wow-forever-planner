@@ -270,10 +270,21 @@ export default function TalentNode({
     onHoverTalent(talent.id);
   }
 
-  // Keyboard path: arrow keys move focus (and so the selection) to the
-  // adjacent talent.
+  // Keyboard path. Enter/Backspace go through the same onAdd/onRemove the
+  // mouse uses, so the planner's validation covers them too; canAdd here is
+  // only used to decide whether to play the blocked-attempt feedback.
   function handleKeyDown(e: React.KeyboardEvent<HTMLButtonElement>) {
-    if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
+    if (e.key === "Enter") {
+      // preventDefault stops the browser turning Enter into a synthetic
+      // click, which would otherwise add a second point.
+      e.preventDefault();
+      touchChangeRef.current = false;
+      if (canAdd) onAdd();
+    } else if (e.key === "Backspace") {
+      e.preventDefault();
+      touchChangeRef.current = false;
+      onRemove();
+    } else if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
       e.preventDefault();
       const dir: NavDirection = e.key === "ArrowUp" ? "up" : e.key === "ArrowDown" ? "down" : e.key === "ArrowLeft" ? "left" : "right";
       onNavigate(talent.id, dir);
