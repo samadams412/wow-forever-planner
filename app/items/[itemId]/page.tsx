@@ -9,11 +9,13 @@ import { getItemSource, getSourceSiblings } from "@/lib/item-sources";
 import { mediumIconUrl, itemQualityColor, itemQualityName } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 
-// Not statically generated -- 21,458 items would mean 21,458 pages built up
+// No generateStaticParams -- 21,458 items would mean 21,458 pages built up
 // front for a page most visitors reach one at a time (from a dungeon drop,
-// a quest reward, or the catalog table). lib/items.ts's getItemById reads
-// data/items.json through the same module-level cache queryItems already
-// uses, so each render after the first is just a Map lookup.
+// a quest reward, or the catalog table). force-static caches each item's
+// response the first time it's requested instead of rendering per request.
+// lib/items.ts's getItemById reads data/items.json through the same
+// module-level cache queryItems already uses, so each render is a Map lookup.
+export const dynamic = "force-static";
 
 const STATUS_CALLOUT: Record<NonNullable<LootItem["status"]>, { border: string; bg: string; text: string; label: string }> = {
   new: {
