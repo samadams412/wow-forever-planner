@@ -1,0 +1,154 @@
+{
+ "id": "excavation-site",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of Excavation Site: Wetlands in WoW Forever, with where each boss stands",
+  "attribution": {
+   "artistName": "Santiago Reyes",
+   "artistUrl": "https://asguevara433.wixsite.com/srmaps"
+  },
+  "floors": [
+   {
+    "name": null,
+    "src": "/dungeons/maps/excavation-site.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Saltspine",
+      "xPct": 44.8,
+      "yPct": 55,
+      "kind": "boss",
+      "display": 144209
+     },
+     {
+      "label": "Shadetooth",
+      "xPct": 55.6,
+      "yPct": 46.4,
+      "kind": "boss",
+      "display": 144210
+     },
+     {
+      "label": "Highland Horror",
+      "xPct": 87.2,
+      "yPct": 66.5,
+      "kind": "boss",
+      "display": 9010
+     },
+     {
+      "label": "Relic Guardian",
+      "xPct": 64.4,
+      "yPct": 25.3,
+      "kind": "boss",
+      "display": 144224
+     },
+     {
+      "label": "Entrance",
+      "xPct": 7.5,
+      "yPct": 60.9,
+      "kind": "entrance",
+      "display": null
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "saltspine",
+   "kind": "boss",
+   "name": "Saltspine",
+   "level": 28,
+   "display": 144209,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "A large health pool",
+     "icon": "/icon/spell_holy_sealofmight.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Nothing special seen in the fight: he hits and has a lot of health. He roams the marsh at the start among elite crocolisks, so clear them first or pull him away from them."
+    }
+   ]
+  },
+  {
+   "id": "shadetooth",
+   "kind": "boss",
+   "name": "Shadetooth",
+   "level": 29,
+   "display": 144210,
+   "trigger": {
+    "flag": "Important",
+    "text": "Kill the raptor matriarch in the tall grass. A wave of raptors comes when she dies, and Shadetooth runs in once they are dead."
+   },
+   "abilities": [
+    {
+     "name": "Raptors in the grass",
+     "icon": "/icon/ability_druid_rake.jpg",
+     "flags": [
+      "Bleed"
+     ],
+     "description": "Small raptors jump out of the grass as you walk through it and make you bleed."
+    },
+    {
+     "name": "The wave before him",
+     "icon": "/icon/ability_hunter_pet_raptor.jpg",
+     "flags": [
+      "Important",
+      "Damage dealers"
+     ],
+     "description": "Kill every raptor of the wave before he arrives. One group wiped on its first try with Shadetooth and several raptors on it at once."
+    },
+    {
+     "name": "Fear",
+     "icon": "/icon/spell_shadow_psychicscream.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "The tank is feared several times in this fight. A shaman's Tremor Totem helps."
+    }
+   ]
+  },
+  {
+   "id": "highland-horror",
+   "kind": "boss",
+   "name": "Highland Horror",
+   "level": 28,
+   "display": 9010,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "The Dragonmaw camp",
+     "icon": "/icon/inv_misc_head_dragon_black.jpg",
+     "flags": [],
+     "description": "He stands in a Dragonmaw camp. Its groups pull apart easily: take them one at a time first. The fight itself is short, nothing special seen yet."
+    }
+   ]
+  },
+  {
+   "id": "relic-guardian",
+   "kind": "boss",
+   "name": "Relic Guardian",
+   "level": 31,
+   "display": 144224,
+   "trigger": {
+    "flag": "Important",
+    "text": "He stands still at the end of the spider trail. Click the small panel next to him to wake him."
+   },
+   "abilities": [
+    {
+     "name": "Threat reset",
+     "icon": "/icon/ability_rogue_feint.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "He drops his threat and changes target during the fight. Damage dealers, slow down when the tank loses him. Tank, take him back at once."
+    }
+   ]
+  }
+ ]
+}

@@ -51,6 +51,20 @@ export type LootItem = {
   source: "foreverchanges" | "wowtbc";
 };
 
+// One "what to watch for" fight note, parsed from foreverchanges.pro's own
+// per-boss ability list (scripts/extract-foreverchanges-dungeon-maps.js) --
+// e.g. {name: "Fear", flags: ["Tank", "Important"], description: "The tank
+// is feared several times in this fight. A shaman's Tremor Totem helps."}.
+// `flags` are foreverchanges' own role/severity tags (Tank/Healer/Damage
+// dealers/Important/Bleed/Fear/...), rendered as small icon badges, not a
+// closed enum here -- new ones appear as foreverchanges adds them.
+export type BossAbility = { name: string | null; icon: string; flags: string[]; description: string };
+
+// An optional single callout shown above a boss's ability list for fights
+// with a pull/phase trigger worth calling out before the per-ability list
+// (e.g. Shadetooth: "Kill the raptor matriarch in the tall grass...").
+export type BossTrigger = { flag: string | null; text: string };
+
 export type LootBoss = {
   name: string;
   kind: "boss" | "trash" | "rare" | "object" | "quest";
@@ -60,6 +74,12 @@ export type LootBoss = {
   // wowtbc.gg (which has no equivalent asset).
   portraitUrl: string | null;
   items: LootItem[];
+  // Matched onto this boss by name against foreverchanges' own map/ability
+  // pull (see build-dungeons.js's buildMapData) -- empty for any dungeon
+  // foreverchanges hasn't written fight-mechanics prose for yet (most of
+  // them, as of 2026-10-02; only 11 dungeons have this content at all).
+  trigger: BossTrigger | null;
+  abilities: BossAbility[];
 };
 
 export type QuestObjective = {
@@ -89,12 +109,60 @@ export type Quest = {
   source: "foreverchanges" | "wowtbc";
 };
 
+// A single marker on `pinMap.src`, CSS left/top percent over the image's
+// native pixel box -- same encoding QuestMapViewer.tsx already renders zone-
+// map quest pins with (foreverchanges' own x/y are already percent, not
+// pixels, so no coordinate conversion is needed, same as that component's
+// Wowhead-sourced pins).
+export type DungeonMapPin = {
+  label: string | null;
+  xPct: number;
+  yPct: number;
+  kind: "boss" | "trash" | "rare" | "entrance";
+  portraitUrl: string | null;
+};
+
+export type DungeonPinMapAttribution = { artistName: string; artistUrl: string };
+
+// One map image for one floor/wing of a dungeon -- most pin-map dungeons
+// have exactly one (`name: null`), but a few have several, switched via a
+// tab control on foreverchanges.pro itself (Shadowfang Keep: 4, Gnomeregan:
+// 4, Blackfathom Deeps: 3, the Deadmines: 2) -- see
+// scripts/extract-foreverchanges-dungeon-maps.js's parseMapFromFlight for
+// why this can only be read from the page's React Flight stream, not its
+// initial server-rendered HTML (which only ever contains the first floor).
+export type DungeonMapFloor = {
+  name: string | null;
+  src: string;
+  width: number;
+  height: number;
+  pins: DungeonMapPin[];
+};
+
+// foreverchanges.pro's own per-dungeon map image(s) with boss/trash/rare/
+// entrance pins baked in as percent coordinates -- present for only 11
+// dungeons as of 2026-10-02 (see build-dungeons.js's buildPinMap). Hotlinked
+// (foreverchanges.pro is an allowed remotePatterns host), never downloaded/
+// rehosted -- 3 of these 11 (excavation-site, hall-of-thanes, ruins-of-
+// lordaeron) are a commissioned fan map by artist Santiago Reyes, used here
+// with his permission specifically (see `attribution`); the credit + link to
+// the artist's own site must stay visible wherever this map renders.
+export type DungeonPinMap = {
+  alt: string;
+  attribution: DungeonPinMapAttribution | null;
+  floors: DungeonMapFloor[];
+};
+
 export type DungeonData = Dungeon & {
   backgroundImage: string;
   bossLootSource: "foreverchanges" | "wowtbc" | null;
   bosses: LootBoss[];
   questSource: "foreverchanges" | "wowtbc" | null;
   quests: Quest[];
+  // null for every dungeon except the 11 foreverchanges has map/pin data
+  // for -- the loot page falls back to the existing Atlas/wow.export map
+  // (getDungeonMapImage et al below) unchanged when this is null.
+  pinMap: DungeonPinMap | null;
 };
 
 // Static map image for a dungeon, converted from its raw .blp source via

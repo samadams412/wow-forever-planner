@@ -1,0 +1,332 @@
+{
+ "id": "wailing-caverns",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of Wailing Caverns in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": null,
+    "src": "/dungeons/maps/wailing-caverns.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Lord Cobrahn",
+      "xPct": 15.6,
+      "yPct": 58.5,
+      "kind": "boss",
+      "display": 4213
+     },
+     {
+      "label": "Lady Anacondra",
+      "xPct": 30.5,
+      "yPct": 43.2,
+      "kind": "boss",
+      "display": 4313
+     },
+     {
+      "label": "Lady Anacondra",
+      "xPct": 28.1,
+      "yPct": 31.8,
+      "kind": "boss",
+      "display": 4313
+     },
+     {
+      "label": "Lady Anacondra",
+      "xPct": 47,
+      "yPct": 45.6,
+      "kind": "boss",
+      "display": 4313
+     },
+     {
+      "label": "Lady Anacondra",
+      "xPct": 40.3,
+      "yPct": 27.4,
+      "kind": "boss",
+      "display": 4313
+     },
+     {
+      "label": "Kresh",
+      "xPct": 25.8,
+      "yPct": 44.6,
+      "kind": "boss",
+      "display": 5126
+     },
+     {
+      "label": "Lord Serpentis",
+      "xPct": 62.5,
+      "yPct": 53.3,
+      "kind": "boss",
+      "display": 4215
+     },
+     {
+      "label": "Verdan the Everliving",
+      "xPct": 56.4,
+      "yPct": 47.4,
+      "kind": "boss",
+      "display": 4256
+     },
+     {
+      "label": "Mutanus the Devourer",
+      "xPct": 34.2,
+      "yPct": 15.8,
+      "kind": "boss",
+      "display": 4088
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "lord-cobrahn",
+   "kind": "boss",
+   "name": "Lord Cobrahn",
+   "level": 20,
+   "display": 4213,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Lightning Bolt",
+     "icon": "/icon/spell_nature_lightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    },
+    {
+     "name": "Healing Touch",
+     "icon": "/icon/spell_nature_healingtouch.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Heals himself or an ally (3-second cast). Interrupt it."
+    },
+    {
+     "name": "Cobrahn Serpent Form",
+     "icon": "/icon/spell_nature_guardianward.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "At 30% health he turns into a serpent: slower but heavier blows, and he starts putting players to sleep."
+    }
+   ]
+  },
+  {
+   "id": "lady-anacondra",
+   "kind": "boss",
+   "name": "Lady Anacondra",
+   "level": 20,
+   "display": 4313,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Healing Touch",
+     "icon": "/icon/spell_nature_healingtouch.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Heals herself or an ally. Interrupt it."
+    },
+    {
+     "name": "Sleep",
+     "icon": "/icon/spell_nature_sleep.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Puts a player to sleep for up to 20 seconds. Damage wakes them, and a Magic dispel removes it."
+    },
+    {
+     "name": "Thorns Aura",
+     "icon": "/icon/spell_nature_thorns.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Nature damage to whoever hits her in melee."
+    }
+   ]
+  },
+  {
+   "id": "kresh",
+   "kind": "boss",
+   "name": "Kresh",
+   "level": 20,
+   "display": 5126,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Shell Shield",
+     "icon": "/icon/ability_hunter_pet_turtle.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "For 12 seconds he takes 60% less damage, and attacks slower but harder."
+    }
+   ]
+  },
+  {
+   "id": "lord-pythas",
+   "kind": "boss",
+   "name": "Lord Pythas",
+   "level": 21,
+   "display": 4214,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Thunderclap",
+     "icon": "/icon/spell_nature_thunderclap.jpg",
+     "flags": [
+      "Healers",
+      "Magic effect"
+     ],
+     "description": "Nature damage to everyone near him, then slower attacks and movement for 10 seconds."
+    },
+    {
+     "name": "Healing Touch",
+     "icon": "/icon/spell_nature_healingtouch.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Heals himself or an ally. Interrupt it."
+    },
+    {
+     "name": "Sleep",
+     "icon": "/icon/spell_nature_sleep.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Puts a player to sleep for up to 20 seconds."
+    }
+   ]
+  },
+  {
+   "id": "skum",
+   "kind": "boss",
+   "name": "Skum",
+   "level": 21,
+   "display": 4203,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Chained Bolt",
+     "icon": "/icon/spell_nature_chainlightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "A lightning bolt that jumps to a second player. Interrupt it."
+    }
+   ]
+  },
+  {
+   "id": "lord-serpentis",
+   "kind": "boss",
+   "name": "Lord Serpentis",
+   "level": 21,
+   "display": 4215,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Healing Touch",
+     "icon": "/icon/spell_nature_healingtouch.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "A slow heal (3.5 seconds) on himself or an ally. Interrupt it."
+    },
+    {
+     "name": "Sleep",
+     "icon": "/icon/spell_nature_sleep.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Puts a player to sleep for up to 20 seconds."
+    },
+    {
+     "name": "Lightning Bolt",
+     "icon": "/icon/spell_nature_lightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    }
+   ]
+  },
+  {
+   "id": "verdan-the-everliving",
+   "kind": "boss",
+   "name": "Verdan the Everliving",
+   "level": 21,
+   "display": 4256,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Grasping Vines",
+     "icon": "/icon/spell_nature_earthquake.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "When his target is close, he knocks down and roots everyone near him for 10 seconds. Ranged players, keep your distance."
+    }
+   ]
+  },
+  {
+   "id": "mutanus-the-devourer",
+   "kind": "boss",
+   "name": "Mutanus the Devourer",
+   "level": 22,
+   "display": 4088,
+   "trigger": {
+    "flag": "Important",
+    "text": "Kill Lady Anacondra, Lord Cobrahn, Lord Pythas and Lord Serpentis, then talk to the Disciple of Naralex at the entrance and escort him to Naralex. Protect him during the ritual: Mutanus comes at the end."
+   },
+   "abilities": [
+    {
+     "name": "Thundercrack",
+     "icon": "/icon/spell_nature_thunderclap.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "Nature damage to everyone near him and a 2.5-second stun."
+    },
+    {
+     "name": "Naralex's Nightmare",
+     "icon": "/icon/spell_nature_sleep.jpg",
+     "flags": [
+      "Magic effect",
+      "Can be interrupted"
+     ],
+     "description": "Puts a player to sleep for up to 15 seconds."
+    },
+    {
+     "name": "Terrify",
+     "icon": "/icon/ability_physical_taunt.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Makes a player flee in fear for 4 seconds."
+    }
+   ]
+  },
+  {
+   "id": "deviate-faerie-dragon",
+   "kind": "rare",
+   "name": "Deviate Faerie Dragon",
+   "level": 20,
+   "display": 1267,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

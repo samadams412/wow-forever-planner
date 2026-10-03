@@ -147,25 +147,44 @@ function questRewardItemToUnified(raw) {
   };
 }
 
+// foreverchanges' map/boss-ability pull (scripts/extract-foreverchanges-
+// dungeon-maps.js) is keyed by fc slug, separate from the loot-endpoint pull
+// above -- matched onto a boss here by name (case-insensitive), not id/slug,
+// since the two pulls don't share a join key and name is stable across both.
+function abilityDataByName(fcSlug) {
+  const data = readJsonIfExists(path.join(FC_DIR, `${fcSlug}.mapdata.json`));
+  if (!data) return null;
+  const byName = new Map(data.bosses.map((b) => [b.name.toLowerCase(), b]));
+  return { byName };
+}
+
 function buildBosses(ourId, fcSlug) {
+  const abilityData = abilityDataByName(fcSlug);
+  function withAbilities(boss) {
+    const match = abilityData?.byName.get(boss.name.toLowerCase());
+    return { ...boss, trigger: match?.trigger ?? null, abilities: match?.abilities ?? [] };
+  }
+
   if (!BOSS_LOOT_FALLBACK.has(ourId)) {
     const fc = readJsonIfExists(path.join(FC_DIR, `${fcSlug}.json`));
     if (fc && Array.isArray(fc.bosses) && fc.bosses.length > 0) {
       return {
         source: "foreverchanges",
-        bosses: fc.bosses.map((b) => ({
-          name: b.name,
-          kind: b.kind,
-          level: b.level ?? null,
-          // foreverchanges' own NPC portrait render, keyed by the beta
-          // client's creature display id -- verified to resolve for all
-          // 223 distinct display ids across every dungeon before relying
-          // on it (see build-dungeons.js history/commit for the check).
-          // Absent for "Trash mobs" groupings and lootable objects, which
-          // have no single NPC to portray.
-          portraitUrl: b.display ? `https://foreverchanges.pro/wow-ui/bosses/${b.display}.webp` : null,
-          items: (b.items || []).map(fcItemToUnified),
-        })),
+        bosses: fc.bosses.map((b) =>
+          withAbilities({
+            name: b.name,
+            kind: b.kind,
+            level: b.level ?? null,
+            // foreverchanges' own NPC portrait render, keyed by the beta
+            // client's creature display id -- verified to resolve for all
+            // 223 distinct display ids across every dungeon before relying
+            // on it (see build-dungeons.js history/commit for the check).
+            // Absent for "Trash mobs" groupings and lootable objects, which
+            // have no single NPC to portray.
+            portraitUrl: b.display ? `https://foreverchanges.pro/wow-ui/bosses/${b.display}.webp` : null,
+            items: (b.items || []).map(fcItemToUnified),
+          })
+        ),
       };
     }
   }
@@ -173,16 +192,64 @@ function buildBosses(ourId, fcSlug) {
   if (wowtbc && Array.isArray(wowtbc.bosses) && wowtbc.bosses.length > 0) {
     return {
       source: "wowtbc",
-      bosses: wowtbc.bosses.map((b) => ({
+      bosses: wowtbc.bosses.map((b) =>
+        withAbilities({
+          name: b.name,
+          kind: "boss",
+          level: null,
+          portraitUrl: null,
+          items: (b.items || []).map(wowtbcItemToUnified),
+        })
+      ),
+    };
+  }
+  // Neither loot source has this dungeon (as of 2026-10-02: excavation-site
+  // only) -- rather than shipping an empty page, build the boss roster
+  // straight from the map/ability pull itself (name/level/portrait/trigger/
+  // abilities, just no items) so the new map+ability content isn't silently
+  // discarded for the one dungeon that has it but no loot pull yet.
+  if (abilityData && abilityData.byName.size > 0) {
+    return {
+      source: null,
+      bosses: [...abilityData.byName.values()].map((b) => ({
         name: b.name,
-        kind: "boss",
-        level: null,
-        portraitUrl: null,
-        items: (b.items || []).map(wowtbcItemToUnified),
+        kind: b.kind,
+        level: b.level,
+        portraitUrl: b.display ? `https://foreverchanges.pro/wow-ui/bosses/${b.display}.webp` : null,
+        items: [],
+        trigger: b.trigger,
+        abilities: b.abilities,
       })),
     };
   }
   return { source: null, bosses: [] };
+}
+
+// null for any dungeon foreverchanges has no map image for (most of them --
+// see scripts/extract-foreverchanges-dungeon-maps.js's coverage report). The
+// 3 dungeons whose map is a commissioned fan piece (excavation-site, hall-
+// of-thanes, ruins-of-lordaeron) carry `attribution`; the other 8 pin
+// dungeons use official client-derived art and have none.
+function buildPinMap(fcSlug) {
+  const data = readJsonIfExists(path.join(FC_DIR, `${fcSlug}.mapdata.json`));
+  if (!data || !data.map) return null;
+  return {
+    alt: data.map.alt,
+    attribution: data.map.attribution,
+    floors: data.map.floors.map((f) => ({
+      name: f.name,
+      src: `https://foreverchanges.pro${f.src}`,
+      width: f.width,
+      height: f.height,
+      pins: f.pins.map((p) => ({
+        label: p.label,
+        xPct: p.xPct,
+        yPct: p.yPct,
+        kind: p.kind,
+        portraitUrl: p.display ? `https://foreverchanges.pro/wow-ui/bosses/${p.display}.webp` : null,
+      })),
+    })),
+  };
 }
 
 // A foreverchanges quest-group header is rendered as one text blob, e.g.
@@ -290,6 +357,7 @@ function main() {
     }
     const { source: bossLootSource, bosses } = buildBosses(dungeon.id, map.fc);
     const { source: questSource, quests } = buildQuests(dungeon.id, map.fc);
+    const pinMap = buildPinMap(map.fc);
 
     const out = {
       id: dungeon.id,
@@ -309,6 +377,7 @@ function main() {
       bosses,
       questSource,
       quests,
+      pinMap,
     };
 
     fs.writeFileSync(path.join(OUT_DIR, `${dungeon.id}.json`), JSON.stringify(out, null, 1));
@@ -320,6 +389,7 @@ function main() {
       itemCount: bosses.reduce((n, b) => n + b.items.length, 0),
       questSource,
       questCount: quests.length,
+      hasPinMap: !!pinMap,
     });
   }
 

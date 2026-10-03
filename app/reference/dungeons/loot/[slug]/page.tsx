@@ -53,7 +53,6 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
       ? [{ id: "quests", label: "Quests", iconSrc: "/images/icons/available.png" }]
       : []),
   ];
-
   return (
     <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
       <Breadcrumbs
@@ -127,7 +126,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
               </div>
             )}
 
-            {data.bosses.length > 0 && (
+            {totalItems > 0 && (
               <div className="mt-4">
                 <LootDisclaimer source={data.bossLootSource} dungeonType={dungeon.type} />
               </div>
@@ -145,6 +144,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
           mapImage={mapImage}
           mapAttribution={mapAttribution}
           mapLegend={mapLegend}
+          pinMap={data.pinMap}
           dungeonName={dungeon.name}
           authorNotes={data.authorNotes}
         />

@@ -53,6 +53,26 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Summon Boar Spirit",
+     "icon": "/icon/spell_magic_polymorphpig.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Calls a Boar Spirit to fight beside him every 30 to 45 seconds (1.5-second cast). Kill each one before the next comes."
+    },
+    {
+     "name": "Chain Heal",
+     "icon": "/icon/spell_nature_healingwavegreater.jpg",
+     "flags": [
+      "Can be interrupted",
+      "Important"
+     ],
+     "description": "Below 75% health he heals himself, and the heal jumps to two allies near him (2.5-second cast). Interrupt it."
+    }
    ]
   },
   {
@@ -145,6 +165,27 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Dominate Mind",
+     "icon": "/icon/spell_shadow_shadowworddominate.jpg",
+     "flags": [
+      "Important",
+      "Can be interrupted",
+      "Magic effect"
+     ],
+     "description": "Takes control of a player other than his target for 15 seconds (2-second cast). Interrupt it, or dispel it from the player."
+    },
+    {
+     "name": "Shadow Bolt",
+     "icon": "/icon/spell_shadow_shadowbolt.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    }
    ]
   },
   {
@@ -215,6 +256,27 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Calls for help",
+     "icon": "/icon/ability_warrior_rallyingcry.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "When pulled, he calls the creatures within 15 yards to join him, the two Razorfen Spearhides at his side among them. Crowd-control one of them."
+    },
+    {
+     "name": "Thunderclap",
+     "icon": "/icon/spell_nature_thunderclap.jpg",
+     "flags": [
+      "Tank",
+      "Healers",
+      "Magic effect"
+     ],
+     "description": "Every 8 to 14 seconds: Nature damage to everyone near him, and their attacks and movement are slowed for 10 seconds."
+    }
    ]
   },
   {
@@ -252,6 +314,26 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Whirling Barrage",
+     "icon": "/icon/inv_spear_05.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits everyone standing close."
+    },
+    {
+     "name": "Thorns Aura",
+     "icon": "/icon/spell_nature_thorns.jpg",
+     "flags": [
+      "Tank",
+      "Damage dealers"
+     ],
+     "description": "Whoever strikes him or an ally near him, Overlord Ramtusk included, takes Nature damage."
     }
    ]
   },
@@ -316,6 +398,38 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "A ward closes his cave. Kill the two Death's Head Ward Keepers standing in front of it: the ward goes down when both are dead."
+   },
+   "abilities": [
+    {
+     "name": "Left for Dead",
+     "icon": "/icon/spell_shadow_raisedead.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Every 21 to 35 seconds he strikes a player other than his target, who falls as if dead and can neither attack nor cast. Moving ends it."
+    },
+    {
+     "name": "Rampage",
+     "icon": "/icon/spell_nature_natureswrath.jpg",
+     "flags": [
+      "Tank",
+      "Healers"
+     ],
+     "description": "Every 25 to 31 seconds: hits everyone near him and stuns them for 2.5 seconds."
+    },
+    {
+     "name": "Enrage",
+     "icon": "/icon/spell_shadow_unholyfrenzy.jpg",
+     "flags": [
+      "Enrage",
+      "Tank"
+     ],
+     "description": "At 60% health, and again at 40%, he attacks 60% faster and hits harder for 2 minutes."
     }
    ]
   },
@@ -406,7 +520,12 @@
      "unknown": false,
      "source": "foreverchanges"
     }
-   ]
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "A rare bat, not there on every run. When it is, it waits in a small recess in the wall of the bat cave near Charlga Razorflank."
+   },
+   "abilities": []
   },
   {
    "name": "Charlga Razorflank",
@@ -523,6 +642,33 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Chain Bolt",
+     "icon": "/icon/spell_nature_chainlightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "She keeps her distance and casts it again and again: lightning that jumps to up to 3 players (2.5-second cast). Interrupt it."
+    },
+    {
+     "name": "Purity",
+     "icon": "/icon/spell_holy_holybolt.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Every 9 to 15 seconds she is immune to all attacks and spells for 2 seconds."
+    },
+    {
+     "name": "Renew",
+     "icon": "/icon/spell_holy_renew.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Heals a wounded ally, or herself, over 15 seconds. A priest or a shaman can remove it."
+    }
    ]
   },
   {
@@ -587,6 +733,33 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Summon Earth Rumbler",
+     "icon": "/icon/spell_nature_earthquake.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "A Stone Rumbler stands with him and fights at his side."
+    },
+    {
+     "name": "Lightning Bolt",
+     "icon": "/icon/spell_nature_lightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    },
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
     }
    ]
   },
@@ -943,7 +1116,9 @@
      "unknown": false,
      "source": "foreverchanges"
     }
-   ]
+   ],
+   "trigger": null,
+   "abilities": []
   }
  ],
  "questSource": "foreverchanges",
@@ -1489,5 +1664,82 @@
    "rewards": [],
    "source": "foreverchanges"
   }
- ]
+ ],
+ "pinMap": {
+  "alt": "Map of Razorfen Kraul in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": null,
+    "src": "https://foreverchanges.pro/dungeons/maps/razorfen-kraul.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Aggem Thorncurse",
+      "xPct": 80.8,
+      "yPct": 54.5,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/6097.webp"
+     },
+     {
+      "label": "Death Speaker Jargba",
+      "xPct": 87.9,
+      "yPct": 41.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/4644.webp"
+     },
+     {
+      "label": "Roogug",
+      "xPct": 64.8,
+      "yPct": 42.1,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/6110.webp"
+     },
+     {
+      "label": "Overlord Ramtusk",
+      "xPct": 56.9,
+      "yPct": 29.8,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/4652.webp"
+     },
+     {
+      "label": "Razorfen Spearhide",
+      "xPct": 53.4,
+      "yPct": 35.5,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/6078.webp"
+     },
+     {
+      "label": "Agathelos the Raging",
+      "xPct": 11.2,
+      "yPct": 72.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/2450.webp"
+     },
+     {
+      "label": "Blind Hunter",
+      "xPct": 11,
+      "yPct": 30.3,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/4735.webp"
+     },
+     {
+      "label": "Charlga Razorflank",
+      "xPct": 26.4,
+      "yPct": 32.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/4642.webp"
+     },
+     {
+      "label": "Earthcaller Halmgar",
+      "xPct": 49.4,
+      "yPct": 47.1,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/6102.webp"
+     }
+    ]
+   }
+  ]
+ }
 }

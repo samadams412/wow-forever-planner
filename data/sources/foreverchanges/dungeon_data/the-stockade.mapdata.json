@@ -1,0 +1,236 @@
+{
+ "id": "the-stockade",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of The Stockade in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": null,
+    "src": "/dungeons/maps/the-stockade.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Kam Deepfury",
+      "xPct": 69.2,
+      "yPct": 30.9,
+      "kind": "boss",
+      "display": 825
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 38.1,
+      "yPct": 24,
+      "kind": "rare",
+      "display": 2142
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 29.5,
+      "yPct": 44.7,
+      "kind": "rare",
+      "display": 2142
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 61.6,
+      "yPct": 48.3,
+      "kind": "rare",
+      "display": 2142
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 61.5,
+      "yPct": 25.1,
+      "kind": "rare",
+      "display": 2142
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 49.9,
+      "yPct": 24.2,
+      "kind": "boss",
+      "display": 0
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 42.4,
+      "yPct": 46.4,
+      "kind": "boss",
+      "display": 0
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 57.8,
+      "yPct": 55.2,
+      "kind": "boss",
+      "display": 0
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 33.3,
+      "yPct": 37.5,
+      "kind": "boss",
+      "display": 0
+     },
+     {
+      "label": "Hamhock",
+      "xPct": 78.2,
+      "yPct": 45.7,
+      "kind": "boss",
+      "display": 0
+     },
+     {
+      "label": "Bazil Thredd",
+      "xPct": 85.7,
+      "yPct": 51,
+      "kind": "boss",
+      "display": 0
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "kam-deepfury",
+   "kind": "boss",
+   "name": "Kam Deepfury",
+   "level": 27,
+   "display": 825,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Shield Slam",
+     "icon": "/icon/ability_warrior_shieldbash.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits the tank and stuns them for 2 seconds."
+    },
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
+   ]
+  },
+  {
+   "id": "bruegal-ironknuckle",
+   "kind": "rare",
+   "name": "Bruegal Ironknuckle",
+   "level": 26,
+   "display": 2142,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
+   ]
+  },
+  {
+   "id": "targorr-the-dread",
+   "kind": "boss",
+   "name": "Targorr the Dread",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Thrash",
+     "icon": "/icon/ability_ghoulfrenzy.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Now and then two extra attacks: heavy hits on the tank."
+    },
+    {
+     "name": "Enrage",
+     "icon": "/icon/spell_shadow_unholyfrenzy.jpg",
+     "flags": [
+      "Enrage",
+      "Tank"
+     ],
+     "description": "At 30% health he attacks 30% faster for the rest of the fight."
+    }
+   ]
+  },
+  {
+   "id": "hamhock",
+   "kind": "boss",
+   "name": "Hamhock",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Chain Lightning",
+     "icon": "/icon/spell_nature_chainlightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Lightning that jumps from player to player (2-second cast). Interrupt it."
+    },
+    {
+     "name": "Bloodlust",
+     "icon": "/icon/spell_nature_bloodlust.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Speeds up his or an ally's attacks by 30% for 30 seconds. A priest or a shaman can remove it."
+    }
+   ]
+  },
+  {
+   "id": "bazil-thredd",
+   "kind": "boss",
+   "name": "Bazil Thredd",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Smoke Bomb",
+     "icon": "/icon/ability_hibernation.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Stuns everyone near him for 4 seconds."
+    },
+    {
+     "name": "Battle Shout",
+     "icon": "/icon/ability_warrior_battleshout.jpg",
+     "flags": [],
+     "description": "More attack power for him and his allies for 2 minutes."
+    },
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
+   ]
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

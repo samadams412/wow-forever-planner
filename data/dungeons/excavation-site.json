@@ -12,8 +12,968 @@
  "confidence": null,
  "authorNotes": null,
  "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-excavation-site.webp",
- "bossLootSource": null,
- "bosses": [],
- "questSource": null,
- "quests": []
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Saltspine",
+   "kind": "boss",
+   "level": 28,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144209.webp",
+   "items": [
+    {
+     "name": "Supple Bellyskin Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273022,
+     "icon": "inv_pants_11",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "92 Armor",
+      "+14 Stamina",
+      "+6 Strength",
+      "Requires Level 26",
+      "Sell Price: 28s 51c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Saltscale Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 273023,
+     "icon": "inv_belt_21",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "124 Armor",
+      "+9 Strength",
+      "+9 Stamina",
+      "Requires Level 26",
+      "Sell Price: 17s 17c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Glinteye Slippers",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273024,
+     "icon": "inv_boots_05",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "33 Armor",
+      "+6 Intellect",
+      "+6 Spirit",
+      "+9 Stamina",
+      "Requires Level 26",
+      "Sell Price: 17s 23c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "A large health pool",
+     "icon": "/icon/spell_holy_sealofmight.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Nothing special seen in the fight: he hits and has a lot of health. He roams the marsh at the start among elite crocolisks, so clear them first or pull him away from them."
+    }
+   ]
+  },
+  {
+   "name": "Shadetooth",
+   "kind": "boss",
+   "level": 29,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144210.webp",
+   "items": [
+    {
+     "name": "Raptor's Gaze",
+     "slot": "Held In Off-hand",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273027,
+     "icon": "spell_nature_crystalball",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+7 Stamina",
+      "+4 Intellect",
+      "Requires Level 26",
+      "Equip: +5 Spell Power",
+      "Sell Price: 23s 24c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Raptorclaw Greaves",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 273025,
+     "icon": "inv_boots_chain_08",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "152 Armor",
+      "+7 Strength",
+      "+7 Stamina",
+      "+6 Intellect",
+      "Requires Level 26",
+      "Sell Price: 26s 6c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Garb of Florid Feathers",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273026,
+     "icon": "inv_misc_bandage_14",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "105 Armor",
+      "+6 Agility",
+      "+13 Intellect",
+      "+6 Stamina",
+      "Requires Level 26",
+      "Sell Price: 28s 94c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Greenhouse",
+     "slot": null,
+     "type": "Book",
+     "itemClass": 9,
+     "itemId": 273106,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Herbalism (140)",
+      "Use: Craft a Greenhouse.",
+      "\"Teaches you how to place a Greenhouse at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "Kill the raptor matriarch in the tall grass. A wave of raptors comes when she dies, and Shadetooth runs in once they are dead."
+   },
+   "abilities": [
+    {
+     "name": "Raptors in the grass",
+     "icon": "/icon/ability_druid_rake.jpg",
+     "flags": [
+      "Bleed"
+     ],
+     "description": "Small raptors jump out of the grass as you walk through it and make you bleed."
+    },
+    {
+     "name": "The wave before him",
+     "icon": "/icon/ability_hunter_pet_raptor.jpg",
+     "flags": [
+      "Important",
+      "Damage dealers"
+     ],
+     "description": "Kill every raptor of the wave before he arrives. One group wiped on its first try with Shadetooth and several raptors on it at once."
+    },
+    {
+     "name": "Fear",
+     "icon": "/icon/spell_shadow_psychicscream.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "The tank is feared several times in this fight. A shaman's Tremor Totem helps."
+    }
+   ]
+  },
+  {
+   "name": "Highland Horror",
+   "kind": "boss",
+   "level": 28,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/9010.webp",
+   "items": [
+    {
+     "name": "Horrible Rootcore",
+     "slot": null,
+     "type": "Quest",
+     "itemClass": 12,
+     "itemId": 270180,
+     "icon": "inv_misc_herb_07",
+     "quality": 1,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Quest Item",
+      "Unique",
+      "\tQuest"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "The Dragonmaw camp",
+     "icon": "/icon/inv_misc_head_dragon_black.jpg",
+     "flags": [],
+     "description": "He stands in a Dragonmaw camp. Its groups pull apart easily: take them one at a time first. The fight itself is short, nothing special seen yet."
+    }
+   ]
+  },
+  {
+   "name": "Relic Guardian",
+   "kind": "boss",
+   "level": 31,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144224.webp",
+   "items": [
+    {
+     "name": "Reliquary Mantle",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 273028,
+     "icon": "inv_shoulder_27",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "171 Armor",
+      "+12 Stamina",
+      "+4 Spirit",
+      "Requires Level 28",
+      "Sell Price: 32s 76c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Titan Relic",
+     "slot": null,
+     "type": "Quest",
+     "itemClass": 12,
+     "itemId": 270865,
+     "icon": "inv_pet_scorchedstone",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tQuest",
+      "\"Fragmented remnants of the construct, refracting light like a kaleidoscope.\""
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Golemsight Long Gun",
+     "slot": "Ranged",
+     "type": "Gun",
+     "itemClass": 2,
+     "itemId": 273029,
+     "icon": "inv_musket_02",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "29 - 54 Damage\tSpeed 2.50",
+      "(16.6 damage per second)",
+      "+6 Agility",
+      "Requires Level 28",
+      "Sell Price: 54s 56c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ring of Power Regulation",
+     "slot": "Finger",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273030,
+     "icon": "inv_jewelry_ring_28",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+8 Stamina",
+      "Requires Level 28",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 29s 20c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "He stands still at the end of the spider trail. Click the small panel next to him to wake him."
+   },
+   "abilities": [
+    {
+     "name": "Threat reset",
+     "icon": "/icon/ability_rogue_feint.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "He drops his threat and changes target during the fight. Damage dealers, slow down when the tank loses him. Tank, take him back at once."
+    }
+   ]
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-95795",
+   "faction": "Alliance",
+   "name": "Fallen in the Fen",
+   "level": 31,
+   "minLevel": 24,
+   "text": "Travel to Lakeshire and personally inform Dorin Songblade what became of his brother within the Excavation Sites.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Where to find it",
+     "value": "It starts at the body of a dwarf inside the dungeon, Dorin Songblade’s brother.",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Daewyn's Girdle",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 271769,
+     "icon": "inv_belt_16",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "28 Armor",
+      "+9 Spirit",
+      "Equip: +6 Spell Power",
+      "Equip: +10 Health Regeneration",
+      "Sell Price: 14s 33c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Songblade Stabilizer",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 271768,
+     "icon": "inv_belt_35",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "128 Armor",
+      "+10 Stamina",
+      "Equip: +8 Dodge Rating",
+      "Sell Price: 36s 88c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95810",
+   "faction": "Alliance",
+   "name": "Lost Relic Carry",
+   "level": 31,
+   "minLevel": 24,
+   "text": "Bring the Titan Relic to Prospector Whelgar in the Wetlands excavation site.",
+   "giver": {
+    "name": "From the item Titan Relic",
+    "location": "From the item Titan Relic",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Where to find it",
+     "value": "The Titan Relic drops from the Relic Guardian, the last boss. You cannot finish Prehistoric Prism for now: on October 2, players reported on Wowhead that Lost Relic Carry keeps the relic while Prehistoric Prism still asks for it.",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95646",
+   "faction": "Alliance",
+   "name": "Horrors in the Highland",
+   "level": 31,
+   "minLevel": 24,
+   "text": "Kill a Highland Horror within Excavation Sites and bring its root core to Rethiel the Greenwarden in the Wetlands.",
+   "giver": {
+    "name": "Rethiel the Greenwarden",
+    "location": "Rethiel the Greenwarden, Wetlands",
+    "mapRef": {
+     "name": "Rethiel the Greenwarden",
+     "href": "/map/eastern-kingdoms#pin=Rethiel%20the%20Greenwarden"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Horrible RootcoreHighland Horror",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/270180",
+       "name": "Horrible Rootcore",
+       "qty": null,
+       "source": "Highland Horror"
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Ironwood Destroyer",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemClass": 2,
+     "itemId": 271667,
+     "icon": "inv_hammer_16",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "75 - 114 Damage\tSpeed 3.40",
+      "(27.8 damage per second)",
+      "+9 Stamina",
+      "+7 Spirit",
+      "Equip: +24 Attack Power",
+      "Sell Price: 86s 58c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Curl of Life",
+     "slot": "Finger",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 271670,
+     "icon": "inv_jewelry_ring_12",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+7 Stamina",
+      "Equip: +5 Spell Power",
+      "Equip: +5 Health Regeneration",
+      "Sell Price: 28s 2c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Hornbeam Heft",
+     "slot": "One-Hand",
+     "type": "Axe",
+     "itemClass": 2,
+     "itemId": 271664,
+     "icon": "inv_axe_01",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tAxe",
+      "36 - 67 Damage\tSpeed 2.40",
+      "(21.5 damage per second)",
+      "+6 Stamina",
+      "+3 Strength",
+      "+3 Spirit",
+      "Sell Price: 68s 47c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95697",
+   "faction": "Horde",
+   "name": "Changing Tastes",
+   "level": 31,
+   "minLevel": 24,
+   "text": "Enter the Excavation Sites in the Wetlands and bring back Thicket Raptor Meat.",
+   "giver": {
+    "name": "Borstan",
+    "location": "Borstan, Orgrimmar",
+    "mapRef": {
+     "name": "Borstan",
+     "href": "/map/kalimdor#pin=Borstan"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Thicket Raptor Meat ×4",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/271100",
+       "name": "Thicket Raptor Meat",
+       "qty": "×4",
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Satchel of Potions",
+     "slot": "Trinket",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 280766,
+     "icon": "inv_misc_bag_08",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Trinket",
+      "Use: Reach into the bag and hope for the best.",
+      "\"Not every potion is meant for consumption.\"",
+      "Sell Price: 29s 87c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Serrated Raptor Claw",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemClass": 2,
+     "itemId": 280805,
+     "icon": "inv_weapon_shortblade_16",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "24 - 45 Damage\tSpeed 1.60",
+      "(21.6 damage per second)",
+      "+5 Agility",
+      "Equip: +10 Attack Power",
+      "\"Some claws are better for killing than cooking.\"",
+      "Sell Price: 74s 39c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Recipe: Twice-Spiced Raptor Slice",
+     "slot": null,
+     "type": "Cooking",
+     "itemClass": 9,
+     "itemId": 250185,
+     "icon": "inv_scroll_03",
+     "quality": 1,
+     "itemLevel": 1,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "\tCooking",
+      "Requires Cooking (75)",
+      "\"Teaches you how to cook Twice-Spiced Raptor Slice.\""
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Twice-Spiced Raptor Slice",
+     "slot": null,
+     "type": "Food & Drink",
+     "itemClass": 0,
+     "itemId": 250077,
+     "icon": "inv_misc_food_legion_saltpeppershank",
+     "quality": 1,
+     "itemLevel": 15,
+     "requiredLevel": 5,
+     "tooltip": [
+      "\tFood & Drink",
+      "Requires Level 5",
+      "Use: Restores 58 health over 21 sec. Must remain seated while eating. If you spend at least 10 sec eating, you will become well fed and gain 3 Intellect for 15 min. Additionally, experience gained from kills is increased by 5%.",
+      "Sell Price: 9c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95664",
+   "faction": "Horde",
+   "name": "Elder Knowledge",
+   "level": 31,
+   "minLevel": 24,
+   "text": "Take the Titan Relic to the Elder Rise in Thunder Bluff and look for someone who can tell you more about it.",
+   "giver": {
+    "name": "From the item Titan Relic",
+    "location": "From the item Titan Relic",
+    "mapRef": null
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Where to find it",
+     "value": "The Titan Relic drops from the Relic Guardian, the last boss. You cannot finish Earthen Echo for now: on October 2, players reported on Wowhead that Elder Knowledge keeps the relic while Earthen Echo still asks for it.",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": null,
+   "rewardNotes": [],
+   "rewards": [],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-95682",
+   "faction": "Horde",
+   "name": "Open the Maw",
+   "level": 31,
+   "minLevel": 24,
+   "text": "Slay the Dragonmaw forces within the Excavation Site and return to the Deathstalker Agent outside with anything you recover.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Where to find it",
+     "value": "From a Deathstalker Agent in the hills above the Dragonmaw camp, outside the dungeon. Dragonmaw Rumors sends you to her.",
+     "mapRef": null,
+     "needItems": null
+    },
+    {
+     "label": "Bring back",
+     "value": "Dragonmaw Dispatch",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/284844",
+       "name": "Dragonmaw Dispatch",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Knife-Polishing Rag",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 271740,
+     "icon": "inv_bracer_10",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "22 Armor",
+      "+4 Intellect",
+      "+7 Spirit",
+      "Equip: +5 Spell Power",
+      "Sell Price: 14s 91c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Dirt-Heavy Bracers",
+     "slot": "Wrist",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 271732,
+     "icon": "inv_bracer_04",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "47 Armor",
+      "+7 Spirit",
+      "+4 Stamina",
+      "Equip: +8 Attack Power",
+      "Sell Price: 18s 26c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ],
+ "pinMap": {
+  "alt": "Map of Excavation Site: Wetlands in WoW Forever, with where each boss stands",
+  "attribution": {
+   "artistName": "Santiago Reyes",
+   "artistUrl": "https://asguevara433.wixsite.com/srmaps"
+  },
+  "floors": [
+   {
+    "name": null,
+    "src": "https://foreverchanges.pro/dungeons/maps/excavation-site.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Saltspine",
+      "xPct": 44.8,
+      "yPct": 55,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144209.webp"
+     },
+     {
+      "label": "Shadetooth",
+      "xPct": 55.6,
+      "yPct": 46.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144210.webp"
+     },
+     {
+      "label": "Highland Horror",
+      "xPct": 87.2,
+      "yPct": 66.5,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/9010.webp"
+     },
+     {
+      "label": "Relic Guardian",
+      "xPct": 64.4,
+      "yPct": 25.3,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144224.webp"
+     },
+     {
+      "label": "Entrance",
+      "xPct": 7.5,
+      "yPct": 60.9,
+      "kind": "entrance",
+      "portraitUrl": null
+     }
+    ]
+   }
+  ]
+ }
 }

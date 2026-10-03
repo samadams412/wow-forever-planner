@@ -1,0 +1,341 @@
+{
+ "id": "the-deadmines",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of The Deadmines in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": "The Deadmines",
+    "src": "/dungeons/maps/the-deadmines-1.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Rhahk'Zor",
+      "xPct": 38.6,
+      "yPct": 60.9,
+      "kind": "boss",
+      "display": 14403
+     },
+     {
+      "label": "Miner Johnson",
+      "xPct": 52.7,
+      "yPct": 50.5,
+      "kind": "rare",
+      "display": 556
+     },
+     {
+      "label": "Sneed",
+      "xPct": 45,
+      "yPct": 88.9,
+      "kind": "boss",
+      "display": 7125
+     },
+     {
+      "label": "Sneed's Shredder",
+      "xPct": 48.5,
+      "yPct": 92.4,
+      "kind": "boss",
+      "display": 1269
+     }
+    ]
+   },
+   {
+    "name": "Ironclad Cove",
+    "src": "/dungeons/maps/the-deadmines-2.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Gilnid",
+      "xPct": 11.9,
+      "yPct": 73.1,
+      "kind": "boss",
+      "display": 7124
+     },
+     {
+      "label": "Mr. Smite",
+      "xPct": 56.1,
+      "yPct": 26.5,
+      "kind": "boss",
+      "display": 2026
+     },
+     {
+      "label": "Captain Greenskin",
+      "xPct": 61.7,
+      "yPct": 35.9,
+      "kind": "boss",
+      "display": 7113
+     },
+     {
+      "label": "Edwin VanCleef",
+      "xPct": 60.6,
+      "yPct": 45.9,
+      "kind": "boss",
+      "display": 2029
+     },
+     {
+      "label": "Cookie",
+      "xPct": 69.7,
+      "yPct": 42,
+      "kind": "boss",
+      "display": 1305
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "rhahk-zor",
+   "kind": "boss",
+   "name": "Rhahk'Zor",
+   "level": 19,
+   "display": 14403,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Rhahk'Zor Slam",
+     "icon": "/icon/inv_gauntlets_05.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits the tank hard and stuns them for 3 seconds."
+    }
+   ]
+  },
+  {
+   "id": "miner-johnson",
+   "kind": "rare",
+   "name": "Miner Johnson",
+   "level": 19,
+   "display": 556,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Pierce Armor",
+     "icon": "/icon/spell_shadow_vampiricaura.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Cuts the tank's armor by 75% for 20 seconds."
+    },
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
+   ]
+  },
+  {
+   "id": "sneed",
+   "kind": "boss",
+   "name": "Sneed",
+   "level": 20,
+   "display": 7125,
+   "trigger": {
+    "flag": "Important",
+    "text": "He pilots Sneed's Shredder and climbs out when it is destroyed."
+   },
+   "abilities": [
+    {
+     "name": "Disarm",
+     "icon": "/icon/ability_warrior_disarm.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Disarms the tank for 6 seconds."
+    }
+   ]
+  },
+  {
+   "id": "sneed-s-shredder",
+   "kind": "boss",
+   "name": "Sneed's Shredder",
+   "level": 20,
+   "display": 1269,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Terrify",
+     "icon": "/icon/ability_physical_taunt.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Makes a player flee in fear for 4 seconds."
+    },
+    {
+     "name": "Distracting Pain",
+     "icon": "/icon/ability_racial_cannibalize.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "Slows a player's casting by 35% for 15 seconds."
+    }
+   ]
+  },
+  {
+   "id": "gilnid",
+   "kind": "boss",
+   "name": "Gilnid",
+   "level": 20,
+   "display": 7124,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Molten Metal",
+     "icon": "/icon/spell_fire_fireball.jpg",
+     "flags": [
+      "Can be interrupted",
+      "Healers"
+     ],
+     "description": "Fire damage every 3 seconds for 15 seconds, with slower attacks and movement. Interrupt the 2-second cast."
+    }
+   ]
+  },
+  {
+   "id": "mr-smite",
+   "kind": "boss",
+   "name": "Mr. Smite",
+   "level": 20,
+   "display": 2026,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Smite Stomp",
+     "icon": "/icon/ability_warstomp.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 66% and again at 33% health he stuns everyone around him, then walks to his chest to change weapons."
+    },
+    {
+     "name": "Thrash",
+     "icon": "/icon/ability_ghoulfrenzy.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "With his two axes, from 66% health: extra attacks on the tank."
+    },
+    {
+     "name": "Smite Slam",
+     "icon": "/icon/inv_gauntlets_05.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "With his hammer, below 33% health: a heavy blow that stuns the tank for 3 seconds."
+    }
+   ]
+  },
+  {
+   "id": "captain-greenskin",
+   "kind": "boss",
+   "name": "Captain Greenskin",
+   "level": 20,
+   "display": 7113,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Poisoned Harpoon",
+     "icon": "/icon/ability_poisons.jpg",
+     "flags": [
+      "Poison",
+      "Can be interrupted"
+     ],
+     "description": "A 2-second cast: a hit, then Nature damage for a minute. Cure the poison."
+    },
+    {
+     "name": "Cleave",
+     "icon": "/icon/ability_warrior_cleave.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits his target and the player nearest to it."
+    }
+   ]
+  },
+  {
+   "id": "edwin-vancleef",
+   "kind": "boss",
+   "name": "Edwin VanCleef",
+   "level": 21,
+   "display": 2029,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Thrash",
+     "icon": "/icon/ability_ghoulfrenzy.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Now and then two extra attacks: heavy hits on the tank."
+    },
+    {
+     "name": "VanCleef's Allies",
+     "icon": "/icon/ability_rogue_ambush.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At half health he calls two Defias Blackguards."
+    }
+   ]
+  },
+  {
+   "id": "cookie",
+   "kind": "boss",
+   "name": "Cookie",
+   "level": 20,
+   "display": 1305,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Acid Splash",
+     "icon": "/icon/inv_drink_06.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "Nature damage every 5 seconds for 30 seconds to everyone near him."
+    },
+    {
+     "name": "Cookie's Cooking",
+     "icon": "/icon/spell_holy_heal.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Below half health he heals himself (2-second cast). Interrupt it."
+    },
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
+   ]
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "defias-gunpowder",
+   "kind": "object",
+   "name": "Defias Gunpowder",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

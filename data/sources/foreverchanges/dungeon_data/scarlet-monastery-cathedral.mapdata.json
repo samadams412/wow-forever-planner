@@ -1,0 +1,44 @@
+{
+ "id": "scarlet-monastery-cathedral",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": null,
+ "bosses": [
+  {
+   "id": "high-inquisitor-fairbanks",
+   "kind": "boss",
+   "name": "High Inquisitor Fairbanks",
+   "level": 40,
+   "display": 2605,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "scarlet-commander-mograine",
+   "kind": "boss",
+   "name": "Scarlet Commander Mograine",
+   "level": 42,
+   "display": 2042,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "high-inquisitor-whitemane",
+   "kind": "boss",
+   "name": "High Inquisitor Whitemane",
+   "level": 42,
+   "display": 2043,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

@@ -1,0 +1,418 @@
+{
+ "id": "shadowfang-keep",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of Shadowfang Keep in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": "The Courtyard",
+    "src": "/dungeons/maps/shadowfang-keep-1.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Rethilgore",
+      "xPct": 66.1,
+      "yPct": 71.1,
+      "kind": "boss",
+      "display": 524
+     },
+     {
+      "label": "Fel Steed / Shadow Charger",
+      "xPct": 33.1,
+      "yPct": 62.6,
+      "kind": "boss",
+      "display": 1952
+     },
+     {
+      "label": "Commander Springvale",
+      "xPct": 25.5,
+      "yPct": 55.6,
+      "kind": "boss",
+      "display": 3223
+     },
+     {
+      "label": "Jordan's Smithing Hammer",
+      "xPct": 37.3,
+      "yPct": 53.8,
+      "kind": "object",
+      "display": 0
+     }
+    ]
+   },
+   {
+    "name": "Dining Hall",
+    "src": "/dungeons/maps/shadowfang-keep-2.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Razorclaw the Butcher",
+      "xPct": 48,
+      "yPct": 29,
+      "kind": "boss",
+      "display": 524
+     },
+     {
+      "label": "Baron Silverlaine",
+      "xPct": 29.5,
+      "yPct": 80.3,
+      "kind": "boss",
+      "display": 3222
+     }
+    ]
+   },
+   {
+    "name": "The Wall Walk",
+    "src": "/dungeons/maps/shadowfang-keep-7.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Odo the Blindwatcher",
+      "xPct": 55.1,
+      "yPct": 77.1,
+      "kind": "boss",
+      "display": 522
+     },
+     {
+      "label": "Deathsworn Captain",
+      "xPct": 63,
+      "yPct": 52.5,
+      "kind": "rare",
+      "display": 3224
+     }
+    ]
+   },
+   {
+    "name": "Arugal's Chamber",
+    "src": "/dungeons/maps/shadowfang-keep-6.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Fenrus the Devourer",
+      "xPct": 55.7,
+      "yPct": 64.5,
+      "kind": "boss",
+      "display": 2352
+     },
+     {
+      "label": "Wolf Master Nandos",
+      "xPct": 59,
+      "yPct": 53.3,
+      "kind": "boss",
+      "display": 11179
+     },
+     {
+      "label": "Archmage Arugal",
+      "xPct": 63.9,
+      "yPct": 20,
+      "kind": "boss",
+      "display": 2353
+     },
+     {
+      "label": "The Book of Ur",
+      "xPct": 47.2,
+      "yPct": 79.3,
+      "kind": "object",
+      "display": 0
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "rethilgore",
+   "kind": "boss",
+   "name": "Rethilgore",
+   "level": 20,
+   "display": 524,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Soul Drain",
+     "icon": "/icon/spell_shadow_lifedrain02.jpg",
+     "flags": [
+      "Magic effect",
+      "Can be interrupted"
+     ],
+     "description": "Roots a player for 10 seconds and drains their health into his. Interrupt the 2-second cast or dispel it."
+    }
+   ]
+  },
+  {
+   "id": "fel-steed-shadow-charger",
+   "kind": "boss",
+   "name": "Fel Steed / Shadow Charger",
+   "level": 20,
+   "display": 1952,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Fel Stomp",
+     "icon": "/icon/ability_warstomp.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "The Fel Steed stuns everyone near it for 3 seconds, and they take more Physical damage. The Shadow Charger has no ability."
+    }
+   ]
+  },
+  {
+   "id": "razorclaw-the-butcher",
+   "kind": "boss",
+   "name": "Razorclaw the Butcher",
+   "level": 22,
+   "display": 524,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Butcher Drain",
+     "icon": "/icon/spell_shadow_siphonmana.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Drains 350 mana from his target in melee: a tank with mana feels it."
+    }
+   ]
+  },
+  {
+   "id": "baron-silverlaine",
+   "kind": "boss",
+   "name": "Baron Silverlaine",
+   "level": 24,
+   "display": 3222,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Veil of Shadow",
+     "icon": "/icon/spell_shadow_gathershadows.jpg",
+     "flags": [
+      "Curse",
+      "Healers"
+     ],
+     "description": "Curses a player: healing on them is 75% weaker for 15 seconds. Remove it, above all from the tank."
+    }
+   ]
+  },
+  {
+   "id": "commander-springvale",
+   "kind": "boss",
+   "name": "Commander Springvale",
+   "level": 24,
+   "display": 3223,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Holy Light",
+     "icon": "/icon/spell_holy_holybolt.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Heals himself or an ally (2.5-second cast). Interrupt it."
+    },
+    {
+     "name": "Divine Shield",
+     "icon": "/icon/spell_holy_divineintervention.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Makes him immune to all damage and spells for 10 seconds."
+    },
+    {
+     "name": "Hammer of Justice",
+     "icon": "/icon/spell_holy_sealofmight.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Stuns a player for 4 seconds."
+    }
+   ]
+  },
+  {
+   "id": "odo-the-blindwatcher",
+   "kind": "boss",
+   "name": "Odo the Blindwatcher",
+   "level": 24,
+   "display": 522,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Calls for help",
+     "icon": "/icon/ability_warrior_rallyingcry.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "When pulled, he calls the creatures within 30 yards to join him. Clear around him first."
+    },
+    {
+     "name": "Howling Rage",
+     "icon": "/icon/ability_bullrush.jpg",
+     "flags": [
+      "Enrage",
+      "Tank"
+     ],
+     "description": "At 60%, 40% and 20% health his blows grow stronger."
+    }
+   ]
+  },
+  {
+   "id": "deathsworn-captain",
+   "kind": "rare",
+   "name": "Deathsworn Captain",
+   "level": 25,
+   "display": 3224,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Cleave",
+     "icon": "/icon/ability_warrior_cleave.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits his target and the player nearest to it."
+    },
+    {
+     "name": "Hamstring",
+     "icon": "/icon/ability_shockwave.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Slows his target's movement for 10 seconds."
+    }
+   ]
+  },
+  {
+   "id": "arugal-s-voidwalker",
+   "kind": "boss",
+   "name": "Arugal's Voidwalker",
+   "level": 24,
+   "display": 1131,
+   "trigger": {
+    "flag": "Important",
+    "text": "Four of them come after Fenrus the Devourer dies: Arugal appears for a moment and calls them."
+   },
+   "abilities": [
+    {
+     "name": "Dark Offering",
+     "icon": "/icon/spell_shadow_haunting.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Heals another voidwalker. Bring them down one at a time."
+    }
+   ]
+  },
+  {
+   "id": "fenrus-the-devourer",
+   "kind": "boss",
+   "name": "Fenrus the Devourer",
+   "level": 25,
+   "display": 2352,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Toxic Saliva",
+     "icon": "/icon/spell_nature_corrosivebreath.jpg",
+     "flags": [
+      "Poison"
+     ],
+     "description": "Nature damage every 6 seconds and drained mana, for 2 minutes. Cure the poison."
+    }
+   ]
+  },
+  {
+   "id": "wolf-master-nandos",
+   "kind": "boss",
+   "name": "Wolf Master Nandos",
+   "level": 25,
+   "display": 11179,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "More worgs",
+     "icon": "/icon/ability_hunter_pet_wolf.jpg",
+     "flags": [
+      "Damage dealers",
+      "Important"
+     ],
+     "description": "The longer the fight, the more worgs join him: a Bleak Worg after 30 to 45 seconds, then a Slavering Worg, then a Lupine Horror."
+    }
+   ]
+  },
+  {
+   "id": "archmage-arugal",
+   "kind": "boss",
+   "name": "Archmage Arugal",
+   "level": 26,
+   "display": 2353,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Void Bolt",
+     "icon": "/icon/spell_shadow_shadowbolt.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "A 3-second Shadow bolt on the tank, over and over. Interrupt it."
+    },
+    {
+     "name": "Arugal's Curse",
+     "icon": "/icon/spell_shadow_gathershadows.jpg",
+     "flags": [
+      "Curse",
+      "Important"
+     ],
+     "description": "Turns a player other than the tank into a Shadowfang Glutton that fights for him for 10 seconds. Remove the curse."
+    },
+    {
+     "name": "Shadow Port",
+     "icon": "/icon/spell_shadow_antishadow.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "He teleports between his ledge, the upper ledge and the stairs."
+    },
+    {
+     "name": "Thundershock",
+     "icon": "/icon/spell_lightning_lightningbolt01.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "When the tank reaches him: Nature damage and a 5-second stun around him."
+    }
+   ]
+  },
+  {
+   "id": "jordan-s-smithing-hammer",
+   "kind": "object",
+   "name": "Jordan's Smithing Hammer",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "the-book-of-ur",
+   "kind": "object",
+   "name": "The Book of Ur",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

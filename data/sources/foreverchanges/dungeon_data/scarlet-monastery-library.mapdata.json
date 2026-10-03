@@ -1,0 +1,44 @@
+{
+ "id": "scarlet-monastery-library",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": null,
+ "bosses": [
+  {
+   "id": "houndmaster-loksey",
+   "kind": "boss",
+   "name": "Houndmaster Loksey",
+   "level": 34,
+   "display": 2040,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "arcanist-doan",
+   "kind": "boss",
+   "name": "Arcanist Doan",
+   "level": 37,
+   "display": 5266,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "doan-s-strongbox",
+   "kind": "object",
+   "name": "Doan's Strongbox",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

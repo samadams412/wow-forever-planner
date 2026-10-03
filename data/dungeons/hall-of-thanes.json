@@ -97,6 +97,18 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Curses and diseases",
+     "icon": "/icon/spell_shadow_curseofsargeras.jpg",
+     "flags": [
+      "Curse",
+      "Disease"
+     ],
+     "description": "A way to remove a curse or cure a disease comes in handy. Otherwise an easy fight: clear the room before the pull."
+    }
    ]
   },
   {
@@ -185,6 +197,26 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "The summoner",
+     "icon": "/icon/spell_shadow_summonimp.jpg",
+     "flags": [
+      "Important",
+      "Damage dealers"
+     ],
+     "description": "Kill the summoner first: he keeps bringing adds. Then turn on the elemental."
+    },
+    {
+     "name": "Fire all around",
+     "icon": "/icon/spell_fire_fire.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "Area damage on the group, worse when many of you fight in melee."
     }
    ]
   },
@@ -277,6 +309,18 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Knocked across the room",
+     "icon": "/icon/ability_warstomp.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "He punts people around the room. Clear the packs closest to him and tank him near the tunnel, so nobody lands in another pack."
     }
    ]
   },
@@ -387,6 +431,23 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Fear at low health",
+     "icon": "/icon/spell_shadow_psychicscream.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "When his health gets low he fears the whole group. Bring a way to break it, or clear the room first so nobody runs into more enemies."
+    },
+    {
+     "name": "The locked vaults",
+     "icon": "/icon/inv_misc_key_03.jpg",
+     "flags": [],
+     "description": "After the fight, open the vaults of the room: about 24 Dwarven Heirlooms for Important Heirlooms, and the tablet of The Treaty of Understanding."
     }
    ]
   }
@@ -758,5 +819,71 @@
    ],
    "source": "foreverchanges"
   }
- ]
+ ],
+ "pinMap": {
+  "alt": "Map of Hall of Thanes in WoW Forever, with where each boss stands",
+  "attribution": {
+   "artistName": "Santiago Reyes",
+   "artistUrl": "https://asguevara433.wixsite.com/srmaps"
+  },
+  "floors": [
+   {
+    "name": null,
+    "src": "https://foreverchanges.pro/dungeons/maps/hall-of-thanes.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Faldrim Anvilmar",
+      "xPct": 50.9,
+      "yPct": 62.5,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/142826.webp"
+     },
+     {
+      "label": "Magmatus",
+      "xPct": 62.5,
+      "yPct": 49,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/1070.webp"
+     },
+     {
+      "label": "Plunder",
+      "xPct": 51,
+      "yPct": 49.5,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/142840.webp"
+     },
+     {
+      "label": "Durgen Dirgehammer",
+      "xPct": 51,
+      "yPct": 22,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/142837.webp"
+     },
+     {
+      "label": "Entrance",
+      "xPct": 50.9,
+      "yPct": 93.4,
+      "kind": "entrance",
+      "portraitUrl": null
+     },
+     {
+      "label": null,
+      "xPct": 40,
+      "yPct": 63.8,
+      "kind": "quest",
+      "portraitUrl": null
+     },
+     {
+      "label": null,
+      "xPct": 54.6,
+      "yPct": 16.9,
+      "kind": "quest",
+      "portraitUrl": null
+     }
+    ]
+   }
+  ]
+ }
 }

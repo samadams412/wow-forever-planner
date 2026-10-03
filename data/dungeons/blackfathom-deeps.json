@@ -112,6 +112,17 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Trample",
+     "icon": "/icon/spell_nature_natureswrath.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits everyone standing close."
+    }
    ]
   },
   {
@@ -250,6 +261,33 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Forked Lightning",
+     "icon": "/icon/spell_nature_chainlightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Nature damage in a cone in front of her (2-second cast). Stay out of the cone."
+    },
+    {
+     "name": "Frost Nova",
+     "icon": "/icon/spell_frost_frostnova.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Freezes everyone near her in place for up to 8 seconds."
+    },
+    {
+     "name": "Slow",
+     "icon": "/icon/spell_nature_slow.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Slows a player's movement and attacks for 10 seconds."
+    }
    ]
   },
   {
@@ -354,6 +392,15 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Net",
+     "icon": "/icon/ability_ensnare.jpg",
+     "flags": [],
+     "description": "Roots a player in place for 10 seconds."
+    }
    ]
   },
   {
@@ -390,6 +437,25 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Lightning Shield",
+     "icon": "/icon/spell_nature_lightningshield.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Lightning strikes whoever hits him. A priest or a shaman can remove it."
+    },
+    {
+     "name": "Lightning Bolt",
+     "icon": "/icon/spell_nature_lightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    }
    ]
   },
   {
@@ -422,6 +488,29 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "Click the Fathom Stone in the water: he rises from it."
+   },
+   "abilities": [
+    {
+     "name": "Frostbolt",
+     "icon": "/icon/spell_frost_frostbolt02.jpg",
+     "flags": [
+      "Can be interrupted",
+      "Magic effect"
+     ],
+     "description": "He keeps his distance to cast it: Frost damage and a slow."
+    },
+    {
+     "name": "Frost Nova",
+     "icon": "/icon/spell_frost_frostnova.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Roots everyone near him for up to 8 seconds."
     }
    ]
   },
@@ -530,6 +619,26 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Sleep",
+     "icon": "/icon/spell_nature_sleep.jpg",
+     "flags": [
+      "Magic effect",
+      "Important"
+     ],
+     "description": "Puts everyone near him to sleep for up to 10 seconds. Damage wakes a sleeper."
+    },
+    {
+     "name": "Mind Blast",
+     "icon": "/icon/spell_shadow_unholyfrenzy.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Shadow damage on a player (1.5-second cast)."
     }
    ]
   },
@@ -644,7 +753,12 @@
      "unknown": false,
      "source": "foreverchanges"
     }
-   ]
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "He waits in an underwater cave below Twilight Lord Kelris's temple, where groups often miss him. Swim under the temple to reach him."
+   },
+   "abilities": []
   },
   {
    "name": "Aku'mai",
@@ -759,6 +873,30 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "Once Twilight Lord Kelris is dead, light the four Fires of Aku'mai in his room, one after the other. Each one brings a wave of creatures. When all are dead, the door to Aku'mai opens."
+   },
+   "abilities": [
+    {
+     "name": "Poison Cloud",
+     "icon": "/icon/spell_nature_regenerate.jpg",
+     "flags": [
+      "Poison",
+      "Healers"
+     ],
+     "description": "Nature damage every 5 seconds for 45 seconds to everyone nearby."
+    },
+    {
+     "name": "Frenzied Rage",
+     "icon": "/icon/spell_shadow_unholyfrenzy.jpg",
+     "flags": [
+      "Enrage",
+      "Tank"
+     ],
+     "description": "Below 30% health: bursts of attacks 75% faster, over and over."
     }
    ]
   },
@@ -1212,7 +1350,9 @@
      "unknown": false,
      "source": "foreverchanges"
     }
-   ]
+   ],
+   "trigger": null,
+   "abilities": []
   }
  ],
  "questSource": "foreverchanges",
@@ -2079,5 +2219,112 @@
    "rewards": [],
    "source": "foreverchanges"
   }
- ]
+ ],
+ "pinMap": {
+  "alt": "Map of Blackfathom Deeps in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": "The Pool of Ask'Ar",
+    "src": "https://foreverchanges.pro/dungeons/maps/blackfathom-deeps-1.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Ghamoo-ra",
+      "xPct": 32.9,
+      "yPct": 60.2,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/5027.webp"
+     },
+     {
+      "label": "Lady Sarevess",
+      "xPct": 10.1,
+      "yPct": 36,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/4979.webp"
+     },
+     {
+      "label": "Gelihast",
+      "xPct": 52.3,
+      "yPct": 55.1,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/1773.webp"
+     }
+    ]
+   },
+   {
+    "name": "Moonshrine Sanctum",
+    "src": "https://foreverchanges.pro/dungeons/maps/blackfathom-deeps-2.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Lorgus Jett",
+      "xPct": 38.8,
+      "yPct": 20,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/12822.webp"
+     },
+     {
+      "label": "Lorgus Jett",
+      "xPct": 44.1,
+      "yPct": 23.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/12822.webp"
+     },
+     {
+      "label": "Lorgus Jett",
+      "xPct": 35.4,
+      "yPct": 48.3,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/12822.webp"
+     },
+     {
+      "label": "Lorgus Jett",
+      "xPct": 33.8,
+      "yPct": 72.3,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/12822.webp"
+     },
+     {
+      "label": "Baron Aquanis",
+      "xPct": 41.5,
+      "yPct": 75.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/110.webp"
+     },
+     {
+      "label": "Twilight Lord Kelris",
+      "xPct": 51.9,
+      "yPct": 81.6,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/4939.webp"
+     },
+     {
+      "label": "Aku'mai",
+      "xPct": 85.6,
+      "yPct": 86.6,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/2837.webp"
+     }
+    ]
+   },
+   {
+    "name": "The Forgotten Pool",
+    "src": "https://foreverchanges.pro/dungeons/maps/blackfathom-deeps-3.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Old Serra'kis",
+      "xPct": 60.6,
+      "yPct": 31.2,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/1816.webp"
+     }
+    ]
+   }
+  ]
+ }
 }

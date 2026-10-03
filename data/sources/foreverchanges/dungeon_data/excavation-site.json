@@ -1,0 +1,340 @@
+{
+ "id": "excavation-site",
+ "bosses": [
+  {
+   "name": "Saltspine",
+   "kind": "boss",
+   "level": 28,
+   "display": 144209,
+   "items": [
+    {
+     "i": 273022,
+     "n": "Supple Bellyskin Leggings",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Legs",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_pants_11",
+     "x": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "92 Armor",
+      "+14 Stamina",
+      "+6 Strength",
+      "Requires Level 26",
+      "Sell Price: 28s 51c"
+     ],
+     "v": {
+      "4": 6,
+      "7": 14,
+      "50": 92
+     },
+     "w": 1
+    },
+    {
+     "i": 273023,
+     "n": "Saltscale Girdle",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Waist",
+     "c": 4,
+     "u": 3,
+     "t": "new",
+     "k": "inv_belt_21",
+     "x": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "124 Armor",
+      "+9 Strength",
+      "+9 Stamina",
+      "Requires Level 26",
+      "Sell Price: 17s 17c"
+     ],
+     "v": {
+      "4": 9,
+      "7": 9,
+      "50": 124
+     },
+     "w": 1
+    },
+    {
+     "i": 273024,
+     "n": "Glinteye Slippers",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Feet",
+     "c": 4,
+     "u": 1,
+     "t": "new",
+     "k": "inv_boots_05",
+     "x": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "33 Armor",
+      "+6 Intellect",
+      "+6 Spirit",
+      "+9 Stamina",
+      "Requires Level 26",
+      "Sell Price: 17s 23c"
+     ],
+     "v": {
+      "5": 6,
+      "6": 6,
+      "7": 9,
+      "50": 33
+     },
+     "w": 1
+    }
+   ]
+  },
+  {
+   "name": "Shadetooth",
+   "kind": "boss",
+   "level": 29,
+   "display": 144210,
+   "items": [
+    {
+     "i": 273027,
+     "n": "Raptor's Gaze",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Held In Off-hand",
+     "c": 4,
+     "u": 0,
+     "t": "new",
+     "k": "spell_nature_crystalball",
+     "x": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+7 Stamina",
+      "+4 Intellect",
+      "Requires Level 26",
+      "Equip: +5 Spell Power",
+      "Sell Price: 23s 24c"
+     ],
+     "v": {
+      "5": 4,
+      "7": 7,
+      "45": 5
+     },
+     "w": 1
+    },
+    {
+     "i": 273025,
+     "n": "Raptorclaw Greaves",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Feet",
+     "c": 4,
+     "u": 3,
+     "t": "new",
+     "k": "inv_boots_chain_08",
+     "x": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "152 Armor",
+      "+7 Strength",
+      "+7 Stamina",
+      "+6 Intellect",
+      "Requires Level 26",
+      "Sell Price: 26s 6c"
+     ],
+     "v": {
+      "4": 7,
+      "5": 6,
+      "7": 7,
+      "50": 152
+     },
+     "w": 1
+    },
+    {
+     "i": 273026,
+     "n": "Garb of Florid Feathers",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Chest",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_misc_bandage_14",
+     "x": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "105 Armor",
+      "+6 Agility",
+      "+13 Intellect",
+      "+6 Stamina",
+      "Requires Level 26",
+      "Sell Price: 28s 94c"
+     ],
+     "v": {
+      "3": 6,
+      "5": 13,
+      "7": 6,
+      "50": 105
+     },
+     "w": 1
+    },
+    {
+     "i": 273106,
+     "n": "Blueprint: Greenhouse",
+     "q": 2,
+     "l": 25,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 0,
+     "t": "new",
+     "k": "inv_garrison_blueprints3",
+     "x": [
+      "\tBook",
+      "Requires Herbalism (140)",
+      "Use: Craft a Greenhouse.",
+      "\"Teaches you how to place a Greenhouse at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "w": 1
+    }
+   ]
+  },
+  {
+   "name": "Highland Horror",
+   "kind": "boss",
+   "level": 28,
+   "display": 9010,
+   "items": [
+    {
+     "i": 270180,
+     "n": "Horrible Rootcore",
+     "q": 1,
+     "l": 25,
+     "r": 0,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "new",
+     "k": "inv_misc_herb_07",
+     "x": [
+      "Quest Item",
+      "Unique",
+      "\tQuest"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Relic Guardian",
+   "kind": "boss",
+   "level": 31,
+   "display": 144224,
+   "items": [
+    {
+     "i": 273028,
+     "n": "Reliquary Mantle",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Shoulder",
+     "c": 4,
+     "u": 3,
+     "t": "new",
+     "k": "inv_shoulder_27",
+     "x": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "171 Armor",
+      "+12 Stamina",
+      "+4 Spirit",
+      "Requires Level 28",
+      "Sell Price: 32s 76c"
+     ],
+     "v": {
+      "6": 4,
+      "7": 12,
+      "50": 171
+     },
+     "w": 1
+    },
+    {
+     "i": 270865,
+     "n": "Titan Relic",
+     "q": 1,
+     "l": 1,
+     "r": 1,
+     "s": null,
+     "c": 12,
+     "u": 0,
+     "t": "new",
+     "k": "inv_pet_scorchedstone",
+     "x": [
+      "Binds when picked up",
+      "Unique",
+      "This Item Begins a Quest",
+      "\tQuest",
+      "\"Fragmented remnants of the construct, refracting light like a kaleidoscope.\""
+     ]
+    },
+    {
+     "i": 273029,
+     "n": "Golemsight Long Gun",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Ranged",
+     "c": 2,
+     "u": 3,
+     "t": "new",
+     "k": "inv_musket_02",
+     "x": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "29 - 54 Damage\tSpeed 2.50",
+      "(16.6 damage per second)",
+      "+6 Agility",
+      "Requires Level 28",
+      "Sell Price: 54s 56c"
+     ],
+     "v": {
+      "3": 6
+     },
+     "w": 1
+    },
+    {
+     "i": 273030,
+     "n": "Ring of Power Regulation",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Finger",
+     "c": 4,
+     "u": 0,
+     "t": "new",
+     "k": "inv_jewelry_ring_28",
+     "x": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+8 Stamina",
+      "Requires Level 28",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 29s 20c"
+     ],
+     "v": {
+      "7": 8,
+      "43": 2
+     },
+     "w": 1
+    }
+   ]
+  }
+ ],
+ "hints": []
+}

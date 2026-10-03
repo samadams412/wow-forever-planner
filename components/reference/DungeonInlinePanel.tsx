@@ -145,10 +145,10 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
             </button>
           </div>
 
-          <div className="flex min-h-[220px] flex-1">
+          <div className="flex h-[320px] flex-1">
             {tab === "bosses" && data.bosses.length > 0 && (
               <>
-                <ul className="w-32 shrink-0 cursor-default overflow-y-auto border-r border-border py-1 sm:w-40">
+                <ul className="scrollbar-gold w-32 shrink-0 cursor-default overflow-y-auto border-r border-border py-1 sm:w-40">
                   {data.bosses.map((b, i) => (
                     <li key={`${b.name}-${i}`}>
                       <button
@@ -163,7 +163,7 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                     </li>
                   ))}
                 </ul>
-                <div className="min-w-0 flex-1 cursor-default overflow-y-auto p-3">
+                <div className="scrollbar-gold min-w-0 flex-1 cursor-default overflow-y-auto p-3">
                   {boss && (
                     <>
                       <div className="mb-1.5 flex items-center gap-2">
@@ -183,7 +183,7 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
 
             {tab === "quests" && data.quests.length > 0 && (
               <>
-                <ul className="w-32 shrink-0 cursor-default overflow-y-auto border-r border-border py-1 sm:w-40">
+                <ul className="scrollbar-gold w-32 shrink-0 cursor-default overflow-y-auto border-r border-border py-1 sm:w-40">
                   {data.quests.map((q, i) => (
                     <li key={q.id}>
                       <button
@@ -203,7 +203,7 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                     </li>
                   ))}
                 </ul>
-                <div className="min-w-0 flex-1 cursor-default overflow-y-auto p-3">
+                <div className="scrollbar-gold min-w-0 flex-1 cursor-default overflow-y-auto p-3">
                   {quest && (
                     <>
                       <div className="mb-1.5 flex flex-wrap items-baseline gap-x-2">

@@ -1,0 +1,146 @@
+{
+ "id": "ragefire-chasm",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of Ragefire Chasm in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": null,
+    "src": "/dungeons/maps/ragefire-chasm.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Oggleflint",
+      "xPct": 56.1,
+      "yPct": 38,
+      "kind": "boss",
+      "display": 11611
+     },
+     {
+      "label": "Taragaman the Hungerer",
+      "xPct": 41,
+      "yPct": 57.7,
+      "kind": "boss",
+      "display": 7970
+     },
+     {
+      "label": "Jergosh the Invoker",
+      "xPct": 33,
+      "yPct": 84.5,
+      "kind": "boss",
+      "display": 11429
+     },
+     {
+      "label": "Bazzalan",
+      "xPct": 41.5,
+      "yPct": 86.2,
+      "kind": "boss",
+      "display": 2007
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "oggleflint",
+   "kind": "boss",
+   "name": "Oggleflint",
+   "level": 16,
+   "display": 11611,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Cleave",
+     "icon": "/icon/ability_warrior_cleave.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits his target and the player nearest to it."
+    }
+   ]
+  },
+  {
+   "id": "taragaman-the-hungerer",
+   "kind": "boss",
+   "name": "Taragaman the Hungerer",
+   "level": 16,
+   "display": 7970,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Fire Nova",
+     "icon": "/icon/spell_fire_sealoffire.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "Fire damage to everyone near him, several times a fight. Healers, keep the melee topped up."
+    },
+    {
+     "name": "Uppercut",
+     "icon": "/icon/inv_gauntlets_05.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "A heavy blow that knocks the tank back."
+    }
+   ]
+  },
+  {
+   "id": "jergosh-the-invoker",
+   "kind": "boss",
+   "name": "Jergosh the Invoker",
+   "level": 16,
+   "display": 11429,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Immolate",
+     "icon": "/icon/spell_fire_immolation.jpg",
+     "flags": [
+      "Can be interrupted",
+      "Magic effect"
+     ],
+     "description": "Burns a player, then Fire damage every few seconds for 21 seconds. Interrupt the cast or dispel the burn."
+    },
+    {
+     "name": "Curse of Weakness",
+     "icon": "/icon/spell_shadow_curseofmannoroth.jpg",
+     "flags": [
+      "Curse"
+     ],
+     "description": "Lowers a player's Physical damage for 30 seconds. A mage or a druid can remove it."
+    }
+   ]
+  },
+  {
+   "id": "bazzalan",
+   "kind": "boss",
+   "name": "Bazzalan",
+   "level": 16,
+   "display": 2007,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Poison",
+     "icon": "/icon/spell_nature_corrosivebreath.jpg",
+     "flags": [
+      "Poison"
+     ],
+     "description": "His blows poison: Nature damage over time. Cure it if you can."
+    },
+    {
+     "name": "Sinister Strike",
+     "icon": "/icon/spell_shadow_ritualofsacrifice.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Extra damage on the tank every 5 to 15 seconds."
+    }
+   ]
+  }
+ ]
+}

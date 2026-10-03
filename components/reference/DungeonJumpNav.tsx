@@ -10,9 +10,25 @@ export type JumpNavEntry = { id: string; label: string; portraitUrl?: string | n
 // viewport's upper third -- IntersectionObserver rather than a scroll
 // listener, so this stays cheap on long loot pages (30+ boss/quest anchors
 // on some dungeons).
-export default function DungeonJumpNav({ entries }: { entries: JumpNavEntry[] }) {
+export default function DungeonJumpNav({
+  entries,
+  onActiveChange,
+}: {
+  entries: JumpNavEntry[];
+  // Reported whenever the scroll-synced active section changes, so a
+  // sibling component (the pin map) can highlight the same boss without
+  // duplicating this IntersectionObserver logic.
+  onActiveChange?: (entry: JumpNavEntry | null) => void;
+}) {
   const [activeId, setActiveId] = useState<string | null>(entries[0]?.id ?? null);
   const visibleIds = useRef<Set<string>>(new Set());
+
+  // Reports only on an actual activeId change, not on every parent re-render
+  // (onActiveChange is a fresh closure each time).
+  useEffect(() => {
+    onActiveChange?.(entries.find((e) => e.id === activeId) ?? null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeId]);
 
   useEffect(() => {
     const elements = entries

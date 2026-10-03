@@ -91,3 +91,9 @@ data/sources/client-db2/*/zone-grid-*.bin
 # parsed into data/sources/wowhead/quest-text.json by
 # scripts/build-wowhead-quest-text.js -- only the parsed output is committed.
 /data/sources/wowhead/quests/scraped_quests_output.json
+
+# Raw foreverchanges.pro dungeon-page HTML, cached by
+# scripts/extract-foreverchanges-dungeon-maps.js so a parser bug doesn't
+# require re-hitting the live site -- only its parsed <slug>.mapdata.json
+# output is committed.
+/data/sources/foreverchanges/raw-html/

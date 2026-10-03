@@ -100,6 +100,25 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Hurled into the air",
+     "icon": "/icon/ability_smash.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Throws the tank into the air and stuns him for 5 seconds. Damage dealers, watch your threat: the tank is on him only about half the fight."
+    },
+    {
+     "name": "A patrol",
+     "icon": "/icon/ability_eyeoftheowl.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Clear his room before the pull: a patrol walks by. His head is looted for the quests Abominable Creatures and Unending Torment."
+    }
    ]
   },
   {
@@ -187,6 +206,17 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Spiders of the courtyard",
+     "icon": "/icon/inv_misc_monsterspidercarapace_01.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Nothing special on the boss itself. Clear the other spiders of the courtyard first, or they join the fight."
     }
    ]
   },
@@ -278,6 +308,20 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "Clear the courtyard, click the statue and survive the waves: she comes after them."
+   },
+   "abilities": [
+    {
+     "name": "Frost Nova",
+     "icon": "/icon/spell_frost_frostnova.jpg",
+     "flags": [
+      "Healers"
+     ],
+     "description": "Frost damage to the whole group. Healers, pace your mana through the waves."
+    }
    ]
   },
   {
@@ -364,6 +408,35 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Knockback",
+     "icon": "/icon/ability_warstomp.jpg",
+     "flags": [
+      "Tank",
+      "Important"
+     ],
+     "description": "Knocks you back: clear the packs around him first, or you land in one."
+    },
+    {
+     "name": "Anti-Magic Shield",
+     "icon": "/icon/spell_shadow_antimagicshell.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Shields himself against spells for a while."
+    },
+    {
+     "name": "Heavy blows",
+     "icon": "/icon/ability_warrior_decisivestrike.jpg",
+     "flags": [
+      "Tank",
+      "Healers"
+     ],
+     "description": "He hits hard: keep the tank topped up."
     }
    ]
   },
@@ -455,6 +528,26 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Flamestrike",
+     "icon": "/icon/spell_fire_selfdestruct.jpg",
+     "flags": [
+      "Deadly",
+      "Can be interrupted"
+     ],
+     "description": "His main spell. He can be interrupted and stunned: plan your kicks and stuns."
+    },
+    {
+     "name": "A large health pool",
+     "icon": "/icon/spell_holy_sealofmight.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "The longest fight of the dungeon. Keep the interrupts going and bring him down."
+    }
    ]
   },
   {
@@ -544,6 +637,29 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": {
+    "flag": "Important",
+    "text": "Clear the house and the statue, click the fireplace and survive the waves. He comes after the last flesh golem."
+   },
+   "abilities": [
+    {
+     "name": "Poison",
+     "icon": "/icon/ability_creature_poison_05.jpg",
+     "flags": [
+      "Poison",
+      "Healers"
+     ],
+     "description": "Poisons his target. Watch the health bars."
+    },
+    {
+     "name": "Heavy blows",
+     "icon": "/icon/ability_warrior_decisivestrike.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "He hits hard: keep the tank healthy. Bring mana potions for the waves before him."
+    }
    ]
   },
   {
@@ -623,7 +739,9 @@
      "unknown": false,
      "source": "foreverchanges"
     }
-   ]
+   ],
+   "trigger": null,
+   "abilities": []
   }
  ],
  "questSource": "foreverchanges",
@@ -1323,5 +1441,85 @@
    ],
    "source": "foreverchanges"
   }
- ]
+ ],
+ "pinMap": {
+  "alt": "Map of Ruins of Lordaeron in WoW Forever, with where each boss stands",
+  "attribution": {
+   "artistName": "Santiago Reyes",
+   "artistUrl": "https://asguevara433.wixsite.com/srmaps"
+  },
+  "floors": [
+   {
+    "name": null,
+    "src": "https://foreverchanges.pro/dungeons/maps/ruins-of-lordaeron.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "The Baron",
+      "xPct": 58.8,
+      "yPct": 69.8,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144188.webp"
+     },
+     {
+      "label": "Witherfang",
+      "xPct": 66.8,
+      "yPct": 39.2,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144189.webp"
+     },
+     {
+      "label": "The Abandoned",
+      "xPct": 41,
+      "yPct": 53.3,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/138667.webp"
+     },
+     {
+      "label": "Bjork",
+      "xPct": 39.2,
+      "yPct": 42.5,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144170.webp"
+     },
+     {
+      "label": "Rath'mael",
+      "xPct": 45.8,
+      "yPct": 62.7,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/144175.webp"
+     },
+     {
+      "label": "Viktor the Vile",
+      "xPct": 37.7,
+      "yPct": 64.8,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/139455.webp"
+     },
+     {
+      "label": "Lordaeron Captain",
+      "xPct": 38.5,
+      "yPct": 25,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/139050.webp"
+     },
+     {
+      "label": "Entrance",
+      "xPct": 61,
+      "yPct": 21.6,
+      "kind": "entrance",
+      "portraitUrl": null
+     },
+     {
+      "label": null,
+      "xPct": 62.4,
+      "yPct": 28.5,
+      "kind": "quest",
+      "portraitUrl": null
+     }
+    ]
+   }
+  ]
+ }
 }

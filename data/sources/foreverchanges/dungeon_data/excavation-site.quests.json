@@ -2,5 +2,234 @@
  "id": "excavation-site",
  "source": "foreverchanges.pro",
  "section": "quests",
- "groups": []
+ "groups": [
+  {
+   "groupNameFull": "Alliance3 quests",
+   "quests": [
+    {
+     "id": "quest-95795",
+     "name": "Fallen in the Fen",
+     "levelText": "Level 31, from level 24",
+     "questText": "Travel to Lakeshire and personally inform Dorin Songblade what became of his brother within the Excavation Sites.",
+     "fields": [
+      {
+       "label": "Where to find it",
+       "value": "It starts at the body of a dwarf inside the dungeon, Dorin Songblade’s brother.",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/271769",
+       "name": "Daewyn's Girdle",
+       "type": "Waist, Cloth"
+      },
+      {
+       "itemHref": "/item/271768",
+       "name": "Songblade Stabilizer",
+       "type": "Waist, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-95810",
+     "name": "Lost Relic Carry",
+     "levelText": "Level 31, from level 24",
+     "questText": "Bring the Titan Relic to Prospector Whelgar in the Wetlands excavation site.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Titan Relic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Where to find it",
+       "value": "The Titan Relic drops from the Relic Guardian, the last boss. You cannot finish Prehistoric Prism for now: on October 2, players reported on Wowhead that Lost Relic Carry keeps the relic while Prehistoric Prism still asks for it.",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-95646",
+     "name": "Horrors in the Highland",
+     "levelText": "Level 31, from level 24",
+     "questText": "Kill a Highland Horror within Excavation Sites and bring its root core to Rethiel the Greenwarden in the Wetlands.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Rethiel the Greenwarden, Wetlands",
+       "mapRef": {
+        "name": "Rethiel the Greenwarden",
+        "href": "/map/eastern-kingdoms#pin=Rethiel%20the%20Greenwarden"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Horrible RootcoreHighland Horror",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/270180",
+         "name": "Horrible Rootcore",
+         "qty": null,
+         "source": "Highland Horror"
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/271667",
+       "name": "Ironwood Destroyer",
+       "type": "Two-Hand, Mace"
+      },
+      {
+       "itemHref": "/item/271670",
+       "name": "Curl of Life",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/271664",
+       "name": "Hornbeam Heft",
+       "type": "One-Hand, Axe"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde3 quests",
+   "quests": [
+    {
+     "id": "quest-95697",
+     "name": "Changing Tastes",
+     "levelText": "Level 31, from level 24",
+     "questText": "Enter the Excavation Sites in the Wetlands and bring back Thicket Raptor Meat.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Borstan, Orgrimmar",
+       "mapRef": {
+        "name": "Borstan",
+        "href": "/map/kalimdor#pin=Borstan"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Thicket Raptor Meat ×4",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/271100",
+         "name": "Thicket Raptor Meat",
+         "qty": "×4",
+         "source": null
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/280766",
+       "name": "Satchel of Potions",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/280805",
+       "name": "Serrated Raptor Claw",
+       "type": "One-Hand, Dagger"
+      },
+      {
+       "itemHref": "/item/250185",
+       "name": "Recipe: Twice-Spiced Raptor Slice",
+       "type": "Cooking"
+      },
+      {
+       "itemHref": "/item/250077",
+       "name": "Twice-Spiced Raptor Slice",
+       "type": "Food & Drink"
+      }
+     ]
+    },
+    {
+     "id": "quest-95664",
+     "name": "Elder Knowledge",
+     "levelText": "Level 31, from level 24",
+     "questText": "Take the Titan Relic to the Elder Rise in Thunder Bluff and look for someone who can tell you more about it.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "From the item Titan Relic",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Where to find it",
+       "value": "The Titan Relic drops from the Relic Guardian, the last boss. You cannot finish Earthen Echo for now: on October 2, players reported on Wowhead that Elder Knowledge keeps the relic while Earthen Echo still asks for it.",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": null,
+     "rewardNotes": [],
+     "rewards": []
+    },
+    {
+     "id": "quest-95682",
+     "name": "Open the Maw",
+     "levelText": "Level 31, from level 24",
+     "questText": "Slay the Dragonmaw forces within the Excavation Site and return to the Deathstalker Agent outside with anything you recover.",
+     "fields": [
+      {
+       "label": "Where to find it",
+       "value": "From a Deathstalker Agent in the hills above the Dragonmaw camp, outside the dungeon. Dragonmaw Rumors sends you to her.",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Dragonmaw Dispatch",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/284844",
+         "name": "Dragonmaw Dispatch",
+         "qty": null,
+         "source": null
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/271740",
+       "name": "Knife-Polishing Rag",
+       "type": "Wrist, Cloth"
+      },
+      {
+       "itemHref": "/item/271732",
+       "name": "Dirt-Heavy Bracers",
+       "type": "Wrist, Leather"
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }

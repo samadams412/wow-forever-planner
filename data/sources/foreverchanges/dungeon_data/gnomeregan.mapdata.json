@@ -1,0 +1,270 @@
+{
+ "id": "gnomeregan",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of Gnomeregan in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": "The Hall of Gears",
+    "src": "/dungeons/maps/gnomeregan-1.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Grubbis",
+      "xPct": 81.9,
+      "yPct": 65.1,
+      "kind": "boss",
+      "display": 6533
+     },
+     {
+      "label": "Viscous Fallout",
+      "xPct": 57.6,
+      "yPct": 56.6,
+      "kind": "boss",
+      "display": 5497
+     }
+    ]
+   },
+   {
+    "name": "The Dormitory",
+    "src": "/dungeons/maps/gnomeregan-2.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Electrocutioner 6000",
+      "xPct": 24.8,
+      "yPct": 67.9,
+      "kind": "boss",
+      "display": 6915
+     }
+    ]
+   },
+   {
+    "name": "Launch Bay",
+    "src": "/dungeons/maps/gnomeregan-3.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Crowd Pummeler 9-60",
+      "xPct": 43.8,
+      "yPct": 86.5,
+      "kind": "boss",
+      "display": 6774
+     }
+    ]
+   },
+   {
+    "name": "Tinkers' Court",
+    "src": "/dungeons/maps/gnomeregan-4.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Dark Iron Ambassador",
+      "xPct": 29.5,
+      "yPct": 54,
+      "kind": "rare",
+      "display": 6669
+     },
+     {
+      "label": "Mekgineer Thermaplugg",
+      "xPct": 31.3,
+      "yPct": 30,
+      "kind": "boss",
+      "display": 6980
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "techbot",
+   "kind": "boss",
+   "name": "Techbot",
+   "level": 26,
+   "display": 7288,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Battle Net",
+     "icon": "/icon/ability_ensnare.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Roots everyone near it for 10 seconds."
+    },
+    {
+     "name": "Lag",
+     "icon": "/icon/inv_gizmo_02.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Slows a player's attacks and movement for 10 seconds, and can stun them."
+    },
+    {
+     "name": "Summon Dupe Bug",
+     "icon": "/icon/spell_shadow_auraofdarkness.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Calls Dupe Bugs to its side. Its Patch kills them and heals it."
+    }
+   ]
+  },
+  {
+   "id": "grubbis",
+   "kind": "boss",
+   "name": "Grubbis",
+   "level": 32,
+   "display": 6533,
+   "trigger": {
+    "flag": "Important",
+    "text": "Talk to Blastmaster Emi Shortfuse and protect her while she blows up the two cave mouths. Troggs pour out in waves, then Grubbis comes with Chomper."
+   },
+   "abilities": []
+  },
+  {
+   "id": "viscous-fallout",
+   "kind": "boss",
+   "name": "Viscous Fallout",
+   "level": 30,
+   "display": 5497,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "electrocutioner-6000",
+   "kind": "boss",
+   "name": "Electrocutioner 6000",
+   "level": 32,
+   "display": 6915,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Megavolt",
+     "icon": "/icon/spell_nature_chainlightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Nature damage in a cone in front of it (2-second cast). Only the tank in front."
+    },
+    {
+     "name": "Chain Bolt",
+     "icon": "/icon/spell_nature_chainlightning.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "Lightning that jumps to nearby players (2.5-second cast). Interrupt it."
+    }
+   ]
+  },
+  {
+   "id": "crowd-pummeler-9-60",
+   "kind": "boss",
+   "name": "Crowd Pummeler 9-60",
+   "level": 32,
+   "display": 6774,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Crowd Pummel",
+     "icon": "/icon/inv_gauntlets_04.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "Hits everyone near it and interrupts their spells. Casters and healers, keep your distance."
+    },
+    {
+     "name": "Arcing Smash",
+     "icon": "/icon/ability_warrior_cleave.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits everyone in a cone in front of it."
+    },
+    {
+     "name": "Trample",
+     "icon": "/icon/spell_nature_natureswrath.jpg",
+     "flags": [],
+     "description": "Hits everyone standing close."
+    }
+   ]
+  },
+  {
+   "id": "dark-iron-ambassador",
+   "kind": "rare",
+   "name": "Dark Iron Ambassador",
+   "level": 33,
+   "display": 6669,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Summon Burning Servant",
+     "icon": "/icon/spell_fire_fire.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "Calls two Burning Servants at the start of the fight."
+    },
+    {
+     "name": "Fireball",
+     "icon": "/icon/spell_fire_flamebolt.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    },
+    {
+     "name": "Fire Shield II",
+     "icon": "/icon/spell_fire_immolation.jpg",
+     "flags": [
+      "Magic effect"
+     ],
+     "description": "Fire damage to everyone near him for a minute. A priest or a shaman can remove it."
+    }
+   ]
+  },
+  {
+   "id": "mekgineer-thermaplugg",
+   "kind": "boss",
+   "name": "Mekgineer Thermaplugg",
+   "level": 34,
+   "display": 6980,
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Walking Bombs",
+     "icon": "/icon/spell_fire_selfdestruct.jpg",
+     "flags": [
+      "Important",
+      "Deadly"
+     ],
+     "description": "He switches on the gnome faces around the room one by one, and each sends out Walking Bombs that explode when they reach a player. The button next to a face switches it off. Below half health he switches them on faster."
+    },
+    {
+     "name": "Knock Away",
+     "icon": "/icon/inv_gauntlets_05.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Knocks the tank back. Below half health it hits everyone around him."
+    }
+   ]
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}

@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import DungeonJumpNav, { type JumpNavEntry } from "@/components/reference/DungeonJumpNav";
 import DungeonMapPanel from "@/components/reference/DungeonMapPanel";
+import DungeonPinMap from "@/components/reference/DungeonPinMap";
 import type { DungeonMapMarker } from "@/components/reference/DungeonMapLegend";
+import type { DungeonPinMap as DungeonPinMapData } from "@/lib/dungeon-loot";
 
 export default function DungeonLootSidebar({
   levelMin,
@@ -12,6 +17,7 @@ export default function DungeonLootSidebar({
   mapImage,
   mapLegend,
   mapAttribution,
+  pinMap,
   dungeonName,
   authorNotes,
 }: {
@@ -24,9 +30,31 @@ export default function DungeonLootSidebar({
   mapImage: string | null;
   mapLegend?: DungeonMapMarker[] | null;
   mapAttribution?: string;
+  // When present, foreverchanges.pro has real map+boss-pin data for this
+  // dungeon -- render that instead of the static Atlas/wow.export image
+  // (mapImage/mapLegend stay unused for this dungeon, not removed -- the
+  // page still computes them so a future "diff against Atlas" isn't blocked).
+  pinMap?: DungeonPinMapData | null;
   dungeonName: string;
   authorNotes?: string | null;
 }) {
+  // Which jump-nav entry (boss or quest section) has most recently scrolled
+  // into view -- only boss entries have a matching map pin, so this drives
+  // the pin map's auto floor-select + marker highlight without that
+  // component needing its own IntersectionObserver.
+  const [activeEntry, setActiveEntry] = useState<JumpNavEntry | null>(jumpNavEntries[0] ?? null);
+
+  // Pin labels are matched against this page's own `#boss-N` anchors by
+  // name (the pin data and the loot-endpoint boss list are two
+  // independently-sourced pulls with no shared id) -- derived from
+  // jumpNavEntries (already client-side data) rather than accepting a
+  // function prop from the server page component, which React Server
+  // Components can't pass across the client boundary.
+  const anchorForLabel = (label: string): string | null => {
+    const entry = jumpNavEntries.find((e) => e.label.toLowerCase() === label.toLowerCase());
+    return entry ? `#${entry.id}` : null;
+  };
+
   return (
     <aside className="w-full shrink-0 md:w-80 md:sticky md:top-4 md:self-start">
       <div className="flex flex-col gap-4">
@@ -50,12 +78,14 @@ export default function DungeonLootSidebar({
           </dl>
         </div>
 
-        <DungeonJumpNav entries={jumpNavEntries} />
+        <DungeonJumpNav entries={jumpNavEntries} onActiveChange={setActiveEntry} />
 
         <div>
           <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Dungeon map</h2>
           <div className="mt-1">
-            {mapImage ? (
+            {pinMap ? (
+              <DungeonPinMap pinMap={pinMap} anchorForLabel={anchorForLabel} activeBossLabel={activeEntry?.label ?? null} />
+            ) : mapImage ? (
               <DungeonMapPanel src={mapImage} alt={`${dungeonName} map`} legend={mapLegend ?? undefined} attribution={mapAttribution} />
             ) : (
               <div className="flex h-56 w-full items-center justify-center rounded border border-dashed border-border text-xs text-foreground-muted">

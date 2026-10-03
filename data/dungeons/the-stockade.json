@@ -59,6 +59,25 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Shield Slam",
+     "icon": "/icon/ability_warrior_shieldbash.jpg",
+     "flags": [
+      "Tank"
+     ],
+     "description": "Hits the tank and stuns them for 2 seconds."
+    },
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
    ]
   },
   {
@@ -174,6 +193,17 @@
      "unknown": false,
      "source": "foreverchanges"
     }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Runs for help",
+     "icon": "/icon/ability_rogue_sprint.jpg",
+     "flags": [
+      "Important"
+     ],
+     "description": "At 15% health he runs off to bring help. Finish him before he gets away."
+    }
    ]
   },
   {
@@ -214,7 +244,9 @@
      "unknown": false,
      "source": "foreverchanges"
     }
-   ]
+   ],
+   "trigger": null,
+   "abilities": []
   }
  ],
  "questSource": "foreverchanges",
@@ -633,5 +665,96 @@
    ],
    "source": "foreverchanges"
   }
- ]
+ ],
+ "pinMap": {
+  "alt": "Map of The Stockade in WoW Forever, with where each boss stands",
+  "attribution": null,
+  "floors": [
+   {
+    "name": null,
+    "src": "https://foreverchanges.pro/dungeons/maps/the-stockade.webp",
+    "width": 1002,
+    "height": 668,
+    "pins": [
+     {
+      "label": "Kam Deepfury",
+      "xPct": 69.2,
+      "yPct": 30.9,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/825.webp"
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 38.1,
+      "yPct": 24,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/2142.webp"
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 29.5,
+      "yPct": 44.7,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/2142.webp"
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 61.6,
+      "yPct": 48.3,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/2142.webp"
+     },
+     {
+      "label": "Bruegal Ironknuckle",
+      "xPct": 61.5,
+      "yPct": 25.1,
+      "kind": "rare",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/2142.webp"
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 49.9,
+      "yPct": 24.2,
+      "kind": "boss",
+      "portraitUrl": null
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 42.4,
+      "yPct": 46.4,
+      "kind": "boss",
+      "portraitUrl": null
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 57.8,
+      "yPct": 55.2,
+      "kind": "boss",
+      "portraitUrl": null
+     },
+     {
+      "label": "Targorr the Dread",
+      "xPct": 33.3,
+      "yPct": 37.5,
+      "kind": "boss",
+      "portraitUrl": null
+     },
+     {
+      "label": "Hamhock",
+      "xPct": 78.2,
+      "yPct": 45.7,
+      "kind": "boss",
+      "portraitUrl": null
+     },
+     {
+      "label": "Bazil Thredd",
+      "xPct": 85.7,
+      "yPct": 51,
+      "kind": "boss",
+      "portraitUrl": null
+     }
+    ]
+   }
+  ]
+ }
 }
