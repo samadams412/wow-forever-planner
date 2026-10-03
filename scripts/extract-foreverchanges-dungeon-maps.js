@@ -4,7 +4,7 @@
 // captured by fetch-foreverchanges-dungeon-loot.js's JSON-endpoint pull (loot
 // only) or extract-foreverchanges-quests.js (quests only):
 //   - the boss/trash/rare/entrance map pins (CSS left/top percent over a
-//     fixed-size map image, same encoding QuestMapViewer.tsx already uses)
+//     fixed-size map image, same encoding QuestMap.tsx already uses)
 //   - each boss's "what to watch for" ability list (name/flags/description),
 //     which exists only as rendered HTML -- confirmed in-session (network
 //     tab showed zero requests when switching bosses) to be server-rendered

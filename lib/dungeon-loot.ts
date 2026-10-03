@@ -110,7 +110,7 @@ export type Quest = {
 };
 
 // A single marker on `pinMap.src`, CSS left/top percent over the image's
-// native pixel box -- same encoding QuestMapViewer.tsx already renders zone-
+// native pixel box -- same encoding QuestMap.tsx already renders zone-
 // map quest pins with (foreverchanges' own x/y are already percent, not
 // pixels, so no coordinate conversion is needed, same as that component's
 // Wowhead-sourced pins).
@@ -176,7 +176,7 @@ export type DungeonData = Dungeon & {
 // directly from wow.export (not a Classic-era BLP) and cropped via
 // `node scripts/crop-dungeon-maps.js` into public/maps/dungeons/<slug>/map.png
 // -- a separate pipeline/location from the BLP-sourced webp maps above. See
-// 03-Handoffs/2026-10-01-dungeon-maps-extraction.md for how each was cropped.
+// 03-Handoffs/maps/2026-10-01-dungeon-maps-extraction.md for how each was cropped.
 const DUNGEON_MAP_IMAGES: Partial<Record<string, string>> = {
   "ragefire-chasm": "/images/dungeon-maps/ragefire-chasm.webp",
   "wailing-caverns": "/images/dungeon-maps/wailing-caverns.webp",

@@ -43,7 +43,7 @@ const PAD = 6; // px of padding kept around the detected content box
 // (bounded by its purple leash-ring) occupying only the center, real terrain
 // on every side, so there's no flat fill color to auto-detect against. Box
 // picked by hand to fully contain the ring with a clean margin, verified
-// visually (see 03-Handoffs/2026-10-01-dungeon-maps-extraction.md).
+// visually (see 03-Handoffs/maps/2026-10-01-dungeon-maps-extraction.md).
 const MANUAL_CROPS = {
   "city-of-dalaran": { left: 300, top: 460, width: 760, height: 700 },
 };

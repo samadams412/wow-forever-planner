@@ -1,7 +1,7 @@
 // Converts wow.export's per-zone in-game map art (one PNG per zone, 1002x668,
 // a fixed-size texture matching the client's own zone-map UI frame) into
 // small JPEGs under public/images/zone-maps/<areaId>.jpg for the quest-detail
-// mini-map (components/reference/QuestMapViewer.tsx). Source lives outside
+// mini-map (components/reference/QuestMap.tsx). Source lives outside
 // the repo entirely on the machine that ran wow.export (same convention as
 // scripts/slice-map-tiles.js), never committed -- only this script's small
 // JPEG output is. Unlike the map tile pyramid, these are genuinely small

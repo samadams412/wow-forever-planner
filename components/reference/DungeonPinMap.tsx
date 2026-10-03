@@ -24,7 +24,7 @@ function floorIndexForLabel(floors: DungeonMapFloor[], label: string | null | un
 }
 
 // foreverchanges.pro's own per-dungeon map with boss/trash/rare/entrance pins
-// -- same CSS left/top percent-over-a-flat-image encoding QuestMapViewer.tsx
+// -- same CSS left/top percent-over-a-flat-image encoding QuestMap.tsx
 // already renders Wowhead zone-map quest pins with. A fixed-aspect-ratio box
 // (from the image's own native width/height) rather than DungeonMapViewer's
 // pan/zoom `object-fit: contain`, deliberately -- contain can letterbox a box

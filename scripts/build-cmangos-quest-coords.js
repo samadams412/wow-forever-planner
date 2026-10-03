@@ -24,7 +24,7 @@
 // polygon on its own continent; the spawn's position is then expressed as a
 // percent of that zone's own worldBounds bbox, matching the xPct/yPct
 // convention lib/quests.ts's WowheadPoint already uses (0-100, west->east /
-// north->south) so QuestMapViewer needs no new code path.
+// north->south) so QuestMap needs no new code path.
 //
 // A giver with spawns in more than one zone (patrol NPCs, reused generic
 // templates) is resolved PER (quest, giver) pair -- not globally per npc --
