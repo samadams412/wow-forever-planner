@@ -10,6 +10,7 @@ import { getLinkedSpells, splitTextWithLinks } from "@/lib/talent-spell-links";
 import { claimActiveTooltip, releaseActiveTooltip, useIsActiveTooltip } from "@/lib/active-tooltip";
 import { STATUS_DOT_CLASS } from "@/lib/talent-status";
 import { POINTS_PER_ROW, MAX_TALENT_POINTS, tierUnlocked } from "@/lib/talent-rules";
+import type { NavDirection } from "@/lib/talent-navigation";
 import {
   TooltipCard,
   TooltipName,
@@ -20,6 +21,8 @@ import {
   TooltipLinkedSpell,
   TooltipRequirement,
   TooltipClassicTalentDiff,
+  TooltipConfidenceNote,
+  TooltipWeaponmasterDescription,
 } from "./TooltipCard";
 
 const TOOLTIP_WIDTH = 260;
@@ -46,6 +49,9 @@ export default function TalentNode({
   onHoverTalent,
   highlightPrerequisite,
   highlightLinked,
+  selected,
+  onSelect,
+  onNavigate,
 }: {
   classId: string;
   talent: Talent;
@@ -71,6 +77,11 @@ export default function TalentNode({
   onHoverTalent: (talentId: string | null) => void;
   highlightPrerequisite: boolean;
   highlightLinked: boolean;
+  // Keyboard selection: the talent last focused in the planner. Drawn as an
+  // outline on the cell, separate from the browser's focus ring.
+  selected: boolean;
+  onSelect: (talentId: string) => void;
+  onNavigate: (talentId: string, dir: NavDirection) => void;
 }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   // Shared across both hook calls below -- only one <TooltipCard> is ever
@@ -247,6 +258,9 @@ export default function TalentNode({
   }
 
   function handleFocus() {
+    // Focus is what selects a talent for keyboard use, so this runs even
+    // when the tooltip is suppressed below.
+    onSelect(talent.id);
     // Skip the hover tooltip if this focus was just a side effect of the
     // tap/touch gesture above -- a real keyboard Tab a moment later still
     // shows it normally.
@@ -254,6 +268,16 @@ export default function TalentNode({
     claimActiveTooltip(tooltipId);
     showHover();
     onHoverTalent(talent.id);
+  }
+
+  // Keyboard path: arrow keys move focus (and so the selection) to the
+  // adjacent talent.
+  function handleKeyDown(e: React.KeyboardEvent<HTMLButtonElement>) {
+    if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      e.preventDefault();
+      const dir: NavDirection = e.key === "ArrowUp" ? "up" : e.key === "ArrowDown" ? "down" : e.key === "ArrowLeft" ? "left" : "right";
+      onNavigate(talent.id, dir);
+    }
   }
 
   function handleHoverEnter() {
@@ -311,16 +335,18 @@ export default function TalentNode({
     <div
       data-talent-status={talent.status}
       style={{ gridColumn: talent.col, gridRow: talent.tier }}
-      className={`relative aspect-square rounded transition-[opacity,filter,box-shadow] duration-200 ${unchangedInCompare ? "opacity-45 grayscale" : "opacity-100"} ${highlightPrerequisite ? "z-[1] shadow-[0_0_0_3px_rgba(244,201,93,0.95),0_0_16px_rgba(244,201,93,0.75)]" : highlightLinked ? "z-[1] shadow-[0_0_0_3px_rgba(174,124,255,0.95),0_0_16px_rgba(174,124,255,0.65)]" : ""}`}
+      className={`relative aspect-square rounded transition-[opacity,filter,box-shadow,outline-color] duration-200 ${unchangedInCompare ? "opacity-45 grayscale" : "opacity-100"} ${selected ? "outline outline-2 outline-offset-2 outline-[#f4c95d]" : ""} ${highlightPrerequisite ? "z-[1] shadow-[0_0_0_3px_rgba(244,201,93,0.95),0_0_16px_rgba(244,201,93,0.75)]" : highlightLinked ? "z-[1] shadow-[0_0_0_3px_rgba(174,124,255,0.95),0_0_16px_rgba(174,124,255,0.65)]" : ""}`}
     >
       <button
         ref={buttonRef}
         type="button"
+        data-talent-id={talent.id}
         data-cursor={locked ? "gear" : undefined}
         onMouseEnter={handleHoverEnter}
         onMouseLeave={handleHoverLeave}
         onFocus={handleFocus}
         onBlur={handleHoverLeave}
+        onKeyDown={handleKeyDown}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -403,7 +429,9 @@ export default function TalentNode({
               Rank {rank} of {talent.maxRank} · {typeLabel}
             </TooltipRank>
             {currentRankText &&
-              (linkedSpells.length > 0 ? (
+              (talent.id === "arms_weaponmaster" ? (
+                <TooltipWeaponmasterDescription text={formatTooltipText(currentRankText)} />
+              ) : linkedSpells.length > 0 ? (
                 <TooltipDescriptionWithLinks
                   segments={splitTextWithLinks(formatTooltipText(currentRankText), linkedSpells)}
                 />
@@ -413,7 +441,9 @@ export default function TalentNode({
             {nextRankText && (
               <>
                 <TooltipRank>Next Rank</TooltipRank>
-                {linkedSpells.length > 0 ? (
+                {talent.id === "arms_weaponmaster" ? (
+                  <TooltipWeaponmasterDescription text={formatTooltipText(nextRankText)} />
+                ) : linkedSpells.length > 0 ? (
                   <TooltipDescriptionWithLinks
                     segments={splitTextWithLinks(formatTooltipText(nextRankText), linkedSpells)}
                   />
@@ -433,6 +463,7 @@ export default function TalentNode({
               </TooltipRequirement>
             )}
             {talent.reqText && <TooltipRequirement>{talent.reqText}</TooltipRequirement>}
+            {talent.confidenceNote && <TooltipConfidenceNote>{talent.confidenceNote}</TooltipConfidenceNote>}
             {tierLocked && (
               <TooltipRequirement>
                 Requires {tierPointsRequired} points in {treeName} Talents

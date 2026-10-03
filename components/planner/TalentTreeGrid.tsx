@@ -1,5 +1,6 @@
 import { createPortal } from "react-dom";
 import { useRef, useState } from "react";
+import { findAdjacentTalent, type NavDirection } from "@/lib/talent-navigation";
 import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
 import { treeBackgroundUrl, mediumIconUrl, getTreeIcon } from "@/lib/wow-data";
@@ -87,6 +88,8 @@ export default function TalentTreeGrid({
   peekTalentId,
   onPeek,
   onResetTree,
+  selectedTalentId,
+  onSelectTalent,
 }: {
   classId: string;
   tree: TalentTree;
@@ -101,8 +104,18 @@ export default function TalentTreeGrid({
   peekTalentId: string | null;
   onPeek: (talentId: string | null) => void;
   onResetTree: () => void;
+  selectedTalentId: string | null;
+  onSelectTalent: (talentId: string) => void;
 }) {
   const [hoveredTalentId, setHoveredTalentId] = useState<string | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  // Arrow keys move focus to the adjacent talent button in this tree; focus
+  // then selects it (see TalentNode's handleFocus). Edges are a no-op.
+  function handleNavigate(talentId: string, dir: NavDirection) {
+    const target = findAdjacentTalent(tree.talents, talentId, dir);
+    if (!target) return;
+    rootRef.current?.querySelector<HTMLButtonElement>(`[data-talent-id="${target.id}"]`)?.focus();
+  }
   const byId = new Map(tree.talents.map((t) => [t.id, t]));
   const hoveredTalent = hoveredTalentId ? byId.get(hoveredTalentId) : undefined;
   const linkedNames = hoveredTalent ? getLinkedSpells(classId, hoveredTalent.id).map((entry) => entry.name.toLocaleLowerCase()) : [];
@@ -112,7 +125,7 @@ export default function TalentTreeGrid({
   const sourceTree = classicSource[classId.charAt(0).toUpperCase() + classId.slice(1)]?.trees.find((item) => item.name === tree.name);
 
   return (
-    <div className={`relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] transition-[border-color,box-shadow] duration-500 sm:max-w-[296px] ${compareMode ? "border-[#b38a3e] shadow-[0_0_18px_rgba(201,169,97,0.16)]" : ""}`}>
+    <div ref={rootRef} className={`relative w-full rounded-sm border-2 border-accent/70 bg-surface p-3 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] transition-[border-color,box-shadow] duration-500 sm:max-w-[296px] ${compareMode ? "border-[#b38a3e] shadow-[0_0_18px_rgba(201,169,97,0.16)]" : ""}`}>
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
@@ -216,6 +229,9 @@ export default function TalentTreeGrid({
             onHoverTalent={setHoveredTalentId}
             highlightPrerequisite={t.id === prerequisiteId}
             highlightLinked={linkedTalentIds.has(t.id)}
+            selected={selectedTalentId === t.id}
+            onSelect={onSelectTalent}
+            onNavigate={handleNavigate}
           />
         ))}
 

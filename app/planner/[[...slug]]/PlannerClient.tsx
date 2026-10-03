@@ -61,6 +61,9 @@ export default function PlannerClient({
   // Long-press-to-read: temporarily overrides tappedTalentId for the inline
   // tooltip while held, without touching the actual tap/spend state.
   const [peekTalentId, setPeekTalentId] = useState<string | null>(null);
+  // The talent last focused in any tree. Keyboard input (Enter/Backspace,
+  // arrows) acts on the focused talent, and this is what draws its outline.
+  const [selectedTalentId, setSelectedTalentId] = useState<string | null>(null);
 
   useEffect(() => {
     // The inline talent tooltip stays open through taps/point-spending and
@@ -223,7 +226,7 @@ export default function PlannerClient({
         <div className="flex items-baseline gap-2">
           <h1 className="font-heading text-lg font-semibold tracking-wide text-accent">Planner</h1>
           <p className="text-xs text-foreground-muted">
-            Pick a class, plan your talent build, then check a race beside it for racials — all in one flow.
+            Pick a class, plan your talent build. 
           </p>
         </div>
       </div>
@@ -277,6 +280,8 @@ export default function PlannerClient({
                 peekTalentId={peekTalentId}
                 onPeek={setPeekTalentId}
                 onResetTree={() => resetTree(tree)}
+                selectedTalentId={selectedTalentId}
+                onSelectTalent={setSelectedTalentId}
               />
             ))}
           </div>

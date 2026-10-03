@@ -80,6 +80,40 @@ export function TooltipDescription({ children }: { children: ReactNode }) {
   return <p className="mt-1.5 max-w-[60ch] text-sm leading-snug text-[#f2d25c]">{children}</p>;
 }
 
+// Weaponmaster's rank text encodes 3 weapon-category effects as
+// "\n\n Label: effect text\n more effect text" blocks after an intro
+// sentence -- plain whitespace collapses all of that into one run-on
+// paragraph (HTML default), which is why this talent gets its own
+// renderer instead of TooltipDescription: one row per category, with the
+// weapon-type label picked out in white so the three are visually
+// distinguishable at a glance.
+export function parseWeaponmasterRankText(text: string): { intro: string; categories: { label: string; effect: string }[] } {
+  const [intro, ...blocks] = text.split(/\n\s*\n/).map((block) => block.trim());
+  const categories = blocks.map((block) => {
+    const collapsed = block.replace(/\s*\n\s*/g, " ").trim();
+    const sep = collapsed.indexOf(":");
+    return sep === -1
+      ? { label: "", effect: collapsed }
+      : { label: collapsed.slice(0, sep).trim(), effect: collapsed.slice(sep + 1).trim() };
+  });
+  return { intro, categories };
+}
+
+export function TooltipWeaponmasterDescription({ text }: { text: string }) {
+  const { intro, categories } = parseWeaponmasterRankText(text);
+  return (
+    <div className="mt-1.5 max-w-[60ch] text-sm leading-snug text-[#f2d25c]">
+      <p>{intro}</p>
+      {categories.map((c, i) => (
+        <p key={i} className="mt-1">
+          {c.label && <span className="font-semibold text-white">{c.label}: </span>}
+          {c.effect}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 // Same description styling as TooltipDescription, but for text already
 // split into segments (splitTextWithLinks) -- a segment naming another
 // spell/talent this one modifies renders as a white, underlined inline
@@ -142,6 +176,16 @@ export function TooltipLinkedSpell({ entry }: { entry: LinkedSpell }) {
 
 export function TooltipRequirement({ children }: { children: ReactNode }) {
   return <p className="mt-1 text-[11px] text-[#ff4040]">{children}</p>;
+}
+
+// A caveat about this talent's own Forever-side data (e.g. a prereq arrow
+// sourced only from reading the beta's hotfix cache rather than an
+// official patch note) -- distinct from TooltipClassicNote/
+// TooltipDataNote, which are about Classic comparisons or per-rank vendor
+// footnotes. Amber rather than gray so an unconfirmed detail doesn't read
+// as settled fact.
+export function TooltipConfidenceNote({ children }: { children: ReactNode }) {
+  return <p className="mt-1.5 text-[10px] italic leading-snug text-[#e0a030]">{children}</p>;
 }
 
 // A cost/range/cast-time/cooldown row, e.g. ["15 Rage", "Melee Range"] --
