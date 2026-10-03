@@ -1,35 +1,13 @@
-import localFont from "next/font/local";
 import Link from "next/link";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import LootItemPill from "@/components/reference/LootItemPill";
-import QuestMapViewer from "@/components/reference/QuestMapViewer";
+import { friz, morpheus } from "@/components/reference/quest-fonts";
+import QuestBackLink from "@/components/reference/QuestBackLink";
 import { mediumIconUrl } from "@/lib/wow-data";
 import type { QuestDetail } from "@/lib/quests";
 
-// Start ("!") / turn-in ("?") marker icons -- the classic WoW quest-log
-// indicators, same assets already used as the "Quests" section icon on
-// dungeon loot pages (see components/reference/LootQuestRewardsCard.tsx).
-const QUEST_MAP_MARKER_ICON: Record<"start" | "end", string> = {
-  start: "/images/icons/available.png",
-  end: "/images/icons/complete.png",
-};
-
-// Scoped to this component only (not app/layout.tsx) -- CLAUDE.md's font
-// note calls for the Name/Description/Rewards headers specifically, not a
-// site-wide heading font swap. next/font/local resolves assets/fonts/
-// relative to this file.
-const morpheus = localFont({
-  src: "../../assets/fonts/morpheus_cyr.ttf",
-  display: "swap",
-});
-
-// Body text (description/objectives/chain/reward lines) renders in Friz
-// Quadrata, matching the in-game quest log's own body font -- distinct from
-// the Morpheus headers above.
-const friz = localFont({
-  src: "../../assets/fonts/frizqt__.ttf",
-  display: "swap",
-});
+// The journal is the quest's text and rewards. The map, quest info and chain
+// are separate components placed beside or below it on the quest page.
 
 const MONEY_ICON: Record<"gold" | "silver" | "copper", string> = {
   gold: "https://wow.zamimg.com/images/icons/money-gold.gif",
@@ -43,15 +21,22 @@ function JournalHeading({ children }: { children: React.ReactNode }) {
   );
 }
 
-function ChainLink({ quest, label }: { quest: { id: number; name: string }; label: string }) {
+// A collapsed-by-default dialogue block, styled like the journal's own
+// headings -- a native <details>, so it needs no client JS.
+function DialogueDropdown({ title, text }: { title: string; text: string }) {
   return (
-    <Link
-      href={`/quests/${quest.id}?from=/reference/quests&fromLabel=Quests`}
-      className="block rounded border border-[#8a6d3b]/60 bg-[#21190f]/90 px-3 py-2 text-sm text-[#e8dcc0] transition-colors hover:border-[#c9a961] hover:bg-[#21190f]"
-    >
-      <span className="block text-[10px] uppercase tracking-wide text-[#c9a961]">{label}</span>
-      {quest.name}
-    </Link>
+    <details className="mt-3">
+      <summary
+        className={`${morpheus.className} cursor-pointer select-none text-sm tracking-wide text-(--ink2) hover:opacity-80`}
+      >
+        {title}
+      </summary>
+      <div className={`${friz.className} mt-2 space-y-2 text-sm leading-relaxed text-black`}>
+        {text.split(/\n+/).map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
+    </details>
   );
 }
 
@@ -103,19 +88,13 @@ export default function QuestJournal({
   backLabel: string;
 }) {
   const narrative = quest.narrative;
-  const hasChain = quest.prevQuest || quest.nextQuest || quest.nextQuestInChain;
   const hasGuaranteed =
     quest.xp > 0 || quest.money > 0 || quest.reputation.length > 0 || quest.guaranteedRewards.length > 0;
   const hasRewards = hasGuaranteed || quest.choiceRewards.length > 0;
 
   return (
     <div className="relative rounded-sm border-2 border-[#8a6d3b]/70 bg-[#21190f] p-2 shadow-[0_0_0_1px_rgba(0,0,0,0.5)] sm:p-3">
-      <Link
-        href={backHref}
-        className="absolute left-2 top-2 z-10 inline-flex items-center gap-1 rounded border-2 border-[#3a2a12] bg-linear-to-b from-[#7a1c1c] to-[#3a0a0a] px-3 py-1 text-xs font-semibold text-[#f0c040] shadow-[0_1px_2px_rgba(0,0,0,0.6)] transition-[filter] hover:brightness-110"
-      >
-        &larr; {backLabel}
-      </Link>
+      <QuestBackLink fallbackHref={backHref} fallbackLabel={backLabel} />
 
       <div className="spellbook-page relative min-h-105 rounded-sm border border-[#8a6d3b]/50 bg-(--pg) p-3 pt-12 sm:min-h-115 sm:p-5 sm:pt-14">
         <h1 className={`${morpheus.className} text-center text-2xl text-(--ink2) sm:text-3xl`}>{quest.name}</h1>
@@ -149,20 +128,6 @@ export default function QuestJournal({
           <p className={`${friz.className} mt-3 text-sm italic leading-relaxed text-(--ink2)`}>{narrative.objectives}</p>
         )}
 
-        {quest.mapGroups.length > 0 && (
-          <div className="mt-5 border-t border-(--ink2)/25 pt-4">
-            <JournalHeading>Map</JournalHeading>
-            <div className={`mt-2 grid gap-3 ${quest.mapGroups.length > 1 ? "sm:grid-cols-2" : ""}`}>
-              {quest.mapGroups.map((group, i) => (
-                <div key={i}>
-                  <p className={`${friz.className} mb-1 text-center text-xs text-(--ink2)/80`}>{group.zoneName}</p>
-                  <QuestMapViewer group={group} markerIcon={QUEST_MAP_MARKER_ICON} />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         <div className="mt-5 border-t border-(--ink2)/25 pt-4">
           <JournalHeading>Description</JournalHeading>
           {narrative?.details ? (
@@ -186,6 +151,9 @@ export default function QuestJournal({
               ))}
             </ul>
           )}
+
+          {narrative?.requestItemsText && <DialogueDropdown title="Partial Dialogue" text={narrative.requestItemsText} />}
+          {narrative?.offerRewardText && <DialogueDropdown title="Completed Dialogue" text={narrative.offerRewardText} />}
         </div>
 
         {quest.mentionedItems.length > 0 && (
@@ -201,20 +169,9 @@ export default function QuestJournal({
           </div>
         )}
 
-        {hasChain && (
-          <div className="mt-5 grid gap-2 border-t border-(--ink2)/25 pt-4 sm:grid-cols-2">
-            {quest.prevQuest && <ChainLink quest={quest.prevQuest} label="Previous in chain" />}
-            {quest.nextQuest && <ChainLink quest={quest.nextQuest} label="Next in chain" />}
-            {quest.nextQuestInChain && <ChainLink quest={quest.nextQuestInChain} label="Leads to" />}
-          </div>
-        )}
-
         {hasRewards && (
           <div className="mt-5 border-t border-(--ink2)/25 pt-4">
             <JournalHeading>Rewards</JournalHeading>
-            {narrative?.offerRewardText && (
-              <p className={`${friz.className} mt-2 text-sm leading-relaxed text-black`}>{narrative.offerRewardText}</p>
-            )}
             <ItemLinkSourceProvider from={`/quests/${quest.id}`} fromLabel={quest.name}>
               {quest.choiceRewards.length > 0 && (
                 <div className="mt-3">

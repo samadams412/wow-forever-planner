@@ -2,12 +2,41 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import QuestJournal from "@/components/reference/QuestJournal";
-import { getQuestById } from "@/lib/quests";
+import QuestMap from "@/components/reference/QuestMap";
+import QuestInfo from "@/components/reference/QuestInfo";
+import QuestChain from "@/components/reference/QuestChain";
+import { getAllQuestIds, type QuestTextSource } from "@/lib/quests";
+import { getQuestById } from "@/lib/quest-detail";
 
-// Not statically generated -- same reasoning as app/items/[itemId]/page.tsx:
-// 5,049 quests built up front for a page most visitors reach one at a time
-// (from the quest listing). getQuestById reads through lib/quests.ts's own
-// module-level cache, so each render after the first is a Map lookup.
+// Statically generated: every quest in the build-time index is prerendered, and
+// no other id is served (dynamicParams = false). The detail shards are read at
+// build time, so no request-time function needs the shard directory.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getAllQuestIds().map((id) => ({ questId: String(id) }));
+}
+
+// Attribution for the narrative text's upstream. Text pulled from the
+// foreverchanges detail scrape is credited to the two sources it itself
+// draws from (cMaNGOS and Wowhead), never to the aggregator.
+const SOURCE_LINKS = {
+  cmangos: { href: "https://github.com/cmangos/classic-db", label: "https://github.com/cmangos/classic-db" },
+  wowhead: { href: "https://www.wowhead.com/forever", label: "Wowhead's Forever database" },
+} as const;
+
+const NARRATIVE_CREDITS: Record<QuestTextSource, (keyof typeof SOURCE_LINKS)[]> = {
+  cmangos: ["cmangos"],
+  wowhead: ["wowhead"],
+  foreverchanges: ["cmangos", "wowhead"],
+};
+
+// Start ("!") and turn-in ("?") pins on the zone map -- the same classic quest-log
+// icons QuestInfo and the journal already use.
+const QUEST_MAP_MARKER_ICON = {
+  start: "/images/icons/available.png",
+  end: "/images/icons/complete.png",
+} as const;
 
 function parseQuestId(raw: string): number | null {
   if (!/^\d+$/.test(raw)) return null;
@@ -31,28 +60,19 @@ export async function generateMetadata({
 
 export default async function QuestDetailPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ questId: string }>;
-  searchParams: Promise<{ from?: string; fromLabel?: string }>;
 }) {
   const { questId } = await params;
   const id = parseQuestId(questId);
-  // A malformed id (non-numeric) is a true 404. A well-formed id with no
-  // catalog entry means the quest exists in-game but hasn't been pulled
-  // into data/sources/foreverchanges/quests/list.json yet (e.g. a
-  // new-in-Forever dungeon whose quests were scraped separately, after the
-  // main quest-list pull) -- that gets a friendly "not yet available" state
-  // instead of a hard 404, so links into it (e.g. from dungeon quest cards)
-  // don't dead-end.
+  // A malformed id (non-numeric) is a true 404. A well-formed id with no index
+  // entry shows a friendly "not yet available" state rather than a hard 404.
   if (id === null) notFound();
   const quest = getQuestById(id);
 
-  const { from, fromLabel } = await searchParams;
-  // Only trust an internal path -- `from` is attacker-controlled query input,
-  // same guard as app/items/[itemId]/page.tsx.
-  const backHref = from && from.startsWith("/") && !from.startsWith("//") ? from : "/reference/quests";
-  const backLabel = from && fromLabel ? fromLabel : "Quests";
+  // The back link reads ?from= on the client (QuestBackLink), keeping this page static.
+  const backHref = "/reference/quests";
+  const backLabel = "Quests";
 
   if (!quest) {
     return (
@@ -78,7 +98,7 @@ export default async function QuestDetailPage({
   }
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-3 py-8 sm:px-4">
+    <main className="mx-auto w-full max-w-6xl px-3 py-8 sm:px-4">
       <Breadcrumbs
         items={[
           { label: "Reference", href: "/reference" },
@@ -87,20 +107,43 @@ export default async function QuestDetailPage({
         ]}
       />
 
-      <QuestJournal quest={quest} backHref={backHref} backLabel={backLabel} />
+      {/* Desktop: journal on the left, map above quest info on the right.
+          Mobile: the same order, stacked. */}
+      <div className="mt-4 flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_418px] lg:items-start">
+        <div className="min-w-0">
+          <QuestJournal quest={quest} backHref={backHref} backLabel={backLabel} />
+        </div>
+        <aside className="flex flex-col gap-4">
+          {quest.mapGroups.length > 0 && (
+            <QuestMap groups={quest.mapGroups} questName={quest.name} markerIcon={QUEST_MAP_MARKER_ICON} />
+          )}
+          <QuestInfo quest={quest} />
+        </aside>
+      </div>
+
+      {quest.chain && (
+        <div className="mt-4">
+          <QuestChain quest={quest} />
+        </div>
+      )}
 
       <p className="mt-4 text-xs text-foreground-muted">
         {quest.narrativeSource && (
           <>
             Quest text sourced from{" "}
-            <a
-              href={quest.narrativeSource === "cmangos" ? "https://github.com/cmangos/classic-db" : "https://www.wowhead.com/forever"}
-              className="underline hover:text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {quest.narrativeSource === "cmangos" ? "https://github.com/cmangos/classic-db" : "Wowhead's Forever database"}
-            </a>
+            {NARRATIVE_CREDITS[quest.narrativeSource].map((key, i) => (
+              <span key={key}>
+                {i > 0 && " and "}
+                <a
+                  href={SOURCE_LINKS[key].href}
+                  className="underline hover:text-foreground"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {SOURCE_LINKS[key].label}
+                </a>
+              </span>
+            ))}
             .{" "}
           </>
         )}
