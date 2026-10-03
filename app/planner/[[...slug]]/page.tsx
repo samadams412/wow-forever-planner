@@ -39,7 +39,7 @@ function parseSlug(slug: string[]): {
 const BASE_METADATA: Metadata = {
   title: "WoW Forever Talent Calculator — Plan Your Build",
   description:
-    "Build and share World of Warcraft: Forever talent trees for all nine classes. Pick a race and class, spend your points, and share your build with a link -- free and updated with every beta patch.",
+    "Build and share World of Warcraft: Forever talent trees for all nine classes. Pick a class, spend your points, and share your build with a link. Free and updated with every beta patch.",
   alternates: {
     canonical: "/planner",
   },
@@ -83,7 +83,7 @@ const WEB_APPLICATION_JSON_LD = {
   operatingSystem: "Any (web browser)",
   url: `${SITE_URL}/planner`,
   description:
-    "Free World of Warcraft: Forever talent point calculator -- pick a race and class, plan your talent build, and share it with a link.",
+    "Free World of Warcraft: Forever talent point calculator. Pick a class, plan your talent build, and share it with a link.",
   isAccessibleForFree: true,
   offers: {
     "@type": "Offer",

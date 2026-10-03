@@ -1,0 +1,669 @@
+{
+  "oldPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever\\talentsforever-2026-10-02.json",
+  "newPath": "C:\\Users\\samue\\Desktop\\Projects\\wow-forever-planner\\data\\sources\\talentsforever\\talentsforever-2026-10-03.json",
+  "oldLabel": "2026-10-02",
+  "newLabel": "2026-10-03",
+  "talents": {
+    "added": [
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "key": "Warrior|Lingering Rage",
+        "talent": {
+          "name": "Lingering Rage",
+          "max": 5,
+          "row": 2,
+          "col": 2,
+          "passive": true,
+          "icon": "ability_warrior_secondwind",
+          "desc": [
+            "Increases the time before your Rage begins to decay after leaving combat by 2 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 4 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 6 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 8 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 10 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-02",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "key": "Warrior|Furious Precision",
+        "talent": {
+          "name": "Furious Precision",
+          "max": 3,
+          "row": 3,
+          "col": 1,
+          "passive": true,
+          "icon": "ability_warrior_incite",
+          "desc": [
+            "Increases your chance to hit with off-hand attacks by 4%.",
+            "Increases your chance to hit with off-hand attacks by 7%.",
+            "Increases your chance to hit with off-hand attacks by 10%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-02",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "key": "Warrior|Gore Drinker",
+        "talent": {
+          "name": "Gore Drinker",
+          "max": 2,
+          "row": 6,
+          "col": 3,
+          "passive": true,
+          "icon": "racial_troll_berserk",
+          "desc": [
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1% of your maximum Health."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-02",
+          "req": "Enrage",
+          "classic": {
+            "status": "new"
+          }
+        }
+      }
+    ],
+    "removed": [
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "key": "Warrior|Improved Cleave",
+        "talent": {
+          "name": "Improved Cleave",
+          "max": 3,
+          "row": 3,
+          "col": 1,
+          "passive": true,
+          "icon": "ability_warrior_cleave",
+          "desc": [
+            "Reduces the Rage cost of your Cleave ability by 1.",
+            "Reduces the Rage cost of your Cleave ability by 2.",
+            "Reduces the Rage cost of your Cleave ability by 3."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "changed",
+            "tree": "Fury",
+            "row": 3,
+            "col": 1,
+            "max": 3,
+            "text": "Increases the bonus damage done by your Cleave ability by 40%."
+          }
+        }
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "key": "Warrior|Boundless Rage",
+        "talent": {
+          "name": "Boundless Rage",
+          "max": 3,
+          "row": 3,
+          "col": 4,
+          "passive": true,
+          "icon": "ability_warrior_intensifyrage",
+          "desc": [
+            "Increases your maximum Rage by 10.",
+            "Increases your maximum Rage by 20.",
+            "Increases your maximum Rage by 30."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "key": "Warrior|Precision",
+        "talent": {
+          "name": "Precision",
+          "max": 3,
+          "row": 5,
+          "col": 1,
+          "passive": true,
+          "icon": "ability_marksmanship",
+          "desc": [
+            "Improves your chance to hit by 1%.",
+            "Improves your chance to hit by 2%.",
+            "Improves your chance to hit by 3%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "key": "Warrior|Toughness",
+        "talent": {
+          "name": "Toughness",
+          "max": 5,
+          "row": 2,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_holy_devotion",
+          "desc": [
+            "Increases your Armor value from items by 2%.",
+            "Increases your Armor value from items by 4%.",
+            "Increases your Armor value from items by 6%.",
+            "Increases your Armor value from items by 8%.",
+            "Increases your Armor value from items by 10%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "same",
+            "tree": "Protection",
+            "row": 2,
+            "col": 3,
+            "max": 5,
+            "text": "Increases your armor value from items by 2%."
+          }
+        }
+      }
+    ],
+    "changed": [
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Improved Slam",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 1.5 sec.",
+              "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3 sec."
+            ],
+            "new": [
+              "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
+              "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Booming Voice",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 10%.",
+              "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 20%.",
+              "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 30%.",
+              "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 40%.",
+              "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 50%."
+            ],
+            "new": [
+              "Increases the area of effect of your Shouts by 10% and reduces their Rage cost by 5%.",
+              "Increases the area of effect of your Shouts by 20% and reduces their Rage cost by 10%.",
+              "Increases the area of effect of your Shouts by 30% and reduces their Rage cost by 15%.",
+              "Increases the area of effect of your Shouts by 40% and reduces their Rage cost by 20%.",
+              "Increases the area of effect of your Shouts by 50% and reduces their Rage cost by 25%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Iron Will",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 1,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Unbridled Wrath",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Gives you a 12% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
+              "Gives you a 24% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
+              "Gives you a 36% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
+              "Gives you a 48% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
+              "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons."
+            ],
+            "new": [
+              "Gives you a 12% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+              "Gives you a 24% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+              "Gives you a 36% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+              "Gives you a 48% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+              "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Piercing Howl",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Causes all nearby enemies to be Dazed, reducing movement speed by 50% for 6 sec."
+            ],
+            "new": [
+              "Causes all enemies within 10 yds to be Dazed, reducing movement speed by 50% for 6 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Blood Craze",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Regenerates 1% of your total Health over 6 sec after being the victim of a critical strike, dealing damage with Bloodthirst, or suffering more than 20% of your maximum Health from a single attack.",
+              "Regenerates 2% of your total Health over 6 sec after being the victim of a critical strike, dealing damage with Bloodthirst, or suffering more than 20% of your maximum Health from a single attack.",
+              "Regenerates 3% of your total Health over 6 sec after being the victim of a critical strike, dealing damage with Bloodthirst, or suffering more than 20% of your maximum Health from a single attack."
+            ],
+            "new": [
+              "Regenerates 1% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack.",
+              "Regenerates 2% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack.",
+              "Regenerates 3% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Dual Wield Specialization",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases your off-hand weapon damage by 5% and chance to hit with off-hand attacks by 2%.",
+              "Increases your off-hand weapon damage by 10% and chance to hit with off-hand attacks by 4%.",
+              "Increases your off-hand weapon damage by 15% and chance to hit with off-hand attacks by 6%.",
+              "Increases your off-hand weapon damage by 20% and chance to hit with off-hand attacks by 8%.",
+              "Increases your off-hand weapon damage by 25% and chance to hit with off-hand attacks by 10%."
+            ],
+            "new": [
+              "Increases the damage done by your off-hand weapon by 5% and the Rage generated by your off-hand attacks by 10%.",
+              "Increases the damage done by your off-hand weapon by 10% and the Rage generated by your off-hand attacks by 20%.",
+              "Increases the damage done by your off-hand weapon by 15% and the Rage generated by your off-hand attacks by 30%.",
+              "Increases the damage done by your off-hand weapon by 20% and the Rage generated by your off-hand attacks by 40%.",
+              "Increases the damage done by your off-hand weapon by 25% and the Rage generated by your off-hand attacks by 50%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Raging Blows",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Causes your Whirlwind to also strike with your Off Hand weapon, and reduces the Rage cost of your Cleave ability by 2."
+            ],
+            "new": [
+              "Reduces the Rage cost of your Cleave and Whirlwind abilities by 3."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Improved Berserker Rage",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 6,
+            "new": 5,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Flurry",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Enrage",
+            "new": "Death Wish",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Fury",
+        "name": "Bloodthirst",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Instantly attack the target causing damage equal to 35% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
+            ],
+            "new": [
+              "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Death Wish",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Anticipation",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 1,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 3,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Improved Bloodrage",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Last Stand",
+        "fieldChanges": [
+          {
+            "field": "req",
+            "old": "Improved Bloodrage",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Improved Revenge",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Improved Disarm",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Vanguard",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Improved Shield Bash",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 5,
+            "new": 4,
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Bastion",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 5,
+            "new": 6,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Focused Rage",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 6,
+            "new": 5,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [
+      {
+        "field": "hotfix",
+        "withField": 23,
+        "total": 466,
+        "valueCounts": [
+          [
+            "\"2026-10-02\"",
+            23
+          ]
+        ]
+      }
+    ],
+    "removedArrayAdded": [
+      "Warrior|Improved Cleave",
+      "Warrior|Toughness"
+    ],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": []
+  },
+  "spellbooks": {
+    "added": [],
+    "removed": [],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      "Warrior|Berserker Rage|",
+      "Warrior|Bloodthirst|Rank 1",
+      "Warrior|Bloodthirst|Rank 2",
+      "Warrior|Bloodthirst|Rank 3",
+      "Warrior|Bloodthirst|Rank 4",
+      "Warrior|Intimidating Shout|",
+      "Warrior|Whirlwind|"
+    ],
+    "newFields": []
+  },
+  "opaque": {
+    "racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": false,
+      "newFields": []
+    }
+  }
+}

@@ -57,6 +57,12 @@ export type Talent = {
   classic?: ClassicTalentInfo;
   passive: boolean;
   cost?: string;
+  // A caveat about this talent's OWN (Forever-side) data that isn't a
+  // Classic comparison -- e.g. a prereq arrow sourced only from reading the
+  // beta's hotfix cache, not from an official Blizzard patch note. Rendered
+  // as a standalone tooltip note; distinct from classic.note, which is
+  // specifically about the Classic-vs-Forever comparison.
+  confidenceNote?: string;
 };
 
 export type TalentTree = {

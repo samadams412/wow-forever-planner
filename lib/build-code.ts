@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 4;
+const CURRENT_VERSION = 5;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -44,12 +44,20 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
     const version = parseInt(segments[0], 10);
     if (version < CURRENT_VERSION) {
       // Version 1-2 codes predate the 2026-09-24 reshape (need V2_TREE_ORDER
-      // for Paladin Holy/Retribution + Shaman Elemental) AND predate today's
-      // 2026-10-02 Druid Feral Combat reshape (need V3_TREE_ORDER too).
-      // Version 3 codes already have the post-09-24 shape for those 3 trees
-      // (so must NOT get V2_TREE_ORDER applied to them) but still predate
-      // today's Druid change, so only need V3_TREE_ORDER.
-      const orders = version < 3 ? { ...V2_TREE_ORDER, ...V3_TREE_ORDER } : V3_TREE_ORDER;
+      // for Paladin Holy/Retribution + Shaman Elemental), the 2026-10-02
+      // Druid Feral Combat reshape (V3_TREE_ORDER), AND today's 2026-10-03
+      // Warrior Fury/Protection hotfix reshape (V4_TREE_ORDER) -- need all
+      // three. Version 3 codes already have the post-09-24 shape for those
+      // first 3 trees (so must NOT get V2_TREE_ORDER applied) but still
+      // predate both the Druid and Warrior changes, so need V3 + V4. Version
+      // 4 codes already have the post-Druid-change shape too, so only need
+      // V4_TREE_ORDER for the Warrior trees.
+      const orders =
+        version < 3
+          ? { ...V2_TREE_ORDER, ...V3_TREE_ORDER, ...V4_TREE_ORDER }
+          : version < 4
+            ? { ...V3_TREE_ORDER, ...V4_TREE_ORDER }
+            : V4_TREE_ORDER;
       return decodeAgainstFrozenOrders(classData, segments.slice(1), orders);
     }
     return decodeVersionedBuild(classData, segments.slice(1));
@@ -195,6 +203,14 @@ const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
   balance_balance_of_nature: null,
   // Removed 2026-10-02 (see V3_TREE_ORDER below).
   feral_king_of_the_jungle: null,
+  // Removed/renamed 2026-10-03 Warrior Fury/Protection hotfix (see
+  // V4_TREE_ORDER below). Iron Will moved tree (Fury -> Protection), so its
+  // id prefix changes to match; the other three were removed outright.
+  fury_iron_will: "protection_iron_will",
+  fury_improved_cleave: null,
+  fury_boundless_rage: null,
+  fury_precision: null,
+  protection_toughness: null,
 };
 
 // --- v2 tree shape (2026-09-18 .. 2026-09-24) ---------------------------------
@@ -315,6 +331,65 @@ const V3_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
+// --- v4 tree shape (2026-10-02 .. 2026-10-03) ---------------------------------
+//
+// Blizzard's 1 Oct patch notes for Warrior (Fury/Protection rework) landed
+// as a server-side hotfix on 1-2 Oct, captured by the 2026-10-03
+// talentsforever.com pull. Fury gained Lingering Rage, Furious Precision,
+// and Gore Drinker, and lost Improved Cleave, Boundless Rage, and Precision;
+// Protection lost Toughness entirely; Iron Will moved tree (Fury -> renamed
+// protection_iron_will) with most of the rest of both trees' rows shuffling
+// around the vacated/added slots. See LEGACY_ID_TRANSLATION above for the
+// id-level moves/removals.
+//
+// V4_TREE_ORDER freezes Warrior Fury and Protection's tier/col-sorted id
+// order as it stood at CURRENT_VERSION 4, immediately before this hotfix.
+// Never edit after the fact, same rule as the other frozen orders above.
+const V4_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  warrior: {
+    Fury: [
+      "fury_booming_voice",
+      "fury_cruelty",
+      "fury_iron_will",
+      "fury_unbridled_wrath",
+      "fury_improved_cleave",
+      "fury_piercing_howl",
+      "fury_blood_craze",
+      "fury_boundless_rage",
+      "fury_dual_wield_specialization",
+      "fury_raging_blows",
+      "fury_enrage",
+      "fury_improved_execute",
+      "fury_precision",
+      "fury_death_wish",
+      "fury_improved_intercept",
+      "fury_improved_berserker_rage",
+      "fury_flurry",
+      "fury_bloodthirst",
+    ],
+    Protection: [
+      "protection_shield_specialization",
+      "protection_anticipation",
+      "protection_improved_bloodrage",
+      "protection_toughness",
+      "protection_improved_thunder_clap",
+      "protection_last_stand",
+      "protection_master_of_defense",
+      "protection_improved_revenge",
+      "protection_defiance",
+      "protection_improved_sunder_armor",
+      "protection_improved_disarm",
+      "protection_vanguard",
+      "protection_improved_shield_wall",
+      "protection_concussion_blow",
+      "protection_improved_shield_bash",
+      "protection_bastion",
+      "protection_focused_rage",
+      "protection_shield_slam",
+    ],
+  },
+};
+
 // Decodes a versioned code older than CURRENT_VERSION, whose per-tree digits
 // are positioned against a frozen older tree order for whichever trees have
 // one in `orders`; every other tree decodes against live data exactly as a
@@ -358,7 +433,8 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
     const legacyOrder =
       LEGACY_TREE_ORDER[classData.class]?.[tree.name] ??
       V2_TREE_ORDER[classData.class]?.[tree.name] ??
-      V3_TREE_ORDER[classData.class]?.[tree.name];
+      V3_TREE_ORDER[classData.class]?.[tree.name] ??
+      V4_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {

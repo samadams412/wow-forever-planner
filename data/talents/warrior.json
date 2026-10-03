@@ -200,7 +200,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "15 Rage | Melee Range | Instant | 20 sec cooldown | Requires Two-Handed Axes, Two-Handed Maces, Polearms, Two-Handed Swords, Staves"
+          "cost": "15 Rage | Melee Range | Instant | 20 sec cooldown"
         },
         {
           "id": "arms_two_handed_weapon_specialization",
@@ -437,11 +437,11 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 10%.",
-            "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 20%.",
-            "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 30%.",
-            "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 40%.",
-            "Increases the radius of your Battle Shout and Demoralizing Shout abilities by 50%."
+            "Increases the area of effect of your Shouts by 10% and reduces their Rage cost by 5%.",
+            "Increases the area of effect of your Shouts by 20% and reduces their Rage cost by 10%.",
+            "Increases the area of effect of your Shouts by 30% and reduces their Rage cost by 15%.",
+            "Increases the area of effect of your Shouts by 40% and reduces their Rage cost by 20%.",
+            "Increases the area of effect of your Shouts by 50% and reduces their Rage cost by 25%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -485,29 +485,24 @@
           "passive": true
         },
         {
-          "id": "fury_iron_will",
-          "name": "Iron Will",
+          "id": "fury_lingering_rage",
+          "name": "Lingering Rage",
           "tier": 2,
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Reduces the duration of Stun and Fear effects inflicted on you by 3%.",
-            "Reduces the duration of Stun and Fear effects inflicted on you by 6%.",
-            "Reduces the duration of Stun and Fear effects inflicted on you by 9%.",
-            "Reduces the duration of Stun and Fear effects inflicted on you by 12%.",
-            "Reduces the duration of Stun and Fear effects inflicted on you by 15%."
+            "Increases the time before your Rage begins to decay after leaving combat by 2 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 4 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 6 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 8 sec.",
+            "Increases the time before your Rage begins to decay after leaving combat by 10 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
-          "icon": "spell_magic_magearmor",
+          "status": "new",
+          "icon": "ability_warrior_secondwind",
           "classic": {
-            "status": "moved",
-            "tree": "Protection",
-            "tier": 2,
-            "col": 4,
-            "maxRank": 5,
-            "text": "Increases your chance to resist Stun and Charm effects by an additional 3%."
+            "status": "new"
           },
           "passive": true
         },
@@ -518,11 +513,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Gives you a 12% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
-            "Gives you a 24% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
-            "Gives you a 36% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
-            "Gives you a 48% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons.",
-            "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon. This effect is increased to 2 Rage for two-handed weapons."
+            "Gives you a 12% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+            "Gives you a 24% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+            "Gives you a 36% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+            "Gives you a 48% chance to generate 1 additional Rage when you deal melee damage with a weapon.",
+            "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -539,27 +534,22 @@
           "passive": true
         },
         {
-          "id": "fury_improved_cleave",
-          "name": "Improved Cleave",
+          "id": "fury_furious_precision",
+          "name": "Furious Precision",
           "tier": 3,
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Reduces the Rage cost of your Cleave ability by 1.",
-            "Reduces the Rage cost of your Cleave ability by 2.",
-            "Reduces the Rage cost of your Cleave ability by 3."
+            "Increases your chance to hit with off-hand attacks by 4%.",
+            "Increases your chance to hit with off-hand attacks by 7%.",
+            "Increases your chance to hit with off-hand attacks by 10%."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
-          "icon": "ability_warrior_cleave",
+          "status": "new",
+          "icon": "ability_warrior_incite",
           "classic": {
-            "status": "changed",
-            "tree": "Fury",
-            "tier": 3,
-            "col": 1,
-            "maxRank": 3,
-            "text": "Increases the bonus damage done by your Cleave ability by 40%."
+            "status": "new"
           },
           "passive": true
         },
@@ -570,7 +560,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Causes all nearby enemies to be Dazed, reducing movement speed by 50% for 6 sec."
+            "Causes all enemies within 10 yds to be Dazed, reducing movement speed by 50% for 6 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -594,9 +584,9 @@
           "col": 3,
           "maxRank": 3,
           "ranks": [
-            "Regenerates 1% of your total Health over 6 sec after being the victim of a critical strike, dealing damage with Bloodthirst, or suffering more than 20% of your maximum Health from a single attack.",
-            "Regenerates 2% of your total Health over 6 sec after being the victim of a critical strike, dealing damage with Bloodthirst, or suffering more than 20% of your maximum Health from a single attack.",
-            "Regenerates 3% of your total Health over 6 sec after being the victim of a critical strike, dealing damage with Bloodthirst, or suffering more than 20% of your maximum Health from a single attack."
+            "Regenerates 1% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack.",
+            "Regenerates 2% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack.",
+            "Regenerates 3% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -613,37 +603,17 @@
           "passive": true
         },
         {
-          "id": "fury_boundless_rage",
-          "name": "Boundless Rage",
-          "tier": 3,
-          "col": 4,
-          "maxRank": 3,
-          "ranks": [
-            "Increases your maximum Rage by 10.",
-            "Increases your maximum Rage by 20.",
-            "Increases your maximum Rage by 30."
-          ],
-          "confidence": "confirmed",
-          "prereq": null,
-          "status": "new",
-          "icon": "ability_warrior_intensifyrage",
-          "classic": {
-            "status": "new"
-          },
-          "passive": true
-        },
-        {
           "id": "fury_dual_wield_specialization",
           "name": "Dual Wield Specialization",
           "tier": 4,
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "Increases your off-hand weapon damage by 5% and chance to hit with off-hand attacks by 2%.",
-            "Increases your off-hand weapon damage by 10% and chance to hit with off-hand attacks by 4%.",
-            "Increases your off-hand weapon damage by 15% and chance to hit with off-hand attacks by 6%.",
-            "Increases your off-hand weapon damage by 20% and chance to hit with off-hand attacks by 8%.",
-            "Increases your off-hand weapon damage by 25% and chance to hit with off-hand attacks by 10%."
+            "Increases the damage done by your off-hand weapon by 5% and the Rage generated by your off-hand attacks by 10%.",
+            "Increases the damage done by your off-hand weapon by 10% and the Rage generated by your off-hand attacks by 20%.",
+            "Increases the damage done by your off-hand weapon by 15% and the Rage generated by your off-hand attacks by 30%.",
+            "Increases the damage done by your off-hand weapon by 20% and the Rage generated by your off-hand attacks by 40%.",
+            "Increases the damage done by your off-hand weapon by 25% and the Rage generated by your off-hand attacks by 50%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -666,7 +636,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Causes your Whirlwind to also strike with your Off Hand weapon, and reduces the Rage cost of your Cleave ability by 2."
+            "Reduces the Rage cost of your Cleave and Whirlwind abilities by 3."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -729,26 +699,6 @@
           "passive": true
         },
         {
-          "id": "fury_precision",
-          "name": "Precision",
-          "tier": 5,
-          "col": 1,
-          "maxRank": 3,
-          "ranks": [
-            "Improves your chance to hit by 1%.",
-            "Improves your chance to hit by 2%.",
-            "Improves your chance to hit by 3%."
-          ],
-          "confidence": "confirmed",
-          "prereq": null,
-          "status": "new",
-          "icon": "ability_marksmanship",
-          "classic": {
-            "status": "new"
-          },
-          "passive": true
-        },
-        {
           "id": "fury_death_wish",
           "name": "Death Wish",
           "tier": 5,
@@ -799,7 +749,7 @@
         {
           "id": "fury_improved_berserker_rage",
           "name": "Improved Berserker Rage",
-          "tier": 6,
+          "tier": 5,
           "col": 1,
           "maxRank": 2,
           "ranks": [
@@ -824,7 +774,7 @@
           "id": "fury_flurry",
           "name": "Flurry",
           "tier": 6,
-          "col": 3,
+          "col": 2,
           "maxRank": 5,
           "ranks": [
             "Increases your melee attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
@@ -835,8 +785,8 @@
           ],
           "confidence": "confirmed",
           "prereq": {
-            "id": "fury_enrage",
-            "ranks": 5
+            "id": "fury_death_wish",
+            "ranks": 1
           },
           "status": "changed",
           "icon": "ability_ghoulfrenzy",
@@ -851,19 +801,39 @@
           "passive": true
         },
         {
+          "id": "fury_gore_drinker",
+          "name": "Gore Drinker",
+          "tier": 6,
+          "col": 3,
+          "maxRank": 2,
+          "ranks": [
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1% of your maximum Health."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "fury_enrage",
+            "ranks": 5
+          },
+          "status": "new",
+          "icon": "racial_troll_berserk",
+          "classic": {
+            "status": "new"
+          },
+          "passive": true
+        },
+        {
           "id": "fury_bloodthirst",
           "name": "Bloodthirst",
           "tier": 7,
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Instantly attack the target causing damage equal to 35% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
+            "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "fury_death_wish",
-            "ranks": 1
-          },
+          "prereq": null,
+          "confidenceNote": "This prereq arrow's removal is sourced only from reading the beta's hotfix cache, not an official Blizzard patch note -- flagged as unconfirmed pending the live game.",
           "status": "changed",
           "icon": "spell_nature_bloodlust",
           "classic": {
@@ -882,6 +852,33 @@
     {
       "name": "Protection",
       "talents": [
+        {
+          "id": "protection_iron_will",
+          "name": "Iron Will",
+          "tier": 1,
+          "col": 3,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the duration of Stun and Fear effects inflicted on you by 3%.",
+            "Reduces the duration of Stun and Fear effects inflicted on you by 6%.",
+            "Reduces the duration of Stun and Fear effects inflicted on you by 9%.",
+            "Reduces the duration of Stun and Fear effects inflicted on you by 12%.",
+            "Reduces the duration of Stun and Fear effects inflicted on you by 15%."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "moved",
+          "icon": "spell_magic_magearmor",
+          "classic": {
+            "status": "moved",
+            "tree": "Protection",
+            "tier": 2,
+            "col": 4,
+            "maxRank": 5,
+            "text": "Increases your chance to resist Stun and Charm effects by an additional 3%."
+          },
+          "passive": true
+        },
         {
           "id": "protection_shield_specialization",
           "name": "Shield Specialization",
@@ -912,8 +909,8 @@
         {
           "id": "protection_anticipation",
           "name": "Anticipation",
-          "tier": 1,
-          "col": 3,
+          "tier": 2,
+          "col": 1,
           "maxRank": 5,
           "ranks": [
             "Increases your Defense Skill by 4.",
@@ -939,7 +936,7 @@
         {
           "id": "protection_improved_bloodrage",
           "name": "Improved Bloodrage",
-          "tier": 2,
+          "tier": 1,
           "col": 1,
           "maxRank": 2,
           "ranks": [
@@ -957,33 +954,6 @@
             "col": 1,
             "maxRank": 2,
             "text": "Increases the instant Rage generated by your Bloodrage ability by 2."
-          },
-          "passive": true
-        },
-        {
-          "id": "protection_toughness",
-          "name": "Toughness",
-          "tier": 2,
-          "col": 3,
-          "maxRank": 5,
-          "ranks": [
-            "Increases your Armor value from items by 2%.",
-            "Increases your Armor value from items by 4%.",
-            "Increases your Armor value from items by 6%.",
-            "Increases your Armor value from items by 8%.",
-            "Increases your Armor value from items by 10%."
-          ],
-          "confidence": "confirmed",
-          "prereq": null,
-          "status": "unchanged",
-          "icon": "spell_holy_devotion",
-          "classic": {
-            "status": "unchanged",
-            "tree": "Protection",
-            "tier": 2,
-            "col": 3,
-            "maxRank": 5,
-            "text": "Increases your armor value from items by 2%."
           },
           "passive": true
         },
@@ -1022,10 +992,8 @@
             "When activated, this ability temporarily grants you 30% of your maximum health for 20 sec. After the effect expires, the health is lost."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "protection_improved_bloodrage",
-            "ranks": 2
-          },
+          "prereq": null,
+          "confidenceNote": "This prereq arrow's removal is sourced only from reading the beta's hotfix cache, not an official Blizzard patch note -- flagged as unconfirmed pending the live game.",
           "status": "changed",
           "icon": "spell_holy_ashestoashes",
           "classic": {
@@ -1064,7 +1032,7 @@
         {
           "id": "protection_improved_revenge",
           "name": "Improved Revenge",
-          "tier": 3,
+          "tier": 2,
           "col": 3,
           "maxRank": 3,
           "ranks": [
@@ -1140,8 +1108,8 @@
         {
           "id": "protection_improved_disarm",
           "name": "Improved Disarm",
-          "tier": 4,
-          "col": 2,
+          "tier": 3,
+          "col": 3,
           "maxRank": 3,
           "ranks": [
             "Reduces the cooldown of your Disarm ability by 7 secs.",
@@ -1166,7 +1134,7 @@
           "id": "protection_vanguard",
           "name": "Vanguard",
           "tier": 4,
-          "col": 3,
+          "col": 2,
           "maxRank": 1,
           "ranks": [
             "Your Charge ability is now usable while in Defensive Stance."
@@ -1231,7 +1199,7 @@
         {
           "id": "protection_improved_shield_bash",
           "name": "Improved Shield Bash",
-          "tier": 5,
+          "tier": 4,
           "col": 3,
           "maxRank": 2,
           "ranks": [
@@ -1240,10 +1208,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "ability_warrior_shieldbash",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Protection",
             "tier": 5,
             "col": 3,
@@ -1255,8 +1223,8 @@
         {
           "id": "protection_bastion",
           "name": "Bastion",
-          "tier": 5,
-          "col": 4,
+          "tier": 6,
+          "col": 3,
           "maxRank": 5,
           "ranks": [
             "Increases all damage you deal by 2% while a shield is equipped.",
@@ -1277,7 +1245,7 @@
         {
           "id": "protection_focused_rage",
           "name": "Focused Rage",
-          "tier": 6,
+          "tier": 5,
           "col": 3,
           "maxRank": 3,
           "ranks": [
