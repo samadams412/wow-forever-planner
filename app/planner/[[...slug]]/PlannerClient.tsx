@@ -300,7 +300,7 @@ export default function PlannerClient({
           </div>
         )}
 
-        {classData && <TalentLegend />}
+        {classData && <TalentLegend compareMode={compareMode} />}
       </div>
 
       {classData && (

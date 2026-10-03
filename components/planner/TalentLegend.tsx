@@ -10,7 +10,10 @@ const STATES = [
   { label: "Locked", borderClass: "border-border/40" },
 ];
 
-export default function TalentLegend() {
+// Only shown alongside the compare-to-Classic view, where the border states
+// are part of the story; in the normal view it's clutter.
+export default function TalentLegend({ compareMode }: { compareMode: boolean }) {
+  if (!compareMode) return null;
   return (
     <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 text-xs text-foreground-muted">
       {STATES.map(({ label, borderClass }) => (
