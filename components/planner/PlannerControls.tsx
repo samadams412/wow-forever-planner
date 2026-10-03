@@ -1,5 +1,7 @@
 import { MIN_TALENT_LEVEL, MAX_LEVEL } from "@/lib/talent-rules";
+import { useCallback, useState } from "react";
 import CompareClassicToggle from "./CompareClassicToggle";
+import ControlsHelp from "./ControlsHelp";
 
 // Consolidates the level picker and the build-action row (Compare to
 // Classic / Reset / Copy share link / Save build / My Builds) into one
@@ -37,6 +39,8 @@ export default function PlannerControls({
   savedBuildsCount: number;
 }) {
   const hasPoints = totalSpent > 0;
+  const [helpOpen, setHelpOpen] = useState(false);
+  const closeHelp = useCallback(() => setHelpOpen(false), []);
 
   return (
     <div className="flex flex-wrap items-center gap-2">
@@ -99,6 +103,17 @@ export default function PlannerControls({
       >
         My Builds{savedBuildsCount > 0 ? ` (${savedBuildsCount})` : ""}
       </button>
+      <button
+        type="button"
+        onClick={() => setHelpOpen((v) => !v)}
+        aria-label="Show planner controls"
+        aria-expanded={helpOpen}
+        title="Controls"
+        className="flex h-5 w-5 items-center justify-center rounded-full border border-border text-[11px] font-semibold text-foreground-muted hover:border-accent/60 hover:text-foreground"
+      >
+        ?
+      </button>
+      <ControlsHelp open={helpOpen} onClose={closeHelp} />
     </div>
   );
 }
