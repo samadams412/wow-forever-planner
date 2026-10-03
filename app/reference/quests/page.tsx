@@ -18,7 +18,7 @@ const SORT_KEYS: QuestSortKey[] = ["name", "level", "requiredLevel", "side", "lo
 export const metadata: Metadata = {
   title: "Quests",
   description:
-    "Every quest in the World of Warcraft: Forever beta client, filterable by zone/dungeon/raid/battleground, with level ranges and rewards, sourced from foreverchanges.pro.",
+    "Every quest in the World of Warcraft: Forever beta client, filterable by zone/dungeon/raid/battleground, with level ranges and rewards, sourced from the beta client.",
   alternates: { canonical: "/reference/quests" },
 };
 

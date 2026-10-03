@@ -3,79 +3,25 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BossPortrait from "@/components/reference/BossPortrait";
-import LootItemPill from "@/components/reference/LootItemPill";
+import BossCard from "@/components/reference/BossCard";
+import QuestCard from "@/components/reference/QuestCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
-import type { DungeonData, LootBoss, Quest } from "@/lib/dungeon-loot";
+import type { DungeonData } from "@/lib/dungeon-loot";
 
 const FACTION_BADGE_CLASS: Record<"Alliance" | "Horde", string> = {
   Alliance: "bg-sky-500/15 text-sky-300",
   Horde: "bg-red-500/15 text-red-400",
 };
 
-function BossDetail({ boss, dungeonId }: { boss: LootBoss; dungeonId: string }) {
-  if (boss.items.length === 0) {
-    return <p className="text-xs text-foreground-muted">No loot recorded for {boss.name} yet.</p>;
-  }
-  return (
-    <div className="flex flex-wrap gap-1.5">
-      {boss.items.map((item, i) => (
-        <LootItemPill key={`${item.name}-${i}`} item={item} tooltipId={`panel:${dungeonId}:${boss.name}:${i}`} />
-      ))}
-    </div>
-  );
-}
-
-function QuestDetail({ quest, dungeonId }: { quest: Quest; dungeonId: string }) {
-  return (
-    <div>
-      {quest.text && <p className="text-xs leading-relaxed text-foreground-muted">{quest.text}</p>}
-      <dl className="mt-1.5 flex flex-col gap-0.5 text-[11px]">
-        {quest.prereq && (
-          <div className="flex gap-1.5">
-            <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Comes after</dt>
-            <dd className="text-foreground">{quest.prereq}</dd>
-          </div>
-        )}
-        {quest.giver && (
-          <div className="flex gap-1.5">
-            <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Starts</dt>
-            <dd className="text-foreground">{quest.giver.location}</dd>
-          </div>
-        )}
-        {quest.objectives.map((obj, i) => (
-          <div key={i} className="flex gap-1.5">
-            <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">{obj.label}</dt>
-            <dd className="text-foreground">{obj.needItems ? obj.needItems.map((it) => `${it.name}${it.qty ? ` ${it.qty}` : ""}`).join(", ") : obj.value}</dd>
-          </div>
-        ))}
-        {(quest.experience || quest.money) && (
-          <div className="flex gap-1.5">
-            <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Reward</dt>
-            <dd className="text-foreground">{[quest.experience, quest.money].filter(Boolean).join(" + ")}</dd>
-          </div>
-        )}
-      </dl>
-      {quest.rewards.length > 0 && (
-        <div className="mt-2">
-          {quest.rewardHeading && <p className="text-[11px] font-medium text-foreground-muted">{quest.rewardHeading}</p>}
-          <div className="mt-1 flex flex-wrap gap-1.5">
-            {quest.rewards.map((item, j) => (
-              <LootItemPill key={`${item.name}-${j}`} item={item} tooltipId={`panel:${dungeonId}:${quest.id}:${j}`} />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function DungeonInlinePanel({ data, onClose }: { data: DungeonData; onClose: () => void }) {
   const [tab, setTab] = useState<"bosses" | "quests">("bosses");
   const [selectedBoss, setSelectedBoss] = useState(0);
   const [selectedQuest, setSelectedQuest] = useState(0);
 
-  const boss = data.bosses[selectedBoss];
+  // Lootable objects (chests, etc.) clutter this compact popup's boss
+  // roster -- they stay in the full loot table page, just not here.
+  const listedBosses = data.bosses.filter((b) => b.kind !== "object");
+  const boss = listedBosses[selectedBoss];
   const quest = data.quests[selectedQuest];
   const totalItems = data.bosses.reduce((n, b) => n + b.items.length, 0);
 
@@ -123,7 +69,7 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                   tab === "bosses" ? "border-b-2 border-accent text-accent" : "text-foreground-muted hover:text-foreground"
                 }`}
               >
-                Bosses and Loot {data.bosses.length > 0 && <span className="text-foreground-muted">{data.bosses.length}</span>}
+                Bosses and Loot {listedBosses.length > 0 && <span className="text-foreground-muted">{listedBosses.length}</span>}
               </button>
               <button
                 type="button"
@@ -145,11 +91,15 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
             </button>
           </div>
 
-          <div className="flex h-[320px] flex-1">
-            {tab === "bosses" && data.bosses.length > 0 && (
+          {/* No flex-1 here -- it's a flex-column child of the surface panel below,
+              and flex-grow would stretch this past its explicit height to fill
+              whatever space the (content-driven) boss/quest list wants, recreating
+              the original unbounded-growth bug this fixed height exists to prevent. */}
+          <div className="flex h-[320px]">
+            {tab === "bosses" && listedBosses.length > 0 && (
               <>
                 <ul className="scrollbar-gold w-32 shrink-0 cursor-default overflow-y-auto border-r border-border py-1 sm:w-40">
-                  {data.bosses.map((b, i) => (
+                  {listedBosses.map((b, i) => (
                     <li key={`${b.name}-${i}`}>
                       <button
                         type="button"
@@ -164,20 +114,12 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                   ))}
                 </ul>
                 <div className="scrollbar-gold min-w-0 flex-1 cursor-default overflow-y-auto p-3">
-                  {boss && (
-                    <>
-                      <div className="mb-1.5 flex items-center gap-2">
-                        <BossPortrait src={boss.portraitUrl} alt="" size={28} />
-                        <h4 className="text-xs font-semibold uppercase tracking-wide text-accent">{boss.name}</h4>
-                      </div>
-                      <BossDetail boss={boss} dungeonId={data.id} />
-                    </>
-                  )}
+                  {boss && <BossCard boss={boss} dungeonId={data.id} compact bare />}
                 </div>
               </>
             )}
 
-            {tab === "bosses" && data.bosses.length === 0 && (
+            {tab === "bosses" && listedBosses.length === 0 && (
               <p className="p-3 text-xs text-foreground-muted">No loot discovered for this dungeon yet.</p>
             )}
 
@@ -204,25 +146,7 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                   ))}
                 </ul>
                 <div className="scrollbar-gold min-w-0 flex-1 cursor-default overflow-y-auto p-3">
-                  {quest && (
-                    <>
-                      <div className="mb-1.5 flex flex-wrap items-baseline gap-x-2">
-                        <h4 className="text-xs font-semibold uppercase tracking-wide text-accent">{quest.name}</h4>
-                        {quest.level !== null && (
-                          <span className="text-[10px] text-foreground-muted">
-                            Level {quest.level}
-                            {quest.minLevel !== null ? `, from level ${quest.minLevel}` : ""}
-                          </span>
-                        )}
-                        {quest.faction && quest.faction !== "Both" && (
-                          <span className={`rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${FACTION_BADGE_CLASS[quest.faction]}`}>
-                            {quest.faction} Only
-                          </span>
-                        )}
-                      </div>
-                      <QuestDetail quest={quest} dungeonId={data.id} />
-                    </>
-                  )}
+                  {quest && <QuestCard quest={quest} dungeonId={data.id} dungeonName={data.name} compact />}
                 </div>
               </>
             )}

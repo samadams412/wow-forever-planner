@@ -2,7 +2,7 @@ import LootItemPill from "@/components/reference/LootItemPill";
 import { sourceTypeLabel, SIBLING_TRUNCATE_THRESHOLD, SIBLING_TRUNCATE_SHOW, type ItemSource } from "@/lib/item-sources";
 import type { LootItem } from "@/lib/dungeon-loot";
 
-// Same card language as LootBossCard/LootQuestRewardsCard -- rounded-lg,
+// Same card language as BossCard/LootQuestRewardsCard -- rounded-lg,
 // border-border, bg-surface. Renders even when there are no siblings (just
 // the source line); callers only mount this when a source exists at all.
 export default function ItemSourceCard({
@@ -38,10 +38,6 @@ export default function ItemSourceCard({
           </div>
         </>
       )}
-
-      {/* <p className="mt-3 text-[11px] text-foreground-muted/70">
-        Sourced from foreverchanges.pro; not every item has source data yet.
-      </p> */}
     </div>
   );
 }

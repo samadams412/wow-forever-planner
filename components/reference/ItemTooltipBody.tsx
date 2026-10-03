@@ -107,9 +107,9 @@ export default function ItemTooltipBody({
       )}
       {item.tooltip && item.tooltipSynthesized && (
         <TooltipDataNote>
-          Reconstructed from item data, not the beta client&apos;s own tooltip text -- foreverchanges.pro
-          doesn&apos;t store full tooltip text for unchanged items. Armor and stat bonuses aren&apos;t
-          available here.
+          Reconstructed from item data, not the beta client&apos;s own tooltip text -- the underlying
+          item data doesn&apos;t include full tooltip text for items unchanged from Classic. Armor and
+          stat bonuses aren&apos;t available here.
         </TooltipDataNote>
       )}
       {item.dropChance !== null && (

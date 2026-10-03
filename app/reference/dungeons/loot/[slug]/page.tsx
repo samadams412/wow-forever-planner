@@ -5,10 +5,11 @@ import { notFound } from "next/navigation";
 import { MapPin } from "lucide-react";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import LootDisclaimer, { QuestRewardNerfDisclaimer } from "@/components/reference/LootDisclaimer";
-import LootBossCard from "@/components/reference/LootBossCard";
+import BossCard from "@/components/reference/BossCard";
 import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import DungeonLootSidebar from "@/components/reference/DungeonLootSidebar";
+import DungeonStickyNav from "@/components/reference/DungeonStickyNav";
 import type { JumpNavEntry } from "@/components/reference/DungeonJumpNav";
 import { getDungeonLootIndex, getDungeonWithLoot, getDungeonMapImage, getDungeonMapLegend, getDungeonMapAttribution } from "@/lib/dungeon-loot";
 import { getEntranceMapHref } from "@/lib/map-entrances";
@@ -96,22 +97,24 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
       )}
 
+      <DungeonStickyNav hasQuests={data.quests.length > 0} />
+
       <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-start">
         <div className="min-w-0 flex-1">
           <ItemLinkSourceProvider from={`/reference/dungeons/loot/${dungeon.id}`} fromLabel={dungeon.name}>
             {data.bosses.length === 0 ? (
-              <p className="text-sm text-foreground-muted">
+              <p id="bosses" className="scroll-mt-20 text-sm text-foreground-muted">
                 Bosses and loot for this dungeon haven&apos;t been discovered yet -- check back as the beta
                 continues.
               </p>
             ) : (
-              <div className="flex flex-col gap-3">
+              <div id="bosses" className="scroll-mt-20 flex flex-col gap-3">
                 <p className="text-xs text-foreground-muted">
                   {data.bosses.length} boss{data.bosses.length === 1 ? "" : "es"}, {totalItems} item
                   {totalItems === 1 ? "" : "s"}
                 </p>
                 {data.bosses.map((boss, i) => (
-                  <LootBossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
+                  <BossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
                 ))}
               </div>
             )}

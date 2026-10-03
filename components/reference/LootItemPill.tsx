@@ -50,7 +50,7 @@ export default function LootItemPill({
   iconSize?: "normal" | "large";
   // Shows the item's slot/type (e.g. "Chest, Cloth") as a small muted tag
   // next to the name, so loot/reward choices are scannable at a glance
-  // without needing the hover tooltip -- used by LootBossCard and
+  // without needing the hover tooltip -- used by BossCard and
   // LootQuestRewardsCard, where several options sit side by side and
   // "which is the plate chest vs. the caster trinket" is exactly what a
   // glance should answer. Non-gear items (reagents, trade goods, bags,

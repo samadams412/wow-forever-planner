@@ -58,7 +58,7 @@ export async function generateMetadata({
   if (!item) return {};
   return {
     title: item.name,
-    description: `${item.name} -- ${itemQualityName(item.quality)}${item.slot ? `, ${item.slot}` : ""} item data for World of Warcraft: Forever, sourced from foreverchanges.pro.`,
+    description: `${item.name} -- ${itemQualityName(item.quality)}${item.slot ? `, ${item.slot}` : ""} item data for World of Warcraft: Forever, sourced from the beta client.`,
     // Only "new"/"changed" items (genuinely distinct from Classic) are worth
     // indexing at 21,458 pages -- "same"/"missing" items are thin/duplicate-
     // ish content that stays crawlable (follow: true, so link equity from

@@ -140,7 +140,7 @@ function Attribution({ attribution }: { attribution: DungeonPinMapData["attribut
           , used with permission
         </>
       ) : (
-        "Map courtesy of foreverchanges.pro"
+        "Map data via the Atlas addon"
       )}
     </p>
   );

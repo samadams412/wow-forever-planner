@@ -24,7 +24,7 @@ const RARITY_VALUES = [0, 1, 2, 3, 4, 5, 6];
 export const metadata: Metadata = {
   title: "Items",
   description:
-    "Every item in the World of Warcraft: Forever beta client, filterable by new/changed/unchanged-since-Classic, sourced from foreverchanges.pro.",
+    "Every item in the World of Warcraft: Forever beta client, filterable by new/changed/unchanged-since-Classic, sourced from the beta client.",
   // Every filter/status/page combination renders through this one route with
   // the same title/description -- canonicalize to the bare URL so Google
   // consolidates ranking signal here instead of splitting it across dozens
@@ -330,18 +330,7 @@ export default async function ItemsPage({
         </div>
       </div>
 
-      <div className="mt-6 text-xs text-foreground-muted">
-        Sourced from{" "}
-        <a
-          href="https://foreverchanges.pro/items"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline hover:text-accent-hover"
-        >
-          foreverchanges.pro
-        </a>
-        , which reads the beta client directly.
-      </div>
+      <div className="mt-6 text-xs text-foreground-muted">Sourced from the WoW Forever beta client directly.</div>
      
     </main>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/site/Breadcrumbs";
 import DungeonsTimeline from "@/components/reference/DungeonsTimeline";
 import DungeonLevelRangesMobile from "@/components/reference/DungeonLevelRangesMobile";
 import { dungeons } from "@/lib/dungeons";
@@ -21,12 +22,7 @@ export default function DungeonsPage() {
 
   return (
     <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
-      <p className="text-xs text-foreground-muted">
-        <Link href="/reference" className="hover:text-foreground hover:underline">
-          Reference
-        </Link>{" "}
-        / Dungeon Level Ranges
-      </p>
+      <Breadcrumbs items={[{ label: "Reference", href: "/reference" }, { label: "Dungeon Level Ranges" }]} />
       <h1 className="mt-1 font-heading text-2xl font-semibold tracking-wide text-accent">
         Dungeon Level Ranges
       </h1>

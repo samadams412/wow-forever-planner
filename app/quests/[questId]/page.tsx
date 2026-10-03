@@ -38,14 +38,44 @@ export default async function QuestDetailPage({
 }) {
   const { questId } = await params;
   const id = parseQuestId(questId);
-  const quest = id !== null ? getQuestById(id) : null;
-  if (!quest) notFound();
+  // A malformed id (non-numeric) is a true 404. A well-formed id with no
+  // catalog entry means the quest exists in-game but hasn't been pulled
+  // into data/sources/foreverchanges/quests/list.json yet (e.g. a
+  // new-in-Forever dungeon whose quests were scraped separately, after the
+  // main quest-list pull) -- that gets a friendly "not yet available" state
+  // instead of a hard 404, so links into it (e.g. from dungeon quest cards)
+  // don't dead-end.
+  if (id === null) notFound();
+  const quest = getQuestById(id);
 
   const { from, fromLabel } = await searchParams;
   // Only trust an internal path -- `from` is attacker-controlled query input,
   // same guard as app/items/[itemId]/page.tsx.
   const backHref = from && from.startsWith("/") && !from.startsWith("//") ? from : "/reference/quests";
   const backLabel = from && fromLabel ? fromLabel : "Quests";
+
+  if (!quest) {
+    return (
+      <main className="mx-auto w-full max-w-2xl px-3 py-8 sm:px-4">
+        <Breadcrumbs
+          items={[
+            { label: "Reference", href: "/reference" },
+            { label: "Quests", href: "/reference/quests" },
+            { label: "Quest details not yet found" },
+          ]}
+        />
+        <div className="mt-4 rounded-lg border border-border bg-surface p-6 text-center">
+          <h1 className="font-heading text-lg font-semibold text-foreground">Quest details not yet found</h1>
+          <p className="mt-2 text-sm text-foreground-muted">
+            This quest hasn&apos;t been pulled into the reference catalog yet -- check back as the beta continues.
+          </p>
+          <a href={backHref} className="mt-4 inline-block text-sm text-accent hover:underline">
+            Back to {backLabel}
+          </a>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="mx-auto w-full max-w-2xl px-3 py-8 sm:px-4">
