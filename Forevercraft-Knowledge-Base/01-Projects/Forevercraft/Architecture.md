@@ -106,4 +106,4 @@ Covered in CLAUDE.md (mobile tap/long-press/scroll disambiguation/haptics; `lib/
 ## Deeper references
 - Dated full audit: [[Site-Audit-2026-09-20]]. Its component/lib inventories still read correctly but are not re-verified; its routing, data, and SEO sections were superseded by the tables above.
 - Repo docs: `docs/adding-content.md`, `docs/map-tile-cdn-plan.md`, `docs/map-reference-foreverchanges.md`
-- Historical session detail: `03-Handoffs/archive/2026-09-30-claude-md-archive` (local-only)
+- Historical session detail: `03-Handoffs/project-history/2026-09-30-claude-md-archive` (local-only)

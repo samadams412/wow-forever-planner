@@ -44,7 +44,7 @@ The always-loaded architecture file is `CLAUDE.md` at the repo root; this vault'
 - `2026-09-30-map-ui-cleanup` — map legend icons, mobile auto-close, loot → map link
 - `2026-09-30-racials-ui` — Racials reference UI patterns
 - `2026-09-30-talent-spell-levels` — talent-granted spell level corrections
-- Archive: `03-Handoffs/archive/` (CLAUDE.md history log, map toolbar, spellbooks UI, professions data)
+- Handoffs are sorted by category under `03-Handoffs/` (`data-pipeline/`, `quests/`, `maps/`, `dungeons-loot/`, `items/`, `talents/`, `reference-ui/`, `infrastructure/`, `project-history/`). The CLAUDE.md history log lives in `project-history/`.
 
 ## What's live (verified against git history and the `app/` tree, 2026-09-30)
 | Area | Route(s) | State |

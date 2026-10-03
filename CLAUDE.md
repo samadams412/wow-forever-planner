@@ -10,11 +10,11 @@ serving as a fixed project brief.
 
 Full session-by-session history (what was built, bugs found/fixed, data
 pipelines investigated, and every superseded/reverted approach) lives in
-`Forevercraft-Knowledge-Base/03-Handoffs/archive/2026-09-30-claude-md-archive.md` — read it if you need forensic detail on
+`Forevercraft-Knowledge-Base/03-Handoffs/project-history/2026-09-30-claude-md-archive.md` — read it if you need forensic detail on
 *how* something was built or verified. This file only covers what's true
 *now*: active architecture, data/build protocols, and open items. (Separate
-from that archive, `Forevercraft-Knowledge-Base/03-Handoffs/*.md` also holds individual recent per-task
-handoffs, e.g. `map-ui-cleanup.md`.)
+from that archive, `Forevercraft-Knowledge-Base/03-Handoffs/<category>/*.md` holds the individual
+per-task handoffs, sorted into category folders, e.g. `maps/` or `data-pipeline/`.)
 
 ## Current state (as of 2026-09-30)
 
@@ -284,7 +284,7 @@ image/credit conventions, and SEO metadata specifics.
 - **Vercel function sizes (open, not urgent):** functions are 24.2 MB each
   (was ~121 MB) but the dashboard's uniform sizes don't match local trace
   sizes, and the cause is unexplained. See
-  `Forevercraft-Knowledge-Base/03-Handoffs/2026-09-30-vercel-function-size.md`.
+  `Forevercraft-Knowledge-Base/03-Handoffs/infrastructure/2026-09-30-vercel-function-size.md`.
 - Export FileDataID 1121272 from wow.export and crop real dungeon/raid/
   battleground icons (see World map above).
 - Resolve the duplicate-Naxxramas-Map-row and Emerald-Dream-on-the-map
@@ -300,4 +300,4 @@ image/credit conventions, and SEO metadata specifics.
 Full history, bug-hunt narratives, and retired/superseded approaches
 (the original SVG map MVP, the pre-tile-pyramid proof of concept, the
 foreverchanges.pro/map 2D-vs-3D recon, per-session verification detail)
-are in `Forevercraft-Knowledge-Base/03-Handoffs/archive/2026-09-30-claude-md-archive.md`.
+are in `Forevercraft-Knowledge-Base/03-Handoffs/project-history/2026-09-30-claude-md-archive.md`.
