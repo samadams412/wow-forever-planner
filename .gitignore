@@ -97,3 +97,6 @@ data/sources/client-db2/*/zone-grid-*.bin
 # require re-hitting the live site -- only its parsed <slug>.mapdata.json
 # output is committed.
 /data/sources/foreverchanges/raw-html/
+
+# Full quest scrape dump (35 MB). Regenerate via scripts/scrape-foreverchanges-quest-pages.js.
+/data/sources/foreverchanges/quests/all.json

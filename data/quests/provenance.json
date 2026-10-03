@@ -1,0 +1,695 @@
+{
+ "generatedAt": "2026-10-03T07:43:36.191Z",
+ "precedence": {
+  "name": [
+   "foreverchanges",
+   "list",
+   "cmangos"
+  ],
+  "level": [
+   "foreverchanges",
+   "list"
+  ],
+  "requiredLevel": [
+   "foreverchanges",
+   "list"
+  ],
+  "side": [
+   "foreverchanges (race list -> faction)",
+   "list"
+  ],
+  "typeTag": [
+   "foreverchanges",
+   "list"
+  ],
+  "location": [
+   "list (zone id)",
+   "foreverchanges (zone name)"
+  ],
+  "xp": [
+   "foreverchanges",
+   "wowhead",
+   "list (unchanged/new quests only)"
+  ],
+  "classicXp": [
+   "list (only when foreverchanges says changed)"
+  ],
+  "money": [
+   "list (copper)"
+  ],
+  "rewards": [
+   "foreverchanges (isChoice + items)",
+   "list (r/k buckets)"
+  ],
+  "reputation": [
+   "wowhead (structured)",
+   "foreverchanges (text)"
+  ],
+  "narrative": [
+   "unchanged: cmangos > foreverchanges > wowhead",
+   "changed/new: foreverchanges > cmangos > wowhead"
+  ],
+  "startNpc": [
+   "foreverchanges",
+   "wowhead",
+   "cmangos (giver names)"
+  ],
+  "endNpc": [
+   "foreverchanges",
+   "wowhead"
+  ],
+  "mapPoints": [
+   "foreverchanges (NPC coords)",
+   "wowhead (points)",
+   "cmangos (giver spawn points)"
+  ],
+  "chain": [
+   "foreverchanges",
+   "cmangos (prev/next links)"
+  ],
+  "mentionedItems": [
+   "wowhead (extras.items)"
+  ]
+ },
+ "fields": {
+  "name": {
+   "fromPrimary": 5024,
+   "fromFallback": 25,
+   "fromNone": 0,
+   "conflicts": 18,
+   "examples": [
+    {
+     "id": 117,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Thunderbrew"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "Thunderbrew Lager"
+     }
+    },
+    {
+     "id": 636,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Legends of the Earth"
+     },
+     "rival": {
+      "source": "list",
+      "value": "Legends of the Earth <NYI>"
+     }
+    },
+    {
+     "id": 1658,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Crashing the Wickerman Festival"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "Crashing the Wickerman Festival (PvP)"
+     }
+    },
+    {
+     "id": 4002,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "The Eastern Kingdoms"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "The Eastern Kingdom"
+     }
+    },
+    {
+     "id": 5226,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Return to Chillwind Camp"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "Return to Chillwind Point"
+     }
+    }
+   ]
+  },
+  "level": {
+   "fromPrimary": 4864,
+   "fromFallback": 5,
+   "fromNone": 180,
+   "conflicts": 0,
+   "examples": []
+  },
+  "requiredLevel": {
+   "fromPrimary": 5021,
+   "fromFallback": 19,
+   "fromNone": 9,
+   "conflicts": 0,
+   "examples": []
+  },
+  "side": {
+   "fromPrimary": 5024,
+   "fromFallback": 25,
+   "fromNone": 0,
+   "conflicts": 1,
+   "examples": [
+    {
+     "id": 6606,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Both"
+     },
+     "rival": {
+      "source": "list",
+      "value": "Horde"
+     }
+    }
+   ]
+  },
+  "typeTag": {
+   "fromPrimary": 1136,
+   "fromFallback": 0,
+   "fromNone": 3913,
+   "conflicts": 0,
+   "examples": []
+  },
+  "xp": {
+   "fromPrimary": 3794,
+   "fromFallback": 357,
+   "fromNone": 898,
+   "conflicts": 104,
+   "examples": [
+    {
+     "id": 76160,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "650"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "660"
+     }
+    },
+    {
+     "id": 76240,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "875"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "880"
+     }
+    },
+    {
+     "id": 78307,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "4600"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "6900"
+     }
+    },
+    {
+     "id": 84395,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "650"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "660"
+     }
+    },
+    {
+     "id": 84396,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "650"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "660"
+     }
+    }
+   ]
+  },
+  "money": {
+   "fromPrimary": 1076,
+   "fromFallback": 0,
+   "fromNone": 3973,
+   "conflicts": 0,
+   "examples": []
+  },
+  "rewards": {
+   "fromPrimary": 1995,
+   "fromFallback": 11,
+   "fromNone": 3043,
+   "conflicts": 54,
+   "examples": [
+    {
+     "id": 55,
+     "winner": "foreverchanges [1282,2953,2954]",
+     "rival": "list [1282,2953,2954,7344]"
+    },
+    {
+     "id": 103,
+     "winner": "foreverchanges [118,2455]",
+     "rival": "list [118,1180,2455,955]"
+    },
+    {
+     "id": 182,
+     "winner": "foreverchanges [2047,2048,2195,5761]",
+     "rival": "list [2047,2048,2195,5761,961]"
+    },
+    {
+     "id": 223,
+     "winner": "foreverchanges [1547,2902]",
+     "rival": "list [1547,2902,5244]"
+    },
+    {
+     "id": 253,
+     "winner": "foreverchanges [270044,3560]",
+     "rival": "list [270044,3560,6223]"
+    }
+   ]
+  },
+  "reputation": {
+   "fromPrimary": 475,
+   "fromFallback": 2511,
+   "fromNone": 2063,
+   "conflicts": 0,
+   "examples": []
+  },
+  "narrative.details": {
+   "fromPrimary": 4389,
+   "fromFallback": 2,
+   "fromNone": 658,
+   "conflicts": 105,
+   "examples": [
+    {
+     "id": 23,
+     "winner": {
+      "source": "cmangos",
+      "value": "The paw of the mighty bear Ursangous is your trophy for this part of the Ashenvale Hunt.  On the paw is a small quarter-"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "<The paw of the mighty bear Ursangous is your trophy for this part of the Ashenvale Hunt.  On the paw is a small quarter"
+     }
+    },
+    {
+     "id": 60,
+     "winner": {
+      "source": "cmangos",
+      "value": "Hello, $ggood sir:my lady;!  Do you have a moment?$B$BMy brother and I run an apothecary in Stormwind, and I'm here to g"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Hello, good sir/my lady!  Do you have a moment?\n\nMy brother and I run an apothecary in Stormwind, and I'm here to gather"
+     }
+    },
+    {
+     "id": 90,
+     "winner": {
+      "source": "cmangos",
+      "value": "Seasoned Wolf Kabobs are a house favorite!  Sure, I can make you some.  But first I'll need the supplies.  Bring me 10 L"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Seasoned Wolf Kabobs are a house favorite!  Sure, I can make you some.  But first I'll need the supplies.  Bring me 10 L"
+     }
+    },
+    {
+     "id": 170,
+     "winner": {
+      "source": "cmangos",
+      "value": "I hope you're here to lend us a hand, $c. After the last trogg attack, we could use all the help we can get.$B$BI hear t"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "I hope you're here to lend us a hand, ‹class›. After the last trogg attack, we could use all the help we can get.\n\nI hea"
+     }
+    },
+    {
+     "id": 233,
+     "winner": {
+      "source": "cmangos",
+      "value": "Hm, I don't suppose you'd be willing to do a favor for me, $g lad : lass;? A stack of letters came through the pass toda"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Hm, I don't suppose you'd be willing to do a favor for me, lad/lass? A stack of letters came through the pass today, but"
+     }
+    }
+   ]
+  },
+  "narrative.objectives": {
+   "fromPrimary": 4372,
+   "fromFallback": 0,
+   "fromNone": 677,
+   "conflicts": 244,
+   "examples": [
+    {
+     "id": 25,
+     "winner": {
+      "source": "cmangos",
+      "value": "Dispatch 12 Befouled Water Elementals at Mystral Lake, due east of the Talondeep Path and southwest of Splintertree Post"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Dispatch 12 Befouled Water Elementals at Mystral Lake, due east of the Talondeep Path and southwest of Splintertree Post"
+     }
+    },
+    {
+     "id": 28,
+     "winner": {
+      "source": "cmangos",
+      "value": "Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use"
+     }
+    },
+    {
+     "id": 29,
+     "winner": {
+      "source": "cmangos",
+      "value": "Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use"
+     }
+    },
+    {
+     "id": 30,
+     "winner": {
+      "source": "cmangos",
+      "value": "Find the Half Pendant of Aquatic Agility and the Half Pendant of Aquatic Endurance.  Speak with the residents of Moongla"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Find the Half Pendant of Aquatic Agility and the Half Pendant of Aquatic Endurance.  Speak with the residents of Moongla"
+     }
+    },
+    {
+     "id": 90,
+     "winner": {
+      "source": "cmangos",
+      "value": "Gather 10 Lean Wolf Flanks and Stormwind Seasoning Herbs and return to Chef Grual in Darkshire."
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Gather 10 Lean Wolf Flanks and return to Chef Grual in Darkshire."
+     }
+    }
+   ]
+  },
+  "narrative.offerRewardText": {
+   "fromPrimary": 4673,
+   "fromFallback": 53,
+   "fromNone": 323,
+   "conflicts": 130,
+   "examples": [
+    {
+     "id": 166,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "‹name›, your bravery is remarkable. The People's Militia thanks you for your service to the people of Westfall. With Van"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "$N, your bravery is remarkable. The People's Militia thanks you for your service to the people of Westfall. With VanClee"
+     }
+    },
+    {
+     "id": 172,
+     "winner": {
+      "source": "cmangos",
+      "value": "Zug zug! My name is Grunth, and I guess you're looking after me? You're an adventurer, like my mom and dad were. My matr"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Zug zug! My name is Grunth, and I guess you're looking after me? You're an adventurer, like my mom and dad were. My matr"
+     }
+    },
+    {
+     "id": 270,
+     "winner": {
+      "source": "cmangos",
+      "value": "Lightforge Iron is a precious metal, but it sounds like your quest is a dire one. You've come a long way, $gBrother:Sist"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Lightforge Iron is a precious metal, but it sounds like your quest is a dire one. You've come a long way, Brother/Sister"
+     }
+    },
+    {
+     "id": 332,
+     "winner": {
+      "source": "cmangos",
+      "value": "Ah, so you've seen Renato? Well here you are, $Gsir:ma'am;. A bottle of our special pinot noir. You'll not find its equa"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Ah, so you've seen Renato? Well here you are, sir/ma'am. A bottle of our special pinot noir. You'll not find its equal i"
+     }
+    },
+    {
+     "id": 429,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "<Renferrel takes the hearts.>It is troubling to hear our Deathstalkers have failed their mission.Let us hope that these "
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "<Renferrel takes the hearts>$B$BIt is troubling to hear our Deathstalkers have failed their mission.$B$BLet us hope that"
+     }
+    }
+   ]
+  },
+  "narrative.requestItemsText": {
+   "fromPrimary": 3503,
+   "fromFallback": 58,
+   "fromNone": 1488,
+   "conflicts": 86,
+   "examples": [
+    {
+     "id": 269,
+     "winner": {
+      "source": "cmangos",
+      "value": "Rest, $gbrother:sister;. I can tell you have traveled far, and you bear a heavy burden. Can you tell me what casts that "
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Rest, brother/sister. I can tell you have traveled far, and you bear a heavy burden. Can you tell me what casts that dar"
+     }
+    },
+    {
+     "id": 332,
+     "winner": {
+      "source": "cmangos",
+      "value": "Greetings and welcome, $Gmaster:madam;. Have you yet tried one of our fine wines?"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Greetings and welcome, master/madam. Have you yet tried one of our fine wines?"
+     }
+    },
+    {
+     "id": 968,
+     "winner": {
+      "source": "cmangos",
+      "value": "Hello, $Gsir:madam;.$B$BMay I interest you in one of my tomes?"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "Hello, sir/madam.May I interest you in one of my tomes?"
+     }
+    },
+    {
+     "id": 1240,
+     "winner": {
+      "source": "cmangos",
+      "value": "There is an angry spirit about you, $gbrother:sister;. What brings you to Kin'weelay?"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "There is an angry spirit about you, brother/sister. What brings you to Kin'weelay?"
+     }
+    },
+    {
+     "id": 3099,
+     "winner": {
+      "source": "cmangos",
+      "value": "I bid you welcome, $gbrother:sister;. I knew you would come. It was only a matter of time.$B$BWhat I said interested you"
+     },
+     "rival": {
+      "source": "foreverchanges",
+      "value": "I bid you welcome, brother/sister. I knew you would come. It was only a matter of time.What I said interested you, didn'"
+     }
+    }
+   ]
+  },
+  "narrative.endText": {
+   "fromPrimary": 206,
+   "fromFallback": 0,
+   "fromNone": 4843,
+   "conflicts": 0,
+   "examples": []
+  },
+  "startNpc": {
+   "fromPrimary": 4519,
+   "fromFallback": 29,
+   "fromNone": 501,
+   "conflicts": 244,
+   "examples": [
+    {
+     "id": 45,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "A half-eaten body"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "2"
+     }
+    },
+    {
+     "id": 68,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Old Footlocker"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "2"
+     }
+    },
+    {
+     "id": 71,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Rolf's corpse"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "2"
+     }
+    },
+    {
+     "id": 74,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Sealed Crate"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "2"
+     }
+    },
+    {
+     "id": 100,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Brazier of Everfount"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "2"
+     }
+    }
+   ]
+  },
+  "endNpc": {
+   "fromPrimary": 4774,
+   "fromFallback": 0,
+   "fromNone": 275,
+   "conflicts": 8,
+   "examples": [
+    {
+     "id": 84395,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Oran Snakewrithe / Jennea Cannon"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "Jennea Cannon / Oran Snakewrithe"
+     }
+    },
+    {
+     "id": 84396,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Oran Snakewrithe / Jennea Cannon"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "Jennea Cannon / Oran Snakewrithe"
+     }
+    },
+    {
+     "id": 84397,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Oran Snakewrithe / Jennea Cannon"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "Jennea Cannon / Oran Snakewrithe"
+     }
+    },
+    {
+     "id": 84398,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Oran Snakewrithe / Jennea Cannon"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "Jennea Cannon / Oran Snakewrithe"
+     }
+    },
+    {
+     "id": 84399,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Oran Snakewrithe / Jennea Cannon"
+     },
+     "rival": {
+      "source": "wowhead",
+      "value": "Jennea Cannon / Oran Snakewrithe"
+     }
+    }
+   ]
+  },
+  "mapPoints": {
+   "fromPrimary": 4332,
+   "fromFallback": 279,
+   "fromNone": 438,
+   "conflicts": 0,
+   "examples": []
+  },
+  "chain": {
+   "fromPrimary": 3412,
+   "fromFallback": 1,
+   "fromNone": 1636,
+   "conflicts": 0,
+   "examples": []
+  },
+  "mentionedItems": {
+   "fromPrimary": 466,
+   "fromFallback": 0,
+   "fromNone": 4583,
+   "conflicts": 0,
+   "examples": []
+  }
+ }
+}
