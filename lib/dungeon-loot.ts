@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { dungeons, getDungeon, type Dungeon } from "@/lib/dungeons";
 import { DUNGEON_MAP_LEGENDS, type DungeonMapMarker } from "@/lib/dungeon-map-legends.generated";
+import questIndex from "@/data/quests/index.json";
 
 // Normalized dungeon data -- bosses/loot/quests -- built by
 // scripts/build-dungeons.js from two sources: foreverchanges.pro (item
@@ -241,6 +242,23 @@ export function getDungeonMapLegend(dungeonId: string): DungeonMapMarker[] | nul
 const DATA_DIR = path.join(process.cwd(), "data", "dungeons");
 let cache: Map<string, DungeonData> | null = null;
 
+// Quest XP comes from the same index /quests/<id> renders (data/quests/
+// index.json, built by scripts/build-quests.js), so the dungeon view can't
+// drift from it. Dungeon quest ids are "quest-<n>" where <n> is the index id.
+const QUEST_XP_BY_ID = new Map<number, number>(questIndex.quests.map((q) => [q.id, q.xp]));
+
+// Overwrites a dungeon quest's stored XP string with the index value when the
+// quest exists there. Quests missing from the index keep their stored string
+// unchanged. As of 2026-10-03 that's six Excavation Site quests (quest-95xxx),
+// which have no /quests page and no XP value at all (experience is null), so
+// there is no stale number left behind for them.
+function applyIndexXp(quest: Quest): void {
+  const id = Number(quest.id.replace(/^quest-/, ""));
+  const xp = QUEST_XP_BY_ID.get(id);
+  if (xp === undefined) return;
+  quest.experience = xp > 0 ? `${xp.toLocaleString("en-US")} XP` : null;
+}
+
 function loadAll(): Map<string, DungeonData> {
   if (cache) return cache;
   const map = new Map<string, DungeonData>();
@@ -248,6 +266,7 @@ function loadAll(): Map<string, DungeonData> {
     for (const file of fs.readdirSync(DATA_DIR)) {
       if (!file.endsWith(".json")) continue;
       const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf8")) as DungeonData;
+      for (const quest of data.quests) applyIndexXp(quest);
       map.set(data.id, data);
     }
   }
