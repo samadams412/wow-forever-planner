@@ -15,10 +15,12 @@ const FACTION_GROUPS: { key: "Alliance" | "Horde" | "Both" | "none"; label: stri
 type FactionChoice = "all" | "Alliance" | "Horde";
 
 const FILTER_STORAGE_KEY = "forevercraft:quest-faction-filter";
-const FILTER_CHOICES: { key: FactionChoice; label: string }[] = [
+// Emblems are different aspect ratios (Alliance is wide, Horde is square), so
+// both sit in the same 16px box with object-contain -- neither dominates the chip.
+const FILTER_CHOICES: { key: FactionChoice; label: string; emblem?: string }[] = [
   { key: "all", label: "All" },
-  { key: "Alliance", label: "Alliance" },
-  { key: "Horde", label: "Horde" },
+  { key: "Alliance", label: "Alliance", emblem: "/images/icons/alliance_emblem.png" },
+  { key: "Horde", label: "Horde", emblem: "/images/icons/horde_emblem.png" },
 ];
 
 // Remembered per viewer, not shared: a Horde player who picks "Horde" once
@@ -116,10 +118,13 @@ export default function LootQuestRewardsCard({
                 type="button"
                 aria-pressed={choice === option.key}
                 onClick={() => selectChoice(option.key)}
-                className={`rounded-sm px-2 py-0.5 font-semibold transition-colors ${
+                className={`inline-flex items-center rounded-sm px-2 py-0.5 font-semibold transition-colors ${
                   choice === option.key ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
                 }`}
               >
+                {option.emblem && (
+                  <Image src={option.emblem} alt="" width={16} height={16} className="mr-1 h-4 w-4" style={{ objectFit: "contain" }} />
+                )}
                 {option.label}
               </button>
             ))}
