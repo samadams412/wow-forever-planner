@@ -187,7 +187,9 @@ Rebuild via `node scripts/build-dungeons.js`.
 Full 21,458-item catalog (`data/items.json`, built by
 `scripts/build-items.js`), filtered/paginated **server-side**
 (`lib/items.ts`'s `queryItems`) — the catalog is never shipped to the
-client for filtering, to protect load-time. Individual item pages
+client for filtering, to protect load-time. Current item pull is
+`1.60.1.70235` (2026-10-05, applied 2026-10-06); the previous pull is in
+`data/sources/foreverchanges/items/archive/`. Individual item pages
 (`/items/[itemId]`) are **not statically generated** (no
 `generateStaticParams`) — rendered on demand. `context: "loot" | "catalog"`
 on `LootItemPill`/`ItemTooltipBody` matters: `status === "missing"` means
@@ -299,7 +301,9 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
-- **Dungeon raw data for the other 27 dungeons is not refreshed (hold):** Razorfen Kraul and The Stockade were restored from live data on 2026-10-06. The rest of `data/sources/foreverchanges/dungeon_data/` still predates the live endpoint, but a 29-dungeon audit found no count mismatch. Refresh only if a future audit finds drift. Roster counts are rendered from `lib/dungeon-roster.ts` (client-safe: no Node built-ins, since `dungeon-loot.ts` imports `fs`). Bosses and rare spawns are shown as separate figures, never summed. The rare split comes from foreverchanges' `kind`, because `sources.json` tags all dungeon drops `B`. See `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-06-client-bundle-fix-and-roster-split.md`.
+- **Stale dungeon item snapshots (resynced 2026-10-06, check for recurrence):** 157 boss-item records in the nine dungeons re-pulled with the 70235 items pull had drifted from the catalog (tooltips, `itemClass`/`type` shape). Resynced by rebuild; nothing else was checked item-by-item. Count-only audits miss this. Use an item-level diff before trusting a "no drift" result.
+- **`scripts/diff-foreverchanges-items.js` truncates tooltips at 160 chars and doesn't diff `sources.json`, `p`/`d`/`v`/`t`:** a removed line (e.g. the Buckshot's Use effect) can be hidden in the markdown. Read the JSON or the raw records for a real check.
+- **Dungeon raw data for the other 26 dungeons is not refreshed (hold):** Razorfen Kraul and The Stockade were restored from live data on 2026-10-06, and nine more (Blackfathom Deeps, Gnomeregan, Razorfen Downs, Shadowfang Keep, SM Armory, SM Library, Uldaman, Wailing Caverns) were re-pulled with the 1.60.1.70235 items pull. The remaining 26 still predate the live endpoint, and count audits found no drift. Count audits miss item-level drift (the nine above had item-level drift with matching counts), so check per-item lists before trusting a "no drift" result. See `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-06-foreverchanges-pull-diff-and-sync.md`. Roster counts are rendered from `lib/dungeon-roster.ts` (client-safe: no Node built-ins, since `dungeon-loot.ts` imports `fs`). Bosses and rare spawns are shown as separate figures, never summed. The rare split comes from foreverchanges' `kind`, because `sources.json` tags all dungeon drops `B`. See `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-06-client-bundle-fix-and-roster-split.md`.
 - **Vercel function sizes (open, not urgent):** functions are 24.2 MB each
   (was ~121 MB) but the dashboard's uniform sizes don't match local trace
   sizes, and the cause is unexplained. See
