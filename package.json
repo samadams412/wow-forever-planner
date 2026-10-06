@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/build-og-backgrounds.js && node scripts/build-map-data-imports.js",
+    "prebuild": "node scripts/build-og-backgrounds.js && node scripts/build-map-data-imports.js && node scripts/build-quest-dungeon-index.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

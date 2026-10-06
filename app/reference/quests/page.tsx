@@ -3,8 +3,10 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import QuestsTable from "@/components/reference/QuestsTable";
 import ItemsSearchInput from "@/components/reference/ItemsSearchInput";
+import QuestDungeonFilter from "@/components/reference/QuestDungeonFilter";
 import {
   getQuestCount,
+  getQuestDungeonOptions,
   getQuestLocationKindCounts,
   getTextSourceCounts,
   queryQuests,
@@ -24,6 +26,7 @@ export const metadata: Metadata = {
 
 type FilterParams = {
   locationKind: QuestLocationKind | "all";
+  dungeon?: string;
   q: string;
   sort?: QuestSortKey;
   dir?: "asc" | "desc";
@@ -33,6 +36,7 @@ type FilterParams = {
 function buildHref(params: FilterParams): string {
   const usp = new URLSearchParams();
   if (params.locationKind !== "all") usp.set("kind", params.locationKind);
+  if (params.dungeon) usp.set("dungeon", params.dungeon);
   if (params.q) usp.set("q", params.q);
   if (params.sort) usp.set("sort", params.sort);
   if (params.sort && params.dir === "desc") usp.set("dir", "desc");
@@ -58,12 +62,16 @@ function sortHref(base: FilterParams, key: QuestSortKey): string {
 export default async function QuestsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ kind?: string; q?: string; sort?: string; dir?: string; page?: string }>;
+  searchParams: Promise<{ kind?: string; dungeon?: string; q?: string; sort?: string; dir?: string; page?: string }>;
 }) {
   const resolved = await searchParams;
   const locationKind = (LOCATION_KIND_TABS.some((t) => t.value === resolved.kind) ? resolved.kind : "all") as
     | QuestLocationKind
     | "all";
+  const dungeonOptions = getQuestDungeonOptions();
+  // Only a dungeon id the list actually offers is applied; anything else is
+  // ignored rather than producing an empty page.
+  const dungeon = dungeonOptions.some((d) => d.id === resolved.dungeon) ? resolved.dungeon : undefined;
   const q = resolved.q ?? "";
   const sort = SORT_KEYS.find((k) => k === resolved.sort);
   const dir = resolved.dir === "desc" ? "desc" : "asc";
@@ -72,8 +80,9 @@ export default async function QuestsPage({
   const totalCount = getQuestCount();
   const counts = getQuestLocationKindCounts();
   const textSourceCounts = getTextSourceCounts();
-  const result = queryQuests({ locationKind, q, sort, dir, page });
-  const baseFilters: FilterParams = { locationKind, q, sort, dir };
+  const result = queryQuests({ locationKind, dungeon, q, sort, dir, page });
+  const baseFilters: FilterParams = { locationKind, dungeon, q, sort, dir };
+  const dungeonSelectValue = dungeon ?? (locationKind === "dungeon" ? "all" : "");
 
   return (
     <main className="mx-auto w-full max-w-5xl px-3 py-8 sm:px-4">
@@ -94,17 +103,27 @@ export default async function QuestsPage({
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <div className="inline-flex flex-wrap rounded border border-border bg-surface p-0.5 text-xs">
-          {LOCATION_KIND_TABS.map((tab) => (
-            <Link
-              key={tab.value}
-              href={buildHref({ ...baseFilters, locationKind: tab.value })}
-              className={`rounded-sm px-2 py-1 transition-colors ${
-                locationKind === tab.value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
-              }`}
-            >
-              {tab.label} <span className="text-foreground-muted">{counts[tab.value].toLocaleString()}</span>
-            </Link>
-          ))}
+          {LOCATION_KIND_TABS.map((tab) =>
+            tab.value === "dungeon" ? (
+              <QuestDungeonFilter
+                key={tab.value}
+                options={dungeonOptions}
+                value={dungeonSelectValue}
+                allCount={counts.dungeon}
+                dungeonActive={locationKind === "dungeon" || dungeon !== undefined}
+              />
+            ) : (
+              <Link
+                key={tab.value}
+                href={buildHref({ ...baseFilters, locationKind: tab.value })}
+                className={`rounded-sm px-2 py-1 transition-colors ${
+                  locationKind === tab.value ? "bg-accent/20 text-accent" : "text-foreground-muted hover:text-foreground"
+                }`}
+              >
+                {tab.label} <span className="text-foreground-muted">{counts[tab.value].toLocaleString()}</span>
+              </Link>
+            ),
+          )}
         </div>
         <ItemsSearchInput initialValue={q} placeholder="Search quest names..." />
       </div>

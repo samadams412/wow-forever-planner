@@ -1,4 +1,5 @@
 import questIndex from "@/data/quests/index.json";
+import dungeonMembership from "@/data/quests/dungeon-membership.json";
 import type { LootItem } from "@/lib/dungeon-loot";
 
 // Listing and query layer for quests. Everything here reads the build-time
@@ -178,6 +179,26 @@ export function getQuestLocationKindCounts(): Record<QuestLocationKind | "all", 
   return counts;
 }
 
+// A dungeon that lists at least one catalog quest on its loot page, for the
+// dungeon dropdown on /reference/quests. `count` is how many catalog quests it
+// lists (a quest can belong to more than one dungeon, e.g. Stratholme).
+export type QuestDungeonOption = { id: string; name: string; count: number };
+
+export function getQuestDungeonOptions(): QuestDungeonOption[] {
+  return dungeonMembership.dungeons
+    .map((d) => ({ id: d.id, name: d.name, count: d.questIds.length }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+let dungeonQuestSets: Map<string, Set<number>> | null = null;
+
+function dungeonQuestIds(dungeonId: string): Set<number> | undefined {
+  if (!dungeonQuestSets) {
+    dungeonQuestSets = new Map(dungeonMembership.dungeons.map((d) => [d.id, new Set(d.questIds)]));
+  }
+  return dungeonQuestSets.get(dungeonId);
+}
+
 export function getQuestCount(): number {
   return loadAll().length;
 }
@@ -202,6 +223,9 @@ export type QuestSortKey = "name" | "level" | "requiredLevel" | "side" | "locati
 
 export type QuestQuery = {
   locationKind?: QuestLocationKind | "all";
+  // A dungeon id from getQuestDungeonOptions(). Narrows whatever else is
+  // selected rather than replacing it.
+  dungeon?: string;
   q?: string;
   side?: QuestSide | "all";
   levelMin?: number;
@@ -263,6 +287,7 @@ export function formatMoney(copper: number): string {
 
 export function queryQuests({
   locationKind = "all",
+  dungeon,
   q = "",
   side = "all",
   levelMin,
@@ -274,6 +299,10 @@ export function queryQuests({
 }: QuestQuery): QuestQueryResult {
   let quests = loadAll();
   if (locationKind !== "all") quests = quests.filter((quest) => quest.locationKind === locationKind);
+  if (dungeon) {
+    const members = dungeonQuestIds(dungeon);
+    quests = members ? quests.filter((quest) => members.has(quest.id)) : [];
+  }
   if (side !== "all") quests = quests.filter((quest) => quest.side === side || quest.side === "Both");
   if (levelMin !== undefined) quests = quests.filter((quest) => quest.level !== null && quest.level >= levelMin);
   if (levelMax !== undefined) quests = quests.filter((quest) => quest.level !== null && quest.level <= levelMax);
