@@ -10,6 +10,7 @@ import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import DungeonLootSidebar from "@/components/reference/DungeonLootSidebar";
 import DungeonStickyNav from "@/components/reference/DungeonStickyNav";
+import QuestGiversTable from "@/components/reference/QuestGiversTable";
 import type { JumpNavEntry } from "@/components/reference/DungeonJumpNav";
 import { getDungeonLootIndex, getDungeonWithLoot, getDungeonMapImage, getDungeonMapLegend, getDungeonMapAttribution } from "@/lib/dungeon-loot";
 import { getEntranceMapHref } from "@/lib/map-entrances";
@@ -110,7 +111,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
       )}
 
-      <DungeonStickyNav hasQuests={data.quests.length > 0} />
+      <DungeonStickyNav hasQuests={data.quests.length > 0} hasQuestGivers={data.quests.length > 0} />
 
       <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-start">
         <div className="min-w-0 flex-1">
@@ -163,6 +164,10 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
           dungeonName={dungeon.name}
           authorNotes={data.authorNotes}
         />
+      </div>
+
+      <div className="mt-8">
+        <QuestGiversTable quests={data.quests} dungeonId={dungeon.id} dungeonName={dungeon.name} />
       </div>
     </main>
   );
