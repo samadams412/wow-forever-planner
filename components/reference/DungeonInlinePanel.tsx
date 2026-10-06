@@ -4,9 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BossCard from "@/components/reference/BossCard";
+import BossPortrait from "@/components/reference/BossPortrait";
 import QuestCard from "@/components/reference/QuestCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import type { DungeonData } from "@/lib/dungeon-loot";
+import { isNamedBoss, rosterCounts } from "@/lib/dungeon-roster";
 
 const FACTION_BADGE_CLASS: Record<"Alliance" | "Horde", string> = {
   Alliance: "bg-sky-500/15 text-sky-300",
@@ -18,9 +20,12 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
   const [selectedBoss, setSelectedBoss] = useState(0);
   const [selectedQuest, setSelectedQuest] = useState(0);
 
-  // Lootable objects (chests, etc.) clutter this compact popup's boss
-  // roster -- they stay in the full loot table page, just not here.
-  const listedBosses = data.bosses.filter((b) => b.kind !== "object");
+  // Containers and items (chests, Defias Gunpowder, etc.) clutter this compact
+  // popup's boss roster -- they stay in the full loot table page, just not here.
+  // Named NPCs (incl. portrait-bearing "object"/"quest" kinds) and the trash group stay.
+  const listedBosses = data.bosses.filter((b) => isNamedBoss(b) || b.kind === "trash");
+  // Header counts match the loot page: regular bosses and rare spawns as two figures.
+  const counts = rosterCounts(data.bosses);
   const boss = listedBosses[selectedBoss];
   const quest = data.quests[selectedQuest];
   const totalItems = data.bosses.reduce((n, b) => n + b.items.length, 0);
@@ -69,7 +74,11 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                   tab === "bosses" ? "border-b-2 border-accent text-accent" : "text-foreground-muted hover:text-foreground"
                 }`}
               >
-                Bosses and Loot {listedBosses.length > 0 && <span className="text-foreground-muted">{listedBosses.length}</span>}
+                Bosses and Loot{" "}
+                {counts.bosses > 0 && <span className="text-foreground-muted">{counts.bosses} boss{counts.bosses === 1 ? "" : "es"}</span>}
+                {counts.rares > 0 && (
+                  <span className="text-foreground-muted"> · {counts.rares} rare</span>
+                )}
               </button>
               <button
                 type="button"
@@ -108,7 +117,10 @@ export default function DungeonInlinePanel({ data, onClose }: { data: DungeonDat
                           i === selectedBoss ? "bg-accent/15 text-accent" : "text-foreground-muted hover:bg-surface-hover hover:text-foreground"
                         }`}
                       >
-                        {b.name}
+                        <span className="flex min-w-0 items-center gap-2">
+                          <BossPortrait src={b.portraitUrl} alt="" size={20} />
+                          <span className="truncate">{b.name}</span>
+                        </span>
                       </button>
                     </li>
                   ))}

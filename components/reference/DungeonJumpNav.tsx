@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import BossPortrait from "@/components/reference/BossPortrait";
 
-export type JumpNavEntry = { id: string; label: string; portraitUrl?: string | null; iconSrc?: string };
+export type JumpNavEntry = { id: string; label: string; portraitUrl?: string | null; iconSrc?: string; rare?: boolean };
 
 // Highlights whichever section's top has most recently scrolled past the
 // viewport's upper third -- IntersectionObserver rather than a scroll
@@ -69,7 +69,12 @@ export default function DungeonJumpNav({
               {entry.iconSrc && (
                 <Image src={entry.iconSrc} alt="" width={16} height={16} className="shrink-0" />
               )}
-              {entry.label}
+              <span className="min-w-0 flex-1 truncate">{entry.label}</span>
+              {entry.rare && (
+                <span className="shrink-0 rounded-sm bg-amber-500/15 px-1 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
+                  Rare
+                </span>
+              )}
             </a>
           </li>
         ))}

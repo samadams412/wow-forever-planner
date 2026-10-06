@@ -13,6 +13,7 @@ import DungeonStickyNav from "@/components/reference/DungeonStickyNav";
 import QuestGiversTable, { hasKnownStart } from "@/components/reference/QuestGiversTable";
 import type { JumpNavEntry } from "@/components/reference/DungeonJumpNav";
 import { getDungeonLootIndex, getDungeonWithLoot, getDungeonMapImage, getDungeonMapLegend, getDungeonMapAttribution } from "@/lib/dungeon-loot";
+import { formatRosterCounts, isNamedBoss, rosterCounts } from "@/lib/dungeon-roster";
 import { getEntranceMapHref } from "@/lib/map-entrances";
 
 export function generateStaticParams() {
@@ -49,8 +50,15 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
   const mapLegend = getDungeonMapLegend(dungeon.id);
   const mapAttribution = getDungeonMapAttribution(dungeon.id);
 
+  // Roster = regular bosses + rare spawns only. Trash groups and lootable
+  // objects still render their drops below the roster, but not in the count
+  // or the "On this page" nav. Anchors keep their original data.bosses index.
+  const counts = rosterCounts(data.bosses);
+  const otherLootGroups = data.bosses.map((boss, i) => ({ boss, i })).filter(({ boss }) => !isNamedBoss(boss));
   const jumpNavEntries: JumpNavEntry[] = [
-    ...data.bosses.map((boss, i) => ({ id: `boss-${i}`, label: boss.name, portraitUrl: boss.portraitUrl })),
+    ...data.bosses.flatMap((boss, i) =>
+      isNamedBoss(boss) ? [{ id: `boss-${i}`, label: boss.name, portraitUrl: boss.portraitUrl, rare: boss.kind === "rare" }] : [],
+    ),
     ...(data.quests.length > 0
       ? [{ id: "quests", label: "Quests", iconSrc: "/images/icons/available.png" }]
       : []),
@@ -111,10 +119,15 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
             ) : (
               <div id="bosses" className="scroll-mt-20 flex flex-col gap-3">
                 <p className="text-xs text-foreground-muted">
-                  {data.bosses.length} boss{data.bosses.length === 1 ? "" : "es"}, {totalItems} item
+                  {formatRosterCounts(counts)}, {totalItems} item
                   {totalItems === 1 ? "" : "s"}
                 </p>
-                {data.bosses.map((boss, i) => (
+                {data.bosses.map((boss, i) =>
+                  isNamedBoss(boss) ? (
+                    <BossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
+                  ) : null,
+                )}
+                {otherLootGroups.map(({ boss, i }) => (
                   <BossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
                 ))}
               </div>
@@ -141,7 +154,8 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
           levelMin={dungeon.levelMin}
           levelMax={dungeon.levelMax}
           zone={dungeon.zone}
-          bossCount={data.bosses.length}
+          bossCount={counts.bosses}
+          rareCount={counts.rares}
           itemCount={totalItems}
           jumpNavEntries={jumpNavEntries}
           mapImage={mapImage}

@@ -12,6 +12,7 @@ export default function DungeonLootSidebar({
   levelMax,
   zone,
   bossCount,
+  rareCount,
   itemCount,
   jumpNavEntries,
   mapImage,
@@ -25,6 +26,7 @@ export default function DungeonLootSidebar({
   levelMax: number;
   zone?: string;
   bossCount: number;
+  rareCount: number;
   itemCount: number;
   jumpNavEntries: JumpNavEntry[];
   mapImage: string | null;
@@ -73,6 +75,8 @@ export default function DungeonLootSidebar({
             )}
             <dt className="text-foreground-muted">Bosses</dt>
             <dd className="text-right">{bossCount}</dd>
+            <dt className="text-foreground-muted">Rare spawns</dt>
+            <dd className="text-right">{rareCount}</dd>
             <dt className="text-foreground-muted">Items</dt>
             <dd className="text-right">{itemCount}</dd>
           </dl>
