@@ -8,6 +8,7 @@ import { getItemById, isIndexableItemStatus } from "@/lib/items";
 import { getItemSource, getSourceSiblings } from "@/lib/item-sources";
 import { mediumIconUrl, itemQualityColor, itemQualityName } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
+import { displayStatus } from "@/lib/item-display-status";
 
 // No generateStaticParams -- 21,458 items would mean 21,458 pages built up
 // front for a page most visitors reach one at a time (from a dungeon drop,
@@ -86,7 +87,9 @@ export default async function ItemPage({
   const metaParts = [itemQualityName(item.quality), item.slot, item.type, item.itemLevel ? `item level ${item.itemLevel}` : null].filter(
     Boolean
   );
-  const callout = item.status ? STATUS_CALLOUT[item.status] : null;
+  // Sell-price-only "changed" items read as "same" here too -- see lib/item-display-status.ts.
+  const shownStatus = displayStatus(item);
+  const callout = shownStatus ? STATUS_CALLOUT[shownStatus] : null;
   const source = item.itemId !== null ? getItemSource(item.itemId) : undefined;
   const siblings = source && item.itemId !== null ? getSourceSiblings(item.itemId) : [];
 

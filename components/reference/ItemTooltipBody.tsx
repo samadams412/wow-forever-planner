@@ -1,6 +1,7 @@
 import { TooltipName, TooltipType, TooltipDataNote } from "@/components/planner/TooltipCard";
 import { itemQualityColor, iconUrl } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
+import { displayStatus } from "@/lib/item-display-status";
 
 // "new"/"changed"/"same" read slightly differently depending on where an
 // item is shown (a loot drop vs. a catalog entry), so the caller says which
@@ -88,6 +89,9 @@ export default function ItemTooltipBody({
 }) {
   const slotLine = item.unknown ? null : [item.slot, item.type].filter(Boolean).join(", ");
   const qualityColor = itemQualityColor(item.quality);
+  // A changed item whose only diff from Classic is its sell price reads as
+  // unchanged here -- see lib/item-display-status.ts.
+  const shownStatus = item.status ? displayStatus(item) : null;
 
   return (
     <>
@@ -121,10 +125,10 @@ export default function ItemTooltipBody({
       {item.unknown && (
         <TooltipDataNote>Not yet discovered by the community -- slot/type unknown.</TooltipDataNote>
       )}
-      {item.status && (
+      {shownStatus && (
         <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
-          <p className="text-[10px] text-gray-500">{STATUS_NOTE[context][item.status]}</p>
-          {item.classicTooltip && (
+          <p className="text-[10px] text-gray-500">{STATUS_NOTE[context][shownStatus]}</p>
+          {shownStatus === "changed" && item.classicTooltip && (
             <div className="mt-1.5">
               <div className="text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">
                 Classic&apos;s version
