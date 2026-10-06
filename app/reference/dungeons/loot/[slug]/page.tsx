@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { MapPin } from "lucide-react";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import LootDisclaimer from "@/components/reference/LootDisclaimer";
-import BossWithCallout from "@/components/reference/BossWithCallout";
+import BossCard from "@/components/reference/BossCard";
 import LootQuestRewardsCard from "@/components/reference/LootQuestRewardsCard";
 import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import DungeonLootSidebar from "@/components/reference/DungeonLootSidebar";
@@ -128,7 +128,7 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
                   {totalItems === 1 ? "" : "s"}
                 </p>
                 {data.bosses.map((boss, i) => (
-                  <BossWithCallout key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
+                  <BossCard key={`${boss.name}-${i}`} boss={boss} dungeonId={dungeon.id} anchorId={`boss-${i}`} />
                 ))}
               </div>
             )}
