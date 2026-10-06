@@ -42,6 +42,31 @@ export default function PrivacyPage() {
           </p>
         </section>
 
+        <section aria-labelledby="build-tracking-heading">
+          <h2 id="build-tracking-heading" className="mb-2 font-heading text-lg font-semibold text-foreground">
+            Anonymous build activity
+          </h2>
+          <p>
+            When you copy a planner share link, save a build, or open a shared build link, Forevercraft
+            records a small anonymous event: the event type, the class, and the build code. Nothing about
+            you is attached to it. There is no account, and we do not store your name, email, or IP
+            address with these events.
+          </p>
+          <p className="mt-2">
+            Each browser gets a random identifier that is kept in your browser&apos;s local storage. Before
+            anything is stored on our side, that identifier is run through a keyed one-way hash, so we
+            never store the original value. We also use a keyed hash of your IP address for a short-lived
+            rate limit that stops automated abuse. Raw events are deleted once they have been counted,
+            usually within a day, and never kept longer than 90 days. What remains is aggregate counts per
+            class and talent, such as how many builds included a given talent. Those counts are not linked
+            to any person or browser.
+          </p>
+          <p className="mt-2">
+            To stop collecting this, clear this site&apos;s local storage in your browser. Doing so does not
+            affect any builds you have saved on this device.
+          </p>
+        </section>
+
         <section aria-labelledby="feedback-heading">
           <h2 id="feedback-heading" className="mb-2 font-heading text-lg font-semibold text-foreground">
             Feedback and bug reports
@@ -60,9 +85,10 @@ export default function PrivacyPage() {
           </h2>
           <p>
             We never sell your information or share it with advertisers. The essential service providers
-            involved in operating this site are Vercel, which hosts the site and provides analytics, and
-            Google, which provides the feedback form. Information submitted through the form is handled
-            by Google so we can receive and review it.
+            involved in operating this site are Vercel, which hosts the site and provides analytics,
+            Upstash, which stores the anonymous build events described above, and Google, which provides
+            the feedback form. Information submitted through the form is handled by Google so we can
+            receive and review it.
           </p>
         </section>
 
