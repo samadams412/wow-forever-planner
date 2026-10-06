@@ -73,38 +73,54 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         ]}
       />
 
-      {data.backgroundImage && (
-        <div className="relative mt-3 h-32 w-full overflow-hidden rounded-lg border border-border sm:h-40">
-          <Image src={data.backgroundImage} alt="" fill sizes="768px" style={{ objectFit: "cover" }} />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0"
-            style={{ backgroundImage: "linear-gradient(to top, rgba(13,11,7,0.9) 0%, transparent 60%)" }}
-          />
-        </div>
-      )}
-
-      <div className="mt-3 flex flex-wrap items-baseline justify-between gap-2">
-        <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">{dungeon.name}</h1>
-        <div className="flex items-center gap-3">
-          <span className="text-sm text-foreground-muted">
-            Level {dungeon.levelMin}-{dungeon.levelMax}
-          </span>
-          {mapHref && (
-            <Link
-              href={mapHref}
-              className="inline-flex items-center gap-1.5 rounded border border-accent/60 bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent transition-colors hover:bg-accent/20"
-            >
-              <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-              View entrance on map
-            </Link>
+      {/* Header art beside the title, borderless. The image sets its own height from
+          its natural ratio (width/height attrs are the source's 960px class, h-auto
+          wins once loaded), so nothing is cropped whatever the source's 1.77-1.83:1
+          ratio. On wide screens it fades into the page on its trailing (right) edge
+          using the page background token itself, so the blend is exact in both
+          themes; on narrow screens it's full-width and the fade is off. */}
+      <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+        {data.backgroundImage && (
+          <div className="relative w-full shrink-0 sm:w-[560px]">
+            <Image
+              src={data.backgroundImage}
+              alt=""
+              width={960}
+              height={540}
+              sizes="(min-width: 640px) 560px, 100vw"
+              className="block h-auto w-full"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 hidden sm:block"
+              style={{ backgroundImage: "linear-gradient(to right, transparent 60%, var(--background) 100%)" }}
+            />
+          </div>
+        )}
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">{dungeon.name}</h1>
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-foreground-muted">
+                Level {dungeon.levelMin}-{dungeon.levelMax}
+              </span>
+              {mapHref && (
+                <Link
+                  href={mapHref}
+                  className="inline-flex items-center gap-1.5 rounded border border-accent/60 bg-accent/10 px-2.5 py-1 text-xs font-semibold text-accent transition-colors hover:bg-accent/20"
+                >
+                  <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+                  View entrance on map
+                </Link>
+              )}
+            </div>
+          </div>
+          {dungeon.zone && <p className="mt-0.5 text-xs text-foreground-muted">{dungeon.zone}</p>}
+          {dungeon.description && (
+            <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
           )}
         </div>
       </div>
-      {dungeon.zone && <p className="mt-0.5 text-xs text-foreground-muted">{dungeon.zone}</p>}
-      {dungeon.description && (
-        <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">{dungeon.description}</p>
-      )}
 
       <DungeonStickyNav hasQuests={data.quests.length > 0} hasQuestGivers={data.quests.some(hasKnownStart)} />
 
