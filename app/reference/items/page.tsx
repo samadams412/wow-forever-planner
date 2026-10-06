@@ -155,7 +155,7 @@ export default async function ItemsPage({
             </Link>
           ))}
         </div>
-        <ItemsSearchInput initialValue={q} />
+        <ItemsSearchInput initialValue={q} placeholder="Search by name or item ID..." />
       </div>
 
       <div className="mt-2 inline-flex flex-wrap items-center gap-1 rounded border border-border bg-surface p-0.5 text-xs">

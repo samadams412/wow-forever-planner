@@ -169,8 +169,15 @@ export function queryItems({
   if (requiredLevelMax !== undefined)
     items = items.filter((item) => item.requiredLevel !== null && item.requiredLevel <= requiredLevelMax);
 
+  // A purely numeric query also matches the item id exactly (typed from a
+  // wowhead/foreverchanges link or an in-game id), alongside the name match.
   const needle = q.trim().toLowerCase();
-  if (needle) items = items.filter((item) => item.name.toLowerCase().includes(needle));
+  if (/^\d+$/.test(needle)) {
+    const id = Number(needle);
+    items = items.filter((item) => item.itemId === id || item.name.toLowerCase().includes(needle));
+  } else if (needle) {
+    items = items.filter((item) => item.name.toLowerCase().includes(needle));
+  }
 
   const total = items.length;
   const pageCount = Math.max(1, Math.ceil(total / pageSize));
