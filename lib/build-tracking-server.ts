@@ -32,7 +32,7 @@ const IP_BURST_LIMIT = 30;
 const TOKEN_DAILY_LIMIT = 100;
 const COUNTER_TTL_SECONDS = 2 * 24 * 60 * 60;
 
-export type RecordResult = "accepted" | "rate-limited" | "unavailable";
+export type RecordResult = "accepted" | "duplicate" | "rate-limited" | "unavailable";
 
 // Validates nothing itself -- callers pass a payload already checked by
 // parseBuildEventPayload. Returns "unavailable" when tracking isn't configured.
@@ -61,6 +61,14 @@ export async function recordBuildEvent(
   const ipCount = counts[0];
   const tokenCount = counts[2];
   if (ipCount > IP_BURST_LIMIT || tokenCount > TOKEN_DAILY_LIMIT) return "rate-limited";
+
+  // Dedup at write time: one counted event per (type, token, build) per UTC
+  // day. The key is claimed with SET NX before anything is queued, so a repeat
+  // (a reload, a second save click, a late clipboard callback) never reaches
+  // the raw list. Duplicates still count toward the rate limits above.
+  const dedupKey = `builds:dedup:${event.type}:${tokenHash}:${event.classId}:${event.buildCode}:${day}`;
+  const claimed = await redis.set(dedupKey, 1, { nx: true, ex: COUNTER_TTL_SECONDS });
+  if (claimed === null) return "duplicate";
 
   const stored: StoredBuildEvent = {
     type: event.type,
