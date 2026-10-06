@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useReducer, useState } from "react";
+import { useCallback, useEffect, useReducer, useRef, useState } from "react";
+import { trackBuildEvent } from "@/lib/build-tracking-client";
 import { getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
 import { encodeBuild, decodeBuild } from "@/lib/build-code";
 import { buildAiTextSummary } from "@/lib/build-text-export";
@@ -82,6 +83,17 @@ export default function PlannerClient({
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // A shared build link landing here counts as one "opened" event. The ref
+  // keeps React's dev-mode double effect run from counting it twice.
+  const openTrackedRef = useRef(false);
+  useEffect(() => {
+    if (openTrackedRef.current) return;
+    openTrackedRef.current = true;
+    if (initialClassId && initialBuildCode) {
+      trackBuildEvent("opened", initialClassId, initialBuildCode);
+    }
+  }, [initialClassId, initialBuildCode]);
 
   useEffect(() => {
     // Reads localStorage, which isn't available during SSR -- state starts
@@ -177,10 +189,12 @@ export default function PlannerClient({
       await navigator.clipboard.writeText(window.location.href);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
+      const code = classData && Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : null;
+      if (code) trackBuildEvent("shared", classId, code);
     } catch {
       // clipboard API unavailable; nothing to fall back to without a visible text field
     }
-  }, []);
+  }, [classData, classId, ranks]);
 
   const handleCopyAiText = useCallback(async () => {
     if (!classData) return;
@@ -211,6 +225,7 @@ export default function PlannerClient({
     }
     setSavedBuilds(getSavedBuilds());
     setSaveDialogOpen(false);
+    if (code) trackBuildEvent("saved", classId, code);
   }, [buildName, classData, classId, ranks]);
 
   const handleLoadBuild = useCallback(
