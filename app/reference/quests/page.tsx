@@ -95,11 +95,6 @@ export default async function QuestsPage({
         description, objectives, and rewards -- sourced for the {textSourceCounts.cmangos.toLocaleString()} quests
         carried over from Classic (see the attribution below).
       </p>
-      <p className="mt-2 max-w-[70ch] rounded border border-amber-400/40 bg-amber-400/5 px-3 py-2 text-xs text-amber-300">
-        Data-confidence note: Blizzard&apos;s recent dungeon quest XP/reward nerfs may not yet be reflected here if this
-        pull predates that change or the upstream source hasn&apos;t caught up -- treat reward values as provisional,
-        not confirmed current.
-      </p>
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <div className="inline-flex flex-wrap rounded border border-border bg-surface p-0.5 text-xs">
