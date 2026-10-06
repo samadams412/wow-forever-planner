@@ -32,6 +32,14 @@ export function rosterCounts(bosses: LootBoss[]): { bosses: number; rares: numbe
   };
 }
 
+// Boss level for display. A two-value level is a range, not a sum:
+// [29, 30] -> "29-30", never "2930" (which is what React prints for an array).
+export function formatBossLevel(level: LootBoss["level"]): string | null {
+  if (level === null) return null;
+  if (Array.isArray(level)) return level[0] === level[1] ? String(level[0]) : `${level[0]}-${level[1]}`;
+  return String(level);
+}
+
 // "8 bosses, 1 rare spawn" -- pluralization kept in one place so the loot page
 // header, sidebar, and inline panel can't drift apart.
 export function formatRosterCounts(counts: { bosses: number; rares: number }): string {

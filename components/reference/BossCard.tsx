@@ -1,6 +1,7 @@
 import BossPortrait from "@/components/reference/BossPortrait";
 import LootItemPill from "@/components/reference/LootItemPill";
 import type { LootBoss } from "@/lib/dungeon-loot";
+import { formatBossLevel } from "@/lib/dungeon-roster";
 
 const KIND_LABEL: Partial<Record<LootBoss["kind"], string>> = {
   trash: "Trash",
@@ -47,7 +48,9 @@ export default function BossCard({
           <h3 className={`font-heading font-semibold text-accent ${compact ? "text-xs uppercase tracking-wide" : "text-base"}`}>
             {boss.name}
           </h3>
-          {boss.level !== null && <span className="text-[11px] text-foreground-muted">Level {boss.level}</span>}
+          {formatBossLevel(boss.level) !== null && (
+            <span className="text-[11px] text-foreground-muted">Level {formatBossLevel(boss.level)}</span>
+          )}
           {kindLabel && (
             <span className="rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-foreground-muted bg-foreground-muted/10">
               {kindLabel}
