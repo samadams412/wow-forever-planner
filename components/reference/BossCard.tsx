@@ -2,6 +2,7 @@ import BossPortrait from "@/components/reference/BossPortrait";
 import LootItemPill from "@/components/reference/LootItemPill";
 import type { LootBoss } from "@/lib/dungeon-loot";
 import { formatBossLevel } from "@/lib/dungeon-roster";
+import { abilityTagClass } from "@/lib/ability-tags";
 
 const KIND_LABEL: Partial<Record<LootBoss["kind"], string>> = {
   trash: "Trash",
@@ -77,8 +78,15 @@ export default function BossCard({
                 <span>
                   {ability.name && <strong className="text-foreground">{ability.name}</strong>}
                   {ability.flags?.length > 0 && (
-                    <span className="ml-1.5 text-[9px] font-semibold uppercase tracking-wide text-foreground-muted">
-                      {ability.flags.join(" · ")}
+                    <span className="ml-1.5 inline-flex flex-wrap items-center gap-1 align-middle">
+                      {ability.flags.map((flag) => (
+                        <span
+                          key={flag}
+                          className={`rounded border px-1 py-px text-[9px] font-semibold uppercase leading-tight tracking-wide ${abilityTagClass(flag)}`}
+                        >
+                          {flag}
+                        </span>
+                      ))}
                     </span>
                   )}
                   <span className="block text-foreground-muted">{ability.description}</span>
@@ -92,9 +100,19 @@ export default function BossCard({
       {hasItems && (
         <div className="mt-2">
           <h4 className="text-[10px] font-semibold uppercase tracking-wide text-foreground-muted">Loot</h4>
+          {/* Wrapping row, not a fixed grid: each stacked pill basis is 12rem and grows
+              to fill its row (3-4 across on wide cards), but is never narrower than its
+              name, so a long name takes its own row instead of being cut off. The compact
+              popup keeps the same wrap, just in a narrower pane. */}
           <div className="mt-1 flex flex-wrap gap-1.5">
             {boss.items.map((item, i) => (
-              <LootItemPill key={`${item.name}-${i}`} item={item} tooltipId={`${dungeonId}:${boss.name}:${i}`} showSlotType={!compact} />
+              <LootItemPill
+                key={`${item.name}-${i}`}
+                item={item}
+                tooltipId={`${dungeonId}:${boss.name}:${i}`}
+                showSlotType={!compact}
+                slotTypeBelow
+              />
             ))}
           </div>
         </div>

@@ -23,6 +23,7 @@ export default function LootItemPill({
   iconOnly,
   iconSize = "normal",
   showSlotType,
+  slotTypeBelow = false,
 }: {
   item: LootItem;
   tooltipId: string;
@@ -57,6 +58,13 @@ export default function LootItemPill({
   // ammo, ...) never get a label even when this is set -- see
   // isEquippableGear below.
   showSlotType?: boolean;
+  // Stacks the slot/type tag under the item name instead of beside it, so a
+  // grid of pills stays narrow enough to fit several per row (BossCard's loot
+  // grid). The name never wraps or truncates: the pill is as wide as its name
+  // (min-w-max), so short names share a row and a long name takes a row of
+  // its own, while every pill stays one name line plus one slot line tall.
+  // Ignored without showSlotType.
+  slotTypeBelow?: boolean;
 }) {
   const { ref, tooltipRef, pos, show, hide } = useHoverTooltip<HTMLSpanElement>(TOOLTIP_WIDTH, "below", 140);
   const isClaimed = useIsActiveTooltip(tooltipId);
@@ -126,6 +134,7 @@ export default function LootItemPill({
   const isEquippableGear =
     item.itemClass !== null ? item.itemClass === 2 || item.itemClass === 4 : !!item.slot && !NON_GEAR_SLOTS.has(item.slot);
   const slotTypeLabel = item.unknown || !isEquippableGear ? null : [item.slot, item.type].filter(Boolean).join(", ");
+  const stacked = !iconOnly && slotTypeBelow && showSlotType && !!slotTypeLabel;
 
   return (
     <span
@@ -138,7 +147,7 @@ export default function LootItemPill({
       onTouchStart={longPress.onTouchStart}
       onTouchMove={longPress.onTouchMove}
       onTouchEnd={longPress.onTouchEnd}
-      className={`inline-flex cursor-default items-center gap-1.5 rounded border transition-colors ${
+      className={`${stacked ? "flex min-w-max flex-[1_1_12rem]" : "inline-flex"} cursor-default items-center gap-1.5 rounded border transition-colors ${
         iconOnly ? "p-0.5" : "px-1.5 py-1 text-xs"
       } ${
         item.unknown
@@ -164,16 +173,19 @@ export default function LootItemPill({
           // is still reachable by click, not just by hover.
           return iconOnly && itemHref ? <Link href={itemHref}>{iconEl}</Link> : iconEl;
         })()}
-      {!iconOnly &&
-        (itemHref ? (
-          <Link href={itemHref} className="hover:underline">
-            {nameEl}
-          </Link>
-        ) : (
-          nameEl
-        ))}
-      {!iconOnly && showSlotType && slotTypeLabel && (
-        <span className="text-[10px] text-foreground-muted">{slotTypeLabel}</span>
+      {!iconOnly && (
+        <span className={stacked ? "flex min-w-0 flex-col leading-tight" : "contents"}>
+          {itemHref ? (
+            <Link href={itemHref} className={`hover:underline ${stacked ? "block whitespace-nowrap" : ""}`}>
+              {nameEl}
+            </Link>
+          ) : (
+            <span className={stacked ? "block whitespace-nowrap" : ""}>{nameEl}</span>
+          )}
+          {showSlotType && slotTypeLabel && (
+            <span className={`text-[10px] text-foreground-muted ${stacked ? "truncate" : ""}`}>{slotTypeLabel}</span>
+          )}
+        </span>
       )}
       {!iconOnly && item.status === "new" && (
         <span className="rounded-sm border border-green-300/70 bg-green-600 px-1 text-[9px] font-semibold uppercase tracking-wide text-white">
