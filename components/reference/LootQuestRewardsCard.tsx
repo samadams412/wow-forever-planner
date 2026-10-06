@@ -19,8 +19,8 @@ const FILTER_STORAGE_KEY = "forevercraft:quest-faction-filter";
 // both sit in the same 16px box with object-contain -- neither dominates the chip.
 const FILTER_CHOICES: { key: FactionChoice; label: string; emblem?: string }[] = [
   { key: "all", label: "All" },
-  { key: "Alliance", label: "Alliance", emblem: "/images/icons/alliance_emblem.png" },
-  { key: "Horde", label: "Horde", emblem: "/images/icons/horde_emblem.png" },
+  { key: "Alliance", label: "Alliance", emblem: "/images/icons/faction-alliance.png" },
+  { key: "Horde", label: "Horde", emblem: "/images/icons/faction-horde.png" },
 ];
 
 // Remembered per viewer, not shared: a Horde player who picks "Horde" once
