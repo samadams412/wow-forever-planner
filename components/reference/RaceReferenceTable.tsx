@@ -54,6 +54,7 @@ function RaceBlock({ race }: { race: Race }) {
               <span className="font-semibold text-accent">{r.name}:</span>{" "}
               {formatTooltipText(r.description)}
             </p>
+            {r.note && <p className="max-w-[60ch] text-xs leading-relaxed text-foreground-muted">{r.note}</p>}
           </li>
         ))}
       </ul>

@@ -583,6 +583,7 @@ export default function TalentNode({
                     ? `${talent.classic.tree} tier ${talent.classic.tier}, col ${talent.classic.col}`
                     : undefined
                 }
+                currentPosition={`${treeName} tier ${talent.tier}, col ${talent.col}`}
                 classicName={talent.classic?.renamedFrom}
                 classicRanks={talent.classic?.maxRank}
                 foreverRanks={talent.maxRank}

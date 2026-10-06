@@ -28,6 +28,10 @@ export type Racial = {
   description: string;
   confidence: Confidence;
   icon: string;
+  // A dated caveat that a later beta build changed how this racial behaves,
+  // sourced from a vendor guide note. Rendered beneath the description;
+  // the description itself stays the current effect.
+  note?: string;
 };
 
 export type ClassicTalentInfo = {

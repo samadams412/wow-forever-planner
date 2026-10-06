@@ -322,6 +322,7 @@ export function TooltipClassicNote({
 export function TooltipClassicTalentDiff({
   status,
   position,
+  currentPosition,
   classicName,
   classicRanks,
   foreverRanks,
@@ -331,6 +332,7 @@ export function TooltipClassicTalentDiff({
 }: {
   status: TalentStatus;
   position?: string;
+  currentPosition?: string;
   classicName?: string;
   classicRanks?: number;
   foreverRanks: number;
@@ -340,19 +342,25 @@ export function TooltipClassicTalentDiff({
 }) {
   const tokens = classicText ? diffWords(classicText, foreverText) : [];
   const statusLabel = status === "changed" ? "Changed from Classic" : status === "moved" ? "Moved since Classic" : status === "new" ? "New in Forever" : "Same as Classic";
+  // A moved talent whose effect text reads the same (ignoring case and spacing)
+  // only needs its position stated -- repeating both texts adds nothing.
+  const normalize = (s: string) => s.replace(/\s+/g, " ").trim().toLowerCase();
+  const sameEffect = status === "moved" && !!classicText && normalize(classicText) === normalize(foreverText);
   return (
     <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
       <div className={`text-xs font-semibold tracking-wide ${STATUS_TEXT_CLASS[status]}`}>
-        {statusLabel}{position ? ` — was ${position}` : ""}
+        {sameEffect ? "Moved - same effect" : statusLabel}
+        {position ? ` — was ${position}` : ""}
+        {sameEffect && currentPosition ? `, now ${currentPosition}` : ""}
       </div>
       {classicName && <p className="mt-1 text-[11px] text-gray-400">Was called &quot;{classicName}&quot; in Classic.</p>}
       {classicRanks && <p className="mt-0.5 text-[11px] text-gray-400">{classicRanks === foreverRanks ? `${foreverRanks} ranks` : `was ${classicRanks} ranks, now ${foreverRanks}`}</p>}
-      {classicText && status !== "unchanged" && (
+      {classicText && status !== "unchanged" && !sameEffect && (
         <p className="mt-1 text-[11px] leading-relaxed text-gray-400">
           <span className="mr-1 font-semibold text-[#ff6b6b]">Classic:</span>{classicText}
         </p>
       )}
-      {classicText && status !== "unchanged" && (
+      {classicText && status !== "unchanged" && !sameEffect && (
         <p className="mt-1 text-[11px] leading-relaxed">
           <span className="mr-1 font-semibold text-[#ffd100]">Forever:</span>
           {tokens.filter((token) => token.op !== "remove").map((token, index) => token.op === "add"

@@ -92,6 +92,7 @@ function AbilityDetails({ ability, race, priest, onClose }: { ability: Racial | 
         {cd && <MetaBadge label="Cooldown" value={cd} />}
       </div>}
       <p className="mt-3 text-sm leading-relaxed text-foreground">{description}</p>
+      {(ability as Racial).note && <p className="mt-2 text-xs leading-relaxed text-foreground-muted">{(ability as Racial).note}</p>}
       {growth && <div className="mt-3 border-t border-border/70 pt-2 text-xs"><span className="text-foreground-muted">Grows with</span><p className="mt-0.5 font-semibold text-foreground">{growth}</p></div>}
     </section>
   );

@@ -46,6 +46,7 @@ function RaceRow({ race }: { race: Race }) {
                   </div>
                   <TooltipType>{r.type}</TooltipType>
                   <TooltipDescription>{formatTooltipText(r.description)}</TooltipDescription>
+                  {r.note && <p className="mt-1.5 max-w-[60ch] text-xs leading-snug text-foreground-muted">{r.note}</p>}
                 </div>
               ))}
             </div>
