@@ -18,7 +18,6 @@ type GiverRow = {
   key: string;
   name: string;
   location: string;
-  mapHref: string | null;
   quests: Quest[];
 };
 
@@ -42,7 +41,6 @@ function groupByGiver(quests: Quest[]): GiverRow[] {
         key: name,
         name,
         location: quest.giver.location,
-        mapHref: quest.giver.mapRef?.href ?? null,
         quests: [],
       };
       rows.set(name, row);
@@ -79,59 +77,51 @@ export default function QuestGiversTable({
         </span>
       </div>
       <p className="mt-1 text-xs text-foreground-muted">
-        Who to see before going in. A name opens the world map on that person.
+        Quests you can pick up before going in, and who gives them.
       </p>
 
       <div className="mt-3 overflow-x-auto rounded border border-border/70 bg-background/60">
         <table className="w-full min-w-[520px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-border text-left text-[10px] font-semibold uppercase tracking-wide text-accent/80">
-              <th className="px-3 py-2">Quest giver</th>
-              <th className="px-3 py-2">Where</th>
               <th className="px-3 py-2">Quests</th>
+              <th className="px-3 py-2">Where</th>
+              <th className="px-3 py-2">Quest giver</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row) => (
               <tr key={row.key} className="border-b border-border/60 align-top last:border-b-0">
                 <td className="px-3 py-2">
-                  <div className="flex items-center gap-2">
-                    <Image src="/images/icons/available.png" alt="" width={14} height={14} className="shrink-0" />
-                    {row.mapHref ? (
-                      <Link href={row.mapHref} className="font-semibold text-foreground hover:text-accent hover:underline">
-                        {row.name}
-                      </Link>
-                    ) : (
-                      <span className="font-semibold text-foreground">{row.name}</span>
-                    )}
+                  <div className="flex items-start gap-2">
+                    <Image src="/images/icons/available.png" alt="" width={14} height={14} className="mt-1 shrink-0" />
+                    <ul className="flex min-w-0 flex-col gap-1">
+                      {row.quests.map((quest) => {
+                        const href = questDetailHref(quest.id, dungeonId, dungeonName);
+                        return (
+                          <li key={quest.id} className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                            {href ? (
+                              <Link href={href} className="text-sky-300 hover:text-accent hover:underline">
+                                {quest.name}
+                              </Link>
+                            ) : (
+                              <span className="text-foreground">{quest.name}</span>
+                            )}
+                            {quest.faction && quest.faction !== "Both" && (
+                              <span
+                                className={`rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${FACTION_BADGE_CLASS[quest.faction]}`}
+                              >
+                                {quest.faction}
+                              </span>
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
                 </td>
                 <td className="px-3 py-2 text-foreground-muted">{row.location}</td>
-                <td className="px-3 py-2">
-                  <ul className="flex flex-col gap-1">
-                    {row.quests.map((quest) => {
-                      const href = questDetailHref(quest.id, dungeonId, dungeonName);
-                      return (
-                        <li key={quest.id} className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                          {href ? (
-                            <Link href={href} className="text-sky-300 hover:text-accent hover:underline">
-                              {quest.name}
-                            </Link>
-                          ) : (
-                            <span className="text-foreground">{quest.name}</span>
-                          )}
-                          {quest.faction && quest.faction !== "Both" && (
-                            <span
-                              className={`rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${FACTION_BADGE_CLASS[quest.faction]}`}
-                            >
-                              {quest.faction}
-                            </span>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </td>
+                <td className="px-3 py-2 font-semibold text-foreground">{row.name}</td>
               </tr>
             ))}
           </tbody>
