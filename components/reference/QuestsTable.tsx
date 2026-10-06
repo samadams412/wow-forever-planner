@@ -1,6 +1,8 @@
 import Link from "next/link";
 import LootItemPill from "@/components/reference/LootItemPill";
-import { formatMoney, type Quest, type QuestSortKey } from "@/lib/quests";
+import { MoneyRewardRow, RewardPill } from "@/components/reference/RewardPills";
+import type { Quest, QuestSortKey } from "@/lib/quests";
+import { mediumIconUrl } from "@/lib/wow-data";
 
 function questHref(quest: Quest): string {
   const params = new URLSearchParams({ from: "/reference/quests", fromLabel: "Quests" });
@@ -69,6 +71,18 @@ function RewardRow({ quest }: { quest: Quest }) {
 
 // Same table/card split as ItemsTable -- full table from `sm` up, one card
 // per row below it.
+// XP and money as the same icon pills the quest cards use, at table-row size.
+// "--" when neither is present, matching the table's empty cells.
+function RewardCell({ quest }: { quest: Quest }) {
+  if (quest.xp <= 0 && quest.money <= 0) return <span className="text-foreground-muted">--</span>;
+  return (
+    <span className="inline-flex flex-wrap items-center gap-1">
+      {quest.xp > 0 && <RewardPill compact iconUrl={mediumIconUrl("xp_icon")}>{quest.xp.toLocaleString()}</RewardPill>}
+      {quest.money > 0 && <MoneyRewardRow compact copper={quest.money} />}
+    </span>
+  );
+}
+
 export default function QuestsTable({ quests, sort, dir, sortHref }: { quests: Quest[] } & SortProps) {
   if (quests.length === 0) {
     return <p className="mt-6 text-sm text-foreground-muted">No quests match this filter.</p>;
@@ -106,8 +120,7 @@ export default function QuestsTable({ quests, sort, dir, sortHref }: { quests: Q
                 </td>
                 <td className="px-3 py-1.5 text-foreground-muted">{locationLabel(quest)}</td>
                 <td className="px-3 py-1.5 text-foreground-muted">
-                  {quest.xp > 0 ? `${quest.xp.toLocaleString()} xp` : "--"}
-                  {quest.money > 0 ? ` / ${formatMoney(quest.money)}` : ""}
+                  <RewardCell quest={quest} />
                 </td>
                 <td className="px-3 py-1.5">
                   <RewardRow quest={quest} />
@@ -145,8 +158,7 @@ export default function QuestsTable({ quests, sort, dir, sortHref }: { quests: Q
               <div className="flex items-center justify-between gap-3">
                 <dt className="text-foreground-muted">XP / Money</dt>
                 <dd>
-                  {quest.xp > 0 ? `${quest.xp.toLocaleString()} xp` : "--"}
-                  {quest.money > 0 ? ` / ${formatMoney(quest.money)}` : ""}
+                  <RewardCell quest={quest} />
                 </dd>
               </div>
               <div className="flex items-center justify-between gap-3">

@@ -3,17 +3,12 @@ import { ItemLinkSourceProvider } from "@/components/reference/ItemLinkSource";
 import LootItemPill from "@/components/reference/LootItemPill";
 import { friz, morpheus } from "@/components/reference/quest-fonts";
 import QuestBackLink from "@/components/reference/QuestBackLink";
+import { MoneyRewardRow, RewardPill } from "@/components/reference/RewardPills";
 import { mediumIconUrl } from "@/lib/wow-data";
 import type { QuestDetail } from "@/lib/quests";
 
 // The journal is the quest's text and rewards. The map, quest info and chain
 // are separate components placed beside or below it on the quest page.
-
-const MONEY_ICON: Record<"gold" | "silver" | "copper", string> = {
-  gold: "https://wow.zamimg.com/images/icons/money-gold.gif",
-  silver: "https://wow.zamimg.com/images/icons/money-silver.gif",
-  copper: "https://wow.zamimg.com/images/icons/money-copper.gif",
-};
 
 function JournalHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -37,44 +32,6 @@ function DialogueDropdown({ title, text }: { title: string; text: string }) {
         ))}
       </div>
     </details>
-  );
-}
-
-// XP/money "will also receive" row item -- a small dark pill matching
-// LootItemPill's own icon+label language, reused here for the non-item
-// guaranteed rewards (XP, money denominations) rather than a bare text line.
-function RewardPill({ iconUrl, children }: { iconUrl: string; children: React.ReactNode }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded border border-[#8a6d3b]/60 bg-[#21190f]/90 px-2 py-1 text-xs font-semibold text-[#e8dcc0]">
-      <img src={iconUrl} alt="" className="h-4 w-4 shrink-0 rounded-sm" />
-      {children}
-    </span>
-  );
-}
-
-function MoneyRewardRow({ copper }: { copper: number }) {
-  const gold = Math.floor(copper / 10000);
-  const silver = Math.floor((copper % 10000) / 100);
-  const remainder = copper % 100;
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded border border-[#8a6d3b]/60 bg-[#21190f]/90 px-2 py-1 text-xs font-semibold text-[#e8dcc0]">
-      <img src={mediumIconUrl("inv_misc_coin_02")} alt="" className="h-4 w-4 shrink-0 rounded-sm" />
-      {gold > 0 && (
-        <span className="inline-flex items-center gap-0.5">
-          {gold} <img src={MONEY_ICON.gold} alt="gold" className="h-3.5 w-3.5" />
-        </span>
-      )}
-      {silver > 0 && (
-        <span className="inline-flex items-center gap-0.5">
-          {silver} <img src={MONEY_ICON.silver} alt="silver" className="h-3.5 w-3.5" />
-        </span>
-      )}
-      {remainder > 0 && (
-        <span className="inline-flex items-center gap-0.5">
-          {remainder} <img src={MONEY_ICON.copper} alt="copper" className="h-3.5 w-3.5" />
-        </span>
-      )}
-    </span>
   );
 }
 

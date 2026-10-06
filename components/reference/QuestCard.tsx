@@ -1,6 +1,9 @@
 import Link from "next/link";
 import LootItemPill from "@/components/reference/LootItemPill";
+import { MoneyRewardRow, RewardPill } from "@/components/reference/RewardPills";
 import type { Quest } from "@/lib/dungeon-loot";
+import { parseExperience, parseMoneyCopper } from "@/lib/quest-rewards";
+import { mediumIconUrl } from "@/lib/wow-data";
 
 // Dungeon quest ids are "quest-<n>" (foreverchanges' own prefix) where <n>
 // is the same numeric id this site's /quests/<id> catalog uses (both trace
@@ -90,7 +93,18 @@ export default function QuestCard({
           {(quest.experience || quest.money) && (
             <div className="flex gap-1.5">
               <dt className="w-20 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-[#c8aa6e]">Reward</dt>
-              <dd className="text-foreground">{[quest.experience, quest.money].filter(Boolean).join(" + ")}</dd>
+              <dd className="flex flex-wrap items-center gap-1.5 text-foreground">
+                {parseExperience(quest.experience) !== null ? (
+                  <RewardPill iconUrl={mediumIconUrl("xp_icon")}>{parseExperience(quest.experience)!.toLocaleString()}</RewardPill>
+                ) : (
+                  quest.experience && <span>{quest.experience}</span>
+                )}
+                {parseMoneyCopper(quest.money) !== null ? (
+                  <MoneyRewardRow copper={parseMoneyCopper(quest.money)!} />
+                ) : (
+                  quest.money && <span>{quest.money}</span>
+                )}
+              </dd>
             </div>
           )}
         </dl>
