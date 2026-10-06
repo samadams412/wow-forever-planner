@@ -64,13 +64,26 @@ export default async function DungeonLootDetailPage({ params }: { params: Promis
         ]}
       />
 
+      {/* Edges fade into the page background (no hard border) so the masthead
+          reads as part of the header, whatever the image's brightness is. */}
       {data.backgroundImage && (
-        <div className="relative mt-3 h-32 w-full overflow-hidden rounded-lg border border-border sm:h-40">
-          <Image src={data.backgroundImage} alt="" fill sizes="768px" style={{ objectFit: "cover" }} />
+        <div className="relative mt-3 h-36 w-full overflow-hidden sm:h-48">
+          <Image src={data.backgroundImage} alt="" fill sizes="768px" style={{ objectFit: "cover", objectPosition: "50% 40%" }} />
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
-            style={{ backgroundImage: "linear-gradient(to top, rgba(13,11,7,0.9) 0%, transparent 60%)" }}
+            style={{
+              backgroundImage:
+                "linear-gradient(to bottom, color-mix(in srgb, var(--background) 85%, transparent) 0%, color-mix(in srgb, var(--background) 30%, transparent) 50%, var(--background) 100%)",
+            }}
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(60% 120% at 50% 100%, color-mix(in srgb, var(--gold) 22%, transparent) 0%, transparent 70%)",
+            }}
           />
         </div>
       )}
