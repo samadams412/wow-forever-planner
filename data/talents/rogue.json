@@ -17,10 +17,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_gouge",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Combat",
             "tier": 1,
             "col": 1,
@@ -49,7 +49,7 @@
             "tier": 1,
             "col": 2,
             "maxRank": 2,
-            "text": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec."
+            "text": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike. Lasts 20 sec."
           },
           "passive": true
         },
@@ -246,10 +246,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "ability_rogue_feigndeath",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Assassination",
             "tier": 4,
             "col": 2,
@@ -269,10 +269,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_ice_lament",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Assassination",
             "tier": 5,
             "col": 2,
@@ -321,10 +321,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_earthbindtotem",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Assassination",
             "tier": 7,
             "col": 2,
@@ -391,15 +391,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "changed",
           "icon": "spell_shadow_chilltouch",
           "classic": {
-            "status": "unchanged",
+            "status": "changed",
             "tree": "Assassination",
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point."
+            "text": "Your critical strikes from abilities that add combo points have a 20% chance to add an additional combo point."
           },
           "passive": true
         },
@@ -423,7 +423,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "25 Energy | 100 yd range | Instant"
+          "cost": "25 Energy | 1 to 5 Combo Points | Instant"
         }
       ]
     },
@@ -443,10 +443,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_rogue_eviscerate",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Assassination",
             "tier": 1,
             "col": 1,
@@ -628,7 +628,7 @@
             "tier": 3,
             "col": 2,
             "maxRank": 1,
-            "text": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
+            "text": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec."
           },
           "passive": false,
           "cost": "10 Energy | Melee Range | Instant | 6 sec cooldown"
@@ -748,7 +748,7 @@
             "tier": 5,
             "col": 2,
             "maxRank": 1,
-            "text": "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec."
+            "text": "Increases your attack speed by 20%. In addition, attacks strike an additional nearby opponent. Lasts 15 sec."
           },
           "passive": false,
           "cost": "25 Energy | Instant | 2 min cooldown"
@@ -872,10 +872,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_stealth",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Subtlety",
             "tier": 2,
             "col": 3,
@@ -946,10 +946,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_mirrorimage",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Subtlety",
             "tier": 4,
             "col": 1,
@@ -1070,7 +1070,7 @@
             "tier": 3,
             "col": 2,
             "maxRank": 1,
-            "text": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->."
+            "text": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point."
           },
           "passive": false,
           "cost": "40 Energy | Melee Range | Instant | 20 sec cooldown"
@@ -1106,10 +1106,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_ambush",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Subtlety",
             "tier": 5,
             "col": 1,
@@ -1129,15 +1129,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_shadow_possession",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Subtlety",
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost.",
+            "text": "When used, adds 2 combo points to your target. You must add to or use those combo points within 10 sec or the combo points are lost.",
             "note": "no longer requires Stealth (Classic did)"
           },
           "passive": false,
@@ -1164,7 +1164,7 @@
             "tier": 4,
             "col": 3,
             "maxRank": 3,
-            "text": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level."
+            "text": "Causes your attacks to ignore 100 of your target's Armor and increases the damage dealt by your Rupture ability by 10%. The amount of Armor reduced increases with your level."
           },
           "passive": true
         },
@@ -1238,7 +1238,7 @@
             "tier": 5,
             "col": 4,
             "maxRank": 1,
-            "text": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3.  Lasts 30 charges or 15 sec.  Awards 1 combo <!--singular:point:points-->point<!--singular-->."
+            "text": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. Awards 1 combo point."
           },
           "passive": false,
           "cost": "35 Energy | Melee Range | Instant"

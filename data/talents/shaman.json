@@ -94,7 +94,7 @@
             "Reduces the cooldown of your Shock spells by 0.4 sec.",
             "Reduces the cooldown of your Shock spells by 0.6 sec.",
             "Reduces the cooldown of your Shock spells by 0.8 sec.",
-            "Reduces the cooldown of your Shock spells by 1 sec."
+            "Reduces the cooldown of your Shock spells by 1.0 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -148,10 +148,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_fire_elementaldevastation",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Elemental",
             "tier": 4,
             "col": 4,
@@ -171,15 +171,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "spell_shadow_manaburn",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Elemental",
             "tier": 3,
             "col": 1,
             "maxRank": 1,
-            "text": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell.  The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+            "text": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           },
           "passive": true
         },
@@ -201,10 +201,10 @@
             "id": "elemental_call_of_thunder",
             "ranks": 1
           },
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_fire_volcano",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Elemental",
             "tier": 5,
             "col": 2,
@@ -259,7 +259,7 @@
             "tier": 4,
             "col": 2,
             "maxRank": 3,
-            "text": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike.  The Focused Casting effect prevents you from losing casting time when taking damage."
+            "text": "Gives you a 33% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage."
           },
           "passive": true
         },
@@ -277,10 +277,10 @@
             "id": "elemental_elemental_alacrity",
             "ranks": 3
           },
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_callstorm",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Elemental",
             "tier": 3,
             "col": 3,
@@ -365,10 +365,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_lightning_lightningbolt01",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Elemental",
             "tier": 6,
             "col": 3,
@@ -444,10 +444,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_thunderbolt",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Enhancement",
             "tier": 2,
             "col": 2,
@@ -534,8 +534,8 @@
           "col": 3,
           "maxRank": 2,
           "ranks": [
-            "Reduces the cast time of your Ghost Wolf spell by 1 sec, and Ghost Wolf may be used indoors.",
-            "Reduces the cast time of your Ghost Wolf spell by 3 sec, and Ghost Wolf may be used indoors."
+            "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
+            "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -589,10 +589,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_fire_flametounge",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Enhancement",
             "tier": 5,
             "col": 2,
@@ -712,15 +712,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_shaman_stormstrike",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Enhancement",
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Gives you an extra attack.  <!--sp435884:0-->In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%.  Lasts 12 sec.<!--sp435884--><!--cooldown:435884:6 sec cooldown-->"
+            "text": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec."
           },
           "passive": false,
           "cost": "125 Mana | Melee Range | Instant | 8 sec cooldown"
@@ -881,10 +881,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_tranquility",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 4,
             "col": 3,
@@ -926,10 +926,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_healingtouch",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 3,
             "col": 4,
@@ -954,10 +954,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_frost_manarecharge",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 1,
             "col": 3,
@@ -1003,10 +1003,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_undyingstrength",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 2,
             "col": 2,
@@ -1074,10 +1074,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_moonglow",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 2,
             "col": 3,
@@ -1124,10 +1124,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_frost_summonwaterelemental",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 7,
             "col": 2,
@@ -1135,7 +1135,7 @@
             "text": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 170 mana every 3 seconds to group members within 20 yards."
           },
           "passive": false,
-          "cost": "10 Mana | Instant | 5 min cooldown"
+          "cost": "10 Mana | Instant | 5 min cooldown | Tools: Water Totem"
         },
         {
           "id": "restoration_healing_way",
@@ -1158,7 +1158,7 @@
             "tier": 5,
             "col": 1,
             "maxRank": 3,
-            "text": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec.  This effect will stack up to 3 times."
+            "text": "Your Healing Wave spells have a 33% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec. This effect will stack up to 3 times."
           },
           "passive": true
         },
@@ -1201,10 +1201,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
+          "status": "unchanged",
           "icon": "spell_frost_wizardmark",
           "classic": {
-            "status": "changed",
+            "status": "unchanged",
             "tree": "Restoration",
             "tier": 6,
             "col": 3,

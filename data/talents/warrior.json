@@ -328,15 +328,15 @@
           "col": 1,
           "maxRank": 2,
           "ranks": [
-            "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 1.5 sec.",
-            "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3 sec."
+            "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
+            "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_warrior_decisivestrike",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Fury",
             "tier": 5,
             "col": 1,
@@ -717,7 +717,7 @@
             "tier": 5,
             "col": 2,
             "maxRank": 1,
-            "text": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.  Lasts 30 sec."
+            "text": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%. Lasts 30 sec."
           },
           "passive": false,
           "cost": "10 Rage | Instant | 3 min cooldown"
@@ -842,7 +842,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Instantly attack the target causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec."
+            "text": "Instantly attack the target causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec."
           },
           "passive": false,
           "cost": "30 Rage | Melee Range | Instant | 6 sec cooldown"
@@ -867,10 +867,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_magic_magearmor",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Protection",
             "tier": 2,
             "col": 4,
@@ -970,10 +970,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_thunderclap",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Arms",
             "tier": 2,
             "col": 4,
@@ -1002,7 +1002,7 @@
             "tier": 3,
             "col": 1,
             "maxRank": 1,
-            "text": "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds.  After the effect expires, the hit points are lost.<!--cooldown:446658:3 min cooldown-->"
+            "text": "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds. After the effect expires, the hit points are lost."
           },
           "passive": false,
           "cost": "Instant | 3 min cooldown"
@@ -1156,7 +1156,7 @@
           "maxRank": 2,
           "ranks": [
             "Reduces the cooldown of your Shield Wall ability by 5.5 min.",
-            "Reduces the cooldown of your Shield Wall ability by 11 min."
+            "Reduces the cooldown of your Shield Wall ability by 11.0 min."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1235,10 +1235,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new",
+          "status": "changed",
           "icon": "inv_shield_04",
           "classic": {
-            "status": "new"
+            "status": "changed",
+            "text": "Increases the damage you deal with One-Handed Melee weapons by 2%.",
+            "tree": "Protection",
+            "tier": 6,
+            "col": 3,
+            "maxRank": 5
           },
           "passive": true
         },
@@ -1288,7 +1293,7 @@
           },
           "reqText": "Requires Shields",
           "passive": false,
-          "cost": "20 Rage | Melee Range | Instant | 6 sec cooldown"
+          "cost": "20 Rage | Melee Range | Instant | 6 sec cooldown | Requires Shields"
         }
       ]
     }

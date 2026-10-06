@@ -87,54 +87,20 @@
       "icon": "spell_nature_enchantarmor"
     }
   ],
-  "warrior:fury_booming_voice": [
-    {
-      "name": "Battle Shout",
-      "kind": "spell",
-      "source": "Warrior spell, rank 7",
-      "description": "The warrior shouts, increasing the melee attack power of all party members within 20 yards by 139. Lasts 3 min.",
-      "icon": "ability_warrior_battleshout"
-    },
-    {
-      "name": "Demoralizing Shout",
-      "kind": "spell",
-      "source": "Warrior spell, rank 5",
-      "description": "Reduces the melee attack power of all enemies within 10 yards by 204 for 45 sec.",
-      "icon": "ability_warrior_warcry"
-    }
-  ],
-  "warrior:fury_improved_cleave": [
+  "warrior:fury_raging_blows": [
     {
       "name": "Cleave",
       "kind": "spell",
       "source": "Warrior spell, rank 5",
       "description": "A sweeping attack that does your weapon damage plus 50 to the target and a second nearby enemy.",
       "icon": "ability_warrior_cleave"
-    }
-  ],
-  "warrior:fury_blood_craze": [
-    {
-      "name": "Bloodthirst",
-      "kind": "talent",
-      "source": "Talent · Fury, row 7",
-      "description": "Instantly attack the target causing damage equal to 35% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec.",
-      "icon": "spell_nature_bloodlust"
-    }
-  ],
-  "warrior:fury_raging_blows": [
+    },
     {
       "name": "Whirlwind",
       "kind": "spell",
       "source": "Warrior spell",
-      "description": "In a whirlwind of steel you attack up to 4 enemies within 8 yards, causing weapon damage to each enemy.",
+      "description": "In a whirlwind of steel you attack up to 4 enemies within 8 yards, causing weapon damage from both melee weapons to each enemy.",
       "icon": "ability_whirlwind"
-    },
-    {
-      "name": "Cleave",
-      "kind": "spell",
-      "source": "Warrior spell, rank 5",
-      "description": "A sweeping attack that does your weapon damage plus 50 to the target and a second nearby enemy.",
-      "icon": "ability_warrior_cleave"
     }
   ],
   "warrior:fury_improved_execute": [
@@ -162,6 +128,52 @@
       "source": "Warrior spell",
       "description": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage. Lasts 10 sec.",
       "icon": "spell_nature_ancestralguardian"
+    }
+  ],
+  "warrior:fury_gore_drinker": [
+    {
+      "name": "Enrage",
+      "kind": "talent",
+      "source": "Talent · Fury, row 4",
+      "description": "Gives you a 30% chance to deal 10% increased Physical damage for 12 sec after being the victim of any damaging attack.",
+      "icon": "spell_shadow_unholyfrenzy"
+    },
+    {
+      "name": "Berserker Rage",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage. Lasts 10 sec.",
+      "icon": "spell_nature_ancestralguardian"
+    },
+    {
+      "name": "Bloodrage",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec.",
+      "icon": "ability_racial_bloodrage"
+    },
+    {
+      "name": "Death Wish",
+      "kind": "talent",
+      "source": "Talent · Fury, row 5",
+      "description": "When activated, increases your Physical damage done by 20% and makes you immune to Fear effects, but increases all damage you take by 5%. Lasts 30 sec.",
+      "icon": "spell_shadow_deathpact"
+    },
+    {
+      "name": "Bloodthirst",
+      "kind": "talent",
+      "source": "Talent · Fury, row 7",
+      "description": "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec.",
+      "icon": "spell_nature_bloodlust"
+    }
+  ],
+  "warrior:fury_bloodthirst": [
+    {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Warrior spell",
+      "description": "",
+      "icon": "inv_sword_04"
     }
   ],
   "warrior:protection_shield_specialization": [
@@ -609,6 +621,15 @@
       "icon": "ability_thunderclap"
     }
   ],
+  "paladin:retribution_vindication": [
+    {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "",
+      "icon": "inv_sword_04"
+    }
+  ],
   "paladin:retribution_sanctified_judgement": [
     {
       "name": "Judgement",
@@ -755,6 +776,13 @@
   ],
   "hunter:beast_mastery_summon_hawk": [
     {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "",
+      "icon": "inv_sword_04"
+    },
+    {
       "name": "Arcane Shot",
       "kind": "spell",
       "source": "Hunter spell, rank 8",
@@ -794,6 +822,15 @@
       "icon": "ability_hunter_criticalshot"
     }
   ],
+  "hunter:marksmanship_careful_aim": [
+    {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "",
+      "icon": "inv_sword_04"
+    }
+  ],
   "hunter:marksmanship_rapid_killing": [
     {
       "name": "Rapid Fire",
@@ -817,6 +854,15 @@
       "source": "Hunter spell, rank 8",
       "description": "An instant shot that causes 217 Arcane damage.",
       "icon": "ability_impalingbolt"
+    }
+  ],
+  "hunter:marksmanship_trueshot_aura": [
+    {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Hunter spell",
+      "description": "",
+      "icon": "inv_sword_04"
     }
   ],
   "hunter:marksmanship_rapid_recuperation": [
@@ -2019,6 +2065,15 @@
       "icon": "spell_nature_groundingtotem"
     }
   ],
+  "shaman:enhancement_mental_dexterity": [
+    {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Shaman spell",
+      "description": "",
+      "icon": "inv_sword_04"
+    }
+  ],
   "shaman:enhancement_improved_ghost_wolf": [
     {
       "name": "Ghost Wolf",
@@ -2854,6 +2909,13 @@
   ],
   "warlock:demonology_improved_felhunter": [
     {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Warlock spell",
+      "description": "",
+      "icon": "inv_sword_04"
+    },
+    {
       "name": "Tainted Blood",
       "kind": "spell",
       "source": "Warlock spell, rank 4",
@@ -3312,6 +3374,15 @@
       "icon": "inv_misc_monsterclaw_03"
     }
   ],
+  "druid:feral_feral_charge": [
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    }
+  ],
   "druid:feral_sharpened_claws": [
     {
       "name": "Bear Form",
@@ -3352,6 +3423,13 @@
     }
   ],
   "druid:feral_predatory_strikes": [
+    {
+      "name": "Attack",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "",
+      "icon": "inv_sword_04"
+    },
     {
       "name": "Cat Form",
       "kind": "spell",

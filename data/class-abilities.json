@@ -3,22 +3,22 @@
     "abilities": [
       {
         "name": "Judgement",
-        "description": "Changed. It no longer eats your seal. 10 yd range, 10 sec cooldown. Judging Seal of Fury taunts for 4 sec, so Paladins can tank pulls now.",
+        "description": "Changed: it no longer eats your seal. 10 yd range, 10 sec cooldown. Judging Seal of Fury taunts for 4 sec.",
         "icon": "spell_holy_righteousfury"
       },
       {
         "name": "Seal of Fury",
-        "description": "The tank seal. Every hit adds Holy damage, and with a shield up you get an absorb worth half of it.",
+        "description": "The tank seal: every hit adds Holy damage, and with a shield up an absorb worth half of it. Level 10, ranks to 58.",
         "icon": "spell_holy_sealoffury"
       },
       {
         "name": "Holy Strike",
-        "description": "Baseline Ret strike on a 10 sec cooldown: weapon damage plus Holy. Several talents build on it.",
+        "description": "Baseline Ret strike, 10 sec cooldown: weapon damage plus Holy. Level 6, ranks to 60. Several talents build on it.",
         "icon": "spell_holy_crusaderstrike"
       },
       {
         "name": "Blessing of Kings and Consecration",
-        "description": "Both trainable now, not talents. Consecration comes at level 20.",
+        "description": "Both trainable now, not talents. Consecration at level 20.",
         "icon": "spell_magic_greaterblessingofkings"
       }
     ]
@@ -27,7 +27,7 @@
     "abilities": [
       {
         "name": "Shadow Word: Death",
-        "description": "Execute-style Shadow spell. Named by the Early Demise talent.",
+        "description": "New Shadow nuke, 15 sec cooldown, ranks at 32, 40, 48 and 56. If the target survives you take 10% of your max health. Early Demise adds 15 or 30% crit on targets at or below 20% health.",
         "icon": "spell_shadow_demonicfortitude"
       },
       {
@@ -46,12 +46,12 @@
     "abilities": [
       {
         "name": "Aimed Shot",
-        "description": "Trainable now instead of a Marksmanship talent, and quicker: 2 sec cast, 6 sec cooldown, shared with Multi-Shot (Classic was a 3 sec cast).",
+        "description": "Trainable now, not a talent, and quicker: 2 sec cast (Classic 3), 6 sec cooldown shared with Multi-Shot. Level 20, ranks to 60. A reader caught the cast time on Xaryu's stream.",
         "icon": "inv_spear_07"
       },
       {
         "name": "Aspect of the Beast",
-        "description": "Changed. Rank 1 makes you untrackable and adds 50 melee attack power. Classic was untrackable only.",
+        "description": "Changed: rank 1 makes you untrackable and adds 50 melee attack power (Classic: untrackable only). Spotted by a reader on Xaryu's stream.",
         "icon": "ability_mount_pinktiger"
       }
     ]
@@ -60,12 +60,12 @@
     "abilities": [
       {
         "name": "Comprehend Scroll",
-        "description": "New little ability: decipher an untranslated scroll.",
+        "description": "New little ability: decipher an untranslated scroll. Level 6.",
         "icon": "inv_scroll_03"
       },
       {
         "name": "Frostfire Bolt",
-        "description": "A bolt that is both Fire and Frost. Four talents mention it.",
+        "description": "New at 40, ranks at 50 and 60: a bolt that is both Fire and Frost. Missile Barrage, Improved Fireball and Heating Up name it.",
         "icon": "ability_mage_frostfirebolt"
       }
     ]
@@ -79,7 +79,7 @@
       },
       {
         "name": "Bane of Agony",
-        "description": "Curse of Agony, renamed. Bane of Doom the same. Banes and Curses are now separate, so you can run one of each.",
+        "description": "Curse of Agony, renamed. Bane of Doom the same. Banes and Curses are separate now, so you can run one of each.",
         "icon": "spell_shadow_curseofsargeras"
       },
       {
@@ -93,47 +93,47 @@
     "abilities": [
       {
         "name": "Rage",
-        "description": "Comes from taking damage and from your melee swings. Slower weapons give more Rage per swing, so it comes in at a steady rate instead of scaling with how hard you hit. Out of combat you lose 1.25 Rage a second (75 a minute).",
+        "description": "From damage taken and your swings. Slower weapons give more Rage a swing, so it comes in at a steady rate. Out of combat you lose 1.25 Rage a second. From the Rage tooltip and Blizzard's Class Highlights video (0:23).",
         "icon": "ability_warrior_endlessrage"
       },
       {
         "name": "Victory Rush",
-        "description": "Baseline, in the Arms tab. Instant, 30 sec cooldown: a melee hit that heals you for 10% of your maximum health, usable within 20 sec of killing something non-trivial.",
+        "description": "Baseline, Arms tab. Instant, 30 sec cooldown: a melee hit that heals 10% of your max health, within 20 sec of a non-trivial kill. Read off Soda's stream via a reader.",
         "icon": "ability_warrior_devastate"
       },
       {
         "name": "Tactical Mastery",
-        "description": "A passive in the Arms tab now, not a talent. You keep up to 10 Rage when you change stances on your own, and the Arms talent Improved Tactical Mastery adds up to 15 more.",
+        "description": "A passive in the Arms tab now, not a talent: keep up to 10 Rage when you change stances, and Improved Tactical Mastery adds up to 15 more. From Soda's Warrior video via a reader.",
         "icon": "spell_nature_enchantarmor"
       },
       {
         "name": "Intercept",
-        "description": "Still in the game: the Fury tree has Improved Intercept.",
+        "description": "Unchanged from Classic: level 30 in the Fury tab, ranks at 42 and 52. Improved Intercept stays in the Fury tree.",
         "icon": "ability_rogue_sprint"
       },
       {
         "name": "Slam",
-        "description": "Now has an 18 sec cooldown (Classic had none).",
+        "description": "A new rank 1 at 20; Classic's four ranks follow at 30, 38, 46 and 54, one rank number higher. 18 sec cooldown now (Classic had none).",
         "icon": "ability_warrior_decisivestrike"
       },
       {
         "name": "Thunder Clap",
-        "description": "Changed. Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec and hits up to 4 targets, where Classic was 10% for the same 22 sec.",
+        "description": "Works in Battle or Defensive Stance. Rank 4 slows attacks 20% for 22 sec on up to 4 targets (Classic 10%). Xaryu's stream via a reader; the Classic number from the files.",
         "icon": "spell_nature_thunderclap"
       },
       {
         "name": "Bloodrage",
-        "description": "Still there, in the Protection tab. 116 health for 10 rage plus 10 more over 10 sec.",
+        "description": "Still there, Protection tab: 20% of your base health for 10 Rage, plus 10 more over 10 sec.",
         "icon": "ability_racial_bloodrage"
       },
       {
         "name": "Shield Wall",
-        "description": "Changed: 15 min cooldown, 60% less damage for 12 sec (Classic was 30 min, 75% for 10 sec). No longer shares a cooldown with Retaliation and Recklessness.",
+        "description": "Changed: 15 min cooldown, 60% less damage for 12 sec (Classic 30 min, 75% for 10 sec). No shared cooldown with Retaliation and Recklessness any more: each has its own timer, and Blizzard's Class Highlights video (1:14) says so. Two readers flagged it first.",
         "icon": "ability_warrior_shieldwall"
       },
       {
         "name": "Shield Block",
-        "description": "Changed: 2 charges and 7 sec baseline (Classic was 1 block for 5 sec). Still 10 Rage, 5 sec cooldown, Defensive Stance.",
+        "description": "Changed: 2 charges and 7 sec (Classic 1 block for 5 sec). Still 10 Rage, 5 sec cooldown, Defensive Stance. From a Tyler1 spellbook screenshot a reader sent in.",
         "icon": "ability_defend"
       }
     ]
@@ -142,12 +142,12 @@
     "abilities": [
       {
         "name": "Energy",
-        "description": "Comes back 1 point every 0.1 sec, 10 a second. Same rate as Classic, but no tick to wait for.",
+        "description": "Comes back 1 point every 0.1 sec, 10 a second: Classic's rate with no tick to wait for. From the Energy tooltip and Blizzard's Class Highlights video (3:41).",
         "icon": "spell_shadow_fumble"
       },
       {
         "name": "Mutilate",
-        "description": "New talent, Assassination row 5. Hits with both weapons for 75% damage each, 20% more on poisoned targets, and gives 2 combo points. Nine other talents feed it.",
+        "description": "New talent, Assassination row 5: both weapons at 75% each, 20% more on poisoned targets, 2 combo points. Remorseless Attacks, Lethality, Cold Blood, Puncturing Wounds and Opportunity name it.",
         "icon": "ability_rogue_shadowstrikes"
       },
       {
@@ -171,7 +171,7 @@
     "abilities": [
       {
         "name": "Omen of Clarity and Nature's Grasp",
-        "description": "Both trainable now, not talents. They're in the Balance tab.",
+        "description": "Both trainable now, not talents, in the Balance tab: Nature's Grasp at 10, Omen of Clarity (a passive now) at 20.",
         "icon": "spell_nature_crystalball"
       },
       {
@@ -181,12 +181,12 @@
       },
       {
         "name": "Lacerate",
-        "description": "Bear bleed from later expansions, in Forever as a baseline ability: the Shredding Attacks talent cuts its Rage cost.",
+        "description": "Bear bleed from later expansions, baseline here; Shredding Attacks cuts its Rage cost. Level 42, ranks at 50 and 58. Thanks to a reader.",
         "icon": "ability_druid_lacerate"
       },
       {
         "name": "Cure Poison",
-        "description": "Gone. Abolish Poison is the only poison cure.",
+        "description": "Still here: level 14 from the quest Power over Poison, as in Classic. Since build 70170 High Order Skyborne can take that quest too (Blizzard's notes).",
         "icon": "spell_nature_nullifypoison"
       }
     ]
@@ -195,7 +195,7 @@
     "abilities": [
       {
         "name": "Lightning Bolt",
-        "description": "Half a second faster than Classic. Rank 7 is a 2.5 sec cast.",
+        "description": "Ranks 4 to 10 cast in 2.5 sec, half a second under Classic's 3. Ranks 1 to 3 keep 1.5, 2 and 2.5 sec.",
         "icon": "spell_nature_lightning"
       },
       {
@@ -205,22 +205,22 @@
       },
       {
         "name": "Totemic Projection",
-        "description": "New. Pick a spot up to 30 yd away and your totems move there, not just to your feet. Totemic Recall is in too.",
+        "description": "New: pick a spot up to 30 yd away and your totems move there. Seen on Guzu's stream. Totemic Recall is in too.",
         "icon": "ability_shaman_totemrelocation"
       },
       {
         "name": "Totems last 5 min",
-        "description": "Lasting totems last 5 min now. Most were 2 min in Classic, and Healing Stream and Mana Spring were 1 min. Disease Cleansing Totem still lasts 2 min. Searing (30 sec), Magma (20), Stoneclaw (15), Earthbind and Grounding (45) and Mana Tide (12) keep their short timers.",
+        "description": "Lasting totems last 5 min now (most were 2 min in Classic; Healing Stream and Mana Spring 1 min). Searing (30 to 55 sec by rank), Magma (20), Stoneclaw (15), Earthbind and Grounding (45) and Mana Tide (12) keep their short timers. Blizzard's Class Highlights video (3:00) says five minutes.",
         "icon": "spell_nature_strengthofearthtotem02"
       },
       {
         "name": "Call of the Elements, Ancestors and Spirits",
-        "description": "New: each drops up to four totems from its own Totem Bar set in one 3 sec cast. Call of the Elements at 20, Call of the Ancestors at 30, Call of the Spirits at 40, so three saved sets by 40.",
+        "description": "New: each drops up to four totems from its own Totem Bar set in one 3 sec cast. Elements at 20, Ancestors at 30, Spirits at 40.",
         "icon": "spell_shaman_dropall_01"
       },
       {
         "name": "Fire Nova",
-        "description": "A spell now, not a totem: 30 yd range, instant, 10 sec cooldown, and it blasts everything within 10 yd of your active Fire totem. Improved Fire Nova trims 2 sec off the cooldown.",
+        "description": "A spell now, not a totem: 30 yd range, instant, 10 sec cooldown, blasts everything within 10 yd of your Fire totem (rank 3 at 32: 195 to 219; rank 5 at 52: 413 to 459). Improved Fire Nova trims 2 or 4 sec off the cooldown.",
         "icon": "spell_fire_sealoffire"
       }
     ]

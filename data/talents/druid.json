@@ -66,10 +66,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_sentinal",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Balance",
             "tier": 5,
             "col": 3,
@@ -133,10 +133,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_naturetouchgrow",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Balance",
             "tier": 3,
             "col": 4,
@@ -158,10 +158,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_stranglevines",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Balance",
             "tier": 2,
             "col": 1,
@@ -232,10 +232,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_insectswarm",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 3,
             "col": 3,
@@ -380,7 +380,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted. Reduces all threat from Arcane and Nature spells by 0% while in this form. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "text": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           },
           "passive": false,
           "cost": "35% of base mana | Instant"
@@ -432,15 +432,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_holy_blessingofagility",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Feral Combat",
             "tier": 6,
             "col": 2,
             "maxRank": 5,
-            "text": "Increases your Intellect by 4%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%."
+            "text": "Increases your Intellect by 4%. In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%."
           },
           "passive": true
         },
@@ -456,15 +456,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_spiritwolf",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Feral Combat",
             "tier": 3,
             "col": 1,
             "maxRank": 2,
-            "text": "Increases your movement speed by 15% <!--sp436895:0-->while outdoors<!--sp436895--> in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
+            "text": "Increases your movement speed by 15% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
             "renamedFrom": "Feline Swiftness"
           },
           "passive": true
@@ -555,10 +555,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_druid_ravage",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Feral Combat",
             "tier": 5,
             "col": 1,
@@ -574,7 +574,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nLeap behind an enemy."
+            "Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nFeral Charge (Cat): 8-25 yd range, Instant, 30 sec cooldown, Requires Cat Form. Leap behind an enemy."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -590,7 +590,7 @@
             "text": "Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec."
           },
           "passive": false,
-          "cost": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Cat Form, Bear Form, Dire Bear Form"
+          "cost": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Bear Form, Dire Bear Form"
         },
         {
           "id": "feral_sharpened_claws",
@@ -770,10 +770,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_unyeildingstamina",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Feral Combat",
             "tier": 7,
             "col": 2,
@@ -873,7 +873,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "Instant | 3 min cooldown"
+          "cost": "Instant | 3 min cooldown | Requires Cat Form, Bear Form, Dire Bear Form"
         }
       ]
     },
@@ -895,10 +895,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_healingwavegreater",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 2,
             "col": 2,
@@ -975,10 +975,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_eyeoftheowl",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 3,
             "col": 4,
@@ -1052,10 +1052,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_nature_protectionformnature",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 5,
             "col": 3,
@@ -1122,10 +1122,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "spell_nature_rejuvenation",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Restoration",
             "tier": 4,
             "col": 4,
@@ -1145,10 +1145,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "inv_relics_idolofrejuvenation",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 7,
             "col": 2,
@@ -1247,10 +1247,10 @@
             "id": "restoration_improved_rejuvenation",
             "ranks": 3
           },
-          "status": "unchanged",
+          "status": "changed",
           "icon": "spell_nature_resistnature",
           "classic": {
-            "status": "unchanged",
+            "status": "changed",
             "tree": "Restoration",
             "tier": 6,
             "col": 3,

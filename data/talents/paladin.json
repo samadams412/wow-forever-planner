@@ -71,10 +71,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_holy_holybolt",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Holy",
             "tier": 3,
             "col": 1,
@@ -145,10 +145,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_holy_unyieldingfaith",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Holy",
             "tier": 3,
             "col": 4,
@@ -223,7 +223,7 @@
           "maxRank": 2,
           "ranks": [
             "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.",
-            "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."
+            "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1.0 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -275,10 +275,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_holy_heal",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Holy",
             "tier": 5,
             "col": 2,
@@ -322,10 +322,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_holy_searinglight",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Holy",
             "tier": 7,
             "col": 2,
@@ -333,7 +333,7 @@
             "text": "Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing to an ally."
           },
           "passive": false,
-          "cost": "160 Mana | 40 yd range | Instant | 10 sec cooldown"
+          "cost": "160 Mana | Enemy: 20 yd range | Friendly: 40 yd range | Instant | 10 sec cooldown"
         },
         {
           "id": "holy_consecrated_ground",
@@ -401,7 +401,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "730 Mana | 40 yd range | 1.5 sec cast | 6 sec cooldown"
+          "cost": "730 Mana | Enemy: 20 yd range | Friendly: 40 yd range | 1.5 sec cast | 6 sec cooldown"
         }
       ]
     },
@@ -458,7 +458,7 @@
             "tier": 1,
             "col": 3,
             "maxRank": 5,
-            "text": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike.  Lasts 10 sec or 5 blocks."
+            "text": "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike. Lasts 10 sec or 5 blocks."
           },
           "passive": true
         },
@@ -499,10 +499,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
+          "status": "unchanged",
           "icon": "spell_holy_sealofprotection",
           "classic": {
-            "status": "changed",
+            "status": "unchanged",
             "tree": "Protection",
             "tier": 2,
             "col": 2,
@@ -526,10 +526,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_magic_lesserinvisibilty",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Protection",
             "tier": 3,
             "col": 4,
@@ -663,10 +663,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "inv_sword_20",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Protection",
             "tier": 6,
             "col": 3,
@@ -688,10 +688,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "spell_holy_sealofmight",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Protection",
             "tier": 4,
             "col": 2,
@@ -913,10 +913,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_holy_retributionaura",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Retribution",
             "tier": 3,
             "col": 2,
@@ -932,9 +932,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 67, and increase your Attack Power by 1% for 30 sec.",
-            "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 133, and increase your Attack Power by 2% for 30 sec.",
-            "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 200, and increase your Attack Power by 3% for 30 sec."
+            "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 68, and increase your Attack Power by 1% for 30 sec.",
+            "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 136, and increase your Attack Power by 2% for 30 sec.",
+            "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 3% for 30 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -981,15 +981,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
+          "status": "unchanged",
           "icon": "ability_warrior_innerrage",
           "classic": {
-            "status": "changed",
+            "status": "unchanged",
             "tree": "Retribution",
             "tier": 3,
             "col": 3,
             "maxRank": 1,
-            "text": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.<br /><br />Unleashing this Seal's energy will judge an enemy, instantly causing <!--ppl20375:20:28:46:280-->68 to <!--ppl20375:20:28:50:280:1-->73 Holy damage, <!--ppl20375:20:28:93:560-->137 to <!--ppl20375:20:28:101:560:1-->146 if the target is stunned or incapacitated."
+            "text": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 145 if the target is stunned or incapacitated."
           },
           "passive": false,
           "cost": "65 Mana | Instant"
@@ -1014,7 +1014,7 @@
             "tier": 3,
             "col": 4,
             "maxRank": 2,
-            "text": "Increases movement and mounted movement speed by 4%.  This does not stack with other movement speed increasing effects."
+            "text": "Increases movement and mounted movement speed by 4%. This does not stack with other movement speed increasing effects."
           },
           "passive": true
         },
@@ -1038,7 +1038,7 @@
             "tier": 4,
             "col": 1,
             "maxRank": 2,
-            "text": "All spell criticals against you cause 15% of the damage taken to the caster as well.  The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
+            "text": "All spell criticals against you cause 15% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
           },
           "passive": true
         },
@@ -1076,7 +1076,7 @@
           "status": "unchanged",
           "icon": "inv_hammer_04",
           "classic": {
-            "status": "same",
+            "status": "unchanged",
             "tree": "Retribution",
             "tier": 5,
             "col": 1,
@@ -1101,10 +1101,10 @@
             "id": "retribution_sanctified_judgement",
             "ranks": 3
           },
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_racial_avatar",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Retribution",
             "tier": 6,
             "col": 2,
@@ -1132,7 +1132,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec.  Any damage caused will awaken the target.  Only works against Humanoids."
+            "text": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
           },
           "passive": false,
           "cost": "60 Mana | 20 yd range | Instant | 1 min cooldown"
@@ -1165,7 +1165,7 @@
           "maxRank": 2,
           "ranks": [
             "Reduces the cast time of your Hammer of Wrath by 0.5 sec, and reduces all threat you generate by 10% while Righteous Fury is not active.",
-            "Reduces the cast time of your Hammer of Wrath by 1 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
+            "Reduces the cast time of your Hammer of Wrath by 1.0 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
           ],
           "confidence": "confirmed",
           "prereq": null,

@@ -1,0 +1,1257 @@
+{
+  "oldPath": "data/sources/talentsforever/talentsforever-2026-10-03.json",
+  "newPath": "data/sources/talentsforever/talentsforever-2026-10-04.json",
+  "oldLabel": "2026-10-03",
+  "newLabel": "2026-10-04",
+  "talents": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Spearing Strike",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "15 Rage | Melee Range | Instant | 20 sec cooldown | Requires Two-Handed Axes, Two-Handed Maces, Polearms, Two-Handed Swords, Staves",
+            "new": "15 Rage | Melee Range | Instant | 20 sec cooldown | Requires Battle Stance",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Arms",
+        "name": "Improved Slam",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
+              "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3 sec."
+            ],
+            "new": [
+              "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
+              "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Improved Shield Wall",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the cooldown of your Shield Wall ability by 5.5 min.",
+              "Reduces the cooldown of your Shield Wall ability by 11 min."
+            ],
+            "new": [
+              "Reduces the cooldown of your Shield Wall ability by 5.5 min.",
+              "Reduces the cooldown of your Shield Wall ability by 11.0 min."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Bastion",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "new": "Increases the damage you deal with One-Handed Melee weapons by 2%.",
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "new",
+            "new": "changed",
+            "trivial": false
+          },
+          {
+            "field": "classic.tree",
+            "new": "Protection",
+            "trivial": false
+          },
+          {
+            "field": "classic.row",
+            "new": 6,
+            "trivial": false
+          },
+          {
+            "field": "classic.col",
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "classic.max",
+            "new": 5,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warrior",
+        "treeName": "Protection",
+        "name": "Shield Slam",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "20 Rage | Melee Range | Instant | 6 sec cooldown",
+            "new": "20 Rage | Melee Range | Instant | 6 sec cooldown | Requires Shields",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Infusion of Light",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.",
+              "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1 sec."
+            ],
+            "new": [
+              "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 0.5 sec.",
+              "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1.0 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Divine Favor",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "moved",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Holy Shock",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "160 Mana | 40 yd range | Instant | 10 sec cooldown",
+            "new": "160 Mana | Enemy: 20 yd range | Friendly: 40 yd range | Instant | 10 sec cooldown",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Light's Vigil",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "730 Mana | 40 yd range | 1.5 sec cast | 6 sec cooldown",
+            "new": "730 Mana | Enemy: 20 yd range | Friendly: 40 yd range | 1.5 sec cast | 6 sec cooldown",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Guardian's Favor",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "changed",
+            "new": "same",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Improved Hammer of Justice",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Vindication",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 67, and increase your Attack Power by 1% for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 133, and increase your Attack Power by 2% for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 200, and increase your Attack Power by 3% for 30 sec."
+            ],
+            "new": [
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 68, and increase your Attack Power by 1% for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 136, and increase your Attack Power by 2% for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 3% for 30 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "classic.text",
+            "old": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5%",
+            "new": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% for 10 sec.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Seal of Command",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "changed",
+            "new": "same",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Instrument of Law",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the cast time of your Hammer of Wrath by 0.5 sec, and reduces all threat you generate by 10% while Righteous Fury is not active.",
+              "Reduces the cast time of your Hammer of Wrath by 1 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
+            ],
+            "new": [
+              "Reduces the cast time of your Hammer of Wrath by 0.5 sec, and reduces all threat you generate by 10% while Righteous Fury is not active.",
+              "Reduces the cast time of your Hammer of Wrath by 1.0 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Beast Mastery",
+        "name": "Summon Hawk",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Command a hawk to dive-bomb your targeted enemy, dealing 32 Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
+            ],
+            "new": [
+              "Command a hawk to dive-bomb your targeted enemy, dealing 32 plus 5% of your Ranged Attack Power Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Beast Mastery",
+        "name": "Spirit Bond",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Scatter Shot",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Sniper Shot",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "An aimed shot that increases ranged damage by 70.",
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "changed",
+            "new": "new",
+            "trivial": false
+          },
+          {
+            "field": "classic.tree",
+            "old": "Marksmanship",
+            "trivial": false
+          },
+          {
+            "field": "classic.row",
+            "old": 3,
+            "trivial": false
+          },
+          {
+            "field": "classic.col",
+            "old": 1,
+            "trivial": false
+          },
+          {
+            "field": "classic.max",
+            "old": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Assassination",
+        "name": "Vile Poisons",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Assassination",
+        "name": "Seal Fate",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Assassination",
+        "name": "Venom",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "25 Energy | 100 yd range | Instant",
+            "new": "25 Energy | 1 to 5 Combo Points | Instant",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Rogue",
+        "treeName": "Subtlety",
+        "name": "Serrated Blades",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%. The amount of Armor reduced increases with your level.",
+            "new": "Causes your attacks to ignore 100 of your target's Armor and increases the damage dealt by your Rupture ability by 10%. The amount of Armor reduced increases with your level.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Discipline",
+        "name": "Improved Mana Burn",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the casting time of your Mana Burn spell by 0.5 sec.",
+              "Reduces the casting time of your Mana Burn spell by 1 sec."
+            ],
+            "new": [
+              "Reduces the casting time of your Mana Burn spell by 0.5 sec.",
+              "Reduces the casting time of your Mana Burn spell by 1.0 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Discipline",
+        "name": "Penance",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "100 Mana | 40 yd range | Channeled | 12 sec cooldown",
+            "new": "100 Mana | Enemy: 36 yd range | Friendly: 40 yd range | Channeled | 12 sec cooldown",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "name": "Inspiration",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases your target's armor by 8% for 15 sec after getting a critical effect from",
+            "new": "Increases your target's armor by 8% for 15 sec after getting a critical effect from your Flash Heal, Heal, Greater Heal, or Prayer of Healing spell.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow",
+        "name": "Blackout",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow",
+        "name": "Improved Shadow Word: Pain",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow",
+        "name": "Improved Mind Blast",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow",
+        "name": "Improved Psychic Scream",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Shadow",
+        "name": "Improved Fade",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Elemental",
+        "name": "Reverberation",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the cooldown of your Shock spells by 0.2 sec.",
+              "Reduces the cooldown of your Shock spells by 0.4 sec.",
+              "Reduces the cooldown of your Shock spells by 0.6 sec.",
+              "Reduces the cooldown of your Shock spells by 0.8 sec.",
+              "Reduces the cooldown of your Shock spells by 1 sec."
+            ],
+            "new": [
+              "Reduces the cooldown of your Shock spells by 0.2 sec.",
+              "Reduces the cooldown of your Shock spells by 0.4 sec.",
+              "Reduces the cooldown of your Shock spells by 0.6 sec.",
+              "Reduces the cooldown of your Shock spells by 0.8 sec.",
+              "Reduces the cooldown of your Shock spells by 1.0 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Elemental",
+        "name": "Elemental Focus",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Enhancement",
+        "name": "Improved Ghost Wolf",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the cast time of your Ghost Wolf spell by 1 sec, and Ghost Wolf may be used indoors.",
+              "Reduces the cast time of your Ghost Wolf spell by 3 sec, and Ghost Wolf may be used indoors."
+            ],
+            "new": [
+              "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
+              "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Enhancement",
+        "name": "Elemental Weapons",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "moved",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Restoration",
+        "name": "Ancestral Healing",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "moved",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Restoration",
+        "name": "Mana Tide Totem",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "10 Mana | Instant | 5 min cooldown",
+            "new": "10 Mana | Instant | 5 min cooldown | Tools: Water Totem",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Shaman",
+        "treeName": "Restoration",
+        "name": "Purification",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "changed",
+            "new": "same",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Frostbite",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Affliction",
+        "name": "Soul Siphon",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "new": "Increases the Health drained by your Drain Life spell by 2%.",
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "new",
+            "new": "changed",
+            "trivial": false
+          },
+          {
+            "field": "classic.tree",
+            "new": "Affliction",
+            "trivial": false
+          },
+          {
+            "field": "classic.row",
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "classic.col",
+            "new": 4,
+            "trivial": false
+          },
+          {
+            "field": "classic.max",
+            "new": 5,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Fel Vitality",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the maximum Health of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 3%.",
+            "new": "Increases the maximum Mana of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 3%.",
+            "trivial": false
+          },
+          {
+            "field": "classic.row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Master Summoner",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "moved",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Fel Domination",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "moved",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Demonology",
+        "name": "Master Demonologist",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Grants both the Warlock and the summoned demon an effect as long as that demon is active.Imp - Reduces threat caused by 4%.Voidwalker - Reduces physical damage taken by 2%.Succubus/Incubus - Increases all damage caused by 2%.Felhunter - Increases all resistances by.2 per level.",
+            "new": "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Reduces threat caused by 4%. Voidwalker - Reduces physical damage taken by 2%. Succubus/Incubus - Increases all damage caused by 2%. Felhunter - Increases all resistances by .2 per level.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Balance",
+        "name": "Moonfury",
+        "fieldChanges": [
+          {
+            "field": "classic.text",
+            "old": "Increases the damage done by your Starfire, Moonfire and Wrath spells by.",
+            "new": "Increases the damage done by your Starfire, Moonfire and Wrath spells by 2%.",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Feral Charge",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nLeap behind an enemy."
+            ],
+            "new": [
+              "Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nFeral Charge (Cat): 8-25 yd range, Instant, 30 sec cooldown, Requires Cat Form. Leap behind an enemy."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "cost",
+            "old": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Cat Form, Bear Form, Dire Bear Form",
+            "new": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Bear Form, Dire Bear Form",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Berserk",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "Instant | 3 min cooldown",
+            "new": "Instant | 3 min cooldown | Requires Cat Form, Bear Form, Dire Bear Form",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Improved Rejuvenation",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Improved Regrowth",
+        "fieldChanges": [
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [],
+    "removedArrayAdded": [
+      "Hunter|Aimed Shot",
+      "Warlock|Fel Stamina"
+    ],
+    "removedArrayRemoved": [
+      "Warrior|One-Handed Weapon Specialization",
+      "Warlock|Improved Drain Life",
+      "Warlock|Fel Intellect",
+      "Druid|Primal Fury"
+    ]
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": [
+      "passive",
+      "cost"
+    ]
+  },
+  "spellbooks": {
+    "added": [],
+    "removed": [],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [
+      "Warrior|Attack|",
+      "Warrior|Languages|Passive",
+      "Paladin|Attack|",
+      "Paladin|Languages|Passive",
+      "Hunter|Attack|",
+      "Hunter|Languages|Passive",
+      "Rogue|Attack|",
+      "Rogue|Languages|Passive",
+      "Priest|Attack|",
+      "Priest|Languages|Passive",
+      "Shaman|Attack|",
+      "Shaman|Languages|Passive",
+      "Mage|Attack|",
+      "Mage|Languages|Passive",
+      "Warlock|Attack|",
+      "Warlock|Languages|Passive",
+      "Druid|Attack|",
+      "Druid|Languages|Passive"
+    ],
+    "removed": [],
+    "changed": [
+      "Warrior|Throw|",
+      "Warrior|Shoot Bow|",
+      "Warrior|Shoot Crossbow|",
+      "Warrior|Shoot Gun|",
+      "Warrior|Dual Wield|Passive",
+      "Warrior|Armor Proficiency|Passive",
+      "Warrior|Block|Passive",
+      "Warrior|Dodge|Passive",
+      "Warrior|Parry|Passive",
+      "Warrior|Spearing Strike|",
+      "Warrior|Tactical Mastery|",
+      "Warrior|Berserker Rage|",
+      "Warrior|Demoralizing Shout|Rank 1",
+      "Warrior|Demoralizing Shout|Rank 2",
+      "Warrior|Demoralizing Shout|Rank 3",
+      "Warrior|Demoralizing Shout|Rank 4",
+      "Warrior|Piercing Howl|",
+      "Warrior|Shield Bash|Rank 1",
+      "Warrior|Shield Bash|Rank 2",
+      "Warrior|Shield Bash|Rank 3",
+      "Warrior|Shield Block|",
+      "Warrior|Shield Slam|Rank 1",
+      "Warrior|Shield Slam|Rank 2",
+      "Warrior|Shield Slam|Rank 3",
+      "Warrior|Shield Slam|Rank 4",
+      "Warrior|Shield Wall|",
+      "Paladin|Armor Proficiency|Passive",
+      "Paladin|Block|Passive",
+      "Paladin|Dodge|Passive",
+      "Paladin|Parry|Passive",
+      "Paladin|Exorcism|Rank 5",
+      "Paladin|Holy Light|Rank 6",
+      "Paladin|Holy Light|Rank 7",
+      "Paladin|Holy Light|Rank 8",
+      "Paladin|Holy Shock|Rank 1",
+      "Paladin|Holy Shock|Rank 2",
+      "Paladin|Holy Shock|Rank 3",
+      "Paladin|Holy Shock|Rank 4",
+      "Paladin|Light's Vigil|Rank 1",
+      "Paladin|Light's Vigil|Rank 2",
+      "Paladin|Light's Vigil|Rank 3",
+      "Paladin|Seal of Fury|Rank 1",
+      "Hunter|Throw|",
+      "Hunter|Dual Wield|Passive",
+      "Hunter|Armor Proficiency|Passive",
+      "Hunter|Dodge|Passive",
+      "Hunter|Parry|Passive",
+      "Hunter|Eagle Eye|",
+      "Hunter|Eyes of the Beast|",
+      "Hunter|Summon Hawk|Rank 1",
+      "Hunter|Summon Hawk|Rank 2",
+      "Hunter|Summon Hawk|Rank 3",
+      "Hunter|Summon Hawk|Rank 4",
+      "Hunter|Counterattack|Rank 1",
+      "Hunter|Bite|Rank 1",
+      "Hunter|Bite|Rank 2",
+      "Hunter|Bite|Rank 3",
+      "Hunter|Bite|Rank 4",
+      "Hunter|Bite|Rank 5",
+      "Hunter|Bite|Rank 6",
+      "Hunter|Bite|Rank 7",
+      "Hunter|Bite|Rank 8",
+      "Hunter|Claw|Rank 1",
+      "Hunter|Claw|Rank 2",
+      "Hunter|Claw|Rank 3",
+      "Hunter|Claw|Rank 4",
+      "Hunter|Claw|Rank 5",
+      "Hunter|Claw|Rank 6",
+      "Hunter|Claw|Rank 7",
+      "Hunter|Claw|Rank 8",
+      "Hunter|Dash|Rank 1",
+      "Hunter|Dash|Rank 2",
+      "Hunter|Dash|Rank 3",
+      "Hunter|Demoralizing Screech|Rank 1",
+      "Hunter|Demoralizing Screech|Rank 2",
+      "Hunter|Demoralizing Screech|Rank 3",
+      "Hunter|Demoralizing Screech|Rank 4",
+      "Hunter|Dive|Rank 1",
+      "Hunter|Dive|Rank 2",
+      "Hunter|Dive|Rank 3",
+      "Rogue|Pick Lock|",
+      "Rogue|Shoot Bow|",
+      "Rogue|Shoot Crossbow|",
+      "Rogue|Shoot Gun|",
+      "Rogue|Throw|",
+      "Rogue|Dual Wield|Passive",
+      "Rogue|Armor Proficiency|Passive",
+      "Rogue|Dodge|Passive",
+      "Rogue|Parry|Passive",
+      "Rogue|Ambush|Rank 1",
+      "Rogue|Ambush|Rank 2",
+      "Rogue|Ambush|Rank 3",
+      "Rogue|Ambush|Rank 4",
+      "Rogue|Ambush|Rank 5",
+      "Rogue|Ambush|Rank 6",
+      "Rogue|Eviscerate|Rank 1",
+      "Rogue|Eviscerate|Rank 2",
+      "Rogue|Eviscerate|Rank 3",
+      "Rogue|Eviscerate|Rank 4",
+      "Rogue|Eviscerate|Rank 5",
+      "Rogue|Eviscerate|Rank 6",
+      "Rogue|Eviscerate|Rank 7",
+      "Rogue|Eviscerate|Rank 8",
+      "Rogue|Eviscerate|Rank 9",
+      "Rogue|Expose Armor|Rank 1",
+      "Rogue|Expose Armor|Rank 2",
+      "Rogue|Expose Armor|Rank 3",
+      "Rogue|Expose Armor|Rank 4",
+      "Rogue|Expose Armor|Rank 5",
+      "Rogue|Kidney Shot|Rank 1",
+      "Rogue|Kidney Shot|Rank 2",
+      "Rogue|Rupture|Rank 1",
+      "Rogue|Rupture|Rank 2",
+      "Rogue|Rupture|Rank 3",
+      "Rogue|Rupture|Rank 4",
+      "Rogue|Rupture|Rank 5",
+      "Rogue|Rupture|Rank 6",
+      "Rogue|Slice and Dice|Rank 1",
+      "Rogue|Slice and Dice|Rank 2",
+      "Rogue|Venom|",
+      "Rogue|Backstab|Rank 1",
+      "Rogue|Backstab|Rank 2",
+      "Rogue|Backstab|Rank 3",
+      "Rogue|Backstab|Rank 4",
+      "Rogue|Backstab|Rank 5",
+      "Rogue|Backstab|Rank 6",
+      "Rogue|Backstab|Rank 7",
+      "Rogue|Backstab|Rank 8",
+      "Rogue|Backstab|Rank 9",
+      "Rogue|Blind|",
+      "Rogue|Disarm Trap|",
+      "Priest|Shoot|",
+      "Priest|Armor Proficiency|Passive",
+      "Priest|Dodge|Passive",
+      "Priest|Feedback|Rank 1",
+      "Priest|Feedback|Rank 3",
+      "Priest|Feedback|Rank 4",
+      "Priest|Feedback|Rank 5",
+      "Priest|Penance|Rank 1",
+      "Priest|Penance|Rank 2",
+      "Priest|Penance|Rank 3",
+      "Priest|Penance|Rank 4",
+      "Priest|Power Word: Shield|Rank 6",
+      "Priest|Binding Heal|Rank 3",
+      "Priest|Desperate Prayer|Rank 5",
+      "Priest|Flash Heal|Rank 4",
+      "Priest|Greater Heal|Rank 1",
+      "Priest|Greater Heal|Rank 3",
+      "Priest|Resurrection|Rank 5",
+      "Priest|Devouring Plague|Rank 1",
+      "Priest|Mind Blast|Rank 4",
+      "Priest|Mind Control|Rank 1",
+      "Priest|Mind Control|Rank 2",
+      "Priest|Mind Control|Rank 3",
+      "Priest|Mind Vision|Rank 2",
+      "Priest|Vampiric Embrace|",
+      "Shaman|Armor Proficiency|Passive",
+      "Shaman|Block|Passive",
+      "Shaman|Dodge|Passive",
+      "Shaman|Chain Lightning|Rank 1",
+      "Shaman|Chain Lightning|Rank 2",
+      "Shaman|Chain Lightning|Rank 3",
+      "Shaman|Chain Lightning|Rank 4",
+      "Shaman|Earth Shock|Rank 4",
+      "Shaman|Earth Shock|Rank 6",
+      "Shaman|Earthbind Totem|",
+      "Shaman|Fire Nova|Rank 4",
+      "Shaman|Flame Shock|Rank 4",
+      "Shaman|Lightning Bolt|Rank 4",
+      "Shaman|Lightning Bolt|Rank 5",
+      "Shaman|Lightning Bolt|Rank 6",
+      "Shaman|Lightning Bolt|Rank 7",
+      "Shaman|Lightning Bolt|Rank 8",
+      "Shaman|Lightning Bolt|Rank 9",
+      "Shaman|Lightning Bolt|Rank 10",
+      "Shaman|Magma Totem|Rank 1",
+      "Shaman|Magma Totem|Rank 2",
+      "Shaman|Magma Totem|Rank 3",
+      "Shaman|Magma Totem|Rank 4",
+      "Shaman|Searing Totem|Rank 1",
+      "Shaman|Searing Totem|Rank 2",
+      "Shaman|Searing Totem|Rank 3",
+      "Shaman|Searing Totem|Rank 4",
+      "Shaman|Searing Totem|Rank 5",
+      "Shaman|Searing Totem|Rank 6",
+      "Shaman|Stoneclaw Totem|Rank 1",
+      "Shaman|Stoneclaw Totem|Rank 2",
+      "Shaman|Stoneclaw Totem|Rank 3",
+      "Shaman|Stoneclaw Totem|Rank 4",
+      "Shaman|Stoneclaw Totem|Rank 5",
+      "Shaman|Stoneclaw Totem|Rank 6",
+      "Shaman|Far Sight|",
+      "Shaman|Fire Resistance Totem|Rank 1",
+      "Shaman|Fire Resistance Totem|Rank 2",
+      "Shaman|Fire Resistance Totem|Rank 3",
+      "Shaman|Flametongue Totem|Rank 1",
+      "Shaman|Flametongue Totem|Rank 2",
+      "Shaman|Flametongue Totem|Rank 3",
+      "Shaman|Flametongue Totem|Rank 4",
+      "Shaman|Frost Resistance Totem|Rank 1",
+      "Shaman|Frost Resistance Totem|Rank 2",
+      "Shaman|Frost Resistance Totem|Rank 3",
+      "Shaman|Grace of Air Totem|Rank 1",
+      "Shaman|Grace of Air Totem|Rank 2",
+      "Shaman|Grace of Air Totem|Rank 3",
+      "Shaman|Grounding Totem|",
+      "Shaman|Nature Resistance Totem|Rank 1",
+      "Shaman|Nature Resistance Totem|Rank 2",
+      "Shaman|Nature Resistance Totem|Rank 3",
+      "Shaman|Sentry Totem|",
+      "Shaman|Stoneskin Totem|Rank 1",
+      "Shaman|Stoneskin Totem|Rank 2",
+      "Shaman|Stoneskin Totem|Rank 3",
+      "Shaman|Stoneskin Totem|Rank 4",
+      "Shaman|Stoneskin Totem|Rank 5",
+      "Shaman|Stoneskin Totem|Rank 6",
+      "Shaman|Stormstrike|",
+      "Shaman|Strength of Earth Totem|Rank 1",
+      "Shaman|Strength of Earth Totem|Rank 2",
+      "Shaman|Strength of Earth Totem|Rank 3",
+      "Shaman|Strength of Earth Totem|Rank 4",
+      "Shaman|Strength of Earth Totem|Rank 5",
+      "Shaman|Windfury Totem|Rank 1",
+      "Shaman|Windfury Totem|Rank 2",
+      "Shaman|Windfury Totem|Rank 3",
+      "Shaman|Windwall Totem|Rank 1",
+      "Shaman|Windwall Totem|Rank 2",
+      "Shaman|Windwall Totem|Rank 3",
+      "Shaman|Chain Heal|Rank 2",
+      "Shaman|Disease Cleansing Totem|",
+      "Shaman|Healing Stream Totem|Rank 1",
+      "Shaman|Healing Stream Totem|Rank 2",
+      "Shaman|Healing Stream Totem|Rank 3",
+      "Shaman|Healing Stream Totem|Rank 4",
+      "Shaman|Healing Stream Totem|Rank 5",
+      "Shaman|Healing Wave|Rank 8",
+      "Shaman|Lesser Healing Wave|Rank 5",
+      "Shaman|Mana Spring Totem|Rank 1",
+      "Shaman|Mana Spring Totem|Rank 2",
+      "Shaman|Mana Spring Totem|Rank 3",
+      "Shaman|Mana Spring Totem|Rank 4",
+      "Shaman|Mana Tide Totem|Rank 1",
+      "Shaman|Mana Tide Totem|Rank 2",
+      "Shaman|Mana Tide Totem|Rank 3",
+      "Shaman|Poison Cleansing Totem|",
+      "Shaman|Tremor Totem|",
+      "Mage|Shoot|",
+      "Mage|Comprehend Scroll|",
+      "Mage|Armor Proficiency|Passive",
+      "Mage|Dodge|Passive",
+      "Mage|Arcane Blast|Rank 5",
+      "Mage|Presence of Mind|",
+      "Mage|Teleport: Dalaran|",
+      "Mage|Fire Blast|Rank 3",
+      "Mage|Fire Blast|Rank 4",
+      "Mage|Fire Blast|Rank 6",
+      "Warlock|Shoot|",
+      "Warlock|Armor Proficiency|Passive",
+      "Warlock|Dodge|Passive",
+      "Warlock|Create Soulstone|Rank 2",
+      "Warlock|Create Soulstone|Rank 3",
+      "Warlock|Create Soulstone|Rank 4",
+      "Warlock|Create Soulstone|Rank 5",
+      "Warlock|Eye of Kilrogg|Summon",
+      "Warlock|Health Funnel|Rank 1",
+      "Warlock|Health Funnel|Rank 2",
+      "Warlock|Health Funnel|Rank 3",
+      "Warlock|Health Funnel|Rank 4",
+      "Warlock|Health Funnel|Rank 5",
+      "Warlock|Health Funnel|Rank 6",
+      "Warlock|Health Funnel|Rank 7",
+      "Warlock|Ritual of Doom|",
+      "Warlock|Ritual of Summoning|",
+      "Warlock|Soul Link|",
+      "Warlock|Shadow Bolt|Rank 7",
+      "Warlock|Shadow Bolt|Rank 8",
+      "Warlock|Shadowburn|Rank 4",
+      "Warlock|Lash of Pain|Rank 1",
+      "Warlock|Lash of Pain|Rank 2",
+      "Warlock|Lash of Pain|Rank 3",
+      "Warlock|Lash of Pain|Rank 4",
+      "Warlock|Lash of Pain|Rank 5",
+      "Warlock|Lash of Pain|Rank 6",
+      "Warlock|Lesser Invisibility|",
+      "Warlock|Sacrifice|Rank 1",
+      "Warlock|Sacrifice|Rank 2",
+      "Warlock|Sacrifice|Rank 3",
+      "Warlock|Sacrifice|Rank 4",
+      "Warlock|Sacrifice|Rank 5",
+      "Warlock|Sacrifice|Rank 6",
+      "Warlock|Seduction|",
+      "Warlock|Soothing Kiss|Rank 1",
+      "Warlock|Soothing Kiss|Rank 2",
+      "Warlock|Soothing Kiss|Rank 3",
+      "Warlock|Soothing Kiss|Rank 4",
+      "Druid|Armor Proficiency|Passive",
+      "Druid|Dodge|Passive",
+      "Druid|Faerie Fire|Rank 1",
+      "Druid|Faerie Fire|Rank 2",
+      "Druid|Faerie Fire|Rank 3",
+      "Druid|Faerie Fire|Rank 4",
+      "Druid|Moonfire|Rank 4",
+      "Druid|Moonfire|Rank 5",
+      "Druid|Omen of Clarity|",
+      "Druid|Thorns|Rank 1",
+      "Druid|Thorns|Rank 2",
+      "Druid|Thorns|Rank 3",
+      "Druid|Thorns|Rank 4",
+      "Druid|Thorns|Rank 5",
+      "Druid|Thorns|Rank 6",
+      "Druid|Wrath|Rank 2",
+      "Druid|Wrath|Rank 5",
+      "Druid|Wrath|Rank 6",
+      "Druid|Aquatic Form|Shapeshift",
+      "Druid|Bear Form|Shapeshift",
+      "Druid|Demoralizing Roar|Rank 2",
+      "Druid|Demoralizing Roar|Rank 4",
+      "Druid|Feral Charge|",
+      "Druid|Ferocious Bite|Rank 1",
+      "Druid|Ferocious Bite|Rank 2",
+      "Druid|Ferocious Bite|Rank 3",
+      "Druid|Ferocious Bite|Rank 4",
+      "Druid|Ferocious Bite|Rank 5",
+      "Druid|Rip|Rank 1",
+      "Druid|Rip|Rank 2",
+      "Druid|Rip|Rank 3",
+      "Druid|Rip|Rank 4",
+      "Druid|Rip|Rank 5",
+      "Druid|Rip|Rank 6",
+      "Druid|Swipe|Rank 1",
+      "Druid|Swipe|Rank 2",
+      "Druid|Swipe|Rank 3",
+      "Druid|Swipe|Rank 4",
+      "Druid|Swipe|Rank 5",
+      "Druid|Cure Poison|",
+      "Druid|Healing Touch|Rank 8",
+      "Druid|Rebirth|Rank 2",
+      "Druid|Rebirth|Rank 3",
+      "Druid|Rebirth|Rank 4",
+      "Druid|Rebirth|Rank 5",
+      "Druid|Regrowth|Rank 1",
+      "Druid|Regrowth|Rank 2",
+      "Druid|Regrowth|Rank 3",
+      "Druid|Regrowth|Rank 4",
+      "Druid|Regrowth|Rank 5",
+      "Druid|Regrowth|Rank 6",
+      "Druid|Regrowth|Rank 7",
+      "Druid|Regrowth|Rank 9",
+      "Druid|Revive|Rank 5"
+    ],
+    "newFields": [
+      "ns"
+    ]
+  },
+  "opaque": {
+    "racials": {
+      "changed": true,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": true,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": true,
+      "newFields": []
+    }
+  }
+}

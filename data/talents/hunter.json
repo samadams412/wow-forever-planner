@@ -259,7 +259,7 @@
           "col": 4,
           "maxRank": 1,
           "ranks": [
-            "Command a hawk to dive-bomb your targeted enemy, dealing 32 Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
+            "Command a hawk to dive-bomb your targeted enemy, dealing 32 plus 5% of your Ranged Attack Power Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -283,10 +283,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "changed",
           "icon": "ability_druid_demoralizingroar",
           "classic": {
-            "status": "unchanged",
+            "status": "changed",
             "tree": "Beast Mastery",
             "tier": 5,
             "col": 1,
@@ -398,7 +398,7 @@
             "tier": 7,
             "col": 2,
             "maxRank": 1,
-            "text": "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
+            "text": "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
           },
           "passive": false,
           "cost": "12% of base mana | 100 yd range | Instant | 2 min cooldown"
@@ -475,10 +475,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_searingarrow",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Marksmanship",
             "tier": 2,
             "col": 3,
@@ -501,10 +501,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_hunter_quickshot",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Marksmanship",
             "tier": 4,
             "col": 2,
@@ -529,10 +529,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_frost_wizardmark",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Marksmanship",
             "tier": 1,
             "col": 3,
@@ -638,10 +638,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_trueshot",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Marksmanship",
             "tier": 7,
             "col": 2,
@@ -739,15 +739,15 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "ability_golemstormbolt",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Marksmanship",
             "tier": 5,
             "col": 1,
             "maxRank": 1,
-            "text": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used."
+            "text": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
           },
           "passive": false,
           "cost": "8% of base mana | 15 yd range | Instant | 30 sec cooldown"
@@ -793,15 +793,10 @@
             "id": "marksmanship_trueshot_aura",
             "ranks": 1
           },
-          "status": "moved",
+          "status": "new",
           "icon": "hunter_pvp_snipershot",
           "classic": {
-            "status": "moved",
-            "tree": "Marksmanship",
-            "tier": 3,
-            "col": 1,
-            "maxRank": 1,
-            "text": "An aimed shot that increases ranged damage by 70.",
+            "status": "new",
             "renamedFrom": "Aimed Shot"
           },
           "passive": false,
@@ -927,10 +922,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "spell_shadow_twilight",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Survival",
             "tier": 3,
             "col": 2,
@@ -1001,10 +996,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_kick",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Survival",
             "tier": 4,
             "col": 2,
@@ -1092,15 +1087,15 @@
             "id": "survival_deterrence",
             "ranks": 1
           },
-          "status": "moved",
+          "status": "changed",
           "icon": "ability_warrior_challange",
           "classic": {
-            "status": "moved",
+            "status": "changed",
             "tree": "Survival",
             "tier": 5,
             "col": 3,
             "maxRank": 1,
-            "text": "A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
+            "text": "A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
           },
           "passive": false,
           "cost": "30 Mana | Melee Range | Instant | 5 sec cooldown"
@@ -1199,12 +1194,12 @@
           "status": "changed",
           "icon": "spell_nature_invisibilty",
           "classic": {
-            "status": "same",
+            "status": "changed",
             "tree": "Survival",
             "tier": 6,
             "col": 3,
             "maxRank": 5,
-            "text": "Increases your Agility by 2%."
+            "text": "Increases your Agility by 3%."
           },
           "passive": true
         },
