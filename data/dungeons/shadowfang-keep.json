@@ -317,6 +317,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Tanning Rack",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 273096,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tLeatherworking",
+      "Requires Leatherworking (140)",
+      "Use: Craft a Tanning Rack.",
+      "\"Teaches you how to place a Tanning Rack at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -1052,6 +1077,34 @@
       "Sell Price: 12s 68c"
      ],
      "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Worgpelt Leggings",
+     "slot": "Legs",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273647,
+     "icon": "inv_pants_12",
+     "quality": 3,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "84 Armor",
+      "+10 Agility",
+      "+5 Strength",
+      "+7 Fire Resistance",
+      "Requires Level 21",
+      "Sell Price: 18s 18c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,

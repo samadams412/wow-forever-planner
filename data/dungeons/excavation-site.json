@@ -414,6 +414,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Rock Garden",
+     "slot": null,
+     "type": "Book",
+     "itemClass": 9,
+     "itemId": 273097,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Mining (140)",
+      "Use: Craft a Rock Garden.",
+      "\"Teaches you how to place a Rock Garden at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": {

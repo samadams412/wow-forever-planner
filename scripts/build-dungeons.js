@@ -61,6 +61,21 @@ for (const file of ["new.json", "changed.json", "same.json", "missing.json"]) {
   for (const item of parsed.items) ITEMS_BY_ID.set(item.i, item);
 }
 
+// foreverchanges' item-source file: { items: { "<itemId>": [code, label, location] } },
+// one entry per item. For boss-drop codes (m creature, B dungeon, R rare) the
+// label is the boss that drops it and the location is the dungeon. Used only to
+// ADD items a boss's scraped loot list is missing; it never removes or reorders
+// anything. Generic labels ("Several bosses", "Any enemy", chest names) match no
+// boss and are skipped, so they never attach an item to the wrong boss.
+const SOURCES_FILE = path.join(ITEMS_DIR, "sources.json");
+const DROP_SOURCE_CODES = new Set(["m", "B", "R"]);
+const ITEM_SOURCES = fs.existsSync(SOURCES_FILE)
+  ? JSON.parse(fs.readFileSync(SOURCES_FILE, "utf8")).items
+  : {};
+function normName(s) {
+  return String(s || "").toLowerCase().replace(/^the /, "").replace(/[^a-z0-9]/g, "");
+}
+
 // Dungeons where foreverchanges has no boss-loot pull at all (yet) -- fall
 // back to the existing wowtbc.gg-sourced loot for these rather than shipping
 // an empty bosses list. Not "known-empty" dungeons (those have real reasons
@@ -172,7 +187,31 @@ function abilityDataByName(fcSlug) {
   return { byName };
 }
 
-function buildBosses(ourId, fcSlug) {
+// Adds items that foreverchanges' item-source file attributes to a boss in this
+// dungeon but that the boss's scraped loot list doesn't have. Returns nothing;
+// mutates `bosses` in place. Items already on a boss are left alone.
+function addSourcedBossDrops(bosses, dungeonName) {
+  const dungeonKey = normName(dungeonName);
+  const bossByName = new Map();
+  for (const boss of bosses) {
+    if (boss.kind !== "boss") continue;
+    const key = normName(boss.name);
+    if (!bossByName.has(key)) bossByName.set(key, boss);
+  }
+  for (const [idStr, entry] of Object.entries(ITEM_SOURCES)) {
+    const [code, label, location] = entry;
+    if (!DROP_SOURCE_CODES.has(code) || normName(location) !== dungeonKey) continue;
+    const boss = bossByName.get(normName(label));
+    if (!boss) continue;
+    const itemId = Number(idStr);
+    if (boss.items.some((it) => it.itemId === itemId)) continue;
+    const raw = ITEMS_BY_ID.get(itemId);
+    if (!raw) continue;
+    boss.items.push(fcItemToUnified(raw));
+  }
+}
+
+function buildBosses(ourId, fcSlug, dungeonName) {
   const abilityData = abilityDataByName(fcSlug);
   function withAbilities(boss) {
     const match = abilityData?.byName.get(boss.name.toLowerCase());
@@ -182,9 +221,7 @@ function buildBosses(ourId, fcSlug) {
   if (!BOSS_LOOT_FALLBACK.has(ourId)) {
     const fc = readJsonIfExists(path.join(FC_DIR, `${fcSlug}.json`));
     if (fc && Array.isArray(fc.bosses) && fc.bosses.length > 0) {
-      return {
-        source: "foreverchanges",
-        bosses: fc.bosses.map((b) =>
+      const bosses = fc.bosses.map((b) =>
           withAbilities({
             name: b.name,
             kind: b.kind,
@@ -198,8 +235,9 @@ function buildBosses(ourId, fcSlug) {
             portraitUrl: b.display ? `https://foreverchanges.pro/wow-ui/bosses/${b.display}.webp` : null,
             items: (b.items || []).map(bossLootItemToUnified),
           })
-        ),
-      };
+        );
+      addSourcedBossDrops(bosses, dungeonName);
+      return { source: "foreverchanges", bosses };
     }
   }
   const wowtbc = wowtbcLoot.dungeons[ourId === "deadmines" ? "deadmines" : ourId];
@@ -369,7 +407,7 @@ function main() {
       report.push({ id: dungeon.id, error: "no entry in dungeon-source-map.js" });
       continue;
     }
-    const { source: bossLootSource, bosses } = buildBosses(dungeon.id, map.fc);
+    const { source: bossLootSource, bosses } = buildBosses(dungeon.id, map.fc, dungeon.name);
     const { source: questSource, quests } = buildQuests(dungeon.id, map.fc);
     const pinMap = buildPinMap(map.fc);
 

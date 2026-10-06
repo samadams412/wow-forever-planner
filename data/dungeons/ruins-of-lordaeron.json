@@ -538,6 +538,56 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Fermenter",
+     "slot": null,
+     "type": "Alchemy",
+     "itemClass": 9,
+     "itemId": 273085,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tAlchemy",
+      "Requires Alchemy (140)",
+      "Use: Craft a Fermenter.",
+      "\"Teaches you how to place a Fermenter at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Arcane Salvager",
+     "slot": null,
+     "type": "Enchanting",
+     "itemClass": 9,
+     "itemId": 273103,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (140)",
+      "Use: Craft an Arcane Salvager.",
+      "\"Teaches you how to place an Arcane Salvager at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,

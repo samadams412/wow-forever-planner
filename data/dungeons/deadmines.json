@@ -116,6 +116,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Plans: Acolyte's Gloves",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemClass": 9,
+     "itemId": 251363,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (80)",
+      "\"Teaches you how to craft Acolyte's Gloves.\"",
+      "Sell Price: 4s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -594,6 +619,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Anvil",
+     "slot": null,
+     "type": "Blacksmithing",
+     "itemClass": 9,
+     "itemId": 273086,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBlacksmithing",
+      "Requires Blacksmithing (140)",
+      "Use: Craft an Anvil.",
+      "\"Teaches you how to place an Anvil at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -895,6 +945,30 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Filigreed Flame Gown",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 253906,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 1,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (75)",
+      "\"Teaches you how to craft Filigreed Flame Gown.\"",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -1099,6 +1173,30 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Filigreed Silky Leggings",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 253940,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 1,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (100)",
+      "\"Teaches you how to craft Filigreed Silky Leggings.\"",
+      "Sell Price: 1s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -1241,6 +1339,31 @@
       "+1 Spirit",
       "Use: Allows you to look far into the distance.",
       "Requires Level 18"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Cookie's Feast",
+     "slot": null,
+     "type": "Cooking",
+     "itemClass": 9,
+     "itemId": 273102,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tCooking",
+      "Requires Cooking (140)",
+      "Use: Craft Cookie's Feast.",
+      "\"Teaches you how to place Cookie's Feast at a campsite.\"",
+      "Sell Price: 3s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
