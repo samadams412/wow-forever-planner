@@ -22,20 +22,27 @@ type GiverRow = {
   quests: Quest[];
 };
 
+// A quest belongs in the table only when we know both who gives it and where.
+// Quests with a missing giver or location are left out rather than shown as
+// a row of blanks.
+export function hasKnownStart(quest: Quest): boolean {
+  return Boolean(quest.giver?.name && quest.giver.location);
+}
+
 // Groups the dungeon's quests by who hands them out. Givers are keyed by name
-// so one NPC with several quests becomes one row; quests with no recorded
-// giver fall into a single "Unknown" row rather than being dropped.
+// so one NPC with several quests becomes one row.
 function groupByGiver(quests: Quest[]): GiverRow[] {
   const rows = new Map<string, GiverRow>();
   for (const quest of quests) {
-    const name = quest.giver?.name ?? "Unknown";
+    if (!quest.giver?.name) continue;
+    const name = quest.giver.name;
     let row = rows.get(name);
     if (!row) {
       row = {
         key: name,
         name,
-        location: quest.giver?.location ?? "--",
-        mapHref: quest.giver?.mapRef?.href ?? null,
+        location: quest.giver.location,
+        mapHref: quest.giver.mapRef?.href ?? null,
         quests: [],
       };
       rows.set(name, row);
@@ -57,8 +64,8 @@ export default function QuestGiversTable({
   dungeonId: string;
   dungeonName: string;
 }) {
-  if (quests.length === 0) return null;
-  const rows = groupByGiver(quests);
+  const rows = groupByGiver(quests.filter(hasKnownStart));
+  if (rows.length === 0) return null;
 
   return (
     <section id="quest-givers" className="scroll-mt-20 rounded-lg border border-border bg-surface p-4">
