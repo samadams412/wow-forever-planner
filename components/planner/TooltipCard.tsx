@@ -342,9 +342,17 @@ export function TooltipClassicTalentDiff({
 }) {
   const tokens = classicText ? diffWords(classicText, foreverText) : [];
   const statusLabel = status === "changed" ? "Changed from Classic" : status === "moved" ? "Moved since Classic" : status === "new" ? "New in Forever" : "Same as Classic";
-  // A moved talent whose effect text reads the same (ignoring case and spacing)
-  // only needs its position stated -- repeating both texts adds nothing.
-  const normalize = (s: string) => s.replace(/\s+/g, " ").trim().toLowerCase();
+  // A moved talent whose effect text reads the same (ignoring case, spacing and
+  // punctuation) only needs its position stated -- repeating both texts adds
+  // nothing. Decimal points between digits are kept, so "1 sec" vs "1.0 sec"
+  // still counts as a real difference.
+  const normalize = (s: string) =>
+    s
+      .toLowerCase()
+      .replace(/(\d)\.(\d)/g, "$1\u0000$2")
+      .replace(/[^\p{L}\p{N}%\u0000]+/gu, " ")
+      .replace(/\u0000/g, ".")
+      .trim();
   const sameEffect = status === "moved" && !!classicText && normalize(classicText) === normalize(foreverText);
   return (
     <div className="mt-2 border-t border-[#c8aa6e]/30 pt-1.5">
