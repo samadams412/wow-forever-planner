@@ -105,6 +105,20 @@ function wowtbcItemToUnified(raw) {
   };
 }
 
+// Boss loot items carry their own snapshot of name/quality/level from the
+// dungeon scrape, which goes stale when a beta patch changes an item (the Oct 1
+// nerfs left 12 boss items on pre-patch values). When the current item catalog
+// disagrees with that snapshot on any of those core fields, the catalog entry
+// wins, same as quest rewards. Items that already agree keep the scrape's own
+// record, so the rest of the boss loot is unchanged.
+function bossLootItemToUnified(raw) {
+  const current = raw.i !== undefined ? ITEMS_BY_ID.get(raw.i) : null;
+  const stale =
+    current &&
+    (current.n !== raw.n || current.q !== raw.q || current.l !== raw.l || current.r !== raw.r);
+  return fcItemToUnified(stale ? current : raw);
+}
+
 function questRewardItemToUnified(raw) {
   const itemId = parseItemId(raw.itemHref);
   const fullItem = itemId !== null ? ITEMS_BY_ID.get(itemId) : null;
@@ -182,7 +196,7 @@ function buildBosses(ourId, fcSlug) {
             // Absent for "Trash mobs" groupings and lootable objects, which
             // have no single NPC to portray.
             portraitUrl: b.display ? `https://foreverchanges.pro/wow-ui/bosses/${b.display}.webp` : null,
-            items: (b.items || []).map(fcItemToUnified),
+            items: (b.items || []).map(bossLootItemToUnified),
           })
         ),
       };
