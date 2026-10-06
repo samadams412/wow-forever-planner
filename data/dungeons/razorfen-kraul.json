@@ -108,6 +108,85 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Brawler's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252512,
+     "icon": "inv_helmet_15",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+10 Agility",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Sell Price: 20s 56c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Defender's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252455,
+     "icon": "inv_helmet_33",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "+12 Strength",
+      "Requires Level 25",
+      "Sell Price: 20s 79c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Defender's Leather Kilt",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252822,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Defender's Leather Kilt.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -150,6 +229,18 @@
      "tooltip": [
       "Binds when picked up",
       "Main Hand\tMace",
+      "28 - 52 Damage\tSpeed 2.80",
+      "(14.3 damage per second)",
+      "Requires Level 28",
+      "Equip: +12 Health Regeneration",
+      "Equip: +68 Healing",
+      "Equip: +28 Shadow Spell Damage",
+      "Sell Price: 71s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "Binds when picked up",
+      "Main Hand\tMace",
       "33 - 63 Damage\tSpeed 2.80",
       "(17.1 damage per second)",
       "+1 Spirit",
@@ -158,9 +249,7 @@
       "Equip: Increases damage done by Shadow spells and effects by up to 7.",
       "Sell Price: 73s 24c"
      ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -238,6 +327,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Defender's Leather Kilt",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252822,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Defender's Leather Kilt.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -255,6 +369,115 @@
     {
      "name": "Shadow Bolt",
      "icon": "/icon/spell_shadow_shadowbolt.jpg",
+     "flags": [
+      "Can be interrupted"
+     ],
+     "description": "He keeps his distance to cast it. Interrupt it."
+    }
+   ]
+  },
+  {
+   "name": "Roogug",
+   "kind": "boss",
+   "level": 28,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/6110.webp",
+   "items": [
+    {
+     "name": "Geomancer Headdress",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 274155,
+     "icon": "inv_helmet_14",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+12 Spirit",
+      "+8 Stamina",
+      "+7 Nature Resistance",
+      "Requires Level 25",
+      "Sell Price: 20s 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thornweaver Drape",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 274149,
+     "icon": "inv_misc_cape_11",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "24 Armor",
+      "+6 Spirit",
+      "Requires Level 25",
+      "Equip: +7 Spell Power",
+      "Sell Price: 15s 37c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Roogug's Severed Head",
+     "slot": "Trinket",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 274152,
+     "icon": "inv_misc_head_quillboar_01",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Trinket",
+      "+6 Spirit",
+      "Requires Level 25",
+      "Use: Raise the severed head of Roogug, Horrifying and Silencing all Swine within 15 yds for 5 sec. (5 Min Cooldown)",
+      "Sell Price: 20s 73c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": [
+    {
+     "name": "Summon Earth Rumbler",
+     "icon": "/icon/spell_nature_earthquake.jpg",
+     "flags": [
+      "Damage dealers"
+     ],
+     "description": "A Stone Rumbler stands with him and fights at his side."
+    },
+    {
+     "name": "Lightning Bolt",
+     "icon": "/icon/spell_nature_lightning.jpg",
      "flags": [
       "Can be interrupted"
      ],
@@ -286,11 +509,20 @@
       "+15 Strength",
       "+8 Stamina",
       "Requires Level 29",
-      "Sell Price: 99s 30c"
+      "Sell Price: 98s 65c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "88 - 132 Damage\tSpeed 3.80",
+      "(28.9 damage per second)",
+      "+15 Strength",
+      "+8 Stamina",
+      "Requires Level 29",
+      "Sell Price: 99s 30c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -309,8 +541,9 @@
      "tooltip": [
       "Binds when picked up",
       "Head\tMail",
-      "308 Armor",
+      "188 Armor",
       "+13 Strength",
+      "+120 Armor",
       "Requires Level 29",
       "Sell Price: 35s 67c"
      ],
@@ -349,6 +582,58 @@
       "Requires Level 29",
       "Equip: +10 Block Rating",
       "Sell Price: 48s 36c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Brawler's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252512,
+     "icon": "inv_helmet_15",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+10 Agility",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Sell Price: 20s 56c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Defender's Leather Kilt",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252822,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Defender's Leather Kilt.\"",
+      "Sell Price: 6s 25c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -407,11 +692,19 @@
       "(19.8 damage per second)",
       "+11 Agility",
       "Requires Level 24",
-      "Sell Price: 48s 52c"
+      "Sell Price: 51s 4c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "same",
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "41 - 62 Damage\tSpeed 2.60",
+      "(19.8 damage per second)",
+      "+11 Agility",
+      "Requires Level 24",
+      "Sell Price: 48s 52c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -447,7 +740,7 @@
    "items": [
     {
      "name": "Swinetusk Shank",
-     "slot": "One-Hand",
+     "slot": "Main Hand",
      "type": "Dagger",
      "itemClass": 2,
      "itemId": 6691,
@@ -456,6 +749,18 @@
      "itemLevel": 35,
      "requiredLevel": 30,
      "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "16 - 30 Damage\tSpeed 1.50",
+      "(15.3 damage per second)",
+      "+6 Stamina",
+      "+4 Spirit",
+      "Requires Level 30",
+      "Equip: +39 Spell Power",
+      "Sell Price: 86s 81c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
       "Binds when picked up",
       "Unique",
       "One-Hand\tDagger",
@@ -466,9 +771,7 @@
       "Requires Level 30",
       "Sell Price: 88s 66c"
      ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -528,6 +831,33 @@
       "+40 Armor",
       "Requires Level 31",
       "Sell Price: 1c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Defender's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252455,
+     "icon": "inv_helmet_33",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "+12 Strength",
+      "Requires Level 25",
+      "Sell Price: 20s 79c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -834,6 +1164,34 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Wisdom's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252515,
+     "icon": "inv_helmet_26",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +7 Spell Damage",
+      "Equip: +21 Healing",
+      "Sell Price: 20s 78c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -947,6 +1305,33 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Defender's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252455,
+     "icon": "inv_helmet_33",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "+12 Strength",
+      "Requires Level 25",
+      "Sell Price: 20s 79c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -1001,11 +1386,20 @@
       "+3 Spirit",
       "+4 Stamina",
       "Requires Level 25",
-      "Sell Price: 19s 57c"
+      "Sell Price: 20s 27c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "classicTooltip": [
+      "Binds when equipped",
+      "Shoulder\tLeather",
+      "77 Armor",
+      "+10 Agility",
+      "+3 Spirit",
+      "+4 Stamina",
+      "Requires Level 25",
+      "Sell Price: 19s 57c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1028,11 +1422,19 @@
       "+15 Strength",
       "+6 Stamina",
       "Requires Level 26",
-      "Sell Price: 33s 79c"
+      "Sell Price: 35s 57c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tMail",
+      "221 Armor",
+      "+15 Strength",
+      "+6 Stamina",
+      "Requires Level 26",
+      "Sell Price: 33s 79c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1055,11 +1457,19 @@
       "+8 Strength",
       "+3 Stamina",
       "Requires Level 25",
-      "Sell Price: 16s 92c"
+      "Sell Price: 16s 17c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "classicTooltip": [
+      "Binds when equipped",
+      "Wrist\tMail",
+      "95 Armor",
+      "+8 Strength",
+      "+3 Stamina",
+      "Requires Level 25",
+      "Sell Price: 16s 92c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1083,11 +1493,20 @@
       "+5 Strength",
       "+6 Stamina",
       "Requires Level 22",
-      "Sell Price: 9s 80c"
+      "Sell Price: 10s 20c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "classicTooltip": [
+      "Binds when equipped",
+      "Hands\tLeather",
+      "61 Armor",
+      "+6 Agility",
+      "+5 Strength",
+      "+6 Stamina",
+      "Requires Level 22",
+      "Sell Price: 9s 80c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1105,6 +1524,16 @@
      "requiredLevel": 24,
      "tooltip": [
       "Binds when equipped",
+      "Unique-Equipped",
+      "Finger",
+      "+8 Stamina",
+      "+3 Intellect",
+      "Requires Level 24",
+      "Sell Price: 19s 60c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "Binds when equipped",
       "Unique",
       "Finger",
       "+8 Stamina",
@@ -1112,9 +1541,7 @@
       "Requires Level 24",
       "Sell Price: 7s 50c"
      ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1136,12 +1563,20 @@
       "33 - 62 Damage\tSpeed 2.70",
       "(17.6 damage per second)",
       "Requires Level 23",
+      "Chance on hit: Reduces target enemy's attack power by 84 for 30 sec.",
+      "Sell Price: 44s 55c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "Binds when equipped",
+      "Main Hand\tSword",
+      "33 - 62 Damage\tSpeed 2.70",
+      "(17.6 damage per second)",
+      "Requires Level 23",
       "Chance on hit: Reduces target's Strength by 10 for 30 sec.",
       "Sell Price: 45s 62c"
      ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1159,6 +1594,17 @@
      "requiredLevel": 26,
      "tooltip": [
       "Binds when equipped",
+      "Unique-Equipped",
+      "One-Hand\tDagger",
+      "17 - 33 Damage\tSpeed 1.30",
+      "(19.2 damage per second)",
+      "+6 Agility",
+      "Requires Level 26",
+      "Sell Price: 59s 29c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "Binds when equipped",
       "Unique",
       "One-Hand\tDagger",
       "17 - 33 Damage\tSpeed 1.30",
@@ -1167,9 +1613,7 @@
       "Requires Level 26",
       "Sell Price: 57s 65c"
      ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1227,14 +1671,24 @@
       "Two-Hand\tSword",
       "60 - 91 Damage\tSpeed 3.30",
       "(22.9 damage per second)",
+      "+5 Strength",
+      "Requires Level 23",
+      "Equip: +29 Healing",
+      "Equip: +10 Spell Damage",
+      "Sell Price: 55s 68c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "60 - 91 Damage\tSpeed 3.30",
+      "(22.9 damage per second)",
       "+13 Spirit",
       "+5 Strength",
       "Requires Level 23",
       "Sell Price: 57s 44c"
      ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1277,27 +1731,33 @@
      "source": "foreverchanges"
     },
     {
-     "name": "Vicar's Robe",
-     "slot": "Chest",
-     "type": "Cloth",
-     "itemClass": 4,
-     "itemId": 3569,
-     "icon": "inv_chest_cloth_42",
-     "quality": 2,
-     "itemLevel": 26,
-     "requiredLevel": 21,
+     "name": "Thornspike",
+     "slot": "One-Hand",
+     "type": "Dagger",
+     "itemClass": 2,
+     "itemId": 6681,
+     "icon": "inv_weapon_shortblade_10",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
      "tooltip": [
-      "Binds when equipped",
-      "Chest\tCloth",
-      "40 Armor",
-      "+4 Stamina",
-      "+7 Spirit",
-      "Requires Level 21",
-      "Sell Price: 12s 62c"
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "24 - 46 Damage\tSpeed 1.70",
+      "(20.6 damage per second)",
+      "Requires Level 27",
+      "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+      "Sell Price: 65s 22c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "missing",
+     "classicTooltip": [
+      "One-Hand\tDagger",
+      "18 - 35 Damage\tSpeed 1.70",
+      "(15.6 damage per second)",
+      "Requires Level 27",
+      "Sell Price: 31s 24c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1320,11 +1780,56 @@
       "(19.8 damage per second)",
       "+11 Agility",
       "Requires Level 24",
-      "Sell Price: 48s 52c"
+      "Sell Price: 51s 4c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "same",
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "41 - 62 Damage\tSpeed 2.60",
+      "(19.8 damage per second)",
+      "+11 Agility",
+      "Requires Level 24",
+      "Sell Price: 48s 52c"
+     ],
+     "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Vicar's Robe",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 3569,
+     "icon": "inv_chest_cloth_42",
+     "quality": 2,
+     "itemLevel": 26,
+     "requiredLevel": 21,
+     "tooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "40 Armor",
+      "+3 Stamina",
+      "+7 Spirit",
+      "Requires Level 21",
+      "Equip: +4 Healing",
+      "Equip: +1 Spell Damage",
+      "Sell Price: 12s 27c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "40 Armor",
+      "+4 Stamina",
+      "+7 Spirit",
+      "Requires Level 21",
+      "Sell Price: 12s 62c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
