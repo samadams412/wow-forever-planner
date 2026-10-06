@@ -28,6 +28,15 @@ export default function ItemsSearchInput({
     };
   }, []);
 
+  // Follows an outside reset (e.g. a "Clear filters" link dropping ?q=) without
+  // fighting the user: typing already writes the trimmed value back to the URL,
+  // so the comparison is against the trimmed box text. A trailing space typed
+  // mid-word therefore doesn't get wiped.
+  useEffect(() => {
+    if (initialValue !== value.trim()) setValue(initialValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialValue]);
+
   function handleChange(next: string) {
     setValue(next);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);

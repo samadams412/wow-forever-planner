@@ -26,6 +26,18 @@ export default function QuestDungeonFilter({
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  // Clears the dungeon filter entirely -- back to the unfiltered "All" tab --
+  // while keeping search and sort. The dropdown's own "All dungeons" option
+  // only switches to the blanket dungeon view, so it can't do this.
+  function handleClear() {
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("kind");
+    params.delete("dungeon");
+    params.delete("page");
+    const qs = params.toString();
+    router.push(qs ? `${pathname}?${qs}` : pathname);
+  }
+
   function handleChange(next: string) {
     const params = new URLSearchParams(searchParams.toString());
     if (next === "all") {
@@ -61,6 +73,17 @@ export default function QuestDungeonFilter({
           </option>
         ))}
       </select>
+      {dungeonActive && (
+        <button
+          type="button"
+          onClick={handleClear}
+          aria-label="Clear dungeon filter"
+          title="Clear dungeon filter"
+          className="ml-1 px-0.5 text-sm leading-none text-foreground-muted hover:text-foreground"
+        >
+          ×
+        </button>
+      )}
     </label>
   );
 }

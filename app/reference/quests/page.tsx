@@ -120,7 +120,19 @@ export default async function QuestsPage({
             ),
           )}
         </div>
-        <ItemsSearchInput initialValue={q} placeholder="Search quest names..." />
+        <div className="flex flex-wrap items-center gap-2">
+          <ItemsSearchInput initialValue={q} placeholder="Search quest names..." />
+          {/* One reset for every filter here (location tab, dungeon, search). Sort and
+              direction are ordering, not filters, so they survive the reset. */}
+          {(locationKind !== "all" || dungeon !== undefined || q !== "") && (
+            <Link
+              href={buildHref({ ...baseFilters, locationKind: "all", dungeon: undefined, q: "", page: undefined })}
+              className="rounded border border-border bg-surface px-2.5 py-1.5 text-xs font-semibold text-foreground-muted transition-colors hover:border-accent hover:text-foreground"
+            >
+              Clear filters
+            </Link>
+          )}
+        </div>
       </div>
 
       <p className="mt-3 text-xs text-foreground-muted">
