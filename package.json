@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@pinta365/blp": "npm:@jsr/pinta365__blp@^0.2.0",
+    "@upstash/redis": "^1.39.0",
     "@vercel/analytics": "^2.0.1",
     "gray-matter": "^4.0.3",
     "leaflet": "^1.9.4",
@@ -18,7 +19,8 @@
     "next": "16.3.5",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "vercel": "^62.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

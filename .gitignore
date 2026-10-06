@@ -100,3 +100,8 @@ data/sources/client-db2/*/zone-grid-*.bin
 
 # Full quest scrape dump (35 MB). Regenerate via scripts/scrape-foreverchanges-quest-pages.js.
 /data/sources/foreverchanges/quests/all.json
+!.env.example
+
+.vercel
+.env*
+!.env.example
