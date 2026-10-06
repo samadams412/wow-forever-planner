@@ -1,7 +1,7 @@
 ---
 type: project
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-06
 tags: [forevercraft, architecture]
 status: active
 ---
@@ -40,8 +40,10 @@ Back to [[Overview]] · Next: [[Roadmap]]
 
 Extending it is tracked on the [[Roadmap]] (Tech debt). Item ids are the join key, not names: name-matching is how the old pipelines drifted.
 
-## Saved builds: Vercel KV (decided 2026-09-30, not built)
+## Saved builds: Vercel KV (decided 2026-09-30; collection built 2026-10-06, see Build tracking below)
 **Decision:** shared/saved builds will use simple key-value storage on **Vercel KV**, replacing the Postgres + Auth design (see Superseded below). It enables a browsable **"most used builds"** list. No accounts.
+
+**2026-10-06 update:** the product-name question below is resolved. "Vercel KV" is retired; the Marketplace now offers **Upstash Redis**, and that's what got built — see "Build tracking" below for the full implementation. That section covers event collection only; the "most used builds" **display** (the actual point of this decision) is still not built.
 
 **What already exists and stays:** build codes are stateless and URL-shareable today (`/planner/<classId>/<buildCode>`), and `lib/saved-builds.ts` does per-device `localStorage` save/load. KV adds what those can't: *shared* storage and *aggregate* counts (popularity), not the basic ability to share.
 
@@ -54,6 +56,35 @@ Extending it is tracked on the [[Roadmap]] (Tech debt). Item ids are the join ke
 ### Superseded: Auth + Postgres saved-builds design
 *Shelved 2026-09-30; kept for the reasoning. See [[Roadmap]] "Shelved / Reconsidered".*
 Originally "Phase 2": NextAuth for auth, Postgres (Vercel Postgres or Supabase) for account-backed saved builds, a per-user "My builds" page, then a lightweight admin view for editing `/data` and posts. This architecture note previously read only: "Phase 2 (not started): auth + Postgres + saved builds; do not begin early." The repo-root brief (`C:\Users\samue\Desktop\CLAUDE.md`) still describes this design.
+
+## Build tracking (built 2026-10-06)
+Fast-reference version lives in CLAUDE.md ("Build tracking" — schema, hashing, secrets, routes, rate limits, dedup rule, cron schedule). This section is the full story: why it's shaped this way, what was verified and how, and the build-time/Vercel-usage investigation from the same work. See also `docs/popular-builds-research.md` (what talentsforever.com does, the design this was built from) and the local-only handoff `03-Handoffs/infrastructure/2026-10-06-build-tracking-infrastructure.md` (session-by-session narrative, superseded by this doc for anything still true).
+
+**Status:** collection is live in production (Upstash Redis, endpoint `enabling-mallard-202178.upstash.io`, console name `upstash-kv-alizarin-blanket`, Free Tier). Verified against real Redis 2026-10-06: a real browser's Copy share link / Save build / page-load-with-build-code all landed as hashed-token events, and a manual rollup run aggregated them into `builds:agg:classes`/`builds:agg:talents` correctly, trimming the raw list to empty afterward. Cron (`/api/cron/build-rollup`, `0 6 * * *`) is confirmed live on the dashboard's Cron Jobs page. Dedup (one event per type/token/build/UTC day) is verified against a local Upstash REST stand-in, including the real-Redis `SET NX EX` primitive it depends on.
+
+**Why dedup exists:** a live test found two `shared` events for one visitor action — not a double-fire in the click handler (it fires once), but two *separate* real clicks in testing, one of which registered late because `navigator.clipboard.writeText` needs a focused tab and silently rejects otherwise. Dedup wasn't built to patch that specific artifact; it was built because reloads and repeat save-clicks are a real risk once real traffic arrives, and the late-clipboard-callback case showed the shape of the problem concretely.
+
+**Design choices not in the CLAUDE.md summary:**
+- Raw events are a capped Redis **list** (`builds:events:raw`, 100k cap), not a stream or sorted set — the rollup only ever needs to drain it head-first in daily batches, and a list's `LRANGE`/`LTRIM` do that with no extra bookkeeping key.
+- The rollup writes aggregate counters **before** trimming the raw batch it just read, so a crash between the two re-counts that batch next run rather than losing it (at-least-once, not exactly-once — acceptable at this volume).
+- Aggregates are Redis hashes, not the static `data/popularity/<class>.json` file the research doc sketches, because a Vercel Function has no repo write access. **This design question is still open** — a build-time export script, a committed snapshot refreshed by a workflow, or an endpoint the client fetches at request time are the live options; none is decided.
+- The 90-day raw-event retention window is enforced by the rollup's own filter, but in practice raw events live about a day (the rollup drains them daily) — the 90-day number only matters if the rollup stops running for a while.
+
+### Build-time investigation (2026-10-06): why every build regenerates ~5,160 pages
+Triggered by the build log always showing `Generating static pages (5160/5160)`, even when game data hadn't changed. Findings, in the order checked:
+- **(a) Determinism is not the cause.** The data-generator scripts (`scripts/build-quests.js` and others) do write `new Date().toISOString()` timestamps into `data/quests/index.json` and `data/quests/provenance.json`. But those files are **committed**, and the Vercel build's `prebuild` only runs `build-og-backgrounds.js` and `build-map-data-imports.js` — the quest data is not regenerated during a deploy, so the timestamps never change build-to-build. Nothing in `app/`/`lib/` reads `generatedAt`, so even a re-run wouldn't change rendered output. Ruled out.
+- **(b) Next's build cache cannot skip unchanged SSG prerendering.** The bundled `node_modules/next/dist/docs` confirm remote/`use cache` entries are keyed by build id and don't persist across deploys by design. There is no mechanism that skips re-rendering a `generateStaticParams` page because its output would be byte-identical — "Restored build cache from previous deployment" covers the compile cache (webpack/Turbopack, fetch cache), not prerendered HTML. A full `next build` always re-renders every statically generated page. This is the actual reason the page count stays fixed.
+- **Where the 5,160 pages come from:** the quest route (`app/quests/[questId]/page.tsx`, `dynamicParams = false`) alone accounts for **5,049 of 5,160** — it statically generates one page per row in `data/quests/index.json` (5,049 quests). Everything else (professions, dungeons, maps, blog, guides, items-with-data) is the remaining ~110.
+- **(c) The `dynamicParams: true` + ISR option was evaluated, not implemented.** It would cut the build to roughly 110 pages (every quest removed from `generateStaticParams`, left to render on first request). The blocker: `getQuestById` currently reads the per-quest detail shard **at build time** specifically so no request-time function needs the 5,049-file `data/quests/detail/` directory — see the standing rule in CLAUDE.md about runtime-variable/full-directory disk reads bloating every function. Switching to on-demand rendering would need either (i) all shards bundled into the quest function anyway (defeats the point, and is the exact anti-pattern the standing rule exists to prevent), or (ii) moving shard data to `public/` and fetching it, which is a real architecture change, not a config flag.
+- **Recommendation (not implemented, pending a decision):** leave the full prerender as-is. Local build is 29s with 27 workers; Vercel's Hobby build machine (2 vCPU → effectively 1 worker) takes ~87s for the same 5,160 pages, confirmed in the build log. Hobby's Build Time budget is only ~1% used (1h/100h over the last 30 days — see Vercel usage below), so this is a known, accepted cost, not a current problem. Revisit only if build time itself becomes the constraint, not because the page count looks large.
+- **2026-10-06 follow-up: the build-time jump is the quest pipeline, pinned to a deploy.** Production build durations (Vercel deployment history, `ready − buildingAt`): ~43–75 s through the Oct 2 deploys; **49 s** at `e6324ac2` (Oct 3 09:15); **223 s** at `38b89fd` (Oct 3 09:18); 190–252 s on every production deploy since. `38b89fd` is a docs-only commit and is *not* the cause — it was simply the first deploy to ship the commits between it and `e6324ac2`. Those commits are `b34d8378` (quest scraper, which commits the 5,049 `data/quests/detail/*.json` shards) and `95652368`, which introduced `generateStaticParams` on `app/quests/[questId]/page.tsx`. That's the quest-pipeline cost described above, now confirmed as the source of the ~3–4 minute builds and a known, accepted cost.
+
+### Vercel usage investigation (2026-10-06)
+Checked `https://vercel.com/texs-projects-536fb399/wow-forever-planner/usage` directly (not assumed from the build-time finding above). Project is on the **Hobby** plan.
+- **The constrained metric is Deployment Storage: 9.69 GB of 10 GB (~97%).** Not retention/bandwidth as might be assumed — Fast Origin Transfer is 5.03/10 GB (~50%), Fast Data Transfer 3.34/100 GB (~3%), Build Time 1h/100h (~1%), Build CPU 5h54m with no stated cap.
+- **The retention policy (Settings → Build and Deployment → "Deployment Retention Policy"; the section is at the bottom of that page, not a separate URL):** Canceled 1 day · Errored 1 day · Pre-Production 1 day · **Production 1 week**. The earlier assumption of "1 day" was wrong for production deployments. The policy's start date isn't shown in the UI, so "since when" is unknown.
+- **Why storage is at 97%:** 31 production deployments are in the listing (Sep 28 to Oct 6). Four are under a day old, 25 are 1–7 days old, and **2 are already past the 1-week window** (Sep 28 `776b6d7c` and Sep 29 `e98233c3`), so the policy is due to prune them but hasn't yet. At ~0.3 GB per deployment, the bulk is the week's ordinary deploy volume, not pre-policy leftovers. Removing only the two overdue deployments frees ~0.6 GB, which doesn't get the project comfortably under the cap. The main lever is how many deploys are kept, not the age of old ones. A 1-day production retention would cut the stored set to roughly the last day's deploys, at the cost of rollback history beyond that.
+- **Do not delete deployments without the owner's explicit go-ahead on which ones.** Deployment deletion is irreversible. Options for the owner: (a) shorten production retention to 1 day (automatic, reversible setting, but drops rollback history beyond a day); (b) keep 1 week and manually delete everything except the current production deployment plus the last 2–3 for rollback; (c) reduce deploy frequency, since every push builds and stores a full deployment. **Outcome (2026-10-06):** option (b) applied by the owner — the 1-week production policy is kept, and older production deployments were deleted manually, keeping the current deployment plus 2 earlier ones for rollback (3 total). Recheck Deployment Storage on the usage page; it should be far below the 10 GB cap.
 
 ## Routes (`app/`, verified 2026-09-30)
 | Route | Notes |

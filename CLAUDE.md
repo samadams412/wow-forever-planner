@@ -16,6 +16,12 @@ pipelines investigated, and every superseded/reverted approach) lives in
 from that archive, `Forevercraft-Knowledge-Base/03-Handoffs/<category>/*.md` holds the individual
 per-task handoffs, sorted into category folders, e.g. `maps/` or `data-pipeline/`.)
 
+Read this file at the start of a session. At the end of a session that did
+substantive work (not a quick question), write a handoff into
+`Forevercraft-Knowledge-Base/03-Handoffs/<category>/`, following the format
+in `Forevercraft-Knowledge-Base/99-Templates/Handoff-Template.md` — don't
+improvise a different structure session to session.
+
 ## Current state (as of 2026-09-30)
 
 - Planner, reference (racials/legacy perks/class spellbooks/dungeon level
@@ -269,6 +275,18 @@ and the archive for the CDN plan).
   a real `.click()` via `javascript_exec` (not the coordinate-based click
   tool) has also worked around this.
 
+### Build tracking (anonymous share/save/open counts)
+Collection only: nothing reads these counts yet, no Popular Builds UI exists. Full detail (schema rationale, the determinism/Next-cache/build-time investigation, Vercel usage findings): `Forevercraft-Knowledge-Base/01-Projects/Forevercraft/Architecture.md` → "Build tracking".
+
+- **Events:** `shared` / `saved` / `opened`, each `{classId, buildCode, token}`. Schema/validation in `lib/build-events.ts`. Raw token never stored.
+- **Token/hashing:** random 32-hex token in localStorage (`lib/build-tracking-client.ts`), server stores only `HMAC-SHA256(BUILD_TRACKING_SECRET, ...)`. IPs are hashed the same way for rate-limit keys only.
+- **Secrets/env:** `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN` (auto, Vercel Marketplace Upstash integration), `BUILD_TRACKING_SECRET` and `CRON_SECRET` (set by hand in Vercel). Locally via `vercel env pull .env.local`, then paste real secret values over the `[SENSITIVE]` placeholders by hand. Missing Upstash vars = tracking no-ops.
+- **Capture route:** `POST /api/builds/track` (`lib/build-tracking-server.ts` `recordBuildEvent`), fire-and-forget (`sendBeacon`/`fetch keepalive`). Rate limits: 30/min/IP, 100/day/token.
+- **Dedup (write time):** one counted event per (type, token, classId, buildCode) per UTC day — `SET NX EX` claim before the write. Reloads, repeat clicks, and late clipboard callbacks collapse to one.
+- **Daily rollup:** `GET /api/cron/build-rollup` (`lib/build-rollup.ts`), Bearer `$CRON_SECRET`. `vercel.json` schedule `0 6 * * *` (Hobby: daily only, ~1h window). Aggregates raw events into `builds:agg:classes`/`builds:agg:talents`/`builds:agg:meta`, then trims what it processed.
+
+Research and rationale: `docs/popular-builds-research.md`.
+
 ## Adding content
 See `docs/adding-content.md` for guides/blog/profession frontmatter,
 image/credit conventions, and SEO metadata specifics.
@@ -281,6 +299,7 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
+- **Dungeon raw data for the other 27 dungeons is not refreshed (hold):** Razorfen Kraul and The Stockade were restored from live data on 2026-10-06. The rest of `data/sources/foreverchanges/dungeon_data/` still predates the live endpoint, but a 29-dungeon audit found no count mismatch. Refresh only if a future audit finds drift. Roster counts are rendered from `lib/dungeon-roster.ts` (client-safe: no Node built-ins, since `dungeon-loot.ts` imports `fs`). Bosses and rare spawns are shown as separate figures, never summed. The rare split comes from foreverchanges' `kind`, because `sources.json` tags all dungeon drops `B`. See `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-06-client-bundle-fix-and-roster-split.md`.
 - **Vercel function sizes (open, not urgent):** functions are 24.2 MB each
   (was ~121 MB) but the dashboard's uniform sizes don't match local trace
   sizes, and the cause is unexplained. See
