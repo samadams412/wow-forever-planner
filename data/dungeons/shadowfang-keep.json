@@ -24,7 +24,7 @@
      "name": "Rugged Spaulders",
      "slot": "Shoulder",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5254,
      "icon": "inv_shoulder_08",
      "quality": 3,
@@ -33,13 +33,15 @@
      "tooltip": [
       "Binds when picked up",
       "Shoulder\tLeather",
-      "87 Armor",
+      "67 Armor",
       "+2 Fire Resistance",
-      "+2 Nature Resistance",
-      "+2 Frost Resistance",
-      "+2 Shadow Resistance",
       "+2 Arcane Resistance",
-      "Requires Level 17"
+      "+2 Nature Resistance",
+      "+2 Shadow Resistance",
+      "+2 Frost Resistance",
+      "+20 Armor",
+      "Requires Level 17",
+      "Sell Price: 8s 49c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -49,32 +51,6 @@
       "Sell Price: 3s 8c"
      ],
      "status": "changed",
-     "dropChance": null,
-     "dropChanceUnder": false,
-     "unknown": false,
-     "source": "foreverchanges"
-    },
-    {
-     "name": "Sorcerer Collar",
-     "slot": "Neck",
-     "type": null,
-     "itemClass": null,
-     "itemId": 273457,
-     "icon": "inv_jewelry_necklace_07",
-     "quality": 3,
-     "itemLevel": 22,
-     "requiredLevel": 17,
-     "tooltip": [
-      "Binds when picked up",
-      "Neck",
-      "+2 Intellect",
-      "+2 Spirit",
-      "Equip: Reduces the hit chance of Silence effects against you by 4%.",
-      "Requires Level 17"
-     ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "new",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -100,6 +76,33 @@
       "Equip: +6 Attack Power Vs Humanoids",
       "Equip: +6 Attack Power",
       "Sell Price: 21s 88c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Sorcerer Collar",
+     "slot": "Neck",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273457,
+     "icon": "inv_jewelry_necklace_07",
+     "quality": 3,
+     "itemLevel": 22,
+     "requiredLevel": 17,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+2 Intellect",
+      "+2 Spirit",
+      "Requires Level 17",
+      "Equip: Reduces the hit chance of Silence effects against you by 4%.",
+      "Sell Price: 8s 78c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -135,8 +138,8 @@
     {
      "name": "Eerie Stable Lantern",
      "slot": "Held In Off-hand",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 6341,
      "icon": "inv_misc_lantern_01",
      "quality": 3,
@@ -147,7 +150,8 @@
       "Held In Off-hand",
       "+4 Stamina",
       "+4 Shadow Resistance",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Sell Price: 7s 85c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -216,7 +220,7 @@
      "name": "Butcher's Cleaver",
      "slot": "One-Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1292,
      "icon": "inv_axe_23",
      "quality": 3,
@@ -229,7 +233,8 @@
       "(16.2 damage per second)",
       "+5 Strength",
       "+2 Agility",
-      "Requires Level 20"
+      "Requires Level 20",
+      "Sell Price: 32s 58c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -252,7 +257,7 @@
      "name": "Bloody Apron",
      "slot": "Chest",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6226,
      "icon": "inv_chest_cloth_24",
      "quality": 3,
@@ -261,11 +266,13 @@
      "tooltip": [
       "Binds when picked up",
       "Chest\tCloth",
+      "42 Armor",
       "+9 Stamina",
-      "+4 Spell Damage",
-      "+13 Healing",
-      "+7 Health Regeneration",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Equip: +7 Health Regeneration",
+      "Equip: +13 Healing",
+      "Equip: +4 Spell Damage",
+      "Sell Price: 11s 53c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -286,7 +293,7 @@
      "name": "Butcher's Slicer",
      "slot": "One-Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6633,
      "icon": "inv_sword_16",
      "quality": 3,
@@ -298,8 +305,9 @@
       "30 - 57 Damage\tSpeed 2.90",
       "(15.0 damage per second)",
       "+3 Stamina",
-      "+6 Attack Power",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Equip: +6 Attack Power",
+      "Sell Price: 25s 51c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -365,8 +373,8 @@
     {
      "name": "Silverlaine's Family Seal",
      "slot": "Finger",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 6321,
      "icon": "inv_belt_29",
      "quality": 3,
@@ -374,11 +382,13 @@
      "requiredLevel": 21,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "Finger",
       "+5 Strength",
       "+2 Stamina",
-      "Equip: Movement speed Increased by 2% in Tirisfal Glades, Silverpine Forest, and Shadowfang Keep.",
-      "Requires Level 21"
+      "Requires Level 21",
+      "Equip: Increases movement speed by 2% in Tirisfal Glades, Silverpine Forest, and Shadowfang Keep.",
+      "Sell Price: 14s 72c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -400,7 +410,7 @@
      "name": "Baron's Scepter",
      "slot": "Main Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6323,
      "icon": "inv_mace_02",
      "quality": 3,
@@ -411,10 +421,11 @@
       "Main Hand\tMace",
       "28 - 52 Damage\tSpeed 2.40",
       "(16.7 damage per second)",
-      "+2 Strength",
       "+3 Stamina",
-      "+4 Health Regeneration",
-      "Requires Level 21"
+      "+2 Strength",
+      "Requires Level 21",
+      "Equip: Cause party members within 30 yds to regenerate 4 health every 5 sec.",
+      "Sell Price: 36s 81c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -436,7 +447,7 @@
      "name": "Blade of Silverlaine",
      "slot": "Main Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 273637,
      "icon": "inv_sword_05",
      "quality": 3,
@@ -448,9 +459,9 @@
       "17 - 33 Damage\tSpeed 2.30",
       "(10.9 damage per second)",
       "+6 Shadow Resistance",
-      "+28 Spell Damage",
-      "+28 Healing",
-      "Requires Level 21"
+      "Requires Level 21",
+      "Equip: +28 Spell Power",
+      "Sell Price: 37s 72c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -482,9 +493,9 @@
    "items": [
     {
      "name": "Commander's Crest",
-     "slot": "Off Hand",
+     "slot": "Shield",
      "type": "Shield",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6320,
      "icon": "inv_shield_03",
      "quality": 3,
@@ -494,16 +505,19 @@
       "Binds when picked up",
       "Off Hand\tShield",
       "585 Armor",
-      "+5 Strength",
+      "12 Block",
       "+3 Stamina",
-      "+4 Health Regeneration",
-      "Requires Level 21"
+      "+5 Strength",
+      "Requires Level 21",
+      "Equip: +4 Health Regeneration",
+      "Sell Price: 23s 56c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
       "Binds when picked up",
       "Off Hand\tShield",
       "623 Armor",
+      "13 Block",
       "+3 Spirit",
       "+3 Stamina",
       "+6 Strength",
@@ -520,7 +534,7 @@
      "name": "Arced War Axe",
      "slot": "Two-Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 3191,
      "icon": "inv_axe_06",
      "quality": 3,
@@ -533,7 +547,8 @@
       "(21.7 damage per second)",
       "+9 Strength",
       "+9 Stamina",
-      "Requires Level 21"
+      "Requires Level 21",
+      "Sell Price: 46s 2c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -570,6 +585,31 @@
       "Equip: +2 Mana Regeneration",
       "Use: Stuns target Worgen for 4 sec. (5 Min Cooldown)",
       "Sell Price: 14s 33c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Toxin Study",
+     "slot": null,
+     "type": "First Aid",
+     "itemClass": 9,
+     "itemId": 273105,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tFirst Aid",
+      "Requires First Aid (140)",
+      "Use: Craft a Toxin Study.",
+      "\"Teaches you how to place a Toxin Study at a campsite.\"",
+      "Sell Price: 3s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -618,7 +658,7 @@
      "name": "Odo's Ley Staff",
      "slot": "Two-Hand",
      "type": "Staff",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6318,
      "icon": "inv_staff_27",
      "quality": 3,
@@ -627,13 +667,14 @@
      "tooltip": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "37 - 57 Damage\tSpeed 2.90",
-      "(16.2 damage per second)",
+      "37 - 56 Damage\tSpeed 2.90",
+      "(16.0 damage per second)",
       "+5 Stamina",
       "+12 Spirit",
-      "+17 Spell Damage",
-      "+52 Healing",
-      "Requires Level 21"
+      "Requires Level 21",
+      "Equip: +52 Healing",
+      "Equip: +17 Spell Damage",
+      "Sell Price: 46s 2c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -656,7 +697,7 @@
      "name": "Girdle of the Blindwatcher",
      "slot": "Waist",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6319,
      "icon": "inv_belt_03",
      "quality": 3,
@@ -668,9 +709,10 @@
       "54 Armor",
       "+5 Stamina",
       "+3 Intellect",
-      "+7 Spell Power",
+      "Requires Level 21",
+      "Equip: +7 Spell Power",
       "Equip: Increases your effective stealth detection level by 1.",
-      "Requires Level 21"
+      "Sell Price: 9s 27c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -745,7 +787,7 @@
      "name": "Phantom Armor",
      "slot": "Chest",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6642,
      "icon": "inv_chest_chain_05",
      "quality": 3,
@@ -755,10 +797,11 @@
       "Binds when picked up",
       "Chest\tMail",
       "208 Armor",
-      "+3 Strength",
-      "+12 Stamina",
       "+5 Spirit",
-      "Requires Level 22"
+      "+12 Stamina",
+      "+3 Strength",
+      "Requires Level 22",
+      "Sell Price: 24s 30c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -781,7 +824,7 @@
      "name": "Haunting Blade",
      "slot": "Two-Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6641,
      "icon": "inv_sword_17",
      "quality": 3,
@@ -792,9 +835,10 @@
       "Two-Hand\tSword",
       "68 - 102 Damage\tSpeed 3.80",
       "(22.4 damage per second)",
-      "+11 Spell Damage",
-      "+33 Healing",
-      "Requires Level 22"
+      "Requires Level 22",
+      "Equip: +33 Healing",
+      "Equip: +11 Spell Damage",
+      "Sell Price: 50s 62c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -846,7 +890,7 @@
      "name": "Rift Bracers",
      "slot": "Wrist",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5943,
      "icon": "inv_bracer_03",
      "quality": 2,
@@ -857,8 +901,9 @@
       "Wrist\tMail",
       "80 Armor",
       "+4 Stamina",
-      "+2 Spell Power",
-      "Requires Level 20"
+      "Requires Level 20",
+      "Equip: +2 Spell Power",
+      "Sell Price: 8s 40c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -901,7 +946,7 @@
      "name": "Fenrus' Hide",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6340,
      "icon": "inv_misc_pelt_wolf_02",
      "quality": 3,
@@ -913,7 +958,8 @@
       "22 Armor",
       "+6 Agility",
       "+3 Stamina",
-      "Requires Level 22"
+      "Requires Level 22",
+      "Sell Price: 12s 15c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -935,7 +981,7 @@
      "name": "Black Wolf Bracers",
      "slot": "Wrist",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 3230,
      "icon": "inv_bracer_07",
      "quality": 3,
@@ -944,10 +990,12 @@
      "tooltip": [
       "Binds when picked up",
       "Wrist\tLeather",
-      "63 Armor",
+      "43 Armor",
       "+7 Stamina",
-      "+4 Attack Power",
-      "Requires Level 22"
+      "+20 Armor",
+      "Requires Level 22",
+      "Equip: +4 Attack Power",
+      "Sell Price: 10s 20c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -977,9 +1025,10 @@
      "tooltip": [
       "Binds when picked up",
       "Feet\tMail",
-      "43 Armor",
+      "143 Armor",
       "+8 Strength",
       "+10 Nature Resistance",
+      "-100 Armor",
       "Requires Level 22",
       "Sell Price: 18s 1c"
      ],
@@ -1014,7 +1063,7 @@
      "name": "Feline Mantle",
      "slot": "Shoulder",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 3748,
      "icon": "inv_shoulder_05",
      "quality": 3,
@@ -1024,11 +1073,12 @@
       "Binds when picked up",
       "Shoulder\tCloth",
       "34 Armor",
-      "+2 Agility",
       "+8 Intellect",
-      "+4 Spell Power",
+      "+2 Agility",
+      "Requires Level 23",
+      "Equip: +4 Spell Power",
       "Equip: Reduces damage from falling.",
-      "Requires Level 23"
+      "Sell Price: 13s 36c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1051,7 +1101,7 @@
      "name": "Wolfmaster Cape",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6314,
      "icon": "inv_misc_cape_10",
      "quality": 3,
@@ -1062,9 +1112,10 @@
       "Back\tCloth",
       "22 Armor",
       "+3 Stamina",
-      "+10 Attack Power",
-      "+9 Attack Power when fighting Beasts",
-      "Requires Level 22"
+      "Requires Level 22",
+      "Equip: +9 Attack Power Vs Beasts",
+      "Equip: +10 Attack Power",
+      "Sell Price: 12s 15c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1134,7 +1185,7 @@
      "name": "Robes of Arugal",
      "slot": "Chest",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6324,
      "icon": "inv_chest_cloth_31",
      "quality": 3,
@@ -1143,12 +1194,14 @@
      "tooltip": [
       "Binds when picked up",
       "Chest\tCloth",
-      "+5 Stamina",
+      "46 Armor",
       "+6 Spirit",
+      "+5 Stamina",
       "+8 Shadow Resistance",
-      "+6 Spell Damage",
-      "+18 Healing",
-      "Requires Level 23"
+      "Requires Level 23",
+      "Equip: +18 Healing",
+      "Equip: +6 Spell Damage",
+      "Sell Price: 17s 82c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1172,7 +1225,7 @@
      "name": "Belt of Arugal",
      "slot": "Waist",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6392,
      "icon": "inv_belt_10",
      "quality": 3,
@@ -1182,11 +1235,12 @@
       "Binds when picked up",
       "Waist\tCloth",
       "26 Armor",
-      "+2 Agility",
       "+3 Intellect",
       "+5 Spirit",
-      "+9 Spell Power",
-      "Requires Level 23"
+      "+2 Agility",
+      "Requires Level 23",
+      "Equip: +9 Spell Power",
+      "Sell Price: 8s 91c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1209,7 +1263,7 @@
      "name": "Meteor Shard",
      "slot": "One-Hand",
      "type": "Dagger",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6220,
      "icon": "inv_weapon_shortblade_25",
      "quality": 3,
@@ -1217,12 +1271,14 @@
      "requiredLevel": 23,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "One-Hand\tDagger",
       "22 - 42 Damage\tSpeed 1.80",
       "(17.8 damage per second)",
       "+3 Fire Resistance",
+      "Requires Level 23",
       "Chance on hit: Blasts a target for 42 Fire damage.",
-      "Requires Level 23"
+      "Sell Price: 44s 55c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1289,7 +1345,7 @@
      "name": "Necrology Robes",
      "slot": "Chest",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 2292,
      "icon": "inv_chest_cloth_36",
      "quality": 3,
@@ -1298,11 +1354,13 @@
      "tooltip": [
       "Binds when equipped",
       "Chest\tCloth",
-      "+3 Stamina",
+      "43 Armor",
       "+5 Intellect",
+      "+3 Stamina",
       "+5 Shadow Resistance",
-      "+14 Shadow Damage",
-      "Requires Level 20"
+      "Requires Level 20",
+      "Equip: +14 Shadow Spell Damage",
+      "Sell Price: 13s 3c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1362,7 +1420,7 @@
      "name": "Mindthrust Bracers",
      "slot": "Wrist",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 1974,
      "icon": "inv_bracer_07",
      "quality": 3,
@@ -1372,10 +1430,11 @@
       "Binds when equipped",
       "Wrist\tCloth",
       "17 Armor",
-      "+1 Stamina",
       "+5 Intellect",
-      "+3 Mana Regeneration",
-      "Requires Level 17"
+      "+1 Stamina",
+      "Requires Level 17",
+      "Equip: +3 Mana Regeneration",
+      "Sell Price: 4s 51c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1397,7 +1456,7 @@
      "name": "Guillotine Axe",
      "slot": "Main Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 2807,
      "icon": "inv_axe_24",
      "quality": 3,
@@ -1408,9 +1467,10 @@
       "Main Hand\tAxe",
       "28 - 53 Damage\tSpeed 2.70",
       "(15.0 damage per second)",
-      "+3 Strength",
       "+3 Agility",
-      "Requires Level 18"
+      "+3 Strength",
+      "Requires Level 18",
+      "Sell Price: 25s 51c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1469,7 +1529,7 @@
      "name": "Assassin's Blade",
      "slot": "One-Hand",
      "type": "Dagger",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1935,
      "icon": "inv_weapon_shortblade_24",
      "quality": 3,
@@ -1480,9 +1540,10 @@
       "One-Hand\tDagger",
       "20 - 39 Damage\tSpeed 1.90",
       "(15.5 damage per second)",
-      "+3 Strength",
       "+4 Agility",
-      "Requires Level 19"
+      "+3 Strength",
+      "Requires Level 19",
+      "Sell Price: 28s 83c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1505,7 +1566,7 @@
      "name": "Face Smasher",
      "slot": "One-Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1483,
      "icon": "inv_hammer_08",
      "quality": 3,
@@ -1518,11 +1579,21 @@
       "(14.0 damage per second)",
       "+3 Strength",
       "+3 Stamina",
-      "Requires Level 16"
+      "Requires Level 16",
+      "Sell Price: 19s 63c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "same",
+     "classicTooltip": [
+      "Binds when equipped",
+      "One-Hand\tMace",
+      "25 - 48 Damage\tSpeed 2.60",
+      "(14.0 damage per second)",
+      "+3 Strength",
+      "+3 Stamina",
+      "Requires Level 16",
+      "Sell Price: 20s 25c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1532,7 +1603,7 @@
      "name": "Night Reaver",
      "slot": "Two-Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1318,
      "icon": "inv_throwingaxe_06",
      "quality": 3,
@@ -1543,8 +1614,9 @@
       "Two-Hand\tAxe",
       "52 - 78 Damage\tSpeed 3.30",
       "(19.7 damage per second)",
-      "Chance on hit: Sends a shadowy bolt at the enemy causing 84 Shadow damage.",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 67 to 101 Shadow damage.",
+      "Sell Price: 31s 89c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1567,7 +1639,7 @@
      "name": "Black Malice",
      "slot": "Two-Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 3194,
      "icon": "inv_mace_01",
      "quality": 3,
@@ -1579,8 +1651,9 @@
       "48 - 73 Damage\tSpeed 3.30",
       "(18.3 damage per second)",
       "+2 Shadow Resistance",
-      "Chance on hit: Sends a shadowy bolt at the enemy causing 70 Shadow damage.",
-      "Requires Level 16"
+      "Requires Level 16",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 55 to 85 Shadow damage.",
+      "Sell Price: 24s 54c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1615,7 +1688,7 @@
       "57 - 86 Damage\tSpeed 3.40",
       "(21.0 damage per second)",
       "Requires Level 20",
-      "Chance on hit: Sends a shadowy bolt at the enemy causing 74 to 123 Shadow damage.",
+      "Chance on hit: Sends a shadowy bolt at the enemy causing 74 to 122 Shadow damage.",
       "Sell Price: 40s 72c"
      ],
      "tooltipSynthesized": false,
@@ -1638,7 +1711,7 @@
      "name": "Witching Stave",
      "slot": "Two-Hand",
      "type": "Staff",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1484,
      "icon": "inv_wand_04",
      "quality": 3,
@@ -1647,13 +1720,14 @@
      "tooltip": [
       "Binds when equipped",
       "Two-Hand\tStaff",
-      "41 - 62 Damage\tSpeed 3.60",
-      "(14.3 damage per second)",
+      "40 - 61 Damage\tSpeed 3.60",
+      "(14.0 damage per second)",
       "+6 Stamina",
-      "+5 Intellect",
       "+8 Shadow Resistance",
-      "+27 Shadow Damage",
-      "Requires Level 17"
+      "+5 Intellect",
+      "Requires Level 17",
+      "Equip: +27 Shadow Spell Damage",
+      "Sell Price: 28s 22c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1676,7 +1750,7 @@
      "name": "Rift Bracers",
      "slot": "Wrist",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5943,
      "icon": "inv_bracer_03",
      "quality": 2,
@@ -1687,8 +1761,9 @@
       "Wrist\tMail",
       "80 Armor",
       "+4 Stamina",
-      "+2 Spell Power",
-      "Requires Level 20"
+      "Requires Level 20",
+      "Equip: +2 Spell Power",
+      "Sell Price: 8s 40c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1708,8 +1783,8 @@
     {
      "name": "Eerie Stable Lantern",
      "slot": "Held In Off-hand",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 6341,
      "icon": "inv_misc_lantern_01",
      "quality": 3,
@@ -1720,7 +1795,8 @@
       "Held In Off-hand",
       "+4 Stamina",
       "+4 Shadow Resistance",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Sell Price: 7s 85c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [

@@ -21,9 +21,13 @@
      "x": [
       "Off Hand\tShield",
       "475 Armor",
+      "9 Block",
       "Requires Level 21",
       "Sell Price: 11s 20c"
      ],
+     "v": {
+      "50": 475
+     },
      "z": 47.56
     }
    ]
@@ -65,7 +69,72 @@
       "Requires Level 29",
       "Sell Price: 22s 60c"
      ],
+     "v": {
+      "3": 5,
+      "4": 6,
+      "6": 9,
+      "50": 144
+     },
+     "w": 1,
      "z": 8.85
+    },
+    {
+     "i": 274043,
+     "n": "Irradiated Shield",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Shield",
+     "c": 4,
+     "u": 6,
+     "t": "new",
+     "k": "inv_shield_03",
+     "x": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "738 Armor",
+      "16 Block",
+      "+9 Spirit",
+      "-10 Stamina",
+      "Requires Level 29",
+      "Equip: +14 Nature Spell Damage",
+      "Sell Price: 50s 65c"
+     ],
+     "v": {
+      "6": 9,
+      "7": -10,
+      "50": 738,
+      "86": 14
+     },
+     "w": 1
+    },
+    {
+     "i": 274042,
+     "n": "Skullduggery Belt",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Waist",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_belt_12",
+     "x": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "62 Armor",
+      "+7 Spirit",
+      "Requires Level 29",
+      "Equip: +16 Attack Power",
+      "Equip: Increases your effective stealth level by 1.",
+      "Sell Price: 19s 87c"
+     ],
+     "v": {
+      "6": 7,
+      "38": 16,
+      "50": 62
+     },
+     "w": 1
     }
    ]
   },
@@ -84,9 +153,20 @@
      "s": "Feet",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_boots_05",
      "x": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "34 Armor",
+      "+8 Intellect",
+      "+4 Spirit",
+      "+5 Nature Resistance",
+      "Requires Level 27",
+      "Equip: +5 Spell Power",
+      "Sell Price: 19s 56c"
+     ],
+     "y": [
       "Binds when picked up",
       "Feet\tCloth",
       "34 Armor",
@@ -97,6 +177,14 @@
       "Equip: Increases damage and healing done by magical spells and effects by up to 5.",
       "Sell Price: 19s 84c"
      ],
+     "v": {
+      "5": 8,
+      "6": 4,
+      "45": 5,
+      "50": 34,
+      "55": 5
+     },
+     "w": 1,
      "z": 60.81
     },
     {
@@ -130,6 +218,7 @@
       "Chance on hit: Deals 5 Nature damage every 5 sec to any enemy in an 8 yard radius around the caster for 15 sec.",
       "Sell Price: 65s 92c"
      ],
+     "w": 1,
      "z": 17.53
     },
     {
@@ -141,9 +230,20 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 10,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_staff_15",
      "x": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "44 - 67 Damage\tSpeed 2.80",
+      "(19.8 damage per second)",
+      "+15 Frost Resistance",
+      "Requires Level 27",
+      "Equip: +36 Spell Power",
+      "Equip: Underwater Breath lasts 50% longer than normal.",
+      "Sell Price: 81s 53c"
+     ],
+     "y": [
       "Binds when picked up",
       "Two-Hand\tStaff",
       "48 - 73 Damage\tSpeed 2.80",
@@ -153,6 +253,11 @@
       "Equip: Allows underwater breathing.",
       "Sell Price: 82s 10c"
      ],
+     "v": {
+      "45": 36,
+      "52": 15
+     },
+     "w": 1,
      "z": 18.78
     }
    ]
@@ -172,9 +277,20 @@
      "s": "Finger",
      "c": 4,
      "u": 0,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_misc_gear_04",
      "x": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+7 Spirit",
+      "+4 Stamina",
+      "Requires Level 29",
+      "Equip: +9 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 31s 56c"
+     ],
+     "y": [
       "Binds when picked up",
       "Unique",
       "Finger",
@@ -183,6 +299,12 @@
       "Requires Level 29",
       "Sell Price: 32s 37c"
      ],
+     "v": {
+      "6": 7,
+      "7": 4,
+      "41": 9,
+      "42": 3
+     },
      "z": 31.06
     },
     {
@@ -214,20 +336,30 @@
       "Chance on hit: Blasts a target for 10 to 20 Nature damage.",
       "Sell Price: 75s 64c"
      ],
+     "w": 1,
      "z": 16.19
     },
     {
      "i": 9448,
      "n": "Spidertank Oilrag",
-     "q": 2,
-     "l": 33,
-     "r": 28,
+     "q": 3,
+     "l": 34,
+     "r": 29,
      "s": "Wrist",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_misc_bandage_09",
      "x": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "22 Armor",
+      "Requires Level 29",
+      "Equip: +9 Spell Power",
+      "Equip: +3 Mana Regeneration",
+      "Sell Price: 15s 78c"
+     ],
+     "y": [
       "Binds when picked up",
       "Wrist\tCloth",
       "20 Armor",
@@ -235,6 +367,11 @@
       "Equip: Restores 3 mana per 5 sec.",
       "Sell Price: 11s 54c"
      ],
+     "v": {
+      "43": 3,
+      "45": 9,
+      "50": 22
+     },
      "z": 41.22
     },
     {
@@ -254,6 +391,26 @@
       "\tKey"
      ],
      "z": 79.36
+    },
+    {
+     "i": 252822,
+     "n": "Pattern: Defender's Leather Kilt",
+     "q": 3,
+     "l": 30,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 1,
+     "t": "new",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Defender's Leather Kilt.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "w": 1
     }
    ]
   },
@@ -270,8 +427,10 @@
      "l": 34,
      "r": 29,
      "s": "Two-Hand",
-     "k": "inv_mace_14",
+     "c": 2,
+     "u": 5,
      "t": "changed",
+     "k": "inv_mace_14",
      "x": [
       "Binds when picked up",
       "Unique",
@@ -280,10 +439,11 @@
       "(29.0 damage per second)",
       "+16 Strength",
       "+5 Agility",
-      "Use: Increases your attack speed by 50% for 30 sec.",
-      "Requires Level 29"
+      "Requires Level 29",
+      "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+      "3 Charges",
+      "Sell Price: 98s 65c"
      ],
-     "w": 1,
      "y": [
       "Binds when picked up",
       "Two-Hand\tMace",
@@ -293,9 +453,14 @@
       "+5 Agility",
       "Requires Level 29",
       "Use: Increases your attack speed by 50% for 30 sec.",
+      "3 Charges",
       "Sell Price: 95s 64c"
      ],
-     "p": 3,
+     "v": {
+      "3": 5,
+      "4": 16
+     },
+     "w": 1,
      "z": 32.62
     },
     {
@@ -328,7 +493,60 @@
       "Requires Level 28",
       "Sell Price: 21s 81c"
      ],
+     "v": {
+      "7": 12,
+      "41": 11,
+      "42": 4,
+      "50": 76
+     },
+     "w": 1,
      "z": 65.28
+    },
+    {
+     "i": 274068,
+     "n": "Thermaplugg Medal of Honor",
+     "q": 3,
+     "l": 34,
+     "r": 29,
+     "s": "Neck",
+     "c": 4,
+     "u": 0,
+     "t": "new",
+     "k": "inv_jewelry_amulet_03",
+     "x": [
+      "Binds when picked up",
+      "Neck",
+      "+6 Spirit",
+      "+6 Stamina",
+      "Requires Level 29",
+      "Equip: +10 Attack Power",
+      "\"Azeroth's Best Pummeler\"",
+      "Sell Price: 32s 23c"
+     ],
+     "v": {
+      "6": 6,
+      "7": 6,
+      "38": 10
+     }
+    },
+    {
+     "i": 274049,
+     "n": "Schematic: 9-60 Battery Pack",
+     "q": 2,
+     "l": 34,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 3,
+     "t": "new",
+     "k": "inv_scroll_03",
+     "x": [
+      "Binds when picked up",
+      "\tEngineering",
+      "Requires Engineering (125)",
+      "\"Teaches you how to make a 9-60 Battery Pack.\""
+     ],
+     "w": 1
     }
    ]
   },
@@ -342,14 +560,22 @@
      "i": 9455,
      "n": "Emissary Cuffs",
      "q": 3,
-     "l": 33,
-     "r": 28,
+     "l": 35,
+     "r": 30,
      "s": "Wrist",
      "c": 4,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_bracer_09",
      "x": [
+      "Binds when picked up",
+      "Wrist\tLeather",
+      "49 Armor",
+      "+6 Arcane Resistance",
+      "Requires Level 30",
+      "Sell Price: 21s 87c"
+     ],
+     "y": [
       "Binds when picked up",
       "Wrist\tLeather",
       "47 Armor",
@@ -357,6 +583,10 @@
       "Requires Level 28",
       "Sell Price: 18s 25c"
      ],
+     "v": {
+      "50": 49,
+      "56": 6
+     },
      "z": 42.93
     },
     {
@@ -368,7 +598,7 @@
      "s": "Ranged",
      "c": 2,
      "u": 3,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_weapon_rifle_02",
      "x": [
       "Binds when picked up",
@@ -376,8 +606,20 @@
       "36 - 68 Damage\tSpeed 2.90",
       "(17.9 damage per second)",
       "Requires Level 30",
+      "Equip: +12 Attack Power",
+      "Sell Price: 65s 11c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "36 - 68 Damage\tSpeed 2.90",
+      "(17.9 damage per second)",
+      "Requires Level 30",
       "Sell Price: 66s 52c"
      ],
+     "v": {
+      "38": 12
+     },
      "z": 32.46
     },
     {
@@ -386,12 +628,24 @@
      "q": 3,
      "l": 35,
      "r": 30,
-     "s": "One-Hand",
+     "s": "Main Hand",
      "c": 2,
      "u": 4,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_mace_08",
      "x": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "24 - 46 Damage\tSpeed 2.30",
+      "(15.2 damage per second)",
+      "+7 Spirit",
+      "+3 Stamina",
+      "Requires Level 30",
+      "Equip: +72 Healing",
+      "Equip: +24 Spell Damage",
+      "Sell Price: 86s 81c"
+     ],
+     "y": [
       "Binds when picked up",
       "One-Hand\tMace",
       "37 - 69 Damage\tSpeed 2.30",
@@ -401,7 +655,33 @@
       "Requires Level 30",
       "Sell Price: 89s 2c"
      ],
+     "v": {
+      "6": 7,
+      "7": 3,
+      "41": 72,
+      "42": 24
+     },
      "z": 20.94
+    },
+    {
+     "i": 252820,
+     "n": "Pattern: Brawler's Leather Legguards",
+     "q": 3,
+     "l": 30,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 1,
+     "t": "new",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Brawler's Leather Legguards.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "w": 1
     }
    ]
   },
@@ -415,37 +695,62 @@
      "i": 9492,
      "n": "Electromagnetic Gigaflux Reactivator",
      "q": 3,
-     "l": 37,
-     "r": 32,
+     "l": 36,
+     "r": 31,
      "s": "Head",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_gizmo_01",
      "x": [
+      "Binds when picked up",
+      "Head\tCloth",
+      "43 Armor",
+      "+9 Spirit",
+      "+8 Intellect",
+      "Requires Level 31",
+      "Equip: +8 Spell Power",
+      "Use: Channels a bolt of lightning and hurls it towards all enemies in front of the caster causing 157 to 177 Nature damage. The caster is then surrounded by a barrier of electricity for 5 min. (5 Min Cooldown)",
+      "Sell Price: 28s 64c"
+     ],
+     "y": [
       "Binds when picked up",
       "Head\tCloth",
       "44 Armor",
       "+12 Spirit",
       "+15 Intellect",
       "Requires Level 32",
-      "Use: Channels a bolt of lightning and hurls it towards all enemies in front of the caster causing 147 to 167 Nature damage. The caster is then surrounded by a barrier of electricity for 10 min. (30 Min Cooldown)",
+      "Use: Channels a bolt of lightning and hurls it towards all enemies in front of the caster causing 152 to 172 Nature damage. The caster is then surrounded by a barrier of electricity for 10 min. (30 Min Cooldown)",
       "Sell Price: 31s 72c"
      ],
+     "v": {
+      "5": 8,
+      "6": 9,
+      "45": 8,
+      "50": 43
+     },
      "z": 9.52
     },
     {
      "i": 9461,
      "n": "Charged Gear",
      "q": 3,
-     "l": 37,
-     "r": 32,
+     "l": 36,
+     "r": 31,
      "s": "Finger",
      "c": 4,
      "u": 0,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_misc_gear_01",
      "x": [
+      "Binds when picked up",
+      "Finger",
+      "+5 Arcane Resistance",
+      "+5 Nature Resistance",
+      "Requires Level 31",
+      "Sell Price: 38s 19c"
+     ],
+     "y": [
       "Binds when picked up",
       "Finger",
       "+5 Nature Resistance",
@@ -453,42 +758,71 @@
       "Requires Level 32",
       "Sell Price: 45s 86c"
      ],
+     "v": {
+      "55": 5,
+      "56": 5
+     },
      "z": 32.26
     },
     {
      "i": 9458,
      "n": "Thermaplugg's Central Core",
      "q": 3,
-     "l": 37,
-     "r": 32,
+     "l": 36,
+     "r": 31,
      "s": "Shield",
      "c": 4,
      "u": 6,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shield_10",
      "x": [
       "Binds when picked up",
       "Off Hand\tShield",
+      "776 Armor",
+      "18 Block",
+      "+3 Spirit",
+      "Requires Level 31",
+      "Equip: When struck in combat has a 5% chance of inflicting 65 to 121 Nature damage to the attacker.",
+      "Sell Price: 61s 11c"
+     ],
+     "y": [
+      "Binds when picked up",
+      "Off Hand\tShield",
       "795 Armor",
+      "18 Block",
       "+3 Spirit",
       "Requires Level 32",
       "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker.",
       "Sell Price: 69s 17c"
      ],
+     "v": {
+      "6": 3,
+      "50": 776
+     },
      "z": 31.84
     },
     {
      "i": 9459,
      "n": "Thermaplugg's Left Arm",
      "q": 3,
-     "l": 37,
-     "r": 32,
+     "l": 36,
+     "r": 31,
      "s": "Two-Hand",
      "c": 2,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_axe_03",
      "x": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "67 - 102 Damage\tSpeed 2.70",
+      "(31.3 damage per second)",
+      "+17 Strength",
+      "+7 Stamina",
+      "Requires Level 31",
+      "Sell Price: 1g 19s 37c"
+     ],
+     "y": [
       "Binds when picked up",
       "Two-Hand\tAxe",
       "70 - 106 Damage\tSpeed 2.70",
@@ -498,6 +832,10 @@
       "Requires Level 32",
       "Sell Price: 1g 35s 60c"
      ],
+     "v": {
+      "4": 17,
+      "7": 7
+     },
      "z": 18.27
     },
     {
@@ -642,9 +980,21 @@
      "s": "Chest",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shirt_14",
      "x": [
+      "Binds when equipped",
+      "Chest\tCloth",
+      "48 Armor",
+      "+12 Intellect",
+      "+5 Stamina",
+      "+5 Arcane Resistance",
+      "Requires Level 26",
+      "Requires Engineering (75)",
+      "Equip: +8 Spell Power",
+      "Sell Price: 23s 71c"
+     ],
+     "y": [
       "Binds when equipped",
       "Chest\tCloth",
       "48 Armor",
@@ -655,6 +1005,13 @@
       "Requires Engineering (75)",
       "Sell Price: 23s 52c"
      ],
+     "v": {
+      "5": 12,
+      "7": 5,
+      "45": 8,
+      "50": 48,
+      "56": 5
+     },
      "z": 0.03
     },
     {
@@ -666,9 +1023,20 @@
      "s": "Hands",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_gauntlets_16",
      "x": [
+      "Binds when equipped",
+      "Hands\tCloth",
+      "31 Armor",
+      "+8 Intellect",
+      "+5 Spirit",
+      "+5 Stamina",
+      "+4 Agility",
+      "Requires Level 27",
+      "Sell Price: 13s 4c"
+     ],
+     "y": [
       "Binds when equipped",
       "Hands\tCloth",
       "31 Armor",
@@ -679,6 +1047,13 @@
       "Requires Level 27",
       "Sell Price: 13s 8c"
      ],
+     "v": {
+      "3": 4,
+      "5": 8,
+      "6": 5,
+      "7": 5,
+      "50": 31
+     },
      "z": 0.03
     },
     {
@@ -690,9 +1065,20 @@
      "s": "Legs",
      "c": 4,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_pants_08",
      "x": [
+      "Binds when equipped",
+      "Legs\tLeather",
+      "90 Armor",
+      "+14 Agility",
+      "+6 Stamina",
+      "Requires Level 25",
+      "Equip: Fire damage taken increased by 10%.",
+      "\"Keep away from fire.\"",
+      "Sell Price: 26s 95c"
+     ],
+     "y": [
       "Binds when equipped",
       "Legs\tLeather",
       "90 Armor",
@@ -703,6 +1089,12 @@
       "\"Keep away from fire.\"",
       "Sell Price: 26s 83c"
      ],
+     "v": {
+      "3": 14,
+      "7": 6,
+      "50": 90
+     },
+     "w": 1,
      "z": 0.04
     },
     {
@@ -714,9 +1106,19 @@
      "s": "Feet",
      "c": 4,
      "u": 3,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_boots_01",
      "x": [
+      "Binds when equipped",
+      "Feet\tMail",
+      "154 Armor",
+      "+4 Strength",
+      "+10 Stamina",
+      "+40 Armor",
+      "Requires Level 27",
+      "Sell Price: 29s 48c"
+     ],
+     "y": [
       "Binds when equipped",
       "Feet\tMail",
       "154 Armor",
@@ -726,18 +1128,23 @@
       "Requires Level 27",
       "Sell Price: 29s 45c"
      ],
+     "v": {
+      "4": 4,
+      "7": 10,
+      "50": 194
+     },
      "z": 0.04
     },
     {
      "i": 9487,
-     "n": "Hi-tech Supergun",
+     "n": "Hi-Tech Supergun",
      "q": 3,
      "l": 29,
      "r": 24,
      "s": "Ranged",
      "c": 2,
      "u": 3,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_weapon_rifle_06",
      "x": [
       "Binds when equipped",
@@ -745,8 +1152,22 @@
       "23 - 43 Damage\tSpeed 2.30",
       "(14.3 damage per second)",
       "Requires Level 24",
+      "Equip: +3 Defense Rating",
+      "Sell Price: 36s 75c"
+     ],
+     "y": [
+      "Binds when equipped",
+      "Ranged\tGun",
+      "23 - 43 Damage\tSpeed 2.30",
+      "(14.3 damage per second)",
+      "Requires Level 24",
       "Sell Price: 36s 32c"
      ],
+     "m": "Hi-tech Supergun",
+     "v": {
+      "12": 3
+     },
+     "w": 1,
      "z": 0.03
     },
     {
@@ -758,9 +1179,18 @@
      "s": "One-Hand",
      "c": 2,
      "u": 0,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_axe_14",
      "x": [
+      "Binds when equipped",
+      "One-Hand\tAxe",
+      "21 - 40 Damage\tSpeed 1.60",
+      "(19.1 damage per second)",
+      "Requires Level 25",
+      "Chance on hit: Punctures target's armor, lowering it by 100.",
+      "Sell Price: 53s 90c"
+     ],
+     "y": [
       "Binds when equipped",
       "One-Hand\tAxe",
       "21 - 40 Damage\tSpeed 1.60",
@@ -780,7 +1210,7 @@
      "s": "One-Hand",
      "c": 2,
      "u": 4,
-     "t": "missing",
+     "t": "same",
      "k": "inv_hammer_08",
      "x": [
       "Binds when equipped",
@@ -792,6 +1222,11 @@
       "Requires Level 23",
       "Sell Price: 44s 19c"
      ],
+     "v": {
+      "4": 5,
+      "7": 1
+     },
+     "w": 1,
      "z": 0.03
     },
     {
@@ -803,9 +1238,18 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_axe_21",
      "x": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "51 - 78 Damage\tSpeed 2.80",
+      "(23.0 damage per second)",
+      "Requires Level 23",
+      "Chance on hit: Blasts a target for 93 to 117 Nature damage.",
+      "Sell Price: 54s 83c"
+     ],
+     "y": [
       "Binds when equipped",
       "Two-Hand\tAxe",
       "51 - 78 Damage\tSpeed 2.80",
@@ -814,6 +1258,7 @@
       "Chance on hit: Blasts a target for 80 to 100 Nature damage.",
       "Sell Price: 54s 83c"
      ],
+     "w": 1,
      "z": 0.04
     },
     {
@@ -825,7 +1270,7 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 8,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_sword_37",
      "x": [
       "Binds when equipped",
@@ -835,22 +1280,46 @@
       "+14 Strength",
       "+5 Agility",
       "Requires Level 24",
+      "Sell Price: 61s 25c"
+     ],
+     "y": [
+      "Binds when equipped",
+      "Two-Hand\tSword",
+      "61 - 92 Damage\tSpeed 3.20",
+      "(23.9 damage per second)",
+      "+14 Strength",
+      "+5 Agility",
+      "Requires Level 24",
       "Sell Price: 61s 21c"
      ],
+     "v": {
+      "3": 5,
+      "4": 14
+     },
+     "w": 1,
      "z": 0.03
     },
     {
      "i": 9489,
      "n": "Gyromatic Icemaker",
-     "q": 2,
+     "q": 3,
      "l": 31,
      "r": 26,
      "s": "Ranged",
      "c": 2,
      "u": 19,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_wand_05",
      "x": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "29 - 56 Frost Damage\tSpeed 1.40",
+      "(30.4 damage per second)",
+      "+5 Frost Resistance",
+      "Requires Level 26",
+      "Sell Price: 44s 47c"
+     ],
+     "y": [
       "Binds when picked up",
       "Ranged\tWand",
       "24 - 46 Frost Damage\tSpeed 1.40",
@@ -859,6 +1328,9 @@
       "Requires Level 26",
       "Sell Price: 36s 90c"
      ],
+     "v": {
+      "52": 5
+     },
      "z": 0.05
     },
     {

@@ -24,7 +24,7 @@
      "name": "Cobrahn's Grasp",
      "slot": "Waist",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6460,
      "icon": "inv_belt_03",
      "quality": 3,
@@ -36,7 +36,8 @@
       "107 Armor",
       "+7 Strength",
       "+3 Agility",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Sell Price: 6s 77c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -58,7 +59,7 @@
      "name": "Leggings of the Fang",
      "slot": "Legs",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10410,
      "icon": "inv_pants_11",
      "quality": 3,
@@ -69,14 +70,15 @@
       "Legs\tLeather",
       "78 Armor",
       "+5 Strength",
-      "+9 Agility",
       "+4 Stamina",
+      "+9 Agility",
       "Requires Level 17",
       "Embrace of the Viper (0/5)",
       "(2) Set: +10 Intellect.",
       "(3) Set: +10 Attack Power.",
       "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
-      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec.",
+      "Sell Price: 11s 29c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -104,7 +106,7 @@
      "name": "Robe of the Moccasin",
      "slot": "Chest",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6465,
      "icon": "inv_chest_cloth_36",
      "quality": 3,
@@ -113,11 +115,13 @@
      "tooltip": [
       "Binds when picked up",
       "Chest\tCloth",
+      "40 Armor",
       "+3 Strength",
       "+10 Spirit",
-      "+3 Spell Damage",
-      "+9 Healing",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: +9 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 9s 3c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -151,6 +155,31 @@
       "Requires Tailoring (75)",
       "\"Teaches you how to craft Filigreed Shadow Gown.\"",
       "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Trapper's Leather Gloves",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252778,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (75)",
+      "\"Teaches you how to craft Trapper's Leather Gloves.\"",
+      "Sell Price: 3s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -200,7 +229,7 @@
      "name": "Belt of the Fang",
      "slot": "Waist",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10412,
      "icon": "inv_belt_30",
      "quality": 3,
@@ -210,14 +239,15 @@
       "Binds when picked up",
       "Waist\tLeather",
       "49 Armor",
-      "+3 Agility",
       "+5 Stamina",
+      "+3 Agility",
       "Requires Level 16",
       "Embrace of the Viper (0/5)",
       "(2) Set: +10 Intellect.",
       "(3) Set: +10 Attack Power.",
       "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
-      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec.",
+      "Sell Price: 4s 94c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -244,7 +274,7 @@
      "name": "Serpent's Shoulders",
      "slot": "Shoulder",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5404,
      "icon": "inv_shoulder_08",
      "quality": 3,
@@ -255,7 +285,8 @@
       "Shoulder\tLeather",
       "68 Armor",
       "+5 Agility",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Sell Price: 9s 59c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -357,6 +388,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Field Guide",
+     "slot": null,
+     "type": "Book",
+     "itemClass": 9,
+     "itemId": 273098,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tBook",
+      "Requires Skinning (140)",
+      "Use: Craft a Field Guide.",
+      "\"Teaches you how to place a Field Guide at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -395,9 +451,9 @@
    "items": [
     {
      "name": "Kresh's Back",
-     "slot": "Off Hand",
+     "slot": "Shield",
      "type": "Shield",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 13245,
      "icon": "inv_shield_18",
      "quality": 3,
@@ -407,14 +463,17 @@
       "Binds when picked up",
       "Off Hand\tShield",
       "528 Armor",
-      "+5 Defense Rating",
-      "Requires Level 18"
+      "10 Block",
+      "Requires Level 18",
+      "Equip: +5 Defense Rating",
+      "Sell Price: 16s 32c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
       "Binds when picked up",
       "Off Hand\tShield",
       "471 Armor",
+      "9 Block",
       "Requires Level 15",
       "Equip: Increased Defense +4.",
       "Sell Price: 10s 64c"
@@ -427,9 +486,9 @@
     },
     {
      "name": "Worn Turtle Shell Shield",
-     "slot": "Off Hand",
+     "slot": "Shield",
      "type": "Shield",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6447,
      "icon": "inv_shield_21",
      "quality": 3,
@@ -438,43 +497,22 @@
      "tooltip": [
       "Binds when picked up",
       "Off Hand\tShield",
-      "530 Armor",
-      "+2 Mana Regeneration",
-      "Requires Level 16"
+      "490 Armor",
+      "9 Block",
+      "+40 Armor",
+      "Requires Level 16",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 12s 56c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
       "Off Hand\tShield",
       "382 Armor",
+      "6 Block",
       "Requires Level 15",
       "Sell Price: 5s 62c"
      ],
      "status": "changed",
-     "dropChance": null,
-     "dropChanceUnder": false,
-     "unknown": false,
-     "source": "foreverchanges"
-    },
-    {
-     "name": "Pattern: Trapper's Leather Gloves",
-     "slot": null,
-     "type": "Leatherworking",
-     "itemClass": 9,
-     "itemId": 252778,
-     "icon": "inv_scroll_06",
-     "quality": 3,
-     "itemLevel": 20,
-     "requiredLevel": 0,
-     "tooltip": [
-      "Binds when picked up",
-      "\tLeatherworking",
-      "Requires Leatherworking (75)",
-      "\"Teaches you how to craft Trapper's Leather Gloves.\"",
-      "Sell Price: 3s 75c"
-     ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "new",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -498,6 +536,31 @@
       "Equip: Movement speed reduced by 25%.",
       "Equip: Swim speed increased by 33%.",
       "Sell Price: 6s 74c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Trapper's Leather Gloves",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252778,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (75)",
+      "\"Teaches you how to craft Trapper's Leather Gloves.\"",
+      "Sell Price: 3s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -530,7 +593,7 @@
      "name": "Stinging Viper",
      "slot": "One-Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6472,
      "icon": "inv_wand_10",
      "quality": 3,
@@ -541,8 +604,9 @@
       "One-Hand\tMace",
       "30 - 57 Damage\tSpeed 2.80",
       "(15.5 damage per second)",
+      "Requires Level 19",
       "Chance on hit: Poisons target for 7 Nature damage every 3 sec for 12 sec.",
-      "Requires Level 19"
+      "Sell Price: 28s 83c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -564,7 +628,7 @@
      "name": "Armor of the Fang",
      "slot": "Chest",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6473,
      "icon": "inv_shirt_16",
      "quality": 3,
@@ -575,14 +639,15 @@
       "Chest\tLeather",
       "91 Armor",
       "+6 Strength",
-      "+4 Stamina",
       "+7 Spirit",
+      "+4 Stamina",
       "Requires Level 18",
       "Embrace of the Viper (0/5)",
       "(2) Set: +10 Intellect.",
       "(3) Set: +10 Attack Power.",
       "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
-      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec.",
+      "Sell Price: 12s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -609,7 +674,7 @@
      "name": "Slither Cord",
      "slot": "Waist",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 273089,
      "icon": "inv_belt_21",
      "quality": 3,
@@ -619,9 +684,34 @@
       "Binds when picked up",
       "Waist\tCloth",
       "22 Armor",
-      "+3 Mana Regeneration",
-      "Use: Escape all immobilizing effects.",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: +3 Mana Regeneration",
+      "Use: Escape all immobilizing effects. (30 Min Cooldown)",
+      "Sell Price: 4s 57c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Filigreed Pristine Leggings",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 253938,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 1,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (100)",
+      "\"Teaches you how to craft Filigreed Pristine Leggings.\"",
+      "Sell Price: 1s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -671,7 +761,7 @@
      "name": "Glowing Lizardscale Cloak",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6449,
      "icon": "inv_chest_cloth_15",
      "quality": 3,
@@ -683,7 +773,8 @@
       "20 Armor",
       "+6 Agility",
       "+2 Spirit",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Sell Price: 7s 65c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -705,7 +796,7 @@
      "name": "Tail Spike",
      "slot": "One-Hand",
      "type": "Dagger",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6448,
      "icon": "inv_weapon_shortblade_10",
      "quality": 3,
@@ -716,9 +807,10 @@
       "One-Hand\tDagger",
       "17 - 33 Damage\tSpeed 1.80",
       "(13.9 damage per second)",
-      "+3 Strength",
       "+3 Agility",
-      "Requires Level 17"
+      "+3 Strength",
+      "Requires Level 17",
+      "Sell Price: 19s 63c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -755,7 +847,31 @@
       "Equip: +3 Spell Damage",
       "Equip: +10 Healing",
       "Use: Restores 174 mana over 24 sec. Must remain seated while drinking. (10 Min Cooldown)",
-      "Sell Price: 21s 88c"
+      "Sell Price: 8s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Filigreed Shadow Leggings",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 253944,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 1,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (100)",
+      "\"Teaches you how to craft Filigreed Shadow Leggings.\"",
+      "Sell Price: 1s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -789,30 +905,6 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
-    },
-    {
-     "name": "Pattern: Filigreed Shadow Leggings",
-     "slot": null,
-     "type": "Tailoring",
-     "itemClass": 9,
-     "itemId": 253944,
-     "icon": "inv_scroll_03",
-     "quality": 3,
-     "itemLevel": 25,
-     "requiredLevel": 1,
-     "tooltip": [
-      "\tTailoring",
-      "Requires Tailoring (100)",
-      "\"Teaches you how to craft Filigreed Shadow Leggings.\"",
-      "Sell Price: 1s 75c"
-     ],
-     "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "new",
-     "dropChance": null,
-     "dropChanceUnder": false,
-     "unknown": false,
-     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -837,7 +929,7 @@
      "name": "Venomstrike",
      "slot": "Ranged",
      "type": "Bow",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6469,
      "icon": "inv_weapon_bow_10",
      "quality": 3,
@@ -848,8 +940,9 @@
       "Ranged\tBow",
       "20 - 38 Damage\tSpeed 2.40",
       "(12.1 damage per second)",
-      "Chance on hit: Venom Shot the target for 28 Nature damage.",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
+      "Sell Price: 21s 62c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -871,7 +964,7 @@
      "name": "Serpent Gloves",
      "slot": "Hands",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5970,
      "icon": "inv_gauntlets_19",
      "quality": 3,
@@ -882,8 +975,9 @@
       "Hands\tCloth",
       "25 Armor",
       "+6 Agility",
-      "+7 Spell Power",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Equip: +7 Spell Power",
+      "Sell Price: 5s 10c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -905,7 +999,7 @@
      "name": "Footpads of the Fang",
      "slot": "Feet",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10411,
      "icon": "inv_boots_04",
      "quality": 3,
@@ -915,14 +1009,15 @@
       "Binds when picked up",
       "Feet\tLeather",
       "61 Armor",
-      "+6 Agility",
       "+6 Stamina",
+      "+6 Agility",
       "Requires Level 17",
       "Embrace of the Viper (0/5)",
       "(2) Set: +10 Intellect.",
       "(3) Set: +10 Attack Power.",
       "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
-      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec.",
+      "Sell Price: 8s 49c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -949,7 +1044,7 @@
      "name": "Savage Trodders",
      "slot": "Feet",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6459,
      "icon": "inv_boots_01",
      "quality": 3,
@@ -960,8 +1055,9 @@
       "Feet\tMail",
       "134 Armor",
       "+7 Stamina",
-      "+6 Health Regeneration",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Equip: +6 Health Regeneration",
+      "Sell Price: 11s 53c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -973,6 +1069,31 @@
       "Sell Price: 9s 34c"
      ],
      "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Journeyman Campfire",
+     "slot": null,
+     "type": "Cooking",
+     "itemClass": 9,
+     "itemId": 273087,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tCooking",
+      "Requires Cooking (90)",
+      "Use: Craft a Journeyman Campfire.",
+      "\"Teaches you how to place a Journeyman Campfire at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1015,9 +1136,9 @@
    "items": [
     {
      "name": "Seedcloud Buckler",
-     "slot": "Off Hand",
+     "slot": "Shield",
      "type": "Shield",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6630,
      "icon": "inv_shield_10",
      "quality": 3,
@@ -1027,15 +1148,18 @@
       "Binds when picked up",
       "Off Hand\tShield",
       "547 Armor",
+      "11 Block",
       "+5 Nature Resistance",
-      "+5 Spell Power",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Equip: +5 Spell Power",
+      "Sell Price: 18s 45c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
       "Binds when picked up",
       "Off Hand\tShield",
       "566 Armor",
+      "12 Block",
       "+3 Spirit",
       "+6 Intellect",
       "Requires Level 20",
@@ -1051,7 +1175,7 @@
      "name": "Living Root",
      "slot": "Two-Hand",
      "type": "Staff",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 6631,
      "icon": "inv_staff_25",
      "quality": 3,
@@ -1060,14 +1184,15 @@
      "tooltip": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "34 - 52 Damage\tSpeed 2.90",
-      "(14.8 damage per second)",
-      "+2 Stamina",
+      "34 - 51 Damage\tSpeed 2.90",
+      "(14.7 damage per second)",
       "+5 Spirit",
+      "+2 Stamina",
       "+9 Nature Resistance",
-      "+15 Spell Damage",
-      "+44 Healing",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Equip: +45 Healing",
+      "Equip: +15 Spell Damage",
+      "Sell Price: 31s 89c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1091,7 +1216,7 @@
      "name": "Sporid Cape",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6629,
      "icon": "inv_misc_cape_17",
      "quality": 3,
@@ -1102,8 +1227,9 @@
       "Back\tCloth",
       "20 Armor",
       "+6 Stamina",
-      "Equip: When struck in combat inflicts 1 Nature damage to the attacker.",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: When struck in combat, inflicts 1 Nature damage to the attacker.",
+      "Sell Price: 6s 77c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1116,6 +1242,30 @@
       "Sell Price: 6s 30c"
      ],
      "status": "changed",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Filigreed Pristine Leggings",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 253938,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 25,
+     "requiredLevel": 1,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (100)",
+      "\"Teaches you how to craft Filigreed Pristine Leggings.\"",
+      "Sell Price: 1s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1144,7 +1294,7 @@
      "name": "Slime-encrusted Pads",
      "slot": "Shoulder",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6461,
      "icon": "inv_shoulder_05",
      "quality": 3,
@@ -1154,9 +1304,10 @@
       "Binds when picked up",
       "Shoulder\tCloth",
       "32 Armor",
-      "+3 Mana Regeneration",
-      "+10 Health Regeneration",
-      "Requires Level 20"
+      "Requires Level 20",
+      "Equip: +10 Health Regeneration",
+      "Equip: +3 Mana Regeneration",
+      "Sell Price: 9s 77c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1177,7 +1328,7 @@
      "name": "Mutant Scale Breastplate",
      "slot": "Chest",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6627,
      "icon": "inv_chest_plate08",
      "quality": 3,
@@ -1189,7 +1340,8 @@
       "194 Armor",
       "+10 Strength",
       "+4 Stamina",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Sell Price: 15s 30c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1210,8 +1362,8 @@
     {
      "name": "Deep Fathom Ring",
      "slot": "Finger",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 6463,
      "icon": "inv_jewelry_ring_15",
      "quality": 3,
@@ -1219,11 +1371,13 @@
      "requiredLevel": 19,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "Finger",
-      "+3 Stamina",
       "+5 Spirit",
-      "+1 Spell Penetration",
-      "Requires Level 19"
+      "+3 Stamina",
+      "Requires Level 19",
+      "Equip: +1 Spell Penetration",
+      "Sell Price: 11s 53c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1310,7 +1464,7 @@
      "name": "Firebelcher",
      "slot": "Ranged",
      "type": "Wand",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5243,
      "icon": "inv_wand_11",
      "quality": 3,
@@ -1321,8 +1475,9 @@
       "Ranged\tWand",
       "27 - 52 Fire Damage\tSpeed 1.70",
       "(23.2 damage per second)",
-      "Equip: Chance on hit to blast the target for 28 Fire damage.",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Equip: Chance on hit to blast the target for 25 to 31 Fire damage.",
+      "Sell Price: 19s 13c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1343,7 +1498,7 @@
      "name": "Feyscale Cloak",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 6632,
      "icon": "inv_misc_cape_02",
      "quality": 3,
@@ -1354,8 +1509,9 @@
       "Back\tCloth",
       "19 Armor",
       "+5 Stamina",
-      "+3 Spell Power",
-      "Requires Level 16"
+      "Requires Level 16",
+      "Equip: +3 Spell Power",
+      "Sell Price: 5s 89c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1387,7 +1543,7 @@
      "name": "Gloves of the Fang",
      "slot": "Hands",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10413,
      "icon": "inv_gauntlets_18",
      "quality": 3,
@@ -1397,14 +1553,15 @@
       "Binds when equipped",
       "Hands\tLeather",
       "52 Armor",
-      "+4 Strength",
       "+6 Agility",
+      "+4 Strength",
       "Requires Level 14",
       "Embrace of the Viper (0/5)",
       "(2) Set: +10 Intellect.",
       "(3) Set: +10 Attack Power.",
       "(4) Set: Taking damage while at or below 25% health causes you to restore 100 health and mana over 5 sec. This effect can only trigger once every 5 min.",
-      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec."
+      "(5) Set: Grants your melee attacks a chance to inflict Dream Venom, stunning the target for 1 sec.",
+      "Sell Price: 3s 74c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
