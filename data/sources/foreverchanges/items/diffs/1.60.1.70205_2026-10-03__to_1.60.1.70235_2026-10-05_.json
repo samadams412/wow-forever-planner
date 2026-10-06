@@ -1,0 +1,348 @@
+{
+  "oldLabel": "1.60.1.70205 (2026-10-03)",
+  "newLabel": "1.60.1.70235 (2026-10-05)",
+  "diff": {
+    "added": [],
+    "removed": [],
+    "bucketChanged": [
+      {
+        "id": 812,
+        "name": "Glowing Brightwood Staff",
+        "oldBucket": "missing",
+        "newBucket": "same",
+        "fieldChanges": []
+      },
+      {
+        "id": 869,
+        "name": "Dazzling Longsword",
+        "oldBucket": "missing",
+        "newBucket": "same",
+        "fieldChanges": []
+      },
+      {
+        "id": 1982,
+        "name": "Nightblade",
+        "oldBucket": "missing",
+        "newBucket": "same",
+        "fieldChanges": []
+      },
+      {
+        "id": 3475,
+        "name": "Cloak of Flames",
+        "oldBucket": "missing",
+        "newBucket": "same",
+        "fieldChanges": []
+      },
+      {
+        "id": 5624,
+        "name": "Circlet of the Order",
+        "oldBucket": "missing",
+        "newBucket": "same",
+        "fieldChanges": []
+      },
+      {
+        "id": 9386,
+        "name": "Excavator's Brand",
+        "oldBucket": "missing",
+        "newBucket": "changed",
+        "fieldChanges": [
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when equipped",
+              "Unique",
+              "One-Hand\tMace",
+              "43 - 82 Damage\tSpeed 2.60",
+              "(24.0 damage per second)",
+              "Requires Level 31",
+              "Chance on hit: Hurls a fiery ball that causes 40 Fire damage and an additional 9 damage over 6 sec.",
+              "Sell Price: 98s 59c"
+            ],
+            "new": [
+              "Binds when equipped",
+              "Unique-Equipped",
+              "One-Hand\tMace",
+              "43 - 82 Damage\tSpeed 2.60",
+              "(24.0 damage per second)",
+              "Requires Level 31",
+              "Chance on hit: Hurls a fiery ball that causes 51 Fire damage and an additional 12 damage over 6 sec.",
+              "Sell Price: 95s 49c"
+            ]
+          },
+          {
+            "field": "classicTooltip",
+            "new": [
+              "Binds when equipped",
+              "Unique",
+              "One-Hand\tMace",
+              "43 - 82 Damage\tSpeed 2.60",
+              "(24.0 damage per second)",
+              "Requires Level 31",
+              "Chance on hit: Hurls a fiery ball that causes 40 Fire damage and an additional 9 damage over 6 sec.",
+              "Sell Price: 98s 59c"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9391,
+        "name": "The Shoveler",
+        "oldBucket": "missing",
+        "newBucket": "changed",
+        "fieldChanges": [
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when equipped",
+              "Two-Hand\tMace",
+              "88 - 133 Damage\tSpeed 3.40",
+              "(32.5 damage per second)",
+              "+15 Stamina",
+              "Classes: Warrior",
+              "Requires Level 32",
+              "Equip: +20 Attack Power.",
+              "Sell Price: 1g 28s 31c"
+            ],
+            "new": [
+              "Binds when equipped",
+              "Two-Hand\tMace",
+              "88 - 133 Damage\tSpeed 3.40",
+              "(32.5 damage per second)",
+              "+15 Stamina",
+              "Classes: Warrior",
+              "Requires Level 32",
+              "Equip: +20 Attack Power",
+              "Equip: +15 Attack Power Vs Elementals",
+              "Sell Price: 1g 31s 31c"
+            ]
+          },
+          {
+            "field": "classicTooltip",
+            "new": [
+              "Binds when equipped",
+              "Two-Hand\tMace",
+              "88 - 133 Damage\tSpeed 3.40",
+              "(32.5 damage per second)",
+              "+15 Stamina",
+              "Classes: Warrior",
+              "Requires Level 32",
+              "Equip: +20 Attack Power.",
+              "Sell Price: 1g 28s 31c"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9393,
+        "name": "Beacon of Hope",
+        "oldBucket": "missing",
+        "newBucket": "changed",
+        "fieldChanges": [
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+4 Spirit",
+              "Requires Level 33",
+              "Equip: Increases healing done by spells and effects by up to 22.",
+              "Sell Price: 78s 82c"
+            ],
+            "new": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+4 Spirit",
+              "Requires Level 33",
+              "Equip: +22 Healing",
+              "Equip: +8 Spell Damage",
+              "Sell Price: 45s 38c"
+            ]
+          },
+          {
+            "field": "classicTooltip",
+            "new": [
+              "Binds when equipped",
+              "Held In Off-hand",
+              "+4 Spirit",
+              "Requires Level 33",
+              "Equip: Increases healing done by spells and effects by up to 22.",
+              "Sell Price: 78s 82c"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10578,
+        "name": "Thoughtcast Boots",
+        "oldBucket": "missing",
+        "newBucket": "changed",
+        "fieldChanges": [
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when equipped",
+              "Feet\tCloth",
+              "38 Armor",
+              "+6 Intellect",
+              "+3 Stamina",
+              "+13 Spirit",
+              "Requires Level 33",
+              "Sell Price: 33s 77c"
+            ],
+            "new": [
+              "Binds when equipped",
+              "Feet\tCloth",
+              "38 Armor",
+              "+3 Stamina",
+              "+13 Spirit",
+              "Requires Level 33",
+              "Equip: +13 Healing",
+              "Equip: +5 Spell Damage",
+              "Sell Price: 34s 3c"
+            ]
+          },
+          {
+            "field": "classicTooltip",
+            "new": [
+              "Binds when equipped",
+              "Feet\tCloth",
+              "38 Armor",
+              "+6 Intellect",
+              "+3 Stamina",
+              "+13 Spirit",
+              "Requires Level 33",
+              "Sell Price: 33s 77c"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10769,
+        "name": "Glowing Eye of Mordresh",
+        "oldBucket": "missing",
+        "newBucket": "changed",
+        "fieldChanges": [
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when picked up",
+              "Neck",
+              "+11 Spirit",
+              "+5 Intellect",
+              "Requires Level 36",
+              "Sell Price: 52s 77c"
+            ],
+            "new": [
+              "Binds when picked up",
+              "Neck",
+              "+8 Intellect",
+              "Requires Level 36",
+              "Equip: +20 Healing",
+              "Equip: +7 Spell Damage",
+              "Sell Price: 57s 16c"
+            ]
+          },
+          {
+            "field": "classicTooltip",
+            "new": [
+              "Binds when picked up",
+              "Neck",
+              "+11 Spirit",
+              "+5 Intellect",
+              "Requires Level 36",
+              "Sell Price: 52s 77c"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10776,
+        "name": "Silky Spider Cape",
+        "oldBucket": "missing",
+        "newBucket": "changed",
+        "fieldChanges": [
+          {
+            "field": "requiredLevel",
+            "old": 35,
+            "new": 37
+          },
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when picked up",
+              "Back\tCloth",
+              "30 Armor",
+              "+11 Stamina",
+              "+5 Spirit",
+              "Requires Level 35",
+              "Sell Price: 47s 99c"
+            ],
+            "new": [
+              "Binds when picked up",
+              "Back\tCloth",
+              "30 Armor",
+              "+10 Stamina",
+              "Requires Level 37",
+              "Equip: Reduces the duration of all movement impairing effects on you by 7%.",
+              "Sell Price: 46s 30c"
+            ]
+          },
+          {
+            "field": "classicTooltip",
+            "new": [
+              "Binds when picked up",
+              "Back\tCloth",
+              "30 Armor",
+              "+11 Stamina",
+              "+5 Spirit",
+              "Requires Level 35",
+              "Sell Price: 47s 99c"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 23192,
+        "name": "Tabard of the Scarlet Crusade",
+        "oldBucket": "missing",
+        "newBucket": "same",
+        "fieldChanges": []
+      }
+    ],
+    "fieldChanged": [
+      {
+        "id": 274748,
+        "name": "Booty Bay Bruiser's Buckshot",
+        "bucket": "new",
+        "fieldChanges": [
+          {
+            "field": "tooltip",
+            "old": [
+              "Binds when picked up",
+              "Ranged\tGun",
+              "35 - 66 Damage\tSpeed 2.80",
+              "(18.0 damage per second)",
+              "+3 Stamina",
+              "Requires Level 30",
+              "Requires Booty Bay - Honored",
+              "Equip: +9 Attack Power",
+              "Use: Take steady aim and fire a round to knock your target away.",
+              "Sell Price: 62s 17c"
+            ],
+            "new": [
+              "Binds when picked up",
+              "Ranged\tGun",
+              "35 - 66 Damage\tSpeed 2.80",
+              "(18.0 damage per second)",
+              "+3 Stamina",
+              "Requires Level 30",
+              "Requires Booty Bay - Honored",
+              "Equip: +9 Attack Power",
+              "Sell Price: 62s 17c"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
