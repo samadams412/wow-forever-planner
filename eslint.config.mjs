@@ -15,6 +15,9 @@ const eslintConfig = defineConfig([
     // Standalone CommonJS Node tooling, not part of the app bundle -- not
     // held to the app's TypeScript/ESM import conventions.
     "scripts/**",
+    // Obsidian vault: its .obsidian/plugins/ hold minified third-party
+    // bundles (241 lint errors on their own), not app code.
+    "Forevercraft-Knowledge-Base/**",
   ]),
 ]);
 

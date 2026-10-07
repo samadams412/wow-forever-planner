@@ -259,7 +259,7 @@
      "name": "Magister's Boots",
      "slot": "Feet",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16682,
      "icon": "inv_boots_02",
      "quality": 3,
@@ -269,17 +269,18 @@
       "Binds when picked up",
       "Feet\tCloth",
       "58 Armor",
-      "+7 Stamina",
-      "+14 Intellect",
       "+14 Spirit",
-      "+9 Spell Power",
+      "+14 Intellect",
+      "+7 Stamina",
       "Requires Level 54",
+      "Equip: +9 Spell Power",
       "Magister's Regalia (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
       "(4) Set: When struck in combat has a 2% chance of freezing the attacker in place for 3 sec. Can only occur once every 60 sec.",
       "(5) Set: Your spellcasts have a 5% chance to energize you for 200 mana.",
-      "(6) Set: Restores 8 mana per 5 sec."
+      "(6) Set: Restores 8 mana per 5 sec.",
+      "Sell Price: 1g 42s 11c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -449,10 +450,10 @@
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
       "(3) Set: +30 Attack Power.",
-      "(4) Set: When struck in combat has a 5% chance to increase your movement speed by 10% for 8 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck in combat, has a 5% chance to increase your movement speed by 10% for 8 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on spellcast to restore 200 Mana, on melee attack to regenerate 20 Energy over 5 sec, and when struck by a melee attack to generate 10 Rage.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 1g 22s 44c"
+      "Sell Price: 1g 19s 37c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -832,10 +833,10 @@
       "Lightforge Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
-      "(4) Set: When struck by a harmful spell has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck by a harmful spell, has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 90s 91c"
+      "Sell Price: 1g 66s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1049,7 +1050,7 @@
      "name": "Shadowcraft Spaulders",
      "slot": "Shoulder",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16708,
      "icon": "inv_shoulder_07",
      "quality": 3,
@@ -1061,14 +1062,15 @@
       "127 Armor",
       "+22 Agility",
       "+9 Stamina",
-      "+2 Hit Rating",
       "Requires Level 55",
+      "Equip: +2 Hit Rating",
       "Shadowcraft Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: +30 Attack Power.",
-      "(4) Set: When struck in combat has a 5% chance to remove a Snare effect from yourself. Can only occur once every 60 sec.",
+      "(4) Set: When struck in combat, has a 5% chance to remove a Snare effect from yourself. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee attack to restore 20 Energy.",
-      "(6) Set: Restores 15 health per 5 sec."
+      "(6) Set: Restores 15 health per 5 sec.",
+      "Sell Price: 1g 87s 3c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1411,7 +1413,7 @@
      "name": "Devout Gloves",
      "slot": "Hands",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16692,
      "icon": "inv_gauntlets_14",
      "quality": 3,
@@ -1421,18 +1423,19 @@
       "Binds when equipped",
       "Hands\tCloth",
       "52 Armor",
-      "+8 Stamina",
-      "+10 Intellect",
       "+17 Spirit",
-      "+5 Spell Damage",
-      "+15 Healing",
+      "+10 Intellect",
+      "+8 Stamina",
       "Requires Level 54",
+      "Equip: +15 Healing",
+      "Equip: +5 Spell Damage",
       "Vestments of the Devout (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
       "(4) Set: When struck in combat has a 2% chance of shielding the wearer in a protective shield which will absorb 488 damage. Can only occur once every 60 sec.",
       "(5) Set: Your spellcasts have a 5% chance to energize you for 200 mana.",
-      "(6) Set: Restores 8 mana per 5 sec."
+      "(6) Set: Restores 8 mana per 5 sec.",
+      "Sell Price: 94s 74c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1690,7 +1693,7 @@
      "name": "Lightforge Boots",
      "slot": "Feet",
      "type": "Plate",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16725,
      "icon": "inv_boots_plate_03",
      "quality": 3,
@@ -1700,16 +1703,17 @@
       "Binds when picked up",
       "Feet\tPlate",
       "424 Armor",
-      "+11 Strength",
       "+18 Stamina",
       "+9 Spirit",
+      "+11 Strength",
       "Requires Level 54",
       "Lightforge Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
-      "(4) Set: When struck by a harmful spell has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck by a harmful spell, has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec.",
-      "(6) Set: Restores 8 mana per 5 sec."
+      "(6) Set: Restores 8 mana per 5 sec.",
+      "Sell Price: 2g 48s 23c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2090,7 +2094,7 @@
      "name": "Devout Bracers",
      "slot": "Wrist",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16697,
      "icon": "inv_belt_31",
      "quality": 3,
@@ -2100,18 +2104,19 @@
       "Binds when equipped",
       "Wrist\tCloth",
       "35 Armor",
-      "+7 Stamina",
       "+8 Intellect",
       "+10 Spirit",
-      "+4 Spell Damage",
-      "+11 Healing",
+      "+7 Stamina",
       "Requires Level 52",
+      "Equip: +11 Healing",
+      "Equip: +4 Spell Damage",
       "Vestments of the Devout (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
       "(4) Set: When struck in combat has a 2% chance of shielding the wearer in a protective shield which will absorb 488 damage. Can only occur once every 60 sec.",
       "(5) Set: Your spellcasts have a 5% chance to energize you for 200 mana.",
-      "(6) Set: Restores 8 mana per 5 sec."
+      "(6) Set: Restores 8 mana per 5 sec.",
+      "Sell Price: 85s 12c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2160,7 +2165,7 @@
       "(4) Set: When struck in combat has a 2% chance of freezing the attacker in place for 3 sec. Can only occur once every 60 sec.",
       "(5) Set: Your spellcasts have a 5% chance to energize you for 200 mana.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 86s 94c"
+      "Sell Price: 90s 23c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2210,7 +2215,7 @@
       "(4) Set: When struck in combat has a 2% chance of causing the attacker to flee in terror for 2 sec. Can only occur once every 60 sec.",
       "(5) Set: Your spellcasts have a 5% chance to heal you for 270 to 330.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 85s 92c"
+      "Sell Price: 90s 23c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2254,10 +2259,10 @@
       "Shadowcraft Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: +30 Attack Power.",
-      "(4) Set: When struck in combat has a 5% chance to remove a Snare effect from yourself. Can only occur once every 60 sec.",
+      "(4) Set: When struck in combat, has a 5% chance to remove a Snare effect from yourself. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee attack to restore 20 Energy.",
       "(6) Set: Restores 15 health per 5 sec.",
-      "Sell Price: 1g 4s 46c"
+      "Sell Price: 1g 7s 26c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2303,10 +2308,10 @@
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
       "(3) Set: +30 Attack Power.",
-      "(4) Set: When struck in combat has a 5% chance to increase your movement speed by 10% for 8 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck in combat, has a 5% chance to increase your movement speed by 10% for 8 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on spellcast to restore 200 Mana, on melee attack to regenerate 20 Energy over 5 sec, and when struck by a melee attack to generate 10 Rage.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 1g 6s 2c"
+      "Sell Price: 1g 7s 26c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2350,10 +2355,10 @@
       "Beaststalker Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: +30 Attack Power.",
-      "(4) Set: When struck in combat has a 8% chance to remove a Root effect from yourself. Can only occur once every 60 sec.",
+      "(4) Set: When struck in combat, has a 8% chance to remove a Root effect from yourself. Can only occur once every 60 sec.",
       "(5) Set: Your melee and ranged autoattacks have a 5% chance to energize you for 200 mana.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 1g 30s 55c"
+      "Sell Price: 1g 27s 69c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2399,10 +2404,10 @@
       "The Elements (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
-      "(4) Set: When struck in melee combat has a 5% chance of Disarming the attacker for 4 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck in melee combat, has a 5% chance of Disarming the attacker for 4 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec.",
       "(6) Set: Restores 8 mana per 5 sec.",
-      "Sell Price: 1g 25s 86c"
+      "Sell Price: 1g 27s 69c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2430,7 +2435,7 @@
      "name": "Lightforge Belt",
      "slot": "Waist",
      "type": "Plate",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16723,
      "icon": "inv_belt_11",
      "quality": 3,
@@ -2440,18 +2445,19 @@
       "Binds when equipped",
       "Waist\tPlate",
       "341 Armor",
-      "+10 Strength",
-      "+9 Stamina",
       "+15 Intellect",
-      "+7 Spell Power",
-      "+5 Hit Rating",
+      "+9 Stamina",
+      "+10 Strength",
       "Requires Level 53",
+      "Equip: +7 Spell Power",
+      "Equip: +5 Hit Rating",
       "Lightforge Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
-      "(4) Set: When struck by a harmful spell has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck by a harmful spell, has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec.",
-      "(6) Set: Restores 8 mana per 5 sec."
+      "(6) Set: Restores 8 mana per 5 sec.",
+      "Sell Price: 1g 58s 81c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2499,10 +2505,10 @@
       "Battlegear of Valor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: +15 Strength.",
-      "(4) Set: When struck in combat has a 10% chance to remove a Disarm effect from yourself. Can only occur once every 60 sec.",
+      "(4) Set: When struck in combat, has a 10% chance to remove a Disarm effect from yourself. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee attack to heal for 88 to 132 and generate 10 Rage",
       "(6) Set: Restores 15 health per 5 sec.",
-      "Sell Price: 92s 95c"
+      "Sell Price: 1g 58s 81c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -3041,7 +3047,7 @@
      "name": "Lightforge Boots",
      "slot": "Feet",
      "type": "Plate",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 16725,
      "icon": "inv_boots_plate_03",
      "quality": 3,
@@ -3051,16 +3057,17 @@
       "Binds when picked up",
       "Feet\tPlate",
       "424 Armor",
-      "+11 Strength",
       "+18 Stamina",
       "+9 Spirit",
+      "+11 Strength",
       "Requires Level 54",
       "Lightforge Armor (0/8)",
       "(2) Set: +8 All Resistances.",
       "(3) Set: Increases damage and healing done by magical spells and effects by up to 18.",
-      "(4) Set: When struck by a harmful spell has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
+      "(4) Set: When struck by a harmful spell, has a 7% chance of Silencing the caster for 3 sec. Can only occur once every 60 sec.",
       "(5) Set: Chance on melee autoattack and spellcast to increase your damage and healing done by magical spells and effects by up to 65 for 10 sec.",
-      "(6) Set: Restores 8 mana per 5 sec."
+      "(6) Set: Restores 8 mana per 5 sec.",
+      "Sell Price: 2g 48s 23c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [

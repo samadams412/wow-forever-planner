@@ -37,7 +37,7 @@
       "(9.5 damage per second)",
       "Requires Level 13",
       "Chance on hit: Wounds the target for 14 Physical damage.",
-      "Sell Price: 7s 67c"
+      "Sell Price: 9s 20c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -51,7 +51,7 @@
      "name": "Trogg Scepter",
      "slot": "Main Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 272996,
      "icon": "inv_misc_bone_10",
      "quality": 3,
@@ -63,8 +63,10 @@
       "13 - 26 Damage\tSpeed 2.40",
       "(8.1 damage per second)",
       "+4 Spirit",
-      "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Equip: +33 Healing",
+      "Equip: +11 Spell Damage",
+      "Sell Price: 13s 42c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -92,7 +94,7 @@
       "Requires Level 13",
       "Equip: +6 Attack Power Vs Beasts",
       "Equip: +6 Attack Power",
-      "Sell Price: 11s 26c"
+      "Sell Price: 13s 52c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -125,7 +127,7 @@
      "name": "Subterranean Cape",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 14149,
      "icon": "inv_misc_cape_18",
      "quality": 3,
@@ -136,8 +138,9 @@
       "Back\tCloth",
       "17 Armor",
       "+3 Strength",
-      "+5 Health Regeneration",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Equip: +5 Health Regeneration",
+      "Sell Price: 3s 87c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -159,7 +162,7 @@
      "name": "Crystalline Cuffs",
      "slot": "Wrist",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 14148,
      "icon": "inv_bracer_13",
      "quality": 3,
@@ -169,9 +172,10 @@
       "Binds when picked up",
       "Wrist\tCloth",
       "15 Armor",
-      "+2 Intellect",
       "+3 Spirit",
-      "Requires Level 13"
+      "+2 Stamina",
+      "Requires Level 13",
+      "Sell Price: 2s 58c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -193,7 +197,7 @@
      "name": "Cursed Felblade",
      "slot": "Main Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 14145,
      "icon": "inv_weapon_shortblade_12",
      "quality": 3,
@@ -204,8 +208,9 @@
       "Main Hand\tSword",
       "19 - 37 Damage\tSpeed 2.30",
       "(12.2 damage per second)",
-      "Chance on hit: Reduces target enemy's attack power by 24.",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Chance on hit: Reduces target enemy's attack power by 24 for 30 sec.",
+      "Sell Price: 12s 91c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -254,7 +259,7 @@
      "name": "Robe of Evocation",
      "slot": "Chest",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 14150,
      "icon": "inv_chest_cloth_24",
      "quality": 3,
@@ -263,10 +268,12 @@
      "tooltip": [
       "Binds when picked up",
       "Chest\tCloth",
-      "+4 Stamina",
+      "35 Armor",
       "+4 Intellect",
-      "+5 Spirit",
-      "Requires Level 13"
+      "+6 Stamina",
+      "+4 Spirit",
+      "Requires Level 13",
+      "Sell Price: 5s 16c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -288,7 +295,7 @@
      "name": "Cavedweller Bracers",
      "slot": "Wrist",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 14147,
      "icon": "inv_bracer_07",
      "quality": 3,
@@ -299,8 +306,9 @@
       "Wrist\tMail",
       "78 Armor",
       "+2 Strength",
-      "+3 Stamina",
-      "Requires Level 13"
+      "+3 Spirit",
+      "Requires Level 13",
+      "Sell Price: 3s 87c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -322,7 +330,7 @@
      "name": "Chanting Blade",
      "slot": "One-Hand",
      "type": "Dagger",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 14151,
      "icon": "inv_weapon_shortblade_25",
      "quality": 3,
@@ -334,8 +342,9 @@
       "12 - 24 Damage\tSpeed 1.50",
       "(12.0 damage per second)",
       "+2 Agility",
-      "+2 Stamina",
-      "Requires Level 13"
+      "+3 Stamina",
+      "Requires Level 13",
+      "Sell Price: 12s 91c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -386,7 +395,7 @@
      "name": "Searing Dagger",
      "slot": "Main Hand",
      "type": "Dagger",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 273003,
      "icon": "inv_weapon_shortblade_03",
      "quality": 3,
@@ -397,10 +406,10 @@
       "Main Hand\tDagger",
       "9 - 17 Damage\tSpeed 1.60",
       "(8.1 damage per second)",
-      "+18 Spell Damage",
-      "+18 Healing",
-      "Equip: Harmful spell casts sear the target for 3 Fire damage.",
-      "Requires Level 13"
+      "+4 Spirit",
+      "Requires Level 13",
+      "Equip: Harmful spell casts sear the target for 7 Fire damage.",
+      "Sell Price: 12s 46c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -414,7 +423,7 @@
      "name": "Chasm Walkers",
      "slot": "Feet",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 273007,
      "icon": "inv_boots_06",
      "quality": 3,
@@ -425,8 +434,9 @@
       "Feet\tLeather",
       "56 Armor",
       "+5 Spirit",
-      "+7 Attack Power",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Equip: +4 Attack Power",
+      "Sell Price: 4s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -453,7 +463,7 @@
       "+3 Stamina",
       "+3 Fire Resistance",
       "Requires Level 13",
-      "Sell Price: 3s 13c"
+      "Sell Price: 3s 76c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,

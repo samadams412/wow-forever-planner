@@ -3,6 +3,7 @@ import path from "path";
 import { dungeons, getDungeon, type Dungeon } from "@/lib/dungeons";
 import { DUNGEON_MAP_LEGENDS, type DungeonMapMarker } from "@/lib/dungeon-map-legends.generated";
 import questIndex from "@/data/quests/index.json";
+import { rosterCounts } from "@/lib/dungeon-roster";
 
 // Normalized dungeon data -- bosses/loot/quests -- built by
 // scripts/build-dungeons.js from two sources: foreverchanges.pro (item
@@ -293,7 +294,10 @@ export function hasDungeonLoot(dungeonId: string): boolean {
 
 export type DungeonLootSummary = Dungeon & {
   backgroundImage: string;
+  // Roster counts (regular bosses and rare spawns, see lib/dungeon-roster.ts),
+  // not data.bosses.length, which also holds trash groups and containers.
   bossCount: number;
+  rareCount: number;
   questCount: number;
 };
 
@@ -306,7 +310,14 @@ export function getDungeonLootIndex(): DungeonLootSummary[] {
     .filter((d) => hasDungeonLoot(d.id))
     .map((d) => {
       const data = getDungeonData(d.id)!;
-      return { ...d, backgroundImage: data.backgroundImage, bossCount: data.bosses.length, questCount: data.quests.length };
+      const counts = rosterCounts(data.bosses);
+      return {
+        ...d,
+        backgroundImage: data.backgroundImage,
+        bossCount: counts.bosses,
+        rareCount: counts.rares,
+        questCount: data.quests.length,
+      };
     })
     .sort((a, b) => a.levelMin - b.levelMin || a.levelMax - b.levelMax);
 }

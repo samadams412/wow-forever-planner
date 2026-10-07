@@ -62,6 +62,31 @@ export function canAddPoint(
   return true;
 }
 
+// Whether a finished build obeys the planner's rules, for builds that arrive
+// from outside the planner (e.g. a tracked build code). Same rules the planner
+// keeps true as points are added and removed: at most maxPoints spent, no rank
+// above maxRank, every invested talent's row unlocked by the points in its
+// tree (tierUnlocked against the tree total, as canRemovePoint checks it, so
+// a legit "spend 5, take a tier-2 point, refund a tier-1 point" build passes),
+// and every prereq met.
+export function isValidBuildState(
+  trees: TalentTree[],
+  ranks: RankState,
+  maxPoints: number = MAX_TALENT_POINTS
+): boolean {
+  if (totalPointsSpent(trees, ranks) > maxPoints) return false;
+  return trees.every((tree) => {
+    const inTree = pointsSpentInTree(tree, ranks);
+    return tree.talents.every((t) => {
+      const rank = ranks[t.id] ?? 0;
+      if (rank === 0) return true;
+      if (rank > t.maxRank) return false;
+      if (!tierUnlocked(t.tier, inTree)) return false;
+      return !t.prereq || (ranks[t.prereq.id] ?? 0) >= t.prereq.ranks;
+    });
+  });
+}
+
 export function canRemovePoint(tree: TalentTree, talent: Talent, ranks: RankState): boolean {
   const current = ranks[talent.id] ?? 0;
   if (current <= 0) return false;
