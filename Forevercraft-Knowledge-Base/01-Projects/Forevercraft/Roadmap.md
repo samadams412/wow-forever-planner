@@ -14,6 +14,22 @@ This is now the living roadmap. `CLAUDE.md` "Open items" is a shorter, older sub
 
 **Task convention:** [Tasks plugin](https://publish.obsidian.md/tasks/) syntax. Every checkbox carries a priority emoji (🔺 Highest · ⏫ High · 🔼 Medium · 🔽 Low · ⏬ Lowest) plus tags. `📅` is a due date. Items marked *(priority unconfirmed)* got a provisional priority during the 2026-09-30 audit and need an owner's call.
 
+## Week of 2026-10-07 – 2026-10-14
+Added 2026-10-06. Design/scoping work this week; build items are called out as such.
+
+- [ ] **BIS builder — design doc (this week); build scheduled after level-60 data lands.** Design written: [[BIS-Builder-Design]] (with [[Competitor-Analysis-2026-10-06]]). The architecture decisions (reuse URL + localStorage persistence, `itemId`-keyed `data/bis/` schema, custom builder before presets) are settled; rankings and level-specific lists are not, and wait for level-60 data. Don't start the BIS UI this week. #planner #bis #design 🔼 📅 2026-10-14
+  - Blocked on level-60 data: per-slot rankings, per-level candidate lists, drop-rate figures, PvP variant scope. See the table in the design doc.
+  - Prerequisite regardless of BIS: a slot-mapping table for `data/items.json` (inconsistent slot strings; 9,479 items have `slot: null`).
+- [ ] **YouTube-transcript blog pipeline — scope as synthesis + commentary, NOT transcript dumps.** #blog #content #scoping 🔽 📅 2026-10-14
+  - **Caveat, do not drop:** a pure recap of a video (transcript → post) is thin, duplicate content, with a high risk of search penalties and low reader value. Every auto-generated post must add something the video doesn't: an analysis, a comparison against Classic or other sources, or the author's own verdict. A "transcript dump" script should not be built as a shortcut.
+  - Scope for now: a pipeline that drafts a synthesis from a transcript for an author to edit, with a required commentary section. Not a publish-on-ingest job.
+- [ ] **Profession leveling guide refresh (1–300), cross-referenced against other sites — split into one session per profession.** #professions #content #large 🔼 📅 2026-10-14
+  - Too large for one pass. Each profession needs its own session: source cross-referencing, recipe-by-recipe checks, and the 1–300 curve. Start with one profession to set the template, then repeat. Expect 8 crafting + 3 gathering professions as separate work items.
+  - Overlaps the existing "Update the professions guides (1–300)" item under Next up. Treat that item as this one.
+- [ ] **Class guide enhancements: useful macros + a "changed from Classic" blog-style section per class.** #guides #content #class 🔼 📅 2026-10-14
+  - Per class: a short macros section (useful macros only, each one explained) and a "changed from Classic" section written as a blog post, not a table. Uses `classicStatus`/`classicDescription` data already in `spellbooks.json`.
+  - Depends on the Classic-description backfill (see Data & content quality), so expect gaps for the spells still missing Classic text.
+
 ## Launch-critical (hard deadline: Nov 4, 2026)
 - [ ] **HARD DEADLINE — Nov 4, 2026 (launch).** Use wow.export to extract full game data: icons, dungeon loot, all items, tooltips. #data #wow-export #launch 🔺 📅 2026-11-04
   - Supersedes the narrower "export FileDataID 1121272 for real dungeon/raid/battleground icons" item, which is listed under Map (paused) below and could be folded into this extraction.

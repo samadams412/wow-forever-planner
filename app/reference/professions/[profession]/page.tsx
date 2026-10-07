@@ -90,6 +90,7 @@ export default async function ProfessionPage({ params }: { params: Promise<{ pro
           <CraftingProfessionExplorer
             data={{
               id: crafting.id,
+              name: crafting.name,
               categories: crafting.categories,
               favorSupported: crafting.favorSupported,
               favor: crafting.favor,
