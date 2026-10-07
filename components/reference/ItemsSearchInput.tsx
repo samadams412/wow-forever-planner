@@ -20,6 +20,7 @@ export default function ItemsSearchInput({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [value, setValue] = useState(initialValue);
+  const [prevInitialValue, setPrevInitialValue] = useState(initialValue);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -31,11 +32,12 @@ export default function ItemsSearchInput({
   // Follows an outside reset (e.g. a "Clear filters" link dropping ?q=) without
   // fighting the user: typing already writes the trimmed value back to the URL,
   // so the comparison is against the trimmed box text. A trailing space typed
-  // mid-word therefore doesn't get wiped.
-  useEffect(() => {
+  // mid-word therefore doesn't get wiped. Adjusted during render rather than
+  // in an effect, so the box never paints one frame with the stale text.
+  if (initialValue !== prevInitialValue) {
+    setPrevInitialValue(initialValue);
     if (initialValue !== value.trim()) setValue(initialValue);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialValue]);
+  }
 
   function handleChange(next: string) {
     setValue(next);
