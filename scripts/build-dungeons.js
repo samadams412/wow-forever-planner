@@ -120,18 +120,18 @@ function wowtbcItemToUnified(raw) {
   };
 }
 
-// Boss loot items carry their own snapshot of name/quality/level from the
-// dungeon scrape, which goes stale when a beta patch changes an item (the Oct 1
-// nerfs left 12 boss items on pre-patch values). When the current item catalog
-// disagrees with that snapshot on any of those core fields, the catalog entry
-// wins, same as quest rewards. Items that already agree keep the scrape's own
-// record, so the rest of the boss loot is unchanged.
+// Boss loot items carry their own snapshot of the item record from the dungeon
+// scrape, which goes stale when a beta patch changes an item (the Oct 1 nerfs
+// left 12 boss items on pre-patch values). The current item catalog wins
+// whenever it has the item, same as quest rewards; the scrape's record is only
+// the fallback for an id the catalog lacks. (This used to swap only when
+// name/quality/level disagreed, which kept stale tooltips, item-class shapes
+// and statuses: 164 records in 14 dungeons as of 2026-10-06.) The scrape-only
+// fields (w, z) aren't read by fcItemToUnified, so nothing rendered is lost.
+// The dungeon scrape still decides which items each boss drops.
 function bossLootItemToUnified(raw) {
   const current = raw.i !== undefined ? ITEMS_BY_ID.get(raw.i) : null;
-  const stale =
-    current &&
-    (current.n !== raw.n || current.q !== raw.q || current.l !== raw.l || current.r !== raw.r);
-  return fcItemToUnified(stale ? current : raw);
+  return fcItemToUnified(current ?? raw);
 }
 
 function questRewardItemToUnified(raw) {
