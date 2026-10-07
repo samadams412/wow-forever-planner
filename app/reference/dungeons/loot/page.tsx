@@ -69,7 +69,10 @@ export default function DungeonLootIndexPage() {
                 <td className="hero-text-muted whitespace-nowrap px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
                   {d.levelMin}-{d.levelMax}
                 </td>
-                <td className="hero-text-muted px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">{d.bossCount}</td>
+                <td className="hero-text-muted px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
+                  {d.bossCount}
+                  {d.rareCount > 0 && <span className="ml-1 text-xs">+{d.rareCount} rare</span>}
+                </td>
                 <td className="hero-text-muted px-3 py-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
                   {d.questCount || "--"}
                 </td>
