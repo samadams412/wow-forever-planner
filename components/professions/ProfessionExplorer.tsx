@@ -13,7 +13,9 @@ import ProfessionCamp from "@/components/professions/ProfessionCamp";
 import ProfessionNodeList from "@/components/professions/ProfessionNodeList";
 import ProfessionGatheringLeveling from "@/components/professions/ProfessionGatheringLeveling";
 import ProfessionSmeltingTable from "@/components/professions/ProfessionSmeltingTable";
+import LevelingUnderConstruction from "@/components/professions/LevelingUnderConstruction";
 import { mediumIconUrl } from "@/lib/wow-data";
+import { isLevelingVerified } from "@/lib/profession-leveling-status";
 import type { CampSection, FavorTier, ResolvedRecipe } from "@/lib/profession-recipes";
 import type { GatheringCatalog } from "@/lib/gathering-professions";
 import type { ResolvedLevelingRank } from "@/lib/profession-utils";
@@ -42,6 +44,7 @@ const TAB_ICON: Record<string, string> = {
 
 export type CraftingProfessionData = {
   id: string;
+  name: string;
   categories: string[];
   favorSupported: boolean;
   favor: FavorTier[] | null;
@@ -107,10 +110,12 @@ function CraftingView({ data, params }: { data: CraftingProfessionData; params: 
           {tabIcon("recipes")}
           Recipes
         </Link>
-        <Link href={`/reference/professions/${data.id}?view=leveling`} className={viewLinkClass("leveling")}>
-          {tabIcon("leveling")}
-          Leveling 1 to 300
-        </Link>
+        {data.leveling && (
+          <Link href={`/reference/professions/${data.id}?view=leveling`} className={viewLinkClass("leveling")}>
+            {tabIcon("leveling")}
+            Leveling 1 to 300
+          </Link>
+        )}
         {data.favorSupported && (
           <Link href={`/reference/professions/${data.id}?view=favor`} className={viewLinkClass("favor")}>
             {tabIcon("favor")}
@@ -174,20 +179,17 @@ function CraftingView({ data, params }: { data: CraftingProfessionData; params: 
         </>
       )}
 
-      {activeView === "leveling" &&
-        (data.leveling ? (
-          <>
-            <p className="mt-4 text-xs text-foreground-muted">
-              <a href="#items-needed" className="text-accent hover:underline">
-                Jump to items needed &darr;
-              </a>
-            </p>
-            <ProfessionLevelingGuide leveling={data.leveling} professionId={data.id} />
-            <ProfessionShoppingList leveling={data.leveling} recipes={data.recipes} professionId={data.id} />
-          </>
-        ) : (
-          <ComingSoon label="Leveling 1 to 300" />
-        ))}
+      {activeView === "leveling" && data.leveling && (
+        <LevelingUnderConstruction verified={isLevelingVerified(data.id)} name={data.name}>
+          <p className="mt-4 text-xs text-foreground-muted">
+            <a href="#items-needed" className="text-accent hover:underline">
+              Jump to items needed &darr;
+            </a>
+          </p>
+          <ProfessionLevelingGuide leveling={data.leveling} professionId={data.id} />
+          <ProfessionShoppingList leveling={data.leveling} recipes={data.recipes} professionId={data.id} />
+        </LevelingUnderConstruction>
+      )}
 
       {activeView === "favor" &&
         (data.favor ? (
@@ -252,7 +254,9 @@ function GatheringView({ catalog, view }: { catalog: GatheringCatalog; view: str
 
       {activeView === "nodes" && catalog.nodes && <ProfessionNodeList nodes={catalog.nodes} professionId={catalog.id} />}
       {activeView === "leveling" && catalog.leveling && (
-        <ProfessionGatheringLeveling steps={catalog.leveling} professionId={catalog.id} />
+        <LevelingUnderConstruction verified={isLevelingVerified(catalog.id)} name={catalog.name}>
+          <ProfessionGatheringLeveling steps={catalog.leveling} professionId={catalog.id} />
+        </LevelingUnderConstruction>
       )}
       {activeView === "skin" && catalog.skin && <ProfessionGatheringLeveling steps={catalog.skin} professionId={catalog.id} />}
       {activeView === "smelting" && catalog.smelting && (

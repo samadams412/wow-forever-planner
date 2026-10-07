@@ -214,6 +214,22 @@ prerendered HTML has real content). `data/professions-catalog/uncertain.json`
 lists 101 recipes (mostly Engineering) with a low-confidence category
 guess — not yet individually reviewed.
 
+**Leveling 1 to 300 verification (`lib/profession-leveling-status.ts`):**
+`LEVELING_VERIFIED_PROFESSION_IDS` (currently Blacksmithing and First Aid)
+marks the paths that are tested and final. Every other profession keeps its
+Leveling tab and its catalog data, reachable on the page and via
+`?view=leveling`. For non-verified ids, `LevelingUnderConstruction`
+(`components/professions/`) wraps the leveling view: content is grayed out
+(opacity + grayscale), made `inert` and covered by a click-blocking scrim, and
+crossed by two caution-tape bands. A card above it says the path isn't
+verified and links to `/contact`. The page and explorer don't gate the tab or
+the URL; the overlay is the only treatment. The `/reference/professions`
+listing still shows an "In the works" card (`InTheWorksCard`) as a quick-glance
+marker. To verify one, add its id to `LEVELING_VERIFIED_PROFESSION_IDS`. The
+MDX guide and blog pipelines are unaffected: the profession write-ups in
+`content/blog/` are patch announcements, not leveling guides, and none of the
+guide drafts exist.
+
 ### `data/sources/` layout
 Organized by source: `data/sources/{talentsforever,wowtbc,foreverchanges}/`.
 See `data/sources/README.md` for what lives where. **Known trap:**
@@ -294,6 +310,7 @@ See `docs/adding-content.md` for guides/blog/profession frontmatter,
 image/credit conventions, and SEO metadata specifics.
 
 ## Next up
+- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`).
 - **Design the November data layout (items / loot / tooltips) before
   importing the full wow.export dataset** — per-item shards (static files,
   fetched on demand / prerendered) vs. Postgres. Decide this first; today's
@@ -318,6 +335,11 @@ image/credit conventions, and SEO metadata specifics.
 - `data/professions-catalog/uncertain.json`'s 101 low-confidence category
   guesses haven't been reviewed.
 - `lib/blog.ts` isn't on the shared `lib/content.ts` loader yet.
+- **Leveling guides held for review (2026-10-06):** the other crafting and
+  gathering professions have catalog leveling data but aren't in
+  `LEVELING_VERIFIED_PROFESSION_IDS`. Review each one, then add it to the
+  verified list. Decide whether the "Browse" links on the in-the-works cards are
+  wanted (they keep recipe pages reachable from the listing).
 - Re-tile Kalimdor with the GM Island 3x3 ADT block excluded (currently
   shows as a stray unlabeled island in the NW corner).
 - No mobile pass yet for `DungeonInlinePanel`'s boss/quest two-column

@@ -75,7 +75,7 @@ export default function GuidesPage() {
           <Card
             href="/reference/professions"
             title="Profession Leveling Guides"
-            description="Step-by-step 1-300 leveling paths for every profession -- what to craft, where to buy the recipe, and what it takes, all in one tab per profession."
+            description="Step-by-step 1-300 leveling paths -- what to craft, where to buy the recipe, and what it takes. Blacksmithing and First Aid are live; the rest are in the works."
             icon={
               /* eslint-disable-next-line @next/next/no-img-element */
               <img src={mediumIconUrl("inv_scroll_03")} alt="" className="h-7 w-7 rounded-sm" />
