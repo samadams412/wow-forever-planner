@@ -37,6 +37,7 @@ Added 2026-10-06. Design/scoping work this week; build items are called out as s
 - [ ] Data-refresh passes as beta patches land (expect 2–3+ before launch): run `node scripts/diff-talentsforever.js`, read the vendor changelog by hand, apply by name-match. ⏫ 📅 2026-11-04 #data #recurring #launch *(priority unconfirmed; it was listed under "Recurring" with no priority)*
 
 ## Next up
+- [ ] **Data pipeline automation: `npm run sync-items` / `npm run sync-dungeons`** (fetch, archive, diff, build, verify in one command), diff-script fixes, shared verification + sentinels, fail-loudly `dungeon_overrides.json`, weekly drift check. Design only so far: `03-Handoffs/data-pipeline/2026-10-06-pipeline-automation-design.md`. Do phases 1–2 (diff-script fixes, `verify-data.ts`) before the next beta patch. ⏫ #data #automation #pipeline *(added 2026-10-06; priority provisional)*
 - [ ] Saved/shared builds via **Vercel KV** (simple key-value storage) instead of Postgres + Auth, enabling a browsable "most used builds" list. ⏫ #planner #kv #feature
   - Design notes and open questions in [[Architecture]] "Saved builds". Not started: no KV dependency in `package.json` yet.
 - [ ] Update the professions guides (1–300) for optimization. 🔼 #professions #content

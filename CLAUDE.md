@@ -16,6 +16,12 @@ pipelines investigated, and every superseded/reverted approach) lives in
 from that archive, `Forevercraft-Knowledge-Base/03-Handoffs/<category>/*.md` holds the individual
 per-task handoffs, sorted into category folders, e.g. `maps/` or `data-pipeline/`.)
 
+**New session orientation:** `Forevercraft-Knowledge-Base/01-Projects/Forevercraft/Site-Overview-2026-10-06.md`
+(route map, data pipeline end to end, architecture, the week's work, roadmap
+state) and `Weekly-Audit-2026-10-06.md` in the same folder (regression,
+security, and tech-debt findings with evidence). Both are dated snapshots;
+this file wins where they disagree.
+
 Read this file at the start of a session. At the end of a session that did
 substantive work (not a quick question), write a handoff into
 `Forevercraft-Knowledge-Base/03-Handoffs/<category>/`, following the format
@@ -70,10 +76,12 @@ Encoding is positional (one base36 rank digit per talent, ordered by tier
 then col, trees joined with `-`) with no name/id tie-back — so any change
 to a tree's talent membership/order needs a version bump, or old shared
 links silently decode to the wrong talent. `encodeBuild` prepends a
-version segment (currently `3`); `decodeBuild` branches: versioned codes
+version segment (currently `5`); `decodeBuild` branches: versioned codes
 decode against current tree order, legacy/old-version codes decode
 against a frozen snapshot (`LEGACY_TREE_ORDER`/`V2_TREE_ORDER`) + an id
-translation table, then clamp to current `maxRank`.
+translation table, then clamp to current `maxRank`. Frozen snapshots now
+run `LEGACY`/`V2`/`V3`/`V4_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
+Warrior Fury/Protection 2026-10-03).
 
 **The next time a tree's talent membership or order changes**, bump
 `CURRENT_VERSION` and add a new frozen order snapshot + translation table
@@ -184,11 +192,14 @@ catalog (`data/items.json`) — 100% match rate, no name-fallback needed.
 Rebuild via `node scripts/build-dungeons.js`.
 
 ### `/reference/items` and `/items/[itemId]`
-Full 21,458-item catalog (`data/items.json`, built by
+Full 21,626-item catalog (`data/items.json`, built by
 `scripts/build-items.js`), filtered/paginated **server-side**
 (`lib/items.ts`'s `queryItems`) — the catalog is never shipped to the
 client for filtering, to protect load-time. Current item pull is
-`1.60.1.70235` (2026-10-05, applied 2026-10-06); the previous pull is in
+`1.60.1.70235` (2026-10-05), re-fetched 2026-10-06 from
+`https://foreverchanges.pro/items/{new,changed,same,missing,sources}.json`
+(foreverchanges republished `new.json` under the same build number with one
+added item, so 21,626 items); previous copies are in
 `data/sources/foreverchanges/items/archive/`. Individual item pages
 (`/items/[itemId]`) are **not statically generated** (no
 `generateStaticParams`) — rendered on demand. `context: "loot" | "catalog"`
@@ -297,9 +308,13 @@ and the archive for the CDN plan).
 Collection only: nothing reads these counts yet, no Popular Builds UI exists. Full detail (schema rationale, the determinism/Next-cache/build-time investigation, Vercel usage findings): `Forevercraft-Knowledge-Base/01-Projects/Forevercraft/Architecture.md` → "Build tracking".
 
 - **Events:** `shared` / `saved` / `opened`, each `{classId, buildCode, token}`. Schema/validation in `lib/build-events.ts`. Raw token never stored.
-- **Token/hashing:** random 32-hex token in localStorage (`lib/build-tracking-client.ts`), server stores only `HMAC-SHA256(BUILD_TRACKING_SECRET, ...)`. IPs are hashed the same way for rate-limit keys only.
+- **Token/hashing:** random 32-hex token in localStorage (`lib/build-tracking-client.ts`), server stores only `HMAC-SHA256(BUILD_TRACKING_SECRET, ...)`. IPs are hashed the same way, for rate-limit keys and the popularity HyperLogLog only. The token is browser-minted, so per-token limits only stop accidental repeats; the per-IP limits bound abuse.
+- **Build validation (write time):** `canonicalBuildCode` decodes with the planner decoder and rejects builds with no points or that fail `isValidBuildState` (`lib/talent-rules.ts`: ≤51 points, rows unlocked by tree points, prereqs met; same rules `canAddPoint`/`canRemovePoint` keep). Stored codes are canonical current-version codes, so a legacy link counts as the same build. Invalid builds get 400.
+- **Popularity signal:** distinct hashed IPs per build per UTC day, `PFADD builds:hll:<classId>:<buildCode>:<day>` (40-day TTL) plus a per-day index set `builds:hll-index:<day>` of `<classId>:<buildCode>`. Rank popularity from these, not from raw event counts.
+- **Local writes are off:** `getRedis()` returns null when `NODE_ENV !== "production"`, and the capture route no-ops for a loopback `Host` header (catches local `next start`, which runs as production with `.env.local` pointing at the **production** database). Both log one warning. `BUILD_TRACKING_ALLOW_LOCAL=1` opts in (use it only against a stand-in or a throwaway database).
+- **Bots:** the client skips `opened` when `navigator.webdriver` is true.
 - **Secrets/env:** `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN` (auto, Vercel Marketplace Upstash integration), `BUILD_TRACKING_SECRET` and `CRON_SECRET` (set by hand in Vercel). Locally via `vercel env pull .env.local`, then paste real secret values over the `[SENSITIVE]` placeholders by hand. Missing Upstash vars = tracking no-ops.
-- **Capture route:** `POST /api/builds/track` (`lib/build-tracking-server.ts` `recordBuildEvent`), fire-and-forget (`sendBeacon`/`fetch keepalive`). Rate limits: 30/min/IP, 100/day/token.
+- **Capture route:** `POST /api/builds/track` (`lib/build-tracking-server.ts` `recordBuildEvent`), fire-and-forget (`sendBeacon`/`fetch keepalive`). Rate limits: 30/min/IP (burst), 50 accepted events/day/IP, 100/day/token.
 - **Dedup (write time):** one counted event per (type, token, classId, buildCode) per UTC day — `SET NX EX` claim before the write. Reloads, repeat clicks, and late clipboard callbacks collapse to one.
 - **Daily rollup:** `GET /api/cron/build-rollup` (`lib/build-rollup.ts`), Bearer `$CRON_SECRET`. `vercel.json` schedule `0 6 * * *` (Hobby: daily only, ~1h window). Aggregates raw events into `builds:agg:classes`/`builds:agg:talents`/`builds:agg:meta`, then trims what it processed.
 
@@ -319,11 +334,14 @@ image/credit conventions, and SEO metadata specifics.
 
 ## Open items (carried forward)
 - **Dungeon loot header art (refined 2026-10-06):** borderless header image, 560px wide on `sm+`, height set by its natural ratio (no crop). Fades into the page on its right edge via `linear-gradient(to right, transparent 60%, var(--background))`, so the blend matches the page in both themes. Full-width and unfaded on narrow screens. Verified on Uldaman and Wailing Caverns (rendered ratio 1.829 vs source 1.827), and phone width (386px, stacked, no overlap, no horizontal scroll). Title sits beside the image on `sm+`. Options and trade-offs are in `Forevercraft-Knowledge-Base/03-Handoffs/reference-ui/2026-10-06-loot-pill-cleanup-quest-ui-and-header-art.md`.
-- **`lib/quests.ts` reads `data/quests/detail/<variable>.json`:** Turbopack warns that the pattern matches 10,098 files. This is the runtime-variable path the standing rule forbids. Fix with a generated literal-path map (like `lib/og-backgrounds.generated.ts`), then recheck `.nft.json` sizes.
+- **`lib/quest-detail.ts` reads `data/quests/detail/<variable>.json`:** Turbopack warns that the pattern matches 10,098 files (still a warning, build exit 0, re-checked 2026-10-06). This is the runtime-variable path the standing rule forbids. The file's comment says the shards are never traced, but `/quests/[questId]/page.js.nft.json` lists all 5,049 of them. Fix with a generated literal-path map (like `lib/og-backgrounds.generated.ts`) or a route-scoped `outputFileTracingExcludes`, then recheck `.nft.json` sizes.
+- **`lib/dungeon-loot.ts` reads the whole `data/dungeons/` directory**, so ~4.9 MB of committed non-JSON source files there (dungeon map PNG/JPGs, `Classic-Classic.lua`) are traced into 10 functions, including ƒ `/reference/items`. Move them out of `data/dungeons/` (update the map scripts' paths) or exclude them from traces. See `Weekly-Audit-2026-10-06.md` §3.4.
+- **Build tracking (pending, owner/dashboard actions only):** the code fixes landed 2026-10-06 (distinct-IP HyperLogLog, 50/day/IP cap, write-time build validation, `opened` bot filter, local-write guard; see "Build tracking" above and `03-Handoffs/infrastructure/2026-10-06-build-tracking-security-fixes.md`). Still open: (1) a **Vercel Firewall rate-limit rule** on `/api/builds/track` (each request, rejected or not, costs ~5 Upstash commands of the 500k/month free tier); (2) **reset the 4 test events** in production `builds:agg:*` before Popular Builds ships; (3) the rollup still aggregates raw event counts (`builds:agg:*`), which one IP can push by up to 50/day, so the Popular Builds reader should rank by the HLLs.
 - **Sell-price-only "changed" items are display-unchanged but still indexable:** `lib/item-display-status.ts` (`displayStatus`) drives the item tooltip and item-page callout. `isIndexableItemStatus` (sitemap, `robots`) still reads the stored status, so 104 such items stay indexed. Decide whether the predicate should use `displayStatus`.
-- **Stale dungeon item snapshots (resynced 2026-10-06, check for recurrence):** 157 boss-item records in the nine dungeons re-pulled with the 70235 items pull had drifted from the catalog (tooltips, `itemClass`/`type` shape). Resynced by rebuild; nothing else was checked item-by-item. Count-only audits miss this. Use an item-level diff before trusting a "no drift" result.
-- **`scripts/diff-foreverchanges-items.js` truncates tooltips at 160 chars and doesn't diff `sources.json`, `p`/`d`/`v`/`t`:** a removed line (e.g. the Buckshot's Use effect) can be hidden in the markdown. Read the JSON or the raw records for a real check.
-- **Dungeon raw data for the other 26 dungeons is not refreshed (hold):** Razorfen Kraul and The Stockade were restored from live data on 2026-10-06, and nine more (Blackfathom Deeps, Gnomeregan, Razorfen Downs, Shadowfang Keep, SM Armory, SM Library, Uldaman, Wailing Caverns) were re-pulled with the 1.60.1.70235 items pull. The remaining 26 still predate the live endpoint, and count audits found no drift. Count audits miss item-level drift (the nine above had item-level drift with matching counts), so check per-item lists before trusting a "no drift" result. See `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-06-foreverchanges-pull-diff-and-sync.md`. Roster counts are rendered from `lib/dungeon-roster.ts` (client-safe: no Node built-ins, since `dungeon-loot.ts` imports `fs`). Bosses and rare spawns are shown as separate figures, never summed. The rare split comes from foreverchanges' `kind`, because `sources.json` tags all dungeon drops `B`. See `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-06-client-bundle-fix-and-roster-split.md`.
+- **Stale dungeon item snapshots: root cause fixed 2026-10-06.** `build-dungeons.js` `bossLootItemToUnified` now always takes the catalog record when the catalog has the item (it used to swap only on a name/quality/level mismatch, which left 157 + 164 stale records over the week). All 1,967 boss items in 35 dungeons matched `data/items.json` after the rebuild. Keep running `build-dungeons.js` after every `build-items.js`, because item records are still baked in. See `03-Handoffs/data-pipeline/2026-10-06-dungeon-drift-audit.md`.
+- **`scripts/diff-foreverchanges-items.js` truncates tooltips at 160 chars and doesn't diff `sources.json`, `p`/`d`/`v`/`t`:** a removed line can be hidden in the markdown. Until fixed (phase 1 of the automation design below), write a full all-field report by hand next to it (format: `items/diffs/…_republished-2026-10-06_full.md`).
+- **Dungeon loot drift: all 29 raw files match live as of 2026-10-06 (late).** `node scripts/check-dungeon-drift.js` (read-only; per-group item-id sets, kind/level; `--slugs`, `--json`; exit 1 on drift) found 4 drifted dungeons (Ruins of Lordaeron, Excavation Site, The Deadmines, SM Graveyard). All were additions, re-pulled and rebuilt; RFK and The Stockade already matched. Run it at every beta patch and before every item pull. It doesn't cover `.mapdata.json`/`.quests.json` yet. Roster counts are rendered from `lib/dungeon-roster.ts` (client-safe: no Node built-ins, since `dungeon-loot.ts` imports `fs`). Bosses and rare spawns are shown as separate figures, never summed. The rare split comes from foreverchanges' `kind`, because `sources.json` tags all dungeon drops `B`. See `03-Handoffs/data-pipeline/2026-10-06-dungeon-drift-audit.md`.
+- **Data pipeline automation (proposed, not built):** one command per pipeline (`npm run sync-items`, `npm run sync-dungeons`: fetch, archive, diff, build, verify, no skippable steps), diff-script fixes, a shared `verify-data.ts` with sentinels, a fail-loudly `dungeon_overrides.json` layer (build-time roster role and quest XP instead of render/load-time corrections), and a weekly scheduled drift check. Design and phasing: `03-Handoffs/data-pipeline/2026-10-06-pipeline-automation-design.md`. Phases 1–2 (diff fixes, verify script) are worth doing before the next beta patch.
 - **Vercel function sizes (open, not urgent):** functions are 24.2 MB each
   (was ~121 MB) but the dashboard's uniform sizes don't match local trace
   sizes, and the cause is unexplained. See
