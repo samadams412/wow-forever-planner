@@ -418,9 +418,19 @@
      "s": "Shoulder",
      "c": 4,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shoulder_13",
      "x": [
+      "Binds when equipped",
+      "Shoulder\tLeather",
+      "88 Armor",
+      "+5 Strength",
+      "+10 Agility",
+      "+10 Stamina",
+      "Requires Level 33",
+      "Sell Price: 42s 65c"
+     ],
+     "y": [
       "Binds when equipped",
       "Shoulder\tLeather",
       "88 Armor",
@@ -1008,9 +1018,20 @@
      "s": "One-Hand",
      "c": 2,
      "u": 4,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_mace_11",
      "x": [
+      "Binds when equipped",
+      "One-Hand\tMace",
+      "41 - 76 Damage\tSpeed 2.20",
+      "(26.6 damage per second)",
+      "+4 Stamina",
+      "+5 Strength",
+      "Requires Level 34",
+      "Chance on hit: Silences an enemy, preventing it from casting spells for 6 sec.",
+      "Sell Price: 1g 22s 52c"
+     ],
+     "y": [
       "Binds when equipped",
       "One-Hand\tMace",
       "41 - 76 Damage\tSpeed 2.20",
@@ -1021,8 +1042,8 @@
       "Sell Price: 1g 19s 70c"
      ],
      "v": {
-      "4": 6,
-      "7": 6
+      "4": 5,
+      "7": 4
      },
      "z": 0
     },
