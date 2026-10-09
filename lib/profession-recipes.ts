@@ -171,7 +171,7 @@ export function getProfessionCatalog(id: string): ProfessionCatalog | undefined 
   return catalog;
 }
 
-export function getAllProfessionSummaries(): { id: string; name: string; recipeCount: number; hasLeveling: boolean }[] {
+export function getAllProfessionSummaries(): { id: string; name: string; recipeCount: number }[] {
   return getProfessionIds()
     .map((id) => {
       const catalog = getProfessionCatalog(id);
@@ -180,8 +180,7 @@ export function getAllProfessionSummaries(): { id: string; name: string; recipeC
         id: catalog.id,
         name: catalog.name,
         recipeCount: catalog.recipes.length,
-        hasLeveling: catalog.leveling !== null,
       };
     })
-    .filter((p): p is { id: string; name: string; recipeCount: number; hasLeveling: boolean } => p !== undefined);
+    .filter((p): p is { id: string; name: string; recipeCount: number } => p !== undefined);
 }

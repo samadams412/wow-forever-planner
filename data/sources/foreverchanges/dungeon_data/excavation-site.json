@@ -99,33 +99,6 @@
    "display": 144210,
    "items": [
     {
-     "i": 273027,
-     "n": "Raptor's Gaze",
-     "q": 3,
-     "l": 31,
-     "r": 26,
-     "s": "Held In Off-hand",
-     "c": 4,
-     "u": 0,
-     "t": "new",
-     "k": "spell_nature_crystalball",
-     "x": [
-      "Binds when picked up",
-      "Held In Off-hand",
-      "+7 Stamina",
-      "+4 Intellect",
-      "Requires Level 26",
-      "Equip: +5 Spell Power",
-      "Sell Price: 23s 24c"
-     ],
-     "v": {
-      "5": 4,
-      "7": 7,
-      "45": 5
-     },
-     "w": 1
-    },
-    {
      "i": 273025,
      "n": "Raptorclaw Greaves",
      "q": 3,
@@ -180,6 +153,33 @@
       "5": 13,
       "7": 6,
       "50": 105
+     },
+     "w": 1
+    },
+    {
+     "i": 273027,
+     "n": "Raptor's Gaze",
+     "q": 3,
+     "l": 31,
+     "r": 26,
+     "s": "Held In Off-hand",
+     "c": 4,
+     "u": 0,
+     "t": "new",
+     "k": "spell_nature_crystalball",
+     "x": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+7 Stamina",
+      "+4 Intellect",
+      "Requires Level 26",
+      "Equip: +5 Spell Power",
+      "Sell Price: 23s 24c"
+     ],
+     "v": {
+      "5": 4,
+      "7": 7,
+      "45": 5
      },
      "w": 1
     },
@@ -264,6 +264,32 @@
      "w": 1
     },
     {
+     "i": 273030,
+     "n": "Ring of Power Regulation",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Finger",
+     "c": 4,
+     "u": 0,
+     "t": "new",
+     "k": "inv_jewelry_ring_28",
+     "x": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+8 Stamina",
+      "Requires Level 28",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 29s 20c"
+     ],
+     "v": {
+      "7": 8,
+      "43": 2
+     },
+     "w": 1
+    },
+    {
      "i": 270865,
      "n": "Titan Relic",
      "q": 1,
@@ -308,29 +334,23 @@
      "w": 1
     },
     {
-     "i": 273030,
-     "n": "Ring of Power Regulation",
-     "q": 3,
-     "l": 33,
-     "r": 28,
-     "s": "Finger",
-     "c": 4,
+     "i": 273097,
+     "n": "Blueprint: Rock Garden",
+     "q": 2,
+     "l": 25,
+     "r": 0,
+     "s": null,
+     "c": 9,
      "u": 0,
      "t": "new",
-     "k": "inv_jewelry_ring_28",
+     "k": "inv_garrison_blueprints3",
      "x": [
-      "Binds when picked up",
-      "Unique-Equipped",
-      "Finger",
-      "+8 Stamina",
-      "Requires Level 28",
-      "Equip: +2 Mana Regeneration",
-      "Sell Price: 29s 20c"
+      "\tBook",
+      "Requires Mining (140)",
+      "Use: Craft a Rock Garden.",
+      "\"Teaches you how to place a Rock Garden at a campsite.\"",
+      "Sell Price: 3s 75c"
      ],
-     "v": {
-      "7": 8,
-      "43": 2
-     },
      "w": 1
     }
    ]

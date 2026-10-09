@@ -68,7 +68,13 @@ data/sources/
                            generated via `npx tsx
                            scripts/build-missing-quest-text-list.js`.
     items/                new.json / changed.json / same.json /
-                           missing.json -- the full ~21k-item catalog
+                           missing.json -- the full ~21k-item catalog.
+                           Fetched from https://foreverchanges.pro/items/
+                           <name>.json (all five files, sources.json
+                           included; robots.txt allows it). A republish can
+                           keep the same forever_build (2026-10-06: new.json
+                           gained one item under 1.60.1.70235), so compare
+                           bytes, not just the build stamp.
       archive/<version>-<date>/   previous pull's four bucket files,
                            archived here (unchanged filenames, just
                            moved) before the live files are overwritten
@@ -84,9 +90,12 @@ data/sources/
                            crafted/world-drop/rare/dungeon-trash),
                            `{forever_build, items: {id: [code, label,
                            location]}}`. Covers ~54% of the catalog
-                           (11,625/21,561 ids as of 1.60.1.70170); not
-                           read by any build script as of 2026-10-02,
-                           see item detail page for the consuming code.
+                           (11,712/21,626 ids as of 1.60.1.70235). Read
+                           by lib/item-sources.ts (item page sources) and
+                           scripts/build-dungeons.js (addSourcedBossDrops:
+                           adds a drop when the label names a boss in that
+                           dungeon exactly; never removes). One source per
+                           item, so multi-boss drops come from dungeon_data/.
       known-duplicate-ids.json   hand-confirmed cases of foreverchanges.pro
                            issuing a new id for an item we already have
                            under an older id (not a real new item). See

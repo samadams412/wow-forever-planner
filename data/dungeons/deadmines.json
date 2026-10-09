@@ -24,7 +24,7 @@
      "name": "Rockslicer",
      "slot": "Two-Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 872,
      "icon": "inv_throwingaxe_01",
      "quality": 3,
@@ -36,9 +36,12 @@
       "Two-Hand\tAxe",
       "52 - 78 Damage\tSpeed 3.30",
       "(19.7 damage per second)",
-      "+10 Strength",
-      "Use: Slice open and gather from target Copper, Tin, Silver, or Iron Vein (does not require Mining).",
-      "Requires Level 18"
+      "+7 Strength",
+      "+7 Nature Resistance",
+      "Requires Level 18",
+      "Use: Slice open and gather from a target Copper, Tin, Silver, or Iron Vein (does not require Mining).",
+      "30 Charges",
+      "Sell Price: 31s 89c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -60,7 +63,7 @@
      "name": "Rhahk'Zor's Hammer",
      "slot": "Two-Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5187,
      "icon": "inv_hammer_09",
      "quality": 3,
@@ -72,8 +75,9 @@
       "47 - 71 Damage\tSpeed 3.20",
       "(18.4 damage per second)",
       "+8 Stamina",
-      "+8 Spell Power",
-      "Requires Level 16"
+      "Requires Level 16",
+      "Equip: +8 Spell Power",
+      "Sell Price: 24s 54c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -93,7 +97,7 @@
      "name": "Ogre Loincloth",
      "slot": "Legs",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 273289,
      "icon": "inv_pants_09",
      "quality": 3,
@@ -105,9 +109,10 @@
       "35 Armor",
       "+4 Strength",
       "+6 Stamina",
-      "+6 Spell Damage",
-      "+18 Healing",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: +18 Healing",
+      "Equip: +6 Spell Damage",
+      "Sell Price: 8s 95c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -141,6 +146,30 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Filigreed Silky Gown",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 253904,
+     "icon": "inv_scroll_03",
+     "quality": 3,
+     "itemLevel": 20,
+     "requiredLevel": 1,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (75)",
+      "\"Teaches you how to craft Filigreed Silky Gown.\"",
+      "Sell Price: 1s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -163,9 +192,9 @@
    "items": [
     {
      "name": "Gold-plated Buckler",
-     "slot": "Off Hand",
+     "slot": "Shield",
      "type": "Shield",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5443,
      "icon": "inv_shield_02",
      "quality": 3,
@@ -175,16 +204,19 @@
       "Binds when picked up",
       "Off Hand\tShield",
       "509 Armor",
-      "+2 Agility",
+      "10 Block",
       "+5 Stamina",
-      "Equip: After entering combat, reduce the next instance of physical damage taken within 20 sec by -15.",
-      "Requires Level 17"
+      "+2 Agility",
+      "Requires Level 17",
+      "Equip: After entering combat, reduce the next instance of Physical damage taken within 20 sec by 15.",
+      "Sell Price: 14s 45c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
       "Binds when picked up",
       "Off Hand\tShield",
       "471 Armor",
+      "9 Block",
       "+5 Stamina",
       "+2 Agility",
       "Requires Level 15",
@@ -200,7 +232,7 @@
      "name": "Miner's Cape",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5444,
      "icon": "inv_misc_cape_11",
      "quality": 3,
@@ -211,9 +243,11 @@
       "Back\tCloth",
       "20 Armor",
       "+5 Stamina",
-      "+4 Attack Power",
-      "+2 Mining",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: +2 Mining Skill",
+      "Equip: +6 Attack Power Vs Elementals",
+      "Equip: +4 Attack Power",
+      "Sell Price: 6s 77c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -261,7 +295,7 @@
      "name": "Taskmaster Axe",
      "slot": "Two-Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5194,
      "icon": "inv_throwingaxe_06",
      "quality": 3,
@@ -270,13 +304,14 @@
      "tooltip": [
       "Binds when picked up",
       "Two-Hand\tAxe",
-      "32 - 48 Damage\tSpeed 2.70",
-      "(14.8 damage per second)",
-      "+8 Stamina",
+      "31 - 48 Damage\tSpeed 2.70",
+      "(14.6 damage per second)",
       "+8 Spirit",
-      "+15 Spell Damage",
-      "+44 Healing",
-      "Requires Level 18"
+      "+8 Stamina",
+      "Requires Level 18",
+      "Equip: +45 Healing",
+      "Equip: +15 Spell Damage",
+      "Sell Price: 31s 89c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -299,7 +334,7 @@
      "name": "Gold-flecked Gloves",
      "slot": "Hands",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5195,
      "icon": "inv_gauntlets_23",
      "quality": 3,
@@ -311,7 +346,8 @@
       "25 Armor",
       "+7 Strength",
       "+5 Fire Resistance",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Sell Price: 4s 51c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -333,7 +369,7 @@
      "name": "Bandsaw Wristbands",
      "slot": "Wrist",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 273293,
      "icon": "inv_bracer_03",
      "quality": 3,
@@ -344,8 +380,9 @@
       "Wrist\tMail",
       "82 Armor",
       "+5 Stamina",
-      "Equip: Deals 6 Physical damage every time you block.",
-      "Requires Level 16"
+      "Requires Level 16",
+      "Equip: Deals 5 to 7 Physical damage every time you block.",
+      "Sell Price: 5s 92c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -406,7 +443,7 @@
      "name": "Buzz Saw",
      "slot": "One-Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1937,
      "icon": "inv_sword_24",
      "quality": 3,
@@ -419,7 +456,8 @@
       "(15.2 damage per second)",
       "+3 Agility",
       "+3 Stamina",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Sell Price: 25s 51c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -442,7 +480,7 @@
      "name": "Buzzer Blade",
      "slot": "Main Hand",
      "type": "Dagger",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 2169,
      "icon": "inv_weapon_shortblade_05",
      "quality": 3,
@@ -453,9 +491,10 @@
       "Main Hand\tDagger",
       "9 - 18 Damage\tSpeed 1.50",
       "(9.0 damage per second)",
-      "+22 Spell Damage",
-      "+22 Healing",
-      "Requires Level 16"
+      "Requires Level 16",
+      "Equip: +9 Spell Damage Vs Elementals",
+      "Equip: +22 Spell Power",
+      "Sell Price: 19s 63c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -475,7 +514,7 @@
      "name": "Dull Sawblade",
      "slot": "Thrown",
      "type": "Speed 1.70",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 285292,
      "icon": "inv_misc_sawblade_01",
      "quality": 3,
@@ -485,9 +524,11 @@
       "Binds when picked up",
       "Thrown",
       "15 - 28 Damage\tSpeed 1.70",
-      "(12.7 damage per second)",
-      "+3 Agility",
-      "Requires Level 16"
+      "(12.6 damage per second)",
+      "+2 Stamina",
+      "Requires Level 16",
+      "Equip: +6 Attack Power",
+      "Sell Price: 9c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -527,8 +568,8 @@
     {
      "name": "Lavishly Jeweled Ring",
      "slot": "Finger",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 1156,
      "icon": "inv_jewelry_ring_09",
      "quality": 3,
@@ -536,10 +577,12 @@
      "requiredLevel": 17,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "Finger",
       "+2 Agility",
       "+6 Intellect",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Sell Price: 9s 3c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -561,7 +604,7 @@
      "name": "Smelting Pants",
      "slot": "Legs",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5199,
      "icon": "inv_pants_02",
      "quality": 3,
@@ -573,8 +616,9 @@
       "76 Armor",
       "+7 Stamina",
       "+5 Spirit",
+      "Requires Level 16",
       "Equip: Reduces the crafting time of Smelt Copper, Smelt Tin, Smelt Bronze, and Smelt Silver by 25%.",
-      "Requires Level 16"
+      "Sell Price: 9s 81c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -607,8 +651,8 @@
       "Main Hand\tMace",
       "21 - 40 Damage\tSpeed 2.00",
       "(15.3 damage per second)",
-      "20 Armor",
       "+4 Stamina",
+      "+20 Armor",
       "Requires Level 18",
       "Sell Price: 26s 5c"
      ],
@@ -669,7 +713,7 @@
      "name": "Smite's Mighty Hammer",
      "slot": "Two-Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 7230,
      "icon": "inv_hammer_09",
      "quality": 3,
@@ -682,11 +726,21 @@
       "(19.7 damage per second)",
       "+11 Strength",
       "+4 Agility",
-      "Requires Level 18"
+      "Requires Level 18",
+      "Sell Price: 31s 89c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "same",
+     "classicTooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "55 - 83 Damage\tSpeed 3.50",
+      "(19.7 damage per second)",
+      "+11 Strength",
+      "+4 Agility",
+      "Requires Level 18",
+      "Sell Price: 31s 3c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -696,7 +750,7 @@
      "name": "Thief's Blade",
      "slot": "One-Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5192,
      "icon": "inv_sword_24",
      "quality": 3,
@@ -704,12 +758,14 @@
      "requiredLevel": 17,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "One-Hand\tSword",
       "17 - 32 Damage\tSpeed 1.70",
       "(14.4 damage per second)",
       "+4 Agility",
+      "Requires Level 17",
       "Equip: Increases the chance your Pick Pocket and Distract abilities are successful by 1%",
-      "Requires Level 17"
+      "Sell Price: 22s 58c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -732,7 +788,7 @@
      "name": "Smite's Reaver",
      "slot": "One-Hand",
      "type": "Axe",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5196,
      "icon": "inv_axe_22",
      "quality": 3,
@@ -744,9 +800,9 @@
       "18 - 35 Damage\tSpeed 1.90",
       "(13.9 damage per second)",
       "+3 Strength",
-      "+2 Stamina",
-      "+2 Spirit",
-      "Requires Level 17"
+      "+3 Spirit",
+      "Requires Level 17",
+      "Sell Price: 19s 63c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -769,8 +825,8 @@
     {
      "name": "First Mate Band",
      "slot": "Finger",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 284715,
      "icon": "inv_jewelry_ring_01",
      "quality": 3,
@@ -778,13 +834,15 @@
      "requiredLevel": 17,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "Finger",
-      "+6 Strength",
-      "+2 Stamina",
+      "+5 Stamina",
+      "+4 Strength",
       "Requires Level 17",
       "Partners in Crime (0/2)",
       "(2) Set: Chance on melee swing to become Angry, increasing Strength by 50 for 10 sec.",
-      "(2) Set: +20 Strength."
+      "(2) Set: +22 Strength.",
+      "Sell Price: 9s 44c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -833,7 +891,7 @@
      "name": "Emberstone Staff",
      "slot": "Two-Hand",
      "type": "Staff",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5201,
      "icon": "inv_staff_13",
      "quality": 3,
@@ -842,14 +900,13 @@
      "tooltip": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "34 - 52 Damage\tSpeed 3.00",
-      "(14.3 damage per second)",
-      "+5 Stamina",
-      "+5 Spirit",
+      "34 - 51 Damage\tSpeed 3.00",
+      "(14.2 damage per second)",
+      "+8 Stamina",
       "+8 Fire Resistance",
-      "+24 Spell Damage",
-      "+24 Healing",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: +24 Spell Power",
+      "Sell Price: 28s 22c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -873,7 +930,7 @@
      "name": "Blackened Defias Belt",
      "slot": "Waist",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10403,
      "icon": "inv_belt_26",
      "quality": 3,
@@ -883,13 +940,14 @@
       "Binds when picked up",
       "Waist\tLeather",
       "50 Armor",
-      "+18 Attack Power",
       "Requires Level 17",
+      "Equip: +18 Attack Power",
       "Defias Leather (0/5)",
       "(2) Set: +5 Arcane Resistance.",
       "(3) Set: +15 Attack Power against Humanoids.",
       "(4) Set: Grants your melee attacks a 5% chance when striking from behind to hit a vital point, causing the target to Bleed for 70 Physical damage over 5 sec.",
-      "(5) Set: Increased Daggers +1."
+      "(5) Set: Increased Daggers +1.",
+      "Sell Price: 5s 69c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -915,7 +973,7 @@
      "name": "Impaling Harpoon",
      "slot": "Two-Hand",
      "type": "Polearm",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5200,
      "icon": "inv_spear_07",
      "quality": 3,
@@ -928,7 +986,8 @@
       "(19.0 damage per second)",
       "+9 Agility",
       "+5 Intellect",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Sell Price: 28s 22c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1002,7 +1061,7 @@
      "name": "Cape of the Brotherhood",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5193,
      "icon": "inv_misc_cape_08",
      "quality": 3,
@@ -1014,7 +1073,8 @@
       "21 Armor",
       "+5 Agility",
       "+3 Stamina",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Sell Price: 8s 65c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1036,7 +1096,7 @@
      "name": "Corsair's Overshirt",
      "slot": "Chest",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 5202,
      "icon": "inv_shirt_08",
      "quality": 3,
@@ -1046,11 +1106,12 @@
       "Binds when picked up",
       "Chest\tCloth",
       "40 Armor",
-      "+5 Stamina",
       "+8 Spirit",
-      "+3 Spell Damage",
-      "+11 Healing",
-      "Requires Level 17"
+      "+5 Stamina",
+      "Requires Level 17",
+      "Equip: +11 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 9s 3c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1072,7 +1133,7 @@
      "name": "Blackened Defias Armor",
      "slot": "Chest",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10399,
      "icon": "inv_chest_leather_08",
      "quality": 3,
@@ -1082,15 +1143,16 @@
       "Binds when picked up",
       "Chest\tLeather",
       "89 Armor",
-      "+4 Strength",
-      "+3 Agility",
       "+10 Stamina",
+      "+3 Agility",
+      "+4 Strength",
       "Requires Level 17",
       "Defias Leather (0/5)",
       "(2) Set: +5 Arcane Resistance.",
       "(3) Set: +15 Attack Power against Humanoids.",
       "(4) Set: Grants your melee attacks a 5% chance when striking from behind to hit a vital point, causing the target to Bleed for 70 Physical damage over 5 sec.",
-      "(5) Set: Increased Daggers +1."
+      "(5) Set: Increased Daggers +1.",
+      "Sell Price: 11s 29c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1118,7 +1180,7 @@
      "name": "Cruel Barb",
      "slot": "One-Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5191,
      "icon": "inv_sword_24",
      "quality": 3,
@@ -1129,8 +1191,9 @@
       "One-Hand\tSword",
       "30 - 57 Damage\tSpeed 2.80",
       "(15.5 damage per second)",
-      "+12 Attack Power",
-      "Requires Level 19"
+      "Requires Level 19",
+      "Equip: +12 Attack Power",
+      "Sell Price: 28s 83c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1229,7 +1292,7 @@
      "name": "Cookie's Stirring Rod",
      "slot": "Ranged",
      "type": "Wand",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5198,
      "icon": "inv_staff_02",
      "quality": 3,
@@ -1240,9 +1303,9 @@
       "Ranged\tWand",
       "20 - 38 Arcane Damage\tSpeed 1.30",
       "(22.3 damage per second)",
-      "+3 Fire Resistance",
-      "+3 Spell Power",
-      "Requires Level 17"
+      "Requires Level 17",
+      "Equip: Increases your Cooking speed by 25%.",
+      "Sell Price: 16s 93c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1263,7 +1326,7 @@
      "name": "Cookie's Tenderizer",
      "slot": "One-Hand",
      "type": "Mace",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 5197,
      "icon": "inv_fabric_silk_02",
      "quality": 3,
@@ -1274,9 +1337,10 @@
       "One-Hand\tMace",
       "27 - 51 Damage\tSpeed 2.80",
       "(13.9 damage per second)",
-      "+4 Strength",
+      "+4 Spirit",
+      "Requires Level 16",
       "Chance on hit: Tenderize the target, increasing physical damage taken by 1 for 1 min.",
-      "Requires Level 16"
+      "Sell Price: 19s 63c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1326,8 +1390,8 @@
     {
      "name": "Lookie's Spyglass",
      "slot": "Trinket",
-     "type": null,
-     "itemClass": null,
+     "type": "Trinket",
+     "itemClass": 4,
      "itemId": 273298,
      "icon": "inv_misc_spyglass_01",
      "quality": 3,
@@ -1335,10 +1399,13 @@
      "requiredLevel": 18,
      "tooltip": [
       "Binds when picked up",
+      "Unique-Equipped",
       "Trinket",
       "+1 Spirit",
+      "Requires Level 18",
       "Use: Allows you to look far into the distance.",
-      "Requires Level 18"
+      "\"Mmmrrgglumg Cookie grgl mrg mllgrgrm. -Lookie, Former Ship Lookout\"",
+      "Sell Price: 10s 45c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -1509,7 +1576,7 @@
      "name": "Blackened Defias Boots",
      "slot": "Feet",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10402,
      "icon": "inv_boots_05",
      "quality": 3,
@@ -1519,14 +1586,15 @@
       "Binds when picked up",
       "Feet\tLeather",
       "59 Armor",
-      "+6 Agility",
       "+4 Stamina",
+      "+6 Agility",
       "Requires Level 15",
       "Defias Leather (0/5)",
       "(2) Set: +5 Arcane Resistance.",
       "(3) Set: +15 Attack Power against Humanoids.",
       "(4) Set: Grants your melee attacks a 5% chance when striking from behind to hit a vital point, causing the target to Bleed for 70 Physical damage over 5 sec.",
-      "(5) Set: Increased Daggers +1."
+      "(5) Set: Increased Daggers +1.",
+      "Sell Price: 6s 42c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1553,7 +1621,7 @@
      "name": "Goblin Mail Leggings",
      "slot": "Legs",
      "type": "Mail",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 1943,
      "icon": "inv_pants_03",
      "quality": 2,
@@ -1565,7 +1633,8 @@
       "144 Armor",
       "+4 Strength",
       "+3 Stamina",
-      "Requires Level 14"
+      "Requires Level 14",
+      "Sell Price: 7s 13c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -1614,7 +1683,7 @@
      "name": "Blackened Defias Leggings",
      "slot": "Legs",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10400,
      "icon": "inv_pants_12",
      "quality": 3,
@@ -1631,7 +1700,8 @@
       "(2) Set: +5 Arcane Resistance.",
       "(3) Set: +15 Attack Power against Humanoids.",
       "(4) Set: Grants your melee attacks a 5% chance when striking from behind to hit a vital point, causing the target to Bleed for 70 Physical damage over 5 sec.",
-      "(5) Set: Increased Daggers +1."
+      "(5) Set: Increased Daggers +1.",
+      "Sell Price: 7s 42c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1658,7 +1728,7 @@
      "name": "Blackened Defias Gloves",
      "slot": "Hands",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 10401,
      "icon": "inv_gauntlets_18",
      "quality": 3,
@@ -1675,7 +1745,8 @@
       "(2) Set: +5 Arcane Resistance.",
       "(3) Set: +15 Attack Power against Humanoids.",
       "(4) Set: Grants your melee attacks a 5% chance when striking from behind to hit a vital point, causing the target to Bleed for 70 Physical damage over 5 sec.",
-      "(5) Set: Increased Daggers +1."
+      "(5) Set: Increased Daggers +1.",
+      "Sell Price: 3s 74c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1737,7 +1808,7 @@
      "name": "Stonemason Cloak",
      "slot": "Back",
      "type": "Cloth",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 1930,
      "icon": "inv_misc_cape_11",
      "quality": 2,
@@ -1748,7 +1819,8 @@
       "Back\tCloth",
       "16 Armor",
       "+3 Stamina",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Sell Price: 4s 8c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -1797,7 +1869,7 @@
      "name": "Metalworking Gloves",
      "slot": "Hands",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 1944,
      "icon": "inv_gauntlets_04",
      "quality": 2,
@@ -1809,7 +1881,8 @@
       "46 Armor",
       "+3 Strength",
       "+1 Stamina",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Sell Price: 2s 59c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -1823,7 +1896,7 @@
      "name": "Woodworking Gloves",
      "slot": "Hands",
      "type": "Leather",
-     "itemClass": null,
+     "itemClass": 4,
      "itemId": 1945,
      "icon": "inv_gauntlets_21",
      "quality": 2,
@@ -1835,7 +1908,8 @@
       "46 Armor",
       "+3 Intellect",
       "+2 Spirit",
-      "Requires Level 13"
+      "Requires Level 13",
+      "Sell Price: 2s 67c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -1849,7 +1923,7 @@
      "name": "Defias Rapier",
      "slot": "Main Hand",
      "type": "Sword",
-     "itemClass": null,
+     "itemClass": 2,
      "itemId": 1925,
      "icon": "inv_sword_30",
      "quality": 2,
@@ -1861,11 +1935,20 @@
       "9 - 17 Damage\tSpeed 1.60",
       "(8.1 damage per second)",
       "+2 Agility",
-      "Requires Level 11"
+      "Requires Level 11",
+      "Sell Price: 8s 13c"
      ],
      "tooltipSynthesized": false,
-     "classicTooltip": null,
-     "status": "same",
+     "classicTooltip": [
+      "Binds when equipped",
+      "Main Hand\tSword",
+      "9 - 17 Damage\tSpeed 1.60",
+      "(8.1 damage per second)",
+      "+2 Agility",
+      "Requires Level 11",
+      "Sell Price: 7s 87c"
+     ],
+     "status": "changed",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,

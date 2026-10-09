@@ -26,6 +26,12 @@ function getOrCreateToken(): string | null {
 
 export function trackBuildEvent(type: BuildEventType, classId: string, buildCode: string): void {
   try {
+    // Automation-driven browsers (headless Chrome, Puppeteer/Playwright,
+    // Selenium, most rendering crawlers) set navigator.webdriver and run the
+    // page's JS, so they would otherwise log an "opened" for every build URL
+    // they load. Share and save need a real click, so only "opened" is
+    // filtered.
+    if (type === "opened" && navigator.webdriver) return;
     const token = getOrCreateToken();
     if (!token) return;
     const body = JSON.stringify({ type, classId, buildCode, token });

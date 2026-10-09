@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
+import InTheWorksCard from "@/components/professions/InTheWorksCard";
 import { getAllProfessionSummaries } from "@/lib/profession-recipes";
 import { getAllGatheringSummaries } from "@/lib/gathering-professions";
+import { isLevelingVerified } from "@/lib/profession-leveling-status";
 import { mediumIconUrl } from "@/lib/wow-data";
 import { PROFESSION_ICON } from "@/lib/profession-icons";
 
@@ -22,33 +24,48 @@ export default function ProfessionsPage() {
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Professions</h1>
       <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-foreground-muted">
         Every recipe for every crafting profession in Forever -- reagents, trainer or recipe source, and
-        skill-up thresholds. Alchemy and Blacksmithing also have a full leveling-1-to-300 guide and
-        Merchant&apos;s Favor breakdown; the rest are coming soon.
+        skill-up thresholds. Blacksmithing and First Aid have full leveling-1-to-300 guides; the rest are in the
+        works.
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
-        {professions.map((profession) => (
-          <Link
-            key={profession.id}
-            href={`/reference/professions/${profession.id}`}
-            className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
-          >
-            {PROFESSION_ICON[profession.id] && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={mediumIconUrl(PROFESSION_ICON[profession.id])}
-                alt=""
-                className="h-10 w-10 shrink-0 rounded border border-border/50"
+        {professions.map((profession) => {
+          const live = isLevelingVerified(profession.id);
+          if (!live) {
+            return (
+              <InTheWorksCard
+                key={profession.id}
+                id={profession.id}
+                name={profession.name}
+                detail={`${profession.recipeCount} recipes`}
+                iconId={PROFESSION_ICON[profession.id]}
+                browseLabel="Browse recipes"
               />
-            )}
-            <div className="min-w-0 flex-1">
-              <h2 className="font-medium text-foreground group-hover:text-accent">{profession.name}</h2>
-              <p className="mt-0.5 text-xs text-foreground-muted">
-                {profession.recipeCount} recipes{profession.hasLeveling ? " -- leveling guide available" : ""}
-              </p>
-            </div>
-          </Link>
-        ))}
+            );
+          }
+          return (
+            <Link
+              key={profession.id}
+              href={`/reference/professions/${profession.id}`}
+              className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+            >
+              {PROFESSION_ICON[profession.id] && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={mediumIconUrl(PROFESSION_ICON[profession.id])}
+                  alt=""
+                  className="h-10 w-10 shrink-0 rounded border border-border/50"
+                />
+              )}
+              <div className="min-w-0 flex-1">
+                <h2 className="font-medium text-foreground group-hover:text-accent">{profession.name}</h2>
+                <p className="mt-0.5 text-xs text-foreground-muted">
+                  {profession.recipeCount} recipes -- leveling guide available
+                </p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       {gathering.length > 0 && (
@@ -59,26 +76,41 @@ export default function ProfessionsPage() {
             work from 1 to 300.
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {gathering.map((profession) => (
-              <Link
-                key={profession.id}
-                href={`/reference/professions/${profession.id}`}
-                className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
-              >
-                {PROFESSION_ICON[profession.id] && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={mediumIconUrl(PROFESSION_ICON[profession.id])}
-                    alt=""
-                    className="h-10 w-10 shrink-0 rounded border border-border/50"
+            {gathering.map((profession) => {
+              const live = isLevelingVerified(profession.id);
+              if (!live) {
+                return (
+                  <InTheWorksCard
+                    key={profession.id}
+                    id={profession.id}
+                    name={profession.name}
+                    detail={`${profession.itemCount} nodes/bands`}
+                    iconId={PROFESSION_ICON[profession.id]}
+                    browseLabel="Browse nodes"
                   />
-                )}
-                <div className="min-w-0 flex-1">
-                  <h2 className="font-medium text-foreground group-hover:text-accent">{profession.name}</h2>
-                  <p className="mt-0.5 text-xs text-foreground-muted">{profession.itemCount} nodes/bands</p>
-                </div>
-              </Link>
-            ))}
+                );
+              }
+              return (
+                <Link
+                  key={profession.id}
+                  href={`/reference/professions/${profession.id}`}
+                  className="group flex items-center gap-4 rounded-lg border border-border bg-surface p-4 transition-colors hover:border-accent hover:bg-surface-hover"
+                >
+                  {PROFESSION_ICON[profession.id] && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={mediumIconUrl(PROFESSION_ICON[profession.id])}
+                      alt=""
+                      className="h-10 w-10 shrink-0 rounded border border-border/50"
+                    />
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <h2 className="font-medium text-foreground group-hover:text-accent">{profession.name}</h2>
+                    <p className="mt-0.5 text-xs text-foreground-muted">{profession.itemCount} nodes/bands</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </>
       )}

@@ -16,11 +16,10 @@
     "gray-matter": "^4.0.3",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.45.0",
-    "next": "16.3.5",
+    "next": "16.3.8",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "vercel": "^62.4.0"
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -29,9 +28,10 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.5",
-    "sharp": "^0.35.4",
+    "eslint-config-next": "16.3.8",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^62.4.0"
   }
 }
