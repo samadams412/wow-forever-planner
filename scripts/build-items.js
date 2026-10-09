@@ -18,6 +18,7 @@
 const fs = require("fs");
 const path = require("path");
 const { fcItemToUnified } = require("./lib/fc-item");
+const { isKnownDuplicateId } = require("./lib/item-duplicates");
 
 const ROOT = path.join(__dirname, "..");
 const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges", "items");
@@ -25,11 +26,22 @@ const OUT_FILE = path.join(ROOT, "data", "items.json");
 
 function main() {
   const items = [];
+  let skippedDuplicates = 0;
   for (const file of ["new.json", "changed.json", "same.json", "missing.json"]) {
     const p = path.join(ITEMS_DIR, file);
     if (!fs.existsSync(p)) continue;
     const parsed = JSON.parse(fs.readFileSync(p, "utf8"));
     for (const raw of parsed.items) {
+      // A hand-confirmed duplicate id (see known-duplicate-ids.json) never
+      // enters the catalog -- the canonical (older) id it duplicates is
+      // already here from its own bucket. Left in, a duplicate silently
+      // shadows the canonical id in any exact-name lookup downstream (the
+      // profession recipe resolver, most notably) since it has no
+      // relationship to the canonical id other than sharing a name.
+      if (raw.i !== undefined && isKnownDuplicateId(raw.i)) {
+        skippedDuplicates++;
+        continue;
+      }
       const unified = fcItemToUnified(raw);
       // new.json carries a 7-item "rebuilt" outlier (t: "rebuilt") --
       // Classic items foreverchanges rebuilt under a new item id.
@@ -52,6 +64,7 @@ function main() {
   for (const item of items) if (item.status && counts[item.status] !== undefined) counts[item.status]++;
   console.log(`${items.length} items written to ${path.relative(ROOT, OUT_FILE)}`);
   console.log(counts);
+  if (skippedDuplicates) console.log(`Skipped ${skippedDuplicates} known-duplicate id(s) (see known-duplicate-ids.json)`);
 }
 
 main();

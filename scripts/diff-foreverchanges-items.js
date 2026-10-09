@@ -24,6 +24,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { isKnownDuplicateId, canonicalIdFor } = require("./lib/item-duplicates");
 
 const ROOT = path.join(__dirname, "..");
 const ITEMS_DIR = path.join(ROOT, "data", "sources", "foreverchanges", "items");
@@ -83,17 +84,54 @@ function pullLabel(meta, dir) {
   return path.basename(dir);
 }
 
+// Builds a name -> [{id, bucket}] index over a pull, for detecting a new
+// id whose name collides with something already in the catalog (see
+// `possibleDuplicates` below). Case/whitespace-insensitive, matching how
+// scripts/lib/profession-item-resolver.js's buildNameIndex joins names.
+function nameIndex(pull) {
+  const byName = new Map();
+  for (const [id, entry] of pull.byId) {
+    const key = (entry.raw.n ?? "").trim().toLowerCase();
+    if (!key) continue;
+    if (!byName.has(key)) byName.set(key, []);
+    byName.get(key).push({ id, bucket: entry.bucket });
+  }
+  return byName;
+}
+
 function diffItems(oldPull, newPull) {
   const added = [];
+  const knownDuplicates = [];
   const removed = [];
   const bucketChanged = [];
   const fieldChanged = [];
 
   for (const [id, newEntry] of newPull.byId) {
-    if (!oldPull.byId.has(id)) added.push(newEntry);
+    if (oldPull.byId.has(id)) continue;
+    if (isKnownDuplicateId(id)) {
+      knownDuplicates.push({ ...newEntry, canonicalId: canonicalIdFor(id) });
+    } else {
+      added.push(newEntry);
+    }
   }
   for (const [id, oldEntry] of oldPull.byId) {
     if (!newPull.byId.has(id)) removed.push(oldEntry);
+  }
+
+  // A genuinely new id (not already a confirmed duplicate above) whose
+  // name matches something that existed under a DIFFERENT id in the old
+  // pull is exactly the shape of bug this caught on 2026-10-08: the
+  // profession-recipe name resolver would silently treat whichever one it
+  // sees first as canonical. Surface it instead of guessing -- a human
+  // confirms it (one way or the other) and it either gets added to
+  // known-duplicate-ids.json or turns out to be a real coincidentally-
+  // named new item.
+  const oldByName = nameIndex(oldPull);
+  const possibleDuplicates = [];
+  for (const entry of added) {
+    const key = (entry.raw.n ?? "").trim().toLowerCase();
+    const matches = (oldByName.get(key) ?? []).filter((m) => m.id !== entry.raw.i);
+    if (matches.length > 0) possibleDuplicates.push({ ...entry, matches });
   }
 
   for (const [id, oldEntry] of oldPull.byId) {
@@ -119,7 +157,7 @@ function diffItems(oldPull, newPull) {
     }
   }
 
-  return { added, removed, bucketChanged, fieldChanged };
+  return { added, knownDuplicates, possibleDuplicates, removed, bucketChanged, fieldChanged };
 }
 
 function fmt(v) {
@@ -138,15 +176,54 @@ function renderMarkdown({ oldLabel, newLabel, diff }) {
   lines.push(
     `Added: ${diff.added.length}, Removed: ${diff.removed.length}, ` +
       `Moved between buckets: ${diff.bucketChanged.length}, ` +
-      `Changed (same bucket, field-level): ${diff.fieldChanged.length}`,
+      `Changed (same bucket, field-level): ${diff.fieldChanged.length}, ` +
+      `Known duplicate ids skipped: ${diff.knownDuplicates.length}, ` +
+      `Possible duplicates needing review: ${diff.possibleDuplicates.length}`,
     ""
   );
+
+  if (diff.possibleDuplicates.length > 0) {
+    lines.push(`## ⚠ Possible duplicate items -- needs review (${diff.possibleDuplicates.length})`, "");
+    lines.push(
+      "Each of these is a genuinely new id whose name matches something",
+      "already in the catalog under a different id. This is exactly the shape",
+      "of the 2026-10-08 bug where the profession-recipe name resolver",
+      "silently treated the new id as canonical. **Do not treat these as",
+      "ordinary new items without checking first** -- confirm by hand whether",
+      "each is a real new item that coincidentally shares a name, or the",
+      "source re-issuing an id for something we already have. Once confirmed",
+      "as a duplicate, add it to data/sources/foreverchanges/items/",
+      "known-duplicate-ids.json so it stops being reported here and the",
+      "build scripts drop it before it can shadow the real id.",
+      ""
+    );
+    for (const e of diff.possibleDuplicates) {
+      const matchList = e.matches.map((m) => `\`${m.id}\` (${m.bucket})`).join(", ");
+      lines.push(`- \`${e.raw.i}\` **${e.raw.n}** (bucket: ${e.bucket}) -- matches existing id(s): ${matchList}`);
+    }
+    lines.push("");
+  }
 
   lines.push(`## New items (${diff.added.length})`, "");
   if (diff.added.length === 0) {
     lines.push("None.", "");
   } else {
     for (const e of diff.added) lines.push(`- \`${e.raw.i}\` **${e.raw.n}** (bucket: ${e.bucket})`);
+    lines.push("");
+  }
+
+  if (diff.knownDuplicates.length > 0) {
+    lines.push(`## Known duplicate ids -- already resolved (${diff.knownDuplicates.length})`, "");
+    lines.push(
+      "Present in this pull but already confirmed (see known-duplicate-ids.json)",
+      "as the source re-issuing an id for an item we already track under its",
+      "canonical id below. Not reported as new/changed, and never enters",
+      "data/items.json -- no action needed.",
+      ""
+    );
+    for (const e of diff.knownDuplicates) {
+      lines.push(`- \`${e.raw.i}\` **${e.raw.n}** -- duplicate of \`${e.canonicalId}\``);
+    }
     lines.push("");
   }
 
@@ -192,6 +269,12 @@ function renderMarkdown({ oldLabel, newLabel, diff }) {
     "cannot see anything that isn't a raw-field change -- it does not re-",
     "derive or compare the fcItemToUnified-mapped LootItem shape, item-",
     "refresh overlays, or tooltip overlays applied later by build-items.js.",
+    "",
+    "The possible-duplicate check above is a plain exact-name match against",
+    "the old pull -- it can't tell a real re-issued-id duplicate from a",
+    "coincidentally-identical name (e.g. a generic recipe name reused on a",
+    "different tier), so every hit still needs a human to confirm it before",
+    "it's added to known-duplicate-ids.json.",
     ""
   );
 

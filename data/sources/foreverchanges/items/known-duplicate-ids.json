@@ -1,0 +1,19 @@
+{
+  "_readme": "foreverchanges.pro occasionally issues a brand-new item id for an item that's functionally identical (same name, same effect, same source) to one already in our catalog under a different, older id -- not a real new item, just the data source re-issuing an id for something it had already shown us. Each entry here was individually confirmed (by hand, against the diff and the item's own data) before being added -- this is NOT a place to paper over a name collision you haven't actually verified; an unverified collision should surface in diff-foreverchanges-items.js's 'Possible duplicate items' section instead, for a human to confirm first. Once confirmed, add the mapping here (newId -> canonicalId) and scripts/lib/item-duplicates.js takes care of the rest: build-items.js and build-dungeons.js both drop any raw record whose id is a key here before it reaches data/items.json (so it can never shadow the canonical id in the profession-recipe name resolver or anywhere else), and diff-foreverchanges-items.js stops reporting that id as Added/Changed on every subsequent pull, listing it in a 'Known duplicate ids (already resolved)' section instead. Discovered 2026-10-08 against the build 1.60.1.70235 -> 1.60.1.70291 pull -- see Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-08-foreverchanges-item-diff.md for the full story.",
+  "287963": { "canonicalId": 8952, "name": "Roasted Quail" },
+  "287964": { "canonicalId": 8766, "name": "Morning Glory Dew" },
+  "287966": { "canonicalId": 118, "name": "Minor Healing Potion" },
+  "287967": { "canonicalId": 858, "name": "Lesser Healing Potion" },
+  "287968": { "canonicalId": 2455, "name": "Minor Mana Potion" },
+  "287969": { "canonicalId": 3385, "name": "Lesser Mana Potion" },
+  "287971": { "canonicalId": 4240, "name": "Woolen Bag" },
+  "287972": { "canonicalId": 21114, "name": "Rumsey Rum Dark" },
+  "287973": { "canonicalId": 18045, "name": "Tender Wolf Steak" },
+  "287974": { "canonicalId": 13928, "name": "Grilled Squid" },
+  "287975": { "canonicalId": 2459, "name": "Swiftness Potion" },
+  "287976": { "canonicalId": 5634, "name": "Free Action Potion" },
+  "287977": { "canonicalId": 1710, "name": "Greater Healing Potion" },
+  "287978": { "canonicalId": 2862, "name": "Rough Sharpening Stone" },
+  "287979": { "canonicalId": 20746, "name": "Lesser Wizard Oil" },
+  "287980": { "canonicalId": 18262, "name": "Elemental Sharpening Stone" }
+}

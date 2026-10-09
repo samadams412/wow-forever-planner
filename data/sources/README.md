@@ -87,6 +87,17 @@ data/sources/
                            (11,625/21,561 ids as of 1.60.1.70170); not
                            read by any build script as of 2026-10-02,
                            see item detail page for the consuming code.
+      known-duplicate-ids.json   hand-confirmed cases of foreverchanges.pro
+                           issuing a new id for an item we already have
+                           under an older id (not a real new item). See
+                           scripts/lib/item-duplicates.js -- build-items.js
+                           and build-dungeons.js both drop these ids before
+                           they can shadow the canonical id in any name-
+                           based lookup, and diff-foreverchanges-items.js
+                           stops reporting them as new/changed once listed
+                           here. Discovered 2026-10-08, see
+                           Forevercraft-Knowledge-Base/03-Handoffs/
+                           data-pipeline/2026-10-08-foreverchanges-item-diff.md
     item-category-labels.json      c:u item-class/subclass -> display
                                     label, built by
                                     build-item-category-labels.js

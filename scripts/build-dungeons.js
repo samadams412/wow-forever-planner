@@ -36,6 +36,7 @@ const fs = require("fs");
 const path = require("path");
 const SLUG_MAP = require("./dungeon-source-map");
 const { fcItemToUnified } = require("./lib/fc-item");
+const { isKnownDuplicateId } = require("./lib/item-duplicates");
 
 const ROOT = path.join(__dirname, "..");
 const FC_DIR = path.join(ROOT, "data", "sources", "foreverchanges", "dungeon_data");
@@ -58,7 +59,14 @@ for (const file of ["new.json", "changed.json", "same.json", "missing.json"]) {
   const p = path.join(ITEMS_DIR, file);
   if (!fs.existsSync(p)) continue;
   const parsed = JSON.parse(fs.readFileSync(p, "utf8"));
-  for (const item of parsed.items) ITEMS_BY_ID.set(item.i, item);
+  // Skip hand-confirmed duplicate ids (see scripts/lib/item-duplicates.js)
+  // the same way build-items.js does -- nothing in this repo's own data
+  // references one of these ids today, but a future dungeon pull
+  // shouldn't be able to resolve a quest reward onto one either.
+  for (const item of parsed.items) {
+    if (isKnownDuplicateId(item.i)) continue;
+    ITEMS_BY_ID.set(item.i, item);
+  }
 }
 
 // foreverchanges' item-source file: { items: { "<itemId>": [code, label, location] } },
