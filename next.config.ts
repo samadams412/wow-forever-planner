@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   // lib/zone-areas.ts read those, ~200KB per continent.)
   outputFileTracingExcludes: {
     "/*": ["./public/map/*/tiles/**"],
+    // /quests/[questId] is fully static (generateStaticParams +
+    // dynamicParams = false in lib/quest-detail.ts's only caller), so it
+    // never reads this directory at request time -- but Next's tracer
+    // matches the path.join(..., `${id}.json`) pattern statically and
+    // bundles all 5,000+ shards into the function anyway without this.
+    // The key is a glob, and "[questId]" would be parsed as a character
+    // class rather than literal text, so it has to be a wildcard here.
+    "/quests/*": ["./data/quests/detail/**"],
   },
   async redirects() {
     return [

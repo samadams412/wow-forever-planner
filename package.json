@@ -7,7 +7,8 @@
     "prebuild": "node scripts/build-og-backgrounds.js && node scripts/build-map-data-imports.js && node scripts/build-quest-dungeon-index.js",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --test"
   },
   "dependencies": {
     "@pinta365/blp": "npm:@jsr/pinta365__blp@^0.2.0",

@@ -144,12 +144,10 @@ export async function recordBuildEvent(
     .expire(ipKey, IP_BURST_WINDOW_SECONDS * 2)
     .incr(tokenKey)
     .expire(tokenKey, COUNTER_TTL_SECONDS)
-    .get<number>(ipDayKey)
-    .exec<[number, number, number, number, number | null]>();
+    .exec<[number, number, number, number]>();
   const ipCount = counts[0];
   const tokenCount = counts[2];
-  const ipAcceptedToday = Number(counts[4] ?? 0);
-  if (ipCount > IP_BURST_LIMIT || tokenCount > TOKEN_DAILY_LIMIT || ipAcceptedToday >= IP_DAILY_ACCEPTED_LIMIT) {
+  if (ipCount > IP_BURST_LIMIT || tokenCount > TOKEN_DAILY_LIMIT) {
     return "rate-limited";
   }
 
@@ -160,6 +158,17 @@ export async function recordBuildEvent(
   const dedupKey = `builds:dedup:${event.type}:${tokenHash}:${event.classId}:${buildCode}:${day}`;
   const claimed = await redis.set(dedupKey, 1, { nx: true, ex: COUNTER_TTL_SECONDS });
   if (claimed === null) return "duplicate";
+
+  // IP daily cap: INCR-then-compare, same atomic pattern as ipKey/tokenKey
+  // above, rather than a separate GET earlier and a separate INCR here --
+  // two requests racing between a GET and a later INCR could otherwise
+  // both read "under the cap" and both get accepted, overshooting it.
+  const [ipAcceptedToday] = await redis
+    .pipeline()
+    .incr(ipDayKey)
+    .expire(ipDayKey, COUNTER_TTL_SECONDS)
+    .exec<[number, number]>();
+  if (ipAcceptedToday > IP_DAILY_ACCEPTED_LIMIT) return "rate-limited";
 
   const stored: StoredBuildEvent = {
     type: event.type,
@@ -174,8 +183,6 @@ export async function recordBuildEvent(
     .pipeline()
     .rpush(RAW_EVENTS_KEY, stored)
     .ltrim(RAW_EVENTS_KEY, -RAW_EVENTS_MAX, -1)
-    .incr(ipDayKey)
-    .expire(ipDayKey, COUNTER_TTL_SECONDS)
     .pfadd(hllKey, ipHash)
     .expire(hllKey, HLL_TTL_SECONDS)
     .sadd(hllIndexKey, `${event.classId}:${buildCode}`)
