@@ -58,14 +58,34 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
           : version < 4
             ? { ...V3_TREE_ORDER, ...V4_TREE_ORDER }
             : V4_TREE_ORDER;
-      return decodeAgainstFrozenOrders(classData, segments.slice(1), orders);
+      return repairPrereqs(classData, decodeAgainstFrozenOrders(classData, segments.slice(1), orders));
     }
-    return decodeVersionedBuild(classData, segments.slice(1));
+    return repairPrereqs(classData, decodeVersionedBuild(classData, segments.slice(1)));
   }
   // No recognizable version segment -> a pre-versioning (legacy) code,
   // encoded against whatever the tree shape was before CURRENT_VERSION
   // existed. Decode it against that frozen old shape, then translate.
-  return decodeLegacyBuild(classData, segments);
+  return repairPrereqs(classData, decodeLegacyBuild(classData, segments));
+}
+
+// A talent's prereq can change (added, removed, or its required rank
+// changed) between data syncs -- e.g. Impale gaining a 3-point Deep Wounds
+// requirement on 2026-10-08. A previously-valid shared build can decode
+// with points in a talent whose prereq is no longer satisfied; those points
+// come back to the player as unspent rather than erroring, the same
+// backward-compatibility treatment as a removed talent (see
+// LEGACY_ID_TRANSLATION above). Processes talents in tier order per tree so
+// a prereq invalidated earlier in this same pass correctly cascades to
+// anything depending on it.
+function repairPrereqs(classData: ClassTalentData, ranks: RankState): RankState {
+  for (const talents of orderedTalents(classData)) {
+    for (const t of talents) {
+      if (!t.prereq) continue;
+      const prereqRank = ranks[t.prereq.id] ?? 0;
+      if (prereqRank < t.prereq.ranks) delete ranks[t.id];
+    }
+  }
+  return ranks;
 }
 
 function decodeVersionedBuild(classData: ClassTalentData, treeCodes: string[]): RankState {

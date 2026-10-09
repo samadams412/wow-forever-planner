@@ -190,7 +190,7 @@
           "col": 1,
           "maxRank": 1,
           "ranks": [
-            "A brutal attack that deals 40% weapon damage, plus an additional 80% weapon damage against Giants, Dragonkin, and mounted targets."
+            "A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets. Mounted targets are dismounted."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -238,7 +238,10 @@
             "Increases the critical strike damage bonus of your abilities by 20%."
           ],
           "confidence": "confirmed",
-          "prereq": null,
+          "prereq": {
+            "id": "arms_deep_wounds",
+            "ranks": 3
+          },
           "status": "changed",
           "icon": "ability_searingarrow",
           "classic": {
@@ -808,7 +811,7 @@
           "maxRank": 2,
           "ranks": [
             "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
-            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1% of your maximum Health."
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health."
           ],
           "confidence": "confirmed",
           "prereq": {
