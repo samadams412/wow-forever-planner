@@ -11101,7 +11101,7 @@
       "requiredLevel": 1,
       "tooltip": [
        "\tExplosives",
-       "Use: Inflicts 22 to 28 Fire damage and stuns targets in a 3 yard radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
+       "Use: Inflicts 22 to 28 Fire damage and stuns targets in a 3 yd radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
        "\"SAF-T Brand bombs *almost* never blow up in your hands (or your paws!)\"",
        "Sell Price: 60c"
       ],
@@ -11125,15 +11125,15 @@
      "item": {
       "name": "SAF-T Tabs",
       "slot": null,
-      "type": "Reagent",
-      "itemClass": 5,
+      "type": "Parts",
+      "itemClass": 7,
       "itemId": 260784,
       "icon": "inv_misc_punchcards_white",
       "quality": 1,
       "itemLevel": 5,
       "requiredLevel": 1,
       "tooltip": [
-       "\tReagent",
+       "\tParts",
        "\"SAF-T brand tabs make it SAF to hand out dynamite to all your friends!\"",
        "Sell Price: 4c"
       ],
@@ -11166,7 +11166,7 @@
       "requiredLevel": 1,
       "tooltip": [
        "\tExplosives",
-       "Use: Inflicts 26 to 34 Fire damage in a 5 yard radius. (1 Min Cooldown)",
+       "Use: Inflicts 26 to 34 Fire damage in a 5 yd radius. (1 Min Cooldown)",
        "\"Easy to throw, and SAF-T too!\"",
        "Sell Price: 75c"
       ],
@@ -11190,15 +11190,15 @@
      "item": {
       "name": "EZ-Thro Wrap",
       "slot": null,
-      "type": "Reagent",
-      "itemClass": 5,
+      "type": "Parts",
+      "itemClass": 7,
       "itemId": 260794,
       "icon": "inv_misc_giftwrap_03",
       "quality": 1,
       "itemLevel": 15,
       "requiredLevel": 1,
       "tooltip": [
-       "\tReagent",
+       "\tParts",
        "Sell Price: 1s 50c"
       ],
       "tooltipSynthesized": false,
@@ -11221,15 +11221,15 @@
      "item": {
       "name": "No Slip SAF-T Padding",
       "slot": null,
-      "type": "Reagent",
-      "itemClass": 5,
+      "type": "Parts",
+      "itemClass": 7,
       "itemId": 260796,
       "icon": "inv_misc_leatherscrap_11",
       "quality": 1,
       "itemLevel": 29,
       "requiredLevel": 1,
       "tooltip": [
-       "\tReagent",
+       "\tParts",
        "\"SAF-T Padding prevents those easy throwing accidents.\"",
        "Sell Price: 2s"
       ],
@@ -11262,7 +11262,7 @@
       "requiredLevel": 1,
       "tooltip": [
        "\tExplosives",
-       "Use: Inflicts 43 to 57 Fire damage and stuns targets in a 5 yard radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
+       "Use: Inflicts 43 to 57 Fire damage and stuns targets in a 5 yd radius for 1 sec. Any damage will break the effect. (1 Min Cooldown)",
        "Sell Price: 1s 75c"
       ],
       "tooltipSynthesized": false,
@@ -11296,8 +11296,8 @@
        "Binds when picked up",
        "Unique",
        "Thrown",
-       "11 - 21 Damage\tSpeed 2.00",
-       "(8.0 damage per second)",
+       "2 - 11 Damage\tSpeed 2.00",
+       "(3.1 damage per second)",
        "+2 Stamina",
        "Requires Level 13",
        "Requires Engineering (85)",
@@ -11342,7 +11342,7 @@
        "26 Armor",
        "Requires Level 30",
        "Requires Engineering (175)",
-       "Sell Price: 17s 10c"
+       "Sell Price: 14s 25c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -11377,7 +11377,7 @@
        "57 Armor",
        "Requires Level 30",
        "Requires Engineering (175)",
-       "Sell Price: 17s 16c"
+       "Sell Price: 18s 2c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -11412,7 +11412,7 @@
        "120 Armor",
        "Requires Level 30",
        "Requires Engineering (175)",
-       "Sell Price: 17s 22c"
+       "Sell Price: 21s 53c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -11470,15 +11470,15 @@
      "item": {
       "name": "EZ-Thro Fireproof Fuse",
       "slot": null,
-      "type": "Reagent",
-      "itemClass": 5,
+      "type": "Parts",
+      "itemClass": 7,
       "itemId": 260801,
       "icon": "inv_jewelcrafting_delicatecopperwire",
       "quality": 1,
       "itemLevel": 39,
       "requiredLevel": 1,
       "tooltip": [
-       "\tReagent",
+       "\tParts",
        "\"Guaranteed not to burn!\"",
        "Sell Price: 3s"
       ],
@@ -11653,8 +11653,8 @@
        "Binds when picked up",
        "Unique",
        "Thrown",
-       "21 - 40 Damage\tSpeed 2.00",
-       "(15.3 damage per second)",
+       "2 - 20 Damage\tSpeed 2.00",
+       "(5.4 damage per second)",
        "+4 Stamina",
        "Requires Level 28",
        "Requires Engineering (165)",
@@ -11698,6 +11698,7 @@
        "Unique-Equipped",
        "Trinket",
        "Use: Gives invisibility for 10 sec. (60 Min Cooldown)",
+       "3 Charges",
        "\"SAF-T means not getting caught.\"",
        "Sell Price: 50s"
       ],
@@ -11800,6 +11801,7 @@
        "Back\tCloth",
        "31 Armor",
        "Use: Reduces your fall speed for 10 sec. (30 Min Cooldown)",
+       "3 Charges",
        "\"SAF-T in case you need to jump.\"",
        "Sell Price: 46s 96c"
       ],
@@ -11869,8 +11871,8 @@
        "Binds when picked up",
        "Unique",
        "Thrown",
-       "34 - 64 Damage\tSpeed 2.00",
-       "(24.5 damage per second)",
+       "2 - 32 Damage\tSpeed 2.00",
+       "(8.3 damage per second)",
        "+6 Stamina",
        "Requires Level 41",
        "Requires Engineering (230)",
@@ -11907,8 +11909,8 @@
       "tooltip": [
        "Binds when picked up",
        "Thrown",
-       "42 - 80 Damage\tSpeed 2.00",
-       "(30.5 damage per second)",
+       "2 - 40 Damage\tSpeed 2.00",
+       "(10.4 damage per second)",
        "+8 Stamina",
        "Requires Level 52",
        "Requires Engineering (285)",

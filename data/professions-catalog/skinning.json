@@ -25,7 +25,7 @@
      "itemLevel": 5,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 7c"
      ],
      "tooltipSynthesized": false,
@@ -47,7 +47,7 @@
      "itemLevel": 10,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 15c"
      ],
      "tooltipSynthesized": false,
@@ -69,7 +69,7 @@
      "itemLevel": 10,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 50c"
      ],
      "tooltipSynthesized": false,
@@ -102,7 +102,7 @@
      "itemLevel": 10,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 15c"
      ],
      "tooltipSynthesized": false,
@@ -124,7 +124,7 @@
      "itemLevel": 5,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 7c"
      ],
      "tooltipSynthesized": false,
@@ -146,7 +146,7 @@
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 50c"
      ],
      "tooltipSynthesized": false,
@@ -168,9 +168,10 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Reagent"
+      "\tReagent",
+      "Sell Price: 7c"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -200,7 +201,7 @@
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 50c"
      ],
      "tooltipSynthesized": false,
@@ -222,7 +223,7 @@
      "itemLevel": 10,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 15c"
      ],
      "tooltipSynthesized": false,
@@ -244,7 +245,7 @@
      "itemLevel": 30,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 1s 50c"
      ],
      "tooltipSynthesized": false,
@@ -266,7 +267,7 @@
      "itemLevel": 30,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 2s"
      ],
      "tooltipSynthesized": false,
@@ -299,7 +300,7 @@
      "itemLevel": 30,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 1s 50c"
      ],
      "tooltipSynthesized": false,
@@ -321,7 +322,7 @@
      "itemLevel": 40,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 3s"
      ],
      "tooltipSynthesized": false,
@@ -343,7 +344,7 @@
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 50c"
      ],
      "tooltipSynthesized": false,
@@ -365,7 +366,7 @@
      "itemLevel": 35,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 1s"
      ],
      "tooltipSynthesized": false,
@@ -398,7 +399,7 @@
      "itemLevel": 40,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 3s"
      ],
      "tooltipSynthesized": false,
@@ -420,7 +421,7 @@
      "itemLevel": 30,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 1s 50c"
      ],
      "tooltipSynthesized": false,
@@ -442,7 +443,7 @@
      "itemLevel": 50,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 5s"
      ],
      "tooltipSynthesized": false,
@@ -464,7 +465,7 @@
      "itemLevel": 35,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 1s"
      ],
      "tooltipSynthesized": false,
@@ -497,7 +498,7 @@
      "itemLevel": 50,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 5s"
      ],
      "tooltipSynthesized": false,
@@ -519,7 +520,7 @@
      "itemLevel": 40,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 3s"
      ],
      "tooltipSynthesized": false,
@@ -541,7 +542,7 @@
      "itemLevel": 55,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 5s"
      ],
      "tooltipSynthesized": false,
@@ -563,7 +564,7 @@
      "itemLevel": 50,
      "requiredLevel": 0,
      "tooltip": [
-      "Leather",
+      "\tLeather",
       "Sell Price: 5s"
      ],
      "tooltipSynthesized": false,
@@ -600,7 +601,7 @@
      "tooltip": [
       "\tOther",
       "Requires Skinning (20)",
-      "Use: Assembles a camp chair that allows you and others sitting nearby to gain 2% increased critical strike chance with all spells and attacks, exclusive with Moonkin Aura. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      "Use: Assembles a camp chair that allows you and others sitting nearby to gain 2% increased critical strike chance with all spells and attacks, mutually exclusive with Moonkin Aura. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,

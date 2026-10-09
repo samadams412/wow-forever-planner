@@ -19,7 +19,7 @@
      "itemLevel": 5,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 10c"
      ],
      "tooltipSynthesized": false,
@@ -54,7 +54,7 @@
      "itemLevel": 5,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 10c"
      ],
      "tooltipSynthesized": false,
@@ -76,9 +76,10 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Quest"
+      "Quest Item",
+      "\tQuest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -110,7 +111,7 @@
      "itemLevel": 5,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 20c"
      ],
      "tooltipSynthesized": false,
@@ -132,9 +133,10 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Quest"
+      "Quest Item",
+      "\tQuest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -166,7 +168,7 @@
      "itemLevel": 10,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 20c"
      ],
      "tooltipSynthesized": false,
@@ -188,9 +190,10 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Quest"
+      "Quest Item",
+      "\tQuest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -209,7 +212,7 @@
      "itemLevel": 15,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 15c"
      ],
      "tooltipSynthesized": false,
@@ -244,7 +247,7 @@
      "itemLevel": 15,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 25c"
      ],
      "tooltipSynthesized": false,
@@ -266,7 +269,7 @@
      "itemLevel": 15,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 15c"
      ],
      "tooltipSynthesized": false,
@@ -288,9 +291,10 @@
      "itemLevel": 1,
      "requiredLevel": 0,
      "tooltip": [
-      "Quest"
+      "Quest Item",
+      "\tQuest"
      ],
-     "tooltipSynthesized": true,
+     "tooltipSynthesized": false,
      "classicTooltip": null,
      "status": "same",
      "dropChance": null,
@@ -322,7 +326,7 @@
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s"
      ],
      "tooltipSynthesized": false,
@@ -357,7 +361,7 @@
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 25c"
      ],
      "tooltipSynthesized": false,
@@ -392,7 +396,7 @@
      "itemLevel": 22,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 50c"
      ],
      "tooltipSynthesized": false,
@@ -427,7 +431,7 @@
      "itemLevel": 24,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 25c"
      ],
      "tooltipSynthesized": false,
@@ -462,7 +466,7 @@
      "itemLevel": 24,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 30c"
      ],
      "tooltipSynthesized": false,
@@ -497,7 +501,7 @@
      "itemLevel": 30,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 75c"
      ],
      "tooltipSynthesized": false,
@@ -532,7 +536,7 @@
      "itemLevel": 32,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s 25c"
      ],
      "tooltipSynthesized": false,
@@ -567,7 +571,7 @@
      "itemLevel": 34,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s 50c"
      ],
      "tooltipSynthesized": false,
@@ -602,7 +606,7 @@
      "itemLevel": 37,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s 75c"
      ],
      "tooltipSynthesized": false,
@@ -637,7 +641,7 @@
      "itemLevel": 39,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s"
      ],
      "tooltipSynthesized": false,
@@ -672,7 +676,7 @@
      "itemLevel": 41,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 2s 50c"
      ],
      "tooltipSynthesized": false,
@@ -707,7 +711,7 @@
      "itemLevel": 42,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 3s"
      ],
      "tooltipSynthesized": false,
@@ -729,7 +733,7 @@
      "itemLevel": 40,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 5c"
      ],
      "tooltipSynthesized": false,
@@ -764,7 +768,7 @@
      "itemLevel": 44,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 95c"
      ],
      "tooltipSynthesized": false,
@@ -799,7 +803,7 @@
      "itemLevel": 46,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 60c"
      ],
      "tooltipSynthesized": false,
@@ -834,7 +838,7 @@
      "itemLevel": 47,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 3s 75c"
      ],
      "tooltipSynthesized": false,
@@ -869,7 +873,7 @@
      "itemLevel": 47,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 3s 75c"
      ],
      "tooltipSynthesized": false,
@@ -904,7 +908,7 @@
      "itemLevel": 50,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 2s 50c"
      ],
      "tooltipSynthesized": false,
@@ -939,7 +943,7 @@
      "itemLevel": 52,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s"
      ],
      "tooltipSynthesized": false,
@@ -974,7 +978,7 @@
      "itemLevel": 54,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s"
      ],
      "tooltipSynthesized": false,
@@ -1009,7 +1013,7 @@
      "itemLevel": 56,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 1s 50c"
      ],
      "tooltipSynthesized": false,
@@ -1044,7 +1048,7 @@
      "itemLevel": 57,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 2s 50c"
      ],
      "tooltipSynthesized": false,
@@ -1079,7 +1083,7 @@
      "itemLevel": 58,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 2s 50c"
      ],
      "tooltipSynthesized": false,
@@ -1114,7 +1118,7 @@
      "itemLevel": 60,
      "requiredLevel": 0,
      "tooltip": [
-      "Herb",
+      "\tHerb",
       "Sell Price: 10s"
      ],
      "tooltipSynthesized": false,
@@ -1345,7 +1349,7 @@
      "tooltip": [
       "\tOther",
       "Requires Herbalism (20)",
-      "Use: Ignites an incense candle that allows you and others sitting nearby to gain 25 increased Intellect, exclusive with Arcane Intellect. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      "Use: Ignites an incense candle that allows you and others sitting nearby to gain 25 increased Intellect, mutually exclusive with Arcane Intellect. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,

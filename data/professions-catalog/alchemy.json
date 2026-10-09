@@ -4570,7 +4570,7 @@
     "grey": "305"
    },
    "item": {
-    "itemId": 9224,
+    "itemId": null,
     "name": "Potion of Demonslaying"
    },
    "makesQty": null,
@@ -5578,7 +5578,7 @@
     "grey": "330"
    },
    "item": {
-    "itemId": 13503,
+    "itemId": null,
     "name": "Alchemists' Stone"
    },
    "makesQty": null,
@@ -5729,7 +5729,7 @@
     "grey": "290"
    },
    "item": {
-    "itemId": 250955,
+    "itemId": null,
     "name": "Potion of Beast Culling"
    },
    "makesQty": null,
@@ -5770,7 +5770,7 @@
     "grey": "290"
    },
    "item": {
-    "itemId": 250954,
+    "itemId": null,
     "name": "Potion of Elemental Siphoning"
    },
    "makesQty": null,
@@ -7658,7 +7658,7 @@
       279
      ],
      "item": {
-      "itemId": 9224,
+      "itemId": null,
       "name": "Potion of Demonslaying"
      },
      "source": "Recipe sold by Nina Lightbrew (Alliance) or Rartar (Horde)",
@@ -7811,7 +7811,7 @@
       "tooltip": [
        "\tElixirs",
        "Requires Level 25",
-       "Use: Drink to regenerate 6 mana every 5 seconds. Lasts for 30 min. (3 Sec Cooldown)",
+       "Use: Drink to regenerate 6 mana every 5 sec. Lasts for 30 min. (3 Sec Cooldown)",
        "Sell Price: 50c"
       ],
       "tooltipSynthesized": false,
@@ -7943,7 +7943,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 25",
-       "Use: Increases your healing done by up to 28 for 30 sec.",
+       "Use: Increases Spell Healing by 31 for 30 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -7976,7 +7976,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 25",
-       "Use: Increases your Spell Damage by 14 for 30 sec.",
+       "Use: Increases Spell Damage by 16 for 30 sec.",
        "Sell Price: 25c"
       ],
       "tooltipSynthesized": false,
@@ -8009,7 +8009,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 25",
-       "Use: Increases your Attack Power by 14 for 30 sec.",
+       "Use: Increases Attack Power by 28 for 30 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8080,7 +8080,7 @@
       "tooltip": [
        "\tElixirs",
        "Requires Level 55",
-       "Use: Drink to regenerate 20 mana every 5 seconds. Lasts for 30 min. (3 Sec Cooldown)",
+       "Use: Drink to regenerate 20 mana every 5 sec. Lasts for 30 min. (3 Sec Cooldown)",
        "Sell Price: 1s"
       ],
       "tooltipSynthesized": false,
@@ -8113,7 +8113,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 45",
-       "Use: Throw a fragile concoction at the target area, revealing a cloud of Disorienting Smog for 8 sec. Enemies standing within the cloud have their Hit Chance reduced by 10%. Ineffective against targets above level ?.",
+       "Use: Throw a fragile concoction at the target area, revealing a cloud of Disorienting Smog for 8 sec. Enemies standing within the cloud have their Hit Chance reduced by 10%. Ineffective against targets above level 10.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8212,7 +8212,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 35",
-       "Use: Unleash a belch of dragonfire, dealing 450 Fire damage instantly in a narrow cone in front of you. Affected targets will suffer 125 additional damage every 2 sec for 8 sec.",
+       "Use: Unleash a belch of dragonfire, dealing 280 Fire damage instantly in a narrow cone in front of you. Affected targets will suffer 35 additional damage every 2 sec for 8 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8250,7 +8250,7 @@
       "tooltip": [
        "\tElixirs",
        "Requires Level 55",
-       "Use: Drink to gain 400 maximum health and 500 armor for 30 min. Lasts for 30 min. (3 Sec Cooldown)",
+       "Use: Drink to gain 400 Maximum Health and 500 Armor. Lasts for 30 min. (3 Sec Cooldown)",
        "Sell Price: 1s 25c"
       ],
       "tooltipSynthesized": false,
@@ -8283,7 +8283,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 45",
-       "Use: Throw a fragile concoction at the target area, revealing a cloud of Caustic Smog for 12 sec. Enemies standing within the cloud suffer 285 to 315 Nature damage every 1 sec.",
+       "Use: Throw a fragile concoction at the target area, revealing a cloud of Caustic Smog for 12 sec. Enemies standing within the cloud suffer 31 to 35 Nature damage every 1 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8316,7 +8316,7 @@
       "tooltip": [
        "\tElixirs",
        "Requires Level 55",
-       "Use: Drink to gain 25 Agility and Intellect for 30 min. Lasts for 30 min. (3 Sec Cooldown)",
+       "Use: Drink to gain 25 Agility and Intellect. Lasts for 30 min. (3 Sec Cooldown)",
        "Sell Price: 1s 25c"
       ],
       "tooltipSynthesized": false,
@@ -8514,7 +8514,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 55",
-       "Use: Increases your healing done by up to 75 for 30 sec.",
+       "Use: Increases Spell Healing by 88 for 30 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8535,7 +8535,7 @@
     },
     {
      "item": {
-      "name": "Potion of Elemental Siphoning",
+      "name": "Potion of Elemental Purging",
       "slot": null,
       "type": "Potions",
       "itemClass": 0,
@@ -8547,7 +8547,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 40",
-       "Use: Increases Spell Damage by 265 against Elementals. Lasts 2 min.",
+       "Use: Increases Spell Damage by 105 against Elementals. Lasts 5 min.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8646,7 +8646,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 55",
-       "Use: Increases your Spell Damage by 40 for 30 sec.",
+       "Use: Increases Spell Damage by 47 for 30 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8684,7 +8684,7 @@
       "tooltip": [
        "\tPotions",
        "Requires Level 55",
-       "Use: Increases your Attack Power by 40 for 30 sec.",
+       "Use: Increases Attack Power by 80 for 30 sec.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -8855,7 +8855,7 @@
      "tooltip": [
       "\tOther",
       "Requires Alchemy (20)",
-      "Use: Constructs a mana well that allows you and others sitting nearby to regenerate 29 Mana every 5 sec, exclusive with Blessing of Wisdom. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      "Use: Constructs a mana well that allows you and others sitting nearby to regenerate 29 Mana every 5 sec, muutally exclusive with Blessing of Wisdom. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,

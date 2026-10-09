@@ -4399,7 +4399,7 @@
     {
      "qty": 1,
      "item": {
-      "itemId": 9224,
+      "itemId": null,
       "name": "Potion of Demonslaying"
      }
     }
@@ -9335,8 +9335,8 @@
       "tooltip": [
        "Binds when picked up",
        "Two-Hand\tStaff",
-       "32 - 48 Damage\tSpeed 2.20",
-       "(18.2 damage per second)",
+       "32 - 49 Damage\tSpeed 2.20",
+       "(18.4 damage per second)",
        "+11 Intellect",
        "+11 Stamina",
        "Requires Level 25",
@@ -9434,7 +9434,7 @@
        "Binds when picked up",
        "\tEnchanting",
        "Requires Enchanting (140)",
-       "Use: Permanently enchant a Melee Weapon to have a chance to trigger Revelation when a non-periodic spell fails to critically strike. Revelation grants 100% increased critical strike chance to the next spell cast. Revelation's chance to trigger is diminished as your critical strike chance increases.",
+       "Use: Permanently enchant a Melee Weapon to have a chance to trigger Revelation when a non-periodic spell fails to critically strike. Revelation grants 100% increased critical strike chance to the next non-periodic spell cast. Revelation's chance to trigger is diminished as your critical strike chance increases.",
        "\"Teaches you how to permanently enchant a weapon to grant a chance to trigger Revelation when your direct spells fail to deal a critical strike. Revelation grants 100% increased critical strike chance to your next spell cast.\"",
        "Sell Price: 7s"
       ],
@@ -9468,14 +9468,14 @@
       "tooltip": [
        "Binds when picked up",
        "Two-Hand\tStaff",
-       "61 - 93 Damage\tSpeed 2.40",
-       "(32.1 damage per second)",
+       "62 - 93 Damage\tSpeed 2.40",
+       "(32.3 damage per second)",
        "+19 Spirit",
        "+19 Stamina",
        "Requires Level 45",
        "Equip: +105 Healing",
        "Equip: +35 Spell Damage",
-       "Sell Price: 6s 1c"
+       "Sell Price: 3g 37s 31c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -9765,7 +9765,7 @@
        "Requires Level 45",
        "Equip: +19 Healing",
        "Equip: +6 Spell Damage",
-       "Sell Price: 21s 56c"
+       "Sell Price: 1g 8s 77c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -9801,7 +9801,7 @@
        "+8 Stamina",
        "Requires Level 45",
        "Equip: +10 Spell Power",
-       "Sell Price: 21s 56c"
+       "Sell Price: 1g 8s 35c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -9833,13 +9833,13 @@
       "tooltip": [
        "Binds when picked up",
        "Two-Hand\tStaff",
-       "61 - 93 Damage\tSpeed 2.40",
-       "(32.1 damage per second)",
+       "62 - 93 Damage\tSpeed 2.40",
+       "(32.3 damage per second)",
        "+19 Intellect",
        "+19 Stamina",
        "Requires Level 45",
        "Equip: +56 Spell Power",
-       "Sell Price: 6s 1c"
+       "Sell Price: 3g 36s 5c"
       ],
       "tooltipSynthesized": false,
       "classicTooltip": null,
@@ -9950,7 +9950,7 @@
        "\tEnchanting",
        "Requires Enchanting (300)",
        "Use: Permanently enchant gloves to increase holy damage by up to 20.",
-       "\"Teaches you how to permanently enchant gloves to increase holy damage by up to 20.\"",
+       "\"Teaches you how to permanently enchant gloves to increase Holy damage by up to 20.\"",
        "Sell Price: 15s"
       ],
       "tooltipSynthesized": false,
@@ -9980,7 +9980,7 @@
        "\tEnchanting",
        "Requires Enchanting (300)",
        "Use: Permanently enchant gloves to increase arcane damage by up to 20.",
-       "\"Teaches you how to permanently enchant gloves to increase arcane damage by up to 20.\"",
+       "\"Teaches you how to permanently enchant gloves to increase Arcane damage by up to 20.\"",
        "Sell Price: 15s"
       ],
       "tooltipSynthesized": false,
@@ -10040,7 +10040,7 @@
        "\tEnchanting",
        "Requires Enchanting (300)",
        "Use: Permanently enchant bracers to give +9 defense skill.",
-       "\"Teaches you how to permanently enchant bracers to give +9 Defense Skill.\"",
+       "\"Teaches you how to permanently enchant bracers to give +6 Defense Skill.\"",
        "Sell Price: 15s"
       ],
       "tooltipSynthesized": false,
@@ -10116,7 +10116,7 @@
     },
     {
      "item": {
-      "name": "Formula: Enchant Off-Hand - Wisdom",
+      "name": "Formula: Enchant Off Hand - Wisdom",
       "slot": null,
       "type": "Enchanting",
       "itemClass": 9,
@@ -10130,7 +10130,7 @@
        "\tEnchanting",
        "Requires Enchanting (300)",
        "Use: Permanently enchant an Off-Hand to add 6 to intellect and 5 to spirit.",
-       "\"Teaches you how to permanently enchant an off-hand to give +6 Intellect and +5 Spirit.\"",
+       "\"Teaches you how to permanently enchant an Off Hand to give +6 Intellect and +5 Spirit.\"",
        "Sell Price: 15s"
       ],
       "tooltipSynthesized": false,
@@ -10249,8 +10249,8 @@
        "Binds when picked up",
        "\tEnchanting",
        "Requires Enchanting (300)",
-       "Use: Permanently enchant gloves to increase nature damage by up to 20.",
-       "\"Teaches you how to permanently enchant gloves to increase nature damage by up to 20.\"",
+       "Use: Permanently enchant gloves to increase Nature damage by up to 20.",
+       "\"Teaches you how to permanently enchant gloves to increase Nature damage by up to 20.\"",
        "Sell Price: 15s"
       ],
       "tooltipSynthesized": false,
@@ -10513,7 +10513,7 @@
      "tooltip": [
       "\tOther",
       "Requires Enchanting (20)",
-      "Use: Summons an enchanted lute that allows you and others sitting nearby to gain 308 increase to Armor, 13 increase to all stats, and 22 increase to all resistances, exclusive with Mark of the Wild. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+      "Use: Summons an enchanted lute that allows you and others sitting nearby to gain 308 Armor, 13 increase to all stats, and 22 increase to all resistances, mutually exclusive with Mark of the Wild. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,

@@ -2978,7 +2978,7 @@
   {
    "name": "Goldthorn Tea",
    "rank": "175",
-   "category": "Health and Mana Only",
+   "category": "Other Buffs",
    "categoryConfident": true,
    "source": "Trainer",
    "skills": {
@@ -4496,7 +4496,7 @@
       "requiredLevel": 1,
       "tooltip": [
        "\tFood & Drink",
-       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 1 Spirit for 15 min.",
+       "Use: Restores 42 mana over 18 sec. Must remain seated while drinking. If you spend at least 10 sec eating, you will become well fed and gain 1 Spirit for 15 min. Additionally, experience gained from kills is increased by 5%.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -4529,7 +4529,7 @@
       "tooltip": [
        "\tFood & Drink",
        "Requires Level 5",
-       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 3 Spirit for 15 min.",
+       "Use: Restores 104 mana over 21 sec. Must remain seated while drinking. If you spend at least 10 sec eating, you will become well fed and gain 3 Spirit for 15 min. Additionally, experience gained from kills is increased by 5%.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -4562,7 +4562,7 @@
       "tooltip": [
        "\tFood & Drink",
        "Requires Level 15",
-       "Use: Restores 174 mana over 24 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 5 Spirit for 15 min.",
+       "Use: Restores 174 mana over 24 sec. Must remain seated while drinking. If you spend at least 10 sec eating, you will become well fed and gain 5 Spirit for 15 min. Additionally, experience gained from kills is increased by 5%.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -4600,7 +4600,7 @@
       "tooltip": [
        "\tFood & Drink",
        "Requires Level 25",
-       "Use: Restores 249 mana over 27 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 10 Spirit for 15 min.",
+       "Use: Restores 249 mana over 27 sec. Must remain seated while drinking. If you spend at least 10 sec eating, you will become well fed and gain 10 Spirit for 15 min. Additionally, experience gained from kills is increased by 5%.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -4633,7 +4633,7 @@
       "tooltip": [
        "\tFood & Drink",
        "Requires Level 35",
-       "Use: Restores 332 mana over 30 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 15 Spirit for 15 min.",
+       "Use: Restores 332 mana over 30 sec. Must remain seated while drinking. If you spend at least 10 sec eating, you will become well fed and gain 15 Spirit for 15 min. Additionally, experience gained from kills is increased by 5%.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -4671,7 +4671,7 @@
       "tooltip": [
        "\tFood & Drink",
        "Requires Level 45",
-       "Use: Restores 489 mana over 30 sec. Must remain seated while drinking. If you spend at least 10 seconds eating you will become well fed and gain 20 Spirit for 15 min.",
+       "Use: Restores 489 mana over 30 sec. Must remain seated while drinking. If you spend at least 10 sec eating, you will become well fed and gain 20 Spirit for 15 min. Additionally, experience gained from kills is increased by 5%.",
        "Sell Price: 1c"
       ],
       "tooltipSynthesized": false,
@@ -4923,7 +4923,7 @@
      "source": "foreverchanges"
     },
     "blueprint": {
-     "name": "Blueprint: Baker's Oven",
+     "name": "Blueprint: Iron Oven",
      "slot": null,
      "type": "Cooking",
      "itemClass": 9,
@@ -4936,7 +4936,7 @@
       "\tCooking",
       "Requires Cooking (300)",
       "Use: Craft an Iron Oven.",
-      "\"Teaches you how to place a Baker's Oven at a campsite.\"",
+      "\"Teaches you how to place a Iron Oven at a campsite.\"",
       "Sell Price: 12g"
      ],
      "tooltipSynthesized": false,
