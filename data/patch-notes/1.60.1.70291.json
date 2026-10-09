@@ -1,0 +1,144 @@
+{
+  "build": "1.60.1.70291",
+  "date": "2026-10-08",
+  "title": "Impale gains a Deep Wounds requirement, Predatory Instincts renamed, and a wide spell-scaling pass",
+  "summary": "The October 8 build adds a 3-point Deep Wounds prerequisite to Warrior Arms' Impale, renames Druid Feral Combat's Predatory Instincts to Natural Instinct (now also adding spell healing from Intellect), removes Water Shield's cooldown, caps Reckoning's extra attack at once per 1.5 sec, and rescales early ranks of several nukes and heals (Fireball, Frostbolt, Arcane Missiles, Lesser Heal, Shadow Bolt, Lightning Bolt, Wrath, Smite, Heal) softer at low ranks and harder at high ranks, alongside a weaker Penance and smaller Thorns/Retribution Aura values.",
+  "sourceNote": "No official Blizzard forum post for build 70291 was on hand for this update -- every change below is sourced directly from a talentsforever.com data diff (data/sources/talentsforever/diffs/2026-10-04_to_2026-10-08.md) between the 2026-10-04 and 2026-10-08 snapshots (beta client 1.60.1.70170 -> 1.60.1.70291), cross-checked against the session's dev-note brief. If an official post for this build surfaces later, add sourceLabel/sourceUrl and quote its developer notes verbatim here.",
+  "pendingInData": [],
+  "classes": {
+    "warrior": [
+      {
+        "name": "Impale",
+        "kind": "changed",
+        "spec": "Arms",
+        "text": "Now requires 3 ranks in Deep Wounds."
+      },
+      {
+        "name": "Spearing Strike",
+        "kind": "changed",
+        "spec": "Arms",
+        "text": "Now also dismounts mounted targets it hits."
+      },
+      {
+        "name": "Gore Drinker",
+        "kind": "changed",
+        "spec": "Fury",
+        "text": "Rank 2's health-restore wording clarified to 1.0% (was displayed as 1%); no value change."
+      }
+    ],
+    "paladin": [
+      {
+        "name": "Reckoning",
+        "kind": "changed",
+        "spec": "Protection",
+        "text": "The extra attack can no longer occur more often than once every 1.5 sec."
+      },
+      {
+        "name": "Retribution Aura",
+        "kind": "changed",
+        "text": "Damage per rank reduced (rank 1: 7 -> 5, scaling down similarly through rank 5: 30 -> 20)."
+      }
+    ],
+    "hunter": [
+      {
+        "name": "Expose Prey",
+        "kind": "changed",
+        "spec": "Survival",
+        "text": "Mongoose Bite activation window increased from 5 sec to 10 sec."
+      }
+    ],
+    "priest": [
+      {
+        "name": "Penance",
+        "kind": "changed",
+        "spec": "Discipline",
+        "text": "Weaker at every rank and costs more Mana. Rank 4: 131 damage / 673 healing for 355 Mana -> 92 damage / 425 healing for 385 Mana."
+      },
+      {
+        "name": "Lesser Heal",
+        "kind": "changed",
+        "text": "Rank 1 softer, ranks 2-3 stronger (rank 3: 138-160 -> 157-181)."
+      },
+      {
+        "name": "Heal",
+        "kind": "changed",
+        "text": "Low ranks softer (rank 1: 282-324 -> 260-300; rank 2: 394-448 -> 364-414); ranks 3-4 unchanged."
+      },
+      {
+        "name": "Smite",
+        "kind": "changed",
+        "text": "Low ranks softer (rank 1: 15-19 -> 13-17); ranks 5-8 unchanged."
+      }
+    ],
+    "shaman": [
+      {
+        "name": "Water Shield",
+        "kind": "changed",
+        "spec": "Restoration",
+        "text": "No longer has a 15 sec cooldown."
+      },
+      {
+        "name": "Lightning Bolt",
+        "kind": "changed",
+        "text": "Low ranks softer, high ranks harder (rank 1: 15-17 -> 14-16; rank 4: 55-63 -> 59-67)."
+      }
+    ],
+    "mage": [
+      {
+        "name": "Fireball",
+        "kind": "changed",
+        "text": "Low ranks softer, high ranks harder (rank 1: 16-24 -> 14-22; rank 4: 66-90 -> 68-92)."
+      },
+      {
+        "name": "Frostbolt",
+        "kind": "changed",
+        "text": "Low ranks softer, high ranks harder (rank 1: 20-22 -> 18-20; rank 4: 61-67 -> 69-77)."
+      },
+      {
+        "name": "Arcane Missiles",
+        "kind": "changed",
+        "text": "Low ranks softer (rank 1: 25 -> 24 per tick; rank 3: 46 -> 48 per tick)."
+      }
+    ],
+    "warlock": [
+      {
+        "name": "Shadow Bolt",
+        "kind": "changed",
+        "text": "Low ranks softer, rank 4 harder (rank 1: 12-16 -> 11-15; rank 4: 56-64 -> 58-66)."
+      },
+      {
+        "name": "Demonic Brand",
+        "kind": "changed",
+        "spec": "Demonology",
+        "text": "Your pet's bonus attacks now only generate high threat when they deal Shadow damage (previously always generated high threat regardless of damage type)."
+      }
+    ],
+    "druid": [
+      {
+        "name": "Natural Instinct",
+        "kind": "renamed",
+        "spec": "Feral Combat",
+        "oldName": "Predatory Instincts",
+        "text": "Renamed, and now also increases spell healing by 12/25% of Intellect in addition to its existing melee critical strike damage bonus."
+      },
+      {
+        "name": "Furor",
+        "kind": "changed",
+        "spec": "Restoration",
+        "text": "Reworded: Bear/Dire Bear Form now forfeit the Cat Form Energy reserve and halt its restoration while active, rather than only losing the chance to regain it; the Rage/Energy percentages and values are unchanged."
+      },
+      {
+        "name": "Thorns",
+        "kind": "changed",
+        "text": "Damage per rank reduced (rank 1: 4 -> 3, scaling down similarly through rank 6: 22 -> 18)."
+      },
+      {
+        "name": "Wrath",
+        "kind": "changed",
+        "text": "Low ranks softer (rank 1: 15-17 -> 14-16); ranks 6-8 unchanged."
+      }
+    ]
+  },
+  "races": [],
+  "other": []
+}
