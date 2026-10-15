@@ -1143,8 +1143,8 @@
       "Binds when picked up",
       "Unique-Equipped",
       "Finger",
-      "+5 Stamina",
-      "+5 Agility",
+      "+6 Stamina",
+      "+4 Agility",
       "Requires Level 21",
       "Sell Price: 14s 72c"
      ],
@@ -1278,17 +1278,17 @@
      "itemClass": 2,
      "itemId": 3400,
      "icon": "inv_sword_20",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 27,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Main Hand\tSword",
-      "30 - 56 Damage\tSpeed 2.50",
-      "(17.2 damage per second)",
-      "+4 Stamina",
-      "+4 Spirit",
-      "Sell Price: 40s 50c"
+      "24 - 46 Damage\tSpeed 2.50",
+      "(14.0 damage per second)",
+      "+3 Stamina",
+      "+3 Spirit",
+      "Sell Price: 33s 75c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1312,18 +1312,18 @@
      "itemClass": 2,
      "itemId": 1317,
      "icon": "inv_staff_16",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 27,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Two-Hand\tStaff",
-      "43 - 66 Damage\tSpeed 3.30",
-      "(16.5 damage per second)",
-      "+2 Strength",
-      "+13 Spirit",
-      "Equip: +29 Spell Power",
-      "Sell Price: 50s 62c"
+      "36 - 54 Damage\tSpeed 3.30",
+      "(13.6 damage per second)",
+      "+1 Strength",
+      "+9 Spirit",
+      "Equip: +20 Spell Power",
+      "Sell Price: 42s 18c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1387,17 +1387,17 @@
      "itemClass": 4,
      "itemId": 2033,
      "icon": "inv_boots_08",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 28,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Feet\tLeather",
-      "68 Armor",
-      "+5 Agility",
-      "+8 Stamina",
-      "+6 Spirit",
-      "Sell Price: 16s 75c"
+      "62 Armor",
+      "+3 Agility",
+      "+5 Stamina",
+      "+4 Spirit",
+      "Sell Price: 13s 95c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1421,16 +1421,16 @@
      "itemClass": 4,
      "itemId": 2906,
      "icon": "inv_pants_03",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 28,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Legs\tMail",
-      "185 Armor",
-      "+10 Strength",
-      "+10 Spirit",
-      "Sell Price: 26s 73c"
+      "168 Armor",
+      "+7 Strength",
+      "+7 Spirit",
+      "Sell Price: 22s 27c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1603,9 +1603,9 @@
       "Two-Hand\tMace",
       "43 - 66 Damage\tSpeed 2.30",
       "(23.7 damage per second)",
-      "+10 Strength",
+      "+9 Strength",
       "+5 Stamina",
-      "+9 Intellect",
+      "+10 Intellect",
       "Sell Price: 61s 25c"
      ],
      "tooltipSynthesized": false,

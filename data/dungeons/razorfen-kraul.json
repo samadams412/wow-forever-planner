@@ -476,10 +476,10 @@
       "Binds when picked up",
       "Head\tLeather",
       "84 Armor",
-      "+12 Spirit",
-      "+8 Stamina",
-      "+7 Nature Resistance",
+      "+14 Spirit",
       "Requires Level 25",
+      "Equip: +13 Healing",
+      "Equip: +4 Spell Damage",
       "Sell Price: 20s 25c"
      ],
      "tooltipSynthesized": false,
@@ -1163,7 +1163,8 @@
       "Neck",
       "+4 Stamina",
       "Requires Level 29",
-      "Equip: +16 Spell Damage Vs Undead",
+      "Equip: +12 Spell Damage Vs Undead",
+      "Equip: +5 Spell Power",
       "Sell Price: 31s 56c"
      ],
      "tooltipSynthesized": false,
@@ -1195,10 +1196,10 @@
       "Binds when picked up",
       "Shoulder\tCloth",
       "38 Armor",
-      "+5 Spirit",
       "+11 Intellect",
       "+3 Agility",
       "Requires Level 29",
+      "Equip: +6 Spell Power",
       "Sell Price: 23s 67c"
      ],
      "tooltipSynthesized": false,
@@ -1357,9 +1358,9 @@
       "One-Hand\tAxe",
       "38 - 72 Damage\tSpeed 2.40",
       "(22.9 damage per second)",
+      "+5 Spirit",
       "+5 Strength",
       "Requires Level 30",
-      "Equip: +6 Health Regeneration",
       "Sell Price: 86s 81c"
      ],
      "tooltipSynthesized": false,
@@ -1590,9 +1591,8 @@
       "Two-Hand\tStaff",
       "56 - 85 Damage\tSpeed 3.30",
       "(21.4 damage per second)",
-      "+5 Intellect",
       "+16 Spirit",
-      "+4 Stamina",
+      "+6 Stamina",
       "Requires Level 29",
       "Equip: +70 Healing",
       "Equip: +23 Spell Damage",
@@ -1630,10 +1630,10 @@
       "Binds when picked up",
       "Head\tLeather",
       "89 Armor",
-      "+6 Stamina",
-      "+11 Intellect",
+      "+11 Stamina",
       "+11 Spirit",
       "Requires Level 29",
+      "Equip: +7 Spell Power",
       "Sell Price: 29s 67c"
      ],
      "tooltipSynthesized": false,
@@ -1972,7 +1972,7 @@
       "One-Hand\tDagger",
       "17 - 33 Damage\tSpeed 1.30",
       "(19.2 damage per second)",
-      "+6 Agility",
+      "+7 Agility",
       "Requires Level 26",
       "Sell Price: 59s 29c"
      ],
@@ -2321,15 +2321,15 @@
      "itemClass": 4,
      "itemId": 6748,
      "icon": "inv_jewelry_ring_14",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 32,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Finger",
-      "+7 Agility",
-      "+7 Spirit",
-      "Sell Price: 26s 9c"
+      "+5 Agility",
+      "+5 Spirit",
+      "Sell Price: 21s 74c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2351,15 +2351,15 @@
      "itemClass": 4,
      "itemId": 6750,
      "icon": "inv_jewelry_ring_06",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 32,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Finger",
-      "+7 Intellect",
-      "+7 Spirit",
-      "Sell Price: 26s 9c"
+      "+5 Intellect",
+      "Equip: +6 Spell Power",
+      "Sell Price: 21s 74c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2381,15 +2381,15 @@
      "itemClass": 4,
      "itemId": 6749,
      "icon": "inv_jewelry_ring_13",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 32,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Finger",
-      "+7 Strength",
-      "+7 Spirit",
-      "Sell Price: 26s 9c"
+      "+5 Strength",
+      "+5 Spirit",
+      "Sell Price: 21s 74c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2447,16 +2447,16 @@
      "itemClass": 4,
      "itemId": 6751,
      "icon": "inv_misc_cape_11",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 32,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Back\tCloth",
-      "24 Armor",
-      "-5 Spirit",
-      "+12 Stamina",
-      "Sell Price: 19s 56c"
+      "22 Armor",
+      "-3 Spirit",
+      "+8 Stamina",
+      "Sell Price: 16s 30c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2480,17 +2480,17 @@
      "itemClass": 4,
      "itemId": 6752,
      "icon": "inv_boots_03",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 32,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Feet\tLeather",
-      "73 Armor",
-      "+8 Stamina",
-      "+7 Agility",
-      "+6 Spirit",
-      "Sell Price: 24s 52c"
+      "67 Armor",
+      "+6 Stamina",
+      "+5 Agility",
+      "+4 Spirit",
+      "Sell Price: 20s 43c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [

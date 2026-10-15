@@ -222,7 +222,6 @@
       "26 - 49 Damage\tSpeed 2.20",
       "(17.0 damage per second)",
       "Requires Level 22",
-      "Equip: +6 Attack Power",
       "Chance on hit: Sends a shadowy bolt at the enemy causing 28 Shadow damage.",
       "Sell Price: 40s 50c"
      ],
@@ -317,8 +316,8 @@
       "Hands\tMail",
       "132 Armor",
       "+8 Strength",
-      "+4 Stamina",
-      "+4 Nature Resistance",
+      "+5 Stamina",
+      "+5 Nature Resistance",
       "Requires Level 23",
       "Sell Price: 13s 36c"
      ],
@@ -2134,17 +2133,17 @@
      "itemClass": 4,
      "itemId": 2034,
      "icon": "inv_chest_cloth_04",
-     "quality": 2,
+     "quality": 3,
      "itemLevel": 25,
      "requiredLevel": 20,
      "tooltip": [
       "Binds when equipped",
       "Chest\tCloth",
-      "39 Armor",
-      "+8 Spirit",
+      "43 Armor",
+      "+12 Spirit",
       "Requires Level 20",
-      "Equip: +2 Spell Power",
-      "Sell Price: 10s 86c"
+      "Equip: +3 Spell Power",
+      "Sell Price: 13s 3c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2212,15 +2211,15 @@
      "itemClass": 4,
      "itemId": 6743,
      "icon": "inv_jewelry_ring_08",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 25,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Finger",
-      "+6 Stamina",
-      "Equip: +6 Health Regeneration",
-      "Sell Price: 13s 3c"
+      "+4 Stamina",
+      "Equip: +4 Health Regeneration",
+      "Sell Price: 10s 86c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2282,16 +2281,16 @@
      "itemClass": 4,
      "itemId": 7003,
      "icon": "inv_bracer_06",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 26,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Wrist\tMail",
-      "89 Armor",
-      "+8 Stamina",
+      "81 Armor",
+      "+3 Stamina",
       "Equip: +6 Attack Power",
-      "Sell Price: 11s 4c"
+      "Sell Price: 9s 20c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2315,17 +2314,17 @@
      "itemClass": 4,
      "itemId": 7004,
      "icon": "inv_misc_cape_18",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 26,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Back\tCloth",
-      "22 Armor",
-      "+6 Spirit",
-      "Equip: +11 Healing",
-      "Equip: +4 Spell Damage",
-      "Sell Price: 11s 4c"
+      "20 Armor",
+      "+3 Spirit",
+      "Equip: +7 Healing",
+      "Equip: +2 Spell Damage",
+      "Sell Price: 9s 20c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2348,16 +2347,16 @@
      "itemClass": 4,
      "itemId": 270021,
      "icon": "inv_bracer_07",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 26,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Wrist\tLeather",
-      "42 Armor",
-      "+5 Agility",
-      "+5 Stamina",
-      "Sell Price: 9s 26c"
+      "38 Armor",
+      "+3 Agility",
+      "+3 Stamina",
+      "Sell Price: 7s 71c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -2419,7 +2418,7 @@
       "30 - 57 Shadow Damage\tSpeed 1.50",
       "(29.0 damage per second)",
       "+3 Spirit",
-      "+4 Shadow Resistance",
+      "Equip: +6 Shadow Spell Damage",
       "Sell Price: 36s 75c"
      ],
      "tooltipSynthesized": false,
@@ -2573,17 +2572,17 @@
      "itemClass": 4,
      "itemId": 6998,
      "icon": "inv_boots_05",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 27,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Feet\tCloth",
-      "31 Armor",
-      "+6 Agility",
-      "Equip: +17 Healing",
-      "Equip: +6 Spell Damage",
-      "Sell Price: 12s 15c"
+      "28 Armor",
+      "+5 Agility",
+      "Equip: +10 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 10s 12c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2607,16 +2606,16 @@
      "itemClass": 4,
      "itemId": 7000,
      "icon": "inv_belt_04",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 27,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Waist\tLeather",
-      "55 Armor",
-      "+7 Stamina",
-      "Equip: +8 Spell Power",
-      "Sell Price: 10s 20c"
+      "50 Armor",
+      "+5 Stamina",
+      "Equip: +6 Spell Power",
+      "Sell Price: 8s 50c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2640,17 +2639,17 @@
      "itemClass": 4,
      "itemId": 270025,
      "icon": "inv_gauntlets_21",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 27,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Hands\tMail",
-      "130 Armor",
-      "+8 Stamina",
-      "Equip: +14 Healing",
-      "Equip: +5 Spell Damage",
-      "Sell Price: 12s 62c"
+      "118 Armor",
+      "+5 Stamina",
+      "Equip: +9 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 10s 52c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -2772,7 +2771,7 @@
      "itemClass": 4,
      "itemId": 17694,
      "icon": "inv_jewelry_ring_02",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 28,
      "requiredLevel": 0,
      "tooltip": [
@@ -2780,8 +2779,7 @@
       "Finger",
       "+4 Agility",
       "+4 Strength",
-      "+6 Spirit",
-      "Sell Price: 17s 82c"
+      "Sell Price: 14s 85c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2804,16 +2802,16 @@
      "itemClass": 4,
      "itemId": 17695,
      "icon": "inv_shoulder_09",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 28,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Shoulder\tCloth",
-      "34 Armor",
-      "+4 Stamina",
-      "Equip: +8 Spell Power",
-      "Sell Price: 13s 36c"
+      "31 Armor",
+      "+3 Stamina",
+      "Equip: +5 Spell Power",
+      "Sell Price: 11s 13c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -2882,7 +2880,7 @@
       "30 - 57 Shadow Damage\tSpeed 1.50",
       "(29.0 damage per second)",
       "+3 Spirit",
-      "+4 Shadow Resistance",
+      "Equip: +6 Shadow Spell Damage",
       "Sell Price: 36s 75c"
      ],
      "tooltipSynthesized": false,

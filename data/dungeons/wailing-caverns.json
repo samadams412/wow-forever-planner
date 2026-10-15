@@ -284,6 +284,7 @@
       "Binds when picked up",
       "Shoulder\tLeather",
       "68 Armor",
+      "+7 Spirit",
       "+5 Agility",
       "Requires Level 18",
       "Sell Price: 9s 59c"
@@ -638,9 +639,9 @@
       "Binds when picked up",
       "Chest\tLeather",
       "91 Armor",
-      "+6 Strength",
-      "+7 Spirit",
-      "+4 Stamina",
+      "+3 Strength",
+      "+10 Spirit",
+      "+3 Intellect",
       "Requires Level 18",
       "Embrace of the Viper (0/5)",
       "(2) Set: +10 Intellect.",
@@ -772,7 +773,7 @@
       "Back\tCloth",
       "20 Armor",
       "+6 Agility",
-      "+2 Spirit",
+      "+2 Nature Resistance",
       "Requires Level 18",
       "Sell Price: 7s 65c"
      ],
@@ -801,7 +802,7 @@
      "icon": "inv_weapon_shortblade_10",
      "quality": 3,
      "itemLevel": 21,
-     "requiredLevel": 17,
+     "requiredLevel": 16,
      "tooltip": [
       "Binds when picked up",
       "One-Hand\tDagger",
@@ -809,7 +810,7 @@
       "(13.9 damage per second)",
       "+3 Agility",
       "+3 Strength",
-      "Requires Level 17",
+      "Requires Level 16",
       "Sell Price: 19s 63c"
      ],
      "tooltipSynthesized": false,
@@ -1149,7 +1150,7 @@
       "Off Hand\tShield",
       "547 Armor",
       "11 Block",
-      "+5 Nature Resistance",
+      "+5 Intellect",
       "Requires Level 19",
       "Equip: +5 Spell Power",
       "Sell Price: 18s 45c"
@@ -1373,10 +1374,9 @@
       "Binds when picked up",
       "Unique-Equipped",
       "Finger",
-      "+5 Spirit",
       "+3 Stamina",
       "Requires Level 19",
-      "Equip: +1 Spell Penetration",
+      "Equip: +2 Spell Penetration",
       "Sell Price: 11s 53c"
      ],
      "tooltipSynthesized": false,
@@ -1659,20 +1659,10 @@
      "itemClass": 4,
      "itemId": 6480,
      "icon": "inv_pants_02",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 20,
      "requiredLevel": 0,
      "tooltip": [
-      "Binds when picked up",
-      "Legs\tLeather",
-      "75 Armor",
-      "+7 Stamina",
-      "+4 Agility",
-      "+5 Spirit",
-      "Sell Price: 7s 13c"
-     ],
-     "tooltipSynthesized": false,
-     "classicTooltip": [
       "Binds when picked up",
       "Legs\tLeather",
       "68 Armor",
@@ -1680,7 +1670,9 @@
       "+4 Agility",
       "Sell Price: 7s 13c"
      ],
-     "status": "changed",
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "same",
      "dropChance": null,
      "dropChanceUnder": false,
      "unknown": false,
@@ -1830,16 +1822,16 @@
      "itemClass": 2,
      "itemId": 8071,
      "icon": "inv_staff_02",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 23,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Ranged\tWand",
-      "27 - 52 Fire Damage\tSpeed 1.70",
-      "(23.2 damage per second)",
-      "Equip: +5 Spell Power",
-      "Sell Price: 19s 13c"
+      "21 - 39 Fire Damage\tSpeed 1.70",
+      "(17.6 damage per second)",
+      "Equip: +2 Spell Power",
+      "Sell Price: 15s 94c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1862,17 +1854,16 @@
      "itemClass": 4,
      "itemId": 6481,
      "icon": "inv_gauntlets_05",
-     "quality": 3,
+     "quality": 2,
      "itemLevel": 23,
      "requiredLevel": 0,
      "tooltip": [
       "Binds when picked up",
       "Hands\tMail",
-      "122 Armor",
+      "110 Armor",
       "+5 Strength",
-      "+3 Agility",
-      "+4 Intellect",
-      "Sell Price: 7s 65c"
+      "+2 Agility",
+      "Sell Price: 6s 37c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": [
@@ -1996,8 +1987,8 @@
       "Two-Hand\tStaff",
       "35 - 53 Damage\tSpeed 2.90",
       "(15.2 damage per second)",
+      "+7 Intellect",
       "+7 Agility",
-      "+7 Spirit",
       "+7 Stamina",
       "Equip: +26 Spell Power",
       "Sell Price: 36s 4c"
@@ -2069,8 +2060,8 @@
       "Two-Hand\tMace",
       "55 - 84 Damage\tSpeed 3.40",
       "(20.4 damage per second)",
-      "+10 Strength",
-      "+7 Stamina",
+      "+10 Spirit",
+      "+7 Strength",
       "Sell Price: 35s 58c"
      ],
      "tooltipSynthesized": false,
