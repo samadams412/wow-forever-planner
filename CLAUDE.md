@@ -65,6 +65,11 @@ sizes. `next.config.ts` also excludes `public/map/*/tiles/**` from all traces.
   catch-all `app/planner/[[...slug]]/page.tsx`. Old 3-segment links
   (`/planner/<classId>/<raceId>/<buildCode>`, from when race was a URL
   segment) redirect via `parseSlug()`.
+- Point order: separate `?order=<build-code version>.<one char per point>`
+  param (`lib/talent-order.ts`), never part of the build code. Levels are
+  derived (point i = level 10+i). Missing/invalid/old-version order = no
+  "Talent order" panel. Full contract:
+  `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-14-talent-order-tracking.md`.
 - Per-build OG image: `app/planner/og/[classId]/[buildCode]/route.tsx`, a
   Route Handler (not the `opengraph-image.tsx` file convention, which
   can't be the terminal segment under a catch-all). `generateMetadata`

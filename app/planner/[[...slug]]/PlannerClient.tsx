@@ -2,12 +2,14 @@
 
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import { trackBuildEvent } from "@/lib/build-tracking-client";
-import { getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree } from "@/lib/wow-data";
-import { encodeBuild, decodeBuild } from "@/lib/build-code";
+import { getClassTalentData, classLabel, mediumIconUrl, CLASS_ICON, type TalentTree, type ClassTalentData } from "@/lib/wow-data";
+import { encodeBuild, decodeBuild, type RankState } from "@/lib/build-code";
 import { buildAiTextSummary } from "@/lib/build-text-export";
 import { totalPointsSpent, pointsAtLevel, MAX_LEVEL } from "@/lib/talent-rules";
 import { buildReducer, isTextEditingTarget, type BuildState } from "@/lib/build-history";
 import { getSavedBuilds, saveBuild, deleteSavedBuild, type SavedBuild } from "@/lib/saved-builds";
+import { encodeOrder, decodeOrder } from "@/lib/talent-order";
+import TalentOrderPanel from "@/components/planner/TalentOrderPanel";
 import ClassPicker from "@/components/planner/ClassPicker";
 import PlannerControls from "@/components/planner/PlannerControls";
 import ClassHero from "@/components/planner/ClassHero";
@@ -22,21 +24,32 @@ import { spellbooks } from "@/lib/spellbooks";
 
 const DEFAULT_CLASS_ID = "warrior";
 
+// An empty build's order is trivially known, so tracking starts right away.
+// A non-empty build without a valid order param (old links, saved builds from
+// before order tracking) stays unknown: no Talent order panel.
+function loadOrder(classData: ClassTalentData | undefined, param: string | null | undefined, ranks: RankState) {
+  if (Object.keys(ranks).length === 0) return [];
+  return classData ? decodeOrder(classData, param, ranks) : null;
+}
+
 // Race never affects talent calculations, so it isn't app state and isn't
 // part of the URL (see RaceReferenceTable below for the reference-only
 // race info that still lives on this page). The build code sits directly
-// after the class: /planner/<class>/<build>.
-function buildPlannerPath(classId: string, code: string | null): string {
+// after the class: /planner/<class>/<build>, with the point order (when
+// known) as a separate ?order= param, see lib/talent-order.ts.
+function buildPlannerPath(classId: string, code: string | null, order: string | null): string {
   const parts = code ? [classId, code] : [classId];
-  return `/planner/${parts.join("/")}`;
+  return `/planner/${parts.join("/")}${code && order ? `?order=${order}` : ""}`;
 }
 
 export default function PlannerClient({
   initialClassId,
   initialBuildCode,
+  initialOrder,
 }: {
   initialClassId: string | null;
   initialBuildCode: string | null;
+  initialOrder: string | null;
 }) {
   const [classId, setClassId] = useState<string>(initialClassId ?? DEFAULT_CLASS_ID);
   // ranks plus its own undo/redo stacks, so every point change and its
@@ -44,9 +57,9 @@ export default function PlannerClient({
   const [buildState, dispatch] = useReducer(buildReducer, null, (): BuildState => {
     const classData = getClassTalentData(initialClassId ?? DEFAULT_CLASS_ID);
     const ranks = classData && initialBuildCode ? decodeBuild(classData, initialBuildCode) : {};
-    return { ranks, past: [], future: [] };
+    return { ranks, order: loadOrder(classData, initialOrder, ranks), past: [], future: [] };
   });
-  const ranks = buildState.ranks;
+  const { ranks, order } = buildState;
   // Not part of the URL/build code (talentsforever.com's own level control
   // works the same way -- it's a local planning aid, not part of the shared
   // build). Defaults to the level cap so a fresh/shared build always starts
@@ -113,8 +126,9 @@ export default function PlannerClient({
     // single point spent. Updating the address bar directly keeps this a
     // pure URL-bar sync with no React tree impact.
     const code = classData && Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : null;
-    window.history.replaceState(null, "", buildPlannerPath(classId, code));
-  }, [classId, ranks, classData]);
+    const orderParam = classData && order && order.length > 0 ? encodeOrder(classData, order) : null;
+    window.history.replaceState(null, "", buildPlannerPath(classId, code, orderParam));
+  }, [classId, ranks, order, classData]);
 
   // Ctrl+Z / Ctrl+Y (Cmd on Mac) for point history. Skipped while focus is in
   // a text field, so the browser's own undo still works there.
@@ -137,7 +151,7 @@ export default function PlannerClient({
 
   const handleSelectClass = useCallback((id: string) => {
     setClassId(id);
-    dispatch({ type: "load", ranks: {} });
+    dispatch({ type: "load", ranks: {}, order: [] });
     setTappedTalentId(null);
     setPeekTalentId(null);
   }, []);
@@ -162,7 +176,7 @@ export default function PlannerClient({
       const tree = classData.trees.find((t) => t.talents.some((tal) => tal.id === talentId));
       const talent = tree?.talents.find((tal) => tal.id === talentId);
       if (!tree || !talent) return;
-      dispatch({ type: "remove", tree, talent });
+      dispatch({ type: "remove", trees: classData.trees, tree, talent });
     },
     [classData]
   );
@@ -218,7 +232,12 @@ export default function PlannerClient({
     const name = buildName.trim();
     if (!name || !classData) return;
     const code = Object.keys(ranks).length > 0 ? encodeBuild(classData, ranks) : "";
-    const saved = saveBuild({ name, classId, buildCode: code });
+    const saved = saveBuild({
+      name,
+      classId,
+      buildCode: code,
+      ...(code && order && order.length > 0 && { order: encodeOrder(classData, order) }),
+    });
     if (!saved) {
       setSaveError(true);
       return;
@@ -226,16 +245,14 @@ export default function PlannerClient({
     setSavedBuilds(getSavedBuilds());
     setSaveDialogOpen(false);
     if (code) trackBuildEvent("saved", classId, code);
-  }, [buildName, classData, classId, ranks]);
+  }, [buildName, classData, classId, ranks, order]);
 
   const handleLoadBuild = useCallback(
     (build: SavedBuild) => {
       setClassId(build.classId);
       const buildClassData = getClassTalentData(build.classId);
-      dispatch({
-        type: "load",
-        ranks: buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {},
-      });
+      const loaded = buildClassData && build.buildCode ? decodeBuild(buildClassData, build.buildCode) : {};
+      dispatch({ type: "load", ranks: loaded, order: loadOrder(buildClassData, build.order, loaded) });
       setTappedTalentId(null);
       setPeekTalentId(null);
       setMyBuildsOpen(false);
@@ -315,7 +332,11 @@ export default function PlannerClient({
           </div>
         )}
 
-        
+        {classData && order && order.length > 0 && (
+          <div className="pt-2">
+            <TalentOrderPanel classData={classData} order={order} />
+          </div>
+        )}
       </div>
 
       {classData && (

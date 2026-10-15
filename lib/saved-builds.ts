@@ -6,6 +6,9 @@ export type SavedBuild = {
   // read-nowhere, purely so builds saved before that change still parse.
   raceId?: string | null;
   buildCode: string;
+  // The `order` param (lib/talent-order.ts). Absent on builds saved before
+  // order tracking, or when the order was unknown at save time.
+  order?: string;
   createdAt: number;
 };
 
@@ -36,7 +39,12 @@ export function getSavedBuilds(): SavedBuild[] {
   return readAll().sort((a, b) => b.createdAt - a.createdAt);
 }
 
-export function saveBuild(build: { name: string; classId: string; buildCode: string }): SavedBuild | null {
+export function saveBuild(build: {
+  name: string;
+  classId: string;
+  buildCode: string;
+  order?: string;
+}): SavedBuild | null {
   const entry: SavedBuild = {
     id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     createdAt: Date.now(),

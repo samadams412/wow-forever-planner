@@ -94,10 +94,13 @@ const WEB_APPLICATION_JSON_LD = {
 
 export default async function PlannerPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug?: string[] }>;
+  searchParams: Promise<{ order?: string | string[] }>;
 }) {
   const { slug = [] } = await params;
+  const { order } = await searchParams;
   const { classId, buildCode, redirectTo } = parseSlug(slug);
   if (redirectTo) redirect(redirectTo);
 
@@ -107,7 +110,11 @@ export default async function PlannerPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEB_APPLICATION_JSON_LD) }}
       />
-      <PlannerClient initialClassId={classId ?? null} initialBuildCode={buildCode ?? null} />
+      <PlannerClient
+        initialClassId={classId ?? null}
+        initialBuildCode={buildCode ?? null}
+        initialOrder={typeof order === "string" ? order : null}
+      />
     </>
   );
 }
