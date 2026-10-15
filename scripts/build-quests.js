@@ -31,6 +31,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { questRequirements } = require("./lib/quest-requirements");
 
 const ROOT = path.join(__dirname, "..");
 const read = (rel) => JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8"));
@@ -62,6 +63,9 @@ const PRECEDENCE = {
   mapPoints: ["foreverchanges (NPC coords)", "wowhead (points)", "cmangos (giver spawn points)"],
   chain: ["foreverchanges", "cmangos (prev/next links)"],
   mentionedItems: ["wowhead (extras.items)"],
+  // Whole-record, not per-field: a null from the leading source means "no
+  // restriction", so a later source must not fill it. See lib/quest-requirements.js.
+  requirements: ["unchanged: cmangos (bitmasks) > foreverchanges (facts)", "changed/new: foreverchanges > cmangos"],
 };
 
 // Known-bad chain pointers, carried over from lib/quests.ts (see the comment
@@ -548,6 +552,18 @@ function main() {
       .filter(Boolean);
     track("mentionedItems", mentionedItems.length ? "primary" : "none", null);
 
+    // --- Class / race / profession requirements -----------------------
+    const req = questRequirements(cmRow, a ? P : null, status);
+    const cmReq = cmRow ? questRequirements(cmRow, null, "unchanged") : null;
+    const fcReq = a ? questRequirements(null, P, "new") : null;
+    const reqKey = (r) => JSON.stringify([r.requiredClasses, r.requiredRaces, r.requiredProfession]);
+    const reqRival = [cmReq, fcReq].find((r) => r && r.source !== req.source && reqKey(r) !== reqKey(req));
+    track(
+      "requirements",
+      req.source === null ? "none" : req.source === (status === "unchanged" ? "cmangos" : "foreverchanges") ? "primary" : "fallback",
+      reqRival ? { id, winner: { source: req.source, value: reqKey(req) }, rival: { source: reqRival.source, value: reqKey(reqRival) } } : null
+    );
+
     // --- Assemble -------------------------------------------------------
     const giverName = startNpcs.list.length ? startNpcs.list.map((n) => n.name).join(" / ") : (cmStart.length ? cmStart.map((n) => n.name).join(" / ") : startItemText);
     const turnInName = endNpcs.list.length ? endNpcs.list.map((n) => n.name).join(" / ") : null;
@@ -565,6 +581,10 @@ function main() {
       locationZoneId,
       xp,
       money,
+      requiredClasses: req.requiredClasses,
+      requiredRaces: req.requiredRaces,
+      requiredProfession: req.requiredProfession,
+      requirementsSource: req.source,
       choiceRewards,
       guaranteedRewards,
       textSource: narrativeSource === "cmangos" ? "cmangos" : narrativeSource === "wowhead" ? "wowhead" : narrativeSource,
@@ -574,11 +594,9 @@ function main() {
     details.push({
       ...summary,
       classicXp,
-      classRestriction: P.class ?? null,
       difficultyBands: (P.difficultyBands ?? []).map((b) => ({ color: b.color, level: b.level })),
       repeatable: P.repeatable === "Yes",
       timelimit: P.timelimit ?? null,
-      profession: P.profession ?? null,
       shareable: P.shareable ?? null,
       status,
       statusNote: a?.knownStatus?.changeNote ?? null,

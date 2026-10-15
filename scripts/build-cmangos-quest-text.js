@@ -10,8 +10,11 @@
 // locales_quest (non-English locale text) is empty upstream as of this
 // pull -- enUS text lives directly in quest_template's own Title/Details/
 // etc. columns, so that's all this script reads.
+// Also keeps the raw RequiredClasses/RequiredRaces bitmasks and
+// RequiredSkill/RequiredSkillValue (undecoded; lib/quest-requirements.ts
+// decodes them at quest-build time).
 //
-// Usage: node scripts/build-cmangos-quest-text.js
+// Usage: node scripts/build-cmangos-quest-text.js [local .sql.gz dump]
 
 const fs = require("fs");
 const path = require("path");
@@ -36,6 +39,10 @@ const KEEP_COLUMNS = [
   "prevQuestId",
   "nextQuestId",
   "nextQuestInChain",
+  "requiredClasses",
+  "requiredRaces",
+  "requiredSkill",
+  "requiredSkillValue",
 ];
 
 // quest_template's column order, as declared in its CREATE TABLE statement.
@@ -183,7 +190,7 @@ function toNullableInt(raw) {
 
 async function main() {
   console.log("Fetching cmangos/classic-db Full_DB dump (~13MB gzipped)...");
-  const gz = await fetchBuffer(DUMP_URL);
+  const gz = process.argv[2] ? fs.readFileSync(process.argv[2]) : await fetchBuffer(DUMP_URL);
   console.log(`Downloaded ${(gz.length / 1024 / 1024).toFixed(1)} MB, decompressing...`);
   const sql = zlib.gunzipSync(gz).toString("utf8");
   console.log(`Decompressed to ${(sql.length / 1024 / 1024).toFixed(1)} MB.`);
@@ -232,6 +239,11 @@ async function main() {
       prevQuestId: toNullableInt(row[keepIndexes.prevQuestId]),
       nextQuestId: toNullableInt(row[keepIndexes.nextQuestId]),
       nextQuestInChain: toNullableInt(row[keepIndexes.nextQuestInChain]),
+      // Raw quest_template restriction columns, 0 = none (stored as null).
+      requiredClasses: toNullableInt(row[keepIndexes.requiredClasses]),
+      requiredRaces: toNullableInt(row[keepIndexes.requiredRaces]),
+      requiredSkill: toNullableInt(row[keepIndexes.requiredSkill]),
+      requiredSkillValue: toNullableInt(row[keepIndexes.requiredSkillValue]),
     };
   }
 

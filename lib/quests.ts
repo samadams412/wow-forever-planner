@@ -49,6 +49,13 @@ export type Quest = {
   locationZoneId: number | null;
   xp: number;
   money: number;
+  // Class/race/profession gates (scripts/lib/quest-requirements.js). null = no
+  // restriction -- unless requirementsSource is null, in which case no source
+  // had the quest and null means unknown.
+  requiredClasses: string[] | null;
+  requiredRaces: string[] | null;
+  requiredProfession: { name: string; skill: number | null } | null;
+  requirementsSource: "cmangos" | "foreverchanges" | null;
   choiceRewards: QuestRewardItem[];
   guaranteedRewards: QuestRewardItem[];
   // Null when the quest has no narrative text from any source.
@@ -118,11 +125,9 @@ export type QuestItemRef = { itemId: number | null; name: string | null; icon: s
 export type QuestDetail = Quest & {
   // Classic's XP, shown on hover when Forever changed the quest's XP.
   classicXp: number | null;
-  classRestriction: string | null;
   difficultyBands: QuestDifficultyBand[];
   repeatable: boolean;
   timelimit: string | null;
-  profession: string | null;
   shareable: string | null;
   // foreverchanges' own status tag for the quest's text and rewards.
   status: "new" | "changed" | "unchanged" | null;
@@ -209,6 +214,22 @@ export function getAllQuestIds(): number[] {
   return loadAll().map((quest) => quest.id);
 }
 
+export type QuestRequirementOptions = { classes: string[]; races: string[]; professions: string[] };
+
+// Every class/race/profession some quest is gated on, for the filter dropdowns.
+export function getQuestRequirementOptions(): QuestRequirementOptions {
+  const classes = new Set<string>();
+  const races = new Set<string>();
+  const professions = new Set<string>();
+  for (const quest of loadAll()) {
+    quest.requiredClasses?.forEach((c) => classes.add(c));
+    quest.requiredRaces?.forEach((r) => races.add(r));
+    if (quest.requiredProfession) professions.add(quest.requiredProfession.name);
+  }
+  const sorted = (set: Set<string>) => [...set].sort();
+  return { classes: sorted(classes), races: sorted(races), professions: sorted(professions) };
+}
+
 export function getTextSourceCounts(): Record<QuestTextSource, number> {
   const counts: Record<QuestTextSource, number> = { foreverchanges: 0, cmangos: 0, wowhead: 0 };
   for (const quest of loadAll()) {
@@ -228,6 +249,11 @@ export type QuestQuery = {
   dungeon?: string;
   q?: string;
   side?: QuestSide | "all";
+  // Class/race/profession names: each narrows to quests gated on that value
+  // (unrestricted quests are left out).
+  className?: string;
+  race?: string;
+  profession?: string;
   levelMin?: number;
   levelMax?: number;
   sort?: QuestSortKey;
@@ -290,6 +316,9 @@ export function queryQuests({
   dungeon,
   q = "",
   side = "all",
+  className,
+  race,
+  profession,
   levelMin,
   levelMax,
   sort,
@@ -304,6 +333,9 @@ export function queryQuests({
     quests = members ? quests.filter((quest) => members.has(quest.id)) : [];
   }
   if (side !== "all") quests = quests.filter((quest) => quest.side === side || quest.side === "Both");
+  if (className) quests = quests.filter((quest) => quest.requiredClasses?.includes(className));
+  if (race) quests = quests.filter((quest) => quest.requiredRaces?.includes(race));
+  if (profession) quests = quests.filter((quest) => quest.requiredProfession?.name === profession);
   if (levelMin !== undefined) quests = quests.filter((quest) => quest.level !== null && quest.level >= levelMin);
   if (levelMax !== undefined) quests = quests.filter((quest) => quest.level !== null && quest.level <= levelMax);
 

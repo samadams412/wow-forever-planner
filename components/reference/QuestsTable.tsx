@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LootItemPill from "@/components/reference/LootItemPill";
 import { MoneyRewardRow, RewardPill } from "@/components/reference/RewardPills";
+import { formatRequiredClasses, formatRequiredProfession, formatRequiredRaces } from "@/lib/quest-requirements";
 import type { Quest, QuestSortKey } from "@/lib/quests";
 import { mediumIconUrl } from "@/lib/wow-data";
 
@@ -69,6 +70,12 @@ function RewardRow({ quest }: { quest: Quest }) {
   );
 }
 
+const REQUIREMENT_COLUMNS: { label: string; format: (quest: Quest) => string }[] = [
+  { label: "Class", format: formatRequiredClasses },
+  { label: "Race", format: formatRequiredRaces },
+  { label: "Profession", format: formatRequiredProfession },
+];
+
 // Same table/card split as ItemsTable -- full table from `sm` up, one card
 // per row below it.
 // XP and money as the same icon pills the quest cards use, at table-row size.
@@ -91,13 +98,18 @@ export default function QuestsTable({ quests, sort, dir, sortHref }: { quests: Q
   return (
     <>
       <div className="mt-4 hidden cursor-default overflow-x-auto rounded-lg border border-border sm:block">
-        <table className="w-full min-w-[640px] border-collapse text-sm">
+        <table className="w-full min-w-[900px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-border bg-surface text-left text-[11px] uppercase tracking-wide text-foreground-muted">
               <SortableHeader label="Quest" sortKey="name" {...sortProps} />
               <SortableHeader label="Level" sortKey="level" {...sortProps} />
               <SortableHeader label="Req. Level" sortKey="requiredLevel" {...sortProps} />
               <SortableHeader label="Side" sortKey="side" {...sortProps} />
+              {REQUIREMENT_COLUMNS.map((col) => (
+                <th key={col.label} className="px-3 py-2 font-semibold">
+                  {col.label}
+                </th>
+              ))}
               <SortableHeader label="Location" sortKey="location" {...sortProps} />
               <SortableHeader label="XP / Money" sortKey="xp" {...sortProps} />
               <th className="px-3 py-2 font-semibold">Rewards</th>
@@ -118,6 +130,11 @@ export default function QuestsTable({ quests, sort, dir, sortHref }: { quests: Q
                     {quest.side === "Both" ? "Both" : quest.side}
                   </span>
                 </td>
+                {REQUIREMENT_COLUMNS.map((col) => (
+                  <td key={col.label} className="px-3 py-1.5 text-foreground-muted">
+                    {col.format(quest)}
+                  </td>
+                ))}
                 <td className="px-3 py-1.5 text-foreground-muted">{locationLabel(quest)}</td>
                 <td className="px-3 py-1.5 text-foreground-muted">
                   <RewardCell quest={quest} />
@@ -151,6 +168,12 @@ export default function QuestsTable({ quests, sort, dir, sortHref }: { quests: Q
                 <dt className="text-foreground-muted">Req. Level</dt>
                 <dd>{quest.requiredLevel ?? "--"}</dd>
               </div>
+              {REQUIREMENT_COLUMNS.map((col) => (
+                <div key={col.label} className="flex items-center justify-between gap-3">
+                  <dt className="text-foreground-muted">{col.label}</dt>
+                  <dd className="text-right">{col.format(quest)}</dd>
+                </div>
+              ))}
               <div className="flex items-center justify-between gap-3">
                 <dt className="text-foreground-muted">Location</dt>
                 <dd>{locationLabel(quest)}</dd>

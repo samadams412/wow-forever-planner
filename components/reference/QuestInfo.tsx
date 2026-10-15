@@ -1,4 +1,5 @@
 import type { QuestDetail, QuestDifficultyBand, QuestNpcPoint } from "@/lib/quests";
+import { formatRequiredClasses, formatRequiredProfession, formatRequiredRaces } from "@/lib/quest-requirements";
 import { friz, morpheus } from "@/components/reference/quest-fonts";
 
 // Start ("!") and turn-in ("?") icons -- the same classic quest-log assets the
@@ -77,12 +78,18 @@ export default function QuestInfo({ quest }: { quest: QuestDetail }) {
             <dt className={`${morpheus.className} text-[11px] uppercase tracking-wide text-[#c9a961]`}>Side</dt>
             <dd className={`${friz.className} mt-0.5 text-sm text-[#e8dcc0]`}>{SIDE_LABEL[quest.side]}</dd>
           </div>
-          {quest.classRestriction && (
-            <div>
-              <dt className={`${morpheus.className} text-[11px] uppercase tracking-wide text-[#c9a961]`}>Class</dt>
-              <dd className={`${friz.className} mt-0.5 text-sm text-[#e8dcc0]`}>{quest.classRestriction}</dd>
+          {(
+            [
+              ["Class", formatRequiredClasses(quest)],
+              ["Race", formatRequiredRaces(quest)],
+              ["Profession", formatRequiredProfession(quest)],
+            ] as const
+          ).map(([label, text]) => (
+            <div key={label}>
+              <dt className={`${morpheus.className} text-[11px] uppercase tracking-wide text-[#c9a961]`}>{label}</dt>
+              <dd className={`${friz.className} mt-0.5 text-sm text-[#e8dcc0]`}>{text}</dd>
             </div>
-          )}
+          ))}
           <div>
             <dt className={`${morpheus.className} text-[11px] uppercase tracking-wide text-[#c9a961]`}>Quest ID</dt>
             <dd className={`${friz.className} mt-0.5 text-sm text-[#e8dcc0]`}>{quest.id}</dd>

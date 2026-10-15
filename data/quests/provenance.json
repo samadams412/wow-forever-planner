@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T07:43:36.191Z",
+ "generatedAt": "2026-10-15T05:19:01.963Z",
  "precedence": {
   "name": [
    "foreverchanges",
@@ -69,6 +69,10 @@
   ],
   "mentionedItems": [
    "wowhead (extras.items)"
+  ],
+  "requirements": [
+   "unchanged: cmangos (bitmasks) > foreverchanges (facts)",
+   "changed/new: foreverchanges > cmangos"
   ]
  },
  "fields": {
@@ -690,6 +694,36 @@
    "fromNone": 4583,
    "conflicts": 0,
    "examples": []
+  },
+  "requirements": {
+   "fromPrimary": 5024,
+   "fromFallback": 1,
+   "fromNone": 24,
+   "conflicts": 2,
+   "examples": [
+    {
+     "id": 4003,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "[null,null,null]"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "[null,[\"Orc\",\"Undead\",\"Tauren\",\"Troll\"],null]"
+     }
+    },
+    {
+     "id": 4004,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "[null,null,null]"
+     },
+     "rival": {
+      "source": "cmangos",
+      "value": "[null,[\"Orc\",\"Undead\",\"Tauren\",\"Troll\"],null]"
+     }
+    }
+   ]
   }
  }
 }

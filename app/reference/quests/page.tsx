@@ -4,16 +4,19 @@ import Breadcrumbs from "@/components/site/Breadcrumbs";
 import QuestsTable from "@/components/reference/QuestsTable";
 import ItemsSearchInput from "@/components/reference/ItemsSearchInput";
 import QuestDungeonFilter from "@/components/reference/QuestDungeonFilter";
+import QuestRequirementFilter from "@/components/reference/QuestRequirementFilter";
 import {
   getQuestCount,
   getQuestDungeonOptions,
   getQuestLocationKindCounts,
+  getQuestRequirementOptions,
   getTextSourceCounts,
   queryQuests,
   LOCATION_KIND_TABS,
   type QuestLocationKind,
   type QuestSortKey,
 } from "@/lib/quests";
+import { requirementSlug } from "@/lib/quest-requirements";
 
 const SORT_KEYS: QuestSortKey[] = ["name", "level", "requiredLevel", "side", "location", "xp"];
 
@@ -27,6 +30,10 @@ export const metadata: Metadata = {
 type FilterParams = {
   locationKind: QuestLocationKind | "all";
   dungeon?: string;
+  // Slugs, as they appear in the URL.
+  classSlug?: string;
+  raceSlug?: string;
+  professionSlug?: string;
   q: string;
   sort?: QuestSortKey;
   dir?: "asc" | "desc";
@@ -37,6 +44,9 @@ function buildHref(params: FilterParams): string {
   const usp = new URLSearchParams();
   if (params.locationKind !== "all") usp.set("kind", params.locationKind);
   if (params.dungeon) usp.set("dungeon", params.dungeon);
+  if (params.classSlug) usp.set("class", params.classSlug);
+  if (params.raceSlug) usp.set("race", params.raceSlug);
+  if (params.professionSlug) usp.set("profession", params.professionSlug);
   if (params.q) usp.set("q", params.q);
   if (params.sort) usp.set("sort", params.sort);
   if (params.sort && params.dir === "desc") usp.set("dir", "desc");
@@ -62,7 +72,17 @@ function sortHref(base: FilterParams, key: QuestSortKey): string {
 export default async function QuestsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ kind?: string; dungeon?: string; q?: string; sort?: string; dir?: string; page?: string }>;
+  searchParams: Promise<{
+    kind?: string;
+    dungeon?: string;
+    class?: string;
+    race?: string;
+    profession?: string;
+    q?: string;
+    sort?: string;
+    dir?: string;
+    page?: string;
+  }>;
 }) {
   const resolved = await searchParams;
   const locationKind = (LOCATION_KIND_TABS.some((t) => t.value === resolved.kind) ? resolved.kind : "all") as
@@ -72,6 +92,15 @@ export default async function QuestsPage({
   // Only a dungeon id the list actually offers is applied; anything else is
   // ignored rather than producing an empty page.
   const dungeon = dungeonOptions.some((d) => d.id === resolved.dungeon) ? resolved.dungeon : undefined;
+  // Same rule as dungeon: only a slug the dropdown offers is applied.
+  const requirementOptions = getQuestRequirementOptions();
+  const fromSlug = (names: string[], slug?: string) => names.find((n) => requirementSlug(n) === slug);
+  const className = fromSlug(requirementOptions.classes, resolved.class);
+  const race = fromSlug(requirementOptions.races, resolved.race);
+  const profession = fromSlug(requirementOptions.professions, resolved.profession);
+  const classSlug = className && requirementSlug(className);
+  const raceSlug = race && requirementSlug(race);
+  const professionSlug = profession && requirementSlug(profession);
   const q = resolved.q ?? "";
   const sort = SORT_KEYS.find((k) => k === resolved.sort);
   const dir = resolved.dir === "desc" ? "desc" : "asc";
@@ -80,8 +109,9 @@ export default async function QuestsPage({
   const totalCount = getQuestCount();
   const counts = getQuestLocationKindCounts();
   const textSourceCounts = getTextSourceCounts();
-  const result = queryQuests({ locationKind, dungeon, q, sort, dir, page });
-  const baseFilters: FilterParams = { locationKind, dungeon, q, sort, dir };
+  const result = queryQuests({ locationKind, dungeon, className, race, profession, q, sort, dir, page });
+  const baseFilters: FilterParams = { locationKind, dungeon, classSlug, raceSlug, professionSlug, q, sort, dir };
+  const anyRequirementFilter = Boolean(className || race || profession);
   const dungeonSelectValue = dungeon ?? (locationKind === "dungeon" ? "all" : "");
 
   return (
@@ -121,12 +151,25 @@ export default async function QuestsPage({
           )}
         </div>
         <div className="flex flex-wrap items-center gap-2">
+          <QuestRequirementFilter param="class" label="Class" options={requirementOptions.classes} value={classSlug ?? ""} />
+          <QuestRequirementFilter param="race" label="Race" options={requirementOptions.races} value={raceSlug ?? ""} />
+          <QuestRequirementFilter
+            param="profession"
+            label="Profession"
+            options={requirementOptions.professions}
+            value={professionSlug ?? ""}
+          />
           <ItemsSearchInput initialValue={q} placeholder="Search quest names..." />
-          {/* One reset for every filter here (location tab, dungeon, search). Sort and
-              direction are ordering, not filters, so they survive the reset. */}
-          {(locationKind !== "all" || dungeon !== undefined || q !== "") && (
+          {/* One reset for every filter here (location tab, dungeon, class/race/profession,
+              search). Sort and direction are ordering, not filters, so they survive the reset. */}
+          {(locationKind !== "all" || dungeon !== undefined || anyRequirementFilter || q !== "") && (
             <Link
-              href={buildHref({ ...baseFilters, locationKind: "all", dungeon: undefined, q: "", page: undefined })}
+              href={buildHref({
+                sort,
+                dir,
+                locationKind: "all",
+                q: "",
+              })}
               className="rounded border border-border bg-surface px-2.5 py-1.5 text-xs font-semibold text-foreground-muted transition-colors hover:border-accent hover:text-foreground"
             >
               Clear filters
