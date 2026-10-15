@@ -12,9 +12,1682 @@
  "confidence": null,
  "authorNotes": null,
  "backgroundImage": "https://foreverchanges.pro/wow-ui/dungeons/art-city-of-dalaran.webp",
- "bossLootSource": null,
- "bosses": [],
- "questSource": null,
- "quests": [],
- "pinMap": null
+ "bossLootSource": "foreverchanges",
+ "bosses": [
+  {
+   "name": "Atrexis the Grave Knight",
+   "kind": "boss",
+   "level": 29,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/145787.webp",
+   "items": [
+    {
+     "name": "Graveweave Bindings",
+     "slot": "Wrist",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273036,
+     "icon": "inv_bracer_10",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tCloth",
+      "21 Armor",
+      "+6 Strength",
+      "Requires Level 26",
+      "Equip: +5 Spell Power",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 12s 32c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bonebinder's Signet",
+     "slot": "Finger",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273032,
+     "icon": "inv_jewelry_ring_28",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+6 Spirit",
+      "+5 Strength",
+      "+40 Armor",
+      "Requires Level 25",
+      "Sell Price: 24s 30c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Gravespike Repeater",
+     "slot": "Ranged",
+     "type": "Crossbow",
+     "itemClass": 2,
+     "itemId": 273033,
+     "icon": "inv_weapon_crossbow_06",
+     "quality": 3,
+     "itemLevel": 31,
+     "requiredLevel": 26,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tCrossbow",
+      "28 - 43 Damage\tSpeed 2.30",
+      "(15.4 damage per second)",
+      "Requires Level 26",
+      "Equip: +8 Attack Power",
+      "Equip: +9 Attack Power Vs Humanoids",
+      "Sell Price: 45s 74c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Lyn the Ignored",
+   "kind": "boss",
+   "level": 31,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/130235.webp",
+   "items": [
+    {
+     "name": "Cartilage Shapers",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273054,
+     "icon": "inv_gauntlets_18",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "68 Armor",
+      "+9 Agility",
+      "+8 Spirit",
+      "Requires Level 28",
+      "Equip: +4 Skinning Skill",
+      "Sell Price: 18s 66c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Tendonscraper Dagger",
+     "slot": "Main Hand",
+     "type": "Dagger",
+     "itemClass": 2,
+     "itemId": 273053,
+     "icon": "inv_misc_bone_06",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Main Hand\tDagger",
+      "16 - 30 Damage\tSpeed 1.60",
+      "(14.4 damage per second)",
+      "+5 Stamina",
+      "Requires Level 28",
+      "Equip: +8 Health Regeneration",
+      "Equip: +36 Spell Power",
+      "Sell Price: 73s 79c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Bonepile Gaze",
+     "slot": "Shield",
+     "type": "Shield",
+     "itemClass": 4,
+     "itemId": 273055,
+     "icon": "inv_shield_02",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "718 Armor",
+      "16 Block",
+      "+5 Strength",
+      "+5 Stamina",
+      "Requires Level 28",
+      "Equip: +8 Block Value",
+      "Sell Price: 47s 56c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Arcane Anomaly",
+   "kind": "boss",
+   "level": 30,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129891.webp",
+   "items": [
+    {
+     "name": "Runemender's Seal",
+     "slot": "Finger",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273031,
+     "icon": "inv_jewelry_ring_28",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+4 Stamina",
+      "+7 Spirit",
+      "Requires Level 27",
+      "Equip: +9 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 26s 64c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ephemeral Grips",
+     "slot": "Hands",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273034,
+     "icon": "inv_gauntlets_24",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "31 Armor",
+      "+7 Stamina",
+      "+7 Intellect",
+      "Requires Level 27",
+      "Equip: +9 Arcane Spell Damage",
+      "Equip: +9 Shadow Spell Damage",
+      "Sell Price: 13s 46c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Mana-Warped Chain Shirt",
+     "slot": "Chest",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 273035,
+     "icon": "inv_chest_chain_04",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tMail",
+      "225 Armor",
+      "+8 Stamina",
+      "+12 Strength",
+      "Requires Level 27",
+      "Equip: +3 Mana Regeneration",
+      "Sell Price: 40s 54c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Arcanic Enigma",
+   "kind": "boss",
+   "level": 30,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129900.webp",
+   "items": [
+    {
+     "name": "Drape of Shifting Energy",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273045,
+     "icon": "inv_misc_cape_18",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "24 Armor",
+      "+7 Spirit",
+      "Requires Level 27",
+      "Equip: +12 Attack Power",
+      "Sell Price: 19s 55c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Violet Sorcerer's Robes",
+     "slot": "Chest",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273044,
+     "icon": "inv_chest_cloth_17",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "49 Armor",
+      "+15 Intellect",
+      "Requires Level 27",
+      "Equip: +9 Spell Power",
+      "Equip: When damaged, has a chance to reduce threat level on all enemies by a small amount for 10 sec.",
+      "Violet Sorcerer's Vestments (0/5)",
+      "(2) Set: +5 Arcane Resistance.",
+      "(3) Set: +10 Spirit.",
+      "(4) Set: Chance on damaging spell to allow 15% of your Mana regeneration to continue while casting for 15 sec. Mana regen amount is doubled in Strongholds and Cities.",
+      "(5) Set: Chance on damaging spell to summon an Arcane elemental to aid you in combat.",
+      "Sell Price: 25s 97c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wand of Mana Concentration",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemClass": 2,
+     "itemId": 273043,
+     "icon": "inv_wand_06",
+     "quality": 3,
+     "itemLevel": 32,
+     "requiredLevel": 27,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "37 - 69 Arcane Damage\tSpeed 1.70",
+      "(31.2 damage per second)",
+      "+4 Intellect",
+      "Requires Level 27",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 47s 22c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Unstable Sentinel",
+   "kind": "boss",
+   "level": 31,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129954.webp",
+   "items": [
+    {
+     "name": "Guardian's Dualblade",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemClass": 2,
+     "itemId": 273046,
+     "icon": "inv_throwingaxe_05",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "78 - 117 Damage\tSpeed 3.50",
+      "(27.9 damage per second)",
+      "Requires Level 28",
+      "Equip: When damaged, has a chance to grant you 1080 armor for 12 sec.",
+      "Sell Price: 89s 93c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Refractory Scaleguards",
+     "slot": "Legs",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 273048,
+     "icon": "inv_pants_mail_12",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Legs\tMail",
+      "199 Armor",
+      "+12 Strength",
+      "+5 Arcane Resistance",
+      "+100 Armor",
+      "Requires Level 28",
+      "Sell Price: 43s 48c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Unstable Crystalline Shoulderpads",
+     "slot": "Shoulder",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273047,
+     "icon": "inv_shoulder_07",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tLeather",
+      "81 Armor",
+      "+9 Agility",
+      "+6 Stamina",
+      "Requires Level 28",
+      "Equip: +2 Mana Regeneration",
+      "Sell Price: 27s 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Spinning Wheel",
+     "slot": null,
+     "type": "Tailoring",
+     "itemClass": 9,
+     "itemId": 273099,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tTailoring",
+      "Requires Tailoring (140)",
+      "Use: Craft a Spinning Wheel.",
+      "\"Teaches you how to place a Spinning Wheel at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Mana Devourer",
+   "kind": "boss",
+   "level": 31,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129895.webp",
+   "items": [
+    {
+     "name": "Spine of the Devourer",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemClass": 2,
+     "itemId": 273040,
+     "icon": "inv_staff_07",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "59 - 90 Damage\tSpeed 3.60",
+      "(20.7 damage per second)",
+      "+14 Stamina",
+      "Requires Level 28",
+      "Equip: +3 Spell Penetration",
+      "Equip: +36 Spell Power",
+      "Sell Price: 85s 58c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Manascale Treads",
+     "slot": "Feet",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 273042,
+     "icon": "inv_boots_chain_08",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tMail",
+      "157 Armor",
+      "+7 Strength",
+      "+7 Intellect",
+      "Requires Level 28",
+      "Equip: +7 Critical Strike Rating",
+      "Sell Price: 31s 18c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Slitherwrap Girdle",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273041,
+     "icon": "inv_belt_15",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "61 Armor",
+      "+9 Agility",
+      "+6 Stamina",
+      "Requires Level 28",
+      "Equip: When struck in combat, drain 2 mana from the attacker.",
+      "Sell Price: 17s 32c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Fel Ancient",
+   "kind": "boss",
+   "level": 32,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129894.webp",
+   "items": [
+    {
+     "name": "Blightleaf Rope",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273039,
+     "icon": "inv_belt_10",
+     "quality": 3,
+     "itemLevel": 34,
+     "requiredLevel": 29,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "28 Armor",
+      "+10 Intellect",
+      "Requires Level 29",
+      "Equip: +7 Spell Power",
+      "Equip: +5 Health Regeneration",
+      "Sell Price: 15s"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Garb of Fallen Felbark",
+     "slot": "Chest",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 273038,
+     "icon": "inv_shirt_09",
+     "quality": 3,
+     "itemLevel": 34,
+     "requiredLevel": 29,
+     "tooltip": [
+      "Binds when picked up",
+      "Chest\tLeather",
+      "110 Armor",
+      "+13 Intellect",
+      "+9 Agility",
+      "+7 Stamina",
+      "Requires Level 29",
+      "Sell Price: 41s 31c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Felbough Arm",
+     "slot": "Two-Hand",
+     "type": "Polearm",
+     "itemClass": 2,
+     "itemId": 273037,
+     "icon": "inv_spear_08",
+     "quality": 3,
+     "itemLevel": 34,
+     "requiredLevel": 29,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "69 - 104 Damage\tSpeed 3.00",
+      "(28.8 damage per second)",
+      "+10 Agility",
+      "+9 Nature Resistance",
+      "Requires Level 29",
+      "Equip: +10 Hit Rating",
+      "Sell Price: 1g 2s 92c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Shade of the Archmage",
+   "kind": "boss",
+   "level": 33,
+   "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/130061.webp",
+   "items": [
+    {
+     "name": "Ponderous Orb",
+     "slot": "Held In Off-hand",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273052,
+     "icon": "inv_misc_orb_04",
+     "quality": 3,
+     "itemLevel": 35,
+     "requiredLevel": 30,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+8 Spirit",
+      "+2 Intellect",
+      "Requires Level 30",
+      "Equip: +11 Healing",
+      "Equip: +4 Spell Damage",
+      "Sell Price: 35s 58c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Violet Sorcerer's Mantle",
+     "slot": "Shoulder",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 273051,
+     "icon": "inv_shoulder_02",
+     "quality": 3,
+     "itemLevel": 35,
+     "requiredLevel": 30,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "38 Armor",
+      "+9 Intellect",
+      "Requires Level 30",
+      "Equip: +4 Spell Penetration",
+      "Violet Sorcerer's Vestments (0/5)",
+      "(2) Set: +5 Arcane Resistance.",
+      "(3) Set: +10 Spirit.",
+      "(4) Set: Chance on damaging spell to allow 15% of your Mana regeneration to continue while casting for 15 sec. Mana regen amount is doubled in Strongholds and Cities.",
+      "(5) Set: Chance on damaging spell to summon an Arcane elemental to aid you in combat.",
+      "Sell Price: 26s 59c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Archmagister's Faceted Pendant",
+     "slot": "Neck",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 273049,
+     "icon": "inv_misc_necklacea8",
+     "quality": 3,
+     "itemLevel": 35,
+     "requiredLevel": 30,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+6 Intellect",
+      "Requires Level 30",
+      "Equip: +12 Attack Power",
+      "Use: Increase experience gained from slaying Undead by 10% for 5 min.",
+      "Sell Price: 35s 20c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Blueprint: Arcane Salvager",
+     "slot": null,
+     "type": "Enchanting",
+     "itemClass": 9,
+     "itemId": 273103,
+     "icon": "inv_garrison_blueprints3",
+     "quality": 2,
+     "itemLevel": 25,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tEnchanting",
+      "Requires Enchanting (140)",
+      "Use: Craft an Arcane Salvager.",
+      "\"Teaches you how to place an Arcane Salvager at a campsite.\"",
+      "Sell Price: 3s 75c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "portraitUrl": null,
+   "items": [
+    {
+     "name": "Mana Fragment",
+     "slot": null,
+     "type": "Junk",
+     "itemClass": 15,
+     "itemId": 276160,
+     "icon": "inv_misc_gem_crystal_02",
+     "quality": 0,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tJunk",
+      "Sell Price: 4s 50c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Crystallized Shard",
+     "slot": null,
+     "type": "Junk",
+     "itemClass": 15,
+     "itemId": 276158,
+     "icon": "inv_misc_gem_diamond_02",
+     "quality": 0,
+     "itemLevel": 1,
+     "requiredLevel": 0,
+     "tooltip": [
+      "\tJunk",
+      "Sell Price: 7s 40c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
+  }
+ ],
+ "questSource": "foreverchanges",
+ "quests": [
+  {
+   "id": "quest-92458",
+   "faction": "Both",
+   "name": "Heart of Disruption",
+   "level": null,
+   "minLevel": null,
+   "text": "Collect the Arcane Mote for the Image of Archmage Modera near the City of Dalaran.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Arcane MoteShade of the Archmage",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/251961",
+       "name": "Arcane Mote",
+       "qty": null,
+       "source": "Shade of the Archmage"
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Spellguard Pauldrons",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 279839,
+     "icon": "inv_shoulder_12",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "178 Armor",
+      "+11 Stamina",
+      "+7 Intellect",
+      "+4 Strength",
+      "Sell Price: 43s 31c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Renewing Footpads",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 279840,
+     "icon": "inv_boots_03",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "78 Armor",
+      "+11 Intellect",
+      "+5 Stamina",
+      "Equip: +11 Healing",
+      "Equip: +4 Spell Damage",
+      "Sell Price: 36s 15c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Defender of Dalaran",
+     "slot": "Two-Hand",
+     "type": "Mace",
+     "itemClass": 2,
+     "itemId": 279841,
+     "icon": "inv_hammer_04",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "82 - 124 Damage\tSpeed 3.30",
+      "(31.2 damage per second)",
+      "+13 Stamina",
+      "+9 Intellect",
+      "+9 Strength",
+      "Sell Price: 1g 20s 65c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Battle Spaulders",
+     "slot": "Shoulder",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 279842,
+     "icon": "inv_shoulder_23",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "178 Armor",
+      "+11 Stamina",
+      "+7 Spirit",
+      "+4 Strength",
+      "Sell Price: 43s 78c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Enchanted Sandals",
+     "slot": "Feet",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 279843,
+     "icon": "inv_boots_05",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tCloth",
+      "36 Armor",
+      "+10 Stamina",
+      "+50 Armor",
+      "Equip: +9 Spell Power",
+      "Sell Price: 29s 92c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Striking Staff",
+     "slot": "Two-Hand",
+     "type": "Staff",
+     "itemClass": 2,
+     "itemId": 279844,
+     "icon": "inv_staff_28",
+     "quality": 3,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "77 - 117 Damage\tSpeed 3.10",
+      "(31.3 damage per second)",
+      "+6 Stamina",
+      "+9 Strength",
+      "+14 Intellect",
+      "Sell Price: 1g 25s 12c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92489",
+   "faction": "Alliance",
+   "name": "Power Overwhelming",
+   "level": null,
+   "minLevel": null,
+   "text": "Slay the Mana Elemental in the City of Dalaran for High Sorcerer Andromath in Stormwind City.",
+   "giver": {
+    "name": "High Sorcerer Andromath",
+    "location": "High Sorcerer Andromath, Stormwind City",
+    "mapRef": {
+     "name": "High Sorcerer Andromath",
+     "href": "/map/eastern-kingdoms#pin=High%20Sorcerer%20Andromath"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Arcanic Enigma",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Violet Sash",
+     "slot": "Waist",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 251962,
+     "icon": "inv_belt_04",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tCloth",
+      "27 Armor",
+      "+9 Intellect",
+      "Equip: +6 Spell Power",
+      "Sell Price: 15s 85c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Runebound Gloves",
+     "slot": "Hands",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 279849,
+     "icon": "inv_gauntlets_15",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Hands\tLeather",
+      "64 Armor",
+      "+7 Stamina",
+      "+4 Spirit",
+      "Equip: +12 Attack Power",
+      "Sell Price: 19s 38c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92456",
+   "faction": "Alliance",
+   "name": "A Green Sample",
+   "level": null,
+   "minLevel": null,
+   "text": "Collect a Fel Infused Blossom from the City of Dalaran for Shylamiir in Stormwind City.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Bring back",
+     "value": "Fel Infused Blossom",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/251983",
+       "name": "Fel Infused Blossom",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Vine Pruner's Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 279835,
+     "icon": "inv_misc_cape_13",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "24 Armor",
+      "+6 Stamina",
+      "Equip: +5 Spell Damage Vs Elementals",
+      "Equip: +5 Spell Power",
+      "Sell Price: 23s 60c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Thorn Protecting Girdle",
+     "slot": "Waist",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 279836,
+     "icon": "inv_belt_12",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tMail",
+      "122 Armor",
+      "+8 Stamina",
+      "Equip: +9 Attack Power Vs Elementals",
+      "Equip: +12 Attack Power",
+      "Sell Price: 23s 69c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-92457",
+   "faction": "Alliance",
+   "name": "Starving Arcane",
+   "level": null,
+   "minLevel": null,
+   "text": "Defeat 8 Seeking Remnants, 8 Saturated Remnants, and 8 Mana Echoes inside the City of Dalaran for Archmage Modera outside of Dalaran.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Seeking Remnant ×8, Saturated Remnant ×8, Mana Echo ×8",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Fallen Guard's Pendant",
+     "slot": "Neck",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 279837,
+     "icon": "inv_jewelry_necklace_44",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Neck",
+      "+7 Arcane Resistance",
+      "+3 Strength",
+      "Sell Price: 31s 70c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Arcane Infused Rod",
+     "slot": "Held In Off-hand",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 279838,
+     "icon": "inv_wand_04",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "Equip: +11 Arcane Spell Damage",
+      "Sell Price: 31s 82c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-96986",
+   "faction": "Horde",
+   "name": "The Grave Knight",
+   "level": null,
+   "minLevel": null,
+   "text": "Defeat Atrexis the Grave Knight in the City of Dalaran for Melisara in Tarren Mill.",
+   "giver": {
+    "name": "Melisara",
+    "location": "Melisara, Hillsbrad Foothills",
+    "mapRef": {
+     "name": "Melisara",
+     "href": "/map/eastern-kingdoms#pin=Melisara"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Slay",
+     "value": "Atrexis the Grave Knight",
+     "mapRef": null,
+     "needItems": null
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Gravewalker Boots",
+     "slot": "Feet",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 251963,
+     "icon": "inv_boots_08",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "71 Armor",
+      "+7 Stamina",
+      "+5 Agility",
+      "+5 Spirit",
+      "Sell Price: 4s 69c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Undead Knight's Bracers",
+     "slot": "Wrist",
+     "type": "Mail",
+     "itemClass": 4,
+     "itemId": 251965,
+     "icon": "inv_bracer_16",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "Wrist\tMail",
+      "95 Armor",
+      "+6 Stamina",
+      "+3 Strength",
+      "+3 Intellect",
+      "Sell Price: 24s 4c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-96988",
+   "faction": "Horde",
+   "name": "Source of Power",
+   "level": null,
+   "minLevel": null,
+   "text": "Collect 6 Cracked Sentry Cores in the City of Dalaran for Doctor Martin Felben in Undercity.",
+   "giver": {
+    "name": "Doctor Martin Felben",
+    "location": "Doctor Martin Felben, Undercity",
+    "mapRef": {
+     "name": "Doctor Martin Felben",
+     "href": "/map/eastern-kingdoms#pin=Doctor%20Martin%20Felben"
+    }
+   },
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Where to find it",
+     "value": "From the Fragmented Sentries. The cores are not shared: each of you needs six, a run has only 12 to 15 sentries, and each gives a single core, so a group of five needs two or three runs.",
+     "mapRef": null,
+     "needItems": null
+    },
+    {
+     "label": "Bring back",
+     "value": "Cracked Sentry Core ×6Fragmented Sentry",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/275997",
+       "name": "Cracked Sentry Core",
+       "qty": "×6",
+       "source": "Fragmented Sentry"
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Unstable Power Core",
+     "slot": "Ranged",
+     "type": "Wand",
+     "itemClass": 2,
+     "itemId": 279847,
+     "icon": "inv_staff_06",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "35 - 66 Damage\tSpeed 1.70",
+      "(29.7 damage per second)",
+      "+4 Stamina",
+      "Sell Price: 57s 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Construct Cloak",
+     "slot": "Back",
+     "type": "Cloth",
+     "itemClass": 4,
+     "itemId": 279848,
+     "icon": "inv_misc_cape_02",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "24 Armor",
+      "+5 Strength",
+      "+5 Spirit",
+      "Sell Price: 22s 98c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  },
+  {
+   "id": "quest-96987",
+   "faction": "Horde",
+   "name": "Opportunistic Education",
+   "level": null,
+   "minLevel": null,
+   "text": "Collect the Founding of Dalaran from the City of Dalaran for Rexxie Copperclutch near the sewer entrance.",
+   "giver": null,
+   "prereq": null,
+   "objectives": [
+    {
+     "label": "Where to find it",
+     "value": "Past the portal room, on the back wall.",
+     "mapRef": null,
+     "needItems": null
+    },
+    {
+     "label": "Bring back",
+     "value": "The Founding of Dalaran",
+     "mapRef": null,
+     "needItems": [
+      {
+       "itemHref": "/item/275996",
+       "name": "The Founding of Dalaran",
+       "qty": null,
+       "source": null
+      }
+     ]
+    }
+   ],
+   "experience": null,
+   "money": null,
+   "rewardHeading": "Choose one of",
+   "rewardNotes": [],
+   "rewards": [
+    {
+     "name": "Solid Gold Band",
+     "slot": "Finger",
+     "type": "Trinket",
+     "itemClass": 4,
+     "itemId": 279845,
+     "icon": "inv_jewelry_ring_03",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Finger",
+      "+5 Spirit",
+      "Equip: +11 Healing",
+      "Equip: +4 Spell Damage",
+      "\"A small prize in exchange for tremendous knowledge.\"",
+      "Sell Price: 1g"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Larcenist's Belt",
+     "slot": "Waist",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 279846,
+     "icon": "inv_belt_04",
+     "quality": 2,
+     "itemLevel": 36,
+     "requiredLevel": 1,
+     "tooltip": [
+      "Binds when picked up",
+      "Waist\tLeather",
+      "58 Armor",
+      "+8 Stamina",
+      "+6 Agility",
+      "Sell Price: 19s 16c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "source": "foreverchanges"
+  }
+ ],
+ "pinMap": {
+  "alt": "Map of City of Dalaran in WoW Forever, with where each boss stands",
+  "attribution": {
+   "artistName": "Santiago Reyes",
+   "artistUrl": "https://asguevara433.wixsite.com/srmaps"
+  },
+  "floors": [
+   {
+    "name": "The sewers",
+    "src": "https://foreverchanges.pro/dungeons/maps/city-of-dalaran-sewers.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Atrexis the Grave Knight",
+      "xPct": 60.9,
+      "yPct": 58.9,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/145787.webp"
+     },
+     {
+      "label": "Lyn the Ignored",
+      "xPct": 69,
+      "yPct": 16.6,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/130235.webp"
+     },
+     {
+      "label": "Entrance",
+      "xPct": 18.6,
+      "yPct": 84,
+      "kind": "entrance",
+      "portraitUrl": null
+     }
+    ]
+   },
+   {
+    "name": "The city",
+    "src": "https://foreverchanges.pro/dungeons/maps/city-of-dalaran-city.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Arcane Anomaly",
+      "xPct": 52,
+      "yPct": 83.4,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129891.webp"
+     },
+     {
+      "label": "Arcanic Enigma",
+      "xPct": 66,
+      "yPct": 49.8,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129900.webp"
+     },
+     {
+      "label": "Unstable Sentinel",
+      "xPct": 59,
+      "yPct": 40.8,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129954.webp"
+     },
+     {
+      "label": "Fel Ancient",
+      "xPct": 53.5,
+      "yPct": 55,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129894.webp"
+     },
+     {
+      "label": "Shade of the Archmage",
+      "xPct": 56.7,
+      "yPct": 25.8,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/130061.webp"
+     },
+     {
+      "label": "Mana Devourer",
+      "xPct": 43.5,
+      "yPct": 72,
+      "kind": "boss",
+      "portraitUrl": "https://foreverchanges.pro/wow-ui/bosses/129895.webp"
+     }
+    ]
+   }
+  ]
+ }
 }

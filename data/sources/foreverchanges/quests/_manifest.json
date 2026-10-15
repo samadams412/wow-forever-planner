@@ -1,6 +1,6 @@
 {
  "source": "foreverchanges.pro",
- "generatedAt": "2026-10-03T01:20:29.626Z",
+ "generatedAt": "2026-10-15T05:06:18.007Z",
  "categoryPagesCrawled": [
   "ahnqiraj",
   "ahnqiraj-war",
@@ -21,10 +21,12 @@
   "blasted-lands",
   "burning-steppes",
   "camping",
+  "city-of-dalaran",
   "cooking",
   "crafting",
   "darkmoon-faire",
   "darkshore",
+  "darkspear-islands",
   "darnassus",
   "deeprun-tram",
   "desolace",
@@ -38,6 +40,8 @@
   "elwynn-forest",
   "engineering",
   "epic",
+  "excavation-site-wetlands",
+  "excavation-site-wetlands-dungeon",
   "felwood",
   "feralas",
   "first-aid",
@@ -81,6 +85,7 @@
   "seasonal",
   "shadowfang-keep",
   "shaman",
+  "shendralas",
   "silithus",
   "silverpine-forest",
   "special",
@@ -122,11 +127,11 @@
   "ahnqiraj": 79,
   "ahnqiraj-war": 78,
   "alchemy": 1,
-  "alterac-mountains": 18,
+  "alterac-mountains": 25,
   "alterac-valley": 67,
   "arathi-basin": 50,
-  "arathi-highlands": 48,
-  "ashenvale": 78,
+  "arathi-highlands": 53,
+  "ashenvale": 82,
   "azshara": 33,
   "badlands": 42,
   "blackfathom-deeps": 11,
@@ -138,13 +143,15 @@
   "blasted-lands": 26,
   "burning-steppes": 24,
   "camping": 101,
+  "city-of-dalaran": 8,
   "cooking": 10,
   "crafting": 150,
   "darkmoon-faire": 46,
   "darkshore": 80,
+  "darkspear-islands": 14,
   "darnassus": 26,
   "deeprun-tram": 2,
-  "desolace": 57,
+  "desolace": 79,
   "dire-maul": 38,
   "druid": 58,
   "dun-morogh": 66,
@@ -155,16 +162,18 @@
   "elwynn-forest": 78,
   "engineering": 20,
   "epic": 2,
+  "excavation-site-wetlands": 1,
+  "excavation-site-wetlands-dungeon": 13,
   "felwood": 91,
   "feralas": 81,
   "first-aid": 4,
   "fishing": 15,
   "gnomeregan": 27,
   "herbalism": 1,
-  "hillsbrad-foothills": 53,
+  "hillsbrad-foothills": 55,
   "hunter": 54,
-  "invasion": 29,
-  "ironforge": 80,
+  "invasion": 30,
+  "ironforge": 82,
   "leatherworking": 21,
   "legendary": 9,
   "loch-modan": 48,
@@ -175,7 +184,7 @@
   "molten-core": 7,
   "molten-core-dungeon": 1,
   "moonglade": 8,
-  "mulgore": 53,
+  "mulgore": 61,
   "naxxramas": 91,
   "night-elf": 1,
   "onyxias-lair": 1,
@@ -188,40 +197,41 @@
   "redridge-mountains": 43,
   "reputation": 32,
   "riverglades": 1,
-  "rogue": 58,
+  "rogue": 66,
   "ruins-of-ahnqiraj": 1,
   "ruins-of-lordaeron": 3,
   "ruins-of-lordaeron-dungeon": 9,
-  "scarlet-monastery": 7,
+  "scarlet-monastery": 8,
   "scholomance": 12,
   "searing-gorge": 31,
   "seasonal": 71,
   "shadowfang-keep": 3,
-  "shaman": 73,
+  "shaman": 79,
+  "shendralas": 19,
   "silithus": 119,
   "silverpine-forest": 52,
   "special": 55,
   "stonetalon-mountains": 52,
   "stormwind-city": 88,
-  "stranglethorn-vale": 152,
+  "stranglethorn-vale": 163,
   "stratholme": 16,
   "sunken-temple": 10,
-  "swamp-of-sorrows": 23,
+  "swamp-of-sorrows": 29,
   "tailoring": 3,
   "tanaris": 91,
   "teldrassil": 66,
-  "the-barrens": 116,
+  "the-barrens": 118,
   "the-deadmines": 5,
   "the-hall-of-thanes": 4,
   "the-hinterlands": 45,
   "the-stockade": 6,
   "thoradins-wall": 1,
-  "thousand-needles": 65,
+  "thousand-needles": 69,
   "thunder-bluff": 38,
   "tirisfal-glades": 66,
   "treasure-map": 1,
   "uldaman": 29,
-  "undercity": 30,
+  "undercity": 31,
   "ungoro-crater": 51,
   "wailing-caverns": 12,
   "warlock": 102,
@@ -229,13 +239,13 @@
   "warsong-gulch": 42,
   "western-plaguelands": 91,
   "westfall": 54,
-  "wetlands": 51,
+  "wetlands": 65,
   "winterspring": 58,
   "zephras-isle": 113,
   "zulfarrak": 10,
   "zulgurub": 48
  },
- "totalUniqueQuestIds": 5024,
+ "totalUniqueQuestIds": 5183,
  "expectedTotal": 5049,
  "quests": [
   {
@@ -25787,6 +25797,12 @@
    ]
   },
   {
+   "id": "78676",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
    "id": "79007",
    "foundOnPages": [
     "the-barrens"
@@ -25850,6 +25866,12 @@
    "id": "79192",
    "foundOnPages": [
     "the-barrens"
+   ]
+  },
+  {
+   "id": "79358",
+   "foundOnPages": [
+    "shaman"
    ]
   },
   {
@@ -26081,6 +26103,12 @@
    ]
   },
   {
+   "id": "86757",
+   "foundOnPages": [
+    "ashenvale"
+   ]
+  },
+  {
    "id": "86758",
    "foundOnPages": [
     "loch-modan"
@@ -26105,9 +26133,39 @@
    ]
   },
   {
+   "id": "87318",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "87491",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
    "id": "87760",
    "foundOnPages": [
     "darkshore"
+   ]
+  },
+  {
+   "id": "88756",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "88757",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "88758",
+   "foundOnPages": [
+    "wetlands"
    ]
   },
   {
@@ -26357,9 +26415,45 @@
    ]
   },
   {
+   "id": "92432",
+   "foundOnPages": [
+    "alterac-mountains"
+   ]
+  },
+  {
+   "id": "92434",
+   "foundOnPages": [
+    "alterac-mountains"
+   ]
+  },
+  {
    "id": "92454",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "92456",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
+   "id": "92457",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
+   "id": "92458",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
+   "id": "92459",
+   "foundOnPages": [
+    "alterac-mountains"
    ]
   },
   {
@@ -26489,6 +26583,12 @@
    ]
   },
   {
+   "id": "92489",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
    "id": "92514",
    "foundOnPages": [
     "zephras-isle"
@@ -26510,6 +26610,12 @@
    "id": "92517",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "92519",
+   "foundOnPages": [
+    "arathi-highlands"
    ]
   },
   {
@@ -26693,6 +26799,12 @@
    ]
   },
   {
+   "id": "92707",
+   "foundOnPages": [
+    "arathi-highlands"
+   ]
+  },
+  {
    "id": "92708",
    "foundOnPages": [
     "zephras-isle"
@@ -26720,6 +26832,12 @@
    "id": "92742",
    "foundOnPages": [
     "westfall"
+   ]
+  },
+  {
+   "id": "92743",
+   "foundOnPages": [
+    "desolace"
    ]
   },
   {
@@ -26777,6 +26895,48 @@
    ]
   },
   {
+   "id": "92754",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "92755",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "92811",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "92812",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "92814",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "92817",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "92818",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
    "id": "92819",
    "foundOnPages": [
     "westfall"
@@ -26792,6 +26952,30 @@
    "id": "92840",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "92841",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "92844",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "92846",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "92847",
+   "foundOnPages": [
+    "shendralas"
    ]
   },
   {
@@ -26813,9 +26997,27 @@
    ]
   },
   {
+   "id": "92867",
+   "foundOnPages": [
+    "arathi-highlands"
+   ]
+  },
+  {
    "id": "92871",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "92872",
+   "foundOnPages": [
+    "arathi-highlands"
+   ]
+  },
+  {
+   "id": "92873",
+   "foundOnPages": [
+    "shendralas"
    ]
   },
   {
@@ -26828,6 +27030,18 @@
    "id": "92881",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "92893",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "92894",
+   "foundOnPages": [
+    "shendralas"
    ]
   },
   {
@@ -26855,15 +27069,75 @@
    ]
   },
   {
+   "id": "93034",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93035",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
    "id": "93036",
    "foundOnPages": [
     "zephras-isle"
    ]
   },
   {
+   "id": "93037",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93041",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93044",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93045",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93058",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93062",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
    "id": "93065",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "93066",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93072",
+   "foundOnPages": [
+    "shendralas"
    ]
   },
   {
@@ -26876,6 +27150,30 @@
    "id": "93090",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "93122",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93125",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93128",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93129",
+   "foundOnPages": [
+    "shendralas"
    ]
   },
   {
@@ -26903,6 +27201,48 @@
    ]
   },
   {
+   "id": "93176",
+   "foundOnPages": [
+    "swamp-of-sorrows"
+   ]
+  },
+  {
+   "id": "93188",
+   "foundOnPages": [
+    "shendralas"
+   ]
+  },
+  {
+   "id": "93196",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93224",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93225",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93226",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "93227",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
    "id": "93317",
    "foundOnPages": [
     "zephras-isle"
@@ -26927,6 +27267,18 @@
    ]
   },
   {
+   "id": "93429",
+   "foundOnPages": [
+    "swamp-of-sorrows"
+   ]
+  },
+  {
+   "id": "93430",
+   "foundOnPages": [
+    "swamp-of-sorrows"
+   ]
+  },
+  {
    "id": "93459",
    "foundOnPages": [
     "zephras-isle"
@@ -26939,9 +27291,39 @@
    ]
   },
   {
+   "id": "93464",
+   "foundOnPages": [
+    "swamp-of-sorrows"
+   ]
+  },
+  {
+   "id": "93465",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
    "id": "93552",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "93585",
+   "foundOnPages": [
+    "swamp-of-sorrows"
+   ]
+  },
+  {
+   "id": "93663",
+   "foundOnPages": [
+    "swamp-of-sorrows"
+   ]
+  },
+  {
+   "id": "93680",
+   "foundOnPages": [
+    "alterac-mountains"
    ]
   },
   {
@@ -28283,6 +28665,12 @@
    ]
   },
   {
+   "id": "94789",
+   "foundOnPages": [
+    "shaman"
+   ]
+  },
+  {
    "id": "94792",
    "foundOnPages": [
     "hunter"
@@ -28364,6 +28752,18 @@
    "id": "94864",
    "foundOnPages": [
     "hunter"
+   ]
+  },
+  {
+   "id": "94872",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "94873",
+   "foundOnPages": [
+    "desolace"
    ]
   },
   {
@@ -28583,6 +28983,12 @@
    ]
   },
   {
+   "id": "95384",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
    "id": "95494",
    "foundOnPages": [
     "the-barrens"
@@ -28607,9 +29013,69 @@
    ]
   },
   {
+   "id": "95534",
+   "foundOnPages": [
+    "alterac-mountains"
+   ]
+  },
+  {
    "id": "95621",
    "foundOnPages": [
     "the-barrens"
+   ]
+  },
+  {
+   "id": "95646",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95647",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95663",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95664",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95682",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95697",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95737",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95748",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
+   "id": "95770",
+   "foundOnPages": [
+    "stranglethorn-vale"
    ]
   },
   {
@@ -28619,9 +29085,27 @@
    ]
   },
   {
+   "id": "95772",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95773",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
    "id": "95774",
    "foundOnPages": [
     "the-barrens"
+   ]
+  },
+  {
+   "id": "95795",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
    ]
   },
   {
@@ -28634,6 +29118,18 @@
    "id": "95805",
    "foundOnPages": [
     "mulgore"
+   ]
+  },
+  {
+   "id": "95809",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "95810",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
    ]
   },
   {
@@ -28682,6 +29178,12 @@
    "id": "95999",
    "foundOnPages": [
     "redridge-mountains"
+   ]
+  },
+  {
+   "id": "96016",
+   "foundOnPages": [
+    "shaman"
    ]
   },
   {
@@ -28769,6 +29271,18 @@
    ]
   },
   {
+   "id": "96135",
+   "foundOnPages": [
+    "shaman"
+   ]
+  },
+  {
+   "id": "96136",
+   "foundOnPages": [
+    "shaman"
+   ]
+  },
+  {
    "id": "96137",
    "foundOnPages": [
     "duskwood"
@@ -28793,9 +29307,63 @@
    ]
   },
   {
+   "id": "96222",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
+   "id": "96241",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
    "id": "96243",
    "foundOnPages": [
     "shaman"
+   ]
+  },
+  {
+   "id": "96259",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
+   "id": "96260",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
+   "id": "96261",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
+   "id": "96264",
+   "foundOnPages": [
+    "shaman"
+   ]
+  },
+  {
+   "id": "96294",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
+   "id": "96339",
+   "foundOnPages": [
+    "the-barrens"
+   ]
+  },
+  {
+   "id": "96383",
+   "foundOnPages": [
+    "the-barrens"
    ]
   },
   {
@@ -28961,6 +29529,60 @@
    ]
   },
   {
+   "id": "96774",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
+   "id": "96779",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96781",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96782",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96783",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96784",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96785",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96786",
+   "foundOnPages": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "96800",
+   "foundOnPages": [
+    "scarlet-monastery"
+   ]
+  },
+  {
    "id": "96821",
    "foundOnPages": [
     "durotar"
@@ -29039,6 +29661,30 @@
    ]
   },
   {
+   "id": "96984",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
+   "id": "96986",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
+   "id": "96987",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
+   "id": "96988",
+   "foundOnPages": [
+    "city-of-dalaran"
+   ]
+  },
+  {
    "id": "97003",
    "foundOnPages": [
     "the-barrens"
@@ -29048,6 +29694,18 @@
    "id": "97005",
    "foundOnPages": [
     "the-barrens"
+   ]
+  },
+  {
+   "id": "97047",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
+   "id": "97048",
+   "foundOnPages": [
+    "stranglethorn-vale"
    ]
   },
   {
@@ -29171,6 +29829,12 @@
    ]
   },
   {
+   "id": "97265",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
    "id": "97275",
    "foundOnPages": [
     "orgrimmar"
@@ -29201,9 +29865,21 @@
    ]
   },
   {
+   "id": "97284",
+   "foundOnPages": [
+    "desolace"
+   ]
+  },
+  {
    "id": "97286",
    "foundOnPages": [
     "mage"
+   ]
+  },
+  {
+   "id": "97287",
+   "foundOnPages": [
+    "alterac-mountains"
    ]
   },
   {
@@ -29243,6 +29919,30 @@
    ]
   },
   {
+   "id": "97328",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
+   "id": "97329",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
+   "id": "97331",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
+   "id": "97420",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
    "id": "97485",
    "foundOnPages": [
     "thunder-bluff"
@@ -29252,6 +29952,12 @@
    "id": "97538",
    "foundOnPages": [
     "stonetalon-mountains"
+   ]
+  },
+  {
+   "id": "97539",
+   "foundOnPages": [
+    "arathi-highlands"
    ]
   },
   {
@@ -29687,6 +30393,12 @@
    ]
   },
   {
+   "id": "97985",
+   "foundOnPages": [
+    "undercity"
+   ]
+  },
+  {
    "id": "98013",
    "foundOnPages": [
     "darkshore"
@@ -29711,6 +30423,12 @@
    ]
   },
   {
+   "id": "98027",
+   "foundOnPages": [
+    "ashenvale"
+   ]
+  },
+  {
    "id": "98028",
    "foundOnPages": [
     "darkshore"
@@ -29729,6 +30447,12 @@
    ]
   },
   {
+   "id": "98059",
+   "foundOnPages": [
+    "hillsbrad-foothills"
+   ]
+  },
+  {
    "id": "98065",
    "foundOnPages": [
     "teldrassil"
@@ -29738,6 +30462,24 @@
    "id": "98067",
    "foundOnPages": [
     "darnassus"
+   ]
+  },
+  {
+   "id": "98069",
+   "foundOnPages": [
+    "thousand-needles"
+   ]
+  },
+  {
+   "id": "98070",
+   "foundOnPages": [
+    "thousand-needles"
+   ]
+  },
+  {
+   "id": "98071",
+   "foundOnPages": [
+    "hillsbrad-foothills"
    ]
   },
   {
@@ -29762,6 +30504,18 @@
    "id": "98095",
    "foundOnPages": [
     "the-barrens"
+   ]
+  },
+  {
+   "id": "98155",
+   "foundOnPages": [
+    "thousand-needles"
+   ]
+  },
+  {
+   "id": "98156",
+   "foundOnPages": [
+    "thousand-needles"
    ]
   },
   {
@@ -29795,9 +30549,39 @@
    ]
   },
   {
+   "id": "98209",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "98216",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
    "id": "98219",
    "foundOnPages": [
     "stormwind-city"
+   ]
+  },
+  {
+   "id": "98221",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "98223",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "98230",
+   "foundOnPages": [
+    "wetlands"
    ]
   },
   {
@@ -29849,6 +30633,12 @@
    ]
   },
   {
+   "id": "98283",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
    "id": "98284",
    "foundOnPages": [
     "camping"
@@ -29873,7 +30663,19 @@
    ]
   },
   {
+   "id": "98291",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
    "id": "98293",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "98297",
    "foundOnPages": [
     "wetlands"
    ]
@@ -29888,6 +30690,24 @@
    "id": "98299",
    "foundOnPages": [
     "silverpine-forest"
+   ]
+  },
+  {
+   "id": "98300",
+   "foundOnPages": [
+    "ironforge"
+   ]
+  },
+  {
+   "id": "98310",
+   "foundOnPages": [
+    "wetlands"
+   ]
+  },
+  {
+   "id": "98313",
+   "foundOnPages": [
+    "ironforge"
    ]
   },
   {
@@ -30029,6 +30849,18 @@
    ]
   },
   {
+   "id": "98417",
+   "foundOnPages": [
+    "ashenvale"
+   ]
+  },
+  {
+   "id": "98418",
+   "foundOnPages": [
+    "ashenvale"
+   ]
+  },
+  {
    "id": "98423",
    "foundOnPages": [
     "dun-morogh"
@@ -30074,6 +30906,18 @@
    "id": "98461",
    "foundOnPages": [
     "wetlands"
+   ]
+  },
+  {
+   "id": "98463",
+   "foundOnPages": [
+    "stranglethorn-vale"
+   ]
+  },
+  {
+   "id": "98471",
+   "foundOnPages": [
+    "invasion"
    ]
   },
   {
@@ -30140,6 +30984,108 @@
    "id": "98739",
    "foundOnPages": [
     "druid"
+   ]
+  },
+  {
+   "id": "98815",
+   "foundOnPages": [
+    "excavation-site-wetlands"
+   ]
+  },
+  {
+   "id": "98823",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "98824",
+   "foundOnPages": [
+    "excavation-site-wetlands-dungeon"
+   ]
+  },
+  {
+   "id": "98887",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98888",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98889",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98891",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98893",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98895",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98896",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98897",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98899",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98901",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98903",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98906",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98910",
+   "foundOnPages": [
+    "darkspear-islands"
+   ]
+  },
+  {
+   "id": "98913",
+   "foundOnPages": [
+    "darkspear-islands"
    ]
   },
   {
@@ -30371,7 +31317,19 @@
    ]
   },
   {
+   "id": "99192",
+   "foundOnPages": [
+    "alterac-mountains"
+   ]
+  },
+  {
    "id": "99196",
+   "foundOnPages": [
+    "mulgore"
+   ]
+  },
+  {
+   "id": "99197",
    "foundOnPages": [
     "mulgore"
    ]
@@ -30380,6 +31338,12 @@
    "id": "99260",
    "foundOnPages": [
     "zephras-isle"
+   ]
+  },
+  {
+   "id": "99411",
+   "foundOnPages": [
+    "mulgore"
    ]
   }
  ]

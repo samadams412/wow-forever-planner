@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-15T05:19:01.963Z",
+ "generatedAt": "2026-10-15T05:20:11.893Z",
  "precedence": {
   "name": [
    "foreverchanges",
@@ -77,8 +77,8 @@
  },
  "fields": {
   "name": {
-   "fromPrimary": 5024,
-   "fromFallback": 25,
+   "fromPrimary": 5183,
+   "fromFallback": 27,
    "fromNone": 0,
    "conflicts": 18,
    "examples": [
@@ -140,24 +140,70 @@
    ]
   },
   "level": {
-   "fromPrimary": 4864,
-   "fromFallback": 5,
-   "fromNone": 180,
-   "conflicts": 0,
-   "examples": []
+   "fromPrimary": 5019,
+   "fromFallback": 7,
+   "fromNone": 184,
+   "conflicts": 3,
+   "examples": [
+    {
+     "id": 86667,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "20"
+     },
+     "rival": {
+      "source": "list",
+      "value": "10"
+     }
+    },
+    {
+     "id": 92747,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "16"
+     },
+     "rival": {
+      "source": "list",
+      "value": "15"
+     }
+    },
+    {
+     "id": 96130,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "8"
+     },
+     "rival": {
+      "source": "list",
+      "value": "5"
+     }
+    }
+   ]
   },
   "requiredLevel": {
-   "fromPrimary": 5021,
-   "fromFallback": 19,
-   "fromNone": 9,
-   "conflicts": 0,
-   "examples": []
+   "fromPrimary": 5178,
+   "fromFallback": 21,
+   "fromNone": 11,
+   "conflicts": 1,
+   "examples": [
+    {
+     "id": 96130,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "5"
+     },
+     "rival": {
+      "source": "list",
+      "value": "4"
+     }
+    }
+   ]
   },
   "side": {
-   "fromPrimary": 5024,
-   "fromFallback": 25,
+   "fromPrimary": 5183,
+   "fromFallback": 27,
    "fromNone": 0,
-   "conflicts": 1,
+   "conflicts": 23,
    "examples": [
     {
      "id": 6606,
@@ -169,20 +215,64 @@
       "source": "list",
       "value": "Horde"
      }
+    },
+    {
+     "id": 79093,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Alliance"
+     },
+     "rival": {
+      "source": "list",
+      "value": "Both"
+     }
+    },
+    {
+     "id": 93461,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Alliance"
+     },
+     "rival": {
+      "source": "list",
+      "value": "Both"
+     }
+    },
+    {
+     "id": 94004,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Both"
+     },
+     "rival": {
+      "source": "list",
+      "value": "Alliance"
+     }
+    },
+    {
+     "id": 94212,
+     "winner": {
+      "source": "foreverchanges",
+      "value": "Horde"
+     },
+     "rival": {
+      "source": "list",
+      "value": "Both"
+     }
     }
    ]
   },
   "typeTag": {
-   "fromPrimary": 1136,
-   "fromFallback": 0,
-   "fromNone": 3913,
+   "fromPrimary": 1187,
+   "fromFallback": 2,
+   "fromNone": 4021,
    "conflicts": 0,
    "examples": []
   },
   "xp": {
-   "fromPrimary": 3794,
+   "fromPrimary": 3894,
    "fromFallback": 357,
-   "fromNone": 898,
+   "fromNone": 959,
    "conflicts": 104,
    "examples": [
     {
@@ -243,22 +333,32 @@
    ]
   },
   "money": {
-   "fromPrimary": 1076,
+   "fromPrimary": 1151,
    "fromFallback": 0,
-   "fromNone": 3973,
+   "fromNone": 4059,
    "conflicts": 0,
    "examples": []
   },
   "rewards": {
-   "fromPrimary": 1995,
-   "fromFallback": 11,
-   "fromNone": 3043,
-   "conflicts": 54,
+   "fromPrimary": 2046,
+   "fromFallback": 33,
+   "fromNone": 3131,
+   "conflicts": 90,
    "examples": [
+    {
+     "id": 31,
+     "winner": "foreverchanges [16608]",
+     "rival": "list [16608,263411]"
+    },
     {
      "id": 55,
      "winner": "foreverchanges [1282,2953,2954]",
      "rival": "list [1282,2953,2954,7344]"
+    },
+    {
+     "id": 98,
+     "winner": "foreverchanges [2043,2044]",
+     "rival": "list [2043,2044,270053]"
     },
     {
      "id": 103,
@@ -269,30 +369,20 @@
      "id": 182,
      "winner": "foreverchanges [2047,2048,2195,5761]",
      "rival": "list [2047,2048,2195,5761,961]"
-    },
-    {
-     "id": 223,
-     "winner": "foreverchanges [1547,2902]",
-     "rival": "list [1547,2902,5244]"
-    },
-    {
-     "id": 253,
-     "winner": "foreverchanges [270044,3560]",
-     "rival": "list [270044,3560,6223]"
     }
    ]
   },
   "reputation": {
    "fromPrimary": 475,
-   "fromFallback": 2511,
-   "fromNone": 2063,
+   "fromFallback": 2570,
+   "fromNone": 2165,
    "conflicts": 0,
    "examples": []
   },
   "narrative.details": {
-   "fromPrimary": 4389,
+   "fromPrimary": 4528,
    "fromFallback": 2,
-   "fromNone": 658,
+   "fromNone": 680,
    "conflicts": 105,
    "examples": [
     {
@@ -353,9 +443,9 @@
    ]
   },
   "narrative.objectives": {
-   "fromPrimary": 4372,
+   "fromPrimary": 4523,
    "fromFallback": 0,
-   "fromNone": 677,
+   "fromNone": 687,
    "conflicts": 244,
    "examples": [
     {
@@ -416,9 +506,9 @@
    ]
   },
   "narrative.offerRewardText": {
-   "fromPrimary": 4673,
+   "fromPrimary": 4676,
    "fromFallback": 53,
-   "fromNone": 323,
+   "fromNone": 481,
    "conflicts": 130,
    "examples": [
     {
@@ -479,9 +569,9 @@
    ]
   },
   "narrative.requestItemsText": {
-   "fromPrimary": 3503,
+   "fromPrimary": 3506,
    "fromFallback": 58,
-   "fromNone": 1488,
+   "fromNone": 1646,
    "conflicts": 86,
    "examples": [
     {
@@ -544,14 +634,14 @@
   "narrative.endText": {
    "fromPrimary": 206,
    "fromFallback": 0,
-   "fromNone": 4843,
+   "fromNone": 5004,
    "conflicts": 0,
    "examples": []
   },
   "startNpc": {
-   "fromPrimary": 4519,
+   "fromPrimary": 4590,
    "fromFallback": 29,
-   "fromNone": 501,
+   "fromNone": 591,
    "conflicts": 244,
    "examples": [
     {
@@ -612,9 +702,9 @@
    ]
   },
   "endNpc": {
-   "fromPrimary": 4774,
+   "fromPrimary": 4838,
    "fromFallback": 0,
-   "fromNone": 275,
+   "fromNone": 372,
    "conflicts": 8,
    "examples": [
     {
@@ -675,30 +765,30 @@
    ]
   },
   "mapPoints": {
-   "fromPrimary": 4332,
-   "fromFallback": 279,
-   "fromNone": 438,
+   "fromPrimary": 4403,
+   "fromFallback": 285,
+   "fromNone": 522,
    "conflicts": 0,
    "examples": []
   },
   "chain": {
-   "fromPrimary": 3412,
+   "fromPrimary": 3471,
    "fromFallback": 1,
-   "fromNone": 1636,
+   "fromNone": 1738,
    "conflicts": 0,
    "examples": []
   },
   "mentionedItems": {
-   "fromPrimary": 466,
+   "fromPrimary": 463,
    "fromFallback": 0,
-   "fromNone": 4583,
+   "fromNone": 4747,
    "conflicts": 0,
    "examples": []
   },
   "requirements": {
-   "fromPrimary": 5024,
+   "fromPrimary": 5183,
    "fromFallback": 1,
-   "fromNone": 24,
+   "fromNone": 26,
    "conflicts": 2,
    "examples": [
     {

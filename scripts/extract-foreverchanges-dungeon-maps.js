@@ -44,7 +44,7 @@ const RAW_DIR = path.join(__dirname, "..", "data", "sources", "foreverchanges", 
 // 2026-10-02 (levels 40-60 new zones, "Not open in the beta yet") -- skip
 // fetching these by default; re-run with an explicit --slugs= once beta
 // reaches them.
-const NOT_OPEN_YET = new Set(["alcaz-prison", "blackmaw-hold", "kroldok-stronghold", "shapers-terrace", "city-of-dalaran", "drowned-city"]);
+const NOT_OPEN_YET = new Set(["alcaz-prison", "blackmaw-hold", "kroldok-stronghold", "shapers-terrace", "drowned-city"]);
 
 const DELAY_MS = 1500;
 

@@ -2,5 +2,304 @@
  "id": "city-of-dalaran",
  "source": "foreverchanges.pro",
  "section": "quests",
- "groups": []
+ "groups": [
+  {
+   "groupNameFull": "Both factions1 quest",
+   "quests": [
+    {
+     "id": "quest-92458",
+     "name": "Heart of Disruption",
+     "levelText": "Alliance and Horde",
+     "questText": "Collect the Arcane Mote for the Image of Archmage Modera near the City of Dalaran.",
+     "fields": [
+      {
+       "label": "Bring back",
+       "value": "Arcane MoteShade of the Archmage",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/251961",
+         "name": "Arcane Mote",
+         "qty": null,
+         "source": "Shade of the Archmage"
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279839",
+       "name": "Spellguard Pauldrons",
+       "type": "Shoulder, Mail"
+      },
+      {
+       "itemHref": "/item/279840",
+       "name": "Renewing Footpads",
+       "type": "Feet, Leather"
+      },
+      {
+       "itemHref": "/item/279841",
+       "name": "Defender of Dalaran",
+       "type": "Two-Hand, Mace"
+      },
+      {
+       "itemHref": "/item/279842",
+       "name": "Battle Spaulders",
+       "type": "Shoulder, Mail"
+      },
+      {
+       "itemHref": "/item/279843",
+       "name": "Enchanted Sandals",
+       "type": "Feet, Cloth"
+      },
+      {
+       "itemHref": "/item/279844",
+       "name": "Striking Staff",
+       "type": "Two-Hand, Staff"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Alliance3 quests",
+   "quests": [
+    {
+     "id": "quest-92489",
+     "name": "Power Overwhelming",
+     "levelText": null,
+     "questText": "Slay the Mana Elemental in the City of Dalaran for High Sorcerer Andromath in Stormwind City.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "High Sorcerer Andromath, Stormwind City",
+       "mapRef": {
+        "name": "High Sorcerer Andromath",
+        "href": "/map/eastern-kingdoms#pin=High%20Sorcerer%20Andromath"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Arcanic Enigma",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/251962",
+       "name": "Violet Sash",
+       "type": "Waist, Cloth"
+      },
+      {
+       "itemHref": "/item/279849",
+       "name": "Runebound Gloves",
+       "type": "Hands, Leather"
+      }
+     ]
+    },
+    {
+     "id": "quest-92456",
+     "name": "A Green Sample",
+     "levelText": null,
+     "questText": "Collect a Fel Infused Blossom from the City of Dalaran for Shylamiir in Stormwind City.",
+     "fields": [
+      {
+       "label": "Bring back",
+       "value": "Fel Infused Blossom",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/251983",
+         "name": "Fel Infused Blossom",
+         "qty": null,
+         "source": null
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279835",
+       "name": "Vine Pruner's Cloak",
+       "type": "Back, Cloth"
+      },
+      {
+       "itemHref": "/item/279836",
+       "name": "Thorn Protecting Girdle",
+       "type": "Waist, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-92457",
+     "name": "Starving Arcane",
+     "levelText": null,
+     "questText": "Defeat 8 Seeking Remnants, 8 Saturated Remnants, and 8 Mana Echoes inside the City of Dalaran for Archmage Modera outside of Dalaran.",
+     "fields": [
+      {
+       "label": "Slay",
+       "value": "Seeking Remnant ×8, Saturated Remnant ×8, Mana Echo ×8",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279837",
+       "name": "Fallen Guard's Pendant",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/279838",
+       "name": "Arcane Infused Rod",
+       "type": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupNameFull": "Horde3 quests",
+   "quests": [
+    {
+     "id": "quest-96986",
+     "name": "The Grave Knight",
+     "levelText": null,
+     "questText": "Defeat Atrexis the Grave Knight in the City of Dalaran for Melisara in Tarren Mill.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Melisara, Hillsbrad Foothills",
+       "mapRef": {
+        "name": "Melisara",
+        "href": "/map/eastern-kingdoms#pin=Melisara"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Slay",
+       "value": "Atrexis the Grave Knight",
+       "mapRef": null,
+       "needItems": null
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/251963",
+       "name": "Gravewalker Boots",
+       "type": "Feet, Leather"
+      },
+      {
+       "itemHref": "/item/251965",
+       "name": "Undead Knight's Bracers",
+       "type": "Wrist, Mail"
+      }
+     ]
+    },
+    {
+     "id": "quest-96988",
+     "name": "Source of Power",
+     "levelText": null,
+     "questText": "Collect 6 Cracked Sentry Cores in the City of Dalaran for Doctor Martin Felben in Undercity.",
+     "fields": [
+      {
+       "label": "Starts",
+       "value": "Doctor Martin Felben, Undercity",
+       "mapRef": {
+        "name": "Doctor Martin Felben",
+        "href": "/map/eastern-kingdoms#pin=Doctor%20Martin%20Felben"
+       },
+       "needItems": null
+      },
+      {
+       "label": "Where to find it",
+       "value": "From the Fragmented Sentries. The cores are not shared: each of you needs six, a run has only 12 to 15 sentries, and each gives a single core, so a group of five needs two or three runs.",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "Cracked Sentry Core ×6Fragmented Sentry",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/275997",
+         "name": "Cracked Sentry Core",
+         "qty": "×6",
+         "source": "Fragmented Sentry"
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279847",
+       "name": "Unstable Power Core",
+       "type": "Ranged, Wand"
+      },
+      {
+       "itemHref": "/item/279848",
+       "name": "Construct Cloak",
+       "type": "Back, Cloth"
+      }
+     ]
+    },
+    {
+     "id": "quest-96987",
+     "name": "Opportunistic Education",
+     "levelText": null,
+     "questText": "Collect the Founding of Dalaran from the City of Dalaran for Rexxie Copperclutch near the sewer entrance.",
+     "fields": [
+      {
+       "label": "Where to find it",
+       "value": "Past the portal room, on the back wall.",
+       "mapRef": null,
+       "needItems": null
+      },
+      {
+       "label": "Bring back",
+       "value": "The Founding of Dalaran",
+       "mapRef": null,
+       "needItems": [
+        {
+         "itemHref": "/item/275996",
+         "name": "The Founding of Dalaran",
+         "qty": null,
+         "source": null
+        }
+       ]
+      }
+     ],
+     "rewardHeading": "Choose one of",
+     "rewardNotes": [],
+     "rewards": [
+      {
+       "itemHref": "/item/279845",
+       "name": "Solid Gold Band",
+       "type": ""
+      },
+      {
+       "itemHref": "/item/279846",
+       "name": "Larcenist's Belt",
+       "type": "Waist, Leather"
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }

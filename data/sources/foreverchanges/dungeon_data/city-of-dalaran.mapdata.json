@@ -1,0 +1,176 @@
+{
+ "id": "city-of-dalaran",
+ "source": "foreverchanges.pro",
+ "section": "map-and-abilities",
+ "map": {
+  "alt": "Map of City of Dalaran in WoW Forever, with where each boss stands",
+  "attribution": {
+   "artistName": "Santiago Reyes",
+   "artistUrl": "https://asguevara433.wixsite.com/srmaps"
+  },
+  "floors": [
+   {
+    "name": "The sewers",
+    "src": "/dungeons/maps/city-of-dalaran-sewers.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Atrexis the Grave Knight",
+      "xPct": 60.9,
+      "yPct": 58.9,
+      "kind": "boss",
+      "display": 145787
+     },
+     {
+      "label": "Lyn the Ignored",
+      "xPct": 69,
+      "yPct": 16.6,
+      "kind": "boss",
+      "display": 130235
+     },
+     {
+      "label": "Entrance",
+      "xPct": 18.6,
+      "yPct": 84,
+      "kind": "entrance",
+      "display": null
+     }
+    ]
+   },
+   {
+    "name": "The city",
+    "src": "/dungeons/maps/city-of-dalaran-city.webp",
+    "width": 2100,
+    "height": 1400,
+    "pins": [
+     {
+      "label": "Arcane Anomaly",
+      "xPct": 52,
+      "yPct": 83.4,
+      "kind": "boss",
+      "display": 129891
+     },
+     {
+      "label": "Arcanic Enigma",
+      "xPct": 66,
+      "yPct": 49.8,
+      "kind": "boss",
+      "display": 129900
+     },
+     {
+      "label": "Unstable Sentinel",
+      "xPct": 59,
+      "yPct": 40.8,
+      "kind": "boss",
+      "display": 129954
+     },
+     {
+      "label": "Fel Ancient",
+      "xPct": 53.5,
+      "yPct": 55,
+      "kind": "boss",
+      "display": 129894
+     },
+     {
+      "label": "Shade of the Archmage",
+      "xPct": 56.7,
+      "yPct": 25.8,
+      "kind": "boss",
+      "display": 130061
+     },
+     {
+      "label": "Mana Devourer",
+      "xPct": 43.5,
+      "yPct": 72,
+      "kind": "boss",
+      "display": 129895
+     }
+    ]
+   }
+  ]
+ },
+ "bosses": [
+  {
+   "id": "atrexis-the-grave-knight",
+   "kind": "boss",
+   "name": "Atrexis the Grave Knight",
+   "level": 29,
+   "display": 145787,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "lyn-the-ignored",
+   "kind": "boss",
+   "name": "Lyn the Ignored",
+   "level": 31,
+   "display": 130235,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "arcane-anomaly",
+   "kind": "boss",
+   "name": "Arcane Anomaly",
+   "level": 30,
+   "display": 129891,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "arcanic-enigma",
+   "kind": "boss",
+   "name": "Arcanic Enigma",
+   "level": 30,
+   "display": 129900,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "unstable-sentinel",
+   "kind": "boss",
+   "name": "Unstable Sentinel",
+   "level": 31,
+   "display": 129954,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "mana-devourer",
+   "kind": "boss",
+   "name": "Mana Devourer",
+   "level": 31,
+   "display": 129895,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "fel-ancient",
+   "kind": "boss",
+   "name": "Fel Ancient",
+   "level": 32,
+   "display": 129894,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "shade-of-the-archmage",
+   "kind": "boss",
+   "name": "Shade of the Archmage",
+   "level": 33,
+   "display": 130061,
+   "trigger": null,
+   "abilities": []
+  },
+  {
+   "id": "trash-mobs",
+   "kind": "trash",
+   "name": "Trash mobs",
+   "level": null,
+   "display": null,
+   "trigger": null,
+   "abilities": []
+  }
+ ]
+}
