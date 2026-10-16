@@ -81,12 +81,14 @@ Encoding is positional (one base36 rank digit per talent, ordered by tier
 then col, trees joined with `-`) with no name/id tie-back — so any change
 to a tree's talent membership/order needs a version bump, or old shared
 links silently decode to the wrong talent. `encodeBuild` prepends a
-version segment (currently `5`); `decodeBuild` branches: versioned codes
+version segment (currently `6`); `decodeBuild` branches: versioned codes
 decode against current tree order, legacy/old-version codes decode
 against a frozen snapshot (`LEGACY_TREE_ORDER`/`V2_TREE_ORDER`) + an id
 translation table, then clamp to current `maxRank`. Frozen snapshots now
-run `LEGACY`/`V2`/`V3`/`V4_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
-Warrior Fury/Protection 2026-10-03).
+run `LEGACY`/`V2`/`V3`/`V4`/`V5_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
+Warrior Fury/Protection 2026-10-03, v6 Priest/Shaman/Mage/Warlock 2026-10-15).
+Frozen orders merge **per tree** (`mergeOrders`), so two snapshots can freeze
+different trees of one class (Shaman: V2 Elemental, V5 Restoration).
 
 **The next time a tree's talent membership or order changes**, bump
 `CURRENT_VERSION` and add a new frozen order snapshot + translation table

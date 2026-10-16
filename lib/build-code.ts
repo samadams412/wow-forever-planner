@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 5;
+const CURRENT_VERSION = 6;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -51,13 +51,18 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
       // first 3 trees (so must NOT get V2_TREE_ORDER applied) but still
       // predate both the Druid and Warrior changes, so need V3 + V4. Version
       // 4 codes already have the post-Druid-change shape too, so only need
-      // V4_TREE_ORDER for the Warrior trees.
+      // V4_TREE_ORDER for the Warrior trees. Every version below 6 predates
+      // the 2026-10-15 reshape (V5_TREE_ORDER). Merged per tree, later wins:
+      // V2's Shaman Elemental must override V5's while V5's Shaman
+      // Restoration survives.
       const orders =
         version < 3
-          ? { ...V2_TREE_ORDER, ...V3_TREE_ORDER, ...V4_TREE_ORDER }
+          ? mergeOrders(V5_TREE_ORDER, V2_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
           : version < 4
-            ? { ...V3_TREE_ORDER, ...V4_TREE_ORDER }
-            : V4_TREE_ORDER;
+            ? mergeOrders(V5_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
+            : version < 5
+              ? mergeOrders(V5_TREE_ORDER, V4_TREE_ORDER)
+              : V5_TREE_ORDER;
       return repairPrereqs(classData, decodeAgainstFrozenOrders(classData, segments.slice(1), orders));
     }
     return repairPrereqs(classData, decodeVersionedBuild(classData, segments.slice(1)));
@@ -231,6 +236,14 @@ const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
   fury_boundless_rage: null,
   fury_precision: null,
   protection_toughness: null,
+  // Removed 2026-10-15, beta build 70425 (see V5_TREE_ORDER below). Each
+  // replacement that took the same slot is a different talent, so points drop.
+  shadow_shadow_affinity: null,
+  shadow_improved_fade: null,
+  elemental_improved_fire_nova: null,
+  elemental_call_of_thunder: null,
+  fire_wake_of_fire: null,
+  affliction_malediction: null,
 };
 
 // --- v2 tree shape (2026-09-18 .. 2026-09-24) ---------------------------------
@@ -410,6 +423,174 @@ const V4_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
+// --- v5 tree shape (2026-10-03 .. 2026-10-15) ---------------------------------
+//
+// The 2026-10-15 talentsforever.com pull (beta build 1.60.1.70425) reshaped 7
+// trees. Priest Shadow lost Shadow Affinity and Improved Fade and gained Dark
+// Inspiration; Priest Discipline moved Improved Power Word: Shield, Mental
+// Strength and Improved Mana Burn. Shaman Elemental lost Improved Fire Nova
+// and Call of Thunder, gained Trial by Fire and Elemental Mastery, and moved
+// most of the rest. Shaman Restoration swapped Totemic Focus/Tidal Focus/Tidal
+// Mastery positions. Mage Arcane gained Arcane Wrath and moved Missile
+// Barrage to tier 1. Mage Fire replaced Wake of Fire with Improved Fire Blast.
+// Warlock Affliction replaced Malediction with Grim Reach. Removed ids are in
+// LEGACY_ID_TRANSLATION above.
+//
+// V5_TREE_ORDER freezes those trees' tier/col-sorted id order as it stood at
+// CURRENT_VERSION 5. Never edit after the fact, same rule as the other frozen
+// orders above.
+const V5_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  priest: {
+    Discipline: [
+      "discipline_power_in_light",
+      "discipline_wand_specialization",
+      "discipline_twin_disciplines",
+      "discipline_silent_resolve",
+      "discipline_holy_precision",
+      "discipline_improved_power_word_shield",
+      "discipline_martyrdom",
+      "discipline_mental_agility",
+      "discipline_inner_focus",
+      "discipline_meditation",
+      "discipline_improved_inner_fire",
+      "discipline_mental_strength",
+      "discipline_soul_warding",
+      "discipline_improved_mana_burn",
+      "discipline_penance",
+      "discipline_renewed_hope",
+      "discipline_divine_aegis",
+      "discipline_power_infusion",
+    ],
+    Shadow: [
+      "shadow_shadow_focus",
+      "shadow_blackout",
+      "shadow_spirit_tap",
+      "shadow_shadow_affinity",
+      "shadow_improved_shadow_word_pain",
+      "shadow_shadow_reach",
+      "shadow_improved_mind_blast",
+      "shadow_improved_psychic_scream",
+      "shadow_mind_flay",
+      "shadow_improved_mind_flay",
+      "shadow_improved_fade",
+      "shadow_vampiric_embrace",
+      "shadow_shadow_weaving",
+      "shadow_silence",
+      "shadow_devouring_contagion",
+      "shadow_early_demise",
+      "shadow_darkness",
+      "shadow_shadowform",
+    ],
+  },
+  shaman: {
+    Elemental: [
+      "elemental_convection",
+      "elemental_concussion",
+      "elemental_elemental_warding",
+      "elemental_reverberation",
+      "elemental_call_of_flame",
+      "elemental_elemental_devastation",
+      "elemental_elemental_focus",
+      "elemental_elemental_alacrity",
+      "elemental_improved_fire_nova",
+      "elemental_eye_of_the_storm",
+      "elemental_call_of_thunder",
+      "elemental_elemental_reach",
+      "elemental_lightning_overload",
+      "elemental_earthbound",
+      "elemental_elemental_fury",
+      "elemental_lava_burst",
+    ],
+    Restoration: [
+      "restoration_improved_healing_wave",
+      "restoration_tidal_mastery",
+      "restoration_mindfulness",
+      "restoration_natural_grace",
+      "restoration_tidal_focus",
+      "restoration_improved_reincarnation",
+      "restoration_ancestral_healing",
+      "restoration_healing_focus",
+      "restoration_water_shield",
+      "restoration_totemic_focus",
+      "restoration_restorative_totems",
+      "restoration_mana_tide_totem",
+      "restoration_healing_way",
+      "restoration_natures_swiftness",
+      "restoration_purification",
+      "restoration_riptide",
+    ],
+  },
+  mage: {
+    Arcane: [
+      "arcane_wand_specialization",
+      "arcane_arcane_focus",
+      "arcane_improved_channeling",
+      "arcane_arcane_subtlety",
+      "arcane_magic_absorption",
+      "arcane_arcane_concentration",
+      "arcane_arcane_resilience",
+      "arcane_arcane_geometry",
+      "arcane_arcane_impact",
+      "arcane_arcane_blast",
+      "arcane_arcane_shielding",
+      "arcane_improved_counterspell",
+      "arcane_arcane_meditation",
+      "arcane_missile_barrage",
+      "arcane_presence_of_mind",
+      "arcane_arcane_mind",
+      "arcane_arcane_instability",
+      "arcane_arcane_power",
+    ],
+    Fire: [
+      "fire_wake_of_fire",
+      "fire_incineration",
+      "fire_improved_fireball",
+      "fire_ignite",
+      "fire_flame_throwing",
+      "fire_impact",
+      "fire_burning_soul",
+      "fire_improved_flamestrike",
+      "fire_pyroblast",
+      "fire_improved_scorch",
+      "fire_improved_fire_ward",
+      "fire_heating_up",
+      "fire_master_of_elements",
+      "fire_critical_mass",
+      "fire_blast_wave",
+      "fire_fire_power",
+      "fire_combustion",
+    ],
+  },
+  warlock: {
+    Affliction: [
+      "affliction_improved_life_tap",
+      "affliction_suppression",
+      "affliction_improved_corruption",
+      "affliction_malediction",
+      "affliction_soul_harvest",
+      "affliction_improved_drains",
+      "affliction_improved_bane_of_agony",
+      "affliction_fel_concentration",
+      "affliction_amplify_curse",
+      "affliction_pandemic",
+      "affliction_malevolence",
+      "affliction_nightfall",
+      "affliction_curse_of_exhaustion",
+      "affliction_siphon_life",
+      "affliction_soul_siphon",
+      "affliction_shadow_mastery",
+      "affliction_wrack",
+    ],
+  },
+};
+
+type FrozenOrders = Record<string, Record<string, string[]>>;
+function mergeOrders(...orders: FrozenOrders[]): FrozenOrders {
+  const out: FrozenOrders = {};
+  for (const o of orders) for (const cls in o) out[cls] = { ...out[cls], ...o[cls] };
+  return out;
+}
+
 // Decodes a versioned code older than CURRENT_VERSION, whose per-tree digits
 // are positioned against a frozen older tree order for whichever trees have
 // one in `orders`; every other tree decodes against live data exactly as a
@@ -454,7 +635,8 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
       LEGACY_TREE_ORDER[classData.class]?.[tree.name] ??
       V2_TREE_ORDER[classData.class]?.[tree.name] ??
       V3_TREE_ORDER[classData.class]?.[tree.name] ??
-      V4_TREE_ORDER[classData.class]?.[tree.name];
+      V4_TREE_ORDER[classData.class]?.[tree.name] ??
+      V5_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {

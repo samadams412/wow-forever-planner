@@ -61,8 +61,8 @@
         {
           "id": "elemental_elemental_warding",
           "name": "Elemental Warding",
-          "tier": 2,
-          "col": 1,
+          "tier": 3,
+          "col": 2,
           "maxRank": 3,
           "ranks": [
             "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
@@ -114,12 +114,12 @@
           "id": "elemental_call_of_flame",
           "name": "Call of Flame",
           "tier": 2,
-          "col": 3,
+          "col": 4,
           "maxRank": 3,
           "ranks": [
-            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%.",
-            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%.",
-            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%."
+            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -139,12 +139,12 @@
           "id": "elemental_elemental_devastation",
           "name": "Elemental Devastation",
           "tier": 2,
-          "col": 4,
+          "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 3% for 10 sec.",
-            "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 6% for 10 sec.",
-            "Your offensive spell critical strikes will increase your chance to get a critical strike with melee attacks by 9% for 10 sec."
+            "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 3% for 10 sec.",
+            "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 6% for 10 sec.",
+            "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -164,22 +164,41 @@
           "id": "elemental_elemental_focus",
           "name": "Elemental Focus",
           "tier": 3,
-          "col": 2,
+          "col": 1,
           "maxRank": 1,
           "ranks": [
             "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "unchanged",
           "icon": "spell_shadow_manaburn",
           "classic": {
-            "status": "moved",
+            "status": "unchanged",
             "tree": "Elemental",
             "tier": 3,
             "col": 1,
             "maxRank": 1,
             "text": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          },
+          "passive": true
+        },
+        {
+          "id": "elemental_trial_by_fire",
+          "name": "Trial by Fire",
+          "tier": 4,
+          "col": 1,
+          "maxRank": 2,
+          "ranks": [
+            "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec, and increases the duration of your Magma Totem by 10 sec.",
+            "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_fire_sealoffire",
+          "classic": {
+            "status": "new"
           },
           "passive": true
         },
@@ -198,8 +217,8 @@
           ],
           "confidence": "confirmed",
           "prereq": {
-            "id": "elemental_call_of_thunder",
-            "ranks": 1
+            "id": "elemental_lightning_overload",
+            "ranks": 3
           },
           "status": "changed",
           "icon": "spell_fire_volcano",
@@ -210,31 +229,6 @@
             "col": 2,
             "maxRank": 1,
             "text": "Increases the critical strike damage bonus of your Searing, Magma, and Fire Nova Totems and your Fire, Frost, and Nature spells by 100%."
-          },
-          "passive": true
-        },
-        {
-          "id": "elemental_improved_fire_nova",
-          "name": "Improved Fire Nova",
-          "tier": 4,
-          "col": 1,
-          "maxRank": 2,
-          "ranks": [
-            "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec.",
-            "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec."
-          ],
-          "confidence": "confirmed",
-          "prereq": null,
-          "status": "changed",
-          "icon": "spell_fire_sealoffire",
-          "classic": {
-            "status": "changed",
-            "tree": "Elemental",
-            "tier": 4,
-            "col": 1,
-            "maxRank": 2,
-            "text": "Reduces the delay before your Fire Nova Totem activates by 1 sec. and decreases the threat generated by your Magma Totem by 25%.",
-            "renamedFrom": "Improved Fire Totems"
           },
           "passive": true
         },
@@ -264,40 +258,14 @@
           "passive": true
         },
         {
-          "id": "elemental_call_of_thunder",
-          "name": "Call of Thunder",
-          "tier": 4,
-          "col": 3,
-          "maxRank": 1,
-          "ranks": [
-            "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 3%."
-          ],
-          "confidence": "confirmed",
-          "prereq": {
-            "id": "elemental_elemental_alacrity",
-            "ranks": 3
-          },
-          "status": "changed",
-          "icon": "spell_nature_callstorm",
-          "classic": {
-            "status": "changed",
-            "tree": "Elemental",
-            "tier": 3,
-            "col": 3,
-            "maxRank": 5,
-            "text": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by an additional 1%."
-          },
-          "passive": true
-        },
-        {
           "id": "elemental_elemental_reach",
           "name": "Elemental Reach",
           "tier": 5,
           "col": 1,
           "maxRank": 2,
           "ranks": [
-            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards, and increases the range of your Flame Shock spell by 8 yards.",
-            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, and increases the range of your Flame Shock spell by 15 yards."
+            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards and reduces the cooldown of Totemic Projection by 10 sec.",
+            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards and reduces the cooldown of Totemic Projection by 20 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -318,7 +286,7 @@
           "id": "elemental_lightning_overload",
           "name": "Lightning Overload",
           "tier": 5,
-          "col": 2,
+          "col": 3,
           "maxRank": 3,
           "ranks": [
             "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
@@ -326,7 +294,10 @@
             "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
           ],
           "confidence": "confirmed",
-          "prereq": null,
+          "prereq": {
+            "id": "elemental_elemental_alacrity",
+            "ranks": 3
+          },
           "status": "new",
           "icon": "spell_nature_lightningoverload",
           "classic": {
@@ -337,7 +308,7 @@
         {
           "id": "elemental_earthbound",
           "name": "Earthbound",
-          "tier": 5,
+          "tier": 4,
           "col": 4,
           "maxRank": 1,
           "ranks": [
@@ -355,7 +326,7 @@
         {
           "id": "elemental_elemental_alacrity",
           "name": "Elemental Alacrity",
-          "tier": 3,
+          "tier": 2,
           "col": 3,
           "maxRank": 3,
           "ranks": [
@@ -381,24 +352,48 @@
         {
           "id": "elemental_lava_burst",
           "name": "Lava Burst",
-          "tier": 7,
+          "tier": 5,
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "You hurl molten lava at the target, dealing 150 to 192 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+            "You hurl molten lava at the target, dealing 113 to 145 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "elemental_lightning_overload",
-            "ranks": 3
-          },
+          "prereq": null,
           "status": "new",
           "icon": "spell_shaman_lavaburst",
           "classic": {
             "status": "new"
           },
           "passive": false,
-          "cost": "165 Mana | 30 yd range | 2.5 sec cast | 10 sec cooldown"
+          "cost": "135 Mana | 30 yd range | 2.5 sec cast | 10 sec cooldown"
+        },
+        {
+          "id": "elemental_elemental_mastery",
+          "name": "Elemental Mastery",
+          "tier": 7,
+          "col": 2,
+          "maxRank": 1,
+          "ranks": [
+            "Gain mastery over Fire and Lightning, reducing the cast time of Lightning Bolt and Lava Burst by 0.5 sec, and removing the cooldown from Chain Lightning. Lasts 15 sec."
+          ],
+          "confidence": "confirmed",
+          "prereq": {
+            "id": "elemental_lava_burst",
+            "ranks": 1
+          },
+          "status": "changed",
+          "icon": "spell_nature_wispheal",
+          "classic": {
+            "status": "changed",
+            "tree": "Elemental",
+            "tier": 7,
+            "col": 2,
+            "maxRank": 1,
+            "text": "When activated, this spell gives your next Fire, Frost, or Nature damage spell a 100% critical strike chance and reduces the mana cost by 100%."
+          },
+          "passive": false,
+          "cost": "Instant | 3 min cooldown"
         }
       ]
     },
@@ -723,7 +718,7 @@
             "text": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec."
           },
           "passive": false,
-          "cost": "125 Mana | Melee Range | Instant | 8 sec cooldown"
+          "cost": "8% of base mana | Melee Range | Instant | 8 sec cooldown"
         },
         {
           "id": "enhancement_spirit_weapons",
@@ -869,8 +864,8 @@
         {
           "id": "restoration_tidal_mastery",
           "name": "Tidal Mastery",
-          "tier": 1,
-          "col": 3,
+          "tier": 4,
+          "col": 1,
           "maxRank": 5,
           "ranks": [
             "Increases the critical effect chance of your healing spells by 1%.",
@@ -942,7 +937,7 @@
         {
           "id": "restoration_tidal_focus",
           "name": "Tidal Focus",
-          "tier": 2,
+          "tier": 1,
           "col": 3,
           "maxRank": 5,
           "ranks": [
@@ -1047,7 +1042,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's healing spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
+            "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1062,8 +1057,8 @@
         {
           "id": "restoration_totemic_focus",
           "name": "Totemic Focus",
-          "tier": 4,
-          "col": 1,
+          "tier": 2,
+          "col": 3,
           "maxRank": 5,
           "ranks": [
             "Reduces the Mana cost of your totems and any spells that summon or move them by 5%.",

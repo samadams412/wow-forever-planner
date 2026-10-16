@@ -83,24 +83,26 @@
           "passive": true
         },
         {
-          "id": "affliction_malediction",
-          "name": "Malediction",
+          "id": "affliction_grim_reach",
+          "name": "Grim Reach",
           "tier": 2,
           "col": 1,
-          "maxRank": 5,
+          "maxRank": 2,
           "ranks": [
-            "Increases all periodic damage done by your Warlock spells by 1%.",
-            "Increases all periodic damage done by your Warlock spells by 2%.",
-            "Increases all periodic damage done by your Warlock spells by 3%.",
-            "Increases all periodic damage done by your Warlock spells by 4%.",
-            "Increases all periodic damage done by your Warlock spells by 5%."
+            "Increases the range of your Affliction spells by 10%.",
+            "Increases the range of your Affliction spells by 20%."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new",
-          "icon": "spell_shadow_curseofachimonde",
+          "status": "moved",
+          "icon": "spell_shadow_callofbone",
           "classic": {
-            "status": "new"
+            "status": "moved",
+            "tree": "Affliction",
+            "tier": 4,
+            "col": 1,
+            "maxRank": 2,
+            "text": "Increases the range of your Affliction spells by 10%."
           },
           "passive": true
         },
@@ -200,7 +202,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec."
+            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 50%. Lasts 30 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -366,11 +368,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Increases the damage dealt or life drained by your Shadow spells by 1%.",
             "Increases the damage dealt or life drained by your Shadow spells by 2%.",
-            "Increases the damage dealt or life drained by your Shadow spells by 3%.",
             "Increases the damage dealt or life drained by your Shadow spells by 4%.",
-            "Increases the damage dealt or life drained by your Shadow spells by 5%."
+            "Increases the damage dealt or life drained by your Shadow spells by 6%.",
+            "Increases the damage dealt or life drained by your Shadow spells by 8%.",
+            "Increases the damage dealt or life drained by your Shadow spells by 10%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -871,15 +873,15 @@
           "col": 1,
           "maxRank": 2,
           "ranks": [
-            "Increases the range of your damaging spells by 10%.",
-            "Increases the range of your damaging spells by 20%."
+            "Increases the range of your Destruction spells by 10%.",
+            "Increases the range of your Destruction spells by 20%."
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
+          "status": "moved",
           "icon": "spell_shadow_corpseexplode",
           "classic": {
-            "status": "changed",
+            "status": "moved",
             "tree": "Destruction",
             "tier": 4,
             "col": 2,

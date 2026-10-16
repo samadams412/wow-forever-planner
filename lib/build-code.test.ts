@@ -27,7 +27,7 @@ test("encodeBuild -> decodeBuild round-trips a current-version build", () => {
     protection_shield_slam: 1,
   };
   const code = encodeBuild(warrior, ranks);
-  assert.match(code, /^5-/); // CURRENT_VERSION
+  assert.match(code, /^6-/); // CURRENT_VERSION
   assert.deepEqual(decodeBuild(warrior, code), ranks);
 });
 
@@ -58,7 +58,7 @@ test("decodeBuild clamps a rank above the talent's current maxRank", () => {
       talents.map((t) => (i === protIndex && t.id === "protection_shield_specialization" ? "6" : "0")).join("")
     )
     .join("-");
-  const ranks = decodeBuild(warrior, `5-${body}`);
+  const ranks = decodeBuild(warrior, `6-${body}`);
   assert.equal(ranks.protection_shield_specialization, 5);
 });
 
@@ -185,4 +185,29 @@ test("decodeBuild does not itself enforce row-gating (that's talent-rules' job)"
   // is why canonicalBuildCode in build-tracking-server.ts calls both.
   const ranks = decodeBuild(warrior, encodeBuild(warrior, { protection_bastion: 1 }));
   assert.deepEqual(ranks, { protection_bastion: 1 });
+});
+
+const shaman = JSON.parse(
+  fs.readFileSync(path.join(import.meta.dirname, "..", "data", "talents", "shaman.json"), "utf8")
+) as ClassTalentData;
+
+test("decodeBuild (version 5 and version 2 codes) uses the right frozen Shaman orders per tree", () => {
+  // V5_TREE_ORDER.shaman: Elemental index 0 = convection, 10 = call_of_thunder
+  // (removed 2026-10-15); Restoration index 1 = tidal_mastery, 9 = totemic_focus.
+  const v5Elemental = "5000000000100000";
+  const v5Restoration = "0500000003000000";
+  assert.deepEqual(decodeBuild(shaman, ["5", v5Elemental, "", v5Restoration].join("-")), {
+    elemental_convection: 5,
+    restoration_tidal_mastery: 5,
+    restoration_totemic_focus: 3,
+  });
+  // A v2 code: Elemental decodes against V2_TREE_ORDER (index 14 =
+  // elemental_alacrity there, elemental_fury in V5), while Restoration still
+  // needs V5's order -- the per-tree merge must keep both.
+  const v2Elemental = "00000000000000300";
+  assert.deepEqual(decodeBuild(shaman, ["2", v2Elemental, "", v5Restoration].join("-")), {
+    elemental_elemental_alacrity: 3,
+    restoration_tidal_mastery: 5,
+    restoration_totemic_focus: 3,
+  });
 });
