@@ -8,11 +8,11 @@
       "icon": "spell_nature_sleep"
     },
     {
-      "name": "Sword Specialization",
+      "name": "Ruthless",
       "type": "passive",
-      "description": "Increases your critical strike chance with all spells and attacks by 2% while you have a sword or two-handed sword equipped.",
+      "description": "Increases your critical strike chance with all spells and attacks by 2%.",
       "confidence": "confirmed",
-      "icon": "ability_meleedamage"
+      "icon": "ability_rogue_eviscerate"
     },
     {
       "name": "The Human Spirit",
@@ -45,11 +45,11 @@
       "icon": "racial_dwarf_findtreasure"
     },
     {
-      "name": "Mace Specialization",
+      "name": "Earth Fury",
       "type": "passive",
-      "description": "Increases your critical strike chance with all spells and attacks by 1% while you have a mace or two-handed mace equipped.",
+      "description": "Increases your critical strike bonus to damage and healing by 2%.",
       "confidence": "confirmed",
-      "icon": "inv_hammer_05"
+      "icon": "spell_shaman_unleashweapon_earth"
     },
     {
       "name": "Big Game Hunter",
@@ -114,7 +114,7 @@
     {
       "name": "Eureka!",
       "type": "active",
-      "description": "Instant, 2 min cooldown. Your next 3 non-periodic damaging abilities cost 10% less (Mana, Rage or Energy) and deal 10% more damage. For Priests, your next 3 non-periodic damaging or healing abilities cost 10% less Mana and do 10% more damage or healing. Periodic effects get nothing from it; a channeled spell is not periodic.",
+      "description": "Instant, 2 min cooldown. For 8 sec, your non-periodic damaging abilities cost 10% less (Mana, Rage or Energy) and deal 10% more damage. For Priests, your non-periodic damaging or healing abilities cost 10% less Mana and do 10% more damage or healing. Periodic effects get nothing from it; a channeled spell is not periodic. The Mage's own tooltip is the one that leaves out non-periodic.",
       "confidence": "confirmed",
       "icon": "inv_gnometoy",
       "note": "Since 1 Oct, Eureka! no longer helps a Warlock's DoTs."
@@ -124,14 +124,14 @@
     {
       "name": "Blood Fury",
       "type": "active",
-      "description": "Instant, 2 min cooldown. Increases Attack Power and Spell Power by 10% for 15 sec.",
+      "description": "Instant, 3 min cooldown. Increases Attack Power and Spell Power by 10% for 15 sec.",
       "confidence": "confirmed",
       "icon": "racial_orc_berserkerstrength"
     },
     {
-      "name": "Axe Specialization",
+      "name": "Savage",
       "type": "passive",
-      "description": "Increases your critical strike chance with all spells and abilities by 1% while you have an axe or a two-handed axe equipped.",
+      "description": "Increases your critical strike chance with all spells and abilities by 1%.",
       "confidence": "confirmed",
       "icon": "inv_axe_02"
     },
@@ -145,7 +145,7 @@
     {
       "name": "Shatter Curse",
       "type": "active",
-      "description": "Instant, 3 min cooldown. Instantly removes and grants immunity to all Curses and Banes, and reduces all Magical damage taken by 15% for 8 sec.",
+      "description": "Instant, 3 min cooldown. Instantly removes all Curses and Banes, and reduces all Magical damage taken by 5% for 8 sec.",
       "confidence": "confirmed",
       "icon": "spell_nature_removecurse"
     }
@@ -175,7 +175,7 @@
     {
       "name": "Touch of the Grave",
       "type": "passive",
-      "description": "Your spells and attacks with a damage part have a chance (10% for casters, 5% for melee) to drain Health from the target, up to 5% of your maximum Health. 1 sec internal cooldown. Does not break crowd control.",
+      "description": "Your spells and attacks with a damage part have a chance (30% for casters, 20% for Paladins, Rogues and Warriors) to drain Health from the target, up to 5% of your maximum Health. 25 sec internal cooldown. Does not break crowd control.",
       "confidence": "confirmed",
       "icon": "spell_shadow_fingerofdeath"
     }
@@ -184,7 +184,7 @@
     {
       "name": "War Stomp",
       "type": "active",
-      "description": "0.5 sec cast, 2 min cooldown. Stuns up to 5 enemies within 8 yds for 2 sec.",
+      "description": "0.5 sec cast, 1.5 min cooldown. Stuns up to 5 enemies within 8 yds for 2 sec.",
       "confidence": "confirmed",
       "icon": "ability_warstomp"
     },
@@ -198,14 +198,14 @@
     {
       "name": "Endurance",
       "type": "passive",
-      "description": "Total Health increased by 5% and chance to hit increased by 1%.",
+      "description": "Total Health increased by 5% and critical strike bonus to damage and healing increased by 2%.",
       "confidence": "confirmed",
       "icon": "spell_nature_unyeildingstamina"
     },
     {
       "name": "Plainsrunning",
       "type": "passive",
-      "description": "Gain 1% increased movement speed every 5 sec spent moving, up to a maximum of 30% increase. Taking damage or standing still will reduce this effect.",
+      "description": "Gain 1% increased movement speed every 5 sec spent moving, up to a maximum of 30% increase. Taking damage or standing still will reduce this effect. In addition, you move 3% faster while mounted.",
       "confidence": "confirmed",
       "icon": "achievement_zone_barrens_01"
     }
@@ -235,7 +235,7 @@
     {
       "name": "Regeneration",
       "type": "passive",
-      "description": "Health regeneration rate increased by 10%. In addition, 10% of total Health regeneration will continue during combat.",
+      "description": "Health regeneration rate increased by 20%. In addition, 20% of total Health regeneration will continue during combat.",
       "confidence": "confirmed",
       "icon": "spell_nature_regenerate"
     }
@@ -244,7 +244,7 @@
     {
       "name": "Walk on Air",
       "type": "active",
-      "description": "Instant, 2 min cooldown. Glide downward through the air for 10 sec while controlling your direction of travel.",
+      "description": "Instant, 1.5 min cooldown. Glide downward through the air for 10 sec while controlling your direction of travel.",
       "confidence": "confirmed",
       "icon": "inv_elemental_primal_air"
     },
@@ -258,7 +258,7 @@
     {
       "name": "Wind Blessed",
       "type": "passive",
-      "description": "Increases your spellcasting, melee, and ranged Haste by 1%.",
+      "description": "Increases your spellcasting, melee, and ranged Haste by 3%.",
       "confidence": "confirmed",
       "icon": "inv_misc_volatileair"
     },
@@ -274,21 +274,21 @@
     {
       "name": "Walk on Air",
       "type": "active",
-      "description": "Instant, 2 min cooldown. Glide downward through the air for 10 sec while controlling your direction of travel.",
+      "description": "Instant, 1.5 min cooldown. Glide downward through the air for 10 sec while controlling your direction of travel.",
       "confidence": "confirmed",
       "icon": "inv_elemental_primal_air"
     },
     {
-      "name": "Read Ley Line",
+      "name": "Read Leyline",
       "type": "active",
-      "description": "2 sec cast, 2 min cooldown. Attempt to tap into the power of a nearby ley line, increasing your Health and Mana regeneration by 100%. Lasts 15 sec if no ley line is nearby, and 15 min if one is found.",
+      "description": "2 sec cast, 2 min cooldown. Attempt to tap into the power of a nearby leyline, increasing your Health and Mana regeneration by 100%. Lasts 30 sec if no leyline is nearby, and 15 min if one is found.",
       "confidence": "confirmed",
       "icon": "ability_mage_incantersabsorbtion"
     },
     {
       "name": "Wind Blessed",
       "type": "passive",
-      "description": "Increases your spellcasting, melee, and ranged Haste by 1%.",
+      "description": "Increases your spellcasting, melee, and ranged Haste by 3%.",
       "confidence": "confirmed",
       "icon": "inv_misc_volatileair"
     },
