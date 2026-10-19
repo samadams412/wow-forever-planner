@@ -28,12 +28,15 @@ function warnDisabledOnce(reason: string): void {
   console.warn(`[build-tracking] disabled: ${reason}. Set ${ALLOW_LOCAL_ENV}=1 to write to the configured Redis anyway.`);
 }
 
-// Both URL and token are set by the Vercel Marketplace Upstash integration (or
-// locally in .env.local -- see .env.example). Missing values turn tracking into
-// a no-op rather than an error, so previews work without a database. Outside a
-// production build (`next dev`) it is also a no-op unless explicitly allowed.
+// On Vercel the Marketplace Upstash integration sets KV_REST_API_URL/_TOKEN;
+// .env.local uses UPSTASH_REDIS_REST_URL/_TOKEN (see .env.example). Either
+// works: Redis.fromEnv() reads UPSTASH_* first and falls back to KV_*. Missing
+// values turn tracking into a no-op rather than an error. Outside a production
+// build (`next dev`) it is also a no-op unless explicitly allowed.
 export function getRedis(): Redis | null {
-  if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) return null;
+  const env = process.env;
+  if (!(env.UPSTASH_REDIS_REST_URL || env.KV_REST_API_URL)) return null;
+  if (!(env.UPSTASH_REDIS_REST_TOKEN || env.KV_REST_API_TOKEN)) return null;
   if (process.env.NODE_ENV !== "production" && !localWritesAllowed()) {
     warnDisabledOnce(`NODE_ENV is "${process.env.NODE_ENV}"`);
     return null;
