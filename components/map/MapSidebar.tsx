@@ -41,6 +41,7 @@ const LAYER_ICON_SVG: Partial<Record<keyof MapLayers, string>> = {
   raids: entranceIconSvg("raid"),
   battlegrounds: entranceIconSvg("battleground"),
   flightMasters: poiIconSvg("flightMasters", null),
+  towns: poiIconSvg("towns", null),
 };
 
 const SECTIONS = [...new Set(MARKER_CATEGORIES.map((c) => c.section))];

@@ -72,6 +72,21 @@ export function flightMasterIconSvg(faction: PoiFaction): string {
   );
 }
 
+// A simple original glyph (not client art, same policy as entranceIconSvg): a
+// gabled house in the map's neutral gold. Towns carry no faction (AreaPOI
+// has none), so there's no tinted variant.
+export function townIconSvg(): string {
+  const color = MAP_FACTION_COLOR.contested;
+  return (
+    `<svg viewBox="0 0 32 32" width="100%" height="100%">` +
+    `<circle cx="16" cy="16" r="14" fill="#0d0b07" stroke="${color}" stroke-width="2.5"/>` +
+    `<path d="M8 15 L16 8 L24 15 Z" fill="${color}"/>` +
+    `<path d="M10 15 H22 V23 H10 Z" fill="${color}" opacity="0.8"/>` +
+    `<path d="M14.5 23 V18.5 H17.5 V23 Z" fill="#0d0b07"/>` +
+    `</svg>`
+  );
+}
+
 // The generic POI marker path (LeafletZoneMap.tsx) and the sidebar legend both
 // pick a category's glyph here. A null faction (a category with no faction)
 // gets the neutral gold.
@@ -79,5 +94,7 @@ export function poiIconSvg(layer: PoiLayerKey, faction: PoiFaction | null): stri
   switch (layer) {
     case "flightMasters":
       return flightMasterIconSvg(faction ?? "Both");
+    case "towns":
+      return townIconSvg();
   }
 }

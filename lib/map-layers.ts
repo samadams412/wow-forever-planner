@@ -15,6 +15,7 @@ export type MapLayers = {
   raids: boolean;
   battlegrounds: boolean;
   flightMasters: boolean;
+  towns: boolean;
 };
 
 export const DEFAULT_MAP_LAYERS: MapLayers = {
@@ -25,6 +26,7 @@ export const DEFAULT_MAP_LAYERS: MapLayers = {
   raids: true,
   battlegrounds: true,
   flightMasters: true,
+  towns: true,
 };
 
 // --- Point-of-interest markers ---
@@ -35,7 +37,7 @@ export const DEFAULT_MAP_LAYERS: MapLayers = {
 // in lib/map-icons.ts, then flip its MARKER_CATEGORIES row to `layer`.
 // Entrances keep their own path (proximity grouping, group popups, deep links).
 
-export type PoiLayerKey = "flightMasters";
+export type PoiLayerKey = "flightMasters" | "towns";
 export type PoiFaction = "Alliance" | "Horde" | "Both";
 
 export type MapPoi = {
@@ -60,6 +62,7 @@ export const MARKER_CATEGORIES: MarkerCategory[] = [
   { section: "Layers", label: "Dungeons", layer: "dungeons" },
   { section: "Layers", label: "Raids", layer: "raids" },
   { section: "Layers", label: "Battlegrounds", layer: "battlegrounds" },
+  { section: "Points of interest", label: "Towns & cities", layer: "towns" },
   { section: "Points of interest", label: "Flight masters", layer: "flightMasters" },
   {
     section: "Points of interest",

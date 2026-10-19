@@ -62,6 +62,7 @@ export const ENTRANCE_ICON_ZOOM = {
 // numerous and would clutter a whole-continent view at z2.5.
 export const POI_ICON_ZOOM: Record<PoiLayerKey, { fadeInFrom: number; sizeAtFadeIn: number; sizeAtMax: number; maxZoomForSizing: number }> = {
   flightMasters: { fadeInFrom: 3, sizeAtFadeIn: 16, sizeAtMax: 32, maxZoomForSizing: 6 },
+  towns: { fadeInFrom: 3, sizeAtFadeIn: 14, sizeAtMax: 26, maxZoomForSizing: 6 },
 };
 
 const ENTRANCE_KIND_LABEL: Record<EntranceKind, string> = {

@@ -11,6 +11,7 @@ import {
 import { getZoneAreaData } from "@/lib/zone-areas";
 import { getEntranceMarkers } from "@/lib/map-entrances";
 import { getFlightMasterPois } from "@/lib/map-flight-masters";
+import { getTownPois } from "@/lib/map-towns";
 
 // Real tiled continent map (wow.export-extracted client art, sliced by
 // scripts/slice-map-tiles.js), not the earlier proof-of-concept crop.
@@ -45,7 +46,7 @@ export default async function ContinentMapPage({ params }: { params: Promise<{ c
   const config = getContinentMapConfig(continent);
   const zoneAreas = getZoneAreaData(continent);
   const entrances = getEntranceMarkers(continent);
-  const pois = getFlightMasterPois(continent);
+  const pois = [...getTownPois(continent), ...getFlightMasterPois(continent)];
 
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-8">

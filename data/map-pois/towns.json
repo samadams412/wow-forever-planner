@@ -1,0 +1,643 @@
+{
+  "_readme": "World-map towns and cities from the client's AreaPOI table (build 1.60.1.70009), built by scripts/build-towns.js -- see its header comment for the Icon/Importance rule. Generated; don't hand-edit. `id` is a name slug plus the AreaPOI row id.",
+  "towns": [
+    {
+      "id": "aerie-peak-792",
+      "name": "Aerie Peak",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 234.85000610351562,
+        "y": -2127.760009765625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "angor-fortress-27",
+      "name": "Angor Fortress",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -6392.64990234375,
+        "y": -3158
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "anvilmar-1",
+      "name": "Anvilmar",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -6134.27978515625,
+        "y": 383.76300048828125
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "booty-bay-40",
+      "name": "Booty Bay",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -14383.2998046875,
+        "y": 487.1390075683594
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "brill-2",
+      "name": "Brill",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 2249.85009765625,
+        "y": 278.4138488769531
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "darkshire-3",
+      "name": "Darkshire",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10564.7001953125,
+        "y": -1170.6500244140625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "deathknell-4",
+      "name": "Deathknell",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 1879.832275390625,
+        "y": 1588.2027587890625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "dun-algaz-5",
+      "name": "Dun Algaz",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -4191.0234375,
+        "y": -2373.14013671875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "dun-modr-6",
+      "name": "Dun Modr",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -2610.25830078125,
+        "y": -2350.558349609375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "goldshire-7",
+      "name": "Goldshire",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -9480.0888671875,
+        "y": 63.52175521850586
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "gromgol-base-camp-41",
+      "name": "Grom'gol Base Camp",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -12378.400390625,
+        "y": 185.73399353027344
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "hammerfall-25",
+      "name": "Hammerfall",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -991.5700073242188,
+        "y": -3528.340087890625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "ironforge-8",
+      "name": "Ironforge",
+      "kind": "Capital city",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -5021,
+        "y": -834.0590209960938
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "kargath-26",
+      "name": "Kargath",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -6676.419921875,
+        "y": -2186.679931640625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "kharanos-9",
+      "name": "Kharanos",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -5585.95068359375,
+        "y": -482.12652587890625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "lakeshire-10",
+      "name": "Lakeshire",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -9227.6904296875,
+        "y": -2201.469970703125
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "menethil-harbor-11",
+      "name": "Menethil Harbor",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -3672.699951171875,
+        "y": -828.4550170898438
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "moonbrook-12",
+      "name": "Moonbrook",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -11017.06640625,
+        "y": 1510.16796875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "northshire-abbey-13",
+      "name": "Northshire Abbey",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -8896.1591796875,
+        "y": -179.32833862304688
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "raven-hill-14",
+      "name": "Raven Hill",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10752.5263671875,
+        "y": 310.4333801269531
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "refuge-pointe-24",
+      "name": "Refuge Pointe",
+      "kind": "Village",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -1251.050048828125,
+        "y": -2526.81005859375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "revantusk-village-1507",
+      "name": "Revantusk Village",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -573.458984375,
+        "y": -4590.509765625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "sentinel-hill-15",
+      "name": "Sentinel Hill",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10503.7001953125,
+        "y": 1027.760009765625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "southshore-22",
+      "name": "Southshore",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -803.031005859375,
+        "y": -531.7269897460938
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "stonard-788",
+      "name": "Stonard",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -10443.7001953125,
+        "y": -3277.489990234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "stormwind-16",
+      "name": "Stormwind",
+      "kind": "Capital city",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -9153.76953125,
+        "y": 364.0570068359375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "tarren-mill-23",
+      "name": "Tarren Mill",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -27.035400390625,
+        "y": -900.56201171875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "the-sepulcher-17",
+      "name": "The Sepulcher",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 508.072998046875,
+        "y": 1619.02001953125
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "the-undercity-18",
+      "name": "The Undercity",
+      "kind": "Capital city",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": 1849.68994140625,
+        "y": 235.69900512695312
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "thelsamar-19",
+      "name": "Thelsamar",
+      "kind": "Town",
+      "continent": "eastern-kingdoms",
+      "worldPosition": {
+        "x": -5349.27001953125,
+        "y": -2959.909912109375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "aldrassil-36",
+      "name": "Aldrassil",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 10462.7001953125,
+        "y": 805.9929809570312
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "astranaar-42",
+      "name": "Astranaar",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2720.429931640625,
+        "y": -382.3909912109375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "auberdine-798",
+      "name": "Auberdine",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 6439.330078125,
+        "y": 411.95098876953125
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "bloodhoof-village-28",
+      "name": "Bloodhoof Village",
+      "kind": "Village",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -2323.919921875,
+        "y": -394.9809875488281
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "camp-mojache-790",
+      "name": "Camp Mojache",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -4394.97998046875,
+        "y": 215.61099243164062
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "camp-narache-30",
+      "name": "Camp Narache",
+      "kind": "Village",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -2906.489990234375,
+        "y": -253.60699462890625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "camp-taurajo-1469",
+      "name": "Camp Taurajo",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -2352.659912109375,
+        "y": -1921.6700439453125
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "cenarion-hold-1685",
+      "name": "Cenarion Hold",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -6886.14990234375,
+        "y": 718.3980102539062
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "darnassus-38",
+      "name": "Darnassus",
+      "kind": "Capital city",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 9951.75,
+        "y": 2254.5
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "dolanaar-37",
+      "name": "Dolanaar",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 9787.990234375,
+        "y": 949.89697265625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "everlook-794",
+      "name": "Everlook",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 6723.4599609375,
+        "y": -4662.5
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "feathermoon-stronghold-796",
+      "name": "Feathermoon Stronghold",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -4434.990234375,
+        "y": 3276.739990234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "freewind-post-46",
+      "name": "Freewind Post",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -5454.06982421875,
+        "y": -2445.5
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "gadgetzan-789",
+      "name": "Gadgetzan",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -7139.14990234375,
+        "y": -3752.110107421875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "nijels-point-799",
+      "name": "Nijel's Point",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 202.52099609375,
+        "y": 1308.239990234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "orgrimmar-33",
+      "name": "Orgrimmar",
+      "kind": "Capital city",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 1381.77001953125,
+        "y": -4371.16015625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "ratchet-39",
+      "name": "Ratchet",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -951.364013671875,
+        "y": -3680.070068359375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "razor-hill-31",
+      "name": "Razor Hill",
+      "kind": "Village",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 312.65899658203125,
+        "y": -4745.52001953125
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "senjin-village-34",
+      "name": "Sen'jin Village",
+      "kind": "Village",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -819.4920043945312,
+        "y": -4918.240234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "shadowprey-village-795",
+      "name": "Shadowprey Village",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -1657.8499755859375,
+        "y": 3097.919921875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "splintertree-post-1471",
+      "name": "Splintertree Post",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2286.409912109375,
+        "y": -2564.669921875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "stonetalon-peak-44",
+      "name": "Stonetalon Peak",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 2658.780029296875,
+        "y": 1449.7099609375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "sun-rock-retreat-701",
+      "name": "Sun Rock Retreat",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": 936.3079833984375,
+        "y": 910.9739990234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "thalanaar-45",
+      "name": "Thalanaar",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -4510.02978515625,
+        "y": -779.4739990234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "the-crossroads-35",
+      "name": "The Crossroads",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -455.8999938964844,
+        "y": -2652.14990234375
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "the-den-32",
+      "name": "The Den",
+      "kind": "Village",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -604.0980224609375,
+        "y": -4202.919921875
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "theramore-isle-791",
+      "name": "Theramore Isle",
+      "kind": "Town",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -3680.169921875,
+        "y": -4388.509765625
+      },
+      "source": "Forever client (AreaPOI)"
+    },
+    {
+      "id": "thunder-bluff-29",
+      "name": "Thunder Bluff",
+      "kind": "Capital city",
+      "continent": "kalimdor",
+      "worldPosition": {
+        "x": -1205.4100341796875,
+        "y": 29.42140007019043
+      },
+      "source": "Forever client (AreaPOI)"
+    }
+  ]
+}
