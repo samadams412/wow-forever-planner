@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { SITE_URL } from "@/lib/site";
 import { CLASS_ICON, getClassTalentData, races } from "@/lib/wow-data";
 import { decodeBuild } from "@/lib/build-code";
@@ -104,6 +104,9 @@ const WEB_APPLICATION_JSON_LD = {
 export default async function PlannerPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug = [] } = await params;
   const { classId, buildCode, redirectTo } = parseSlug(slug);
+  // Build-code URLs are cached on first request, so an unknown class would
+  // otherwise render (as the Warrior fallback) and cache a page per junk path.
+  if (classId && !(classId in CLASS_ICON)) notFound();
   if (redirectTo) redirect(redirectTo);
 
   return (
