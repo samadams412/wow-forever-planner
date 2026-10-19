@@ -316,14 +316,31 @@ runtime file reads), then add the `MapLayers` key, `PoiLayerKey`,
 - **Live:** dungeons/raids/battlegrounds (`data/map-entrances.json`, 32 of 52
   placed; the 20 unplaced, Naxx's duplicate `map.csv` row and Emerald Dream
   only affect this layer), flight masters (`data/map-pois/flight-masters.json`,
-  client TaxiNodes), towns & cities (`data/map-pois/towns.json`, 58, from
-  client AreaPOI via `scripts/build-towns.js`: capitals, towns, villages;
-  the 149 minor landmarks are excluded by decision).
+  client TaxiNodes), towns & cities (`data/map-pois/towns.json`, 59, from
+  client AreaPOI via `scripts/build-towns.js`: capitals, towns, villages,
+  plus Brackenwall Village special-cased by AreaPOI id 1684 since its icon
+  is the AV-graveyard one; the 149 minor landmarks are excluded by decision).
 - **Blocked (stubbed, no pins):** town services and graveyards (not in the
   Forever client; cmangos has Classic-era positions, but the owner decided
   2026-10-19 not to use Classic positions for these), rare elites, library
   books and trade camps (new in Forever, no source has positions), boats &
   zeppelins (needs transport route data).
+- **Client extract is older than the rest of the site's data:** entrances,
+  flight masters, towns and zone data all come from the one client-db2
+  extract, `data/sources/client-db2/1.60.1.70009/` (2026-09-25). Talents,
+  spellbooks and racials are synced to build 70425, items to 70374.
+  Whether AreaPOI/TaxiNodes/Map changed since 70009 is unknown until a fresh
+  wow.export extract is diffed against it.
+- **Verified 2026-10-19:** the `npm run build` trace for
+  `reference/map/[continent]` grew 13,127 bytes (29.771 → 29.784 MB local
+  trace sum; the other 43 functions were byte-identical; same 310 traced
+  files), so the towns JSON is bundled into the page chunk, not traced as a
+  file. Usable at 390px phone width (menu overlay rows, counts, toggles,
+  popups).
+- **Known follow-ups:** blocked rows' reason is a native `title`, so touch
+  users see only "No data"; towns aren't in the sidebar search; layer rows
+  are 30px tall, under the 44px touch-target guideline (pre-existing row
+  style).
 
 **Not yet built:** real dungeon/raid icon art (client texture atlas
 FileDataID 1121272 needs exporting from wow.export and cropping — SVG
