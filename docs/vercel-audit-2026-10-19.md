@@ -15,7 +15,9 @@ Commands used (CLI 62.4.0, authenticated by the CLI's stored login because
 | Item | Status |
 |---|---|
 | H1 tracking no-op | **Resolved.** `11f60aab` accepts `KV_REST_API_*`. Verified live: the event landed in Redis and the cron returned `ok`. Test data was cleaned up. |
-| M2 planner renders per request | **Resolved.** `d786051f` reads `?order=` client-side, and `/planner` plus the class pages are prerendered. Not yet deployed. |
+| M2 planner renders per request | **Resolved.** `d786051f` reads `?order=` client-side, and `/planner` plus the class pages are prerendered. Pushed 2026-10-19. Junk class slugs return 404 (`37dc3388`). |
+| OAI-SearchBot volume | **Deliberately deferred** (2026-10-19) until the usage re-check below. |
+| Savings from these changes | **Re-check scheduled for 2026-10-21 or later.** The baseline is below. |
 | Firewall rate limit on `/api/builds/track` (carried over from CLAUDE.md) | **Resolved.** Live rule, 30 POST/60s/IP, then 429. Tested live: 30 passed, then 429. |
 | L1 crawler on item pages | **Mitigated.** `bc43b5da` robots.txt blocks `?from=` variants, catalog filter URLs, build URLs, MJ12bot and Amazonbot. The item route itself is unchanged (see below). |
 | M1, M3, L2–L7 | Still open. |
@@ -43,8 +45,62 @@ Plus):
   zero 404s, so the cost is real items, and the route was left unchanged.
   Prerendering all items with `dynamicParams = false` was considered and
   declined (about 7–8 min more per build, and the ISR saving is unverified).
-- Not changed (owner decision): OAI-SearchBot stays allowed, because blocking
-  it would remove the site from ChatGPT search.
+- **OAI-SearchBot: decision deferred, 2026-10-19.** It's deliberately left
+  allowed, with no robots.txt or Firewall change. This is a real trade-off
+  between ChatGPT search visibility and request volume (7.7k/day, 28% of all
+  traffic, on 2026-10-19). Revisit it after the re-check below, once the
+  2026-10-19 deploy has had time to take effect.
+- **Junk planner URLs: fixed, `37dc3388`.** `/planner/<unknown class>` now calls
+  `notFound()` before any planner render or redirect. Previously, each junk path
+  rendered and cached the Warrior fallback (about 102 KB). Verified locally with
+  `next start`:
+  - `/planner`, `/planner/warrior` and `/planner/druid` return 200 (cache HIT),
+    and `/planner/mage` renders all 3 trees in Chrome.
+  - Build URLs return 200, and the legacy `/planner/warrior/human/<code>`
+    returns 307.
+  - `/planner/notaclass`, `/planner/notaclass/<code>` and
+    `/planner/notaclass/human/<code>` return 404.
+  - Remaining cost: Next still caches the 404 response (about 15 KB, roughly
+    2 ISR units, vs 13 for the old fallback page), the same as the item route.
+    Writing nothing at all would need the class as its own route segment with
+    `dynamicParams = false` (`/planner/og/` is a sibling static segment, so the
+    move needs care). Not done.
+
+### Usage re-check (scheduled, not yet measured)
+
+The planner, robots.txt and firewall changes were pushed 2026-10-19
+(`11f60aab..ffaa7ac9`, production deploy started about 23:20 UTC).
+`37dc3388` (junk planner 404) follows in a later push. **Re-check on or after
+2026-10-21** (a full 24h window after the deploy), then fill in the "After"
+column.
+
+Baseline, captured 2026-10-19. The window is the 24h of `vercel firewall
+traffic list`, 2026-10-18 23:00 to 2026-10-20 00:00 UTC (the CLI's own label;
+the run happened about 23:00 UTC on 10-19):
+
+| Measure | Baseline (2026-10-19) | After (re-check date) | Delta |
+|---|---|---|---|
+| Allowed requests / 24h | 27.4k | not measured yet | not measured yet |
+| Denied (DDoS mitigation) / 24h | 393 | not measured yet | not measured yet |
+| OAI-SearchBot | 7.7k | not measured yet | not measured yet |
+| Amazonbot (now robots-blocked) | 3.2k | not measured yet | not measured yet |
+| MJ12bot (now robots-blocked) | 1.8k | not measured yet | not measured yet |
+| Googlebot | 1.3k | not measured yet | not measured yet |
+| `/reference/items` (top path) | 1.3k | not measured yet | not measured yet |
+| `vercel metrics vercel.request.count --since 1d` | 28,421 (2026-10-18 22:00 to 10-19 23:00 UTC) | not measured yet | not measured yet |
+
+How to re-check:
+1. `vercel firewall traffic list`: the totals, Verified Bots and Top Request
+   Paths fill in the table above.
+2. `vercel firewall traffic inspect bot amazonbot --group-by path` and the
+   same for `mj12bot`. Robots-compliant crawlers re-read robots.txt within
+   about a day, so non-zero counts by 10-21 mean the block isn't being
+   honored.
+3. `vercel metrics vercel.request.count --since 1d` for the same-shaped total.
+4. Check the Usage dashboard by hand (ISR Reads/Writes and Fast Origin
+   Transfer aren't queryable from the CLI on Hobby without Observability
+   Plus).
+5. Then decide on OAI-SearchBot (see above).
 
 ## High
 
