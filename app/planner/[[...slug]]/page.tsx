@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { SITE_URL } from "@/lib/site";
-import { getClassTalentData, races } from "@/lib/wow-data";
+import { CLASS_ICON, getClassTalentData, races } from "@/lib/wow-data";
 import { decodeBuild } from "@/lib/build-code";
 // "What's new" (lib/whats-new.ts, /whats-new, components/whats-new/*) is
 // intentionally unlinked from navigation right now, not abandoned -- see
 // CLAUDE.md. This page used to surface a change-count badge here via
 // getLatestDiffSummary(); that wiring was removed along with the nav link,
 // but the underlying feature and its route are untouched and still work.
-import PlannerClient from "./PlannerClient";
+import PlannerFromUrl from "./PlannerFromUrl";
 
 const RACE_IDS = new Set(races.map((r) => r.id));
+
+// /planner and the 9 class pages are prerendered. Build-code URLs
+// (/planner/<class>/<code>) render once on first request and are then cached
+// (dynamicParams defaults to true), instead of server-rendering every visit.
+export function generateStaticParams() {
+  return [{ slug: [] }, ...Object.keys(CLASS_ICON).map((classId) => ({ slug: [classId] }))];
+}
 
 // Race used to be a URL segment (/planner/<class>/<race>/<build>) before it
 // became reference-only and was dropped from the URL entirely. A second
@@ -92,15 +99,10 @@ const WEB_APPLICATION_JSON_LD = {
   },
 };
 
-export default async function PlannerPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ slug?: string[] }>;
-  searchParams: Promise<{ order?: string | string[] }>;
-}) {
+// ?order= is deliberately not read here (see PlannerFromUrl): reading
+// searchParams on the server would make every planner visit a server render.
+export default async function PlannerPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug = [] } = await params;
-  const { order } = await searchParams;
   const { classId, buildCode, redirectTo } = parseSlug(slug);
   if (redirectTo) redirect(redirectTo);
 
@@ -110,11 +112,7 @@ export default async function PlannerPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WEB_APPLICATION_JSON_LD) }}
       />
-      <PlannerClient
-        initialClassId={classId ?? null}
-        initialBuildCode={buildCode ?? null}
-        initialOrder={typeof order === "string" ? order : null}
-      />
+      <PlannerFromUrl initialClassId={classId ?? null} initialBuildCode={buildCode ?? null} />
     </>
   );
 }
