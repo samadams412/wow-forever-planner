@@ -4,9 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import ContinentSelect from "./ContinentSelect";
 import type { ZoneAreaData, ZoneFaction } from "@/lib/zone-areas";
 import type { EntranceMarker } from "@/lib/map-entrances";
-import type { FlightMaster } from "@/lib/map-flight-masters";
-import type { MapLayers } from "@/lib/map-layers";
-import { entranceIconSvg, flightMasterIconSvg } from "@/lib/map-icons";
+import { MARKER_CATEGORIES, type MapLayers, type MapPoi } from "@/lib/map-layers";
+import { entranceIconSvg, poiIconSvg } from "@/lib/map-icons";
 
 const FACTION_DOT_COLOR: Record<ZoneFaction, string> = {
   alliance: "#6fb1ff",
@@ -31,28 +30,20 @@ const KIND_TAG: Record<string, "Dungeon" | "Raid" | "Battleground"> = {
   battleground: "Battleground",
 };
 
-// Zone borders/labels/level lines moved to MapToolbar.tsx (top-right, above
-// the map) -- entrance-type toggles stay here in the sidebar for now, per
-// instruction, so this list is deliberately shorter than it used to be. Not
-// duplicated in both places.
-//
-// `iconSvg` is the exact same markup the map marker itself renders (shared
-// via lib/map-icons.ts), so each toggle doubles as the map's legend.
-type LayerRow = { key: keyof MapLayers; label: string; iconSvg: string; countKind?: "dungeon" | "raid" | "battleground" };
-
-const LAYER_ROWS: LayerRow[] = [
-  { key: "dungeons", label: "Dungeons", iconSvg: entranceIconSvg("dungeon"), countKind: "dungeon" },
-  { key: "raids", label: "Raids", iconSvg: entranceIconSvg("raid"), countKind: "raid" },
-  { key: "battlegrounds", label: "Battlegrounds", iconSvg: entranceIconSvg("battleground"), countKind: "battleground" },
-];
-
-// A separate section/heading from Layers -- these are individually-placed
-// points of interest (flight masters), not tree/label/entrance-icon display
-// toggles, even though the toggle mechanism itself (a MapLayers key, on by
-// default, persisted in the same URL hash) is identical.
+// Zone borders/labels/level lines live in MapToolbar.tsx (top-right, above
+// the map); the marker categories (lib/map-layers.ts's MARKER_CATEGORIES)
+// render here. Each live row's icon is the exact markup the map marker itself
+// renders (shared via lib/map-icons.ts), so the toggles double as the legend.
 // Flight-master markers are tinted by faction on the map; the legend uses the
-// neutral ("Both") gold variant since one row stands in for all three.
-const POI_ROWS: LayerRow[] = [{ key: "flightMasters", label: "Flight masters", iconSvg: flightMasterIconSvg("Both") }];
+// neutral gold variant since one row stands in for all three.
+const LAYER_ICON_SVG: Partial<Record<keyof MapLayers, string>> = {
+  dungeons: entranceIconSvg("dungeon"),
+  raids: entranceIconSvg("raid"),
+  battlegrounds: entranceIconSvg("battleground"),
+  flightMasters: poiIconSvg("flightMasters", null),
+};
+
+const SECTIONS = [...new Set(MARKER_CATEGORIES.map((c) => c.section))];
 
 // Static, locally-generated SVG strings (no user/data input), so
 // dangerouslySetInnerHTML is safe here. Dimmed + desaturated when the layer
@@ -75,7 +66,7 @@ export default function MapSidebar({
   current,
   zoneAreas,
   entrances,
-  flightMasters,
+  pois,
   selectedZoneId,
   onSelectZoneRow,
   onSearchPick,
@@ -86,7 +77,7 @@ export default function MapSidebar({
   current: string;
   zoneAreas: ZoneAreaData[];
   entrances: EntranceMarker[];
-  flightMasters: FlightMaster[];
+  pois: MapPoi[];
   selectedZoneId: number | null;
   onSelectZoneRow: (areaId: number) => void;
   onSearchPick: (result: SearchResult) => void;
@@ -160,14 +151,19 @@ export default function MapSidebar({
     return out.slice(0, 20);
   }, [query, zoneAreas, entrances]);
 
-  const entranceCounts = useMemo(() => {
-    const counts = { dungeon: 0, raid: 0, battleground: 0 };
+  // Live per-layer marker counts. Entrance groups count each member, since a
+  // grouped marker (e.g. Blackrock Mountain) stands for several instances.
+  const layerCounts = useMemo(() => {
+    const counts: Partial<Record<keyof MapLayers, number>> = {};
+    const bump = (k: keyof MapLayers) => (counts[k] = (counts[k] ?? 0) + 1);
+    const entranceLayer = { dungeon: "dungeons", raid: "raids", battleground: "battlegrounds" } as const;
     for (const e of entrances) {
-      if (e.type === "single") counts[e.kind]++;
-      else for (const m of e.members) counts[m.kind]++;
+      if (e.type === "single") bump(entranceLayer[e.kind]);
+      else for (const m of e.members) bump(entranceLayer[m.kind]);
     }
+    for (const p of pois) bump(p.layer);
     return counts;
-  }, [entrances]);
+  }, [entrances, pois]);
 
   return (
     <aside className="w-full shrink-0 md:w-72">
@@ -236,51 +232,48 @@ export default function MapSidebar({
         </div>
       </div>
 
-      <div className="mt-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Layers</h2>
-        <div className="mt-1 flex flex-col gap-1">
-          {LAYER_ROWS.map((row) => (
-            <button
-              key={row.key}
-              type="button"
-              aria-pressed={layers[row.key]}
-              onClick={() => onToggleLayer(row.key)}
-              className={`flex items-center justify-between rounded border px-2 py-1 text-left text-sm ${
-                layers[row.key] ? "border-accent/60 bg-accent/10 text-foreground" : "border-border text-foreground-muted"
-              }`}
-            >
-              <span className="flex items-center gap-2">
-                <LegendIcon svg={row.iconSvg} active={layers[row.key]} />
-                {row.label}
-              </span>
-              {row.countKind && <span className="text-xs opacity-70">{entranceCounts[row.countKind]}</span>}
-            </button>
-          ))}
+      {SECTIONS.map((section) => (
+        <div key={section} className="mt-4">
+          <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">{section}</h2>
+          <div className="mt-1 flex flex-col gap-1">
+            {MARKER_CATEGORIES.filter((c) => c.section === section).map((c) =>
+              "layer" in c ? (
+                <button
+                  key={c.label}
+                  type="button"
+                  aria-pressed={layers[c.layer]}
+                  onClick={() => onToggleLayer(c.layer)}
+                  className={`flex items-center justify-between rounded border px-2 py-1 text-left text-sm ${
+                    layers[c.layer] ? "border-accent/60 bg-accent/10 text-foreground" : "border-border text-foreground-muted"
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <LegendIcon svg={LAYER_ICON_SVG[c.layer] ?? ""} active={layers[c.layer]} />
+                    {c.label}
+                  </span>
+                  <span className="text-xs opacity-70">{layerCounts[c.layer] ?? 0}</span>
+                </button>
+              ) : (
+                // aria-disabled rather than `disabled`, so the row stays
+                // focusable and its title tooltip still shows on hover.
+                <button
+                  key={c.label}
+                  type="button"
+                  aria-disabled="true"
+                  title={c.blockedReason}
+                  className="flex items-center justify-between rounded border border-dashed border-border/60 px-2 py-1 text-left text-sm text-foreground-muted/60"
+                >
+                  <span className="flex items-center gap-2">
+                    <span aria-hidden="true" className="h-5 w-5 shrink-0" />
+                    {c.label}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-wide">No data</span>
+                </button>
+              )
+            )}
+          </div>
         </div>
-      </div>
-
-      <div className="mt-4">
-        <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground-muted">Points of interest</h2>
-        <div className="mt-1 flex flex-col gap-1">
-          {POI_ROWS.map((row) => (
-            <button
-              key={row.key}
-              type="button"
-              aria-pressed={layers[row.key]}
-              onClick={() => onToggleLayer(row.key)}
-              className={`flex items-center justify-between rounded border px-2 py-1 text-left text-sm ${
-                layers[row.key] ? "border-accent/60 bg-accent/10 text-foreground" : "border-border text-foreground-muted"
-              }`}
-            >
-              <span className="flex items-center gap-2">
-                <LegendIcon svg={row.iconSvg} active={layers[row.key]} />
-                {row.label}
-              </span>
-              <span className="text-xs opacity-70">{flightMasters.length}</span>
-            </button>
-          ))}
-        </div>
-      </div>
+      ))}
     </aside>
   );
 }

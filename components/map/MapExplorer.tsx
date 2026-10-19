@@ -5,11 +5,10 @@ import LeafletZoneMap from "./LeafletZoneMapLoader";
 import type { LeafletZoneMapHandle } from "./LeafletZoneMap";
 import MapSidebar, { type SearchResult } from "./MapSidebar";
 import MapToolbar from "./MapToolbar";
-import { DEFAULT_MAP_LAYERS, type MapLayers } from "@/lib/map-layers";
+import { DEFAULT_MAP_LAYERS, type MapLayers, type MapPoi } from "@/lib/map-layers";
 import type { FullGridCorners } from "@/lib/map-coords";
 import type { ZoneAreaData } from "@/lib/zone-areas";
 import type { EntranceMarker } from "@/lib/map-entrances";
-import type { FlightMaster } from "@/lib/map-flight-masters";
 
 // Owns every piece of state that has to be shared between the sidebar and
 // the map (selection, layer toggles) plus the URL hash that persists them
@@ -44,7 +43,7 @@ export default function MapExplorer({
   mapConfig,
   zoneAreas,
   entrances,
-  flightMasters,
+  pois,
 }: {
   continentId: string;
   continentName: string;
@@ -60,7 +59,7 @@ export default function MapExplorer({
   };
   zoneAreas: ZoneAreaData[];
   entrances: EntranceMarker[];
-  flightMasters: FlightMaster[];
+  pois: MapPoi[];
 }) {
   const [selectedZoneId, setSelectedZoneId] = useState<number | null>(null);
   const [selectedEntranceId, setSelectedEntranceId] = useState<string | null>(null);
@@ -311,7 +310,7 @@ export default function MapExplorer({
             current={continentId}
             zoneAreas={zoneAreas}
             entrances={entrances}
-            flightMasters={flightMasters}
+            pois={pois}
             selectedZoneId={selectedZoneId}
             onSelectZoneRow={handleSelectZoneRow}
             onSearchPick={handleSearchPick}
@@ -332,7 +331,7 @@ export default function MapExplorer({
             fullGridCorners={mapConfig.fullGridCorners}
             zoneAreas={zoneAreas}
             entrances={entrances}
-            flightMasters={flightMasters}
+            pois={pois}
             selectedZoneId={selectedZoneId}
             onSelectZone={handleSelectZoneOnMap}
             onViewChange={handleViewChange}

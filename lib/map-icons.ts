@@ -1,5 +1,5 @@
 import type { EntranceKind } from "./map-entrances";
-import type { FlightMasterFaction } from "./map-flight-masters";
+import type { PoiFaction, PoiLayerKey } from "./map-layers";
 
 // Marker glyph SVG markup, shared between components/map/LeafletZoneMap.tsx
 // (the real map markers, injected into Leaflet divIcons) and
@@ -9,7 +9,7 @@ import type { FlightMasterFaction } from "./map-flight-masters";
 // isn't behind the ssr:false loader -- same reason lib/map-layers.ts exists.
 // One copy of the markup means the legend can never drift from the markers.
 //
-// Type-only imports above: map-entrances.ts/map-flight-masters.ts read JSON
+// Type-only imports above: map-entrances.ts reads JSON
 // data server-side, and `import type` is erased at compile time, so none of
 // that is pulled into the client bundle.
 
@@ -29,7 +29,7 @@ export const ENTRANCE_ICON_COLOR: Record<EntranceKind, string> = {
 // red / contested-or-neutral gold) rather than inventing a second palette.
 // "Both" isn't literally "contested" the way a zone's territory can be, but
 // it's the same "neither side alone" case visually, so it gets the same gold.
-export const FLIGHT_MASTER_FACTION_COLOR: Record<FlightMasterFaction, string> = {
+export const FLIGHT_MASTER_FACTION_COLOR: Record<PoiFaction, string> = {
   Alliance: MAP_FACTION_COLOR.alliance,
   Horde: MAP_FACTION_COLOR.horde,
   Both: MAP_FACTION_COLOR.contested,
@@ -60,7 +60,7 @@ export function entranceIconSvg(kind: EntranceKind): string {
 // FLIGHT_MASTER_FACTION_COLOR. Checked at full render size before trusting
 // it -- an earlier version (a plain vertical bar with a flared base) read
 // as the numeral "1" once shrunk to icon size, not a boot at all.
-export function flightMasterIconSvg(faction: FlightMasterFaction): string {
+export function flightMasterIconSvg(faction: PoiFaction): string {
   const color = FLIGHT_MASTER_FACTION_COLOR[faction];
   return (
     `<svg viewBox="0 0 32 32" width="100%" height="100%">` +
@@ -70,4 +70,14 @@ export function flightMasterIconSvg(faction: FlightMasterFaction): string {
     `<path d="M13 6 L19 6 L19 17 L19 19 L24 19 Q27 19 27 21.5 Q27 24 24 24 L8 24 L8 19.5 Q8 17.5 10 17 L13 17 Z" fill="${color}"/>` +
     `</svg>`
   );
+}
+
+// The generic POI marker path (LeafletZoneMap.tsx) and the sidebar legend both
+// pick a category's glyph here. A null faction (a category with no faction)
+// gets the neutral gold.
+export function poiIconSvg(layer: PoiLayerKey, faction: PoiFaction | null): string {
+  switch (layer) {
+    case "flightMasters":
+      return flightMasterIconSvg(faction ?? "Both");
+  }
 }

@@ -5,14 +5,13 @@ import L from "leaflet";
 import { worldToLatLng, latLngToWorld, type FullGridCorners } from "@/lib/map-coords";
 import type { ZoneAreaData, ZoneAreaGeometry } from "@/lib/zone-areas";
 import type { EntranceMarker, EntranceInfo, EntranceKind } from "@/lib/map-entrances";
-import type { FlightMaster } from "@/lib/map-flight-masters";
-import type { MapLayers } from "@/lib/map-layers";
+import type { MapLayers, MapPoi, PoiLayerKey } from "@/lib/map-layers";
 import { preloadSubzoneLookup, lookupArea } from "@/lib/subzone-lookup";
 import { worldToZoneCoords } from "@/lib/zone-coords";
 import {
   MAP_FACTION_COLOR as FACTION_COLOR,
   entranceIconSvg,
-  flightMasterIconSvg,
+  poiIconSvg,
 } from "@/lib/map-icons";
 // NOT imported here -- this component is loaded via next/dynamic(...,
 // { ssr: false }) (see LeafletZoneMapLoader.tsx), and a CSS side-effect
@@ -56,18 +55,14 @@ export const ENTRANCE_ICON_ZOOM = {
   raidSizeMultiplier: 1.15,
 } as const;
 
-// Same fade-in/scale curve as ENTRANCE_ICON_ZOOM above (see that constant's
-// own comment for the mechanics -- a single CSS custom property set on the
-// shared "pins" pane on zoomend, read by every marker's inner element), just
-// a later fadeInFrom: flight masters are far more numerous than dungeon/
-// raid/battleground entrances, so they'd clutter a whole-continent view if
-// they appeared as early as z2.5.
-export const FLIGHT_MASTER_ICON_ZOOM = {
-  fadeInFrom: 3,
-  sizeAtFadeIn: 16,
-  sizeAtMax: 32,
-  maxZoomForSizing: 6,
-} as const;
+// Per-POI-layer version of ENTRANCE_ICON_ZOOM's fade-in/scale curve (see that
+// constant's own comment for the mechanics -- a CSS custom property pair per
+// layer set on the shared "pins" pane on zoomend, read by every marker's inner
+// element). Flight masters fade in later than entrances: they're far more
+// numerous and would clutter a whole-continent view at z2.5.
+export const POI_ICON_ZOOM: Record<PoiLayerKey, { fadeInFrom: number; sizeAtFadeIn: number; sizeAtMax: number; maxZoomForSizing: number }> = {
+  flightMasters: { fadeInFrom: 3, sizeAtFadeIn: 16, sizeAtMax: 32, maxZoomForSizing: 6 },
+};
 
 const ENTRANCE_KIND_LABEL: Record<EntranceKind, string> = {
   dungeon: "Dungeon",
@@ -95,13 +90,13 @@ export type LeafletZoneMapHandle = {
   openEntrancePopup: (id: string) => void;
 };
 
-function flightMasterPopupHtml(f: FlightMaster): string {
+function poiPopupHtml(p: MapPoi): string {
   return (
     `<div style="font-family:inherit;text-align:center;min-width:180px">` +
-    `<strong style="color:#c9a961;font-size:14px">${f.name}</strong><br/>` +
-    `<span style="opacity:.85">${f.faction} flight master</span>` +
-    `<div style="margin-top:5px;font-size:11px;opacity:.6">Source: ${f.source}</div>` +
-    `<div style="font-size:11px;opacity:.6">world ${Math.round(f.worldPosition.x)}, ${Math.round(f.worldPosition.y)}</div>` +
+    `<strong style="color:#c9a961;font-size:14px">${p.name}</strong><br/>` +
+    `<span style="opacity:.85">${p.kindLabel}</span>` +
+    `<div style="margin-top:5px;font-size:11px;opacity:.6">Source: ${p.source}</div>` +
+    `<div style="font-size:11px;opacity:.6">world ${Math.round(p.worldPosition.x)}, ${Math.round(p.worldPosition.y)}</div>` +
     `</div>`
   );
 }
@@ -220,7 +215,7 @@ type ZoneEntry = {
 };
 
 type EntranceMarkerEntry = { id: string; kind: EntranceKind; marker: L.Marker };
-type FlightMasterMarkerEntry = { id: string; marker: L.Marker };
+type PoiMarkerEntry = { layer: PoiLayerKey; marker: L.Marker };
 
 // Real tiled map (wow.export-extracted client art, sliced by
 // scripts/slice-map-tiles.js), rendered with Leaflet's CRS.Simple -- this
@@ -246,7 +241,7 @@ const LeafletZoneMap = forwardRef<
     fullGridCorners: FullGridCorners;
     zoneAreas: ZoneAreaData[];
     entrances: EntranceMarker[];
-    flightMasters: FlightMaster[];
+    pois: MapPoi[];
     selectedZoneId: number | null;
     onSelectZone: (areaId: number | null) => void;
     onViewChange: (view: { x: number; y: number; z: number }) => void;
@@ -267,7 +262,7 @@ const LeafletZoneMap = forwardRef<
     fullGridCorners,
     zoneAreas,
     entrances,
-    flightMasters,
+    pois,
     selectedZoneId,
     onSelectZone,
     onViewChange,
@@ -280,7 +275,7 @@ const LeafletZoneMap = forwardRef<
   const mapRef = useRef<L.Map | null>(null);
   const zoneEntriesRef = useRef<Map<number, ZoneEntry>>(new Map());
   const entranceMarkersRef = useRef<EntranceMarkerEntry[]>([]);
-  const flightMasterMarkersRef = useRef<FlightMasterMarkerEntry[]>([]);
+  const poiMarkersRef = useRef<PoiMarkerEntry[]>([]);
   const appliedSelectionRef = useRef<number | null>(null);
   const layersRef = useRef<MapLayers>(layers);
   const updateLabelsRef = useRef<() => void>(() => {});
@@ -786,64 +781,59 @@ const LeafletZoneMap = forwardRef<
       if (!layersRef.current[layerKey]) leafletMarker.getElement()!.style.display = "none";
     }
 
-    // --- Flight master markers ---
-    // Own CSS var pair (distinct from --entrance-icon-*) so this layer's
-    // fade-in/scale curve (FLIGHT_MASTER_ICON_ZOOM, fading in later than
-    // entrance icons) is independent of the dungeon/raid/battleground one,
-    // even though both are set on the same shared "pins" pane and follow
-    // the identical mechanism -- see ENTRANCE_ICON_ZOOM's own comment.
-    pinsPane.style.setProperty("--flight-master-icon-size", `${FLIGHT_MASTER_ICON_ZOOM.sizeAtFadeIn}px`);
-    pinsPane.style.setProperty("--flight-master-icon-opacity", "0");
-
-    function updateFlightMasterIconStyle() {
+    // --- Point-of-interest markers (flight masters, ...) ---
+    // Same fixed-outer/resizing-inner markup as the entrance markers above,
+    // with one CSS var pair per layer (--poi-<layer>-size/-opacity) so each
+    // layer's POI_ICON_ZOOM curve is independent.
+    const poiLayerKeys = Object.keys(POI_ICON_ZOOM) as PoiLayerKey[];
+    function updatePoiIconStyle() {
       const zoom = map.getZoom();
-      const t = Math.max(
-        0,
-        Math.min(1, (zoom - FLIGHT_MASTER_ICON_ZOOM.fadeInFrom) / (FLIGHT_MASTER_ICON_ZOOM.maxZoomForSizing - FLIGHT_MASTER_ICON_ZOOM.fadeInFrom))
-      );
-      const size = FLIGHT_MASTER_ICON_ZOOM.sizeAtFadeIn + t * (FLIGHT_MASTER_ICON_ZOOM.sizeAtMax - FLIGHT_MASTER_ICON_ZOOM.sizeAtFadeIn);
-      pinsPane.style.setProperty("--flight-master-icon-size", `${size}px`);
-      pinsPane.style.setProperty("--flight-master-icon-opacity", zoom >= FLIGHT_MASTER_ICON_ZOOM.fadeInFrom ? "1" : "0");
+      for (const layer of poiLayerKeys) {
+        const z = POI_ICON_ZOOM[layer];
+        const t = Math.max(0, Math.min(1, (zoom - z.fadeInFrom) / (z.maxZoomForSizing - z.fadeInFrom)));
+        pinsPane.style.setProperty(`--poi-${layer}-size`, `${z.sizeAtFadeIn + t * (z.sizeAtMax - z.sizeAtFadeIn)}px`);
+        pinsPane.style.setProperty(`--poi-${layer}-opacity`, zoom >= z.fadeInFrom ? "1" : "0");
+      }
     }
-    map.on("zoomend", updateFlightMasterIconStyle);
-    updateFlightMasterIconStyle();
+    map.on("zoomend", updatePoiIconStyle);
+    updatePoiIconStyle();
 
-    const flightMasterMarkerEntries: FlightMasterMarkerEntry[] = [];
-    flightMasterMarkersRef.current = flightMasterMarkerEntries;
+    const poiMarkerEntries: PoiMarkerEntry[] = [];
+    poiMarkersRef.current = poiMarkerEntries;
 
-    for (const fm of flightMasters) {
+    for (const poi of pois) {
       // cursor:none here -- see the matching entrance-marker comment above
       // for why (Leaflet's own stylesheet sets cursor:pointer on an
       // ancestor, which CSS inheritance would otherwise carry down here,
       // fighting the site's custom-cursor overlay).
       const innerStyle =
-        `width:var(--flight-master-icon-size, 16px);height:var(--flight-master-icon-size, 16px);` +
-        `opacity:var(--flight-master-icon-opacity, 0);transition:opacity 200ms ease,filter 120ms ease;` +
+        `width:var(--poi-${poi.layer}-size, 16px);height:var(--poi-${poi.layer}-size, 16px);` +
+        `opacity:var(--poi-${poi.layer}-opacity, 0);transition:opacity 200ms ease,filter 120ms ease;` +
         `pointer-events:auto;cursor:none;filter:drop-shadow(0 0 3px rgba(0,0,0,.8))`;
       const icon = L.divIcon({
         className: "",
         html:
           `<div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;pointer-events:none">` +
-          `<div class="flight-master-icon-inner" style="${innerStyle}">${flightMasterIconSvg(fm.faction)}</div>` +
+          `<div class="poi-icon-inner" style="${innerStyle}">${poiIconSvg(poi.layer, poi.faction)}</div>` +
           `</div>`,
         iconSize: [32, 32],
         iconAnchor: [16, 16],
       });
-      const latlng = worldToLatLng(fullGridCorners, gridSize, tileSize, maxNativeZoom, fm.worldPosition.x, fm.worldPosition.y);
-      const leafletMarker = L.marker(latlng, { icon, pane: "pins" }).addTo(map).bindPopup(flightMasterPopupHtml(fm));
+      const latlng = worldToLatLng(fullGridCorners, gridSize, tileSize, maxNativeZoom, poi.worldPosition.x, poi.worldPosition.y);
+      const leafletMarker = L.marker(latlng, { icon, pane: "pins" }).addTo(map).bindPopup(poiPopupHtml(poi));
       leafletMarker.on("mouseover", () => {
-        const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".flight-master-icon-inner");
+        const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".poi-icon-inner");
         if (el) el.style.filter = "drop-shadow(0 0 5px rgba(255,255,255,.85)) brightness(1.3)";
       });
       leafletMarker.on("mouseout", () => {
-        const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".flight-master-icon-inner");
+        const el = leafletMarker.getElement()?.querySelector<HTMLElement>(".poi-icon-inner");
         if (el) el.style.filter = "drop-shadow(0 0 3px rgba(0,0,0,.8))";
       });
       // See the entrance markers' own identical handler above for why this
       // is needed (L.Marker has no bubblingMouseEvents option).
       leafletMarker.on("click", (e) => L.DomEvent.stopPropagation(e));
-      flightMasterMarkerEntries.push({ id: fm.id, marker: leafletMarker });
-      if (!layersRef.current.flightMasters) leafletMarker.getElement()!.style.display = "none";
+      poiMarkerEntries.push({ layer: poi.layer, marker: leafletMarker });
+      if (!layersRef.current[poi.layer]) leafletMarker.getElement()!.style.display = "none";
     }
 
     // --- Cursor readout (bottom-left overlay) ---
@@ -900,7 +890,7 @@ const LeafletZoneMap = forwardRef<
       mapRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- selectedZoneId/layers/onSelectZone/onViewChange are intentionally handled by their own effects/refs below, not remount triggers
-  }, [mapName, bounds, minZoom, maxNativeZoom, tileSize, gridSize, fullGridCorners, zoneAreas, entrances, flightMasters]);
+  }, [mapName, bounds, minZoom, maxNativeZoom, tileSize, gridSize, fullGridCorners, zoneAreas, entrances, pois]);
 
   // Applies `selectedZoneId` changes to border styling without touching
   // the rest of the map -- keeps MapExplorer's state as the single source
@@ -931,9 +921,9 @@ const LeafletZoneMap = forwardRef<
       const el = entry.marker.getElement();
       if (el) el.style.display = layers[ENTRANCE_LAYER_KEY[entry.kind]] ? "" : "none";
     }
-    for (const entry of flightMasterMarkersRef.current) {
+    for (const entry of poiMarkersRef.current) {
       const el = entry.marker.getElement();
-      if (el) el.style.display = layers.flightMasters ? "" : "none";
+      if (el) el.style.display = layers[entry.layer] ? "" : "none";
     }
     updateLabelsRef.current();
   }, [layers]);
