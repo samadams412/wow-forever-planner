@@ -13,8 +13,9 @@
 // (caves, keeps, outposts -- out of scope for this layer by decision), Icon
 // 9-12/41/42 are Eastern Plaguelands towers and world-event markers, and
 // Icon 7 is Stormwind shop signs whose Pos isn't a continent world position.
-// Brackenwall Village (Kalimdor) is Icon 15, an icon the client otherwise
-// only uses for Alterac Valley graveyards, so the rule leaves it out.
+// Brackenwall Village (Kalimdor, AreaPOI 1684) is Icon 15, an icon the client
+// otherwise only uses for Alterac Valley graveyards, so the rule would miss
+// it -- it's added back as a Town by row id.
 // AreaPOI has no faction column, so towns carry no faction (neutral pin).
 //
 // Usage: node scripts/build-towns.js [build]
@@ -31,6 +32,7 @@ const CONTINENT_SLUG = { "0": "eastern-kingdoms", "1": "kalimdor" };
 function tier(row) {
   const importance = Number(row.Importance);
   if (row.Icon === "5") return "Capital city";
+  if (row.ID === "1684") return "Town"; // Brackenwall Village, see header
   if (row.Icon === "4") return "Town";
   if (row.Icon === "6" && importance >= 2) return "Village";
   return null;
