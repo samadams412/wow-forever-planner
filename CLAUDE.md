@@ -33,9 +33,10 @@ improvise a different structure session to session.
 - Planner, reference (racials/legacy perks/class spellbooks/dungeon level
   ranges/professions/items/world map), guides, and blog are all live.
 - World map (`/reference/map/[continent]`) covers both continents with a
-  full tile pyramid, zone borders/labels, dungeon/raid/battleground entrance
-  markers, and a sidebar (zone list/search/layer toggles), all URL-hash
-  restorable. See "World map" below.
+  full tile pyramid, zone borders/labels, toggleable marker layers
+  (entrances, flight masters, towns; blocked categories stubbed, as of
+  2026-10-19), and a sidebar (zone list/search/layer toggles), all URL-hash
+  restorable. See "World map" → "Marker layers" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
 ## Standing rule: no runtime-variable or full-file disk reads in server code
@@ -297,6 +298,32 @@ legend, so they can never drift). Empty map space renders solid black
 (`style={{backgroundColor: "#000"}}` — Leaflet's own CSS otherwise wins
 over theme tokens). Regenerate zone data via
 `node scripts/build-zone-areas.js [build] [wowExportRoot]`.
+
+**Marker layers (2026-10-19):** sidebar marker rows come from
+`MARKER_CATEGORIES` in `lib/map-layers.ts`. A row with `layer` is live: it
+toggles a `MapLayers` key (hidden via `display:none` on marker elements, no
+map re-render, persisted in the hash's `off=`) and shows a live count. A row
+with `blockedReason` renders greyed with that reason as its tooltip, and has no
+pins. Entrances keep their own render path (grouping, group popups, deep
+links). Every other category is a generic `MapPoi` on one path in
+`LeafletZoneMap.tsx` (`POI_ICON_ZOOM` per layer, `poiIconSvg` in
+`lib/map-icons.ts`). **Adding a category:** a generator script writes
+`data/map-pois/<category>.json` from a raw source (never hand-edited), a
+`lib/map-<category>.ts` reader maps it to `MapPoi` via a static JSON import (no
+runtime file reads), then add the `MapLayers` key, `PoiLayerKey`,
+`POI_ICON_ZOOM` entry and icon, and switch the registry row from
+`blockedReason` to `layer`. Data status per category:
+- **Live:** dungeons/raids/battlegrounds (`data/map-entrances.json`, 32 of 52
+  placed; the 20 unplaced, Naxx's duplicate `map.csv` row and Emerald Dream
+  only affect this layer), flight masters (`data/map-pois/flight-masters.json`,
+  client TaxiNodes), towns & cities (`data/map-pois/towns.json`, 58, from
+  client AreaPOI via `scripts/build-towns.js`: capitals, towns, villages;
+  the 149 minor landmarks are excluded by decision).
+- **Blocked (stubbed, no pins):** town services and graveyards (not in the
+  Forever client; cmangos has Classic-era positions, but the owner decided
+  2026-10-19 not to use Classic positions for these), rare elites, library
+  books and trade camps (new in Forever, no source has positions), boats &
+  zeppelins (needs transport route data).
 
 **Not yet built:** real dungeon/raid icon art (client texture atlas
 FileDataID 1121272 needs exporting from wow.export and cropping — SVG
