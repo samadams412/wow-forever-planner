@@ -10,6 +10,42 @@ Commands used (CLI 62.4.0, authenticated by the CLI's stored login because
 <url> --logs`, `vercel logs --json` (paged with `--until`), `vercel env ls`,
 `vercel project inspect`, `vercel api /v13/deployments/<id>`.
 
+## Status (updated 2026-10-19, later the same day)
+
+| Item | Status |
+|---|---|
+| H1 tracking no-op | **Resolved.** `11f60aab` accepts `KV_REST_API_*`. Verified live: the event landed in Redis and the cron returned `ok`. Test data was cleaned up. |
+| M2 planner renders per request | **Resolved.** `d786051f` reads `?order=` client-side, and `/planner` plus the class pages are prerendered. Not yet deployed. |
+| Firewall rate limit on `/api/builds/track` (carried over from CLAUDE.md) | **Resolved.** Live rule, 30 POST/60s/IP, then 429. Tested live: 30 passed, then 429. |
+| L1 crawler on item pages | **Mitigated.** `bc43b5da` robots.txt blocks `?from=` variants, catalog filter URLs, build URLs, MJ12bot and Amazonbot. The item route itself is unchanged (see below). |
+| M1, M3, L2–L7 | Still open. |
+
+### Usage overage follow-up (CDN Requests, ISR Reads/Writes, Fast Origin Transfer)
+
+Data from `vercel firewall traffic list` (24h) and `vercel metrics` (Hobby:
+1h for grouped queries, 1d for totals; anything longer needs Observability
+Plus):
+
+- 27.4k requests/day, about 820k/month against the 1M CDN Requests limit.
+- **Verified bots were about half of all traffic.** OAI-SearchBot 7.7k (the
+  same ~20 static pages, ~150–180 times each), Amazonbot 3.2k, MJ12bot 1.8k
+  (all item pages), Googlebot 1.3k, GoogleOther 1.0k.
+- Top path: `/reference/items` at 1.3k/day. It's dynamic, so every hit is a
+  full render, which is Fast Origin Transfer.
+- `/80f5eaee580a985b/view` (836/day) is the `@vercel/analytics` v2 page-view
+  beacon. 509 of those come from Googlebot rendering pages, which spends Web
+  Analytics events.
+- ISR is billed per 8 KB unit only on a CDN miss. A prerendered quest page is
+  80 KB HTML + 37 KB RSC (about 15 units). A crawler walking 21.7k item pages
+  misses almost every time, and each deploy resets the item cache.
+- **Item route (A):** already 404s unknown ids through an exact
+  `data/items.json` lookup (`getItemById` → `notFound()`). The sampled hour had
+  zero 404s, so the cost is real items, and the route was left unchanged.
+  Prerendering all items with `dynamicParams = false` was considered and
+  declined (about 7–8 min more per build, and the ISR saving is unverified).
+- Not changed (owner decision): OAI-SearchBot stays allowed, because blocking
+  it would remove the site from ChatGPT search.
+
 ## High
 
 **H1. Build tracking is a silent no-op in production.** `getRedis()`
