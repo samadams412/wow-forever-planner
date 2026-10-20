@@ -37,9 +37,10 @@ improvise a different structure session to session.
   (entrances, flight masters, towns; blocked categories stubbed, as of
   2026-10-19), and a sidebar (zone list/search/layer toggles), all URL-hash
   restorable. See "World map" → "Marker layers" below.
-- Raid comp planner (`/raid-comp`, 2026-10-19): 40-slot roster by spec,
-  live buff/debuff coverage from hand-curated `data/raid-buffs.json`, role
-  summary, shareable `?r=&n=` link. See "Raid comp planner" below.
+- Raid comp planner (`/raid-comp`, 2026-10-19): 10/20/40-player roster by
+  spec, live buff/debuff coverage from hand-curated `data/raid-buffs.json`,
+  role summary, shareable `?r=&n=&s=` link, local saved rosters. See "Raid
+  comp planner" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
 ## Standing rule: no runtime-variable or full-file disk reads in server code
@@ -114,7 +115,9 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   `components/raid-comp/{RaidCompFromUrl,RaidCompPlanner,CoveragePanel}.tsx`,
   `lib/raid-comp.ts` (client-safe core: frozen spec list, roles, coverage,
   share-link codec), `lib/raid-buffs.ts` (server-only resolver),
-  `lib/raid-comp.test.ts`. Top-level "Raid Comp" link in `SiteHeader`.
+  `lib/saved-rosters.ts` (localStorage), `lib/raid-comp.test.ts`,
+  `app/raid-comp/opengraph-image.tsx`. Top-level "Raid Comp" link in
+  `SiteHeader`.
 - **Client bundle stays small on purpose:** `lib/raid-comp.ts` must not
   import `lib/wow-data` (it pulls every talent file into the client). The
   page resolves spec icons/colors (`SpecView`) and effect icons + Forever
@@ -129,7 +132,10 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   spellbook spell flagged `talent: true`) is credited only to its tree.
   `onlyOneCounts` sets (stacking: major/minor armor, -204 AP, -2% hit,
   armor proc) and `perCaster` sets (one-at-a-time: Blessings, Auras,
-  Judgements, Curses, air/water totems, hunter pets). Top-level `source` +
+  Judgements, Curses, air/water totems, hunter pets). Sets may carry an
+  `evidence` array (url, era the source describes, what it says), never
+  rendered: the web research behind the rule. A set is `confirmed` only on
+  an official Blizzard source or a specific in-game test. Top-level `source` +
   `build` record provenance (verified against build 1.60.1.70425 spell
   text). `scripts/check-raid-buffs.js` runs first in `prebuild` and fails
   the build if any spell/talent/tree/set reference stops matching
@@ -141,7 +147,13 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   reach the provider's group. `perCasterShortfalls` adds "1 Paladin for 4
   Blessings" notes when casters < covered effects in a set (per group for
   group-scope sets). Each icon has a source-count badge.
-- **Share link:** `?r=1-<base36 digit per slot>&n=<names>`. Digit = 1-based
+- **Raid size (10/20/40):** `roster`/`names` always hold 40 slots; a smaller
+  size only hides groups (switching back up restores them) and coverage,
+  roles and counts use the visible `roster.slice(0, size)`. The share link
+  and saved rosters encode only the visible slots, so hidden slots survive
+  size switches but not a reload or a shared link.
+- **Share link:** `?r=1-<base36 digit per slot>&n=<names>&s=<10|20>` (`s`
+  omitted at 40, so pre-size links still open as 40-man). Digit = 1-based
   index into `SPEC_ORDER` (0 = empty), trailing empties trimmed (full raid
   = 42 chars). **`SPEC_ORDER` is frozen**: never reorder or remove entries
   (a renamed tree changes `tree` in place; new specs append). If that ever
@@ -150,7 +162,22 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   names), max 12 chars. Read client-side (`useSearchParams` under
   Suspense); written with `history.replaceState`. Never read
   `searchParams` in `page.tsx` (keeps the page static, same rule as the
-  planner).
+  planner). **Verified 2026-10-19 against `next start`:** `/raid-comp` is
+  `compute: static`, `initialRevalidateSeconds: false` in the prerender
+  manifest; five different `?r=&n=&s=` URLs all returned
+  `x-nextjs-cache: HIT` with byte-identical HTML and no new files under
+  `.next/server/app` or `.next/cache`, while each new planner build path
+  was a MISS (server render + new ISR entry). Shared rosters cost no renders.
+- **Saved rosters:** `lib/saved-rosters.ts` mirrors `lib/saved-builds.ts`
+  (key `forevercraft:saved-rosters`, `{id, name, query, createdAt}`, newest
+  first). `query` is the share-link query, so loads go through the same
+  versioned decoders. Save / My Rosters dialogs copy the planner's. Local
+  only: no build-tracking events.
+- **SEO:** title/description, canonical `/raid-comp` for every shared
+  roster, openGraph, `WebApplication` JSON-LD (as on the planner), a
+  two-paragraph intro in the server-rendered page, `/raid-comp` in
+  `app/sitemap.ts`. `app/robots.ts` disallows `/raid-comp?` (shared-link
+  variants), like `/planner/*/`; `/raid-comp` itself is allowed.
 - **Interaction:** tap a palette spec to arm it, then tap slots; tapping
   an empty slot with nothing armed opens a spec picker (`Dialog`); tapping
   a filled slot then another moves/swaps. Desktop adds HTML5 drag (palette
@@ -459,17 +486,30 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
-- **Raid comp: `estimated` items to verify in game** (`data/raid-buffs.json`):
-  all five `onlyOneCounts` stacking rules (spell text never states them;
-  `minor-armor` = Faerie Fire / Curse of Recklessness / Dust Cloud is the
-  least certain, since FF and CoR stacked in Classic); the one-totem-per-
-  element rule (`shaman-air-totems`, `shaman-water-totems`); pet-sourced
-  effects (Furious Howl, Dust Cloud, Demoralizing Screech, Blood Pact count
-  for every Hunter/Warlock spec though they need a specific pet). Possible
-  later work: optional linked talent build per slot (owner deferred it; it
-  would make coverage talent-exact but needs a new link version), a
-  coverage summary visible while building on phones (the panel sits below
-  all 8 groups), and a site-changelog entry if the feature gets announced.
+- **Raid comp: `estimated` rules still unverified** (`data/raid-buffs.json`,
+  web research pass 2026-10-19, sources in each set's `evidence`). Now
+  **confirmed** from Blizzard: `major-armor` (Rogue/Warlock deep dive:
+  Sunder won't overwrite Expose unless weaker) and the new
+  `windfury-flametongue` set (beta notes Sept 24 + Oct 16; Grace of Air
+  stacks with both). **Corrected:** Demoralizing Screech is the Carrion Bird
+  family's ability, not owl/bat (Hunter/Druid deep dive). **Still
+  estimated:** `minor-armor` (now leans the right way: a community wiki
+  and a third-party PR citing Wowhead say Faerie Fire / Curse of
+  Recklessness / Dust Cloud don't stack in Forever, but nothing official;
+  Blizzard's Oct 16 fixes are each spell with itself), `attack-power-
+  reduction`, `hit-reduction` (Oct 16 fix is Insect Swarm with itself),
+  `armor-proc` (nothing found), `shaman-air-totems` / `shaman-water-totems`
+  (one-per-element only from a third-party guide), `hunter-pets` (pet
+  families confirmed; one pet out at a time not restated), pet-sourced
+  effects (Furious Howl, Dust Cloud, Demoralizing Screech, Blood Pact).
+  **Unmodelled leads:** Furious Howl reportedly doesn't stack with Battle
+  Shout (community wiki, testing-grade); Leader of the Pack was made
+  exclusive with Moonkin crit (Sept 30), then the two were split into
+  melee/ranged vs spell crit (Oct 16) with no word on whether that still
+  holds. Possible later work: optional linked talent build per slot (owner
+  deferred it; needs a new link version), a coverage summary visible while
+  building on phones (the panel sits below the groups), and a
+  site-changelog entry if the feature gets announced.
 - **Dungeon loot header art (refined 2026-10-06):** borderless header image, 560px wide on `sm+`, height set by its natural ratio (no crop). Fades into the page on its right edge via `linear-gradient(to right, transparent 60%, var(--background))`, so the blend matches the page in both themes. Full-width and unfaded on narrow screens. Verified on Uldaman and Wailing Caverns (rendered ratio 1.829 vs source 1.827), and phone width (386px, stacked, no overlap, no horizontal scroll). Title sits beside the image on `sm+`. Options and trade-offs are in `Forevercraft-Knowledge-Base/03-Handoffs/reference-ui/2026-10-06-loot-pill-cleanup-quest-ui-and-header-art.md`.
 - **`lib/quest-detail.ts` reads `data/quests/detail/<variable>.json`:** Turbopack warns that the pattern matches 10,098 files (still a warning, build exit 0, re-checked 2026-10-06). This is the runtime-variable path the standing rule forbids. The file's comment says the shards are never traced, but `/quests/[questId]/page.js.nft.json` lists all 5,049 of them. Fix with a generated literal-path map (like `lib/og-backgrounds.generated.ts`) or a route-scoped `outputFileTracingExcludes`, then recheck `.nft.json` sizes.
 - **`lib/dungeon-loot.ts` reads the whole `data/dungeons/` directory**, so ~4.9 MB of committed non-JSON source files there (dungeon map PNG/JPGs, `Classic-Classic.lua`) are traced into 10 functions, including ƒ `/reference/items`. Move them out of `data/dungeons/` (update the map scripts' paths) or exclude them from traces. See `Weekly-Audit-2026-10-06.md` §3.4.
