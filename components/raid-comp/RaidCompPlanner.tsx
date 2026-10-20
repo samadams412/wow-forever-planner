@@ -91,8 +91,7 @@ export default function RaidCompPlanner({
     const bar = specsRef.current;
     if (!bar) return;
     const ro = new ResizeObserver(() => {
-      const h = getComputedStyle(bar).position === "sticky" ? bar.offsetHeight : 0;
-      rootRef.current?.style.setProperty("--specs-h", `${h}px`);
+      rootRef.current?.style.setProperty("--specs-h", `${bar.offsetHeight}px`);
     });
     ro.observe(bar);
     return () => ro.disconnect();
@@ -227,16 +226,16 @@ export default function RaidCompPlanner({
 
   return (
     <div ref={rootRef} className="mt-4 flex flex-col gap-4 pb-16">
-      {/* Sticky from sm up so specs stay reachable while placing into the bottom groups (on
-          phones its 3 rows would cover ~40% of the screen; tapping an empty slot opens the picker
-          instead). Its height is published as --specs-h so sticky columns and scroll targets sit below it. */}
+      {/* Sticky so specs stay reachable while placing into the bottom groups. Below sm it's
+          trimmed (no visible heading, smaller icons) since its 3 rows take a big share of a phone
+          screen. Its height is published as --specs-h so sticky columns and scroll targets sit below it. */}
       <section
         ref={specsRef}
         aria-label="Specs"
-        className="-mx-3 px-3 sm:sticky sm:top-0 sm:z-20 sm:-mx-4 sm:border-b sm:border-border sm:bg-background/95 sm:px-4 sm:py-2 sm:backdrop-blur"
+        className="sticky top-0 z-20 -mx-3 border-b border-border bg-background/95 px-3 py-1.5 backdrop-blur sm:-mx-4 sm:px-4 sm:py-2"
       >
-        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-sm font-medium text-foreground">Specs</h2>
+        <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2 sm:mb-2">
+          <h2 className="sr-only text-sm font-medium text-foreground sm:not-sr-only">Specs</h2>
           <div className="flex flex-wrap items-center gap-2 text-xs text-foreground-muted">
             <label className="flex items-center gap-1.5">
               <span className="sr-only">Raid size</span>
@@ -303,6 +302,7 @@ export default function RaidCompPlanner({
             setArmed((a) => (a === i ? 0 : i));
           }}
           draggable
+          compact
           columns="grid-cols-3 sm:grid-cols-5 lg:grid-cols-9"
         />
       </section>
@@ -598,12 +598,15 @@ function SpecGrid({
   activeIndex,
   onPick,
   draggable = false,
+  compact = false,
   columns,
 }: {
   specs: SpecView[];
   activeIndex: number;
   onPick: (index: number) => void;
   draggable?: boolean;
+  /** Palette in the sticky bar: tighter below sm so the bar takes less of a phone screen. */
+  compact?: boolean;
   /** Tailwind grid-cols classes; the dialog is narrow at every viewport. */
   columns: string;
 }) {
@@ -615,10 +618,10 @@ function SpecGrid({
   }, []);
 
   return (
-    <div className={`grid gap-1.5 ${columns}`}>
+    <div className={`grid ${compact ? "gap-1 sm:gap-1.5" : "gap-1.5"} ${columns}`}>
       {byClass.map((group) => (
         <div key={group[0].classId} className="rounded border border-border bg-surface/50 p-1" style={{ borderTop: `2px solid ${group[0].color}` }}>
-          <div className="mb-1 truncate px-0.5 text-[10px] font-medium uppercase tracking-wide text-foreground-muted">{group[0].className}</div>
+          <div className={`${compact ? "mb-0.5 sm:mb-1" : "mb-1"} truncate px-0.5 text-[10px] font-medium uppercase tracking-wide text-foreground-muted`}>{group[0].className}</div>
           <div className="flex justify-between gap-1">
             {group.map((s) => (
               <button
@@ -635,7 +638,7 @@ function SpecGrid({
                 }}
                 className={`rounded p-0.5 ${activeIndex === s.index ? "bg-accent/30 ring-2 ring-accent" : "hover:bg-surface-hover"}`}
               >
-                <SpecIcon spec={s} size="h-8 w-8" />
+                <SpecIcon spec={s} size={compact ? "h-7 w-7 sm:h-8 sm:w-8" : "h-8 w-8"} />
               </button>
             ))}
           </div>
