@@ -161,7 +161,14 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   while open, so the grid returns to two columns. Opening below `xl`
   scrolls the section into view. The choice is remembered in localStorage
   (`forevercraft:raid-comp-rules-open`, "1"/"0", read after mount, every
-  access in try/catch, same as the quest faction filter). Either way the rule list never pushes coverage down; keep
+  access in try/catch, same as the quest faction filter). Each
+  only-one-counts entry is a compact one-liner (members + classes, "N in
+  your roster" when doubled up); its sourced note is behind a per-entry
+  "why" (native `<details>`, like coverage rows).
+  **Unreproduced glitch (2026-10-19):** once, after a navigation, the key
+  read "0" while the section rendered open. Two exact repeats with a trace
+  in `toggleRules` showed no write. Likely a click in another localhost tab
+  (storage is shared), unconfirmed. Only investigate with a real repro. Either way the rule list never pushes coverage down; keep
   rules out of `CoveragePanel`. Class names there use `CLASS_COLOR` (via
   `SpecView.color`) with `CLASS_TEXT_SHADOW` from `lib/class-text.ts`
   (shared with the planner's `ClassHero`; client-safe, no `lib/wow-data`).
