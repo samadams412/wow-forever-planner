@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Dialog from "@/components/site/Dialog";
 import CoveragePanel from "@/components/raid-comp/CoveragePanel";
 import StackingRules from "@/components/raid-comp/StackingRules";
@@ -83,6 +83,20 @@ export default function RaidCompPlanner({
   const [savedRosters, setSavedRosters] = useState<SavedRoster[]>([]);
   // Stacking rules start collapsed; the viewer's choice is remembered per browser.
   const [rulesOpen, setRulesOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const specsRef = useRef<HTMLElement>(null);
+
+  // Publish the sticky specs bar's height (it wraps differently per width) as --specs-h.
+  useEffect(() => {
+    const bar = specsRef.current;
+    if (!bar) return;
+    const ro = new ResizeObserver(() => {
+      const h = getComputedStyle(bar).position === "sticky" ? bar.offsetHeight : 0;
+      rootRef.current?.style.setProperty("--specs-h", `${h}px`);
+    });
+    ro.observe(bar);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     // localStorage isn't available during prerender: start empty/collapsed, sync once mounted.
@@ -212,8 +226,15 @@ export default function RaidCompPlanner({
   const hidden = roster.slice(size).filter(Boolean).length;
 
   return (
-    <div className="mt-4 flex flex-col gap-4 pb-16">
-      <section aria-label="Specs">
+    <div ref={rootRef} className="mt-4 flex flex-col gap-4 pb-16">
+      {/* Sticky from sm up so specs stay reachable while placing into the bottom groups (on
+          phones its 3 rows would cover ~40% of the screen; tapping an empty slot opens the picker
+          instead). Its height is published as --specs-h so sticky columns and scroll targets sit below it. */}
+      <section
+        ref={specsRef}
+        aria-label="Specs"
+        className="-mx-3 px-3 sm:sticky sm:top-0 sm:z-20 sm:-mx-4 sm:border-b sm:border-border sm:bg-background/95 sm:px-4 sm:py-2 sm:backdrop-blur"
+      >
         <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-sm font-medium text-foreground">Specs</h2>
           <div className="flex flex-wrap items-center gap-2 text-xs text-foreground-muted">
@@ -429,13 +450,13 @@ export default function RaidCompPlanner({
           </div>
         ))}
       </section>
-      <div className="scrollbar-gold lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+      <div className="scrollbar-gold lg:sticky lg:top-[calc(var(--specs-h,0px)+1rem)] lg:max-h-[calc(100vh-var(--specs-h,0px)-2rem)] lg:overflow-y-auto">
         <CoveragePanel effects={effects} coverage={coverage} build={build} />
       </div>
       {/* Its own column on xl; below the groups on lg; last on phones, so it never pushes coverage down.
           Collapsed = not rendered, so xl drops back to two columns. */}
       {rulesOpen && (
-        <div className="scrollbar-gold xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto">
+        <div className="scrollbar-gold xl:sticky xl:top-[calc(var(--specs-h,0px)+1rem)] xl:max-h-[calc(100vh-var(--specs-h,0px)-2rem)] xl:overflow-y-auto">
           <StackingRules
             effects={effects}
             coverage={coverage}

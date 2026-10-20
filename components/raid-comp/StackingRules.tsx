@@ -30,7 +30,7 @@ export default function StackingRules({
   );
 
   return (
-    <section id="stacking-rules" aria-label="Stacking rules" className="flex flex-col gap-3 rounded-lg border border-border bg-surface/50 p-2">
+    <section id="stacking-rules" aria-label="Stacking rules" className="flex scroll-mt-[calc(var(--specs-h,0px)+1rem)] flex-col gap-3 rounded-lg border border-border bg-surface/50 p-2">
       <div className="flex items-center justify-between gap-2 px-1">
         <h2 className="text-sm font-medium text-foreground">Stacking rules</h2>
         <button
