@@ -67,31 +67,40 @@ export default function StackingRules({
           const members = effects.filter((e) => e.onlyOneCounts === set.id);
           const coveredCount = members.filter((m) => coverage[m.id].covered).length;
           return (
-            <li key={set.id} className="rounded border border-border/70 px-2 py-1.5 text-xs">
-              <div className="flex flex-wrap items-baseline gap-x-1.5">
-                <span className="font-medium text-foreground">{set.label}</span>
-                <span className="text-[10px] uppercase tracking-wide text-foreground-muted">
-                  only one counts{set.confidence === "estimated" ? " (estimated)" : ""}
-                </span>
-              </div>
-              <ul className="mt-0.5 flex flex-wrap gap-x-2 gap-y-0.5">
-                {members.map((m) => (
-                  <li key={m.id} className={coverage[m.id].covered ? "text-foreground" : "text-foreground-muted/70"}>
-                    {m.name}{" "}
-                    <span className="text-foreground-muted">(</span>
-                    {[...new Set(m.sources.map((src) => src.classId))].map((classId, i) => (
-                      <span key={classId}>
-                        {i > 0 && ", "}
-                        {/* Hunter pet abilities (Dust Cloud, Demoralizing Screech) need a specific pet family. */}
-                        <ClassName classId={classId} suffix={m.perCaster === "hunter-pets" ? " pet" : ""} />
+            // Compact one-liner by default; the sourced explanation (set.note) sits behind
+            // "why", a native <details> like CoveragePanel's rows (tap to expand, no JS state).
+            <li key={set.id} className="rounded border border-border/70 text-xs">
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-start gap-2 rounded px-2 py-1.5 hover:bg-surface-hover [&::-webkit-details-marker]:hidden">
+                  <span className="min-w-0 flex-1 leading-snug">
+                    <span className="font-medium text-foreground">{set.label}</span>
+                    <span className="text-foreground-muted">
+                      {" "}
+                      — only one counts{set.confidence === "estimated" ? " (estimated)" : ""}:{" "}
+                    </span>
+                    {members.map((m, mi) => (
+                      <span key={m.id} className={coverage[m.id].covered ? "text-foreground" : "text-foreground-muted/70"}>
+                        {mi > 0 && <span className="text-foreground-muted"> or </span>}
+                        {m.name}{" "}
+                        <span className="text-foreground-muted">(</span>
+                        {[...new Set(m.sources.map((src) => src.classId))].map((classId, i) => (
+                          <span key={classId}>
+                            {i > 0 && ", "}
+                            {/* Hunter pet abilities (Dust Cloud, Demoralizing Screech) need a specific pet family. */}
+                            <ClassName classId={classId} suffix={m.perCaster === "hunter-pets" ? " pet" : ""} />
+                          </span>
+                        ))}
+                        <span className="text-foreground-muted">)</span>
                       </span>
                     ))}
-                    <span className="text-foreground-muted">)</span>
-                  </li>
-                ))}
-              </ul>
-              {coveredCount > 1 && <p className="mt-0.5 text-foreground-muted">Your roster has {coveredCount}; only one applies at a time.</p>}
-              <p className="mt-0.5 text-[11px] leading-snug text-foreground-muted">{set.note}</p>
+                    {coveredCount > 1 && <span className="text-accent"> · {coveredCount} in your roster</span>}
+                  </span>
+                  <span className="shrink-0 text-[10px] text-foreground-muted group-open:text-accent">
+                    why <span className="inline-block transition-transform group-open:rotate-180">▾</span>
+                  </span>
+                </summary>
+                <p className="px-2 pb-1.5 text-[11px] leading-snug text-foreground-muted">{set.note}</p>
+              </details>
             </li>
           );
         })}
