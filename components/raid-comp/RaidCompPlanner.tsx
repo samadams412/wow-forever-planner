@@ -180,6 +180,8 @@ export default function RaidCompPlanner({
   const roles = roleCounts(active);
   const hints = roleHints(roles);
 
+  // Generic role icons borrowed from spec icons: Protection Warrior, Restoration Druid, Fury Warrior.
+  const roleIcon = (classId: string, tree: string) => specs.find((s) => s.classId === classId && s.tree === tree);
   const armedSpec = armed ? specs[armed - 1] : undefined;
   const filled = active.filter(Boolean).length;
   const hidden = roster.slice(size).filter(Boolean).length;
@@ -260,9 +262,9 @@ export default function RaidCompPlanner({
 
       <section aria-label="Role summary" className="flex flex-col gap-1.5">
         <div className="flex flex-wrap gap-1.5 text-xs">
-          <RoleChip label="Tanks" count={roles.tank} flex={roles.flex} />
-          <RoleChip label="Healers" count={roles.healer} />
-          <RoleChip label="DPS" count={roles.dps} flex={roles.flex} />
+          <RoleChip label="Tanks" count={roles.tank} flex={roles.flex} spec={roleIcon("warrior", "Protection")} />
+          <RoleChip label="Healers" count={roles.healer} spec={roleIcon("druid", "Restoration")} />
+          <RoleChip label="DPS" count={roles.dps} flex={roles.flex} spec={roleIcon("warrior", "Fury")} />
         </div>
         {hints.map((h) => (
           <p key={h} className="text-xs text-foreground-muted">
@@ -486,9 +488,10 @@ export default function RaidCompPlanner({
 
 // Feral Druids can tank or DPS, so they show as "+N Feral" on both chips
 // rather than being forced into one count.
-function RoleChip({ label, count, flex = 0 }: { label: string; count: number; flex?: number }) {
+function RoleChip({ label, count, flex = 0, spec }: { label: string; count: number; flex?: number; spec?: SpecView }) {
   return (
-    <span className="rounded border border-border bg-surface px-2 py-1 text-foreground">
+    <span className="flex items-center gap-1.5 rounded border border-border bg-surface px-2 py-1 text-foreground">
+      {spec && <SpecIcon spec={spec} size="h-4 w-4" />}
       {label} <span className="font-semibold">{count}</span>
       {flex > 0 && <span className="text-foreground-muted"> +{flex} Feral</span>}
     </span>
