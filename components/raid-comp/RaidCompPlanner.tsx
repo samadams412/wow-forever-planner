@@ -5,12 +5,13 @@ import Dialog from "@/components/site/Dialog";
 import CoveragePanel from "@/components/raid-comp/CoveragePanel";
 import { deleteSavedRoster, getSavedRosters, saveRoster, type SavedRoster } from "@/lib/saved-rosters";
 import {
-  GROUP_COUNT,
   GROUP_SIZE,
+  RAID_SIZES,
   MAX_NAME_LENGTH,
   cleanName,
   decodeNames,
   decodeRoster,
+  decodeSize,
   rosterQuery,
   computeCoverage,
   perCasterShortfalls,
@@ -21,6 +22,7 @@ import {
   swapSlots,
   type EffectSet,
   type EffectView,
+  type RaidSize,
   type Roster,
   type SpecView,
 } from "@/lib/raid-comp";
@@ -46,6 +48,7 @@ export default function RaidCompPlanner({
   build,
   initialRoster,
   initialNames,
+  initialSize = 40,
 }: {
   specs: SpecView[];
   effects: EffectView[];
@@ -54,10 +57,14 @@ export default function RaidCompPlanner({
   build: string;
   initialRoster?: Roster;
   initialNames?: string[];
+  initialSize?: RaidSize;
 }) {
   // Initial values only: later URL changes come from this component itself.
   const [roster, setRoster] = useState<Roster>(() => initialRoster ?? emptyRoster());
   const [names, setNames] = useState<string[]>(() => initialNames ?? emptyNames());
+  // Smaller sizes hide groups, they don't clear them: roster/names always
+  // hold all 40 slots, and everything below works on the visible `active` slice.
+  const [size, setSize] = useState<RaidSize>(initialSize);
   const [copied, setCopied] = useState(false);
   const [armed, setArmed] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
@@ -78,8 +85,8 @@ export default function RaidCompPlanner({
   useEffect(() => {
     // replaceState, not router.replace: a pure address-bar sync, no re-render
     // or refetch of the (static) page. See PlannerClient for the same call.
-    window.history.replaceState(null, "", `${window.location.pathname}${rosterQuery(roster, names)}`);
-  }, [roster, names]);
+    window.history.replaceState(null, "", `${window.location.pathname}${rosterQuery(roster, names, size)}`);
+  }, [roster, names, size]);
 
   const copyLink = async () => {
     try {
@@ -134,7 +141,7 @@ export default function RaidCompPlanner({
   const confirmSave = () => {
     const name = rosterName.trim();
     if (!name) return;
-    if (!saveRoster({ name, query: rosterQuery(roster, names).slice(1) })) return setSaveError(true);
+    if (!saveRoster({ name, query: rosterQuery(roster, names, size).slice(1) })) return setSaveError(true);
     setSavedRosters(getSavedRosters());
     setSaveDialogOpen(false);
   };
@@ -143,6 +150,7 @@ export default function RaidCompPlanner({
     const q = new URLSearchParams(saved.query);
     setRoster(decodeRoster(q.get("r")));
     setNames(decodeNames(q.get("n")));
+    setSize(decodeSize(q.get("s")));
     setArmed(0);
     setSelectedSlot(null);
     setMyRostersOpen(false);
@@ -155,17 +163,24 @@ export default function RaidCompPlanner({
     setSelectedSlot(null);
   };
 
-  const coverage = useMemo(() => computeCoverage(roster, effects), [roster, effects]);
+  const changeSize = (next: RaidSize) => {
+    setSize(next);
+    setSelectedSlot((s) => (s !== null && s >= next ? null : s));
+  };
+
+  const active = useMemo(() => roster.slice(0, size), [roster, size]);
+  const coverage = useMemo(() => computeCoverage(active, effects), [active, effects]);
   const shortfalls = useMemo(
-    () => perCasterShortfalls(roster, effects, coverage, perCaster, Object.fromEntries(specs.map((s) => [s.classId, s.className]))),
-    [roster, effects, coverage, perCaster, specs],
+    () => perCasterShortfalls(active, effects, coverage, perCaster, Object.fromEntries(specs.map((s) => [s.classId, s.className]))),
+    [active, effects, coverage, perCaster, specs],
   );
   const groupBuffs = effects.filter((e) => e.scope === "group");
-  const roles = roleCounts(roster);
+  const roles = roleCounts(active);
   const hints = roleHints(roles);
 
   const armedSpec = armed ? specs[armed - 1] : undefined;
-  const filled = roster.filter(Boolean).length;
+  const filled = active.filter(Boolean).length;
+  const hidden = roster.slice(size).filter(Boolean).length;
 
   return (
     <div className="mt-4 flex flex-col gap-4 pb-16">
@@ -173,7 +188,24 @@ export default function RaidCompPlanner({
         <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-sm font-medium text-foreground">Specs</h2>
           <div className="flex flex-wrap items-center gap-2 text-xs text-foreground-muted">
-            <span>{filled} / {roster.length} players</span>
+            <label className="flex items-center gap-1.5">
+              <span className="sr-only">Raid size</span>
+              <select
+                value={size}
+                onChange={(e) => changeSize(decodeSize(e.target.value))}
+                className="rounded border border-border bg-surface px-1.5 py-1 text-xs text-foreground focus:border-accent focus:outline-none"
+              >
+                {RAID_SIZES.map((n) => (
+                  <option key={n} value={n}>
+                    {n}-man
+                  </option>
+                ))}
+              </select>
+            </label>
+            <span>
+              {filled} / {size} players
+              {hidden > 0 && <span title="Kept for when you switch back to a bigger size"> (+{hidden} hidden)</span>}
+            </span>
             <button
               type="button"
               onClick={copyLink}
@@ -277,7 +309,7 @@ export default function RaidCompPlanner({
 
       <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
       <section aria-label="Raid groups" className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        {Array.from({ length: GROUP_COUNT }, (_, g) => (
+        {Array.from({ length: size / GROUP_SIZE }, (_, g) => (
           <div key={g} className="rounded-lg border border-border bg-surface/50 p-2">
             <h3 className="mb-1.5 px-1 text-xs font-medium uppercase tracking-wide text-foreground-muted">Group {g + 1}</h3>
             <ol className="flex flex-col gap-1">
@@ -414,6 +446,7 @@ export default function RaidCompPlanner({
                 <div className="min-w-0 flex-1">
                   <div className="truncate text-sm font-medium text-foreground">{saved.name}</div>
                   <div className="truncate text-xs text-foreground-muted">
+                    {decodeSize(new URLSearchParams(saved.query).get("s"))}-man ·{" "}
                     {decodeRoster(new URLSearchParams(saved.query).get("r")).filter(Boolean).length} players ·{" "}
                     {new Date(saved.createdAt).toLocaleDateString()}
                   </div>

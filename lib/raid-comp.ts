@@ -6,6 +6,8 @@
 export const GROUP_COUNT = 8;
 export const GROUP_SIZE = 5;
 export const ROSTER_SIZE = GROUP_COUNT * GROUP_SIZE;
+export const RAID_SIZES = [10, 20, 40] as const;
+export type RaidSize = (typeof RAID_SIZES)[number];
 export const MAX_NAME_LENGTH = 12; // WoW character names cap at 12 letters
 
 /** "flex" = Feral Druid, counted as both a possible tank and DPS. */
@@ -208,7 +210,12 @@ export function perCasterShortfalls(
 // change in a way that isn't a pure append.
 // `n` is the slot names, each percent-encoded, joined by "~", trailing
 // empties trimmed. "~" is stripped from names, so it can't collide.
-// Both are omitted when empty, so a blank planner is a bare /raid-comp.
+// `s` is the raid size (10 or 20), omitted for 40, so links from before
+// the size selector still open as 40-man. Only the visible slots
+// (0..size-1) are encoded: slots hidden by a smaller size stay in memory
+// for switching back up, but a shared or saved 10-man roster doesn't carry
+// 30 players its recipient can't see.
+// All are omitted when empty/default, so a blank planner is a bare /raid-comp.
 
 export const ROSTER_CODE_VERSION = 1;
 const NAME_SEPARATOR = "~";
@@ -232,10 +239,10 @@ export function encodeNames(names: string[]): string | null {
 }
 
 /** Query string (with "?") for the current state, or "" when empty. */
-export function rosterQuery(roster: Roster, names: string[]): string {
-  const r = encodeRoster(roster);
-  const n = encodeNames(names);
-  const parts = [r && `r=${r}`, n && `n=${n}`].filter(Boolean);
+export function rosterQuery(roster: Roster, names: string[], size: RaidSize = 40): string {
+  const r = encodeRoster(roster.slice(0, size));
+  const n = encodeNames(names.slice(0, size));
+  const parts = [r && `r=${r}`, n && `n=${n}`, size !== 40 && `s=${size}`].filter(Boolean);
   return parts.length ? `?${parts.join("&")}` : "";
 }
 
@@ -249,6 +256,11 @@ export function decodeRoster(code: string | null): Roster {
     roster[i] = v <= SPECS.length ? v : 0;
   });
   return roster;
+}
+
+/** Anything but 10 or 20 (including no param) = 40. */
+export function decodeSize(value: string | null): RaidSize {
+  return RAID_SIZES.find((s) => String(s) === value) ?? 40;
 }
 
 /** `value` is the already percent-decoded param (URLSearchParams.get). */

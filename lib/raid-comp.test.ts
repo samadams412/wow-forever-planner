@@ -16,6 +16,7 @@ import {
   encodeNames,
   decodeNames,
   rosterQuery,
+  decodeSize,
   type EffectView,
   type EffectSet,
 } from "./raid-comp.ts";
@@ -183,4 +184,22 @@ test("~ is stripped from names so it can't break the separator", () => {
 test("bad codes decode to an empty roster", () => {
   for (const bad of [null, "", "2-111", "1-!!", "garbage"]) assert.deepEqual(decodeRoster(bad), emptyRoster());
   assert.equal(decodeRoster("1-z")[0], 0); // 35 > 27 specs
+});
+
+test("raid size: 40 is omitted, 10/20 round-trip, only visible slots are encoded", () => {
+  const r = rosterOf([[0, 3], [12, 14], [30, 26]]);
+  const names = Array(40).fill("");
+  names[30] = "Hidden";
+  assert.ok(!rosterQuery(r, names, 40).includes("s="));
+  assert.equal(new URLSearchParams(rosterQuery(r, names, 40)).get("r")!.length, 2 + 31);
+  const q = new URLSearchParams(rosterQuery(r, names, 20));
+  assert.equal(q.get("s"), "20");
+  assert.equal(q.get("n"), null); // the only name sits in a hidden slot
+  assert.deepEqual(decodeRoster(q.get("r")), rosterOf([[0, 3], [12, 14]]));
+  assert.equal(decodeSize(q.get("s")), 20);
+});
+
+test("raid size: missing or unknown s decodes to 40", () => {
+  for (const v of [null, "", "40", "25", "abc"]) assert.equal(decodeSize(v), 40);
+  assert.equal(decodeSize("10"), 10);
 });
