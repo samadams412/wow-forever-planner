@@ -1,9 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import Dialog from "@/components/site/Dialog";
 import CoveragePanel from "@/components/raid-comp/CoveragePanel";
 import StackingRules from "@/components/raid-comp/StackingRules";
+import HowToUse from "@/components/raid-comp/HowToUse";
 import { deleteSavedRoster, getSavedRosters, saveRoster, type SavedRoster } from "@/lib/saved-rosters";
 import {
   GROUP_SIZE,
@@ -50,6 +51,7 @@ export default function RaidCompPlanner({
   build,
   initialRoster,
   initialNames,
+  help,
   initialSize = 40,
 }: {
   specs: SpecView[];
@@ -60,6 +62,8 @@ export default function RaidCompPlanner({
   initialRoster?: Roster;
   initialNames?: string[];
   initialSize?: RaidSize;
+  /** Server-rendered how-to copy, shown behind the "?" (kept in the static HTML for SEO). */
+  help: ReactNode;
 }) {
   // Initial values only: later URL changes come from this component itself.
   const [roster, setRoster] = useState<Roster>(() => initialRoster ?? emptyRoster());
@@ -267,6 +271,7 @@ export default function RaidCompPlanner({
             >
               Reset
             </button>
+            <HowToUse>{help}</HowToUse>
           </div>
         </div>
         <SpecGrid

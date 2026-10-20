@@ -35,6 +35,24 @@ const WEB_APPLICATION_JSON_LD = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+// The how-to copy is the page's main crawlable text. It's rendered here on the
+// server and passed into the planner's "?" dialog, which keeps it in the DOM
+// (hidden until opened), so it stays in the prerendered HTML.
+const HOW_TO = (
+  <>
+    <p>
+      Build a World of Warcraft: Forever raid roster group by group, for 10, 20 or 40 players. As you add specs, the
+      coverage list shows which raid buffs, group buffs and boss debuffs your roster brings, how many players can
+      provide each one, and where a class is spread too thin, like one Paladin for four Blessings.
+    </p>
+    <p>
+      Tap a spec, then tap slots to place it; on desktop you can also drag specs and players around. Add names, save
+      the roster to this browser, or share it: the link in your address bar always matches what&apos;s on screen. Buff
+      text comes from the current Forever beta.
+    </p>
+  </>
+);
+
 export default function RaidCompPage() {
   const specs: SpecView[] = SPECS.map((s) => ({
     ...s,
@@ -50,24 +68,16 @@ export default function RaidCompPage() {
     <main className="mx-auto w-full max-w-7xl px-3 py-6 sm:px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEB_APPLICATION_JSON_LD) }} />
       <h1 className="font-heading text-2xl font-semibold tracking-wide text-accent">Raid Comp Planner</h1>
-      <div className="mt-2 max-w-[72ch] space-y-1.5 text-sm leading-relaxed text-foreground-muted">
-        <p>
-          Build a World of Warcraft: Forever raid roster group by group, for 10, 20 or 40 players. As you add specs, the
-          coverage list shows which raid buffs, group buffs and boss debuffs your roster brings, how many players can
-          provide each one, and where a class is spread too thin, like one Paladin for four Blessings.
-        </p>
-        <p>
-          Tap a spec, then tap slots to place it; on desktop you can also drag specs and players around. Add names, save
-          the roster to this browser, or share it: the link in your address bar always matches what&apos;s on screen. Buff
-          text comes from the current Forever beta.
-        </p>
-      </div>
+      <p className="mt-1 text-sm text-foreground-muted">
+        Plan a raid by spec and see which buffs and debuffs your roster covers.
+      </p>
       <RaidCompFromUrl
         specs={specs}
         effects={getRaidEffects()}
         onlyOneCounts={sets.onlyOneCounts}
         perCaster={sets.perCaster}
         build={sets.build}
+        help={HOW_TO}
       />
     </main>
   );
