@@ -9,6 +9,8 @@ import {
   computeCoverage,
   perCasterShortfalls,
   emptyRoster,
+  roleCounts,
+  roleHints,
   type EffectView,
   type EffectSet,
 } from "./raid-comp.ts";
@@ -39,7 +41,8 @@ test("swapSlots swaps without mutating", () => {
 
 // --- coverage, driven by the real data/raid-buffs.json --------------------
 const raw = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "..", "data", "raid-buffs.json"), "utf8"));
-const effects: EffectView[] = raw.effects.map((e: EffectView & { sources: { classId: string; specs: "all" | string[] }[] }) => ({
+type RawEffect = Omit<EffectView, "sources"> & { sources: { classId: string; specs: "all" | string[] }[] };
+const effects: EffectView[] = raw.effects.map((e: RawEffect) => ({
   ...e,
   icon: "",
   text: "",
@@ -108,4 +111,29 @@ test("water totem shortfall counts Mana Tide only for Restoration", () => {
   };
   assert.equal(short("Enhancement"), 2);
   assert.equal(short("Restoration"), 3);
+});
+
+// --- role summary -----------------------------------------------------------
+test("role counts: Feral is flex, Disc counts as a healer", () => {
+  const r = rosterOf([
+    [0, spec("warrior", "Protection")],
+    [1, spec("druid", "Feral Combat")],
+    [2, spec("priest", "Discipline")],
+    [3, spec("mage", "Frost")],
+    [4, spec("paladin", "Retribution")],
+  ]);
+  assert.deepEqual(roleCounts(r), { tank: 1, healer: 1, dps: 2, flex: 1, players: 5 });
+});
+
+test("role hints stay quiet under 10 players and flag thin healing above", () => {
+  const dps = spec("rogue", "Combat");
+  assert.deepEqual(roleHints(roleCounts(rosterOf([[0, dps]]))), []);
+  // 20 players, 2 healers (10%), 1 tank
+  const big = rosterOf(Array.from({ length: 20 }, (_, i) => [i, i === 0 ? spec("warrior", "Protection") : i < 3 ? spec("priest", "Holy") : dps]));
+  const h = roleHints(roleCounts(big));
+  assert.equal(h.length, 1);
+  assert.match(h[0], /2 healers for 20 players/);
+  // 20 players, 5 healers (25%), no tanks
+  const healthy = rosterOf(Array.from({ length: 20 }, (_, i) => [i, i < 5 ? spec("shaman", "Restoration") : dps]));
+  assert.deepEqual(roleHints(roleCounts(healthy)), ["No tanks yet."]);
 });

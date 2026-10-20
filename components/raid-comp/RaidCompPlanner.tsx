@@ -9,6 +9,8 @@ import {
   MAX_NAME_LENGTH,
   computeCoverage,
   perCasterShortfalls,
+  roleCounts,
+  roleHints,
   emptyNames,
   emptyRoster,
   swapSlots,
@@ -104,6 +106,8 @@ export default function RaidCompPlanner({
     [roster, effects, coverage, perCaster, specs],
   );
   const groupBuffs = effects.filter((e) => e.scope === "group");
+  const roles = roleCounts(roster);
+  const hints = roleHints(roles);
 
   const armedSpec = armed ? specs[armed - 1] : undefined;
   const filled = roster.filter(Boolean).length;
@@ -135,6 +139,19 @@ export default function RaidCompPlanner({
           draggable
           columns="grid-cols-3 sm:grid-cols-5 lg:grid-cols-9"
         />
+      </section>
+
+      <section aria-label="Role summary" className="flex flex-col gap-1.5">
+        <div className="flex flex-wrap gap-1.5 text-xs">
+          <RoleChip label="Tanks" count={roles.tank} flex={roles.flex} />
+          <RoleChip label="Healers" count={roles.healer} />
+          <RoleChip label="DPS" count={roles.dps} flex={roles.flex} />
+        </div>
+        {hints.map((h) => (
+          <p key={h} className="text-xs text-foreground-muted">
+            <span className="text-accent">Heads up:</span> {h}
+          </p>
+        ))}
       </section>
 
       {(armedSpec || selectedSlot !== null) && (
@@ -268,6 +285,17 @@ export default function RaidCompPlanner({
         />
       </Dialog>
     </div>
+  );
+}
+
+// Feral Druids can tank or DPS, so they show as "+N Feral" on both chips
+// rather than being forced into one count.
+function RoleChip({ label, count, flex = 0 }: { label: string; count: number; flex?: number }) {
+  return (
+    <span className="rounded border border-border bg-surface px-2 py-1 text-foreground">
+      {label} <span className="font-semibold">{count}</span>
+      {flex > 0 && <span className="text-foreground-muted"> +{flex} Feral</span>}
+    </span>
   );
 }
 

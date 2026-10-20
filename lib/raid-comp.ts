@@ -8,31 +8,36 @@ export const GROUP_SIZE = 5;
 export const ROSTER_SIZE = GROUP_COUNT * GROUP_SIZE;
 export const MAX_NAME_LENGTH = 12; // WoW character names cap at 12 letters
 
+/** "flex" = Feral Druid, counted as both a possible tank and DPS. */
+export type Role = "tank" | "healer" | "dps" | "flex";
+
 export type Spec = {
   /** 1-based position in SPECS; 0 means an empty slot. */
   index: number;
   classId: string;
   /** Talent tree name exactly as in data/talents/<classId>.json. */
   tree: string;
+  role: Role;
 };
 
 // FROZEN ORDER: a spec's position here is its share-link digit, so never
 // reorder or remove entries. A renamed tree just changes `tree` in place;
 // new specs append to the end. lib/raid-comp.test.ts checks every `tree`
 // still exists in the talent data.
-const SPEC_ORDER: [string, string][] = [
-  ["warrior", "Arms"], ["warrior", "Fury"], ["warrior", "Protection"],
-  ["paladin", "Holy"], ["paladin", "Protection"], ["paladin", "Retribution"],
-  ["hunter", "Beast Mastery"], ["hunter", "Marksmanship"], ["hunter", "Survival"],
-  ["rogue", "Assassination"], ["rogue", "Combat"], ["rogue", "Subtlety"],
-  ["priest", "Discipline"], ["priest", "Holy"], ["priest", "Shadow"],
-  ["shaman", "Elemental"], ["shaman", "Enhancement"], ["shaman", "Restoration"],
-  ["mage", "Arcane"], ["mage", "Fire"], ["mage", "Frost"],
-  ["warlock", "Affliction"], ["warlock", "Demonology"], ["warlock", "Destruction"],
-  ["druid", "Balance"], ["druid", "Feral Combat"], ["druid", "Restoration"],
+// Roles are the spec's usual raid job, a planning default, not a rule.
+const SPEC_ORDER: [string, string, Role][] = [
+  ["warrior", "Arms", "dps"], ["warrior", "Fury", "dps"], ["warrior", "Protection", "tank"],
+  ["paladin", "Holy", "healer"], ["paladin", "Protection", "tank"], ["paladin", "Retribution", "dps"],
+  ["hunter", "Beast Mastery", "dps"], ["hunter", "Marksmanship", "dps"], ["hunter", "Survival", "dps"],
+  ["rogue", "Assassination", "dps"], ["rogue", "Combat", "dps"], ["rogue", "Subtlety", "dps"],
+  ["priest", "Discipline", "healer"], ["priest", "Holy", "healer"], ["priest", "Shadow", "dps"],
+  ["shaman", "Elemental", "dps"], ["shaman", "Enhancement", "dps"], ["shaman", "Restoration", "healer"],
+  ["mage", "Arcane", "dps"], ["mage", "Fire", "dps"], ["mage", "Frost", "dps"],
+  ["warlock", "Affliction", "dps"], ["warlock", "Demonology", "dps"], ["warlock", "Destruction", "dps"],
+  ["druid", "Balance", "dps"], ["druid", "Feral Combat", "flex"], ["druid", "Restoration", "healer"],
 ];
 
-export const SPECS: Spec[] = SPEC_ORDER.map(([classId, tree], i) => ({ index: i + 1, classId, tree }));
+export const SPECS: Spec[] = SPEC_ORDER.map(([classId, tree, role], i) => ({ index: i + 1, classId, tree, role }));
 
 export function getSpec(index: number): Spec | undefined {
   return index > 0 ? SPECS[index - 1] : undefined;
@@ -40,6 +45,36 @@ export function getSpec(index: number): Spec | undefined {
 
 /** A Spec plus display fields resolved on the server (icon is a full URL). */
 export type SpecView = Spec & { label: string; className: string; color: string; icon: string };
+
+export type RoleCounts = { tank: number; healer: number; dps: number; flex: number; players: number };
+
+export function roleCounts(roster: Roster): RoleCounts {
+  const c: RoleCounts = { tank: 0, healer: 0, dps: 0, flex: 0, players: 0 };
+  for (const idx of roster) {
+    const spec = getSpec(idx);
+    if (!spec) continue;
+    c[spec.role]++;
+    c.players++;
+  }
+  return c;
+}
+
+// Soft hints only, from a rule of thumb: Classic-era 40-player raids ran
+// roughly one healer per 4-5 players. Silent below 10 players, where a
+// roster is still being filled in.
+export const HEALER_SHARE_HINT = 0.2;
+
+export function roleHints(c: RoleCounts): string[] {
+  if (c.players < 10) return [];
+  const hints: string[] = [];
+  if (c.tank + c.flex === 0) hints.push("No tanks yet.");
+  if (c.healer / c.players < HEALER_SHARE_HINT) {
+    hints.push(
+      `Looks light on healing: ${c.healer} healer${c.healer === 1 ? "" : "s"} for ${c.players} players. Raids usually bring about 1 healer per 4 to 5 players.`,
+    );
+  }
+  return hints;
+}
 
 /** One spec index per slot (0 = empty), length ROSTER_SIZE. */
 export type Roster = number[];
