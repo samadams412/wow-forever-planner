@@ -1,14 +1,19 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Dialog from "@/components/site/Dialog";
+import CoveragePanel from "@/components/raid-comp/CoveragePanel";
 import {
   GROUP_COUNT,
   GROUP_SIZE,
   MAX_NAME_LENGTH,
+  computeCoverage,
+  perCasterShortfalls,
   emptyNames,
   emptyRoster,
   swapSlots,
+  type EffectSet,
+  type EffectView,
   type Roster,
   type SpecView,
 } from "@/lib/raid-comp";
@@ -26,7 +31,19 @@ import {
 type DragPayload = { kind: "spec"; index: number } | { kind: "slot"; index: number };
 const DRAG_MIME = "text/plain";
 
-export default function RaidCompPlanner({ specs }: { specs: SpecView[] }) {
+export default function RaidCompPlanner({
+  specs,
+  effects,
+  onlyOneCounts,
+  perCaster,
+  build,
+}: {
+  specs: SpecView[];
+  effects: EffectView[];
+  onlyOneCounts: EffectSet[];
+  perCaster: EffectSet[];
+  build: string;
+}) {
   const [roster, setRoster] = useState<Roster>(emptyRoster);
   const [names, setNames] = useState<string[]>(emptyNames);
   const [armed, setArmed] = useState(0);
@@ -80,6 +97,13 @@ export default function RaidCompPlanner({ specs }: { specs: SpecView[] }) {
     setArmed(0);
     setSelectedSlot(null);
   };
+
+  const coverage = useMemo(() => computeCoverage(roster, effects), [roster, effects]);
+  const shortfalls = useMemo(
+    () => perCasterShortfalls(roster, effects, coverage, perCaster, Object.fromEntries(specs.map((s) => [s.classId, s.className]))),
+    [roster, effects, coverage, perCaster, specs],
+  );
+  const groupBuffs = effects.filter((e) => e.scope === "group");
 
   const armedSpec = armed ? specs[armed - 1] : undefined;
   const filled = roster.filter(Boolean).length;
@@ -151,7 +175,8 @@ export default function RaidCompPlanner({ specs }: { specs: SpecView[] }) {
         </div>
       )}
 
-      <section aria-label="Raid groups" className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
+      <section aria-label="Raid groups" className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {Array.from({ length: GROUP_COUNT }, (_, g) => (
           <div key={g} className="rounded-lg border border-border bg-surface/50 p-2">
             <h3 className="mb-1.5 px-1 text-xs font-medium uppercase tracking-wide text-foreground-muted">Group {g + 1}</h3>
@@ -222,9 +247,14 @@ export default function RaidCompPlanner({ specs }: { specs: SpecView[] }) {
                 );
               })}
             </ol>
+            <GroupBuffIcons effects={groupBuffs.filter((e) => coverage[e.id].groups.includes(g))} />
           </div>
         ))}
       </section>
+      <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+        <CoveragePanel effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} build={build} />
+      </div>
+      </div>
 
       <Dialog open={pickerSlot !== null} onClose={() => setPickerSlot(null)} title="Pick a spec">
         <SpecGrid
@@ -237,6 +267,21 @@ export default function RaidCompPlanner({ specs }: { specs: SpecView[] }) {
           }}
         />
       </Dialog>
+    </div>
+  );
+}
+
+function GroupBuffIcons({ effects }: { effects: EffectView[] }) {
+  return (
+    <div className="mt-1.5 flex min-h-5 flex-wrap items-center gap-1 px-1" aria-label="Group buffs in this group">
+      {effects.length === 0 ? (
+        <span className="text-[10px] text-foreground-muted/70">No group buffs</span>
+      ) : (
+        effects.map((e) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img key={e.id} src={e.icon} alt={e.name} title={e.name} className="h-5 w-5 rounded-sm" />
+        ))
+      )}
     </div>
   );
 }
