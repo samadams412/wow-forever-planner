@@ -4,38 +4,63 @@
   "verified": "2026-10-19",
   "conventions": {
     "specs": "\"all\" = a spell every member of the class learns. A list of talent-tree names = a talent (or a spellbook spell flagged talent: true), credited only to that tree's spec.",
-    "confidence": "On an effect: its scope and numbers, read from spell text. On a source: whether that spec really provides it. On an onlyOneCounts / perCaster set: the stacking or one-at-a-time rule, which spell text usually doesn't state."
+    "confidence": "On an effect: its scope and numbers, read from spell text. On a source: whether that spec really provides it. On an onlyOneCounts / perCaster set: the stacking or one-at-a-time rule, which spell text usually doesn't state.",
+    "evidence": "Optional, never rendered: web sources found for a stacking rule (url, which game era the source describes, what it says). A set is only confirmed by an official Blizzard source or a specific in-game test, never by Classic-era sources or forum consensus. Last research pass 2026-10-19."
   },
   "onlyOneCounts": [
     {
       "id": "major-armor",
       "label": "Major armor reduction",
-      "confidence": "estimated",
-      "note": "Sunder Armor and Expose Armor didn't stack in Classic. Both cap at 2,250 armor in Forever."
+      "confidence": "confirmed",
+      "note": "Blizzard: Sunder Armor won't overwrite Expose Armor unless its effect is weaker. Warriors can still use Sunder for threat while Expose is up.",
+      "evidence": [
+        { "url": "https://news.blizzard.com/en-us/article/24310968/world-of-warcraft-forever-class-deep-dives-rogue-and-warlock", "era": "Forever beta (Rogue/Warlock class deep dive)", "says": "Expose Armor reduction raised to match 5 Sunder Armor applications; Expose no longer prevents Sunder from being used; Sunder still won't overwrite Expose unless its effect is weaker." }
+      ]
     },
     {
       "id": "minor-armor",
       "label": "-505 armor",
       "confidence": "estimated",
-      "note": "All three reduce armor by exactly 505, which suggests one shared slot. In Classic, Faerie Fire and Curse of Recklessness did stack, so this is the least certain set."
+      "note": "All three reduce armor by exactly 505. Beta testers report they don't stack with each other in Forever (they did in Classic), but Blizzard hasn't said so.",
+      "evidence": [
+        { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-updated-october-15/2360696", "era": "Forever beta (official notes, Oct 16)", "says": "Fixed multiple Faerie Fire debuffs being active on a target; same fix for Curse of Recklessness. That is each spell with itself, not Faerie Fire with Curse of Recklessness." },
+        { "url": "https://github.com/classic-hunter/forever-hunter/wiki/Forever-Beta-Changes", "era": "Forever beta (community wiki, unmarked = tooltip/client data/testing, not Blizzard-confirmed)", "says": "Dust Cloud does not stack with Faerie Fire or with Curse of Recklessness." },
+        { "url": "https://github.com/ElliotWood/Forever/pull/671", "era": "Forever beta (third-party project PR, Oct 4; repo not publicly readable as of 2026-10-19, seen only via search snippet)", "says": "Faerie Fire and Curse of Recklessness share their armor reduction, citing Wowhead's Forever Fury Warrior guide; notes the client data has no shared category." }
+      ]
     },
     {
       "id": "attack-power-reduction",
       "label": "-204 attack power",
       "confidence": "estimated",
-      "note": "All four lower attack power by exactly 204. Demoralizing Shout and Roar didn't stack in Classic."
+      "note": "All four lower attack power by exactly 204. Demoralizing Shout and Roar didn't stack in Classic.",
+      "evidence": [
+        { "url": "https://worldofwarcraft.blizzard.com/news/24301515", "era": "Forever beta (Hunter/Druid class deep dive)", "says": "Demoralizing Roar tuned to be identical to Demoralizing Shout at level 60. Says nothing about stacking. No Forever source found on stacking for any of the four." }
+      ]
     },
     {
       "id": "hit-reduction",
       "label": "-2% hit",
       "confidence": "estimated",
-      "note": "Insect Swarm and Scorpid Sting didn't stack in Classic."
+      "note": "Insect Swarm and Scorpid Sting didn't stack in Classic.",
+      "evidence": [
+        { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-updated-october-15/2360696", "era": "Forever beta (official notes, Oct 16)", "says": "Multiple instances of Insect Swarm no longer keep reducing the target's hit chance. Insect Swarm with itself only; nothing found on Insect Swarm with Scorpid Sting." }
+      ]
     },
     {
       "id": "armor-proc",
       "label": "+25% armor on heal crit",
       "confidence": "estimated",
-      "note": "Ancestral Healing and Inspiration give the same buff value and didn't stack in Classic."
+      "note": "Ancestral Healing and Inspiration give the same buff value and didn't stack in Classic.",
+      "evidence": [{ "url": null, "era": null, "says": "No Forever source found (searched 2026-10-19)." }]
+    },
+    {
+      "id": "windfury-flametongue",
+      "label": "Windfury or Flametongue",
+      "confidence": "confirmed",
+      "note": "Blizzard: Windfury Totem and Flametongue Totem don't stack, even from different Shamans. Grace of Air stacks with both.",
+      "evidence": [
+        { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-updated-october-15/2360696", "era": "Forever beta (official notes)", "says": "Sept 24: Flametongue Totem no longer stacks with Windfury Totem. Oct 16: Grace of Air Totem is no longer exclusive with Windfury Totem and Flametongue Totem; Windfury Totem and Flametongue Totem retain their exclusivity." }
+      ]
     }
   ],
   "perCaster": [
@@ -72,21 +97,29 @@
       "classId": "shaman",
       "label": "Air totems",
       "confidence": "estimated",
-      "note": "One totem per element in Classic. Forever's spell text doesn't restate it."
+      "note": "One totem per element in Classic. Forever's spell text and Blizzard's notes don't restate it; a Forever shaman guide does.",
+      "evidence": [
+        { "url": "https://www.warcrafttavern.com/forever/guides/shaman/", "era": "Forever (third-party guide, no source cited for this rule)", "says": "You can only have one totem of a specific element active at a time." },
+        { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-updated-october-15/2360696", "era": "Forever beta (official notes)", "says": "Nothing on one-per-element. Sept 24 made Tranquil Air, Windfury and Grace of Air exclusive across Shamans; Oct 16 freed Grace of Air from Windfury and Flametongue (see windfury-flametongue)." }
+      ]
     },
     {
       "id": "shaman-water-totems",
       "classId": "shaman",
       "label": "Water totems",
       "confidence": "estimated",
-      "note": "One totem per element in Classic. Forever's spell text doesn't restate it."
+      "note": "One totem per element in Classic. Forever's spell text doesn't restate it.",
+      "evidence": [{ "url": "https://www.warcrafttavern.com/forever/guides/shaman/", "era": "Forever (third-party guide, no source cited for this rule)", "says": "One totem of each element at a time; lists Healing Stream, Mana Spring and Mana Tide as Water totems. Nothing official found." }]
     },
     {
       "id": "hunter-pets",
       "classId": "hunter",
       "label": "Pet abilities",
       "confidence": "estimated",
-      "note": "Each comes from a different pet family (wolf, tallstrider, owl/bat), and a Hunter has one pet out at a time."
+      "note": "Each comes from a different pet family (wolf, tallstrider, carrion bird), and a Hunter has one pet out at a time.",
+      "evidence": [
+        { "url": "https://worldofwarcraft.blizzard.com/news/24301515", "era": "Forever beta (Hunter/Druid class deep dive)", "says": "Each pet family now has one ability unique to it: Wolf Furious Howl, Tallstrider Dust Cloud, Carrion Bird Demoralizing Screech. Confirms the family requirement; one pet at a time is not restated for Forever, so the set stays estimated." }
+      ]
     }
   ],
   "effects": [
@@ -224,7 +257,7 @@
       "scope": "raid",
       "summary": "+3% melee and ranged crit",
       "confidence": "confirmed",
-      "note": "Party or raid within 45 yards in Forever. Party-only in Classic.",
+      "note": "Party or raid within 45 yards in Forever. Party-only in Classic. Blizzard's Sept 30 deep dive made it exclusive with Moonkin Form's crit; the Oct 16 notes then split them (melee/ranged crit vs spell crit) without saying whether that still applies, so they're tracked separately.",
       "sources": [{ "classId": "druid", "specs": ["Feral Combat"], "talent": "Leader of the Pack", "confidence": "confirmed" }]
     },
     {
@@ -264,6 +297,7 @@
       "scope": "raid",
       "summary": "20% chance per main-hand hit of an extra attack with +246 attack power",
       "perCaster": "shaman-air-totems",
+      "onlyOneCounts": "windfury-flametongue",
       "confidence": "confirmed",
       "note": "Party or raid within 30 yards in Forever. Party-only in Classic.",
       "sources": [{ "classId": "shaman", "specs": "all", "spell": "Windfury Totem", "confidence": "confirmed" }]
@@ -274,6 +308,7 @@
       "kind": "buff",
       "scope": "raid",
       "summary": "17 to 55 extra Fire damage per main-hand hit",
+      "onlyOneCounts": "windfury-flametongue",
       "confidence": "confirmed",
       "sources": [{ "classId": "shaman", "specs": "all", "spell": "Flametongue Totem", "confidence": "confirmed" }]
     },
@@ -285,7 +320,11 @@
       "summary": "+83 melee attack power, 15 yards, 1 min",
       "perCaster": "hunter-pets",
       "confidence": "confirmed",
-      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Furious Howl", "confidence": "estimated", "note": "Wolf pet only. Counts only if the Hunter brings a wolf." }]
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Furious Howl", "confidence": "estimated", "note": "Wolf pet only (Blizzard: unique to the wolf family). Counts only if the Hunter brings a wolf." }],
+      "evidence": [
+        { "url": "https://github.com/classic-hunter/forever-hunter/wiki/Forever-Beta-Changes", "era": "Forever beta (community wiki, unmarked = tooltip/client data/testing)", "says": "Furious Howl does not stack with Battle Shout. Not Blizzard-confirmed, so not modelled as a set yet." },
+        { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-updated-october-15/2360696", "era": "Forever beta (official notes, Sept 24)", "says": "Furious Howl Attack Power bonus reduced 40%." }
+      ]
     },
     {
       "id": "devotion-aura",
@@ -324,7 +363,8 @@
       "scope": "group",
       "summary": "+54 Stamina",
       "confidence": "confirmed",
-      "sources": [{ "classId": "warlock", "specs": "all", "spell": "Blood Pact", "confidence": "estimated", "note": "Imp only. Counts only if the Warlock has the Imp out." }]
+      "sources": [{ "classId": "warlock", "specs": "all", "spell": "Blood Pact", "confidence": "estimated", "note": "Imp only. Counts only if the Warlock has the Imp out." }],
+      "evidence": [{ "url": "https://news.blizzard.com/en-us/article/24310968/world-of-warcraft-forever-class-deep-dives-rogue-and-warlock", "era": "Forever beta (Rogue/Warlock class deep dive)", "says": "Improved Imp no longer affects Blood Pact. Nothing found on Blood Pact's pet requirement or stacking." }]
     },
     {
       "id": "healing-stream-totem",
@@ -464,7 +504,7 @@
       "onlyOneCounts": "minor-armor",
       "perCaster": "hunter-pets",
       "confidence": "confirmed",
-      "note": "New in Forever (tallstrider pet).",
+      "note": "New in Forever (Blizzard: unique to the Tallstrider pet family).",
       "sources": [{ "classId": "hunter", "specs": "all", "spell": "Dust Cloud", "confidence": "estimated", "note": "Tallstrider pet only. Counts only if the Hunter brings one." }]
     },
     {
@@ -506,7 +546,7 @@
       "onlyOneCounts": "attack-power-reduction",
       "perCaster": "hunter-pets",
       "confidence": "confirmed",
-      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Demoralizing Screech", "confidence": "estimated", "note": "Pet ability. Counts only if the Hunter brings a pet that has it." }]
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Demoralizing Screech", "confidence": "estimated", "note": "Carrion Bird pet only (Blizzard: unique to that family). Counts only if the Hunter brings one." }]
     },
     {
       "id": "vindication",
