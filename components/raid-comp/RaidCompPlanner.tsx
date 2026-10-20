@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Dialog from "@/components/site/Dialog";
 import CoveragePanel from "@/components/raid-comp/CoveragePanel";
+import StackingRules from "@/components/raid-comp/StackingRules";
 import { deleteSavedRoster, getSavedRosters, saveRoster, type SavedRoster } from "@/lib/saved-rosters";
 import {
   GROUP_SIZE,
@@ -307,7 +308,7 @@ export default function RaidCompPlanner({
         </div>
       )}
 
-      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
+      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_20rem_17rem]">
       <section aria-label="Raid groups" className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {Array.from({ length: size / GROUP_SIZE }, (_, g) => (
           <div key={g} className="rounded-lg border border-border bg-surface/50 p-2">
@@ -384,7 +385,11 @@ export default function RaidCompPlanner({
         ))}
       </section>
       <div className="scrollbar-gold lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
-        <CoveragePanel effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} build={build} />
+        <CoveragePanel effects={effects} coverage={coverage} build={build} />
+      </div>
+      {/* Its own column on xl; below the groups on lg; last on phones, so it never pushes coverage down. */}
+      <div className="scrollbar-gold xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto">
+        <StackingRules effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} />
       </div>
       </div>
 
