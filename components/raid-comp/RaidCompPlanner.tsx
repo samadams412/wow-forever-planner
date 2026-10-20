@@ -3,11 +3,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Dialog from "@/components/site/Dialog";
 import CoveragePanel from "@/components/raid-comp/CoveragePanel";
+import { deleteSavedRoster, getSavedRosters, saveRoster, type SavedRoster } from "@/lib/saved-rosters";
 import {
   GROUP_COUNT,
   GROUP_SIZE,
   MAX_NAME_LENGTH,
   cleanName,
+  decodeNames,
+  decodeRoster,
   rosterQuery,
   computeCoverage,
   perCasterShortfalls,
@@ -60,6 +63,17 @@ export default function RaidCompPlanner({
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [pickerSlot, setPickerSlot] = useState<number | null>(null);
   const [dropTarget, setDropTarget] = useState<number | null>(null);
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
+  const [rosterName, setRosterName] = useState("");
+  const [saveError, setSaveError] = useState(false);
+  const [myRostersOpen, setMyRostersOpen] = useState(false);
+  const [savedRosters, setSavedRosters] = useState<SavedRoster[]>([]);
+
+  useEffect(() => {
+    // localStorage isn't available during prerender: start empty, sync once mounted.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSavedRosters(getSavedRosters());
+  }, []);
 
   useEffect(() => {
     // replaceState, not router.replace: a pure address-bar sync, no re-render
@@ -117,6 +131,23 @@ export default function RaidCompPlanner({
     else if (payload.kind === "slot" && payload.index >= 0 && payload.index < roster.length) swap(payload.index, slot);
   };
 
+  const confirmSave = () => {
+    const name = rosterName.trim();
+    if (!name) return;
+    if (!saveRoster({ name, query: rosterQuery(roster, names).slice(1) })) return setSaveError(true);
+    setSavedRosters(getSavedRosters());
+    setSaveDialogOpen(false);
+  };
+
+  const loadRoster = (saved: SavedRoster) => {
+    const q = new URLSearchParams(saved.query);
+    setRoster(decodeRoster(q.get("r")));
+    setNames(decodeNames(q.get("n")));
+    setArmed(0);
+    setSelectedSlot(null);
+    setMyRostersOpen(false);
+  };
+
   const reset = () => {
     setRoster(emptyRoster());
     setNames(emptyNames());
@@ -139,9 +170,9 @@ export default function RaidCompPlanner({
   return (
     <div className="mt-4 flex flex-col gap-4 pb-16">
       <section aria-label="Specs">
-        <div className="mb-2 flex items-center justify-between gap-2">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-sm font-medium text-foreground">Specs</h2>
-          <div className="flex items-center gap-3 text-xs text-foreground-muted">
+          <div className="flex flex-wrap items-center gap-2 text-xs text-foreground-muted">
             <span>{filled} / {roster.length} players</span>
             <button
               type="button"
@@ -150,6 +181,26 @@ export default function RaidCompPlanner({
               className="rounded border border-accent/60 px-2 py-1 text-foreground hover:bg-surface-hover disabled:opacity-40"
             >
               {copied ? "Link copied" : "Share"}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setRosterName("");
+                setSaveError(false);
+                setSaveDialogOpen(true);
+              }}
+              disabled={filled === 0}
+              title={filled === 0 ? "Place at least one spec to save a roster" : undefined}
+              className="rounded border border-border px-2 py-1 hover:border-accent/60 hover:text-foreground disabled:opacity-40"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              onClick={() => setMyRostersOpen(true)}
+              className="rounded border border-border px-2 py-1 hover:border-accent/60 hover:text-foreground"
+            >
+              My Rosters{savedRosters.length > 0 ? ` (${savedRosters.length})` : ""}
             </button>
             <button
               type="button"
@@ -315,6 +366,80 @@ export default function RaidCompPlanner({
             setPickerSlot(null);
           }}
         />
+      </Dialog>
+
+      <Dialog open={saveDialogOpen} onClose={() => setSaveDialogOpen(false)} title="Save roster">
+        <p className="text-xs text-foreground-muted">
+          Saved to this browser only -- not synced across devices, and cleared if you clear site data.
+        </p>
+        <input
+          type="text"
+          value={rosterName}
+          onChange={(e) => setRosterName(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && confirmSave()}
+          placeholder="e.g. Molten Core week 1"
+          autoFocus
+          className="mt-3 w-full rounded border border-border bg-background px-2 py-1.5 text-sm text-foreground focus:border-accent focus:outline-none"
+        />
+        {saveError && (
+          <p className="mt-2 text-xs text-red-400">Couldn&apos;t save -- your browser&apos;s storage may be full or unavailable.</p>
+        )}
+        <div className="mt-3 flex justify-end gap-2">
+          <button
+            type="button"
+            onClick={() => setSaveDialogOpen(false)}
+            className="rounded border border-border px-3 py-1 text-xs text-foreground-muted hover:text-foreground"
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            onClick={confirmSave}
+            disabled={!rosterName.trim()}
+            className="rounded border border-accent/60 px-3 py-1 text-xs text-accent hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Save
+          </button>
+        </div>
+      </Dialog>
+
+      <Dialog open={myRostersOpen} onClose={() => setMyRostersOpen(false)} title="My Rosters">
+        <p className="text-xs text-foreground-muted">Saved to this browser only -- not synced across devices.</p>
+        {savedRosters.length === 0 ? (
+          <p className="mt-3 text-sm text-foreground-muted">No saved rosters yet.</p>
+        ) : (
+          <ul className="mt-3 max-h-80 cursor-default space-y-2 overflow-y-auto">
+            {savedRosters.map((saved) => (
+              <li key={saved.id} className="flex items-center gap-2 rounded border border-border bg-background/40 p-2">
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-sm font-medium text-foreground">{saved.name}</div>
+                  <div className="truncate text-xs text-foreground-muted">
+                    {decodeRoster(new URLSearchParams(saved.query).get("r")).filter(Boolean).length} players ·{" "}
+                    {new Date(saved.createdAt).toLocaleDateString()}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => loadRoster(saved)}
+                  className="shrink-0 rounded border border-accent/60 px-2 py-1 text-xs text-accent hover:bg-surface-hover"
+                >
+                  Load
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    deleteSavedRoster(saved.id);
+                    setSavedRosters(getSavedRosters());
+                  }}
+                  aria-label={`Delete ${saved.name}`}
+                  className="shrink-0 rounded border border-border px-2 py-1 text-xs text-foreground-muted hover:border-red-400/60 hover:text-red-400"
+                >
+                  ✕
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </Dialog>
     </div>
   );
