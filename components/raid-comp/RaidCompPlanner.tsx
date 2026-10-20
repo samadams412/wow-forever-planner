@@ -383,7 +383,7 @@ export default function RaidCompPlanner({
           </div>
         ))}
       </section>
-      <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+      <div className="scrollbar-gold lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
         <CoveragePanel effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} build={build} />
       </div>
       </div>
@@ -440,7 +440,7 @@ export default function RaidCompPlanner({
         {savedRosters.length === 0 ? (
           <p className="mt-3 text-sm text-foreground-muted">No saved rosters yet.</p>
         ) : (
-          <ul className="mt-3 max-h-80 cursor-default space-y-2 overflow-y-auto">
+          <ul className="scrollbar-gold mt-3 max-h-80 cursor-default space-y-2 overflow-y-auto">
             {savedRosters.map((saved) => (
               <li key={saved.id} className="flex items-center gap-2 rounded border border-border bg-background/40 p-2">
                 <div className="min-w-0 flex-1">
