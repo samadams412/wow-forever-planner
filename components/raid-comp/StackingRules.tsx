@@ -12,6 +12,7 @@ export default function StackingRules({
   shortfalls,
   onlyOneCounts,
   classes,
+  onHide,
 }: {
   effects: EffectView[];
   coverage: Record<string, EffectCoverage>;
@@ -19,6 +20,7 @@ export default function StackingRules({
   onlyOneCounts: EffectSet[];
   /** classId -> display name + CLASS_COLOR, resolved on the server (SpecView). */
   classes: Record<string, { name: string; color: string }>;
+  onHide: () => void;
 }) {
   const ClassName = ({ classId, suffix = "" }: { classId: string; suffix?: string }) => (
     <span className="font-medium" style={{ color: classes[classId]?.color, textShadow: CLASS_TEXT_SHADOW }}>
@@ -28,17 +30,33 @@ export default function StackingRules({
   );
 
   return (
-    <section aria-label="Stacking rules" className="flex flex-col gap-3 rounded-lg border border-border bg-surface/50 p-2">
-      <h2 className="px-1 text-sm font-medium text-foreground">Stacking rules</h2>
+    <section id="stacking-rules" aria-label="Stacking rules" className="flex flex-col gap-3 rounded-lg border border-border bg-surface/50 p-2">
+      <div className="flex items-center justify-between gap-2 px-1">
+        <h2 className="text-sm font-medium text-foreground">Stacking rules</h2>
+        <button
+          type="button"
+          onClick={onHide}
+          className="rounded border border-accent/40 px-2 py-0.5 text-xs text-accent hover:border-accent hover:bg-surface-hover"
+        >
+          Hide
+        </button>
+      </div>
 
       {shortfalls.length > 0 && (
         <ul className="flex flex-col gap-1" aria-label="Caster limits">
           {shortfalls.map((s) => (
-            <li key={`${s.setId}-${s.group}`} className="rounded border border-accent/40 bg-accent/10 px-2 py-1 text-xs text-foreground">
-              {s.group !== null && <span className="text-foreground-muted">Group {s.group + 1}: </span>}
-              {s.casters} <ClassName classId={s.classId} suffix={s.casters > 1 ? "s" : ""} /> for {s.effects} {s.label}. Each{" "}
-              <ClassName classId={s.classId} /> can only provide one at a time.
-              {s.confidence === "estimated" && <span className="text-foreground-muted"> (one-at-a-time rule estimated)</span>}
+            // "1 Paladin per group for 3 Auras, one at a time (Groups 1, 2, 4)": one line per
+            // distinct shortfall, however many groups it repeats in (perCasterShortfalls merges them).
+            <li key={`${s.setId}-${s.casters}`} className="rounded border border-accent/40 bg-accent/10 px-2 py-1 text-xs text-foreground">
+              {s.casters} <ClassName classId={s.classId} suffix={s.casters > 1 ? "s" : ""} />
+              {s.groups && s.groups.length > 1 && " per group"} for {s.effects} {s.label}, one at a time
+              {s.groups && (
+                <span className="text-foreground-muted">
+                  {" "}
+                  (Group{s.groups.length > 1 ? "s" : ""} {s.groups.map((g) => g + 1).join(", ")})
+                </span>
+              )}
+              .{s.confidence === "estimated" && <span className="text-foreground-muted"> Rule estimated.</span>}
             </li>
           ))}
         </ul>

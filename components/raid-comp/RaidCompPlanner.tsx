@@ -40,6 +40,7 @@ import {
 //   ever see the tap flow.
 type DragPayload = { kind: "spec"; index: number } | { kind: "slot"; index: number };
 const DRAG_MIME = "text/plain";
+const RULES_OPEN_KEY = "forevercraft:raid-comp-rules-open";
 
 export default function RaidCompPlanner({
   specs,
@@ -76,12 +77,28 @@ export default function RaidCompPlanner({
   const [saveError, setSaveError] = useState(false);
   const [myRostersOpen, setMyRostersOpen] = useState(false);
   const [savedRosters, setSavedRosters] = useState<SavedRoster[]>([]);
+  // Stacking rules start collapsed; the viewer's choice is remembered per browser.
+  const [rulesOpen, setRulesOpen] = useState(false);
 
   useEffect(() => {
-    // localStorage isn't available during prerender: start empty, sync once mounted.
+    // localStorage isn't available during prerender: start empty/collapsed, sync once mounted.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSavedRosters(getSavedRosters());
+    try {
+      setRulesOpen(window.localStorage.getItem(RULES_OPEN_KEY) === "1");
+    } catch {
+      // storage blocked: stays collapsed
+    }
   }, []);
+
+  const toggleRules = (open: boolean) => {
+    setRulesOpen(open);
+    try {
+      window.localStorage.setItem(RULES_OPEN_KEY, open ? "1" : "0");
+    } catch {
+      // not persisted this time; the in-memory state still applies
+    }
+  };
 
   useEffect(() => {
     // replaceState, not router.replace: a pure address-bar sync, no re-render
@@ -177,6 +194,10 @@ export default function RaidCompPlanner({
     [active, effects, coverage, perCaster, specs],
   );
   const groupBuffs = effects.filter((e) => e.scope === "group");
+  // Caster-limit notes plus "only one counts" sets the roster doubles up on.
+  const activeRules =
+    shortfalls.length +
+    onlyOneCounts.filter((set) => effects.filter((e) => e.onlyOneCounts === set.id && coverage[e.id].covered).length > 1).length;
   const roles = roleCounts(active);
   const hints = roleHints(roles);
 
@@ -265,6 +286,22 @@ export default function RaidCompPlanner({
           <RoleChip label="Tanks" count={roles.tank} flex={roles.flex} spec={roleIcon("warrior", "Protection")} />
           <RoleChip label="Healers" count={roles.healer} spec={roleIcon("druid", "Restoration")} />
           <RoleChip label="DPS" count={roles.dps} flex={roles.flex} spec={roleIcon("warrior", "Fury")} />
+          {/* Up here so it's findable at every width; the section itself sits beside or below the groups. */}
+          <button
+            type="button"
+            onClick={() => {
+              toggleRules(!rulesOpen);
+              // Below xl the section opens far down the page (under the groups / coverage): bring it into view.
+              if (!rulesOpen && !window.matchMedia("(min-width: 80rem)").matches) {
+                requestAnimationFrame(() => document.getElementById("stacking-rules")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+              }
+            }}
+            aria-expanded={rulesOpen}
+            aria-controls="stacking-rules"
+            className="ml-auto rounded border border-accent/40 px-2 py-1 text-accent hover:border-accent hover:bg-surface-hover"
+          >
+            Stacking rules{activeRules > 0 ? ` · ${activeRules} active` : ""} {rulesOpen ? "▴" : "▾"}
+          </button>
         </div>
         {hints.map((h) => (
           <p key={h} className="text-xs text-foreground-muted">
@@ -311,7 +348,7 @@ export default function RaidCompPlanner({
         </div>
       )}
 
-      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_20rem_17rem]">
+      <div className={`flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start ${rulesOpen ? "xl:grid-cols-[minmax(0,1fr)_20rem_17rem]" : ""}`}>
       <section aria-label="Raid groups" className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {Array.from({ length: size / GROUP_SIZE }, (_, g) => (
           <div key={g} className="rounded-lg border border-border bg-surface/50 p-2">
@@ -390,10 +427,20 @@ export default function RaidCompPlanner({
       <div className="scrollbar-gold lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
         <CoveragePanel effects={effects} coverage={coverage} build={build} />
       </div>
-      {/* Its own column on xl; below the groups on lg; last on phones, so it never pushes coverage down. */}
-      <div className="scrollbar-gold xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto">
-        <StackingRules effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} classes={classes} />
-      </div>
+      {/* Its own column on xl; below the groups on lg; last on phones, so it never pushes coverage down.
+          Collapsed = not rendered, so xl drops back to two columns. */}
+      {rulesOpen && (
+        <div className="scrollbar-gold xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto">
+          <StackingRules
+            effects={effects}
+            coverage={coverage}
+            shortfalls={shortfalls}
+            onlyOneCounts={onlyOneCounts}
+            classes={classes}
+            onHide={() => toggleRules(false)}
+          />
+        </div>
+      )}
       </div>
 
       <Dialog open={pickerSlot !== null} onClose={() => setPickerSlot(null)} title="Pick a spec">

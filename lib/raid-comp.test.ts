@@ -100,8 +100,18 @@ test("caster shortfalls: 1 Paladin for 4 Blessings, 3 Judgements, 3 Auras in its
   assert.equal(by["paladin-blessings"].effects, 4);
   assert.equal(by["paladin-blessings"].casters, 1);
   assert.equal(by["paladin-judgements"].effects, 3);
-  assert.equal(by["paladin-auras"].group, 0);
+  assert.deepEqual(by["paladin-auras"].groups, [0]);
   assert.equal(by["paladin-auras"].effects, 3);
+});
+
+test("identical per-group shortfalls merge into one note listing the groups", () => {
+  // One Holy Paladin in groups 1, 2 and 4; two in group 3 (2 casters for 3 Auras: still short, but a different note).
+  const r = rosterOf([[0, spec("paladin", "Holy")], [5, spec("paladin", "Holy")], [15, spec("paladin", "Holy")], [10, spec("paladin", "Holy")], [11, spec("paladin", "Holy")]]);
+  const auras = perCasterShortfalls(r, effects, computeCoverage(r, effects), sets, classNames).filter((x) => x.setId === "paladin-auras");
+  assert.deepEqual(
+    auras.map((a) => [a.casters, a.groups]),
+    [[1, [0, 1, 3]], [2, [2]]],
+  );
 });
 
 test("four Paladins cover all four Blessings with no shortfall", () => {

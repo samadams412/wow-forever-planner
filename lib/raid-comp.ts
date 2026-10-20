@@ -147,8 +147,12 @@ export type PerCasterShortfall = {
   className: string;
   casters: number;
   effects: number;
-  /** 0-based group for a group-scope set (auras, water totems); null = raid-wide. */
-  group: number | null;
+  /**
+   * 0-based groups for a group-scope set (auras, water totems), merged: one
+   * entry per distinct casters/effects shortfall, listing every group where
+   * it applies, so identical per-group notes show once. null = raid-wide.
+   */
+  groups: number[] | null;
   confidence: Confidence;
 };
 
@@ -189,12 +193,15 @@ export function perCasterShortfalls(
       for (let g = 0; g < GROUP_COUNT; g++) {
         const casters = casterSlots.filter((s) => groupOf(s) === g).length;
         const effectCount = members.filter((e) => coverage[e.id].groups.includes(g)).length;
-        if (casters > 0 && casters < effectCount) out.push({ ...base, casters, effects: effectCount, group: g });
+        if (!(casters > 0 && casters < effectCount)) continue;
+        const same = out.find((o) => o.setId === set.id && o.casters === casters && o.effects === effectCount);
+        if (same) same.groups!.push(g);
+        else out.push({ ...base, casters, effects: effectCount, groups: [g] });
       }
     } else {
       const effectCount = members.filter((e) => coverage[e.id].covered).length;
       if (casterSlots.length > 0 && casterSlots.length < effectCount) {
-        out.push({ ...base, casters: casterSlots.length, effects: effectCount, group: null });
+        out.push({ ...base, casters: casterSlots.length, effects: effectCount, groups: null });
       }
     }
   }
