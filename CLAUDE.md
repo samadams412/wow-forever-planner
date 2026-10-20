@@ -112,7 +112,7 @@ Built 2026-10-19. Feature shape learned from wowtbc.gg's raid comp planner
 (mechanism only; none of its code, data, icons or design was copied).
 Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.md`.
 - **Files:** `app/raid-comp/page.tsx` (static ○ server shell),
-  `components/raid-comp/{RaidCompFromUrl,RaidCompPlanner,CoveragePanel}.tsx`,
+  `components/raid-comp/{RaidCompFromUrl,RaidCompPlanner,CoveragePanel,StackingRules}.tsx`,
   `lib/raid-comp.ts` (client-safe core: frozen spec list, roles, coverage,
   share-link codec), `lib/raid-buffs.ts` (server-only resolver),
   `lib/saved-rosters.ts` (localStorage), `lib/raid-comp.test.ts`,
@@ -147,6 +147,17 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   reach the provider's group. `perCasterShortfalls` adds "1 Paladin for 4
   Blessings" notes when casters < covered effects in a set (per group for
   group-scope sets). Each icon has a source-count badge.
+- **Layout (2026-10-19):** page grid is groups | coverage on `lg`
+  (`[minmax(0,1fr)_20rem]`), plus a third sticky `17rem` column on `xl` for
+  `StackingRules` (caster-limit notes + every `onlyOneCounts` set with its
+  members' classes). On `lg` the rules sit below the groups, on phones
+  after coverage. Either way the rule list never pushes coverage down; keep
+  rules out of `CoveragePanel`. Class names there use `CLASS_COLOR` (via
+  `SpecView.color`) with `CLASS_TEXT_SHADOW` from `lib/class-text.ts`
+  (shared with the planner's `ClassHero`; client-safe, no `lib/wow-data`).
+  Pet-family abilities (`perCaster: "hunter-pets"`) show as "Hunter pet".
+  Role chips borrow spec icons: Protection Warrior (Tank), Restoration
+  Druid (Healer), Fury Warrior (DPS).
 - **Raid size (10/20/40):** `roster`/`names` always hold 40 slots; a smaller
   size only hides groups (switching back up restores them) and coverage,
   roles and counts use the visible `roster.slice(0, size)`. The share link
