@@ -98,12 +98,21 @@ function EffectRow({ effect: e, cov }: { effect: EffectView; cov: EffectCoverage
     <li>
       <details className="rounded">
         <summary className="flex cursor-pointer list-none items-center gap-2 rounded px-1 py-0.5 hover:bg-surface-hover [&::-webkit-details-marker]:hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={e.icon}
-            alt=""
-            className={`h-6 w-6 shrink-0 rounded-sm ${cov.covered ? "" : "opacity-35 grayscale"}`}
-          />
+          <span className="relative shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={e.icon} alt="" className={`h-6 w-6 rounded-sm ${cov.covered ? "" : "opacity-35 grayscale"}`} />
+            {cov.providers.length > 0 && (
+              // How many roster players can provide it: a quick read on
+              // redundancy (or a single point of failure) without warnings.
+              <span
+                className="absolute -bottom-1 -right-1.5 min-w-4 rounded-full border border-background bg-accent px-0.5 text-center text-[9px] font-semibold leading-3.5 text-background"
+                title={`${cov.providers.length} in this roster can provide it`}
+              >
+                {cov.providers.length}
+                <span className="sr-only"> sources</span>
+              </span>
+            )}
+          </span>
           <span className={`min-w-0 flex-1 truncate text-xs ${cov.covered ? "text-foreground" : "text-foreground-muted"}`}>{e.name}</span>
           {cov.groups.length > 0 && (
             <span className="shrink-0 text-[10px] text-foreground-muted">{cov.groups.map((g) => `G${g + 1}`).join(" ")}</span>
@@ -115,6 +124,11 @@ function EffectRow({ effect: e, cov }: { effect: EffectView; cov: EffectCoverage
         </summary>
         <div className="mb-1 ml-9 mr-1 flex flex-col gap-1 text-xs text-foreground-muted">
           <p className="text-foreground">{e.summary}</p>
+          {cov.providers.length > 0 && (
+            <p>
+              {cov.providers.length} player{cov.providers.length === 1 ? "" : "s"} in this roster can provide it.
+            </p>
+          )}
           {e.raidSpell && <p>Raid-wide version: {e.raidSpell}.</p>}
           {e.text && <p className="italic">“{e.text}”</p>}
           {e.note && <p>{e.note}</p>}
