@@ -112,7 +112,7 @@ Built 2026-10-19. Feature shape learned from wowtbc.gg's raid comp planner
 (mechanism only; none of its code, data, icons or design was copied).
 Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.md`.
 - **Files:** `app/raid-comp/page.tsx` (static ○ server shell),
-  `components/raid-comp/{RaidCompFromUrl,RaidCompPlanner,CoveragePanel,StackingRules}.tsx`,
+  `components/raid-comp/{RaidCompFromUrl,RaidCompPlanner,CoveragePanel,StackingRules,HowToUse}.tsx`,
   `lib/raid-comp.ts` (client-safe core: frozen spec list, roles, coverage,
   share-link codec), `lib/raid-buffs.ts` (server-only resolver),
   `lib/saved-rosters.ts` (localStorage), `lib/raid-comp.test.ts`,
@@ -203,7 +203,12 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   only: no build-tracking events.
 - **SEO:** title/description, canonical `/raid-comp` for every shared
   roster, openGraph, `WebApplication` JSON-LD (as on the planner), a
-  two-paragraph intro in the server-rendered page, `/raid-comp` in
+  two-paragraph how-to (`HOW_TO` in `page.tsx`, 2026-10-20) behind a "?"
+  in the controls row (`HowToUse.tsx`), with one visible tagline under the
+  h1. The how-to is a native `<dialog>` that's always mounted (hidden until
+  `showModal()`), so the text is in the prerendered HTML. **Don't swap it for
+  the house `Dialog`**, which unmounts when closed and would drop the text
+  from the static HTML. `/raid-comp` in
   `app/sitemap.ts`. `app/robots.ts` disallows `/raid-comp?` (shared-link
   variants), like `/planner/*/`; `/raid-comp` itself is allowed.
 - **Interaction:** tap a palette spec to arm it, then tap slots; tapping
