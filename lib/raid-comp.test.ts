@@ -11,6 +11,11 @@ import {
   emptyRoster,
   roleCounts,
   roleHints,
+  encodeRoster,
+  decodeRoster,
+  encodeNames,
+  decodeNames,
+  rosterQuery,
   type EffectView,
   type EffectSet,
 } from "./raid-comp.ts";
@@ -136,4 +141,46 @@ test("role hints stay quiet under 10 players and flag thin healing above", () =>
   // 20 players, 5 healers (25%), no tanks
   const healthy = rosterOf(Array.from({ length: 20 }, (_, i) => [i, i < 5 ? spec("shaman", "Restoration") : dps]));
   assert.deepEqual(roleHints(roleCounts(healthy)), ["No tanks yet."]);
+});
+
+// --- share URL ----------------------------------------------------------------
+
+const roundTrip = (roster: number[], names: string[]) => {
+  const q = new URLSearchParams(rosterQuery(roster, names));
+  return { roster: decodeRoster(q.get("r")), names: decodeNames(q.get("n")) };
+};
+
+test("empty roster encodes to no query at all", () => {
+  assert.equal(rosterQuery(emptyRoster(), Array(40).fill("")), "");
+});
+
+test("trailing empty slots are trimmed", () => {
+  const r = rosterOf([[0, 1], [6, 27]]);
+  assert.equal(encodeRoster(r), "1-100000r"); // slots 0..6
+});
+
+test("a full 40-player raid is 42 chars (wowtbc's equivalent is 90)", () => {
+  const r = Array.from({ length: 40 }, (_, i) => (i % 27) + 1);
+  assert.equal(encodeRoster(r)!.length, 42);
+  assert.deepEqual(roundTrip(r, Array(40).fill("")).roster, r);
+});
+
+test("names round-trip, including spaces, accents, & and +", () => {
+  const r = rosterOf([[0, 3], [1, 14], [39, 26]]);
+  const names = Array(40).fill("");
+  names[0] = "Thrall";
+  names[1] = "Jaina & co+1";
+  names[39] = "Élune";
+  assert.deepEqual(roundTrip(r, names), { roster: r, names });
+});
+
+test("~ is stripped from names so it can't break the separator", () => {
+  const names = Array(40).fill("");
+  names[0] = "a~b";
+  assert.equal(encodeNames(names), "ab");
+});
+
+test("bad codes decode to an empty roster", () => {
+  for (const bad of [null, "", "2-111", "1-!!", "garbage"]) assert.deepEqual(decodeRoster(bad), emptyRoster());
+  assert.equal(decodeRoster("1-z")[0], 0); // 35 > 27 specs
 });

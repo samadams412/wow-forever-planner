@@ -1,12 +1,14 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Dialog from "@/components/site/Dialog";
 import CoveragePanel from "@/components/raid-comp/CoveragePanel";
 import {
   GROUP_COUNT,
   GROUP_SIZE,
   MAX_NAME_LENGTH,
+  cleanName,
+  rosterQuery,
   computeCoverage,
   perCasterShortfalls,
   roleCounts,
@@ -39,19 +41,41 @@ export default function RaidCompPlanner({
   onlyOneCounts,
   perCaster,
   build,
+  initialRoster,
+  initialNames,
 }: {
   specs: SpecView[];
   effects: EffectView[];
   onlyOneCounts: EffectSet[];
   perCaster: EffectSet[];
   build: string;
+  initialRoster?: Roster;
+  initialNames?: string[];
 }) {
-  const [roster, setRoster] = useState<Roster>(emptyRoster);
-  const [names, setNames] = useState<string[]>(emptyNames);
+  // Initial values only: later URL changes come from this component itself.
+  const [roster, setRoster] = useState<Roster>(() => initialRoster ?? emptyRoster());
+  const [names, setNames] = useState<string[]>(() => initialNames ?? emptyNames());
+  const [copied, setCopied] = useState(false);
   const [armed, setArmed] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [pickerSlot, setPickerSlot] = useState<number | null>(null);
   const [dropTarget, setDropTarget] = useState<number | null>(null);
+
+  useEffect(() => {
+    // replaceState, not router.replace: a pure address-bar sync, no re-render
+    // or refetch of the (static) page. See PlannerClient for the same call.
+    window.history.replaceState(null, "", `${window.location.pathname}${rosterQuery(roster, names)}`);
+  }, [roster, names]);
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // clipboard API unavailable; the address bar already holds the link
+    }
+  };
 
   const specAt = (i: number) => (roster[i] ? specs[roster[i] - 1] : undefined);
 
@@ -119,6 +143,14 @@ export default function RaidCompPlanner({
           <h2 className="text-sm font-medium text-foreground">Specs</h2>
           <div className="flex items-center gap-3 text-xs text-foreground-muted">
             <span>{filled} / {roster.length} players</span>
+            <button
+              type="button"
+              onClick={copyLink}
+              disabled={filled === 0}
+              className="rounded border border-accent/60 px-2 py-1 text-foreground hover:bg-surface-hover disabled:opacity-40"
+            >
+              {copied ? "Link copied" : "Share"}
+            </button>
             <button
               type="button"
               onClick={reset}
@@ -243,7 +275,7 @@ export default function RaidCompPlanner({
                     <input
                       value={names[slot]}
                       onChange={(e) => {
-                        const v = e.target.value.slice(0, MAX_NAME_LENGTH);
+                        const v = cleanName(e.target.value);
                         setNames((n) => n.map((x, i) => (i === slot ? v : x)));
                       }}
                       maxLength={MAX_NAME_LENGTH}

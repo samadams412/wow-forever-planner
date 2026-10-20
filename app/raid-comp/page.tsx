@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RaidCompPlanner from "@/components/raid-comp/RaidCompPlanner";
+import RaidCompFromUrl from "@/components/raid-comp/RaidCompFromUrl";
 import { SPECS, type SpecView } from "@/lib/raid-comp";
 import { getRaidEffectSets, getRaidEffects } from "@/lib/raid-buffs";
 import { CLASS_COLOR, classLabel, getTreeIcon, mediumIconUrl } from "@/lib/wow-data";
@@ -27,7 +27,7 @@ export default function RaidCompPage() {
       <p className="mt-1 text-sm text-foreground-muted">
         Tap a spec, then tap slots to place it. On desktop you can also drag specs and players around.
       </p>
-      <RaidCompPlanner
+      <RaidCompFromUrl
         specs={specs}
         effects={getRaidEffects()}
         onlyOneCounts={sets.onlyOneCounts}

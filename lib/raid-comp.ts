@@ -197,3 +197,63 @@ export function perCasterShortfalls(
   }
   return out;
 }
+
+// ---------------------------------------------------------------------------
+// Share URL: /raid-comp?r=1-<one base36 char per slot>&n=<names>
+//
+// `r` is the roster, same idea as lib/build-code.ts: a leading version
+// segment, then one base36 digit per slot (0 = empty, 1..27 = SPECS index)
+// in slot order, trailing empties trimmed. A full raid is 42 chars. Bump
+// ROSTER_CODE_VERSION (and branch in decodeRoster) if SPECS ever has to
+// change in a way that isn't a pure append.
+// `n` is the slot names, each percent-encoded, joined by "~", trailing
+// empties trimmed. "~" is stripped from names, so it can't collide.
+// Both are omitted when empty, so a blank planner is a bare /raid-comp.
+
+export const ROSTER_CODE_VERSION = 1;
+const NAME_SEPARATOR = "~";
+
+export const cleanName = (name: string) => name.replaceAll(NAME_SEPARATOR, "").slice(0, MAX_NAME_LENGTH);
+
+const trimTrailing = <T>(list: T[], isEmpty: (v: T) => boolean): T[] => {
+  let end = list.length;
+  while (end > 0 && isEmpty(list[end - 1])) end--;
+  return list.slice(0, end);
+};
+
+export function encodeRoster(roster: Roster): string | null {
+  const digits = trimTrailing(roster, (v) => v === 0);
+  return digits.length ? `${ROSTER_CODE_VERSION}-${digits.map((v) => v.toString(36)).join("")}` : null;
+}
+
+export function encodeNames(names: string[]): string | null {
+  const kept = trimTrailing(names.map(cleanName), (v) => v === "");
+  return kept.length ? kept.map((n) => encodeURIComponent(n)).join(NAME_SEPARATOR) : null;
+}
+
+/** Query string (with "?") for the current state, or "" when empty. */
+export function rosterQuery(roster: Roster, names: string[]): string {
+  const r = encodeRoster(roster);
+  const n = encodeNames(names);
+  const parts = [r && `r=${r}`, n && `n=${n}`].filter(Boolean);
+  return parts.length ? `?${parts.join("&")}` : "";
+}
+
+/** Unknown version or malformed code = empty roster (never throws). */
+export function decodeRoster(code: string | null): Roster {
+  const roster = emptyRoster();
+  const m = code?.match(/^(\d+)-([0-9a-z]*)$/i);
+  if (!m || Number(m[1]) !== ROSTER_CODE_VERSION) return roster;
+  [...m[2].toLowerCase()].slice(0, ROSTER_SIZE).forEach((ch, i) => {
+    const v = parseInt(ch, 36);
+    roster[i] = v <= SPECS.length ? v : 0;
+  });
+  return roster;
+}
+
+/** `value` is the already percent-decoded param (URLSearchParams.get). */
+export function decodeNames(value: string | null): string[] {
+  const names = emptyNames();
+  (value ?? "").split(NAME_SEPARATOR).slice(0, ROSTER_SIZE).forEach((n, i) => (names[i] = n.slice(0, MAX_NAME_LENGTH)));
+  return names;
+}
