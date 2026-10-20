@@ -20,6 +20,7 @@ type NavLink = {
 
 const NAV_LINKS: NavLink[] = [
   { href: "/planner", label: "Planner" },
+  { href: "/raid-comp", label: "Raid Comp" },
   {
     href: "/reference",
     label: "Reference",
