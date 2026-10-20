@@ -213,6 +213,12 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   cursors while `html:has(dialog:modal)`. `/raid-comp` in
   `app/sitemap.ts`. `app/robots.ts` disallows `/raid-comp?` (shared-link
   variants), like `/planner/*/`; `/raid-comp` itself is allowed.
+- **Sticky specs bar (2026-10-20):** the Specs section (controls row + grid)
+  is `sm:sticky top-0`; a ResizeObserver writes its height to `--specs-h`
+  on the planner root (0 when not sticky), which offsets the sticky coverage
+  and rules columns (`top`/`max-h`) and `#stacking-rules`' `scroll-mt`.
+  Not sticky on phones (3 grid rows = ~42% of a 390px screen; the empty-slot
+  picker covers that case).
 - **Interaction:** tap a palette spec to arm it, then tap slots; tapping
   an empty slot with nothing armed opens a spec picker (`Dialog`); tapping
   a filled slot then another moves/swaps. Desktop adds HTML5 drag (palette
