@@ -11,6 +11,7 @@ import { getAllQuestIds } from "@/lib/quests";
 const STATIC_ROUTES = [
   "",
   "/planner",
+  "/raid-comp",
   "/reference",
   "/reference/racials",
   "/reference/legacy-perks",

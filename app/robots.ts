@@ -11,9 +11,10 @@ export default function robots(): MetadataRoute.Robots {
         // (and for the catalogs a server render): catalog filter/sort/page
         // combinations, ?from= back-link variants of item and quest pages
         // (items are listed in the sitemap without it), and shared-build
-        // planner URLs (canonical /planner). /planner/og/ stays allowed so
+        // planner URLs (canonical /planner) and shared raid rosters
+        // (/raid-comp?r=..., canonical /raid-comp). /planner/og/ stays allowed so
         // link previews (X checks robots.txt) can fetch build images.
-        disallow: ["/reference/items?", "/reference/quests?", "/items/*?", "/quests/*?", "/planner/*/"],
+        disallow: ["/reference/items?", "/reference/quests?", "/items/*?", "/quests/*?", "/planner/*/", "/raid-comp?"],
       },
       {
         // AI-training crawlers, plus MJ12bot and Amazonbot: heavy crawl
