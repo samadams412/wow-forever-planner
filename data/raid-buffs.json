@@ -1,0 +1,591 @@
+{
+  "source": "Hand-curated for Forevercraft (not generated). Every effect, its scope (raid / group / single target) and which specs can provide it was read from this site's own data/spellbooks.json and data/talents/*.json, both synced to the WoW Forever beta client. wowtbc.gg's raid comp planner was looked at only to see which effects players track; none of its data was copied. Validated by scripts/check-raid-buffs.js (runs in prebuild).",
+  "build": "1.60.1.70425",
+  "verified": "2026-10-19",
+  "conventions": {
+    "specs": "\"all\" = a spell every member of the class learns. A list of talent-tree names = a talent (or a spellbook spell flagged talent: true), credited only to that tree's spec.",
+    "confidence": "On an effect: its scope and numbers, read from spell text. On a source: whether that spec really provides it. On an onlyOneCounts / perCaster set: the stacking or one-at-a-time rule, which spell text usually doesn't state."
+  },
+  "onlyOneCounts": [
+    {
+      "id": "major-armor",
+      "label": "Major armor reduction",
+      "confidence": "estimated",
+      "note": "Sunder Armor and Expose Armor didn't stack in Classic. Both cap at 2,250 armor in Forever."
+    },
+    {
+      "id": "minor-armor",
+      "label": "-505 armor",
+      "confidence": "estimated",
+      "note": "All three reduce armor by exactly 505, which suggests one shared slot. In Classic, Faerie Fire and Curse of Recklessness did stack, so this is the least certain set."
+    },
+    {
+      "id": "attack-power-reduction",
+      "label": "-204 attack power",
+      "confidence": "estimated",
+      "note": "All four lower attack power by exactly 204. Demoralizing Shout and Roar didn't stack in Classic."
+    },
+    {
+      "id": "hit-reduction",
+      "label": "-2% hit",
+      "confidence": "estimated",
+      "note": "Insect Swarm and Scorpid Sting didn't stack in Classic."
+    },
+    {
+      "id": "armor-proc",
+      "label": "+25% armor on heal crit",
+      "confidence": "estimated",
+      "note": "Ancestral Healing and Inspiration give the same buff value and didn't stack in Classic."
+    }
+  ],
+  "perCaster": [
+    {
+      "id": "paladin-blessings",
+      "classId": "paladin",
+      "label": "Blessings",
+      "confidence": "confirmed",
+      "note": "Spell text: players may only have one Blessing on them per Paladin. Salvation is not a Blessing in Forever, so it isn't in this set."
+    },
+    {
+      "id": "paladin-auras",
+      "classId": "paladin",
+      "label": "Auras",
+      "confidence": "confirmed",
+      "note": "Spell text: only one Aura per Paladin."
+    },
+    {
+      "id": "paladin-judgements",
+      "classId": "paladin",
+      "label": "Judgements",
+      "confidence": "confirmed",
+      "note": "Spell text: only one Judgement per Paladin can be active."
+    },
+    {
+      "id": "warlock-curses",
+      "classId": "warlock",
+      "label": "Curses",
+      "confidence": "confirmed",
+      "note": "Spell text: only one Curse per Warlock on any one target."
+    },
+    {
+      "id": "shaman-air-totems",
+      "classId": "shaman",
+      "label": "Air totems",
+      "confidence": "estimated",
+      "note": "One totem per element in Classic. Forever's spell text doesn't restate it."
+    },
+    {
+      "id": "shaman-water-totems",
+      "classId": "shaman",
+      "label": "Water totems",
+      "confidence": "estimated",
+      "note": "One totem per element in Classic. Forever's spell text doesn't restate it."
+    },
+    {
+      "id": "hunter-pets",
+      "classId": "hunter",
+      "label": "Pet abilities",
+      "confidence": "estimated",
+      "note": "Each comes from a different pet family (wolf, tallstrider, owl/bat), and a Hunter has one pet out at a time."
+    }
+  ],
+  "effects": [
+    {
+      "id": "arcane-intellect",
+      "name": "Arcane Intellect",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+31 Intellect",
+      "raidSpell": "Arcane Brilliance",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "mage", "specs": "all", "spell": "Arcane Intellect", "confidence": "confirmed" }]
+    },
+    {
+      "id": "power-word-fortitude",
+      "name": "Power Word: Fortitude",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+70 Stamina",
+      "raidSpell": "Prayer of Fortitude",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "priest", "specs": "all", "spell": "Power Word: Fortitude", "confidence": "confirmed" }]
+    },
+    {
+      "id": "divine-spirit",
+      "name": "Divine Spirit",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+40 Spirit",
+      "raidSpell": "Prayer of Spirit",
+      "confidence": "confirmed",
+      "note": "Every Priest learns it in Forever. It was a Discipline talent in Classic.",
+      "sources": [{ "classId": "priest", "specs": "all", "spell": "Divine Spirit", "confidence": "confirmed" }]
+    },
+    {
+      "id": "shadow-protection",
+      "name": "Shadow Protection",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+60 Shadow resistance",
+      "raidSpell": "Prayer of Shadow Protection",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "priest", "specs": "all", "spell": "Shadow Protection", "confidence": "confirmed" }]
+    },
+    {
+      "id": "mark-of-the-wild",
+      "name": "Mark of the Wild",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+385 armor, +16 all stats, +27 all resistances",
+      "raidSpell": "Gift of the Wild",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "druid", "specs": "all", "spell": "Mark of the Wild", "confidence": "confirmed" }]
+    },
+    {
+      "id": "blessing-of-kings",
+      "name": "Blessing of Kings",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+10% all stats",
+      "raidSpell": "Greater Blessing of Kings",
+      "perCaster": "paladin-blessings",
+      "confidence": "confirmed",
+      "note": "Every Paladin learns it in Forever. It was a Protection talent in Classic.",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Blessing of Kings", "confidence": "confirmed" }]
+    },
+    {
+      "id": "blessing-of-might",
+      "name": "Blessing of Might",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+133 melee attack power",
+      "raidSpell": "Greater Blessing of Might",
+      "perCaster": "paladin-blessings",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Blessing of Might", "confidence": "confirmed" }]
+    },
+    {
+      "id": "blessing-of-wisdom",
+      "name": "Blessing of Wisdom",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+40 mana every 5 sec",
+      "raidSpell": "Greater Blessing of Wisdom",
+      "perCaster": "paladin-blessings",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Blessing of Wisdom", "confidence": "confirmed" }]
+    },
+    {
+      "id": "blessing-of-light",
+      "name": "Blessing of Light",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+400 Holy Light, +115 Flash of Light healing received",
+      "raidSpell": "Greater Blessing of Light",
+      "perCaster": "paladin-blessings",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Blessing of Light", "confidence": "confirmed" }]
+    },
+    {
+      "id": "salvation",
+      "name": "Salvation",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "-30% threat generated",
+      "raidSpell": "Mass Salvation",
+      "confidence": "confirmed",
+      "note": "No longer a Blessing in Forever (was Blessing of Salvation), so it doesn't use up a Paladin's Blessing slot. New Revoke spell removes it.",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Salvation", "confidence": "confirmed" }]
+    },
+    {
+      "id": "battle-shout",
+      "name": "Battle Shout",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+139 melee attack power",
+      "confidence": "confirmed",
+      "note": "Party or raid within 20 yards in Forever. Party-only in Classic.",
+      "sources": [{ "classId": "warrior", "specs": "all", "spell": "Battle Shout", "confidence": "confirmed" }]
+    },
+    {
+      "id": "trueshot-aura",
+      "name": "Trueshot Aura",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+50 ranged attack power",
+      "confidence": "confirmed",
+      "note": "Party or raid within 45 yards in Forever. Party-only in Classic.",
+      "sources": [{ "classId": "hunter", "specs": ["Marksmanship"], "talent": "Trueshot Aura", "confidence": "confirmed" }]
+    },
+    {
+      "id": "leader-of-the-pack",
+      "name": "Leader of the Pack",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+3% melee and ranged crit",
+      "confidence": "confirmed",
+      "note": "Party or raid within 45 yards in Forever. Party-only in Classic.",
+      "sources": [{ "classId": "druid", "specs": ["Feral Combat"], "talent": "Leader of the Pack", "confidence": "confirmed" }]
+    },
+    {
+      "id": "moonkin-form",
+      "name": "Moonkin Form",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+3% spell crit",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "druid", "specs": ["Balance"], "talent": "Moonkin Form", "confidence": "confirmed" }]
+    },
+    {
+      "id": "strength-of-earth-totem",
+      "name": "Strength of Earth Totem",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+53 Strength",
+      "confidence": "confirmed",
+      "note": "Party or raid within 30 yards in Forever. Party-only in Classic.",
+      "sources": [{ "classId": "shaman", "specs": "all", "spell": "Strength of Earth Totem", "confidence": "confirmed" }]
+    },
+    {
+      "id": "grace-of-air-totem",
+      "name": "Grace of Air Totem",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+89 Agility",
+      "perCaster": "shaman-air-totems",
+      "confidence": "confirmed",
+      "note": "Party or raid within 30 yards in Forever. Party-only in Classic.",
+      "sources": [{ "classId": "shaman", "specs": "all", "spell": "Grace of Air Totem", "confidence": "confirmed" }]
+    },
+    {
+      "id": "windfury-totem",
+      "name": "Windfury Totem",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "20% chance per main-hand hit of an extra attack with +246 attack power",
+      "perCaster": "shaman-air-totems",
+      "confidence": "confirmed",
+      "note": "Party or raid within 30 yards in Forever. Party-only in Classic.",
+      "sources": [{ "classId": "shaman", "specs": "all", "spell": "Windfury Totem", "confidence": "confirmed" }]
+    },
+    {
+      "id": "flametongue-totem",
+      "name": "Flametongue Totem",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "17 to 55 extra Fire damage per main-hand hit",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "shaman", "specs": "all", "spell": "Flametongue Totem", "confidence": "confirmed" }]
+    },
+    {
+      "id": "furious-howl",
+      "name": "Furious Howl",
+      "kind": "buff",
+      "scope": "raid",
+      "summary": "+83 melee attack power, 15 yards, 1 min",
+      "perCaster": "hunter-pets",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Furious Howl", "confidence": "estimated", "note": "Wolf pet only. Counts only if the Hunter brings a wolf." }]
+    },
+    {
+      "id": "devotion-aura",
+      "name": "Devotion Aura",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "+735 armor",
+      "perCaster": "paladin-auras",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Devotion Aura", "confidence": "confirmed" }]
+    },
+    {
+      "id": "retribution-aura",
+      "name": "Retribution Aura",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "20 Holy damage to melee attackers",
+      "perCaster": "paladin-auras",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Retribution Aura", "confidence": "confirmed" }]
+    },
+    {
+      "id": "concentration-aura",
+      "name": "Concentration Aura",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "35% chance to ignore spell pushback",
+      "perCaster": "paladin-auras",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Concentration Aura", "confidence": "confirmed" }]
+    },
+    {
+      "id": "blood-pact",
+      "name": "Blood Pact",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "+54 Stamina",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "warlock", "specs": "all", "spell": "Blood Pact", "confidence": "estimated", "note": "Imp only. Counts only if the Warlock has the Imp out." }]
+    },
+    {
+      "id": "healing-stream-totem",
+      "name": "Healing Stream Totem",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "11 health every 2 sec",
+      "perCaster": "shaman-water-totems",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "shaman", "specs": "all", "spell": "Healing Stream Totem", "confidence": "confirmed" }]
+    },
+    {
+      "id": "mana-spring-totem",
+      "name": "Mana Spring Totem",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "10 mana every 2 sec",
+      "perCaster": "shaman-water-totems",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "shaman", "specs": "all", "spell": "Mana Spring Totem", "confidence": "confirmed" }]
+    },
+    {
+      "id": "mana-tide-totem",
+      "name": "Mana Tide Totem",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "290 mana every 3 sec for 12 sec",
+      "perCaster": "shaman-water-totems",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "shaman", "specs": ["Restoration"], "talent": "Mana Tide Totem", "confidence": "confirmed", "note": "The spellbook flags the spell talent: true, so it's the Restoration talent, not a baseline spell." }]
+    },
+    {
+      "id": "vampiric-embrace",
+      "name": "Vampiric Embrace",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "Party healed for 20% of the Priest's Shadow damage",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "priest", "specs": ["Shadow"], "talent": "Vampiric Embrace", "confidence": "confirmed" }]
+    },
+    {
+      "id": "dark-inspiration",
+      "name": "Dark Inspiration",
+      "kind": "buff",
+      "scope": "group",
+      "summary": "+15% Spirit for 10 sec",
+      "confidence": "confirmed",
+      "note": "New in Forever.",
+      "sources": [{ "classId": "priest", "specs": ["Shadow"], "talent": "Dark Inspiration", "confidence": "confirmed" }]
+    },
+    {
+      "id": "innervate",
+      "name": "Innervate",
+      "kind": "buff",
+      "scope": "target",
+      "summary": "+400% mana regeneration for 20 sec",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "druid", "specs": "all", "spell": "Innervate", "confidence": "confirmed" }]
+    },
+    {
+      "id": "power-infusion",
+      "name": "Power Infusion",
+      "kind": "buff",
+      "scope": "target",
+      "summary": "+20% spell damage and healing for 15 sec",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "priest", "specs": ["Discipline"], "talent": "Power Infusion", "confidence": "confirmed" }]
+    },
+    {
+      "id": "ancestral-healing",
+      "name": "Ancestral Healing",
+      "kind": "buff",
+      "scope": "target",
+      "summary": "+25% armor for 15 sec after a heal crit",
+      "onlyOneCounts": "armor-proc",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "shaman", "specs": ["Restoration"], "talent": "Ancestral Healing", "confidence": "confirmed" }]
+    },
+    {
+      "id": "inspiration",
+      "name": "Inspiration",
+      "kind": "buff",
+      "scope": "target",
+      "summary": "+25% armor for 15 sec after a heal crit",
+      "onlyOneCounts": "armor-proc",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "priest", "specs": ["Holy"], "talent": "Inspiration", "confidence": "confirmed" }]
+    },
+    {
+      "id": "sunder-armor",
+      "name": "Sunder Armor",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-450 armor per stack, 5 stacks (-2,250)",
+      "onlyOneCounts": "major-armor",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "warrior", "specs": "all", "spell": "Sunder Armor", "confidence": "confirmed" }]
+    },
+    {
+      "id": "expose-armor",
+      "name": "Expose Armor",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-450 armor per combo point (-2,250 at 5)",
+      "onlyOneCounts": "major-armor",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "rogue", "specs": "all", "spell": "Expose Armor", "confidence": "confirmed" }]
+    },
+    {
+      "id": "curse-of-recklessness",
+      "name": "Curse of Recklessness",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-505 armor",
+      "onlyOneCounts": "minor-armor",
+      "perCaster": "warlock-curses",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "warlock", "specs": "all", "spell": "Curse of Recklessness", "confidence": "confirmed" }]
+    },
+    {
+      "id": "faerie-fire",
+      "name": "Faerie Fire",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-505 armor",
+      "onlyOneCounts": "minor-armor",
+      "confidence": "confirmed",
+      "note": "Works in Cat and Bear Form in Forever without the old Faerie Fire (Feral) talent, which is gone.",
+      "sources": [{ "classId": "druid", "specs": "all", "spell": "Faerie Fire", "confidence": "confirmed" }]
+    },
+    {
+      "id": "dust-cloud",
+      "name": "Dust Cloud",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-505 armor",
+      "onlyOneCounts": "minor-armor",
+      "perCaster": "hunter-pets",
+      "confidence": "confirmed",
+      "note": "New in Forever (tallstrider pet).",
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Dust Cloud", "confidence": "estimated", "note": "Tallstrider pet only. Counts only if the Hunter brings one." }]
+    },
+    {
+      "id": "curse-of-the-elements",
+      "name": "Curse of the Elements",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-75 magic resistances, +10% magic damage taken",
+      "perCaster": "warlock-curses",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "warlock", "specs": "all", "spell": "Curse of the Elements", "confidence": "confirmed" }]
+    },
+    {
+      "id": "demoralizing-shout",
+      "name": "Demoralizing Shout",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-204 melee attack power",
+      "onlyOneCounts": "attack-power-reduction",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "warrior", "specs": "all", "spell": "Demoralizing Shout", "confidence": "confirmed" }]
+    },
+    {
+      "id": "demoralizing-roar",
+      "name": "Demoralizing Roar",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-204 melee attack power",
+      "onlyOneCounts": "attack-power-reduction",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "druid", "specs": "all", "spell": "Demoralizing Roar", "confidence": "confirmed", "note": "Bear Form ability every Druid learns. In practice it comes from whoever is in Bear Form." }]
+    },
+    {
+      "id": "demoralizing-screech",
+      "name": "Demoralizing Screech",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-204 melee attack power",
+      "onlyOneCounts": "attack-power-reduction",
+      "perCaster": "hunter-pets",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Demoralizing Screech", "confidence": "estimated", "note": "Pet ability. Counts only if the Hunter brings a pet that has it." }]
+    },
+    {
+      "id": "vindication",
+      "name": "Vindication",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-204 attack power (chance on melee hit)",
+      "onlyOneCounts": "attack-power-reduction",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": ["Retribution"], "talent": "Vindication", "confidence": "confirmed" }]
+    },
+    {
+      "id": "insect-swarm",
+      "name": "Insect Swarm",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-2% chance to hit",
+      "onlyOneCounts": "hit-reduction",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "druid", "specs": ["Balance"], "talent": "Insect Swarm", "confidence": "confirmed" }]
+    },
+    {
+      "id": "scorpid-sting",
+      "name": "Scorpid Sting",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "-2% chance to hit",
+      "onlyOneCounts": "hit-reduction",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Scorpid Sting", "confidence": "confirmed" }]
+    },
+    {
+      "id": "thunder-clap",
+      "name": "Thunder Clap",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "+20% time between attacks",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "warrior", "specs": "all", "spell": "Thunder Clap", "confidence": "confirmed" }]
+    },
+    {
+      "id": "hunters-mark",
+      "name": "Hunter's Mark",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "+71 ranged attack power for all attackers",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "hunter", "specs": "all", "spell": "Hunter's Mark", "confidence": "confirmed" }]
+    },
+    {
+      "id": "judgement-of-the-crusader",
+      "name": "Judgement of the Crusader",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "+161 Holy damage taken",
+      "perCaster": "paladin-judgements",
+      "confidence": "confirmed",
+      "note": "Judging no longer consumes the Seal in Forever.",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Seal of the Crusader", "confidence": "confirmed" }]
+    },
+    {
+      "id": "judgement-of-wisdom",
+      "name": "Judgement of Wisdom",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "Attacks and spells on the target can restore 59 mana",
+      "perCaster": "paladin-judgements",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Seal of Wisdom", "confidence": "confirmed" }]
+    },
+    {
+      "id": "judgement-of-light",
+      "name": "Judgement of Light",
+      "kind": "debuff",
+      "scope": "enemy",
+      "summary": "Melee attacks on the target can heal the attacker for 61",
+      "perCaster": "paladin-judgements",
+      "confidence": "confirmed",
+      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Seal of Light", "confidence": "confirmed" }]
+    }
+  ]
+}
