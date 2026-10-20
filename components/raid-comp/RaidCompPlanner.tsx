@@ -171,6 +171,7 @@ export default function RaidCompPlanner({
 
   const active = useMemo(() => roster.slice(0, size), [roster, size]);
   const coverage = useMemo(() => computeCoverage(active, effects), [active, effects]);
+  const classes = useMemo(() => Object.fromEntries(specs.map((s) => [s.classId, { name: s.className, color: s.color }])), [specs]);
   const shortfalls = useMemo(
     () => perCasterShortfalls(active, effects, coverage, perCaster, Object.fromEntries(specs.map((s) => [s.classId, s.className]))),
     [active, effects, coverage, perCaster, specs],
@@ -389,7 +390,7 @@ export default function RaidCompPlanner({
       </div>
       {/* Its own column on xl; below the groups on lg; last on phones, so it never pushes coverage down. */}
       <div className="scrollbar-gold xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto">
-        <StackingRules effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} />
+        <StackingRules effects={effects} coverage={coverage} shortfalls={shortfalls} onlyOneCounts={onlyOneCounts} classes={classes} />
       </div>
       </div>
 

@@ -142,6 +142,7 @@ export type EffectCoverage = {
 
 export type PerCasterShortfall = {
   setId: string;
+  classId: string;
   label: string;
   className: string;
   casters: number;
@@ -183,7 +184,7 @@ export function perCasterShortfalls(
     const members = effects.filter((e) => e.perCaster === set.id);
     if (members.length === 0) continue;
     const casterSlots = roster.flatMap((spec, slot) => (getSpec(spec)?.classId === set.classId ? [slot] : []));
-    const base = { setId: set.id, label: set.label, className: classNames[set.classId], confidence: set.confidence };
+    const base = { setId: set.id, classId: set.classId, label: set.label, className: classNames[set.classId], confidence: set.confidence };
     if (members[0].scope === "group") {
       for (let g = 0; g < GROUP_COUNT; g++) {
         const casters = casterSlots.filter((s) => groupOf(s) === g).length;

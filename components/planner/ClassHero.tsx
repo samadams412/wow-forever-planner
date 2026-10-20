@@ -1,3 +1,4 @@
+import { CLASS_TEXT_SHADOW } from "@/lib/class-text";
 import { mediumIconUrl, getTreeIcon, CLASS_COLOR, classLabel, type TalentTree } from "@/lib/wow-data";
 import { pointsSpentInTree, leadingTreeIndex } from "@/lib/talent-rules";
 import type { RankState } from "@/lib/build-code";
@@ -24,14 +25,9 @@ const LEAD_BAR_COLOR = "#ffffff";
 // soft halo to show up against. Priest's white-on-Light-mode's near-white
 // surface is the opposite case -- a solid color within a few shades of the
 // text itself -- so this is a real 4-direction hard outline plus a wider
-// soft glow, not just a drop shadow.
-const CLASS_TEXT_SHADOW = [
-  "-1px -1px 2px rgba(0,0,0,0.9)",
-  "1px -1px 2px rgba(0,0,0,0.9)",
-  "-1px 1px 2px rgba(0,0,0,0.9)",
-  "1px 1px 2px rgba(0,0,0,0.9)",
-  "0 0 5px rgba(0,0,0,0.6)",
-].join(", ");
+// soft glow, not just a drop shadow. Lives in lib/class-text.ts, shared
+// with the raid comp planner (which can't import this file: lib/wow-data).
+
 
 export default function ClassHero({
   classId,
