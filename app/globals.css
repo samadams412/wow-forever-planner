@@ -230,6 +230,22 @@ html.light-mode {
   html.js-custom-cursor [data-cursor] {
     cursor: none;
   }
+
+  /* A modal <dialog> (raid comp "?") sits in the browser's top layer, above
+     the overlay's z-index, so the overlay would be stuck behind it. While one
+     is open, use the native gauntlet cursors instead (same images/hotspot).
+     Browsers without :has() drop these rules and keep the overlay. */
+  html.js-custom-cursor:has(dialog:modal) body {
+    cursor: url("/cursors/gauntlet.png") 6 4, auto;
+  }
+
+  html.js-custom-cursor:has(dialog:modal) :is(a, button:not(:disabled), [role="button"], summary) {
+    cursor: url("/cursors/gauntlet-active.png") 6 4, pointer;
+  }
+}
+
+html:has(dialog:modal) .wow-cursor {
+  display: none;
 }
 
 /* CustomCursor's dynamic hover states -- written as plain CSS rather than

@@ -208,7 +208,9 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   h1. The how-to is a native `<dialog>` that's always mounted (hidden until
   `showModal()`), so the text is in the prerendered HTML. **Don't swap it for
   the house `Dialog`**, which unmounts when closed and would drop the text
-  from the static HTML. `/raid-comp` in
+  from the static HTML. A modal `<dialog>` sits above `CustomCursor`'s
+  overlay (top layer), so `globals.css` swaps to the native gauntlet
+  cursors while `html:has(dialog:modal)`. `/raid-comp` in
   `app/sitemap.ts`. `app/robots.ts` disallows `/raid-comp?` (shared-link
   variants), like `/planner/*/`; `/raid-comp` itself is allowed.
 - **Interaction:** tap a palette spec to arm it, then tap slots; tapping
