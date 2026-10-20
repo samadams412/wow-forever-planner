@@ -37,6 +37,9 @@ improvise a different structure session to session.
   (entrances, flight masters, towns; blocked categories stubbed, as of
   2026-10-19), and a sidebar (zone list/search/layer toggles), all URL-hash
   restorable. See "World map" → "Marker layers" below.
+- Raid comp planner (`/raid-comp`, 2026-10-19): 40-slot roster by spec,
+  live buff/debuff coverage from hand-curated `data/raid-buffs.json`, role
+  summary, shareable `?r=&n=` link. See "Raid comp planner" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
 ## Standing rule: no runtime-variable or full-file disk reads in server code
@@ -103,6 +106,61 @@ different trees of one class (Shaman: V2 Elemental, V5 Restoration).
 for whatever changed, following the existing pattern — don't remove the
 versioning machinery just because it looks unused most of the time.
 
+### Raid comp planner (`/raid-comp`)
+Built 2026-10-19. Feature shape learned from wowtbc.gg's raid comp planner
+(mechanism only; none of its code, data, icons or design was copied).
+Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.md`.
+- **Files:** `app/raid-comp/page.tsx` (static ○ server shell),
+  `components/raid-comp/{RaidCompFromUrl,RaidCompPlanner,CoveragePanel}.tsx`,
+  `lib/raid-comp.ts` (client-safe core: frozen spec list, roles, coverage,
+  share-link codec), `lib/raid-buffs.ts` (server-only resolver),
+  `lib/raid-comp.test.ts`. Top-level "Raid Comp" link in `SiteHeader`.
+- **Client bundle stays small on purpose:** `lib/raid-comp.ts` must not
+  import `lib/wow-data` (it pulls every talent file into the client). The
+  page resolves spec icons/colors (`SpecView`) and effect icons + Forever
+  tooltip text (`EffectView`, via `lib/raid-buffs.ts`) on the server and
+  passes them down. Effect rows are native `<details>` (tap to expand), not
+  `TooltipCard` hovers, for the same reason and because hover doesn't
+  exist on touch, so `active-tooltip` isn't involved.
+- **Data: `data/raid-buffs.json` is hand-curated, never generated.** 49
+  effects (raid / group / single-target buffs, enemy debuffs), each with
+  sources `{classId, specs: "all" | [tree], spell | talent, confidence,
+  note}`. `"all"` = a spell every class member learns; a talent (or a
+  spellbook spell flagged `talent: true`) is credited only to its tree.
+  `onlyOneCounts` sets (stacking: major/minor armor, -204 AP, -2% hit,
+  armor proc) and `perCaster` sets (one-at-a-time: Blessings, Auras,
+  Judgements, Curses, air/water totems, hunter pets). Top-level `source` +
+  `build` record provenance (verified against build 1.60.1.70425 spell
+  text). `scripts/check-raid-buffs.js` runs first in `prebuild` and fails
+  the build if any spell/talent/tree/set reference stops matching
+  `data/spellbooks.json` / `data/talents/*.json`. **After every talent or
+  spellbook sync, re-read the effects' Forever text** (the check only
+  catches names, not changed numbers or scope), and update `build`.
+- **Coverage is spec-level:** a slot covers an effect if its spec can
+  provide it (no talent builds, no pet choice). Group-scope effects only
+  reach the provider's group. `perCasterShortfalls` adds "1 Paladin for 4
+  Blessings" notes when casters < covered effects in a set (per group for
+  group-scope sets). Each icon has a source-count badge.
+- **Share link:** `?r=1-<base36 digit per slot>&n=<names>`. Digit = 1-based
+  index into `SPEC_ORDER` (0 = empty), trailing empties trimmed (full raid
+  = 42 chars). **`SPEC_ORDER` is frozen**: never reorder or remove entries
+  (a renamed tree changes `tree` in place; new specs append). If that ever
+  can't hold, bump `ROSTER_CODE_VERSION` and branch in `decodeRoster`, as
+  with build codes. Names are percent-encoded, joined by `~` (stripped from
+  names), max 12 chars. Read client-side (`useSearchParams` under
+  Suspense); written with `history.replaceState`. Never read
+  `searchParams` in `page.tsx` (keeps the page static, same rule as the
+  planner).
+- **Interaction:** tap a palette spec to arm it, then tap slots; tapping
+  an empty slot with nothing armed opens a spec picker (`Dialog`); tapping
+  a filled slot then another moves/swaps. Desktop adds HTML5 drag (palette
+  → slot, slot ↔ slot), which never fires from touch. The status bar is
+  `fixed` at the bottom so it never shifts the grid (a sticky in-flow bar
+  caused mis-taps).
+- **Roles:** default role per spec (Feral = "flex", shown as "+N Feral"
+  on Tanks and DPS). Soft hints from 10 players up: no tanks, or healers
+  under 20% of the roster (rule of thumb, not a game rule).
+
 ### Mobile talent tree interaction (`TalentNode.tsx`/`TalentTreeGrid.tsx`)
 - Tap always adds a point (never toggles remove — removal is the
   dedicated minus button).
@@ -160,7 +218,7 @@ real candidate for the same factor-out, not fixed yet.
 
 ### Reference nav dropdown
 `SiteHeader.tsx`'s `NAV_LINKS` entries support `children: {href, label}[]`
-— only Reference does (Racials, Legacy Perks, Class Spellbooks, Dungeon
+(top-level links: Planner, Raid Comp, Reference, Guides, Blog) — only Reference does (Racials, Legacy Perks, Class Spellbooks, Dungeon
 Level Ranges, Professions). Desktop is pure CSS (`group`/`group-hover`/
 `group-focus-within`), no JS. `<header>` has no `overflow-hidden` (it was
 clipping the dropdown).
@@ -361,6 +419,12 @@ and the archive for the CDN plan).
   window first, or to click and let you screenshot the result. Dispatching
   a real `.click()` via `javascript_exec` (not the coordinate-based click
   tool) has also worked around this.
+- Phone-width layout check without a second window: replace the page body
+  with a same-origin `<iframe src="/route" style="width:390px">` via
+  `javascript_exec`. The iframe has its own viewport, so Tailwind
+  breakpoints apply. It doesn't emulate touch events.
+- `left_click_drag` doesn't start native HTML5 drag-and-drop; dispatch
+  `DragEvent`s with a shared `DataTransfer` from `javascript_exec` instead.
 
 ### Build tracking (anonymous share/save/open counts)
 Collection only: nothing reads these counts yet, no Popular Builds UI exists. Full detail (schema rationale, the determinism/Next-cache/build-time investigation, Vercel usage findings): `Forevercraft-Knowledge-Base/01-Projects/Forevercraft/Architecture.md` → "Build tracking".
@@ -395,6 +459,17 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
+- **Raid comp: `estimated` items to verify in game** (`data/raid-buffs.json`):
+  all five `onlyOneCounts` stacking rules (spell text never states them;
+  `minor-armor` = Faerie Fire / Curse of Recklessness / Dust Cloud is the
+  least certain, since FF and CoR stacked in Classic); the one-totem-per-
+  element rule (`shaman-air-totems`, `shaman-water-totems`); pet-sourced
+  effects (Furious Howl, Dust Cloud, Demoralizing Screech, Blood Pact count
+  for every Hunter/Warlock spec though they need a specific pet). Possible
+  later work: optional linked talent build per slot (owner deferred it; it
+  would make coverage talent-exact but needs a new link version), a
+  coverage summary visible while building on phones (the panel sits below
+  all 8 groups), and a site-changelog entry if the feature gets announced.
 - **Dungeon loot header art (refined 2026-10-06):** borderless header image, 560px wide on `sm+`, height set by its natural ratio (no crop). Fades into the page on its right edge via `linear-gradient(to right, transparent 60%, var(--background))`, so the blend matches the page in both themes. Full-width and unfaded on narrow screens. Verified on Uldaman and Wailing Caverns (rendered ratio 1.829 vs source 1.827), and phone width (386px, stacked, no overlap, no horizontal scroll). Title sits beside the image on `sm+`. Options and trade-offs are in `Forevercraft-Knowledge-Base/03-Handoffs/reference-ui/2026-10-06-loot-pill-cleanup-quest-ui-and-header-art.md`.
 - **`lib/quest-detail.ts` reads `data/quests/detail/<variable>.json`:** Turbopack warns that the pattern matches 10,098 files (still a warning, build exit 0, re-checked 2026-10-06). This is the runtime-variable path the standing rule forbids. The file's comment says the shards are never traced, but `/quests/[questId]/page.js.nft.json` lists all 5,049 of them. Fix with a generated literal-path map (like `lib/og-backgrounds.generated.ts`) or a route-scoped `outputFileTracingExcludes`, then recheck `.nft.json` sizes.
 - **`lib/dungeon-loot.ts` reads the whole `data/dungeons/` directory**, so ~4.9 MB of committed non-JSON source files there (dungeon map PNG/JPGs, `Classic-Classic.lua`) are traced into 10 functions, including ƒ `/reference/items`. Move them out of `data/dungeons/` (update the map scripts' paths) or exclude them from traces. See `Weekly-Audit-2026-10-06.md` §3.4.
