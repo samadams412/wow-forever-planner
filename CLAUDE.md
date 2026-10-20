@@ -144,14 +144,24 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   catches names, not changed numbers or scope), and update `build`.
 - **Coverage is spec-level:** a slot covers an effect if its spec can
   provide it (no talent builds, no pet choice). Group-scope effects only
-  reach the provider's group. `perCasterShortfalls` adds "1 Paladin for 4
-  Blessings" notes when casters < covered effects in a set (per group for
-  group-scope sets). Each icon has a source-count badge.
+  reach the provider's group. `perCasterShortfalls` adds caster-limit notes
+  when casters < covered effects in a set (per group for group-scope sets),
+  merging identical per-group shortfalls into one entry with `groups[]`:
+  "1 Paladin per group for 3 Auras, one at a time (Groups 1, 2, 4)". A
+  group with a different caster count gets its own line. Each icon has a
+  source-count badge.
 - **Layout (2026-10-19):** page grid is groups | coverage on `lg`
   (`[minmax(0,1fr)_20rem]`), plus a third sticky `17rem` column on `xl` for
   `StackingRules` (caster-limit notes + every `onlyOneCounts` set with its
   members' classes). On `lg` the rules sit below the groups, on phones
-  after coverage. Either way the rule list never pushes coverage down; keep
+  after coverage. **Collapsed by default:** a "Stacking rules · N active"
+  toggle in the role-summary row (N = caster notes + only-one-counts sets
+  the roster doubles up on) opens it; its own Hide button closes it.
+  Collapsed = not rendered, and the `xl` third column class is applied only
+  while open, so the grid returns to two columns. Opening below `xl`
+  scrolls the section into view. The choice is remembered in localStorage
+  (`forevercraft:raid-comp-rules-open`, "1"/"0", read after mount, every
+  access in try/catch, same as the quest faction filter). Either way the rule list never pushes coverage down; keep
   rules out of `CoveragePanel`. Class names there use `CLASS_COLOR` (via
   `SpecView.color`) with `CLASS_TEXT_SHADOW` from `lib/class-text.ts`
   (shared with the planner's `ClassHero`; client-safe, no `lib/wow-data`).
