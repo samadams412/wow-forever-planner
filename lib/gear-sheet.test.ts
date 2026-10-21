@@ -6,7 +6,7 @@ import { computeSheet, sheetDelta, withPick } from "./gear-sheet.ts";
 import type { GearPool } from "./gear-code.ts";
 
 const pool: GearPool & { baseStats: Record<string, { str: number; agi: number; sta: number; int: number; spi: number; health: number; mana: number }> } =
-  JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "..", "public", "gear", "30", "warrior.json"), "utf8"));
+  JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "..", "public", "gear-pool", "30", "warrior.json"), "utf8"));
 const human = pool.baseStats.human;
 
 test("naked Human Warrior 30 matches the Classic sheet (62/44/57/24/31, 374 + Stamina health)", () => {

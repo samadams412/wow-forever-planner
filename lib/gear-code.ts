@@ -5,7 +5,7 @@
 // Only [0-9a-z._-] appear, so URLSearchParams leaves the code unescaped.
 //
 // Decoding validates every slot against the class's item pool
-// (public/gear/<level>/<class>.json) and lib/gear-classes.ts, drops what's
+// (public/gear-pool/<level>/<class>.json) and lib/gear-classes.ts, drops what's
 // illegal and says why, so a stale or hand-edited link still opens with
 // whatever is valid. Client-safe and pure.
 //

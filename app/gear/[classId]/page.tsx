@@ -7,7 +7,7 @@ import { CLASS_COLOR, classLabel } from "@/lib/wow-data";
 // One prerendered page per class with a pool. ?g= (the gear code) is read
 // client-side in GearFromUrl, never here, so the page stays static (the
 // planner and raid comp rule). The item pool, presets and base stats come
-// from public/gear/<level>/<class>.json, fetched by the client.
+// from public/gear-pool/<level>/<class>.json, fetched by the client.
 export const dynamicParams = false;
 export function generateStaticParams() {
   return GEAR_PLANNER_CLASSES.map((classId) => ({ classId }));

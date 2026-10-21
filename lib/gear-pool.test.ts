@@ -6,7 +6,7 @@ import { itemSuffixes, type SuffixData } from "./item-suffixes.ts";
 import { DEFAULT_GEAR_LEVEL } from "./gear-config.ts";
 
 const root = path.join(import.meta.dirname, "..");
-const poolDir = path.join(root, "public", "gear", String(DEFAULT_GEAR_LEVEL));
+const poolDir = path.join(root, "public", "gear-pool", String(DEFAULT_GEAR_LEVEL));
 const read = (p: string) => JSON.parse(fs.readFileSync(p, "utf8"));
 const catalog = new Map<number, { requiredLevel: number | null }>(read(path.join(root, "data", "items.json")).items.map((i: { itemId: number }) => [i.itemId, i]));
 const suffixData: SuffixData = read(path.join(root, "data", "gear", "suffixes.json"));

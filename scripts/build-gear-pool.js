@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds public/gear/<level>/<classId>.json: the gear planner's item pool for
+// Builds public/gear-pool/<level>/<classId>.json: the gear planner's item pool for
 // one class, fetched by the client (never read on the server, per the
 // standing rule on large data). One row per base item; a random-suffix item
 // is flagged and its rolls are computed in the browser by lib/item-suffixes.ts
@@ -53,7 +53,10 @@ function main() {
   const classIds = process.argv.slice(2).length
     ? process.argv.slice(2)
     : fs.readdirSync(path.join(ROOT, "data", "gear", "presets")).map((f) => f.replace(/\.json$/, ""));
-  const outDir = path.join(ROOT, "public", "gear", String(level));
+  // public/gear-pool, not public/gear: a public folder sharing its first segment
+  // with the /gear/<class> page route made a fresh `next start` answer the
+  // page's first requests with the 404 page (reproduced 2026-10-21).
+  const outDir = path.join(ROOT, "public", "gear-pool", String(level));
   fs.mkdirSync(outDir, { recursive: true });
 
   for (const classId of classIds) {

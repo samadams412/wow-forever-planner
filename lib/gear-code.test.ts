@@ -6,7 +6,7 @@ import { decodeGear, encodeGear, emptyGear, GEAR_CODE_VERSION, type GearPool, ty
 import { GEAR_SLOTS, type GearSlot } from "./gear-slots.ts";
 
 const root = path.join(import.meta.dirname, "..");
-const pool: GearPool = JSON.parse(fs.readFileSync(path.join(root, "public", "gear", "30", "warrior.json"), "utf8"));
+const pool: GearPool = JSON.parse(fs.readFileSync(path.join(root, "public", "gear-pool", "30", "warrior.json"), "utf8"));
 const presets = JSON.parse(fs.readFileSync(path.join(root, "data", "gear", "presets", "warrior.json"), "utf8"));
 
 function presetState(key: string, side: "a" | "h"): GearState {

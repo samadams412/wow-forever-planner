@@ -20,7 +20,7 @@ export default function GearPlanner({ classId, className, help, initialCode }: P
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
     let live = true;
-    fetch(`/gear/${DEFAULT_GEAR_LEVEL}/${classId}.json`)
+    fetch(`/gear-pool/${DEFAULT_GEAR_LEVEL}/${classId}.json`)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((p: PlannerPool) => live && setPool(p))
       .catch(() => live && setLoadError(true));
