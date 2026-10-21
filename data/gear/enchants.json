@@ -1,0 +1,4346 @@
+{
+ "itemsBuild": "1.60.1.70374",
+ "generatedBy": "scripts/build-gear-enchants.js",
+ "enchants": [
+  {
+   "id": 6042,
+   "name": "Iron Shield Spike",
+   "text": "Attaches an Iron Spike to your shield that deals damage every time you block with it.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Attaches an Iron Spike to your shield that deals damage every time you block with it.",
+   "profession": "Blacksmithing",
+   "skill": 125,
+   "requiredLevel": 0,
+   "requires": [
+    "Requires Blacksmithing (150)"
+   ],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 6043,
+   "name": "Iron Counterweight",
+   "text": "Attaches a counterweight to a two-handed sword, mace, axe or polearm making it 3% faster.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": [
+    "Sword",
+    "Mace",
+    "Axe",
+    "Polearm"
+   ],
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Attaches a counterweight to a two-handed sword, mace, axe or polearm making it 3% faster.",
+   "profession": "Blacksmithing",
+   "skill": 140,
+   "requiredLevel": 0,
+   "requires": [
+    "Requires Blacksmithing (165)"
+   ],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 6041,
+   "name": "Steel Weapon Chain",
+   "text": "Attaches a chain to your weapon, making it impossible to disarm.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Attaches a chain to your weapon, making it impossible to disarm.",
+   "profession": "Blacksmithing",
+   "skill": 165,
+   "requiredLevel": 0,
+   "requires": [
+    "Requires Blacksmithing (190)"
+   ],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 7967,
+   "name": "Mithril Shield Spike",
+   "text": "Attaches a Mithril Spike to your shield that deals damage every time you block with it.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Attaches a Mithril Spike to your shield that deals damage every time you block with it.",
+   "profession": "Blacksmithing",
+   "skill": 190,
+   "requiredLevel": 0,
+   "requires": [
+    "Requires Blacksmithing (215)"
+   ],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 7969,
+   "name": "Mithril Spurs",
+   "text": "Attaches spurs to your boots that increase your mounted movement speed slightly.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Attaches spurs to your boots that increase your mounted movement speed slightly.",
+   "profession": "Blacksmithing",
+   "skill": 210,
+   "requiredLevel": 0,
+   "requires": [
+    "Requires Blacksmithing (215)"
+   ],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 12645,
+   "name": "Thorium Shield Spike",
+   "text": "Attaches a Thorium Spike to your shield that deals damage every time you block with it.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Attaches a Thorium Spike to your shield that deals damage every time you block with it.",
+   "profession": "Blacksmithing",
+   "skill": 250,
+   "requiredLevel": 0,
+   "requires": [
+    "Requires Blacksmithing (250)"
+   ],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273458,
+   "name": "Enchant Bracer - Inferior Stamina",
+   "text": "Permanently enchant bracers to increase the Stamina of the wearer by 2.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 1,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273461,
+   "name": "Enchant Bracer - Minor Deflect",
+   "text": "Permanently enchant bracers so that the defense skill of the wearer is increased by 3.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 1,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273459,
+   "name": "Enchant Chest - Inferior Stamina",
+   "text": "Permanently enchant a piece of chest armor so that it increases the Stamina of the wearer by 2.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 15,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273462,
+   "name": "Enchant Chest - Minor Intellect",
+   "text": "Permanently enchant a piece of chest armor so that it increases the Intellect of the wearer by 2.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "int": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 20,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273460,
+   "name": "Enchant Chest - Minor Absorption",
+   "text": "Enchant a piece of chest armor so it has a 2% chance per hit of giving you 10 points of damage absorption. Cannot occur more often than once every 5 sec.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Enchant a piece of chest armor so it has a 2% chance per hit of giving you 10 points of damage absorption. Cannot occur more often than once every 5 sec.",
+   "profession": "Enchanting",
+   "skill": 40,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273463,
+   "name": "Enchant Cloak - Minor Resistance",
+   "text": "Permanently enchant a cloak so that it increases the resistance to all schools of magic by 2.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "allRes": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 45,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273464,
+   "name": "Enchant Bracer - Minor Stamina",
+   "text": "Permanently enchant bracers so they increase the wearer's Stamina by 3.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 50,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273466,
+   "name": "Enchant Chest - Lesser Stamina",
+   "text": "Permanently enchant a piece of chest armor so that it increases the Stamina of the wearer by 3.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 60,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273467,
+   "name": "Enchant Bracer - Minor Spirit",
+   "text": "Permanently enchant bracers so they increase the wearer's Spirit by 3.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 60,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273468,
+   "name": "Enchant Cloak - Minor Protection",
+   "text": "Permanently enchant a cloak to increase armor by 10.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 10,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 70,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273611,
+   "name": "Enchant Bracer - Minor Intellect",
+   "text": "Permanently enchant bracers to give +3 Intellect.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "int": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 70,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273469,
+   "name": "Enchant Chest - Lesser Intellect",
+   "text": "Permanently enchant a piece of chest armor so that it increases the Intellect of the wearer by 3.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "int": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 80,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273470,
+   "name": "Enchant Bracer - Minor Agility",
+   "text": "Permanently enchant bracers so they increase the wearer's Agility by 3.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 80,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273471,
+   "name": "Enchant Bracer - Minor Strength",
+   "text": "Permanently enchant bracers so they increase the wearer's Strength by 3.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "str": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 80,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273472,
+   "name": "Enchant Weapon - Minor Beastslayer",
+   "text": "Permanently enchant a Melee Weapon to do 2 additional points of damage to Beasts.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a Melee Weapon to do 2 additional points of damage to Beasts.",
+   "profession": "Enchanting",
+   "skill": 90,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273473,
+   "name": "Enchant Weapon - Minor Striking",
+   "text": "Permanently enchant a Melee Weapon to do 1 additional point of damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 1,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 90,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273612,
+   "name": "Enchant Bracer - Minor Healing Power",
+   "text": "Permanently enchant bracers so they increase the wearer's healing spells by up to 8 and damage spells by up to 3.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 8,
+    "spellDmg": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 90,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273465,
+   "name": "Enchant 2H Weapon - Minor Impact",
+   "text": "Permanently enchant a Two-Handed Melee Weapon to do 4 additional points of damage.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 4,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 100,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273474,
+   "name": "Enchant 2H Weapon - Lesser Intellect",
+   "text": "Permanently enchant a Two-Handed Melee Weapon to add 5 to Intellect.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "int": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 100,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273480,
+   "name": "Enchant Shield - Minor Stamina",
+   "text": "Permanently enchant a shield so that it increases the Stamina of the bearer by 3.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 105,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273481,
+   "name": "Enchant 2H Weapon - Lesser Spirit",
+   "text": "Permanently enchant a Two-Handed Melee Weapon to add 5 to Spirit.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 110,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273482,
+   "name": "Enchant Cloak - Minor Agility",
+   "text": "Permanently enchant a cloak to grant +3 Agility.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 110,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273483,
+   "name": "Enchant Cloak - Lesser Protection",
+   "text": "Permanently enchant a cloak to increase armor by 20.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 20,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 115,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273484,
+   "name": "Enchant Shield - Lesser Protection",
+   "text": "Permanently enchant a shield to increase its armor by 30.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 30,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 115,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273475,
+   "name": "Enchant Chest - Stamina",
+   "text": "Permanently enchant a piece of chest armor to increase the Stamina of the wearer by 4.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 120,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273476,
+   "name": "Enchant Bracer - Lesser Spirit",
+   "text": "Permanently enchant a bracer so it increases the wearer's Spirit by 4.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 120,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273477,
+   "name": "Enchant Cloak - Lesser Fire Resistance",
+   "text": "Permanently enchant a cloak so that it increases resistance to fire by 10.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "fireRes": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 125,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273478,
+   "name": "Enchant Boots - Minor Stamina",
+   "text": "Permanently enchant a pair of boots so they increase the wearer's Stamina by 3.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 125,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273479,
+   "name": "Enchant Boots - Minor Agility",
+   "text": "Permanently enchant a pair of boots so they increase the wearer's Agility by 3.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 125,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273485,
+   "name": "Enchant Shield - Lesser Spirit",
+   "text": "Permanently enchant a shield to give 3 spirit.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 130,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273486,
+   "name": "Enchant Bracer - Lesser Stamina",
+   "text": "Permanently enchant a bracer so it increases the wearer's Stamina by 4.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 130,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273488,
+   "name": "Enchant Cloak - Lesser Shadow Resistance",
+   "text": "Permanently enchant a cloak so that it increases resistance to shadow by 10.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "shadowRes": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 135,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273487,
+   "name": "Enchant Weapon - Lesser Striking",
+   "text": "Permanently enchant a Melee Weapon to do 2 additional points of damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 2,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273490,
+   "name": "Enchant Bracer - Lesser Strength",
+   "text": "Permanently enchant a bracer so it increases the wearer's Strength by 4.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "str": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273491,
+   "name": "Enchant Chest - Lesser Absorption",
+   "text": "Enchant a piece of chest armor so it has a 5% chance per hit of giving you 25 points of damage absorption. Cannot occur more often than once every 5 sec.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Enchant a piece of chest armor so it has a 5% chance per hit of giving you 25 points of damage absorption. Cannot occur more often than once every 5 sec.",
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273613,
+   "name": "Enchant Bracer - Lesser Agility",
+   "text": "Permanently enchant a bracer so it increases the wearer's Agility by 4.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273627,
+   "name": "Enchant Weapon - Insight",
+   "text": "Permanently enchant a Melee Weapon to have a chance to grant Insight when you cast a spell, increasing Spirit by 100% for 10 sec.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a Melee Weapon to have a chance to grant Insight when you cast a spell, increasing Spirit by 100% for 10 sec.",
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273628,
+   "name": "Enchant Weapon - Recovery",
+   "text": "Permanently enchant a Melee Weapon to trigger Recovery when you are Parried or Dodged, healing you for 5% of your maximum health. Cannot occur more often than once every 10 sec.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a Melee Weapon to trigger Recovery when you are Parried or Dodged, healing you for 5% of your maximum health. Cannot occur more often than once every 10 sec.",
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273629,
+   "name": "Enchant Weapon - Revelation",
+   "text": "Permanently enchant a Melee Weapon to have a chance to trigger Revelation when a non-periodic spell fails to critically strike. Revelation grants 100% increased critical strike chance to the next non-periodic spell cast. Revelation's chance to trigger is diminished as your critical strike chance increases.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a Melee Weapon to have a chance to trigger Revelation when a non-periodic spell fails to critically strike. Revelation grants 100% increased critical strike chance to the next non-periodic spell cast. Revelation's chance to trigger is diminished as your critical strike chance increases.",
+   "profession": "Enchanting",
+   "skill": 140,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273489,
+   "name": "Enchant 2H Weapon - Lesser Impact",
+   "text": "Permanently enchant a Two-handed Melee Weapon to do 5 additional points of damage.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 5,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 145,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273492,
+   "name": "Enchant Chest - Intellect",
+   "text": "Permanently enchant a piece of chest armor to increase the Intellect of the wearer by 4.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "int": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 145,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273493,
+   "name": "Enchant Gloves - Mining",
+   "text": "Permanently enchant gloves to grant +2 mining skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +2 mining skill.",
+   "profession": "Enchanting",
+   "skill": 145,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273494,
+   "name": "Enchant Gloves - Herbalism",
+   "text": "Permanently enchant gloves to grant +2 herbalism skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +2 herbalism skill.",
+   "profession": "Enchanting",
+   "skill": 145,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273495,
+   "name": "Enchant Gloves - Fishing",
+   "text": "Permanently enchant gloves to grant +2 fishing skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +2 fishing skill.",
+   "profession": "Enchanting",
+   "skill": 145,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273496,
+   "name": "Enchant Bracer - Lesser Intellect",
+   "text": "Permanently enchant a bracer so it increases the wearer's Intellect by 5.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "int": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 150,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273497,
+   "name": "Enchant Chest - Minor Stats",
+   "text": "Permanently enchant a piece of chest armor to grant +2 to all stats.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "str": 2,
+    "agi": 2,
+    "sta": 2,
+    "int": 2,
+    "spi": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 150,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273498,
+   "name": "Enchant Shield - Lesser Stamina",
+   "text": "Permanently enchant a shield to give 5 Stamina.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 155,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273499,
+   "name": "Enchant Cloak - Defense",
+   "text": "Permanently enchant a cloak to give 60 additional armor.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 60,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 155,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273500,
+   "name": "Enchant Boots - Lesser Agility",
+   "text": "Permanently enchant boots to give +4 Agility.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 160,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273501,
+   "name": "Enchant Chest - Greater Stamina",
+   "text": "Permanently enchant a piece of chest armor to give +6 Stamina.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 6
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 160,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273502,
+   "name": "Enchant Bracer - Spirit",
+   "text": "Permanently enchant bracers to give +5 Spirit.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 165,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273503,
+   "name": "Enchant Boots - Lesser Stamina",
+   "text": "Permanently enchant boots to give +4 Stamina.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 170,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273504,
+   "name": "Enchant Bracer - Lesser Deflection",
+   "text": "Permanently enchant bracers to give +5 Defense.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 170,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273505,
+   "name": "Enchant Bracer - Stamina",
+   "text": "Permanently enchant bracers to give +5 Stamina.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 170,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273506,
+   "name": "Enchant Weapon - Lesser Beastslayer",
+   "text": "Permanently enchant a Melee Weapon to do 6 additional points of damage to Beasts.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a Melee Weapon to do 6 additional points of damage to Beasts.",
+   "profession": "Enchanting",
+   "skill": 175,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273507,
+   "name": "Enchant Weapon - Lesser Elemental Slayer",
+   "text": "Permanently enchant a Melee Weapon to do 6 additional damage against Elementals.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a Melee Weapon to do 6 additional damage against Elementals.",
+   "profession": "Enchanting",
+   "skill": 175,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273508,
+   "name": "Enchant Cloak - Fire Resistance",
+   "text": "Permanently enchant a cloak to give 12 Fire Resistance.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "fireRes": 12
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 175,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273509,
+   "name": "Enchant Shield - Spirit",
+   "text": "Permanently enchant a shield to give 5 Spirit.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 180,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273510,
+   "name": "Enchant Bracer - Strength",
+   "text": "Permanently enchant bracers to give +5 Strength.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "str": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 180,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273511,
+   "name": "Enchant Chest - Greater Intellect",
+   "text": "Permanently enchant a piece of chest armor to give +6 Intellect.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "int": 6
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 185,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273512,
+   "name": "Enchant Boots - Lesser Spirit",
+   "text": "Permanently enchant boots to give +4 Spirit.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 190,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273569,
+   "name": "Enchant Weapon - Winter's Might",
+   "text": "Permanently enchant a weapon to grant up to 15 additional frost damage when casting frost spells.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "frostDmg": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 190,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273597,
+   "name": "Enchant Bracer - Agility",
+   "text": "Permanently enchant bracers to increase Agility by 9.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 190,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273513,
+   "name": "Enchant Shield - Lesser Block",
+   "text": "Permanently enchant a shield to give +2% chance to block.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "blockPct": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 195,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273514,
+   "name": "Enchant Weapon - Striking",
+   "text": "Permanently enchant a Melee Weapon to do 3 additional points of damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 3,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 195,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273515,
+   "name": "Enchant 2H Weapon - Impact",
+   "text": "Permanently enchant a Two-handed Melee Weapon to do 6 additional points of damage.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 6,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 200,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273516,
+   "name": "Enchant Gloves - Skinning",
+   "text": "Permanently enchant gloves to grant +5 skinning skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +5 skinning skill.",
+   "profession": "Enchanting",
+   "skill": 200,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273517,
+   "name": "Enchant Chest - Lesser Stats",
+   "text": "Permanently enchant a piece of chest armor to grant +2 to all stats.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "str": 2,
+    "agi": 2,
+    "sta": 2,
+    "int": 2,
+    "spi": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 200,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273518,
+   "name": "Enchant Cloak - Greater Defense",
+   "text": "Permanently enchant a cloak to give 60 additional armor.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 60,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 205,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273519,
+   "name": "Enchant Cloak - Resistance",
+   "text": "Permanently enchant a cloak to give 3 to all resistances.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "allRes": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 205,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273615,
+   "name": "Enchant Bracer - Lesser Healing Power",
+   "text": "Permanently enchant bracers to increase healing by up to 16 and damage by up to 6.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 16,
+    "spellDmg": 6
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 205,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273520,
+   "name": "Enchant Gloves - Agility",
+   "text": "Permanently enchant gloves to grant +7 Agility.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273521,
+   "name": "Enchant Shield - Stamina",
+   "text": "Permanently enchant a shield to give +7 Stamina.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273522,
+   "name": "Enchant Bracer - Intellect",
+   "text": "Permanently enchant bracers to give +5 Intellect.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "int": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273617,
+   "name": "Enchant 2H Weapon - Lesser Agility",
+   "text": "Permanently enchant a Two-handed Melee Weapon to grant +15 Agility.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273630,
+   "name": "Enchant Necklace - Strength",
+   "text": "Permanently enchant a necklace to increase Strength by 5.",
+   "slots": [
+    "Neck"
+   ],
+   "types": null,
+   "stats": {
+    "str": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273631,
+   "name": "Enchant Necklace - Spell Power",
+   "text": "Permanently enchant a necklace to increase spell damage and healing by up to 6.",
+   "slots": [
+    "Neck"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 6
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273632,
+   "name": "Enchant Necklace - Healing Power",
+   "text": "Permanently enchant a necklace to increase healing by up to 11 and spell damage by up to 4.",
+   "slots": [
+    "Neck"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 11,
+    "spellDmg": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273633,
+   "name": "Enchant Necklace - Agility",
+   "text": "Permanently enchant a necklace to increase Agility by 5.",
+   "slots": [
+    "Neck"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273634,
+   "name": "Enchant Necklace - Deflection",
+   "text": "Permanently enchant a necklace to increase defense skill by 5.",
+   "slots": [
+    "Neck"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 210,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273523,
+   "name": "Enchant Boots - Stamina",
+   "text": "Permanently enchant boots to give +5 Stamina.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 215,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273524,
+   "name": "Enchant Gloves - Advanced Mining",
+   "text": "Permanently enchant gloves to grant +5 mining skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +5 mining skill.",
+   "profession": "Enchanting",
+   "skill": 215,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273525,
+   "name": "Enchant Bracer - Greater Spirit",
+   "text": "Permanently enchant bracers to give +7 Spirit.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 220,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273526,
+   "name": "Enchant Chest - Superior Stamina",
+   "text": "Permanently enchant a piece of chest armor to grant +8 Stamina.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 8
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 220,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273618,
+   "name": "Enchant 2H Weapon - Lesser Strength",
+   "text": "Permanently enchant a Two-handed Melee Weapon to grant +15 Strength.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "str": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 220,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273635,
+   "name": "Enchant Chest - Absorption",
+   "text": "Enchant a piece of chest armor so it has a 25% chance per hit of giving you 50 points of damage absorption. Cannot occur more often than once every 5 sec.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Enchant a piece of chest armor so it has a 25% chance per hit of giving you 50 points of damage absorption. Cannot occur more often than once every 5 sec.",
+   "profession": "Enchanting",
+   "skill": 220,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273527,
+   "name": "Enchant Gloves - Advanced Herbalism",
+   "text": "Permanently enchant gloves to grant +5 herbalism skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +5 herbalism skill.",
+   "profession": "Enchanting",
+   "skill": 225,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273528,
+   "name": "Enchant Cloak - Lesser Agility",
+   "text": "Permanently enchant a cloak to give 3 Agility.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 225,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273529,
+   "name": "Enchant Gloves - Strength",
+   "text": "Permanently enchant gloves to grant +7 Strength.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "str": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 225,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273530,
+   "name": "Enchant Boots - Minor Speed",
+   "text": "Permanently enchant boots to give a slight movement speed increase.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant boots to give a slight movement speed increase.",
+   "profession": "Enchanting",
+   "skill": 225,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273532,
+   "name": "Enchant Shield - Greater Spirit",
+   "text": "Permanently enchant a shield to give +7 Spirit.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 230,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273533,
+   "name": "Enchant Weapon - Demonslaying",
+   "text": "Permanently enchant a melee weapon to have a chance of stunning and doing heavy damage to demons.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a melee weapon to have a chance of stunning and doing heavy damage to demons.",
+   "profession": "Enchanting",
+   "skill": 230,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273534,
+   "name": "Enchant Chest - Superior Intellect",
+   "text": "Permanently enchant a piece of chest armor to give +8 Intellect.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "int": 8
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 230,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273535,
+   "name": "Enchant Bracer - Deflection",
+   "text": "Permanently enchant bracers to give +7 Defense.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 235,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273536,
+   "name": "Enchant Shield - Frost Resistance",
+   "text": "Permanently enchant a shield to give +8 Frost Resistance.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "frostRes": 8
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 235,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273537,
+   "name": "Enchant Boots - Agility",
+   "text": "Permanently enchant boots to give +5 Agility.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 235,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273538,
+   "name": "Enchant 2H Weapon - Greater Impact",
+   "text": "Permanently enchant a two-handed melee weapon to do +7 damage.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 7,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 240,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273539,
+   "name": "Enchant Bracer - Greater Strength",
+   "text": "Permanently enchant bracers to give +7 Strength.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "str": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 240,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273616,
+   "name": "Enchant Bracer - Greater Agility",
+   "text": "Permanently enchant bracers to give +7 Agility.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 240,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273540,
+   "name": "Enchant Chest - Stats",
+   "text": "Permanently enchant a piece of chest armor to grant +3 to all stats.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "str": 3,
+    "agi": 3,
+    "sta": 3,
+    "int": 3,
+    "spi": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 245,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273541,
+   "name": "Enchant Weapon - Greater Striking",
+   "text": "Permanently enchant a Melee Weapon to do 4 additional points of damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 4,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 245,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273542,
+   "name": "Enchant Bracer - Greater Stamina",
+   "text": "Permanently enchant bracers to give +7 Stamina.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 245,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273543,
+   "name": "Enchant Gloves - Riding Skill",
+   "text": "Permanently enchant gloves to grant a minor movement bonus while mounted.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant a minor movement bonus while mounted.",
+   "profession": "Enchanting",
+   "skill": 250,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273544,
+   "name": "Enchant Gloves - Minor Haste",
+   "text": "Permanently enchant gloves to grant a +1% attack and casting speed bonus.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant a +1% attack and casting speed bonus.",
+   "profession": "Enchanting",
+   "skill": 250,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273619,
+   "name": "Enchant Gloves - Advanced Skinning",
+   "text": "Permanently enchant gloves to grant +10 skinning skill.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to grant +10 skinning skill.",
+   "profession": "Enchanting",
+   "skill": 250,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273545,
+   "name": "Enchant Bracer - Greater Intellect",
+   "text": "Permanently enchant bracers to give +7 Intellect.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "int": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 255,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273555,
+   "name": "Enchant Boots - Greater Stamina",
+   "text": "Permanently enchant boots to give +7 Stamina.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 260,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273531,
+   "name": "Enchant Weapon - Fiery Weapon",
+   "text": "Permanently enchant a melee weapon to often strike for 40 additional fire damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a melee weapon to often strike for 40 additional fire damage.",
+   "profession": "Enchanting",
+   "skill": 265,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273551,
+   "name": "Enchant Cloak - Greater Resistance",
+   "text": "Permanently enchant a cloak to give 5 to all resistances.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "allRes": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 265,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273554,
+   "name": "Enchant Shield - Greater Stamina",
+   "text": "Permanently enchant a shield to give +9 Stamina.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 265,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273546,
+   "name": "Enchant Bracer - Superior Spirit",
+   "text": "Permanently enchant bracers to give +9 Spirit.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 270,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273549,
+   "name": "Enchant Gloves - Greater Agility",
+   "text": "Permanently enchant gloves to grant +10 Agility.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 270,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273557,
+   "name": "Enchant Boots - Spirit",
+   "text": "Permanently enchant boots to give +5 Spirit.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 275,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273559,
+   "name": "Enchant Chest - Major Stamina",
+   "text": "Permanently enchant a piece of chest armor to grant +10 Stamina.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 275,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273553,
+   "name": "Enchant Shield - Superior Spirit",
+   "text": "Permanently enchant a shield to give +9 Spirit.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 280,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273552,
+   "name": "Enchant Cloak - Superior Defense",
+   "text": "Permanently enchant a cloak to give 70 additional armor.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 70,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 285,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273561,
+   "name": "Enchant Weapon - Icy Chill",
+   "text": "Permanently enchant a melee weapon to often chill the target reducing their movement and attack speed.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a melee weapon to often chill the target reducing their movement and attack speed.",
+   "profession": "Enchanting",
+   "skill": 285,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273560,
+   "name": "Enchant Chest - Major Intellect",
+   "text": "Permanently enchant a piece of chest armor to give +10 Intellect.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "int": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 290,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273572,
+   "name": "Enchant Weapon - Strength",
+   "text": "Permanently enchant a melee weapon to grant +15 strength.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "str": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 290,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273573,
+   "name": "Enchant Weapon - Agility",
+   "text": "Permanently enchant a melee weapon to grant +15 Agility.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 290,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273574,
+   "name": "Enchant Bracer - Mana Regeneration",
+   "text": "Permanently enchant bracers to restore 4 mana every 5 seconds.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "mp5": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 290,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273589,
+   "name": "Enchant 2H Weapon - Agility",
+   "text": "Permanently enchant a two-handed melee weapon to grant +25 Agility.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 25
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 290,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273547,
+   "name": "Enchant Bracer - Superior Strength",
+   "text": "Permanently enchant bracers to give +9 Strength.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "str": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273550,
+   "name": "Enchant Gloves - Greater Strength",
+   "text": "Permanently enchant gloves to grant +10 Strength.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "str": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273556,
+   "name": "Enchant Boots - Greater Agility",
+   "text": "Permanently enchant boots to give +7 Agility.",
+   "slots": [
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 7
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273562,
+   "name": "Enchant 2H Weapon - Superior Impact",
+   "text": "Permanently enchant a two-handed melee weapon to do +9 damage.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 9,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273565,
+   "name": "Enchant Weapon - Unholy Weapon",
+   "text": "Permanently enchant a melee weapon to often inflict a curse on the target reducing their melee damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a melee weapon to often inflict a curse on the target reducing their melee damage.",
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273620,
+   "name": "Enchant Bracer - Superior Agility",
+   "text": "Permanently enchant bracers to give +9 Agility.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 274426,
+   "name": "Enchant Gloves - Lotus Claw",
+   "text": "Permanently enchant a pair of gloves to give a small chance to acquire Death Lotus when gathering any herb in Hyjal.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a pair of gloves to give a small chance to acquire Death Lotus when gathering any herb in Hyjal.",
+   "profession": "Enchanting",
+   "skill": 295,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273548,
+   "name": "Enchant Bracer - Superior Stamina",
+   "text": "Permanently enchant bracers to give +9 Stamina.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273558,
+   "name": "Enchant Chest - Greater Stats",
+   "text": "Permanently enchant a piece of chest armor to grant +4 to all stats.",
+   "slots": [
+    "Chest"
+   ],
+   "types": null,
+   "stats": {
+    "str": 4,
+    "agi": 4,
+    "sta": 4,
+    "int": 4,
+    "spi": 4
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273563,
+   "name": "Enchant Weapon - Superior Striking",
+   "text": "Permanently enchant a Melee Weapon to do 5 additional points of damage.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 5,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273564,
+   "name": "Enchant Weapon - Lifestealing",
+   "text": "Permanently enchant a melee weapon to often steal life from the enemy and give it to the wielder.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a melee weapon to often steal life from the enemy and give it to the wielder.",
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273566,
+   "name": "Enchant Weapon - Crusader",
+   "text": "Permanently enchant a melee weapon so that often when attacking in melee it heals for 75 to 125 and increases Strength by 100 for 15 sec.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a melee weapon so that often when attacking in melee it heals for 75 to 125 and increases Strength by 100 for 15 sec.",
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273567,
+   "name": "Enchant 2H Weapon - Major Spirit",
+   "text": "Permanently enchant a Two-Handed Melee Weapon to add 9 to Spirit.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273568,
+   "name": "Enchant 2H Weapon - Major Intellect",
+   "text": "Permanently enchant a Two-Handed Melee Weapon to add 9 to intellect.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "int": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273570,
+   "name": "Enchant Weapon - Spell Power",
+   "text": "Permanently enchant a Melee Weapon to add up to 30 damage to spells.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "spellDmg": 30
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273571,
+   "name": "Enchant Weapon - Healing Power",
+   "text": "Permanently enchant a Melee Weapon to add up to 55 points of healing to healing spells and up to 19 points of damage to damage spells.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 55,
+    "spellDmg": 19
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273575,
+   "name": "Enchant Bracer - Healing Power",
+   "text": "Permanently enchant bracers to increase the effects of your healing spells by up to 24 and the effects of your damage spells by up to 8.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 24,
+    "spellDmg": 8
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273576,
+   "name": "Enchant Weapon - Mighty Spirit",
+   "text": "Permanently enchant a melee weapon to grant +22 Spirit.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 22
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273577,
+   "name": "Enchant Weapon - Mighty Intellect",
+   "text": "Permanently enchant a melee weapon to grant +22 Intellect.",
+   "slots": [
+    "One-Hand",
+    "Main Hand",
+    "Two-Hand",
+    "Off Hand"
+   ],
+   "types": null,
+   "stats": {
+    "int": 22
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273578,
+   "name": "Enchant Gloves - Threat",
+   "text": "Permanently enchant gloves to increase threat from all attacks and spells by 2%.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant gloves to increase threat from all attacks and spells by 2%.",
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273579,
+   "name": "Enchant Gloves - Shadow Power",
+   "text": "Permanently enchant gloves to increase shadow damage by up to 20.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "shadowDmg": 20
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273580,
+   "name": "Enchant Gloves - Frost Power",
+   "text": "Permanently enchant gloves to increase frost damage by up to 20.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "frostDmg": 20
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273581,
+   "name": "Enchant Gloves - Fire Power",
+   "text": "Permanently enchant gloves to increase fire damage by up to 20.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "fireDmg": 20
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273582,
+   "name": "Enchant Gloves - Healing Power",
+   "text": "Permanently enchant gloves to increase the caster's healing spells by up to 35 and damage spells by up to 12.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 35,
+    "spellDmg": 12
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273583,
+   "name": "Enchant Gloves - Superior Agility",
+   "text": "Permanently enchant gloves to increase agility by 15.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273584,
+   "name": "Enchant Cloak - Greater Fire Resistance",
+   "text": "Permanently enchant a cloak to give 15 fire resistance.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "fireRes": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273585,
+   "name": "Enchant Cloak - Greater Nature Resistance",
+   "text": "Permanently enchant a cloak to give 15 nature resistance.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "natureRes": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273586,
+   "name": "Enchant Cloak - Stealth",
+   "text": "Permanently enchant a cloak to give an increase to your stealth as if you were 1 level higher.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a cloak to give an increase to your stealth as if you were 1 level higher.",
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273587,
+   "name": "Enchant Cloak - Subtlety",
+   "text": "Permanently enchant a cloak to decrease threat caused by the wearer by 2%.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": "Permanently enchant a cloak to decrease threat caused by the wearer by 2%.",
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273588,
+   "name": "Enchant Cloak - Dodge",
+   "text": "Permanently enchant a cloak to give a 1% chance to dodge.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "dodgePct": 1
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273598,
+   "name": "Enchant Off-Hand - Superior Intellect",
+   "text": "Permanently enchant an Off-Hand to add 9 to intellect.",
+   "slots": [
+    "Held In Off-hand"
+   ],
+   "types": null,
+   "stats": {
+    "int": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273599,
+   "name": "Enchant Off-Hand - Excellent Spirit",
+   "text": "Permanently enchant an Off-Hand to add 12 to spirit.",
+   "slots": [
+    "Held In Off-hand"
+   ],
+   "types": null,
+   "stats": {
+    "spi": 12
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273600,
+   "name": "Enchant Off-Hand - Wisdom",
+   "text": "Permanently enchant an Off-Hand to add 6 to intellect and 5 to spirit.",
+   "slots": [
+    "Held In Off-hand"
+   ],
+   "types": null,
+   "stats": {
+    "int": 6,
+    "spi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273601,
+   "name": "Enchant 2H Weapon - Spellblasting",
+   "text": "Permanently enchant a 2H Weapon to add 65 Spell Power.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 65
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273602,
+   "name": "Enchant Shield - Excellent Stamina",
+   "text": "Permanently enchant a Shield to add 12 to stamina.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 12
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273604,
+   "name": "Enchant Cloak - Agility",
+   "text": "Permanently enchant a Cloak to add 5 to agility.",
+   "slots": [
+    "Back"
+   ],
+   "types": null,
+   "stats": {
+    "agi": 5
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273605,
+   "name": "Enchant Shield - Critical Strike",
+   "text": "Permanently enchant a Shield to add 1% critical strike chance.",
+   "slots": [
+    "Shield"
+   ],
+   "types": null,
+   "stats": {
+    "critPct": 1
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273606,
+   "name": "Enchant Bracer - Greater Spellpower",
+   "text": "Permanently enchant Bracers to add 16 to spell power.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 16
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273621,
+   "name": "Enchant 2H Weapon - Mighty Spell Power",
+   "text": "Permanently enchant a two-handed melee weapon to increase damage and healing by up to 55.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 55
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273622,
+   "name": "Enchant 2H Weapon - Mighty Healing Power",
+   "text": "Permanently enchant a two-handed melee weapon to increase healing by up to 100 and damage by up to 34.",
+   "slots": [
+    "Two-Hand"
+   ],
+   "types": null,
+   "stats": {
+    "heal": 100,
+    "spellDmg": 34
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273623,
+   "name": "Enchant Gloves - Superior Strength",
+   "text": "Permanently enchant gloves to increase Strength by 15.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "str": 15
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273624,
+   "name": "Enchant Gloves - Natural Power",
+   "text": "Permanently enchant gloves to increase Nature damage by up to 20.",
+   "slots": [
+    "Hands"
+   ],
+   "types": null,
+   "stats": {
+    "natureDmg": 20
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273625,
+   "name": "Enchant Bracer - Superior Intellect",
+   "text": "Permanently enchant bracers to give +9 Intellect.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "int": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 273626,
+   "name": "Enchant Bracer - Superior Deflection",
+   "text": "Permanently enchant bracers to give +9 defense skill.",
+   "slots": [
+    "Wrist"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 9
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Enchanting",
+   "skill": 300,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 4405,
+   "name": "Crude Scope",
+   "text": "Attaches a permanent scope to a bow or gun that increases its damage by 1.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun"
+   ],
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 1,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 60,
+   "requiredLevel": 5,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 4406,
+   "name": "Standard Scope",
+   "text": "Attaches a permanent scope to a bow or gun that increases its damage by 2.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun"
+   ],
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 2,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 110,
+   "requiredLevel": 10,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 4407,
+   "name": "Accurate Scope",
+   "text": "Attaches a permanent scope to a bow or gun that increases its damage by 3.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun"
+   ],
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 3,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 180,
+   "requiredLevel": 20,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 10546,
+   "name": "Deadly Scope",
+   "text": "Attaches a permanent scope to a bow or gun that increases its damage by 5.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun"
+   ],
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 5,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 210,
+   "requiredLevel": 30,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 10548,
+   "name": "Sniper Scope",
+   "text": "Attaches a permanent scope to a bow or gun that increases its damage by 7.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun"
+   ],
+   "stats": {},
+   "armor": 0,
+   "weaponDamage": 7,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 240,
+   "requiredLevel": 40,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 18283,
+   "name": "Biznicks 247x128 Accurascope",
+   "text": "Attaches a permanent scope to a bow or gun that increases its chance to hit by 3%.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun"
+   ],
+   "stats": {
+    "hitPct": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 300,
+   "requiredLevel": 50,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 279272,
+   "name": "SAF-T Ultra Precision Scope",
+   "text": "Attaches a permanent scope to a bow, gun, or crossbow that increases its critical strike chance by 2%.",
+   "slots": [
+    "Ranged"
+   ],
+   "types": [
+    "Bow",
+    "Gun",
+    "Crossbow"
+   ],
+   "stats": {
+    "critPct": 2
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Engineering",
+   "skill": 300,
+   "requiredLevel": 60,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 2304,
+   "name": "Light Armor Kit",
+   "text": "Permanently increase the Stamina value by 1 and the Armor value by 8 of an item worn on the chest, legs, hands or feet.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 1
+   },
+   "armor": 8,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 1,
+   "requiredLevel": 1,
+   "requires": [],
+   "status": "changed",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252436,
+   "name": "Mystic Medium Armor Kit",
+   "text": "Permanently increase the Spell Power value by 2 and the armor value by 16 of an item worn on the chest, legs, hands, or feet.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 2
+   },
+   "armor": 16,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 80,
+   "requiredLevel": 15,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252437,
+   "name": "Forceful Medium Armor Kit",
+   "text": "Permanently increase the Attack Power value by 4 and the armor value by 16 of an item worn on the chest, legs, hands, or feet.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "ap": 4
+   },
+   "armor": 16,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 80,
+   "requiredLevel": 15,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 2313,
+   "name": "Medium Armor Kit",
+   "text": "Permanently increase the Stamina value by 2 and the armor value by 16 of an item worn on the chest, legs, hands or feet.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 2
+   },
+   "armor": 16,
+   "weaponDamage": 0,
+   "minIlvl": 0,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 100,
+   "requiredLevel": 5,
+   "requires": [],
+   "status": "changed",
+   "confidence": "datamined"
+  },
+  {
+   "id": 4265,
+   "name": "Heavy Armor Kit",
+   "text": "Permanently increase the Stamina value by 3 and armor value by 24 of an item worn on the chest, legs, hands or feet. Only usable on items level 15 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 3
+   },
+   "armor": 24,
+   "weaponDamage": 0,
+   "minIlvl": 15,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 125,
+   "requiredLevel": 20,
+   "requires": [],
+   "status": "changed",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252452,
+   "name": "Mystic Heavy Armor Kit",
+   "text": "Permanently increase the Spell Power value by 4 and armor value by 24 of an item worn on the chest, legs, hands, or feet. Only usable on items level 15 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 4
+   },
+   "armor": 24,
+   "weaponDamage": 0,
+   "minIlvl": 15,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 135,
+   "requiredLevel": 30,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252453,
+   "name": "Forceful Heavy Armor Kit",
+   "text": "Permanently increase the Attack Power value by 6 and armor value by 24 of an item worn on the chest, legs, hands, or feet. Only usable on items level 15 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "ap": 6
+   },
+   "armor": 24,
+   "weaponDamage": 0,
+   "minIlvl": 15,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 135,
+   "requiredLevel": 30,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252462,
+   "name": "Mystic Thick Armor Kit",
+   "text": "Permanently increase the Spell Power value by 5 and armor value by 32 of an item worn on the chest, legs, hands, or feet. Only usable on items level 25 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 5
+   },
+   "armor": 32,
+   "weaponDamage": 0,
+   "minIlvl": 25,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 185,
+   "requiredLevel": 40,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252463,
+   "name": "Forceful Thick Armor Kit",
+   "text": "Permanently increase the Attack Power value by 8 and armor value by 32 of an item worn on the chest, legs, hands, or feet. Only usable on items level 25 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "ap": 8
+   },
+   "armor": 32,
+   "weaponDamage": 0,
+   "minIlvl": 25,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 185,
+   "requiredLevel": 40,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 8173,
+   "name": "Thick Armor Kit",
+   "text": "Permanently increase the Stamina value by 4 and armor value by 32 of an item worn on the chest, legs, hands or feet. Only usable on items level 25 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 4
+   },
+   "armor": 32,
+   "weaponDamage": 0,
+   "minIlvl": 25,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 200,
+   "requiredLevel": 30,
+   "requires": [],
+   "status": "changed",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252487,
+   "name": "Mystic Rugged Armor Kit",
+   "text": "Permanently increase the Spell Power value by 6 and armor value by 40 of an item worn on the chest, legs, hands, or feet. Only usable on items level 35 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sp": 6
+   },
+   "armor": 40,
+   "weaponDamage": 0,
+   "minIlvl": 35,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 235,
+   "requiredLevel": 50,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 252488,
+   "name": "Forceful Rugged Armor Kit",
+   "text": "Permanently increase the Attack Power value by 10 and armor value by 40 of an item worn on the chest, legs, hands, or feet. Only usable on items level 35 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "ap": 10
+   },
+   "armor": 40,
+   "weaponDamage": 0,
+   "minIlvl": 35,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 235,
+   "requiredLevel": 50,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  },
+  {
+   "id": 15564,
+   "name": "Rugged Armor Kit",
+   "text": "Permanently increase the Stamina value by 5 and armor value by 40 of an item worn on the chest, legs, hands or feet. Only usable on items level 35 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "sta": 5
+   },
+   "armor": 40,
+   "weaponDamage": 0,
+   "minIlvl": 35,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 250,
+   "requiredLevel": 40,
+   "requires": [],
+   "status": "changed",
+   "confidence": "datamined"
+  },
+  {
+   "id": 18251,
+   "name": "Core Armor Kit",
+   "text": "Permanently increase the defense value of an item worn on the chest, legs, hands or feet by 3. Only usable on items level 45 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 3
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 45,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 300,
+   "requiredLevel": 50,
+   "requires": [],
+   "status": "same",
+   "confidence": "datamined"
+  },
+  {
+   "id": 279258,
+   "name": "Wild Leather Armor Kit",
+   "text": "Permanently increase the Defense Skill by 4 and the Stamina value by 10 of an item worn on the chest, legs, hands, or feet. Only usable on items level 45 and above.",
+   "slots": [
+    "Chest",
+    "Legs",
+    "Hands",
+    "Feet"
+   ],
+   "types": null,
+   "stats": {
+    "defSkill": 4,
+    "sta": 10
+   },
+   "armor": 0,
+   "weaponDamage": 0,
+   "minIlvl": 45,
+   "effect": null,
+   "profession": "Leatherworking",
+   "skill": 300,
+   "requiredLevel": 60,
+   "requires": [],
+   "status": "new",
+   "confidence": "datamined"
+  }
+ ]
+}

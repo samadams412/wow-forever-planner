@@ -2,7 +2,27 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import { parseItemTooltip } from "./item-stats.ts";
+import { parseItemTooltip, parseEnchantText } from "./item-stats.ts";
+
+test("enchant text: targets, stats, armor kits, procs", () => {
+  const bracer = parseEnchantText("Use: Permanently enchant a bracer so it increases the wearer's Intellect by 5.");
+  assert.deepEqual([bracer.slots, bracer.stats, bracer.effect], [["Wrist"], { int: 5 }, null]);
+  const kit = parseEnchantText("Use: Permanently increase the Attack Power value by 6 and armor value by 24 of an item worn on the chest, legs, hands, or feet. Only usable on items level 15 and above.");
+  assert.deepEqual([kit.slots, kit.stats, kit.armor, kit.minIlvl], [["Chest", "Legs", "Hands", "Feet"], { ap: 6 }, 24, 15]);
+  const heal = parseEnchantText("Use: Permanently enchant a Melee Weapon to add up to 55 points of healing to healing spells and up to 19 points of damage to damage spells.");
+  assert.deepEqual(heal.stats, { heal: 55, spellDmg: 19 });
+  const stats = parseEnchantText("Use: Permanently enchant a piece of chest armor to grant +2 to all stats.");
+  assert.deepEqual(stats.stats, { str: 2, agi: 2, sta: 2, int: 2, spi: 2 });
+  const two = parseEnchantText("Use: Permanently enchant a 2H Weapon to add 65 Spell Power.");
+  assert.deepEqual([two.slots, two.stats, two.leftover], [["Two-Hand"], { sp: 65 }, null]);
+  const scope = parseEnchantText("Use: Attaches a permanent scope to a bow or gun that increases its damage by 5.");
+  assert.deepEqual([scope.slots, scope.types, scope.weaponDamage], [["Ranged"], ["Bow", "Gun"], 5]);
+  const crusader = parseEnchantText("Use: Permanently enchant a melee weapon so that often when attacking in melee it heals for 75 to 125 and increases Strength by 100 for 15 sec.");
+  assert.deepEqual(crusader.stats, {});
+  assert.ok(crusader.effect);
+  const winter = parseEnchantText("Use: Permanently enchant a weapon to grant up to 15 additional frost damage when casting frost spells.");
+  assert.deepEqual(winter.stats, { frostDmg: 15 });
+});
 
 test("Forever-format armor piece", () => {
   const p = parseItemTooltip([
