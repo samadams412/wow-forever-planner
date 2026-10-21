@@ -16,3 +16,7 @@ export function maxProfessionSkill(level: number): number {
   if (level >= 5) return 75;
   return 0;
 }
+
+// Classes with a /gear/<classId> page (and a public/gear/<level>/<class>.json
+// pool). Staged: Warrior first, the rest once its UI settles.
+export const GEAR_PLANNER_CLASSES = ["warrior"] as const;

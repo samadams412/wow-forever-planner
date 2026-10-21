@@ -15,6 +15,10 @@
 // No tooltip text: rows carry parsed stats; the item page (/items/<id>) has
 // the full tooltip, sources and suffix list.
 //
+// Also carried, so the page needs one fetch and no server-side data: the
+// class's presets (scores dropped) and its base stats at this level per race
+// (data/base-stats.json, ~2 KB of a 419 KB file).
+//
 // Usage: node scripts/build-gear-pool.js [classId ...]   (default: every
 // class with a preset file)
 
@@ -108,6 +112,19 @@ function main() {
         learnedFrom: e.learnedFrom, recipeSourced: e.recipeSourced,
       }));
 
+    const races = readJson("data", "races.json").filter((r) => r.allowedClasses.includes(classId));
+    const baseStats = Object.fromEntries(races.map((r) => {
+      const b = readJson("data", "base-stats.json").levels[String(level)][classId][r.id];
+      if (!b) throw new Error(`${classId}: no base stats for ${r.id} at ${level}`);
+      return [r.id, { name: r.name, side: r.faction === "Alliance" ? "a" : "h", ...b }];
+    }));
+    const presets = {
+      disclaimer: preset.disclaimer,
+      variants: preset.variants.map((v) => ({
+        key: v.key, name: v.name, role: v.role, ...(v.groups && { groups: v.groups }), sides: v.sides,
+        ranked: Object.fromEntries(Object.entries(v.ranked).map(([k, bySide]) => [k, Object.fromEntries(Object.entries(bySide).map(([side, list]) => [side, list.map(({ score, ...e }) => e)]))])),
+      })),
+    };
     const out = {
       version: POOL_VERSION,
       classId,
@@ -119,6 +136,8 @@ function main() {
       items: rows.sort((a, b) => a.itemId - b.itemId),
       suffixes,
       enchants: usable,
+      presets,
+      baseStats,
     };
     const file = path.join(outDir, `${classId}.json`);
     fs.writeFileSync(file, JSON.stringify(out) + "\n");
