@@ -8,6 +8,8 @@ import { isTwoHand, type GearSlot } from "@/lib/gear-slots";
 import { LEFT, RIGHT, SlotCard, WEAPONS } from "./SlotGrid";
 import StatSheet from "./StatSheet";
 import SlotPicker from "./SlotPicker";
+import GearActions from "./GearActions";
+import type { SavedGearSet } from "@/lib/saved-gear-sets";
 import { computeSheet, type Sheet } from "@/lib/gear-sheet";
 
 type Props = { classId: string; className: string; help: ReactNode; initialCode: string | null };
@@ -28,19 +30,23 @@ export default function GearPlanner({ classId, className, help, initialCode }: P
 
   if (loadError) return <p className="mt-6 text-sm text-foreground-muted">The {className} item list didn&apos;t load. Reload the page to try again.</p>;
   if (!pool) return <p className="mt-6 text-sm text-foreground-muted">Loading the {className} item list…</p>;
-  return <Planner pool={pool} initialCode={initialCode} className={className} help={help} />;
+  return <Planner pool={pool} initialCode={initialCode} classId={classId} className={className} help={help} />;
 }
+
+// The preset a set is identical to (its share code matches), so a shared or saved preset reads as that preset.
+const matchingPreset = (pool: PlannerPool, gear: GearState) =>
+  pool.presets.variants.find((v) => encodeGear(presetState(v, gear.side)) === encodeGear(gear))?.key ?? null;
 
 function initialState(pool: PlannerPool, code: string | null): { gear: GearState; variant: string | null; skipped: DecodeResult["skipped"] } {
   if (code) {
     const { state, skipped } = decodeGear(code, pool);
-    if (Object.keys(state.slots).length || skipped.length) return { gear: state, variant: null, skipped };
+    if (Object.keys(state.slots).length || skipped.length) return { gear: state, variant: matchingPreset(pool, state), skipped };
   }
   const first = pool.presets.variants[0];
   return { gear: presetState(first, "a"), variant: first.key, skipped: [] };
 }
 
-function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialCode: string | null; className: string; help: ReactNode }) {
+function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool; initialCode: string | null; classId: string; className: string; help: ReactNode }) {
   const items = useMemo(() => itemIndex(pool), [pool]);
   const [start] = useState(() => initialState(pool, initialCode));
   const [gear, setGear] = useState<GearState>(start.gear);
@@ -65,11 +71,19 @@ function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialC
   const sheet = useMemo(() => computeSheet(pool, base, gear.slots), [pool, base, gear.slots]);
   const races = Object.entries(pool.baseStats).filter(([, r]) => r.side === gear.side);
 
+  const code = useMemo(() => encodeGear(gear), [gear]);
   // replaceState, not router.replace: a pure address-bar sync, no re-render (raid comp does the same).
   useEffect(() => {
-    const code = encodeGear(gear);
     window.history.replaceState(null, "", `${window.location.pathname}${code ? `?g=${code}` : ""}`);
-  }, [gear]);
+  }, [code]);
+
+  const loadSaved = (set: SavedGearSet) => {
+    const { state, skipped: dropped } = decodeGear(set.code, pool);
+    setGear(state);
+    setVariant(matchingPreset(pool, state));
+    setSkipped(dropped);
+    setRace(pool.baseStats[set.race]?.side === state.side ? set.race : defaultRace(pool, state.side));
+  };
 
   const loadPreset = (key: string, side: Side) => {
     const v = pool.presets.variants.find((x) => x.key === key);
@@ -141,6 +155,9 @@ function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialC
               {side === "a" ? "Alliance" : "Horde"}
             </button>
           ))}
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <GearActions classId={classId} code={code} race={race} onLoad={loadSaved} />
         </div>
       </div>
       <p className="mt-2 text-xs text-foreground-muted">{pool.presets.disclaimer}</p>
