@@ -41,9 +41,10 @@ improvise a different structure session to session.
   spec, live buff/debuff coverage from hand-curated `data/raid-buffs.json`,
   role summary, shareable `?r=&n=&s=` link, local saved rosters. See "Raid
   comp planner" below.
-- Gear planner (`/gear/<classId>`, planned): the data layer is built
-  (2026-10-20); the item pool, share codec and UI are not. See "Gear planner
-  data layer" below.
+- Gear planner (`/gear/<classId>`, 2026-10-21): **Warrior only** at
+  `/gear/warrior` (item pool, share codec and UI built; not in the nav or the
+  sitemap yet, pending the owner's review). Presets exist for all 9 classes.
+  See "Gear planner" and "Gear planner data layer" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
 ## Standing rule: no runtime-variable or full-file disk reads in server code
@@ -62,6 +63,13 @@ as `prebuild`). This applies doubly to the full wow.export dataset (icons,
 dungeon loot, tooltips) landing for Nov 4. After adding any new server-side
 file read, re-run `next build` and check the `.next/server/app/**/*.nft.json`
 sizes. `next.config.ts` also excludes `public/map/*/tiles/**` from all traces.
+
+**Related: never name a top-level `public/` folder after a page route.** A
+`public/gear` folder next to the `/gear/<class>` route made a fresh
+`next start` answer that page's first requests with the 404 page
+(2026-10-21, reproduced 4 times; renaming the folder to `public/gear-pool`
+fixed it 3 of 3). Today's top-level `public/` folders: backgrounds, cursors,
+gear-pool, images, map, maps.
 
 ## Active architecture
 
@@ -233,14 +241,88 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   on Tanks and DPS). Soft hints from 10 players up: no tanks, or healers
   under 20% of the roster (rule of thumb, not a game rule).
 
-### Gear planner data layer (built 2026-10-20, no UI yet)
+### Gear planner (`/gear/<classId>`, Warrior only, 2026-10-21)
+Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/gear-planner/2026-10-21-gear-planner-pool-codec-ui.md`.
+- **Item pool** (`node scripts/build-gear-pool.js [classId]` →
+  `public/gear-pool/<level>/<class>.json`, client-fetched, never read on the
+  server). One row per base item (`itemId`, name, icon, quality, item level,
+  catalog slot and type, parsed `stats`, `armor`, `weapon`, `fromLevel`,
+  `sides`, `requires`, unique / `uniqueGroup`, a `suffixes` flag); **no
+  tooltip text** (the item page has it). Plus a `suffixes` slice (the
+  `SuffixData` its items need, so `lib/item-suffixes.ts` computes rolls in
+  the browser), the usable `enchants`, the class `presets` (scores dropped)
+  and `baseStats` per race at that level, so the page makes one fetch. Warrior:
+  1,519 items, 319 with suffixes, 107 enchants, 375 KB (~50 KB gzip).
+  - **Window:** source-derived level (`gear-availability.js`, not "Requires
+    Level", which 312 of Warrior's pool items lack) from 20 to the level, plus
+    every item the class's presets use: the class Insignias (level 1, rank
+    gated), Minor Recombobulator (crafted, from 10) and a few 17-19 picks
+    would otherwise drop out. The generator fails if a preset item is missing.
+  - **Eligibility is shared** with the preset generator in
+    `scripts/lib/gear-pool.js` (`classBaseItems`, `expandSuffixes`,
+    `classifyRequirement`); presets came out byte-identical after the move.
+  - **Capital vendors:** a `sources.json` vendor in one capital ("Orgrimmar,
+    in Classic") now sells to that faction only (88 items; Insignia of the
+    Horde / Alliance were both-faction before).
+  - `lib/gear-pool.test.ts`: every preset item is in its pool for its side,
+    no tooltip field, the window rule, and the pool's suffix slice reproduces
+    the full suffix data for every flagged item.
+- **Share codec** (`lib/gear-code.ts`, test `lib/gear-code.test.ts`):
+  `?g=<version>.<a|h>.<slot>...` over the frozen `GEAR_SLOTS`; each slot is
+  `base36(itemId)[_base36(suffixId)][-base36(enchantId)]`, trailing empties
+  trimmed, only `[0-9a-z._-]` (URLSearchParams leaves it unescaped). A full
+  set is about 125-135 characters. `GEAR_CODE_VERSION` = 1: bump it and branch
+  `decodeGear` if a slot's meaning changes. `pickProblem` / `decodeGear`
+  validate each slot against the pool and `lib/gear-classes.ts` (faction,
+  slot, dual-wield level, shields, no off hand under a two-hander, the item's
+  own suffix rolls, a roll required on suffix items and refused on plain ones,
+  enchant slot/type/item level, unique items and unique groups) and **keep
+  what's legal, listing why the rest was skipped**, so a stale link still
+  opens. No name or race in the link yet (saved sets keep the race).
+- **UI** (`app/gear/[classId]/page.tsx`, `components/gear/*`): a static ●
+  page per class in `GEAR_PLANNER_CLASSES` (`lib/gear-config.ts`),
+  `dynamicParams = false`. `GearFromUrl` reads `?g=` under Suspense (never
+  `searchParams` in `page.tsx`); `GearPlanner` fetches the pool and writes
+  the code back with `history.replaceState`. Verified 2026-10-21 against
+  `next start`: `/gear/warrior` is `compute: static`, and four different
+  `?g=` URLs return the same cached HTML (HIT); the route's trace is 2.46 MB
+  with no pool, preset or base-stat file.
+  - `SlotGrid` (paper doll: armor left, jewelry right, weapons below; one
+    column on phones with the sheet after the slots), `RequirementChips`
+    (profession / reputation / PvP rank), preset select with the disclaimer
+    (a set identical to a preset reads as that preset; any hand edit makes
+    it "Custom set"), Alliance/Horde toggle (a preset follows the faction, a
+    custom set keeps what the other faction can use and lists the rest).
+  - `StatSheet` + `lib/gear-sheet.ts` (`computeSheet`, tested): race base
+    stats (race select, derived races flagged estimated) + item stats +
+    suffix roll + enchant; health/mana by the Classic formulas, armor + 2 ×
+    Agility, no crit/hit/AP derivation (Forever's conversions are unknown).
+  - `SlotPicker`: a right-side drawer (the sheet stays visible on wide
+    screens), empty search = the preset's ranked list (pins and alternates
+    tagged), typing = name search over the pool (60 max, best quality first).
+    Each row shows its top stat changes (phones get the preview without
+    hover); hover/focus previews the change on the sheet; illegal picks are
+    disabled with the reason. The equipped item's suffix roll and enchant are
+    chosen in the drawer (unknown-recipe enchants labelled).
+  - `GearActions`: Share (copies the address bar), Save and My Sets
+    (`lib/saved-gear-sets.ts`, key `forevercraft:saved-gear-sets`, per class,
+    stored as the share code plus race, loaded through `decodeGear`).
+  - "?" how-to: `components/raid-comp/HowToUse.tsx` (now takes `title`/`id`),
+    rendered above the loading gate so the text is in the prerendered HTML.
+  - Client components import display helpers from client-safe
+    `lib/item-display.ts` (moved out of `lib/wow-data.ts`, which re-exports
+    them), never `lib/wow-data.ts`.
+  - **Not done yet:** the other 8 classes' pools and pages, a nav link,
+    sitemap and `robots` entries (disallow `/gear/*?` like raid comp), an OG
+    image, set names and race in the link, talents in the link.
+
+### Gear planner data layer (built 2026-10-20)
 Planned feature: standalone `/gear/<classId>`, level 30 first, level as a
 parameter throughout. Decided by the owner on 2026-10-20: generated presets
 (weights plus an override file, all `estimated`), no 3D viewer, cmangos base
 stats, raid-comp-style "?" how-to `<dialog>`. Investigation and design:
 `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`.
-**Not built yet: the per-level item pool (`public/gear/<level>/<class>.json`),
-the share codec (`lib/gear-code.ts`) and any UI.** Presets exist for all 9
+The pool, codec and UI are in "Gear planner" above. Presets exist for all 9
 classes (38 variants × 2 sides, generated 2026-10-20), pending the owner's
 review; per-class status is under "Presets" below.
 - **`lib/item-stats.ts`** (pure, erasable TS, so build scripts `require()` it
@@ -712,7 +794,7 @@ See `docs/adding-content.md` for guides/blog/profession frontmatter,
 image/credit conventions, and SEO metadata specifics.
 
 ## Next up
-- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`). **2026-10-20:** the owner now wants a level-30 gear planner built with level as a parameter; the investigation (foreverchanges dissection, data model, URL scheme, open scope calls) is in `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`. Decisions made the same day; the data layer is built (see "Gear planner data layer"). Pass 3 (same day): Warrior trinket/enchant overrides, suffix sourcing investigated, Wowhead cross-check (see the handoff). All 9 classes' presets are generated (2026-10-20, later). Next, after the owner reviews them: the suffix-aware item pool, the codec, then the UI.
+- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`). **2026-10-20:** the owner now wants a level-30 gear planner built with level as a parameter; the investigation (foreverchanges dissection, data model, URL scheme, open scope calls) is in `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`. Decisions made the same day; the data layer is built (see "Gear planner data layer"). Pass 3 (same day): Warrior trinket/enchant overrides, suffix sourcing investigated, Wowhead cross-check (see the handoff). All 9 classes' presets are generated (2026-10-20, later). **2026-10-21:** item pool, codec and UI built for Warrior (`/gear/warrior`, see "Gear planner"). Next, after the owner's review: pools and pages for the other 8 classes, then nav/sitemap/robots/OG.
 - **Design the November data layout (items / loot / tooltips) before
   importing the full wow.export dataset** — per-item shards (static files,
   fetched on demand / prerendered) vs. Postgres. Decide this first; today's
