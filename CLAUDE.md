@@ -301,9 +301,25 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/gear-planner/2026-10-21-gear-p
     screens), empty search = the preset's ranked list (pins and alternates
     tagged), typing = name search over the pool (60 max, best quality first).
     Each row shows its top stat changes (phones get the preview without
-    hover); hover/focus previews the change on the sheet; illegal picks are
-    disabled with the reason. The equipped item's suffix roll and enchant are
-    chosen in the drawer (unknown-recipe enchants labelled).
+    hover); hover/focus previews the change on the sheet. **Click/tap expands
+    a row** (one at a time) to the slot tooltip's detail (`ItemDetail` in
+    `SlotTooltip.tsx`) plus an Equip button; nothing equips on the row click.
+    Illegal picks still expand, with Equip disabled and the reason. The
+    equipped item's suffix roll and enchant are chosen in the drawer.
+  - Enchant text everywhere is the effect only (`enchantEffect` in
+    `lib/gear-sheet.ts`, the numbers the sheet applies), never the name. In
+    the enchant select, the short name is added only where two options on
+    that item read the same (5 pairs on 70374 data: Minor/Lesser Stats,
+    Defense/Greater Defense, etc., probably stale values). A recipe whose
+    formula has no known source reads "(Leatherworking (135) pattern, source
+    unknown)": the Forceful/Mystic armor kits are pattern-taught, and our data
+    has no source for those patterns (Merchant's Favor only lists the kits as
+    turn-ins).
+  - Slot hover tooltip (`SlotTooltip`, desktop hover only, `active-tooltip`
+    claim). "Requires Level N" comes from the tooltip line
+    (`build-gear-pool.js`), never the catalog `requiredLevel` field, which
+    holds a placeholder 1 on 25 Warrior items with no line; items without a
+    line say "obtainable from level N" (`fromLevel`).
   - `GearActions`: Share (copies the address bar), Save and My Sets
     (`lib/saved-gear-sets.ts`, key `forevercraft:saved-gear-sets`, per class,
     stored as the share code plus race, loaded through `decodeGear`).

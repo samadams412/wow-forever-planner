@@ -4,10 +4,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { GEAR_SLOT_LABEL, gearSlotsFor, isTwoHand, type GearSlot } from "@/lib/gear-slots";
 import { pickProblem, type GearState, type PoolItem, type SlotPick } from "@/lib/gear-code";
 import { enchantsFor, rankKey, suffixesOf, type PlannerPool, type RankedEntry } from "@/lib/gear-planner";
-import { computeSheet, sheetDelta, withPick, type BaseStats, type Sheet, type SheetLine } from "@/lib/gear-sheet";
+import { computeSheet, enchantEffect, sheetDelta, withPick, type BaseStats, type Sheet, type SheetLine } from "@/lib/gear-sheet";
 import { STAT_LABEL, type StatKey } from "@/lib/item-stats";
 import { itemQualityColor, mediumIconUrl } from "@/lib/item-display";
 import RequirementChips from "./RequirementChips";
+import { ItemDetail } from "./SlotTooltip";
 
 const DELTA_LINES: SheetLine[] = [
   "str", "agi", "sta", "int", "spi", "health", "mana", "armor", "ap", "rap", "critRating", "hitRating", "hasteRating", "expertiseRating",
@@ -19,6 +20,8 @@ const SHORT: Partial<Record<SheetLine, string>> = {
   critRating: "Crit", hitRating: "Hit", sp: "SP", heal: "Heal", mp5: "MP5", defRating: "Def", dodgeRating: "Dodge", parryRating: "Parry",
   blockRating: "Block", blockValue: "Block value",
 };
+// What each profession calls the item that teaches a recipe (the enchant's recipeItemIds).
+const RECIPE_ITEM: Record<string, string> = { Enchanting: "formula", Leatherworking: "pattern", Engineering: "schematic", Blacksmithing: "plans" };
 const short = (l: SheetLine) => SHORT[l] ?? STAT_LABEL[l as StatKey]?.name ?? l;
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
@@ -48,6 +51,8 @@ export default function SlotPicker({
   onClose: () => void;
 }) {
   const [query, setQuery] = useState("");
+  // The one expanded row (click/tap to expand, Equip to wear it), like the one-open-tooltip rule.
+  const [expanded, setExpanded] = useState<string | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -169,11 +174,13 @@ export default function SlotPicker({
                 className="min-w-0 flex-1 rounded border border-border bg-background px-1.5 py-1 text-xs text-foreground"
               >
                 <option value="">No enchant</option>
-                {enchantsFor(pool, currentItem).map((e) => (
+                {enchantsFor(pool, currentItem).map((e, _, all) => (
                   <option key={e.id} value={e.id}>
-                    {e.name}
+                    {enchantEffect(e)}
+                    {/* Two enchants with the same effect on this item (stale Classic values, e.g. Minor vs Lesser Stats) need the name to tell apart. */}
+                    {all.some((o) => o !== e && enchantEffect(o) === enchantEffect(e)) ? ` (${e.name.replace(/^Enchant [\w\s-]+? - /, "")})` : ""}
                     {e.requires?.length ? ` (${e.requires.map((r) => r.replace(/^Requires /, "")).join(", ")})` : ""}
-                    {e.learnedFrom === "recipe" && !e.recipeSourced ? " (recipe source unknown)" : ""}
+                    {e.learnedFrom === "recipe" && !e.recipeSourced ? ` (${e.profession} (${e.skill}) ${RECIPE_ITEM[e.profession] ?? "recipe"}, source unknown)` : ""}
                   </option>
                 ))}
               </select>
@@ -207,15 +214,22 @@ export default function SlotPicker({
             const deltas = Object.entries(deltaOf(r.pick)) as [SheetLine, number][];
             const top = deltas.sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 4);
             const worn = current?.itemId === r.item.itemId && current.suffixId === r.pick.suffixId;
+            const key = `${r.item.itemId}:${r.pick.suffixId ?? ""}`;
+            const open = expanded === key;
+            // What equipping would wear: the kept enchant shows in the detail too.
+            const wearing = slotsWith(r.pick)[slot] ?? r.pick;
             return (
-              <li key={`${r.item.itemId}:${r.pick.suffixId ?? ""}`}>
+              <li key={key} className={open ? "rounded bg-background" : ""}>
                 <button
                   type="button"
-                  disabled={Boolean(r.problem)}
-                  onClick={() => onEquip(slotsWith(r.pick))}
+                  aria-expanded={open}
+                  onClick={() => {
+                    setExpanded(open ? null : key);
+                    if (!open) previewRow(r.pick);
+                  }}
                   onMouseEnter={() => previewRow(r.pick)}
                   onFocus={() => previewRow(r.pick)}
-                  className={`flex w-full items-start gap-2 rounded px-2 py-1.5 text-left hover:bg-background focus:bg-background disabled:cursor-not-allowed disabled:opacity-50 ${worn ? "ring-1 ring-accent/50" : ""}`}
+                  className={`flex w-full items-start gap-2 rounded px-2 py-1.5 text-left hover:bg-background focus:bg-background ${r.problem ? "opacity-50" : ""} ${worn ? "ring-1 ring-accent/50" : ""}`}
                 >
                   {r.item.icon && (
                     // eslint-disable-next-line @next/next/no-img-element
@@ -253,6 +267,27 @@ export default function SlotPicker({
                     </span>
                   </span>
                 </button>
+                {open && (
+                  <div className="px-2 pb-2">
+                    <div className="rounded border border-[#c8aa6e]/80 bg-[#0a0f1a] p-3 text-xs leading-snug text-white">
+                      <ItemDetail pool={pool} item={r.item} pick={wearing} />
+                    </div>
+                    <div className="mt-2 flex items-center gap-3">
+                      <button
+                        type="button"
+                        disabled={Boolean(r.problem) || worn}
+                        onClick={() => {
+                          onEquip(slotsWith(r.pick));
+                          setExpanded(null);
+                        }}
+                        className="rounded border border-accent/60 bg-accent/15 px-3 py-1 text-sm font-semibold text-foreground hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        {worn ? "Equipped" : "Equip"}
+                      </button>
+                      {r.problem && <span className="text-[11px] text-foreground-muted">{r.problem}</span>}
+                    </div>
+                  </div>
+                )}
               </li>
             );
           })}
