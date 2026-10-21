@@ -11,7 +11,7 @@
 // CLAUDE.md's map-tile-pyramid note for the same "large local source, small
 // derived snapshot in the repo" pattern already used for the map tiles).
 //
-// Usage: node scripts/trim-client-db2.js [sourceDir] [build]
+// Usage: node scripts/trim-client-db2.js [sourceDir] [build] [table,table...]
 //   sourceDir defaults to C:/Users/samue/wow.export (this machine's install)
 //   build defaults to 1.60.1.70009, confirmed against this machine's
 //   `World of Warcraft/.build.info` (wow_classic_beta product line) at the
@@ -91,12 +91,37 @@ const TABLES = {
     ],
   },
   // uimap: intentionally absent from this run -- see header comment.
+
+  // Random-suffix tables (gear planner, item pages), first trimmed from a
+  // 1.60.1.70450 export -- scripts/build-gear-suffixes.js reads them.
+  itemxbonustree: { file: "ItemXBonusTree.csv", columns: ["ID", "ItemBonusTreeID", "ItemID"] },
+  itembonustreenode: {
+    file: "ItemBonusTreeNode.csv",
+    columns: ["ID", "ItemContext", "ChildItemBonusTreeID", "ChildItemBonusListID", "ChildItemBonusListGroupID", "ParentItemBonusTreeID"],
+  },
+  // Value is 4 numbers comma-packed: type 2 = stat id, allocation /10000; type 5 = ItemNameDescription id.
+  itembonus: { file: "ItemBonus.csv", columns: ["ID", "Value", "ParentItemBonusListID", "Type", "OrderIndex"] },
+  // Epic/Superior/Good: 5 comma-packed budgets per item level (ID), one per slot group.
+  randproppoints: { file: "RandPropPoints.csv", columns: ["ID", "Epic", "Superior", "Good"] },
+  itemnamedescription: { file: "ItemNameDescription.csv", columns: ["ID", "Description_lang"] },
+  // Partial in the client (19,257 rows): a cross-check for ilvl/quality, and the only
+  // source of RequiredPVPRank (client value - 4 = Classic rank: 6 = Corporal / Grunt).
+  itemsparse: {
+    file: "ItemSparse.csv",
+    columns: ["ID", "Display_lang", "ItemLevel", "OverallQualityID", "InventoryType", "RequiredLevel", "RequiredPVPRank", "MinFactionID", "MinReputation"],
+  },
 };
+
+// Optional 3rd arg: comma-separated table names, so a newer export can be
+// trimmed for some tables without relabelling older exports of the others.
+const only = process.argv[4] ? new Set(process.argv[4].split(",")) : null;
+for (const name of only ?? []) if (!TABLES[name]) throw new Error(`unknown table ${name}`);
 
 const outDir = path.join(__dirname, "..", "data", "sources", "client-db2", build);
 fs.mkdirSync(outDir, { recursive: true });
 
 for (const [name, { file, columns }] of Object.entries(TABLES)) {
+  if (only && !only.has(name)) continue;
   const srcPath = path.join(sourceDir, file);
   if (!fs.existsSync(srcPath)) {
     console.log(`SKIP ${name}: ${srcPath} not found`);
@@ -108,6 +133,6 @@ for (const [name, { file, columns }] of Object.entries(TABLES)) {
 }
 
 const uimapSrc = path.join(sourceDir, "UiMap.csv");
-if (!fs.existsSync(uimapSrc)) {
+if (!only && !fs.existsSync(uimapSrc)) {
   console.log(`SKIP uimap: ${uimapSrc} not found -- not exported this run, see this file's own header comment`);
 }

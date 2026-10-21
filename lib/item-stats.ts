@@ -66,6 +66,11 @@ const EQUIP_PLUS_STATS: Record<string, StatKey> = {
   "Block Rating": "blockRating", "Block Value": "blockValue", Armor: "bonusArmor",
 };
 
+// StatKey -> Forever tooltip wording ("+9 Intellect", "Equip: +12 Attack Power"), first name wins.
+export const STAT_LABEL: Partial<Record<StatKey, { name: string; equip: boolean }>> = {};
+for (const [table, equip] of [[PLUS_STATS, false], [EQUIP_PLUS_STATS, true]] as const)
+  for (const [name, key] of Object.entries(table)) STAT_LABEL[key] ??= { name, equip };
+
 const SCHOOL_KEY: Record<string, StatKey> = {
   Holy: "holyDmg", Fire: "fireDmg", Frost: "frostDmg", Shadow: "shadowDmg", Nature: "natureDmg", Arcane: "arcaneDmg",
 };

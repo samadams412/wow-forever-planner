@@ -275,3 +275,10 @@ itself changed.
 - `wowhead/quests/scraped_quests_output.json` -- raw local scrape of Wowhead Forever quest pages (5.4MB, 838 entries, contains page-script junk). **Gitignored**; not needed at runtime.
 - `wowhead/quest-text.json` -- parsed output (816 quests) in the same row shape as `cmangos/quest-text.json`, built by `node scripts/build-wowhead-quest-text.js`. Only consulted by `lib/quests.ts` for quests cMaNGOS has no row for.
 - `wowhead/quest-extras.json` -- optional per-quest fields from the same scrape (829 quests): `xp`, `reputation`, `start`/`end` NPC name+id, `items` (mentioned item ids), `points` (start/end zone-percent map coords, stored but not rendered yet). Written by the same script. `lib/quests.ts` merges XP (only where list.json has 0), reputation, giver/turn-in and mentioned items.
+
+## client-db2/
+
+Trimmed client DB2 tables, one folder per client build, written by `node scripts/trim-client-db2.js <wow.export dir> <build> [tables]` from a local wow.export CSV export (never hand-edited, never overwritten across builds).
+
+- `1.60.1.70009/` -- map tables (areapoi, areatable, contenttuning, map, taxinodes, uimapassignment) plus the zone grids; read by the map build scripts.
+- `1.60.1.70450/` -- random-suffix tables (itemxbonustree, itembonustreenode, itembonus, randproppoints, itemnamedescription, itemsparse), exported 2026-10-20; read by `scripts/build-gear-suffixes.js` and `scripts/build-gear-presets.js` (ItemSparse `RequiredPVPRank`). Row-for-row identical to wago.tools' 70450 copies when imported.

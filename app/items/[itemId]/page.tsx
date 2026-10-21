@@ -9,6 +9,9 @@ import { getItemSource, getSourceSiblings } from "@/lib/item-sources";
 import { mediumIconUrl, itemQualityColor, itemQualityName } from "@/lib/wow-data";
 import type { LootItem } from "@/lib/dungeon-loot";
 import { displayStatus } from "@/lib/item-display-status";
+import ItemSuffixList from "@/components/reference/ItemSuffixList";
+import { itemSuffixes, type SuffixData } from "@/lib/item-suffixes";
+import suffixData from "@/data/gear/suffixes.json";
 
 // No generateStaticParams -- 21,458 items would mean 21,458 pages built up
 // front for a page most visitors reach one at a time (from a dungeon drop,
@@ -92,6 +95,7 @@ export default async function ItemPage({
   const callout = shownStatus ? STATUS_CALLOUT[shownStatus] : null;
   const source = item.itemId !== null ? getItemSource(item.itemId) : undefined;
   const siblings = source && item.itemId !== null ? getSourceSiblings(item.itemId) : [];
+  const suffixes = itemSuffixes(item, suffixData as unknown as SuffixData);
 
   return (
     <main className="mx-auto w-full max-w-2xl px-3 py-8 sm:px-4">
@@ -126,6 +130,12 @@ export default async function ItemPage({
       <div className="mt-4 rounded border border-[#c8aa6e]/80 bg-[#0a0f1a]/95 p-4 text-left shadow-lg [--quality-common:#ffffff]">
         <ItemTooltipBody item={item} context="catalog" />
       </div>
+
+      {suffixes.length > 0 && (
+        <div className="mt-4">
+          <ItemSuffixList itemName={item.name} suffixes={suffixes} build={suffixData.build} />
+        </div>
+      )}
 
       {source && (
         <div className="mt-4">
