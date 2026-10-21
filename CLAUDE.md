@@ -306,14 +306,14 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/gear-planner/2026-10-21-gear-p
     `SlotTooltip.tsx`) plus an Equip button; nothing equips on the row click.
     Illegal picks still expand, with Equip disabled and the reason. The
     equipped item's suffix roll and enchant are chosen in the drawer.
-  - Enchant text everywhere is the effect only (`enchantEffect` in
-    `lib/gear-sheet.ts`, the numbers the sheet applies), never the name. In
-    the enchant select, the short name is added only where two options on
-    that item read the same (5 pairs on 70374 data: Minor/Lesser Stats,
-    Defense/Greater Defense, etc., probably stale values). A recipe whose
-    formula has no known source reads "(Leatherworking (135) pattern, source
-    unknown)": the Forceful/Mystic armor kits are pattern-taught, and our data
-    has no source for those patterns (Merchant's Favor only lists the kits as
+  - Slot cards and tooltips show an enchant's effect only (`enchantEffect` in
+    `lib/gear-sheet.ts`, the numbers the sheet applies), never the name. The
+    drawer's enchant select is "short name: stats" ("Lesser Stats: +2 all
+    stats", "Forceful Heavy Armor Kit: +6 Attack Power, +24 armor"), just the
+    name for effect-only enchants, and nothing else (owner's call
+    2026-10-21: no use text, requirements or recipe-source notes). The
+    `recipeSourced` flag stays in the data: the Forceful/Mystic armor kits'
+    patterns have no known source (Merchant's Favor only lists the kits as
     turn-ins).
   - Slot hover tooltip (`SlotTooltip`, desktop hover only, `active-tooltip`
     claim). "Requires Level N" comes from the tooltip line

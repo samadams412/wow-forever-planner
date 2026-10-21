@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GEAR_SLOT_LABEL, gearSlotsFor, isTwoHand, type GearSlot } from "@/lib/gear-slots";
-import { pickProblem, type GearState, type PoolItem, type SlotPick } from "@/lib/gear-code";
+import { pickProblem, type GearState, type PoolEnchant, type PoolItem, type SlotPick } from "@/lib/gear-code";
 import { enchantsFor, rankKey, suffixesOf, type PlannerPool, type RankedEntry } from "@/lib/gear-planner";
 import { computeSheet, enchantEffect, sheetDelta, withPick, type BaseStats, type Sheet, type SheetLine } from "@/lib/gear-sheet";
 import { STAT_LABEL, type StatKey } from "@/lib/item-stats";
@@ -20,8 +20,12 @@ const SHORT: Partial<Record<SheetLine, string>> = {
   critRating: "Crit", hitRating: "Hit", sp: "SP", heal: "Heal", mp5: "MP5", defRating: "Def", dodgeRating: "Dodge", parryRating: "Parry",
   blockRating: "Block", blockValue: "Block value",
 };
-// What each profession calls the item that teaches a recipe (the enchant's recipeItemIds).
-const RECIPE_ITEM: Record<string, string> = { Enchanting: "formula", Leatherworking: "pattern", Engineering: "schematic", Blacksmithing: "plans" };
+// Enchant select label: short name and its stats ("Lesser Stats: +2 all stats",
+// "Forceful Heavy Armor Kit: +6 Attack Power, +24 armor"); effect-only enchants get just the name.
+const enchantLabel = (e: PoolEnchant) => {
+  const name = e.name.replace(/^Enchant [\w\s-]+? - /, "");
+  return Object.keys(e.stats).length || e.armor || e.weaponDamage ? `${name}: ${enchantEffect(e)}` : name;
+};
 const short = (l: SheetLine) => SHORT[l] ?? STAT_LABEL[l as StatKey]?.name ?? l;
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
@@ -174,13 +178,9 @@ export default function SlotPicker({
                 className="min-w-0 flex-1 rounded border border-border bg-background px-1.5 py-1 text-xs text-foreground"
               >
                 <option value="">No enchant</option>
-                {enchantsFor(pool, currentItem).map((e, _, all) => (
+                {enchantsFor(pool, currentItem).map((e) => (
                   <option key={e.id} value={e.id}>
-                    {enchantEffect(e)}
-                    {/* Two enchants with the same effect on this item (stale Classic values, e.g. Minor vs Lesser Stats) need the name to tell apart. */}
-                    {all.some((o) => o !== e && enchantEffect(o) === enchantEffect(e)) ? ` (${e.name.replace(/^Enchant [\w\s-]+? - /, "")})` : ""}
-                    {e.requires?.length ? ` (${e.requires.map((r) => r.replace(/^Requires /, "")).join(", ")})` : ""}
-                    {e.learnedFrom === "recipe" && !e.recipeSourced ? ` (${e.profession} (${e.skill}) ${RECIPE_ITEM[e.profession] ?? "recipe"}, source unknown)` : ""}
+                    {enchantLabel(e)}
                   </option>
                 ))}
               </select>
