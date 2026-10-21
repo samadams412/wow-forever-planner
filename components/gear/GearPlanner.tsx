@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import { DEFAULT_GEAR_LEVEL } from "@/lib/gear-config";
 import { decodeGear, encodeGear, pickProblem, type DecodeResult, type GearState, type Side } from "@/lib/gear-code";
 import { defaultRace, itemIndex, presetState, type PlannerPool } from "@/lib/gear-planner";
 import { isTwoHand, type GearSlot } from "@/lib/gear-slots";
 import { LEFT, RIGHT, SlotCard, WEAPONS } from "./SlotGrid";
 import StatSheet from "./StatSheet";
+import SlotPicker from "./SlotPicker";
 import { computeSheet, type Sheet } from "@/lib/gear-sheet";
 
 type Props = { classId: string; className: string; help: ReactNode; initialCode: string | null };
@@ -48,7 +49,18 @@ function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialC
   const [skipped, setSkipped] = useState(start.skipped);
   const [race, setRace] = useState(() => defaultRace(pool, start.gear.side));
   // The sheet with a hovered/focused picker item swapped in (null when nothing is highlighted).
-  const [preview] = useState<Sheet | null>(null);
+  const [preview, setPreview] = useState<Sheet | null>(null);
+  const [picking, setPicking] = useState<GearSlot | null>(null);
+  const closePicker = useCallback(() => {
+    setPicking(null);
+    setPreview(null);
+  }, []);
+  // Any hand edit leaves the preset: the select shows "Custom set".
+  const equip = (slots: GearState["slots"]) => {
+    setGear((g) => ({ ...g, slots }));
+    setVariant(null);
+    setPreview(null);
+  };
   const base = pool.baseStats[race];
   const sheet = useMemo(() => computeSheet(pool, base, gear.slots), [pool, base, gear.slots]);
   const races = Object.entries(pool.baseStats).filter(([, r]) => r.side === gear.side);
@@ -94,7 +106,7 @@ function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialC
       pool={pool}
       items={items}
       slots={gear.slots}
-      onOpen={() => {}}
+      onOpen={setPicking}
       disabled={slot === "off" && twoHanded ? "A two-handed weapon leaves no off hand" : undefined}
     />
   );
@@ -179,6 +191,21 @@ function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialC
         <div className="space-y-2">{RIGHT.map(card)}</div>
         <div className="grid gap-2 sm:col-span-2 sm:grid-cols-3 lg:col-span-3">{WEAPONS.map(card)}</div>
       </div>
+
+      {picking && (
+        <SlotPicker
+          pool={pool}
+          items={items}
+          slot={picking}
+          gear={gear}
+          base={base}
+          sheet={sheet}
+          variantKey={variant}
+          onEquip={equip}
+          onPreview={setPreview}
+          onClose={closePicker}
+        />
+      )}
     </div>
   );
 }
