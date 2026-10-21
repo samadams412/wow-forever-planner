@@ -41,6 +41,9 @@ improvise a different structure session to session.
   spec, live buff/debuff coverage from hand-curated `data/raid-buffs.json`,
   role summary, shareable `?r=&n=&s=` link, local saved rosters. See "Raid
   comp planner" below.
+- Gear planner (`/gear/<classId>`, planned): the data layer is built
+  (2026-10-20); the item pool, share codec and UI are not. See "Gear planner
+  data layer" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
 ## Standing rule: no runtime-variable or full-file disk reads in server code
@@ -229,6 +232,72 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
 - **Roles:** default role per spec (Feral = "flex", shown as "+N Feral"
   on Tanks and DPS). Soft hints from 10 players up: no tanks, or healers
   under 20% of the roster (rule of thumb, not a game rule).
+
+### Gear planner data layer (built 2026-10-20, no UI yet)
+Planned feature: standalone `/gear/<classId>`, level 30 first, level as a
+parameter throughout. Decided by the owner on 2026-10-20: generated presets
+(weights plus an override file, all `estimated`), no 3D viewer, cmangos base
+stats, raid-comp-style "?" how-to `<dialog>`. Investigation and design:
+`Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`.
+**Not built yet: the per-level item pool (`public/gear/<level>/<class>.json`),
+the share codec (`lib/gear-code.ts`) and any UI.** Presets exist for Warrior
+only, pending the owner's sanity check before the other 8 classes.
+- **`lib/item-stats.ts`** (pure, erasable TS, so build scripts `require()` it
+  under Node 24 type stripping): `parseItemTooltip` sorts every tooltip line
+  into stats / armor / weapon damage / meta / set bonus / unscored effect /
+  `unparsed`; `parseEnchantText` turns an enchant's `Use:` prose into target
+  slots, stats, armor, flat weapon damage, `minIlvl` (procs are effect-only).
+  Stat keys in `STAT_KEYS`: Forever ratings (`critRating`) and Classic
+  percentages (`critPct`) stay separate keys, and Spell Power / Spell Damage /
+  Healing are distinct, as in Forever tooltips. Conditional bonuses ("Attack
+  Power Vs Undead", weapon skills) are effects, not stats. A shield's
+  "N Block" line counts as `blockValue` (foreverchanges leaves it out).
+  Keeps `uniqueGroup` ("Unique-Equipped: Rune of Battle (1)").
+- **Coverage:** `node scripts/report-item-stat-coverage.js` writes
+  `docs/item-stat-coverage.md`; re-run after every item pull. As of the 70374
+  catalog: 11,969 / 11,976 equipment items (99.9%) clean, 0 unparsed lines;
+  the 7 misses are "Damage set by hand" placeholder weapons and armorless
+  shirts. A test fails if any equipment item gains an unparsed line.
+- **`lib/gear-slots.ts`:** `GEAR_SLOTS` is **frozen** (share codes will be
+  positional over it: never reorder or remove, append only, same rule as
+  `SPEC_ORDER`). `CATALOG_SLOT_TO_GEAR_SLOTS` maps `data/items.json` slot
+  strings (One-Hand → main/off, Relic/Thrown → ranged). 11,876 / 11,998
+  weapons+armor map; the rest are shirts/tabards (`NON_PLANNER_CATALOG_SLOTS`)
+  or `slot: null` non-equipment (conjured stones, seals, quest items).
+- **`lib/gear-config.ts`:** `GEAR_LEVELS`, `DEFAULT_GEAR_LEVEL`,
+  `maxProfessionSkill(level)` (Classic rank gates, caps enchants a preset
+  assumes). **`lib/gear-classes.ts`:** per-class proficiencies (`canEquip`),
+  Warrior only so far, `estimated`; fill a class in before generating its
+  presets.
+- **`data/base-stats.json`** (`node scripts/build-base-stats.js [--check]`):
+  level 1-60 → class → race → str/agi/sta/int/spi/health/mana from cmangos
+  classic-db `player_levelstats` + `player_classlevelstats`, pinned to commit
+  `28ef6259` (last change to `Full_DB/`, 2024-01-17). `basis` per entry:
+  `classic` (`datamined`, Classic values not verified for Forever),
+  `race-offset` (pairs new in Forever such as Undead Paladin, Dwarf Shaman;
+  `estimated`; leave-one-out error 0.09 per attribute), `class-average`
+  (Skyborne, no Classic row; `estimated`; leave-one-out error 2.49, p95 6).
+  419 KB for all 60 levels: import a slice server-side, never into a client
+  bundle.
+- **`data/gear/enchants.json`** (`node scripts/build-gear-enchants.js`):
+  194 enchants from the Enchanting/Engineering/Leatherworking/Blacksmithing
+  catalogs, id = the enchant item's `itemId`, stats parsed from that item's
+  Forever tooltip. The script exits 1 on an unrecognised target or leftover
+  number. No Arcanums / ZG / Argent Dawn shoulders yet (no profession recipe;
+  all 50+).
+- **Presets** (`node scripts/build-gear-presets.js [classId]`):
+  hand-written `data/gear/preset-weights.json` (per variant: weights,
+  `mainHand` two-hand / one-hand-shield / dual-wield) and
+  `data/gear/preset-overrides.json` (exclude, pin, forced enchant; the
+  generator fails on an id it can't place) → `data/gear/presets/<class>.json`:
+  per variant and side (`a`/`h`) a loadout, enchants and a top-6 ranked list
+  per slot. Eligibility uses `scripts/lib/gear-availability.js`: many Forever
+  quest rewards and drops have **no "Requires Level" line**, so the obtainable
+  level comes from the quest's required level / dungeon minimum level, and
+  the faction from the quest side. Items with no known source are dropped
+  (test records like "Bad Hat"), as are profession- or reputation-gated items.
+  **Use-effect trinkets score 0** (effects aren't weighted), so trinkets need
+  overrides. `lib/gear-presets.test.ts` checks every generated pick is legal.
 
 ### Mobile talent tree interaction (`TalentNode.tsx`/`TalentTreeGrid.tsx`)
 - Tap always adds a point (never toggles remove — removal is the
@@ -520,7 +589,7 @@ See `docs/adding-content.md` for guides/blog/profession frontmatter,
 image/credit conventions, and SEO metadata specifics.
 
 ## Next up
-- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`).
+- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`). **2026-10-20:** the owner now wants a level-30 gear planner built with level as a parameter; the investigation (foreverchanges dissection, data model, URL scheme, open scope calls) is in `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`. Decisions made the same day; the data layer is built (see "Gear planner data layer"). Next, after the owner signs off on the Warrior presets: weights + `lib/gear-classes.ts` rows for the other 8 classes, then the item pool, the codec, and the UI.
 - **Design the November data layout (items / loot / tooltips) before
   importing the full wow.export dataset** — per-item shards (static files,
   fetched on demand / prerendered) vs. Postgres. Decide this first; today's
@@ -528,6 +597,14 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
+- **Gear planner data gaps (2026-10-20):** (1) `data/items.json` has no
+  random-suffix items ("…of the Tiger"); foreverchanges encodes them as
+  `baseId * 100000 + suffixId` and 3 of their 49 Warrior picks per faction
+  are suffix items. Needs a suffix source before the pool is built. (2) The
+  item catalog is build 70374, foreverchanges is on 70450: enchants such as
+  Bracer - Lesser Intellect (+5 → +3) and Cloak - Defense (60 → 30 armor)
+  were nerfed since. Refresh items, then re-run `build-gear-enchants.js` and
+  `build-gear-presets.js`.
 - **Raid comp: `estimated` rules still unverified** (`data/raid-buffs.json`,
   web research pass 2026-10-19, sources in each set's `evidence`). Now
   **confirmed** from Blizzard: `major-armor` (Rogue/Warlock deep dive:
