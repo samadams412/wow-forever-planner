@@ -2,18 +2,26 @@
 
 import { useRef, type ReactNode } from "react";
 
-// "?" help for the raid comp planner. A native <dialog> rather than the house
+// "?" help for the raid comp planner (and the gear planner, via title/id). A native <dialog> rather than the house
 // Dialog because Dialog unmounts when closed: the how-to text is the page's
 // SEO copy and must stay in the prerendered HTML, so it's always in the DOM
 // and only shown (top layer, focus trap, Escape) by showModal().
-export default function HowToUse({ children }: { children: ReactNode }) {
+export default function HowToUse({
+  children,
+  title = "How to use the raid comp planner",
+  id = "raid-comp-how-to",
+}: {
+  children: ReactNode;
+  title?: string;
+  id?: string;
+}) {
   const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
       <button
         type="button"
         onClick={() => ref.current?.showModal()}
-        aria-label="How to use the raid comp planner"
+        aria-label={title}
         aria-haspopup="dialog"
         title="How to use"
         className="flex h-5 w-5 items-center justify-center rounded-full border border-border text-[11px] font-semibold text-foreground-muted hover:border-accent/60 hover:text-foreground"
@@ -22,15 +30,15 @@ export default function HowToUse({ children }: { children: ReactNode }) {
       </button>
       <dialog
         ref={ref}
-        aria-labelledby="raid-comp-how-to"
+        aria-labelledby={id}
         // A click on the backdrop lands on the <dialog> itself, not its contents.
         onClick={(e) => e.target === e.currentTarget && e.currentTarget.close()}
         className="m-auto w-[calc(100%-2rem)] max-w-md rounded-lg border border-accent/40 bg-surface p-0 text-foreground shadow-lg backdrop:bg-black/60"
       >
         <div className="p-4">
           <div className="flex items-center justify-between gap-3">
-            <h2 id="raid-comp-how-to" className="font-heading text-base font-semibold text-accent">
-              How to use the raid comp planner
+            <h2 id={id} className="font-heading text-base font-semibold text-accent">
+              {title}
             </h2>
             <button
               type="button"

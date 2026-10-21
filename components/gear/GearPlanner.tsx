@@ -9,6 +9,7 @@ import { LEFT, RIGHT, SlotCard, WEAPONS } from "./SlotGrid";
 import StatSheet from "./StatSheet";
 import SlotPicker from "./SlotPicker";
 import GearActions from "./GearActions";
+import HowToUse from "@/components/raid-comp/HowToUse";
 import type { SavedGearSet } from "@/lib/saved-gear-sets";
 import { computeSheet, type Sheet } from "@/lib/gear-sheet";
 
@@ -28,9 +29,24 @@ export default function GearPlanner({ classId, className, help, initialCode }: P
     };
   }, [classId]);
 
-  if (loadError) return <p className="mt-6 text-sm text-foreground-muted">The {className} item list didn&apos;t load. Reload the page to try again.</p>;
-  if (!pool) return <p className="mt-6 text-sm text-foreground-muted">Loading the {className} item list…</p>;
-  return <Planner pool={pool} initialCode={initialCode} classId={classId} className={className} help={help} />;
+  return (
+    <>
+      {/* Outside the loading gate, so the how-to text is in the prerendered HTML. */}
+      <div className="mt-3 flex items-center gap-2 text-xs text-foreground-muted">
+        <HowToUse title={`How to use the ${className} gear planner`} id="gear-how-to">
+          {help}
+        </HowToUse>
+        <span>How it works</span>
+      </div>
+      {loadError ? (
+        <p className="mt-6 text-sm text-foreground-muted">The {className} item list didn&apos;t load. Reload the page to try again.</p>
+      ) : !pool ? (
+        <p className="mt-6 text-sm text-foreground-muted">Loading the {className} item list…</p>
+      ) : (
+        <Planner pool={pool} initialCode={initialCode} classId={classId} className={className} help={help} />
+      )}
+    </>
+  );
 }
 
 // The preset a set is identical to (its share code matches), so a shared or saved preset reads as that preset.
