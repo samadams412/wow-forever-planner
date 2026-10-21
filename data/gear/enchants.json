@@ -17,6 +17,11 @@
    "effect": "Attaches an Iron Spike to your shield that deals damage every time you block with it.",
    "profession": "Blacksmithing",
    "skill": 125,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6044
+   ],
+   "recipeSourced": true,
    "requiredLevel": 0,
    "requires": [
     "Requires Blacksmithing (150)"
@@ -44,6 +49,11 @@
    "effect": "Attaches a counterweight to a two-handed sword, mace, axe or polearm making it 3% faster.",
    "profession": "Blacksmithing",
    "skill": 140,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6045
+   ],
+   "recipeSourced": true,
    "requiredLevel": 0,
    "requires": [
     "Requires Blacksmithing (165)"
@@ -69,6 +79,11 @@
    "effect": "Attaches a chain to your weapon, making it impossible to disarm.",
    "profession": "Blacksmithing",
    "skill": 165,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6046
+   ],
+   "recipeSourced": true,
    "requiredLevel": 0,
    "requires": [
     "Requires Blacksmithing (190)"
@@ -91,6 +106,11 @@
    "effect": "Attaches a Mithril Spike to your shield that deals damage every time you block with it.",
    "profession": "Blacksmithing",
    "skill": 190,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    7976
+   ],
+   "recipeSourced": true,
    "requiredLevel": 0,
    "requires": [
     "Requires Blacksmithing (215)"
@@ -113,6 +133,11 @@
    "effect": "Attaches spurs to your boots that increase your mounted movement speed slightly.",
    "profession": "Blacksmithing",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    7989
+   ],
+   "recipeSourced": true,
    "requiredLevel": 0,
    "requires": [
     "Requires Blacksmithing (215)"
@@ -135,6 +160,11 @@
    "effect": "Attaches a Thorium Spike to your shield that deals damage every time you block with it.",
    "profession": "Blacksmithing",
    "skill": 250,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    12692
+   ],
+   "recipeSourced": true,
    "requiredLevel": 0,
    "requires": [
     "Requires Blacksmithing (250)"
@@ -159,6 +189,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 1,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -181,6 +214,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 1,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -203,6 +239,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 15,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -225,6 +264,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 20,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6342
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -245,6 +289,9 @@
    "effect": "Enchant a piece of chest armor so it has a 2% chance per hit of giving you 10 points of damage absorption. Cannot occur more often than once every 5 sec.",
    "profession": "Enchanting",
    "skill": 40,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -267,6 +314,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 45,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -289,6 +339,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 50,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -311,6 +364,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 60,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -333,6 +389,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 60,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6344
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -353,6 +414,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 70,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -375,6 +439,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 70,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249474
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -397,6 +466,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 80,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6346
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -419,6 +493,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 80,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -441,6 +518,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 80,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6347
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -464,6 +546,11 @@
    "effect": "Permanently enchant a Melee Weapon to do 2 additional points of damage to Beasts.",
    "profession": "Enchanting",
    "skill": 90,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6348
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -487,6 +574,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 90,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -510,6 +600,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 90,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249475
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -530,6 +625,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 100,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -552,6 +650,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 100,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6349
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -574,6 +677,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 105,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -596,6 +702,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 110,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11038
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -618,6 +729,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 110,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11039
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -638,6 +754,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 115,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -658,6 +777,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 115,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11081
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -680,6 +804,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 120,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -702,6 +829,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 120,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6375
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -724,6 +856,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 125,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -746,6 +881,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 125,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -768,6 +906,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 125,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    6377
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -790,6 +933,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 130,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -812,6 +958,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 130,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -834,6 +983,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 135,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11098
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -857,6 +1011,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -879,6 +1036,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11101
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -899,6 +1061,9 @@
    "effect": "Enchant a piece of chest armor so it has a 5% chance per hit of giving you 25 points of damage absorption. Cannot occur more often than once every 5 sec.",
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -921,6 +1086,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249486
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -944,6 +1114,11 @@
    "effect": "Permanently enchant a Melee Weapon to have a chance to grant Insight when you cast a spell, increasing Spirit by 100% for 10 sec.",
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249479
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -967,6 +1142,11 @@
    "effect": "Permanently enchant a Melee Weapon to trigger Recovery when you are Parried or Dodged, healing you for 5% of your maximum health. Cannot occur more often than once every 10 sec.",
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249480
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -990,6 +1170,11 @@
    "effect": "Permanently enchant a Melee Weapon to have a chance to trigger Revelation when a non-periodic spell fails to critically strike. Revelation grants 100% increased critical strike chance to the next non-periodic spell cast. Revelation's chance to trigger is diminished as your critical strike chance increases.",
    "profession": "Enchanting",
    "skill": 140,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249481
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1010,6 +1195,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 145,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1032,6 +1220,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 145,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1052,6 +1243,11 @@
    "effect": "Permanently enchant gloves to grant +2 mining skill.",
    "profession": "Enchanting",
    "skill": 145,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11150
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1072,6 +1268,11 @@
    "effect": "Permanently enchant gloves to grant +2 herbalism skill.",
    "profession": "Enchanting",
    "skill": 145,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11151
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1092,6 +1293,11 @@
    "effect": "Permanently enchant gloves to grant +2 fishing skill.",
    "profession": "Enchanting",
    "skill": 145,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11152
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1114,6 +1320,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 150,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1140,6 +1349,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 150,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1162,6 +1374,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 155,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1182,6 +1397,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 155,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1204,6 +1422,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 160,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1226,6 +1447,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 160,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1248,6 +1472,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 165,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1270,6 +1497,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 170,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1292,6 +1522,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 170,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11163
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1314,6 +1549,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 170,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1337,6 +1575,11 @@
    "effect": "Permanently enchant a Melee Weapon to do 6 additional points of damage to Beasts.",
    "profession": "Enchanting",
    "skill": 175,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11164
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1360,6 +1603,11 @@
    "effect": "Permanently enchant a Melee Weapon to do 6 additional damage against Elementals.",
    "profession": "Enchanting",
    "skill": 175,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11165
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1382,6 +1630,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 175,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1404,6 +1655,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 180,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1426,6 +1680,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 180,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1448,6 +1705,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 185,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1470,6 +1730,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 190,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11167
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1495,6 +1760,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 190,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    17725
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1517,6 +1787,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 190,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249488
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1539,6 +1814,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 195,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11168
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1562,6 +1842,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 195,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1582,6 +1865,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 200,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1602,6 +1888,11 @@
    "effect": "Permanently enchant gloves to grant +5 skinning skill.",
    "profession": "Enchanting",
    "skill": 200,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11166
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1628,6 +1919,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 200,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1648,6 +1942,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 205,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1670,6 +1967,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 205,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1693,6 +1993,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 205,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249489
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1715,6 +2020,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1737,6 +2045,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11202
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1759,6 +2072,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1781,6 +2097,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249511
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1803,6 +2124,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249496
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1825,6 +2151,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249502
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1848,6 +2179,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249503
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1870,6 +2206,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249504
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1892,6 +2233,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249505
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1914,6 +2260,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 215,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1934,6 +2283,11 @@
    "effect": "Permanently enchant gloves to grant +5 mining skill.",
    "profession": "Enchanting",
    "skill": 215,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11203
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1956,6 +2310,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 220,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11204
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -1978,6 +2337,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 220,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2000,6 +2362,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 220,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249513
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2020,6 +2387,11 @@
    "effect": "Enchant a piece of chest armor so it has a 25% chance per hit of giving you 50 points of damage absorption. Cannot occur more often than once every 5 sec.",
    "profession": "Enchanting",
    "skill": 220,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249510
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2040,6 +2412,11 @@
    "effect": "Permanently enchant gloves to grant +5 herbalism skill.",
    "profession": "Enchanting",
    "skill": 225,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11205
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2062,6 +2439,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 225,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11206
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2084,6 +2466,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 225,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2104,6 +2489,9 @@
    "effect": "Permanently enchant boots to give a slight movement speed increase.",
    "profession": "Enchanting",
    "skill": 225,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2126,6 +2514,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 230,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2149,6 +2540,11 @@
    "effect": "Permanently enchant a melee weapon to have a chance of stunning and doing heavy damage to demons.",
    "profession": "Enchanting",
    "skill": 230,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11208
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2171,6 +2567,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 230,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2193,6 +2592,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 235,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11223
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2215,6 +2619,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 235,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11224
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2237,6 +2646,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 235,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2257,6 +2669,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 240,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2279,6 +2694,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 240,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2301,6 +2719,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 240,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249514
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2327,6 +2750,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 245,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2350,6 +2776,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 245,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2372,6 +2801,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 245,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11225
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2392,6 +2826,11 @@
    "effect": "Permanently enchant gloves to grant a minor movement bonus while mounted.",
    "profession": "Enchanting",
    "skill": 250,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11226
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2412,6 +2851,9 @@
    "effect": "Permanently enchant gloves to grant a +1% attack and casting speed bonus.",
    "profession": "Enchanting",
    "skill": 250,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2432,6 +2874,11 @@
    "effect": "Permanently enchant gloves to grant +10 skinning skill.",
    "profession": "Enchanting",
    "skill": 250,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249516
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2454,6 +2901,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 255,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16214
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2476,6 +2928,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 260,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16215
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2499,6 +2956,11 @@
    "effect": "Permanently enchant a melee weapon to often strike for 40 additional fire damage.",
    "profession": "Enchanting",
    "skill": 265,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    11207
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2521,6 +2983,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 265,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16216
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2543,6 +3010,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 265,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16217
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2565,6 +3037,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 270,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16218
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2587,6 +3064,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 270,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16219
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2609,6 +3091,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 275,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16220
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2631,6 +3118,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 275,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16221
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2653,6 +3145,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 280,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16222
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2673,6 +3170,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 285,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16224
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2696,6 +3198,11 @@
    "effect": "Permanently enchant a melee weapon to often chill the target reducing their movement and attack speed.",
    "profession": "Enchanting",
    "skill": 285,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16223
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2718,6 +3225,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 290,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16242
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2743,6 +3255,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 290,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    19444
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2768,6 +3285,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 290,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    19445
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2790,6 +3312,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 290,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    19446
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2812,6 +3339,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 290,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    22392
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2834,6 +3366,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16246
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2856,6 +3393,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16244
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2878,6 +3420,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16245
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2898,6 +3445,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16247
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2921,6 +3473,11 @@
    "effect": "Permanently enchant a melee weapon to often inflict a curse on the target reducing their melee damage.",
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16248
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2943,6 +3500,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249524
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2963,6 +3525,11 @@
    "effect": "Permanently enchant a pair of gloves to give a small chance to acquire Death Lotus when gathering any herb in Hyjal.",
    "profession": "Enchanting",
    "skill": 295,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274424
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -2985,6 +3552,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16251
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3011,6 +3583,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16253
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3034,6 +3611,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16250
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3057,6 +3639,11 @@
    "effect": "Permanently enchant a melee weapon to often steal life from the enemy and give it to the wielder.",
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16254
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3080,6 +3667,11 @@
    "effect": "Permanently enchant a melee weapon so that often when attacking in melee it heals for 75 to 125 and increases Strength by 100 for 15 sec.",
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16252
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3102,6 +3694,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16255
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3124,6 +3721,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    16249
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3149,6 +3751,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    18259
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3175,6 +3782,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    18260
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3198,6 +3810,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3223,6 +3838,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    19448
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3248,6 +3868,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    19449
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3268,6 +3893,11 @@
    "effect": "Permanently enchant gloves to increase threat from all attacks and spells by 2%.",
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20726
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3290,6 +3920,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20727
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3312,6 +3947,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20728
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3334,6 +3974,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20729
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3357,6 +4002,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20730
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3379,6 +4029,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20731
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3401,6 +4056,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20732
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3423,6 +4083,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20733
+   ],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3443,6 +4108,11 @@
    "effect": "Permanently enchant a cloak to give an increase to your stealth as if you were 1 level higher.",
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20734
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3463,6 +4133,11 @@
    "effect": "Permanently enchant a cloak to decrease threat caused by the wearer by 2%.",
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20735
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3485,6 +4160,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    20736
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3507,6 +4187,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3529,6 +4212,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3552,6 +4238,9 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3574,6 +4263,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274394
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3596,6 +4290,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274395
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3618,6 +4317,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274399
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3640,6 +4344,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274400
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3662,6 +4371,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274401
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3684,6 +4398,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249525
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3707,6 +4426,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249526
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3729,6 +4453,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    274398
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3751,6 +4480,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249535
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3773,6 +4507,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249538
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3795,6 +4534,11 @@
    "effect": null,
    "profession": "Enchanting",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    249539
+   ],
+   "recipeSourced": false,
    "requiredLevel": 1,
    "requires": [],
    "status": "new",
@@ -3818,6 +4562,9 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 60,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 5,
    "requires": [],
    "status": "same",
@@ -3841,6 +4588,9 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 110,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 10,
    "requires": [],
    "status": "same",
@@ -3864,6 +4614,11 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 180,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    13310
+   ],
+   "recipeSourced": true,
    "requiredLevel": 20,
    "requires": [],
    "status": "same",
@@ -3887,6 +4642,11 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 210,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    10602
+   ],
+   "recipeSourced": true,
    "requiredLevel": 30,
    "requires": [],
    "status": "same",
@@ -3910,6 +4670,11 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 240,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    10608
+   ],
+   "recipeSourced": true,
    "requiredLevel": 40,
    "requires": [],
    "status": "same",
@@ -3935,6 +4700,11 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    18290
+   ],
+   "recipeSourced": false,
    "requiredLevel": 50,
    "requires": [],
    "status": "same",
@@ -3961,6 +4731,11 @@
    "effect": null,
    "profession": "Engineering",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    279321
+   ],
+   "recipeSourced": false,
    "requiredLevel": 60,
    "requires": [],
    "status": "new",
@@ -3986,6 +4761,9 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 1,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 1,
    "requires": [],
    "status": "changed",
@@ -4011,6 +4789,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 80,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252783
+   ],
+   "recipeSourced": false,
    "requiredLevel": 15,
    "requires": [],
    "status": "new",
@@ -4036,6 +4819,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 80,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252784
+   ],
+   "recipeSourced": false,
    "requiredLevel": 15,
    "requires": [],
    "status": "new",
@@ -4061,6 +4849,9 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 100,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 5,
    "requires": [],
    "status": "changed",
@@ -4086,6 +4877,9 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 125,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 20,
    "requires": [],
    "status": "changed",
@@ -4111,6 +4905,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 135,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252811
+   ],
+   "recipeSourced": false,
    "requiredLevel": 30,
    "requires": [],
    "status": "new",
@@ -4136,6 +4935,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 135,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252812
+   ],
+   "recipeSourced": false,
    "requiredLevel": 30,
    "requires": [],
    "status": "new",
@@ -4161,6 +4965,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 185,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252833
+   ],
+   "recipeSourced": true,
    "requiredLevel": 40,
    "requires": [],
    "status": "new",
@@ -4186,6 +4995,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 185,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252834
+   ],
+   "recipeSourced": false,
    "requiredLevel": 40,
    "requires": [],
    "status": "new",
@@ -4211,6 +5025,9 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 200,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 30,
    "requires": [],
    "status": "changed",
@@ -4236,6 +5053,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 235,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252941
+   ],
+   "recipeSourced": false,
    "requiredLevel": 50,
    "requires": [],
    "status": "new",
@@ -4261,6 +5083,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 235,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    252942
+   ],
+   "recipeSourced": false,
    "requiredLevel": 50,
    "requires": [],
    "status": "new",
@@ -4286,6 +5113,9 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 250,
+   "learnedFrom": "trainer",
+   "recipeItemIds": [],
+   "recipeSourced": true,
    "requiredLevel": 40,
    "requires": [],
    "status": "changed",
@@ -4311,6 +5141,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    18252
+   ],
+   "recipeSourced": false,
    "requiredLevel": 50,
    "requires": [],
    "status": "same",
@@ -4337,6 +5172,11 @@
    "effect": null,
    "profession": "Leatherworking",
    "skill": 300,
+   "learnedFrom": "recipe",
+   "recipeItemIds": [
+    279307
+   ],
+   "recipeSourced": false,
    "requiredLevel": 60,
    "requires": [],
    "status": "new",

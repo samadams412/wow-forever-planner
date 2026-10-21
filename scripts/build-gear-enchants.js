@@ -29,6 +29,14 @@ const OUT_FILE = path.join(ROOT, "data", "gear", "enchants.json");
 const ENCHANT_USE = /^Use: (Permanently (enchant|increase|adds)|Attaches |Enchant )/;
 
 const items = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, "data", "items.json"), "utf8")).items.map((i) => [i.itemId, i]));
+// "Recipe" enchants are learned from a formula item ("Formula: Enchant ...", "Pattern: ...").
+// recipeSourced: that item has a known source (quest, dungeon, vendor, drop) in our data.
+const availability = require("./lib/gear-availability.js").loadAvailability();
+const formulasByName = new Map();
+for (const i of items.values()) {
+  const m = /^(?:Formula|Schematic|Pattern|Plans): (.+)$/.exec(i.name);
+  if (m) formulasByName.set(m[1], [...(formulasByName.get(m[1]) ?? []), i]);
+}
 const itemsBuild = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "sources", "foreverchanges", "items", "sources.json"), "utf8")).forever_build;
 
 const enchants = new Map();
@@ -46,6 +54,7 @@ for (const [file, profession] of Object.entries(PROFESSIONS)) {
     const prev = enchants.get(item.itemId);
     // Two recipes for one enchant item: keep the one learnable earliest.
     if (prev && prev.skill <= skill) continue;
+    const formulas = recipe.source === "Trainer" ? [] : (formulasByName.get(recipe.name) ?? []);
     enchants.set(item.itemId, {
       id: item.itemId,
       name: item.name,
@@ -59,6 +68,9 @@ for (const [file, profession] of Object.entries(PROFESSIONS)) {
       effect: parsed.effect,
       profession,
       skill: Number.isFinite(skill) ? skill : null,
+      learnedFrom: recipe.source === "Trainer" ? "trainer" : "recipe",
+      recipeItemIds: formulas.map((f) => f.itemId),
+      recipeSourced: recipe.source === "Trainer" || formulas.some((f) => availability(f) !== null),
       requiredLevel: item.requiredLevel,
       requires: item.tooltip.filter((l) => /^Requires (?!Level \d+$)/.test(l)),
       status: item.status,
@@ -78,4 +90,5 @@ fs.writeFileSync(OUT_FILE, JSON.stringify({ itemsBuild, generatedBy: "scripts/bu
 const by = (f) => list.reduce((a, e) => ((a[f(e)] = (a[f(e)] ?? 0) + 1), a), {});
 console.log(`wrote ${path.relative(ROOT, OUT_FILE)}: ${list.length} enchants`);
 console.log("by profession", by((e) => e.profession));
+console.log("learned", by((e) => (e.learnedFrom === "trainer" ? "trainer" : e.recipeSourced ? "recipe, sourced" : e.recipeItemIds.length ? "recipe, formula has no known source" : "recipe, no formula item")));
 console.log("scored", list.filter((e) => Object.keys(e.stats).length || e.armor || e.weaponDamage).length, "| effect-only", list.filter((e) => !Object.keys(e.stats).length && !e.armor && !e.weaponDamage).length, "| scored + effect text", list.filter((e) => e.effect && (Object.keys(e.stats).length || e.armor || e.weaponDamage)).length);
