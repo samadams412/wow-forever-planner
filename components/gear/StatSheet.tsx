@@ -3,12 +3,16 @@
 import { STAT_LABEL, type StatKey } from "@/lib/item-stats";
 import { sheetValue, type Sheet, type SheetLine } from "@/lib/gear-sheet";
 
-const GROUPS: { title: string; lines: SheetLine[]; always?: boolean }[] = [
-  { title: "Attributes", lines: ["str", "agi", "sta", "int", "spi"], always: true },
-  { title: "Survival", lines: ["health", "mana", "armor"], always: true },
-  { title: "Melee and ranged", lines: ["ap", "rap", "critRating", "hitRating", "hasteRating", "expertiseRating", "critPct", "hitPct"] },
+// Header colors: distinct per section, at least 4.5:1 on both themes' surfaces, and kept off
+// the delta red (hue 0) and green (142) that mean better/worse: gold (the site accent), teal 172,
+// burnt orange 25, steel blue 212, dusty purple 266. Spell and Resistances stay muted.
+const MUTED = "text-foreground-muted";
+const GROUPS: { title: string; lines: SheetLine[]; always?: boolean; color?: string }[] = [
+  { title: "Attributes", lines: ["str", "agi", "sta", "int", "spi"], always: true, color: "text-accent" },
+  { title: "Survival", lines: ["health", "mana", "armor"], always: true, color: "text-[#3cbfae] [html.light-mode_&]:text-[#0f766e]" },
+  { title: "Melee and ranged", color: "text-[#e0823d] [html.light-mode_&]:text-[#a8510f]", lines: ["ap", "rap", "critRating", "hitRating", "hasteRating", "expertiseRating", "critPct", "hitPct"] },
   { title: "Spell", lines: ["sp", "spellDmg", "heal", "holyDmg", "fireDmg", "frostDmg", "shadowDmg", "natureDmg", "arcaneDmg", "spellCritPct", "spellHitPct", "spellPen", "mp5", "hp5"] },
-  { title: "Defense", lines: ["defRating", "defSkill", "dodgeRating", "dodgePct", "parryRating", "parryPct", "blockRating", "blockPct", "blockValue"] },
+  { title: "Defense", color: "text-[#7fa7d6] [html.light-mode_&]:text-[#2f5f8f]", lines: ["defRating", "defSkill", "dodgeRating", "dodgePct", "parryRating", "parryPct", "blockRating", "blockPct", "blockValue"] },
   { title: "Resistances", lines: ["fireRes", "frostRes", "shadowRes", "natureRes", "arcaneRes", "allRes"] },
 ];
 const NAMES: Partial<Record<SheetLine, string>> = {
@@ -39,7 +43,7 @@ export default function StatSheet({ sheet, preview, title, note }: { sheet: Shee
         if (!lines.length) return null;
         return (
           <div key={g.title} className="mt-3">
-            <h3 className="text-[10px] font-semibold uppercase tracking-wide text-foreground-muted">{g.title}</h3>
+            <h3 className={`text-[10px] font-semibold uppercase tracking-wide ${g.color ?? MUTED}`}>{g.title}</h3>
             <dl className="mt-1 grid grid-cols-[1fr_auto] gap-x-3 gap-y-0.5">
               {lines.map((l) => (
                 <div key={l} className="contents">
@@ -56,7 +60,7 @@ export default function StatSheet({ sheet, preview, title, note }: { sheet: Shee
       })}
       {dps.length > 0 && (
         <div className="mt-3">
-          <h3 className="text-[10px] font-semibold uppercase tracking-wide text-foreground-muted">Weapon DPS</h3>
+          <h3 className="text-[10px] font-semibold uppercase tracking-wide text-[#b49ad6] [html.light-mode_&]:text-[#6b4c9a]">Weapon DPS</h3>
           <dl className="mt-1 grid grid-cols-[1fr_auto] gap-x-3 gap-y-0.5">
             {dps.map((s) => {
               const now = sheet.weaponDps[s] ?? 0;

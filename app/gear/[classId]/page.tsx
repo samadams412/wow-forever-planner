@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GearFromUrl from "@/components/gear/GearFromUrl";
 import { GEAR_PLANNER_CLASSES, DEFAULT_GEAR_LEVEL } from "@/lib/gear-config";
-import { CLASS_COLOR, classLabel } from "@/lib/wow-data";
+import { CLASS_COLOR, CLASS_ICON, classLabel, mediumIconUrl } from "@/lib/wow-data";
 
 // One prerendered page per class with a pool. ?g= (the gear code) is read
 // client-side in GearFromUrl, never here, so the page stays static (the
@@ -59,7 +59,7 @@ export default async function GearPage({ params }: { params: Promise<{ classId: 
       <p className="mt-1 text-sm text-foreground-muted">
         Level {DEFAULT_GEAR_LEVEL} gear sets for World of Warcraft: Forever, from a preset or from scratch.
       </p>
-      <GearFromUrl classId={classId} className={name} help={howTo} />
+      <GearFromUrl classId={classId} className={name} classIcon={mediumIconUrl(CLASS_ICON[classId])} help={howTo} />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import Image from "next/image";
 import { DEFAULT_GEAR_LEVEL } from "@/lib/gear-config";
 import { decodeGear, encodeGear, pickProblem, type DecodeResult, type GearState, type Side } from "@/lib/gear-code";
 import { defaultRace, itemIndex, presetState, type PlannerPool } from "@/lib/gear-planner";
@@ -13,9 +14,9 @@ import HowToUse from "@/components/raid-comp/HowToUse";
 import type { SavedGearSet } from "@/lib/saved-gear-sets";
 import { computeSheet, type Sheet } from "@/lib/gear-sheet";
 
-type Props = { classId: string; className: string; help: ReactNode; initialCode: string | null };
+type Props = { classId: string; className: string; classIcon: string; help: ReactNode; initialCode: string | null };
 
-export default function GearPlanner({ classId, className, help, initialCode }: Props) {
+export default function GearPlanner({ classId, className, classIcon, help, initialCode }: Props) {
   const [pool, setPool] = useState<PlannerPool | null>(null);
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function GearPlanner({ classId, className, help, initialCode }: P
       ) : !pool ? (
         <p className="mt-6 text-sm text-foreground-muted">Loading the {className} item list…</p>
       ) : (
-        <Planner pool={pool} initialCode={initialCode} classId={classId} className={className} help={help} />
+        <Planner pool={pool} initialCode={initialCode} classId={classId} className={className} classIcon={classIcon} help={help} />
       )}
     </>
   );
@@ -62,7 +63,20 @@ function initialState(pool: PlannerPool, code: string | null): { gear: GearState
   return { gear: presetState(first, "a"), variant: first.key, skipped: [] };
 }
 
-function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool; initialCode: string | null; classId: string; className: string; help: ReactNode }) {
+function Planner({
+  pool,
+  initialCode,
+  classId,
+  className,
+  classIcon,
+}: {
+  pool: PlannerPool;
+  initialCode: string | null;
+  classId: string;
+  className: string;
+  classIcon: string;
+  help: ReactNode;
+}) {
   const items = useMemo(() => itemIndex(pool), [pool]);
   const [start] = useState(() => initialState(pool, initialCode));
   const [gear, setGear] = useState<GearState>(start.gear);
@@ -73,6 +87,15 @@ function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool;
   // The sheet with a hovered/focused picker item swapped in (null when nothing is highlighted).
   const [preview, setPreview] = useState<Sheet | null>(null);
   const [picking, setPicking] = useState<GearSlot | null>(null);
+  const [confirmClear, setConfirmClear] = useState(false);
+  const filled = Object.keys(gear.slots).length;
+  // Empties the working set only: faction, race and saved sets stay as they are.
+  const clearAll = () => {
+    setGear((g) => ({ ...g, slots: {} }));
+    setVariant(null);
+    setSkipped([]);
+    setConfirmClear(false);
+  };
   const closePicker = useCallback(() => {
     setPicking(null);
     setPreview(null);
@@ -168,12 +191,43 @@ function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool;
               onClick={() => switchSide(side)}
               className={`px-3 py-1 ${gear.side === side ? "bg-accent/20 font-semibold text-foreground" : "text-foreground-muted hover:text-foreground"}`}
             >
-              {side === "a" ? "Alliance" : "Horde"}
+              <span className="flex items-center gap-1.5">
+                <Image
+                  src={side === "a" ? "/images/icons/faction-alliance.png" : "/images/icons/faction-horde.png"}
+                  alt=""
+                  width={16}
+                  height={16}
+                  className="h-4 w-4"
+                  style={{ objectFit: "contain" }}
+                />
+                {side === "a" ? "Alliance" : "Horde"}
+              </span>
             </button>
           ))}
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <GearActions classId={classId} code={code} race={race} onLoad={loadSaved} />
+          {confirmClear ? (
+            <span role="group" aria-label="Confirm clear" className="flex items-center gap-1 text-sm">
+              <span className="text-foreground-muted">Clear all {filled} items?</span>
+              <button type="button" onClick={clearAll} className="rounded border border-red-400/60 px-2 py-1 text-red-400 hover:bg-surface-hover [html.light-mode_&]:text-red-700">
+                Clear
+              </button>
+              <button type="button" onClick={() => setConfirmClear(false)} className="rounded border border-border px-2 py-1 text-foreground-muted hover:text-foreground">
+                Cancel
+              </button>
+            </span>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setConfirmClear(true)}
+              disabled={filled === 0}
+              title={filled === 0 ? "Nothing equipped" : "Remove every equipped item"}
+              className="rounded border border-border px-2 py-1 text-sm hover:border-accent/60 hover:text-foreground disabled:opacity-40"
+            >
+              Clear
+            </button>
+          )}
         </div>
       </div>
       <p className="mt-2 text-xs text-foreground-muted">{pool.presets.disclaimer}</p>
@@ -202,12 +256,12 @@ function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool;
             preview={preview}
             title={
               <label className="flex items-center gap-2">
-                <span>Level {pool.level}</span>
+                <span className="whitespace-nowrap">Level {pool.level}</span>
                 <select
                   value={race}
                   onChange={(e) => setRace(e.target.value)}
                   aria-label="Race"
-                  className="rounded border border-border bg-background px-1.5 py-0.5 text-xs text-foreground"
+                  className="min-w-0 flex-1 rounded border border-border bg-background px-1.5 py-0.5 text-xs text-foreground"
                 >
                   {races.map(([id, r]) => (
                     <option key={id} value={id}>
@@ -215,7 +269,11 @@ function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool;
                     </option>
                   ))}
                 </select>
-                <span>{className}</span>
+                <span className="flex shrink-0 items-center gap-1">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={classIcon} alt="" width={16} height={16} className="h-4 w-4 rounded-sm border border-border" />
+                  {className}
+                </span>
               </label>
             }
             note={`Race base stats + gear + suffix rolls + enchants. No buffs or talents; ratings aren't converted to percentages.${base.basis === "classic" ? "" : ` ${base.name} ${className} base stats are estimated (no Classic data for this pair).`}`}
