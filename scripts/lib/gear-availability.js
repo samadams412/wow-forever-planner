@@ -9,6 +9,7 @@
 //   dungeon loot     dungeon levelMin, dungeon faction (data/dungeons/*.json),
 //   dungeon quest    quest minLevel and faction
 //   crafted          the level that profession skill is trainable at
+//   capital vendor   that city's faction only
 //   other sources    foreverchanges sources.json (world drop, vendor, crafted,
 //                    mob...): no level of their own
 // fromLevel = max(requiredLevel, earliest source level). A source with no
@@ -21,6 +22,7 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..", "..");
 const readJson = (...p) => JSON.parse(fs.readFileSync(path.join(ROOT, ...p), "utf8"));
 const SIDE = { Alliance: ["a"], Horde: ["h"], Both: ["a", "h"] };
+const CAPITAL_SIDE = { "Stormwind City": "a", Ironforge: "a", Darnassus: "a", Orgrimmar: "h", "Thunder Bluff": "h", Undercity: "h" };
 const { maxProfessionSkill } = require("../../lib/gear-config.ts");
 const levelForSkill = (skill) => {
   for (let level = 1; level <= 60; level++) if (maxProfessionSkill(level) >= skill) return level;
@@ -49,13 +51,16 @@ function loadAvailability() {
   // sources.json kinds: q/Q quest, B boss, m mob, w world drop, v vendor, C
   // crafted, R reputation. Its quest entries carry no faction, so they only
   // count when the quest index above doesn't already know the item's quests.
-  for (const [id, [kind, what]] of Object.entries(readJson("data", "sources", "foreverchanges", "items", "sources.json").items)) {
+  for (const [id, [kind, what, where]] of Object.entries(readJson("data", "sources", "foreverchanges", "items", "sources.json").items)) {
     const itemId = Number(id);
     if ((kind === "q" || kind === "Q") && sources.get(itemId)?.some((s) => s.kind === "quest" || s.kind === "dungeon-quest")) continue;
     // A crafted item exists once a crafter has the skill ("Engineering (210)"):
     // the rank's level gate, not itemLevel - 5 (Net-o-Matic: ilvl 42, skill 210, level 20).
     const skill = kind === "C" ? Number(/\((\d+)\)/.exec(what ?? "")?.[1] ?? NaN) : NaN;
-    push(itemId, { kind: "other", level: Number.isNaN(skill) ? null : levelForSkill(skill), sides: ["a", "h"], classes: null });
+    // A vendor in one capital ("Orgrimmar, in Classic") sells to that city's faction only
+    // (Insignia of the Horde vs of the Alliance); a vendor spread over zones sells to both.
+    const city = kind === "v" ? CAPITAL_SIDE[/^([^,]+),/.exec(where ?? "")?.[1]] : undefined;
+    push(itemId, { kind: "other", level: Number.isNaN(skill) ? null : levelForSkill(skill), sides: city ? [city] : ["a", "h"], classes: null });
   }
 
   // -> { fromLevel, sides: Set, classes: Set|null } | null (no known source)

@@ -5,13 +5,8 @@
 // weights (data/gear/preset-weights.json), then hand corrections apply
 // (data/gear/preset-overrides.json). Every pick is confidence "estimated".
 //
-// Eligible item at the planner level (lib/gear-config.ts):
-//   - maps to a planner slot (lib/gear-slots.ts); status isn't "missing"
-//   - obtainable by that level and faction (scripts/lib/gear-availability.js:
-//     quest/dungeon level and side; no known source = not eligible, which
-//     drops test and unobtainable records like "Bad Hat" or "(DNT)" items)
-//   - the class can equip it (lib/gear-classes.ts), and any "Classes:" line
-//     or class-locked quest includes the class
+// Eligible items: scripts/lib/gear-pool.js (shared with the item pool), each
+// random-suffix item expanded into one candidate per roll. Ranked picks need
 //   - no reputation or profession requirement (presets assume neither),
 //     except a pin, which may need a profession trainable by that level;
 //     the side's `requires` lists those lines for the UI
@@ -23,26 +18,21 @@
 
 const fs = require("fs");
 const path = require("path");
-const { parseItemTooltip } = require("../lib/item-stats.ts");
 const { GEAR_SLOTS, gearSlotsFor, isTwoHand } = require("../lib/gear-slots.ts");
 const { DEFAULT_GEAR_LEVEL, maxProfessionSkill } = require("../lib/gear-config.ts");
-const { CLASS_GEAR, canEquip } = require("../lib/gear-classes.ts");
 const { loadAvailability } = require("./lib/gear-availability.js");
-const { readCsv } = require("./lib/csv");
-const { itemSuffixes } = require("../lib/item-suffixes.ts");
+const { classBaseItems, expandSuffixes } = require("./lib/gear-pool.js");
 
 const ROOT = path.join(__dirname, "..");
 const readJson = (...p) => JSON.parse(fs.readFileSync(path.join(ROOT, ...p), "utf8"));
 const RANKED = 6;
 const SIDES = ["a", "h"];
-const CLASS_NAME = (id) => id[0].toUpperCase() + id.slice(1);
 const MAIN_HAND_SLOTS = {
   "two-hand": { main: ["Two-Hand"], off: [] },
   "one-hand-shield": { main: ["One-Hand", "Main Hand"], off: ["Shield"] },
   "dual-wield": { main: ["One-Hand", "Main Hand"], off: ["One-Hand", "Off Hand"] },
   "one-hand-off-hand": { main: ["One-Hand", "Main Hand"], off: ["Held In Off-hand"] },
 };
-const SUFFIXES = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "gear", "suffixes.json"), "utf8"));
 const PAIRED = { finger1: "finger2", trinket1: "trinket2" };
 // Shown wherever a generated preset is displayed (the gear planner UI reads it from the preset file).
 const DISCLAIMER =
@@ -56,59 +46,6 @@ function score(weights, parsed, slot, bonus = 0) {
   if (slot === "main" || slot === "off") s += (weights.dps ?? 0) * dps * (slot === "off" ? 0.5 : 1);
   if (slot === "ranged") s += (weights.rangedDps ?? 0) * dps;
   return s;
-}
-
-function classCandidates(classId, items, availability, excluded, level) {
-  const rules = CLASS_GEAR[classId];
-  if (!rules) throw new Error(`no lib/gear-classes.ts rules for ${classId}`);
-  const className = CLASS_NAME(classId);
-  const out = [];
-  for (const item of items) {
-    if (item.status === "missing" || excluded.has(item.itemId) || !gearSlotsFor(item.slot).length) continue;
-    if (!canEquip(rules, level, item.slot, item.type, item.itemClass)) continue;
-    const avail = availability(item);
-    if (!avail || avail.fromLevel > level || (avail.classes && !avail.classes.has(className))) continue;
-    const parsed = parseItemTooltip(item.tooltip);
-    if (parsed.classes && !parsed.classes.includes(className)) continue;
-    // Gated items (profession, reputation, PvP rank) stay in the pool for pins only.
-    // A faction-only reputation (The Defilers) also limits the item to that side.
-    const gates = parsed.requires.map(classifyRequirement);
-    // No tooltip shows a PvP rank; the client's ItemSparse.RequiredPVPRank does (value - 4 = rank).
-    const rank = PVP_RANK_BY_ITEM.get(item.itemId);
-    if (rank) gates.push({ kind: "pvpRank", text: `Requires PvP rank ${rank} (${PVP_RANKS.a[rank - 1]} / ${PVP_RANKS.h[rank - 1]})` });
-    const sides = new Set([...avail.sides].filter((s) => gates.every((g) => !g.side || g.side === s)));
-    // A random-suffix item always drops with a suffix: one candidate per roll, base + suffix stats.
-    const rolls = itemSuffixes(item, SUFFIXES);
-    if (!rolls.length) out.push({ item, parsed, gates, sides, fromLevel: avail.fromLevel, suffixId: null });
-    for (const r of rolls) {
-      const stats = { ...parsed.stats };
-      for (const [k, n] of Object.entries(r.stats)) stats[k] = (stats[k] ?? 0) + n;
-      out.push({ item, parsed: { ...parsed, stats }, gates, sides, fromLevel: avail.fromLevel, suffixId: r.id });
-    }
-  }
-  return { rules, candidates: out };
-}
-
-// Classic PvP rank titles, Alliance then Horde; "Requires <rank>" is how a rank-gated tooltip reads.
-const PVP_RANKS = { a: ["Private", "Corporal", "Sergeant", "Master Sergeant", "Sergeant Major", "Knight", "Knight-Lieutenant", "Knight-Captain", "Knight-Champion", "Lieutenant Commander", "Commander", "Marshal", "Field Marshal", "Grand Marshal"], h: ["Scout", "Grunt", "Sergeant", "Senior Sergeant", "First Sergeant", "Stone Guard", "Blood Guard", "Legionnaire", "Centurion", "Champion", "Lieutenant General", "General", "Warlord", "High Warlord"] };
-// ItemSparse is partial in the client, but carries every rank-gated item it knows (449 at 70450).
-const PVP_RANK_BY_ITEM = new Map(
-  readCsv(path.join(ROOT, "data", "sources", "client-db2", "1.60.1.70450", "itemsparse.csv"))
-    .filter((r) => Number(r.RequiredPVPRank) > 4)
-    .map((r) => [Number(r.ID), Number(r.RequiredPVPRank) - 4]),
-);
-const FACTION_SIDE = { "The League of Arathor": "a", "Silverwing Sentinels": "a", "Stormpike Guard": "a", "The Defilers": "h", "Warsong Outriders": "h", "Frostwolf Clan": "h" };
-
-// A tooltip "Requires ..." line (never "Requires Level N") -> { kind, text, skill?, side? }.
-function classifyRequirement(text) {
-  const prof = /^Requires [A-Za-z ]+ \((\d+)\)$/.exec(text);
-  if (prof) return { kind: "profession", text, skill: Number(prof[1]) };
-  const rep = /^Requires (.+) - (Neutral|Friendly|Honored|Revered|Exalted)$/.exec(text);
-  if (rep) return { kind: "reputation", text, side: FACTION_SIDE[rep[1]] };
-  const rank = text.replace(/^Requires /, "");
-  const side = PVP_RANKS.a.includes(rank) ? (PVP_RANKS.h.includes(rank) ? undefined : "a") : PVP_RANKS.h.includes(rank) ? "h" : null;
-  if (side !== null) return { kind: "pvpRank", text, side };
-  return { kind: "other", text };
 }
 
 function pickEnchant(weights, slot, c, enchants, level, excluded) {
@@ -289,7 +226,8 @@ function main() {
     if (!weights[classId]) throw new Error(`no weights for ${classId}`);
     const o = overrides[classId] ?? {};
     const excluded = new Set((o.exclude ?? []).map((e, i) => withReason(e, "itemId", `${classId}/exclude/${i}`)));
-    const { rules, candidates } = classCandidates(classId, items, availability, excluded, level);
+    const { rules, items: base } = classBaseItems(classId, items, availability, excluded, level);
+    const candidates = base.flatMap(expandSuffixes);
     const variants = weights[classId].map((v) => buildVariant(classId, v, { ...o.variants?.[v.key], pin: { ...o.pin, ...o.variants?.[v.key]?.pin } }, { groups: overrides._groups, excludeEnchants }, rules, candidates, enchants, level));
     const out = { classId, level, generatedBy: "scripts/build-gear-presets.js", confidence: "estimated", disclaimer: DISCLAIMER, candidates: candidates.length, variants };
     const file = path.join(ROOT, "data", "gear", "presets", `${classId}.json`);
