@@ -34,6 +34,7 @@ export type PoolItem = {
   stats: Stats;
   armor: number;
   weapon?: { min: number; max: number; speed: number | null; dps: number | null };
+  requiredLevel?: number;
   fromLevel: number;
   sides: string;
   requires?: { kind: string; text: string }[];

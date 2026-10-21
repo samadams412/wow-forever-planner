@@ -72,6 +72,7 @@ function main() {
       const tree = itemSuffixes(c.item, SUFFIXES).length ? SUFFIXES.items[c.item.itemId] : undefined;
       if (tree !== undefined) { trees.add(tree); ilvls.add(c.item.itemLevel); }
       const w = c.parsed.weapon;
+      const requiredLevel = Number((c.item.tooltip ?? []).map((l) => /^Requires Level (\d+)$/.exec(l.trim())?.[1]).find(Boolean)) || 0;
       rows.push({
         itemId: c.item.itemId,
         name: c.item.name,
@@ -83,6 +84,9 @@ function main() {
         stats: c.parsed.stats,
         armor: c.parsed.armor,
         ...(w && { weapon: { min: w.damage[0]?.min ?? 0, max: w.damage[0]?.max ?? 0, speed: w.speed, dps: w.dps } }),
+        // The tooltip's "Requires Level" line when it has one (many Forever items don't); fromLevel is the
+        // derived level. Not the catalog's requiredLevel field: 25 Warrior items carry a placeholder 1 there with no line.
+        ...(requiredLevel && { requiredLevel }),
         fromLevel: c.fromLevel,
         sides: [...c.sides].sort().join(""),
         ...(c.gates.length && { requires: c.gates.map(({ kind, text }) => ({ kind, text })) }),
