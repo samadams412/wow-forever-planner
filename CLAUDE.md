@@ -240,8 +240,9 @@ parameter throughout. Decided by the owner on 2026-10-20: generated presets
 stats, raid-comp-style "?" how-to `<dialog>`. Investigation and design:
 `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`.
 **Not built yet: the per-level item pool (`public/gear/<level>/<class>.json`),
-the share codec (`lib/gear-code.ts`) and any UI.** Presets exist for Warrior
-only, pending the owner's sanity check before the other 8 classes.
+the share codec (`lib/gear-code.ts`) and any UI.** Presets exist for all 9
+classes (38 variants × 2 sides, generated 2026-10-20), pending the owner's
+review; per-class status is under "Presets" below.
 - **`lib/item-stats.ts`** (pure, erasable TS, so build scripts `require()` it
   under Node 24 type stripping): `parseItemTooltip` sorts every tooltip line
   into stats / armor / weapon damage / meta / set bonus / unscored effect /
@@ -267,8 +268,13 @@ only, pending the owner's sanity check before the other 8 classes.
 - **`lib/gear-config.ts`:** `GEAR_LEVELS`, `DEFAULT_GEAR_LEVEL`,
   `maxProfessionSkill(level)` (Classic rank gates, caps enchants a preset
   assumes). **`lib/gear-classes.ts`:** per-class proficiencies (`canEquip`),
-  Warrior only so far, `estimated`; fill a class in before generating its
-  presets.
+  all 9 classes, Classic trainer rules, `estimated`: armor tier by level,
+  shield, weapon types, `twoHand` (types allowed as a two-hander when narrower,
+  e.g. Mage staves only, Rogue none), ranged-slot catalog slots, dual-wield
+  level, and `relic` (Libram / Idol / Totem). Agrees with foreverchanges'
+  per-class pools. **Forever changes from Classic** (listed in the file's
+  header; add new ones there): Druids use two-handed Polearms (confirmed by
+  the owner 2026-10-21; nothing in our own sourced data mentions it).
 - **`data/base-stats.json`** (`node scripts/build-base-stats.js [--check]`):
   level 1-60 → class → race → str/agi/sta/int/spi/health/mana from cmangos
   classic-db `player_levelstats` + `player_classlevelstats`, pinned to commit
@@ -284,20 +290,128 @@ only, pending the owner's sanity check before the other 8 classes.
   catalogs, id = the enchant item's `itemId`, stats parsed from that item's
   Forever tooltip. The script exits 1 on an unrecognised target or leftover
   number. No Arcanums / ZG / Argent Dawn shoulders yet (no profession recipe;
-  all 50+).
+  all 50+). Each entry has `learnedFrom` (`trainer` | `recipe`, from the
+  catalog's `source`), `recipeItemIds` (the "Formula:/Pattern:/Schematic:/
+  Plans:" items, matched by name) and `recipeSourced` (trainer, or a formula
+  with a known source via `gear-availability.js`). As of 70374: 61 trainer, 66
+  recipe with a sourced formula, 63 recipe whose formula has **no known source
+  in our data** (all 38 Forever-new formulas among them, plus Classic ones such
+  as Crusader), 4 with no formula item. That's a gap in foreverchanges'
+  `sources.json`, not proof they're unlearnable (foreverchanges treats
+  Necklace - Strength and the Forever armor kits as learnable), so presets
+  don't filter on it; the UI can flag it.
 - **Presets** (`node scripts/build-gear-presets.js [classId]`):
-  hand-written `data/gear/preset-weights.json` (per variant: weights,
-  `mainHand` two-hand / one-hand-shield / dual-wield) and
-  `data/gear/preset-overrides.json` (exclude, pin, forced enchant; the
-  generator fails on an id it can't place) → `data/gear/presets/<class>.json`:
-  per variant and side (`a`/`h`) a loadout, enchants and a top-6 ranked list
-  per slot. Eligibility uses `scripts/lib/gear-availability.js`: many Forever
-  quest rewards and drops have **no "Requires Level" line**, so the obtainable
-  level comes from the quest's required level / dungeon minimum level, and
-  the faction from the quest side. Items with no known source are dropped
-  (test records like "Bad Hat"), as are profession- or reputation-gated items.
-  **Use-effect trinkets score 0** (effects aren't weighted), so trinkets need
-  overrides. `lib/gear-presets.test.ts` checks every generated pick is legal.
+  hand-written `data/gear/preset-weights.json` (per variant: weights;
+  `mainHand` one mode or a list of two-hand / one-hand-shield /
+  one-hand-off-hand / dual-wield, the best-scoring main + off pair wins;
+  optional `mainTypes`; `groups` such as `pvp`, `caster`) and
+  `data/gear/preset-overrides.json`: `_groups` (shared `alternates` and forced
+  `enchants` for every variant in a group: `pvp` offers Minor Recombobulator
+  and Net-o-Matic as trinket alternates and forces Boots - Minor Speed;
+  `caster` forces Weapon - Revelation; `caster-pve` pins Minor Recombobulator
+  in trinket 2; groups may carry `pin`, which sits under the class's and
+  variant's own), `_excludeEnchants` (never picked: the
+  three enchants with no known recipe, Minor Stats and Cloak - Defense, whose
+  values changed after our item pull), and per class `exclude`, a class-wide
+  `pin` (the relic) and per variant `pin` / `enchants` / `alternates`. Every
+  entry is `{id, reason}`; the generator fails on a missing reason or an id it
+  can't place. Output `data/gear/presets/<class>.json`: per variant and side
+  (`a`/`h`) a loadout, `suffixes` (slot → suffix id for random-suffix picks),
+  enchants, a `requires` map (slot → `[{kind, text}]`, kind `profession` |
+  `reputation` | `pvpRank` | `override`, for the UI) and a ranked list per
+  slot: pins (tag `pin`), then alternates (tag `alternate`, offered but not
+  picked), then the scored top 6 (entries may carry `suffixId`). **Candidates
+  are suffix-aware**: an item with a bonus tree becomes one candidate per roll
+  (base + suffix stats, `lib/item-suffixes.ts`), never a bare base. A slot no
+  weighted enchant fits gets the most-armor enchant (caster cloaks). Eligibility uses
+  `scripts/lib/gear-availability.js`: many Forever quest rewards and drops
+  have **no "Requires Level" line**, so the obtainable level comes from the
+  quest's required level / dungeon minimum level (crafted: the level the
+  profession skill is trainable at), and the faction from the quest side.
+  Items with no known source are dropped (test records like "Bad Hat").
+  Gated items are never ranked; a **pin** may take one gated by a profession
+  trainable by the level (Minor Recombobulator, Net-o-Matic), a reputation
+  (Defiler's / Arathor Talisman), or a PvP rank. No tooltip shows a rank, so
+  rank gates come from the client's `ItemSparse.RequiredPVPRank`
+  (`data/sources/client-db2/1.60.1.70450/itemsparse.csv`, 449 items; value −
+  4 = Classic rank, so Insignia's 6 = rank 2, Corporal / Grunt). A
+  faction-only reputation (The Defilers, League of Arathor, the BG factions)
+  also limits the item to that side. A pin can be one entry or `{a, h}` per
+  side, and may add `requires: [text]` for a gate no data shows (kind
+  `override`). **Use-effect trinkets and relics score 0** (effects aren't
+  weighted), so they're pinned. The pattern for every class:
+  - **PvP:** trinket 1 = the class Insignia, trinket 2 = Talisman of Arathor
+    (A) / Defiler's Talisman (H), per side; the Engineering pair stays in the
+    ranked list as alternates. Forever's Horde Paladins and Alliance Shamans
+    have no Insignia (Classic made none), so that side pins only the talisman.
+  - **Melee PvE:** Cursed Murloc Eye + Minor Recombobulator. **Tanks:** Minor
+    Recombobulator + Rune of Duty. **Caster / healer PvE** (`caster-pve`
+    group): trinket 1 = the generator's best stat trinket, trinket 2 = Minor
+    Recombobulator (its on-use mana and health outweigh the +2 mp5 / +6 Spirit
+    trinkets, and use effects aren't scored); Dog Whistle offered as an
+    alternate. The rule for a pin: an on-use or equip effect the scoring can't
+    see; plain itemization taste stays with the generator.
+  - **Relics:** Tenets of the Silver Hand (Paladin), Mystic Mushroom (Druid
+    casters; Idol of Shifting Tides for Horde ferals, Alliance can't get it per
+    our quest data), Polished Driftwood Icon (Shaman).
+  - **Weights:** healers value Healing and Spell Power at 0.5 (the client budget
+    prices a Healing point at about a quarter of a primary stat); two-school
+    casters (Warlock, Balance, Elemental) weight their main school below
+    all-school Spell Power, or "of … Wrath" suffixes win everywhere.
+  - **Match vs foreverchanges, both sides (2026-10-21, ring and trinket pairs
+    compared as pairs; identical / identical + in their ranked list / enchants
+    identical):** Warrior 55 / 78 / 61%, Paladin 41 / 71 / 56%, Hunter 56 / 74 /
+    63%, Mage 57 / 82 / 68%, Rogue 59 / 78 / 70%, Priest 54 / 82 / 72%, Warlock
+    38 / 81 / 69%, Druid 49 / 76 / 61%, Shaman 51 / 81 / 69%. 6–10% of their picks per class aren't offerable to us
+    (no source in our data or not in our catalog; Paladin 21 of 200). The PvP
+    trinket pins differ from theirs by design.
+  Each
+  preset file carries a `disclaimer` string the UI must show wherever a
+  preset is displayed: generated starting point, not a definitive BiS claim,
+  build and share your own. `lib/gear-presets.test.ts` checks every generated
+  pick is legal and that `requires` starts with the item's tooltip lines.
+- **Random suffixes** (`node scripts/build-gear-suffixes.js [build]` →
+  `data/gear/suffixes.json`, 82 KB, `confidence: "datamined"`; read through
+  `lib/item-suffixes.ts` `itemSuffixes(item, data)`, pure, callers pass the
+  JSON in). Forever has no Classic ItemRandomProperties / ItemRandomSuffix; it
+  uses retail-style bonus lists, all in the client. Source:
+  `data/sources/client-db2/1.60.1.70450/` (`itemxbonustree`,
+  `itembonustreenode`, `itembonus`, `randproppoints`, `itemnamedescription`,
+  `itemsparse`), trimmed by `node scripts/trim-client-db2.js <wow.export dir>
+  <build> <tables>` from the owner's wow.export export (row-for-row identical
+  to wago.tools' 70450 tables).
+  - **Eligibility:** `ItemXBonusTree` (item → tree) → `ItemBonusTreeNode` rows
+    of that tree with ItemContext 0 → `ChildItemBonusListID`; a list is a
+    suffix when it has a name (ItemBonus type 5 → `ItemNameDescription`).
+    Covers 1,758 items over 75 shared trees (300 suffixes). Not covered: 50
+    items whose tree nests trees or uses item contexts (Forever's "Restored …"
+    set, an upgrade system), and the dev list "Test".
+  - **Stats:** ItemBonus type 2 (`Value` = stat id, allocation /10000) →
+    `round(RandPropPoints[itemLevel][quality][group] × allocation / 10000)`;
+    groups 0 head/chest/legs/2H, 1 shoulder/waist/feet/hands/trinket, 2
+    wrist/neck/back/finger/shield/held off-hand, 3 one-hand, 4 ranged. The
+    item's own fixed stats stay on its tooltip. Type 23 is an **ItemEffect** id
+    (only "of Eluding": 213334 → spell 13669 "Increased Dodge 1", +1% dodge,
+    per wago's 70450 tables). Decoding it from our own export needs
+    `ItemEffect`, `Spell` and `SpellEffect` (`EffectBasePointsF` fills `$s1`);
+    not exported yet, so the page says "plus an equip effect (not decoded
+    yet)". Type 54 rows are
+    zero-valued flags. The script fails on an unmapped stat id or bonus type.
+  - **Stat ids:** each mapped to a `STAT_KEYS` key by evidence (the formula on
+    ItemSparse base items vs our parsed tooltips, plus the suffix names): 51-56
+    resistances (53 holy unused), 84-89 school spell damage ("of … Wrath"). Ids
+    83 and 90+ appear only on base items and stay unmapped.
+  - **Verified:** the formula reproduces 4,466 / 4,557 ItemSparse base items'
+    fixed stats against our tooltips; 232 / 232 foreverchanges suffix items
+    (their numbers only graded ours; the 5 "differences" are a shield's base
+    block value they don't count). Wowhead's "<Random enchantment>" marker
+    agrees on 9 of 12 sampled tree items it has and all 5 non-tree items; the
+    3 it lacks (Cerulean Talisman, two Forever thrown weapons) are stat-less
+    greens, which is what a suffix base looks like (1,582 of the 1,711 tree
+    items in our catalog have no fixed stats).
+  - **Presets use them** (one candidate per roll); the item pool (not built) must too.
+  - `scripts/lib/csv.js` is now quote-aware (ItemSparse has `;` and a newline
+    inside quoted descriptions) and fails on a row whose field count is off.
 
 ### Mobile talent tree interaction (`TalentNode.tsx`/`TalentTreeGrid.tsx`)
 - Tap always adds a point (never toggles remove — removal is the
@@ -417,6 +531,15 @@ added item, so 21,626 items); previous copies are in
 on `LootItemPill`/`ItemTooltipBody` matters: `status === "missing"` means
 "no longer drops" in a loot context but "beta hasn't touched this Classic
 item yet" in the catalog — don't let the two share wording/styling.
+Items that can roll random suffixes show a "Random suffixes (N)" card
+(`components/reference/ItemSuffixList.tsx`, server-rendered, 1 column on
+phones, 2 from `sm`; suffix names in `itemQualityColor(2)`, the fixed Uncommon
+green like every quality color, values in `text-foreground`. In Light mode the
+green is low contrast, about 1.4:1, as on every green item name on the site) with each suffix's stats at that item's level, from
+`lib/item-suffixes.ts` (see "Random suffixes" under the gear planner). The
+page imports `data/gear/suffixes.json` statically: `npm run build` on
+2026-10-20 showed the same 186 traced files and +85,561 bytes, with no
+suffix or client-db2 file traced.
 
 ### Professions (`/reference/professions/[profession]`)
 8 crafting professions (`data/professions-catalog/<id>.json`, built by
@@ -589,7 +712,7 @@ See `docs/adding-content.md` for guides/blog/profession frontmatter,
 image/credit conventions, and SEO metadata specifics.
 
 ## Next up
-- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`). **2026-10-20:** the owner now wants a level-30 gear planner built with level as a parameter; the investigation (foreverchanges dissection, data model, URL scheme, open scope calls) is in `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`. Decisions made the same day; the data layer is built (see "Gear planner data layer"). Next, after the owner signs off on the Warrior presets: weights + `lib/gear-classes.ts` rows for the other 8 classes, then the item pool, the codec, and the UI.
+- **BIS builder** — design doc written 2026-10-06 (`Forevercraft-Knowledge-Base/04-Features/BIS-Builder/BIS-Builder-Design.md`). Build is scheduled for after level-60 data lands; don't start the BIS UI before then. Reuses the planner's URL + localStorage persistence; gear data is keyed by `itemId` into `data/items.json`, which first needs a slot-mapping table (inconsistent slot strings, 9,479 `null`). **2026-10-20:** the owner now wants a level-30 gear planner built with level as a parameter; the investigation (foreverchanges dissection, data model, URL scheme, open scope calls) is in `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-20-gear-planner-investigation.md`. Decisions made the same day; the data layer is built (see "Gear planner data layer"). Pass 3 (same day): Warrior trinket/enchant overrides, suffix sourcing investigated, Wowhead cross-check (see the handoff). All 9 classes' presets are generated (2026-10-20, later). Next, after the owner reviews them: the suffix-aware item pool, the codec, then the UI.
 - **Design the November data layout (items / loot / tooltips) before
   importing the full wow.export dataset** — per-item shards (static files,
   fetched on demand / prerendered) vs. Postgres. Decide this first; today's
@@ -597,10 +720,23 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
+- **Quality colors in Light mode are low contrast (tracked, not fixed):**
+  `ITEM_QUALITY_COLOR` (`lib/wow-data.ts`) is a fixed palette by design (only
+  Common routes through `--quality-common`), so Uncommon `#1eff00` reads at
+  about 1.4:1 on the Light surface (`#f4f4f5`), far under 4.5:1. Seen on the
+  item-page suffix card (2026-10-20) but site-wide: every green item name,
+  the item page title, `ItemsTable`, loot pills. Rare/Epic/Legendary likely
+  need a check too. A fix belongs in the quality-color tokens (Light-mode
+  variants per quality, like Common), not in one component.
 - **Gear planner data gaps (2026-10-20):** (1) `data/items.json` has no
   random-suffix items ("…of the Tiger"); foreverchanges encodes them as
   `baseId * 100000 + suffixId` and 3 of their 49 Warrior picks per faction
-  are suffix items. Needs a suffix source before the pool is built. (2) The
+  are suffix items. **The suffix data and item-page list are built
+  (2026-10-20, see "Random suffixes" above), and presets pick suffix rolls;
+  the item pool isn't built yet.** Open: the "of Eluding" effect text
+  (ItemEffect 213334; needs the ItemEffect, Spell and SpellEffect exports),
+  the 50 "Restored …" nested-tree items, and the 47 tree items not in our
+  catalog. (2) The
   item catalog is build 70374, foreverchanges is on 70450: enchants such as
   Bracer - Lesser Intellect (+5 → +3) and Cloak - Defense (60 → 30 armor)
   were nerfed since. Refresh items, then re-run `build-gear-enchants.js` and
