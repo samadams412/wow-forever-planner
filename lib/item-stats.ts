@@ -33,6 +33,8 @@ export type ParsedItem = {
   classes: string[] | null;
   races: string[] | null;
   unique: boolean;
+  // "Unique-Equipped: Rune of Battle (1)": items sharing a group can't be worn together beyond the count.
+  uniqueGroup: string | null;
   // Non-level requirements (profession skill, reputation), verbatim.
   requires: string[];
   setName: string | null;
@@ -219,7 +221,7 @@ export function parseEnchantText(useLine: string): ParsedEnchant {
 
 export function parseItemTooltip(lines: readonly string[]): ParsedItem {
   const out: ParsedItem = {
-    stats: {}, armor: 0, weapon: null, classes: null, races: null, unique: false,
+    stats: {}, armor: 0, weapon: null, classes: null, races: null, unique: false, uniqueGroup: null,
     requires: [], setName: null, setBonuses: [], effects: [], unparsed: [],
   };
   const weapon = () => (out.weapon ??= { damage: [], speed: null, dps: null });
@@ -266,7 +268,11 @@ export function parseItemTooltip(lines: readonly string[]): ParsedItem {
 
     if ((m = line.match(/^Classes: (.+)$/))) { out.classes = m[1].split(", "); continue; }
     if ((m = line.match(/^Races: (.+)$/))) { out.races = m[1].split(", "); continue; }
-    if (/^Unique(-Equipped)?( ?\(\d+\)|: .+)?$/.test(line)) { out.unique = true; continue; }
+    if ((m = line.match(/^Unique(?:-Equipped)?(?: ?\(\d+\)|: (.+?)(?: \(\d+\))?)?$/))) {
+      out.unique = true;
+      out.uniqueGroup = m[1] ?? null;
+      continue;
+    }
     if (/^Requires (?!Level \d+$)/.test(line)) { out.requires.push(line); continue; }
     if (/^\(\d+\) Set: /.test(line)) { out.setBonuses.push(line); continue; }
     if ((m = line.match(/^(.+) \(\d+\/\d+\)$/))) { out.setName = m[1]; continue; }

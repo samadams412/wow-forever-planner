@@ -60,6 +60,13 @@ test("weapon damage, bonus school damage, dps, shield block", () => {
   assert.deepEqual(s.stats, { blockValue: 16, sta: -10 });
 });
 
+test("unique-equipped groups", () => {
+  const p = parseItemTooltip(["Binds when picked up", "Unique-Equipped: Rune of Battle (1)", "Trinket", "+4 Stamina"]);
+  assert.deepEqual([p.unique, p.uniqueGroup], [true, "Rune of Battle"]);
+  const plain = parseItemTooltip(["Unique"]);
+  assert.deepEqual([plain.unique, plain.uniqueGroup], [true, null]);
+});
+
 test("unknown lines surface as unparsed, category lines don't", () => {
   const p = parseItemTooltip(["\tPotions", "Requires Level 12", "Something new"]);
   assert.deepEqual(p.unparsed, ["Something new"]);

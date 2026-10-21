@@ -1,0 +1,26 @@
+{
+  "_note": "Hand-written stat weights per class variant, in Strength-equivalents for melee and Spell Power-equivalents for casters. Every generated preset is confidence 'estimated'. Ratings (critRating, hitRating...) have no known level-30 conversion in Forever yet, so their weights are guesses. dps weights a weapon's damage per second in the main hand; rangedDps the ranged slot. armor applies to base armor plus bonus armor. mainHand: two-hand | one-hand-shield | dual-wield.",
+  "warrior": [
+    {
+      "key": "pve",
+      "name": "PvE",
+      "role": "dps",
+      "mainHand": "two-hand",
+      "weights": { "str": 1, "ap": 0.5, "agi": 0.6, "critRating": 1, "hitRating": 1, "critPct": 10, "hitPct": 10, "sta": 0.1, "dps": 7, "rangedDps": 0.5 }
+    },
+    {
+      "key": "pvp",
+      "name": "PvP",
+      "role": "dps",
+      "mainHand": "two-hand",
+      "weights": { "str": 1, "sta": 0.8, "ap": 0.5, "agi": 0.6, "critRating": 0.9, "hitRating": 0.6, "critPct": 9, "hitPct": 6, "armor": 0.02, "dps": 7, "rangedDps": 0.5 }
+    },
+    {
+      "key": "tank",
+      "name": "Tank",
+      "role": "tank",
+      "mainHand": "one-hand-shield",
+      "weights": { "sta": 1, "defSkill": 1.5, "defRating": 1.2, "armor": 0.05, "dodgeRating": 1, "parryRating": 1, "blockRating": 0.6, "dodgePct": 12, "parryPct": 12, "blockPct": 6, "blockValue": 0.3, "agi": 0.6, "str": 0.4, "hitRating": 0.3, "dps": 2, "rangedDps": 0.3 }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "_note": "Hand corrections applied after scoring. Per class: exclude (itemIds never picked for any variant of the class), and per variant: pin ({slot: itemId}, forced pick, must be a valid candidate for the slot) and enchants ({slot: enchantId, or null for none}). Every entry needs a reason. The generator fails on an id it can't place.",
+  "warrior": {
+    "exclude": [],
+    "variants": {}
+  }
+}
