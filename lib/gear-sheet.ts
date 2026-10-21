@@ -8,8 +8,8 @@
 
 import { GEAR_SLOTS, type GearSlot } from "./gear-slots.ts";
 import { itemSuffixes } from "./item-suffixes.ts";
-import type { Stats, StatKey } from "./item-stats.ts";
-import type { GearPool, GearState, PoolItem, SlotPick } from "./gear-code.ts";
+import { STAT_KEYS, STAT_LABEL, type Stats, type StatKey } from "./item-stats.ts";
+import type { GearPool, GearState, PoolEnchant, PoolItem, SlotPick } from "./gear-code.ts";
 
 export type BaseStats = { str: number; agi: number; sta: number; int: number; spi: number; health: number; mana: number };
 export type Sheet = { stats: Stats; armor: number; health: number; mana: number; weaponDps: Partial<Record<"main" | "off" | "ranged", number>> };
@@ -20,6 +20,27 @@ const add = (into: Stats, from: Stats) => {
   for (const [k, v] of Object.entries(from) as [StatKey, number][]) into[k] = (into[k] ?? 0) + v;
 };
 
+// What an enchant adds to the sheet. The one source for both the sheet and the
+// enchant's displayed effect (enchantEffect), so the two can't drift apart.
+export function enchantContribution(e: PoolEnchant): { stats: Stats; armor: number; weaponDamage: number } {
+  return { stats: e.stats, armor: e.armor, weaponDamage: e.weaponDamage };
+}
+
+// "+6 weapon damage", "+2 all stats", "+5 Stamina, +32 armor"; an effect-only
+// enchant (Minor Speed, shield spikes) shows its own text and says it isn't counted.
+export function enchantEffect(e: PoolEnchant): string {
+  const { stats, armor, weaponDamage } = enchantContribution(e);
+  const parts: string[] = [];
+  const keys = (Object.keys(stats) as StatKey[]).sort((a, b) => STAT_KEYS.indexOf(a) - STAT_KEYS.indexOf(b));
+  const attrs = ATTRS.map((a) => stats[a]);
+  const allStats = attrs.every((v) => v !== undefined && v === attrs[0]);
+  if (allStats) parts.push(`+${attrs[0]} all stats`);
+  for (const k of keys) if (!(allStats && (ATTRS as readonly string[]).includes(k))) parts.push(`+${stats[k]} ${STAT_LABEL[k]?.name ?? k}`);
+  if (armor) parts.push(`+${armor} armor`);
+  if (weaponDamage) parts.push(`+${weaponDamage} weapon damage`);
+  return parts.length ? parts.join(", ") : `${e.text} (not counted in stats)`;
+}
+
 // What one pick contributes: item stats + its suffix roll + its enchant.
 export function pickContribution(pool: GearPool, item: PoolItem, pick: SlotPick): { stats: Stats; armor: number; weaponDamage: number } {
   const stats: Stats = { ...item.stats };
@@ -28,8 +49,9 @@ export function pickContribution(pool: GearPool, item: PoolItem, pick: SlotPick)
     if (roll) add(stats, roll.stats);
   }
   const e = pick.enchantId ? pool.enchants.find((x) => x.id === pick.enchantId) : undefined;
-  if (e) add(stats, e.stats);
-  return { stats, armor: item.armor + (e?.armor ?? 0), weaponDamage: e?.weaponDamage ?? 0 };
+  const ec = e ? enchantContribution(e) : { stats: {}, armor: 0, weaponDamage: 0 };
+  add(stats, ec.stats);
+  return { stats, armor: item.armor + ec.armor, weaponDamage: ec.weaponDamage };
 }
 
 const fromAttr = (value: number, perPoint: number) => Math.min(value, 20) + Math.max(value - 20, 0) * perPoint;

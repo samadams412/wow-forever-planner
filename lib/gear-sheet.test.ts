@@ -30,3 +30,30 @@ test("withPick adds and clears a slot without mutating", () => {
   assert.deepEqual(a, { head: { itemId: 1 } });
   assert.deepEqual(withPick(b, "head", null), { neck: { itemId: 2 } });
 });
+
+test("every enchant's displayed effect lists exactly what the sheet applies", async () => {
+  const { enchantEffect } = await import("./gear-sheet.ts");
+  const { STAT_LABEL } = await import("./item-stats.ts");
+  const chest = pool.items.find((i) => i.itemId === 1488)!; // the PvE preset's chest
+  for (const e of pool.enchants) {
+    const text = enchantEffect(e);
+    const item = pool.items.find((i) => e.slots.includes(i.slot) && (!e.types || e.types.includes(i.type ?? "")) && e.minIlvl <= (i.itemLevel ?? 0) && i.weapon?.speed !== null) ?? chest;
+    const slot = ({ Head: "head", Neck: "neck", Shoulder: "shoulder", Back: "back", Chest: "chest", Wrist: "wrist", Hands: "hands", Waist: "waist", Legs: "legs", Feet: "feet", Shield: "off", "Two-Hand": "main", "One-Hand": "main", "Main Hand": "main", Ranged: "ranged" } as const)[item.slot as "Head"];
+    if (!slot) continue;
+    const without = computeSheet(pool, human, { [slot]: { itemId: item.itemId } });
+    const withE = computeSheet(pool, human, { [slot]: { itemId: item.itemId, enchantId: e.id } });
+    const applied = sheetDelta(without, withE, Object.keys(e.stats) as never[]);
+    if (!Object.keys(e.stats).length && !e.armor && !e.weaponDamage) {
+      assert.match(text, /not counted in stats/, e.name);
+      assert.deepEqual(applied, {}, e.name);
+      continue;
+    }
+    for (const [k, v] of Object.entries(applied)) {
+      const all = /^\+(\d+) all stats/.exec(text);
+      assert.ok(text.includes(`+${v} ${STAT_LABEL[k as "str"]?.name ?? k}`) || (all && Number(all[1]) === v), `${e.name}: ${text} vs ${k} ${v}`);
+    }
+    if (e.armor) assert.equal(withE.armor - without.armor, e.armor, e.name);
+    if (e.armor) assert.ok(text.includes(`+${e.armor} armor`), e.name);
+    if (e.weaponDamage) assert.ok(text.includes(`+${e.weaponDamage} weapon damage`), e.name);
+  }
+});
