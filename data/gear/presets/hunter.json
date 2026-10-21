@@ -1,0 +1,2093 @@
+{
+ "classId": "hunter",
+ "level": 30,
+ "generatedBy": "scripts/build-gear-presets.js",
+ "confidence": "estimated",
+ "disclaimer": "These sets are generated from stat weights plus a few hand corrections: a starting point, not a definitive best-in-slot list. Build your own and share it.",
+ "candidates": 13188,
+ "variants": [
+  {
+   "key": "pve",
+   "name": "PvE",
+   "role": "dps",
+   "mainHand": [
+    "two-hand",
+    "dual-wield"
+   ],
+   "confidence": "estimated",
+   "sides": {
+    "a": {
+     "items": {
+      "head": 15339,
+      "neck": 19537,
+      "shoulder": 2278,
+      "back": 13108,
+      "chest": 7374,
+      "wrist": 9428,
+      "hands": 7348,
+      "waist": 252521,
+      "legs": 9624,
+      "feet": 15142,
+      "finger1": 285190,
+      "finger2": 285190,
+      "trinket1": 273840,
+      "trinket2": 4381,
+      "ranged": 17686,
+      "main": 273037
+     },
+     "suffixes": {
+      "head": 12728,
+      "wrist": 13019,
+      "feet": 12728
+     },
+     "enchants": {
+      "neck": 273633,
+      "back": 273482,
+      "chest": 273517,
+      "wrist": 273613,
+      "hands": 273520,
+      "legs": 252453,
+      "feet": 273500,
+      "ranged": 10546,
+      "main": 273515
+     },
+     "requires": {
+      "trinket2": [
+       {
+        "kind": "profession",
+        "text": "Requires Engineering (140)"
+       }
+      ]
+     }
+    },
+    "h": {
+     "items": {
+      "head": 15339,
+      "neck": 19537,
+      "shoulder": 2278,
+      "back": 13108,
+      "chest": 7374,
+      "wrist": 9428,
+      "hands": 7348,
+      "waist": 252521,
+      "legs": 9624,
+      "feet": 15142,
+      "finger1": 285190,
+      "finger2": 285190,
+      "trinket1": 273840,
+      "trinket2": 4381,
+      "ranged": 17686,
+      "main": 273037
+     },
+     "suffixes": {
+      "head": 12728,
+      "wrist": 13019,
+      "feet": 12728
+     },
+     "enchants": {
+      "neck": 273633,
+      "back": 273482,
+      "chest": 273517,
+      "wrist": 273613,
+      "hands": 273520,
+      "legs": 252453,
+      "feet": 273500,
+      "ranged": 10546,
+      "main": 273515
+     },
+     "requires": {
+      "trinket2": [
+       {
+        "kind": "profession",
+        "text": "Requires Engineering (140)"
+       }
+      ]
+     }
+    }
+   },
+   "ranked": {
+    "head": {
+     "a": [
+      {
+       "itemId": 15339,
+       "suffixId": 12728,
+       "score": 13
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12728,
+       "score": 13
+      },
+      {
+       "itemId": 10406,
+       "suffixId": 12728,
+       "score": 12
+      },
+      {
+       "itemId": 15129,
+       "suffixId": 12728,
+       "score": 12
+      },
+      {
+       "itemId": 15339,
+       "suffixId": 12724,
+       "score": 11.7
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12724,
+       "score": 11.7
+      }
+     ],
+     "h": [
+      {
+       "itemId": 15339,
+       "suffixId": 12728,
+       "score": 13
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12728,
+       "score": 13
+      },
+      {
+       "itemId": 10406,
+       "suffixId": 12728,
+       "score": 12
+      },
+      {
+       "itemId": 15129,
+       "suffixId": 12728,
+       "score": 12
+      },
+      {
+       "itemId": 15339,
+       "suffixId": 12724,
+       "score": 11.7
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12724,
+       "score": 11.7
+      }
+     ]
+    },
+    "neck": {
+     "a": [
+      {
+       "itemId": 19537,
+       "score": 8.5
+      },
+      {
+       "itemId": 19541,
+       "score": 8.5
+      },
+      {
+       "itemId": 12029,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 12039,
+       "suffixId": 12728,
+       "score": 7
+      },
+      {
+       "itemId": 12019,
+       "suffixId": 12728,
+       "score": 7
+      },
+      {
+       "itemId": 12028,
+       "suffixId": 12728,
+       "score": 7
+      }
+     ],
+     "h": [
+      {
+       "itemId": 19537,
+       "score": 8.5
+      },
+      {
+       "itemId": 19541,
+       "score": 8.5
+      },
+      {
+       "itemId": 12029,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 12039,
+       "suffixId": 12728,
+       "score": 7
+      },
+      {
+       "itemId": 12019,
+       "suffixId": 12728,
+       "score": 7
+      },
+      {
+       "itemId": 12028,
+       "suffixId": 12728,
+       "score": 7
+      }
+     ]
+    },
+    "shoulder": {
+     "a": [
+      {
+       "itemId": 2278,
+       "score": 11.3
+      },
+      {
+       "itemId": 2264,
+       "score": 10.4
+      },
+      {
+       "itemId": 273047,
+       "score": 10.2
+      },
+      {
+       "itemId": 15357,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15140,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15357,
+       "suffixId": 12724,
+       "score": 9.1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 2278,
+       "score": 11.3
+      },
+      {
+       "itemId": 2264,
+       "score": 10.4
+      },
+      {
+       "itemId": 273047,
+       "score": 10.2
+      },
+      {
+       "itemId": 15357,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15140,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15357,
+       "suffixId": 12724,
+       "score": 9.1
+      }
+     ]
+    },
+    "back": {
+     "a": [
+      {
+       "itemId": 13108,
+       "score": 8.7
+      },
+      {
+       "itemId": 7436,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 15579,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 14593,
+       "score": 7.2
+      },
+      {
+       "itemId": 7460,
+       "suffixId": 12728,
+       "score": 7
+      },
+      {
+       "itemId": 9860,
+       "suffixId": 12728,
+       "score": 7
+      }
+     ],
+     "h": [
+      {
+       "itemId": 13108,
+       "score": 8.7
+      },
+      {
+       "itemId": 7436,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 15579,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 14593,
+       "score": 7.2
+      },
+      {
+       "itemId": 7460,
+       "suffixId": 12728,
+       "score": 7
+      },
+      {
+       "itemId": 9860,
+       "suffixId": 12728,
+       "score": 7
+      }
+     ]
+    },
+    "chest": {
+     "a": [
+      {
+       "itemId": 7374,
+       "score": 14
+      },
+      {
+       "itemId": 7407,
+       "suffixId": 12728,
+       "score": 14
+      },
+      {
+       "itemId": 273038,
+       "score": 13.6
+      },
+      {
+       "itemId": 273026,
+       "score": 13.5
+      },
+      {
+       "itemId": 15130,
+       "suffixId": 12728,
+       "score": 13
+      },
+      {
+       "itemId": 9835,
+       "suffixId": 12728,
+       "score": 13
+      }
+     ],
+     "h": [
+      {
+       "itemId": 7374,
+       "score": 14
+      },
+      {
+       "itemId": 7407,
+       "suffixId": 12728,
+       "score": 14
+      },
+      {
+       "itemId": 273038,
+       "score": 13.6
+      },
+      {
+       "itemId": 273026,
+       "score": 13.5
+      },
+      {
+       "itemId": 15130,
+       "suffixId": 12728,
+       "score": 13
+      },
+      {
+       "itemId": 9835,
+       "suffixId": 12728,
+       "score": 13
+      }
+     ]
+    },
+    "wrist": {
+     "a": [
+      {
+       "itemId": 9428,
+       "suffixId": 13019,
+       "score": 12.2
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13100,
+       "score": 11
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13022,
+       "score": 10.8
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13014,
+       "score": 9.8
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13024,
+       "score": 9.6
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13018,
+       "score": 9.5
+      }
+     ],
+     "h": [
+      {
+       "itemId": 9428,
+       "suffixId": 13019,
+       "score": 12.2
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13100,
+       "score": 11
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13022,
+       "score": 10.8
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13014,
+       "score": 9.8
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13024,
+       "score": 9.6
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13018,
+       "score": 9.5
+      }
+     ]
+    },
+    "hands": {
+     "a": [
+      {
+       "itemId": 7348,
+       "score": 14
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 15137,
+       "suffixId": 12728,
+       "score": 9
+      }
+     ],
+     "h": [
+      {
+       "itemId": 7348,
+       "score": 14
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 15137,
+       "suffixId": 12728,
+       "score": 9
+      }
+     ]
+    },
+    "waist": {
+     "a": [
+      {
+       "itemId": 252521,
+       "score": 11.4
+      },
+      {
+       "itemId": 9855,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15148,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 252520,
+       "score": 9.9
+      },
+      {
+       "itemId": 273041,
+       "score": 9.6
+      },
+      {
+       "itemId": 9855,
+       "suffixId": 12724,
+       "score": 9.1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 252521,
+       "score": 11.4
+      },
+      {
+       "itemId": 9855,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15148,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 252520,
+       "score": 9.9
+      },
+      {
+       "itemId": 273041,
+       "score": 9.6
+      },
+      {
+       "itemId": 16659,
+       "score": 9.1
+      }
+     ]
+    },
+    "legs": {
+     "a": [
+      {
+       "itemId": 9624,
+       "score": 18.8
+      },
+      {
+       "itemId": 9509,
+       "score": 14.6
+      },
+      {
+       "itemId": 13114,
+       "score": 14.4
+      },
+      {
+       "itemId": 15358,
+       "suffixId": 12728,
+       "score": 14
+      },
+      {
+       "itemId": 6690,
+       "score": 14
+      },
+      {
+       "itemId": 15456,
+       "score": 13.5
+      }
+     ],
+     "h": [
+      {
+       "itemId": 9624,
+       "score": 18.8
+      },
+      {
+       "itemId": 9509,
+       "score": 14.6
+      },
+      {
+       "itemId": 13114,
+       "score": 14.4
+      },
+      {
+       "itemId": 15358,
+       "suffixId": 12728,
+       "score": 14
+      },
+      {
+       "itemId": 6690,
+       "score": 14
+      },
+      {
+       "itemId": 7414,
+       "suffixId": 12728,
+       "score": 13
+      }
+     ]
+    },
+    "feet": {
+     "a": [
+      {
+       "itemId": 15142,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15142,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 7409,
+       "suffixId": 12728,
+       "score": 9
+      },
+      {
+       "itemId": 15131,
+       "suffixId": 12728,
+       "score": 9
+      }
+     ],
+     "h": [
+      {
+       "itemId": 15142,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12728,
+       "score": 10
+      },
+      {
+       "itemId": 15142,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12724,
+       "score": 9.1
+      },
+      {
+       "itemId": 7409,
+       "suffixId": 12728,
+       "score": 9
+      },
+      {
+       "itemId": 15131,
+       "suffixId": 12728,
+       "score": 9
+      }
+     ]
+    },
+    "finger": {
+     "a": [
+      {
+       "itemId": 285190,
+       "score": 11.5
+      },
+      {
+       "itemId": 7686,
+       "score": 9.2
+      },
+      {
+       "itemId": 11985,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 281634,
+       "score": 7.7
+      },
+      {
+       "itemId": 270052,
+       "score": 7.6
+      },
+      {
+       "itemId": 11970,
+       "suffixId": 12728,
+       "score": 7
+      }
+     ],
+     "h": [
+      {
+       "itemId": 285190,
+       "score": 11.5
+      },
+      {
+       "itemId": 7686,
+       "score": 9.2
+      },
+      {
+       "itemId": 11985,
+       "suffixId": 12728,
+       "score": 8
+      },
+      {
+       "itemId": 281634,
+       "score": 7.7
+      },
+      {
+       "itemId": 270052,
+       "score": 7.6
+      },
+      {
+       "itemId": 11970,
+       "suffixId": 12728,
+       "score": 7
+      }
+     ]
+    },
+    "trinket": {
+     "a": [
+      {
+       "itemId": 273840,
+       "score": 0,
+       "tag": "pin"
+      },
+      {
+       "itemId": 4381,
+       "score": 0,
+       "tag": "pin",
+       "requires": [
+        {
+         "kind": "profession",
+         "text": "Requires Engineering (140)"
+        }
+       ]
+      },
+      {
+       "itemId": 273643,
+       "score": 0.6
+      },
+      {
+       "itemId": 21566,
+       "score": 0.4
+      },
+      {
+       "itemId": 21568,
+       "score": 0.4
+      }
+     ],
+     "h": [
+      {
+       "itemId": 273840,
+       "score": 0,
+       "tag": "pin"
+      },
+      {
+       "itemId": 4381,
+       "score": 0,
+       "tag": "pin",
+       "requires": [
+        {
+         "kind": "profession",
+         "text": "Requires Engineering (140)"
+        }
+       ]
+      },
+      {
+       "itemId": 273643,
+       "score": 0.6
+      },
+      {
+       "itemId": 21566,
+       "score": 0.4
+      },
+      {
+       "itemId": 21568,
+       "score": 0.4
+      }
+     ]
+    },
+    "main": {
+     "a": [
+      {
+       "itemId": 273037,
+       "score": 49.8
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12728,
+       "score": 37.9
+      },
+      {
+       "itemId": 279844,
+       "score": 36.6
+      },
+      {
+       "itemId": 3185,
+       "suffixId": 12728,
+       "score": 36
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12724,
+       "score": 35.6
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12733,
+       "score": 35.1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 273037,
+       "score": 49.8
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12728,
+       "score": 37.9
+      },
+      {
+       "itemId": 279844,
+       "score": 36.6
+      },
+      {
+       "itemId": 3185,
+       "suffixId": 12728,
+       "score": 36
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12724,
+       "score": 35.6
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12733,
+       "score": 35.1
+      }
+     ]
+    },
+    "off": {
+     "a": [
+      {
+       "itemId": 19545,
+       "score": 17.9
+      },
+      {
+       "itemId": 19549,
+       "score": 17.9
+      },
+      {
+       "itemId": 281314,
+       "score": 17.5
+      },
+      {
+       "itemId": 776,
+       "score": 16.6
+      },
+      {
+       "itemId": 285346,
+       "score": 16
+      },
+      {
+       "itemId": 7683,
+       "score": 15.8
+      }
+     ],
+     "h": [
+      {
+       "itemId": 9520,
+       "score": 18.6
+      },
+      {
+       "itemId": 19545,
+       "score": 17.9
+      },
+      {
+       "itemId": 19549,
+       "score": 17.9
+      },
+      {
+       "itemId": 16886,
+       "score": 16.6
+      },
+      {
+       "itemId": 776,
+       "score": 16.6
+      },
+      {
+       "itemId": 285346,
+       "score": 16
+      }
+     ]
+    },
+    "ranged": {
+     "a": [
+      {
+       "itemId": 17686,
+       "score": 122.4
+      },
+      {
+       "itemId": 17687,
+       "score": 120.6
+      },
+      {
+       "itemId": 9456,
+       "score": 112.2
+      },
+      {
+       "itemId": 4127,
+       "score": 109.3
+      },
+      {
+       "itemId": 6696,
+       "score": 105.6
+      },
+      {
+       "itemId": 273029,
+       "score": 105.6
+      }
+     ],
+     "h": [
+      {
+       "itemId": 17686,
+       "score": 122.4
+      },
+      {
+       "itemId": 17687,
+       "score": 120.6
+      },
+      {
+       "itemId": 9456,
+       "score": 112.2
+      },
+      {
+       "itemId": 6696,
+       "score": 105.6
+      },
+      {
+       "itemId": 273029,
+       "score": 105.6
+      },
+      {
+       "itemId": 13137,
+       "score": 104.2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "key": "pvp",
+   "name": "PvP",
+   "role": "dps",
+   "mainHand": [
+    "two-hand",
+    "dual-wield"
+   ],
+   "groups": [
+    "pvp"
+   ],
+   "confidence": "estimated",
+   "sides": {
+    "a": {
+     "items": {
+      "head": 252512,
+      "neck": 7731,
+      "shoulder": 273047,
+      "back": 13108,
+      "chest": 273038,
+      "wrist": 9428,
+      "hands": 6727,
+      "waist": 252521,
+      "legs": 9624,
+      "feet": 15142,
+      "finger1": 285190,
+      "finger2": 285190,
+      "trinket1": 18856,
+      "trinket2": 21119,
+      "ranged": 17686,
+      "main": 19545,
+      "off": 19549
+     },
+     "suffixes": {
+      "wrist": 13014,
+      "feet": 12721
+     },
+     "enchants": {
+      "neck": 273633,
+      "back": 273482,
+      "chest": 273526,
+      "wrist": 273505,
+      "hands": 273520,
+      "legs": 8173,
+      "feet": 273530,
+      "ranged": 10546,
+      "main": 273514,
+      "off": 273514
+     },
+     "requires": {
+      "trinket1": [
+       {
+        "kind": "pvpRank",
+        "text": "Requires PvP rank 2 (Corporal / Grunt)"
+       }
+      ],
+      "trinket2": [
+       {
+        "kind": "reputation",
+        "text": "Requires The League of Arathor - Friendly"
+       }
+      ]
+     }
+    },
+    "h": {
+     "items": {
+      "head": 252512,
+      "neck": 7731,
+      "shoulder": 273047,
+      "back": 13108,
+      "chest": 273038,
+      "wrist": 9428,
+      "hands": 6727,
+      "waist": 252521,
+      "legs": 9624,
+      "feet": 16977,
+      "finger1": 285190,
+      "finger2": 285190,
+      "trinket1": 18846,
+      "trinket2": 21120,
+      "ranged": 17686,
+      "main": 19545,
+      "off": 19549
+     },
+     "suffixes": {
+      "wrist": 13014
+     },
+     "enchants": {
+      "neck": 273633,
+      "back": 273482,
+      "chest": 273526,
+      "wrist": 273505,
+      "hands": 273520,
+      "legs": 8173,
+      "feet": 273530,
+      "ranged": 10546,
+      "main": 273514,
+      "off": 273514
+     },
+     "requires": {
+      "trinket1": [
+       {
+        "kind": "pvpRank",
+        "text": "Requires PvP rank 2 (Corporal / Grunt)"
+       }
+      ],
+      "trinket2": [
+       {
+        "kind": "reputation",
+        "text": "Requires The Defilers - Friendly"
+       }
+      ]
+     }
+    }
+   },
+   "ranked": {
+    "head": {
+     "a": [
+      {
+       "itemId": 252512,
+       "score": 23.4
+      },
+      {
+       "itemId": 15339,
+       "suffixId": 12721,
+       "score": 18.7
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12721,
+       "score": 18.7
+      },
+      {
+       "itemId": 252504,
+       "score": 18.5
+      },
+      {
+       "itemId": 15339,
+       "suffixId": 12751,
+       "score": 18.1
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12751,
+       "score": 18.1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 252512,
+       "score": 23.4
+      },
+      {
+       "itemId": 15339,
+       "suffixId": 12721,
+       "score": 18.7
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12721,
+       "score": 18.7
+      },
+      {
+       "itemId": 252504,
+       "score": 18.5
+      },
+      {
+       "itemId": 15339,
+       "suffixId": 12751,
+       "score": 18.1
+      },
+      {
+       "itemId": 7413,
+       "suffixId": 12751,
+       "score": 18.1
+      }
+     ]
+    },
+    "neck": {
+     "a": [
+      {
+       "itemId": 7731,
+       "score": 13.7
+      },
+      {
+       "itemId": 19537,
+       "score": 12.5
+      },
+      {
+       "itemId": 19541,
+       "score": 12.5
+      },
+      {
+       "itemId": 12029,
+       "suffixId": 12751,
+       "score": 11.2
+      },
+      {
+       "itemId": 12029,
+       "suffixId": 12721,
+       "score": 9.5
+      },
+      {
+       "itemId": 12039,
+       "suffixId": 12721,
+       "score": 9.5
+      }
+     ],
+     "h": [
+      {
+       "itemId": 7731,
+       "score": 13.7
+      },
+      {
+       "itemId": 19537,
+       "score": 12.5
+      },
+      {
+       "itemId": 19541,
+       "score": 12.5
+      },
+      {
+       "itemId": 12029,
+       "suffixId": 12751,
+       "score": 11.2
+      },
+      {
+       "itemId": 12029,
+       "suffixId": 12721,
+       "score": 9.5
+      },
+      {
+       "itemId": 12039,
+       "suffixId": 12721,
+       "score": 9.5
+      }
+     ]
+    },
+    "shoulder": {
+     "a": [
+      {
+       "itemId": 273047,
+       "score": 17
+      },
+      {
+       "itemId": 2264,
+       "score": 15.1
+      },
+      {
+       "itemId": 15357,
+       "suffixId": 12721,
+       "score": 14.8
+      },
+      {
+       "itemId": 277043,
+       "score": 14.8
+      },
+      {
+       "itemId": 277051,
+       "score": 14.8
+      },
+      {
+       "itemId": 15140,
+       "suffixId": 12721,
+       "score": 14.8
+      }
+     ],
+     "h": [
+      {
+       "itemId": 273047,
+       "score": 17
+      },
+      {
+       "itemId": 2264,
+       "score": 15.1
+      },
+      {
+       "itemId": 15357,
+       "suffixId": 12721,
+       "score": 14.8
+      },
+      {
+       "itemId": 277043,
+       "score": 14.8
+      },
+      {
+       "itemId": 277051,
+       "score": 14.8
+      },
+      {
+       "itemId": 15140,
+       "suffixId": 12721,
+       "score": 14.8
+      }
+     ]
+    },
+    "back": {
+     "a": [
+      {
+       "itemId": 13108,
+       "score": 14.8
+      },
+      {
+       "itemId": 7436,
+       "suffixId": 12751,
+       "score": 11.7
+      },
+      {
+       "itemId": 15579,
+       "suffixId": 12751,
+       "score": 11.7
+      },
+      {
+       "itemId": 7436,
+       "suffixId": 12721,
+       "score": 10
+      },
+      {
+       "itemId": 15579,
+       "suffixId": 12721,
+       "score": 10
+      },
+      {
+       "itemId": 7460,
+       "suffixId": 12721,
+       "score": 10
+      }
+     ],
+     "h": [
+      {
+       "itemId": 13108,
+       "score": 14.8
+      },
+      {
+       "itemId": 7436,
+       "suffixId": 12751,
+       "score": 11.7
+      },
+      {
+       "itemId": 15579,
+       "suffixId": 12751,
+       "score": 11.7
+      },
+      {
+       "itemId": 7436,
+       "suffixId": 12721,
+       "score": 10
+      },
+      {
+       "itemId": 15579,
+       "suffixId": 12721,
+       "score": 10
+      },
+      {
+       "itemId": 7460,
+       "suffixId": 12721,
+       "score": 10
+      }
+     ]
+    },
+    "chest": {
+     "a": [
+      {
+       "itemId": 273038,
+       "score": 22.7
+      },
+      {
+       "itemId": 4119,
+       "score": 19.7
+      },
+      {
+       "itemId": 7407,
+       "suffixId": 12751,
+       "score": 19.4
+      },
+      {
+       "itemId": 7407,
+       "suffixId": 12721,
+       "score": 19.1
+      },
+      {
+       "itemId": 15130,
+       "suffixId": 12721,
+       "score": 19.1
+      },
+      {
+       "itemId": 9835,
+       "suffixId": 12721,
+       "score": 19.1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 273038,
+       "score": 22.7
+      },
+      {
+       "itemId": 4119,
+       "score": 19.7
+      },
+      {
+       "itemId": 7407,
+       "suffixId": 12751,
+       "score": 19.4
+      },
+      {
+       "itemId": 7407,
+       "suffixId": 12721,
+       "score": 19.1
+      },
+      {
+       "itemId": 15130,
+       "suffixId": 12721,
+       "score": 19.1
+      },
+      {
+       "itemId": 9835,
+       "suffixId": 12721,
+       "score": 19.1
+      }
+     ]
+    },
+    "wrist": {
+     "a": [
+      {
+       "itemId": 9428,
+       "suffixId": 13014,
+       "score": 15.6
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13024,
+       "score": 15.4
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13019,
+       "score": 13.2
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13023,
+       "score": 12.6
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13100,
+       "score": 12.6
+      },
+      {
+       "itemId": 9455,
+       "suffixId": 13014,
+       "score": 12.4
+      }
+     ],
+     "h": [
+      {
+       "itemId": 9428,
+       "suffixId": 13014,
+       "score": 15.6
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13024,
+       "score": 15.4
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13019,
+       "score": 13.2
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13023,
+       "score": 12.6
+      },
+      {
+       "itemId": 9428,
+       "suffixId": 13100,
+       "score": 12.6
+      },
+      {
+       "itemId": 9455,
+       "suffixId": 13014,
+       "score": 12.4
+      }
+     ]
+    },
+    "hands": {
+     "a": [
+      {
+       "itemId": 6727,
+       "score": 17.5
+      },
+      {
+       "itemId": 7690,
+       "score": 14.6
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12721,
+       "score": 14.6
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12721,
+       "score": 14.5
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12751,
+       "score": 13.8
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12751,
+       "score": 13.7
+      }
+     ],
+     "h": [
+      {
+       "itemId": 6727,
+       "score": 17.5
+      },
+      {
+       "itemId": 7690,
+       "score": 14.6
+      },
+      {
+       "itemId": 6784,
+       "score": 14.6
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12721,
+       "score": 14.6
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12721,
+       "score": 14.5
+      },
+      {
+       "itemId": 9861,
+       "suffixId": 12751,
+       "score": 13.8
+      }
+     ]
+    },
+    "waist": {
+     "a": [
+      {
+       "itemId": 252521,
+       "score": 18.1
+      },
+      {
+       "itemId": 252460,
+       "score": 16.1
+      },
+      {
+       "itemId": 252520,
+       "score": 15.7
+      },
+      {
+       "itemId": 273041,
+       "score": 15.6
+      },
+      {
+       "itemId": 9855,
+       "suffixId": 12721,
+       "score": 14.4
+      },
+      {
+       "itemId": 15148,
+       "suffixId": 12721,
+       "score": 14.4
+      }
+     ],
+     "h": [
+      {
+       "itemId": 252521,
+       "score": 18.1
+      },
+      {
+       "itemId": 252460,
+       "score": 16.1
+      },
+      {
+       "itemId": 252520,
+       "score": 15.7
+      },
+      {
+       "itemId": 273041,
+       "score": 15.6
+      },
+      {
+       "itemId": 9855,
+       "suffixId": 12721,
+       "score": 14.4
+      },
+      {
+       "itemId": 15148,
+       "suffixId": 12721,
+       "score": 14.4
+      }
+     ]
+    },
+    "legs": {
+     "a": [
+      {
+       "itemId": 9624,
+       "score": 25.4
+      },
+      {
+       "itemId": 4108,
+       "score": 21.8
+      },
+      {
+       "itemId": 9509,
+       "score": 21.2
+      },
+      {
+       "itemId": 252517,
+       "score": 19.9
+      },
+      {
+       "itemId": 13114,
+       "score": 19.4
+      },
+      {
+       "itemId": 15456,
+       "score": 19.3
+      }
+     ],
+     "h": [
+      {
+       "itemId": 9624,
+       "score": 25.4
+      },
+      {
+       "itemId": 4108,
+       "score": 21.8
+      },
+      {
+       "itemId": 9509,
+       "score": 21.2
+      },
+      {
+       "itemId": 252517,
+       "score": 19.9
+      },
+      {
+       "itemId": 13114,
+       "score": 19.4
+      },
+      {
+       "itemId": 15358,
+       "suffixId": 12751,
+       "score": 19.2
+      }
+     ]
+    },
+    "feet": {
+     "a": [
+      {
+       "itemId": 15142,
+       "suffixId": 12721,
+       "score": 14.7
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12721,
+       "score": 14.7
+      },
+      {
+       "itemId": 15142,
+       "suffixId": 12751,
+       "score": 13.9
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12751,
+       "score": 13.9
+      },
+      {
+       "itemId": 7409,
+       "suffixId": 12751,
+       "score": 13.5
+      },
+      {
+       "itemId": 15131,
+       "suffixId": 12751,
+       "score": 13.4
+      }
+     ],
+     "h": [
+      {
+       "itemId": 16977,
+       "score": 14.7
+      },
+      {
+       "itemId": 15142,
+       "suffixId": 12721,
+       "score": 14.7
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12721,
+       "score": 14.7
+      },
+      {
+       "itemId": 15142,
+       "suffixId": 12751,
+       "score": 13.9
+      },
+      {
+       "itemId": 15350,
+       "suffixId": 12751,
+       "score": 13.9
+      },
+      {
+       "itemId": 7409,
+       "suffixId": 12751,
+       "score": 13.5
+      }
+     ]
+    },
+    "finger": {
+     "a": [
+      {
+       "itemId": 285190,
+       "score": 15.5
+      },
+      {
+       "itemId": 281634,
+       "score": 13.3
+      },
+      {
+       "itemId": 11985,
+       "suffixId": 12751,
+       "score": 11.2
+      },
+      {
+       "itemId": 19513,
+       "score": 9.6
+      },
+      {
+       "itemId": 19517,
+       "score": 9.6
+      },
+      {
+       "itemId": 11985,
+       "suffixId": 12721,
+       "score": 9.5
+      }
+     ],
+     "h": [
+      {
+       "itemId": 285190,
+       "score": 15.5
+      },
+      {
+       "itemId": 281634,
+       "score": 13.3
+      },
+      {
+       "itemId": 11985,
+       "suffixId": 12751,
+       "score": 11.2
+      },
+      {
+       "itemId": 6414,
+       "score": 9.6
+      },
+      {
+       "itemId": 19513,
+       "score": 9.6
+      },
+      {
+       "itemId": 19517,
+       "score": 9.6
+      }
+     ]
+    },
+    "trinket": {
+     "a": [
+      {
+       "itemId": 18856,
+       "score": 0,
+       "tag": "pin",
+       "requires": [
+        {
+         "kind": "pvpRank",
+         "text": "Requires PvP rank 2 (Corporal / Grunt)"
+        }
+       ]
+      },
+      {
+       "itemId": 21119,
+       "score": 5.4,
+       "tag": "pin",
+       "requires": [
+        {
+         "kind": "reputation",
+         "text": "Requires The League of Arathor - Friendly"
+        }
+       ]
+      },
+      {
+       "itemId": 4381,
+       "score": 0,
+       "tag": "alternate",
+       "requires": [
+        {
+         "kind": "profession",
+         "text": "Requires Engineering (140)"
+        }
+       ]
+      },
+      {
+       "itemId": 10720,
+       "score": 0,
+       "tag": "alternate",
+       "requires": [
+        {
+         "kind": "profession",
+         "text": "Requires Engineering (210)"
+        }
+       ]
+      },
+      {
+       "itemId": 21566,
+       "score": 3.6
+      },
+      {
+       "itemId": 21568,
+       "score": 3.6
+      },
+      {
+       "itemId": 273643,
+       "score": 1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 18846,
+       "score": 0,
+       "tag": "pin",
+       "requires": [
+        {
+         "kind": "pvpRank",
+         "text": "Requires PvP rank 2 (Corporal / Grunt)"
+        }
+       ]
+      },
+      {
+       "itemId": 21120,
+       "score": 5.4,
+       "tag": "pin",
+       "requires": [
+        {
+         "kind": "reputation",
+         "text": "Requires The Defilers - Friendly"
+        }
+       ]
+      },
+      {
+       "itemId": 4381,
+       "score": 0,
+       "tag": "alternate",
+       "requires": [
+        {
+         "kind": "profession",
+         "text": "Requires Engineering (140)"
+        }
+       ]
+      },
+      {
+       "itemId": 10720,
+       "score": 0,
+       "tag": "alternate",
+       "requires": [
+        {
+         "kind": "profession",
+         "text": "Requires Engineering (210)"
+        }
+       ]
+      },
+      {
+       "itemId": 21566,
+       "score": 3.6
+      },
+      {
+       "itemId": 21568,
+       "score": 3.6
+      },
+      {
+       "itemId": 273643,
+       "score": 1
+      }
+     ]
+    },
+    "main": {
+     "a": [
+      {
+       "itemId": 273037,
+       "score": 46.8
+      },
+      {
+       "itemId": 7689,
+       "score": 43.7
+      },
+      {
+       "itemId": 19569,
+       "score": 42.5
+      },
+      {
+       "itemId": 19573,
+       "score": 42.5
+      },
+      {
+       "itemId": 279844,
+       "score": 42.3
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12751,
+       "score": 41.3
+      }
+     ],
+     "h": [
+      {
+       "itemId": 273037,
+       "score": 46.8
+      },
+      {
+       "itemId": 7689,
+       "score": 43.7
+      },
+      {
+       "itemId": 19569,
+       "score": 42.5
+      },
+      {
+       "itemId": 19573,
+       "score": 42.5
+      },
+      {
+       "itemId": 279844,
+       "score": 42.3
+      },
+      {
+       "itemId": 3197,
+       "suffixId": 12751,
+       "score": 41.3
+      }
+     ]
+    },
+    "off": {
+     "a": [
+      {
+       "itemId": 19545,
+       "score": 20.3
+      },
+      {
+       "itemId": 19549,
+       "score": 20.3
+      },
+      {
+       "itemId": 281314,
+       "score": 19.1
+      },
+      {
+       "itemId": 2941,
+       "score": 16.7
+      },
+      {
+       "itemId": 776,
+       "score": 16.6
+      },
+      {
+       "itemId": 2080,
+       "suffixId": 12751,
+       "score": 16.1
+      }
+     ],
+     "h": [
+      {
+       "itemId": 19545,
+       "score": 20.3
+      },
+      {
+       "itemId": 19549,
+       "score": 20.3
+      },
+      {
+       "itemId": 9520,
+       "score": 18.6
+      },
+      {
+       "itemId": 2941,
+       "score": 16.7
+      },
+      {
+       "itemId": 16886,
+       "score": 16.6
+      },
+      {
+       "itemId": 776,
+       "score": 16.6
+      }
+     ]
+    },
+    "ranged": {
+     "a": [
+      {
+       "itemId": 17686,
+       "score": 122.4
+      },
+      {
+       "itemId": 17687,
+       "score": 120.4
+      },
+      {
+       "itemId": 9456,
+       "score": 112.2
+      },
+      {
+       "itemId": 4127,
+       "score": 109.6
+      },
+      {
+       "itemId": 13137,
+       "score": 107.4
+      },
+      {
+       "itemId": 19561,
+       "score": 106.7
+      }
+     ],
+     "h": [
+      {
+       "itemId": 17686,
+       "score": 122.4
+      },
+      {
+       "itemId": 17687,
+       "score": 120.4
+      },
+      {
+       "itemId": 9456,
+       "score": 112.2
+      },
+      {
+       "itemId": 13137,
+       "score": 107.4
+      },
+      {
+       "itemId": 19561,
+       "score": 106.7
+      },
+      {
+       "itemId": 19565,
+       "score": 106.7
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

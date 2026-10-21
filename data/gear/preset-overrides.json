@@ -1,7 +1,688 @@
 {
-  "_note": "Hand corrections applied after scoring. Per class: exclude (itemIds never picked for any variant of the class), and per variant: pin ({slot: itemId}, forced pick, must be a valid candidate for the slot) and enchants ({slot: enchantId, or null for none}). Every entry needs a reason. The generator fails on an id it can't place.",
+  "_note": "Hand corrections applied after scoring, our own picks. foreverchanges' and Wowhead's Warrior sets were read as a cross-check signal, never copied. Top-level _groups ({group: {pin: {slot: entry}, alternates: {rankKey: [{itemId, reason}]}, enchants: {slot: {enchantId, reason}}}}) apply to every variant whose preset-weights.json entry lists that group: pins sit under the class's and variant's own; alternates are offered in that slot's ranked list (tag \"alternate\"), never picked; enchants are forced unless the variant sets its own. A top-level _excludeEnchants ([{enchantId, reason}]) is never picked by any preset. Per class, pin ({slot: entry}) applies to every variant unless the variant pins that slot itself. Per class: exclude ([{itemId, reason}], never picked for any variant of the class), and per variant: pin ({slot: {itemId, reason}}, forced pick; must be a candidate for the slot, and may need a profession the class can have trained by the level, never a reputation) and enchants ({slot: {enchantId, reason}}, enchantId null for none). The generator fails on an entry without a reason or an id it can't place. Per variant, alternates ({rankKey: [{itemId, reason}]}) work the same way.",
+  "_groups": {
+    "pvp": {
+      "alternates": {
+        "trinket": [
+          {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): on-use heal and polymorph dispel. The engineer's alternative to the pinned reputation/honor trinkets."
+          },
+          {
+            "itemId": 10720,
+            "reason": "Gnomish Net-o-Matic Projector (Engineering 210, trainable by 20): a 10 s root. The engineer's alternative to the pinned reputation/honor trinkets."
+          }
+        ]
+      },
+      "enchants": {
+        "feet": {
+          "enchantId": 273530,
+          "reason": "Boots - Minor Speed: movement speed decides PvP fights; effects aren't scored, so the generator can't pick it."
+        }
+      }
+    },
+    "caster": {
+      "enchants": {
+        "main": {
+          "enchantId": 273629,
+          "reason": "Weapon - Revelation: the caster weapon enchant (the next non-periodic spell after a non-crit gets +100% crit chance). Effect-only, so it scores 0; its formula has no source in our data, but foreverchanges lists it as learnable."
+        }
+      }
+    },
+    "caster-pve": {
+      "pin": {
+        "trinket2": {
+          "itemId": 4381,
+          "reason": "Minor Recombobulator (Engineering 140): its on-use 96-160 mana and 202-338 health (5 min) outweighs the +2 mp5 / +6 Spirit stat trinkets it replaces for a caster or healer, and use effects aren't scored. Trinket 1 stays the generator's best stat trinket. The side's requires line tells non-engineers."
+        }
+      },
+      "alternates": {
+        "trinket": [
+          {
+            "itemId": 3456,
+            "reason": "Dog Whistle: a tracking hound for 3 min (10 min cooldown) plus 5 Shadow Resistance; an extra damage source, offered rather than pinned because its value at 30 isn't measured."
+          }
+        ]
+      }
+    }
+  },
   "warrior": {
     "exclude": [],
-    "variants": {}
+    "variants": {
+      "pve": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit is worth more to a DPS Warrior than the +4 Stamina runes, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          }
+        },
+        "enchants": {}
+      },
+      "pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18854,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows, the core Warrior PvP trinket, no profession needed. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified. Replaces Minor Recombobulator (Engineering)."
+            },
+            "h": {
+              "itemId": 18834,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows, the core Warrior PvP trinket, no profession needed. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified. Replaces Minor Recombobulator (Engineering)."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, available at 28. Replaces Gnomish Net-o-Matic (Engineering 210)."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, available at 28. Replaces Gnomish Net-o-Matic (Engineering 210)."
+            }
+          }
+        },
+        "enchants": {}
+      },
+      "tank": {
+        "pin": {
+          "trinket1": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use self-heal for an engineer tank."
+          },
+          "trinket2": {
+            "itemId": 21568,
+            "reason": "Rune of Duty: the same +4 Stamina as Rune of Perfection, with all-resistance instead of spell piercing, which a tank can use."
+          }
+        },
+        "enchants": {
+          "wrist": {
+            "enchantId": 273505,
+            "reason": "Bracer - Stamina over Lesser Deflection: at 30 tanks are health-limited, not crit-immunity-limited; +5 Stamina over +5 Defense."
+          },
+          "hands": {
+            "enchantId": 273520,
+            "reason": "Gloves - Agility (+7) over Thick Armor Kit (+4 Stamina, +32 armor): close by our weights (4.9 vs 5.6, Agility's armor and threat unscored); taken on the foreverchanges signal, revisit with the tank weights."
+          },
+          "feet": {
+            "enchantId": 273523,
+            "reason": "Boots - Stamina (+5) over Thick Armor Kit (+4 Stamina, +32 armor): close by our weights (5.0 vs 5.6); taken on the foreverchanges signal, revisit with the tank weights."
+          }
+        }
+      }
+    }
+  },
+  "_excludeEnchants": [
+    {
+      "enchantId": 273618,
+      "reason": "2H Weapon - Lesser Strength: its formula (249513) has no known source in our data, and foreverchanges marks it not known."
+    },
+    {
+      "enchantId": 273617,
+      "reason": "2H Weapon - Lesser Agility: its formula (249511) has no known source in our data, and foreverchanges marks it not known."
+    },
+    {
+      "enchantId": 273597,
+      "reason": "Bracer - Agility (+9): its formula (249488) has no known source in our data, and foreverchanges marks it not known."
+    },
+    {
+      "enchantId": 273497,
+      "reason": "Chest - Minor Stats: reads +2 at 70374 but is +1 in Classic and on foreverchanges' 70450 sheet; Lesser Stats is the safe +2."
+    },
+    {
+      "enchantId": 273499,
+      "reason": "Cloak - Defense: reads 60 armor at 70374 but was cut to 30 in 70450; Greater Defense keeps 60."
+    }
+  ],
+  "paladin": {
+    "exclude": [],
+    "pin": {
+      "ranged": {
+        "itemId": 249397,
+        "reason": "Tenets of the Silver Hand: the only Libram by 30 (1% more damage to Undead); librams are equip effects, which score 0."
+      }
+    },
+    "variants": {
+      "retribution": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit beats the +4 Stamina runes for melee DPS, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          }
+        }
+      },
+      "retribution-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18864,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28. No Horde paladin Insignia exists (Classic had none; Forever adds the race/class combo), so the other trinket is the generator's pick."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "holy-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18864,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28. No Horde paladin Insignia exists (Classic had none; Forever adds the race/class combo), so the other trinket is the generator's pick."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "shockadin": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18864,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28. No Horde paladin Insignia exists (Classic had none; Forever adds the race/class combo), so the other trinket is the generator's pick."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "tank": {
+        "pin": {
+          "trinket1": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use self-heal for an engineer tank."
+          },
+          "trinket2": {
+            "itemId": 21568,
+            "reason": "Rune of Duty: +4 Stamina with all-resistance, the tank pick of the two runes."
+          }
+        }
+      }
+    }
+  },
+  "hunter": {
+    "exclude": [],
+    "variants": {
+      "pve": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit beats the +4 Stamina runes for melee DPS, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          }
+        }
+      },
+      "pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18856,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18846,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
+  },
+  "mage": {
+    "exclude": [],
+    "variants": {
+      "pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18859,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18850,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "fire-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18859,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18850,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
+  },
+  "rogue": {
+    "exclude": [],
+    "variants": {
+      "pve": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit beats the +4 Stamina runes for melee DPS, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          }
+        }
+      },
+      "assassination": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit beats the +4 Stamina runes for melee DPS, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          }
+        }
+      },
+      "pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18857,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18849,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "pvp-hemo": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18857,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18849,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
+  },
+  "priest": {
+    "exclude": [],
+    "variants": {
+      "shadow-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18862,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18851,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "discipline-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18862,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18851,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
+  },
+  "warlock": {
+    "exclude": [],
+    "variants": {
+      "pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18858,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18852,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
+  },
+  "druid": {
+    "exclude": [],
+    "pin": {
+      "ranged": {
+        "itemId": 249396,
+        "reason": "Mystic Mushroom: +5% Spirit, the caster Idol by 30; idols are equip effects, which score 0."
+      }
+    },
+    "variants": {
+      "feral": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit beats the +4 Stamina runes for melee DPS, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          },
+          "ranged": {
+            "a": {
+              "itemId": 249396,
+              "reason": "Mystic Mushroom: Idol of Shifting Tides is a Horde quest reward in our data, so Alliance ferals take the other Idol."
+            },
+            "h": {
+              "itemId": 263411,
+              "reason": "Idol of Shifting Tides: 40 less mana per shapeshift, the feral Idol (Horde quest reward in our data)."
+            }
+          }
+        }
+      },
+      "feral-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18863,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18853,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          },
+          "ranged": {
+            "a": {
+              "itemId": 249396,
+              "reason": "Mystic Mushroom: Idol of Shifting Tides is a Horde quest reward in our data, so Alliance ferals take the other Idol."
+            },
+            "h": {
+              "itemId": 263411,
+              "reason": "Idol of Shifting Tides: 40 less mana per shapeshift, the feral Idol (Horde quest reward in our data)."
+            }
+          }
+        }
+      },
+      "tank": {
+        "pin": {
+          "trinket1": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use self-heal for an engineer tank."
+          },
+          "trinket2": {
+            "itemId": 21568,
+            "reason": "Rune of Duty: +4 Stamina with all-resistance, the tank pick of the two runes."
+          },
+          "ranged": {
+            "a": {
+              "itemId": 249396,
+              "reason": "Mystic Mushroom: Idol of Shifting Tides is a Horde quest reward in our data, so Alliance ferals take the other Idol."
+            },
+            "h": {
+              "itemId": 263411,
+              "reason": "Idol of Shifting Tides: 40 less mana per shapeshift, the feral Idol (Horde quest reward in our data)."
+            }
+          }
+        }
+      },
+      "balance-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18863,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18853,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "restoration-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 18863,
+              "reason": "Insignia of the Alliance: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Corporal); whether Forever keeps the honor vendor rank isn't verified."
+            },
+            "h": {
+              "itemId": 18853,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            },
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
+  },
+  "shaman": {
+    "exclude": [],
+    "pin": {
+      "ranged": {
+        "itemId": 249398,
+        "reason": "Polished Driftwood Icon: 8% mana regeneration while casting, the Totem by 30 for both factions; totems are equip effects, which score 0."
+      }
+    },
+    "variants": {
+      "elemental-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28. No Alliance shaman Insignia exists (Classic had none; Forever adds the race/class combo), so the other trinket is the generator's pick."
+            },
+            "h": {
+              "itemId": 18845,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      },
+      "enhancement": {
+        "pin": {
+          "trinket1": {
+            "itemId": 273840,
+            "reason": "Cursed Murloc Eye: its Equip shadow damage on every hit beats the +4 Stamina runes for melee DPS, but effects aren't scored."
+          },
+          "trinket2": {
+            "itemId": 4381,
+            "reason": "Minor Recombobulator (Engineering 140): an on-use heal, the best second trinket at 30 for an engineer. The side's requires line tells non-engineers."
+          }
+        }
+      },
+      "enhancement-pvp": {
+        "pin": {
+          "trinket1": {
+            "a": {
+              "itemId": 21119,
+              "reason": "Talisman of Arathor (League of Arathor, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28. No Alliance shaman Insignia exists (Classic had none; Forever adds the race/class combo), so the other trinket is the generator's pick."
+            },
+            "h": {
+              "itemId": 18845,
+              "reason": "Insignia of the Horde: removes stuns, roots and slows. Client ItemSparse gates it at PvP rank 2 (Grunt); whether Forever keeps the honor vendor rank isn't verified."
+            }
+          },
+          "trinket2": {
+            "h": {
+              "itemId": 21120,
+              "reason": "Defiler's Talisman (The Defilers, Friendly; Arathi Basin): +6 Stamina and a 278-338 physical absorb, from 28."
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,26 +1,982 @@
 {
-  "_note": "Hand-written stat weights per class variant, in Strength-equivalents for melee and Spell Power-equivalents for casters. Every generated preset is confidence 'estimated'. Ratings (critRating, hitRating...) have no known level-30 conversion in Forever yet, so their weights are guesses. dps weights a weapon's damage per second in the main hand; rangedDps the ranged slot. armor applies to base armor plus bonus armor. mainHand: two-hand | one-hand-shield | dual-wield.",
+  "_note": "Hand-written stat weights per class variant, in Strength-equivalents for melee and Spell Power-equivalents for casters. Every generated preset is confidence 'estimated'. Ratings (critRating, hitRating...) have no known level-30 conversion in Forever yet, so their weights are guesses. dps weights a weapon's damage per second in the main hand; rangedDps the ranged slot. armor applies to base armor plus bonus armor. mainHand: two-hand | one-hand-shield | dual-wield. groups (pvp, caster, caster-pve) pull shared alternates and forced enchants from preset-overrides.json _groups. mainHand may be a list of modes (two-hand | one-hand-shield | one-hand-off-hand | dual-wield); the best-scoring main + off combination wins. mainTypes optionally limits the main weapon's type.",
   "warrior": [
     {
       "key": "pve",
       "name": "PvE",
       "role": "dps",
       "mainHand": "two-hand",
-      "weights": { "str": 1, "ap": 0.5, "agi": 0.6, "critRating": 1, "hitRating": 1, "critPct": 10, "hitPct": 10, "sta": 0.1, "dps": 7, "rangedDps": 0.5 }
+      "weights": {
+        "str": 1,
+        "ap": 0.5,
+        "agi": 0.6,
+        "critRating": 1,
+        "hitRating": 1,
+        "critPct": 10,
+        "hitPct": 10,
+        "sta": 0.1,
+        "dps": 7,
+        "rangedDps": 0.5
+      }
     },
     {
       "key": "pvp",
       "name": "PvP",
       "role": "dps",
       "mainHand": "two-hand",
-      "weights": { "str": 1, "sta": 0.8, "ap": 0.5, "agi": 0.6, "critRating": 0.9, "hitRating": 0.6, "critPct": 9, "hitPct": 6, "armor": 0.02, "dps": 7, "rangedDps": 0.5 }
+      "weights": {
+        "str": 1,
+        "sta": 0.8,
+        "ap": 0.5,
+        "agi": 0.6,
+        "critRating": 0.9,
+        "hitRating": 0.6,
+        "critPct": 9,
+        "hitPct": 6,
+        "armor": 0.02,
+        "dps": 7,
+        "rangedDps": 0.5
+      },
+      "groups": [
+        "pvp"
+      ]
     },
     {
       "key": "tank",
       "name": "Tank",
       "role": "tank",
       "mainHand": "one-hand-shield",
-      "weights": { "sta": 1, "defSkill": 1.5, "defRating": 1.2, "armor": 0.05, "dodgeRating": 1, "parryRating": 1, "blockRating": 0.6, "dodgePct": 12, "parryPct": 12, "blockPct": 6, "blockValue": 0.3, "agi": 0.6, "str": 0.4, "hitRating": 0.3, "dps": 2, "rangedDps": 0.3 }
+      "weights": {
+        "sta": 1,
+        "defSkill": 1.5,
+        "defRating": 1.2,
+        "armor": 0.05,
+        "dodgeRating": 1,
+        "parryRating": 1,
+        "blockRating": 0.6,
+        "dodgePct": 12,
+        "parryPct": 12,
+        "blockPct": 6,
+        "blockValue": 0.3,
+        "agi": 0.6,
+        "str": 0.4,
+        "hitRating": 0.3,
+        "dps": 2,
+        "rangedDps": 0.3
+      }
+    }
+  ],
+  "paladin": [
+    {
+      "key": "retribution",
+      "name": "Retribution PvE",
+      "role": "dps",
+      "mainHand": "two-hand",
+      "weights": {
+        "str": 1,
+        "ap": 0.5,
+        "agi": 0.6,
+        "critRating": 1,
+        "hitRating": 1,
+        "critPct": 10,
+        "hitPct": 10,
+        "sta": 0.1,
+        "dps": 7,
+        "rangedDps": 0.3,
+        "int": 0.2,
+        "sp": 0.2,
+        "holyDmg": 0.2
+      }
+    },
+    {
+      "key": "retribution-pvp",
+      "name": "Retribution PvP",
+      "role": "dps",
+      "mainHand": "two-hand",
+      "weights": {
+        "str": 1,
+        "sta": 0.8,
+        "ap": 0.5,
+        "agi": 0.5,
+        "critRating": 0.9,
+        "hitRating": 0.6,
+        "critPct": 9,
+        "hitPct": 6,
+        "armor": 0.02,
+        "dps": 7,
+        "rangedDps": 0.3,
+        "int": 0.3,
+        "sp": 0.2,
+        "holyDmg": 0.2
+      },
+      "groups": [
+        "pvp"
+      ]
+    },
+    {
+      "key": "holy",
+      "name": "Holy PvE",
+      "role": "healer",
+      "mainHand": [
+        "one-hand-shield",
+        "one-hand-off-hand",
+        "two-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "int": 0.8,
+        "mp5": 1.4,
+        "spi": 0.4,
+        "critRating": 0.4,
+        "spellCritPct": 6,
+        "sta": 0.1,
+        "rangedDps": 0
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "holy-pvp",
+      "name": "Holy PvP",
+      "role": "healer",
+      "mainHand": [
+        "one-hand-shield",
+        "one-hand-off-hand",
+        "two-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "sta": 0.9,
+        "int": 0.8,
+        "mp5": 1.2,
+        "spi": 0.3,
+        "critRating": 0.3,
+        "armor": 0.02,
+        "rangedDps": 0
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "shockadin",
+      "name": "Shockadin PvP",
+      "role": "dps",
+      "mainHand": [
+        "one-hand-shield",
+        "two-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "holyDmg": 1,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.6,
+        "spellCritPct": 6,
+        "spi": 0.1,
+        "armor": 0.02,
+        "rangedDps": 0,
+        "str": 0.3,
+        "ap": 0.15
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "tank",
+      "name": "Tank",
+      "role": "tank",
+      "mainHand": "one-hand-shield",
+      "weights": {
+        "sta": 1,
+        "defRating": 1.2,
+        "defSkill": 1.5,
+        "armor": 0.05,
+        "dodgeRating": 1,
+        "parryRating": 1,
+        "blockRating": 0.6,
+        "dodgePct": 12,
+        "parryPct": 12,
+        "blockPct": 6,
+        "blockValue": 0.4,
+        "agi": 0.5,
+        "str": 0.4,
+        "sp": 0.4,
+        "spellDmg": 0.4,
+        "holyDmg": 0.4,
+        "int": 0.3,
+        "hitRating": 0.3,
+        "dps": 1
+      }
+    }
+  ],
+  "hunter": [
+    {
+      "key": "pve",
+      "name": "PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "dual-wield"
+      ],
+      "weights": {
+        "agi": 1,
+        "rap": 0.5,
+        "ap": 0.4,
+        "critRating": 1,
+        "hitRating": 1.1,
+        "critPct": 10,
+        "hitPct": 12,
+        "int": 0.3,
+        "mp5": 0.3,
+        "sta": 0.1,
+        "str": 0.05,
+        "rangedDps": 6,
+        "dps": 1
+      }
+    },
+    {
+      "key": "pvp",
+      "name": "PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "dual-wield"
+      ],
+      "weights": {
+        "agi": 1,
+        "sta": 0.9,
+        "rap": 0.5,
+        "ap": 0.4,
+        "critRating": 0.8,
+        "hitRating": 0.8,
+        "critPct": 8,
+        "hitPct": 8,
+        "int": 0.4,
+        "mp5": 0.5,
+        "armor": 0.02,
+        "rangedDps": 6,
+        "dps": 1
+      },
+      "groups": [
+        "pvp"
+      ]
+    }
+  ],
+  "mage": [
+    {
+      "key": "pve",
+      "name": "Frost PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "frostDmg": 1,
+        "hitRating": 1,
+        "critRating": 0.8,
+        "spellHitPct": 10,
+        "spellCritPct": 8,
+        "int": 0.4,
+        "spi": 0.1,
+        "mp5": 0.6,
+        "sta": 0.1,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "pvp",
+      "name": "Frost PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "frostDmg": 1,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.6,
+        "spellCritPct": 6,
+        "spi": 0.1,
+        "armor": 0.02,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "fire",
+      "name": "Fire PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "fireDmg": 1,
+        "hitRating": 1,
+        "critRating": 1,
+        "spellHitPct": 10,
+        "spellCritPct": 10,
+        "int": 0.4,
+        "spi": 0.1,
+        "mp5": 0.6,
+        "sta": 0.1,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "fire-pvp",
+      "name": "Fire PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "fireDmg": 1,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.6,
+        "spellCritPct": 6,
+        "spi": 0.1,
+        "armor": 0.02,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "arcane",
+      "name": "Arcane PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "arcaneDmg": 1,
+        "hitRating": 1,
+        "critRating": 0.8,
+        "spellHitPct": 10,
+        "spellCritPct": 8,
+        "int": 0.6,
+        "spi": 0.2,
+        "mp5": 0.6,
+        "sta": 0.1,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    }
+  ],
+  "rogue": [
+    {
+      "key": "pve",
+      "name": "Combat PvE",
+      "role": "dps",
+      "mainHand": "dual-wield",
+      "mainTypes": [
+        "Sword",
+        "Mace",
+        "Fist Weapon"
+      ],
+      "weights": {
+        "agi": 1,
+        "ap": 0.5,
+        "str": 0.5,
+        "critRating": 1,
+        "hitRating": 1.2,
+        "critPct": 10,
+        "hitPct": 12,
+        "sta": 0.1,
+        "dps": 4,
+        "rangedDps": 0.3
+      }
+    },
+    {
+      "key": "assassination",
+      "name": "Assassination PvE",
+      "role": "dps",
+      "mainHand": "dual-wield",
+      "mainTypes": [
+        "Dagger"
+      ],
+      "weights": {
+        "agi": 1,
+        "ap": 0.5,
+        "str": 0.5,
+        "critRating": 1,
+        "hitRating": 1.2,
+        "critPct": 10,
+        "hitPct": 12,
+        "sta": 0.1,
+        "dps": 4,
+        "rangedDps": 0.3
+      }
+    },
+    {
+      "key": "pvp",
+      "name": "Subtlety PvP, Dagger",
+      "role": "dps",
+      "mainHand": "dual-wield",
+      "mainTypes": [
+        "Dagger"
+      ],
+      "weights": {
+        "agi": 1,
+        "ap": 0.5,
+        "str": 0.5,
+        "critRating": 1,
+        "hitRating": 0.8,
+        "critPct": 10,
+        "hitPct": 8,
+        "sta": 0.8,
+        "dps": 4,
+        "rangedDps": 0.3,
+        "armor": 0.02
+      },
+      "groups": [
+        "pvp"
+      ]
+    },
+    {
+      "key": "pvp-hemo",
+      "name": "Subtlety PvP, Hemo",
+      "role": "dps",
+      "mainHand": "dual-wield",
+      "mainTypes": [
+        "Sword",
+        "Mace",
+        "Fist Weapon"
+      ],
+      "weights": {
+        "agi": 1,
+        "ap": 0.5,
+        "str": 0.5,
+        "critRating": 1,
+        "hitRating": 0.8,
+        "critPct": 10,
+        "hitPct": 8,
+        "sta": 0.8,
+        "dps": 4,
+        "rangedDps": 0.3,
+        "armor": 0.02
+      },
+      "groups": [
+        "pvp"
+      ]
+    }
+  ],
+  "priest": [
+    {
+      "key": "shadow",
+      "name": "Shadow PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "shadowDmg": 1,
+        "hitRating": 1,
+        "critRating": 0.3,
+        "spellHitPct": 10,
+        "spellCritPct": 3,
+        "int": 0.4,
+        "spi": 0.4,
+        "mp5": 0.6,
+        "sta": 0.1,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "shadow-pvp",
+      "name": "Shadow PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "shadowDmg": 1,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.3,
+        "spellCritPct": 6,
+        "spi": 0.1,
+        "armor": 0.02,
+        "rangedDps": 1.5
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "holy",
+      "name": "Holy PvE",
+      "role": "healer",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "int": 0.8,
+        "mp5": 1.4,
+        "spi": 0.6,
+        "critRating": 0.4,
+        "spellCritPct": 6,
+        "sta": 0.1,
+        "rangedDps": 0.5
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "discipline-pvp",
+      "name": "Discipline PvP",
+      "role": "healer",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "sta": 0.9,
+        "int": 0.8,
+        "mp5": 1.2,
+        "spi": 0.3,
+        "critRating": 0.3,
+        "armor": 0.02,
+        "rangedDps": 0.5
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    }
+  ],
+  "warlock": [
+    {
+      "key": "pve",
+      "name": "PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "shadowDmg": 0.8,
+        "hitRating": 1,
+        "critRating": 0.8,
+        "spellHitPct": 10,
+        "spellCritPct": 8,
+        "int": 0.4,
+        "spi": 0.1,
+        "mp5": 0.6,
+        "sta": 0.3,
+        "rangedDps": 1.5,
+        "fireDmg": 0.3
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "pvp",
+      "name": "PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "shadowDmg": 0.8,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.6,
+        "spellCritPct": 6,
+        "spi": 0.3,
+        "armor": 0.02,
+        "rangedDps": 1.5,
+        "fireDmg": 0.3
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    }
+  ],
+  "druid": [
+    {
+      "key": "feral",
+      "name": "Feral PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "str": 1,
+        "ap": 0.5,
+        "apFeral": 0.5,
+        "agi": 1,
+        "critRating": 1,
+        "hitRating": 1.1,
+        "critPct": 10,
+        "hitPct": 12,
+        "sta": 0.1,
+        "dps": 0
+      }
+    },
+    {
+      "key": "feral-pvp",
+      "name": "Feral PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "str": 1,
+        "ap": 0.5,
+        "apFeral": 0.5,
+        "agi": 1,
+        "critRating": 0.7,
+        "hitRating": 0.7,
+        "critPct": 10,
+        "hitPct": 7,
+        "sta": 0.9,
+        "dps": 0,
+        "int": 0.3,
+        "mp5": 0.3,
+        "armor": 0.03
+      },
+      "groups": [
+        "pvp"
+      ]
+    },
+    {
+      "key": "tank",
+      "name": "Tank",
+      "role": "tank",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "armor": 0.08,
+        "agi": 0.8,
+        "defRating": 1,
+        "defSkill": 1.3,
+        "dodgeRating": 1,
+        "dodgePct": 12,
+        "str": 0.5,
+        "apFeral": 0.2,
+        "ap": 0.2,
+        "hitRating": 0.3,
+        "dps": 0
+      }
+    },
+    {
+      "key": "balance",
+      "name": "Balance PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "natureDmg": 0.8,
+        "hitRating": 1,
+        "critRating": 0.8,
+        "spellHitPct": 10,
+        "spellCritPct": 8,
+        "int": 0.4,
+        "spi": 0.1,
+        "mp5": 0.6,
+        "sta": 0.1,
+        "rangedDps": 0,
+        "arcaneDmg": 0.5
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "balance-pvp",
+      "name": "Balance PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "natureDmg": 0.8,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.6,
+        "spellCritPct": 6,
+        "spi": 0.1,
+        "armor": 0.02,
+        "rangedDps": 0,
+        "arcaneDmg": 0.5
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "restoration",
+      "name": "Restoration PvE",
+      "role": "healer",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "int": 0.9,
+        "mp5": 1.4,
+        "spi": 0.7,
+        "critRating": 0.4,
+        "spellCritPct": 6,
+        "sta": 0.1,
+        "rangedDps": 0
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "restoration-pvp",
+      "name": "Restoration PvP",
+      "role": "healer",
+      "mainHand": [
+        "two-hand",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "sta": 0.9,
+        "int": 0.8,
+        "mp5": 1.2,
+        "spi": 0.3,
+        "critRating": 0.3,
+        "armor": 0.02,
+        "rangedDps": 0
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    }
+  ],
+  "shaman": [
+    {
+      "key": "elemental",
+      "name": "Elemental PvE",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-shield",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sp": 1,
+        "spellDmg": 1,
+        "natureDmg": 0.8,
+        "hitRating": 1,
+        "critRating": 0.8,
+        "spellHitPct": 10,
+        "spellCritPct": 8,
+        "int": 0.4,
+        "spi": 0.1,
+        "mp5": 0.6,
+        "sta": 0.1,
+        "rangedDps": 0,
+        "fireDmg": 0.4
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
+    },
+    {
+      "key": "elemental-pvp",
+      "name": "Elemental PvP",
+      "role": "dps",
+      "mainHand": [
+        "two-hand",
+        "one-hand-shield",
+        "one-hand-off-hand"
+      ],
+      "weights": {
+        "sta": 1,
+        "sp": 1,
+        "spellDmg": 1,
+        "natureDmg": 0.8,
+        "int": 0.6,
+        "mp5": 0.8,
+        "hitRating": 0.6,
+        "critRating": 0.6,
+        "spellCritPct": 6,
+        "spi": 0.1,
+        "armor": 0.02,
+        "rangedDps": 0,
+        "fireDmg": 0.3
+      },
+      "groups": [
+        "pvp",
+        "caster"
+      ]
+    },
+    {
+      "key": "enhancement",
+      "name": "Enhancement PvE",
+      "role": "dps",
+      "mainHand": "two-hand",
+      "weights": {
+        "str": 1,
+        "ap": 0.5,
+        "agi": 0.6,
+        "critRating": 1,
+        "hitRating": 1,
+        "critPct": 10,
+        "hitPct": 10,
+        "sta": 0.1,
+        "dps": 7,
+        "rangedDps": 0,
+        "int": 0.2,
+        "sp": 0.2,
+        "natureDmg": 0.2,
+        "fireDmg": 0.2
+      }
+    },
+    {
+      "key": "enhancement-pvp",
+      "name": "Enhancement PvP",
+      "role": "dps",
+      "mainHand": "two-hand",
+      "weights": {
+        "str": 1,
+        "sta": 0.8,
+        "ap": 0.5,
+        "agi": 0.5,
+        "critRating": 0.9,
+        "hitRating": 0.6,
+        "critPct": 9,
+        "hitPct": 6,
+        "armor": 0.02,
+        "dps": 7,
+        "rangedDps": 0,
+        "int": 0.3,
+        "sp": 0.2,
+        "natureDmg": 0.2
+      },
+      "groups": [
+        "pvp"
+      ]
+    },
+    {
+      "key": "restoration",
+      "name": "Restoration",
+      "role": "healer",
+      "mainHand": [
+        "one-hand-shield",
+        "one-hand-off-hand",
+        "two-hand"
+      ],
+      "weights": {
+        "heal": 0.5,
+        "sp": 0.5,
+        "int": 0.9,
+        "mp5": 1.4,
+        "spi": 0.4,
+        "critRating": 0.4,
+        "spellCritPct": 6,
+        "sta": 0.1,
+        "rangedDps": 0
+      },
+      "groups": [
+        "caster",
+        "caster-pve"
+      ]
     }
   ]
 }
