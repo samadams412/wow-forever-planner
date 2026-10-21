@@ -25,7 +25,7 @@ export type PresetVariant = {
 };
 export type PlannerPool = GearPool & {
   presets: { disclaimer: string; variants: PresetVariant[] };
-  baseStats: Record<string, BaseStats & { name: string; side: Side }>;
+  baseStats: Record<string, BaseStats & { name: string; side: Side; basis: "classic" | "race-offset" | "class-average"; confidence: string }>;
 };
 
 export function presetState(variant: PresetVariant, side: Side): GearState {

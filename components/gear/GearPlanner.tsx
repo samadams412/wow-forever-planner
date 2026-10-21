@@ -6,10 +6,12 @@ import { decodeGear, encodeGear, pickProblem, type DecodeResult, type GearState,
 import { defaultRace, itemIndex, presetState, type PlannerPool } from "@/lib/gear-planner";
 import { isTwoHand, type GearSlot } from "@/lib/gear-slots";
 import { LEFT, RIGHT, SlotCard, WEAPONS } from "./SlotGrid";
+import StatSheet from "./StatSheet";
+import { computeSheet, type Sheet } from "@/lib/gear-sheet";
 
 type Props = { classId: string; className: string; help: ReactNode; initialCode: string | null };
 
-export default function GearPlanner({ classId, className, initialCode }: Props) {
+export default function GearPlanner({ classId, className, help, initialCode }: Props) {
   const [pool, setPool] = useState<PlannerPool | null>(null);
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
@@ -25,7 +27,7 @@ export default function GearPlanner({ classId, className, initialCode }: Props) 
 
   if (loadError) return <p className="mt-6 text-sm text-foreground-muted">The {className} item list didn&apos;t load. Reload the page to try again.</p>;
   if (!pool) return <p className="mt-6 text-sm text-foreground-muted">Loading the {className} item list…</p>;
-  return <Planner pool={pool} initialCode={initialCode} />;
+  return <Planner pool={pool} initialCode={initialCode} className={className} help={help} />;
 }
 
 function initialState(pool: PlannerPool, code: string | null): { gear: GearState; variant: string | null; skipped: DecodeResult["skipped"] } {
@@ -37,14 +39,19 @@ function initialState(pool: PlannerPool, code: string | null): { gear: GearState
   return { gear: presetState(first, "a"), variant: first.key, skipped: [] };
 }
 
-function Planner({ pool, initialCode }: { pool: PlannerPool; initialCode: string | null }) {
+function Planner({ pool, initialCode, className }: { pool: PlannerPool; initialCode: string | null; className: string; help: ReactNode }) {
   const items = useMemo(() => itemIndex(pool), [pool]);
   const [start] = useState(() => initialState(pool, initialCode));
   const [gear, setGear] = useState<GearState>(start.gear);
   // The preset the set still matches; null once anything is changed by hand.
   const [variant, setVariant] = useState<string | null>(start.variant);
   const [skipped, setSkipped] = useState(start.skipped);
-  const [, setRace] = useState(() => defaultRace(pool, start.gear.side));
+  const [race, setRace] = useState(() => defaultRace(pool, start.gear.side));
+  // The sheet with a hovered/focused picker item swapped in (null when nothing is highlighted).
+  const [preview] = useState<Sheet | null>(null);
+  const base = pool.baseStats[race];
+  const sheet = useMemo(() => computeSheet(pool, base, gear.slots), [pool, base, gear.slots]);
+  const races = Object.entries(pool.baseStats).filter(([, r]) => r.side === gear.side);
 
   // replaceState, not router.replace: a pure address-bar sync, no re-render (raid comp does the same).
   useEffect(() => {
@@ -144,7 +151,31 @@ function Planner({ pool, initialCode }: { pool: PlannerPool; initialCode: string
 
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_18rem_minmax(0,1fr)]">
         <div className="space-y-2">{LEFT.map(card)}</div>
-        <div className="space-y-2 sm:order-last sm:col-span-2 lg:order-none lg:col-span-1" data-sheet-slot />
+        <div className="sm:order-last sm:col-span-2 lg:order-none lg:col-span-1">
+          <StatSheet
+            sheet={sheet}
+            preview={preview}
+            title={
+              <label className="flex items-center gap-2">
+                <span>Level {pool.level}</span>
+                <select
+                  value={race}
+                  onChange={(e) => setRace(e.target.value)}
+                  aria-label="Race"
+                  className="rounded border border-border bg-background px-1.5 py-0.5 text-xs text-foreground"
+                >
+                  {races.map(([id, r]) => (
+                    <option key={id} value={id}>
+                      {r.name}
+                    </option>
+                  ))}
+                </select>
+                <span>{className}</span>
+              </label>
+            }
+            note={`Race base stats + gear + suffix rolls + enchants. No buffs or talents; ratings aren't converted to percentages.${base.basis === "classic" ? "" : ` ${base.name} ${className} base stats are estimated (no Classic data for this pair).`}`}
+          />
+        </div>
         <div className="space-y-2">{RIGHT.map(card)}</div>
         <div className="grid gap-2 sm:col-span-2 sm:grid-cols-3 lg:col-span-3">{WEAPONS.map(card)}</div>
       </div>
