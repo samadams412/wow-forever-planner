@@ -196,7 +196,7 @@ function Planner({ pool, initialCode, classId, className }: { pool: PlannerPool;
 
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_18rem_minmax(0,1fr)]">
         <div className="space-y-2">{LEFT.map(card)}</div>
-        <div className="sm:order-last sm:col-span-2 lg:order-none lg:col-span-1">
+        <div className="order-last sm:col-span-2 lg:order-none lg:col-span-1">
           <StatSheet
             sheet={sheet}
             preview={preview}
