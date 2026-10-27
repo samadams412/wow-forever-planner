@@ -104,12 +104,13 @@ Encoding is positional (one base36 rank digit per talent, ordered by tier
 then col, trees joined with `-`) with no name/id tie-back — so any change
 to a tree's talent membership/order needs a version bump, or old shared
 links silently decode to the wrong talent. `encodeBuild` prepends a
-version segment (currently `6`); `decodeBuild` branches: versioned codes
+version segment (currently `7`); `decodeBuild` branches: versioned codes
 decode against current tree order, legacy/old-version codes decode
 against a frozen snapshot (`LEGACY_TREE_ORDER`/`V2_TREE_ORDER`) + an id
 translation table, then clamp to current `maxRank`. Frozen snapshots now
-run `LEGACY`/`V2`/`V3`/`V4`/`V5_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
-Warrior Fury/Protection 2026-10-03, v6 Priest/Shaman/Mage/Warlock 2026-10-15).
+run `LEGACY`/`V2`/`V3`/`V4`/`V5`/`V6_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
+Warrior Fury/Protection 2026-10-03, v6 Priest/Shaman/Mage/Warlock 2026-10-15,
+v7 Mage Frost 2026-10-22).
 Frozen orders merge **per tree** (`mergeOrders`), so two snapshots can freeze
 different trees of one class (Shaman: V2 Elemental, V5 Restoration).
 
@@ -147,7 +148,7 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   `evidence` array (url, era the source describes, what it says), never
   rendered: the web research behind the rule. A set is `confirmed` only on
   an official Blizzard source or a specific in-game test. Top-level `source` +
-  `build` record provenance (verified against build 1.60.1.70425 spell
+  `build` record provenance (verified against build 1.60.1.70630 spell
   text). `scripts/check-raid-buffs.js` runs first in `prebuild` and fails
   the build if any spell/talent/tree/set reference stops matching
   `data/spellbooks.json` / `data/talents/*.json`. **After every talent or
@@ -690,6 +691,13 @@ diffs the two most recent snapshots into `data/sources/talentsforever/diffs/`
 vendor's own `changelog` array by hand (the diff is a pure field diff, it
 can't see UI/UX-only changes). Match by name (or tree+row+col for Legacy
 Perks), never array index — the vendor has reordered sections before.
+**Diff script blind spots (found 2026-10-27):** it doesn't diff
+`spellbooks.<Class>.icons` (Frost Blast's icon changed unreported; the
+spellbook rebuild picks it up anyway), it reports the vendor's `racials`
+section only as "changed" (diff it by hand; ours mirror it by race and
+ability name), and it doesn't show talent `asis` notes. After applying, run
+a field check of every talent against the new snapshot (ranks, tier, col,
+maxRank, icon, passive, prereq).
 
 ### World map (`/reference/map/[continent]`)
 Real client art (wow.export tile exports) tiled into a committed z0-z6
@@ -745,7 +753,7 @@ runtime file reads), then add the `MapLayers` key, `PoiLayerKey`,
 - **Client extract is older than the rest of the site's data:** entrances,
   flight masters, towns and zone data all come from the one client-db2
   extract, `data/sources/client-db2/1.60.1.70009/` (2026-09-25). Talents,
-  spellbooks and racials are synced to build 70425, items to 70374.
+  spellbooks and racials are synced to build 70630 (2026-10-27), items to 70374.
   Whether AreaPOI/TaxiNodes/Map changed since 70009 is unknown until a fresh
   wow.export extract is diffed against it.
 - **Verified 2026-10-19:** the `npm run build` trace for

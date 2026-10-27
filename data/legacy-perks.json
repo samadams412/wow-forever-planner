@@ -287,7 +287,7 @@
           "id": "professions_master_chef",
           "name": "Master Chef",
           "tier": 1,
-          "col": 3,
+          "col": 2,
           "maxRank": 5,
           "ranks": [
             "Your cooking recipes have a 10% chance to create an extra result.",
@@ -351,11 +351,11 @@
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "You discover 20% more Scarce materials from Mining, Herbalism, and Skinning.",
-            "You discover 40% more Scarce materials from Mining, Herbalism, and Skinning.",
-            "You discover 60% more Scarce materials from Mining, Herbalism, and Skinning.",
-            "You discover 80% more Scarce materials from Mining, Herbalism, and Skinning.",
-            "You discover 100% more Scarce materials from Mining, Herbalism, and Skinning."
+            "You are 20% more likely to discover Scarce materials from Mining, Herbalism, and Skinning.",
+            "You are 40% more likely to discover Scarce materials from Mining, Herbalism, and Skinning.",
+            "You are 60% more likely to discover Scarce materials from Mining, Herbalism, and Skinning.",
+            "You are 80% more likely to discover Scarce materials from Mining, Herbalism, and Skinning.",
+            "You are 100% more likely to discover Scarce materials from Mining, Herbalism, and Skinning."
           ],
           "icon": "inv_misc_bag_18",
           "gate": 0,
@@ -404,7 +404,7 @@
           "id": "professions_luremaster",
           "name": "Luremaster",
           "tier": 4,
-          "col": 3,
+          "col": 2,
           "maxRank": 2,
           "ranks": [
             "While fishing with a Lure active, you have a 25% chance to catch an extra fish.",

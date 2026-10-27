@@ -952,7 +952,7 @@
       "name": "Hunter's Mark",
       "kind": "spell",
       "source": "Hunter spell, rank 4",
-      "description": "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 71. In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible. The target also appears on the mini-map. Lasts for 2 min.",
+      "description": "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 143. In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible. The target also appears on the mini-map. Lasts for 2 min.",
       "icon": "ability_hunter_snipershot"
     },
     {
@@ -2353,6 +2353,13 @@
       "icon": "spell_frost_frostbolt02"
     },
     {
+      "name": "Frost Blast",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_ice_magicdamage"
+    },
+    {
       "name": "Frostfire Bolt",
       "kind": "spell",
       "source": "Mage spell, rank 3",
@@ -2507,6 +2514,13 @@
       "source": "Mage spell, rank 5",
       "description": "Absorbs 913 Frost damage. Lasts 30 sec.",
       "icon": "spell_frost_frostward"
+    },
+    {
+      "name": "Ice Barrier",
+      "kind": "talent",
+      "source": "Talent · Frost, row 7",
+      "description": "Shield yourself, absorbing 447 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage.",
+      "icon": "spell_ice_lament"
     }
   ],
   "mage:frost_improved_frostbolt": [
@@ -2522,7 +2536,7 @@
       "kind": "spell",
       "source": "Mage spell, rank 3",
       "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-      "icon": "spell_frost_frostbolt"
+      "icon": "spell_ice_magicdamage"
     }
   ],
   "mage:frost_improved_frost_nova": [
@@ -2556,7 +2570,7 @@
       "kind": "spell",
       "source": "Mage spell, rank 3",
       "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-      "icon": "spell_frost_frostbolt"
+      "icon": "spell_ice_magicdamage"
     },
     {
       "name": "Blizzard",
@@ -2590,6 +2604,34 @@
     }
   ],
   "mage:frost_winters_chill": [
+    {
+      "name": "Frostbolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 11",
+      "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_frost_frostbolt02"
+    },
+    {
+      "name": "Frost Blast",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
+      "icon": "spell_ice_magicdamage"
+    },
+    {
+      "name": "Fingers of Frost",
+      "kind": "talent",
+      "source": "Talent · Frost, row 5",
+      "description": "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 2 spells cast as if the target were Frozen. Lasts 15 sec.",
+      "icon": "ability_mage_wintersgrasp"
+    },
+    {
+      "name": "Ice Lance",
+      "kind": "talent",
+      "source": "Talent · Frost, row 3",
+      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+      "icon": "spell_frost_frostblast"
+    },
     {
       "name": "Cone of Cold",
       "kind": "spell",

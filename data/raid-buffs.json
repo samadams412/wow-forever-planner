@@ -1,6 +1,6 @@
 {
   "source": "Hand-curated for Forevercraft (not generated). Every effect, its scope (raid / group / single target) and which specs can provide it was read from this site's own data/spellbooks.json and data/talents/*.json, both synced to the WoW Forever beta client. wowtbc.gg's raid comp planner was looked at only to see which effects players track; none of its data was copied. Validated by scripts/check-raid-buffs.js (runs in prebuild).",
-  "build": "1.60.1.70425",
+  "build": "1.60.1.70630",
   "verified": "2026-10-19",
   "conventions": {
     "specs": "\"all\" = a spell every member of the class learns. A list of talent-tree names = a talent (or a spellbook spell flagged talent: true), credited only to that tree's spec.",
@@ -592,7 +592,7 @@
       "name": "Hunter's Mark",
       "kind": "debuff",
       "scope": "enemy",
-      "summary": "+71 ranged attack power for all attackers",
+      "summary": "+143 ranged attack power for all attackers",
       "confidence": "confirmed",
       "sources": [{ "classId": "hunter", "specs": "all", "spell": "Hunter's Mark", "confidence": "confirmed" }]
     },

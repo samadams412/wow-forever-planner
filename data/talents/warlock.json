@@ -177,9 +177,9 @@
           "col": 2,
           "maxRank": 3,
           "ranks": [
-            "Gives you a 23% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells.",
-            "Gives you a 47% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells.",
-            "Gives you a 70% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells."
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 70% chance to not lose casting time when you take damage."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -202,7 +202,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 50%. Lasts 30 sec."
+            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1076,9 +1076,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Gives you a 23% chance to resist interruption caused by damage while casting or channeling any Destruction spell.",
-            "Gives you a 47% chance to resist interruption caused by damage while casting or channeling any Destruction spell.",
-            "Gives you a 70% chance to resist interruption caused by damage while casting or channeling any Destruction spell."
+            "Gives your Destruction spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Destruction spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Destruction spells a 70% chance to not lose casting time when you take damage."
           ],
           "confidence": "confirmed",
           "prereq": null,

@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 6;
+const CURRENT_VERSION = 7;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -54,15 +54,20 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
       // V4_TREE_ORDER for the Warrior trees. Every version below 6 predates
       // the 2026-10-15 reshape (V5_TREE_ORDER). Merged per tree, later wins:
       // V2's Shaman Elemental must override V5's while V5's Shaman
-      // Restoration survives.
-      const orders =
+      // Restoration survives. Every version below 7 predates the 2026-10-22
+      // Mage Frost reshape (V6_TREE_ORDER), a tree no older snapshot freezes.
+      const orders = mergeOrders(
+        V6_TREE_ORDER,
         version < 3
           ? mergeOrders(V5_TREE_ORDER, V2_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
           : version < 4
             ? mergeOrders(V5_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
             : version < 5
               ? mergeOrders(V5_TREE_ORDER, V4_TREE_ORDER)
-              : V5_TREE_ORDER;
+              : version < 6
+                ? V5_TREE_ORDER
+                : {}
+      );
       return repairPrereqs(classData, decodeAgainstFrozenOrders(classData, segments.slice(1), orders));
     }
     return repairPrereqs(classData, decodeVersionedBuild(classData, segments.slice(1)));
@@ -244,6 +249,8 @@ const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
   elemental_call_of_thunder: null,
   fire_wake_of_fire: null,
   affliction_malediction: null,
+  // Removed 2026-10-22, server hotfix 2026-10-20 on build 70425 (see V6_TREE_ORDER below).
+  frost_piercing_ice: null,
 };
 
 // --- v2 tree shape (2026-09-18 .. 2026-09-24) ---------------------------------
@@ -584,6 +591,43 @@ const V5_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
+// --- v6 tree shape (2026-10-15 .. 2026-10-22) ---------------------------------
+//
+// The 2026-10-22 talentsforever.com pull (build 70425 plus a 2026-10-20 server
+// hotfix) reshaped Mage Frost: Piercing Ice was removed, Permafrost and
+// Frostbite swapped columns, and Frost Channeling and Improved Blizzard moved
+// to columns 1 and 2 of tier 3. Elemental Precision went from 5 to 3 ranks
+// (clamped on decode, no order change).
+//
+// V6_TREE_ORDER freezes that tree's tier/col-sorted id order as it stood at
+// CURRENT_VERSION 6. Never edit after the fact, same rule as the other frozen
+// orders above.
+const V6_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  mage: {
+    Frost: [
+      "frost_frost_warding",
+      "frost_improved_frostbolt",
+      "frost_elemental_precision",
+      "frost_ice_shards",
+      "frost_permafrost",
+      "frost_improved_frost_nova",
+      "frost_frostbite",
+      "frost_piercing_ice",
+      "frost_frost_channeling",
+      "frost_ice_lance",
+      "frost_improved_blizzard",
+      "frost_arctic_reach",
+      "frost_ice_block",
+      "frost_shatter",
+      "frost_improved_cone_of_cold",
+      "frost_cold_snap",
+      "frost_fingers_of_frost",
+      "frost_winters_chill",
+      "frost_ice_barrier",
+    ],
+  },
+};
+
 type FrozenOrders = Record<string, Record<string, string[]>>;
 function mergeOrders(...orders: FrozenOrders[]): FrozenOrders {
   const out: FrozenOrders = {};
@@ -636,7 +680,8 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
       V2_TREE_ORDER[classData.class]?.[tree.name] ??
       V3_TREE_ORDER[classData.class]?.[tree.name] ??
       V4_TREE_ORDER[classData.class]?.[tree.name] ??
-      V5_TREE_ORDER[classData.class]?.[tree.name];
+      V5_TREE_ORDER[classData.class]?.[tree.name] ??
+      V6_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {

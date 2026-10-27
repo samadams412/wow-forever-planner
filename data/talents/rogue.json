@@ -519,16 +519,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "changed",
+          "status": "new",
           "icon": "ability_backstab",
           "classic": {
-            "status": "changed",
-            "tree": "Combat",
-            "tier": 2,
-            "col": 1,
-            "maxRank": 3,
-            "text": "Increases the critical strike chance of your Backstab ability by 10%.",
-            "renamedFrom": "Improved Backstab"
+            "status": "new"
           },
           "passive": true
         },
@@ -768,11 +762,17 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "new",
+          "status": "changed",
           "icon": "inv_sword_27",
           "classic": {
-            "status": "new",
-            "replaces": ["Dagger Specialization", "Fist Weapon Specialization", "Mace Specialization", "Sword Specialization"]
+            "status": "changed",
+            "tree": "Combat",
+            "tier": 5,
+            "col": 3,
+            "maxRank": 5,
+            "text": "Gives you a 1% chance to get an extra attack on the same target after dealing damage with your Sword.",
+            "renamedFrom": "Sword Specialization",
+            "replaces": ["Dagger Specialization", "Fist Weapon Specialization", "Mace Specialization"]
           },
           "passive": true
         },

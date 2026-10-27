@@ -10,14 +10,14 @@
     {
       "name": "Ruthless",
       "type": "passive",
-      "description": "Increases your critical strike chance with all spells and attacks by 2%.",
+      "description": "Increases your critical strike chance with all spells and attacks by 1%.",
       "confidence": "confirmed",
       "icon": "ability_rogue_eviscerate"
     },
     {
       "name": "The Human Spirit",
       "type": "passive",
-      "description": "Spirit increased by 5%.",
+      "description": "Spirit increased by 10%.",
       "confidence": "confirmed",
       "icon": "inv_enchant_shardbrilliantsmall"
     },
@@ -45,11 +45,11 @@
       "icon": "racial_dwarf_findtreasure"
     },
     {
-      "name": "Earth Fury",
+      "name": "Artisan's Precision",
       "type": "passive",
-      "description": "Increases your critical strike bonus to damage and healing by 2%.",
+      "description": "Increases hit chance with spells and attacks by 1%.",
       "confidence": "confirmed",
-      "icon": "spell_shaman_unleashweapon_earth"
+      "icon": "ability_marksmanship"
     },
     {
       "name": "Big Game Hunter",
@@ -124,16 +124,16 @@
     {
       "name": "Blood Fury",
       "type": "active",
-      "description": "Instant, 3 min cooldown. Increases Attack Power and Spell Power by 10% for 15 sec.",
+      "description": "Instant, 2 min cooldown. Increases Attack Power and Spell Power by 10% for 15 sec.",
       "confidence": "confirmed",
       "icon": "racial_orc_berserkerstrength"
     },
     {
-      "name": "Savage",
+      "name": "Command",
       "type": "passive",
-      "description": "Increases your critical strike chance with all spells and abilities by 1%.",
+      "description": "Damage dealt by Hunter and Warlock pets increased by 5%.",
       "confidence": "confirmed",
-      "icon": "inv_axe_02"
+      "icon": "ability_warrior_warcry"
     },
     {
       "name": "Hardiness",
@@ -175,7 +175,7 @@
     {
       "name": "Touch of the Grave",
       "type": "passive",
-      "description": "Your spells and attacks with a damage part have a chance (30% for casters, 20% for Paladins, Rogues and Warriors) to drain Health from the target, up to 5% of your maximum Health. 25 sec internal cooldown. Does not break crowd control.",
+      "description": "Your spells and attacks with a damage part have a chance (30% for casters, 20% for Paladins, Rogues and Warriors) to drain Health from the target, up to 5% of your maximum Health. 15 sec internal cooldown. Does not break crowd control.",
       "confidence": "confirmed",
       "icon": "spell_shadow_fingerofdeath"
     }
@@ -191,21 +191,21 @@
     {
       "name": "Cultivation",
       "type": "passive",
-      "description": "Instant. Cultivate a nearby herb, growing a duplicate you can harvest without requiring Herbalism skill. Each herb may only be cultivated once. In play it goes on a 1 hour cooldown, though its tooltip shows none.",
+      "description": "Instant. Cultivate a nearby herb, growing a duplicate you can harvest without requiring Herbalism skill. Each herb may only be cultivated once. In play it goes on a 15 min cooldown, though its tooltip shows none.",
       "confidence": "confirmed",
       "icon": "inv_misc_flower_01"
     },
     {
       "name": "Endurance",
       "type": "passive",
-      "description": "Total Health increased by 5% and critical strike bonus to damage and healing increased by 2%.",
+      "description": "Total Health increased by 5%.",
       "confidence": "confirmed",
       "icon": "spell_nature_unyeildingstamina"
     },
     {
       "name": "Plainsrunning",
       "type": "passive",
-      "description": "Gain 1% increased movement speed every 5 sec spent moving, up to a maximum of 30% increase. Taking damage or standing still will reduce this effect. In addition, you move 3% faster while mounted.",
+      "description": "Gain 2% increased movement speed every 5 sec spent moving, up to a maximum of 60% increase. Taking damage or standing still will reduce this effect. Does not increase mounted movement speed.",
       "confidence": "confirmed",
       "icon": "achievement_zone_barrens_01"
     }
@@ -214,7 +214,7 @@
     {
       "name": "Berserking",
       "type": "active",
-      "description": "Instant, 3 min cooldown. Increases your spellcasting and attack speed by 10% for 10 sec.",
+      "description": "Instant, 3 min cooldown. Increases your spellcasting and attack speed by 10% for 15 sec.",
       "confidence": "confirmed",
       "icon": "racial_troll_berserk"
     },
@@ -251,14 +251,14 @@
     {
       "name": "Skysight",
       "type": "active",
-      "description": "0.5 sec cast, 2 min cooldown. Attempt to draw power from a convergence of elements and receive its blessing, increasing your movement and mounted movement speeds by 10%. Lasts 30 sec if no elemental convergence is nearby, and 15 min if one is found.",
+      "description": "0.5 sec cast, 2 min cooldown. Increases your movement speed by 15% for 15 sec. Used at an elemental convergence it also grants Charged for 1 hour, which raises the bonus to 30%. Charged persists through death and ends when you enter a raid.",
       "confidence": "confirmed",
       "icon": "ability_skyreach_lens_flare"
     },
     {
       "name": "Wind Blessed",
       "type": "passive",
-      "description": "Increases your spellcasting, melee, and ranged Haste by 3%.",
+      "description": "Increases your spellcasting, melee, and ranged Haste by 2%.",
       "confidence": "confirmed",
       "icon": "inv_misc_volatileair"
     },
@@ -281,14 +281,14 @@
     {
       "name": "Read Leyline",
       "type": "active",
-      "description": "2 sec cast, 2 min cooldown. Attempt to tap into the power of a nearby leyline, increasing your Health and Mana regeneration by 100%. Lasts 30 sec if no leyline is nearby, and 15 min if one is found.",
+      "description": "2 sec cast, 2 min cooldown. Increases your Health and Mana regeneration by 50% for 15 sec. Used at a Ley Line it also grants Attuned for 1 hour, which raises the bonus to 100%. Attuned persists through death and ends when you enter a raid. Cannot be used while Innervate is active.",
       "confidence": "confirmed",
       "icon": "ability_mage_incantersabsorbtion"
     },
     {
       "name": "Wind Blessed",
       "type": "passive",
-      "description": "Increases your spellcasting, melee, and ranged Haste by 3%.",
+      "description": "Increases your spellcasting, melee, and ranged Haste by 2%.",
       "confidence": "confirmed",
       "icon": "inv_misc_volatileair"
     },

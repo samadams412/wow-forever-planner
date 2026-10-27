@@ -27,7 +27,7 @@ test("encodeBuild -> decodeBuild round-trips a current-version build", () => {
     protection_shield_slam: 1,
   };
   const code = encodeBuild(warrior, ranks);
-  assert.match(code, /^6-/); // CURRENT_VERSION
+  assert.match(code, /^7-/); // CURRENT_VERSION
   assert.deepEqual(decodeBuild(warrior, code), ranks);
 });
 
@@ -58,7 +58,7 @@ test("decodeBuild clamps a rank above the talent's current maxRank", () => {
       talents.map((t) => (i === protIndex && t.id === "protection_shield_specialization" ? "6" : "0")).join("")
     )
     .join("-");
-  const ranks = decodeBuild(warrior, `6-${body}`);
+  const ranks = decodeBuild(warrior, `7-${body}`);
   assert.equal(ranks.protection_shield_specialization, 5);
 });
 
@@ -209,5 +209,21 @@ test("decodeBuild (version 5 and version 2 codes) uses the right frozen Shaman o
     elemental_elemental_alacrity: 3,
     restoration_tidal_mastery: 5,
     restoration_totemic_focus: 3,
+  });
+});
+
+const mage = JSON.parse(
+  fs.readFileSync(path.join(import.meta.dirname, "..", "data", "talents", "mage.json"), "utf8")
+) as ClassTalentData;
+
+test("decodeBuild (version 6 code) uses the frozen Mage Frost order and drops Piercing Ice", () => {
+  // V6_TREE_ORDER.mage.Frost: 2 = elemental_precision (5 -> 3 ranks), 4 = permafrost,
+  // 6 = frostbite, 7 = piercing_ice (removed 2026-10-22), 10 = improved_blizzard.
+  const v6Frost = "0050302300100000000";
+  assert.deepEqual(decodeBuild(mage, ["6", "", "", v6Frost].join("-")), {
+    frost_elemental_precision: 3,
+    frost_permafrost: 3,
+    frost_frostbite: 2,
+    frost_improved_blizzard: 1,
   });
 });
