@@ -3,6 +3,7 @@ import Image from "next/image";
 import { GitBranch, BookOpen, Compass, PenLine } from "lucide-react";
 import Card from "@/components/site/Card";
 import LaunchCountdown from "@/components/site/LaunchCountdown";
+import BetaWrappedBanner from "@/components/site/BetaWrappedBanner";
 
 const ICON_CLASS = "h-5 w-5 text-accent";
 
@@ -72,6 +73,8 @@ export default function Home() {
           ].join(", "),
         }}
       />
+
+      <BetaWrappedBanner />
 
       <div className="relative w-full max-w-2xl">
         <LaunchCountdown />

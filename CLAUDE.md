@@ -45,6 +45,9 @@ improvise a different structure session to session.
   `/gear/warrior` (item pool, share codec and UI built; not in the nav or the
   sitemap yet, pending the owner's review). Presets exist for all 9 classes.
   See "Gear planner" and "Gear planner data layer" below.
+- Beta Wrapped (`/beta-wrapped`, 2026-10-28): story-mode recap of the
+  beta's changes, linked from a dismissible homepage banner and the footer
+  (not the nav). See "Beta Wrapped" below.
 - No database yet — still static JSON + MDX, Phase 1.
 
 ## Standing rule: no runtime-variable or full-file disk reads in server code
@@ -241,6 +244,76 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
 - **Roles:** default role per spec (Feral = "flex", shown as "+N Feral"
   on Tanks and DPS). Soft hints from 10 players up: no tanks, or healers
   under 20% of the roster (rule of thumb, not a game rule).
+
+### Beta Wrapped (`/beta-wrapped`, 2026-10-28)
+Handoffs: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-28-beta-wrapped-page.md`
+(build) and `2026-10-28-beta-wrapped-animation-polish.md` (motion, banner,
+visual pass).
+- **Dated edition, kept as an archive** (owner's call): the copy says "beta"
+  outright. Content is hand-written in `lib/beta-wrapped.ts` (`BETA_WRAPPED`,
+  a `WrappedEdition` of typed slides), paraphrased from `data/patch-notes/` and
+  the talentsforever pulls, never generated. A later edition (e.g. launch) is
+  a new edition object and route reusing `components/wrapped/*`.
+- **Files:** `app/beta-wrapped/page.tsx` (static ○ server shell: resolves
+  class colors/icons from `lib/wow-data` and passes them down, so the client
+  bundle never imports it), `opengraph-image.tsx`,
+  `components/wrapped/WrappedStory.tsx` (client shell),
+  `components/wrapped/WrappedSlides.tsx` (one renderer per slide `kind`:
+  intro, stats, timeline, list, class, roster, beforeAfter, spotlight,
+  closer). In `app/sitemap.ts`. Linked from `components/site/BetaWrappedBanner.tsx`
+  (homepage only, absolutely positioned over the top of the hero so its
+  post-mount appearance never shifts layout; dismissal in localStorage key
+  `forevercraft:beta-wrapped-banner-dismissed`, every access in try/catch)
+  and a "Beta Wrapped" footer link after What's new. **Deliberately not in
+  `SiteHeader`'s nav**: it's a dated archive page, not permanent IA.
+- **Shell:** every slide is rendered (the full recap is in the prerendered
+  HTML); inactive slides are `inert` + `aria-hidden`. Navigation: tap or
+  click the left third = back, the rest = forward; horizontal swipe (pointer
+  events, 40px); Arrow/PageUp/PageDown/Home/End. **Steps use a functional
+  `setIndex`**: a closure over `index` dropped fast or held key presses (10
+  quick presses moved 1 slide). No auto-advance. Below `sm` it's a `fixed
+  inset-0 z-[60]` overlay over the site chrome, with a close (X) link to `/`,
+  and it sets `overflow: hidden` on `<html>` while mounted. From `sm` up it's
+  a 9:16 card under the header. A slide too tall for the screen scrolls
+  vertically (`touch-pan-y`, `overflow-y-auto`): on a 375×548 viewport the
+  timeline, roster and racials slides do (by 119/69/30 px); at 390×664 none
+  do; after the visual pass, 375×548 overflows 20/80/7 px on the timeline,
+  roster and racials slides.
+- **Animation: `motion` (pinned exact `14.2.0`, published 2026-10-13; the
+  newer releases were days old).** Used only in `components/wrapped/*`
+  through `LazyMotion features={domAnimation} strict` + `m.*`; never import
+  it from shared components (the homepage banner doesn't). Its chunk (~47 KB
+  gzip with the wrapped components) is referenced only by `/beta-wrapped`.
+  What moves, and nothing else: directional slide variants (`past`/`active`/
+  `future` with a `custom` direction: forward pushes the old slide back
+  (scale 0.94, dim) and slides the new one in from the right; back slides
+  the previous one in from the left), tap-zone press feedback (card scales
+  to 0.985 plus a gold wash on the pressed third), progress segments on the
+  same 0.42 s curve (`EASE`), and count-ups on the numbers slide and the
+  spotlight bars. `CountUp` writes to its DOM node (no re-render per frame)
+  and renders the final figure on the server and when inactive.
+  **Reduced motion:** `MotionConfig reducedMotion="user"` drops transforms,
+  slide duration falls to 0.12 s (opacity only), `CountUp` and the spotlight
+  bars jump to final, and the press scale is skipped. Verified 2026-10-28 by
+  overriding `matchMedia` in a test iframe before hydration, not by the
+  DevTools toggle. Note: this Chrome-extension environment only gives the
+  tab about 2 animation frames per second, so mid-animation samples there
+  are meaningless; check end states.
+- **Visual language:** square card with the site's `CornerBracket`s (no
+  rounded card, no drop shadow); Cinzel Decorative (`font-heading`) for
+  display type and numerals, Geist for body. Intro and closer sit on a dim
+  crop of the homepage hero art; class slides head with that class's
+  talent-tree art (`treeBackgroundUrl`, tree chosen per slide in the data's
+  `tree` field, masked into the surface, fetched only for the current and
+  adjacent slides) plus the class's three spec icons, with headers
+  alternating left/right. A class slide's `items[0]` is its lead change,
+  set large, and must match the tagline. Other slides stay flat on
+  `bg-surface` on purpose.
+- **Share:** static closer: a planner link, plus a Share button
+  (`navigator.share`, else copy the link). The OG image is a single site-wide
+  image, not per class or per user.
+- Light mode: the roster's new/removed colors use `[.light-mode_&]:`
+  overrides (emerald/red 700), the same pattern as `InGameSection.tsx`.
 
 ### Gear planner (`/gear/<classId>`, Warrior only, 2026-10-21)
 Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/gear-planner/2026-10-21-gear-planner-pool-codec-ui.md`.

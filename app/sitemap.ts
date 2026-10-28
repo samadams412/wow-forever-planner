@@ -27,6 +27,7 @@ const STATIC_ROUTES = [
   "/guides",
   "/blog",
   "/whats-new",
+  "/beta-wrapped",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

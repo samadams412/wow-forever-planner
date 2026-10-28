@@ -31,6 +31,12 @@ export default function SiteFooter() {
             What&apos;s new
           </Link>
           <Link
+            href="/beta-wrapped"
+            className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline"
+          >
+            Beta Wrapped
+          </Link>
+          <Link
             href="/privacy"
             className="text-foreground-muted/70 transition-colors hover:text-foreground hover:underline"
           >
