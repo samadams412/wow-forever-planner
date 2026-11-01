@@ -107,15 +107,21 @@ Encoding is positional (one base36 rank digit per talent, ordered by tier
 then col, trees joined with `-`) with no name/id tie-back — so any change
 to a tree's talent membership/order needs a version bump, or old shared
 links silently decode to the wrong talent. `encodeBuild` prepends a
-version segment (currently `7`); `decodeBuild` branches: versioned codes
+version segment (currently `8`); `decodeBuild` branches: versioned codes
 decode against current tree order, legacy/old-version codes decode
 against a frozen snapshot (`LEGACY_TREE_ORDER`/`V2_TREE_ORDER`) + an id
 translation table, then clamp to current `maxRank`. Frozen snapshots now
-run `LEGACY`/`V2`/`V3`/`V4`/`V5`/`V6_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
+run `LEGACY`/`V2`…`V7_TREE_ORDER` (v4 Druid Feral 2026-10-01, v5
 Warrior Fury/Protection 2026-10-03, v6 Priest/Shaman/Mage/Warlock 2026-10-15,
-v7 Mage Frost 2026-10-22).
+v7 Mage Frost 2026-10-22, v8 all Paladin trees, Mage, Druid Feral/Resto,
+Priest Holy and Hunter BM 2026-10-30).
 Frozen orders merge **per tree** (`mergeOrders`), so two snapshots can freeze
 different trees of one class (Shaman: V2 Elemental, V5 Restoration).
+Talents that move tree or get renamed translate to their new id in
+`LEGACY_ID_TRANSLATION` (points carry over); removed ones map to `null`. That
+table is class-agnostic, so `translateId` never translates an id the class
+still has (Warrior's removed `protection_toughness` is Paladin's live
+Toughness; old Paladin links dropped its points until 2026-10-31).
 
 **The next time a tree's talent membership or order changes**, bump
 `CURRENT_VERSION` and add a new frozen order snapshot + translation table
@@ -152,7 +158,8 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/2026-10-19-raid-comp-planner.m
   rendered: the web research behind the rule. A set is `confirmed` only on
   an official Blizzard source or a specific in-game test. Top-level `source` +
   `build` record provenance (verified against build 1.60.1.70630 spell
-  text). `scripts/check-raid-buffs.js` runs first in `prebuild` and fails
+  text plus the 28/30 Oct server hotfixes; 47 effects since Blessing of Light
+  and Salvation left the Paladin spellbook on 2026-10-30). `scripts/check-raid-buffs.js` runs first in `prebuild` and fails
   the build if any spell/talent/tree/set reference stops matching
   `data/spellbooks.json` / `data/talents/*.json`. **After every talent or
   spellbook sync, re-read the effects' Forever text** (the check only
@@ -768,9 +775,13 @@ Perks), never array index — the vendor has reordered sections before.
 `spellbooks.<Class>.icons` (Frost Blast's icon changed unreported; the
 spellbook rebuild picks it up anyway), it reports the vendor's `racials`
 section only as "changed" (diff it by hand; ours mirror it by race and
-ability name), and it doesn't show talent `asis` notes. After applying, run
-a field check of every talent against the new snapshot (ranks, tier, col,
-maxRank, icon, passive, prereq).
+ability name), and it doesn't show talent `asis` notes. **It also can't see a
+talent changing tree** (found 2026-10-31): it matches by name and reports the
+move as a row/col change in the old tree (Holy Conduit, Divine Intellect,
+Unyielding Faith, Furor, Heart of the Wild), so compare tree membership by
+hand. It doesn't diff `class_abilities` per class either (we don't ingest it).
+After applying, run a field check of every talent against the new snapshot
+(ranks, tier, col, maxRank, icon, passive, prereq).
 
 ### World map (`/reference/map/[continent]`)
 Real client art (wow.export tile exports) tiled into a committed z0-z6
@@ -826,7 +837,8 @@ runtime file reads), then add the `MapLayers` key, `PoiLayerKey`,
 - **Client extract is older than the rest of the site's data:** entrances,
   flight masters, towns and zone data all come from the one client-db2
   extract, `data/sources/client-db2/1.60.1.70009/` (2026-09-25). Talents,
-  spellbooks and racials are synced to build 70630 (2026-10-27), items to 70374.
+  spellbooks and racials are synced to build 70630 plus the 28/30 Oct server
+  hotfixes (talentsforever 2026-10-30), items to 70374.
   Whether AreaPOI/TaxiNodes/Map changed since 70009 is unknown until a fresh
   wow.export extract is diffed against it.
 - **Verified 2026-10-19:** the `npm run build` trace for
@@ -908,6 +920,13 @@ image/credit conventions, and SEO metadata specifics.
   need a check too. A fix belongs in the quality-color tokens (Light-mode
   variants per quality, like Common), not in one component.
 - **Gear planner data gaps (2026-10-20):** (1) `data/items.json` has no
+- **Review later (talent sync 2026-10-31, owner unsure):** (1) Blessing of
+  Light, Greater Blessing of Light, Salvation, Mass Salvation and Revoke are gone
+  from the Paladin spellbook as of the 30 Oct hotfix data, with no explanation
+  anywhere; raid comp dropped `blessing-of-light` and `salvation`. Restore them if
+  the spells come back. (2) Leader of the Pack and Moonkin Form both give plain
+  crit since 30 Oct; whether they stack is unknown, so `data/raid-buffs.json`
+  keeps them separate with no `onlyOneCounts` set.
   random-suffix items ("…of the Tiger"); foreverchanges encodes them as
   `baseId * 100000 + suffixId` and 3 of their 49 Warrior picks per faction
   are suffix items. **The suffix data and item-page list are built

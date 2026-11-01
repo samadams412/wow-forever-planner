@@ -106,8 +106,8 @@
         {
           "id": "beast_mastery_pathfinding",
           "name": "Pathfinding",
-          "tier": 2,
-          "col": 3,
+          "tier": 3,
+          "col": 1,
           "maxRank": 2,
           "ranks": [
             "Increases the speed bonus of your Aspect of the Cheetah and Aspect of the Pack by 3%.",
@@ -115,10 +115,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "moved",
+          "status": "unchanged",
           "icon": "ability_mount_jungletiger",
           "classic": {
-            "status": "moved",
+            "status": "unchanged",
             "tree": "Beast Mastery",
             "tier": 3,
             "col": 1,
@@ -131,7 +131,7 @@
           "id": "beast_mastery_improved_revive_pet",
           "name": "Improved Revive Pet",
           "tier": 2,
-          "col": 4,
+          "col": 3,
           "maxRank": 2,
           "ranks": [
             "Revive Pet's casting time is reduced by 3 sec, mana cost is reduced by 20%, and increases the health your pet returns with by an additional 15%.",
@@ -139,10 +139,10 @@
           ],
           "confidence": "confirmed",
           "prereq": null,
-          "status": "unchanged",
+          "status": "moved",
           "icon": "ability_hunter_beastsoothe",
           "classic": {
-            "status": "unchanged",
+            "status": "moved",
             "tree": "Beast Mastery",
             "tier": 2,
             "col": 4,
@@ -634,7 +634,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
+            "Increases the Ranged Attack Power of party or raid members within 45 yds by 15."
           ],
           "confidence": "confirmed",
           "prereq": null,

@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 7;
+const CURRENT_VERSION = 8;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -56,17 +56,24 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
       // V2's Shaman Elemental must override V5's while V5's Shaman
       // Restoration survives. Every version below 7 predates the 2026-10-22
       // Mage Frost reshape (V6_TREE_ORDER), a tree no older snapshot freezes.
+      // Every version below 8 predates the 2026-10-30 reshape (V7_TREE_ORDER);
+      // an older snapshot of the same tree (V2 Paladin, V6 Mage Frost) wins.
       const orders = mergeOrders(
-        V6_TREE_ORDER,
-        version < 3
-          ? mergeOrders(V5_TREE_ORDER, V2_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
-          : version < 4
-            ? mergeOrders(V5_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
-            : version < 5
-              ? mergeOrders(V5_TREE_ORDER, V4_TREE_ORDER)
-              : version < 6
-                ? V5_TREE_ORDER
-                : {}
+        V7_TREE_ORDER,
+        version < 7
+          ? mergeOrders(
+              V6_TREE_ORDER,
+              version < 3
+                ? mergeOrders(V5_TREE_ORDER, V2_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
+                : version < 4
+                  ? mergeOrders(V5_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
+                  : version < 5
+                    ? mergeOrders(V5_TREE_ORDER, V4_TREE_ORDER)
+                    : version < 6
+                      ? V5_TREE_ORDER
+                      : {}
+            )
+          : {}
       );
       return repairPrereqs(classData, decodeAgainstFrozenOrders(classData, segments.slice(1), orders));
     }
@@ -251,7 +258,35 @@ const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
   affliction_malediction: null,
   // Removed 2026-10-22, server hotfix 2026-10-20 on build 70425 (see V6_TREE_ORDER below).
   frost_piercing_ice: null,
+  // Removed, renamed or moved tree 2026-10-30 (see V7_TREE_ORDER below).
+  // Renames and tree moves are the same talent, so points carry over.
+  holy_voice_of_truth: null,
+  protection_improved_seal_of_fury: null,
+  protection_one_handed_weapon_specialization: null,
+  retribution_instrument_of_law: null,
+  // talentsforever's 30 Oct hotfix sheet: "Twist of Light is now Unsealed Wrath" (same slot).
+  retribution_twist_of_light: "retribution_unsealed_wrath",
+  retribution_holy_conduit: "holy_holy_conduit",
+  holy_divine_intellect: "protection_divine_intellect",
+  holy_unyielding_faith: "retribution_unyielding_faith",
+  holy_binding_heal: null,
+  arcane_arcane_focus: null,
+  fire_improved_fireball: "fire_accelerant",
+  frost_elemental_precision: "frost_precision",
+  feral_improved_shifting_power: null,
+  feral_berserk: null,
+  restoration_furor: "feral_furor",
+  feral_heart_of_the_wild: "restoration_heart_of_the_wild",
+  restoration_gift_of_the_earthmother: null,
 };
+
+// Keys above are class-agnostic, but a removed id can still be live in
+// another class (Warrior's removed protection_toughness is Paladin's
+// Toughness), so a talent the class has now is never translated.
+function translateId(oldId: string, currentById: Map<string, Talent>): string | null {
+  if (currentById.has(oldId)) return oldId;
+  return oldId in LEGACY_ID_TRANSLATION ? LEGACY_ID_TRANSLATION[oldId] : oldId;
+}
 
 // --- v2 tree shape (2026-09-18 .. 2026-09-24) ---------------------------------
 //
@@ -628,6 +663,228 @@ const V6_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
+// --- v7 tree shape (2026-10-22 .. 2026-10-30) ---------------------------------
+//
+// The 2026-10-30 talentsforever.com pull (build 70630 plus Blizzard server
+// hotfixes of 28 and 30 Oct) reshaped 9 trees: all three Paladin trees were
+// rebuilt (4 talents removed, 5 new, Twist of Light renamed Unsealed Wrath,
+// Holy Conduit / Divine Intellect / Unyielding Faith changed tree), Druid Feral Combat lost Berserk and Improved
+// Shifting Power and swapped Furor in for Heart of the Wild with Restoration,
+// Restoration lost Gift of the Earthmother and gained Bloom, Mage Arcane lost
+// Arcane Focus and moved talents around, Fire's Improved Fireball became
+// Accelerant, Frost's Elemental Precision became Precision, Priest Holy's
+// Binding Heal was replaced in its slot by Holy Binding, and Hunter Beast
+// Mastery's Pathfinding and Improved Revive Pet swapped order.
+//
+// V7_TREE_ORDER freezes those trees' tier/col-sorted id order as it stood at
+// CURRENT_VERSION 7. Never edit after the fact, same rule as the other frozen
+// orders above.
+const V7_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  paladin: {
+    Holy: [
+      "holy_divine_strength",
+      "holy_divine_intellect",
+      "holy_healing_light",
+      "holy_spiritual_focus",
+      "holy_improved_seals",
+      "holy_unyielding_faith",
+      "holy_voice_of_truth",
+      "holy_reverence",
+      "holy_purifying_power",
+      "holy_infusion_of_light",
+      "holy_illumination",
+      "holy_divine_favor",
+      "holy_divine_precision",
+      "holy_holy_shock",
+      "holy_consecrated_ground",
+      "holy_holy_power",
+      "holy_lights_vigil",
+    ],
+    Protection: [
+      "protection_toughness",
+      "protection_redoubt",
+      "protection_precision",
+      "protection_guardians_favor",
+      "protection_anticipation",
+      "protection_improved_seal_of_fury",
+      "protection_improved_righteous_fury",
+      "protection_shield_specialization",
+      "protection_sacred_duty",
+      "protection_swift_judgement",
+      "protection_one_handed_weapon_specialization",
+      "protection_improved_hammer_of_justice",
+      "protection_templars_bulwark",
+      "protection_reckoning",
+      "protection_iron_creed",
+      "protection_holy_shield",
+    ],
+    Retribution: [
+      "retribution_deflection",
+      "retribution_benediction",
+      "retribution_improved_judgement",
+      "retribution_holy_conduit",
+      "retribution_conviction",
+      "retribution_vindication",
+      "retribution_sanctified_judgement",
+      "retribution_seal_of_command",
+      "retribution_pursuit_of_justice",
+      "retribution_eye_for_an_eye",
+      "retribution_sacred_arbiter",
+      "retribution_two_handed_weapon_specialization",
+      "retribution_vengeance",
+      "retribution_repentance",
+      "retribution_champion_of_the_light",
+      "retribution_instrument_of_law",
+      "retribution_twist_of_light",
+    ],
+  },
+  hunter: {
+    "Beast Mastery": [
+      "beast_mastery_deadly_aspects",
+      "beast_mastery_endurance_training",
+      "beast_mastery_focused_fire",
+      "beast_mastery_improved_aspect_of_the_monkey",
+      "beast_mastery_pathfinding",
+      "beast_mastery_improved_revive_pet",
+      "beast_mastery_bestial_swiftness",
+      "beast_mastery_unleashed_fury",
+      "beast_mastery_improved_mend_pet",
+      "beast_mastery_ferocity",
+      "beast_mastery_summon_hawk",
+      "beast_mastery_spirit_bond",
+      "beast_mastery_intimidation",
+      "beast_mastery_bestial_discipline",
+      "beast_mastery_frenzy",
+      "beast_mastery_bestial_wrath",
+    ],
+  },
+  priest: {
+    Holy: [
+      "holy_twilight_focus",
+      "holy_improved_renew",
+      "holy_holy_specialization",
+      "holy_spell_warding",
+      "holy_divine_fury",
+      "holy_holy_nova",
+      "holy_blessed_recovery",
+      "holy_inspiration",
+      "holy_holy_reach",
+      "holy_improved_healing",
+      "holy_searing_light",
+      "holy_binding_heal",
+      "holy_litany_of_light",
+      "holy_spirit_of_redemption",
+      "holy_spiritual_guidance",
+      "holy_spiritual_healing",
+      "holy_prayer_of_mending",
+    ],
+  },
+  mage: {
+    Arcane: [
+      "arcane_wand_specialization",
+      "arcane_arcane_focus",
+      "arcane_improved_channeling",
+      "arcane_missile_barrage",
+      "arcane_arcane_subtlety",
+      "arcane_magic_absorption",
+      "arcane_arcane_concentration",
+      "arcane_arcane_resilience",
+      "arcane_arcane_geometry",
+      "arcane_arcane_impact",
+      "arcane_arcane_blast",
+      "arcane_arcane_shielding",
+      "arcane_improved_counterspell",
+      "arcane_arcane_meditation",
+      "arcane_arcane_wrath",
+      "arcane_presence_of_mind",
+      "arcane_arcane_mind",
+      "arcane_arcane_instability",
+      "arcane_arcane_power",
+    ],
+    Fire: [
+      "fire_improved_fire_blast",
+      "fire_incineration",
+      "fire_improved_fireball",
+      "fire_ignite",
+      "fire_flame_throwing",
+      "fire_impact",
+      "fire_burning_soul",
+      "fire_improved_flamestrike",
+      "fire_pyroblast",
+      "fire_improved_scorch",
+      "fire_improved_fire_ward",
+      "fire_heating_up",
+      "fire_master_of_elements",
+      "fire_critical_mass",
+      "fire_blast_wave",
+      "fire_fire_power",
+      "fire_combustion",
+    ],
+    Frost: [
+      "frost_frost_warding",
+      "frost_improved_frostbolt",
+      "frost_elemental_precision",
+      "frost_ice_shards",
+      "frost_frostbite",
+      "frost_improved_frost_nova",
+      "frost_permafrost",
+      "frost_frost_channeling",
+      "frost_improved_blizzard",
+      "frost_ice_lance",
+      "frost_arctic_reach",
+      "frost_ice_block",
+      "frost_shatter",
+      "frost_improved_cone_of_cold",
+      "frost_cold_snap",
+      "frost_fingers_of_frost",
+      "frost_winters_chill",
+      "frost_ice_barrier",
+    ],
+  },
+  druid: {
+    "Feral Combat": [
+      "feral_ferocity",
+      "feral_heart_of_the_wild",
+      "feral_feral_swiftness",
+      "feral_feral_instinct",
+      "feral_brutal_impact",
+      "feral_thick_hide",
+      "feral_shredding_attacks",
+      "feral_savage_fury",
+      "feral_feral_charge",
+      "feral_sharpened_claws",
+      "feral_shifting_power",
+      "feral_primal_bite",
+      "feral_predatory_strikes",
+      "feral_blood_frenzy",
+      "feral_improved_shifting_power",
+      "feral_leader_of_the_pack",
+      "feral_predatory_instincts",
+      "feral_natural_reaction",
+      "feral_rend_and_tear",
+      "feral_berserk",
+    ],
+    Restoration: [
+      "restoration_natures_focus",
+      "restoration_furor",
+      "restoration_naturalist",
+      "restoration_subtlety",
+      "restoration_natural_shapeshifter",
+      "restoration_reflection",
+      "restoration_gift_of_nature",
+      "restoration_gift_of_the_earthmother",
+      "restoration_tranquil_spirit",
+      "restoration_improved_rejuvenation",
+      "restoration_swiftmend",
+      "restoration_natures_swiftness",
+      "restoration_living_spirit",
+      "restoration_improved_tranquility",
+      "restoration_improved_regrowth",
+      "restoration_wild_growth",
+    ],
+  },
+};
+
 type FrozenOrders = Record<string, Record<string, string[]>>;
 function mergeOrders(...orders: FrozenOrders[]): FrozenOrders {
   const out: FrozenOrders = {};
@@ -657,7 +914,7 @@ function decodeAgainstFrozenOrders(
       const char = treeCode[j];
       const rank = char ? parseInt(char, 36) : 0;
       if (!Number.isFinite(rank) || rank <= 0) return;
-      const newId = oldId in LEGACY_ID_TRANSLATION ? LEGACY_ID_TRANSLATION[oldId] : oldId;
+      const newId = translateId(oldId, currentById);
       if (!newId) return;
       const talent = currentById.get(newId);
       if (!talent) return;
@@ -681,14 +938,15 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
       V3_TREE_ORDER[classData.class]?.[tree.name] ??
       V4_TREE_ORDER[classData.class]?.[tree.name] ??
       V5_TREE_ORDER[classData.class]?.[tree.name] ??
-      V6_TREE_ORDER[classData.class]?.[tree.name];
+      V6_TREE_ORDER[classData.class]?.[tree.name] ??
+      V7_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {
       const char = treeCode[j];
       const rank = char ? parseInt(char, 36) : 0;
       if (!Number.isFinite(rank) || rank <= 0) return;
-      const newId = oldId in LEGACY_ID_TRANSLATION ? LEGACY_ID_TRANSLATION[oldId] : oldId;
+      const newId = translateId(oldId, currentById);
       if (!newId) return; // talent removed with no replacement -- drop the points
       const talent = currentById.get(newId);
       if (!talent) return;

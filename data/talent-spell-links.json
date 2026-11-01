@@ -224,7 +224,7 @@
       "name": "Revenge",
       "kind": "spell",
       "source": "Warrior spell, rank 6",
-      "description": "Instantly counterattack an enemy for 138 to 168 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+      "description": "Instantly counterattack an enemy for 138 to 168 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
       "icon": "ability_warrior_revenge"
     }
   ],
@@ -338,7 +338,7 @@
       "name": "Light's Vigil",
       "kind": "talent",
       "source": "Talent · Holy, row 7",
-      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. You may only have one Light's Vigil active per party.",
+      "description": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 325 to 343. Only one Vigil per Paladin may be active in each party.",
       "icon": "ability_paladin_judgementofthepure"
     }
   ],
@@ -414,7 +414,7 @@
       "name": "Light's Vigil",
       "kind": "talent",
       "source": "Talent · Holy, row 7",
-      "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. You may only have one Light's Vigil active per party.",
+      "description": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 325 to 343. Only one Vigil per Paladin may be active in each party.",
       "icon": "ability_paladin_judgementofthepure"
     },
     {
@@ -457,7 +457,69 @@
       "icon": "spell_holy_innerfire"
     }
   ],
-  "paladin:holy_holy_power": [
+  "paladin:holy_lights_vigil": [
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "paladin:holy_holy_conduit": [
+    {
+      "name": "Consecration",
+      "kind": "spell",
+      "source": "Paladin spell, rank 5",
+      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area. The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
+      "icon": "spell_holy_innerfire"
+    },
+    {
+      "name": "Holy Wrath",
+      "kind": "spell",
+      "source": "Paladin spell, rank 2",
+      "description": "Sends bolts of holy power in all directions, causing 490 to 576 Holy damage to all Undead and Demon targets within 20 yds and stunning them for 2 sec.",
+      "icon": "spell_holy_excorcism"
+    },
+    {
+      "name": "Exorcism",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Causes 475 to 529 Holy damage to an Undead or Demon target.",
+      "icon": "spell_holy_excorcism_02"
+    },
+    {
+      "name": "Hammer of Wrath",
+      "kind": "spell",
+      "source": "Paladin spell, rank 3",
+      "description": "Hurls a hammer that strikes an enemy for 474 to 522 Holy damage. Only usable on enemies that have 20% or less health.",
+      "icon": "ability_thunderclap"
+    }
+  ],
+  "paladin:holy_oath_of_light": [
+    {
+      "name": "Holy Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 9",
+      "description": "Heals a friendly target for 1,495 to 1,665.",
+      "icon": "spell_holy_holybolt"
+    },
+    {
+      "name": "Flash of Light",
+      "kind": "spell",
+      "source": "Paladin spell, rank 6",
+      "description": "Heals a friendly target for 291 to 325.",
+      "icon": "spell_holy_flashheal"
+    },
+    {
+      "name": "Holy Shock",
+      "kind": "talent",
+      "source": "Talent · Holy, row 5",
+      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
+      "icon": "spell_holy_searinglight"
+    }
+  ],
+  "paladin:holy_boundless_light": [
     {
       "name": "Holy Shock",
       "kind": "talent",
@@ -466,20 +528,11 @@
       "icon": "spell_holy_searinglight"
     },
     {
-      "name": "Holy Strike",
-      "kind": "spell",
-      "source": "Paladin spell, rank 8",
-      "description": "An instant strike that causes 50% weapon damage plus an additional 40 to 53 as Holy damage.",
-      "icon": "classicon_paladin"
-    }
-  ],
-  "paladin:holy_lights_vigil": [
-    {
-      "name": "Holy Shock",
+      "name": "Oath of Light",
       "kind": "talent",
-      "source": "Talent · Holy, row 5",
-      "description": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally.",
-      "icon": "spell_holy_searinglight"
+      "source": "Talent · Holy, row 4",
+      "description": "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light, and Holy Shock on them. Only one Oath of Light may be sworn by the Paladin at any one time.",
+      "icon": "spell_holy_greaterblessingoflight"
     }
   ],
   "paladin:protection_guardians_favor": [
@@ -498,21 +551,12 @@
       "icon": "spell_holy_sealofvalor"
     }
   ],
-  "paladin:protection_improved_seal_of_fury": [
-    {
-      "name": "Seal of Fury",
-      "kind": "spell",
-      "source": "Paladin spell, rank 7",
-      "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
-      "icon": "spell_holy_retributionaura"
-    }
-  ],
   "paladin:protection_improved_righteous_fury": [
     {
       "name": "Righteous Fury",
       "kind": "spell",
       "source": "Paladin spell",
-      "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+      "description": "Increases all threat generated by 33%, and all threat generated by your Holy attacks by an additional 90%. Lasts 30 min.",
       "icon": "spell_holy_sealoffury"
     }
   ],
@@ -534,7 +578,7 @@
     {
       "name": "Templar's Bulwark",
       "kind": "talent",
-      "source": "Talent · Protection, row 5",
+      "source": "Talent · Protection, row 3",
       "description": "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
       "icon": "ability_paladin_shieldofthetemplar"
     }
@@ -569,8 +613,38 @@
       "name": "Righteous Fury",
       "kind": "spell",
       "source": "Paladin spell",
-      "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+      "description": "Increases all threat generated by 33%, and all threat generated by your Holy attacks by an additional 90%. Lasts 30 min.",
       "icon": "spell_holy_sealoffury"
+    }
+  ],
+  "paladin:protection_shieldsworn": [
+    {
+      "name": "Holy Strike",
+      "kind": "spell",
+      "source": "Paladin spell, rank 8",
+      "description": "An instant strike that causes 50% weapon damage plus an additional 40 to 53 as Holy damage.",
+      "icon": "classicon_paladin"
+    },
+    {
+      "name": "Holy Shield",
+      "kind": "talent",
+      "source": "Talent · Protection, row 5",
+      "description": "Increases chance to block by 30% for 10 sec, and deals 75 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+      "icon": "spell_holy_blessingofprotection"
+    },
+    {
+      "name": "Shield Specialization",
+      "kind": "talent",
+      "source": "Talent · Protection, row 3",
+      "description": "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 3 sec.",
+      "icon": "inv_shield_06"
+    },
+    {
+      "name": "Block",
+      "kind": "spell",
+      "source": "Paladin spell",
+      "description": "Gives a chance to block enemy melee and ranged attacks.",
+      "icon": "ability_defend"
     }
   ],
   "paladin:retribution_deflection": [
@@ -589,36 +663,6 @@
       "source": "Paladin spell",
       "description": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect.",
       "icon": "spell_holy_righteousfury"
-    }
-  ],
-  "paladin:retribution_holy_conduit": [
-    {
-      "name": "Consecration",
-      "kind": "spell",
-      "source": "Paladin spell, rank 5",
-      "description": "Consecrates the land beneath the Paladin, doing 96 Holy damage over 8 sec to enemies who enter the area. The first 4 enemies who enter the area will take an additional 216 damage over 8 sec.",
-      "icon": "spell_holy_innerfire"
-    },
-    {
-      "name": "Holy Wrath",
-      "kind": "spell",
-      "source": "Paladin spell, rank 2",
-      "description": "Sends bolts of holy power in all directions, causing 490 to 576 Holy damage to all Undead and Demon targets within 20 yds and stunning them for 2 sec.",
-      "icon": "spell_holy_excorcism"
-    },
-    {
-      "name": "Exorcism",
-      "kind": "spell",
-      "source": "Paladin spell, rank 6",
-      "description": "Causes 475 to 529 Holy damage to an Undead or Demon target.",
-      "icon": "spell_holy_excorcism_02"
-    },
-    {
-      "name": "Hammer of Wrath",
-      "kind": "spell",
-      "source": "Paladin spell, rank 3",
-      "description": "Hurls a hammer that strikes an enemy for 474 to 522 Holy damage. Only usable on enemies that have 20% or less health.",
-      "icon": "ability_thunderclap"
     }
   ],
   "paladin:retribution_vindication": [
@@ -655,50 +699,22 @@
       "icon": "spell_holy_righteousfury"
     }
   ],
-  "paladin:retribution_instrument_of_law": [
+  "paladin:retribution_champion_of_the_light": [
     {
       "name": "Hammer of Wrath",
       "kind": "spell",
       "source": "Paladin spell, rank 3",
       "description": "Hurls a hammer that strikes an enemy for 474 to 522 Holy damage. Only usable on enemies that have 20% or less health.",
       "icon": "ability_thunderclap"
-    },
-    {
-      "name": "Righteous Fury",
-      "kind": "spell",
-      "source": "Paladin spell",
-      "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
-      "icon": "spell_holy_sealoffury"
     }
   ],
-  "paladin:retribution_twist_of_light": [
+  "paladin:retribution_turn_evil": [
     {
-      "name": "Seal of Command",
-      "kind": "talent",
-      "source": "Talent · Retribution, row 3",
-      "description": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.\n\nUnleashing this Seal's energy will judge an enemy, instantly causing 68 to 73 Holy damage, 137 to 145 if the target is stunned or incapacitated.",
-      "icon": "ability_warrior_innerrage"
-    },
-    {
-      "name": "Seal of Righteousness",
+      "name": "Turn Undead",
       "kind": "spell",
-      "source": "Paladin spell, rank 8",
-      "description": "Fills the Paladin with holy spirit for 30 sec, granting each melee attack an additional 22 to 75 Holy damage. Slower weapons cause more Holy damage per swing. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy will cause 170 to 186 Holy damage to an enemy.",
-      "icon": "ability_thunderbolt"
-    },
-    {
-      "name": "Seal of Fury",
-      "kind": "spell",
-      "source": "Paladin spell, rank 7",
-      "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
-      "icon": "spell_holy_retributionaura"
-    },
-    {
-      "name": "Seal of Justice",
-      "kind": "spell",
-      "source": "Paladin spell",
-      "description": "Fills the Paladin with the spirit of justice for 30 sec, giving each melee attack a chance to stun for 2 sec. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy will judge an enemy for 10 sec, preventing them from fleeing. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time.",
-      "icon": "spell_holy_sealofwrath"
+      "source": "Paladin spell, rank 3",
+      "description": "The targeted undead enemy will be compelled to flee for up to 20 sec. Damage caused may interrupt the effect. Only one target can be turned at a time.",
+      "icon": "spell_holy_turnundead"
     }
   ],
   "hunter:beast_mastery_deadly_aspects": [
@@ -1593,13 +1609,6 @@
       "icon": "spell_holy_flashheal"
     },
     {
-      "name": "Binding Heal",
-      "kind": "talent",
-      "source": "Talent · Holy, row 4",
-      "description": "Heals a friendly target and the caster for 236 to 284. Low threat.",
-      "icon": "spell_holy_blindingheal"
-    },
-    {
       "name": "Lesser Heal",
       "kind": "spell",
       "source": "Priest spell, rank 3",
@@ -1750,6 +1759,15 @@
       "icon": "spell_holy_holynova"
     }
   ],
+  "priest:holy_holy_binding": [
+    {
+      "name": "Flash Heal",
+      "kind": "spell",
+      "source": "Priest spell, rank 7",
+      "description": "Heals a friendly target for 773 to 909.",
+      "icon": "spell_holy_flashheal"
+    }
+  ],
   "priest:shadow_spirit_tap": [
     {
       "name": "Vampiric Embrace",
@@ -1832,7 +1850,7 @@
       "name": "Shadow Word: Death",
       "kind": "spell",
       "source": "Priest spell, rank 4",
-      "description": "A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+      "description": "A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 30% of your maximum health.",
       "icon": "spell_shadow_demonicfortitude"
     }
   ],
@@ -2287,7 +2305,7 @@
       "name": "Arcane Blast",
       "kind": "talent",
       "source": "Talent · Arcane, row 3",
-      "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+      "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
       "icon": "spell_arcane_blast"
     },
     {
@@ -2328,7 +2346,7 @@
       "name": "Arcane Blast",
       "kind": "talent",
       "source": "Talent · Arcane, row 3",
-      "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+      "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
       "icon": "spell_arcane_blast"
     },
     {
@@ -2351,13 +2369,6 @@
       "source": "Mage spell, rank 11",
       "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
       "icon": "spell_frost_frostbolt02"
-    },
-    {
-      "name": "Frost Blast",
-      "kind": "spell",
-      "source": "Mage spell, rank 3",
-      "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-      "icon": "spell_ice_magicdamage"
     },
     {
       "name": "Frostfire Bolt",
@@ -2395,14 +2406,14 @@
       "name": "Ice Lance",
       "kind": "talent",
       "source": "Talent · Frost, row 3",
-      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
       "icon": "spell_frost_frostblast"
     },
     {
       "name": "Arcane Blast",
       "kind": "talent",
       "source": "Talent · Arcane, row 3",
-      "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+      "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
       "icon": "spell_arcane_blast"
     },
     {
@@ -2411,22 +2422,6 @@
       "source": "Mage spell, rank 7",
       "description": "Scorch the enemy for 166 to 196 Fire damage.",
       "icon": "spell_fire_soulburn"
-    }
-  ],
-  "mage:fire_improved_fireball": [
-    {
-      "name": "Fireball",
-      "kind": "spell",
-      "source": "Mage spell, rank 12",
-      "description": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.",
-      "icon": "spell_fire_flamebolt"
-    },
-    {
-      "name": "Frostfire Bolt",
-      "kind": "spell",
-      "source": "Mage spell, rank 3",
-      "description": "Launches a bolt of frostfire at the enemy, causing 270 to 314 Frostfire damage, slowing movement speed by 40% and causing an additional 57 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.",
-      "icon": "ability_mage_frostfirebolt"
     }
   ],
   "mage:fire_improved_flamestrike": [
@@ -2493,6 +2488,29 @@
       "icon": "spell_fire_fireball02"
     }
   ],
+  "mage:fire_accelerant": [
+    {
+      "name": "Fireball",
+      "kind": "spell",
+      "source": "Mage spell, rank 12",
+      "description": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.",
+      "icon": "spell_fire_flamebolt"
+    },
+    {
+      "name": "Frostfire Bolt",
+      "kind": "spell",
+      "source": "Mage spell, rank 3",
+      "description": "Launches a bolt of frostfire at the enemy, causing 270 to 314 Frostfire damage, slowing movement speed by 40% and causing an additional 57 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage.",
+      "icon": "ability_mage_frostfirebolt"
+    },
+    {
+      "name": "Arcane Wrath",
+      "kind": "talent",
+      "source": "Talent · Arcane, row 4",
+      "description": "Launches a projectile of pure Arcane energy at the enemy target, causing 122 to 146 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana.",
+      "icon": "ability_mage_netherwindpresence"
+    }
+  ],
   "mage:frost_frost_warding": [
     {
       "name": "Frost Armor",
@@ -2519,7 +2537,7 @@
       "name": "Ice Barrier",
       "kind": "talent",
       "source": "Talent · Frost, row 7",
-      "description": "Shield yourself, absorbing 447 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage.",
+      "description": "Shield yourself, absorbing 447 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage.",
       "icon": "spell_ice_lament"
     }
   ],
@@ -2530,13 +2548,6 @@
       "source": "Mage spell, rank 11",
       "description": "Launches a bolt of frost at the enemy, causing 457 to 493 Frost damage and slowing movement speed by 40% for 9 sec.",
       "icon": "spell_frost_frostbolt02"
-    },
-    {
-      "name": "Frost Blast",
-      "kind": "spell",
-      "source": "Mage spell, rank 3",
-      "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-      "icon": "spell_ice_magicdamage"
     }
   ],
   "mage:frost_improved_frost_nova": [
@@ -2566,11 +2577,11 @@
       "icon": "spell_frost_frostbolt02"
     },
     {
-      "name": "Frost Blast",
-      "kind": "spell",
-      "source": "Mage spell, rank 3",
-      "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-      "icon": "spell_ice_magicdamage"
+      "name": "Ice Lance",
+      "kind": "talent",
+      "source": "Talent · Frost, row 3",
+      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
+      "icon": "spell_frost_frostblast"
     },
     {
       "name": "Blizzard",
@@ -2612,13 +2623,6 @@
       "icon": "spell_frost_frostbolt02"
     },
     {
-      "name": "Frost Blast",
-      "kind": "spell",
-      "source": "Mage spell, rank 3",
-      "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-      "icon": "spell_ice_magicdamage"
-    },
-    {
       "name": "Fingers of Frost",
       "kind": "talent",
       "source": "Talent · Frost, row 5",
@@ -2629,7 +2633,7 @@
       "name": "Ice Lance",
       "kind": "talent",
       "source": "Talent · Frost, row 3",
-      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+      "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
       "icon": "spell_frost_frostblast"
     },
     {
@@ -2683,11 +2687,11 @@
       "icon": "spell_shadow_haunting"
     },
     {
-      "name": "Wrack",
-      "kind": "talent",
-      "source": "Talent · Affliction, row 7",
-      "description": "Tears the target apart from within, inflicting 36 Shadow damage every 1 sec and increasing the damage they take from your other Shadow damage over time effects by 10% for 6 sec.",
-      "icon": "ability_deathknight_hemorrhagicfever"
+      "name": "Drain Mana",
+      "kind": "spell",
+      "source": "Warlock spell, rank 4",
+      "description": "Transfers 139 Mana every 1 sec from the target to the caster. Lasts 5 sec.",
+      "icon": "spell_shadow_siphonmana"
     }
   ],
   "warlock:affliction_improved_bane_of_agony": [
@@ -3308,8 +3312,8 @@
     {
       "name": "Primal Bite",
       "kind": "talent",
-      "source": "Talent · Feral Combat, row 4",
-      "description": "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat.",
+      "source": "Talent · Feral Combat, row 7",
+      "description": "Bite the target, dealing 100% normal damage plus 42 and generating a high amount of threat.",
       "icon": "ability_racial_cannibalize"
     },
     {
@@ -3332,29 +3336,6 @@
       "source": "Druid spell, rank 4",
       "description": "Rake the target for 61 damage and an additional 102 damage over 9 sec. Awards 1 combo point.",
       "icon": "ability_druid_disembowel"
-    }
-  ],
-  "druid:feral_heart_of_the_wild": [
-    {
-      "name": "Bear Form",
-      "kind": "spell",
-      "source": "Druid spell",
-      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
-      "icon": "ability_racial_bearform"
-    },
-    {
-      "name": "Dire Bear Form",
-      "kind": "spell",
-      "source": "Druid spell",
-      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
-      "icon": "ability_racial_bearform"
-    },
-    {
-      "name": "Cat Form",
-      "kind": "spell",
-      "source": "Druid spell",
-      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
-      "icon": "ability_druid_catform"
     }
   ],
   "druid:feral_feral_swiftness": [
@@ -3424,7 +3405,7 @@
       "name": "Moonkin Form",
       "kind": "talent",
       "source": "Talent · Balance, row 7",
-      "description": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their spell Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "description": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
       "icon": "spell_nature_forceofnature"
     }
   ],
@@ -3507,9 +3488,9 @@
     },
     {
       "name": "Lacerate",
-      "kind": "spell",
-      "source": "Druid spell, rank 3",
-      "description": "Lacerates the enemy target, making them bleed for 75 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
+      "kind": "talent",
+      "source": "Talent · Feral Combat, row 4",
+      "description": "Lacerates the enemy target, making them bleed for 20 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
       "icon": "ability_druid_lacerate"
     }
   ],
@@ -3589,25 +3570,7 @@
       "icon": "ability_racial_bearform"
     }
   ],
-  "druid:feral_improved_shifting_power": [
-    {
-      "name": "Shifting Power",
-      "kind": "talent",
-      "source": "Talent · Feral Combat, row 4",
-      "description": "Instantly convert 55% of base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting.",
-      "icon": "spell_druid_displacement"
-    }
-  ],
-  "druid:feral_berserk": [
-    {
-      "name": "Primal Bite",
-      "kind": "talent",
-      "source": "Talent · Feral Combat, row 4",
-      "description": "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat.",
-      "icon": "ability_racial_cannibalize"
-    }
-  ],
-  "druid:restoration_furor": [
+  "druid:feral_furor": [
     {
       "name": "Bear Form",
       "kind": "spell",
@@ -3630,6 +3593,15 @@
       "icon": "ability_druid_catform"
     }
   ],
+  "druid:feral_predatory_discipline": [
+    {
+      "name": "Ferocious Bite",
+      "kind": "spell",
+      "source": "Druid spell, rank 6",
+      "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 2.7 additional damage. Damage is increased by your Attack Power.\n 1 point : 199-259 damage\n 2 points: 346-406 damage\n 3 points: 493-553 damage\n 4 points: 640-700 damage\n 5 points: 787-847 damage",
+      "icon": "ability_druid_ferociousbite"
+    }
+  ],
   "druid:restoration_naturalist": [
     {
       "name": "Healing Touch",
@@ -3637,28 +3609,12 @@
       "source": "Druid spell, rank 11",
       "description": "Heals a friendly target for 2,139 to 2,525.",
       "icon": "spell_nature_healingtouch"
-    }
-  ],
-  "druid:restoration_gift_of_the_earthmother": [
-    {
-      "name": "Rejuvenation",
-      "kind": "spell",
-      "source": "Druid spell, rank 11",
-      "description": "Heals the target for 776 over 12 sec.",
-      "icon": "spell_nature_rejuvenation"
-    },
-    {
-      "name": "Swiftmend",
-      "kind": "talent",
-      "source": "Talent · Restoration, row 4",
-      "description": "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells.",
-      "icon": "inv_relics_idolofrejuvenation"
     },
     {
       "name": "Wild Growth",
       "kind": "talent",
       "source": "Talent · Restoration, row 7",
-      "description": "Heals the target and their party for 336 over 7 sec. Party members must be within 43 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
+      "description": "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
       "icon": "ability_druid_flourish"
     }
   ],
@@ -3713,6 +3669,45 @@
     }
   ],
   "druid:restoration_improved_regrowth": [
+    {
+      "name": "Regrowth",
+      "kind": "spell",
+      "source": "Druid spell, rank 9",
+      "description": "Heals a friendly target for 965 to 1,077 and another 994 over 21 sec.",
+      "icon": "spell_nature_resistnature"
+    }
+  ],
+  "druid:restoration_heart_of_the_wild": [
+    {
+      "name": "Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into Bear Form, increasing Attack Power by 120, Armor contribution from items by 180%, and Health by 180. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Dire Bear Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into Dire Bear Form, increasing Attack Power by 180, Armor contribution from items by 360%, and Health by 1,240. Also protects the caster from Polymorph effects and allows the use of various bear abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_racial_bearform"
+    },
+    {
+      "name": "Cat Form",
+      "kind": "spell",
+      "source": "Druid spell",
+      "description": "Shapeshift into Cat Form, increasing Attack Power by 120 plus Agility. Also protects the caster from Polymorph effects and allows the use of various cat abilities.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+      "icon": "ability_druid_catform"
+    }
+  ],
+  "druid:restoration_bloom": [
+    {
+      "name": "Rejuvenation",
+      "kind": "spell",
+      "source": "Druid spell, rank 11",
+      "description": "Heals the target for 776 over 12 sec.",
+      "icon": "spell_nature_rejuvenation"
+    },
     {
       "name": "Regrowth",
       "kind": "spell",

@@ -1,6 +1,6 @@
 {
   "source": "Hand-curated for Forevercraft (not generated). Every effect, its scope (raid / group / single target) and which specs can provide it was read from this site's own data/spellbooks.json and data/talents/*.json, both synced to the WoW Forever beta client. wowtbc.gg's raid comp planner was looked at only to see which effects players track; none of its data was copied. Validated by scripts/check-raid-buffs.js (runs in prebuild).",
-  "build": "1.60.1.70630",
+  "build": "1.60.1.70630 + hotfixes 2026-10-28/30",
   "verified": "2026-10-19",
   "conventions": {
     "specs": "\"all\" = a spell every member of the class learns. A list of talent-tree names = a talent (or a spellbook spell flagged talent: true), credited only to that tree's spec.",
@@ -69,7 +69,7 @@
       "classId": "paladin",
       "label": "Blessings",
       "confidence": "confirmed",
-      "note": "Spell text: players may only have one Blessing on them per Paladin. Salvation is not a Blessing in Forever, so it isn't in this set."
+      "note": "Spell text: players may only have one Blessing on them per Paladin."
     },
     {
       "id": "paladin-auras",
@@ -209,28 +209,6 @@
       "sources": [{ "classId": "paladin", "specs": "all", "spell": "Blessing of Wisdom", "confidence": "confirmed" }]
     },
     {
-      "id": "blessing-of-light",
-      "name": "Blessing of Light",
-      "kind": "buff",
-      "scope": "raid",
-      "summary": "+400 Holy Light, +115 Flash of Light healing received",
-      "raidSpell": "Greater Blessing of Light",
-      "perCaster": "paladin-blessings",
-      "confidence": "confirmed",
-      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Blessing of Light", "confidence": "confirmed" }]
-    },
-    {
-      "id": "salvation",
-      "name": "Salvation",
-      "kind": "buff",
-      "scope": "raid",
-      "summary": "-30% threat generated",
-      "raidSpell": "Mass Salvation",
-      "confidence": "confirmed",
-      "note": "No longer a Blessing in Forever (was Blessing of Salvation), so it doesn't use up a Paladin's Blessing slot. New Revoke spell removes it.",
-      "sources": [{ "classId": "paladin", "specs": "all", "spell": "Salvation", "confidence": "confirmed" }]
-    },
-    {
       "id": "battle-shout",
       "name": "Battle Shout",
       "kind": "buff",
@@ -255,9 +233,9 @@
       "name": "Leader of the Pack",
       "kind": "buff",
       "scope": "raid",
-      "summary": "+3% melee and ranged crit",
+      "summary": "+3% crit",
       "confidence": "confirmed",
-      "note": "Party or raid within 45 yards in Forever. Party-only in Classic. Blizzard's Sept 30 deep dive made it exclusive with Moonkin Form's crit; the Oct 16 notes then split them (melee/ranged crit vs spell crit) without saying whether that still applies, so they're tracked separately.",
+      "note": "Party or raid within 45 yards in Forever. Party-only in Classic. Blizzard's Sept 30 deep dive made it exclusive with Moonkin Form's crit; the Oct 16 notes split them (melee/ranged crit vs spell crit). Since the Oct 30 hotfix both tooltips say plain Critical Strike chance again, and nothing says whether they stack, so they're tracked separately.",
       "sources": [{ "classId": "druid", "specs": ["Feral Combat"], "talent": "Leader of the Pack", "confidence": "confirmed" }]
     },
     {
@@ -265,7 +243,7 @@
       "name": "Moonkin Form",
       "kind": "buff",
       "scope": "raid",
-      "summary": "+3% spell crit",
+      "summary": "+3% crit",
       "confidence": "confirmed",
       "sources": [{ "classId": "druid", "specs": ["Balance"], "talent": "Moonkin Form", "confidence": "confirmed" }]
     },

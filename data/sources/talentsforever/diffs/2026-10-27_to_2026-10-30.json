@@ -1,0 +1,2520 @@
+{
+  "oldPath": "data/sources/talentsforever/talentsforever-2026-10-27.json",
+  "newPath": "data/sources/talentsforever/talentsforever-2026-10-30.json",
+  "oldLabel": "2026-10-27",
+  "newLabel": "2026-10-30",
+  "talents": {
+    "added": [
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "key": "Paladin|Oath of Light",
+        "talent": {
+          "name": "Oath of Light",
+          "max": 1,
+          "row": 4,
+          "col": 3,
+          "passive": false,
+          "icon": "spell_holy_greaterblessingoflight",
+          "desc": [
+            "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light, and Holy Shock on them. Only one Oath of Light may be sworn by the Paladin at any one time."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "cost": "8% of base mana | 40 yd range | Instant",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "key": "Paladin|Boundless Light",
+        "talent": {
+          "name": "Boundless Light",
+          "max": 2,
+          "row": 5,
+          "col": 3,
+          "passive": true,
+          "icon": "ability_paladin_sacredcleansing",
+          "desc": [
+            "Increases the critical strike chance of your Holy Shock spell by 15% when cast on allies not affected by your Oath of Light.",
+            "Increases the critical strike chance of your Holy Shock spell by 30% when cast on allies not affected by your Oath of Light."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "req": "Holy Shock",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "key": "Paladin|Stoicism",
+        "talent": {
+          "name": "Stoicism",
+          "max": 2,
+          "row": 5,
+          "col": 1,
+          "passive": true,
+          "icon": "spell_holy_stoicism",
+          "desc": [
+            "Reduces the duration of Stun and Charm effects on you by 10%.",
+            "Reduces the duration of Stun and Charm effects on you by 20%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "key": "Paladin|Shieldsworn",
+        "talent": {
+          "name": "Shieldsworn",
+          "max": 1,
+          "row": 7,
+          "col": 2,
+          "passive": true,
+          "icon": "spell_holy_greaterblessingofsanctuary",
+          "desc": [
+            "Reduces the cooldown of your Holy Strike ability by 4 sec. Additionally, Holy Strike now strikes with your shield, triggering your active Holy Shield and Shield Specialization talents without consuming their charges or triggering their cooldowns, and allowing you to Block spells for 6 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "req": "Holy Shield",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "key": "Paladin|Turn Evil",
+        "talent": {
+          "name": "Turn Evil",
+          "max": 2,
+          "row": 5,
+          "col": 1,
+          "passive": true,
+          "icon": "spell_holy_turnundead",
+          "desc": [
+            "Reduces the cast time of your Turn Undead spell by 0.5 sec, its cooldown by 5 sec, and allows it to affect Demons.",
+            "Reduces the cast time of your Turn Undead spell by 1.0 sec, its cooldown by 10 sec, and allows it to affect Demons."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "key": "Paladin|Unsealed Wrath",
+        "talent": {
+          "name": "Unsealed Wrath",
+          "max": 1,
+          "row": 7,
+          "col": 2,
+          "passive": true,
+          "icon": "spell_holy_blessedresillience",
+          "desc": [
+            "Your melee attacks store a copy of your active Seal for 15 sec, stacking up to 3 times. Landing an attack with a different Seal consumes all stacks, giving the stored Seal its normal chance to activate once per stack."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "req": "Repentance",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "key": "Priest|Holy Binding",
+        "talent": {
+          "name": "Holy Binding",
+          "max": 1,
+          "row": 4,
+          "col": 4,
+          "passive": true,
+          "icon": "spell_holy_blindingheal",
+          "desc": [
+            "Each time you heal a target other than yourself with Flash Heal, you are healed for 50% as much. This healing generates no threat."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "key": "Mage|Accelerant",
+        "talent": {
+          "name": "Accelerant",
+          "max": 5,
+          "row": 1,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_fire_flamebolt",
+          "desc": [
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.1 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.2 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.3 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.4 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.5 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-28",
+          "classic": {
+            "status": "changed",
+            "tree": "Fire",
+            "row": 1,
+            "col": 2,
+            "max": 5,
+            "text": "Reduces the casting time of your Fireball spell by 0.1 sec.",
+            "moved": true,
+            "renamed": "Improved Fireball"
+          }
+        }
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "key": "Mage|Precision",
+        "talent": {
+          "name": "Precision",
+          "max": 3,
+          "row": 1,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_ice_magicdamage",
+          "desc": [
+            "Improves your chance to hit with all spells by 2%.",
+            "Improves your chance to hit with all spells by 4%.",
+            "Improves your chance to hit with all spells by 6%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-28",
+          "classic": {
+            "status": "changed",
+            "tree": "Frost",
+            "row": 1,
+            "col": 3,
+            "max": 3,
+            "text": "Reduces the chance that the opponent can resist your Frost and Fire spells by 2%.",
+            "renamed": "Elemental Precision"
+          }
+        }
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "key": "Druid|Lacerate",
+        "talent": {
+          "name": "Lacerate",
+          "max": 1,
+          "row": 4,
+          "col": 2,
+          "passive": false,
+          "icon": "ability_druid_lacerate",
+          "desc": [
+            "Lacerates the enemy target, making them bleed for 20 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "req": "Savage Fury",
+          "cost": "15 Rage | Melee Range | Instant",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "key": "Druid|Predatory Discipline",
+        "talent": {
+          "name": "Predatory Discipline",
+          "max": 1,
+          "row": 4,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_druid_savagery",
+          "desc": [
+            "Your Ferocious Bite ability no longer converts extra Energy into damage, but still deals extra damage based on your excess Energy."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "key": "Druid|Bloom",
+        "talent": {
+          "name": "Bloom",
+          "max": 1,
+          "row": 3,
+          "col": 4,
+          "passive": true,
+          "icon": "inv_misc_herb_felblossom",
+          "desc": [
+            "When your Rejuvenation or Regrowth spell expires due to its duration, the target is instantly healed for an amount equal to 100% of your Spirit. If either spell expires due to being dispelled, the target is healed for 50% of your Spirit instead."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "hotfix": "2026-10-30",
+          "classic": {
+            "status": "new"
+          }
+        }
+      }
+    ],
+    "removed": [
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "key": "Paladin|Voice of Truth",
+        "talent": {
+          "name": "Voice of Truth",
+          "max": 1,
+          "row": 3,
+          "col": 1,
+          "passive": false,
+          "icon": "inv_misc_horn_03",
+          "desc": [
+            "Grants you immunity to Silence and Interrupt effects for 6 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "cost": "Instant | 3 min cooldown",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "key": "Paladin|Improved Seal of Fury",
+        "talent": {
+          "name": "Improved Seal of Fury",
+          "max": 1,
+          "row": 3,
+          "col": 1,
+          "passive": true,
+          "icon": "spell_holy_righteousnessaura",
+          "desc": [
+            "When Seal of Fury's shield is fully absorbed, restore 60 Mana, increased by 15% per level the attacker is above you, up to 45%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "key": "Paladin|One-Handed Weapon Specialization",
+        "talent": {
+          "name": "One-Handed Weapon Specialization",
+          "max": 3,
+          "row": 4,
+          "col": 2,
+          "passive": true,
+          "icon": "inv_sword_20",
+          "desc": [
+            "Increases the damage you deal with one-handed melee weapons by 3%.",
+            "Increases the damage you deal with one-handed melee weapons by 7%.",
+            "Increases the damage you deal with one-handed melee weapons by 10%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "changed",
+            "tree": "Protection",
+            "row": 6,
+            "col": 3,
+            "max": 5,
+            "text": "Increases the damage you deal with one-handed melee weapons by 2%.",
+            "moved": true
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "key": "Paladin|Instrument of Law",
+        "talent": {
+          "name": "Instrument of Law",
+          "max": 2,
+          "row": 6,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_holy_divinepurpose",
+          "desc": [
+            "Reduces the cast time of your Hammer of Wrath by 0.5 sec, and reduces all threat you generate by 10% while Righteous Fury is not active.",
+            "Reduces the cast time of your Hammer of Wrath by 1.0 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "key": "Paladin|Twist of Light",
+        "talent": {
+          "name": "Twist of Light",
+          "max": 1,
+          "row": 7,
+          "col": 2,
+          "passive": true,
+          "icon": "spell_holy_blessedresillience",
+          "desc": [
+            "Reduces the Mana cost of your Seal spells by 20%, and when you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal. Your next melee attack applies the replaced Seal's effects, consuming the Echo."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Priest",
+        "treeName": "Holy",
+        "key": "Priest|Binding Heal",
+        "talent": {
+          "name": "Binding Heal",
+          "max": 1,
+          "row": 4,
+          "col": 4,
+          "passive": false,
+          "icon": "spell_holy_blindingheal",
+          "desc": [
+            "Heals a friendly target and the caster for 236 to 284. Low threat."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "cost": "155 Mana | 40 yd range | 1.5 sec cast",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "key": "Mage|Arcane Focus",
+        "talent": {
+          "name": "Arcane Focus",
+          "max": 5,
+          "row": 1,
+          "col": 2,
+          "passive": true,
+          "icon": "spell_holy_devotion",
+          "desc": [
+            "Improves your chance to hit with Arcane spells by 1%.",
+            "Improves your chance to hit with Arcane spells by 2%.",
+            "Improves your chance to hit with Arcane spells by 3%.",
+            "Improves your chance to hit with Arcane spells by 4%.",
+            "Improves your chance to hit with Arcane spells by 5%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "changed",
+            "tree": "Arcane",
+            "row": 1,
+            "col": 2,
+            "max": 5,
+            "text": "Reduces the chance that the opponent can resist your Arcane spells by 2%."
+          }
+        }
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "key": "Mage|Improved Fireball",
+        "talent": {
+          "name": "Improved Fireball",
+          "max": 5,
+          "row": 1,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_fire_flamebolt",
+          "desc": [
+            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.1 sec.",
+            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.2 sec.",
+            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.3 sec.",
+            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.4 sec.",
+            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "changed",
+            "tree": "Fire",
+            "row": 1,
+            "col": 2,
+            "max": 5,
+            "text": "Reduces the casting time of your Fireball spell by 0.1 sec.",
+            "moved": true
+          }
+        }
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "key": "Mage|Elemental Precision",
+        "talent": {
+          "name": "Elemental Precision",
+          "max": 3,
+          "row": 1,
+          "col": 3,
+          "passive": true,
+          "icon": "spell_ice_magicdamage",
+          "desc": [
+            "Improves your chance to hit with Frost and Fire spells by 2%.",
+            "Improves your chance to hit with Frost and Fire spells by 4%.",
+            "Improves your chance to hit with Frost and Fire spells by 6%."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2,
+            3
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "changed",
+            "tree": "Frost",
+            "row": 1,
+            "col": 3,
+            "max": 3,
+            "text": "Reduces the chance that the opponent can resist your Frost and Fire spells by 2%."
+          }
+        }
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "key": "Druid|Improved Shifting Power",
+        "talent": {
+          "name": "Improved Shifting Power",
+          "max": 2,
+          "row": 5,
+          "col": 1,
+          "passive": true,
+          "icon": "ability_hunter_aspectmastery",
+          "desc": [
+            "Reduces the cooldown of your Shifting Power spell by 4 sec.",
+            "Reduces the cooldown of your Shifting Power spell by 8 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1,
+            2
+          ],
+          "src": "beta",
+          "req": "Shifting Power",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "key": "Druid|Berserk",
+        "talent": {
+          "name": "Berserk",
+          "max": 1,
+          "row": 7,
+          "col": 2,
+          "passive": false,
+          "icon": "ability_druid_berserk",
+          "desc": [
+            "Causes your Primal Bite ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "req": "Leader of the Pack",
+          "cost": "Instant | 3 min cooldown | Requires Cat Form, Bear Form, Dire Bear Form",
+          "classic": {
+            "status": "new"
+          }
+        }
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "key": "Druid|Gift of the Earthmother",
+        "talent": {
+          "name": "Gift of the Earthmother",
+          "max": 1,
+          "row": 3,
+          "col": 4,
+          "passive": true,
+          "icon": "spell_nature_spiritarmor",
+          "desc": [
+            "Reduces the global cooldown by 0.5 seconds on your Rejuvenation, Swiftmend, and Wild Growth spells."
+          ],
+          "complete": true,
+          "confirmed": [
+            1
+          ],
+          "src": "beta",
+          "classic": {
+            "status": "new"
+          }
+        }
+      }
+    ],
+    "changed": [
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Divine Strength",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Divine Intellect",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Spiritual Focus",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 35% chance to not lose casting time when you take damage.",
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 70% chance to not lose casting time when you take damage."
+            ],
+            "new": [
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 14% chance to not lose casting time when you take damage.",
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 28% chance to not lose casting time when you take damage.",
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 42% chance to not lose casting time when you take damage.",
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 56% chance to not lose casting time when you take damage.",
+              "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 70% chance to not lose casting time when you take damage."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 2,
+            "new": 5,
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 2,
+            "new": 1,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2
+            ],
+            "new": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Improved Seals",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the damage done by your Seals and Judgements by 5%.",
+              "Increases the damage done by your Seals and Judgements by 10%.",
+              "Increases the damage done by your Seals and Judgements by 15%."
+            ],
+            "new": [
+              "Increases the damage done by your Seals and Judgements by 3%.",
+              "Increases the damage done by your Seals and Judgements by 6%.",
+              "Increases the damage done by your Seals and Judgements by 9%.",
+              "Increases the damage done by your Seals and Judgements by 12%.",
+              "Increases the damage done by your Seals and Judgements by 15%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 3,
+            "new": 5,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3
+            ],
+            "new": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Unyielding Faith",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 4,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Reverence",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Allows 10% of your Mana regeneration to continue while casting.",
+              "Allows 20% of your Mana regeneration to continue while casting.",
+              "Allows 30% of your Mana regeneration to continue while casting."
+            ],
+            "new": [
+              "Allows 15% of your Mana regeneration to continue while casting.",
+              "Allows 30% of your Mana regeneration to continue while casting."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3
+            ],
+            "new": [
+              1,
+              2
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Purifying Power",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 3,
+            "new": 4,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Infusion of Light",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 1,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Illumination",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Divine Favor",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 3,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Divine Precision",
+        "fieldChanges": [
+          {
+            "field": "icon",
+            "old": "spell_holy_healingfocus",
+            "new": "spell_holy_mindsooth",
+            "trivial": false
+          },
+          {
+            "field": "desc",
+            "old": [
+              "Improves your chance to hit with Holy spells by 6%.",
+              "Improves your chance to hit with Holy spells by 12%.",
+              "Improves your chance to hit with Holy spells by 18%."
+            ],
+            "new": [
+              "Improves your chance to hit with Holy spells by 4%, and reduces the duration of Silence effects on you by 10%.",
+              "Improves your chance to hit with Holy spells by 8%, and reduces the duration of Silence effects on you by 20%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 5,
+            "new": 4,
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Holy Shock",
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3
+            ],
+            "new": [
+              1,
+              2
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Consecrated Ground",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Holy Power",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 3%, and all other spells by 1%.",
+              "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 6%, and all other spells by 2%.",
+              "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 9%, and all other spells by 3%.",
+              "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 12%, and all other spells by 4%.",
+              "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 15%, and all other spells by 5%."
+            ],
+            "new": [
+              "Increases the critical strike healing bonus of your Holy spells by 10%.",
+              "Increases the critical strike healing bonus of your Holy spells by 20%.",
+              "Increases the critical strike healing bonus of your Holy spells by 30%.",
+              "Increases the critical strike healing bonus of your Holy spells by 40%.",
+              "Increases the critical strike healing bonus of your Holy spells by 50%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Holy",
+        "name": "Light's Vigil",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. You may only have one Light's Vigil active per party."
+            ],
+            "new": [
+              "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 325 to 343. Only one Vigil per Paladin may be active in each party."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "cost",
+            "old": "730 Mana | Enemy: 20 yd range | Friendly: 40 yd range | 1.5 sec cast | 6 sec cooldown",
+            "new": "730 Mana | 40 yd range | 1.5 sec cast | 6 sec cooldown",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Toughness",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 1,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 4,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Redoubt",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 4%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 8%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 16%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 20%. Lasts 10 sec or 5 blocks."
+            ],
+            "new": [
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 6%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 12%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 18%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 24%. Lasts 10 sec or 5 blocks.",
+              "Damaging melee attacks against you have a 10% chance to increase your chance to block by 30%. Lasts 10 sec or 5 blocks."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Anticipation",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 4,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Improved Righteous Fury",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "While Righteous Fury is active, all damage taken is reduced by 2%.",
+              "While Righteous Fury is active, all damage taken is reduced by 4%.",
+              "While Righteous Fury is active, all damage taken is reduced by 6%."
+            ],
+            "new": [
+              "While Righteous Fury is active, all damage taken is reduced by 3%.",
+              "While Righteous Fury is active, all damage taken is reduced by 6%.",
+              "While Righteous Fury is active, all damage taken is reduced by 9%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 3,
+            "new": 4,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Shield Specialization",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the amount of damage absorbed by your shield by 10%, and gives your blocks a 33% chance to restore 4% of your maximum Mana. May only occur once every 3 sec.",
+              "Increases the amount of damage absorbed by your shield by 20%, and gives your blocks a 66% chance to restore 4% of your maximum Mana. May only occur once every 3 sec.",
+              "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 3 sec."
+            ],
+            "new": [
+              "Increases the amount of damage absorbed by your shield by 15%, and gives your blocks a 50% chance to restore 4% of your maximum Mana. May only occur once every 3 sec.",
+              "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 3 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3
+            ],
+            "new": [
+              1,
+              2
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Sacred Duty",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases your total Stamina by 2% and reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 30 sec.",
+              "Increases your total Stamina by 4% and reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 60 sec."
+            ],
+            "new": [
+              "Reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 30 sec, and reduces the duration of Forbearance by 5 sec.",
+              "Reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 60 sec, and reduces the duration of Forbearance by 10 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Swift Judgement",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Finishes the remaining cooldown on your Judgement ability and reduces the Mana cost of your next Judgement by 100%."
+            ],
+            "new": [
+              "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect. Does not share a cooldown with your Judgement ability."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "cost",
+            "old": "Instant | 1 min cooldown",
+            "new": "10 yd range | Instant | 1 min cooldown",
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Improved Seal of Fury",
+            "new": "Templar's Bulwark",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Improved Hammer of Justice",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Templar's Bulwark",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 5,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Iron Creed",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the threat generated by your Holy Strike ability by 5%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 2% for 6 sec.",
+              "Increases the threat generated by your Holy Strike ability by 10%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 4% for 6 sec.",
+              "Increases the threat generated by your Holy Strike ability by 15%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 6% for 6 sec.",
+              "Increases the threat generated by your Holy Strike ability by 20%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 8% for 6 sec.",
+              "Increases the threat generated by your Holy Strike ability by 25%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 10% for 6 sec."
+            ],
+            "new": [
+              "Increases the threat generated by your Holy Strike ability by 10%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 2% for 6 sec.",
+              "Increases the threat generated by your Holy Strike ability by 20%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 4% for 6 sec.",
+              "Increases the threat generated by your Holy Strike ability by 30%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 6% for 6 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 5,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "new": [
+              1,
+              2,
+              3
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Protection",
+        "name": "Holy Shield",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases chance to block by 30% for 10 sec, and deals 110 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+            ],
+            "new": [
+              "Increases chance to block by 30% for 10 sec, and deals 75 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "cost",
+            "old": "150 Mana | Instant | 10 sec cooldown | Requires Shields",
+            "new": "100 Mana | Instant | 10 sec cooldown | Requires Shields",
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 7,
+            "new": 5,
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Templar's Bulwark",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Holy Conduit",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Conviction",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Improves your chance to get a critical strike with melee attacks by 1%.",
+              "Improves your chance to get a critical strike with melee attacks by 2%.",
+              "Improves your chance to get a critical strike with melee attacks by 3%.",
+              "Improves your chance to get a critical strike with melee attacks by 4%.",
+              "Improves your chance to get a critical strike with melee attacks by 5%."
+            ],
+            "new": [
+              "Improves your chance to get a critical strike with all spells and attacks by 2%.",
+              "Improves your chance to get a critical strike with all spells and attacks by 4%.",
+              "Improves your chance to get a critical strike with all spells and attacks by 6%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 5,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "new": [
+              1,
+              2,
+              3
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Vindication",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 68, and increase your Attack Power by 1% for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 136, and increase your Attack Power by 2% for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 3% for 30 sec."
+            ],
+            "new": [
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 68 for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 136 for 30 sec.",
+              "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204 for 30 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Sanctified Judgement",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Sacred Arbiter",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Two-Handed Weapon Specialization",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the damage you deal with two-handed melee weapons by 2%.",
+              "Increases the damage you deal with two-handed melee weapons by 4%.",
+              "Increases the damage you deal with two-handed melee weapons by 6%."
+            ],
+            "new": [
+              "Increases the physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
+              "Increases the physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
+              "Increases the physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 5,
+            "new": 4,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 1,
+            "new": 4,
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "changed",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Vengeance",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Sanctified Judgement",
+            "new": "Seal of Command",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Repentance",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Paladin",
+        "treeName": "Retribution",
+        "name": "Champion of the Light",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases your spell damage by up to 20% of your Intellect.",
+              "Increases your spell damage by up to 40% of your Intellect.",
+              "Increases your spell damage by up to 60% of your Intellect."
+            ],
+            "new": [
+              "Increases your spell damage by up to 12% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.2 sec.",
+              "Increases your spell damage by up to 24% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.4 sec.",
+              "Increases your spell damage by up to 36% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.6 sec.",
+              "Increases your spell damage by up to 48% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.8 sec.",
+              "Increases your spell damage by up to 60% of your Intellect, and reduces the cast time of your Hammer of Wrath by 1.0 sec."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 3,
+            "new": 5,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3
+            ],
+            "new": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Beast Mastery",
+        "name": "Pathfinding",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 3,
+            "new": 1,
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "moved",
+            "new": "same",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Beast Mastery",
+        "name": "Improved Revive Pet",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "same",
+            "new": "moved",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Hunter",
+        "treeName": "Marksmanship",
+        "name": "Trueshot Aura",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
+            ],
+            "new": [
+              "Increases the Ranged Attack Power of party or raid members within 45 yds by 15."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Priest",
+        "treeName": "Discipline",
+        "name": "Renewed Hope",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
+              "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
+              "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
+              "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
+              "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
+            ],
+            "new": [
+              "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
+              "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
+              "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
+              "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
+              "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Improved Channeling",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Missile Barrage",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 1,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Arcane Resilience",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases your Armor by an amount equal to 25% of your Intellect.",
+              "Increases your Armor by an amount equal to 50% of your Intellect."
+            ],
+            "new": [
+              "Increases your Armor by an amount equal to 25% of your Intellect.",
+              "Increases your Armor by an amount equal to 50% of your Intellect.",
+              "Increases your Armor by an amount equal to 75% of your Intellect."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 2,
+            "new": 1,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 4,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2
+            ],
+            "new": [
+              1,
+              2,
+              3
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Arcane",
+        "name": "Arcane Blast",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application."
+            ],
+            "new": [
+              "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Improved Fire Blast",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 1,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 1,
+            "new": 4,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Incineration",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%."
+            ],
+            "new": [
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%.",
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 8%.",
+              "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 10%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 3,
+            "new": 5,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3
+            ],
+            "new": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Fire",
+        "name": "Critical Mass",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the critical strike chance of your Fire spells by 2%.",
+              "Increases the critical strike chance of your Fire spells by 4%.",
+              "Increases the critical strike chance of your Fire spells by 6%.",
+              "Increases the critical strike chance of your Fire spells by 8%.",
+              "Increases the critical strike chance of your Fire spells by 10%."
+            ],
+            "new": [
+              "Increases the critical strike chance of your Fire spells by 2%.",
+              "Increases the critical strike chance of your Fire spells by 4%.",
+              "Increases the critical strike chance of your Fire spells by 6%."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "max",
+            "old": 5,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "confirmed",
+            "old": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "new": [
+              1,
+              2,
+              3
+            ],
+            "trivial": false
+          },
+          {
+            "field": "classic.status",
+            "old": "changed",
+            "new": "same",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Ice Lance",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
+            ],
+            "new": [
+              "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "cost",
+            "old": "45 Mana | 30 yd range | Instant",
+            "new": "45 Mana | 30 yd range | Instant | 8 sec cooldown",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Arctic Reach",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the range of your Frostbolt, Frost Blast, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+              "Increases the range of your Frostbolt, Frost Blast, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
+            ],
+            "new": [
+              "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+              "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Winter's Chill",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times."
+            ],
+            "new": [
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+              "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Mage",
+        "treeName": "Frost",
+        "name": "Ice Barrier",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Shield yourself, absorbing 447 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage."
+            ],
+            "new": [
+              "Shield yourself, absorbing 447 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Warlock",
+        "treeName": "Affliction",
+        "name": "Improved Drains",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 7%.",
+              "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 13%.",
+              "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 20%."
+            ],
+            "new": [
+              "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 7%.",
+              "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 13%.",
+              "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 20%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Balance",
+        "name": "Genesis",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Increases the periodic damage and healing done by your spells and abilities by 1%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 2%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 3%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 4%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 5%."
+            ],
+            "new": [
+              "Increases the periodic damage and healing done by your spells and abilities by 2%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 4%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 6%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 8%.",
+              "Increases the periodic damage and healing done by your spells and abilities by 10%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Balance",
+        "name": "Moonkin Form",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their spell Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            ],
+            "new": [
+              "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Shifting Power",
+        "fieldChanges": [
+          {
+            "field": "cost",
+            "old": "55% of base mana | Instant | 16 sec cooldown | Requires Cat Form",
+            "new": "55% of base mana | Instant | 8 sec cooldown | Requires Cat Form",
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 4,
+            "new": 7,
+            "trivial": false
+          },
+          {
+            "field": "col",
+            "old": 1,
+            "new": 3,
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Shredding Attacks",
+            "new": "Predatory Discipline",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Primal Bite",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat."
+            ],
+            "new": [
+              "Bite the target, dealing 100% normal damage plus 42 and generating a high amount of threat."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "row",
+            "old": 4,
+            "new": 7,
+            "trivial": false
+          },
+          {
+            "field": "req",
+            "old": "Savage Fury",
+            "new": "Leader of the Pack",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Predatory Strikes",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Leader of the Pack",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the melee and ranged Critical Strike chance of all party or raid members within 45 yards by 3%."
+            ],
+            "new": [
+              "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the Critical Strike chance of all party or raid members within 45 yards by 3%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Natural Reaction",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 1,
+            "new": 4,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Feral Combat",
+        "name": "Rend and Tear",
+        "fieldChanges": [
+          {
+            "field": "col",
+            "old": 3,
+            "new": 1,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Naturalist",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Reduces the cast time of your Healing Touch spell by 0.1 sec and increases all damage you deal by 1%.",
+              "Reduces the cast time of your Healing Touch spell by 0.2 sec and increases all damage you deal by 2%.",
+              "Reduces the cast time of your Healing Touch spell by 0.3 sec and increases all damage you deal by 3%.",
+              "Reduces the cast time of your Healing Touch spell by 0.4 sec and increases all damage you deal by 4%.",
+              "Reduces the cast time of your Healing Touch spell by 0.5 sec and increases all damage you deal by 5%."
+            ],
+            "new": [
+              "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.1 sec and increases all damage you deal by 2%.",
+              "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.2 sec and increases all damage you deal by 4%.",
+              "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.3 sec and increases all damage you deal by 6%.",
+              "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.4 sec and increases all damage you deal by 8%.",
+              "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.5 sec and increases all damage you deal by 10%."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Subtlety",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 2,
+            "new": 3,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Reflection",
+        "fieldChanges": [
+          {
+            "field": "row",
+            "old": 3,
+            "new": 2,
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Swiftmend",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells."
+            ],
+            "new": [
+              "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of the consumed spell."
+            ],
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      },
+      {
+        "className": "Druid",
+        "treeName": "Restoration",
+        "name": "Wild Growth",
+        "fieldChanges": [
+          {
+            "field": "desc",
+            "old": [
+              "Heals the target and their party for 336 over 7 sec. Party members must be within 43 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+            ],
+            "new": [
+              "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+            ],
+            "trivial": false
+          },
+          {
+            "field": "cost",
+            "old": "550 Mana | 40 yd range | Instant | 6 sec cooldown",
+            "new": "550 Mana | 40 yd range | 3 sec cast | 6 sec cooldown",
+            "trivial": false
+          }
+        ],
+        "allTrivial": false
+      }
+    ],
+    "newFields": [
+      {
+        "field": "hotfix",
+        "withField": 79,
+        "total": 465,
+        "valueCounts": [
+          [
+            "\"2026-10-30\"",
+            71
+          ],
+          [
+            "\"2026-10-28\"",
+            8
+          ]
+        ]
+      }
+    ],
+    "removedArrayAdded": [
+      "Paladin|One-Handed Weapon Specialization",
+      "Mage|Arcane Focus"
+    ],
+    "removedArrayRemoved": []
+  },
+  "legacy": {
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "newFields": []
+  },
+  "spellbooks": {
+    "added": [
+      {
+        "className": "Paladin",
+        "tabName": "Holy",
+        "key": "Paladin|Holy|Oath of Light",
+        "name": "Oath of Light"
+      }
+    ],
+    "removed": [
+      {
+        "className": "Paladin",
+        "tabName": "Holy",
+        "key": "Paladin|Holy|Blessing of Light",
+        "name": "Blessing of Light"
+      },
+      {
+        "className": "Paladin",
+        "tabName": "Holy",
+        "key": "Paladin|Holy|Greater Blessing of Light",
+        "name": "Greater Blessing of Light"
+      },
+      {
+        "className": "Paladin",
+        "tabName": "Protection",
+        "key": "Paladin|Protection|Mass Salvation",
+        "name": "Mass Salvation"
+      },
+      {
+        "className": "Paladin",
+        "tabName": "Protection",
+        "key": "Paladin|Protection|Revoke",
+        "name": "Revoke"
+      },
+      {
+        "className": "Paladin",
+        "tabName": "Protection",
+        "key": "Paladin|Protection|Salvation",
+        "name": "Salvation"
+      },
+      {
+        "className": "Mage",
+        "tabName": "Frost",
+        "key": "Mage|Frost|Frost Blast",
+        "name": "Frost Blast"
+      },
+      {
+        "className": "Druid",
+        "tabName": "Feral Combat",
+        "key": "Druid|Feral Combat|Berserk",
+        "name": "Berserk"
+      }
+    ],
+    "notesChanges": []
+  },
+  "spellDesc": {
+    "added": [
+      "Paladin|Oath of Light|",
+      "Druid|Ferocious Bite|Rank 6",
+      "Druid|Lacerate|Rank 4",
+      "Druid|Lacerate|Rank 5"
+    ],
+    "removed": [
+      "Paladin|Blessing of Light|Rank 1",
+      "Paladin|Blessing of Light|Rank 2",
+      "Paladin|Blessing of Light|Rank 3",
+      "Paladin|Greater Blessing of Light|",
+      "Paladin|Mass Salvation|",
+      "Paladin|Revoke|",
+      "Paladin|Salvation|",
+      "Mage|Frost Blast|Rank 1",
+      "Mage|Frost Blast|Rank 2",
+      "Mage|Frost Blast|Rank 3",
+      "Druid|Berserk|",
+      "Druid|Primal Bite|Rank 4"
+    ],
+    "changed": [
+      "Warrior|Revenge|Rank 1",
+      "Warrior|Revenge|Rank 2",
+      "Warrior|Revenge|Rank 3",
+      "Warrior|Revenge|Rank 4",
+      "Warrior|Revenge|Rank 5",
+      "Warrior|Revenge|Rank 6",
+      "Paladin|Divine Favor|",
+      "Paladin|Light's Vigil|Rank 1",
+      "Paladin|Light's Vigil|Rank 2",
+      "Paladin|Light's Vigil|Rank 3",
+      "Paladin|Voice of Truth|",
+      "Paladin|Holy Shield|Rank 1",
+      "Paladin|Holy Shield|Rank 2",
+      "Paladin|Holy Shield|Rank 3",
+      "Paladin|Righteous Fury|",
+      "Paladin|Seal of Fury|Rank 1",
+      "Paladin|Seal of Fury|Rank 2",
+      "Paladin|Seal of Fury|Rank 3",
+      "Paladin|Seal of Fury|Rank 4",
+      "Paladin|Seal of Fury|Rank 5",
+      "Paladin|Seal of Fury|Rank 6",
+      "Paladin|Seal of Fury|Rank 7",
+      "Paladin|Swift Judgement|",
+      "Paladin|Templar's Bulwark|",
+      "Hunter|Aspect of the Hawk|Rank 1",
+      "Hunter|Aspect of the Hawk|Rank 2",
+      "Hunter|Aspect of the Hawk|Rank 3",
+      "Hunter|Aspect of the Hawk|Rank 4",
+      "Hunter|Aspect of the Hawk|Rank 5",
+      "Hunter|Trueshot Aura|Rank 1",
+      "Hunter|Trueshot Aura|Rank 2",
+      "Hunter|Trueshot Aura|Rank 3",
+      "Hunter|Trueshot Aura|Rank 4",
+      "Priest|Binding Heal|Rank 1",
+      "Priest|Shadow Word: Death|Rank 1",
+      "Priest|Shadow Word: Death|Rank 2",
+      "Priest|Shadow Word: Death|Rank 3",
+      "Priest|Shadow Word: Death|Rank 4",
+      "Mage|Arcane Blast|Rank 1",
+      "Mage|Arcane Blast|Rank 2",
+      "Mage|Arcane Blast|Rank 3",
+      "Mage|Arcane Blast|Rank 4",
+      "Mage|Arcane Blast|Rank 5",
+      "Mage|Ice Barrier|Rank 1",
+      "Mage|Ice Barrier|Rank 2",
+      "Mage|Ice Barrier|Rank 3",
+      "Mage|Ice Barrier|Rank 4",
+      "Mage|Ice Lance|Rank 1",
+      "Mage|Ice Lance|Rank 2",
+      "Mage|Ice Lance|Rank 3",
+      "Mage|Ice Lance|Rank 4",
+      "Mage|Ice Lance|Rank 5",
+      "Mage|Ice Lance|Rank 6",
+      "Druid|Moonkin Form|Shapeshift",
+      "Druid|Ferocious Bite|Rank 1",
+      "Druid|Ferocious Bite|Rank 2",
+      "Druid|Ferocious Bite|Rank 3",
+      "Druid|Ferocious Bite|Rank 4",
+      "Druid|Ferocious Bite|Rank 5",
+      "Druid|Lacerate|Rank 1",
+      "Druid|Lacerate|Rank 2",
+      "Druid|Lacerate|Rank 3",
+      "Druid|Primal Bite|Rank 1",
+      "Druid|Primal Bite|Rank 2",
+      "Druid|Primal Bite|Rank 3",
+      "Druid|Shifting Power|",
+      "Druid|Swiftmend|",
+      "Druid|Wild Growth|Rank 1",
+      "Druid|Wild Growth|Rank 2",
+      "Druid|Wild Growth|Rank 3"
+    ],
+    "newFields": []
+  },
+  "opaque": {
+    "racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_racials": {
+      "changed": false,
+      "newFields": []
+    },
+    "class_abilities": {
+      "changed": true,
+      "newFields": []
+    }
+  }
+}
