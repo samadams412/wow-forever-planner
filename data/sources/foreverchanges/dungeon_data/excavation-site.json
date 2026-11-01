@@ -50,13 +50,13 @@
       "Waist\tMail",
       "124 Armor",
       "+9 Strength",
-      "+9 Stamina",
+      "+9 Intellect",
       "Requires Level 26",
       "Sell Price: 17s 17c"
      ],
      "v": {
       "4": 9,
-      "7": 9,
+      "5": 9,
       "50": 124
      },
      "w": 1
@@ -76,16 +76,16 @@
       "Binds when picked up",
       "Feet\tCloth",
       "33 Armor",
-      "+6 Intellect",
       "+6 Spirit",
       "+9 Stamina",
       "Requires Level 26",
+      "Equip: +7 Spell Power",
       "Sell Price: 17s 23c"
      ],
      "v": {
-      "5": 6,
       "6": 6,
       "7": 9,
+      "45": 7,
       "50": 33
      },
      "w": 1
@@ -142,16 +142,14 @@
       "Binds when picked up",
       "Chest\tLeather",
       "105 Armor",
-      "+6 Agility",
-      "+13 Intellect",
-      "+6 Stamina",
+      "+9 Agility",
+      "+15 Intellect",
       "Requires Level 26",
       "Sell Price: 28s 94c"
      ],
      "v": {
-      "3": 6,
-      "5": 13,
-      "7": 6,
+      "3": 9,
+      "5": 15,
       "50": 105
      },
      "w": 1
@@ -170,16 +168,16 @@
      "x": [
       "Binds when picked up",
       "Held In Off-hand",
-      "+7 Stamina",
+      "+4 Stamina",
       "+4 Intellect",
       "Requires Level 26",
-      "Equip: +5 Spell Power",
+      "Equip: +8 Spell Power",
       "Sell Price: 23s 24c"
      ],
      "v": {
       "5": 4,
-      "7": 7,
-      "45": 5
+      "7": 4,
+      "45": 8
      },
      "w": 1
     },
@@ -252,13 +250,13 @@
       "Shoulder\tMail",
       "171 Armor",
       "+12 Stamina",
-      "+4 Spirit",
       "Requires Level 28",
+      "Equip: +4 Hit Rating",
       "Sell Price: 32s 76c"
      ],
      "v": {
-      "6": 4,
       "7": 12,
+      "31": 4,
       "50": 171
      },
      "w": 1
@@ -278,14 +276,14 @@
       "Binds when picked up",
       "Unique-Equipped",
       "Finger",
-      "+8 Stamina",
       "Requires Level 28",
-      "Equip: +2 Mana Regeneration",
+      "Equip: +6 Spell Power",
+      "Equip: +3 Mana Regeneration",
       "Sell Price: 29s 20c"
      ],
      "v": {
-      "7": 8,
-      "43": 2
+      "43": 3,
+      "45": 6
      },
      "w": 1
     },
@@ -351,6 +349,65 @@
       "\"Teaches you how to place a Rock Garden at a campsite.\"",
       "Sell Price: 3s 75c"
      ],
+     "w": 1
+    }
+   ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "items": [
+    {
+     "i": 287068,
+     "n": "Excavated Dagger",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Thrown",
+     "c": 2,
+     "u": 16,
+     "t": "new",
+     "k": "inv_weapon_shortblade_19",
+     "x": [
+      "Binds when equipped",
+      "Thrown",
+      "Damage set by hand\tSpeed 1.80",
+      "+4 Strength",
+      "+4 Agility",
+      "Requires Level 28",
+      "Sell Price: 53s 81c"
+     ],
+     "v": {
+      "3": 4,
+      "4": 4
+     },
+     "w": 1
+    },
+    {
+     "i": 286983,
+     "n": "Ancient Cleaver",
+     "q": 3,
+     "l": 33,
+     "r": 28,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 1,
+     "t": "new",
+     "k": "inv_weapon_halbard_01",
+     "x": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "80 - 120 Damage\tSpeed 3.60",
+      "(27.8 damage per second)",
+      "+12 Strength",
+      "Requires Level 28",
+      "Equip: +14 Spell Power",
+      "Sell Price: 89s 76c"
+     ],
+     "v": {
+      "4": 12,
+      "45": 14
+     },
      "w": 1
     }
    ]

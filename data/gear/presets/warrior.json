@@ -4,7 +4,7 @@
  "generatedBy": "scripts/build-gear-presets.js",
  "confidence": "estimated",
  "disclaimer": "These sets are generated from stat weights plus a few hand corrections: a starting point, not a definitive best-in-slot list. Build your own and share it.",
- "candidates": 18854,
+ "candidates": 18870,
  "variants": [
   {
    "key": "pve",
@@ -498,6 +498,10 @@
        "score": 14
       },
       {
+       "itemId": 286992,
+       "score": 12.4
+      },
+      {
        "itemId": 4107,
        "score": 11.8
       },
@@ -513,11 +517,6 @@
       },
       {
        "itemId": 15355,
-       "suffixId": 12727,
-       "score": 11.2
-      },
-      {
-       "itemId": 15560,
        "suffixId": 12727,
        "score": 11.2
       }
@@ -528,6 +527,10 @@
        "score": 14
       },
       {
+       "itemId": 286992,
+       "score": 12.4
+      },
+      {
        "itemId": 4107,
        "score": 11.8
       },
@@ -543,11 +546,6 @@
       },
       {
        "itemId": 15355,
-       "suffixId": 12727,
-       "score": 11.2
-      },
-      {
-       "itemId": 15560,
        "suffixId": 12727,
        "score": 11.2
       }
@@ -975,7 +973,7 @@
       "back": 13108,
       "chest": 7688,
       "wrist": 9428,
-      "hands": 14764,
+      "hands": 286992,
       "waist": 250556,
       "legs": 250523,
       "feet": 273042,
@@ -1023,7 +1021,7 @@
       "back": 13108,
       "chest": 7688,
       "wrist": 9428,
-      "hands": 14764,
+      "hands": 286992,
       "waist": 250556,
       "legs": 250523,
       "feet": 273042,
@@ -1422,6 +1420,10 @@
     "hands": {
      "a": [
       {
+       "itemId": 286992,
+       "score": 18
+      },
+      {
        "itemId": 14764,
        "score": 15.5
       },
@@ -1442,13 +1444,13 @@
       {
        "itemId": 720,
        "score": 14.8
-      },
-      {
-       "itemId": 273810,
-       "score": 14.7
       }
      ],
      "h": [
+      {
+       "itemId": 286992,
+       "score": 18
+      },
       {
        "itemId": 14764,
        "score": 15.5
@@ -1470,10 +1472,6 @@
       {
        "itemId": 16978,
        "score": 15
-      },
-      {
-       "itemId": 720,
-       "score": 14.8
       }
      ]
     },
@@ -2023,7 +2021,7 @@
      "a": [
       {
        "itemId": 250500,
-       "score": 29.5
+       "score": 28.3
       },
       {
        "itemId": 250499,
@@ -2050,7 +2048,7 @@
      "h": [
       {
        "itemId": 250500,
-       "score": 29.5
+       "score": 28.3
       },
       {
        "itemId": 250499,
@@ -2509,7 +2507,7 @@
        "score": 27.1
       },
       {
-       "itemId": 250495,
+       "itemId": 250523,
        "score": 26.2
       }
      ],
@@ -2535,7 +2533,7 @@
        "score": 27.1
       },
       {
-       "itemId": 250495,
+       "itemId": 250523,
        "score": 26.2
       }
      ]

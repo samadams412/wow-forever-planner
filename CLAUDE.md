@@ -333,7 +333,7 @@ Handoff: `Forevercraft-Knowledge-Base/03-Handoffs/gear-planner/2026-10-21-gear-p
   `SuffixData` its items need, so `lib/item-suffixes.ts` computes rolls in
   the browser), the usable `enchants`, the class `presets` (scores dropped)
   and `baseStats` per race at that level, so the page makes one fetch. Warrior:
-  1,519 items, 319 with suffixes, 107 enchants, 375 KB (~50 KB gzip).
+  1,529 items, 319 with suffixes, 107 enchants, 399 KB (item pull 70707).
   - **Window:** source-derived level (`gear-availability.js`, not "Requires
     Level", which 312 of Warrior's pool items lack) from 20 to the level, plus
     every item the class's presets use: the class Insignias (level 1, rank
@@ -434,10 +434,10 @@ review; per-class status is under "Presets" below.
   "N Block" line counts as `blockValue` (foreverchanges leaves it out).
   Keeps `uniqueGroup` ("Unique-Equipped: Rune of Battle (1)").
 - **Coverage:** `node scripts/report-item-stat-coverage.js` writes
-  `docs/item-stat-coverage.md`; re-run after every item pull. As of the 70374
-  catalog: 11,969 / 11,976 equipment items (99.9%) clean, 0 unparsed lines;
-  the 7 misses are "Damage set by hand" placeholder weapons and armorless
-  shirts. A test fails if any equipment item gains an unparsed line.
+  `docs/item-stat-coverage.md`; re-run after every item pull. As of the 70707
+  catalog: 12,004 / 12,022 equipment items (99.9%) clean, 0 unparsed lines;
+  the 18 misses are "Damage set by hand" placeholder weapons (now including
+  the new Forever knife family) and armorless shirts. A test fails if any equipment item gains an unparsed line.
 - **`lib/gear-slots.ts`:** `GEAR_SLOTS` is **frozen** (share codes will be
   positional over it: never reorder or remove, append only, same rule as
   `SPEC_ORDER`). `CATALOG_SLOT_TO_GEAR_SLOTS` maps `data/items.json` slot
@@ -472,8 +472,8 @@ review; per-class status is under "Presets" below.
   all 50+). Each entry has `learnedFrom` (`trainer` | `recipe`, from the
   catalog's `source`), `recipeItemIds` (the "Formula:/Pattern:/Schematic:/
   Plans:" items, matched by name) and `recipeSourced` (trainer, or a formula
-  with a known source via `gear-availability.js`). As of 70374: 61 trainer, 66
-  recipe with a sourced formula, 63 recipe whose formula has **no known source
+  with a known source via `gear-availability.js`). As of 70707: 61 trainer, 68
+  recipe with a sourced formula, 61 recipe whose formula has **no known source
   in our data** (all 38 Forever-new formulas among them, plus Classic ones such
   as Crusader), 4 with no formula item. That's a gap in foreverchanges'
   `sources.json`, not proof they're unlearnable (foreverchanges treats
@@ -490,8 +490,8 @@ review; per-class status is under "Presets" below.
   `caster` forces Weapon - Revelation; `caster-pve` pins Minor Recombobulator
   in trinket 2; groups may carry `pin`, which sits under the class's and
   variant's own), `_excludeEnchants` (never picked: the
-  three enchants with no known recipe, Minor Stats and Cloak - Defense, whose
-  values changed after our item pull), and per class `exclude`, a class-wide
+  three enchants with no known recipe; Minor Stats and Cloak - Defense were
+  dropped from it on 2026-10-31 once the item pull had their nerfed values), and per class `exclude`, a class-wide
   `pin` (the relic) and per variant `pin` / `enchants` / `alternates`. Every
   entry is `{id, reason}`; the generator fails on a missing reason or an id it
   can't place. Output `data/gear/presets/<class>.json`: per variant and side
@@ -696,15 +696,24 @@ catalog (`data/items.json`) — 100% match rate, no name-fallback needed.
 Rebuild via `node scripts/build-dungeons.js`.
 
 ### `/reference/items` and `/items/[itemId]`
-Full 21,626-item catalog (`data/items.json`, built by
+Full 21,809-item catalog (`data/items.json`, built by
 `scripts/build-items.js`), filtered/paginated **server-side**
 (`lib/items.ts`'s `queryItems`) — the catalog is never shipped to the
 client for filtering, to protect load-time. Current item pull is
-`1.60.1.70235` (2026-10-05), re-fetched 2026-10-06 from
+`1.60.1.70707` (2026-10-30), fetched 2026-10-31 from
 `https://foreverchanges.pro/items/{new,changed,same,missing,sources}.json`
-(foreverchanges republished `new.json` under the same build number with one
-added item, so 21,626 items); previous copies are in
-`data/sources/foreverchanges/items/archive/`. Individual item pages
+(21 known duplicates skipped, 21,809 items); previous copies are in
+`data/sources/foreverchanges/items/archive/`. **Item pull order:** archive the
+five files, fetch, `diff-foreverchanges-items.js`, `build-items.js`, then
+`check-dungeon-drift.js` (re-pull what drifted), `build-dungeons.js`,
+`build-professions.js`, `build-gathering-professions.js`, `build-quests.js`,
+`build-quest-dungeon-index.js`, `report-item-stat-coverage.js`,
+`build-gear-enchants.js`, `build-gear-presets.js`, `build-gear-pool.js warrior`.
+**Renamed items** must also be renamed in the hand-kept, name-only
+`data/professions/*.json` files and in `scripts/lib/profession-categories/*`
+name lists, or their recipes stop resolving (12 Leatherworking shoulders and
+an Alchemy potion on 2026-10-31). Removed items simply drop out with the feed
+(their `/items/<id>` page 404s). Individual item pages
 (`/items/[itemId]`) are **not statically generated** (no
 `generateStaticParams`) — rendered on demand. `context: "loot" | "catalog"`
 on `LootItemPill`/`ItemTooltipBody` matters: `status === "missing"` means
@@ -838,7 +847,7 @@ runtime file reads), then add the `MapLayers` key, `PoiLayerKey`,
   flight masters, towns and zone data all come from the one client-db2
   extract, `data/sources/client-db2/1.60.1.70009/` (2026-09-25). Talents,
   spellbooks and racials are synced to build 70630 plus the 28/30 Oct server
-  hotfixes (talentsforever 2026-10-30), items to 70374.
+  hotfixes (talentsforever 2026-10-30), items to 70707 (2026-10-30).
   Whether AreaPOI/TaxiNodes/Map changed since 70009 is unknown until a fresh
   wow.export extract is diffed against it.
 - **Verified 2026-10-19:** the `npm run build` trace for
@@ -911,6 +920,19 @@ image/credit conventions, and SEO metadata specifics.
   pattern that won't scale (see the standing rule above).
 
 ## Open items (carried forward)
+- **Item pull 70707 (2026-10-31), decided:** the five "Unique (5)" Firework ids
+  (288336-288340) are known duplicates of Engineering's 9312-9315/9318. The 8
+  items dropped from the feed stay dropped (we mirror it). The 46 preset slots on
+  City of Dalaran BoE drops are kept. Watch for more same-name new ids at every pull:
+  the recipe resolver is first-match-wins with `new.json` first. See
+  `Forevercraft-Knowledge-Base/03-Handoffs/data-pipeline/2026-10-31-foreverchanges-item-sync.md`.
+- **Review later (talent sync 2026-10-31, owner unsure):** (1) Blessing of
+  Light, Greater Blessing of Light, Salvation, Mass Salvation and Revoke are gone
+  from the Paladin spellbook as of the 30 Oct hotfix data, with no explanation
+  anywhere; raid comp dropped `blessing-of-light` and `salvation`. Restore them if
+  the spells come back. (2) Leader of the Pack and Moonkin Form both give plain
+  crit since 30 Oct; whether they stack is unknown, so `data/raid-buffs.json`
+  keeps them separate with no `onlyOneCounts` set.
 - **Quality colors in Light mode are low contrast (tracked, not fixed):**
   `ITEM_QUALITY_COLOR` (`lib/wow-data.ts`) is a fixed palette by design (only
   Common routes through `--quality-common`), so Uncommon `#1eff00` reads at
@@ -920,13 +942,6 @@ image/credit conventions, and SEO metadata specifics.
   need a check too. A fix belongs in the quality-color tokens (Light-mode
   variants per quality, like Common), not in one component.
 - **Gear planner data gaps (2026-10-20):** (1) `data/items.json` has no
-- **Review later (talent sync 2026-10-31, owner unsure):** (1) Blessing of
-  Light, Greater Blessing of Light, Salvation, Mass Salvation and Revoke are gone
-  from the Paladin spellbook as of the 30 Oct hotfix data, with no explanation
-  anywhere; raid comp dropped `blessing-of-light` and `salvation`. Restore them if
-  the spells come back. (2) Leader of the Pack and Moonkin Form both give plain
-  crit since 30 Oct; whether they stack is unknown, so `data/raid-buffs.json`
-  keeps them separate with no `onlyOneCounts` set.
   random-suffix items ("…of the Tiger"); foreverchanges encodes them as
   `baseId * 100000 + suffixId` and 3 of their 49 Warrior picks per faction
   are suffix items. **The suffix data and item-page list are built
@@ -934,11 +949,10 @@ image/credit conventions, and SEO metadata specifics.
   the item pool isn't built yet.** Open: the "of Eluding" effect text
   (ItemEffect 213334; needs the ItemEffect, Spell and SpellEffect exports),
   the 50 "Restored …" nested-tree items, and the 47 tree items not in our
-  catalog. (2) The
-  item catalog is build 70374, foreverchanges is on 70450: enchants such as
-  Bracer - Lesser Intellect (+5 → +3) and Cloak - Defense (60 → 30 armor)
-  were nerfed since. Refresh items, then re-run `build-gear-enchants.js` and
-  `build-gear-presets.js`.
+  catalog. (2) ~~Stale enchant values~~ done 2026-10-31: the 70707 pull has
+  Bracer - Lesser Intellect +3, Chest - Minor Stats +1, Cloak - Defense 30
+  armor; enchants and presets regenerated, and the two stale `_excludeEnchants`
+  entries were dropped (no pick changed).
 - **Raid comp: `estimated` rules still unverified** (`data/raid-buffs.json`,
   web research pass 2026-10-19, sources in each set's `evidence`). Now
   **confirmed** from Blizzard: `major-armor` (Rogue/Warlock deep dive:

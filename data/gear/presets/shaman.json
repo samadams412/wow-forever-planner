@@ -4,7 +4,7 @@
  "generatedBy": "scripts/build-gear-presets.js",
  "confidence": "estimated",
  "disclaimer": "These sets are generated from stat weights plus a few hand corrections: a starting point, not a definitive best-in-slot list. Build your own and share it.",
- "candidates": 14270,
+ "candidates": 14281,
  "variants": [
   {
    "key": "elemental",
@@ -24,14 +24,14 @@
     "a": {
      "items": {
       "head": 14200,
-      "neck": 12029,
+      "neck": 286995,
       "shoulder": 7684,
       "back": 7436,
       "chest": 7353,
       "wrist": 9428,
-      "hands": 4980,
+      "hands": 286989,
       "waist": 252522,
-      "legs": 14203,
+      "legs": 286988,
       "feet": 9845,
       "finger1": 281635,
       "finger2": 281635,
@@ -43,11 +43,9 @@
      },
      "suffixes": {
       "head": 12734,
-      "neck": 12745,
       "back": 12734,
       "chest": 12734,
       "wrist": 13055,
-      "legs": 12734,
       "feet": 12734
      },
      "enchants": {
@@ -73,14 +71,14 @@
     "h": {
      "items": {
       "head": 14200,
-      "neck": 12029,
+      "neck": 286995,
       "shoulder": 7684,
       "back": 7436,
       "chest": 7353,
       "wrist": 9428,
-      "hands": 9861,
+      "hands": 286989,
       "waist": 252522,
-      "legs": 14203,
+      "legs": 286988,
       "feet": 9845,
       "finger1": 281635,
       "finger2": 281635,
@@ -92,12 +90,9 @@
      },
      "suffixes": {
       "head": 12734,
-      "neck": 12745,
       "back": 12734,
       "chest": 12734,
       "wrist": 13055,
-      "hands": 12734,
-      "legs": 12734,
       "feet": 12734
      },
      "enchants": {
@@ -191,6 +186,10 @@
     "neck": {
      "a": [
       {
+       "itemId": 286995,
+       "score": 6.8
+      },
+      {
        "itemId": 12029,
        "suffixId": 12745,
        "score": 5.7
@@ -212,16 +211,15 @@
       {
        "itemId": 12039,
        "suffixId": 12746,
-       "score": 5.3
-      },
-      {
-       "itemId": 12019,
-       "suffixId": 12745,
        "score": 5.3
       }
      ],
      "h": [
       {
+       "itemId": 286995,
+       "score": 6.8
+      },
+      {
        "itemId": 12029,
        "suffixId": 12745,
        "score": 5.7
@@ -243,11 +241,6 @@
       {
        "itemId": 12039,
        "suffixId": 12746,
-       "score": 5.3
-      },
-      {
-       "itemId": 12019,
-       "suffixId": 12745,
        "score": 5.3
       }
      ]
@@ -341,9 +334,8 @@
        "score": 8.5
       },
       {
-       "itemId": 7460,
-       "suffixId": 12734,
-       "score": 8
+       "itemId": 286994,
+       "score": 8.2
       }
      ],
      "h": [
@@ -372,9 +364,8 @@
        "score": 8.5
       },
       {
-       "itemId": 7460,
-       "suffixId": 12734,
-       "score": 8
+       "itemId": 286994,
+       "score": 8.2
       }
      ]
     },
@@ -510,6 +501,10 @@
     "hands": {
      "a": [
       {
+       "itemId": 286989,
+       "score": 13.6
+      },
+      {
        "itemId": 4980,
        "score": 12.2
       },
@@ -532,14 +527,13 @@
        "itemId": 9861,
        "suffixId": 12760,
        "score": 11.2
-      },
-      {
-       "itemId": 15355,
-       "suffixId": 12760,
-       "score": 11.2
       }
      ],
      "h": [
+      {
+       "itemId": 286989,
+       "score": 13.6
+      },
       {
        "itemId": 9861,
        "suffixId": 12734,
@@ -563,10 +557,6 @@
       {
        "itemId": 15355,
        "suffixId": 12760,
-       "score": 11.2
-      },
-      {
-       "itemId": 7348,
        "score": 11.2
       }
      ]
@@ -635,6 +625,10 @@
     "legs": {
      "a": [
       {
+       "itemId": 286988,
+       "score": 17.7
+      },
+      {
        "itemId": 14203,
        "suffixId": 12734,
        "score": 16
@@ -656,17 +650,16 @@
       },
       {
        "itemId": 9833,
-       "suffixId": 12760,
-       "score": 15.2
-      },
-      {
-       "itemId": 15139,
        "suffixId": 12760,
        "score": 15.2
       }
      ],
      "h": [
       {
+       "itemId": 286988,
+       "score": 17.7
+      },
+      {
        "itemId": 14203,
        "suffixId": 12734,
        "score": 16
@@ -688,11 +681,6 @@
       },
       {
        "itemId": 9833,
-       "suffixId": 12760,
-       "score": 15.2
-      },
-      {
-       "itemId": 15139,
        "suffixId": 12760,
        "score": 15.2
       }
@@ -1045,7 +1033,7 @@
     "a": {
      "items": {
       "head": 252456,
-      "neck": 7746,
+      "neck": 286995,
       "shoulder": 4197,
       "back": 277206,
       "chest": 252510,
@@ -1088,7 +1076,7 @@
     "h": {
      "items": {
       "head": 252456,
-      "neck": 12029,
+      "neck": 286995,
       "shoulder": 4197,
       "back": 277206,
       "chest": 252510,
@@ -1106,7 +1094,6 @@
       "off": 4129
      },
      "suffixes": {
-      "neck": 12748,
       "wrist": 13055,
       "hands": 12745
      },
@@ -1195,6 +1182,10 @@
     "neck": {
      "a": [
       {
+       "itemId": 286995,
+       "score": 14
+      },
+      {
        "itemId": 7746,
        "score": 9.9
       },
@@ -1216,13 +1207,13 @@
       {
        "itemId": 6723,
        "score": 9
-      },
-      {
-       "itemId": 7731,
-       "score": 9
       }
      ],
      "h": [
+      {
+       "itemId": 286995,
+       "score": 14
+      },
       {
        "itemId": 12029,
        "suffixId": 12748,
@@ -1244,11 +1235,6 @@
       },
       {
        "itemId": 7731,
-       "score": 9
-      },
-      {
-       "itemId": 12029,
-       "suffixId": 12754,
        "score": 9
       }
      ]
@@ -1619,6 +1605,10 @@
        "score": 24.8
       },
       {
+       "itemId": 286988,
+       "score": 21.2
+      },
+      {
        "itemId": 252458,
        "score": 20.4
       },
@@ -1632,10 +1622,6 @@
       },
       {
        "itemId": 253987,
-       "score": 19.5
-      },
-      {
-       "itemId": 2277,
        "score": 19.5
       }
      ],
@@ -1645,6 +1631,10 @@
        "score": 24.8
       },
       {
+       "itemId": 286988,
+       "score": 21.2
+      },
+      {
        "itemId": 252458,
        "score": 20.4
       },
@@ -1658,10 +1648,6 @@
       },
       {
        "itemId": 253987,
-       "score": 19.5
-      },
-      {
-       "itemId": 2277,
        "score": 19.5
       }
      ]
@@ -2530,31 +2516,7 @@
        "score": 11.8
       },
       {
-       "itemId": 9861,
-       "suffixId": 12727,
-       "score": 11.2
-      },
-      {
-       "itemId": 15355,
-       "suffixId": 12727,
-       "score": 11.2
-      },
-      {
-       "itemId": 6408,
-       "score": 10.6
-      },
-      {
-       "itemId": 3754,
-       "score": 10.6
-      }
-     ],
-     "h": [
-      {
-       "itemId": 7348,
-       "score": 14
-      },
-      {
-       "itemId": 4107,
+       "itemId": 286989,
        "score": 11.8
       },
       {
@@ -2570,11 +2532,34 @@
       {
        "itemId": 6408,
        "score": 10.6
+      }
+     ],
+     "h": [
+      {
+       "itemId": 7348,
+       "score": 14
+      },
+      {
+       "itemId": 4107,
+       "score": 11.8
+      },
+      {
+       "itemId": 286989,
+       "score": 11.8
       },
       {
        "itemId": 9861,
-       "suffixId": 12732,
-       "score": 10
+       "suffixId": 12727,
+       "score": 11.2
+      },
+      {
+       "itemId": 15355,
+       "suffixId": 12727,
+       "score": 11.2
+      },
+      {
+       "itemId": 6408,
+       "score": 10.6
       }
      ]
     },
@@ -4501,6 +4486,10 @@
        "score": 20
       },
       {
+       "itemId": 286988,
+       "score": 19.7
+      },
+      {
        "itemId": 252503,
        "score": 17.4
       },
@@ -4510,11 +4499,6 @@
       },
       {
        "itemId": 14203,
-       "suffixId": 12749,
-       "score": 16.4
-      },
-      {
-       "itemId": 15358,
        "suffixId": 12749,
        "score": 16.4
       }
@@ -4529,6 +4513,10 @@
        "score": 20
       },
       {
+       "itemId": 286988,
+       "score": 19.7
+      },
+      {
        "itemId": 252503,
        "score": 17.4
       },
@@ -4538,11 +4526,6 @@
       },
       {
        "itemId": 14203,
-       "suffixId": 12749,
-       "score": 16.4
-      },
-      {
-       "itemId": 15358,
        "suffixId": 12749,
        "score": 16.4
       }

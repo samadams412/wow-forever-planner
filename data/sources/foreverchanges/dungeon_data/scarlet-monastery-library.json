@@ -58,8 +58,8 @@
       "Hands\tLeather",
       "71 Armor",
       "Requires Level 31",
-      "Equip: +20 Attack Power",
-      "Equip: +30 Attack Power Vs Beasts",
+      "Equip: +24 Attack Power",
+      "Equip: +21 Attack Power Vs Beasts",
       "Sell Price: 24s 6c"
      ],
      "y": [
@@ -71,9 +71,9 @@
       "Sell Price: 16s 6c"
      ],
      "v": {
-      "38": 20,
+      "38": 24,
       "50": 71,
-      "131": 30
+      "131": 21
      },
      "z": 56.34
     },
@@ -130,12 +130,39 @@
       "Requires Level 31",
       "Equip: +4 Attack Power",
       "Equip: +9 Attack Power Vs Beasts",
-      "Sell Price: 1c"
+      "Sell Price: 68s 70c"
      ],
      "v": {
       "7": 4,
       "38": 4,
       "131": 9
+     },
+     "w": 1
+    },
+    {
+     "i": 252512,
+     "n": "Brawler's Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_15",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+10 Agility",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Sell Price: 20s 56c"
+     ],
+     "v": {
+      "3": 10,
+      "7": 13,
+      "50": 84
      },
      "w": 1
     }
@@ -504,8 +531,7 @@
       "Chest\tCloth",
       "50 Armor",
       "+8 Spirit",
-      "+7 Stamina",
-      "+8 Intellect",
+      "+12 Intellect",
       "Requires Level 29",
       "Equip: +9 Spell Power",
       "Sell Price: 31s 56c"
@@ -521,9 +547,8 @@
       "Sell Price: 32s 23c"
      ],
      "v": {
-      "5": 8,
+      "5": 12,
       "6": 8,
-      "7": 7,
       "45": 9,
       "50": 50
      },
@@ -577,9 +602,21 @@
      "s": "Legs",
      "c": 4,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_pants_06",
      "x": [
+      "Binds when equipped",
+      "Legs\tLeather",
+      "105 Armor",
+      "+6 Intellect",
+      "+14 Spirit",
+      "+5 Strength",
+      "Requires Level 34",
+      "Equip: +24 Healing",
+      "Equip: +8 Spell Damage",
+      "Sell Price: 61s 26c"
+     ],
+     "y": [
       "Binds when equipped",
       "Legs\tLeather",
       "105 Armor",
@@ -592,7 +629,9 @@
      "v": {
       "4": 5,
       "5": 6,
-      "6": 19,
+      "6": 14,
+      "41": 24,
+      "42": 8,
       "50": 105
      },
      "z": 0
@@ -1188,8 +1227,7 @@
       "Two-Hand\tStaff",
       "60 - 90 Damage\tSpeed 3.10",
       "(24.2 damage per second)",
-      "+15 Intellect",
-      "+8 Stamina",
+      "+17 Stamina",
       "Requires Level 32",
       "Equip: +3 Spell Penetration",
       "Equip: +51 Arcane Spell Damage",
@@ -1207,8 +1245,7 @@
       "Sell Price: 1g 28s 74c"
      ],
      "v": {
-      "5": 15,
-      "7": 8,
+      "7": 17,
       "47": 3,
       "89": 51
      },

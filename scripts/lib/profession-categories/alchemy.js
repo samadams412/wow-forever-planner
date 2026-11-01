@@ -84,7 +84,7 @@ const ELIXIRS = [
   "Elixir of Strength", "Elixir of Greater Spirit",
   "Draught of Water Walking", "Elixir of Lesser Fortitude",
   "Greater Mageblood Elixir", "Elixir of Agility", "Elixir of Frost Power",
-  "Draught of Detect Lesser Invisibility", "Draught of Predatory Senses",
+  "Draught of Detect Lesser Invisibility", "Potion of Predatory Senses",
   "Elixir of Defense", "Greater Cleric's Elixir", "Catseye Draught",
   "Elixir of Greater Fortitude", "Draught of Greater Water Breathing",
   "Draught of Detect Undead", "Arcane Elixir", "Elixir of Greater Intellect",

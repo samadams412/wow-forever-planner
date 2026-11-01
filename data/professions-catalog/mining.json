@@ -272,7 +272,7 @@
      "type": "Metal & Stone",
      "itemClass": 7,
      "itemId": 2776,
-     "icon": "inv_ore_copper_01",
+     "icon": "inv_ore_gold_01",
      "quality": 2,
      "itemLevel": 25,
      "requiredLevel": 0,
@@ -1016,7 +1016,7 @@
      "type": "Metal & Stone",
      "itemClass": 7,
      "itemId": 2776,
-     "icon": "inv_ore_copper_01",
+     "icon": "inv_ore_gold_01",
      "quality": 2,
      "itemLevel": 25,
      "requiredLevel": 0,
@@ -1363,7 +1363,7 @@
     "requiredLevel": 0,
     "tooltip": [
      "\tMetal & Stone",
-     "Sell Price: 50s"
+     "Sell Price: 30s"
     ],
     "tooltipSynthesized": false,
     "classicTooltip": null,
@@ -1442,7 +1442,7 @@
     "requiredLevel": 0,
     "tooltip": [
      "\tMetal & Stone",
-     "Sell Price: 25s"
+     "Sell Price: 15s"
     ],
     "tooltipSynthesized": false,
     "classicTooltip": null,
@@ -1763,7 +1763,7 @@
     "maxRank": 5,
     "gate": 0,
     "prereqName": null,
-    "description": "You discover 100% more Scarce materials from Mining, Herbalism, and Skinning."
+    "description": "You are 100% more likely to discover Scarce materials from Mining, Herbalism, and Skinning."
    },
    {
     "id": "professions_working_overtime",

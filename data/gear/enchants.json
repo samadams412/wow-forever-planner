@@ -1,5 +1,5 @@
 {
- "itemsBuild": "1.60.1.70374",
+ "itemsBuild": "1.60.1.70707",
  "generatedBy": "scripts/build-gear-enchants.js",
  "enchants": [
   {
@@ -1306,13 +1306,13 @@
   {
    "id": 273496,
    "name": "Enchant Bracer - Lesser Intellect",
-   "text": "Permanently enchant a bracer so it increases the wearer's Intellect by 5.",
+   "text": "Permanently enchant a bracer so it increases the wearer's Intellect by 3.",
    "slots": [
     "Wrist"
    ],
    "types": null,
    "stats": {
-    "int": 5
+    "int": 3
    },
    "armor": 0,
    "weaponDamage": 0,
@@ -1331,17 +1331,17 @@
   {
    "id": 273497,
    "name": "Enchant Chest - Minor Stats",
-   "text": "Permanently enchant a piece of chest armor to grant +2 to all stats.",
+   "text": "Permanently enchant a piece of chest armor to grant +1 to all stats.",
    "slots": [
     "Chest"
    ],
    "types": null,
    "stats": {
-    "str": 2,
-    "agi": 2,
-    "sta": 2,
-    "int": 2,
-    "spi": 2
+    "str": 1,
+    "agi": 1,
+    "sta": 1,
+    "int": 1,
+    "spi": 1
    },
    "armor": 0,
    "weaponDamage": 0,
@@ -1385,13 +1385,13 @@
   {
    "id": 273499,
    "name": "Enchant Cloak - Defense",
-   "text": "Permanently enchant a cloak to give 60 additional armor.",
+   "text": "Permanently enchant a cloak to give 30 additional armor.",
    "slots": [
     "Back"
    ],
    "types": null,
    "stats": {},
-   "armor": 60,
+   "armor": 30,
    "weaponDamage": 0,
    "minIlvl": 0,
    "effect": null,
@@ -2477,7 +2477,7 @@
   {
    "id": 273530,
    "name": "Enchant Boots - Minor Speed",
-   "text": "Permanently enchant boots to give a slight movement speed increase.",
+   "text": "Permanently enchant boots to increase movement speed by 4%.",
    "slots": [
     "Feet"
    ],
@@ -2486,7 +2486,7 @@
    "armor": 0,
    "weaponDamage": 0,
    "minIlvl": 0,
-   "effect": "Permanently enchant boots to give a slight movement speed increase.",
+   "effect": "Permanently enchant boots to increase movement speed by 4%.",
    "profession": "Enchanting",
    "skill": 225,
    "learnedFrom": "trainer",
@@ -4793,7 +4793,7 @@
    "recipeItemIds": [
     252783
    ],
-   "recipeSourced": false,
+   "recipeSourced": true,
    "requiredLevel": 15,
    "requires": [],
    "status": "new",
@@ -4823,7 +4823,7 @@
    "recipeItemIds": [
     252784
    ],
-   "recipeSourced": false,
+   "recipeSourced": true,
    "requiredLevel": 15,
    "requires": [],
    "status": "new",
