@@ -2411,7 +2411,7 @@
                 {
                   "rank": 1,
                   "level": 14,
-                  "description": "Instantly counterattack an enemy for 20 to 24 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+                  "description": "Instantly counterattack an enemy for 20 to 24 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
                   "lines": [
                     [
                       "5 Rage",
@@ -2428,14 +2428,14 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly counterattack an enemy for 12 to 14 damage and a high amount of threat. Revenge must follow a block, dodge or parry."
                 },
                 {
                   "rank": 2,
                   "level": 24,
-                  "description": "Instantly counterattack an enemy for 31 to 37 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+                  "description": "Instantly counterattack an enemy for 31 to 37 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
                   "lines": [
                     [
                       "5 Rage",
@@ -2452,14 +2452,14 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly counterattack an enemy for 18 to 22 damage and a high amount of threat. Revenge must follow a block, dodge or parry."
                 },
                 {
                   "rank": 3,
                   "level": 34,
-                  "description": "Instantly counterattack an enemy for 43 to 53 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+                  "description": "Instantly counterattack an enemy for 43 to 53 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
                   "lines": [
                     [
                       "5 Rage",
@@ -2476,14 +2476,14 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly counterattack an enemy for 25 to 31 damage and a high amount of threat. Revenge must follow a block, dodge or parry."
                 },
                 {
                   "rank": 4,
                   "level": 44,
-                  "description": "Instantly counterattack an enemy for 73 to 91 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+                  "description": "Instantly counterattack an enemy for 73 to 91 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
                   "lines": [
                     [
                       "5 Rage",
@@ -2500,14 +2500,14 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly counterattack an enemy for 43 to 53 damage and a high amount of threat. Revenge must follow a block, dodge or parry."
                 },
                 {
                   "rank": 5,
                   "level": 54,
-                  "description": "Instantly counterattack an enemy for 109 to 133 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+                  "description": "Instantly counterattack an enemy for 109 to 133 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
                   "lines": [
                     [
                       "5 Rage",
@@ -2524,14 +2524,14 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly counterattack an enemy for 64 to 78 damage and a high amount of threat. Revenge must follow a block, dodge or parry."
                 },
                 {
                   "rank": 6,
                   "level": 60,
-                  "description": "Instantly counterattack an enemy for 138 to 168 damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
+                  "description": "Instantly counterattack an enemy for 138 to 168 plus 25% of your Attack Power damage and a high amount of threat. Revenge must follow a block, dodge or parry.",
                   "lines": [
                     [
                       "5 Rage",
@@ -2548,7 +2548,7 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly counterattack an enemy for 81 to 99 damage and a high amount of threat. Revenge must follow a block, dodge or parry."
                 }
@@ -3034,72 +3034,6 @@
           "name": "Holy",
           "spells": [
             {
-              "name": "Blessing of Light",
-              "icon": "spell_holy_prayerofhealing02",
-              "ranks": [
-                {
-                  "rank": 1,
-                  "level": 40,
-                  "description": "Places a Blessing on the friendly target, increasing the effects of Holy Light spells used on the target by up to 210 and the effect Flash of Light spells used on the target by up to 60. Lasts 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
-                  "lines": [
-                    [
-                      "85 Mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Places a Blessing on the friendly target, increasing the effects of Holy Light spells used on the target by up to 210 and the effect Flash of Light spells used on the target by up to 60. Lasts 5 min. Players may only have one Blessing on them per Paladin at any one time."
-                },
-                {
-                  "rank": 2,
-                  "level": 50,
-                  "description": "Places a Blessing on the friendly target, increasing the effects of Holy Light spells used on the target by up to 300 and the effect Flash of Light spells used on the target by up to 85. Lasts 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
-                  "lines": [
-                    [
-                      "110 Mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Places a Blessing on the friendly target, increasing the effects of Holy Light spells used on the target by up to 300 and the effect Flash of Light spells used on the target by up to 85. Lasts 5 min. Players may only have one Blessing on them per Paladin at any one time."
-                },
-                {
-                  "rank": 3,
-                  "level": 60,
-                  "description": "Places a Blessing on the friendly target, increasing the effects of Holy Light spells used on the target by up to 400 and the effect Flash of Light spells used on the target by up to 115. Lasts 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
-                  "lines": [
-                    [
-                      "135 Mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Places a Blessing on the friendly target, increasing the effects of Holy Light spells used on the target by up to 400 and the effect Flash of Light spells used on the target by up to 115. Lasts 5 min. Players may only have one Blessing on them per Paladin at any one time."
-                }
-              ]
-            },
-            {
               "name": "Blessing of Wisdom",
               "icon": "spell_holy_sealofwisdom",
               "ranks": [
@@ -3368,7 +3302,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 25,
+                  "level": 20,
                   "description": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.",
                   "lines": [
                     [
@@ -3648,36 +3582,6 @@
                   "source": "beta client 1.60.1.70630",
                   "classicStatus": "changed",
                   "classicDescription": "Heals a friendly target for 348 to 388."
-                }
-              ]
-            },
-            {
-              "name": "Greater Blessing of Light",
-              "icon": "spell_holy_greaterblessingoflight",
-              "ranks": [
-                {
-                  "rank": null,
-                  "level": 60,
-                  "description": "Gives all members of the raid or group that share the same class with the target the Greater Blessing of Light, increasing the effects of Holy Light spells used on the target by up to 400 and the effect Flash of Light spells used on the target by up to 115. Lasts 1 hour. Players may only have one Blessing on them per Paladin at any one time.",
-                  "lines": [
-                    [
-                      "260 Mana",
-                      "40 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ],
-                    [
-                      "Reagents: Symbol of Kings",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Gives all members of the raid or group that share the same class with the target the Greater Blessing of Light, increasing the effects of Holy Light spells used on the target by up to 400 and the effect Flash of Light spells used on the target by up to 115. Lasts 15 min. Players may only have one Blessing on them per Paladin at any one time."
                 }
               ]
             },
@@ -4286,15 +4190,11 @@
                 {
                   "rank": 1,
                   "level": 40,
-                  "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 to 189 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325 to 343. You may only have one Light's Vigil active per party.",
+                  "description": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 325 to 343. Only one Vigil per Paladin may be active in each party.",
                   "lines": [
                     [
-                      "",
-                      "Enemy: 20 yd range"
-                    ],
-                    [
                       "730 Mana",
-                      "Friendly: 40 yd range"
+                      "40 yd range"
                     ],
                     [
                       "1.5 sec cast",
@@ -4304,21 +4204,17 @@
                   "school": "Holy",
                   "coefficient": "42.9% of spell power (direct), 14.3% of spell power (heal)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
                   "level": 50,
-                  "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 268 to 288 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 486 to 514. You may only have one Light's Vigil active per party.",
+                  "description": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 486 to 514. Only one Vigil per Paladin may be active in each party.",
                   "lines": [
                     [
-                      "",
-                      "Enemy: 20 yd range"
-                    ],
-                    [
                       "1,000 Mana",
-                      "Friendly: 40 yd range"
+                      "40 yd range"
                     ],
                     [
                       "1.5 sec cast",
@@ -4328,21 +4224,17 @@
                   "school": "Holy",
                   "coefficient": "42.9% of spell power (direct), 14.3% of spell power (heal)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
                   "level": 60,
-                  "description": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 380 to 410 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 684 to 724. You may only have one Light's Vigil active per party.",
+                  "description": "Applies Light's Vigil to a friendly target for 30 sec. The caster's next Holy Shock on the target incurs no cooldown and heals the target and their party for 684 to 724. Only one Vigil per Paladin may be active in each party.",
                   "lines": [
                     [
-                      "",
-                      "Enemy: 20 yd range"
-                    ],
-                    [
                       "1,340 Mana",
-                      "Friendly: 40 yd range"
+                      "40 yd range"
                     ],
                     [
                       "1.5 sec cast",
@@ -4352,7 +4244,33 @@
                   "school": "Holy",
                   "coefficient": "42.9% of spell power (direct), 14.3% of spell power (heal)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
+                  "classicStatus": "new"
+                }
+              ]
+            },
+            {
+              "name": "Oath of Light",
+              "icon": "spell_holy_greaterblessingoflight",
+              "talent": true,
+              "ranks": [
+                {
+                  "rank": null,
+                  "level": 25,
+                  "description": "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light, and Holy Shock on them. Only one Oath of Light may be sworn by the Paladin at any one time.",
+                  "lines": [
+                    [
+                      "8% of base mana",
+                      "40 yd range"
+                    ],
+                    [
+                      "Instant",
+                      ""
+                    ]
+                  ],
+                  "school": "Holy",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -4936,7 +4854,6 @@
             {
               "name": "Voice of Truth",
               "icon": "inv_misc_horn_03",
-              "talent": true,
               "ranks": [
                 {
                   "rank": null,
@@ -5601,8 +5518,42 @@
               "ranks": [
                 {
                   "rank": 1,
+                  "level": 30,
+                  "description": "Increases chance to block by 30% for 10 sec, and deals 75 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+                  "lines": [
+                    [
+                      "100 Mana",
+                      ""
+                    ],
+                    [
+                      "Instant",
+                      "10 sec cooldown"
+                    ],
+                    [
+                      "Requires Shields",
+                      ""
+                    ]
+                  ],
+                  "school": "Holy",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
+                  "classicStatus": "changed",
+                  "classicDescription": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+                  "classicLines": [
+                    [
+                      "150 Mana",
+                      ""
+                    ],
+                    [
+                      "Instant",
+                      "10 sec cooldown"
+                    ]
+                  ]
+                },
+                {
+                  "rank": 2,
                   "level": 40,
-                  "description": "Increases chance to block by 30% for 10 sec, and deals 110 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+                  "description": "Increases chance to block by 30% for 10 sec, and deals 110 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat.",
                   "lines": [
                     [
                       "150 Mana",
@@ -5619,12 +5570,22 @@
                   ],
                   "school": "Holy",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
-                  "classicDescription": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+                  "classicDescription": "Increases chance to block by 30% for 10 sec, and deals 95 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+                  "classicLines": [
+                    [
+                      "195 Mana",
+                      ""
+                    ],
+                    [
+                      "Instant",
+                      "10 sec cooldown"
+                    ]
+                  ]
                 },
                 {
-                  "rank": 2,
+                  "rank": 3,
                   "level": 50,
                   "description": "Increases chance to block by 30% for 10 sec, and deals 153 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat.",
                   "lines": [
@@ -5643,15 +5604,10 @@
                   ],
                   "school": "Holy",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
-                  "classicDescription": "Increases chance to block by 30% for 10 sec, and deals 95 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
-                },
-                {
-                  "rank": 3,
-                  "level": 60,
-                  "description": "Increases chance to block by 30% for 10 sec, and deals 221 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat.",
-                  "lines": [
+                  "classicDescription": "Increases chance to block by 30% for 10 sec, and deals 130 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+                  "classicLines": [
                     [
                       "240 Mana",
                       ""
@@ -5659,73 +5615,8 @@
                     [
                       "Instant",
                       "10 sec cooldown"
-                    ],
-                    [
-                      "Requires Shields",
-                      ""
                     ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Increases chance to block by 30% for 10 sec, and deals 130 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
-                }
-              ]
-            },
-            {
-              "name": "Mass Salvation",
-              "icon": "spell_holy_greaterblessingofsalvation",
-              "ranks": [
-                {
-                  "rank": null,
-                  "level": 60,
-                  "description": "Gives all members of the raid or group that share the same class with the target a reduction to all threat generated by 30% for 1 hour.",
-                  "lines": [
-                    [
-                      "16% of base mana",
-                      "40 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ],
-                    [
-                      "Reagents: Symbol of Kings",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Gives all members of the raid or group that share the same class with the target the Greater Blessing of Salvation, reducing the amount of all threat generated by 30% for 15 min. Players may only have one Blessing on them per Paladin at any one time.",
-                  "renamedFrom": "Greater Blessing of Salvation"
-                }
-              ]
-            },
-            {
-              "name": "Revoke",
-              "icon": "spell_holy_prayerofmendingtga",
-              "ranks": [
-                {
-                  "rank": null,
-                  "level": 26,
-                  "description": "Remove target party or raid member's Salvation or Mass Salvation.",
-                  "lines": [
-                    [
-                      "",
-                      "40 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
+                  ]
                 }
               ]
             },
@@ -5735,8 +5626,8 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 16,
-                  "description": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min.",
+                  "level": 10,
+                  "description": "Increases all threat generated by 33%, and all threat generated by your Holy attacks by an additional 90%. Lasts 30 min.",
                   "lines": [
                     [
                       "30% of base mana",
@@ -5749,36 +5640,9 @@
                   ],
                   "school": "Holy",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Increases the threat generated by your Holy attacks by 60%. Lasts 30 min."
-                }
-              ]
-            },
-            {
-              "name": "Salvation",
-              "icon": "spell_holy_sealofsalvation",
-              "ranks": [
-                {
-                  "rank": null,
-                  "level": 26,
-                  "description": "Reduces all threat generated by target party member by 30% for 1 hour.",
-                  "lines": [
-                    [
-                      "8% of base mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "Instant",
-                      ""
-                    ]
-                  ],
-                  "school": "Holy",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "changed",
-                  "classicDescription": "Places a Blessing on the party member, reducing the amount of all threat generated by 30% for 5 min. Players may only have one Blessing on them per Paladin at any one time.",
-                  "renamedFrom": "Blessing of Salvation"
                 }
               ]
             },
@@ -5789,7 +5653,7 @@
                 {
                   "rank": 1,
                   "level": 10,
-                  "description": "Fills you with divine fury for 30 sec, causing melee attacks to deal an additional 6 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 32 to 34 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills you with divine fury for 30 sec, causing melee attacks to deal an additional 6 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 32 to 34 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "40 Mana",
@@ -5803,13 +5667,13 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
                   "level": 18,
-                  "description": "Fills you with divine fury for 30 sec, causing melee attacks to inflict an additional 9 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 47 to 51 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills you with divine fury for 30 sec, causing melee attacks to inflict an additional 9 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 47 to 51 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "60 Mana",
@@ -5823,13 +5687,13 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
                   "level": 26,
-                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 14 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 66 to 72 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 14 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 66 to 72 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "90 Mana",
@@ -5843,13 +5707,13 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 4,
                   "level": 34,
-                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 19 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 86 to 94 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 19 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 86 to 94 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "120 Mana",
@@ -5863,13 +5727,13 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 5,
                   "level": 42,
-                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 25 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 111 to 121 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 25 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 111 to 121 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "140 Mana",
@@ -5883,13 +5747,13 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 6,
                   "level": 50,
-                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 32 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 140 to 150 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 32 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 140 to 150 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "170 Mana",
@@ -5903,13 +5767,13 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 7,
                   "level": 58,
-                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 153 to 167 Holy damage to an enemy and taunts the target to attack you for 4 sec.",
+                  "description": "Fills the Paladin with divine fury for 30 sec, causing melee attacks to deal an additional 35 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time.\n\nUnleashing this Seal's energy inflicts 153 to 167 Holy damage to an enemy and taunts the target to attack you for 3 sec.",
                   "lines": [
                     [
                       "200 Mana",
@@ -5923,7 +5787,7 @@
                   "school": "Holy",
                   "coefficient": "42.9% and 10% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -6015,8 +5879,12 @@
                 {
                   "rank": null,
                   "level": 25,
-                  "description": "Finishes the remaining cooldown on your Judgement ability and reduces the Mana cost of your next Judgement by 100%.",
+                  "description": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect. Does not share a cooldown with your Judgement ability.",
                   "lines": [
+                    [
+                      "",
+                      "10 yd range"
+                    ],
                     [
                       "Instant",
                       "1 min cooldown"
@@ -6024,7 +5892,7 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -6036,7 +5904,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 30,
+                  "level": 20,
                   "description": "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active.",
                   "lines": [
                     [
@@ -6051,7 +5919,8 @@
                   "school": "Holy",
                   "confirmed": true,
                   "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
+                  "classicStatus": "new",
+                  "note": "Row 3 of Protection opens at level 20 (15 with the Legacy perk Talented at 5/5), so that is when the talent can give it. The game files still put the spell itself at level 30."
                 }
               ]
             }
@@ -6952,7 +6821,7 @@
                 {
                   "rank": 1,
                   "level": 10,
-                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 20. Only one Aspect can be active at a time.",
+                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 15. Only one Aspect can be active at a time.",
                   "lines": [
                     [
                       "20 Mana",
@@ -6965,13 +6834,14 @@
                   ],
                   "school": "Nature",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "same"
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
+                  "classicStatus": "changed",
+                  "classicDescription": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 20. Only one Aspect can be active at a time."
                 },
                 {
                   "rank": 2,
                   "level": 18,
-                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 35. Only one Aspect can be active at a time.",
+                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 22. Only one Aspect can be active at a time.",
                   "lines": [
                     [
                       "35 Mana",
@@ -6984,13 +6854,14 @@
                   ],
                   "school": "Nature",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "same"
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
+                  "classicStatus": "changed",
+                  "classicDescription": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 35. Only one Aspect can be active at a time."
                 },
                 {
                   "rank": 3,
                   "level": 28,
-                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 50. Only one Aspect can be active at a time.",
+                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 30. Only one Aspect can be active at a time.",
                   "lines": [
                     [
                       "50 Mana",
@@ -7003,13 +6874,14 @@
                   ],
                   "school": "Nature",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "same"
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
+                  "classicStatus": "changed",
+                  "classicDescription": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 50. Only one Aspect can be active at a time."
                 },
                 {
                   "rank": 4,
                   "level": 38,
-                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 70. Only one Aspect can be active at a time.",
+                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 38. Only one Aspect can be active at a time.",
                   "lines": [
                     [
                       "70 Mana",
@@ -7022,13 +6894,14 @@
                   ],
                   "school": "Nature",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "same"
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
+                  "classicStatus": "changed",
+                  "classicDescription": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 70. Only one Aspect can be active at a time."
                 },
                 {
                   "rank": 5,
                   "level": 48,
-                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 90. Only one Aspect can be active at a time.",
+                  "description": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 47. Only one Aspect can be active at a time.",
                   "lines": [
                     [
                       "90 Mana",
@@ -7041,8 +6914,9 @@
                   ],
                   "school": "Nature",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "same"
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
+                  "classicStatus": "changed",
+                  "classicDescription": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 90. Only one Aspect can be active at a time."
                 },
                 {
                   "rank": 6,
@@ -8803,7 +8677,7 @@
                 {
                   "rank": 1,
                   "level": 25,
-                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yds by 30.",
+                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yds by 15.",
                   "lines": [
                     [
                       "180 Mana",
@@ -8816,14 +8690,14 @@
                   ],
                   "school": "Arcane",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
                   "classicStatus": "new",
                   "classicNote": "New in Forever. A new low rank. Classic's Trueshot Aura began at level 40, which is Forever's rank 3."
                 },
                 {
                   "rank": 2,
                   "level": 32,
-                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yds by 40.",
+                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yds by 22.",
                   "lines": [
                     [
                       "245 Mana",
@@ -8836,14 +8710,14 @@
                   ],
                   "school": "Arcane",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
                   "classicStatus": "new",
                   "classicNote": "New in Forever. A new low rank. Classic's Trueshot Aura began at level 40, which is Forever's rank 3."
                 },
                 {
                   "rank": 3,
                   "level": 40,
-                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yards by 50. Lasts 30 min.",
+                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yards by 30. Lasts 30 min.",
                   "lines": [
                     [
                       "325 Mana",
@@ -8856,14 +8730,14 @@
                   ],
                   "school": "Arcane",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
                   "classicStatus": "changed",
                   "classicDescription": "Increases the attack power of party members within 45 yards by 50. Lasts 30 min."
                 },
                 {
                   "rank": 4,
                   "level": 50,
-                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yards by 75. Lasts 30 min.",
+                  "description": "Increases the Ranged Attack Power of party or raid members within 45 yards by 40. Lasts 30 min.",
                   "lines": [
                     [
                       "425 Mana",
@@ -8876,7 +8750,7 @@
                   ],
                   "school": "Arcane",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-28",
                   "classicStatus": "changed",
                   "classicDescription": "Increases the attack power of party members within 45 yards by 75. Lasts 30 min."
                 },
@@ -18242,7 +18116,6 @@
             {
               "name": "Binding Heal",
               "icon": "spell_holy_blindingheal",
-              "talent": true,
               "ranks": [
                 {
                   "rank": 1,
@@ -21591,7 +21464,7 @@
                 {
                   "rank": 1,
                   "level": 32,
-                  "description": "A word of dark binding that inflicts 293 to 311 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+                  "description": "A word of dark binding that inflicts 293 to 311 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 30% of your maximum health.",
                   "lines": [
                     [
                       "175 Mana",
@@ -21605,13 +21478,13 @@
                   "school": "Shadow",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
                   "level": 40,
-                  "description": "A word of dark binding that inflicts 368 to 390 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+                  "description": "A word of dark binding that inflicts 368 to 390 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 30% of your maximum health.",
                   "lines": [
                     [
                       "205 Mana",
@@ -21625,13 +21498,13 @@
                   "school": "Shadow",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
                   "level": 48,
-                  "description": "A word of dark binding that inflicts 402 to 426 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+                  "description": "A word of dark binding that inflicts 402 to 426 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 30% of your maximum health.",
                   "lines": [
                     [
                       "250 Mana",
@@ -21645,13 +21518,13 @@
                   "school": "Shadow",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 4,
                   "level": 56,
-                  "description": "A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+                  "description": "A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 30% of your maximum health.",
                   "lines": [
                     [
                       "340 Mana",
@@ -21665,7 +21538,7 @@
                   "school": "Shadow",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -27092,7 +26965,7 @@
                 {
                   "rank": 1,
                   "level": 20,
-                  "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+                  "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
                   "lines": [
                     [
                       "15% of base mana",
@@ -27106,13 +26979,13 @@
                   "school": "Arcane",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
                   "level": 30,
-                  "description": "Blasts the target with energy, dealing 78 to 90 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+                  "description": "Blasts the target with energy, dealing 78 to 90 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
                   "lines": [
                     [
                       "15% of base mana",
@@ -27126,13 +26999,13 @@
                   "school": "Arcane",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
                   "level": 40,
-                  "description": "Blasts the target with energy, dealing 101 to 117 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+                  "description": "Blasts the target with energy, dealing 101 to 117 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
                   "lines": [
                     [
                       "15% of base mana",
@@ -27146,13 +27019,13 @@
                   "school": "Arcane",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 4,
                   "level": 50,
-                  "description": "Blasts the target with energy, dealing 165 to 191 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+                  "description": "Blasts the target with energy, dealing 165 to 191 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
                   "lines": [
                     [
                       "15% of base mana",
@@ -27166,13 +27039,13 @@
                   "school": "Arcane",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 5,
                   "level": 60,
-                  "description": "Blasts the target with energy, dealing 218 to 254 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application.",
+                  "description": "Blasts the target with energy, dealing 218 to 254 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
                   "lines": [
                     [
                       "15% of base mana",
@@ -27186,7 +27059,7 @@
                   "school": "Arcane",
                   "coefficient": "42.9% of spell power (direct)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new",
                   "classicNote": "New in Forever. Classic Era had no Arcane Blast; Season of Discovery had a rune with this name."
                 }
@@ -30686,72 +30559,6 @@
               ]
             },
             {
-              "name": "Frost Blast",
-              "icon": "spell_ice_magicdamage",
-              "ranks": [
-                {
-                  "rank": 1,
-                  "level": 24,
-                  "description": "Quickly launch a weak blast of frost at the enemy, causing 28 to 30 Frost damage and slowing movement speed by 40% for 9 sec.",
-                  "lines": [
-                    [
-                      "40 Mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "1.5 sec cast",
-                      ""
-                    ]
-                  ],
-                  "school": "Frost",
-                  "coefficient": "27.1% of spell power (direct)",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
-                },
-                {
-                  "rank": 2,
-                  "level": 36,
-                  "description": "Quickly launch a weak blast of frost at the enemy, causing 48 to 52 Frost damage and slowing movement speed by 40% for 9 sec.",
-                  "lines": [
-                    [
-                      "65 Mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "1.5 sec cast",
-                      ""
-                    ]
-                  ],
-                  "school": "Frost",
-                  "coefficient": "27.1% of spell power (direct)",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
-                },
-                {
-                  "rank": 3,
-                  "level": 48,
-                  "description": "Quickly launch a weak blast of frost at the enemy, causing 80 to 88 Frost damage and slowing movement speed by 40% for 9 sec.",
-                  "lines": [
-                    [
-                      "90 Mana",
-                      "30 yd range"
-                    ],
-                    [
-                      "1.5 sec cast",
-                      ""
-                    ]
-                  ],
-                  "school": "Frost",
-                  "coefficient": "27.1% of spell power (direct)",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
-                }
-              ]
-            },
-            {
               "name": "Frost Nova",
               "icon": "spell_frost_frostnova",
               "ranks": [
@@ -31297,7 +31104,7 @@
                 {
                   "rank": 1,
                   "level": 40,
-                  "description": "Shield yourself, absorbing 447 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage.",
+                  "description": "Shield yourself, absorbing 447 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage.",
                   "lines": [
                     [
                       "305 Mana",
@@ -31310,14 +31117,14 @@
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly shields you, absorbing 454 damage. Lasts 1 min. While the shield holds, spells will not be interrupted."
                 },
                 {
                   "rank": 2,
                   "level": 46,
-                  "description": "Shield yourself, absorbing 561 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage.",
+                  "description": "Shield yourself, absorbing 561 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage.",
                   "lines": [
                     [
                       "360 Mana",
@@ -31330,14 +31137,14 @@
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly shields you, absorbing 568 damage. Lasts 1 min. While the shield holds, spells will not be interrupted."
                 },
                 {
                   "rank": 3,
                   "level": 52,
-                  "description": "Shield yourself, absorbing 692 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage.",
+                  "description": "Shield yourself, absorbing 692 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage.",
                   "lines": [
                     [
                       "420 Mana",
@@ -31350,14 +31157,14 @@
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly shields you, absorbing 699 damage. Lasts 1 min. While the shield holds, spells will not be interrupted."
                 },
                 {
                   "rank": 4,
                   "level": 58,
-                  "description": "Shield yourself, absorbing 819 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage.",
+                  "description": "Shield yourself, absorbing 819 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage.",
                   "lines": [
                     [
                       "480 Mana",
@@ -31370,7 +31177,7 @@
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Instantly shields you, absorbing 826 damage. Lasts 1 min. While the shield holds, spells will not be interrupted."
                 }
@@ -31410,7 +31217,7 @@
                 {
                   "rank": 1,
                   "level": 20,
-                  "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+                  "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
                   "lines": [
                     [
                       "45 Mana",
@@ -31418,18 +31225,18 @@
                     ],
                     [
                       "Instant",
-                      ""
+                      "8 sec cooldown"
                     ]
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
                   "level": 28,
-                  "description": "Deals 34 to 40 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+                  "description": "Deals 34 to 40 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
                   "lines": [
                     [
                       "55 Mana",
@@ -31437,18 +31244,18 @@
                     ],
                     [
                       "Instant",
-                      ""
+                      "8 sec cooldown"
                     ]
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
                   "level": 34,
-                  "description": "Deals 44 to 52 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+                  "description": "Deals 44 to 52 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
                   "lines": [
                     [
                       "70 Mana",
@@ -31456,18 +31263,18 @@
                     ],
                     [
                       "Instant",
-                      ""
+                      "8 sec cooldown"
                     ]
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 4,
                   "level": 42,
-                  "description": "Deals 76 to 90 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+                  "description": "Deals 76 to 90 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
                   "lines": [
                     [
                       "105 Mana",
@@ -31475,18 +31282,18 @@
                     ],
                     [
                       "Instant",
-                      ""
+                      "8 sec cooldown"
                     ]
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 5,
                   "level": 48,
-                  "description": "Deals 95 to 111 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+                  "description": "Deals 95 to 111 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
                   "lines": [
                     [
                       "120 Mana",
@@ -31494,18 +31301,18 @@
                     ],
                     [
                       "Instant",
-                      ""
+                      "8 sec cooldown"
                     ]
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 6,
                   "level": 56,
-                  "description": "Deals 136 to 160 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets.",
+                  "description": "Deals 136 to 160 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
                   "lines": [
                     [
                       "160 Mana",
@@ -31513,12 +31320,12 @@
                     ],
                     [
                       "Instant",
-                      ""
+                      "8 sec cooldown"
                     ]
                   ],
                   "school": "Frost",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -38225,7 +38032,7 @@
                   "rank": null,
                   "variant": "Shapeshift",
                   "level": 40,
-                  "description": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their spell Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+                  "description": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
                   "lines": [
                     [
                       "35% of base mana",
@@ -38238,7 +38045,7 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
                 }
@@ -39212,32 +39019,6 @@
               ]
             },
             {
-              "name": "Berserk",
-              "icon": "ability_druid_berserk",
-              "talent": true,
-              "ranks": [
-                {
-                  "rank": null,
-                  "level": 40,
-                  "description": "Causes your Primal Bite ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec.",
-                  "lines": [
-                    [
-                      "Instant",
-                      "3 min cooldown"
-                    ],
-                    [
-                      "Requires Cat Form, Bear Form, Dire Bear Form",
-                      ""
-                    ]
-                  ],
-                  "school": "Physical",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
-                }
-              ]
-            },
-            {
               "name": "Cat Form",
               "icon": "ability_druid_catform",
               "ranks": [
@@ -39779,6 +39560,33 @@
               "ranks": [
                 {
                   "rank": 1,
+                  "level": 24,
+                  "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 0.6 additional damage. Damage is increased by your Attack Power.\n 1 point : 33-43 damage\n 2 points: 57-67 damage\n 3 points: 81-91 damage\n 4 points: 105-115 damage\n 5 points: 129-139 damage",
+                  "lines": [
+                    [
+                      "35 Energy",
+                      "Melee Range"
+                    ],
+                    [
+                      "1 to 5 Combo Points",
+                      ""
+                    ],
+                    [
+                      "Instant",
+                      ""
+                    ],
+                    [
+                      "Requires Cat Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
+                  "classicStatus": "new"
+                },
+                {
+                  "rank": 2,
                   "level": 32,
                   "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 1.0 additional damage. Damage is increased by your Attack Power.\n 1 point : 50-66 damage\n 2 points: 86-102 damage\n 3 points: 122-138 damage\n 4 points: 158-174 damage\n 5 points: 194-210 damage",
                   "lines": [
@@ -39805,7 +39613,7 @@
                   "classicStatus": "same"
                 },
                 {
-                  "rank": 2,
+                  "rank": 3,
                   "level": 40,
                   "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 1.5 additional damage. Damage is increased by your Attack Power.\n 1 point : 79-103 damage\n 2 points: 138-162 damage\n 3 points: 197-221 damage\n 4 points: 256-280 damage\n 5 points: 315-339 damage",
                   "lines": [
@@ -39832,7 +39640,7 @@
                   "classicStatus": "same"
                 },
                 {
-                  "rank": 3,
+                  "rank": 4,
                   "level": 48,
                   "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 2.0 additional damage. Damage is increased by your Attack Power.\n 1 point : 122-162 damage\n 2 points: 214-254 damage\n 3 points: 306-346 damage\n 4 points: 398-438 damage\n 5 points: 490-530 damage",
                   "lines": [
@@ -39859,7 +39667,7 @@
                   "classicStatus": "same"
                 },
                 {
-                  "rank": 4,
+                  "rank": 5,
                   "level": 56,
                   "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 2.5 additional damage. Damage is increased by your Attack Power.\n 1 point : 173-223 damage\n 2 points: 301-351 damage\n 3 points: 429-479 damage\n 4 points: 557-607 damage\n 5 points: 685-735 damage",
                   "lines": [
@@ -39886,7 +39694,7 @@
                   "classicStatus": "same"
                 },
                 {
-                  "rank": 5,
+                  "rank": 6,
                   "level": 60,
                   "description": "Finishing move that causes damage per combo point and converts each extra point of energy into 2.7 additional damage. Damage is increased by your Attack Power.\n 1 point : 199-259 damage\n 2 points: 346-406 damage\n 3 points: 493-553 damage\n 4 points: 640-700 damage\n 5 points: 787-847 damage",
                   "lines": [
@@ -39986,9 +39794,56 @@
             {
               "name": "Lacerate",
               "icon": "ability_druid_lacerate",
+              "talent": true,
               "ranks": [
                 {
                   "rank": 1,
+                  "level": 25,
+                  "description": "Lacerates the enemy target, making them bleed for 20 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
+                  "lines": [
+                    [
+                      "15 Rage",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      ""
+                    ],
+                    [
+                      "Requires Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
+                  "classicStatus": "new"
+                },
+                {
+                  "rank": 2,
+                  "level": 34,
+                  "description": "Lacerates the enemy target, making them bleed for 30 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
+                  "lines": [
+                    [
+                      "15 Rage",
+                      "Melee Range"
+                    ],
+                    [
+                      "Instant",
+                      ""
+                    ],
+                    [
+                      "Requires Bear Form, Dire Bear Form",
+                      ""
+                    ]
+                  ],
+                  "school": "Physical",
+                  "confirmed": true,
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
+                  "classicStatus": "new"
+                },
+                {
+                  "rank": 3,
                   "level": 42,
                   "description": "Lacerates the enemy target, making them bleed for 50 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
                   "lines": [
@@ -40011,7 +39866,7 @@
                   "classicStatus": "new"
                 },
                 {
-                  "rank": 2,
+                  "rank": 4,
                   "level": 50,
                   "description": "Lacerates the enemy target, making them bleed for 60 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
                   "lines": [
@@ -40034,7 +39889,7 @@
                   "classicStatus": "new"
                 },
                 {
-                  "rank": 3,
+                  "rank": 5,
                   "level": 58,
                   "description": "Lacerates the enemy target, making them bleed for 75 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
                   "lines": [
@@ -40307,8 +40162,8 @@
               "ranks": [
                 {
                   "rank": 1,
-                  "level": 25,
-                  "description": "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat.",
+                  "level": 40,
+                  "description": "Bite the target, dealing 100% normal damage plus 42 and generating a high amount of threat.",
                   "lines": [
                     [
                       "20 Rage",
@@ -40325,13 +40180,13 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
-                  "level": 36,
-                  "description": "Bite the target, dealing 100% normal damage plus 38 and generating a high amount of threat.",
+                  "level": 50,
+                  "description": "Bite the target, dealing 100% normal damage plus 62 and generating a high amount of threat.",
                   "lines": [
                     [
                       "20 Rage",
@@ -40348,34 +40203,11 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
-                  "level": 48,
-                  "description": "Bite the target, dealing 100% normal damage plus 59 and generating a high amount of threat.",
-                  "lines": [
-                    [
-                      "20 Rage",
-                      "Melee Range"
-                    ],
-                    [
-                      "Instant",
-                      "6 sec cooldown"
-                    ],
-                    [
-                      "Requires Bear Form, Dire Bear Form",
-                      ""
-                    ]
-                  ],
-                  "school": "Physical",
-                  "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
-                  "classicStatus": "new"
-                },
-                {
-                  "rank": 4,
                   "level": 60,
                   "description": "Bite the target, dealing 100% normal damage plus 77 and generating a high amount of threat.",
                   "lines": [
@@ -40394,7 +40226,7 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -40843,7 +40675,7 @@
               "ranks": [
                 {
                   "rank": null,
-                  "level": 25,
+                  "level": 40,
                   "description": "Instantly convert 55% of base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting.",
                   "lines": [
                     [
@@ -40852,7 +40684,7 @@
                     ],
                     [
                       "Instant",
-                      "16 sec cooldown"
+                      "8 sec cooldown"
                     ],
                     [
                       "Requires Cat Form",
@@ -40861,7 +40693,7 @@
                   ],
                   "school": "Physical",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]
@@ -42613,7 +42445,7 @@
                 {
                   "rank": null,
                   "level": 25,
-                  "description": "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells.",
+                  "description": "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of the consumed spell.",
                   "lines": [
                     [
                       "20% of base mana",
@@ -42626,7 +42458,7 @@
                   ],
                   "school": "Nature",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "changed",
                   "classicDescription": "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
                 }
@@ -42726,61 +42558,61 @@
                 {
                   "rank": 1,
                   "level": 40,
-                  "description": "Heals the target and their party for 336 over 7 sec. Party members must be within 43 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
+                  "description": "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
                   "lines": [
                     [
                       "550 Mana",
                       "40 yd range"
                     ],
                     [
-                      "Instant",
+                      "3 sec cast",
                       "6 sec cooldown"
                     ]
                   ],
                   "school": "Nature",
                   "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 2,
                   "level": 50,
-                  "description": "Heals the target and their party for 490 over 7 sec. Party members must be within 43 yds of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
+                  "description": "Heals the target and their party for 490 over 7 sec. Party members must be within 43.5 yds of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
                   "lines": [
                     [
                       "755 Mana",
                       "40 yd range"
                     ],
                     [
-                      "Instant",
+                      "3 sec cast",
                       "6 sec cooldown"
                     ]
                   ],
                   "school": "Nature",
                   "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 },
                 {
                   "rank": 3,
                   "level": 60,
-                  "description": "Heals the target and their party for 679 over 7 sec. Party members must be within 43 yds of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
+                  "description": "Heals the target and their party for 679 over 7 sec. Party members must be within 43.5 yds of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
                   "lines": [
                     [
                       "1,050 Mana",
                       "40 yd range"
                     ],
                     [
-                      "Instant",
+                      "3 sec cast",
                       "6 sec cooldown"
                     ]
                   ],
                   "school": "Nature",
                   "coefficient": "3.3% of spell power (per tick)",
                   "confirmed": true,
-                  "source": "beta client 1.60.1.70630",
+                  "source": "beta client 1.60.1.70630, server hotfix 2026-10-30",
                   "classicStatus": "new"
                 }
               ]

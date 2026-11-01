@@ -455,6 +455,71 @@
      "description": "He drops his threat and changes target during the fight. Damage dealers, slow down when the tank loses him. Tank, take him back at once."
     }
    ]
+  },
+  {
+   "name": "Trash mobs",
+   "kind": "trash",
+   "level": null,
+   "portraitUrl": null,
+   "items": [
+    {
+     "name": "Excavated Dagger",
+     "slot": "Thrown",
+     "type": "Speed 1.80",
+     "itemClass": 2,
+     "itemId": 287068,
+     "icon": "inv_weapon_shortblade_19",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when equipped",
+      "Thrown",
+      "Damage set by hand\tSpeed 1.80",
+      "+4 Strength",
+      "+4 Agility",
+      "Requires Level 28",
+      "Sell Price: 53s 81c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Ancient Cleaver",
+     "slot": "Two-Hand",
+     "type": "Axe",
+     "itemClass": 2,
+     "itemId": 286983,
+     "icon": "inv_weapon_halbard_01",
+     "quality": 3,
+     "itemLevel": 33,
+     "requiredLevel": 28,
+     "tooltip": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "80 - 120 Damage\tSpeed 3.60",
+      "(27.8 damage per second)",
+      "+12 Strength",
+      "Requires Level 28",
+      "Equip: +14 Spell Power",
+      "Sell Price: 89s 76c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    }
+   ],
+   "trigger": null,
+   "abilities": []
   }
  ],
  "questSource": "foreverchanges",

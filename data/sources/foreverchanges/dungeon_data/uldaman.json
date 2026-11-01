@@ -16,9 +16,19 @@
      "s": "Head",
      "c": 4,
      "u": 4,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_helmet_25",
      "x": [
+      "Binds when picked up",
+      "Head\tPlate",
+      "303 Armor",
+      "+10 Agility",
+      "+15 Stamina",
+      "Requires Level 40",
+      "Use: Charge an enemy, knocking it silly for 30 seconds. Also knocks you down, stunning you for a short period of time. Any damage caused will revive the target. (30 Min Cooldown)",
+      "Sell Price: 80s 87c"
+     ],
+     "y": [
       "Binds when picked up",
       "Head\tPlate",
       "303 Armor",
@@ -38,15 +48,24 @@
     {
      "i": 9398,
      "n": "Worn Running Boots",
-     "q": 2,
-     "l": 40,
-     "r": 35,
+     "q": 3,
+     "l": 42,
+     "r": 37,
      "s": "Feet",
      "c": 4,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_boots_02",
      "x": [
+      "Binds when picked up",
+      "Feet\tLeather",
+      "87 Armor",
+      "+13 Agility",
+      "+10 Stamina",
+      "Requires Level 37",
+      "Sell Price: 58s 3c"
+     ],
+     "y": [
       "Binds when picked up",
       "Feet\tLeather",
       "76 Armor",
@@ -56,9 +75,9 @@
       "Sell Price: 12s 44c"
      ],
      "v": {
-      "3": 11,
-      "7": 3,
-      "50": 76
+      "3": 13,
+      "7": 10,
+      "50": 87
      },
      "z": 79.85
     },
@@ -98,9 +117,19 @@
      "s": "One-Hand",
      "c": 2,
      "u": 7,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_sword_24",
      "x": [
+      "Binds when picked up",
+      "One-Hand\tSword",
+      "45 - 84 Damage\tSpeed 2.20",
+      "(29.3 damage per second)",
+      "+8 Agility",
+      "+5 Stamina",
+      "Requires Level 38",
+      "Sell Price: 1g 66s 69c"
+     ],
+     "y": [
       "Binds when picked up",
       "One-Hand\tSword",
       "45 - 84 Damage\tSpeed 2.20",
@@ -125,9 +154,15 @@
      "s": "Ammo",
      "c": 6,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_ammo_arrow_01",
      "x": [
+      "Ammo\tArrow",
+      "Damage set by hand\tSpeed 3.00",
+      "Requires Level 35",
+      "Sell Price: 3c"
+     ],
+     "y": [
       "Ammo\tArrow",
       "11 - 12 Damage\tSpeed 3.00",
       "(3.8 damage per second)",
@@ -139,21 +174,35 @@
     {
      "i": 9400,
      "n": "Baelog's Shortbow",
-     "q": 1,
-     "l": 41,
-     "r": 36,
+     "q": 3,
+     "l": 43,
+     "r": 38,
      "s": "Ranged",
      "c": 2,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_weapon_bow_11",
      "x": [
+      "Binds when picked up",
+      "Ranged\tBow",
+      "36 - 68 Damage\tSpeed 2.30",
+      "(22.6 damage per second)",
+      "+5 Strength",
+      "+5 Stamina",
+      "Requires Level 38",
+      "Sell Price: 1g 25s 2c"
+     ],
+     "y": [
       "Ranged\tBow",
       "26 - 50 Damage\tSpeed 2.30",
       "(16.5 damage per second)",
       "Requires Level 36",
       "Sell Price: 16s 24c"
      ],
+     "v": {
+      "4": 5,
+      "7": 5
+     },
      "z": 39.62
     }
    ]
@@ -173,9 +222,19 @@
      "s": "Shield",
      "c": 4,
      "u": 6,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shield_02",
      "x": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1287 Armor",
+      "22 Block",
+      "+11 Stamina",
+      "Requires Level 37",
+      "Use: Reduces your fall speed for 10 sec. (30 Min Cooldown)",
+      "Sell Price: 98s 78c"
+     ],
+     "y": [
       "Binds when picked up",
       "Off Hand\tShield",
       "1287 Armor",
@@ -194,15 +253,26 @@
     {
      "i": 9403,
      "n": "Battered Viking Shield",
-     "q": 1,
-     "l": 40,
-     "r": 35,
+     "q": 3,
+     "l": 42,
+     "r": 37,
      "s": "Shield",
      "c": 4,
      "u": 6,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shield_07",
      "x": [
+      "Binds when picked up",
+      "Off Hand\tShield",
+      "1287 Armor",
+      "22 Block",
+      "+10 Spirit",
+      "Requires Level 37",
+      "Equip: +13 Healing",
+      "Equip: +5 Spell Damage",
+      "Sell Price: 98s 78c"
+     ],
+     "y": [
       "Off Hand\tShield",
       "907 Armor",
       "16 Block",
@@ -212,9 +282,10 @@
       "Sell Price: 13s 31c"
      ],
      "v": {
-      "6": 4,
-      "7": 8,
-      "50": 907
+      "6": 10,
+      "41": 13,
+      "42": 5,
+      "50": 1287
      },
      "z": 77.9
     },
@@ -307,15 +378,22 @@
     {
      "i": 9390,
      "n": "Revelosh's Gloves",
-     "q": 2,
-     "l": 40,
-     "r": 35,
+     "q": 3,
+     "l": 42,
+     "r": 37,
      "s": "Hands",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_gauntlets_17",
      "x": [
+      "Binds when picked up",
+      "Hands\tCloth",
+      "38 Armor",
+      "Requires Level 37",
+      "Sell Price: 30s 87c"
+     ],
+     "y": [
       "Binds when picked up",
       "Hands\tCloth",
       "33 Armor",
@@ -323,7 +401,7 @@
       "Sell Price: 21s 46c"
      ],
      "v": {
-      "50": 33
+      "50": 38
      },
      "z": 21.11
     },
@@ -465,9 +543,19 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 10,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_staff_28",
      "x": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "74 - 112 Damage\tSpeed 2.50",
+      "(37.2 damage per second)",
+      "+20 Stamina",
+      "+8 Strength",
+      "Requires Level 37",
+      "Sell Price: 1g 92s 93c"
+     ],
+     "y": [
       "Binds when picked up",
       "Two-Hand\tStaff",
       "74 - 112 Damage\tSpeed 2.50",
@@ -506,6 +594,138 @@
       "Quest Item",
       "\tQuest"
      ]
+    },
+    {
+     "i": 274430,
+     "n": "Rock Sentinel Slicer",
+     "q": 3,
+     "l": 44,
+     "r": 39,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 1,
+     "t": "new",
+     "k": "inv_axe_04",
+     "x": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "64 - 97 Damage\tSpeed 2.80",
+      "(28.8 damage per second)",
+      "+12 Intellect",
+      "Requires Level 39",
+      "Equip: +94 Healing",
+      "Equip: +31 Spell Damage",
+      "Equip: While in combat, your healing spells have a chance to grant an ally 300 armor for 10 sec.",
+      "Sell Price: 2g 15s 68c"
+     ],
+     "v": {
+      "5": 12,
+      "41": 94,
+      "42": 31
+     },
+     "w": 1
+    },
+    {
+     "i": 274428,
+     "n": "Dark Golem Breastplate",
+     "q": 3,
+     "l": 44,
+     "r": 39,
+     "s": "Chest",
+     "c": 4,
+     "u": 4,
+     "t": "new",
+     "k": "inv_chest_plate10",
+     "x": [
+      "Binds when picked up",
+      "Chest\tPlate",
+      "471 Armor",
+      "+10 Stamina",
+      "+5 Strength",
+      "Requires Level 39",
+      "Equip: +15 Parry Rating",
+      "Sell Price: 1g 19s 86c"
+     ],
+     "v": {
+      "4": 5,
+      "7": 10,
+      "14": 15,
+      "50": 471
+     },
+     "w": 1
+    },
+    {
+     "i": 274425,
+     "n": "White Obsidian Wand",
+     "q": 3,
+     "l": 44,
+     "r": 39,
+     "s": "Ranged",
+     "c": 2,
+     "u": 19,
+     "t": "new",
+     "k": "inv_wand_07",
+     "x": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "49 - 92 Arcane Damage\tSpeed 1.70",
+      "(41.5 damage per second)",
+      "Requires Level 39",
+      "Equip: +6 Spell Power",
+      "Equip: Chance on hit to reduce the mana cost of your next spell cast within 10 sec by 24.",
+      "Sell Price: 1g 36s 87c"
+     ],
+     "v": {
+      "45": 6
+     },
+     "w": 1
+    },
+    {
+     "i": 274485,
+     "n": "Axe of Lingering Dread",
+     "q": 3,
+     "l": 44,
+     "r": 39,
+     "s": "Two-Hand",
+     "c": 2,
+     "u": 1,
+     "t": "new",
+     "k": "inv_axe_01",
+     "x": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "93 - 140 Damage\tSpeed 3.00",
+      "(38.8 damage per second)",
+      "Requires Level 39",
+      "Equip: +15 Parry Rating",
+      "Equip: +12 Dodge Rating",
+      "Sell Price: 2g 34s"
+     ],
+     "v": {
+      "13": 12,
+      "14": 15
+     },
+     "w": 1
+    },
+    {
+     "i": 251400,
+     "n": "Plans: Warder's Boots",
+     "q": 3,
+     "l": 45,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 4,
+     "t": "new",
+     "k": "inv_scroll_03",
+     "x": [
+      "Binds when picked up",
+      "\tBlacksmithing",
+      "Requires Blacksmithing (200)",
+      "\"Teaches you how to craft Warder's Boots.\"",
+      "Sell Price: 20s"
+     ],
+     "w": 1
     }
    ]
   },
@@ -519,14 +739,22 @@
      "i": 9410,
      "n": "Cragfists",
      "q": 3,
-     "l": 45,
-     "r": 40,
+     "l": 46,
+     "r": 41,
      "s": "Hands",
      "c": 4,
      "u": 4,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_gauntlets_12",
      "x": [
+      "Binds when picked up",
+      "Hands\tPlate",
+      "306 Armor",
+      "Requires Level 41",
+      "Equip: +5 Defense Rating",
+      "Sell Price: 73s 91c"
+     ],
+     "y": [
       "Binds when picked up",
       "Hands\tPlate",
       "300 Armor",
@@ -535,22 +763,34 @@
       "Sell Price: 37s 85c"
      ],
      "v": {
-      "50": 300
+      "12": 5,
+      "50": 306
      },
      "z": 47.66
     },
     {
      "i": 9411,
      "n": "Rockshard Pauldrons",
-     "q": 2,
-     "l": 45,
-     "r": 40,
+     "q": 3,
+     "l": 46,
+     "r": 41,
      "s": "Shoulder",
      "c": 4,
      "u": 3,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shoulder_02",
      "x": [
+      "Binds when picked up",
+      "Shoulder\tMail",
+      "209 Armor",
+      "+3 Strength",
+      "+13 Intellect",
+      "+6 Spirit",
+      "Requires Level 41",
+      "Equip: +12 Spell Power",
+      "Sell Price: 94s 91c"
+     ],
+     "y": [
       "Binds when picked up",
       "Shoulder\tMail",
       "186 Armor",
@@ -561,10 +801,11 @@
       "Sell Price: 71s 56c"
      ],
      "v": {
-      "4": 2,
-      "5": 9,
-      "6": 9,
-      "50": 186
+      "4": 3,
+      "5": 13,
+      "6": 6,
+      "45": 12,
+      "50": 209
      },
      "z": 46.98
     }
@@ -585,9 +826,18 @@
      "s": "Shoulder",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shoulder_05",
      "x": [
+      "Binds when picked up",
+      "Shoulder\tCloth",
+      "51 Armor",
+      "+10 Spirit",
+      "Requires Level 42",
+      "Equip: +14 Fire Spell Damage",
+      "Sell Price: 68s 3c"
+     ],
+     "y": [
       "Binds when picked up",
       "Shoulder\tCloth",
       "51 Armor",
@@ -598,7 +848,8 @@
      ],
      "v": {
       "6": 10,
-      "50": 51
+      "50": 51,
+      "85": 14
      },
      "z": 19.49
     },
@@ -611,9 +862,18 @@
      "s": "Ranged",
      "c": 2,
      "u": 3,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_weapon_rifle_07",
      "x": [
+      "Binds when picked up",
+      "Ranged\tGun",
+      "44 - 84 Damage\tSpeed 2.60",
+      "(24.6 damage per second)",
+      "Requires Level 42",
+      "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
+      "Sell Price: 1g 70s 9c"
+     ],
+     "y": [
       "Binds when picked up",
       "Ranged\tGun",
       "44 - 84 Damage\tSpeed 2.60",
@@ -627,15 +887,24 @@
     {
      "i": 11311,
      "n": "Emberscale Cape",
-     "q": 2,
-     "l": 46,
-     "r": 41,
+     "q": 3,
+     "l": 47,
+     "r": 42,
      "s": "Back",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_misc_cape_08",
      "x": [
+      "Binds when picked up",
+      "Back\tCloth",
+      "34 Armor",
+      "+4 Fire Resistance",
+      "+14 Stamina",
+      "Requires Level 42",
+      "Sell Price: 68s 3c"
+     ],
+     "y": [
       "Binds when picked up",
       "Back\tCloth",
       "30 Armor",
@@ -645,24 +914,34 @@
       "Sell Price: 51s 10c"
      ],
      "v": {
-      "6": 3,
-      "7": 10,
-      "50": 30
+      "7": 14,
+      "50": 34,
+      "51": 4
      },
      "z": 38.08
     },
     {
      "i": 9419,
      "n": "Galgann's Firehammer",
-     "q": 2,
-     "l": 46,
-     "r": 41,
-     "s": "One-Hand",
+     "q": 3,
+     "l": 47,
+     "r": 42,
+     "s": "Main Hand",
      "c": 2,
      "u": 4,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_hammer_17",
      "x": [
+      "Binds when picked up",
+      "Main Hand\tMace",
+      "32 - 60 Damage\tSpeed 2.20",
+      "(20.9 damage per second)",
+      "Requires Level 42",
+      "Equip: +54 Spell Power",
+      "Equip: Chance on harmful spell cast to blast a target for 64 to 90 Fire damage.",
+      "Sell Price: 2g 26s 79c"
+     ],
+     "y": [
       "Binds when picked up",
       "One-Hand\tMace",
       "42 - 79 Damage\tSpeed 2.20",
@@ -671,6 +950,9 @@
       "Chance on hit: Blasts a target for 80 to 112 Fire damage.",
       "Sell Price: 1g 80s 76c"
      ],
+     "v": {
+      "45": 54
+     },
      "z": 19.88
     }
    ]
@@ -690,9 +972,21 @@
      "s": "Chest",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_shirt_05",
      "x": [
+      "Binds when picked up",
+      "Chest\tCloth",
+      "68 Armor",
+      "+10 Stamina",
+      "+14 Spirit",
+      "+5 Intellect",
+      "Requires Level 42",
+      "Equip: +29 Healing",
+      "Equip: +10 Spell Damage",
+      "Sell Price: 90s 71c"
+     ],
+     "y": [
       "Binds when picked up",
       "Chest\tCloth",
       "68 Armor",
@@ -704,8 +998,10 @@
      ],
      "v": {
       "5": 5,
-      "6": 20,
+      "6": 14,
       "7": 10,
+      "41": 29,
+      "42": 10,
       "50": 68
      },
      "z": 39.68
@@ -719,9 +1015,20 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 6,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_spear_08",
      "x": [
+      "Binds when picked up",
+      "Two-Hand\tPolearm",
+      "88 - 133 Damage\tSpeed 2.70",
+      "(40.9 damage per second)",
+      "+15 Agility",
+      "+10 Strength",
+      "+15 Stamina",
+      "Requires Level 42",
+      "Sell Price: 2g 83s 48c"
+     ],
+     "y": [
       "Binds when picked up",
       "Two-Hand\tPolearm",
       "88 - 133 Damage\tSpeed 2.70",
@@ -742,15 +1049,25 @@
     {
      "i": 9414,
      "n": "Oilskin Leggings",
-     "q": 2,
-     "l": 46,
-     "r": 41,
+     "q": 3,
+     "l": 47,
+     "r": 42,
      "s": "Legs",
      "c": 4,
      "u": 2,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_pants_06",
      "x": [
+      "Binds when picked up",
+      "Legs\tLeather",
+      "122 Armor",
+      "+18 Agility",
+      "+11 Spirit",
+      "Requires Level 42",
+      "Equip: Increases Feral Combat +1.",
+      "Sell Price: 1g 13s 39c"
+     ],
+     "y": [
       "Binds when picked up",
       "Legs\tLeather",
       "108 Armor",
@@ -760,9 +1077,9 @@
       "Sell Price: 86s 45c"
      ],
      "v": {
-      "3": 13,
-      "6": 12,
-      "50": 108
+      "3": 18,
+      "6": 11,
+      "50": 122
      },
      "z": 28.75
     },
@@ -799,9 +1116,17 @@
      "s": "Finger",
      "c": 4,
      "u": 0,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_stone_15",
      "x": [
+      "Binds when picked up",
+      "Unique-Equipped",
+      "Finger",
+      "+50 Armor",
+      "Requires Level 42",
+      "Sell Price: 90s 71c"
+     ],
+     "y": [
       "Binds when picked up",
       "Unique",
       "Finger",
@@ -812,6 +1137,7 @@
      "v": {
       "50": 50
      },
+     "w": 1,
      "z": 62.35
     },
     {
@@ -823,9 +1149,19 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 5,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_hammer_12",
      "x": [
+      "Binds when picked up",
+      "Two-Hand\tMace",
+      "126 - 190 Damage\tSpeed 3.70",
+      "(42.7 damage per second)",
+      "+5 Strength",
+      "Requires Level 44",
+      "Equip: +28 Critical Strike Rating",
+      "Sell Price: 3g 27s 60c"
+     ],
+     "y": [
       "Binds when picked up",
       "Two-Hand\tMace",
       "126 - 190 Damage\tSpeed 3.70",
@@ -836,8 +1172,10 @@
       "Sell Price: 3g 22s 48c"
      ],
      "v": {
-      "4": 5
+      "4": 5,
+      "32": 28
      },
+     "w": 1,
      "z": 13.62
     },
     {
@@ -877,9 +1215,20 @@
      "s": "Head",
      "c": 4,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_helmet_28",
      "x": [
+      "Binds when equipped",
+      "Head\tCloth",
+      "51 Armor",
+      "+17 Intellect",
+      "+9 Spirit",
+      "Requires Level 38",
+      "Equip: +22 Healing",
+      "Equip: +8 Spell Damage",
+      "Sell Price: 50s 1c"
+     ],
+     "y": [
       "Binds when equipped",
       "Head\tCloth",
       "51 Armor",
@@ -892,6 +1241,8 @@
      "v": {
       "5": 17,
       "6": 9,
+      "41": 22,
+      "42": 8,
       "50": 51
      },
      "z": 0.02
@@ -1228,16 +1579,32 @@
      "s": "Ranged",
      "c": 2,
      "u": 19,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_staff_17",
      "x": [
       "Binds when equipped",
       "Ranged\tWand",
       "42 - 79 Nature Damage\tSpeed 1.70",
       "(35.6 damage per second)",
+      "+5 Nature Resistance",
+      "Requires Level 33",
+      "Equip: +9 Healing",
+      "Equip: +3 Spell Damage",
+      "Sell Price: 85s 9c"
+     ],
+     "y": [
+      "Binds when equipped",
+      "Ranged\tWand",
+      "42 - 79 Nature Damage\tSpeed 1.70",
+      "(35.6 damage per second)",
       "Requires Level 33",
       "Sell Price: 86s 28c"
-     ]
+     ],
+     "v": {
+      "41": 9,
+      "42": 3,
+      "55": 5
+     }
     },
     {
      "i": 9426,
@@ -1435,9 +1802,19 @@
      "s": "One-Hand",
      "c": 2,
      "u": 7,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_sword_26",
      "x": [
+      "Binds when equipped",
+      "One-Hand\tSword",
+      "34 - 64 Damage\tSpeed 1.80",
+      "(27.2 damage per second)",
+      "+6 Strength",
+      "+6 Stamina",
+      "Requires Level 35",
+      "Sell Price: 1g 32s 33c"
+     ],
+     "y": [
       "Binds when equipped",
       "One-Hand\tSword",
       "34 - 64 Damage\tSpeed 1.80",
@@ -1489,9 +1866,20 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_axe_14",
      "x": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "94 - 141 Damage\tSpeed 3.30",
+      "(35.6 damage per second)",
+      "+19 Stamina",
+      "+6 Strength",
+      "+5 Agility",
+      "Requires Level 35",
+      "Sell Price: 1g 65s 41c"
+     ],
+     "y": [
       "Binds when equipped",
       "Two-Hand\tAxe",
       "94 - 141 Damage\tSpeed 3.30",
@@ -1518,9 +1906,19 @@
      "s": "Two-Hand",
      "c": 2,
      "u": 1,
-     "t": "missing",
+     "t": "changed",
      "k": "inv_weapon_halberd_08",
      "x": [
+      "Binds when picked up",
+      "Two-Hand\tAxe",
+      "124 - 187 Damage\tSpeed 4.00",
+      "(38.9 damage per second)",
+      "Requires Level 39",
+      "Chance on hit: Delivers a fatal wound for 259 to 363 Physical damage. Deals 50% increased damage to targets below 25% health.",
+      "Equip: Each swing alternates your attack speed between 100% faster and 50% slower.",
+      "Sell Price: 2g 25s 4c"
+     ],
+     "y": [
       "Binds when equipped",
       "Two-Hand\tAxe",
       "124 - 187 Damage\tSpeed 4.00",

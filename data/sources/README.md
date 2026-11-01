@@ -5,6 +5,11 @@ as-received so later sessions can diff what changed between pulls instead
 of only ever seeing the latest state. Never overwrite an existing snapshot
 in place -- a new pull gets a new dated file alongside the old one.
 
+The order of operations for a talentsforever or foreverchanges sync (fetch,
+archive, diff, apply, rebuild, verify) lives in
+`Forevercraft-Knowledge-Base/01-Projects/Forevercraft/Data-Sync-Runbook.md`;
+this file only describes what each source file is.
+
 ## Layout (reorganized 2026-09-23, grouped by source)
 
 ```

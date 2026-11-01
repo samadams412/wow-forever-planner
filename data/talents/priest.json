@@ -363,11 +363,11 @@
           "col": 3,
           "maxRank": 5,
           "ranks": [
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -716,25 +716,6 @@
           "passive": true
         },
         {
-          "id": "holy_binding_heal",
-          "name": "Binding Heal",
-          "tier": 4,
-          "col": 4,
-          "maxRank": 1,
-          "ranks": [
-            "Heals a friendly target and the caster for 236 to 284. Low threat."
-          ],
-          "confidence": "confirmed",
-          "prereq": null,
-          "status": "new",
-          "icon": "spell_holy_blindingheal",
-          "classic": {
-            "status": "new"
-          },
-          "passive": false,
-          "cost": "155 Mana | 40 yd range | 1.5 sec cast"
-        },
-        {
           "id": "holy_litany_of_light",
           "name": "Litany of Light",
           "tier": 5,
@@ -849,6 +830,24 @@
           },
           "passive": false,
           "cost": "210 Mana | 40 yd range | Instant | 10 sec cooldown"
+        },
+        {
+          "id": "holy_holy_binding",
+          "name": "Holy Binding",
+          "tier": 4,
+          "col": 4,
+          "maxRank": 1,
+          "ranks": [
+            "Each time you heal a target other than yourself with Flash Heal, you are healed for 50% as much. This healing generates no threat."
+          ],
+          "confidence": "confirmed",
+          "prereq": null,
+          "status": "new",
+          "icon": "spell_holy_blindingheal",
+          "classic": {
+            "status": "new"
+          },
+          "passive": true
         }
       ]
     },

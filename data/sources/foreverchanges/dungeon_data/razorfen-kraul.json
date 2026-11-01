@@ -185,6 +185,62 @@
       "Sell Price: 6s 25c"
      ],
      "w": 1
+    },
+    {
+     "i": 252456,
+     "n": "Totemic Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_24",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +12 Spell Power",
+      "Sell Price: 20s 87c"
+     ],
+     "v": {
+      "7": 13,
+      "45": 12,
+      "50": 84
+     },
+     "w": 1
+    },
+    {
+     "i": 252515,
+     "n": "Wisdom's Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_26",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +7 Spell Damage",
+      "Equip: +21 Healing",
+      "Sell Price: 20s 78c"
+     ],
+     "v": {
+      "7": 13,
+      "41": 21,
+      "42": 7,
+      "50": 84
+     },
+     "w": 1
     }
    ]
   },
@@ -389,6 +445,26 @@
       "50": 84
      },
      "w": 1
+    },
+    {
+     "i": 252820,
+     "n": "Pattern: Brawler's Leather Legguards",
+     "q": 3,
+     "l": 30,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 1,
+     "t": "new",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Brawler's Leather Legguards.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "w": 1
     }
    ]
   },
@@ -413,17 +489,17 @@
       "Binds when picked up",
       "Head\tLeather",
       "84 Armor",
-      "+12 Spirit",
-      "+8 Stamina",
-      "+7 Nature Resistance",
+      "+14 Spirit",
       "Requires Level 25",
+      "Equip: +13 Healing",
+      "Equip: +4 Spell Damage",
       "Sell Price: 20s 25c"
      ],
      "v": {
-      "6": 12,
-      "7": 8,
-      "50": 84,
-      "55": 7
+      "6": 14,
+      "41": 13,
+      "42": 4,
+      "50": 84
      },
      "w": 1
     },
@@ -479,6 +555,26 @@
       "7": 13,
       "50": 84
      },
+     "w": 1
+    },
+    {
+     "i": 252820,
+     "n": "Pattern: Brawler's Leather Legguards",
+     "q": 3,
+     "l": 30,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 1,
+     "t": "new",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Brawler's Leather Legguards.\"",
+      "Sell Price: 6s 25c"
+     ],
      "w": 1
     },
     {
@@ -871,7 +967,7 @@
       "+4 Strength",
       "+40 Armor",
       "Requires Level 31",
-      "Sell Price: 1c"
+      "Sell Price: 71s 62c"
      ],
      "v": {
       "4": 4,
@@ -1004,7 +1100,8 @@
       "Neck",
       "+4 Stamina",
       "Requires Level 29",
-      "Equip: +16 Spell Damage Vs Undead",
+      "Equip: +12 Spell Damage Vs Undead",
+      "Equip: +5 Spell Power",
       "Sell Price: 31s 56c"
      ],
      "y": [
@@ -1017,7 +1114,8 @@
      ],
      "v": {
       "7": 4,
-      "136": 16
+      "45": 5,
+      "136": 12
      },
      "w": 1,
      "z": 27.15
@@ -1037,10 +1135,10 @@
       "Binds when picked up",
       "Shoulder\tCloth",
       "38 Armor",
-      "+5 Spirit",
       "+11 Intellect",
       "+3 Agility",
       "Requires Level 29",
+      "Equip: +6 Spell Power",
       "Sell Price: 23s 67c"
      ],
      "y": [
@@ -1056,7 +1154,7 @@
      "v": {
       "3": 3,
       "5": 11,
-      "6": 5,
+      "45": 6,
       "50": 38
      },
      "w": 1,
@@ -1201,9 +1299,9 @@
       "One-Hand\tAxe",
       "38 - 72 Damage\tSpeed 2.40",
       "(22.9 damage per second)",
+      "+5 Spirit",
       "+5 Strength",
       "Requires Level 30",
-      "Equip: +6 Health Regeneration",
       "Sell Price: 86s 81c"
      ],
      "y": [
@@ -1219,7 +1317,7 @@
      ],
      "v": {
       "4": 5,
-      "46": 6
+      "6": 5
      },
      "w": 1,
      "z": 17.81
@@ -1399,9 +1497,8 @@
       "Two-Hand\tStaff",
       "56 - 85 Damage\tSpeed 3.30",
       "(21.4 damage per second)",
-      "+5 Intellect",
       "+16 Spirit",
-      "+4 Stamina",
+      "+6 Stamina",
       "Requires Level 29",
       "Equip: +70 Healing",
       "Equip: +23 Spell Damage",
@@ -1419,9 +1516,8 @@
       "Sell Price: 82s 67c"
      ],
      "v": {
-      "5": 5,
       "6": 16,
-      "7": 4,
+      "7": 6,
       "41": 70,
       "42": 23
      },
@@ -1443,10 +1539,10 @@
       "Binds when picked up",
       "Head\tLeather",
       "89 Armor",
-      "+6 Stamina",
-      "+11 Intellect",
+      "+11 Stamina",
       "+11 Spirit",
       "Requires Level 29",
+      "Equip: +7 Spell Power",
       "Sell Price: 29s 67c"
      ],
      "y": [
@@ -1460,9 +1556,9 @@
       "Sell Price: 20s 59c"
      ],
      "v": {
-      "5": 11,
       "6": 11,
-      "7": 6,
+      "7": 11,
+      "45": 7,
       "50": 89
      },
      "w": 1,
@@ -1764,7 +1860,7 @@
       "One-Hand\tDagger",
       "17 - 33 Damage\tSpeed 1.30",
       "(19.2 damage per second)",
-      "+6 Agility",
+      "+7 Agility",
       "Requires Level 26",
       "Sell Price: 59s 29c"
      ],
@@ -1779,7 +1875,7 @@
       "Sell Price: 57s 65c"
      ],
      "v": {
-      "3": 6
+      "3": 7
      },
      "w": 1,
      "z": 0.03

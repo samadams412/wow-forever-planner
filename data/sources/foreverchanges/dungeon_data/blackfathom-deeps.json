@@ -199,7 +199,6 @@
       "26 - 49 Damage\tSpeed 2.20",
       "(17.0 damage per second)",
       "Requires Level 22",
-      "Equip: +6 Attack Power",
       "Chance on hit: Sends a shadowy bolt at the enemy causing 28 Shadow damage.",
       "Sell Price: 40s 50c"
      ],
@@ -212,9 +211,6 @@
       "Chance on hit: Sends a shadowy bolt at the enemy causing 25 Shadow damage.",
       "Sell Price: 29s 41c"
      ],
-     "v": {
-      "38": 6
-     },
      "w": 1,
      "z": 38.81
     },
@@ -261,8 +257,8 @@
       "Hands\tMail",
       "132 Armor",
       "+8 Strength",
-      "+4 Stamina",
-      "+4 Nature Resistance",
+      "+5 Stamina",
+      "+5 Nature Resistance",
       "Requires Level 23",
       "Sell Price: 13s 36c"
      ],
@@ -277,9 +273,9 @@
      ],
      "v": {
       "4": 8,
-      "7": 4,
+      "7": 5,
       "50": 132,
-      "55": 4
+      "55": 5
      },
      "w": 1,
      "z": 44.28
@@ -540,6 +536,33 @@
       "50": 84
      },
      "w": 1
+    },
+    {
+     "i": 252455,
+     "n": "Defender's Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_33",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "+12 Strength",
+      "Requires Level 25",
+      "Sell Price: 20s 79c"
+     ],
+     "v": {
+      "4": 12,
+      "7": 13,
+      "50": 84
+     },
+     "w": 1
     }
    ]
   },
@@ -704,6 +727,53 @@
      "w": 1
     },
     {
+     "i": 252456,
+     "n": "Totemic Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_24",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +12 Spell Power",
+      "Sell Price: 20s 87c"
+     ],
+     "v": {
+      "7": 13,
+      "45": 12,
+      "50": 84
+     },
+     "w": 1
+    },
+    {
+     "i": 252822,
+     "n": "Pattern: Defender's Leather Kilt",
+     "q": 3,
+     "l": 30,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 1,
+     "t": "new",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Defender's Leather Kilt.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "w": 1
+    },
+    {
      "i": 273842,
      "n": "Treacherous Treads",
      "q": 3,
@@ -777,6 +847,33 @@
       "\"Teaches you how to craft Defender's Leather Kilt.\"",
       "Sell Price: 6s 25c"
      ],
+     "w": 1
+    },
+    {
+     "i": 252456,
+     "n": "Totemic Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_24",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +12 Spell Power",
+      "Sell Price: 20s 87c"
+     ],
+     "v": {
+      "7": 13,
+      "45": 12,
+      "50": 84
+     },
      "w": 1
     }
    ]
@@ -1041,6 +1138,33 @@
       "50": 84
      },
      "w": 1
+    },
+    {
+     "i": 252512,
+     "n": "Brawler's Leather Helm",
+     "q": 3,
+     "l": 30,
+     "r": 25,
+     "s": "Head",
+     "c": 4,
+     "u": 2,
+     "t": "new",
+     "k": "inv_helmet_15",
+     "x": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+10 Agility",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Sell Price: 20s 56c"
+     ],
+     "v": {
+      "3": 10,
+      "7": 13,
+      "50": 84
+     },
+     "w": 1
     }
    ]
   },
@@ -1234,6 +1358,26 @@
       "45": 12,
       "50": 84
      },
+     "w": 1
+    },
+    {
+     "i": 252822,
+     "n": "Pattern: Defender's Leather Kilt",
+     "q": 3,
+     "l": 30,
+     "r": 0,
+     "s": null,
+     "c": 9,
+     "u": 1,
+     "t": "new",
+     "k": "inv_scroll_06",
+     "x": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Defender's Leather Kilt.\"",
+      "Sell Price: 6s 25c"
+     ],
      "w": 1
     }
    ]
@@ -1948,7 +2092,7 @@
     {
      "i": 2034,
      "n": "Scholarly Robes",
-     "q": 2,
+     "q": 3,
      "l": 25,
      "r": 20,
      "s": "Chest",
@@ -1959,11 +2103,11 @@
      "x": [
       "Binds when equipped",
       "Chest\tCloth",
-      "39 Armor",
-      "+8 Spirit",
+      "43 Armor",
+      "+12 Spirit",
       "Requires Level 20",
-      "Equip: +2 Spell Power",
-      "Sell Price: 10s 86c"
+      "Equip: +3 Spell Power",
+      "Sell Price: 13s 3c"
      ],
      "y": [
       "Binds when equipped",
@@ -1975,9 +2119,9 @@
       "Sell Price: 10s 35c"
      ],
      "v": {
-      "6": 8,
-      "45": 2,
-      "50": 39
+      "6": 12,
+      "45": 3,
+      "50": 43
      },
      "w": 1,
      "z": 1.83

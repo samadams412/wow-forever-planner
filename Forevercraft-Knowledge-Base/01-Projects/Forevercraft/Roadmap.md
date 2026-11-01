@@ -1,16 +1,16 @@
 ---
 type: project
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-31
 tags: [forevercraft, roadmap]
 status: active
 ---
 
 # Roadmap
 
-Back to [[Overview]] · See [[Architecture]].
+Back to [[Overview]] · See [[Architecture]] · Sync order: [[Data-Sync-Runbook]].
 
-This is now the living roadmap. `CLAUDE.md` "Open items" is a shorter, older subset of it and does not yet reflect the 2026-09-30 decisions below (KV instead of Postgres+Auth, map paused, Nov 4 extraction deadline). Keep the two in sync when `CLAUDE.md` is next edited.
+This is the **only** backlog. Since the 2026-10-31 docs cleanup, `CLAUDE.md` keeps no open-items list of its own; everything it carried moved here (verbatim originals: `03-Handoffs/project-history/2026-10-31-claude-md-archive.md`). Sections dated before 2026-10-31 were not re-verified in that pass unless marked.
 
 **Task convention:** [Tasks plugin](https://publish.obsidian.md/tasks/) syntax. Every checkbox carries a priority emoji (🔺 Highest · ⏫ High · 🔼 Medium · 🔽 Low · ⏬ Lowest) plus tags. `📅` is a due date. Items marked *(priority unconfirmed)* got a provisional priority during the 2026-09-30 audit and need an owner's call.
 
@@ -30,11 +30,41 @@ Added 2026-10-06. Design/scoping work this week; build items are called out as s
   - Per class: a short macros section (useful macros only, each one explained) and a "changed from Classic" section written as a blog post, not a table. Uses `classicStatus`/`classicDescription` data already in `spellbooks.json`.
   - Depends on the Classic-description backfill (see Data & content quality), so expect gaps for the spells still missing Classic text.
 
+## Partially built (audited 2026-10-31 against the code and data)
+Every feature that is live but incomplete, with its real state. Re-check when one moves.
+
+- [ ] **Gear planner (`/gear/<class>`): Warrior only, level 30 only.** `GEAR_PLANNER_CLASSES = ["warrior"]`, `GEAR_LEVELS = [30]` (`lib/gear-config.ts`); only `public/gear-pool/30/warrior.json` exists. Presets are generated for all 9 classes (`data/gear/presets/*.json`), pending the owner's review. Missing: pools and pages for the other 8 classes (`node scripts/build-gear-pool.js <class>` + add to `GEAR_PLANNER_CLASSES`), nav link, sitemap, `robots` (disallow `/gear/*?`), OG image, set name / race / talents in the share link, other levels. ⏫ #gear-planner
+  - Data gaps: the "of Eluding" suffix effect (ItemEffect 213334 needs the ItemEffect, Spell and SpellEffect exports; the item page says "not decoded yet"), 50 "Restored …" nested-tree items, 47 tree items not in our catalog. 🔽 #gear-planner #data
+  - 46 preset slots moved to City of Dalaran BoE drops in the 70707 item pull (kept; see `03-Handoffs/data-pipeline/2026-10-31-foreverchanges-item-sync.md`). 🔽 #gear-planner
+- [ ] **Popular builds: collection only.** Share/save/open events are recorded (`/api/builds/track`, daily rollup cron) but nothing reads them; no Popular Builds UI. The reader must rank by the per-day HyperLogLogs, not the raw `builds:agg:*` counts (one IP can add 50/day). ⏫ #planner #kv
+- [ ] **Guides: `/guides` has zero guides.** `content/guides/` doesn't exist; the page links to profession leveling pages. 🔼 #content #guides
+- [ ] **Profession leveling 1–300: 2 of 11 verified.** `LEVELING_VERIFIED_PROFESSION_IDS` = Blacksmithing, First Aid; every other path renders under the "under construction" overlay (`LevelingUnderConstruction`). Skinning has no leveling data at all, and First Aid has no Merchant's Favor data (that tab shows "coming soon"). Review each path, then add its id. Decide whether the "Browse" links on the in-the-works cards stay. 🔼 #professions
+- [ ] **What's New "In Game" stops at build 70291.** `data/patch-notes/` has no entry for 70374, 70425, 70630, the 26–27 Oct racial pass or the 28/30 Oct hotfixes. Entries need an official Blizzard source (`sourceUrl` only for a Blizzard forum post; dev notes quoted verbatim). 🔼 #whats-new #content
+- [ ] **World map: paused, 6 marker categories stubbed.** Town services, graveyards, rare elites, library books, trade camps, boats & zeppelins render greyed with a `blockedReason` (`lib/map-layers.ts`). Entrances: 32 of 52 placed. The client extract behind map data is build 70009; whether it changed since is unknown. Touch users only see "No data" for blocked rows (native `title`); towns aren't in sidebar search; layer rows are 30px (under 44px). See "Map (paused)" for the rest. 🔽 #map
+- [ ] **Dungeons not open in beta:** drowned-city, kroldok-stronghold, alcaz-prison, blackmaw-hold, shapers-terrace have roster stubs only (no loot, no quests); onboarding steps are in `03-Handoffs/data-pipeline/2026-10-14-build-70374-data-refresh.md`. New-in-Forever dungeons without extracted maps show "Map coming soon". 🔼 #dungeons #launch
+- [ ] **Raid comp: stacking rules still `estimated`** in `data/raid-buffs.json`: `minor-armor`, `attack-power-reduction`, `hit-reduction`, `armor-proc`, `shaman-air-totems`, `shaman-water-totems`, `hunter-pets`, and the pet-sourced effects (Furious Howl, Dust Cloud, Demoralizing Screech, Blood Pact). Lead not modelled: Furious Howl vs Battle Shout. Deferred: optional linked talent build per slot (needs a new link version), a phone coverage summary. 🔽 #raid-comp
+- [ ] **BIS builder (level 60): design only.** [[BIS-Builder-Design]]; scheduled after level-60 data. The level-30 gear planner above is its first slice. 🔼 #bis
+- [ ] **Data pipeline automation: design only.** See [[Data-Sync-Runbook]] "Not automated yet". Also: **promote the talentsforever apply script into `scripts/`** (every sync so far used a scratchpad one-off), and fix the diff scripts' blind spots (talent tree moves, `spellbooks.*.icons`, per-ability racials, `asis`, `class_abilities`; item tooltips truncated at 160 chars, `sources.json` and `p/d/v/t/o` not diffed). ⏫ #data #automation
+
+## Review later (owner unsure, 2026-10-31)
+- [ ] Paladin spellbook: Blessing of Light, Greater Blessing of Light, Salvation, Mass Salvation and Revoke are gone as of the 30 Oct hotfix data, unexplained. Raid comp dropped `blessing-of-light` and `salvation`; restore them if the spells come back. 🔽 #data #raid-comp
+- [ ] Leader of the Pack and Moonkin Form both give plain crit since 30 Oct; whether they stack is unknown, so they stay separate effects with no `onlyOneCounts` set. 🔽 #raid-comp
+
+## Known issues (moved from CLAUDE.md "Open items", 2026-10-31)
+- [ ] **`lib/quest-detail.ts` reads `data/quests/detail/<variable>.json`**, the runtime-variable path the standing rule forbids (Turbopack warns the pattern matches 10,420 files; the build still passes). Fix with a generated literal-path map or a route-scoped `outputFileTracingExcludes`, then recheck `.nft.json` sizes. ⏫ #tech-debt #vercel
+- [ ] **`lib/dungeon-loot.ts` reads the whole `data/dungeons/` directory**, tracing ~4.9 MB of non-JSON files (map images, `Classic-Classic.lua`) into 10 functions. Move them out or exclude them from traces. See [[Weekly-Audit-2026-10-06]] §3.4. 🔼 #tech-debt #vercel
+- [ ] **Item quality colors in Light mode are low contrast:** Uncommon `#1eff00` is about 1.4:1 on `#f4f4f5`. Fix in the quality-color tokens (Light variants per quality, like Common), not per component. 🔼 #a11y #ui
+- [ ] **Sell-price-only "changed" items stay indexable:** `isIndexableItemStatus` (sitemap, robots) reads the stored status, not `displayStatus` (104 items). Decide which one it should use. 🔽 #seo
+- [ ] **Design the November data layout** (items / loot / tooltips: per-item shards vs Postgres) before importing the full wow.export dataset; the single 10 MB `data/items.json` won't scale. ⏫ #data #launch
+- [ ] **Vercel function sizes:** 24.2 MB each, but the dashboard's uniform sizes don't match local traces; cause unexplained (`03-Handoffs/infrastructure/2026-09-30-vercel-function-size.md`). 🔽 #vercel
+- [ ] **`check-dungeon-drift.js`** doesn't cover `.mapdata.json` / `.quests.json` yet. 🔽 #data
+- [ ] `app/not-found.tsx` has a "TODO: change logo". ⏬ #ui
+
 ## Launch-critical (hard deadline: Nov 4, 2026)
 - [ ] **HARD DEADLINE — Nov 4, 2026 (launch).** Use wow.export to extract full game data: icons, dungeon loot, all items, tooltips. #data #wow-export #launch 🔺 📅 2026-11-04
   - Supersedes the narrower "export FileDataID 1121272 for real dungeon/raid/battleground icons" item, which is listed under Map (paused) below and could be folded into this extraction.
   - Current data is scraped (foreverchanges.pro, wowtbc.gg, talentsforever), not client-extracted; see [[Architecture]] "Data pipelines".
-- [ ] Data-refresh passes as beta patches land (expect 2–3+ before launch): run `node scripts/diff-talentsforever.js`, read the vendor changelog by hand, apply by name-match. ⏫ 📅 2026-11-04 #data #recurring #launch *(priority unconfirmed; it was listed under "Recurring" with no priority)*
+- [ ] Data-refresh passes as beta patches land (expect 2–3+ before launch): follow [[Data-Sync-Runbook]]. ⏫ 📅 2026-11-04 #data #recurring #launch *(priority unconfirmed; it was listed under "Recurring" with no priority)*
 
 ## Next up
 - [ ] **Data pipeline automation: `npm run sync-items` / `npm run sync-dungeons`** (fetch, archive, diff, build, verify in one command), diff-script fixes, shared verification + sentinels, fail-loudly `dungeon_overrides.json`, weekly drift check. Design only so far: `03-Handoffs/data-pipeline/2026-10-06-pipeline-automation-design.md`. Do phases 1–2 (diff-script fixes, `verify-data.ts`) before the next beta patch. ⏫ #data #automation #pipeline *(added 2026-10-06; priority provisional)*
@@ -42,7 +72,7 @@ Added 2026-10-06. Design/scoping work this week; build items are called out as s
   - Design notes and open questions in [[Architecture]] "Saved builds". Not started: no KV dependency in `package.json` yet.
 - [ ] Update the professions guides (1–300) for optimization. 🔼 #professions #content
   - Interpreted as the **Leveling 1–300** tab data (`data/professions/*` → `data/professions-catalog/*`) and the matching blog write-ups. Confirm that's the intended scope.
-- [ ] Review `data/professions-catalog/uncertain.json` (101 low-confidence recipe category guesses, mostly Engineering). 🔼 #professions #data *(priority unconfirmed)*
+- [ ] Review `data/professions-catalog/uncertain.json` (95 low-confidence recipe category guesses as of 2026-10-31, 77 of them Engineering). 🔼 #professions #data *(priority unconfirmed)*
 - [ ] Author the first real guide(s). `content/guides/` does not exist and there are zero guide MDX files; `/guides` currently only links to the profession leveling pages. A real gap against the "hub" positioning. 🔼 #content #guides *(priority unconfirmed)*
 
 ## Map (paused)

@@ -731,7 +731,7 @@
     {
      "name": "Blindwatcher's Sight",
      "slot": "Head",
-     "type": "Trinket",
+     "type": "Cloth",
      "itemClass": 4,
      "itemId": 273645,
      "icon": "inv_misc_bandana_01",
@@ -740,7 +740,8 @@
      "requiredLevel": 21,
      "tooltip": [
       "Binds when picked up",
-      "Head",
+      "Head\tCloth",
+      "35 Armor",
       "Requires Level 21",
       "Equip: Reduces the hit chance of Disorient effects against you by 7%.",
       "Sell Price: 10s 82c"

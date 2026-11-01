@@ -212,6 +212,61 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Totemic Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252456,
+     "icon": "inv_helmet_24",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +12 Spell Power",
+      "Sell Price: 20s 87c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Wisdom's Leather Helm",
+     "slot": "Head",
+     "type": "Leather",
+     "itemClass": 4,
+     "itemId": 252515,
+     "icon": "inv_helmet_26",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 25,
+     "tooltip": [
+      "Binds when picked up",
+      "Head\tLeather",
+      "84 Armor",
+      "+13 Stamina",
+      "Requires Level 25",
+      "Equip: +7 Spell Damage",
+      "Equip: +21 Healing",
+      "Sell Price: 20s 78c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -432,6 +487,31 @@
      "dropChanceUnder": false,
      "unknown": false,
      "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Brawler's Leather Legguards",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252820,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Brawler's Leather Legguards.\"",
+      "Sell Price: 6s 25c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
     }
    ],
    "trigger": null,
@@ -535,6 +615,31 @@
       "+13 Stamina",
       "Requires Level 25",
       "Sell Price: 20s 56c"
+     ],
+     "tooltipSynthesized": false,
+     "classicTooltip": null,
+     "status": "new",
+     "dropChance": null,
+     "dropChanceUnder": false,
+     "unknown": false,
+     "source": "foreverchanges"
+    },
+    {
+     "name": "Pattern: Brawler's Leather Legguards",
+     "slot": null,
+     "type": "Leatherworking",
+     "itemClass": 9,
+     "itemId": 252820,
+     "icon": "inv_scroll_06",
+     "quality": 3,
+     "itemLevel": 30,
+     "requiredLevel": 0,
+     "tooltip": [
+      "Binds when picked up",
+      "\tLeatherworking",
+      "Requires Leatherworking (125)",
+      "\"Teaches you how to craft Brawler's Leather Legguards.\"",
+      "Sell Price: 6s 25c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,
@@ -992,7 +1097,7 @@
       "+4 Strength",
       "+40 Armor",
       "Requires Level 31",
-      "Sell Price: 1c"
+      "Sell Price: 71s 62c"
      ],
      "tooltipSynthesized": false,
      "classicTooltip": null,

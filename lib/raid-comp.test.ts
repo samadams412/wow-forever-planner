@@ -77,7 +77,7 @@ test("empty roster covers nothing", () => {
 
 test("one Retribution Paladin lights up exactly the Paladin effects it can provide", () => {
   const c = covered(rosterOf([[0, spec("paladin", "Retribution")]]));
-  for (const id of ["blessing-of-kings", "blessing-of-might", "blessing-of-wisdom", "blessing-of-light", "salvation", "vindication", "devotion-aura", "judgement-of-the-crusader"]) {
+  for (const id of ["blessing-of-kings", "blessing-of-might", "blessing-of-wisdom", "vindication", "devotion-aura", "judgement-of-the-crusader"]) {
     assert.ok(c.has(id), id);
   }
   assert.ok(!c.has("battle-shout"));
@@ -93,11 +93,11 @@ test("group buffs only reach the provider's group", () => {
   assert.deepEqual(computeCoverage(r, effects)["devotion-aura"].groups, [1]);
 });
 
-test("caster shortfalls: 1 Paladin for 4 Blessings, 3 Judgements, 3 Auras in its group", () => {
+test("caster shortfalls: 1 Paladin for 3 Blessings, 3 Judgements, 3 Auras in its group", () => {
   const r = rosterOf([[0, spec("paladin", "Holy")]]);
   const s = perCasterShortfalls(r, effects, computeCoverage(r, effects), sets, classNames);
   const by = Object.fromEntries(s.map((x) => [x.setId, x]));
-  assert.equal(by["paladin-blessings"].effects, 4);
+  assert.equal(by["paladin-blessings"].effects, 3);
   assert.equal(by["paladin-blessings"].casters, 1);
   assert.equal(by["paladin-judgements"].effects, 3);
   assert.deepEqual(by["paladin-auras"].groups, [0]);
@@ -114,8 +114,8 @@ test("identical per-group shortfalls merge into one note listing the groups", ()
   );
 });
 
-test("four Paladins cover all four Blessings with no shortfall", () => {
-  const r = rosterOf([0, 1, 2, 3].map((i) => [i * 5, spec("paladin", "Holy")]));
+test("three Paladins cover all three Blessings with no shortfall", () => {
+  const r = rosterOf([0, 1, 2].map((i) => [i * 5, spec("paladin", "Holy")]));
   const s = perCasterShortfalls(r, effects, computeCoverage(r, effects), sets, classNames);
   assert.ok(!s.some((x) => x.setId === "paladin-blessings"));
 });

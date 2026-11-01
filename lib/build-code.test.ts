@@ -27,7 +27,7 @@ test("encodeBuild -> decodeBuild round-trips a current-version build", () => {
     protection_shield_slam: 1,
   };
   const code = encodeBuild(warrior, ranks);
-  assert.match(code, /^7-/); // CURRENT_VERSION
+  assert.match(code, /^8-/); // CURRENT_VERSION
   assert.deepEqual(decodeBuild(warrior, code), ranks);
 });
 
@@ -58,7 +58,7 @@ test("decodeBuild clamps a rank above the talent's current maxRank", () => {
       talents.map((t) => (i === protIndex && t.id === "protection_shield_specialization" ? "6" : "0")).join("")
     )
     .join("-");
-  const ranks = decodeBuild(warrior, `7-${body}`);
+  const ranks = decodeBuild(warrior, `8-${body}`);
   assert.equal(ranks.protection_shield_specialization, 5);
 });
 
@@ -217,13 +217,36 @@ const mage = JSON.parse(
 ) as ClassTalentData;
 
 test("decodeBuild (version 6 code) uses the frozen Mage Frost order and drops Piercing Ice", () => {
-  // V6_TREE_ORDER.mage.Frost: 2 = elemental_precision (5 -> 3 ranks), 4 = permafrost,
+  // V6_TREE_ORDER.mage.Frost: 2 = elemental_precision (5 -> 3 ranks, renamed Precision
+  // 2026-10-30), 4 = permafrost,
   // 6 = frostbite, 7 = piercing_ice (removed 2026-10-22), 10 = improved_blizzard.
   const v6Frost = "0050302300100000000";
   assert.deepEqual(decodeBuild(mage, ["6", "", "", v6Frost].join("-")), {
-    frost_elemental_precision: 3,
+    frost_precision: 3,
     frost_permafrost: 3,
     frost_frostbite: 2,
     frost_improved_blizzard: 1,
   });
+});
+
+const paladin = JSON.parse(
+  fs.readFileSync(path.join(import.meta.dirname, "..", "data", "talents", "paladin.json"), "utf8")
+) as ClassTalentData;
+
+test("decodeBuild (version 7 code) follows tree moves and renames, drops removals", () => {
+  // V7_TREE_ORDER.paladin.Holy: 1 = divine_intellect (moved to Protection
+  // 2026-10-30), 6 = voice_of_truth (removed). Protection 0 = toughness, which
+  // must survive although Warrior's removed protection_toughness translates to null.
+  assert.deepEqual(decodeBuild(paladin, ["7", "0500003", "5", ""].join("-")), {
+    protection_divine_intellect: 5,
+    protection_toughness: 5,
+  });
+  // V7 Retribution: Twist of Light (index 16) is now Unsealed Wrath, which
+  // needs Repentance (index 13), so the point carries over.
+  assert.deepEqual(decodeBuild(paladin, ["7", "", "", "00000000000001001"].join("-")), {
+    retribution_repentance: 1,
+    retribution_unsealed_wrath: 1,
+  });
+  // V7_TREE_ORDER.mage.Fire: 2 = improved_fireball, renamed Accelerant.
+  assert.deepEqual(decodeBuild(mage, ["7", "", "005", ""].join("-")), { fire_accelerant: 5 });
 });
