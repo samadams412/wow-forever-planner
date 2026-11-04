@@ -114,3 +114,19 @@ export function canRemovePoint(tree: TalentTree, talent: Talent, ranks: RankStat
 
   return true;
 }
+
+// How a prereq connector can be drawn: straight across a row or straight
+// down a column, with no talent in between. Anything else (a prereq in
+// another column, or a talent sitting on the line) gets no connector, as on
+// talentsforever.com: a straight bar there would point at the wrong talent.
+// The tooltip's "Requires ..." line and the hover highlight still show it.
+export function prereqConnector(tree: TalentTree, talent: Talent, prereq: Talent): "row" | "column" | null {
+  const between = (a: number, b: number, x: number) => x > Math.min(a, b) && x < Math.max(a, b);
+  if (prereq.tier === talent.tier) {
+    return tree.talents.some((t) => t.tier === talent.tier && between(prereq.col, talent.col, t.col)) ? null : "row";
+  }
+  if (prereq.col === talent.col) {
+    return tree.talents.some((t) => t.col === talent.col && between(prereq.tier, talent.tier, t.tier)) ? null : "column";
+  }
+  return null;
+}

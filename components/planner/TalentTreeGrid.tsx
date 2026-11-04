@@ -5,7 +5,7 @@ import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
 import { treeBackgroundUrl, mediumIconUrl, getTreeIcon } from "@/lib/wow-data";
 import foreverTalentSource from "@/data/sources/talentsforever/talentsforever-2026-11-03.json";
-import { canAddPoint, pointsSpentInTree } from "@/lib/talent-rules";
+import { canAddPoint, pointsSpentInTree, prereqConnector } from "@/lib/talent-rules";
 import CornerBracket from "@/components/site/CornerBracket";
 import TalentNode from "./TalentNode";
 import { getLinkedSpells } from "@/lib/talent-spell-links";
@@ -167,7 +167,8 @@ export default function TalentTreeGrid({
           .filter((t) => t.prereq)
           .map((t) => {
             const prereq = byId.get(t.prereq!.id);
-            if (!prereq) return null;
+            const path = prereq && prereqConnector(tree, t, prereq);
+            if (!prereq || !path) return null;
             const met = (ranks[prereq.id] ?? 0) >= t.prereq!.ranks;
             const isHoveredPath = hoveredTalentId === t.id;
             const barClass = isHoveredPath ? "bg-[#f4c95d] shadow-[0_0_9px_rgba(244,201,93,0.9)]" : met ? "bg-accent" : "bg-foreground-muted/40";
@@ -177,7 +178,7 @@ export default function TalentTreeGrid({
             // side by side in the same row, so the connector runs
             // horizontally across the column gap between them instead of
             // vertically down a shared column.
-            if (prereq.tier === t.tier) {
+            if (path === "row") {
               const minCol = Math.min(prereq.col, t.col);
               const maxCol = Math.max(prereq.col, t.col);
               return (
@@ -239,7 +240,8 @@ export default function TalentTreeGrid({
           .filter((t) => t.prereq)
           .map((t) => {
             const prereq = byId.get(t.prereq!.id);
-            if (!prereq) return null;
+            const path = prereq && prereqConnector(tree, t, prereq);
+            if (!prereq || !path) return null;
             const met = (ranks[prereq.id] ?? 0) >= t.prereq!.ranks;
 
             // Same-tier prereq: arrow pokes out of the side of the
@@ -248,7 +250,7 @@ export default function TalentTreeGrid({
             // pointing left, if it sits to the right -- e.g. Holy Shock at
             // col 2 pointing left into Divine Precision at col 1) instead
             // of the default top edge pointing down.
-            if (prereq.tier === t.tier) {
+            if (path === "row") {
               const prereqIsRight = prereq.col > t.col;
               return (
                 <div

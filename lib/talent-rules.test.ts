@@ -11,6 +11,7 @@ import {
   leadingTreeIndex,
   totalPointsSpent,
   MAX_TALENT_POINTS,
+  prereqConnector,
 } from "./talent-rules.ts";
 import type { ClassTalentData, TalentTree } from "./wow-data.ts";
 
@@ -145,4 +146,24 @@ test("leadingTreeIndex: null at 0/0/0, null on a tie, the max otherwise", () => 
 
   const furyLeads = { arms_improved_heroic_strike: 1, fury_cruelty: 5 };
   assert.equal(leadingTreeIndex(trees, furyLeads), 1);
+});
+
+test("prereqConnector: straight clear paths only", () => {
+  const rogue = JSON.parse(
+    fs.readFileSync(path.join(import.meta.dirname, "..", "data", "talents", "rogue.json"), "utf8")
+  ) as ClassTalentData;
+  const find = (data: ClassTalentData, treeName: string, id: string) => {
+    const tree = data.trees.find((t) => t.name === treeName)!;
+    return { tree, t: tree.talents.find((x) => x.id === id)! };
+  };
+  const conn = (data: ClassTalentData, treeName: string, id: string) => {
+    const { tree, t } = find(data, treeName, id);
+    return prereqConnector(tree, t, tree.talents.find((x) => x.id === t.prereq!.id)!);
+  };
+  // Clear column: Shield Slam <- Concussion Blow.
+  assert.equal(conn(warrior, "Protection", "protection_shield_slam"), "column");
+  // A talent on the line: Gore Drinker <- Blood Craze passes Reckless Swings.
+  assert.equal(conn(warrior, "Fury", "fury_gore_drinker"), null);
+  // Different column: Dual Wield Specialization (col 4) <- Precision (col 3).
+  assert.equal(conn(rogue, "Combat", "combat_dual_wield_specialization"), null);
 });

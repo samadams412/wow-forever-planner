@@ -93,7 +93,10 @@ and `2026-10-31-claude-md-archive.md` (the full pre-trim copy of this file).
   touch movement is a scroll, one `position: fixed` `TooltipCard` dismissed on
   `scroll`, haptic pulse only for touch-originated changes.
 - Desktop tree: 43 px icons / 24 px gap / 67 px pitch, **square cells on
-  purpose** (the connector-arrow layout depends on it).
+  purpose** (the connector-arrow layout depends on it). A prereq connector is
+  drawn only along a clear row or column (`prereqConnector` in
+  `lib/talent-rules.ts`), as on talentsforever.com; otherwise the tooltip's
+  "Requires" line and the hover highlight carry it.
 - `TalentTreeGrid.tsx` imports the current talentsforever snapshot for Classic
   comparisons; bump the import with each sync.
 
