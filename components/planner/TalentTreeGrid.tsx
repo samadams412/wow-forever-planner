@@ -4,7 +4,7 @@ import { findAdjacentTalent, type NavDirection } from "@/lib/talent-navigation";
 import type { RankState } from "@/lib/build-code";
 import type { TalentTree } from "@/lib/wow-data";
 import { treeBackgroundUrl, mediumIconUrl, getTreeIcon } from "@/lib/wow-data";
-import foreverTalentSource from "@/data/sources/talentsforever/talentsforever-2026-10-30.json";
+import foreverTalentSource from "@/data/sources/talentsforever/talentsforever-2026-11-03.json";
 import { canAddPoint, pointsSpentInTree } from "@/lib/talent-rules";
 import CornerBracket from "@/components/site/CornerBracket";
 import TalentNode from "./TalentNode";

@@ -24,7 +24,7 @@ function orderedTalents(classData: ClassTalentData) {
 // (pre-versioning) code -- no new characters needed in the format, just
 // one more segment, so codes stay plain base36+"-" and drop safely into
 // any URL segment or the OG image route's path with no escaping questions.
-const CURRENT_VERSION = 8;
+const CURRENT_VERSION = 9;
 
 // One base36 digit per talent (max rank is well under 36), trees separated by "-".
 export function encodeBuild(classData: ClassTalentData, ranks: RankState): string {
@@ -58,20 +58,27 @@ export function decodeBuild(classData: ClassTalentData, code: string): RankState
       // Mage Frost reshape (V6_TREE_ORDER), a tree no older snapshot freezes.
       // Every version below 8 predates the 2026-10-30 reshape (V7_TREE_ORDER);
       // an older snapshot of the same tree (V2 Paladin, V6 Mage Frost) wins.
+      // Every version below 9 predates the 2026-11-03 reshape (V8_TREE_ORDER);
+      // likewise older snapshots of Warrior Fury and Shaman Elemental win.
       const orders = mergeOrders(
-        V7_TREE_ORDER,
-        version < 7
+        V8_TREE_ORDER,
+        version < 8
           ? mergeOrders(
-              V6_TREE_ORDER,
-              version < 3
-                ? mergeOrders(V5_TREE_ORDER, V2_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
-                : version < 4
-                  ? mergeOrders(V5_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
-                  : version < 5
-                    ? mergeOrders(V5_TREE_ORDER, V4_TREE_ORDER)
-                    : version < 6
-                      ? V5_TREE_ORDER
-                      : {}
+              V7_TREE_ORDER,
+              version < 7
+                ? mergeOrders(
+                    V6_TREE_ORDER,
+                    version < 3
+                      ? mergeOrders(V5_TREE_ORDER, V2_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
+                      : version < 4
+                        ? mergeOrders(V5_TREE_ORDER, V3_TREE_ORDER, V4_TREE_ORDER)
+                        : version < 5
+                          ? mergeOrders(V5_TREE_ORDER, V4_TREE_ORDER)
+                          : version < 6
+                            ? V5_TREE_ORDER
+                            : {}
+                  )
+                : {}
             )
           : {}
       );
@@ -278,6 +285,20 @@ const LEGACY_ID_TRANSLATION: Record<string, string | null> = {
   restoration_furor: "feral_furor",
   feral_heart_of_the_wild: "restoration_heart_of_the_wild",
   restoration_gift_of_the_earthmother: null,
+  // Removed or renamed 2026-11-03, Blizzard's development notes of 2 Nov (see
+  // V8_TREE_ORDER below). The notes call all three renames ("renamed"), so
+  // points carry over. Lava Burst was "replaced with" Call of Thunder, a
+  // different talent: its points drop. (elemental_call_of_thunder is live
+  // again; translateId() leaves live ids alone, so its old null is inert.)
+  assassination_murder: null,
+  subtlety_improved_distract: null,
+  subtlety_quietus: null,
+  subtlety_cutthroat: null,
+  subtlety_thousand_cuts: null,
+  elemental_lava_burst: null,
+  combat_improved_eviscerate: "combat_coup_de_grace",
+  combat_improved_sinister_strike: "combat_efficient_strikes",
+  elemental_elemental_mastery: "elemental_lightning_mastery",
 };
 
 // Keys above are class-agnostic, but a removed id can still be live in
@@ -885,6 +906,147 @@ const V7_TREE_ORDER: Record<string, Record<string, string[]>> = {
   },
 };
 
+// --- v8 tree shape (2026-10-30 .. 2026-11-03) ---------------------------------
+//
+// The 2026-11-03 talentsforever.com pull follows Blizzard's development notes
+// of 2 Nov (client build 70753) and reshaped 6 trees: all three Rogue trees
+// were reworked (Murder, Improved Distract, Quietus, Cutthroat and Thousand
+// Cuts removed; Improved Eviscerate renamed Coup de Grace and Improved
+// Sinister Strike renamed Efficient Strikes; Blood Splatter, Composure, Flash
+// of Steel, Quick Getaway, Boot Knife and Death Mark new; many row moves),
+// Warrior Fury gained Reckless Swings and Improved Whirlwind and moved Enrage
+// and Gore Drinker, Shaman Elemental lost Lava Burst for Call of Thunder and
+// renamed Elemental Mastery to Lightning Mastery, and Shaman Enhancement's
+// Improved Ghost Wolf moved from row 2 to row 4.
+//
+// V8_TREE_ORDER freezes those trees' tier/col-sorted id order as it stood at
+// CURRENT_VERSION 8 (generated from the talent files at commit 8846396e).
+// Never edit after the fact, same rule as the other frozen orders above.
+const V8_TREE_ORDER: Record<string, Record<string, string[]>> = {
+  warrior: {
+    Fury: [
+      "fury_booming_voice",
+      "fury_cruelty",
+      "fury_lingering_rage",
+      "fury_unbridled_wrath",
+      "fury_furious_precision",
+      "fury_piercing_howl",
+      "fury_blood_craze",
+      "fury_dual_wield_specialization",
+      "fury_raging_blows",
+      "fury_enrage",
+      "fury_improved_execute",
+      "fury_improved_berserker_rage",
+      "fury_death_wish",
+      "fury_improved_intercept",
+      "fury_flurry",
+      "fury_gore_drinker",
+      "fury_bloodthirst",
+    ],
+  },
+  rogue: {
+    Assassination: [
+      "assassination_improved_gouge",
+      "assassination_remorseless_attacks",
+      "assassination_malice",
+      "assassination_ruthlessness",
+      "assassination_murder",
+      "assassination_improved_slice_and_dice",
+      "assassination_relentless_strikes",
+      "assassination_improved_expose_armor",
+      "assassination_lethality",
+      "assassination_vile_poisons",
+      "assassination_cold_blood",
+      "assassination_improved_poisons",
+      "assassination_vigor",
+      "assassination_mutilate",
+      "assassination_improved_kidney_shot",
+      "assassination_seal_fate",
+      "assassination_venom",
+    ],
+    Combat: [
+      "combat_improved_eviscerate",
+      "combat_improved_sinister_strike",
+      "combat_lightning_reflexes",
+      "combat_puncturing_wounds",
+      "combat_deflection",
+      "combat_precision",
+      "combat_endurance",
+      "combat_riposte",
+      "combat_improved_sprint",
+      "combat_improved_kick",
+      "combat_flawless_execution",
+      "combat_dual_wield_specialization",
+      "combat_blade_flurry",
+      "combat_hack_and_slash",
+      "combat_weapon_expertise",
+      "combat_aggression",
+      "combat_adrenaline_rush",
+    ],
+    Subtlety: [
+      "subtlety_camouflage",
+      "subtlety_master_of_deception",
+      "subtlety_opportunity",
+      "subtlety_setup",
+      "subtlety_elusiveness",
+      "subtlety_dirty_tricks",
+      "subtlety_improved_ambush",
+      "subtlety_initiative",
+      "subtlety_ghostly_strike",
+      "subtlety_improved_distract",
+      "subtlety_heightened_senses",
+      "subtlety_premeditation",
+      "subtlety_serrated_blades",
+      "subtlety_dirty_deeds",
+      "subtlety_preparation",
+      "subtlety_hemorrhage",
+      "subtlety_quietus",
+      "subtlety_cutthroat",
+      "subtlety_thousand_cuts",
+    ],
+  },
+  shaman: {
+    Elemental: [
+      "elemental_convection",
+      "elemental_concussion",
+      "elemental_elemental_devastation",
+      "elemental_reverberation",
+      "elemental_elemental_alacrity",
+      "elemental_call_of_flame",
+      "elemental_elemental_focus",
+      "elemental_elemental_warding",
+      "elemental_trial_by_fire",
+      "elemental_eye_of_the_storm",
+      "elemental_earthbound",
+      "elemental_elemental_reach",
+      "elemental_lava_burst",
+      "elemental_lightning_overload",
+      "elemental_elemental_fury",
+      "elemental_elemental_mastery",
+    ],
+    Enhancement: [
+      "enhancement_earths_grasp",
+      "enhancement_thundering_strikes",
+      "enhancement_ancestral_knowledge",
+      "enhancement_guardian_totems",
+      "enhancement_mental_dexterity",
+      "enhancement_improved_ghost_wolf",
+      "enhancement_improved_lightning_shield",
+      "enhancement_elemental_weapons",
+      "enhancement_shamanistic_focus",
+      "enhancement_anticipation",
+      "enhancement_toughness",
+      "enhancement_flurry",
+      "enhancement_stormstrike",
+      "enhancement_spirit_weapons",
+      "enhancement_mental_quickness",
+      "enhancement_improved_stormstrike",
+      "enhancement_maelstrom_weapon",
+      "enhancement_rage_of_the_farseer",
+    ],
+  },
+};
+
 type FrozenOrders = Record<string, Record<string, string[]>>;
 function mergeOrders(...orders: FrozenOrders[]): FrozenOrders {
   const out: FrozenOrders = {};
@@ -939,7 +1101,8 @@ function decodeLegacyBuild(classData: ClassTalentData, treeCodes: string[]): Ran
       V4_TREE_ORDER[classData.class]?.[tree.name] ??
       V5_TREE_ORDER[classData.class]?.[tree.name] ??
       V6_TREE_ORDER[classData.class]?.[tree.name] ??
-      V7_TREE_ORDER[classData.class]?.[tree.name];
+      V7_TREE_ORDER[classData.class]?.[tree.name] ??
+      V8_TREE_ORDER[classData.class]?.[tree.name];
     const order = legacyOrder ?? orderedTalents(classData)[i].map((t) => t.id);
     const treeCode = treeCodes[i] ?? "";
     order.forEach((oldId, j) => {

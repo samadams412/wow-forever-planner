@@ -21,13 +21,14 @@ test("encodeBuild -> decodeBuild round-trips a current-version build", () => {
     arms_improved_heroic_strike: 3,
     arms_improved_rend: 3,
     arms_deep_wounds: 3,
+    fury_death_wish: 1,
     fury_bloodthirst: 1,
     protection_shield_specialization: 5,
     protection_concussion_blow: 1,
     protection_shield_slam: 1,
   };
   const code = encodeBuild(warrior, ranks);
-  assert.match(code, /^8-/); // CURRENT_VERSION
+  assert.match(code, /^9-/); // CURRENT_VERSION
   assert.deepEqual(decodeBuild(warrior, code), ranks);
 });
 
@@ -58,7 +59,7 @@ test("decodeBuild clamps a rank above the talent's current maxRank", () => {
       talents.map((t) => (i === protIndex && t.id === "protection_shield_specialization" ? "6" : "0")).join("")
     )
     .join("-");
-  const ranks = decodeBuild(warrior, `8-${body}`);
+  const ranks = decodeBuild(warrior, `9-${body}`);
   assert.equal(ranks.protection_shield_specialization, 5);
 });
 
@@ -143,7 +144,8 @@ test("decodeBuild (version 4 code) translates a cross-tree rename and drops outr
   // V4_TREE_ORDER.warrior.Fury is the shape immediately before the
   // 2026-10-03 hotfix: fury_iron_will (index 2) moved to Protection as
   // protection_iron_will; fury_improved_cleave (index 4) was removed
-  // outright; fury_bloodthirst (last) is unaffected.
+  // outright; fury_bloodthirst (last) is unaffected, but has needed
+  // fury_death_wish since 2026-11-03, so the code spends a point there too.
   const v4Fury = [
     "fury_booming_voice",
     "fury_cruelty",
@@ -167,6 +169,7 @@ test("decodeBuild (version 4 code) translates a cross-tree rename and drops outr
   const digits = v4Fury.map((id) => {
     if (id === "fury_iron_will") return "4";
     if (id === "fury_improved_cleave") return "2";
+    if (id === "fury_death_wish") return "1";
     if (id === "fury_bloodthirst") return "1";
     return "0";
   });
@@ -174,6 +177,7 @@ test("decodeBuild (version 4 code) translates a cross-tree rename and drops outr
   const ranks = decodeBuild(warrior, code);
   assert.deepEqual(ranks, {
     protection_iron_will: 4,
+    fury_death_wish: 1,
     fury_bloodthirst: 1,
   });
 });
@@ -193,11 +197,13 @@ const shaman = JSON.parse(
 
 test("decodeBuild (version 5 and version 2 codes) uses the right frozen Shaman orders per tree", () => {
   // V5_TREE_ORDER.shaman: Elemental index 0 = convection, 10 = call_of_thunder
-  // (removed 2026-10-15); Restoration index 1 = tidal_mastery, 9 = totemic_focus.
+  // (removed 2026-10-15, back as a 1-rank talent 2026-11-03, so its point
+  // returns); Restoration index 1 = tidal_mastery, 9 = totemic_focus.
   const v5Elemental = "5000000000100000";
   const v5Restoration = "0500000003000000";
   assert.deepEqual(decodeBuild(shaman, ["5", v5Elemental, "", v5Restoration].join("-")), {
     elemental_convection: 5,
+    elemental_call_of_thunder: 1,
     restoration_tidal_mastery: 5,
     restoration_totemic_focus: 3,
   });
@@ -249,4 +255,30 @@ test("decodeBuild (version 7 code) follows tree moves and renames, drops removal
   });
   // V7_TREE_ORDER.mage.Fire: 2 = improved_fireball, renamed Accelerant.
   assert.deepEqual(decodeBuild(mage, ["7", "", "005", ""].join("-")), { fire_accelerant: 5 });
+});
+
+const rogue = JSON.parse(
+  fs.readFileSync(path.join(import.meta.dirname, "..", "data", "talents", "rogue.json"), "utf8")
+) as ClassTalentData;
+
+test("decodeBuild (version 8 code) carries renamed talents, drops removals and Lava Burst", () => {
+  // V8_TREE_ORDER.rogue.Combat: 0 = improved_eviscerate (renamed Coup de Grace
+  // 2026-11-03), 1 = improved_sinister_strike (renamed Efficient Strikes),
+  // 5 = precision (unchanged).
+  assert.deepEqual(decodeBuild(rogue, ["8", "", "320003", ""].join("-")), {
+    combat_coup_de_grace: 3,
+    combat_efficient_strikes: 2,
+    combat_precision: 3,
+  });
+  // V8 Subtlety: 9 = improved_distract and 17 = cutthroat, both removed.
+  assert.deepEqual(decodeBuild(rogue, ["8", "", "", "300000000200000003"].join("-")), {
+    subtlety_camouflage: 3,
+  });
+  // V8_TREE_ORDER.shaman.Elemental: 12 = lava_burst, 15 = elemental_mastery.
+  // Lava Burst's point drops (replaced by a different talent), so the renamed
+  // Lightning Mastery loses its point too: it now needs Call of Thunder.
+  const v8Elemental = "5" + "0".repeat(11) + "1" + "00" + "1";
+  assert.deepEqual(decodeBuild(shaman, ["8", v8Elemental, "", ""].join("-")), {
+    elemental_convection: 5,
+  });
 });

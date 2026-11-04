@@ -1,7 +1,7 @@
 ---
 type: project
 created: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-03
 tags: [forevercraft, data-pipeline, runbook]
 status: active
 ---
@@ -51,6 +51,16 @@ in that folder). **Outputs:** `data/talents/<class>.json`, `data/racials.json`,
    - **Renames look like remove + add.** Check every added talent's
      `classic.renamed` and the vendor's hotfix notes (2026-10-30: Twist of
      Light → Unsealed Wrath was only on talentsforever's hotfix sheet).
+   - **"Ahead of the game data" placements.** Since 2026-11-03 the vendor
+     can follow Blizzard's notes before the client has them, and when the notes
+     give a row but no column, the column is the vendor's guess. Neither `src`
+     nor any other field marks it; its `changelog` and per-class `source`
+     line say so. Read the official post and give each talent whose column the
+     notes don't state `confidence: "estimated"` plus a `confidenceNote`
+     (the planner tooltip shows the note, not the badge).
+   - `spell_desc` "Changed" counts are mostly noise on a client-build bump: every
+     entry's `src` string changes (2026-11-03: 1,679 of 1,750). Diff with `src`
+     ignored before reading.
    - `spellbooks.<Class>.icons` aren't diffed; `racials` is reported only as
      "changed" (diff per race and ability name); talent `asis` notes and
      per-class `class_abilities` aren't diffed (we don't ingest
@@ -64,13 +74,18 @@ in that folder). **Outputs:** `data/talents/<class>.json`, `data/racials.json`,
    `renamed→renamedFrom`, keep `replaces`, keep an existing `note`). New
    talents: id `<treePrefix>_<snake_name>`, `confidence: "confirmed"`. A talent
    that moved tree or was renamed gets a new id.
-   - **Gap: the apply script is not in the repo.** Every sync so far used a
-     scratchpad one-off (`apply-talent-diff.js`, rewritten 2026-10-31 as
-     `apply-talent-sync.js`, which handles class-wide name matching, renames,
-     tree moves and prints an id map). It is gone with each session. Until it is
-     promoted to `scripts/`, validate any rewrite first by applying the
-     *previous* snapshot to HEAD: it must reproduce every talent file byte for
-     byte.
+   - **Script:** `node scripts/apply-talent-sync.js <new> --prev <old>` (dry
+     run; add `--write`, or `--repo <dir>` to target a copy). It matches by
+     name across the class, follows `classic.renamed`, re-ids renamed and
+     moved talents, keeps array order (new, renamed and moved talents are
+     appended) and prints the id map. It rewrites `classic` **only where the
+     vendor's own `classic` changed since `--prev`**, which keeps our hand
+     edits (the 4 `renamedFrom` mismatches from 10-22). It keeps `confidence`,
+     `confidenceNote` and `reqText` as they are.
+   - **Validate first:** apply the previous pair (e.g. `<prev> --prev <prev-1>`)
+     to a copy of HEAD's `data/talents`; it must reproduce every file. The one
+     known exception is `rogue.json`, whose hand-wrapped inline array doesn't
+     survive `JSON.stringify` (semantically equal).
 4. **Build codes, if any tree's membership or order changed** (`lib/build-code.ts`):
    - bump `CURRENT_VERSION`;
    - add `V<old>_TREE_ORDER` with each affected tree's tier/col-sorted ids
@@ -86,7 +101,11 @@ in that folder). **Outputs:** `data/talents/<class>.json`, `data/racials.json`,
    - **Pitfall:** `LEGACY_ID_TRANSLATION` is one table for all classes, so a
      removed id can equal a live id in another class (Warrior's removed
      `protection_toughness` is Paladin's Toughness). `translateId()` never
-     translates an id the class still has; keep it that way.
+     translates an id the class still has; keep it that way. The same rule
+     means a talent that **comes back** under its old id keeps points from old
+     links even though its `null` entry stays (2026-11-03: Shaman Call of
+     Thunder, removed 10-15). Decide whether that's right, and fix the older
+     version's decode test.
 5. **Racials / Legacy Perks:** apply by race + ability name / tree + row + col.
    `legacy-perks.json` doesn't round-trip through `JSON.stringify`; edit strings
    in place.
@@ -186,6 +205,8 @@ match; the four checks pass; a handoff is in `03-Handoffs/data-pipeline/`.
 
 ## Not automated yet
 One command per pipeline (`npm run sync-items` / `sync-dungeons`), diff-script
-fixes and a `verify-data.ts` are designed but not built:
+fixes and a `verify-data.ts` are designed but not built (the talent apply step
+is now `scripts/apply-talent-sync.js`; the diff and field check are still
+separate):
 `03-Handoffs/data-pipeline/2026-10-06-pipeline-automation-design.md`. Tracked on
 the [[Roadmap]], along with promoting the talent apply script.

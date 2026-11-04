@@ -368,7 +368,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -785,11 +785,11 @@
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "Increases damage done by your melee abilities on Bleeding targets by 2%.",
-            "Increases damage done by your melee abilities on Bleeding targets by 4%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 3%.",
             "Increases damage done by your melee abilities on Bleeding targets by 6%.",
-            "Increases damage done by your melee abilities on Bleeding targets by 8%.",
-            "Increases damage done by your melee abilities on Bleeding targets by 10%."
+            "Increases damage done by your melee abilities on Bleeding targets by 9%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 12%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 15%."
           ],
           "confidence": "confirmed",
           "prereq": {
@@ -850,7 +850,7 @@
             "status": "new"
           },
           "passive": false,
-          "cost": "15 Rage | Melee Range | Instant"
+          "cost": "15 Rage | Melee Range | Instant | Requires Bear Form, Dire Bear Form"
         },
         {
           "id": "feral_predatory_discipline",

@@ -141,7 +141,7 @@
           "confidence": "confirmed",
           "prereq": {
             "id": "arms_tactical_mastery",
-            "ranks": 5
+            "ranks": 3
           },
           "status": "changed",
           "icon": "spell_holy_blessingofstamina",
@@ -209,9 +209,9 @@
           "col": 2,
           "maxRank": 3,
           "ranks": [
-            "Increases the damage you deal with two-handed melee weapons by 1%.",
             "Increases the damage you deal with two-handed melee weapons by 2%.",
-            "Increases the damage you deal with two-handed melee weapons by 3%."
+            "Increases the damage you deal with two-handed melee weapons by 4%.",
+            "Increases the damage you deal with two-handed melee weapons by 6%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -312,12 +312,9 @@
           "name": "Bloodthrill",
           "tier": 5,
           "col": 1,
-          "maxRank": 5,
+          "maxRank": 2,
           "ranks": [
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 4% chance to allow an activation of Overpower.",
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 8% chance to allow an activation of Overpower.",
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 12% chance to allow an activation of Overpower.",
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 16% chance to allow an activation of Overpower.",
+            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 10% chance to allow an activation of Overpower.",
             "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 20% chance to allow an activation of Overpower."
           ],
           "confidence": "confirmed",
@@ -336,8 +333,8 @@
           "col": 1,
           "maxRank": 2,
           "ranks": [
-            "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
-            "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec."
+            "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 2.5 sec.",
+            "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 5.0 sec."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -410,12 +407,10 @@
           "name": "Improved Tactical Mastery",
           "tier": 2,
           "col": 2,
-          "maxRank": 5,
+          "maxRank": 3,
           "ranks": [
-            "Tactical Mastery lets you retain up to an additional 3 Rage when you change stances.",
-            "Tactical Mastery lets you retain up to an additional 6 Rage when you change stances.",
-            "Tactical Mastery lets you retain up to an additional 9 Rage when you change stances.",
-            "Tactical Mastery lets you retain up to an additional 12 Rage when you change stances.",
+            "Tactical Mastery lets you retain up to an additional 5 Rage when you change stances.",
+            "Tactical Mastery lets you retain up to an additional 10 Rage when you change stances.",
             "Tactical Mastery lets you retain up to an additional 15 Rage when you change stances."
           ],
           "confidence": "confirmed",
@@ -445,11 +440,11 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Increases the area of effect of your Shouts by 10% and reduces their Rage cost by 5%.",
-            "Increases the area of effect of your Shouts by 20% and reduces their Rage cost by 10%.",
-            "Increases the area of effect of your Shouts by 30% and reduces their Rage cost by 15%.",
-            "Increases the area of effect of your Shouts by 40% and reduces their Rage cost by 20%.",
-            "Increases the area of effect of your Shouts by 50% and reduces their Rage cost by 25%."
+            "Increases the area of effect of your Shouts by 10% and reduces their Rage cost by 5%. Also reduces the Rage cost of Piercing Howl by 5%.",
+            "Increases the area of effect of your Shouts by 20% and reduces their Rage cost by 10%. Also reduces the Rage cost of Piercing Howl by 10%.",
+            "Increases the area of effect of your Shouts by 30% and reduces their Rage cost by 15%. Also reduces the Rage cost of Piercing Howl by 15%.",
+            "Increases the area of effect of your Shouts by 40% and reduces their Rage cost by 20%. Also reduces the Rage cost of Piercing Howl by 20%.",
+            "Increases the area of effect of your Shouts by 50% and reduces their Rage cost by 25%. Also reduces the Rage cost of Piercing Howl by 25%."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -658,8 +653,8 @@
         {
           "id": "fury_enrage",
           "name": "Enrage",
-          "tier": 4,
-          "col": 3,
+          "tier": 3,
+          "col": 4,
           "maxRank": 5,
           "ranks": [
             "Gives you a 30% chance to deal 2% increased Physical damage for 12 sec after being the victim of any damaging attack.",
@@ -668,7 +663,8 @@
             "Gives you a 30% chance to deal 8% increased Physical damage for 12 sec after being the victim of any damaging attack.",
             "Gives you a 30% chance to deal 10% increased Physical damage for 12 sec after being the victim of any damaging attack."
           ],
-          "confidence": "confirmed",
+          "confidence": "estimated",
+          "confidenceNote": "Blizzard's development notes of 2 Nov give this talent's row but not its column. The column is talentsforever's placement until the live game shows it.",
           "prereq": null,
           "status": "changed",
           "icon": "spell_shadow_unholyfrenzy",
@@ -783,19 +779,14 @@
           "name": "Flurry",
           "tier": 6,
           "col": 2,
-          "maxRank": 5,
+          "maxRank": 3,
           "ranks": [
-            "Increases your melee attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
             "Increases your melee attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your melee attack speed by 15% for your next 3 swings after dealing a melee critical strike.",
             "Increases your melee attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your melee attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+            "Increases your melee attack speed by 30% for your next 3 swings after dealing a melee critical strike."
           ],
           "confidence": "confirmed",
-          "prereq": {
-            "id": "fury_death_wish",
-            "ranks": 1
-          },
+          "prereq": null,
           "status": "changed",
           "icon": "ability_ghoulfrenzy",
           "classic": {
@@ -811,7 +802,7 @@
         {
           "id": "fury_gore_drinker",
           "name": "Gore Drinker",
-          "tier": 6,
+          "tier": 5,
           "col": 3,
           "maxRank": 2,
           "ranks": [
@@ -820,8 +811,8 @@
           ],
           "confidence": "confirmed",
           "prereq": {
-            "id": "fury_enrage",
-            "ranks": 5
+            "id": "fury_blood_craze",
+            "ranks": 3
           },
           "status": "new",
           "icon": "racial_troll_berserk",
@@ -840,7 +831,10 @@
             "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
           ],
           "confidence": "confirmed",
-          "prereq": null,
+          "prereq": {
+            "id": "fury_death_wish",
+            "ranks": 1
+          },
           "confidenceNote": "This prereq arrow's removal is sourced only from reading the beta's hotfix cache, not an official Blizzard patch note -- flagged as unconfirmed pending the live game.",
           "status": "changed",
           "icon": "spell_nature_bloodlust",
@@ -854,6 +848,46 @@
           },
           "passive": false,
           "cost": "30 Rage | Melee Range | Instant | 6 sec cooldown"
+        },
+        {
+          "id": "fury_reckless_swings",
+          "name": "Reckless Swings",
+          "tier": 4,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "Your next 4 melee attacks generate 5 additional Rage. Lasts 8 seconds."
+          ],
+          "confidence": "estimated",
+          "confidenceNote": "Blizzard's development notes of 2 Nov give this talent's row but not its column. The column is talentsforever's placement until the live game shows it.",
+          "prereq": null,
+          "status": "new",
+          "icon": "ability_warrior_endlessrage",
+          "classic": {
+            "status": "new"
+          },
+          "passive": false,
+          "cost": "25% of base health | 15 sec cooldown"
+        },
+        {
+          "id": "fury_improved_whirlwind",
+          "name": "Improved Whirlwind",
+          "tier": 6,
+          "col": 3,
+          "maxRank": 2,
+          "ranks": [
+            "Reduces the cooldown of your Whirlwind ability by 1 second and increases the damage it deals to the closest enemy by 15%.",
+            "Reduces the cooldown of your Whirlwind ability by 2 seconds and increases the damage it deals to the closest enemy by 30%."
+          ],
+          "confidence": "estimated",
+          "confidenceNote": "Blizzard's development notes of 2 Nov give this talent's row but not its column. The column is talentsforever's placement until the live game shows it.",
+          "prereq": null,
+          "status": "new",
+          "icon": "ability_warrior_bladestorm",
+          "classic": {
+            "status": "new"
+          },
+          "passive": true
         }
       ]
     },
@@ -1069,9 +1103,9 @@
           "col": 4,
           "maxRank": 3,
           "ranks": [
-            "Increases all threat generated in Defensive stance by an additional 5% while a shield is equipped.",
-            "Increases all threat generated in Defensive stance by an additional 10% while a shield is equipped.",
-            "Increases all threat generated in Defensive stance by an additional 15% while a shield is equipped."
+            "Increases all threat generated in Defensive stance by an additional 7% while a shield is equipped.",
+            "Increases all threat generated in Defensive stance by an additional 13% while a shield is equipped.",
+            "Increases all threat generated in Defensive stance by an additional 20% while a shield is equipped."
           ],
           "confidence": "confirmed",
           "prereq": null,

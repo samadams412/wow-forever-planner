@@ -1,6 +1,6 @@
 {
   "source": "Hand-curated for Forevercraft (not generated). Every effect, its scope (raid / group / single target) and which specs can provide it was read from this site's own data/spellbooks.json and data/talents/*.json, both synced to the WoW Forever beta client. wowtbc.gg's raid comp planner was looked at only to see which effects players track; none of its data was copied. Validated by scripts/check-raid-buffs.js (runs in prebuild).",
-  "build": "1.60.1.70630 + hotfixes 2026-10-28/30",
+  "build": "1.60.1.70753 + Blizzard's notes 2026-11-02",
   "verified": "2026-10-19",
   "conventions": {
     "specs": "\"all\" = a spell every member of the class learns. A list of talent-tree names = a talent (or a spellbook spell flagged talent: true), credited only to that tree's spec.",
@@ -60,6 +60,15 @@
       "note": "Blizzard: Windfury Totem and Flametongue Totem don't stack, even from different Shamans. Grace of Air stacks with both.",
       "evidence": [
         { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-updated-october-15/2360696", "era": "Forever beta (official notes)", "says": "Sept 24: Flametongue Totem no longer stacks with Windfury Totem. Oct 16: Grace of Air Totem is no longer exclusive with Windfury Totem and Flametongue Totem; Windfury Totem and Flametongue Totem retain their exclusivity." }
+      ]
+    },
+    {
+      "id": "druid-crit",
+      "label": "Druid crit auras",
+      "confidence": "confirmed",
+      "note": "Blizzard: Leader of the Pack and Moonkin Form's crit don't stack.",
+      "evidence": [
+        { "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9", "era": "Forever beta (official notes, Nov 2)", "says": "Moonkin Form's crit bonus is again an increase to all types of critical strikes and is again exclusive with Leader of the Pack; Leader of the Pack likewise, again exclusive with Moonkin Aura." }
       ]
     }
   ],
@@ -223,7 +232,7 @@
       "name": "Trueshot Aura",
       "kind": "buff",
       "scope": "raid",
-      "summary": "+50 ranged attack power",
+      "summary": "+100 ranged attack power",
       "confidence": "confirmed",
       "note": "Party or raid within 45 yards in Forever. Party-only in Classic.",
       "sources": [{ "classId": "hunter", "specs": ["Marksmanship"], "talent": "Trueshot Aura", "confidence": "confirmed" }]
@@ -234,8 +243,9 @@
       "kind": "buff",
       "scope": "raid",
       "summary": "+3% crit",
+      "onlyOneCounts": "druid-crit",
       "confidence": "confirmed",
-      "note": "Party or raid within 45 yards in Forever. Party-only in Classic. Blizzard's Sept 30 deep dive made it exclusive with Moonkin Form's crit; the Oct 16 notes split them (melee/ranged crit vs spell crit). Since the Oct 30 hotfix both tooltips say plain Critical Strike chance again, and nothing says whether they stack, so they're tracked separately.",
+      "note": "Party or raid within 45 yards in Forever. Party-only in Classic. Blizzard's Sept 30 deep dive made it exclusive with Moonkin Form's crit; the Oct 16 notes split them (melee/ranged crit vs spell crit); the Nov 2 notes make both all types of crit and exclusive again.",
       "sources": [{ "classId": "druid", "specs": ["Feral Combat"], "talent": "Leader of the Pack", "confidence": "confirmed" }]
     },
     {
@@ -244,6 +254,7 @@
       "kind": "buff",
       "scope": "raid",
       "summary": "+3% crit",
+      "onlyOneCounts": "druid-crit",
       "confidence": "confirmed",
       "sources": [{ "classId": "druid", "specs": ["Balance"], "talent": "Moonkin Form", "confidence": "confirmed" }]
     },

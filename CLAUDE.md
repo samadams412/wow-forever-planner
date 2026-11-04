@@ -28,22 +28,23 @@ and update this file only for rules or architecture that changed.
 Forensic history: `03-Handoffs/project-history/2026-09-30-claude-md-archive.md`
 and `2026-10-31-claude-md-archive.md` (the full pre-trim copy of this file).
 
-## Current state (2026-10-31)
-- Talent planner (9 classes, build codes v8), raid comp, reference section
+## Current state (2026-11-03)
+- Talent planner (9 classes, build codes v9), raid comp, reference section
   (racials, legacy perks, spellbooks, dungeons and loot, professions, crafting
   calculator, items, quests, world map), Beta Wrapped, blog: live.
-- Data: talents/spellbooks/racials from talentsforever 2026-10-30 (build 70630
-  plus Blizzard's 28/30 Oct hotfixes); items from foreverchanges 1.60.1.70707
+- Data: talents/spellbooks/racials from talentsforever 2026-11-03 (client build
+  70753; some talents follow Blizzard's 2 Nov notes ahead of the game data, and
+  14 vendor-placed talents carry `confidence: "estimated"`); items from foreverchanges 1.60.1.70707
   (21,809 items); map data from client extract 70009.
 - **Partial:** gear planner (Warrior, level 30 only, not in nav/sitemap),
   guides (none written), Popular Builds (collection only), profession leveling
-  (2 of 11 verified), What's New (stops at 70291), world map (paused). Details:
+  (2 of 11 verified), What's New (missing 70374/70425), world map (paused). Details:
   Roadmap → "Partially built".
 - No relational database: static JSON + MDX; Upstash Redis only for build
   tracking.
-- The 2026-10-31 talent sync, item sync and docs cleanup were merged to `main`
-  locally that day (`03-Handoffs/2026-10-31-merge-to-main.md`); pushing, which
-  deploys, is the owner's call.
+- `main` matches `origin/main` at `8846396e` (the 10-31 syncs). The 11-03
+  talent sync is uncommitted on `main`
+  (`03-Handoffs/talents/2026-11-03-talentsforever-data-sync.md`).
 
 ## Standing rules
 - **No runtime-variable or full-file disk reads in server code.** Never read
@@ -98,11 +99,11 @@ and `2026-10-31-claude-md-archive.md` (the full pre-trim copy of this file).
 
 ### Build codes (`lib/build-code.ts`)
 Positional: one base36 digit per talent, tier then col order, trees joined by
-`-`, with a leading version segment (currently **8**). Any change to a tree's
+`-`, with a leading version segment (currently **9**). Any change to a tree's
 membership **or order** needs a version bump, or old links decode onto the
 wrong talents.
 - Older versions decode against frozen orders `LEGACY_TREE_ORDER`,
-  `V2`…`V7_TREE_ORDER`, merged **per tree** (`mergeOrders`; an older snapshot of
+  `V2`…`V8_TREE_ORDER`, merged **per tree** (`mergeOrders`; an older snapshot of
   the same tree wins), then `LEGACY_ID_TRANSLATION` (removed → `null`; renamed
   or moved tree → new id), clamp to `maxRank`, and `repairPrereqs` drops points
   whose prereq is no longer met.

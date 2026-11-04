@@ -359,7 +359,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light, Flash of Light, and Holy Shock on them. Only one Oath of Light may be sworn by the Paladin at any one time."
+            "Swear an Oath to protect target ally for 5 min, increasing the healing of your Holy Light on them by up to 400, your Flash of Light by up to 115, and your Holy Shock by up to 230. Only one Oath of Light may be sworn by the Paladin at any one time."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1054,9 +1054,9 @@
           "col": 4,
           "maxRank": 3,
           "ranks": [
-            "Increases the physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
-            "Increases the physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
-            "Increases the physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
+            "Increases the Holy and Physical damage you deal by 2%, and reduces all threat you generate by 7% while a two-handed melee weapon is equipped.",
+            "Increases the Holy and Physical damage you deal by 4%, and reduces all threat you generate by 14% while a two-handed melee weapon is equipped.",
+            "Increases the Holy and Physical damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
           ],
           "confidence": "confirmed",
           "prereq": null,
@@ -1079,9 +1079,9 @@
           "col": 3,
           "maxRank": 3,
           "ranks": [
-            "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times.",
-            "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times.",
-            "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times."
+            "Increases your Physical and Holy damage dealt by 1% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times.",
+            "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times.",
+            "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike. Stacks up to 5 times."
           ],
           "confidence": "confirmed",
           "prereq": {
